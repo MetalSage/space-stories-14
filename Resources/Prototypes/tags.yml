@@ -297,6 +297,11 @@
 - type: Tag
   id: CaptainSabre
 
+# Stories-Cards-Start
+- type: Tag
+  id: Card
+# Stories-Cards-End
+
 - type: Tag
   id: Carpet
 
