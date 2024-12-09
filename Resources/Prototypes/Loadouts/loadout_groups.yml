@@ -11,6 +11,7 @@
   - StoriesWristwatchGold
   - ClothingNeckCloakCollector
   - ClothingNeckCloakAnomalist
+  - NeckLizard
   - ClothingNeckCloakSnake
   - ToyFigurineColossus
   - ToyFigurineAshDragon
@@ -1242,6 +1243,7 @@
   loadouts:
   - HeadofSecurityHead
   - HeadofSecurityBeret
+  - HeadofSecurityBeretHatCap # Stories
 
 - type: loadoutGroup
   id: HeadofSecurityJumpsuit

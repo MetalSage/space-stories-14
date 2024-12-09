@@ -53,3 +53,13 @@
       whitelist:
         tags:
           - NukeOpsUplink
+
+- type: listing
+  id: UplinkDogEars
+  name: uplink-dog-ears-name
+  description: uplink-dog-ears-desc
+  productEntity: ClothingHeadHatDogEars
+  cost:
+    Telecrystal: 26
+  categories:
+  - UplinkPointless

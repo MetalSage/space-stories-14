@@ -1,0 +1,57 @@
+- type: marking
+  id: TailFluffy
+  bodyPart: Tail
+  markingCategory: Tail
+  speciesRestriction: [Human]
+  coloring:
+    default:
+      type:
+        !type:CategoryColoring
+        category: Hair
+      fallbackTypes:
+      - !type:CategoryColoring
+        category: FacialHair
+      - !type:SkinColoring
+  sprites:
+  - sprite: Stories/Mobs/Customization/Vulpkanin/tail_markings.rsi
+    state: fluffy
+
+- type: marking
+  id: VulpTailAnimated
+  bodyPart: Tail
+  markingCategory: Tail
+  speciesRestriction: [Human]
+  coloring:
+    default:
+      type:
+        !type:CategoryColoring
+        category: Hair
+      fallbackTypes:
+      - !type:CategoryColoring
+        category: FacialHair
+      - !type:SkinColoring
+  sprites:
+    - sprite: Stories/Mobs/Customization/Vulpkanin/tail_markings.rsi
+      state: vulp_wag
+    - sprite: Stories/Mobs/Customization/Vulpkanin/tail_markings.rsi
+      state: vulp_wag-tip
+
+- type: marking
+  id: TailFoxAnimated
+  bodyPart: Tail
+  markingCategory: Tail
+  speciesRestriction: [Human]
+  coloring:
+    default:
+      type:
+        !type:CategoryColoring
+        category: Hair
+      fallbackTypes:
+      - !type:CategoryColoring
+        category: FacialHair
+      - !type:SkinColoring
+  sprites:
+    - sprite: Stories/Mobs/Customization/Vulpkanin/tail_markings.rsi
+      state: fox_wag
+    - sprite: Stories/Mobs/Customization/Vulpkanin/tail_markings.rsi
+      state: fox_wag-fade

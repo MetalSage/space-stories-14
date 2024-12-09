@@ -1,0 +1,112 @@
+- type: marking
+  id: VulpEar
+  bodyPart: HeadTop
+  markingCategory: HeadTop
+  speciesRestriction: [Human]
+  coloring:
+    default:
+      type:
+        !type:CategoryColoring
+        category: Hair
+      fallbackTypes:
+      - !type:SkinColoring
+    layers:
+      ears_cat_inner:
+        type:
+          !type:SimpleColoring
+          color: "#FFFFFF"
+  sprites:
+  - sprite: Stories/Mobs/Customization/Vulpkanin/ear_markings.rsi
+    state: vulp
+  - sprite: Stories/Mobs/Customization/Vulpkanin/ear_markings.rsi
+    state: vulp-inner
+
+- type: marking
+  id: VulpEarJackal
+  bodyPart: HeadTop
+  markingCategory: HeadTop
+  speciesRestriction: [Human]
+  coloring:
+    default:
+      type:
+        !type:CategoryColoring
+        category: Hair
+      fallbackTypes:
+      - !type:SkinColoring
+    layers:
+      ears_cat_inner:
+        type:
+          !type:SimpleColoring
+          color: "#FFFFFF"
+  sprites:
+  - sprite: Stories/Mobs/Customization/Vulpkanin/ear_markings.rsi
+    state: jackal
+  - sprite: Stories/Mobs/Customization/Vulpkanin/ear_markings.rsi
+    state: jackal-inner
+
+- type: marking
+  id: VulpEarFennec
+  bodyPart: HeadTop
+  markingCategory: HeadTop
+  speciesRestriction: [Human]
+  coloring:
+    default:
+      type:
+        !type:CategoryColoring
+        category: Hair
+      fallbackTypes:
+      - !type:SkinColoring
+    layers:
+      ears_cat_inner:
+        type:
+          !type:SimpleColoring
+          color: "#FFFFFF"
+  sprites:
+    - sprite: Stories/Mobs/Customization/Vulpkanin/ear_markings.rsi
+      state: fennec
+    - sprite: Stories/Mobs/Customization/Vulpkanin/ear_markings.rsi
+      state: fennec-inner
+
+- type: marking
+  id: VulpEarFox
+  bodyPart: HeadTop
+  markingCategory: HeadTop
+  speciesRestriction: [Human]
+  coloring:
+    default:
+      type:
+        !type:CategoryColoring
+        category: Hair
+      fallbackTypes:
+      - !type:SkinColoring
+    layers:
+      ears_cat_inner:
+        type:
+          !type:SimpleColoring
+          color: "#FFFFFF"
+  sprites:
+    - sprite: Stories/Mobs/Customization/Vulpkanin/ear_markings.rsi
+      state: fox
+
+- type: marking
+  id: VulpEarOtie
+  bodyPart: HeadTop
+  markingCategory: HeadTop
+  speciesRestriction: [Human]
+  coloring:
+    default:
+      type:
+        !type:CategoryColoring
+        category: Hair
+      fallbackTypes:
+      - !type:SkinColoring
+    layers:
+      ears_cat_inner:
+        type:
+          !type:SimpleColoring
+          color: "#FFFFFF"
+  sprites:
+    - sprite: Stories/Mobs/Customization/Vulpkanin/ear_markings.rsi
+      state: otie
+    - sprite: Stories/Mobs/Customization/Vulpkanin/ear_markings.rsi
+      state: otie-inner

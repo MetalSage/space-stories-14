@@ -38,3 +38,23 @@
   sprites:
   - sprite: Mobs/Customization/cat_parts.rsi
     state: tail_cat
+
+# Stories-CatTailAnimated-Start
+- type: marking
+  id: CatTailAnimated
+  bodyPart: Tail
+  markingCategory: Tail
+  speciesRestriction: [Human]
+  coloring:
+    default:
+      type:
+        !type:CategoryColoring
+        category: Hair
+      fallbackTypes:
+      - !type:CategoryColoring
+        category: FacialHair
+      - !type:SkinColoring
+  sprites:
+  - sprite: Mobs/Customization/cat_parts.rsi
+    state: tail_cat_wag
+# Stories-CatTailAnimated-End
