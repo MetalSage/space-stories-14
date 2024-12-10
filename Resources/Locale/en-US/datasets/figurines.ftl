@@ -1,6 +1,11 @@
 figurines-hop-1 = Papers, please.
 figurines-hop-2 = You are fired.
 
+figurines-boo-cat-1 = Boo! Are you scared? Don't be afraid, I'm a friend, I won't hurt you.
+figurines-boo-cat-2 = Come here, come to me, sit next to me, look into my eyes.
+figurines-boo-cat-3 = Do you see me? I can see you too.
+figurines-boo-cat-4 = Don't you want to? Why? Is something wrong?
+
 figurines-passenger-1 = Insuls please.
 figurines-passenger-2 = Call evac.
 

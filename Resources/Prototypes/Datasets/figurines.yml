@@ -5,6 +5,12 @@
     count: 2
 
 - type: localizedDataset
+  id: FigurinesBooCat
+  values:
+    prefix: figurines-boo-cat-
+    count: 4
+
+- type: localizedDataset
   id: FigurinesPassenger
   values:
     prefix: figurines-passenger-
