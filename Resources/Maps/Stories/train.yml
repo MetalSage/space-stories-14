@@ -89204,6 +89204,13 @@ entities:
     - type: Transform
       pos: -3.5,-54.5
       parent: 2
+- proto: SpawnPointJediNt
+  entities:
+  - uid: 13890
+    components:
+    - type: Transform
+      pos: -4.5,-358.5
+      parent: 2
 - proto: SpawnPointLatejoin
   entities:
   - uid: 13344

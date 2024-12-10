@@ -121145,6 +121145,13 @@ entities:
     - type: Transform
       pos: -18.5,-26.5
       parent: 2
+- proto: SpawnPointJediNt
+  entities:
+  - uid: 21452
+    components:
+    - type: Transform
+      pos: -8.5,29.5
+      parent: 2
 - proto: SpawnPointLatejoin
   entities:
   - uid: 5022
