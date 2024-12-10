@@ -101,7 +101,7 @@
       - ToyFigurineLawyer
       - ToyFigurineCargoTech
       - ToyFigurineSalvage
-      - ToyFigurineQuartermaster   
+      - ToyFigurineQuartermaster
       - ToyFigurineChiefEngineer
       - ToyFigurineAtmosTech
       - ToyFigurineEngineer
@@ -112,6 +112,7 @@
       - ToyFigurineParamedic
       - ToyFigurineMedicalDoctor
       - ToyFigurineHeadOfPersonnel
+      - ToyFigurineBooCat
       - ToyFigurineLibrarian
       - ToyFigurineChaplain
       - ToyFigurineChef

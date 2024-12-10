@@ -118,6 +118,9 @@
       - id: ToyFigurineRatKing
         prob: 0.30
         orGroup: SpacemenFig
+      - id: ToyFigurineBooCat
+        prob: 0.50
+        orGroup: SpacemenFig
       - id: ToyFigurineRatServant
         prob: 0.40
         orGroup: SpacemenFig

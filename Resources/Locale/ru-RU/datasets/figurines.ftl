@@ -1,5 +1,9 @@
 figurines-hop-1 = Бумаги, пожалуйста.
 figurines-hop-2 = Вы уволены.
+figurines-boo-cat-1 = Бу! Испугался? Не бойся, я друг, я тебя не обижу.
+figurines-boo-cat-2 = Иди сюда, иди ко мне, посмотри мне в глаза.
+figurines-boo-cat-3 = Ты видишь меня? Я тоже тебя вижу.
+figurines-boo-cat-4 = Ты не хочешь? Почему? Что-то не так?
 figurines-passenger-1 = Изоли пожалуйста.
 figurines-passenger-2 = Вызывайте эвак.
 figurines-greytider-1 = Чувак, эта вечеринка отстой. Я, бля, ненавижу этих людей.
