@@ -36,7 +36,7 @@
         vgroid: !type:DungeonSpawnGroup
           minimumDistance: 400
           maximumDistance: 450
-          nameDataset: names_borer
+          nameDataset: NamesBorer
           stationGrid: false
           addComponents:
           - type: Gravity
