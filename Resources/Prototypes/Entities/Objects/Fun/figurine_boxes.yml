@@ -118,7 +118,7 @@
       - id: ToyFigurineRatKing
         prob: 0.30
         orGroup: SpacemenFig
-      - id: ToyFigurineBooCat
+      - id: ToyFigurineBooCat # Stories
         prob: 0.50
         orGroup: SpacemenFig
       - id: ToyFigurineRatServant

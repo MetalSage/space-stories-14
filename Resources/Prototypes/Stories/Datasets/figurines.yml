@@ -1,0 +1,5 @@
+- type: localizedDataset
+  id: FigurinesBooCat
+  values:
+    prefix: figurines-boo-cat-
+    count: 4

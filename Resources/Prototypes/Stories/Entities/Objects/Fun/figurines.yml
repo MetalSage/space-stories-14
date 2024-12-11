@@ -17,6 +17,10 @@
     - Figurine
   - type: StealTarget
     stealGroup: Figurines
+  - type: UseDelay
+    delay: 10
+  - type: Speech
+    speechSounds: Pai # it just sounds better
 
 - type: entity
   parent: BaseFigurineStories
@@ -116,3 +120,14 @@
   components:
   - type: Sprite
     state: colossus
+
+- type: entity
+  parent: BaseFigurineStories
+  id: ToyFigurineBooCat
+  name: фигурка зловещего кота
+  description: Фигурка, изображающая зловещего кота, который обычно обитает в темноте технических туннелей.
+  components:
+  - type: Sprite
+    state: boo_cat
+  - type: SpeakOnUse
+    pack: FigurinesBooCat
