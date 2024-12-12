@@ -72,7 +72,7 @@
   components:
   - type: InstantAction
     useDelay: 1
-    icon: Stories/Actions/force.rsi/telekines.png
+    icon: _Stories/Actions/force.rsi/telekines.png
     itemIconStyle: NoItem
     event: !type:InstantForceUserActionEvent
       volume: 5

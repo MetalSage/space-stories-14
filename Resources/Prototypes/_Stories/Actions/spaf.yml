@@ -6,7 +6,7 @@
   components:
   - type: InstantAction
     useDelay: 15
-    icon: Stories/Actions/spaf.rsi/spaf_stealth.png
+    icon: _Stories/Actions/spaf.rsi/spaf_stealth.png
     event: !type:SpafStealthEvent
       cost: 30
       seconds: 5
@@ -19,7 +19,7 @@
   components:
   - type: InstantAction
     useDelay: 1
-    icon: Stories/Actions/spaf.rsi/spaf_light.png
+    icon: _Stories/Actions/spaf.rsi/spaf_light.png
     event: !type:ToggleActionEvent
 
 - type: entity
@@ -30,7 +30,7 @@
   components:
   - type: InstantAction
     useDelay: 15
-    icon: Stories/Actions/spaf.rsi/spaf_lube.png
+    icon: _Stories/Actions/spaf.rsi/spaf_lube.png
     event: !type:SpafSpillSolutionEvent
       cost: 30
       solution:
@@ -47,7 +47,7 @@
   components:
   - type: InstantAction
     useDelay: 15
-    icon: Stories/Actions/spaf.rsi/spaf_mine.png
+    icon: _Stories/Actions/spaf.rsi/spaf_mine.png
     event: !type:SpafCreateEntityEvent
       cost: 40
       proto: LandMineSpaf
@@ -60,7 +60,7 @@
   components:
   - type: InstantAction
     useDelay: 1
-    icon: Stories/Actions/spaf.rsi/spaf_food.png
+    icon: _Stories/Actions/spaf.rsi/spaf_food.png
     event: !type:FoodPopupEvent
 
 - type: entity
@@ -71,7 +71,7 @@
   components:
   - type: InstantAction
     useDelay: 5
-    icon: Stories/Actions/spaf.rsi/spaf_glue.png
+    icon: _Stories/Actions/spaf.rsi/spaf_glue.png
     event: !type:SpafSpillSolutionEvent
       cost: 10
       solution:
@@ -88,7 +88,7 @@
   components:
   - type: InstantAction
     useDelay: 60
-    icon: Stories/Actions/spaf.rsi/spaf_egg.png
+    icon: _Stories/Actions/spaf.rsi/spaf_egg.png
     event: !type:SpafCreateEntityEvent
       cost: 150
       proto: MobSpafEgg
@@ -101,7 +101,7 @@
   components:
   - type: InstantAction
     useDelay: 60
-    icon: Stories/Actions/spaf.rsi/spaf_evol.png
+    icon: _Stories/Actions/spaf.rsi/spaf_evol.png
     event: !type:SpafPolymorphEvent
       cost: 100
       protoId: MobSpaf
@@ -113,6 +113,6 @@
   categories: [ HideSpawnMenu ]
   components:
   - type: EntityTargetAction
-    icon: Stories/Actions/spaf.rsi/spaf_devour.png
-    iconOn: Stories/Actions/spaf.rsi/spaf_devour_on.png
+    icon: _Stories/Actions/spaf.rsi/spaf_devour.png
+    iconOn: _Stories/Actions/spaf.rsi/spaf_devour_on.png
     event: !type:DevourActionEvent

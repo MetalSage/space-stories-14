@@ -15,7 +15,7 @@ public sealed partial class ShadowlingRuleComponent : Component
     public Color AscendanceAnnouncementColor = Color.Red;
 
     [DataField]
-    public SoundSpecifier? AscendanceGlobalSound = new SoundPathSpecifier("/Audio/Stories/Misc/purple_code_remix.ogg");
+    public SoundSpecifier? AscendanceGlobalSound = new SoundPathSpecifier("/Audio/_Stories/Misc/purple_code_remix.ogg");
 
     [DataField]
     public TimeSpan RoundEndTime = TimeSpan.FromMinutes(4);
