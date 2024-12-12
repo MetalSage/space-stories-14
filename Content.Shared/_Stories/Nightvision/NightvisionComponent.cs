@@ -16,7 +16,7 @@ public sealed partial class NightvisionComponent : Component
     [DataField, AutoNetworkedField]
     public EntityUid? ToggleActionEntity;
     [DataField("toggleOnSound")]
-    public SoundSpecifier? ToggleOnSound = new SoundPathSpecifier("/Audio/Stories/Misc/night_vision.ogg");
+    public SoundSpecifier? ToggleOnSound = new SoundPathSpecifier("/Audio/_Stories/Misc/night_vision.ogg");
 }
 
 [RegisterComponent]

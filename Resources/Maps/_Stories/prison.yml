@@ -32999,7 +32999,7 @@ entities:
           maxDistance: 15
           pitch: 1
           volume: 2
-        path: /Audio/Stories/Misc/tear_of_veil.ogg
+        path: /Audio/_Stories/Misc/tear_of_veil.ogg
   - uid: 4271
     components:
     - type: Transform
