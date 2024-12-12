@@ -1,5 +1,5 @@
-- type: dataset
-  id: names_ai
+﻿- type: dataset
+  id: NamesAI
   values:
   - 16-20
   - 512k
