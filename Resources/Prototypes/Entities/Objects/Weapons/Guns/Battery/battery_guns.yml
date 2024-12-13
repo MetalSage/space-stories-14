@@ -725,7 +725,7 @@
   description: A one-of-a-kind prototype energy weapon that uses various shotgun configurations. It offers the possibility of both lethal and non-lethal shots, making it a versatile weapon.
   components:
   - type: Sprite
-    sprite: Stories/Objects/Weapons/Guns/Battery/energy_shotgun.rsi
+    sprite: _Stories/Objects/Weapons/Guns/Battery/energy_shotgun.rsi
     layers:
       - state: base
         map: ["enum.GunVisualLayers.Base"]
@@ -733,7 +733,7 @@
         map: ["enum.GunVisualLayers.MagUnshaded"]
         shader: unshaded
   - type: Clothing
-    sprite: Stories/Objects/Weapons/Guns/Battery/energy_shotgun.rsi
+    sprite: _Stories/Objects/Weapons/Guns/Battery/energy_shotgun.rsi
   - type: Gun
     fireRate: 2
     soundGunshot:
@@ -753,7 +753,7 @@
     size: Large
     shape:
     - 0,0,3,1
-    sprite: Stories/Objects/Weapons/Guns/Battery/inhands_64x.rsi
+    sprite: _Stories/Objects/Weapons/Guns/Battery/inhands_64x.rsi
     heldPrefix: energy
   - type: Tag
     tags:

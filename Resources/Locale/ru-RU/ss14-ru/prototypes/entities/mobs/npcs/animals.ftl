@@ -152,3 +152,7 @@ ent-MobDionaNymph = нимфа дионы
 ent-MobDionaNymphAccent = { ent-MobDionaNymph }
     .suffix = Акцент
     .desc = { ent-MobDionaNymph.desc }
+ent-MobReindeerBuck = северный олень
+    .desc = Думаете, он может тянуть сани?
+ent-MobReindeerDoe = олени
+    .desc = { ent-MobReindeerBuck.desc }

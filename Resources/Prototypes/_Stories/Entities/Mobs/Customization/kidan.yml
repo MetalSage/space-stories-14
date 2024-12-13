@@ -1,0 +1,152 @@
+- type: marking
+  id: KidanHeadNormal
+  bodyPart: HeadTop
+  markingCategory: HeadTop
+  speciesRestriction: [Kidan]
+  sprites:
+    - sprite: _Stories/Mobs/Customization/Kidan/head_accessories.rsi
+      state: normal_s
+
+- type: marking
+  id: KidanHeadAlert
+  bodyPart: HeadTop
+  markingCategory: HeadTop
+  speciesRestriction: [Kidan]
+  sprites:
+    - sprite: _Stories/Mobs/Customization/Kidan/head_accessories.rsi
+      state: alert_s
+
+- type: marking
+  id: KidanHeadCrescent
+  bodyPart: HeadTop
+  markingCategory: HeadTop
+  speciesRestriction: [Kidan]
+  sprites:
+    - sprite: _Stories/Mobs/Customization/Kidan/head_accessories.rsi
+      state: crescent_s
+
+- type: marking
+  id: KidanHeadCurious
+  bodyPart: HeadTop
+  markingCategory: HeadTop
+  speciesRestriction: [Kidan]
+  sprites:
+    - sprite: _Stories/Mobs/Customization/Kidan/head_accessories.rsi
+      state: curious_s
+
+- type: marking
+  id: KidanHeadLong
+  bodyPart: HeadTop
+  markingCategory: HeadTop
+  speciesRestriction: [Kidan]
+  sprites:
+    - sprite: _Stories/Mobs/Customization/Kidan/head_accessories.rsi
+      state: long_s
+
+- type: marking
+  id: KidanHeadMantieLong
+  bodyPart: HeadTop
+  markingCategory: HeadTop
+  speciesRestriction: [Kidan]
+  sprites:
+    - sprite: _Stories/Mobs/Customization/Kidan/head_accessories.rsi
+      state: mantie_long
+
+- type: marking
+  id: KidanHeadMopey
+  bodyPart: HeadTop
+  markingCategory: HeadTop
+  speciesRestriction: [Kidan]
+  sprites:
+    - sprite: _Stories/Mobs/Customization/Kidan/head_accessories.rsi
+      state: mopey_s
+
+- type: marking
+  id: KidanHeadMoth
+  bodyPart: HeadTop
+  markingCategory: HeadTop
+  speciesRestriction: [Kidan]
+  sprites:
+    - sprite: _Stories/Mobs/Customization/Kidan/head_accessories.rsi
+      state: moth_s
+
+- type: marking
+  id: KidanHeadPerky
+  bodyPart: HeadTop
+  markingCategory: HeadTop
+  speciesRestriction: [Kidan]
+  sprites:
+    - sprite: _Stories/Mobs/Customization/Kidan/head_accessories.rsi
+      state: perky_s
+
+- type: marking
+  id: KidanHeadMarkingOutline
+  bodyPart: Head
+  markingCategory: Head
+  speciesRestriction: [Kidan]
+  sprites:
+    - sprite: _Stories/Mobs/Customization/Kidan/head_markings.rsi
+      state: outline_s
+
+- type: marking
+  id: KidanHairBrokenPullHorns
+  bodyPart: Hair
+  markingCategory: Hair
+  speciesRestriction: [Kidan]
+  sprites:
+    - sprite: _Stories/Mobs/Customization/Kidan/hair.rsi
+      state: broken_pull_horns
+
+- type: marking
+  id: KidanHairBullHorns
+  bodyPart: Hair
+  markingCategory: Hair
+  speciesRestriction: [Kidan]
+  sprites:
+    - sprite: _Stories/Mobs/Customization/Kidan/hair.rsi
+      state: bull_horns_s
+
+- type: marking
+  id: KidanHairCurledHorns
+  bodyPart: Hair
+  markingCategory: Hair
+  speciesRestriction: [Kidan]
+  sprites:
+    - sprite: _Stories/Mobs/Customization/Kidan/hair.rsi
+      state: curled_horns_s
+
+- type: marking
+  id: KidanHairHawkHorns
+  bodyPart: Hair
+  markingCategory: Hair
+  speciesRestriction: [Kidan]
+  sprites:
+    - sprite: _Stories/Mobs/Customization/Kidan/hair.rsi
+      state: hawk_horns_s
+
+- type: marking
+  id: KidanHairHollowHorns
+  bodyPart: Hair
+  markingCategory: Hair
+  speciesRestriction: [Kidan]
+  sprites:
+    - sprite: _Stories/Mobs/Customization/Kidan/hair.rsi
+      state: hollow_horns_s
+
+- type: marking
+  id: KidanHairTallHorns
+  bodyPart: Hair
+  markingCategory: Hair
+  speciesRestriction: [Kidan]
+  sprites:
+    - sprite: _Stories/Mobs/Customization/Kidan/hair.rsi
+      state: tall_horns_s
+
+- type: marking
+  id: KidanHairWideHorns
+  bodyPart: Hair
+  markingCategory: Hair
+  speciesRestriction: [Kidan]
+  sprites:
+    - sprite: _Stories/Mobs/Customization/Kidan/hair.rsi
+      state: wide_horns_s

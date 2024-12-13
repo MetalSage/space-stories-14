@@ -2,6 +2,7 @@ using System.Diagnostics.CodeAnalysis;
 using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
+using Content.Server._Corvax.Sponsors;
 using Content.Server.Database;
 using Content.Shared.CCVar;
 using Content.Shared.Preferences;
@@ -26,6 +27,7 @@ namespace Content.Server.Preferences.Managers
         [Dependency] private readonly IDependencyCollection _dependencies = default!;
         [Dependency] private readonly ILogManager _log = default!;
         [Dependency] private readonly UserDbDataManager _userDb = default!;
+        [Dependency] private readonly SponsorsManager _sponsors = default!;
 
         // Cache player prefs on the server so we don't need as much async hell related to them.
         private readonly Dictionary<NetUserId, PlayerPrefData> _cachedPlayerPrefs =
@@ -33,7 +35,7 @@ namespace Content.Server.Preferences.Managers
 
         private ISawmill _sawmill = default!;
 
-        private int MaxCharacterSlots => _cfg.GetCVar(CCVars.GameMaxCharacterSlots);
+        // private int MaxCharacterSlots => _cfg.GetCVar(CCVars.GameMaxCharacterSlots);
 
         public void Init()
         {
@@ -55,7 +57,7 @@ namespace Content.Server.Preferences.Managers
                 return;
             }
 
-            if (index < 0 || index >= MaxCharacterSlots)
+            if (index < 0 || index >= GetMaxUserCharacterSlots(userId)) // Corvax-Sponsors
             {
                 return;
             }
@@ -95,7 +97,7 @@ namespace Content.Server.Preferences.Managers
                 return;
             }
 
-            if (slot < 0 || slot >= MaxCharacterSlots)
+            if (slot < 0 || slot >= GetMaxUserCharacterSlots(userId)) // Corvax-Sponsors
                 return;
 
             var curPrefs = prefsData.Prefs!;
@@ -125,7 +127,7 @@ namespace Content.Server.Preferences.Managers
                 return;
             }
 
-            if (slot < 0 || slot >= MaxCharacterSlots)
+            if (slot < 0 || slot >= GetMaxUserCharacterSlots(userId)) // Corvax-Sponsors
             {
                 return;
             }
@@ -213,7 +215,7 @@ namespace Content.Server.Preferences.Managers
             msg.Preferences = prefsData.Prefs;
             msg.Settings = new GameSettings
             {
-                MaxCharacterSlots = MaxCharacterSlots
+                MaxCharacterSlots = GetMaxUserCharacterSlots(session.UserId),  // Corvax-Sponsors
             };
             _netManager.ServerSendMessage(msg, session.Channel);
         }
@@ -228,6 +230,14 @@ namespace Content.Server.Preferences.Managers
             return _cachedPlayerPrefs.ContainsKey(session.UserId);
         }
 
+        // Corvax-Sponsors-Start: Calculate total available users slots with sponsors
+        private int GetMaxUserCharacterSlots(NetUserId userId)
+        {
+            var maxSlots = _cfg.GetCVar(CCVars.GameMaxCharacterSlots);
+            var extraSlots = _sponsors.TryGetInfo(userId, out var sponsor) ? sponsor.ExtraSlots : 0;
+            return maxSlots + extraSlots;
+        }
+        // Corvax-Sponsors-End
 
         /// <summary>
         /// Tries to get the preferences from the cache

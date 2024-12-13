@@ -1,0 +1,63 @@
+- type: entity
+  parent: ClothingOuterStorageBase
+  id: ClothingOuterCoatJedi
+  name: накидка джедая
+  description: Длинный вид одежды, который свободно лежит на плечах, охватывая шею.
+  components:
+  - type: Tag
+    tags:
+      - ForceRecallEquipment
+  - type: ToggleableClothing
+    clothingPrototype: ClothingHeadHatHoodJedihood
+  - type: TemperatureProtection
+    heatingCoefficient: 0.005
+    coolingCoefficient: 0.005
+  - type: ClothingSpeedModifier
+    walkModifier: 1
+    sprintModifier: 1.1
+  - type: Sprite
+    sprite: _Stories/Clothing/OuterClothing/Coats/jedi.rsi
+  - type: Clothing
+    sprite: _Stories/Clothing/OuterClothing/Coats/jedi.rsi
+  - type: Armor
+    modifiers:
+      coefficients:
+        Blunt: 0.90
+        Slash: 0.80
+        Piercing: 0.80
+        Heat: 0.90
+
+- type: entity
+  parent: ClothingOuterStorageBase
+  id: PRISONClothingOuterCoatHeadOfPrison
+  name: пальто начальника тюрьмы
+  description: Прочное холщовое пальто, разработанное и созданное компанией TX Fabrication Corp. Его ношение заставляет сочувствовать судьбе тибетцев.
+  components:
+  - type: Sprite
+    sprite: _Stories/Clothing/OuterClothing/Coats/hosp.rsi
+  - type: Clothing
+    sprite: _Stories/Clothing/OuterClothing/Coats/hosp.rsi
+  - type: Armor
+    modifiers:
+      coefficients:
+        Blunt: 0.70
+        Slash: 0.70
+        Piercing: 0.70
+        Heat: 0.80
+
+- type: entity
+  parent: [ClothingOuterStorageBase, AllowSuitStorageClothing, ClothingOuterArmorBasic]
+  id: ClothingOuterCoatDetectiveGrey
+  name: серый тренч детектива
+  description: Мультифункциональный тренчкот XVIII века. Носящий его - серьёзный тип.
+  components:
+  - type: Sprite
+    sprite: _Stories/Clothing/OuterClothing/Coats/detective.rsi
+  - type: Clothing
+    sprite: _Stories/Clothing/OuterClothing/Coats/detective.rsi
+  - type: StorageFill
+    contents:
+    - id: SmokingPipeFilledTobacco
+    - id: FlippoEngravedLighter
+  - type: ExplosionResistance
+    damageCoefficient: 1 #its a coat. it doesnt do shit

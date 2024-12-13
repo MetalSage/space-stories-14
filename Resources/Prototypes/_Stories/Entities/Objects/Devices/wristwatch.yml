@@ -1,0 +1,37 @@
+- type: entity
+  id: StoriesWristwatchGold
+  parent: Wristwatch
+  name: золотые часы
+  description: Модные часы, стоимостью больше, чем ваша почка.
+  components:
+  - type: Sprite
+    sprite: _Stories/Objects/Devices/goldwatch.rsi
+    layers:
+    - state: wristwatch
+    - map: [ "enum.ClockVisualLayers.MinuteHand"]
+    - map: [ "enum.ClockVisualLayers.HourHand"]
+  - type: Item
+    sprite: _Stories/Objects/Devices/goldwatch.rsi
+  - type: Clothing
+    sprite: Objects/Devices/goldwatch.rsi
+  - type: StaticPrice
+    price: 500 #if you ever increase the price of kidneys, increase this too.
+
+- type: entity
+  id: WristwatchSilver
+  parent: Wristwatch
+  name: серебряные часы
+  description: Модные часы, стоимостью больше, чем ваша почка.
+  components:
+  - type: Sprite
+    sprite: _Stories/Objects/Devices/silverwatch.rsi
+    layers:
+    - state: wristwatch
+    - map: [ "enum.ClockVisualLayers.MinuteHand"]
+    - map: [ "enum.ClockVisualLayers.HourHand"]
+  - type: Item
+    sprite: _Stories/Objects/Devices/silverwatch.rsi
+  - type: Clothing
+    sprite: Objects/Devices/goldwatch.rsi # No...
+  - type: StaticPrice
+    price: 400 #if you ever increase the price of kidneys, increase this too.

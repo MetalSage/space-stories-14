@@ -13,7 +13,7 @@ using Robust.Shared.Network;
 using Robust.Shared.Player;
 using Robust.Shared.Prototypes;
 using Robust.Shared.Utility;
-using Content.Client.Corvax.Sponsors;
+using Content.Client._Corvax.Sponsors;
 
 namespace Content.Client.Players.PlayTimeTracking;
 

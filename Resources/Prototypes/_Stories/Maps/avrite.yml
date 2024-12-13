@@ -1,0 +1,69 @@
+- type: gameMap
+  id: CorvaxAvrite
+  mapName: '[KT] Avrite Station'
+  mapPath: /Maps/_Stories/corvax_avrite.yml
+  maxRandomOffset: 0
+  minPlayers: 55
+  stations:
+    Avrit:
+      stationProto: StandardNanotrasenStation
+      components:
+        - type: StationPrison
+          gameMap: StoriesPrison
+        - type: StationNameSetup
+          mapNameTemplate: '{0} Avrite {1}'
+          nameGenerator:
+            !type:NanotrasenNameGenerator
+            prefixCreator: 'SY'
+        - type: StationEmergencyShuttle
+          emergencyShuttlePath: /Maps/_Stories/Shuttles/emergency_corvaxavrit.yml
+        - type: StationJobs
+          availableJobs:
+            # service
+            HeadOfPersonnel: [ 1, 1 ]
+            Passenger: [ -1, -1 ]
+            ServiceWorker: [ 3, 4 ]
+            Bartender: [ 2, 2 ]
+            Botanist: [ 3, 4 ]
+            Chef: [ 2, 2 ]
+            Clown: [ 1, 1 ]
+            Janitor: [ 3, 3 ]
+            Mime: [ 1, 1 ]
+            Chaplain: [ 1, 1 ]
+            Librarian: [ 1, 1 ]
+            Musician: [ 1, 1 ]
+            Reporter: [ 1, 2 ]
+            Zookeeper: [ 1, 1 ]
+            # command
+            Captain: [ 1, 1 ]
+            IAA: [ 1, 1 ]
+            # engineering
+            ChiefEngineer: [ 1, 1 ]
+            AtmosphericTechnician: [ 3, 3 ]
+            StationEngineer: [ 4, 5 ]
+            TechnicalAssistant: [ 2, 3 ]
+            # medical
+            ChiefMedicalOfficer: [ 1, 1 ]
+            Paramedic: [ 1, 1 ]
+            Chemist: [ 3, 3 ]
+            MedicalDoctor: [ 4, 5 ]
+            MedicalIntern: [ 3, 4 ]
+            Psychologist: [ 1, 1 ]
+            # science
+            ResearchDirector: [ 1, 1 ]
+            Scientist: [ 5, 6 ]
+            ResearchAssistant: [ 3, 4 ]
+            Borg: [ 2, 3 ]
+            # security
+            HeadOfSecurity: [ 1, 1 ]
+            Warden: [ 1, 1 ]
+            Detective: [ 1, 1 ]
+            SecurityOfficer: [ 7, 8 ]
+            SecurityCadet: [ 4, 6 ]
+            # Pilot: [ 1, 1]
+            # cargo
+            Quartermaster: [ 1, 1 ]
+            SalvageSpecialist: [ 4, 4 ]
+            CargoTechnician: [ 4, 5 ]
+            #stories content
+            JediNt: [ 1, 1 ]
