@@ -1,6 +1,7 @@
 - type: gameMapPool
   id: StoriesDefaultMapPool
   maps:
+  - StoriesAmber
   - StoriesBarratry
   - StoriesBagel
   - StoriesBox
