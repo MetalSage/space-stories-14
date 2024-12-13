@@ -575,6 +575,10 @@
     accent-german-words-61-3: accent-german-words-replace-61
     accent-german-words-61-4: accent-german-words-replace-61
     accent-german-words-62: accent-german-words-replace-62
+    accent-german-words-63: accent-german-words-replace-63
+    accent-german-words-63-2: accent-german-words-replace-63
+    accent-german-words-63-3: accent-german-words-replace-63
+    accent-german-words-64: accent-german-words-replace-64
 
 - type: accent
   id: russian
@@ -582,11 +586,22 @@
     accent-russian-words-1: accent-russian-words-replace-1
     accent-russian-words-2: accent-russian-words-replace-2
     accent-russian-words-3: accent-russian-words-replace-3
-    accent-russian-words-3-2: accent-russian-words-replace-3
-    accent-russian-words-3-3: accent-russian-words-replace-3
     accent-russian-words-4: accent-russian-words-replace-4
     accent-russian-words-5: accent-russian-words-replace-5
+    accent-russian-words-5-2: accent-russian-words-replace-5
     accent-russian-words-6: accent-russian-words-replace-6
+    accent-russian-words-6-2: accent-russian-words-replace-6
+    accent-russian-words-6-3: accent-russian-words-replace-6
+    accent-russian-words-7: accent-russian-words-replace-7
+    accent-russian-words-8: accent-russian-words-replace-8
+    accent-russian-words-8-2: accent-russian-words-replace-8
+    accent-russian-words-9: accent-russian-words-replace-9
+    accent-russian-words-10: accent-russian-words-replace-10
+    accent-russian-words-11: accent-russian-words-replace-11
+    accent-russian-words-12: accent-russian-words-replace-12
+    accent-russian-words-13: accent-russian-words-replace-13
+    accent-russian-words-14: accent-russian-words-replace-14
+    accent-russian-words-15: accent-russian-words-replace-15
 
 - type: accent
   id: skeleton

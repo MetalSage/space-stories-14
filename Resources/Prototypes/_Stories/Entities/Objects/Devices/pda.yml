@@ -1,0 +1,91 @@
+- type: entity
+  parent: BaseSecurityPDA
+  id: JediNtPDA
+  name: КПК стража клинка
+  description: Красный значит мощный. На нём имеются царапины от светового меча.
+  components:
+  - type: Tag
+    tags:
+      - ForceRecallEquipment
+  - type: Pda
+    id: JediNtIDCard
+    state: pda-ert
+  - type: PdaBorderColor
+    borderColor: "#A32D26"
+    accentHColor: "#447987"
+    accentVColor: "#447987"
+  - type: Icon
+    state: pda-ert
+
+- type: entity
+  parent: BaseSecurityPDA
+  id: IAAPDA
+  name: КПК агента внутрених дел
+  description: Корпорация и прибыль - лучшие друзья.
+  components:
+    - type: Pda
+      id: IAAIDCard
+      state: pda-lawyer
+      penSlot:
+        startingItem: PenCentcom
+        priority: -1
+        whitelist:
+          tags:
+          - Write
+    - type: PdaBorderColor
+      borderColor: "#6f6192"
+    - type: Icon
+      state: pda-lawyer
+
+- type: entity
+  parent: BasePDA
+  id: PRISONPDAHeadOfPrison
+  name: КПК начальника тюрьмы
+  description: Этот КПК - ваш путь к свободе.
+  components:
+  - type: Sprite
+    sprite: _Stories/Objects/Devices/pda.rsi
+  - type: Pda
+    id: PRISONIDCardHeadOfPrison
+    state: pda-hosp
+  - type: Icon
+    sprite: _Stories/Objects/Devices/pda.rsi
+    state: pda-hosp
+
+- type: entity
+  parent: PRISONPDAHeadOfPrison
+  id: PRISONPDAOfficer
+  name: КПК офицера тюрьмы
+  description: Этот КПК - ваш путь к свободе.
+  components:
+  - type: Pda
+    id: PRISONIDCardOfficer
+    state: pda-spofficer
+  - type: Icon
+    state: pda-spofficer
+
+- type: entity
+  parent: PRISONPDAHeadOfPrison
+  id: PRISONPDAEngineer
+  name: КПК инженера тюрьмы
+  description: Этот КПК - ваш путь к свободе.
+  components:
+  - type: Pda
+    id: PRISONIDCardEngineer
+    state: pda-spengineer
+  - type: Icon
+    state: pda-spengineer
+
+- type: entity
+  parent:
+    - PRISONPDAHeadOfPrison
+    - BaseMedicalPDA
+  id: PRISONPDAMedic
+  name: КПК врача тюрьмы
+  description: Этот КПК - ваш путь к свободе.
+  components:
+  - type: Pda
+    id: PRISONIDCardMedic
+    state: pda-spmedic
+  - type: Icon
+    state: pda-spmedic

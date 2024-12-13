@@ -1,0 +1,143 @@
+- type: alert
+  id: ForceVolume
+  icons:
+  - sprite: /Textures/_Stories/Interface/Alerts/force_volume.rsi
+    state: 0
+  - sprite: /Textures/_Stories/Interface/Alerts/force_volume.rsi
+    state: 1
+  - sprite: /Textures/_Stories/Interface/Alerts/force_volume.rsi
+    state: 2
+  - sprite: /Textures/_Stories/Interface/Alerts/force_volume.rsi
+    state: 3
+  - sprite: /Textures/_Stories/Interface/Alerts/force_volume.rsi
+    state: 4
+  - sprite: /Textures/_Stories/Interface/Alerts/force_volume.rsi
+    state: 5
+  - sprite: /Textures/_Stories/Interface/Alerts/force_volume.rsi
+    state: 6
+  - sprite: /Textures/_Stories/Interface/Alerts/force_volume.rsi
+    state: 7
+  - sprite: /Textures/_Stories/Interface/Alerts/force_volume.rsi
+    state: 8
+  - sprite: /Textures/_Stories/Interface/Alerts/force_volume.rsi
+    state: 9
+  - sprite: /Textures/_Stories/Interface/Alerts/force_volume.rsi
+    state: 10
+  - sprite: /Textures/_Stories/Interface/Alerts/force_volume.rsi
+    state: 11
+  - sprite: /Textures/_Stories/Interface/Alerts/force_volume.rsi
+    state: 12
+  - sprite: /Textures/_Stories/Interface/Alerts/force_volume.rsi
+    state: 13
+  - sprite: /Textures/_Stories/Interface/Alerts/force_volume.rsi
+    state: 14
+  - sprite: /Textures/_Stories/Interface/Alerts/force_volume.rsi
+    state: 15
+  - sprite: /Textures/_Stories/Interface/Alerts/force_volume.rsi
+    state: 16
+  - sprite: /Textures/_Stories/Interface/Alerts/force_volume.rsi
+    state: 17
+  - sprite: /Textures/_Stories/Interface/Alerts/force_volume.rsi
+    state: 18
+  - sprite: /Textures/_Stories/Interface/Alerts/force_volume.rsi
+    state: 19
+  name: Сила
+  description: Когда количество имеет значение.
+  minSeverity: 0
+  maxSeverity: 19
+
+- type: alert
+  id: SithForceVolume
+  icons:
+  - sprite: /Textures/_Stories/Interface/Alerts/sith_volume.rsi
+    state: 0
+  - sprite: /Textures/_Stories/Interface/Alerts/sith_volume.rsi
+    state: 1
+  - sprite: /Textures/_Stories/Interface/Alerts/sith_volume.rsi
+    state: 2
+  - sprite: /Textures/_Stories/Interface/Alerts/sith_volume.rsi
+    state: 3
+  - sprite: /Textures/_Stories/Interface/Alerts/sith_volume.rsi
+    state: 4
+  - sprite: /Textures/_Stories/Interface/Alerts/sith_volume.rsi
+    state: 5
+  - sprite: /Textures/_Stories/Interface/Alerts/sith_volume.rsi
+    state: 6
+  - sprite: /Textures/_Stories/Interface/Alerts/sith_volume.rsi
+    state: 7
+  - sprite: /Textures/_Stories/Interface/Alerts/sith_volume.rsi
+    state: 8
+  - sprite: /Textures/_Stories/Interface/Alerts/sith_volume.rsi
+    state: 9
+  - sprite: /Textures/_Stories/Interface/Alerts/sith_volume.rsi
+    state: 10
+  - sprite: /Textures/_Stories/Interface/Alerts/sith_volume.rsi
+    state: 11
+  - sprite: /Textures/_Stories/Interface/Alerts/sith_volume.rsi
+    state: 12
+  - sprite: /Textures/_Stories/Interface/Alerts/sith_volume.rsi
+    state: 13
+  - sprite: /Textures/_Stories/Interface/Alerts/sith_volume.rsi
+    state: 14
+  - sprite: /Textures/_Stories/Interface/Alerts/sith_volume.rsi
+    state: 15
+  - sprite: /Textures/_Stories/Interface/Alerts/sith_volume.rsi
+    state: 16
+  - sprite: /Textures/_Stories/Interface/Alerts/sith_volume.rsi
+    state: 17
+  - sprite: /Textures/_Stories/Interface/Alerts/sith_volume.rsi
+    state: 18
+  - sprite: /Textures/_Stories/Interface/Alerts/sith_volume.rsi
+    state: 19
+  name: Сила Инквизитора
+  description: Дизайн придает сил.
+  minSeverity: 0
+  maxSeverity: 19
+
+- type: alert
+  id: JediNtForceVolume
+  icons:
+  - sprite: /Textures/_Stories/Interface/Alerts/jedint_volume.rsi
+    state: 0
+  - sprite: /Textures/_Stories/Interface/Alerts/jedint_volume.rsi
+    state: 1
+  - sprite: /Textures/_Stories/Interface/Alerts/jedint_volume.rsi
+    state: 2
+  - sprite: /Textures/_Stories/Interface/Alerts/jedint_volume.rsi
+    state: 3
+  - sprite: /Textures/_Stories/Interface/Alerts/jedint_volume.rsi
+    state: 4
+  - sprite: /Textures/_Stories/Interface/Alerts/jedint_volume.rsi
+    state: 5
+  - sprite: /Textures/_Stories/Interface/Alerts/jedint_volume.rsi
+    state: 6
+  - sprite: /Textures/_Stories/Interface/Alerts/jedint_volume.rsi
+    state: 7
+  - sprite: /Textures/_Stories/Interface/Alerts/jedint_volume.rsi
+    state: 8
+  - sprite: /Textures/_Stories/Interface/Alerts/jedint_volume.rsi
+    state: 9
+  - sprite: /Textures/_Stories/Interface/Alerts/jedint_volume.rsi
+    state: 10
+  - sprite: /Textures/_Stories/Interface/Alerts/jedint_volume.rsi
+    state: 11
+  - sprite: /Textures/_Stories/Interface/Alerts/jedint_volume.rsi
+    state: 12
+  - sprite: /Textures/_Stories/Interface/Alerts/jedint_volume.rsi
+    state: 13
+  - sprite: /Textures/_Stories/Interface/Alerts/jedint_volume.rsi
+    state: 14
+  - sprite: /Textures/_Stories/Interface/Alerts/jedint_volume.rsi
+    state: 15
+  - sprite: /Textures/_Stories/Interface/Alerts/jedint_volume.rsi
+    state: 16
+  - sprite: /Textures/_Stories/Interface/Alerts/jedint_volume.rsi
+    state: 17
+  - sprite: /Textures/_Stories/Interface/Alerts/jedint_volume.rsi
+    state: 18
+  - sprite: /Textures/_Stories/Interface/Alerts/jedint_volume.rsi
+    state: 19
+  name: Сила Стража Клинка
+  description: В вашем стиле. Точен на 20%.
+  minSeverity: 0
+  maxSeverity: 19

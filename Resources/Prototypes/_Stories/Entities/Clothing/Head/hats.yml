@@ -1,0 +1,26 @@
+- type: entity
+  parent: ClothingHeadBase
+  id: ClothingHeadHatFedoraSpecialGrey
+  name: серая федора
+  description: Это серая фетровая шляпа.
+  components:
+  - type: Sprite
+    sprite: _Stories/Clothing/Head/Hats/greyfedora.rsi
+  - type: Clothing
+    sprite: _Stories/Clothing/Head/Hats/greyfedora.rsi
+  - type: Tag
+    tags:
+    - ClothMade
+    - HamsterWearable
+    - WhitelistChameleon
+
+- type: entity
+  parent: ClothingHeadBase
+  id: ClothingHeadHatCapHoS
+  name: фуражка главы службы безопасности
+  description: Прочная форменная фуражка начальника службы безопасности. Напоминает рядовым офицерам, кто здесь главный.
+  components:
+  - type: Sprite
+    sprite: Stories/Clothing/Head/Hats/hoshat.rsi
+  - type: Clothing
+    sprite: Stories/Clothing/Head/Hats/hoshat.rsi

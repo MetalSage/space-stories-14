@@ -1,4 +1,4 @@
-﻿- type: dataset
+- type: dataset
   id: RatKingCommandStay
   values:
     - "Сидеть!"
@@ -24,3 +24,4 @@
   values:
     - "Вольно!"
     - "Врассыпную!"
+    

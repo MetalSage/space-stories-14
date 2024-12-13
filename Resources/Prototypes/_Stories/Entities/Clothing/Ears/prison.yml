@@ -1,0 +1,66 @@
+- type: entity
+  parent: ClothingHeadset
+  id: PRISONClothingHeadset
+  name: гарнитура тюрьмы
+  description: Гарнитура, используемая сотрудниками тюрьмы.
+  components:
+    - type: ContainerFill
+      containers:
+        key_slots:
+          - PRISONEncryptionKey
+          - EncryptionKeyCommon
+          - EncryptionKeySecurity
+    - type: Sprite
+      sprite: _Stories/Clothing/Ears/Headsets/prison.rsi
+    - type: Clothing
+      sprite: _Stories/Clothing/Ears/Headsets/prison.rsi
+
+- type: entity
+  parent: ClothingHeadset
+  id: PRISONClothingHeadsetMedic
+  name: гарнитура врача тюрьмы
+  description: Гарнитура, используемая сотрудниками тюрьмы.
+  components:
+    - type: ContainerFill
+      containers:
+        key_slots:
+          - PRISONEncryptionKey
+          - EncryptionKeyCommon
+    - type: Sprite
+      sprite: _Stories/Clothing/Ears/Headsets/prison.rsi
+    - type: Clothing
+      sprite: _Stories/Clothing/Ears/Headsets/prison.rsi
+
+- type: entity
+  parent: ClothingHeadset
+  id: PRISONClothingHeadsetEngi
+  name: гарнитура инженера тюрьмы
+  description: Гарнитура, используемая сотрудниками тюрьмы.
+  components:
+    - type: ContainerFill
+      containers:
+        key_slots:
+          - PRISONEncryptionKey
+          - EncryptionKeyCommon
+    - type: Sprite
+      sprite: _Stories/Clothing/Ears/Headsets/prison.rsi
+    - type: Clothing
+      sprite: _Stories/Clothing/Ears/Headsets/prison.rsi
+
+- type: entity
+  parent: ClothingHeadsetAlt
+  id: PRISONClothingHeadsetAlt
+  name: полноразмерная гарнитура начальника тюрьмы
+  description: Нужна, чтобы сообщить капитану о побеге клоуна.
+  components:
+    - type: ContainerFill
+      containers:
+        key_slots:
+          - PRISONEncryptionKey
+          - EncryptionKeyCommon
+          - EncryptionKeySecurity
+          - EncryptionKeyCommand
+    - type: Sprite
+      sprite: _Stories/Clothing/Ears/Headsets/prison.rsi
+    - type: Clothing
+      sprite: _Stories/Clothing/Ears/Headsets/prison.rsi

@@ -1,0 +1,44 @@
+- type: entity
+  parent: ClothingBackpackSatchel
+  id: ClothingBackpackHandbagAdidos
+  name: поясная сумка
+  description: Модная сумка.
+  components:
+  - type: Sprite
+    sprite: _Stories/Clothing/Back/Handbags/handbag_adidos.rsi
+
+- type: entity
+  parent: ClothingBackpackSatchel
+  id: ClothingBackpackHandbagBluesky
+  name: барсетка
+  description: Модная барсетка.
+  components:
+  - type: Sprite
+    sprite: _Stories/Clothing/Back/Handbags/handbag_bluesky.rsi
+
+- type: entity
+  parent: ClothingBackpackSatchel
+  id: ClothingBackpackHandbagEight
+  name: поясная сумка
+  description: Модная сумка.
+  components:
+  - type: Sprite
+    sprite: _Stories/Clothing/Back/Handbags/handbag_eight.rsi
+
+- type: entity
+  parent: ClothingBackpackSatchel
+  id: ClothingBackpackHandbagGachi
+  name: поясная сумка
+  description: Модная сумка.
+  components:
+  - type: Sprite
+    sprite: _Stories/Clothing/Back/Handbags/handbag_gachi.rsi
+
+- type: entity
+  parent: ClothingBackpackSatchel
+  id: ClothingBackpackHandbagRl
+  name: барсетка
+  description: Модная барсетка.
+  components:
+  - type: Sprite
+    sprite: _Stories/Clothing/Back/Handbags/handbag_rl.rsi

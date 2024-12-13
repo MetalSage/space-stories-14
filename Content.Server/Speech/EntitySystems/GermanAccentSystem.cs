@@ -64,6 +64,12 @@ public sealed class GermanAccentSystem : EntitySystem
                         'o' => 'ö',
                         'U' => 'Ü',
                         'u' => 'ü',
+                        'А' => 'Ä', // Hardcoded into Russian.
+                        'а' => 'ä', // Hardcoded into Russian.
+                        'О' => 'Ö', // Hardcoded into Russian.
+                        'о' => 'ö', // Hardcoded into Russian.
+                        'У' => 'Ü', // Hardcoded into Russian.
+                        'у' => 'ü', // Hardcoded into Russian.
                         _ => msgBuilder[i]
                     };
                     umlautCooldown = 4;

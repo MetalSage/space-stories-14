@@ -1,0 +1,74 @@
+﻿- type: entity
+  parent: ClothingShoesBaseButcherable
+  id: ClothingShoesSith
+  name: ботинки инквизитора
+  description: Обычные черные ботинки.
+  components:
+  - type: NoSlip
+  - type: Tag
+    tags:
+      - ForceRecallEquipment
+  - type: Sprite
+    sprite: Clothing/Shoes/Specific/swat.rsi
+  - type: Clothing
+    sprite: Clothing/Shoes/Specific/swat.rsi
+
+- type: entity
+  parent: ClothingShoesBootsJack
+  id: ClothingShoesBootsJackJedi
+  name: подкованные сапоги джедая
+  description: Созданы, чтобы ваши ножки не промокли на далеких планетах.
+  components:
+    - type: Tag
+      tags:
+        - ForceRecallEquipment
+    - type: NoSlip
+    - type: Sprite
+      sprite: _Stories/Clothing/Shoes/Boots/jedi.rsi
+    - type: Clothing
+      sprite: _Stories/Clothing/Shoes/Boots/jedi.rsi
+
+- type: entity
+  parent: ClothingShoesBootsJack
+  id: ClothingShoesBootsJackJediNt
+  name: подкованные сапоги стража клинка
+  description: Планировалось, что они будут удобнее обычных.
+  components:
+    - type: Tag
+      tags:
+        - ForceRecallEquipment
+    - type: NoSlip
+    - type: Sprite
+      sprite: _Stories/Clothing/Shoes/Boots/jedi_nt.rsi
+    - type: Clothing
+      sprite: _Stories/Clothing/Shoes/Boots/jedi_nt.rsi
+
+- type: entity
+  parent: ClothingShoesBootsJack
+  id: ClothingShoesBootsJackJediNomad
+  name: сапоги путника
+  description: Планировалось, что они будут удобнее обычных.
+  components:
+    - type: Tag
+      tags:
+        - ForceRecallEquipment
+    - type: NoSlip
+    - type: Sprite
+      sprite: _Stories/Clothing/Shoes/Boots/jedi_nomad.rsi
+    - type: Clothing
+      sprite: _Stories/Clothing/Shoes/Boots/jedi_nomad.rsi
+
+- type: entity
+  parent: ClothingShoesBootsMag
+  id: ClothingShoesBootsExe
+  name: сапоги хранителя
+  description: Продвинутая обувь, гарантирующая удобство носителя и полное сцепление с любой поверхностью.
+  components:
+  - type: Sprite
+    sprite: _Stories/Clothing/Shoes/Boots/exe_boots.rsi
+    state: icon
+  - type: Clothing
+    sprite: _Stories/Clothing/Shoes/Boots/exe_boots.rsi
+  - type: Tag
+    tags:
+    - WhitelistChameleon
