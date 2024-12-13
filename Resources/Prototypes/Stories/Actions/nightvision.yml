@@ -1,9 +1,0 @@
-- type: entity
-  id: ToggleNightvisionAction
-  name: Ночное зрение
-  description: Переключить своё ночное зрение.
-  components:
-  - type: InstantAction
-    useDelay: 5
-    icon: { sprite: Stories/Clothing/Eyes/Glasses/nvg.rsi, state: icon }
-    event: !type:ToggleNightvisionEvent

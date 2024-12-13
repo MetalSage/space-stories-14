@@ -1,0 +1,59 @@
+- type: entity
+  abstract: true
+  parent: BaseObjective
+  id: BaseInquisitorObjective
+  components:
+  - type: Objective
+    issuer: objective-issuer-inquisitor
+    difficulty: 1.0
+  - type: RoleRequirement
+    roles:
+      components:
+      - EmpireMemberRole
+
+- type: entity
+  categories: [ HideSpawnMenu ]
+  parent: [BaseInquisitorObjective, BaseKillObjective]
+  id: KillJediNtObjective
+  description: Уничтожьте его.
+  components:
+  - type: Objective
+    difficulty: 3.0
+    unique: true
+  - type: TargetObjective
+    title: objective-condition-kill-head-title
+  - type: PickRandomJobPerson
+    jobID: JediNt
+  - type: KillPersonCondition
+    # don't count missing evac as killing as heads are higher profile, so you really need to do the dirty work
+    # if ce flies a shittle to centcom you better find a way onto it
+    requireDead: true
+
+- type: entity
+  categories: [ HideSpawnMenu ]
+  parent: [BaseInquisitorObjective, BaseSurviveObjective]
+  id: SithSurviveObjective
+  name: Выжить.
+  description: У вас нет планов умирать.
+  components:
+  - type: Objective
+    difficulty: 1.0
+    icon:
+      sprite: _Stories/Mobs/Ghosts/sith.rsi
+      state: sith
+
+- type: entity
+  categories: [ HideSpawnMenu ]
+  parent: BaseInquisitorObjective
+  id: HypnosisObjective
+  description: Императору нужны новые подданные.
+  components:
+  - type: Objective
+    icon:
+      sprite: _Stories/Mobs/Ghosts/sith.rsi
+      state: empire
+  - type: NumberObjective
+    min: 3
+    max: 3
+    title: objective-sith-hypnosis-title
+  - type: HypnosisCondition

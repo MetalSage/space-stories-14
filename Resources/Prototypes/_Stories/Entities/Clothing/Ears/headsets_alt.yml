@@ -1,0 +1,19 @@
+- type: entity
+  parent: ClothingHeadsetAlt
+  id: ClothingHeadsetJediNtAlt
+  name: полноразмерная гарнитура стража клинка
+  description: Наконец-то тут есть командная частота.
+  components:
+    - type: Tag
+      tags:
+        - ForceRecallEquipment
+    - type: ContainerFill
+      containers:
+        key_slots:
+          - EncryptionKeyCommon
+          - EncryptionKeySecurity
+          - EncryptionKeyCommand
+    - type: Sprite
+      sprite: _Stories/Clothing/Ears/Headsets/jedi_nt.rsi
+    - type: Clothing
+      sprite: _Stories/Clothing/Ears/Headsets/jedi_nt.rsi

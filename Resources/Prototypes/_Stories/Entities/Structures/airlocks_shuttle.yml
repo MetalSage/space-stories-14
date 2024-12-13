@@ -1,0 +1,27 @@
+# Prison
+
+- type: entity
+  parent: AirlockShuttle
+  name: стыковочный шлюз
+  description: Необходим для соединения двух космических кораблей вместе.
+  id: PRISONAirlockShuttleLocked
+  suffix: Prison, Docking, Locked
+  components:
+    - type: Sprite
+      sprite: _Stories/Structures/Doors/Airlocks/Standard/shuttle_sp.rsi
+    - type: ContainerFill
+      containers:
+        board: [PRISONDoorElectronics]
+
+- type: entity
+  parent: AirlockGlassShuttle
+  name: стыковочный шлюз
+  description: Необходим для соединения двух космических кораблей вместе.
+  id: PRISONAirlockGlassShuttleLocked
+  suffix: Prison, Docking, Glass, Locked
+  components:
+    - type: ContainerFill
+      containers:
+        board: [PRISONDoorElectronics]
+    - type: Sprite
+      sprite: _Stories/Structures/Doors/Airlocks/Glass/shuttle_sp.rsi

@@ -7,83 +7,8 @@
 server_name = "Space Stories - Atlas 🗺️"
 
 [game]
-hostname = "📚 Space Stories - Atlas 🗺️ [TTS]"
-lobbyduration = 210
-round_restart_time = 120
+hostname         = "📚 Space Stories - Atlas 🗺️ [TTS]"
 soft_max_players = 100
-desc = """
-                  📕 𝗦𝗽𝗮𝗰𝗲 𝗦𝘁𝗼𝗿𝗶𝗲𝘀 - Сервер, который ценит Role Play, создавай свои истории у нас! 📘
-•────────────────────────────────── ✧ ──────────────────────────────────•
-  🌠 ⋮ Сервер со средним уровнем требований к ролевому отыгрышу.
-  🩺 ⋮ Хирургия - уникальная механика повреждений органов и возможность их пересадки.
-  🔐 ⋮ Космическая тюрьма - отдаленный объект в космосе, содержащий опасных преступников.
-  🌑 ⋮ Тенеморф - полубог, боящийся света, порабощающий экипаж с целью захватить галактику.
-  ⚔️ ⋮ Страж Клинка - воин света, защищающий командование станции своими мечом и магией.
-  🔥 ⋮ Инквизитор - воин тьмы, прибывший на станцию, чтобы уничтожить Стража Клинка.
-  🦠 ⋮ S.P.A.F. - слизень, пожирающий членов экипажа ради продолжения своего рода.
-  💀 ⋮ Понтифик - культист-некромант, ведущий свою армию мертвецов в бой со станцией.
-  🦇 ⋮ Вампир - упырь, который здесь лишь для того, чтобы высосать побольше крови.
-  ⛪ ⋮ Способности священника - боритесь с нечистью с помощью своих священных сил.
-  🔊 ⋮ TTS - 130 уникальных голосов, чтобы выразить уникальность ваших персонажей.
-  🐌 ⋮ Ползание - уникальная механика, позволяющая вам упасть и ползти.
-  👔 ⋮ Отзывчивая администрация, которая покажет, расскажет и поможет Вам освоится.
-•────────────────────────────────── ✧ ──────────────────────────────────•
-                                            📚 Присоединяйтесь к нашему дружному сообществу 📚"""
-map_pool = "StoriesDefaultMapPool"
-contraband_examine = false
 
-[admin]
-deadmin_on_join = true
-server_ban_hwid_ban_default = false
-
-[vote]
-restart_enabled = true
-preset_enabled = false
-map_enabled = false
-restart_not_allowed_when_admin_online = true
-
-[shuttle]
-emergency_dock_time = 120
-emergency_transit_time_min = 30
-emergency_transit_time_max = 60
-auto_call_time = 0
-
-[rules]
-time = 180.0
-
-[queue]
-enabled = true
-
-[atmos]
-monstermos_rip_tiles = false
-
-[biomass]
-easy_mode = false
-
-[ic]
-flavor_text = true
-
-[infolinks]
-discord = "https://discord.gg/space-stories"
-wiki = "https://spacestories.club"
-appeal = "https://discord.gg/space-stories"
-patreon = "https://boosty.to/spacestories14"
-
-[server]
-rules_file = "StoriesRuleset"
-
-[auth]
-# Включена без гостей. (0 для гостей. 2 для выключения)
-mode = 1
-
-[procgen]
-preload = false
-
-[gateway]
-generator_enabled = false
-
-[netres]
-limit = 10
-
-[viewport]
-maximum_width = 26
+[hub]
+tags = "lang:ru,rp:med,region:eu_e"

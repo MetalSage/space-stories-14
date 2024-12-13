@@ -1,9 +1,9 @@
 using Content.Client.Administration.Managers;
 using Content.Client.Changelog;
 using Content.Client.Chat.Managers;
-using Content.Client.Corvax.DiscordAuth;
-using Content.Client.Corvax.JoinQueue;
-using Content.Client.Corvax.Sponsors;
+using Content.Client._Corvax.DiscordAuth;
+using Content.Client._Corvax.JoinQueue;
+using Content.Client._Corvax.Sponsors;
 using Content.Client.Options;
 using Content.Client.DebugMon;
 using Content.Client.Eui;
