@@ -12,7 +12,6 @@
   - type: ApcPowerReceiver
     powerLoad: 200
   - type: ExtensionCableReceiver
-  - type: Anchorable
   - type: ShuttleConsole
   - type: ActivatableUI
     inHandsOnly: true
