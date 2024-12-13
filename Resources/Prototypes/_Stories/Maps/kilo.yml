@@ -1,7 +1,7 @@
 - type: gameMap
   id: StoriesKilo
   mapName: '[КТ] Kilo Station'
-  mapPath: /Maps/Stories/kilo.yml
+  mapPath: /Maps/_Stories/kilo.yml
   minPlayers: 35
   stations:
     Kilo:
