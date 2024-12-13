@@ -3,19 +3,31 @@
 
   [color=#66FF00]Космический ниндзя[/color] - это призрачная роль, которую можно получить случайным образом в середине игры. Если вы выберете ее, то вам выдадут снаряжение и цели.
 
-  Вы - ниндзя, но в космосе. [color=#66FF00]Клан паука[/color] отправил вас на станцию, чтобы вы сеяли различные разрушения и у вас есть все необходимое, чтобы сделать это бесшумно, но смертельно опасно.
+  Whether you get bloody or stay out of trouble, your discipline has taught you that [italic]your objectives must be at least attempted[/italic]. For honor!
 
   Безжалостно уничтожайте экипаж станции или клоунов, что решили рассекретить или помешать вам, ваша дисциплина научила вас, что [color=#66FF00]ваши цели обязательно должны быть достигнуты[/color]. За честь!
 
   # Снаряжение
 
-  Сначала вам имплантируют [color=#a4885c]посмертный растворитель[/color], так что, если вы испугаетесь или решите совершить харакири, вы оставите уборщику последний подарок, и все ваше драгоценное снаряжение не попадет в руки врага.
+  <Box>
+    <GuideEntityEmbed Entity="JetpackBlack"/>
+    <GuideEntityEmbed Entity="PinpointerStation"/>
+  </Box>
 
-  В вашей сумке полно инструментов для более изощренного саботажа, а также аварийный запас на случай, если вам потребуется перекусить.
+  ## Your Suit
 
-  Также у вас есть [color=#a4885c]реактивный ранец[/color] и [color=#a4885c]пинпоинтер[/color], которые позволят вам найти станцию.
+  <Box>
+    <GuideEntityEmbed Entity="ClothingEyesVisorNinja" Caption="your visor"/>
+    <GuideEntityEmbed Entity="ClothingOuterSuitSpaceNinja" Caption="your suit"/>
+    <GuideEntityEmbed Entity="ClothingShoesSpaceNinja" Caption="your boots"/>
+  </Box>
 
-  <GuideEntityEmbed Entity="PinpointerStation" Caption="пинпоинтер станции"/>
+  Your single most important item is [color=cyan]your suit[/color], without it none of your abilities would work.
+  Your suit requires power to function, which is supplied by its [bold]internal battery[/bold]. It can be replaced, and [italic]high capacity batteries[/italic] mean a [italic]highly effective ninja[/italic].
+
+  [bold]You can recharge your internal battery directly[/bold] by using [color=cyan]your gloves[/color]. You can see the current charge by examining the suit or checking the nifty battery alert on your screen.
+
+  Your outfit also includes [color=cyan]special boots[/color] that keep you agile, upright and grounded without using energy. You've also got flash protection thanks to your [color=cyan]visor[/color].
 
   ## Костюм ниндзя
 
@@ -37,20 +49,19 @@
 
   Они изготовлены из [color=#a4885c]изолированных наномашин[/color], которые помогут вам изящно проникать в различные помещения, не оставляя отпечатков.
 
-  У вас есть действие, позволяющее переключать перчатки. Когда перчатки включены, они позволяют вам использовать [color=#a4885c]специальные способности[/color], которые активируются при взаимодействии с объектами пустой рукой и при отключенном боевом режиме.
+  Your [color=cyan]energy katana[/color] hurts plenty and can be [bold]recalled at will[/bold] at the cost of suit power. The farther away it is from you, the more energy required to recall it.
 
-  К вашим способностям в перчатках относятся:
-  - Взлом неограниченного количества дверей.
-  - Кража энергии от электроприборов, таких как ЛКП, подстанции и СМЭСы. Чем выше напряжение, тем эффективнее кража энергии.
-  - Вы можете ударить током любое существо, оглушив и немного его повредив.
-  - Вы можете воровать технологии с сервера РнД для выполнения одной из ваших задач.
-  - Вы можете взломать коммуникационную консоль, чтобы вызвать [textlink="угрозу" link="MinorAntagonists"].
+  While in hand you may also [color=cyan]teleport[/color] to anywhere that you can see, [bold]including through windows[/bold]. The charges required to do this regenerate slowly, so keep a charge or two spare in case you need a quick getaway.
 
-  ## Энергокатана
+  ## Spider Clan Charge
 
-Наносит большой урон и может быть вызвана по желанию, затрачивая энергию костюма пропорционально расстоянию телепортации.
-Пока вы держите её в руках, вы можете телепортироваться в любое место, которое можете видеть, то есть за большинство дверей и окон, но не за стены.
-У этой способности ограниченное количество зарядов, которые восстанавливаются медленно, так что держите пару зарядов про запас на случай, если вам понадобится быстро сбежать.
+  <Box>
+    <GuideEntityEmbed Entity="SpiderCharge"/>
+  </Box>
+
+  This is a [color=cyan]modified C-4 explosive[/color] which can be found in your pocket. Creates a large explosion but [bold]must be armed in your target area[/bold] as it is one of your objectives.
+
+  It can't be activated manually, so simply plant it on a wall or some furniture that does not spark joy. Choose wisely, it can't be unstuck once planted.
 
 ## Бомба Клана Паука
 

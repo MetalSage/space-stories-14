@@ -122,6 +122,8 @@
     attributes:
       gender: male
   - type: Sharp
+  - type: TTS # Stories-TTS
+    voice: twitch
 
 - type: entity
   id: MobRatKingBuff

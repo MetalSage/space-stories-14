@@ -1,0 +1,53 @@
+- type: entity
+  parent: ClothingBeltStorageBase
+  id: ClothingBeltJedi
+  name: ремень джедая
+  description: Повесьте на него свой меч.
+  components:
+    - type: Tag
+      tags:
+        - ForceRecallEquipment
+    - type: Sprite
+      sprite: _Stories/Clothing/Belt/jedi_belt.rsi
+      state: icon
+    - type: Clothing
+      sprite: _Stories/Clothing/Belt/jedi_belt.rsi
+    - type: Storage
+      whitelist:
+        tags:
+          - CigPack
+          - Radio
+        components:
+          - FlashOnTrigger
+          - Flash
+          - Welder
+          - Flash
+          - Handcuff
+          - EnergySword
+
+- type: entity
+  parent: ClothingBeltSheath
+  id: ClothingBeltSheathExe
+  name: ножны для световой рапиры
+  description: Богато украшенные ножны, предназначенные для хранения клинка.
+  components:
+    - type: Sprite
+      sprite: _Stories/Clothing/Belt/e_rapier_sheath.rsi
+      state: sheath
+    - type: Clothing
+      sprite: _Stories/Clothing/Belt/e_rapier_sheath.rsi
+    - type: ItemSlots
+      slots:
+        item:
+          name: Sabre
+          insertVerbText: sheath-insert-verb
+          ejectVerbText: sheath-eject-verb
+          whitelist:
+            components:
+              - Lightsaber
+    - type: ItemMapper
+      mapLayers:
+        sheath-sabre:
+          whitelist:
+            components:
+              - Lightsaber

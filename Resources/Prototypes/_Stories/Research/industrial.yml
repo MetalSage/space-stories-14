@@ -1,0 +1,13 @@
+- type: technology
+  id: ReflectionTech
+  name: research-technology-reflection
+  icon:
+    sprite: _Stories/Structures/Machines/reflectors.rsi
+    state: reflector_circle
+  discipline: Industrial
+  tier: 2
+  cost: 5000
+  recipeUnlocks:
+  - ReflectorBoxMachineCircuitboard
+  - ReflectorCornerMachineCircuitboard
+  - ReflectorCornerTsideMachineCircuitboard

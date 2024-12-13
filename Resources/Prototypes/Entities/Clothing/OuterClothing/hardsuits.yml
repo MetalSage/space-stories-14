@@ -475,21 +475,11 @@
 #ANTAG HARDSUITS
 #Blood-red Hardsuit
 - type: entity
-  parent: [ ClothingOuterHardsuitBase, BaseSyndicateContraband ]
+  parent: [ ClothingOuterHardsuitBase, BaseSyndicateContraband, BaseSyndicateExplodingClothing ] # [ ClothingOuterHardsuitBase, BaseSyndicateContraband ] # Stories
   id: ClothingOuterHardsuitSyndie
   name: blood-red hardsuit
   description: A heavily armored hardsuit designed for work in special operations. Property of Gorlex Marauders.
   components:
-  - type: ClothingWhitelist # Stories-ExplodingHardsuit (doublechest) - start
-    factionsWhitelist:
-    - Syndicate
-  - type: Explosive
-    explosionType: PowerSink
-    maxIntensity: 8
-    intensitySlope: 5
-    totalIntensity: 5
-    canCreateVacuum: false
-  - type: ExplodeOnTrigger # Stories-ExplodingHardsuit (doublechest) - end
   - type: Sprite
     sprite: Clothing/OuterClothing/Hardsuits/syndicate.rsi
   - type: Item
@@ -542,21 +532,11 @@
 
 #Syndicate Elite Hardsuit
 - type: entity
-  parent: [ClothingOuterHardsuitBase, BaseSyndicateContraband]
+  parent: [ ClothingOuterHardsuitBase, BaseSyndicateContraband, BaseSyndicateExplodingClothing ] # [ ClothingOuterHardsuitBase, BaseSyndicateContraband ] # Stories
   id: ClothingOuterHardsuitSyndieElite
   name: syndicate elite hardsuit
   description: An elite version of the blood-red hardsuit, with improved mobility and fireproofing. Property of Gorlex Marauders.
   components:
-  - type: ClothingWhitelist # Stories-ExplodingHardsuit (doublechest) - start
-    factionsWhitelist:
-    - Syndicate
-  - type: Explosive
-    explosionType: PowerSink
-    maxIntensity: 8
-    intensitySlope: 5
-    totalIntensity: 5
-    canCreateVacuum: false
-  - type: ExplodeOnTrigger # Stories-ExplodingHardsuit (doublechest) - end
   - type: Sprite
     sprite: Clothing/OuterClothing/Hardsuits/syndieelite.rsi
   - type: Clothing
@@ -591,21 +571,11 @@
 
 #Syndicate Commander Hardsuit
 - type: entity
-  parent: [ClothingOuterHardsuitBase, BaseSyndicateContraband]
+  parent: [ ClothingOuterHardsuitBase, BaseSyndicateContraband, BaseSyndicateExplodingClothing ] # [ ClothingOuterHardsuitBase, BaseSyndicateContraband ] # Stories
   id: ClothingOuterHardsuitSyndieCommander
   name: syndicate commander hardsuit
   description: A bulked up version of the blood-red hardsuit, purpose-built for the commander of a syndicate operative squad. Has significantly improved armor for those deadly front-lines firefights.
   components:
-  - type: ClothingWhitelist # Stories-ExplodingHardsuit (doublechest) - start
-    factionsWhitelist:
-    - Syndicate
-  - type: Explosive
-    explosionType: PowerSink
-    maxIntensity: 8
-    intensitySlope: 5
-    totalIntensity: 5
-    canCreateVacuum: false
-  - type: ExplodeOnTrigger # Stories-ExplodingHardsuit (doublechest) - end
   - type: Sprite
     sprite: Clothing/OuterClothing/Hardsuits/syndiecommander.rsi
   - type: Clothing
@@ -633,21 +603,11 @@
 
 #Cybersun Juggernaut Hardsuit
 - type: entity
-  parent: [ClothingOuterHardsuitBase, BaseSyndicateContraband]
+  parent: [ ClothingOuterHardsuitBase, BaseSyndicateContraband, BaseSyndicateExplodingClothing ] # [ ClothingOuterHardsuitBase, BaseSyndicateContraband ] # Stories
   id: ClothingOuterHardsuitJuggernaut
   name: cybersun juggernaut suit
   description: A suit made by the cutting edge R&D department at cybersun to be hyper resilient.
   components:
-  - type: ClothingWhitelist # Stories-ExplodingHardsuit (doublechest) - start
-    factionsWhitelist:
-    - Syndicate
-  - type: Explosive
-    explosionType: PowerSink
-    maxIntensity: 8
-    intensitySlope: 5
-    totalIntensity: 5
-    canCreateVacuum: false
-  - type: ExplodeOnTrigger # Stories-ExplodingHardsuit (doublechest) - end
   - type: Sprite
     sprite: Clothing/OuterClothing/Hardsuits/cybersun.rsi
   - type: Clothing
@@ -803,7 +763,7 @@
 #CENTCOMM / ERT HARDSUITS
 #ERT Leader Hardsuit
 - type: entity
-  parent: [ BaseCentcommContraband, ClothingOuterHardsuitSyndieCommander ]
+  parent: [ BaseERTNotExplodingClothing, BaseCentcommContraband, ClothingOuterHardsuitSyndieCommander ] # [ BaseCentcommContraband, ClothingOuterHardsuitSyndieCommander ] # Stories
   id: ClothingOuterHardsuitERTLeader
   name: ERT leader's hardsuit
   description: A protective hardsuit worn by the leader of an emergency response team.
@@ -831,12 +791,10 @@
     sprite: Clothing/OuterClothing/Hardsuits/ERTSuits/ertleader.rsi
   - type: ToggleableClothing
     clothingPrototype: ClothingHeadHelmetHardsuitERTLeader
-  - type: ClothingWhitelist # Stories-ExplodingHardsuit
-    factionsWhitelist: null
 
 #ERT Chaplain Hardsuit
 - type: entity
-  parent: [ BaseCentcommContraband, ClothingOuterHardsuitJuggernaut ]
+  parent: [ BaseERTNotExplodingClothing, BaseCentcommContraband, ClothingOuterHardsuitJuggernaut ] # [ BaseCentcommContraband, ClothingOuterHardsuitJuggernaut ] # Stories
   id: ClothingOuterHardsuitERTChaplain
   name: ERT chaplain's hardsuit
   description: A protective hardsuit worn by the chaplains of an Emergency Response Team.
@@ -847,8 +805,6 @@
     sprite: Clothing/OuterClothing/Hardsuits/ERTSuits/ertchaplain.rsi
   - type: ToggleableClothing
     clothingPrototype: ClothingHeadHelmetHardsuitERTChaplain
-  - type: ClothingWhitelist # Stories-ExplodingHardsuit
-    factionsWhitelist: null
 
 #ERT Engineer Hardsuit
 - type: entity
@@ -866,7 +822,7 @@
 
 #ERT Medic Hardsuit
 - type: entity
-  parent: [ BaseCentcommContraband, ClothingOuterHardsuitSyndieMedic ]
+  parent: [ BaseERTNotExplodingClothing, BaseCentcommContraband, ClothingOuterHardsuitSyndieMedic ] # [ BaseCentcommContraband, ClothingOuterHardsuitSyndieMedic ] # Stories
   id: ClothingOuterHardsuitERTMedical
   name: ERT medic's hardsuit
   description: A protective hardsuit worn by the medics of an emergency response team.
@@ -877,12 +833,10 @@
     sprite: Clothing/OuterClothing/Hardsuits/ERTSuits/ertmedical.rsi
   - type: ToggleableClothing
     clothingPrototype: ClothingHeadHelmetHardsuitERTMedical
-  - type: ClothingWhitelist # Stories-ExplodingHardsuit
-    factionsWhitelist: null
 
 #ERT Security Hardsuit
 - type: entity
-  parent: [ BaseCentcommContraband, ClothingOuterHardsuitSyndie ]
+  parent: [ BaseERTNotExplodingClothing, BaseCentcommContraband, ClothingOuterHardsuitSyndie ] # [ BaseCentcommContraband, ClothingOuterHardsuitSyndie ] # Stories
   id: ClothingOuterHardsuitERTSecurity
   name: ERT security's hardsuit
   description: A protective hardsuit worn by the security officers of an emergency response team.
@@ -914,8 +868,6 @@
     tags:
     - Hardsuit
     - WhitelistChameleon
-  - type: ClothingWhitelist # Stories-ExplodingHardsuit
-    factionsWhitelist: null
 
 #ERT Janitor Hardsuit
 - type: entity

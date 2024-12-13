@@ -216,6 +216,8 @@
       path: /Audio/Items/bikehorn.ogg
       params:
         variation: 0.125
+  - type: TTS # Stories-TTS
+    voice: space_core
 
 - type: entity
   parent: MobHonkBot

@@ -24,7 +24,7 @@
     damageContainer: Biological
   - type: NoSlip
   - type: TTS # Stories-TTS
-    voice: twitch
+    voice: hagraven
   - type: Eye
     drawFov: false
     visMask:

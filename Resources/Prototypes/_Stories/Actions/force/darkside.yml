@@ -1,0 +1,207 @@
+# - type: entity
+#   id: ActionSithCreateProtectiveBubble
+#   name: Защитный пузырь инквизитора
+#   description: Создайте защитный телекинетический кокон, который отразит любые лазеры, сильно уменьшит урон от пуль и защитит от взрывов и давления. Почти не защищает от ударов ближнего боя.
+#   categories: [ HideSpawnMenu ]
+#   components:
+#   - type: InstantAction
+#     useDelay: 300
+#     icon:
+#       sprite: _Stories/Actions/force.rsi
+#       state: shield
+#     itemIconStyle: NoItem
+#     event: !type:CreateProtectiveBubbleEvent
+#       proto: EffectSithProtectiveBubble
+
+- type: entity
+  id: ActionLifeSteal
+  name: Кража жизни
+  description: Иссушает жертву, восстанавливая вас.
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: EntityTargetAction
+    useDelay: 10
+    range: 2
+    itemIconStyle: BigAction
+    whitelist:
+      components:
+      - Body
+    canTargetSelf: false
+    interactOnMiss: false
+    sound: !type:SoundPathSpecifier
+      path: /Audio/Effects/radpulse1.ogg
+    icon:
+      sprite: _Stories/Actions/force.rsi
+      state: steal
+    event: !type:EntityTargetForceUserActionEvent
+      volume: 7.5
+      event: !type:StealLifeTargetEvent
+        doAfterTime: 1
+
+- type: entity
+  id: ActionSithGhost
+  name: Теневой призрак
+  description: Станьте призраком и проходите сквозь стены. В таком состоянии вы не можете воздействовать на мир, но всегда можете вернуться.
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: InstantAction
+    useDelay: 5
+    itemIconStyle: BigAction
+    icon: { sprite: _Stories/Actions/force.rsi, state: sith }
+    event: !type:DoAfterUserEvent
+      hidden: false
+      needHand: false
+      delay: 3
+      breakOnDamage: true
+      breakOnMove: true
+      event: !type:InstantForceUserActionEvent
+        volume: 100
+        event: !type:SithPolymorphEvent
+
+- type: entity
+  id: ActionFrozeBullets
+  name: Замедление силы
+  description: Используйте телекинез, чтобы останавливать пули вокруг вас на протяжении 10 секунд.
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: InstantAction
+    itemIconStyle: BigAction
+    useDelay: 5
+    icon: { sprite: _Stories/Actions/force.rsi, state: stopbullets }
+    event: !type:InstantForceUserActionEvent
+      volume: 50
+      event: !type:FrozeBulletsActionEvent
+
+# - type: entity
+#   id: ActionRejuvenate
+#   name: Самовосстановление
+#   description: Используйте телекинез, чтобы останавливать пули вокруг вас на протяжении 10 секунд.
+#   categories: [ HideSpawnMenu ]
+#   components:
+#   - type: InstantAction
+#     useDelay: 180
+#     icon: { sprite: _Stories/Actions/force.rsi, state: stopbullets }
+#     event: !type:InstantForceUserActionEvent
+#       volume: 200
+#       event: !type:RejuvenateActionEvent
+
+- type: entity
+  id: ActionRecliningPulse
+  name: Оттолкнуть
+  description: Оттолкните всех вокруг вас.
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: InstantAction
+    itemIconStyle: BigAction
+    useDelay: 30
+    icon: { sprite: _Stories/Actions/force.rsi, state: pulse }
+    event: !type:InstantForceUserActionEvent
+      volume: 100
+      event: !type:RecliningPulseEvent
+        strength: 15
+        stun: 3
+        range: 5
+
+- type: entity
+  id: ActionStrangle
+  name: Удушение силой
+  description: Удушающий прием техники бесконтактного боя.
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: EntityTargetAction
+    useDelay: 10
+    range: 2
+    itemIconStyle: BigAction
+    whitelist:
+      components:
+      - Body
+    canTargetSelf: false
+    interactOnMiss: false
+    sound: !type:SoundPathSpecifier
+      path: /Audio/Effects/radpulse1.ogg
+    icon:
+      sprite: _Stories/Actions/force.rsi
+      state: strangle
+    event: !type:EntityTargetForceUserActionEvent
+      volume: 7.5
+      event: !type:StrangleTargetEvent
+        doAfterTime: 1
+
+- type: entity
+  id: ActionLightningStrike
+  name: Молнии силы
+  description: Направьте молнию из ваших рук в вашего врага.
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: EntityTargetAction
+    useDelay: 5
+    range: 10
+    itemIconStyle: BigAction
+    canTargetSelf: false
+    interactOnMiss: false
+    icon:
+      sprite: _Stories/Actions/force.rsi
+      state: lightning
+    event: !type:EntityTargetForceUserActionEvent
+      volume: 50
+      event: !type:LightningStrikeEvent
+
+- type: entity
+  id: ActionIgniteTarget
+  name: Пирокинез
+  description: Вызывает легкое выгорание у врага.
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: EntityTargetAction
+    useDelay: 10
+    range: 10
+    itemIconStyle: BigAction
+    canTargetSelf: false
+    interactOnMiss: false
+    sound: !type:SoundPathSpecifier
+      path: /Audio/Magic/rumble.ogg
+    icon:
+      sprite: _Stories/Actions/force.rsi
+      state: ignite
+    event: !type:EntityTargetForceUserActionEvent
+      volume: 75
+      event: !type:IgniteTargetActionEvent
+        stackAmount: 3.1
+
+- type: entity
+  id: ActionHypnosis
+  name: Гипноз силы
+  description: Обращает жертву на сторону Императора.
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: EntityTargetAction
+    useDelay: 3
+    range: 1
+    itemIconStyle: BigAction
+    whitelist:
+      components:
+      - Body
+    canTargetSelf: false
+    interactOnMiss: false
+    icon:
+      sprite: _Stories/Actions/force.rsi
+      state: hypnosis
+    event: !type:DoAfterTargetEvent
+      hidden: true
+      needHand: true
+      delay: 10
+      breakOnDamage: true
+      breakOnMove: true
+      event: !type:EntityTargetForceUserActionEvent
+        volume: 100
+        event: !type:HypnosisTargetActionEvent
+
+- type: entity
+  id: ActionSithRevertPolymorph
+  name: Вернуться в обычную форму
+  description: Перестаньте бегать и сразитесь!
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: InstantAction
+    icon: { sprite: _Stories/Actions/force.rsi, state: sith }
+    event: !type:RevertPolymorphActionEvent

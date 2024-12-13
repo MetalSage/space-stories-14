@@ -1,6 +1,6 @@
 <Document>
   # Воры
-  
+
   <Box>
     [color=#999999][italic]"Йоинк! Я возьму это! И это! О, не возражай, если я это сделаю!"[/italic][/color]
   </Box>
@@ -10,8 +10,9 @@
 
   Воры - мелкие, но хитрые [color=green]преступники[/color], которые не могут держать свои руки при себе.
 
-  ## Искусство кражи
-  В отличие от других противников, в ваши цели не входит убийство членов экипажа, ваша страсть - это кража вещей для сбора своей идеальной коллекции.
+  ## Art of the Steal
+  Unlike other antagonists, [bold]staying out of trouble is almost a requirement for you[/bold] because of your implant.
+  You can only run if [color=#cb0000]Security[/color] picks a fight with you, and because you work alone you don't have any friends to pull you out of danger.
 
   Несмотря на то что вы не можете убивать экипаж владеющий желанной вам вещью, вам помогут: решительность, ловкость рук, несколько инструментов и [color=cyan]воровские перчатки.[/color]
 
@@ -28,7 +29,7 @@
 
   [color=cyan]Маяк[/color] обеспечивает телепорт для безделушек, которые нелегко было бы пронести с собой в эвакуационном шаттле. Просто найдите укромное место на станции, чтобы включить маяк, а затем установите его координаты.
   Все блестяшки, находящиеся рядом с ним, будут [bold]телепортированы в ваше хранилище по окончании смены[/bold], что поможет выполнить ваши задачи.
-  
+
   <Box>
     <GuideEntityEmbed Entity="ThiefBeacon"/>
   </Box>
@@ -37,10 +38,13 @@
   Подтвердите свой выбор в безопасном месте, так как ящик с инструментами исчезнет, а снаряжение упадет к вашим ногам.
 
   <Box>
-    <GuideEntityEmbed Entity="StorageImplanter" Caption="Набор анатома"/>
-    <GuideEntityEmbed Entity="C4" Caption="Набор взломщика"/>
-    <GuideEntityEmbed Entity="ChameleonProjector" Caption="Набор хамелеона"/>
-    <GuideEntityEmbed Entity="EncryptionKeyStationMaster" Caption="Набор переговорщика"/>
+    <GuideEntityEmbed Entity="ToolboxThief"/>
+  </Box>
+  <Box>
+    <GuideEntityEmbed Entity="StorageImplanter" Caption="Anatomy"/>
+    <GuideEntityEmbed Entity="C4" Caption="Breacher"/>
+    <GuideEntityEmbed Entity="ChameleonProjector" Caption="Chameleon"/>
+    <GuideEntityEmbed Entity="EncryptionKeyStationMaster" Caption="Communicator"/>
   </Box>
   <Box>
     <GuideEntityEmbed Entity="NitrousOxideTank" Caption="Набор сони"/>
@@ -58,12 +62,12 @@
   Некоторые [italic]живые[/italic] объекты могут не содействовать вам. Убедитесь, что они живы и будут с вами или с вашим маяком, когда смена закончится.
 
   Вещи, которые вы можете пожелать:
-  
+
   <Box>
    <GuideEntityEmbed Entity="ToyFigurineGreytider" Caption="Фигурки"/>
    <GuideEntityEmbed Entity="PassengerIDCard" Caption="ID карты"/>
    <GuideEntityEmbed Entity="ChemDispenser" Caption="Структуры"/>
    <GuideEntityEmbed Entity="MobCorgiIan" Caption="Животные/Питомцы"/>
   </Box>
-  
+
 </Document>

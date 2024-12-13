@@ -4,11 +4,10 @@ barsign-ui-set-label = Выбрать вывеску:
 
 # Bar signs prototypes
 
-
 ## The Harmbaton
 
 barsign-prototype-name-harmbaton = Хармбатон
-barsign-prototype-description-harmbaton = Отличные обеды как для сотрудников службы безопасности, так и для ассистентов.
+barsign-prototype-description-harmbaton = Отличные обеды как для сотрудников службы безопасности, так и для пассажиров.
 
 ## The Singulo
 

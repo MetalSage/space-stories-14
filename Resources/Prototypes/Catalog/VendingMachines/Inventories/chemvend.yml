@@ -2,6 +2,7 @@
   id: ChemVendInventory
   startingInventory:
     Jug: 4
+    BigJug: 4 # Stories
     JugAluminium: 2
     JugCarbon: 4
     JugChlorine: 1
@@ -29,6 +30,7 @@
   id: ChemVendInventorySyndicate
   startingInventory:
     Jug: 4
+    BigJugSyndie: 4 # Stories
     JugAluminium: 2
     JugCarbon: 4
     JugChlorine: 1
@@ -55,4 +57,4 @@
     MuteToxinChemistryBottle: 3
     LeadChemistryBottle: 2
     ToxinChemistryBottle: 1
-    
+

@@ -1,0 +1,22 @@
+- type: entity
+  abstract: true
+  id: BaseSyndicateExplodingClothing
+  components:
+  - type: ClothingWhitelist
+    factionsWhitelist:
+    - Syndicate
+  - type: Explosive
+    explosionType: PowerSink
+    maxIntensity: 8
+    intensitySlope: 5
+    totalIntensity: 5
+    canCreateVacuum: false
+  - type: ExplodeOnTrigger
+
+- type: entity
+  abstract: true
+  id: BaseERTNotExplodingClothing
+  components:
+  - type: ClothingWhitelist
+    factionsWhitelist: null
+  - type: Emagged # Нельзя емагнуть скафандр без биокода, если он уже емагнут.

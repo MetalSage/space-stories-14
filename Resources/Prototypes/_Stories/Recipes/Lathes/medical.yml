@@ -1,0 +1,6 @@
+- type: latheRecipe
+  id: BigJug
+  result: BigJug
+  completetime: 4
+  materials:
+    Plastic: 500

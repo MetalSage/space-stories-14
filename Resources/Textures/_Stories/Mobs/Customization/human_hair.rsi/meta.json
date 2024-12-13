@@ -1,0 +1,91 @@
+{
+    "version": 1,
+    "size": {
+      "x": 32,
+      "y": 32
+    },
+    "copyright": "Made by XcenLegend for Space Stories",
+    "license": "CC-BY-SA-3.0",
+    "states": [
+      {
+        "name": "cornrowbacktail",
+        "directions": 4
+      },
+      {
+        "name": "dragon",
+        "directions": 4
+      },
+      {
+        "name": "fighter",
+        "directions": 4
+      },
+      {
+        "name": "karen",
+        "directions": 4
+      },
+      {
+        "name": "longshoulder",
+        "directions": 4
+      },
+      {
+        "name": "master",
+        "directions": 4
+      },
+      {
+        "name": "musician",
+        "directions": 4
+      },
+      {
+        "name": "ponytail8",
+        "directions": 4
+      },
+      {
+        "name": "powder",
+        "directions": 4
+      },
+      {
+        "name": "shortsidebangs",
+        "directions": 4
+      },
+      {
+        "name": "side",
+        "directions": 4
+      },
+      {
+        "name": "sidesweeps",
+        "directions": 4
+      },
+      {
+        "name": "stock",
+        "directions": 4
+      },
+      {
+        "name": "stylish",
+        "directions": 4
+      },
+      {
+        "name": "twinbangs",
+        "directions": 4
+      },
+      {
+        "name": "twotails",
+        "directions": 4
+      },
+      {
+        "name": "undercutfade",
+        "directions": 4
+      },
+      {
+        "name": "upbangs",
+        "directions": 4
+      },
+      {
+        "name": "wheatear",
+        "directions": 4
+      },
+      {
+        "name": "yoga",
+        "directions": 4
+      }
+    ]
+  }

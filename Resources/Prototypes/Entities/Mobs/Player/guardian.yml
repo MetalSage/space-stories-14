@@ -109,6 +109,8 @@
     - type: Tag
       tags:
         - CannotSuicide
+    - type: TTS # Stories-TTS
+      voice: sentrybot
 
 # From the uplink injector
 - type: entity
@@ -231,7 +233,7 @@
     - type: Hands
     - type: ComplexInteraction
     - type: Clumsy
-      clumsyDamage:
+      gunShootFailDamage:
         types:
           Blunt: 5
           Piercing: 4
@@ -257,6 +259,8 @@
     - type: HTN
       rootTask:
         task: SimpleHumanoidHostileCompound
+    - type: TTS # Stories-TTS
+      voice: fact_core
 
 - type: entity
   id: ActionToggleGuardian

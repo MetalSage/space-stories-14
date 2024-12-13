@@ -1,0 +1,56 @@
+- type: entity
+  parent: ClothingBackpackSatchel
+  id: ClothingBackpackSatchelJediNt
+  name: сумка стража клинка
+  description: Где же моя помадка?
+  components:
+  - type: Tag
+    tags:
+      - ForceRecallEquipment
+  - type: Sprite
+    sprite: _Stories/Clothing/Back/Satchels/satchel_jedint.rsi
+
+- type: entity
+  parent: ClothingBackpackSatchel
+  id: ClothingBackpackSatchelAdidos
+  name: сумка
+  description: Модная сумка.
+  components:
+  - type: Sprite
+    sprite: _Stories/Clothing/Back/Satchels/satchel_adidos.rsi
+
+- type: entity
+  parent: ClothingBackpackSatchel
+  id: ClothingBackpackSatchelBluesky
+  name: сумка
+  description: Модная сумка.
+  components:
+  - type: Sprite
+    sprite: _Stories/Clothing/Back/Satchels/satchel_bluesky.rsi
+
+- type: entity
+  parent: ClothingBackpackSatchel
+  id: ClothingBackpackSatchelEight
+  name: сумка
+  description: Модная сумка.
+  components:
+  - type: Sprite
+    sprite: _Stories/Clothing/Back/Satchels/satchel_eight.rsi
+
+- type: entity
+  parent: ClothingBackpackSatchel
+  id: ClothingBackpackSatchelGachi
+  name: сумка
+  description: Модная сумка.
+  components:
+  - type: Sprite
+    sprite: _Stories/Clothing/Back/Satchels/satchel_gachi.rsi
+
+- type: entity
+  parent: ClothingBackpackSatchel
+  id: ClothingBackpackSatchelRl
+  name: сумка
+  description: Модная сумка.
+  components:
+  - type: Sprite
+    sprite: _Stories/Clothing/Back/Satchels/satchel_rl.rsi

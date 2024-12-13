@@ -699,9 +699,9 @@
   productEntity: ClothingBackpackDuffelSyndicateMedicalBundleFilled
   discountCategory: rareDiscounts
   discountDownTo:
-    Telecrystal: 12
+    Telecrystal: 16
   cost:
-    Telecrystal: 20
+    Telecrystal: 24
   categories:
   - UplinkChemicals
   conditions:
@@ -1227,7 +1227,7 @@
   id: UplinkMobCatMicrobomb
   name: uplink-mobcat-microbomb-name
   description: uplink-mobcat-microbomb-desc
-  icon: { sprite: Stories/Mobs/Pets/syndiCat.rsi, state: old-radio-syndicat } # { sprite: Objects/Devices/communication.rsi, state: old-radio-syndicat } # Stories
+  icon: { sprite: _Stories/Mobs/Pets/syndiCat.rsi, state: old-radio-syndicat } # { sprite: Objects/Devices/communication.rsi, state: old-radio-syndicat } # Stories
   productEntity: ReinforcementRadioSyndicateSyndiCat
   discountCategory: usualDiscounts
   discountDownTo:

@@ -10,7 +10,7 @@ using Content.Shared.Verbs;
 using Robust.Shared.Player;
 using Robust.Shared.Prototypes;
 using Robust.Shared.Utility;
-using Content.Server.Stories.GameTicking.Rules.Components;
+using Content.Server._Stories.GameTicking.Rules.Components;
 
 namespace Content.Server.Administration.Systems;
 

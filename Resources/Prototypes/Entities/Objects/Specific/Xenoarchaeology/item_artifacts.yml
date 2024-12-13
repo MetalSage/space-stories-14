@@ -65,6 +65,8 @@
   - type: GuideHelp
     guides:
     - Xenoarchaeology
+  - type: TTS # Stories-TTS
+    voice: threedog_radio
 
 - type: entity
   parent: BaseXenoArtifactItem
