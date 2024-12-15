@@ -1859,7 +1859,7 @@
   - type: PointLight
     color: LightGreen
     radius: 5
-    energy: 5
+    energy: 2
     netsync: false
   - type: RadiationSource
     intensity: 0.3

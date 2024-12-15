@@ -62,7 +62,7 @@
         - GlassLayer
   - type: PointLight
     radius: 10
-    energy: 16
+    energy: 4
   - type: EventHorizon
     radius: 0.5
     canBreachContainment: false
