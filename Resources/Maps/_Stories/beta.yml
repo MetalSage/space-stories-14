@@ -76121,6 +76121,23 @@ entities:
     - type: Transform
       pos: 10.5,14.5
       parent: 1
+- proto: SpawnPointCargoTechnician
+  entities:
+  - uid: 14590
+    components:
+    - type: Transform
+      pos: 53.5,-39.5
+      parent: 1
+  - uid: 14591
+    components:
+    - type: Transform
+      pos: 53.5,-40.5
+      parent: 1
+  - uid: 14592
+    components:
+    - type: Transform
+      pos: 53.5,-41.5
+      parent: 1
 - proto: SpawnPointChaplain
   entities:
   - uid: 1514
@@ -76207,6 +76224,38 @@ entities:
     components:
     - type: Transform
       pos: 57.5,15.5
+      parent: 1
+- proto: SpawnPointLatejoin
+  entities:
+  - uid: 14593
+    components:
+    - type: Transform
+      pos: 63.5,-4.5
+      parent: 1
+  - uid: 14594
+    components:
+    - type: Transform
+      pos: 63.5,-6.5
+      parent: 1
+  - uid: 14595
+    components:
+    - type: Transform
+      pos: 64.5,-8.5
+      parent: 1
+  - uid: 14596
+    components:
+    - type: Transform
+      pos: 67.5,-8.5
+      parent: 1
+  - uid: 14597
+    components:
+    - type: Transform
+      pos: 64.5,-2.5
+      parent: 1
+  - uid: 14598
+    components:
+    - type: Transform
+      pos: 67.5,-2.5
       parent: 1
 - proto: SpawnPointLawyer
   entities:
