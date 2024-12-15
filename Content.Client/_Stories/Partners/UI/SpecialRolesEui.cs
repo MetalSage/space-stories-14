@@ -6,7 +6,7 @@ using Robust.Shared.Utility;
 using Content.Shared._Stories.Partners;
 using Robust.Client.Player;
 using Content.Client.GameTicking.Managers;
-using Content.Client._Corvax.Sponsors;
+using Content.Client._Stories.Sponsors;
 
 namespace Content.Client._Stories.Partners.UI;
 

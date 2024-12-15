@@ -1,8 +1,8 @@
 ﻿using System.Diagnostics.CodeAnalysis;
-using Content.Shared._Corvax.Sponsors;
+using Content.Shared._Stories.Sponsors;
 using Robust.Shared.Network;
 
-namespace Content.Client._Corvax.Sponsors;
+namespace Content.Client._Stories.Sponsors;
 
 public sealed class SponsorsManager
 {

@@ -1,5 +1,5 @@
 using Npgsql;
-using Content.Shared._Corvax.CCCVars;
+using Content.Shared._Stories.CCCVars;
 using Robust.Shared.Configuration;
 using Robust.Shared.Network;
 

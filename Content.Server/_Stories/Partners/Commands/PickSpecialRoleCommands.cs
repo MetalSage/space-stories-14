@@ -4,7 +4,7 @@ using Robust.Shared.Prototypes;
 using Content.Server.Database;
 using Content.Server._Stories.Partners.Systems;
 using Content.Shared._Stories.Partners;
-using Content.Server._Corvax.Sponsors;
+using Content.Server._Stories.Sponsors;
 
 namespace Content.Server._Stories.Partners.Commands;
 

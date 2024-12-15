@@ -3,8 +3,8 @@ using System.Net.Http;
 using System.Net.Http.Json;
 using System.Threading;
 using System.Threading.Tasks;
-using Content.Shared._Corvax.CCCVars;
-using Content.Shared._Corvax.DiscordAuth;
+using Content.Shared._Stories.CCCVars;
+using Content.Shared._Stories.DiscordAuth;
 using JetBrains.Annotations;
 using Robust.Server.Player;
 using Robust.Shared.Configuration;
@@ -12,7 +12,7 @@ using Robust.Shared.Enums;
 using Robust.Shared.Network;
 using Robust.Shared.Player;
 
-namespace Content.Server._Corvax.DiscordAuth;
+namespace Content.Server._Stories.DiscordAuth;
 
 // TODO: Add minimal Discord account age check for panic bunker by extracting timestamp from snowflake received from API secured with key
 

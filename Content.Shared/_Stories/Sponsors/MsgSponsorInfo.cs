@@ -5,7 +5,7 @@ using Robust.Shared.Network;
 using Robust.Shared.Serialization;
 using Robust.Shared.Utility;
 
-namespace Content.Shared._Corvax.Sponsors;
+namespace Content.Shared._Stories.Sponsors;
 
 [Serializable, NetSerializable]
 public sealed class SponsorInfo

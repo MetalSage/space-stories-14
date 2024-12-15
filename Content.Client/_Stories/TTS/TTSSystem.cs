@@ -1,5 +1,5 @@
 ﻿using Content.Shared.Chat;
-using Content.Shared._Corvax.CCCVars;
+using Content.Shared._Stories.CCCVars;
 using Content.Shared._Stories.TTS;
 using Robust.Client.Audio;
 using Robust.Client.ResourceManagement;

@@ -6,7 +6,7 @@ using Content.Shared.Paper;
 using Robust.Shared.Prototypes;
 using Robust.Shared.Random;
 
-namespace Content.Server._Corvax.StationGoal
+namespace Content.Server._Stories.StationGoal
 {
     /// <summary>
     ///     System to spawn paper with station goal.

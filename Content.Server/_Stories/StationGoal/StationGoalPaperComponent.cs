@@ -1,4 +1,4 @@
-namespace Content.Server._Corvax.StationGoal
+namespace Content.Server._Stories.StationGoal
 {
     /// <summary>
     ///     Paper with a written station goal in it.

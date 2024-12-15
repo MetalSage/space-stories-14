@@ -1,4 +1,4 @@
-using Content.Server._Corvax.Sponsors;
+using Content.Server._Stories.Sponsors;
 using Content.Shared.Administration;
 using Robust.Shared.Console;
 using Content.Server.EUI;

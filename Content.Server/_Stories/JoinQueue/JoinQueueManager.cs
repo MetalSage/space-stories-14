@@ -1,9 +1,9 @@
 ﻿using System.Linq;
 using Content.Server.Connection;
-using Content.Server._Corvax.DiscordAuth;
+using Content.Server._Stories.DiscordAuth;
 using Content.Shared.CCVar;
-using Content.Shared._Corvax.CCCVars;
-using Content.Shared._Corvax.JoinQueue;
+using Content.Shared._Stories.CCCVars;
+using Content.Shared._Stories.JoinQueue;
 using Prometheus;
 using Robust.Server.Player;
 using Robust.Shared.Configuration;
@@ -12,7 +12,7 @@ using Robust.Shared.Network;
 using Robust.Shared.Timing;
 using Robust.Shared.Player;
 
-namespace Content.Server._Corvax.JoinQueue;
+namespace Content.Server._Stories.JoinQueue;
 
 /// <summary>
 ///     Manages new player connections when the server is full and queues them up, granting access when a slot becomes free

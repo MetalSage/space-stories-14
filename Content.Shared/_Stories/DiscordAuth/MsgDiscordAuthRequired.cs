@@ -2,7 +2,7 @@
 using Robust.Shared.Network;
 using Robust.Shared.Serialization;
 
-namespace Content.Shared._Corvax.DiscordAuth;
+namespace Content.Shared._Stories.DiscordAuth;
 
 /// <summary>
 /// Server sends this event to client on connect if Discord auth is required

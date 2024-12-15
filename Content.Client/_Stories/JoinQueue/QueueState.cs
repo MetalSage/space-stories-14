@@ -1,4 +1,4 @@
-﻿using Content.Shared._Corvax.JoinQueue;
+﻿using Content.Shared._Stories.JoinQueue;
 using Robust.Client.Audio;
 using Robust.Client.Console;
 using Robust.Client.GameObjects;
@@ -6,7 +6,7 @@ using Robust.Client.State;
 using Robust.Client.UserInterface;
 using Robust.Shared.Player;
 
-namespace Content.Client._Corvax.JoinQueue;
+namespace Content.Client._Stories.JoinQueue;
 
 public sealed class QueueState : State
 {

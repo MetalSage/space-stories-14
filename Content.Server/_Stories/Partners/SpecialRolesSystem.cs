@@ -10,7 +10,7 @@ using Content.Server.GameTicking.Rules.Components;
 using Content.Server.Antag;
 using Content.Server._Stories.GameTicking.Rules.Components;
 using Robust.Shared.Prototypes;
-using Content.Server._Corvax.Sponsors;
+using Content.Server._Stories.Sponsors;
 using Content.Server.Database;
 using Content.Server.StationEvents;
 using Content.Shared.RatKing;

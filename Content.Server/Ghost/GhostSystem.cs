@@ -1,6 +1,6 @@
 using System.Linq;
 using System.Numerics;
-using Content.Server._Corvax.Sponsors;
+using Content.Server._Stories.Sponsors;
 using Content.Server.Database;
 using Content.Server.Administration.Logs;
 using Content.Server.Chat.Managers;

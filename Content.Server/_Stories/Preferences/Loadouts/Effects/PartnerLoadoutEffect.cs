@@ -1,5 +1,5 @@
 using System.Diagnostics.CodeAnalysis;
-using Content.Server._Corvax.Sponsors;
+using Content.Server._Stories.Sponsors;
 using Content.Shared.Humanoid.Prototypes;
 using Robust.Shared.Player;
 using Robust.Shared.Prototypes;

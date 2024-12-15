@@ -3,13 +3,13 @@ using System.Net;
 using System.Net.Http;
 using System.Net.Http.Json;
 using System.Threading.Tasks;
-using Content.Shared._Corvax.CCCVars;
-using Content.Shared._Corvax.Sponsors;
+using Content.Shared._Stories.CCCVars;
+using Content.Shared._Stories.Sponsors;
 using Robust.Shared.Configuration;
 using Robust.Shared.Network;
 using Robust.Shared.Utility;
 
-namespace Content.Server._Corvax.Sponsors;
+namespace Content.Server._Stories.Sponsors;
 
 public sealed partial class SponsorsManager
 {
