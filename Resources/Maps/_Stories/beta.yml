@@ -43560,18 +43560,6 @@ entities:
     - type: Transform
       pos: 27.314047,-6.7651405
       parent: 1
-    - type: Storage
-      storedItems:
-        4505:
-          position: 0,0
-          _rotation: South
-    - type: ContainerContainer
-      containers:
-        storagebase: !type:Container
-          showEnts: False
-          occludes: True
-          ents:
-          - 4505
   - uid: 8671
     components:
     - type: Transform
@@ -43582,18 +43570,6 @@ entities:
     - type: Transform
       pos: 43.5,1.5
       parent: 1
-    - type: Storage
-      storedItems:
-        9033:
-          position: 0,0
-          _rotation: South
-    - type: ContainerContainer
-      containers:
-        storagebase: !type:Container
-          showEnts: False
-          occludes: True
-          ents:
-          - 9033
   - uid: 9034
     components:
     - type: Transform
