@@ -4,10 +4,10 @@
   id: FloorTileItemWoodParquet
   components:
   - type: Sprite
-    sprite: _Corvax/Objects/Tiles/wood.rsi
+    sprite: _Stories/Objects/Tiles/wood.rsi
     state: wood_parquet
   - type: Item
-    sprite: _Corvax/Objects/Tiles/wood.rsi
+    sprite: _Stories/Objects/Tiles/wood.rsi
     heldPrefix: wood
   - type: FloorTile
     outputs:
@@ -22,10 +22,10 @@
   id: FloorTileItemWoodBlack
   components:
   - type: Sprite
-    sprite: _Corvax/Objects/Tiles/wood.rsi
+    sprite: _Stories/Objects/Tiles/wood.rsi
     state: wood_black
   - type: Item
-    sprite: _Corvax/Objects/Tiles/wood.rsi
+    sprite: _Stories/Objects/Tiles/wood.rsi
     heldPrefix: wood-black
   - type: FloorTile
     outputs:
@@ -40,10 +40,10 @@
   id: FloorTileItemWoodDark
   components:
   - type: Sprite
-    sprite: _Corvax/Objects/Tiles/wood.rsi
+    sprite: _Stories/Objects/Tiles/wood.rsi
     state: wood_dark
   - type: Item
-    sprite: _Corvax/Objects/Tiles/wood.rsi
+    sprite: _Stories/Objects/Tiles/wood.rsi
     heldPrefix: wood-dark
   - type: FloorTile
     outputs:
@@ -58,10 +58,10 @@
   id: FloorTileItemWoodLight
   components:
   - type: Sprite
-    sprite: _Corvax/Objects/Tiles/wood.rsi
+    sprite: _Stories/Objects/Tiles/wood.rsi
     state: wood_light
   - type: Item
-    sprite: _Corvax/Objects/Tiles/wood.rsi
+    sprite: _Stories/Objects/Tiles/wood.rsi
     heldPrefix: wood-light
   - type: FloorTile
     outputs:
@@ -76,10 +76,10 @@
   id: FloorTileItemWoodRed
   components:
   - type: Sprite
-    sprite: _Corvax/Objects/Tiles/wood.rsi
+    sprite: _Stories/Objects/Tiles/wood.rsi
     state: wood_red
   - type: Item
-    sprite: _Corvax/Objects/Tiles/wood.rsi
+    sprite: _Stories/Objects/Tiles/wood.rsi
     heldPrefix: wood-red
   - type: FloorTile
     outputs:
@@ -94,10 +94,10 @@
   id: FloorTileItemWoodLargeBlack
   components:
   - type: Sprite
-    sprite: _Corvax/Objects/Tiles/wood.rsi
+    sprite: _Stories/Objects/Tiles/wood.rsi
     state: wood_large_black
   - type: Item
-    sprite: _Corvax/Objects/Tiles/wood.rsi
+    sprite: _Stories/Objects/Tiles/wood.rsi
     heldPrefix: wood-black
   - type: FloorTile
     outputs:
@@ -112,10 +112,10 @@
   id: FloorTileItemWoodLargeDark
   components:
   - type: Sprite
-    sprite: _Corvax/Objects/Tiles/wood.rsi
+    sprite: _Stories/Objects/Tiles/wood.rsi
     state: wood_large_dark
   - type: Item
-    sprite: _Corvax/Objects/Tiles/wood.rsi
+    sprite: _Stories/Objects/Tiles/wood.rsi
     heldPrefix: wood-dark
   - type: FloorTile
     outputs:
@@ -130,10 +130,10 @@
   id: FloorTileItemWoodLargeLight
   components:
   - type: Sprite
-    sprite: _Corvax/Objects/Tiles/wood.rsi
+    sprite: _Stories/Objects/Tiles/wood.rsi
     state: wood_large_light
   - type: Item
-    sprite: _Corvax/Objects/Tiles/wood.rsi
+    sprite: _Stories/Objects/Tiles/wood.rsi
     heldPrefix: wood-light
   - type: FloorTile
     outputs:
@@ -148,10 +148,10 @@
   id: FloorTileItemWoodLargeRed
   components:
   - type: Sprite
-    sprite: _Corvax/Objects/Tiles/wood.rsi
+    sprite: _Stories/Objects/Tiles/wood.rsi
     state: wood_large_red
   - type: Item
-    sprite: _Corvax/Objects/Tiles/wood.rsi
+    sprite: _Stories/Objects/Tiles/wood.rsi
     heldPrefix: wood-red
   - type: FloorTile
     outputs:
@@ -166,10 +166,10 @@
   id: FloorTileItemWoodParquetBlack
   components:
   - type: Sprite
-    sprite: _Corvax/Objects/Tiles/wood.rsi
+    sprite: _Stories/Objects/Tiles/wood.rsi
     state: wood_parquet_black
   - type: Item
-    sprite: _Corvax/Objects/Tiles/wood.rsi
+    sprite: _Stories/Objects/Tiles/wood.rsi
     heldPrefix: wood-black
   - type: FloorTile
     outputs:
@@ -184,10 +184,10 @@
   id: FloorTileItemWoodParquetDark
   components:
   - type: Sprite
-    sprite: _Corvax/Objects/Tiles/wood.rsi
+    sprite: _Stories/Objects/Tiles/wood.rsi
     state: wood_parquet_dark
   - type: Item
-    sprite: _Corvax/Objects/Tiles/wood.rsi
+    sprite: _Stories/Objects/Tiles/wood.rsi
     heldPrefix: wood-dark
   - type: FloorTile
     outputs:
@@ -202,10 +202,10 @@
   id: FloorTileItemWoodParquetLight
   components:
   - type: Sprite
-    sprite: _Corvax/Objects/Tiles/wood.rsi
+    sprite: _Stories/Objects/Tiles/wood.rsi
     state: wood_parquet_light
   - type: Item
-    sprite: _Corvax/Objects/Tiles/wood.rsi
+    sprite: _Stories/Objects/Tiles/wood.rsi
     heldPrefix: wood-light
   - type: FloorTile
     outputs:
@@ -220,10 +220,10 @@
   id: FloorTileItemWoodParquetRed
   components:
   - type: Sprite
-    sprite: _Corvax/Objects/Tiles/wood.rsi
+    sprite: _Stories/Objects/Tiles/wood.rsi
     state: wood_parquet_red
   - type: Item
-    sprite: _Corvax/Objects/Tiles/wood.rsi
+    sprite: _Stories/Objects/Tiles/wood.rsi
     heldPrefix: wood-red
   - type: FloorTile
     outputs:
@@ -238,10 +238,10 @@
   id: FloorTileItemWoodChess
   components:
   - type: Sprite
-    sprite: _Corvax/Objects/Tiles/wood.rsi
+    sprite: _Stories/Objects/Tiles/wood.rsi
     state: wood_chess
   - type: Item
-    sprite: _Corvax/Objects/Tiles/wood.rsi
+    sprite: _Stories/Objects/Tiles/wood.rsi
     heldPrefix: wood
   - type: FloorTile
     outputs:
@@ -256,10 +256,10 @@
   id: FloorTileItemWoodChessBlack
   components:
   - type: Sprite
-    sprite: _Corvax/Objects/Tiles/wood.rsi
+    sprite: _Stories/Objects/Tiles/wood.rsi
     state: wood_chess_black
   - type: Item
-    sprite: _Corvax/Objects/Tiles/wood.rsi
+    sprite: _Stories/Objects/Tiles/wood.rsi
     heldPrefix: wood-black
   - type: FloorTile
     outputs:
@@ -274,10 +274,10 @@
   id: FloorTileItemWoodChessDark
   components:
   - type: Sprite
-    sprite: _Corvax/Objects/Tiles/wood.rsi
+    sprite: _Stories/Objects/Tiles/wood.rsi
     state: wood_chess_dark
   - type: Item
-    sprite: _Corvax/Objects/Tiles/wood.rsi
+    sprite: _Stories/Objects/Tiles/wood.rsi
     heldPrefix: wood-dark
   - type: FloorTile
     outputs:
@@ -292,10 +292,10 @@
   id: FloorTileItemWoodChessLight
   components:
   - type: Sprite
-    sprite: _Corvax/Objects/Tiles/wood.rsi
+    sprite: _Stories/Objects/Tiles/wood.rsi
     state: wood_chess_light
   - type: Item
-    sprite: _Corvax/Objects/Tiles/wood.rsi
+    sprite: _Stories/Objects/Tiles/wood.rsi
     heldPrefix: wood-light
   - type: FloorTile
     outputs:
@@ -310,10 +310,10 @@
   id: FloorTileItemWoodChessRed
   components:
   - type: Sprite
-    sprite: _Corvax/Objects/Tiles/wood.rsi
+    sprite: _Stories/Objects/Tiles/wood.rsi
     state: wood_chess_red
   - type: Item
-    sprite: _Corvax/Objects/Tiles/wood.rsi
+    sprite: _Stories/Objects/Tiles/wood.rsi
     heldPrefix: wood-red
   - type: FloorTile
     outputs:
