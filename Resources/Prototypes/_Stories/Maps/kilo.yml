@@ -3,6 +3,7 @@
   mapName: '[КТ] Kilo Station'
   mapPath: /Maps/_Stories/kilo.yml
   minPlayers: 35
+  maxPlayers: 70
   stations:
     Kilo:
       stationProto: StandardNanotrasenStation
