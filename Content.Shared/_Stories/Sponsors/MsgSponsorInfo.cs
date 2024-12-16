@@ -19,9 +19,6 @@ public sealed class SponsorInfo
     [JsonPropertyName("priorityJoin")]
     public bool HavePriorityJoin { get; set; } = false;
 
-    [JsonPropertyName("extraSlots")]
-    public int ExtraSlots { get; set; }
-
     [JsonPropertyName("allowedMarkings")] // TODO: Rename API field in separate PR as breaking change!
     public string[] AllowedMarkings { get; set; } = Array.Empty<string>();
 

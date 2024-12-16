@@ -21,7 +21,6 @@ desc              = """
                                             📚 Присоединяйтесь к нашему дружному сообществу 📚"""
 map_pool           = "StoriesDefaultMapPool"
 lobbyduration      = 210
-maxcharacterslots  = 2
 round_restart_time = 120
 contraband_examine = false
 
