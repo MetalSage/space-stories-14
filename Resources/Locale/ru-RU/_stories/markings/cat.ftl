@@ -1,0 +1,1 @@
+marking-CatTailAnimated = Кошачий хвост (виляющий)

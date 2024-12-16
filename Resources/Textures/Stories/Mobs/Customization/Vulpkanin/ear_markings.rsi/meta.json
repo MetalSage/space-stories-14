@@ -1,0 +1,47 @@
+{
+  "version": 1,
+  "license": "CC-BY-SA-3.0",
+  "copyright": "Taken from https://github.com/VOREStation/VOREStation/ edited by Floofers",
+  "size": {
+      "x": 32,
+      "y": 32
+  },
+  "states": [
+    {
+      "name": "vulp",
+      "directions": 4
+    },
+    {
+      "name": "vulp-inner",
+      "directions": 4
+    },
+    {
+      "name": "jackal",
+      "directions": 4
+    },
+    {
+      "name": "jackal-inner",
+      "directions": 4
+    },
+    {
+      "name": "fennec",
+      "directions": 4
+    },
+    {
+      "name": "fennec-inner",
+      "directions": 4
+    },
+    {
+      "name": "fox",
+      "directions": 4
+    },
+    {
+      "name": "otie",
+      "directions": 4
+    },
+    {
+      "name": "otie-inner",
+      "directions": 4
+    }
+  ]
+}
