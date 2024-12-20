@@ -26,7 +26,7 @@ public sealed class ThermalVisionSystem : SharedThermalVisionSystem
 
     private void OnThermalVisionDetached(Entity<ThermalVisionComponent> ent, ref LocalPlayerDetachedEvent args)
     {
-        Off();
+        Off(ent.Comp.Innate);
     }
 
     protected override void ThermalVisionChanged(Entity<ThermalVisionComponent> ent)
@@ -35,8 +35,9 @@ public sealed class ThermalVisionSystem : SharedThermalVisionSystem
             return;
 
         if (ent.Comp.Enabled)
-            On();
-        else Off();
+            On(ent.Comp.Innate);
+        else
+            Off(ent.Comp.Innate);
     }
 
     protected override void ThermalVisionRemoved(Entity<ThermalVisionComponent> ent)
@@ -44,20 +45,28 @@ public sealed class ThermalVisionSystem : SharedThermalVisionSystem
         if (ent != _player.LocalEntity)
             return;
 
-        Off();
+        Off(ent.Comp.Innate);
     }
 
-    private void Off()
+    private void Off(bool isInnate)
     {
         _overlay.RemoveOverlay(new ThermalVisionOverlay());
-        _light.DrawShadows = true;
-        _light.DrawLighting = true;
+
+        if(isInnate)
+        {
+            _light.DrawShadows = true;
+            _light.DrawLighting = true;
+        }
     }
 
-    private void On()
+    private void On(bool isInnate)
     {
         _overlay.AddOverlay(new ThermalVisionOverlay());
-        _light.DrawShadows = false;
-        _light.DrawLighting = false;
+
+        if(isInnate)
+        {
+            _light.DrawShadows = false;
+            _light.DrawLighting = false;
+        }
     }
 }
