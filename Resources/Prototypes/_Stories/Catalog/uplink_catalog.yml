@@ -13,10 +13,36 @@
   name: Прибор ночного видения
   description: Позволяет видеть в полной темноте. Работает на ядерной батарее внутри и совсем не вреден для глаз.
   productEntity: ClothingEyesNightvision
-  cost:
+  discountCategory: rareDiscounts
+  discountDownTo:
     Telecrystal: 2
+  cost:
+    Telecrystal: 4
   categories:
     - UplinkWearables
+  conditions:
+  - !type:StoreWhitelistCondition
+    blacklist:
+      tags:
+        - NukeOpsUplink
+
+- type: listing
+  id: UplinkNightvisionNukeOps
+  name: Прибор ночного видения
+  description: Позволяет видеть в полной темноте. Работает на ядерной батарее внутри и совсем не вреден для глаз.
+  productEntity: ClothingEyesNightvision
+  discountCategory: rareDiscounts
+  discountDownTo:
+    Telecrystal: 4
+  cost:
+    Telecrystal: 6
+  categories:
+  - UplinkWearables
+  conditions:
+  - !type:StoreWhitelistCondition
+    whitelist:
+      tags:
+        - NukeOpsUplink
 
 - type: listing
   id: UplinkClothingEyesThermalVisionMonocular
@@ -45,7 +71,7 @@
   discountDownTo:
     Telecrystal: 6
   cost:
-    Telecrystal: 9
+    Telecrystal: 8
   categories:
     - UplinkWearables
   conditions:
