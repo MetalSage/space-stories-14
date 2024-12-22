@@ -2,7 +2,7 @@
   id: SpaceLaw
   name: Таблица Статей
   priority: -1
-  text: "/ServerInfo/_Stories/ServerRules/StoriesSpaceLaw/SpaceStationTableLaw.xml"
+  text: "/ServerInfo/_Stories/ServerRules/SpaceLaw/SpaceStationTableLaw.xml"
   children:
   - SpaceLawSpaceStories
   - BasicRightsOfIntelligentBeings
@@ -10,15 +10,15 @@
 - type: guideEntry
   id: SpaceLawSpaceStories
   name: Корпоративный Закон
-  text: "/ServerInfo/_Stories/ServerRules/StoriesSpaceLaw/SpaceStationLaw.xml"
+  text: "/ServerInfo/_Stories/ServerRules/SpaceLaw/SpaceStationLaw.xml"
 
 - type: guideEntry
   id: SopSec
   name: СРП СБ
   priority: -1
-  text: "/ServerInfo/_Stories/ServerRules/StoriesSpaceLaw/SpaceStationSop.xml"
+  text: "/ServerInfo/_Stories/ServerRules/SpaceLaw/SpaceStationSop.xml"
 
 - type: guideEntry
   id: BasicRightsOfIntelligentBeings
   name: ОПРС
-  text: "/ServerInfo/_Stories/ServerRules/StoriesSpaceLaw/SpaceStationBRIB.xml"
+  text: "/ServerInfo/_Stories/ServerRules/SpaceLaw/SpaceStationBRIB.xml"
