@@ -13,3 +13,14 @@
     - ClothMade
     - HamsterWearable
     - WhitelistChameleon
+
+- type: entity
+  parent: ClothingHeadBase
+  id: ClothingHeadHatCapHoS
+  name: фуражка главы службы безопасности
+  description: Прочная форменная фуражка начальника службы безопасности. Напоминает рядовым офицерам, кто здесь главный.
+  components:
+  - type: Sprite
+    sprite: Stories/Clothing/Head/Hats/hoshat.rsi
+  - type: Clothing
+    sprite: Stories/Clothing/Head/Hats/hoshat.rsi
