@@ -1,0 +1,991 @@
+- type: entity
+  parent: [BaseItem, BaseFoldable]
+  abstract: true
+  id: cardBase
+  name: карта
+  description: "Основано на шапке ушанке"
+  components:
+  - type: Appearance
+  - type: Foldable
+    canFoldInsideContainer: true
+  - type: Sprite
+    sprite: Stories/Objects/Fun/cards.rsi
+  - type: Tag
+    tags:
+    - Card
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeAabb
+          bounds: "-0.01,-0.01,0.01,0.01"
+        density: 20
+        mask:
+        - ItemMask
+        restitution: 0.3  # fite me
+        friction: 0.2
+
+- type: entity
+  parent: cardBase
+  id: card-1
+  name: карта
+  suffix: Бубны Туз 
+  description: "Обычная игральная карта"
+  components:
+  - type: Sprite
+    layers:
+    - state: icon
+      map: [ "unfoldedLayer" ]
+    - state: card-1
+      map: ["foldedLayer"]
+      visible: false
+
+- type: entity
+  parent: cardBase
+  id: card-2
+  name: карта
+  suffix: Бубны 2 
+  description: "Обычная игральная карта"
+  components:
+  - type: Sprite
+    layers:
+    - state: icon
+      map: [ "unfoldedLayer" ]
+    - state: card-2
+      map: ["foldedLayer"]
+      visible: false
+
+- type: entity
+  parent: cardBase
+  id: card-3
+  name: карта
+  suffix: Бубны 3 
+  description: "Обычная игральная карта"
+  components:
+  - type: Sprite
+    layers:
+    - state: icon
+      map: [ "unfoldedLayer" ]
+    - state: card-3
+      map: ["foldedLayer"]
+      visible: false
+
+- type: entity
+  parent: cardBase
+  id: card-4
+  name: карта
+  suffix: Бубны 4 
+  description: "Обычная игральная карта"
+  components:
+  - type: Sprite
+    layers:
+    - state: icon
+      map: [ "unfoldedLayer" ]
+    - state: card-4
+      map: ["foldedLayer"]
+      visible: false
+
+- type: entity
+  parent: cardBase
+  id: card-5
+  name: карта
+  suffix: Бубны 5 
+  description: "Обычная игральная карта"
+  components:
+  - type: Sprite
+    layers:
+    - state: icon
+      map: [ "unfoldedLayer" ]
+    - state: card-5
+      map: ["foldedLayer"]
+      visible: false
+
+- type: entity
+  parent: cardBase
+  id: card-6
+  name: карта
+  suffix: Бубны 6 
+  description: "Обычная игральная карта"
+  components:
+  - type: Sprite
+    layers:
+    - state: icon
+      map: [ "unfoldedLayer" ]
+    - state: card-6
+      map: ["foldedLayer"]
+      visible: false
+
+- type: entity
+  parent: cardBase
+  id: card-7
+  name: карта
+  suffix: Бубны 7 
+  description: "Обычная игральная карта"
+  components:
+  - type: Sprite
+    layers:
+    - state: icon
+      map: [ "unfoldedLayer" ]
+    - state: card-7
+      map: ["foldedLayer"]
+      visible: false
+
+- type: entity
+  parent: cardBase
+  id: card-8
+  name: карта
+  suffix: Бубны 8 
+  description: "Обычная игральная карта"
+  components:
+  - type: Sprite
+    layers:
+    - state: icon
+      map: [ "unfoldedLayer" ]
+    - state: card-8
+      map: ["foldedLayer"]
+      visible: false
+
+- type: entity
+  parent: cardBase
+  id: card-9
+  name: карта
+  suffix: Бубны 9 
+  description: "Обычная игральная карта"
+  components:
+  - type: Sprite
+    layers:
+    - state: icon
+      map: [ "unfoldedLayer" ]
+    - state: card-9
+      map: ["foldedLayer"]
+      visible: false
+
+- type: entity
+  parent: cardBase
+  id: card-10
+  name: карта
+  suffix: Бубны 10 
+  description: "Обычная игральная карта"
+  components:
+  - type: Sprite
+    layers:
+    - state: icon
+      map: [ "unfoldedLayer" ]
+    - state: card-10
+      map: ["foldedLayer"]
+      visible: false
+
+- type: entity
+  parent: cardBase
+  id: card-11
+  name: карта
+  suffix: Бубны Валет 
+  description: "Обычная игральная карта"
+  components:
+  - type: Sprite
+    layers:
+    - state: icon
+      map: [ "unfoldedLayer" ]
+    - state: card-11
+      map: ["foldedLayer"]
+      visible: false
+
+- type: entity
+  parent: cardBase
+  id: card-12
+  name: карта
+  suffix: Бубны Дама 
+  description: "Обычная игральная карта"
+  components:
+  - type: Sprite
+    layers:
+    - state: icon
+      map: [ "unfoldedLayer" ]
+    - state: card-12
+      map: ["foldedLayer"]
+      visible: false
+
+- type: entity
+  parent: cardBase
+  id: card-13
+  name: карта
+  suffix: Бубны Король 
+  description: "Обычная игральная карта"
+  components:
+  - type: Sprite
+    layers:
+    - state: icon
+      map: [ "unfoldedLayer" ]
+    - state: card-13
+      map: ["foldedLayer"]
+      visible: false
+
+- type: entity
+  parent: cardBase
+  id: card-14
+  name: карта
+  suffix: Черви Туз 
+  description: "Обычная игральная карта"
+  components:
+  - type: Sprite
+    layers:
+    - state: icon
+      map: [ "unfoldedLayer" ]
+    - state: card-14
+      map: ["foldedLayer"]
+      visible: false
+
+- type: entity
+  parent: cardBase
+  id: card-15
+  name: карта
+  suffix: Черви 2 
+  description: "Обычная игральная карта"
+  components:
+  - type: Sprite
+    layers:
+    - state: icon
+      map: [ "unfoldedLayer" ]
+    - state: card-15
+      map: ["foldedLayer"]
+      visible: false
+
+- type: entity
+  parent: cardBase
+  id: card-16
+  name: карта
+  suffix: Черви 3 
+  description: "Обычная игральная карта"
+  components:
+  - type: Sprite
+    layers:
+    - state: icon
+      map: [ "unfoldedLayer" ]
+    - state: card-16
+      map: ["foldedLayer"]
+      visible: false
+
+- type: entity
+  parent: cardBase
+  id: card-17
+  name: карта
+  suffix: Черви 4 
+  description: "Обычная игральная карта"
+  components:
+  - type: Sprite
+    layers:
+    - state: icon
+      map: [ "unfoldedLayer" ]
+    - state: card-17
+      map: ["foldedLayer"]
+      visible: false
+
+- type: entity
+  parent: cardBase
+  id: card-18
+  name: карта
+  suffix: Черви 5 
+  description: "Обычная игральная карта"
+  components:
+  - type: Sprite
+    layers:
+    - state: icon
+      map: [ "unfoldedLayer" ]
+    - state: card-18
+      map: ["foldedLayer"]
+      visible: false
+
+- type: entity
+  parent: cardBase
+  id: card-19
+  name: карта
+  suffix: Черви 6 
+  description: "Обычная игральная карта"
+  components:
+  - type: Sprite
+    layers:
+    - state: icon
+      map: [ "unfoldedLayer" ]
+    - state: card-19
+      map: ["foldedLayer"]
+      visible: false
+
+- type: entity
+  parent: cardBase
+  id: card-20
+  name: карта
+  suffix: Черви 7 
+  description: "Обычная игральная карта"
+  components:
+  - type: Sprite
+    layers:
+    - state: icon
+      map: [ "unfoldedLayer" ]
+    - state: card-20
+      map: ["foldedLayer"]
+      visible: false
+
+- type: entity
+  parent: cardBase
+  id: card-21
+  name: карта
+  suffix: Черви 8 
+  description: "Обычная игральная карта"
+  components:
+  - type: Sprite
+    layers:
+    - state: icon
+      map: [ "unfoldedLayer" ]
+    - state: card-21
+      map: ["foldedLayer"]
+      visible: false
+
+- type: entity
+  parent: cardBase
+  id: card-22
+  name: карта
+  suffix: Черви 9 
+  description: "Обычная игральная карта"
+  components:
+  - type: Sprite
+    layers:
+    - state: icon
+      map: [ "unfoldedLayer" ]
+    - state: card-22
+      map: ["foldedLayer"]
+      visible: false
+
+- type: entity
+  parent: cardBase
+  id: card-23
+  name: карта
+  suffix: Черви 10 
+  description: "Обычная игральная карта"
+  components:
+  - type: Sprite
+    layers:
+    - state: icon
+      map: [ "unfoldedLayer" ]
+    - state: card-23
+      map: ["foldedLayer"]
+      visible: false
+
+- type: entity
+  parent: cardBase
+  id: card-24
+  name: карта
+  suffix: Черви Валет 
+  description: "Обычная игральная карта"
+  components:
+  - type: Sprite
+    layers:
+    - state: icon
+      map: [ "unfoldedLayer" ]
+    - state: card-24
+      map: ["foldedLayer"]
+      visible: false
+
+- type: entity
+  parent: cardBase
+  id: card-25
+  name: карта
+  suffix: Черви Дама 
+  description: "Обычная игральная карта"
+  components:
+  - type: Sprite
+    layers:
+    - state: icon
+      map: [ "unfoldedLayer" ]
+    - state: card-25
+      map: ["foldedLayer"]
+      visible: false
+
+- type: entity
+  parent: cardBase
+  id: card-26
+  name: карта
+  suffix: Черви Король 
+  description: "Обычная игральная карта"
+  components:
+  - type: Sprite
+    layers:
+    - state: icon
+      map: [ "unfoldedLayer" ]
+    - state: card-26
+      map: ["foldedLayer"]
+      visible: false
+
+- type: entity
+  parent: cardBase
+  id: card-27
+  name: карта
+  suffix: Трефы Туз 
+  description: "Обычная игральная карта"
+  components:
+  - type: Sprite
+    layers:
+    - state: icon
+      map: [ "unfoldedLayer" ]
+    - state: card-27
+      map: ["foldedLayer"]
+      visible: false
+
+- type: entity
+  parent: cardBase
+  id: card-28
+  name: карта
+  suffix: Трефы 2 
+  description: "Обычная игральная карта"
+  components:
+  - type: Sprite
+    layers:
+    - state: icon
+      map: [ "unfoldedLayer" ]
+    - state: card-28
+      map: ["foldedLayer"]
+      visible: false
+
+- type: entity
+  parent: cardBase
+  id: card-29
+  name: карта
+  suffix: Трефы 3 
+  description: "Обычная игральная карта"
+  components:
+  - type: Sprite
+    layers:
+    - state: icon
+      map: [ "unfoldedLayer" ]
+    - state: card-29
+      map: ["foldedLayer"]
+      visible: false
+
+- type: entity
+  parent: cardBase
+  id: card-30
+  name: карта
+  suffix: Трефы 4 
+  description: "Обычная игральная карта"
+  components:
+  - type: Sprite
+    layers:
+    - state: icon
+      map: [ "unfoldedLayer" ]
+    - state: card-30
+      map: ["foldedLayer"]
+      visible: false
+
+- type: entity
+  parent: cardBase
+  id: card-31
+  name: карта
+  suffix: Трефы 5 
+  description: "Обычная игральная карта"
+  components:
+  - type: Sprite
+    layers:
+    - state: icon
+      map: [ "unfoldedLayer" ]
+    - state: card-31
+      map: ["foldedLayer"]
+      visible: false
+
+- type: entity
+  parent: cardBase
+  id: card-32
+  name: карта
+  suffix: Трефы 6 
+  description: "Обычная игральная карта"
+  components:
+  - type: Sprite
+    layers:
+    - state: icon
+      map: [ "unfoldedLayer" ]
+    - state: card-32
+      map: ["foldedLayer"]
+      visible: false
+
+- type: entity
+  parent: cardBase
+  id: card-33
+  name: карта
+  suffix: Трефы 7 
+  description: "Обычная игральная карта"
+  components:
+  - type: Sprite
+    layers:
+    - state: icon
+      map: [ "unfoldedLayer" ]
+    - state: card-33
+      map: ["foldedLayer"]
+      visible: false
+
+- type: entity
+  parent: cardBase
+  id: card-34
+  name: карта
+  suffix: Трефы 8 
+  description: "Обычная игральная карта"
+  components:
+  - type: Sprite
+    layers:
+    - state: icon
+      map: [ "unfoldedLayer" ]
+    - state: card-34
+      map: ["foldedLayer"]
+      visible: false
+
+- type: entity
+  parent: cardBase
+  id: card-35
+  name: карта
+  suffix: Трефы 9 
+  description: "Обычная игральная карта"
+  components:
+  - type: Sprite
+    layers:
+    - state: icon
+      map: [ "unfoldedLayer" ]
+    - state: card-35
+      map: ["foldedLayer"]
+      visible: false
+
+- type: entity
+  parent: cardBase
+  id: card-36
+  name: карта
+  suffix: Трефы 10 
+  description: "Обычная игральная карта"
+  components:
+  - type: Sprite
+    layers:
+    - state: icon
+      map: [ "unfoldedLayer" ]
+    - state: card-36
+      map: ["foldedLayer"]
+      visible: false
+
+- type: entity
+  parent: cardBase
+  id: card-37
+  name: карта
+  suffix: Трефы Валет 
+  description: "Обычная игральная карта"
+  components:
+  - type: Sprite
+    layers:
+    - state: icon
+      map: [ "unfoldedLayer" ]
+    - state: card-37
+      map: ["foldedLayer"]
+      visible: false
+
+- type: entity
+  parent: cardBase
+  id: card-38
+  name: карта
+  suffix: Трефы Дама
+  description: "Обычная игральная карта"
+  components:
+  - type: Sprite
+    layers:
+    - state: icon
+      map: [ "unfoldedLayer" ]
+    - state: card-38
+      map: ["foldedLayer"]
+      visible: false
+
+- type: entity
+  parent: cardBase
+  id: card-39
+  name: карта
+  suffix: Трефы Король 
+  description: "Обычная игральная карта"
+  components:
+  - type: Sprite
+    layers:
+    - state: icon
+      map: [ "unfoldedLayer" ]
+    - state: card-39
+      map: ["foldedLayer"]
+      visible: false
+
+- type: entity
+  parent: cardBase
+  id: card-40
+  name: карта
+  suffix: Пики Туз 
+  description: "Обычная игральная карта"
+  components:
+  - type: Sprite
+    layers:
+    - state: icon
+      map: [ "unfoldedLayer" ]
+    - state: card-40
+      map: ["foldedLayer"]
+      visible: false
+
+- type: entity
+  parent: cardBase
+  id: card-41
+  name: карта
+  suffix: Пики 2 
+  description: "Обычная игральная карта"
+  components:
+  - type: Sprite
+    layers:
+    - state: icon
+      map: [ "unfoldedLayer" ]
+    - state: card-41
+      map: ["foldedLayer"]
+      visible: false
+
+- type: entity
+  parent: cardBase
+  id: card-42
+  name: карта
+  suffix: Пики 3 
+  description: "Обычная игральная карта"
+  components:
+  - type: Sprite
+    layers:
+    - state: icon
+      map: [ "unfoldedLayer" ]
+    - state: card-42
+      map: ["foldedLayer"]
+      visible: false
+
+- type: entity
+  parent: cardBase
+  id: card-43
+  name: карта
+  suffix: Пики 4 
+  description: "Обычная игральная карта"
+  components:
+  - type: Sprite
+    layers:
+    - state: icon
+      map: [ "unfoldedLayer" ]
+    - state: card-43
+      map: ["foldedLayer"]
+      visible: false
+ 
+- type: entity
+  parent: cardBase
+  id: card-44
+  name: карта
+  suffix: Пики 5 
+  description: "Обычная игральная карта"
+  components:
+  - type: Sprite
+    layers:
+    - state: icon
+      map: [ "unfoldedLayer" ]
+    - state: card-44
+      map: ["foldedLayer"]
+      visible: false
+
+- type: entity
+  parent: cardBase
+  id: card-45
+  name: карта
+  suffix: Пики 6 
+  description: "Обычная игральная карта"
+  components:
+  - type: Sprite
+    layers:
+    - state: icon
+      map: [ "unfoldedLayer" ]
+    - state: card-45
+      map: ["foldedLayer"]
+      visible: false
+
+- type: entity
+  parent: cardBase
+  id: card-46
+  name: карта
+  suffix: Пики 7 
+  description: "Обычная игральная карта"
+  components:
+  - type: Sprite
+    layers:
+    - state: icon
+      map: [ "unfoldedLayer" ]
+    - state: card-46
+      map: ["foldedLayer"]
+      visible: false
+
+- type: entity
+  parent: cardBase
+  id: card-47
+  name: карта
+  suffix: Пики 8 
+  description: "Обычная игральная карта"
+  components:
+  - type: Sprite
+    layers:
+    - state: icon
+      map: [ "unfoldedLayer" ]
+    - state: card-47
+      map: ["foldedLayer"]
+      visible: false
+
+- type: entity
+  parent: cardBase
+  id: card-48
+  name: карта
+  suffix: Пики 9 
+  description: "Обычная игральная карта"
+  components:
+  - type: Sprite
+    layers:
+    - state: icon
+      map: [ "unfoldedLayer" ]
+    - state: card-48
+      map: ["foldedLayer"]
+      visible: false
+
+- type: entity
+  parent: cardBase
+  id: card-49
+  name: карта
+  suffix: Пики 10 
+  description: "Обычная игральная карта"
+  components:
+  - type: Sprite
+    layers:
+    - state: icon
+      map: [ "unfoldedLayer" ]
+    - state: card-49
+      map: ["foldedLayer"]
+      visible: false
+
+- type: entity
+  parent: cardBase
+  id: card-50
+  name: карта
+  suffix: Пики Валет
+  description: "Обычная игральная карта"
+  components:
+  - type: Sprite
+    layers:
+    - state: icon
+      map: [ "unfoldedLayer" ]
+    - state: card-50
+      map: ["foldedLayer"]
+      visible: false
+
+- type: entity
+  parent: cardBase
+  id: card-51
+  name: карта
+  suffix: Пики Дама
+  description: "Обычная игральная карта"
+  components:
+  - type: Sprite
+    layers:
+    - state: icon
+      map: [ "unfoldedLayer" ]
+    - state: card-51
+      map: ["foldedLayer"]
+      visible: false
+
+- type: entity
+  parent: cardBase
+  id: card-52
+  name: карта
+  suffix: Пики Король
+  description: "Обычная игральная карта"
+  components:
+  - type: Sprite
+    layers:
+    - state: icon
+      map: [ "unfoldedLayer" ]
+    - state: card-52
+      map: ["foldedLayer"]
+      visible: false
+
+- type: entity
+  parent: cardBase
+  id: card-53
+  name: карта
+  suffix: Джокер клоун
+  description: "Обычная игральная карта"
+  components:
+  - type: Sprite
+    layers:
+    - state: icon
+      map: [ "unfoldedLayer" ]
+    - state: card-53
+      map: ["foldedLayer"]
+      visible: false
+
+- type: entity
+  parent: cardBase
+  id: card-54
+  name: карта
+  suffix: Джокер Мим
+  description: "Обычная игральная карта"
+  components:
+  - type: Sprite
+    layers:
+    - state: icon
+      map: [ "unfoldedLayer" ]
+    - state: card-54
+      map: ["foldedLayer"]
+      visible: false
+
+- type: entity
+  parent: cardBase
+  id: card-Random
+  name: карта
+  suffix: Случайная карта
+  description: "Обычная игральная карта"
+  components:
+  - type: Sprite
+    layers:
+    - state: icon
+      map: [ "unfoldedLayer" ]
+    - state: card-0
+      map: ["foldedLayer"]
+      visible: false
+  - type: RandomSpawner
+    prototypes:
+      - card-1
+      - card-2
+      - card-3
+      - card-4
+      - card-5
+      - card-6
+      - card-7
+      - card-8
+      - card-9
+      - card-10
+      - card-11
+      - card-12
+      - card-13
+      - card-14
+      - card-15
+      - card-16
+      - card-17
+      - card-18
+      - card-19
+      - card-20
+      - card-21
+      - card-22
+      - card-23
+      - card-24
+      - card-25
+      - card-26
+      - card-27
+      - card-28
+      - card-29
+      - card-30
+      - card-31
+      - card-32
+      - card-33
+      - card-34
+      - card-35
+      - card-36
+      - card-37
+      - card-38
+      - card-39
+      - card-40
+      - card-41
+      - card-42
+      - card-43
+      - card-44
+      - card-45
+      - card-46
+      - card-47
+      - card-48
+      - card-49
+      - card-50
+      - card-51
+      - card-52
+      - card-53
+      - card-54
+    chance: 1
+
+- type: entity
+  name: колода карт
+  id: cardDesk
+  parent: [ BaseStorageItem, BaseBagOpenClose ]
+  components:
+  - type: MagnetPickup
+  - type: Sprite
+    sprite: Stories/Objects/Fun/cards.rsi
+    state: desk
+    layers:
+    - state: desk
+    - state: desk-open
+      map: ["openLayer"]
+      visible: false
+  - type: Item
+    size: Ginormous
+  - type: Storage
+    maxItemSize: Normal
+    grid:
+    - 0,0,26,3
+    quickInsert: true
+    areaInsert: true
+    whitelist:
+      tags:
+        - Card
+  - type: Dumpable
+  - type: StorageFill
+    contents:
+      - id: card-1
+      - id: card-2
+      - id: card-3
+      - id: card-4
+      - id: card-5
+      - id: card-6
+      - id: card-7
+      - id: card-8
+      - id: card-9
+      - id: card-10
+      - id: card-11
+      - id: card-12
+      - id: card-13
+      - id: card-14
+      - id: card-15
+      - id: card-16
+      - id: card-17
+      - id: card-18
+      - id: card-19
+      - id: card-20
+      - id: card-21
+      - id: card-22
+      - id: card-23
+      - id: card-24
+      - id: card-25
+      - id: card-26
+      - id: card-27
+      - id: card-28
+      - id: card-29
+      - id: card-30
+      - id: card-31
+      - id: card-32
+      - id: card-33
+      - id: card-34
+      - id: card-35
+      - id: card-36
+      - id: card-37
+      - id: card-38
+      - id: card-39
+      - id: card-40
+      - id: card-41
+      - id: card-42
+      - id: card-43
+      - id: card-44
+      - id: card-45
+      - id: card-46
+      - id: card-47
+      - id: card-48
+      - id: card-49
+      - id: card-50
+      - id: card-51
+      - id: card-52
+      - id: card-53
+      - id: card-54
