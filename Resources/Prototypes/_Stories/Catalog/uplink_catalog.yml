@@ -81,6 +81,16 @@
           - NukeOpsUplink
 
 - type: listing
+  id: ClothingUniformMaidMiniskirt
+  name: uplink-maid-miniskirt-name
+  description: uplink-maid-miniskirt-desc
+  productEntity: ClothingUniformJumpskirtJanimaidmini
+  cost:
+    Telecrystal: 20
+  categories:
+  - UplinkPointless
+
+- type: listing
   id: UplinkDogEars
   name: uplink-dog-ears-name
   description: uplink-dog-ears-desc
