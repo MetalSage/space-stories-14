@@ -1790,6 +1790,11 @@
   name: uplink-balloon-name
   description: uplink-balloon-desc
   productEntity: BalloonSyn
+  # Stories-start
+  discountCategory: veryRareDiscounts
+  discountDownTo:
+    Telecrystal: 0
+  # Stories-end
   cost:
     Telecrystal: 20
   categories:
