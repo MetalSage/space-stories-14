@@ -1,0 +1,5 @@
+# Hats
+- type: latheRecipe
+  parent: BaseCommandHatRecipe
+  id: ClothingHeadHatCapHoS
+  result: ClothingHeadHatCapHoS
