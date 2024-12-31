@@ -1,0 +1,8 @@
+- type: speechSounds
+  id: MaleAvali
+  saySound:
+    path: /Audio/_Stories/Voice/Avali/avali_1.ogg
+  askSound:
+    path: /Audio/_Stories/Voice/Avali/avali_1_ask.ogg
+  exclaimSound:
+    path: /Audio/_Stories/Voice/Avali/avali_1_exclaim.ogg

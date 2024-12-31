@@ -1,0 +1,25 @@
+- type: entity
+  save: false
+  parent: BaseMobSpeciesOrganic
+  id: MobFelinid
+  name: Urist McFelinid
+  components:
+  - type: HumanoidAppearance
+    species: Felinid
+    hideLayersOnEquip:
+    - Hair
+    - HeadTop
+  - type: Sprite
+    drawdepth: Mobs
+  - type: Vocal
+    sounds:
+      Male: MaleFelinid
+      Unsexed: UnisexFelinid
+      Female: FemaleFelinid
+  - type: Speech
+    allowedEmotes: ['Hiss', 'Meow', 'Mew', 'Growl', 'Purr']
+
+- type: entity
+  parent: BaseSpeciesDummy
+  id: MobFelinidDummy
+  categories: [ HideSpawnMenu ]

@@ -23,3 +23,8 @@
     Blunt: 0.5
     Cold: 0.1
     Heat: 2.0
+
+- type: damageModifierSet
+  id: Vulpkanin
+  coefficients:
+    Heat: 1.15
