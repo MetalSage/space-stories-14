@@ -1255,7 +1255,7 @@
   loadouts:
   - HeadofSecurityHead
   - HeadofSecurityBeret
-  - ClothingHeadHatCapHoS # Stories
+  - HeadofSecurityCap # Stories
 
 - type: loadoutGroup
   id: HeadofSecurityJumpsuit
