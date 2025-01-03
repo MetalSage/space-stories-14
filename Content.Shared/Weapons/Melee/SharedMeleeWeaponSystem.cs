@@ -731,8 +731,8 @@ public abstract class SharedMeleeWeaponSystem : EntitySystem
 
             for (var a = 0; a < res.Count; a++) // Space Stories - start
             {
-                // if (Transform(ignore).ChildEntities.Contains(res[a].HitEntity)) // Мне просто нужно, чтобы он не бил своих детей, но его удары проходили дальше.
-                //     continue;
+                if (Transform(ignore).ChildEntities.Contains(res[a].HitEntity)) // Мне просто нужно, чтобы он не бил своих детей, но его удары проходили дальше.
+                    continue;
                 resSet.Add(res[a].HitEntity);
                 break;
             }  // Space Stories - end
