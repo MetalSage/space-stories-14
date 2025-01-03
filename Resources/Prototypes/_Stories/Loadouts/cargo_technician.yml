@@ -1,0 +1,17 @@
+- type: loadoutEffectGroup
+  id: CargoTechnicianNeckLizard
+  effects:
+  - !type:JobRequirementLoadoutEffect
+    requirement:
+      !type:RoleTimeRequirement
+      role: JobCargoTechnician
+      time: 36000 #10 hrs
+
+- type: loadout
+  id: NeckLizard
+  effects:
+  - !type:GroupLoadoutEffect
+    proto: CargoTechnicianNeckLizard
+  storage:
+    back:
+    - ClothingNeckCloakAdmin
