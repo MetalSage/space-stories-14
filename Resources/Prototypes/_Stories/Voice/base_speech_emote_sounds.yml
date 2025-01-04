@@ -1,0 +1,50 @@
+- type: emoteSounds
+  id: BaseHumanoidSounds
+  abstract: true
+  params:
+    variation: 0.125
+  sounds:
+    Snore:
+      collection: Snores
+    Whistle:
+      collection: Whistles
+
+- type: emoteSounds
+  parent: BaseHumanoidSounds
+  id: BaseMaleSounds
+  abstract: true
+  sounds:
+    Sneeze:
+      collection: MaleSneezes
+    Cough:
+      collection: MaleCoughs
+    Yawn:
+      collection: MaleYawn
+    Sigh:
+      collection: MaleSigh
+    Crying:
+      collection: MaleCry
+    Gasp:
+      collection: MaleGasp
+    DefaultDeathgasp:
+      collection: MaleDeathGasp
+
+- type: emoteSounds
+  parent: BaseHumanoidSounds
+  id: BaseFemaleSounds
+  abstract: true
+  sounds:
+    Sneeze:
+      collection: FemaleSneezes
+    Cough:
+      collection: FemaleCoughs
+    Yawn:
+      collection: FemaleYawn
+    Sigh:
+      collection: FemaleSigh
+    Crying:
+      collection: FemaleCry
+    Gasp:
+      collection: FemaleGasp
+    DefaultDeathgasp:
+      collection: FemaleDeathGasp

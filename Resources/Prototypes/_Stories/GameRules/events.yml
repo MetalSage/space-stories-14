@@ -1,0 +1,208 @@
+- type: entity
+  parent: BaseGameRule
+  id: SithSpawn
+  components:
+  - type: AntagObjectives
+    objectives:
+    - KillJediNtObjective
+    - SithSurviveObjective
+    - HypnosisObjective
+  - type: AntagLoadProfileRule
+    speciesOverride: Human
+    speciesOverrideBlacklist:
+    #Species that do not work with nukies should be included in this list.
+    #Once the issues are fixed the species should be removed from this list to be enabled.
+    #Balance concerns are not a valid reason to disable a species, except for high-impact Nukie-specific exploits.
+    - Vox
+  # - type: StationEvent
+  #   earliestStart: 35
+  #   weight: 5.5
+  #   minimumPlayers: 20
+  #   duration: 1
+  - type: RuleGrids
+  - type: LoadMapRule
+    preloadedGrid: TIE
+  - type: AntagSelection
+    definitions:
+    - spawnerPrototype: SpawnPointSith
+      min: 1
+      max: 1
+      pickPlayer: false
+      startingGear: SithGear
+      components:
+      - type: Barotrauma
+        protectionSlots:
+        - head
+        - neck
+        damage:
+          types:
+            Blunt: 0.55 #per second, scales with pressure and other constants.
+      - type: Force
+      - type: ForceUser
+        preset: Inquisitor
+      - type: AutoImplant
+        implants:
+        - DeathAcidifierImplant
+      - type: IntrinsicRadioReceiver
+      - type: IntrinsicRadioTransmitter
+        channels:
+        - Empire
+      - type: ActiveRadio
+        channels:
+        - Empire
+      - type: Stamina
+        stunTime: 3
+        decay: 6
+        cooldown: 1
+        critThreshold: 400
+      - type: Puller
+        needsHands: false
+      - type: UserInterface
+        interfaces:
+          enum.StoreUiKey.Key: # SpaceStories Немного магазина во всех нас.
+            type: StoreBoundUserInterface # ! Это нужно, чтобы пользователи силы могли открывать свой магазин навыков.
+          enum.VoiceMaskUIKey.Key:
+            type: VoiceMaskBoundUserInterface
+          enum.HumanoidMarkingModifierKey.Key:
+            type: HumanoidMarkingModifierBoundUserInterface
+          enum.StrippingUiKey.Key:
+            type: StrippableBoundUserInterface
+      - type: StatusEffects
+        allowed:
+        - Stun
+        - KnockedDown
+        - SlowedDown
+        - Stutter
+        - SeeingRainbows
+        - Electrocution
+        - Drunk
+        - SlurredSpeech
+        - RatvarianLanguage
+        - PressureImmunity
+        - FrozeBullets # Stories
+        - Muted
+        - ForcedSleep
+        - TemporaryBlindness
+        - Pacified
+        - StaminaModifier
+      - type: RandomMetadata
+        nameSegments:
+        - names_sith_title
+        - names_sith
+      - type: NpcFactionMember
+        factions:
+        - Syndicate
+      mindRoles:
+      - MindRoleEmpireMember
+
+- type: entity
+  parent: BaseGameRule
+  id: KyloSpawn
+  components:
+  - type: AntagLoadProfileRule
+    speciesOverride: Human
+    speciesOverrideBlacklist:
+    #Species that do not work with nukies should be included in this list.
+    #Once the issues are fixed the species should be removed from this list to be enabled.
+    #Balance concerns are not a valid reason to disable a species, except for high-impact Nukie-specific exploits.
+    - Vox
+  # - type: StationEvent
+  #   earliestStart: 35
+  #   weight: 5.5
+  #   minimumPlayers: 20
+  #   duration: 1
+  - type: RuleGrids
+  - type: LoadMapRule
+    preloadedGrid: TIE
+  - type: AntagObjectives
+    objectives:
+    - KillJediNtObjective
+    - SithSurviveObjective
+    - HypnosisObjective
+  - type: AntagSelection
+    definitions:
+    - spawnerPrototype: SpawnPointSith
+      min: 1
+      max: 1
+      pickPlayer: false
+      startingGear: KyloGear
+      components:
+      - type: Barotrauma
+        protectionSlots:
+        - head
+        - neck
+        damage:
+          types:
+            Blunt: 0.55 #per second, scales with pressure and other constants.
+      - type: Force
+      - type: ForceUser
+        preset: Inquisitor
+      - type: AutoImplant
+        implants:
+        - DeathAcidifierImplant
+      - type: IntrinsicRadioReceiver
+      - type: IntrinsicRadioTransmitter
+        channels:
+        - Empire
+      - type: ActiveRadio
+        channels:
+        - Empire
+      - type: Stamina
+        stunTime: 3
+        decay: 6
+        cooldown: 1
+        critThreshold: 400
+      - type: Puller
+        needsHands: false
+      - type: UserInterface
+        interfaces:
+          enum.StoreUiKey.Key: # SpaceStories Немного магазина во всех нас.
+            type: StoreBoundUserInterface # ! Это нужно, чтобы пользователи силы могли открывать свой магазин навыков.
+          enum.HumanoidMarkingModifierKey.Key:
+            type: HumanoidMarkingModifierBoundUserInterface
+          enum.StrippingUiKey.Key:
+            type: StrippableBoundUserInterface
+      - type: StatusEffects
+        allowed:
+        - Stun
+        - KnockedDown
+        - SlowedDown
+        - Stutter
+        - SeeingRainbows
+        - Electrocution
+        - Drunk
+        - SlurredSpeech
+        - RatvarianLanguage
+        - PressureImmunity
+        - FrozeBullets # Stories
+        - Muted
+        - ForcedSleep
+        - TemporaryBlindness
+        - Pacified
+        - StaminaModifier
+      - type: RandomMetadata
+        nameSegments:
+        - names_sith_title
+        - names_sith
+      - type: NpcFactionMember
+        factions:
+        - Syndicate
+      mindRoles:
+      - MindRoleEmpireMember
+
+- type: entity
+  id: SpafMigration
+  parent: BaseStationEventShortDelay
+  components:
+  - type: StationEvent
+    startAnnouncement: station-event-vent-creatures-start-announcement
+    startAudio:
+      path: /Audio/Announcements/attention.ogg
+    earliestStart: 15
+    weight: 6.5
+    duration: 50
+    minimumPlayers: 30
+  - type: VentCrittersRule
+    specialEntries:
+    - id: SpawnPointGhostSpaf
+      prob: 0.001

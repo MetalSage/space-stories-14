@@ -246,7 +246,7 @@
         color: "#75b1f0"
   - type: PointLight
     radius: 2.0
-    energy: 3.5
+    energy: 2.5
     color: "#75b1f0" # Edited through the LiquidAnomalySystem
   - type: MobState
     allowedStates:

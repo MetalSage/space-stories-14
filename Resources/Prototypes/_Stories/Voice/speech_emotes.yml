@@ -1,0 +1,170 @@
+- type: emote
+  id: Meow
+  name: emote-name-meow
+  category: Vocal
+  whitelist:
+    components:
+    - Vocal
+  blacklist:
+    components:
+    - BorgChassis
+  available: false
+  icon: Interface/Actions/scream.png
+  chatMessages: ["emote-meow"]
+  chatTriggers:
+  - meow
+  - meows
+  - meowing
+  - meowed
+  - miau
+  - miaus
+  - nya
+  - nyas
+  - мяукает
+  - мявкает
+  - мяу
+  - нья
+  - ня
+
+- type: emote
+  id: Mew
+  name: emote-name-mew
+  category: Vocal
+  whitelist:
+    components:
+    - Vocal
+  blacklist:
+    components:
+    - BorgChassis
+  available: false
+  icon: Interface/Actions/scream.png
+  chatMessages: ["emote-mew"]
+  chatTriggers:
+  - mew
+  - mews
+  - mewing
+  - mewed
+
+- type: emote
+  id: Purr
+  name: emote-name-purr
+  category: Vocal
+  whitelist:
+    components:
+    - Vocal
+  blacklist:
+    components:
+    - BorgChassis
+  available: false
+  icon: Interface/Actions/scream.png
+  chatMessages: ["emote-purr"]
+  chatTriggers:
+  - purr
+  - purrs
+  - purring
+  - purred
+  - мурлыкает
+  - мурлык
+  - мурчит
+
+- type: emote
+  id: Growl
+  name: emote-name-growl
+  category: Vocal
+  whitelist:
+    components:
+    - Vocal
+  blacklist:
+    components:
+    - BorgChassis
+  available: false
+  chatMessages: ["emote-growls"]
+  chatTriggers:
+  - growl
+  - growled
+  - growling
+  - growled
+  - рычание
+  - рычит
+
+#Vulpkanin
+- type: emote
+  id: Bark
+  name: emote-name-bark
+  category: Vocal
+  whitelist:
+    components:
+    - Vocal
+  blacklist:
+    components:
+    - BorgChassis
+  available: false
+  chatMessages: ["emote-barks"]
+  chatTriggers:
+  - bark
+  - barks
+  - barked
+  - barking
+  - лай
+  - лает
+  - гавкает
+
+- type: emote
+  id: Snarl
+  name: emote-name-snarl
+  category: Vocal
+  whitelist:
+    components:
+    - Vocal
+  blacklist:
+    components:
+    - BorgChassis
+  available: false
+  chatMessages: ["emote-snarls"]
+  chatTriggers:
+  - snarl
+  - snarls
+  - snarled
+  - snarling
+  - яростное рычание
+  - яростно рычит
+
+- type: emote
+  id: Whine
+  name: emote-name-whine
+  category: Vocal
+  whitelist:
+    components:
+    - Vocal
+  blacklist:
+    components:
+    - BorgChassis
+  available: false
+  chatMessages: ["emote-whines"]
+  chatTriggers:
+  - whine
+  - whines
+  - whining
+  - скулёж
+  - скулит
+
+- type: emote
+  id: Howl
+  name: emote-name-howl
+  category: Vocal
+  whitelist:
+    components:
+    - Vocal
+  blacklist:
+    components:
+    - BorgChassis
+  available: false
+  chatMessages: ["emote-howls"]
+  chatTriggers:
+  - howl
+  - howls
+  - howling
+  - howled
+  - вой
+  - воет
+  - завывание

@@ -1,0 +1,14 @@
+- type: entity
+  parent: ClothingMaskGasSecurity
+  id: ClothingMaskGasExe
+  name: противогаз хранителя
+  description: Противогаз неизвестной конструкции.
+  components:
+  - type: Sprite
+    sprite: _Stories/Clothing/Mask/exe_mask.rsi
+  - type: Clothing
+    sprite: _Stories/Clothing/Mask/exe_mask.rsi
+  - type: Tag
+    tags:
+    - WhitelistChameleon
+    - HidesNose

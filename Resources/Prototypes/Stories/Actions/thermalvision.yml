@@ -1,9 +1,0 @@
-- type: entity
-  id: ToggleThermalVisionAction
-  name: Термальное зрение
-  description: Переключить своё термальное зрение.
-  components:
-  - type: InstantAction
-    useDelay: 5
-    icon: { sprite: Stories/Actions/thermalVision.rsi, state: toggle }
-    event: !type:ToggleThermalVisionEvent

@@ -1,0 +1,10 @@
+ent-SponsorObserverTier1 = наблюдатель
+    .desc = Этот призрак подозрительный.
+ent-SponsorObserverTier2 = наблюдатель
+    .desc = Этот призрак подозрительный.
+ent-SponsorObserverTier3 = наблюдатель
+    .desc = Этот призрак подозрительный.
+ent-SponsorObserverTier4 = наблюдатель
+    .desc = Этот призрак подозрительный.
+ent-SponsorObserverTier5 = наблюдатель
+    .desc = Этот призрак подозрительный.

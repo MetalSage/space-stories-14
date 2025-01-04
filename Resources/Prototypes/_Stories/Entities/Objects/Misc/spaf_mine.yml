@@ -1,0 +1,13 @@
+- type: entity
+  id: LandMineSpaf
+  name: органическая ловушка
+  description: По её внешнему виду тяжело понять функционал, но явно наступать на это не стоит...
+  parent: BaseLandMine
+  components:
+  - type: Sprite
+    drawdepth: Items
+    sprite: _Stories/Objects/Misc/spafmine.rsi
+    state: spafmine
+  - type: FlashOnTrigger
+  - type: StealthOnMove
+  - type: Stealth

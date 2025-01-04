@@ -1,0 +1,47 @@
+- type: alert
+  id: ProjectiveBubble
+  icons:
+  - sprite: /Textures/_Stories/Interface/Alerts/projective_bubble.rsi
+    state: 0
+  - sprite: /Textures/_Stories/Interface/Alerts/projective_bubble.rsi
+    state: 1
+  - sprite: /Textures/_Stories/Interface/Alerts/projective_bubble.rsi
+    state: 2
+  - sprite: /Textures/_Stories/Interface/Alerts/projective_bubble.rsi
+    state: 3
+  - sprite: /Textures/_Stories/Interface/Alerts/projective_bubble.rsi
+    state: 4
+  - sprite: /Textures/_Stories/Interface/Alerts/projective_bubble.rsi
+    state: 5
+  - sprite: /Textures/_Stories/Interface/Alerts/projective_bubble.rsi
+    state: 6
+  - sprite: /Textures/_Stories/Interface/Alerts/projective_bubble.rsi
+    state: 7
+  - sprite: /Textures/_Stories/Interface/Alerts/projective_bubble.rsi
+    state: 8
+  - sprite: /Textures/_Stories/Interface/Alerts/projective_bubble.rsi
+    state: 9
+  - sprite: /Textures/_Stories/Interface/Alerts/projective_bubble.rsi
+    state: 10
+  - sprite: /Textures/_Stories/Interface/Alerts/projective_bubble.rsi
+    state: 11
+  - sprite: /Textures/_Stories/Interface/Alerts/projective_bubble.rsi
+    state: 12
+  - sprite: /Textures/_Stories/Interface/Alerts/projective_bubble.rsi
+    state: 13
+  - sprite: /Textures/_Stories/Interface/Alerts/projective_bubble.rsi
+    state: 14
+  - sprite: /Textures/_Stories/Interface/Alerts/projective_bubble.rsi
+    state: 15
+  - sprite: /Textures/_Stories/Interface/Alerts/projective_bubble.rsi
+    state: 16
+  - sprite: /Textures/_Stories/Interface/Alerts/projective_bubble.rsi
+    state: 17
+  - sprite: /Textures/_Stories/Interface/Alerts/projective_bubble.rsi
+    state: 18
+  - sprite: /Textures/_Stories/Interface/Alerts/projective_bubble.rsi
+    state: 19
+  name: Здоровье щита
+  description: Только бы не разгерма.
+  minSeverity: 0
+  maxSeverity: 20

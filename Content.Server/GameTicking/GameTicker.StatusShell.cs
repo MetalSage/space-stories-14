@@ -1,5 +1,5 @@
 using System.Text.Json.Nodes;
-using Content.Server.Corvax.JoinQueue;
+using Content.Server._Corvax.JoinQueue;
 using Content.Shared.CCVar;
 using Content.Shared.GameTicking;
 using Robust.Server.ServerStatus;

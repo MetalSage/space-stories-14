@@ -4,7 +4,7 @@ using System.Runtime.InteropServices;
 using Content.Server.Administration.Logs;
 using Content.Server.Administration.Managers;
 using Content.Server.Administration.Systems;
-using Content.Server.Corvax.Sponsors;
+using Content.Server._Corvax.Sponsors;
 using Content.Server.MoMMI;
 using Content.Server.Players.RateLimiting;
 using Content.Server.Preferences.Managers;

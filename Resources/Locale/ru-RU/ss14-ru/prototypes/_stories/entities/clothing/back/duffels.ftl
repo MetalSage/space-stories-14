@@ -1,0 +1,10 @@
+ent-ClothingBackpackDuffelAdidos = вещмешок
+    .desc = Большой вещмешок для хранения дополнительных предметов.
+ent-ClothingBackpackDuffelBluesky = вещмешок
+    .desc = Большой вещмешок для хранения дополнительных предметов.
+ent-ClothingBackpackDuffelEight = вещмешок
+    .desc = Большой вещмешок для хранения дополнительных предметов.
+ent-ClothingBackpackDuffelGachi = вещмешок
+    .desc = Большой вещмешок для хранения дополнительных предметов.
+ent-ClothingBackpackDuffelRl = вещмешок
+    .desc = Большой вещмешок для хранения дополнительных предметов.

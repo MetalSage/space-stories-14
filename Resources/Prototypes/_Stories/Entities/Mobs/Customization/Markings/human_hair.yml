@@ -1,0 +1,159 @@
+- type: marking
+  id: HumanHairCornrowbacktail
+  bodyPart: Hair
+  markingCategory: Hair
+  sprites:
+    - sprite: _Stories/Mobs/Customization/human_hair.rsi
+      state: cornrowbacktail
+
+- type: marking
+  id: HumanHairDragon
+  bodyPart: Hair
+  markingCategory: Hair
+  sprites:
+    - sprite: _Stories/Mobs/Customization/human_hair.rsi
+      state: dragon
+
+- type: marking
+  id: HumanHairFighter
+  bodyPart: Hair
+  markingCategory: Hair
+  sprites:
+    - sprite: _Stories/Mobs/Customization/human_hair.rsi
+      state: fighter
+
+- type: marking
+  id: HumanHairKaren
+  bodyPart: Hair
+  markingCategory: Hair
+  sprites:
+    - sprite: _Stories/Mobs/Customization/human_hair.rsi
+      state: karen
+
+- type: marking
+  id: HumanHairLongshoulder
+  bodyPart: Hair
+  markingCategory: Hair
+  sprites:
+    - sprite: _Stories/Mobs/Customization/human_hair.rsi
+      state: longshoulder
+
+- type: marking
+  id: HumanHairMaster
+  bodyPart: Hair
+  markingCategory: Hair
+  sprites:
+    - sprite: _Stories/Mobs/Customization/human_hair.rsi
+      state: master
+
+- type: marking
+  id: HumanHairMusician
+  bodyPart: Hair
+  markingCategory: Hair
+  sprites:
+    - sprite: _Stories/Mobs/Customization/human_hair.rsi
+      state: musician
+
+- type: marking
+  id: HumanHairPonytail8
+  bodyPart: Hair
+  markingCategory: Hair
+  sprites:
+    - sprite: _Stories/Mobs/Customization/human_hair.rsi
+      state: ponytail8
+
+- type: marking
+  id: HumanHairPowder
+  bodyPart: Hair
+  markingCategory: Hair
+  sprites:
+    - sprite: _Stories/Mobs/Customization/human_hair.rsi
+      state: powder
+
+- type: marking
+  id: HumanHairShortsidebangs
+  bodyPart: Hair
+  markingCategory: Hair
+  sprites:
+    - sprite: _Stories/Mobs/Customization/human_hair.rsi
+      state: shortsidebangs
+
+- type: marking
+  id: HumanHairSide
+  bodyPart: Hair
+  markingCategory: Hair
+  sprites:
+    - sprite: _Stories/Mobs/Customization/human_hair.rsi
+      state: side
+
+- type: marking
+  id: HumanHairSidesweeps
+  bodyPart: Hair
+  markingCategory: Hair
+  sprites:
+    - sprite: _Stories/Mobs/Customization/human_hair.rsi
+      state: sidesweeps
+
+- type: marking
+  id: HumanHairStock
+  bodyPart: Hair
+  markingCategory: Hair
+  sprites:
+    - sprite: _Stories/Mobs/Customization/human_hair.rsi
+      state: stock
+
+- type: marking
+  id: HumanHairStylish
+  bodyPart: Hair
+  markingCategory: Hair
+  sprites:
+    - sprite: _Stories/Mobs/Customization/human_hair.rsi
+      state: stylish
+
+- type: marking
+  id: HumanHairTwinbangs
+  bodyPart: Hair
+  markingCategory: Hair
+  sprites:
+    - sprite: _Stories/Mobs/Customization/human_hair.rsi
+      state: twinbangs
+
+- type: marking
+  id: HumanHairTwotails
+  bodyPart: Hair
+  markingCategory: Hair
+  sprites:
+    - sprite: _Stories/Mobs/Customization/human_hair.rsi
+      state: twotails
+
+- type: marking
+  id: HumanHairUndercutfade
+  bodyPart: Hair
+  markingCategory: Hair
+  sprites:
+    - sprite: _Stories/Mobs/Customization/human_hair.rsi
+      state: undercutfade
+
+- type: marking
+  id: HumanHairUpbangs
+  bodyPart: Hair
+  markingCategory: Hair
+  sprites:
+    - sprite: _Stories/Mobs/Customization/human_hair.rsi
+      state: upbangs
+
+- type: marking
+  id: HumanHairWheatear
+  bodyPart: Hair
+  markingCategory: Hair
+  sprites:
+    - sprite: _Stories/Mobs/Customization/human_hair.rsi
+      state: wheatear
+
+- type: marking
+  id: HumanHairYoga
+  bodyPart: Hair
+  markingCategory: Hair
+  sprites:
+    - sprite: _Stories/Mobs/Customization/human_hair.rsi
+      state: yoga

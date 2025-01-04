@@ -1,0 +1,43 @@
+- type: entity
+  name: странное яйцо
+  description: Оно шевелится! Возможно, стоит позвать экспертов.
+  parent: BaseStructure
+  id: MobSpafEgg
+  components:
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeAabb
+          bounds: "-0.45,-0.45,0.45,0.45"
+        density: 60
+        mask:
+        - MachineMask
+  - type: Damageable
+  - type: GhostRoleMobSpawner
+    prototype: MobMiniSpaf
+  - type: Destructible
+    thresholds:
+      - trigger:
+          !type:DamageTrigger
+          damage: 10
+        behaviors:
+          - !type:DoActsBehavior
+            acts: [ "Destruction" ]
+  - type: Sprite
+    drawdepth: Mobs
+    sprite: _Stories/Mobs/Aliens/spafegg.rsi
+    layers:
+      - map: ["enum.DamageStateVisualLayers.Base"]
+        state: spaf_eggs
+  - type: PointLight
+    color: DarkGreen
+    radius: 1
+    softness: 1
+  - type: GhostRole
+    makeSentient: true
+    name: ghost-role-information-spafegg-name
+    description: ghost-role-information-spafegg-description
+    rules: ghost-role-information-spaf-rules
+    raffle:
+      settings: default

@@ -1,0 +1,44 @@
+- type: entity
+  parent: ClothingBackpackDuffel
+  id: ClothingBackpackDuffelAdidos
+  name: вещмешок
+  description: Большой вещмешок для хранения дополнительных предметов.
+  components:
+  - type: Sprite
+    sprite: _Stories/Clothing/Back/Duffels/duffels_adidos.rsi
+
+- type: entity
+  parent: ClothingBackpackDuffel
+  id: ClothingBackpackDuffelBluesky
+  name: вещмешок
+  description: Большой вещмешок для хранения дополнительных предметов.
+  components:
+  - type: Sprite
+    sprite: _Stories/Clothing/Back/Duffels/duffels_bluesky.rsi
+
+- type: entity
+  parent: ClothingBackpackDuffel
+  id: ClothingBackpackDuffelEight
+  name: вещмешок
+  description: Большой вещмешок для хранения дополнительных предметов.
+  components:
+  - type: Sprite
+    sprite: _Stories/Clothing/Back/Duffels/duffels_eight.rsi
+
+- type: entity
+  parent: ClothingBackpackDuffel
+  id: ClothingBackpackDuffelGachi
+  name: вещмешок
+  description: Большой вещмешок для хранения дополнительных предметов.
+  components:
+  - type: Sprite
+    sprite: _Stories/Clothing/Back/Duffels/duffels_gachi.rsi
+
+- type: entity
+  parent: ClothingBackpackDuffel
+  id: ClothingBackpackDuffelRl
+  name: вещмешок
+  description: Большой вещмешок для хранения дополнительных предметов.
+  components:
+  - type: Sprite
+    sprite: _Stories/Clothing/Back/Duffels/duffels_rl.rsi

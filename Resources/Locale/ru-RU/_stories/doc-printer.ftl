@@ -1,5 +1,4 @@
 materials-inks = чернила
-
 lathe-category-reports = Отчёт
 lathe-category-statements = Заявления
 lathe-category-inquiries-and-appeals = Запрос
@@ -10,7 +9,6 @@ lathe-category-orders = Заказ
 lathe-category-evidence = Свидетельства
 lathe-category-conclusions-and-decisions = Решения
 lathe-category-error = Ошибка
-
 doc-text-printer-report-station =
     { "[" }head = 3]                            ОТЧЁТ О СИТУАЦИИ [/head]
     { "[" }bold]                                   ‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾[/bold]
@@ -94,7 +92,7 @@ doc-text-printer-condition-report =
     { "[" }bold]Проверенный объект:[/bold][italic][ОБЪЕКТ][/italic]
     { "[" }bold]                                              ‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾[/bold]
     { "[" }bold]Выявленные повреждения объекта:[/bold][italic][ПОВРЕЖДЕНИЯ][/italic]
-
+    
     { "[" }bold]Результат ремонта объекта:[/bold][italic][РЕЗУЛЬТАТ][/italic]
 doc-text-printer-report-study-object =
     { "[" }head = 3]                  ОТЧЁТ ОБ ИЗУЧЕНИИ ОБЪЕКТА[/head]
@@ -106,7 +104,7 @@ doc-text-printer-report-study-object =
     { "[" }bold]Должность составителя:[/bold][italic]  [ДОЛЖНОСТЬ][/italic]
     { "[" }bold]                                                     ‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾[/bold]
     { "[" }bold]Внешнее описание объекта:[/bold][italic][ОПИСАНИЕ][/italic]
-
+    
     { "[" }bold]Выявленные свойства объекта:[/bold][italic][СВОЙСТВА][/italic]
 doc-text-printer-experiment-report =
     { "[" }head = 3]                                ЭКСПЕРИМЕНТ №[НОМЕР][/head]
@@ -118,13 +116,13 @@ doc-text-printer-experiment-report =
     { "[" }bold]Должность составителя:[/bold][italic]  [ДОЛЖНОСТЬ][/italic]
     { "[" }bold]                                                     ‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾[/bold]
     { "[" }bold]Внешнее описание объекта эксперимента:[/bold][italic][ОПИСАНИЕ][/italic]
-
+    
     { "[" }bold]Описание эксперимента:[/bold][italic][ОПИСАНИЕ][/italic]
-
+    
     { "[" }bold]Ожидаемый результат:[/bold][italic][ОЖИДАНИЕ][/italic]
-
+    
     { "[" }bold]Используемое оборудование:[/bold][italic][ОБОРУДОВАНИЕ][/italic]
-
+    
     { "[" }bold]Фактический результат:[/bold][italic][РЕАЛЬНОСТЬ][/italic]
 doc-text-printer-disposal-report =
     { "[" }head = 3]                      ОТЧЁТ ОБ УТИЛИЗАЦИИ[/head]
@@ -150,7 +148,7 @@ doc-text-printer-application-appointment-interim =
     { "[" }bold]Занимаемая должность:[/bold][italic][ДОЛЖНОСТЬ][/italic]
     { "[" }bold]                                                     ‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾[/bold]
     { "[" }italic]При вступлении в должность обязуюсь следовать Стандартным Рабочим Процедурам и до появления сотрудника, занимающего данную должность, с Центрального Командования обеспечивать порядок и управление отделом, обеспечивать сохранность вверяемых мне особо ценных предметов и снаряжения.[/italic]
-
+    
     { "[" }bold]Подпись:[/bold][ПОДПИСЬ][/italic]
     { "[" }bold]                  ‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾[/bold]
 doc-text-printer-application-employment =
@@ -211,7 +209,7 @@ doc-text-printer-evacuation-shuttle-request =
     { "[" }bold]Должность составителя:[/bold][italic]  [ДОЛЖНОСТЬ][/italic]
     { "[" }bold]                                                     ‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾[/bold]
     { "[" }italic]Уважаемое Центральное Командование! Мы запрашиваем запустить протоколы эвакуации и прислать эвакуационный шаттл, приняв решение об окончании смены.[/italic]
-
+    
     { "[" }bold]Причина:[/bold][italic][ПРИЧИНА][/italic]
 doc-text-printer-shuttle-registration-request =
     { "[" }head = 3]               ЗАПРОС РЕГИСТРАЦИИ ШАТТЛА[/head]
@@ -271,9 +269,9 @@ doc-text-printer-request-for-non-listed-employment =
     { "[" }bold]Ответственный глава:[/bold][italic] [ГЛАВА][/italic]
     { "[" }bold]                                               ‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾[/bold]
     { "[" }bold]Стандартные рабочие процедуры:[/bold][italic][СРП][/italic]
-
+    
     { "[" }bold]Доступы и радиочастоты:[/bold][italic][ДОСТУПЫ][/italic]
-
+    
     { "[" }bold]Причина:[/bold][italic][ПРИЧИНА][/italic]
 doc-text-printer-request-for-promotion =
     { "[" }head = 3]                          ЗАПРОС ПОВЫШЕНИЯ  [/head]
@@ -299,9 +297,9 @@ doc-text-printer-request-euthanasia =
     { "[" }bold]Должность составителя:[/bold][italic]  [ДОЛЖНОСТЬ][/italic]
     { "[" }bold]                                                   ‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾[/bold]
     { "[" }italic]Я прошу содействие медицинского отдела в проведении эвтаназии в качестве врачебного лечения. С последствиями данного решения ознакомлен, медицинским персоналом была установлена рациональность и гуманность данного решения. Претензий к к медицинскому отделу при соблюдении ими протоколов эвтаназии не имею.[/italic]
-
+    
     { "[" }bold]Причина:[/bold][italic] [ПРИЧИНА][/italic]
-
+    
     { "[" }bold]Способ утилизации тела:[/bold][italic] [СПОСОБ][/italic]
 doc-text-printer-request-construction-work =
     { "[" }head = 3]         ЗАПРОС ПРОВЕДЕНИЯ СТРОИТЕЛЬНЫХ
@@ -316,7 +314,7 @@ doc-text-printer-request-construction-work =
     { "[" }bold]Отдел:[/bold][italic] [ОТДЕЛ][/italic]
     { "[" }bold]               ‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾[/bold]
     { "[" }bold]Проводимые работы:[/bold][italic] [РАБОТЫ][/italic]
-
+    
     { "[" }bold]Причина:[/bold][italic] [ПРИЧИНА][/italic]
 doc-text-printer-complaint-offense =
     { "[" }head = 3]                  ЖАЛОБА НА ПРАВОНАРУШЕНИЕ[/head]
@@ -502,7 +500,7 @@ doc-text-printer-product-manufacturing-order =
     { "[" }bold]Задействованный отдел:[/bold][italic] [ОТДЕЛ][/italic]
     { "[" }bold]                                                     ‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾[/bold]
     { "[" }bold]Перечень необходимых продуктов:[/bold][italic] [ПЕРЕЧЕНЬ][/italic]
-
+    
     { "[" }bold]Причина заказа:[/bold][italic] [ПРИЧИНА][/italic]
                                          ‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾[/bold]
 doc-text-printer-order-purchase-resources-equipment =
@@ -517,7 +515,7 @@ doc-text-printer-order-purchase-resources-equipment =
     { "[" }bold]Место доставки:[/bold][italic][МЕСТО][/italic]
     { "[" }bold]                                   ‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾[/bold]
     { "[" }bold]Перечень товара для заказа:[/bold][italic][ПЕРЕЧЕНЬ][/italic]
-
+    
     { "[" }bold]Причина заказа:[/bold][italic][ПРИЧИНА][/italic]
     { "[" }bold]                                   ‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾[/bold]
 doc-text-printer-ordering-special-equipment =
@@ -530,7 +528,7 @@ doc-text-printer-ordering-special-equipment =
     { "[" }bold]Должность составителя:[/bold][italic]  [ДОЛЖНОСТЬ][/italic]
     { "[" }bold]                                                   ‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾[/bold]
     { "[" }bold]Перечень товара для заказа:[/bold][italic][ПЕРЕЧЕНЬ][/italic]
-
+    
     { "[" }bold]Причина заказа:[/bold][italic][ПРИЧИНА][/italic]
     { "[" }bold]                               ‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾[/bold]
 doc-text-printer-certificate =
@@ -579,15 +577,15 @@ doc-text-printer-certificate-offense =
     { "[" }bold]Место преступления:[/bold][italic][МЕСТО][/italic]
     { "[" }bold]                                           ‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾[/bold]
     { "[" }bold]Мотивы совершения преступления:[/bold][italic][МОТИВЫ][/italic]
-
+    
     { "[" }bold]Пострадавшие:[/bold][italic][ИМЯ][ФАМИЛИЯ][/italic]
-
+    
     { "[" }bold]Характер и размер вреда, причиненного преступлением:[/bold][italic][ОПИСАНИЕ][/italic]
-
+    
     { "[" }bold]Пособник-и в преступлении:[/bold][italic][ИМЯ][ФАМИЛИЯ][/italic]
-
+    
     { "[" }bold]Действия пособника:[/bold][italic][ОПИСАНИЕ][/bold]
-
+    
     { "[" }bold]Полная хронология событий:[/bold][italic][ХРОНОЛОГИЯ][/italic]
 doc-text-printer-death-certificate =
     { "[" }head = 3]                   СВИДЕТЕЛЬСТВО О СМЕРТИ[/head]
@@ -653,9 +651,9 @@ doc-text-printer-closing-indictment =
     { "[" }bold]Подозреваемый:[/bold][italic][ИМЯ][ФАМИЛИЯ][/italic]
     { "[" }bold]                                   ‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾[/bold]
     { "[" }italic]В ходе предварительного следствия были обнаружены доказательства, указывающие на совершение правонарушения данным лицом.[/italic]
-
+    
     { "[" }bold]Прямые доказательства:[/bold][italic][ДОКАЗАТЕЛЬСТВА][/italic]
-
+    
     { "[" }bold]Косвенные доказательства:[/bold][italic][ДОКАЗАТЕЛЬСТВА][/italic]
 doc-text-printer-sentence =
     { "[" }head = 3]                                    ПРИГОВОР[/head]
@@ -669,7 +667,7 @@ doc-text-printer-sentence =
     { "[" }bold]Нарушитель:[/bold][italic][ИМЯ][ФАМИЛИЯ][/italic]
     { "[" }bold]                             ‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾[/bold]
     { "[" }bold]Нарушения:[/bold][italic][НАРУШЕНИЯ][/italic]
-
+    
     { "[" }bold]Наказание:[/bold][italic][НАКАЗАНИЕ][СРОК][/italic]
     { "[" }bold]                         ‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾[/bold]
 doc-text-printer-judgment =
@@ -682,11 +680,11 @@ doc-text-printer-judgment =
     { "[" }bold]Должность составителя:[/bold][italic]  [ДОЛЖНОСТЬ][/italic]
     { "[" }bold]                                                     ‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾[/bold]
     { "[" }bold]Предъявленные нарушения:[/bold][italic][НАРУШЕНИЯ][/italic]
-
+    
     { "[" }bold]Назначенное время и проведенный срок:[/bold][italic][СРОК]-[СРОК][/italic]
-
+    
     { "[" }bold]Судное решение:[/bold][italic][НАРУШЕНИЯ][/italic]
-
+    
     { "[" }bold]Наказание:[/bold][italic][НАКАЗАНИЕ][СРОК][/italic]
 doc-text-printer-statement-health =
     { "[" }head = 3]      ЗАКЛЮЧЕНИЕ О СОСТОТЯНИИ ЗДОРОВЬЯ[/head]
@@ -721,7 +719,7 @@ doc-text-printer-notice-of-liquidation =
     { "[" }bold]Цель ликвидации:[/bold][italic] [ИМЯ] [ФАМИЛИЯ][/italic]
     { "[" }bold]                                       ‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾[/bold]
     { "[" }italic]Руководством Синдиката принято решение о вашей немедленной ликвидации в ходе данной смены. Просим заранее подготовить завещание и направить его Медицинскому отделу станции. Уничтожение вашего тела будет произведено силами Синдиката.[/italic]
-
+    
     { "[" }bold]Причина ликвидации:[/bold][italic]  [ПРИЧИНА][/italic]
 doc-text-printer-business-deal =
     { "[" }color = #F0F0F0] [head = 3]                            ДЕЛОВАЯ СДЕЛКА[/head]
@@ -731,9 +729,9 @@ doc-text-printer-business-deal =
     { "[" }bold]Позывной агента:[/bold][italic] [ИМЯ] [ФАМИЛИЯ][/italic]
     { "[" }bold]                                       ‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾[/bold]
     { "[" }italic]Синдикат любезно предлагает заключить сделку между своим агентом и станцией.[/italic]
-
+    
     { "[" }bold]Со стороны станции необходимо:[/bold][italic]  [УСЛОВИЯ][/italic]
-
+    
     { "[" }bold]Со стороны агента обещано:[/bold][italic]  [ОБЕЩАНИЕ][/italic]
 doc-text-printer-note-beginning-military-actions =
     { "[" }color = #F0F0F0] [head = 3]        НОТА О НАЧАЛЕ ВОЕННЫХ ДЕЙСТВИЙ[/head]
@@ -743,7 +741,7 @@ doc-text-printer-note-beginning-military-actions =
     { "[" }bold]Позывной агента:[/bold][italic] [ИМЯ] [ФАМИЛИЯ][/italic]
     { "[" }bold]                                       ‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾[/bold]
     { "[" }italic]Неуважаемые корпоративные крысы NanoTrasen! Синдикат официально объявляет о начале военных действий с вами, а также о начале операции по вашему истреблению.[/italic]
-
+    
     { "[" }bold]Причина предъявления ноты:[/bold][italic]  [ПРИЧИНА][/italic]
 doc-text-printer-report-accomplishment-goals =
     { "[" }color = #F0F0F0] [head = 3]                      ОТЧЁТ О ВЫПОЛНЕНИИ ЦЕЛЕЙ[/head]
@@ -753,5 +751,5 @@ doc-text-printer-report-accomplishment-goals =
     { "[" }bold]Позывной агента:[/bold][italic] [ИМЯ] [ФАМИЛИЯ][/italic]
     { "[" }bold]                                       ‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾[/bold]
     { "[" }italic]Я успешно выполнил поставленные передо мной руководством Синдиката цели. Прошу принять отчёт о выполнении.[/italic]
-
+    
     { "[" }bold]Отчёт:[/bold][italic]  [ОТЧЕТ][/italic]

@@ -18,6 +18,11 @@ using Content.Shared.Strip.Components;
 using Content.Shared.Throwing;
 using Robust.Shared.Physics.Components;
 
+using Content.Shared.Damage;
+using Content.Shared.Humanoid;
+using Content.Shared.Movement.Components;
+using Content.Shared.Movement.Systems;
+
 namespace Content.Shared.Mobs.Systems;
 
 public partial class MobStateSystem
@@ -46,6 +51,8 @@ public partial class MobStateSystem
         SubscribeLocalEvent<MobStateComponent, AttemptPacifiedAttackEvent>(OnAttemptPacifiedAttack);
 
         SubscribeLocalEvent<MobStateComponent, UnbuckleAttemptEvent>(OnUnbuckleAttempt);
+
+        SubscribeLocalEvent<MobStateComponent, RefreshMovementSpeedModifiersEvent>(OnRefreshMovementSpeedModifiers); // Stories-Crawling
     }
 
     private void OnUnbuckleAttempt(Entity<MobStateComponent> ent, ref UnbuckleAttemptEvent args)
@@ -73,6 +80,11 @@ public partial class MobStateSystem
         {
             case MobState.Alive:
                 //unused
+
+                // Stories-Crawling-Start
+                if (!_standing.CanCrawl(target))
+                    _standing.Stand(target);
+                // Stories-Crawling-End
                 break;
             case MobState.Critical:
                 _standing.Stand(target);
@@ -144,6 +156,10 @@ public partial class MobStateSystem
             RemCompDeferred<AllowNextCritSpeechComponent>(uid);
             return;
         }
+        // Stories-Crit-Speech-Start
+        if (component.CurrentState == MobState.Critical)
+            return;
+        // Stories-Crit-Speech-End
 
         CheckAct(uid, component, args);
     }
@@ -153,8 +169,12 @@ public partial class MobStateSystem
         switch (component.CurrentState)
         {
             case MobState.Dead:
-            case MobState.Critical:
                 args.Cancel();
+                break;
+            case MobState.Critical:
+                if (args is not UpdateCanMoveEvent || !HasComp<HumanoidAppearanceComponent>(target))
+                    args.Cancel();
+
                 break;
         }
     }
@@ -184,6 +204,33 @@ public partial class MobStateSystem
     private void OnAttemptPacifiedAttack(Entity<MobStateComponent> ent, ref AttemptPacifiedAttackEvent args)
     {
         args.Cancelled = true;
+    }
+
+    private void OnRefreshMovementSpeedModifiers(EntityUid uid, MobStateComponent component, ref RefreshMovementSpeedModifiersEvent ev)
+    {
+        if (!HasComp<HumanoidAppearanceComponent>(uid))
+            return;
+
+        switch (component.CurrentState)
+        {
+            case MobState.Critical:
+                if (!TryComp<DamageableComponent>(uid, out var damageable))
+                    return;
+
+                // Stories-Crawling-Start
+                if (!TryComp<MovementSpeedModifierComponent>(uid, out var speed))
+                    return;
+
+                if (!_mobThreshold.TryGetPercentageForState(uid, MobState.Dead, damageable.TotalDamage, out var percentage))
+                    return;
+
+                var sprintSpeedModifier = (1 - (float) percentage) * 2 * 0.15f * speed.BaseSprintSpeed;
+                var walkSpeedModifier = (1 - (float) percentage) * 2 * 0.15f * speed.BaseWalkSpeed;
+
+                ev.ModifySpeed(sprintSpeedModifier, walkSpeedModifier);
+                // Stories-Crawling-End
+                break;
+        }
     }
 
     #endregion

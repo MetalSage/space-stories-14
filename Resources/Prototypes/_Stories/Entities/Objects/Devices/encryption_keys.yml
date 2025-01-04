@@ -1,0 +1,33 @@
+- type: entity
+  parent: EncryptionKey
+  id: EncryptionKeyIAA
+  name: ключ шифрования АВД
+  description: Ключ шифрования, используемый самой педантичной персоной на станции.
+  components:
+    - type: EncryptionKey
+      channels:
+        - Common
+        - Command
+        - Security
+      defaultChannel: Command
+    - type: Sprite
+      sprite: _Stories/Objects/Devices/encryption_keys.rsi
+      layers:
+        - state: crypt_silver
+        - state: nano_label
+
+- type: entity
+  parent: EncryptionKey
+  id: PRISONEncryptionKey
+  name: ключ шифрования тюрьмы
+  description: Ключ шифрования, используемый сотрудниками космической тюрьмы.
+  components:
+    - type: EncryptionKey
+      channels:
+        - Prison
+      defaultChannel: Prison
+    - type: Sprite
+      sprite: _Stories/Objects/Devices/encryption_keys.rsi
+      layers:
+        - state: crypt_prison
+        - state: prison_label

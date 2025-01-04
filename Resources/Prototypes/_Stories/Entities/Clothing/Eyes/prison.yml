@@ -1,0 +1,11 @@
+- type: entity
+  parent: ClothingEyesGlassesSecurity
+  id: PRISONClothingEyesGlasses
+  name: солнцезащитные очки сотрудника тюрьмы
+  description: Странная древняя технология используется для обеспечения элементарной защиты глаз. Усиленная защита блокирует многие вспышки.
+  components:
+  - type: Sprite
+    sprite: _Stories/Clothing/Eyes/Glasses/secglassessp.rsi
+  - type: Clothing
+    sprite: _Stories/Clothing/Eyes/Glasses/secglassessp.rsi
+

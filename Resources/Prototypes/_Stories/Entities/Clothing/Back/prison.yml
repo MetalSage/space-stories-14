@@ -1,0 +1,26 @@
+- type: entity
+  parent: ClothingBackpackDuffel
+  id: PRISONClothingBackpackDuffel
+  name: вещмешок сотрудника тюрьмы
+  description: Большой вещмешок для хранения дополнительных предметов, связанных с обеспечением побегов.
+  components:
+  - type: Sprite
+    sprite: _Stories/Clothing/Back/Duffels/sp.rsi
+
+- type: entity
+  parent: ClothingBackpackSatchel
+  id: PRISONClothingBackpackSatchel
+  name: сумка сотрудника тюрьмы
+  description: Прочная сумка для обеспечения побегов.
+  components:
+  - type: Sprite
+    sprite: _Stories/Clothing/Back/Satchels/sp.rsi
+
+- type: entity
+  parent: ClothingBackpack
+  id: PRISONClothingBackpack
+  name: рюкзак сотрудника тюрьмы
+  description: Это очень прочный рюкзак.
+  components:
+  - type: Sprite
+    sprite: _Stories/Clothing/Back/Backpacks/sp.rsi

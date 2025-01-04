@@ -1,0 +1,10 @@
+- type: gameMapPool
+  id: StoriesDefaultMapPool
+  maps:
+  - StoriesBagel
+  - StoriesBeta
+  - StoriesBox
+  - StoriesFland
+  - StoriesKilo
+  - StoriesMeta
+  - CorvaxDelta

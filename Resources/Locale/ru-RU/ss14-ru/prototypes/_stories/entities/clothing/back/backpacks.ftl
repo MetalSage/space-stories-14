@@ -1,0 +1,12 @@
+ent-ClothingBackpackJediNt = рюкзак стража клинка
+    .desc = Кажется, вы где-то это уже видели.
+ent-ClothingBackpackAdidos = рюкзак
+    .desc = Вы носите это на спине и кладёте в него предметы.
+ent-ClothingBackpackBluesky = рюкзак
+    .desc = Вы носите это на спине и кладёте в него предметы.
+ent-ClothingBackpackEight = рюкзак
+    .desc = Вы носите это на спине и кладёте в него предметы.
+ent-ClothingBackpackGachi = рюкзак
+    .desc = Вы носите это на спине и кладёте в него предметы.
+ent-ClothingBackpackRl = рюкзак
+    .desc = Вы носите это на спине и кладёте в него предметы.

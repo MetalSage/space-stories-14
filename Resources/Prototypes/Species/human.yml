@@ -23,7 +23,6 @@
     FacialHair: MobHumanoidAnyMarking
     Snout: MobHumanoidAnyMarking
     Chest: MobHumanTorso
-    Tail: MobHumanoidAnyMarking # Stories
     Eyes: MobHumanoidEyes
     HeadTop: MobHumanoidAnyMarking
     LArm: MobHumanLArm
@@ -38,9 +37,9 @@
 - type: markingPoints
   id: MobHumanMarkingLimits
   points:
-    Special: # the cat ear joke
-      points: 0
-      required: false
+    # Special: # the cat ear joke
+    #   points: 0
+    #   required: false
     Hair:
       points: 1
       required: false
@@ -50,12 +49,12 @@
     Snout:
       points: 1
       required: false
-    Tail: # the cat tail joke
-      points: 1 # Stories
-      required: false
-    HeadTop:
-      points: 1
-      required: false
+    # Tail: # the cat tail joke
+    #   points: 0
+    #   required: false
+    # HeadTop:
+    #   points: 1
+    #   required: false
     Chest:
       points: 1
       required: false

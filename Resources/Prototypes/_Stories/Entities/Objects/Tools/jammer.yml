@@ -1,0 +1,27 @@
+- type: entity
+  name: экспериментальный глушитель связи
+  parent: RadioJammer
+  id: RadioJammerIndustrial
+  description: Это устройство является улучшенной версией обычного глушителя связи. Радиус действия увеличен, но и потребление больше.
+  components:
+  - type: Sprite
+    sprite: _Stories/Objects/Devices/jammer_ind.rsi
+  - type: RadioJammer
+    settings:
+    - wattage: 3
+      range: 6
+      message: radio-jammer-component-set-message-low
+      name: radio-jammer-component-setting-low
+    - wattage: 6
+      range: 12
+      message: radio-jammer-component-set-message-medium
+      name: radio-jammer-component-setting-medium
+    - wattage: 12
+      range: 24
+      message: radio-jammer-component-set-message-high
+      name: radio-jammer-component-setting-high
+  - type: ItemSlots
+    slots:
+      cell_slot:
+        name: power-cell-slot-component-slot-name-default
+        startingItem: PowerCellHigh

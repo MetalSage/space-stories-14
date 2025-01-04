@@ -17,9 +17,11 @@ namespace Content.Client.Singularity
         ///     Maximum number of distortions that can be shown on screen at a time.
         ///     If this value is changed, the shader itself also needs to be updated.
         /// </summary>
-        public const int MaxCount = 5;
+        public const int MaxCount = 32;
 
         private const float MaxDistance = 20f;
+
+        private const float MaxDeformation = 8.0f;
 
         public override OverlaySpace Space => OverlaySpace.WorldSpace;
         public override bool RequestScreenTexture => true;
@@ -38,6 +40,7 @@ namespace Content.Client.Singularity
         private readonly Vector2[] _positions = new Vector2[MaxCount];
         private readonly float[] _intensities = new float[MaxCount];
         private readonly float[] _falloffPowers = new float[MaxCount];
+        private readonly bool[] _haveEventHorizons = new bool[MaxCount];
         private int _count = 0;
 
         protected override bool BeforeDraw(in OverlayDrawArgs args)
@@ -68,6 +71,7 @@ namespace Content.Client.Singularity
                 _positions[_count] = tempCoords;
                 _intensities[_count] = distortion.Intensity;
                 _falloffPowers[_count] = distortion.FalloffPower;
+                _haveEventHorizons[_count] = distortion.HasEventHorizon;
                 _count++;
 
                 if (_count == MaxCount)
@@ -87,6 +91,8 @@ namespace Content.Client.Singularity
             _shader?.SetParameter("position", _positions);
             _shader?.SetParameter("intensity", _intensities);
             _shader?.SetParameter("falloffPower", _falloffPowers);
+            _shader?.SetParameter("hasEventHorizon", _haveEventHorizons);
+            _shader?.SetParameter("maxDeformation", MaxDeformation);
             _shader?.SetParameter("SCREEN_TEXTURE", ScreenTexture);
 
             var worldHandle = args.WorldHandle;
@@ -128,10 +134,16 @@ namespace Content.Client.Singularity
                 if (distance >= maxDistance)
                     deformation = 0.0f;
                 else
+                {
                     deformation *= 1.0f - MathF.Pow(distance / maxDistance, 4.0f);
 
-                if (deformation > 0.8)
-                    deformation = MathF.Pow(deformation, 0.3f);
+                    if (_haveEventHorizons[i] && _intensities[i] > 0.0f)
+                    {
+                        deformation += MathF.Pow(deformation / MaxDeformation, 32.0f);
+                        if (deformation > 2.0f * MaxDeformation)
+                            deformation = 0.0f;
+                    }
+                }
 
                 finalCoords -= delta * deformation;
             }

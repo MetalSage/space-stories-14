@@ -1,0 +1,209 @@
+# Гравированная зажигалка флиппо
+
+- type: loadout
+  id: StoriesFlippoEngravedLighter
+  effects:
+  - !type:GroupLoadoutEffect
+    proto: PartnerMinTier3
+  storage:
+    back:
+    - StoriesFlippoEngravedLighter
+
+# Сереб. часы
+
+- type: loadout
+  id: WristwatchSilver
+  effects:
+  - !type:GroupLoadoutEffect
+    proto: PartnerMinTier3
+  storage:
+    back:
+    - WristwatchSilver
+
+# Золотые часы
+
+- type: loadout
+  id: StoriesWristwatchGold
+  effects:
+  - !type:GroupLoadoutEffect
+    proto: PartnerMinTier3
+  storage:
+    back:
+    - StoriesWristwatchGold
+
+# Плащ коллекционера
+
+- type: loadout
+  id: ClothingNeckCloakCollector
+  effects:
+  - !type:GroupLoadoutEffect
+    proto: PartnerMinTier4
+  storage:
+    back:
+    - ClothingNeckCloakCollector
+
+# Плащ аномалиста
+
+- type: loadout
+  id: ClothingNeckCloakAnomalist
+  effects:
+  - !type:GroupLoadoutEffect
+    proto: PartnerMinTier4
+  storage:
+    back:
+    - ClothingNeckCloakAnomalist
+
+# Плащ заклинателя змей
+
+- type: loadout
+  id: ClothingNeckCloakSnake
+  effects:
+  - !type:GroupLoadoutEffect
+    proto: PartnerMinTier5
+  storage:
+    back:
+    - ClothingNeckCloakSnake
+
+# Колосс
+
+- type: loadout
+  id: ToyFigurineColossus
+  effects:
+  - !type:GroupLoadoutEffect
+    proto: PartnerMinTier5
+  storage:
+    back:
+    - ToyFigurineColossus
+
+# Дракон
+
+- type: loadout
+  id: ToyFigurineAshDragon
+  effects:
+  - !type:GroupLoadoutEffect
+    proto: PartnerMinTier5
+  storage:
+    back:
+    - ToyFigurineAshDragon
+
+# Бубл
+
+- type: loadout
+  id: ToyFigurineBubblegum
+  effects:
+  - !type:GroupLoadoutEffect
+    proto: PartnerMinTier5
+  storage:
+    back:
+    - ToyFigurineBubblegum
+
+# Сферы
+
+- type: loadout
+  id: ClothingNeckElectrospheres
+  effects:
+  - !type:GroupLoadoutEffect
+    proto: PartnerMinTier4
+  storage:
+    back:
+    - ClothingNeckElectrospheres
+
+# Тенеморф
+
+- type: loadout
+  id: ToyFigurineShadowling
+  effects:
+  - !type:GroupLoadoutEffect
+    proto: PartnerMinTier4
+  storage:
+    back:
+    - ToyFigurineShadowling
+
+# Вознесенный тенеморф
+
+- type: loadout
+  id: ToyFigurineAscendedShadowling
+  effects:
+  - !type:GroupLoadoutEffect
+    proto: PartnerMinTier4
+  storage:
+    back:
+    - ToyFigurineAscendedShadowling
+
+# Ситх
+
+- type: loadout
+  id: ToyFigurineSith
+  effects:
+  - !type:GroupLoadoutEffect
+    proto: PartnerMinTier5
+  storage:
+    back:
+    - ToyFigurineSith
+
+# Страж
+
+- type: loadout
+  id: ToyFigurineJediNt
+  effects:
+  - !type:GroupLoadoutEffect
+    proto: PartnerMinTier4
+  storage:
+    back:
+    - ToyFigurineJediNt
+
+# Медик КТ
+
+- type: loadout
+  id: ToyFigurineMSP
+  effects:
+  - !type:GroupLoadoutEffect
+    proto: PartnerMinTier1
+  storage:
+    back:
+    - ToyFigurineMSP
+
+# Офицер КТ
+
+- type: loadout
+  id: ToyFigurineOSP
+  effects:
+  - !type:GroupLoadoutEffect
+    proto: PartnerMinTier1
+  storage:
+    back:
+    - ToyFigurineOSP
+
+# Офицер КТ
+
+- type: loadout
+  id: ToyFigurineESP
+  effects:
+  - !type:GroupLoadoutEffect
+    proto: PartnerMinTier1
+  storage:
+    back:
+    - ToyFigurineESP
+
+# Глава КТ
+
+- type: loadout
+  id: ToyFigurineHOSP
+  effects:
+  - !type:GroupLoadoutEffect
+    proto: PartnerMinTier1
+  storage:
+    back:
+    - ToyFigurineHOSP
+
+- type: loadout
+  id: ToySword
+  effects:
+  - !type:JobRequirementLoadoutEffect
+    requirement:
+      !type:RoleTimeRequirement
+      role: JobClown
+      time: 36000 # 10hr
+  storage:
+    back:
+    - ToySword
