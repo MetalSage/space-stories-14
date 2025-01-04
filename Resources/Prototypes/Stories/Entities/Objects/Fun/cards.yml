@@ -541,7 +541,7 @@
   parent: cardBase
   categories: [ HideSpawnMenu ]
   id: card-33
-  name: трефы 7 
+  name: карта 
   suffix: Трефы 7 
   description: "Обычная игральная карта"
   components:
@@ -557,7 +557,7 @@
   parent: cardBase
   categories: [ HideSpawnMenu ]
   id: card-34
-  name: трефы 8
+  name: карта
   suffix: Трефы 8 
   description: "Обычная игральная карта"
   components:
@@ -573,7 +573,7 @@
   parent: cardBase
   categories: [ HideSpawnMenu ]
   id: card-35
-  name: трефы 9 
+  name: карта
   suffix: Трефы 9 
   description: "Обычная игральная карта"
   components:
@@ -589,7 +589,7 @@
   parent: cardBase
   categories: [ HideSpawnMenu ]
   id: card-36
-  name: трефы 10 
+  name: карта
   suffix: Трефы 10 
   description: "Обычная игральная карта"
   components:
@@ -605,7 +605,7 @@
   parent: cardBase
   categories: [ HideSpawnMenu ]
   id: card-37
-  name: трефы валет
+  name: карта
   suffix: Трефы Валет 
   description: "Обычная игральная карта"
   components:
@@ -621,7 +621,7 @@
   parent: cardBase
   categories: [ HideSpawnMenu ]
   id: card-38
-  name: трефы дама
+  name: карта
   suffix: Трефы Дама
   description: "Обычная игральная карта"
   components:
@@ -637,7 +637,7 @@
   parent: cardBase
   categories: [ HideSpawnMenu ]
   id: card-39
-  name: трефы король
+  name: карта
   suffix: Трефы Король 
   description: "Обычная игральная карта"
   components:
@@ -653,7 +653,7 @@
   parent: cardBase
   categories: [ HideSpawnMenu ]
   id: card-40
-  name: пики туз 
+  name: карта
   suffix: Пики Туз 
   description: "Обычная игральная карта"
   components:
@@ -685,7 +685,7 @@
   parent: cardBase
   categories: [ HideSpawnMenu ]
   id: card-42
-  name: пики 3
+  name: карта
   suffix: Пики 3 
   description: "Обычная игральная карта"
   components:
@@ -701,7 +701,7 @@
   parent: cardBase
   categories: [ HideSpawnMenu ]
   id: card-43
-  name: пики 4
+  name: карта
   suffix: Пики 4 
   description: "Обычная игральная карта"
   components:
@@ -717,7 +717,7 @@
   parent: cardBase
   categories: [ HideSpawnMenu ]
   id: card-44
-  name: пики 5 
+  name: карта
   suffix: Пики 5 
   description: "Обычная игральная карта"
   components:
@@ -733,7 +733,7 @@
   parent: cardBase
   categories: [ HideSpawnMenu ]
   id: card-45
-  name: пики 6 
+  name: карта
   suffix: Пики 6 
   description: "Обычная игральная карта"
   components:
@@ -749,7 +749,7 @@
   parent: cardBase
   categories: [ HideSpawnMenu ]
   id: card-46
-  name: пики 7
+  name: карта
   suffix: Пики 7 
   description: "Обычная игральная карта"
   components:
@@ -765,7 +765,7 @@
   parent: cardBase
   categories: [ HideSpawnMenu ]
   id: card-47
-  name: пики 8
+  name: карта
   suffix: Пики 8 
   description: "Обычная игральная карта"
   components:
@@ -781,7 +781,7 @@
   parent: cardBase
   categories: [ HideSpawnMenu ]
   id: card-48
-  name: пики 9
+  name: карта
   suffix: Пики 9 
   description: "Обычная игральная карта"
   components:
@@ -797,7 +797,7 @@
   parent: cardBase
   categories: [ HideSpawnMenu ]
   id: card-49
-  name: Пики 10
+  name: карта
   suffix: Пики 10 
   description: "Обычная игральная карта"
   components:
@@ -813,7 +813,7 @@
   parent: cardBase
   categories: [ HideSpawnMenu ]
   id: card-50
-  name: Пики Валет
+  name: карта
   suffix: Пики Валет
   description: "Обычная игральная карта"
   components:
@@ -829,7 +829,7 @@
   parent: cardBase
   categories: [ HideSpawnMenu ]
   id: card-51
-  name: Пики Дама
+  name: карта
   suffix: Пики Дама
   description: "Обычная игральная карта"
   components:
@@ -845,7 +845,7 @@
   parent: cardBase
   categories: [ HideSpawnMenu ]
   id: card-52
-  name: Пики Король
+  name: карта
   suffix: Пики Король
   description: "Обычная игральная карта"
   components:
@@ -861,7 +861,7 @@
   parent: cardBase
   categories: [ HideSpawnMenu ]
   id: card-53
-  name: Джокер клоун
+  name: карта
   suffix: Джокер клоун
   description: "Обычная игральная карта"
   components:
@@ -877,8 +877,8 @@
   parent: cardBase
   categories: [ HideSpawnMenu ]
   id: card-54
-  name: Джокер Мим
-  suffix: Игральная карта.
+  name: карта
+  suffix: Джокер Мим
   description: "Обычная игральная карта"
   components:
   - type: Sprite
