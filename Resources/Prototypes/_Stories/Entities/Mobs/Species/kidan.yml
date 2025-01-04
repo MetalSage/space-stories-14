@@ -1,0 +1,97 @@
+- type: entity
+  save: false
+  name: Урист МакКидан (Уриззт МакХэндзз)
+  parent: BaseMobSpeciesOrganic
+  id: BaseMobKidan
+  abstract: true
+  components:
+  - type: HumanoidAppearance
+    species: Kidan
+  - type: Hunger
+  - type: Thirst
+  - type: Icon
+    sprite: _Stories/Mobs/Species/Kidan/parts.rsi
+    state: full
+  - type: Body
+    prototype: Kidan
+    requiredLegs: 2
+  - type: Speech
+    speechVerb: Kidan
+#    speechSounds: Kidan # оно работает, но звуки просто ужас
+  - type: Butcherable
+    butcheringType: Spike
+    spawned:
+    - id: FoodMeat
+      amount: 5
+  - type: Bloodstream
+    bloodReagent: InsectBlood # Логично.
+  - type: DamageVisuals
+    damageOverlayGroups:
+      Brute:
+        sprite: Mobs/Effects/brute_damage.rsi
+        color: "#808A51"
+      Burn:
+        sprite: Mobs/Effects/burn_damage.rsi
+  - type: IntrinsicRadioReceiver
+  - type: IntrinsicRadioTransmitter
+    channels:
+    - Chitine
+  - type: ActiveRadio
+    channels:
+    - Chitine
+  - type: KidanAccent
+  - type: Vocal
+    sounds:
+      Male: UnsexedKidan
+      Female: UnsexedKidan
+      Unsexed: UnsexedKidan
+  - type: Damageable
+    damageContainer: Biological
+    damageModifierSet: Kidan
+  - type: Bioluminescence
+  - type: MeleeWeapon
+    animation: WeaponArcClaw
+    soundHit:
+      collection: AlienClaw
+    damage:
+      types:
+        Slash: 5
+  - type: PointLight
+    energy: 1.5
+    radius: 3
+    color: "#556b2f"
+    enabled: false
+  - type: Temperature
+    heatDamageThreshold: 400
+    coldDamageThreshold: 285
+    currentTemperature: 310.15
+    specificHeat: 42
+    coldDamage:
+      types:
+        Cold : 0.1 #per second, scales with temperature & other constants
+    heatDamage:
+      types:
+        Heat : 0.1 #per second, scales with temperature & other constants
+  - type: MovementSpeedModifier
+    baseWalkSpeed : 2.7
+    baseSprintSpeed : 4.5
+  - type: Perishable
+
+- type: entity
+  save: false
+  name: Urist McKidan
+  parent: BaseSpeciesDummy
+  id: MobKidanDummy
+  categories: [ HideSpawnMenu ]
+  description: A dummy kidan meant to be used in character setup.
+  components:
+  - type: HumanoidAppearance
+    species: Kidan
+
+- type: radioChannel
+  id: Chitine
+  name: chat-radio-chitine
+  frequency: 98766
+  keycode: 'х'
+  color: "#556b2f"
+  longRange: true

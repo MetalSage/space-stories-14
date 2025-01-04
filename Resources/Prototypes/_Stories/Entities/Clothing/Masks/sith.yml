@@ -1,0 +1,22 @@
+- type: entity
+  parent: ClothingMaskGas
+  id: ClothingMaskGasSith
+  name: маска инквизитора
+  description: Зловещая маска. Она так манит надеть её...
+  components:
+  - type: Tag
+    tags:
+      - ForceRecallEquipment
+  - type: Item
+    size: Tiny
+  - type: Sprite
+    sprite: _Stories/Clothing/Mask/mask_sith.rsi
+  - type: Clothing
+    sprite: _Stories/Clothing/Mask/mask_sith.rsi
+  - type: Armor
+    modifiers:
+      coefficients:
+        Blunt: 0.95
+        Slash: 0.95
+        Piercing: 0.95
+        Heat: 0.95

@@ -1,0 +1,88 @@
+- type: entity
+  parent: ClothingHeadBase
+  id: ClothingHeadHatHoodJedihood
+  name: капюшон джедая
+  categories: [ HideSpawnMenu ]
+  description: Достаточно крут, чтобы вы его носили.
+  components:
+  - type: HideLayerClothing
+    slots:
+    - Hair
+    - Snout
+    - HeadTop
+    - HeadSide
+  - type: Tag
+    tags:
+      - ForceRecallEquipment
+  - type: Sprite
+    sprite: _Stories/Clothing/Head/Hoods/jedi.rsi
+  - type: Clothing
+    sprite: _Stories/Clothing/Head/Hoods/jedi.rsi
+
+- type: entity
+  parent: ClothingHeadBase
+  id: ClothingHeadHatHoodSith
+  name: капюшон инквизитора
+  categories: [ HideSpawnMenu ]
+  description: Какой же вы злодей без крутого капюшона?
+  components:
+  - type: HideLayerClothing
+    slots:
+    - Hair
+    - Snout
+    - HeadTop
+    - HeadSide
+  - type: TemperatureProtection
+    heatingCoefficient: 0.005
+    coolingCoefficient: 0.005
+  - type: PressureProtection
+    highPressureMultiplier: 0.08
+    lowPressureMultiplier: 1000
+  - type: Armor
+    modifiers:
+      coefficients:
+        Blunt: 0.9
+        Slash: 0.9
+        Piercing: 0.9
+        Heat: 0.9
+  - type: Tag
+    tags:
+      - ForceRecallEquipment
+  - type: Sprite
+    sprite: _Stories/Clothing/Head/Hoods/helmet_sith.rsi
+  - type: Clothing
+    sprite: _Stories/Clothing/Head/Hoods/helmet_sith.rsi
+
+- type: entity
+  parent: ClothingHeadBase
+  id: ClothingHeadHatHoodKylo
+  name: капюшон кайло рена
+  categories: [ HideSpawnMenu ]
+  description: Какой же вы злодей без крутого капюшона?
+  components:
+  - type: HideLayerClothing
+    slots:
+    - Hair
+    - Snout
+    - HeadTop
+    - HeadSide
+  - type: TemperatureProtection
+    heatingCoefficient: 0.005
+    coolingCoefficient: 0.005
+  - type: PressureProtection
+    highPressureMultiplier: 0.08
+    lowPressureMultiplier: 1000
+  - type: Armor
+    modifiers:
+      coefficients:
+        Blunt: 0.9
+        Slash: 0.9
+        Piercing: 0.9
+        Heat: 0.9
+  - type: Tag
+    tags:
+      - ForceRecallEquipment
+  - type: Sprite
+    sprite: _Stories/Clothing/Head/Hoods/helmet_kylo.rsi
+  - type: Clothing
+    sprite: _Stories/Clothing/Head/Hoods/helmet_kylo.rsi

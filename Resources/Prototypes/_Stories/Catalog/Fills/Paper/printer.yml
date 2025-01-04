@@ -1,0 +1,66 @@
+- type: entity
+  name: коробка с принтером
+  parent: BoxBase
+  id: BoxPrinter
+  description: Картонная коробка со всем для бумажного принтера.
+  components:
+  - type: Item
+    size: Large
+    shape:
+    - 0,0,3,3
+  - type: Storage
+    maxItemSize: Large
+    grid:
+    - 0,0,3,3
+  - type: Sprite
+    sprite: _Stories/Objects/Storage/printer_box.rsi
+    layers:
+    - map: [ base ]
+      state: box
+    - map: [ fax ]
+      state: layer_fax
+    - map: [ multitool ]
+      state: layer_multitool
+    - map: [ paper ]
+      state: layer_paper
+  - type: GenericVisualizer
+    visuals:
+      enum.StorageVisuals.Open:
+        base:
+          True: { state: box-open }
+          False: { state: box }
+        fax:
+          True: { visible: true }
+          False: { visible: false }
+        multitool:
+          True: { visible: true }
+          False: { visible: false }
+        paper:
+          True: { visible: true }
+          False: { visible: false }
+  - type: Appearance
+  - type: StorageFill
+    contents:
+    - id: InkPrinter
+      amount: 2
+    - id: SheetPrinter
+      amount: 2
+    - id: Multitool
+    - id: PrinterDocFlatpack
+
+- type: entity
+  name: коробка с синди принтером
+  parent: BoxPrinter
+  id: BoxSyndiePrinter
+  description: Картонная коробка со всем для бумажного принтера.
+  components:
+  - type: Sprite
+    sprite: _Stories/Objects/Storage/printer_box_syndie.rsi
+  - type: StorageFill
+    contents:
+    - id: InkPrinter
+      amount: 2
+    - id: SheetPrinter
+      amount: 2
+    - id: Multitool
+    - id: PrinterDocSyndieFlatpack

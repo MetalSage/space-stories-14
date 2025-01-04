@@ -1,0 +1,51 @@
+- type: entity
+  parent: ClothingHeadBaseButcherable
+  id: PRISONClothingHeadHatCapHeadOfPrison
+  name: фуражка начальника тюрьмы
+  description: Прочная форменная фуражка начальника тюрьмы. Напоминает рядовым офицерам, кто здесь главный.
+  components:
+    - type: Sprite
+      sprite: _Stories/Clothing/Head/Soft/hosp_cap.rsi
+    - type: Clothing
+      sprite: _Stories/Clothing/Head/Soft/hosp_cap.rsi
+
+- type: entity
+  parent: ClothingHeadBaseButcherable
+  id: PRISONClothingHeadHatSoft
+  name: кепка тюрьмы
+  description: Это надежная бейсболка со вкусом подобранного синего цвета.
+  components:
+    - type: Sprite
+      sprite: _Stories/Clothing/Head/Soft/cap_sp.rsi
+    - type: Clothing
+      sprite: _Stories/Clothing/Head/Soft/cap_sp.rsi
+
+- type: entity
+  parent: ClothingHeadBase
+  id: PRISONClothingHeadHatUshanka
+  name: ушанка
+  description: Идеально подходит для зимы в Сибири, da?
+  components:
+    - type: Sprite
+      sprite: _Stories/Clothing/Head/Hats/hosp_ushanka.rsi
+    - type: Clothing
+      sprite: _Stories/Clothing/Head/Hats/hosp_ushanka.rsi
+    - type: Tag
+      tags:
+        - HamsterWearable
+        - WhitelistChameleon
+
+- type: entity
+  parent: ClothingHeadBase
+  id: PRISONClothingHeadHatBeret
+  name: берет тюрьмы
+  description: Берет - любимый головной убор заключенного. Из него делаются бинты.
+  components:
+    - type: Sprite
+      sprite: _Stories/Clothing/Head/Hats/beret_sp.rsi
+    - type: Clothing
+      sprite: _Stories/Clothing/Head/Hats/beret_sp.rsi
+    - type: Tag
+      tags:
+        - HamsterWearable
+        - WhitelistChameleon

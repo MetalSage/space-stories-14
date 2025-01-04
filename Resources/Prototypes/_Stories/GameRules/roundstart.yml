@@ -1,0 +1,29 @@
+- type: entity
+  id: Shadowling
+  parent: BaseGameRule
+  components:
+  - type: GameRule
+    minPlayers: 30
+  - type: ShadowlingRule
+  - type: AntagSelection
+    definitions:
+    - prefRoles: [ Shadowling ]
+      max: 2
+      playerRatio: 30
+      briefing:
+        text: shadowling-role-greeting
+        color: DarkRed
+        sound: "/Audio/Ambience/Antag/ling_alert.ogg"
+      components:
+      - type: IntrinsicRadioReceiver
+      - type: IntrinsicRadioTransmitter
+        channels:
+        - ShadowlingMind
+      - type: ActiveRadio
+        channels:
+        - ShadowlingMind
+      - type: Shadowling
+        actions:
+          ActionShadowlingHatch: 0
+      mindRoles:
+      - MindRoleShadowling

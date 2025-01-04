@@ -211,7 +211,7 @@
   - type: PointLight
     enabled: false
     radius: 8
-    energy: 5
+    energy: 1.8
   - type: ItemSlots
     slots:
       cell_slot:

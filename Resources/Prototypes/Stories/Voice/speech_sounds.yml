@@ -1,8 +1,0 @@
-- type: speechSounds
-  id: Kidan
-  saySound:
-    path: /Audio/Stories/Voice/Kidan/speak1.ogg
-  askSound:
-    path: /Audio/Stories/Voice/Kidan/speak2.ogg
-  exclaimSound:
-    path: /Audio/Stories/Voice/Kidan/speak3.ogg

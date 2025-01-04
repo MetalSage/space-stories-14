@@ -1,0 +1,199 @@
+- type: entity
+  save: false
+  parent: [ SimpleSpaceMobBase, FlyingMobBase ]
+  id: BaseMobSpaf
+  abstract: true
+  components:
+  - type: TypingIndicator
+    proto: slime
+  - type: Bloodstream
+    bloodReagent: Slime
+    bloodlossDamage:
+      types:
+        Bloodloss:
+          0.5
+    bloodlossHealDamage:
+      types:
+        Bloodloss:
+          -0.25
+  - type: Butcherable
+    spawned:
+    - id: FoodMeatSlime
+      amount: 2
+  - type: Speech
+    speechVerb: Slime
+    speechSounds: Slime
+  - type: Tag
+    tags:
+    - CannotSuicide
+  - type: IntrinsicRadioReceiver
+  - type: IntrinsicRadioTransmitter
+    channels:
+    - SpafMind
+  - type: ActiveRadio
+    channels:
+    - SpafMind
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeCircle
+          radius: 0.2
+        density: 100
+        mask:
+          - SmallMobMask
+        layer:
+          - SmallMobLayer
+  - type: Puller
+    needsHands: false
+  - type: Hunger
+    currentHunger: 25
+    thresholds: # only animals and rats are derived from this prototype so let's override it here and in rats' proto
+      Overfed: 200
+      Okay: 50
+      Peckish: 25
+      Starving: 10
+      Dead: 0
+    baseDecayRate: 0 # it is okay for animals to eat and drink less than humans, but more frequently
+  - type: Thirst
+    thresholds:
+      OverHydrated: 200
+      Okay: 150
+      Thirsty: 100
+      Parched: 50
+      Dead: 0
+    baseDecayRate: 0.04
+  - type: MovementSpeedModifier
+    baseWalkSpeed : 4
+    baseSprintSpeed : 4
+  - type: UnpoweredFlashlight
+    toggleFlashlightSound:
+      path: /Audio/Voice/Slime/slime_squish.ogg
+    toggleAction: ActionSpafLight
+  - type: PointLight
+    enabled: false
+    color: DarkGreen
+    radius: 3
+    energy: 2
+    softness: 1
+  - type: StealthOnMove
+    passiveVisibilityRate: -0.9
+    movementVisibilityRate: -10
+  - type: Stealth
+    enabledOnDeath: false
+    enabled: false
+
+- type: entity
+  name: S.P.A.F.
+  description: Ужасное на вид создание... Брр.. Пожалуй, от него стоит убегать.
+  parent: BaseMobSpaf
+  id: MobSpaf
+  components:
+  - type: Spaf
+    actions:
+    - ActionSpafStealth
+    - ActionSpafLube
+    # - ActionSpafMine Сломалось.
+    - ActionSpafFood
+    - ActionSpafGlue
+    - ActionSpafEgg
+  - type: Devourer
+    devourAction: ActionSpafDevour
+    foodPreference: Humanoid
+    shouldStoreDevoured: true
+    chemical: Ichor
+    healRate: 15.0
+    whitelist:
+      components:
+      - MobState
+  - type: RandomMetadata
+    nameSegments:
+    - SpafFirst
+    - SpafLast
+  - type: MeleeWeapon
+    altDisarm: false
+    soundHit:
+      path: /Audio/Weapons/Xeno/alien_claw_flesh3.ogg
+    damage:
+      types:
+        Slash: 15
+  - type: GhostRole
+    makeSentient: true
+    name: ghost-role-information-spaf-name
+    description: ghost-role-information-spaf-description
+    rules: ghost-role-information-spaf-rules
+    raffle:
+      settings: default
+  - type: GhostTakeoverAvailable
+  - type: SlowOnDamage
+    speedModifierThresholds:
+      30: 0.95
+      50: 0.9
+      70: 0.8
+  - type: Sprite
+    drawdepth: SmallMobs
+    sprite: _Stories/Mobs/Aliens/spaf.rsi
+    layers:
+    - map: ["enum.DamageStateVisualLayers.Base"]
+      state: spaf
+  - type: MobThresholds
+    thresholds:
+      0: Alive
+      100: Dead
+    stateAlertDict:
+      Alive: SpafHealth
+      Dead: SpafDead
+    showOverlays: false
+  - type: DamageStateVisuals
+    states:
+      Alive:
+        Base: spaf
+      Dead:
+        Base: dead
+  - type: TTS
+    voice: ziggs
+
+- type: entity
+  name: маленький радужный слизняк
+  description: На вид очень милый и безобидный! Скорее всего, он сбежал из РНД.
+  parent: BaseMobSpaf
+  id: MobMiniSpaf
+  components:
+  - type: Spaf
+    actions:
+    - ActionSpafFood
+    - ActionSpafEvol
+  - type: Sprite
+    drawdepth: SmallMobs
+    sprite: _Stories/Mobs/Aliens/minispaf.rsi
+    layers:
+      - map: ["enum.DamageStateVisualLayers.Base"]
+        state: spaf
+  - type: MobThresholds
+    thresholds:
+      0: Alive
+      50: Dead
+    stateAlertDict:
+      Alive: SpafHealth
+      Dead: SpafDead
+    showOverlays: false
+  - type: DamageStateVisuals
+    states:
+      Alive:
+        Base: spaf
+      Dead:
+        Base: dead
+  - type: SlowOnDamage
+    speedModifierThresholds:
+        20: 0.95
+        30: 0.9
+        40: 0.8
+  - type: MeleeWeapon
+    altDisarm: false
+    soundHit:
+      path: /Audio/Weapons/Xeno/alien_claw_flesh3.ogg
+    damage:
+      types:
+        Slash: 5
+  - type: TTS
+    voice: charlotte

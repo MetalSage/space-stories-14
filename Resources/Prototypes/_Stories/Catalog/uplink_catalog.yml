@@ -1,0 +1,81 @@
+- type: listing
+  id: UplinkRadioJammerIndustrial
+  name: Экспериментальный глушитель связи
+  description: Это устройство является улучшенной версией обычного глушителя связи. Радиус действия увеличен, но и потребление больше. (Замаскирован под %%%%%%%)
+  productEntity: RadioJammerIndustrial
+  cost:
+    Telecrystal: 6
+  categories:
+  - UplinkDisruption
+
+- type: listing
+  id: UplinkNightvision
+  name: Прибор ночного видения
+  description: Позволяет видеть в полной темноте. Работает на ядерной батарее внутри и совсем не вреден для глаз.
+  productEntity: ClothingEyesNightvision
+  discountCategory: rareDiscounts
+  discountDownTo:
+    Telecrystal: 2
+  cost:
+    Telecrystal: 4
+  categories:
+    - UplinkWearables
+  conditions:
+  - !type:StoreWhitelistCondition
+    blacklist:
+      tags:
+        - NukeOpsUplink
+
+- type: listing
+  id: UplinkNightvisionNukeOps
+  name: Прибор ночного видения
+  description: Позволяет видеть в полной темноте. Работает на ядерной батарее внутри и совсем не вреден для глаз.
+  productEntity: ClothingEyesNightvision
+  discountCategory: rareDiscounts
+  discountDownTo:
+    Telecrystal: 4
+  cost:
+    Telecrystal: 6
+  categories:
+  - UplinkWearables
+  conditions:
+  - !type:StoreWhitelistCondition
+    whitelist:
+      tags:
+        - NukeOpsUplink
+
+- type: listing
+  id: UplinkClothingEyesThermalVisionMonocular
+  name: Монокль термального зрения
+  description: Новейшая разведочная технология, которую поместили внутрь монокля. Позволяет видеть органические цели в полной темноте и даже через стены.
+  productEntity: ClothingEyesThermalVisionMonocular
+  discountCategory: rareDiscounts
+  discountDownTo:
+    Telecrystal: 4
+  cost:
+    Telecrystal: 6
+  categories:
+    - UplinkWearables
+  conditions:
+    - !type:StoreWhitelistCondition
+      blacklist:
+        tags:
+          - NukeOpsUplink
+
+- type: listing
+  id: UplinkClothingEyesThermalVisionHud
+  name: Термальный визор оперативника
+  description: Новейшая разведочная технология, которую поместили внутрь визора. Позволяет видеть органические цели в полной темноте и даже через стены. Этот вариант специально для Ядерных Оперативников имеет встроенный визор Синдиката.
+  productEntity: ClothingEyesThermalVisionHud
+  discountCategory: rareDiscounts
+  discountDownTo:
+    Telecrystal: 6
+  cost:
+    Telecrystal: 8
+  categories:
+    - UplinkWearables
+  conditions:
+    - !type:StoreWhitelistCondition
+      whitelist:
+        tags:
+          - NukeOpsUplink

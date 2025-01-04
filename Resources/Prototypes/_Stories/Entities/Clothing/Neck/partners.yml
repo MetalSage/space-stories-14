@@ -1,0 +1,12 @@
+- type: entity
+  parent: ClothingNeckBase
+  id: ClothingNeckElectrospheres
+  name: электросферы
+  description: Странные сферы, которые красиво светятся и летают.
+  components:
+  - type: PointLight
+    color: "#00FFF8FF"
+    radius: 1.5
+    energy: 1.0
+  - type: Sprite
+    sprite: _Stories/Clothing/Neck/spheres.rsi

@@ -82,7 +82,7 @@
       visible: false
   - type: PointLight
     radius: 6.0
-    energy: 7.5
+    energy: 5
     color: "#E25822"
     castShadows: false
   - type: PyroclasticAnomaly
@@ -145,8 +145,8 @@
   - type: CanMoveInAir
   - type: RandomWalk
   - type: SingularityDistortion
-    intensity: 1000
-    falloffPower: 2.7
+    intensity: 200
+    falloffPower: 1.7
 
 - type: entity
   id: AnomalyElectricity
@@ -165,7 +165,7 @@
       visible: false
   - type: PointLight
     radius: 2.0
-    energy: 5.0
+    energy: 2.5
     color: "#ffffaa"
     castShadows: false
   - type: ElectricityAnomaly
@@ -278,7 +278,7 @@
       visible: false
   - type: PointLight
     radius: 2.0
-    energy: 7.5
+    energy: 5
     color: "#00ccff"
     castShadows: false
   - type: BluespaceAnomaly
@@ -385,7 +385,7 @@
       visible: false
   - type: PointLight
     radius: 2.0
-    energy: 7.5
+    energy: 4
     color: "#5ca8cb"
     castShadows: false
   - type: TileSpawnAnomaly
@@ -412,7 +412,7 @@
     color: "#52ff39"
   - type: PointLight
     radius: 2.0
-    energy: 7.5
+    energy: 4
     color: "#52ff39"
   - type: EntitySpawnAnomaly
     entries:
@@ -462,7 +462,7 @@
     color: "#fb4747"
   - type: PointLight
     radius: 2.0
-    energy: 7.5
+    energy: 4
     color: "#fb4747"
   - type: EntitySpawnAnomaly
     entries:
@@ -512,7 +512,7 @@
     color: "#47f8ff"
   - type: PointLight
     radius: 2.0
-    energy: 7.5
+    energy: 4
     color: "#47f8ff"
   - type: EntitySpawnAnomaly
     entries:
@@ -562,7 +562,7 @@
     color: "#ff8227"
   - type: PointLight
     radius: 2.0
-    energy: 7.5
+    energy: 4
     color: "#ff8227"
   - type: EntitySpawnAnomaly
     entries:
@@ -936,3 +936,54 @@
   - type: Tag
     tags:
       - HideContextMenu
+
+- type: entity
+  id: AnomalySanta
+  parent: BaseAnomaly
+  suffix: Santa
+  components:
+  - type: Sprite
+    drawdepth: Mobs
+    sprite: Structures/Specific/Anomalies/santa_anom.rsi
+    layers:
+    - state: anom
+      map: ["enum.AnomalyVisualLayers.Base"]
+    - state: pulse
+      map: ["enum.AnomalyVisualLayers.Animated"]
+      visible: false
+  - type: PointLight
+    radius: 8.0
+    energy: 8.5
+    color: "#db8127"
+  - type: Anomaly
+    animationTime: 6
+    offset: 0, 0
+    corePrototype: AnomalyCoreSanta
+    coreInertPrototype: AnomalyCoreSantaInert
+    minPulseLength: 60
+    maxPulseLength: 120
+  - type: EntitySpawnAnomaly
+    entries:
+    - settings:
+        spawnOnPulse: true
+        minAmount: 2
+        maxAmount: 5
+        maxRange: 5
+      spawns:
+      - PresentRandomUnsafe
+      - PresentRandom
+      - PresentRandomCoal
+      - PresentRandomCash
+      - ClothingHeadHatSantahat
+      - FoodCakeChristmasSlice
+    - settings:
+        spawnOnSuperCritical: true
+        minAmount: 10
+        maxAmount: 20
+        maxRange: 6
+      spawns:
+      - PresentRandomInsane
+  - type: ProjectileAnomaly
+    projectilePrototype: DrinkLemonLimeCranberryCan
+    minProjectiles: 1
+    maxProjectiles: 3

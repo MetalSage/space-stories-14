@@ -2,4 +2,4 @@
   id: StoriesRuleset
   name: guide-entry-rules
   ruleEntry: true
-  text: "/ServerInfo/Stories/ServerRules/StoriesRules.xml"
+  text: "/ServerInfo/_Stories/ServerRules/StoriesRules.xml"

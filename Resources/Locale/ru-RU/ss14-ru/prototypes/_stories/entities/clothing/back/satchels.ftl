@@ -1,0 +1,12 @@
+ent-ClothingBackpackSatchelJediNt = сумка стража клинка
+    .desc = Где же моя помадка?
+ent-ClothingBackpackSatchelAdidos = сумка
+    .desc = Модная сумка.
+ent-ClothingBackpackSatchelBluesky = сумка
+    .desc = Модная сумка.
+ent-ClothingBackpackSatchelEight = сумка
+    .desc = Модная сумка.
+ent-ClothingBackpackSatchelGachi = сумка
+    .desc = Модная сумка.
+ent-ClothingBackpackSatchelRl = сумка
+    .desc = Модная сумка.

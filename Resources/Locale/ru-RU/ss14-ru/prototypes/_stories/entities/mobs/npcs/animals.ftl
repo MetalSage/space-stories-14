@@ -1,0 +1,17 @@
+ent-BaseMobKoi = космический кои
+    .desc = Цветастая пародия на космического карпа, выглядит дружелюбно.
+ent-MobRedBlackKoi = { ent-BaseMobKoi }
+    .suffix = Красно-чёрный
+    .desc = { ent-BaseMobKoi.desc }
+ent-MobGoldBlackKoi = { ent-BaseMobKoi }
+    .suffix = Чёрно-золотой
+    .desc = { ent-BaseMobKoi.desc }
+ent-MobRedCircleKoi = { ent-BaseMobKoi }
+    .suffix = Красный круг
+    .desc = { ent-BaseMobKoi.desc }
+ent-MobBloodSkeletonKoi = { ent-BaseMobKoi }
+    .suffix = Кровавый скелет
+    .desc = { ent-BaseMobKoi.desc }
+ent-MobSpaceGlowKoi = { ent-BaseMobKoi }
+    .suffix = Космическое свечение
+    .desc = { ent-BaseMobKoi.desc }

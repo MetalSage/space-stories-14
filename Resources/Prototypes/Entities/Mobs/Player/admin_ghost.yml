@@ -109,8 +109,8 @@
   description: View a Solar Control Interface.
   components:
   - type: InstantAction
-    icon: Stories/Interface/AdminActions/solar.png # Stories-Resprite
-    iconOn: Stories/Interface/AdminActions/solar.png # Stories-Resprite
+    icon: _Stories/Interface/AdminActions/solar.png # Stories-Resprite
+    iconOn: _Stories/Interface/AdminActions/solar.png # Stories-Resprite
     keywords: [ "AI", "console", "interface" ]
     priority: -10
     event: !type:ToggleIntrinsicUIEvent { key: enum.SolarControlConsoleUiKey.Key }
@@ -145,8 +145,8 @@
   description: View a Cargo Ordering Interface.
   components:
   - type: InstantAction
-    icon: Stories/Interface/AdminActions/cargo.png # Stories-Resprite
-    iconOn: Stories/Interface/AdminActions/cargo.png # Stories-Resprite
+    icon: _Stories/Interface/AdminActions/cargo.png # Stories-Resprite
+    iconOn: _Stories/Interface/AdminActions/cargo.png # Stories-Resprite
     keywords: [ "AI", "console", "interface" ]
     priority: -10
     event: !type:ToggleIntrinsicUIEvent { key: enum.CargoConsoleUiKey.Orders }

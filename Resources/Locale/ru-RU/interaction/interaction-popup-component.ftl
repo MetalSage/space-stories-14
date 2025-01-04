@@ -1,5 +1,6 @@
 ### Interaction Popup component
 
+
 ## Petting animals
 
 petting-success-generic = Вы гладите { $target } по голове.
@@ -65,7 +66,9 @@ petting-success-janitor-cyborg = Вы гладите { $target } по { POSS-ADJ
 petting-success-medical-cyborg = Вы гладите { $target } по { POSS-ADJ($target) } стерильной металлической голове.
 petting-success-service-cyborg = Вы гладите { $target } по { POSS-ADJ($target) } нарядной металлической голове.
 petting-success-syndicate-cyborg = Вы гладите { $target } по { POSS-ADJ($target) } угрожающего вида металлической голове.
-petting-failure-honkbot = Вы тянетесь погладить { $target }, но { $target } хонкает и уворачивается!
+petting-success-derelict-cyborg = Вы гладите { THE($target) } по { POSS-ADJ($target) } ржавой металлической голове.
+petting-failure-honkbot = Вы тянетесь погладить { $target }, но { $target } издает гудок и уклоняется!
+petting-success-station-ai = Вы гладите { THE($target) } по { POSS-ADJ($target) } холодному, квадратного монитору.
 petting-success-recycler = Вы гладите { $target } по { POSS-ADJ($target) } слегка пугающему стальному покрытию.
 petting-failure-cleanbot = Вы тянетесь погладить { $target }, но { $target } занимается уборкой!
 petting-failure-mimebot = Вы тянетесь погладить { $target }, но { $target } занимается мимированием!
@@ -78,6 +81,9 @@ petting-failure-janitor-cyborg = Вы тянетесь погладить { $tar
 petting-failure-medical-cyborg = Вы тянетесь погладить { $target }, но { $target } занимается спасением жизней!
 petting-failure-service-cyborg = Вы тянетесь погладить { $target }, но { $target } занимается обслуживанием экипажа!
 petting-failure-syndicate-cyborg = Вы тянетесь погладить { $target }, но предательская натура { $target } заставляет вас передумать.
+petting-failure-derelict-cyborg = Вы тянетесь, чтобы погладить { THE($target) }, но { POSS-ADJ($target) } ржавая и неровная поверхность заставляет вас передумать.
+petting-failure-station-ai = Вы тянетесь, чтобы погладить { THE($target) }, но { SUBJECT($target) } отдергивает вашу руку.
+petting-success-station-ai-others = { CAPITALIZE(THE($user)) } гладит { THE($target) } по { POSS-ADJ($target) } холодному, квадратного монитору.
 hugging-success-generic = Вы обнимаете { $target }.
 hugging-success-generic-others = { CAPITALIZE($user) } обнимает { $target }.
 fence-rattle-success = *бдзынь*

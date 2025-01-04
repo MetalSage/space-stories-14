@@ -4,7 +4,7 @@ using Content.Shared.IdentityManagement;
 using Content.Shared.Mindshield.Components;
 using Content.Shared.Popups;
 using Content.Shared.Revolutionary.Components;
-using Content.Shared.Stories.Mindshield;
+using Content.Shared._Stories.Mindshield;
 using Content.Shared.Stunnable;
 using Robust.Shared.GameStates;
 using Robust.Shared.Player;

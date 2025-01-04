@@ -1,0 +1,17 @@
+- type: marking
+  id: HumanHornsShort
+  bodyPart: HeadTop
+  markingCategory: HeadTop
+  speciesRestriction: []
+  sprites:
+  - sprite: _Stories/Mobs/Customization/horns.rsi
+    state: horns_short
+
+- type: marking
+  id: HumanHornsSimple
+  bodyPart: HeadTop
+  markingCategory: HeadTop
+  speciesRestriction: []
+  sprites:
+  - sprite: _Stories/Mobs/Customization/horns.rsi
+    state: horns_simple

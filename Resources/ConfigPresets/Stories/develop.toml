@@ -11,40 +11,9 @@ reason = "Требуется разрешение на подключение к
 enabled = false
 
 [game]
-hostname = "📚 Space Stories - Develop 🔌"
+hostname = "📚 Space Stories - Develop ⚙"
 role_timers = false
 desc = "⚙️ Это сервер 𝗦𝗽𝗮𝗰𝗲 𝗦𝘁𝗼𝗿𝗶𝗲𝘀 для разработчиков."
-map_pool = "StoriesDefaultMapPool"
-
-[shuttle]
-auto_call_time = 0
 
 [rules]
 time = 0.0
-
-[queue]
-enabled = false
-
-[atmos]
-monstermos_rip_tiles = false
-
-[infolinks]
-discord = "https://discord.gg/space-stories"
-bug_report = "https://discord.com/channels/1111698541841240164/1112726172112007208"
-github = "https://github.com/Space-Stories/space-station-14"
-wiki = "https://spacestories.club"
-appeal = "https://discord.gg/space-stories"
-patreon = "https://boosty.to/spacestories14"
-
-[auth]
-# Включена без гостей. (0 для гостей. 2 для выключения)
-mode = 1
-
-[procgen]
-preload = false
-
-[netres]
-limit = 30
-
-[viewport]
-maximum_width = 26

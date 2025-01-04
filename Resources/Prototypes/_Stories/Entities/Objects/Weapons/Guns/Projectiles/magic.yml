@@ -1,0 +1,185 @@
+- type: entity
+  id: JediPushBall
+  name: base bullet rubber
+  parent: BaseBullet
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Reflective
+    reflective:
+    - None
+  - type: TimedDespawn
+    lifetime: 0.2 # 4 тайла
+  - type: Sprite
+    visible: false
+    sprite: Objects/Weapons/Guns/Projectiles/magic.rsi
+    layers:
+    - state: spell
+  - type: Projectile
+    soundHit:
+      path: /Audio/Weapons/egloves.ogg
+  - type: StunOnCollide
+    stunAmount: 2
+    knockdownAmount: 2
+  - type: PushOnCollide
+
+
+# Я думаю это надо переместить.
+- type: entity
+  name: disabler bolt
+  id: BulletRedPlazma
+  parent: BaseBullet
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Reflective
+    reflective:
+    - Energy
+  - type: FlyBySound
+    sound:
+      collection: EnergyMiss
+      params:
+        volume: 5
+  - type: PointLight
+    color: Red
+    radius: 2
+    softness: 1
+  - type: Sprite
+    sprite: Objects/Weapons/Guns/Projectiles/projectiles_tg.rsi
+    layers:
+    - state: omnilaser_greyscale
+      shader: unshaded
+      color: red
+  - type: Physics
+  # - type: Fixtures
+  #   fixtures:
+  #     projectile:
+  #       shape:
+  #         !type:PhysShapeAabb
+  #         bounds: "-0.15,-0.3,0.15,0.3"
+  #       hard: false
+  #       mask:
+  #       - Impassable
+  #       - BulletImpassable
+  #     fly-by: *flybyfixture
+  - type: Ammo
+  - type: Projectile
+    impactEffect: BulletImpactEffectRedPlazma
+    damage:
+      types:
+        Heat: 35
+    soundHit:
+      path: /Audio/Effects/lightburn.ogg
+
+- type: entity
+  id: BulletImpactEffectRedPlazma
+  categories: [ HideSpawnMenu ]
+  components:
+    - type: TimedDespawn
+      lifetime: 0.2
+    - type: Sprite
+      drawdepth: Effects
+      layers:
+        - shader: unshaded
+          map: ["enum.EffectLayers.Unshaded"]
+          sprite: Objects/Weapons/Guns/Projectiles/projectiles_tg.rsi
+          state: impact_laser_greyscale
+          color: red
+    - type: EffectVisuals
+    - type: Tag
+      tags:
+        - HideContextMenu
+
+- type: entity
+  name: Бластерный карабин DC-15S
+  parent: BaseWeaponBatterySmall
+  id: WeaponBlasterRifle
+  description: Вариант бластерного карабина бластерной винтовки DC-15A компании BlasTech, не путать с самой DC-15A. Это оружие носили солдаты -клоны Галактической Республики во время Войн клонов. Он также находился на вооружении в первые годы существования Галактической Империи.
+  components:
+    - type: Tag
+      tags:
+      - Sidearm
+    - type: Battery
+      maxCharge: 10000
+      startingCharge: 10000
+    - type: Wieldable
+    - type: GunWieldBonus
+      minAngle: -90
+      maxAngle: -135
+    - type: Sprite
+      sprite: _Stories/Objects/Weapons/Guns/StarWars/DC-15S.rsi
+      layers:
+        - state: icon
+          map: ["enum.GunVisualLayers.Base"]
+    - type: Clothing
+      sprite: _Stories/Objects/Weapons/Guns/StarWars/DC-15S.rsi
+      quickEquip: false
+      slots:
+        - suitStorage
+        - Belt
+        - Back
+    - type: Gun
+      minAngle: 90
+      maxAngle: 135
+      fireRate: 2
+      soundGunshot:
+        path: /Audio/Weapons/Guns/Gunshots/laser_cannon.ogg
+    - type: ProjectileBatteryAmmoProvider
+      proto: BulletRedPlazma
+      fireCost: 100
+    - type: Appearance
+
+- type: entity
+  name: Бластерная винтовка DC-15A
+  parent: BaseWeaponBattery
+  id: WeaponBlasterCarbine
+  description: Известна просто как бластерная винтовка DC-15, была тяжелой бластерной винтовкой, производимой компанией BlasTech Industries, как часть семейства DC-15. Это было одно из стандартных видов оружия солдат-клонов Галактической Республики, армии клонированных солдат Великой армии Республики, во время Войн клонов против Конфедерации независимых систем. Бластер представлял собой более крупную, тяжелую и мощную дальнобойную альтернативу бластерному карабину DC-15S. Он использовался Республикой и ее союзниками на протяжении Войн клонов и видел ограниченное применение на ранних этапах Галактической гражданской войны между Галактической Империей и Альянсом за восстановление Республики.
+  components:
+    - type: Battery
+      maxCharge: 50000
+      startingCharge: 50000
+    - type: Wieldable
+    - type: GunWieldBonus
+      minAngle: -85
+      maxAngle: -125
+    - type: Sprite
+      sprite: _Stories/Objects/Weapons/Guns/StarWars/DC-15A.rsi
+      layers:
+        - state: icon
+          map: ["enum.GunVisualLayers.Base"]
+    - type: Clothing
+      sprite: _Stories/Objects/Weapons/Guns/StarWars/DC-15A.rsi
+      quickEquip: false
+      slots:
+        - Back
+    - type: Gun
+      minAngle: 90
+      maxAngle: 135
+      fireRate: 2
+      soundGunshot:
+        path: /Audio/Weapons/Guns/Gunshots/laser_cannon.ogg
+    - type: ProjectileBatteryAmmoProvider
+      proto: BulletRedPlazma
+      fireCost: 100
+    - type: Appearance
+
+- type: entity
+  parent: ClothingBeltStorageBase
+  id: ClothingBeltAssaultStormtrooper
+  name: штурмовой пояс
+  description: Атрибут экипировки, который большинство граждан использовало при выполнении довольно сложных задач. Данные пояса делались для переноски необходимых расходных материалов и различных приспособлений без использования рук.
+  components:
+  - type: Sprite
+    sprite: _Stories/Clothing/Belt/assault_stormtrooper.rsi
+  - type: Clothing
+    sprite: _Stories/Clothing/Belt/assault_stormtrooper.rsi
+  - type: ItemMapper
+    mapLayers:
+      flashbang:
+        whitelist:
+          components:
+          - FlashOnTrigger
+      stunbaton:
+        whitelist:
+          components:
+          - Stunbaton
+    sprite: Clothing/Belt/belt_overlay.rsi
+  - type: Appearance

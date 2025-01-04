@@ -1,0 +1,11 @@
+- type: entity
+  parent: BriefcaseBase
+  id: BriefcaseSteel
+  name: стальной чемодан
+  description: Пригодится для переноски миллиона кредитов в руках.
+  components:
+  - type: Sprite
+    sprite: _Stories/Objects/Storage/Briefcases/briefcase_steel.rsi
+    state: icon
+  - type: Item
+    sprite: _Stories/Objects/Storage/Briefcases/briefcase_steel.rsi

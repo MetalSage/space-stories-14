@@ -1,0 +1,15 @@
+- type: entity
+  parent: ClothingHeadBase
+  id: ClothingHeadHatFedoraSpecialGrey
+  name: серая федора
+  description: Это серая фетровая шляпа.
+  components:
+  - type: Sprite
+    sprite: _Stories/Clothing/Head/Hats/greyfedora.rsi
+  - type: Clothing
+    sprite: _Stories/Clothing/Head/Hats/greyfedora.rsi
+  - type: Tag
+    tags:
+    - ClothMade
+    - HamsterWearable
+    - WhitelistChameleon

@@ -1,0 +1,157 @@
+- type: entity
+  save: false
+  name: Urist' McShadowling
+  parent:
+  - BaseMob
+  - MobDamageable
+  - MobCombat
+  - MobPolymorphable
+  id: BaseMobShadowling
+  abstract: true
+  components:
+  - type: Cuffer
+    timeModifier: 2
+  - type: ZombieImmune
+  - type: ThermalVision
+    innate: true
+  - type: ComplexInteraction
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTypeTrigger
+        damageType: Heat
+        damage: 480
+      behaviors:
+      - !type:SpawnEntitiesBehavior
+        spawnInContainer: true
+        spawn:
+          Ash:
+            min: 1
+            max: 1
+      - !type:BurnBodyBehavior { }
+      - !type:PlaySoundBehavior
+        sound:
+          collection: MeatLaserImpact
+  - type: Prying
+    pryPowered: true
+    force: true
+    useSound:
+      path: /Audio/Items/crowbar.ogg
+  - type: Shadowling
+    actions:
+      # ActionShadowlingHatch: 0
+      ActionShadowlingShadowWalk: 0
+      ActionShadowlingGlare: 0
+      ActionShadowlingVeil: 0
+      ActionShadowlingIcyVeins: 0
+      ActionShadowlingCollectiveMind: 0
+      ActionShadowlingRapidReHatch: 0
+      ActionShadowlingEnthrall: 0
+      ActionShadowlingBlindnessSmoke: 5
+      ActionShadowlingSonicScreech: 3
+      ActionShadowlingBlackRecuperation: 9
+      ActionShadowlingAscendance: 15
+  - type: Photosensitivity
+  - type: NoSlip
+  - type: MovementAlwaysTouching
+  - type: Insulated
+  - type: CombatMode
+  - type: InputMover
+  - type: MobMover
+  - type: Hands
+  - type: StatusEffects
+    allowed:
+    - Stun
+    - KnockedDown
+    - SlowedDown
+    - Stutter
+    - SeeingRainbows
+    - Electrocution
+    - Drunk
+    - SlurredSpeech
+    - RatvarianLanguage
+    - PressureImmunity
+    - Muted
+    - ForcedSleep
+    - TemporaryBlindness
+    - Pacified
+    - StaminaModifier
+    - Flashed
+  - type: Temperature
+    heatDamageThreshold: 360
+    coldDamageThreshold: 0
+    currentTemperature: 310.15
+    specificHeat: 42
+    coldDamage:
+      types:
+        Cold: 0.1 #per second, scales with temperature & other constants
+    heatDamage:
+      types:
+        Heat: 0.1 #per second, scales with temperature & other constants
+  - type: ThermalRegulator
+    metabolismHeat: 800
+    radiatedHeat: 100
+    implicitHeatRegulation: 500
+    sweatHeatRegulation: 2000
+    shiveringHeatRegulation: 2000
+    normalBodyTemperature: 310.15
+    thermalRegulationTemperatureThreshold: 25
+  - type: TypingIndicator
+    proto: holo
+  - type: MobState
+    allowedStates:
+    - Alive
+    - Critical
+    - Dead
+  - type: MobThresholds
+    thresholds:
+      0: Alive
+      60: Critical
+      120: Dead
+  - type: Blindable
+  - type: RotationVisuals
+    defaultRotation: 90
+    horizontalRotation: 90
+  - type: StandingState
+    canCrawl: true
+  - type: FireVisuals
+    alternateState: Standing
+  - type: Sprite
+    drawdepth: Mobs
+    sprite: _Stories/Mobs/Demons/shadowling.rsi
+    layers:
+    - state: shadowling
+    - state: shadowling_overlay
+      shader: unshaded
+  - type: Body
+    prototype: Shadowling
+    requiredLegs: 2
+  - type: IntrinsicRadioReceiver
+  - type: IntrinsicRadioTransmitter
+    channels:
+    - ShadowlingMind
+  - type: ActiveRadio
+    channels:
+    - ShadowlingMind
+  - type: Damageable
+    damageContainer: Biological
+    damageModifierSet: Shadowling
+  - type: MeleeWeapon
+    soundHit:
+      collection: Punch
+    angle: 30
+    animation: WeaponArcFist
+    attackRate: 1
+    damage:
+      types:
+        Blunt: 10
+  - type: MovementSpeedModifier
+    baseWalkSpeed : 2.7
+    baseSprintSpeed : 4.5
+  - type: Perishable
+  - type: ContentEye
+    maxZoom: 1.2, 1.2
+  - type: Puller
+  - type: Tag
+    tags:
+    - DoorBumpOpener

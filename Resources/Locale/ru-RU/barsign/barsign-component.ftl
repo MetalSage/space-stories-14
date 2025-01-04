@@ -4,6 +4,7 @@ barsign-ui-set-label = Выбрать вывеску:
 
 # Bar signs prototypes
 
+
 ## The Harmbaton
 
 barsign-prototype-name-harmbaton = Хармбатон
@@ -47,7 +48,7 @@ barsign-prototype-description-emergency-rum-party = Недавно продли�
 ## The Combo Cafe
 
 barsign-prototype-name-combo-cafe = Комбо Кафе
-barsign-prototype-description-combo-cafe = Известны по всей системе своими совершенно некреативными комбинациями напитков.
+barsign-prototype-description-combo-cafe = Известны по всей системе своими совершенно не креативными комбинациями напитков.
 
 ## The Ale Nath
 
@@ -57,7 +58,7 @@ barsign-prototype-description-ale-nath = По какой-то причине п�
 ## The Net
 
 barsign-prototype-name-the-net = Сеть
-barsign-prototype-description-the-net = Незаметишь как затянет на пару часов.
+barsign-prototype-description-the-net = Не заметишь как затянет на пару часов.
 
 ## Maid Cafe
 
@@ -87,7 +88,7 @@ barsign-prototype-description-zocalo = Ранее находилось в Кос
 ## LV426
 
 barsign-prototype-name-lv426 = LV-426
-barsign-prototype-description-lv426 = Выпить с модной маской на лице явно важнее, чем сходить в медотсек.
+barsign-prototype-description-lv426 = Выпить с модной маской на лице явно важнее, чем сходить в мед отсек.
 
 ## The Wiggle Roomm
 

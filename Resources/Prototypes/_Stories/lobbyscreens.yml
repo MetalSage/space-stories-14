@@ -1,0 +1,63 @@
+- type: lobbyBackground
+  id: GlorySSSP
+  background: /Textures/_Stories/LobbyScreens/GlorySSSP.jpg
+
+- type: lobbyBackground
+  id: Nuclear_environment
+  background: /Textures/_Stories/LobbyScreens/Nuclear_environment.jpg
+
+- type: lobbyBackground
+  id: Nuclear_environmentV2
+  background: /Textures/_Stories/LobbyScreens/Nuclear_environmentV2.jpg
+
+- type: lobbyBackground
+  id: Paramedic
+  background: /Textures/_Stories/LobbyScreens/Paramedic.jpg
+
+- type: lobbyBackground
+  id: Starbow
+  background: /Textures/_Stories/LobbyScreens/Starbow.jpg
+
+- type: lobbyBackground
+  id: Therapy
+  background: /Textures/_Stories/LobbyScreens/Therapy.jpg
+
+- type: lobbyBackground
+  id: Zombie
+  background: /Textures/_Stories/LobbyScreens/Zombie.jpg
+
+- type: lobbyBackground
+  id: Atmos
+  background: /Textures/_Stories/LobbyScreens/atmos.jpg
+
+- type: lobbyBackground
+  id: Boom
+  background: /Textures/_Stories/LobbyScreens/boom.jpg
+
+- type: lobbyBackground
+  id: Botanic
+  background: /Textures/_Stories/LobbyScreens/botanic.jpg
+
+- type: lobbyBackground
+  id: Engineer
+  background: /Textures/_Stories/LobbyScreens/engineer.jpg
+
+- type: lobbyBackground
+  id: Fire
+  background: /Textures/_Stories/LobbyScreens/fire.jpg
+
+- type: lobbyBackground
+  id: GuitarHunter
+  background: /Textures/_Stories/LobbyScreens/guiterhunter.jpg
+
+- type: lobbyBackground
+  id: NewYear
+  background: /Textures/_Stories/LobbyScreens/newyear.jpg
+
+- type: lobbyBackground
+  id: Plazma
+  background: /Textures/_Stories/LobbyScreens/plazma.jpg
+
+- type: lobbyBackground
+  id: Spaf
+  background: /Textures/_Stories/LobbyScreens/spaf.jpg

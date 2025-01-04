@@ -1,0 +1,556 @@
+- type: latheRecipe
+  id: PrintedDocumentReportStationRecipe
+  result: PrintedDocumentReportStation
+  icon: _Stories/Interface/Printer/reports.png
+  category: Reports
+  completetime: 2
+  applyMaterialDiscount: false
+  materials:
+    SheetPrinter: 100
+    Ink: 100
+
+- type: latheRecipe
+  id: PrintedDocumentReporDepartmentRecipe
+  result: PrintedDocumentReporDepartment
+  icon: _Stories/Interface/Printer/reports.png
+  category: Reports
+  completetime: 2
+  applyMaterialDiscount: false
+  materials:
+    SheetPrinter: 100
+    Ink: 100
+
+- type: latheRecipe
+  id: PrintedDocumentReportEmployeePerformanceRecipe
+  result: PrintedDocumentReportEmployeePerformance
+  icon: _Stories/Interface/Printer/reports.png
+  category: Reports
+  completetime: 2
+  applyMaterialDiscount: false
+  materials:
+    SheetPrinter: 100
+    Ink: 100
+
+- type: latheRecipe
+  id: PrintedDocumentInternalAffairsAgentsReportRecipe
+  result: PrintedDocumentInternalAffairsAgentsReport
+  icon: _Stories/Interface/Printer/reports.png
+  category: Reports
+  completetime: 2
+  applyMaterialDiscount: false
+  materials:
+    SheetPrinter: 100
+    Ink: 100
+
+- type: latheRecipe
+  id: PrintedDocumentConditionReportRecipe
+  result: PrintedDocumentConditionReport
+  icon: _Stories/Interface/Printer/reports.png
+  category: Reports
+  completetime: 2
+  applyMaterialDiscount: false
+  materials:
+    SheetPrinter: 100
+    Ink: 100
+
+- type: latheRecipe
+  id: PrintedDocumentReportStudyObjectRecipe
+  result: PrintedDocumentReportStudyObject
+  icon: _Stories/Interface/Printer/reports.png
+  category: Reports
+  completetime: 2
+  applyMaterialDiscount: false
+  materials:
+    SheetPrinter: 100
+    Ink: 100
+
+- type: latheRecipe
+  id: PrintedDocumentExperimentReportRecipe
+  result: PrintedDocumentExperimentReport
+  icon: _Stories/Interface/Printer/reports.png
+  category: Reports
+  completetime: 2
+  applyMaterialDiscount: false
+  materials:
+    SheetPrinter: 100
+    Ink: 100
+
+- type: latheRecipe
+  id: PrintedDocumentDisposalReportRecipe
+  result: PrintedDocumentDisposalReport
+  icon: _Stories/Interface/Printer/reports.png
+  category: Reports
+  completetime: 2
+  applyMaterialDiscount: false
+  materials:
+    SheetPrinter: 100
+    Ink: 100
+
+- type: latheRecipe
+  id: PrintedDocumentApplicationAppointmentInterimRecipe
+  result: PrintedDocumentApplicationAppointmentInterim
+  icon: _Stories/Interface/Printer/statements.png
+  category: Statements
+  completetime: 2
+  applyMaterialDiscount: false
+  materials:
+    SheetPrinter: 100
+    Ink: 100
+
+- type: latheRecipe
+  id: PrintedDocumentApplicationEmploymentRecipe
+  result: PrintedDocumentApplicationEmployment
+  icon: _Stories/Interface/Printer/statements.png
+  category: Statements
+  completetime: 2
+  applyMaterialDiscount: false
+  materials:
+    SheetPrinter: 100
+    Ink: 100
+
+- type: latheRecipe
+  id: PrintedDocumentLetterResignationRecipe
+  result: PrintedDocumentLetterResignation
+  icon: _Stories/Interface/Printer/statements.png
+  category: Statements
+  completetime: 2
+  applyMaterialDiscount: false
+  materials:
+    SheetPrinter: 100
+    Ink: 100
+
+- type: latheRecipe
+  id: PrintedDocumentApplicationAccessRecipe
+  result: PrintedDocumentApplicationAccess
+  icon: _Stories/Interface/Printer/statements.png
+  category: Statements
+  completetime: 2
+  applyMaterialDiscount: false
+  materials:
+    SheetPrinter: 100
+    Ink: 100
+
+- type: latheRecipe
+  id: PrintedDocumentApplicationEquipmentRecipe
+  result: PrintedDocumentApplicationEquipment
+  icon: _Stories/Interface/Printer/statements.png
+  category: Statements
+  completetime: 2
+  applyMaterialDiscount: false
+  materials:
+    SheetPrinter: 100
+    Ink: 100
+
+- type: latheRecipe
+  id: PrintedDocumentEvacuationShuttleRequestRecipe
+  result: PrintedDocumentEvacuationShuttleRequest
+  icon: _Stories/Interface/Printer/inquiries.png
+  category: InquiriesAndAppeals
+  completetime: 2
+  applyMaterialDiscount: false
+  materials:
+    SheetPrinter: 100
+    Ink: 100
+
+- type: latheRecipe
+  id: PrintedDocumentShuttleRegistrationRequestRecipe
+  result: PrintedDocumentShuttleRegistrationRequest
+  icon: _Stories/Interface/Printer/inquiries.png
+  category: InquiriesAndAppeals
+  completetime: 2
+  applyMaterialDiscount: false
+  materials:
+    SheetPrinter: 100
+    Ink: 100
+
+- type: latheRecipe
+  id: PrintedDocumentRequestCallMembersCentralCommitteeDSORecipe
+  result: PrintedDocumentRequestCallMembersCentralCommitteeDSO
+  icon: _Stories/Interface/Printer/inquiries.png
+  category: InquiriesAndAppeals
+  completetime: 2
+  applyMaterialDiscount: false
+  materials:
+    SheetPrinter: 100
+    Ink: 100
+
+- type: latheRecipe
+  id: PrintedDocumentRequestChangeSalaryRecipe
+  result: PrintedDocumentRequestChangeSalary
+  icon: _Stories/Interface/Printer/inquiries.png
+  category: InquiriesAndAppeals
+  completetime: 2
+  applyMaterialDiscount: false
+  materials:
+    SheetPrinter: 100
+    Ink: 100
+
+- type: latheRecipe
+  id: PrintedDocumentRequestForNonlistedEmploymentRecipe
+  result: PrintedDocumentRequestForNonlistedEmployment
+  icon: _Stories/Interface/Printer/inquiries.png
+  category: InquiriesAndAppeals
+  completetime: 2
+  applyMaterialDiscount: false
+  materials:
+    SheetPrinter: 100
+    Ink: 100
+
+- type: latheRecipe
+  id: PrintedDocumentRequestForPromotionRecipe
+  result: PrintedDocumentRequestForPromotion
+  icon: _Stories/Interface/Printer/inquiries.png
+  category: InquiriesAndAppeals
+  completetime: 2
+  applyMaterialDiscount: false
+  materials:
+    SheetPrinter: 100
+    Ink: 100
+
+- type: latheRecipe
+  id: PrintedDocumentRequestEuthanasiaRecipe
+  result: PrintedDocumentRequestEuthanasia
+  icon: _Stories/Interface/Printer/inquiries.png
+  category: InquiriesAndAppeals
+  completetime: 2
+  applyMaterialDiscount: false
+  materials:
+    SheetPrinter: 100
+    Ink: 100
+
+- type: latheRecipe
+  id: PrintedDocumentRequestConstructionWorkRecipe
+  result: PrintedDocumentRequestConstructionWork
+  icon: _Stories/Interface/Printer/inquiries.png
+  category: InquiriesAndAppeals
+  completetime: 2
+  applyMaterialDiscount: false
+  materials:
+    SheetPrinter: 100
+    Ink: 100
+
+- type: latheRecipe
+  id: PrintedDocumentComplaintOffenseRecipe
+  result: PrintedDocumentComplaintOffense
+  icon: _Stories/Interface/Printer/complaintst.png
+  category: Complaintst
+  completetime: 2
+  applyMaterialDiscount: false
+  materials:
+    SheetPrinter: 100
+    Ink: 100
+
+- type: latheRecipe
+  id: PrintedDocumentPermissionEquipmentRecipe
+  result: PrintedDocumentPermissionEquipment
+  icon: _Stories/Interface/Printer/permissions.png
+  category: Permissions
+  completetime: 2
+  applyMaterialDiscount: false
+  materials:
+    SheetPrinter: 100
+    Ink: 100
+
+
+- type: latheRecipe
+  id: PrintedDocumentSearchPermissionRecipe
+  result: PrintedDocumentSearchPermission
+  icon: _Stories/Interface/Printer/permissions.png
+  category: Permissions
+  completetime: 2
+  applyMaterialDiscount: false
+  materials:
+    SheetPrinter: 100
+    Ink: 100
+
+- type: latheRecipe
+  id: PrintedDocumentPrescriptionDrugAuthorizationRecipe
+  result: PrintedDocumentPrescriptionDrugAuthorization
+  icon: _Stories/Interface/Printer/permissions.png
+  category: Permissions
+  completetime: 2
+  applyMaterialDiscount: false
+  materials:
+    SheetPrinter: 100
+    Ink: 100
+
+- type: latheRecipe
+  id: PrintedDocumentPermissionDisposeBodyRecipe
+  result: PrintedDocumentPermissionDisposeBody
+  icon: _Stories/Interface/Printer/permissions.png
+  category: Permissions
+  completetime: 2
+  applyMaterialDiscount: false
+  materials:
+    SheetPrinter: 100
+    Ink: 100
+
+- type: latheRecipe
+  id: PrintedDocumentConstructionPermitRecipe
+  result: PrintedDocumentConstructionPermit
+  icon: _Stories/Interface/Printer/permissions.png
+  category: Permissions
+  completetime: 2
+  applyMaterialDiscount: false
+  materials:
+    SheetPrinter: 100
+    Ink: 100
+
+- type: latheRecipe
+  id: PrintedDocumentOrderDismissalRecipe
+  result: PrintedDocumentOrderDismissal
+  icon: _Stories/Interface/Printer/instructions.png
+  category: OrdersAndInstructions
+  completetime: 2
+  applyMaterialDiscount: false
+  materials:
+    SheetPrinter: 100
+    Ink: 100
+
+- type: latheRecipe
+  id: PrintedDocumentOrderDeprivationAccessRecipe
+  result: PrintedDocumentOrderDeprivationAccess
+  icon: _Stories/Interface/Printer/instructions.png
+  category: OrdersAndInstructions
+  completetime: 2
+  applyMaterialDiscount: false
+  materials:
+    SheetPrinter: 100
+    Ink: 100
+
+- type: latheRecipe
+  id: PrintedDocumentOrderEncouragementRecipe
+  result: PrintedDocumentOrderEncouragement
+  icon: _Stories/Interface/Printer/instructions.png
+  category: OrdersAndInstructions
+  completetime: 2
+  applyMaterialDiscount: false
+  materials:
+    SheetPrinter: 100
+    Ink: 100
+
+- type: latheRecipe
+  id: PrintedDocumentOrderParolePrisonerRecipe
+  result: PrintedDocumentOrderParolePrisoner
+  icon: _Stories/Interface/Printer/instructions.png
+  category: OrdersAndInstructions
+  completetime: 2
+  applyMaterialDiscount: false
+  materials:
+    SheetPrinter: 100
+    Ink: 100
+
+- type: latheRecipe
+  id: PrintedDocumentOrderRecognizingSentienceCreatureRecipe
+  result: PrintedDocumentOrderRecognizingSentienceCreature
+  icon: _Stories/Interface/Printer/instructions.png
+  category: OrdersAndInstructions
+  completetime: 2
+  applyMaterialDiscount: false
+  materials:
+    SheetPrinter: 100
+    Ink: 100
+
+- type: latheRecipe
+  id: PrintedDocumentOrderMedicalInterventionRecipe
+  result: PrintedDocumentOrderMedicalIntervention
+  icon: _Stories/Interface/Printer/instructions.png
+  category: OrdersAndInstructions
+  completetime: 2
+  applyMaterialDiscount: false
+  materials:
+    SheetPrinter: 100
+    Ink: 100
+
+- type: latheRecipe
+  id: PrintedDocumentProductManufacturingOrderRecipe
+  result: PrintedDocumentProductManufacturingOrder
+  icon: _Stories/Interface/Printer/orders.png
+  category: Orders
+  completetime: 2
+  applyMaterialDiscount: false
+  materials:
+    SheetPrinter: 100
+    Ink: 100
+
+- type: latheRecipe
+  id: PrintedDocumentOrderPurchaseResourcesEquipmentRecipe
+  result: PrintedDocumentOrderPurchaseResourcesEquipment
+  icon: _Stories/Interface/Printer/orders.png
+  category: Orders
+  completetime: 2
+  applyMaterialDiscount: false
+  materials:
+    SheetPrinter: 100
+    Ink: 100
+
+- type: latheRecipe
+  id: PrintedDocumentOrderingSpecialEquipmentRecipe
+  result: PrintedDocumentOrderingSpecialEquipment
+  icon: _Stories/Interface/Printer/orders.png
+  category: Orders
+  completetime: 2
+  applyMaterialDiscount: false
+  materials:
+    SheetPrinter: 100
+    Ink: 100
+
+- type: latheRecipe
+  id: PrintedDocumentCertificateRecipe
+  result: PrintedDocumentCertificate
+  icon: _Stories/Interface/Printer/evidence.png
+  category: Evidence
+  completetime: 2
+  applyMaterialDiscount: false
+  materials:
+    SheetPrinter: 100
+    Ink: 100
+
+- type: latheRecipe
+  id: PrintedDocumentCertificateAdvancedTrainingRecipe
+  result: PrintedDocumentCertificateAdvancedTraining
+  icon: _Stories/Interface/Printer/evidence.png
+  category: Evidence
+  completetime: 2
+  applyMaterialDiscount: false
+  materials:
+    SheetPrinter: 100
+    Ink: 100
+
+- type: latheRecipe
+  id: PrintedDocumentCertificateOffenseRecipe
+  result: PrintedDocumentCertificateOffense
+  icon: _Stories/Interface/Printer/evidence.png
+  category: Evidence
+  completetime: 2
+  applyMaterialDiscount: false
+  materials:
+    SheetPrinter: 100
+    Ink: 100
+
+- type: latheRecipe
+  id: PrintedDocumentDeathCertificateRecipe
+  result: PrintedDocumentDeathCertificate
+  icon: _Stories/Interface/Printer/evidence.png
+  category: Evidence
+  completetime: 2
+  applyMaterialDiscount: false
+  materials:
+    SheetPrinter: 100
+    Ink: 100
+
+- type: latheRecipe
+  id: PrintedDocumentMarriageCertificateRecipe
+  result: PrintedDocumentMarriageCertificate
+  icon: _Stories/Interface/Printer/evidence.png
+  category: Evidence
+  completetime: 2
+  applyMaterialDiscount: false
+  materials:
+    SheetPrinter: 100
+    Ink: 100
+
+- type: latheRecipe
+  id: PrintedDocumentDivorceCertificateRecipe
+  result: PrintedDocumentDivorceCertificate
+  icon: _Stories/Interface/Printer/evidence.png
+  category: Evidence
+  completetime: 2
+  applyMaterialDiscount: false
+  materials:
+    SheetPrinter: 100
+    Ink: 100
+
+- type: latheRecipe
+  id: PrintedDocumentClosingIndictmentRecipe
+  result: PrintedDocumentClosingIndictment
+  icon: _Stories/Interface/Printer/decisions.png
+  category: ConclusionsAndDecisions
+  completetime: 2
+  applyMaterialDiscount: false
+  materials:
+    SheetPrinter: 100
+    Ink: 100
+
+- type: latheRecipe
+  id: PrintedDocumentSentenceRecipe
+  result: PrintedDocumentSentence
+  icon: _Stories/Interface/Printer/decisions.png
+  category: ConclusionsAndDecisions
+  completetime: 2
+  applyMaterialDiscount: false
+  materials:
+    SheetPrinter: 100
+    Ink: 100
+
+- type: latheRecipe
+  id: PrintedDocumentJudgmentRecipe
+  result: PrintedDocumentJudgment
+  icon: _Stories/Interface/Printer/decisions.png
+  category: ConclusionsAndDecisions
+  completetime: 2
+  applyMaterialDiscount: false
+  materials:
+    SheetPrinter: 100
+    Ink: 100
+
+- type: latheRecipe
+  id: PrintedDocumentStatementHealtheRecipe
+  result: PrintedDocumentStatementHealth
+  icon: _Stories/Interface/Printer/decisions.png
+  category: ConclusionsAndDecisions
+  completetime: 2
+  applyMaterialDiscount: false
+  materials:
+    SheetPrinter: 100
+    Ink: 100
+
+- type: latheRecipe
+  id: PrintedDocumentErrorLoadingFormHeaderRecipe
+  result: PrintedDocumentErrorLoadingFormHeader
+  category: ErrorDocument
+  completetime: 2
+  applyMaterialDiscount: false
+  materials:
+    SheetPrinter: 100
+    Ink: 100
+
+- type: latheRecipe
+  id: PrintedDocumentNoticeOfLiquidationRecipe
+  result: PrintedDocumentNoticeOfLiquidation
+  category: ErrorDocument
+  completetime: 2
+  applyMaterialDiscount: false
+  materials:
+    SheetPrinter: 100
+    Ink: 100
+
+- type: latheRecipe
+  id: PrintedDocumentBusinessDealRecipe
+  result: PrintedDocumentBusinessDeal
+  category: ErrorDocument
+  completetime: 2
+  applyMaterialDiscount: false
+  materials:
+    SheetPrinter: 100
+    Ink: 100
+
+- type: latheRecipe
+  id: PrintedDocumentNoteBeginningMilitaryActionsRecipe
+  result: PrintedDocumentNoteBeginningMilitaryActions
+  category: ErrorDocument
+  completetime: 2
+  applyMaterialDiscount: false
+  materials:
+    SheetPrinter: 100
+    Ink: 100
+
+- type: latheRecipe
+  id: PrintedDocumentReportAccomplishmentGoalsRecipe
+  result: PrintedDocumentReportAccomplishmentGoals
+  category: ErrorDocument
+  completetime: 2
+  applyMaterialDiscount: false
+  materials:
+    SheetPrinter: 100
+    Ink: 100

@@ -1,0 +1,37 @@
+- type: entity
+  name: Вместительный кувшин
+  parent: Jug
+  id: BigJug
+  description: Используется для хранения очень большого количества химических веществ или растворов. Работает на экспериментальной блюспейс технологии.
+  components:
+  - type: SolutionContainerManager
+    solutions:
+      beaker:
+        maxVol: 300
+  - type: Sprite
+    sprite: _Stories/Objects/Specific/Chemistry/big_jug.rsi
+    layers:
+    - state: jug
+    - state: jug1
+      map: [ "enum.SolutionContainerLayers.Fill" ]
+      visible: false
+    - state: unlit
+      shader: unshaded
+  - type: Item
+    size: Normal
+    shape:
+    - 0,0,1,2
+    sprite: _Stories/Objects/Specific/Chemistry/big_jug.rsi
+  - type: SolutionContainerVisuals
+    maxFillLevels: 9
+
+- type: entity
+  name: Красный вместительный кувшин
+  parent: BigJug
+  id: BigJugSyndie
+  description: Используется для хранения очень большого количества химических веществ или растворов. Работает на экспериментальной блюспейс технологии.
+  components:
+  - type: Sprite
+    sprite: _Stories/Objects/Specific/Chemistry/big_jug_syndicate.rsi
+  - type: Item
+    sprite: _Stories/Objects/Specific/Chemistry/big_jug_syndicate.rsi

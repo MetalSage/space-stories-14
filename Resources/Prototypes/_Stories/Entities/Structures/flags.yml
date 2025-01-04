@@ -1,0 +1,10 @@
+- type: entity
+  parent: BaseFlag
+  id: PRISONFlag
+  name: Флаг персонала тюрьмы
+  description: На защите галактики от опасных преступников.
+  components:
+  - type: Sprite
+    drawdepth: WallTops
+    sprite: _Stories/Structures/flags.rsi
+    state: sp

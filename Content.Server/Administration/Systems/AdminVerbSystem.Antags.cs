@@ -10,7 +10,7 @@ using Content.Shared.Verbs;
 using Robust.Shared.Player;
 using Robust.Shared.Prototypes;
 using Robust.Shared.Utility;
-using Content.Server.Stories.GameTicking.Rules.Components;
+using Content.Server._Stories.GameTicking.Rules.Components;
 
 namespace Content.Server.Administration.Systems;
 
@@ -157,7 +157,7 @@ public sealed partial class AdminVerbSystem
         {
             Text = Loc.GetString("admin-verb-text-make-shadowling"),
             Category = VerbCategory.Antag,
-            Icon = new SpriteSpecifier.Rsi(new ResPath("Stories/Mobs/Demons/shadowling.rsi"), "shadowling"),
+            Icon = new SpriteSpecifier.Rsi(new ResPath("_Stories/Mobs/Demons/shadowling.rsi"), "shadowling"),
             Act = () =>
             {
                 _antag.ForceMakeAntag<ShadowlingRuleComponent>(targetPlayer, "Shadowling");

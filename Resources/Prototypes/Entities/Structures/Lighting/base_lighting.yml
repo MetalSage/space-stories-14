@@ -33,7 +33,7 @@
     state: base
   - type: PointLight
     color: "#FFE4CE" # 5000K color temp
-    energy: 0.8
+    energy: 1.2
     radius: 10
     softness: 1
     offset: "0, -0.5"
@@ -197,7 +197,7 @@
   components:
   - type: PointLight
     radius: 12
-    energy: 4.5
+    energy: 2.5
     softness: 0.5
     color: "#B4FCF0"
 
@@ -340,6 +340,27 @@
     color: "#EEEEFF"
   - type: PoweredLight
     hasLampOnSpawn: LedLightBulb
+  - type: DamageOnInteract
+    damage:
+      types:
+        Heat: 1
+    popupText: powered-light-component-burn-hand
+
+- type: entity
+  id: PoweredDimSmallLight
+  suffix: Dim
+  parent: PoweredSmallLightEmpty
+  components:
+  - type: Sprite
+    state: base
+  - type: PointLight
+    enabled: true
+    radius: 5
+    energy: 0.5
+    softness: 3
+    color: "#ba473f"
+  - type: PoweredLight
+    hasLampOnSpawn: DimLightBulb
   - type: DamageOnInteract
     damage:
       types:

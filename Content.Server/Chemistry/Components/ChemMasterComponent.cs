@@ -15,6 +15,9 @@ namespace Content.Server.Chemistry.Components
         [DataField("pillType"), ViewVariables(VVAccess.ReadWrite)]
         public uint PillType = 0;
 
+        [DataField("maxPillCount"), ViewVariables(VVAccess.ReadWrite)]
+        public uint MaxPillCount = 10;
+
         [DataField("mode"), ViewVariables(VVAccess.ReadWrite)]
         public ChemMasterMode Mode = ChemMasterMode.Transfer;
 

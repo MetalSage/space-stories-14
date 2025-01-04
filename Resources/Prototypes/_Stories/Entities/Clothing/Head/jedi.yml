@@ -1,0 +1,14 @@
+- type: entity
+  parent: ClothingHeadBase
+  id: ClothingHeadHatExe
+  name: шляпа
+  description: Идеально подходит для зимы в Сибири, da? Нет.
+  components:
+  - type: Sprite
+    sprite: _Stories/Clothing/Head/Hats/exe_hat.rsi
+  - type: Clothing
+    sprite: _Stories/Clothing/Head/Hats/exe_hat.rsi
+  - type: Tag
+    tags:
+      - HamsterWearable
+      - WhitelistChameleon

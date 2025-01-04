@@ -24,6 +24,7 @@ namespace Content.Shared.Humanoid.Markings
         [DataField("sponsorOnly")]
         public bool SponsorOnly = false;
         // Corvax-Sponsors-End
+
         [DataField("sexRestriction")]
         public Sex? SexRestriction { get; private set; }
 

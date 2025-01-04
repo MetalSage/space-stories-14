@@ -562,6 +562,11 @@ public sealed partial class ChatSystem : SharedChatSystem
 
         _replay.RecordServerMessage(new ChatMessage(ChatChannel.Whisper, message, wrappedMessage, GetNetEntity(source), null, MessageRangeHideChatForReplay(range)));
 
+        // Stories-Crit-Speech-Start
+        if (_mobStateSystem.IsCritical(source) && _prototype.TryIndex<DamageTypePrototype>("Asphyxiation", out var asphyxiation))
+            _damageable.TryChangeDamage(source, new(asphyxiation, 100), true, false);
+        // Stories-Crit-Speech-End
+
         var ev = new EntitySpokeEvent(source, message, originalMessage, channel, obfuscatedMessage); // Stories-TTS: Spec symbol sanitize
         RaiseLocalEvent(source, ev, true);
         if (!hideLog)

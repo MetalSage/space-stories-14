@@ -2,7 +2,7 @@
   id: HumanLongEars
   bodyPart: HeadTop
   markingCategory: HeadTop
-  speciesRestriction: [Human, Dwarf]
+  speciesRestriction: [] # Stories-Marking
   forcedColoring: true
   followSkinColor: true
   sprites:
