@@ -52,6 +52,16 @@ namespace Content.Client.Inventory
         [ViewVariables]
         private readonly EntityUid _virtualHiddenEntity;
 
+        // Stories-Cards-Start
+
+        [ViewVariables]
+        private readonly EntityUid _virtualHiddenEntityCard;
+
+        [ViewVariables]
+        private const string HiddenCardEntityID = "StrippingHiddenEntityCard";
+
+        // Stories-Cards-End
+
         public StrippableBoundUserInterface(EntityUid owner, Enum uiKey) : base(owner, uiKey)
         {
             _tagSystem = EntMan.System<TagSystem>(); // Stories-Cards
@@ -61,6 +71,8 @@ namespace Content.Client.Inventory
             _strippable = EntMan.System<StrippableSystem>();
 
             _virtualHiddenEntity = EntMan.SpawnEntity(HiddenPocketEntityId, MapCoordinates.Nullspace);
+
+            _virtualHiddenEntityCard = EntMan.SpawnEntity(HiddenCardEntityID, MapCoordinates.Nullspace); // Stories-Cards
         }
 
         protected override void Open()
@@ -180,7 +192,7 @@ namespace Content.Client.Inventory
             var entity = hand.HeldEntity;
 
             if (entity != null && _tagSystem.HasTag(entity.Value, "Card"))
-                entity = _virtualHiddenEntity;
+                entity = _virtualHiddenEntityCard;
 
             UpdateEntityIcon(button, entity);
 
