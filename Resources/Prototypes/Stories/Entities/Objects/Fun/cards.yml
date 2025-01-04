@@ -27,6 +27,7 @@
 
 - type: entity
   parent: cardBase
+  categories: [ HideSpawnMenu ]
   id: card-1
   name: карта
   suffix: Бубны Туз 
@@ -42,6 +43,7 @@
 
 - type: entity
   parent: cardBase
+  categories: [ HideSpawnMenu ]
   id: card-2
   name: карта
   suffix: Бубны 2 
@@ -57,6 +59,7 @@
 
 - type: entity
   parent: cardBase
+  categories: [ HideSpawnMenu ]
   id: card-3
   name: карта
   suffix: Бубны 3 
@@ -72,6 +75,7 @@
 
 - type: entity
   parent: cardBase
+  categories: [ HideSpawnMenu ]
   id: card-4
   name: карта
   suffix: Бубны 4 
@@ -87,6 +91,7 @@
 
 - type: entity
   parent: cardBase
+  categories: [ HideSpawnMenu ]
   id: card-5
   name: карта
   suffix: Бубны 5 
@@ -102,6 +107,7 @@
 
 - type: entity
   parent: cardBase
+  categories: [ HideSpawnMenu ]
   id: card-6
   name: карта
   suffix: Бубны 6 
@@ -117,6 +123,7 @@
 
 - type: entity
   parent: cardBase
+  categories: [ HideSpawnMenu ]
   id: card-7
   name: карта
   suffix: Бубны 7 
@@ -132,6 +139,7 @@
 
 - type: entity
   parent: cardBase
+  categories: [ HideSpawnMenu ]
   id: card-8
   name: карта
   suffix: Бубны 8 
@@ -147,6 +155,7 @@
 
 - type: entity
   parent: cardBase
+  categories: [ HideSpawnMenu ]
   id: card-9
   name: карта
   suffix: Бубны 9 
@@ -162,6 +171,7 @@
 
 - type: entity
   parent: cardBase
+  categories: [ HideSpawnMenu ]
   id: card-10
   name: карта
   suffix: Бубны 10 
@@ -177,6 +187,7 @@
 
 - type: entity
   parent: cardBase
+  categories: [ HideSpawnMenu ]
   id: card-11
   name: карта
   suffix: Бубны Валет 
@@ -192,6 +203,7 @@
 
 - type: entity
   parent: cardBase
+  categories: [ HideSpawnMenu ]
   id: card-12
   name: карта
   suffix: Бубны Дама 
@@ -207,6 +219,7 @@
 
 - type: entity
   parent: cardBase
+  categories: [ HideSpawnMenu ]
   id: card-13
   name: карта
   suffix: Бубны Король 
@@ -222,6 +235,7 @@
 
 - type: entity
   parent: cardBase
+  categories: [ HideSpawnMenu ]
   id: card-14
   name: карта
   suffix: Черви Туз 
@@ -237,6 +251,7 @@
 
 - type: entity
   parent: cardBase
+  categories: [ HideSpawnMenu ]
   id: card-15
   name: карта
   suffix: Черви 2 
@@ -252,6 +267,7 @@
 
 - type: entity
   parent: cardBase
+  categories: [ HideSpawnMenu ]
   id: card-16
   name: карта
   suffix: Черви 3 
@@ -267,6 +283,7 @@
 
 - type: entity
   parent: cardBase
+  categories: [ HideSpawnMenu ]
   id: card-17
   name: карта
   suffix: Черви 4 
@@ -282,6 +299,7 @@
 
 - type: entity
   parent: cardBase
+  categories: [ HideSpawnMenu ]
   id: card-18
   name: карта
   suffix: Черви 5 
@@ -297,6 +315,7 @@
 
 - type: entity
   parent: cardBase
+  categories: [ HideSpawnMenu ]
   id: card-19
   name: карта
   suffix: Черви 6 
@@ -312,6 +331,7 @@
 
 - type: entity
   parent: cardBase
+  categories: [ HideSpawnMenu ]
   id: card-20
   name: карта
   suffix: Черви 7 
@@ -327,6 +347,7 @@
 
 - type: entity
   parent: cardBase
+  categories: [ HideSpawnMenu ]
   id: card-21
   name: карта
   suffix: Черви 8 
@@ -342,6 +363,7 @@
 
 - type: entity
   parent: cardBase
+  categories: [ HideSpawnMenu ]
   id: card-22
   name: карта
   suffix: Черви 9 
@@ -357,6 +379,7 @@
 
 - type: entity
   parent: cardBase
+  categories: [ HideSpawnMenu ]
   id: card-23
   name: карта
   suffix: Черви 10 
@@ -372,6 +395,7 @@
 
 - type: entity
   parent: cardBase
+  categories: [ HideSpawnMenu ]
   id: card-24
   name: карта
   suffix: Черви Валет 
@@ -387,6 +411,7 @@
 
 - type: entity
   parent: cardBase
+  categories: [ HideSpawnMenu ]
   id: card-25
   name: карта
   suffix: Черви Дама 
@@ -402,6 +427,7 @@
 
 - type: entity
   parent: cardBase
+  categories: [ HideSpawnMenu ]
   id: card-26
   name: карта
   suffix: Черви Король 
@@ -417,6 +443,7 @@
 
 - type: entity
   parent: cardBase
+  categories: [ HideSpawnMenu ]
   id: card-27
   name: карта
   suffix: Трефы Туз 
@@ -432,6 +459,7 @@
 
 - type: entity
   parent: cardBase
+  categories: [ HideSpawnMenu ]
   id: card-28
   name: карта
   suffix: Трефы 2 
@@ -447,6 +475,7 @@
 
 - type: entity
   parent: cardBase
+  categories: [ HideSpawnMenu ]
   id: card-29
   name: карта
   suffix: Трефы 3 
@@ -462,6 +491,7 @@
 
 - type: entity
   parent: cardBase
+  categories: [ HideSpawnMenu ]
   id: card-30
   name: карта
   suffix: Трефы 4 
@@ -477,6 +507,7 @@
 
 - type: entity
   parent: cardBase
+  categories: [ HideSpawnMenu ]
   id: card-31
   name: карта
   suffix: Трефы 5 
@@ -492,6 +523,7 @@
 
 - type: entity
   parent: cardBase
+  categories: [ HideSpawnMenu ]
   id: card-32
   name: карта
   suffix: Трефы 6 
@@ -507,8 +539,9 @@
 
 - type: entity
   parent: cardBase
+  categories: [ HideSpawnMenu ]
   id: card-33
-  name: карта
+  name: трефы 7 
   suffix: Трефы 7 
   description: "Обычная игральная карта"
   components:
@@ -522,8 +555,9 @@
 
 - type: entity
   parent: cardBase
+  categories: [ HideSpawnMenu ]
   id: card-34
-  name: карта
+  name: трефы 8
   suffix: Трефы 8 
   description: "Обычная игральная карта"
   components:
@@ -537,8 +571,9 @@
 
 - type: entity
   parent: cardBase
+  categories: [ HideSpawnMenu ]
   id: card-35
-  name: карта
+  name: трефы 9 
   suffix: Трефы 9 
   description: "Обычная игральная карта"
   components:
@@ -552,8 +587,9 @@
 
 - type: entity
   parent: cardBase
+  categories: [ HideSpawnMenu ]
   id: card-36
-  name: карта
+  name: трефы 10 
   suffix: Трефы 10 
   description: "Обычная игральная карта"
   components:
@@ -567,8 +603,9 @@
 
 - type: entity
   parent: cardBase
+  categories: [ HideSpawnMenu ]
   id: card-37
-  name: карта
+  name: трефы валет
   suffix: Трефы Валет 
   description: "Обычная игральная карта"
   components:
@@ -582,8 +619,9 @@
 
 - type: entity
   parent: cardBase
+  categories: [ HideSpawnMenu ]
   id: card-38
-  name: карта
+  name: трефы дама
   suffix: Трефы Дама
   description: "Обычная игральная карта"
   components:
@@ -597,8 +635,9 @@
 
 - type: entity
   parent: cardBase
+  categories: [ HideSpawnMenu ]
   id: card-39
-  name: карта
+  name: трефы король
   suffix: Трефы Король 
   description: "Обычная игральная карта"
   components:
@@ -612,8 +651,9 @@
 
 - type: entity
   parent: cardBase
+  categories: [ HideSpawnMenu ]
   id: card-40
-  name: карта
+  name: пики туз 
   suffix: Пики Туз 
   description: "Обычная игральная карта"
   components:
@@ -627,8 +667,9 @@
 
 - type: entity
   parent: cardBase
+  categories: [ HideSpawnMenu ]
   id: card-41
-  name: карта
+  name: пики 2 
   suffix: Пики 2 
   description: "Обычная игральная карта"
   components:
@@ -642,8 +683,9 @@
 
 - type: entity
   parent: cardBase
+  categories: [ HideSpawnMenu ]
   id: card-42
-  name: карта
+  name: пики 3
   suffix: Пики 3 
   description: "Обычная игральная карта"
   components:
@@ -657,8 +699,9 @@
 
 - type: entity
   parent: cardBase
+  categories: [ HideSpawnMenu ]
   id: card-43
-  name: карта
+  name: пики 4
   suffix: Пики 4 
   description: "Обычная игральная карта"
   components:
@@ -672,8 +715,9 @@
  
 - type: entity
   parent: cardBase
+  categories: [ HideSpawnMenu ]
   id: card-44
-  name: карта
+  name: пики 5 
   suffix: Пики 5 
   description: "Обычная игральная карта"
   components:
@@ -687,8 +731,9 @@
 
 - type: entity
   parent: cardBase
+  categories: [ HideSpawnMenu ]
   id: card-45
-  name: карта
+  name: пики 6 
   suffix: Пики 6 
   description: "Обычная игральная карта"
   components:
@@ -702,8 +747,9 @@
 
 - type: entity
   parent: cardBase
+  categories: [ HideSpawnMenu ]
   id: card-46
-  name: карта
+  name: пики 7
   suffix: Пики 7 
   description: "Обычная игральная карта"
   components:
@@ -717,8 +763,9 @@
 
 - type: entity
   parent: cardBase
+  categories: [ HideSpawnMenu ]
   id: card-47
-  name: карта
+  name: пики 8
   suffix: Пики 8 
   description: "Обычная игральная карта"
   components:
@@ -732,8 +779,9 @@
 
 - type: entity
   parent: cardBase
+  categories: [ HideSpawnMenu ]
   id: card-48
-  name: карта
+  name: пики 9
   suffix: Пики 9 
   description: "Обычная игральная карта"
   components:
@@ -747,8 +795,9 @@
 
 - type: entity
   parent: cardBase
+  categories: [ HideSpawnMenu ]
   id: card-49
-  name: карта
+  name: Пики 10
   suffix: Пики 10 
   description: "Обычная игральная карта"
   components:
@@ -762,8 +811,9 @@
 
 - type: entity
   parent: cardBase
+  categories: [ HideSpawnMenu ]
   id: card-50
-  name: карта
+  name: Пики Валет
   suffix: Пики Валет
   description: "Обычная игральная карта"
   components:
@@ -777,8 +827,9 @@
 
 - type: entity
   parent: cardBase
+  categories: [ HideSpawnMenu ]
   id: card-51
-  name: карта
+  name: Пики Дама
   suffix: Пики Дама
   description: "Обычная игральная карта"
   components:
@@ -792,8 +843,9 @@
 
 - type: entity
   parent: cardBase
+  categories: [ HideSpawnMenu ]
   id: card-52
-  name: карта
+  name: Пики Король
   suffix: Пики Король
   description: "Обычная игральная карта"
   components:
@@ -807,8 +859,9 @@
 
 - type: entity
   parent: cardBase
+  categories: [ HideSpawnMenu ]
   id: card-53
-  name: карта
+  name: Джокер клоун
   suffix: Джокер клоун
   description: "Обычная игральная карта"
   components:
@@ -822,9 +875,10 @@
 
 - type: entity
   parent: cardBase
+  categories: [ HideSpawnMenu ]
   id: card-54
-  name: карта
-  suffix: Джокер Мим
+  name: Джокер Мим
+  suffix: Игральная карта.
   description: "Обычная игральная карта"
   components:
   - type: Sprite

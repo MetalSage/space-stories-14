@@ -10,3 +10,15 @@
   - type: Sprite
     texture: Interface/VerbIcons/information.svg.192dpi.png
     scale: 0.3,0.3
+
+# Stories-Cards-Start
+- type: entity
+  id: StrippingHiddenEntityCard
+  name: скрытая карта
+  description: Вы не можете подсмотреть, что за карта в руке.
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Sprite
+    texture: Interface/VerbIcons/information.svg.192dpi.png
+    scale: 0.3,0.3
+# Stories-Cards-End
