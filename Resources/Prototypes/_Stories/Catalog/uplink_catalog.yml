@@ -1,4 +1,14 @@
 - type: listing
+  id: UplinkClothingTacticalMaid
+  name: Набор горничной синдиката
+  description: Предполагается, что у лучших горничных должны быть дизайнерские костюмы.
+  productEntity: ClothingBackpackDuffelCrateTacticalMaid
+  cost:
+    Telecrystal: 6
+  categories:
+  - UplinkPointless
+
+- type: listing
   id: UplinkRadioJammerIndustrial
   name: Экспериментальный глушитель связи
   description: Это устройство является улучшенной версией обычного глушителя связи. Радиус действия увеличен, но и потребление больше. (Замаскирован под %%%%%%%)
@@ -79,3 +89,13 @@
       whitelist:
         tags:
           - NukeOpsUplink
+
+- type: listing
+  id: UplinkDogEars
+  name: Собачьи ушки
+  description: Тяф!
+  productEntity: ClothingHeadHatDogEars
+  cost:
+    Telecrystal: 26
+  categories:
+  - UplinkPointless

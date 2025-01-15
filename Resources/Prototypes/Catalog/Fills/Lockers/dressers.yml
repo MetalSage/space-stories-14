@@ -61,6 +61,7 @@
   components:
   - type: StorageFill
     contents:
+      - id: ClothingHeadHatCapHoS # Stories
       - id: ClothingHeadHatBeretHoS
       - id: ClothingHeadHatHoshat
       - id: ClothingUniformJumpskirtHoSAlt
