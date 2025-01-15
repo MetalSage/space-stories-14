@@ -22,6 +22,7 @@ using Robust.Client.UserInterface;
 using Robust.Client.UserInterface.Controls;
 using Robust.Shared.Input;
 using Robust.Shared.Map;
+using Content.Shared.Tag; // Stories-Cards
 using static Content.Client.Inventory.ClientInventorySystem;
 using static Robust.Client.UserInterface.Control;
 
@@ -33,6 +34,7 @@ namespace Content.Client.Inventory
         [Dependency] private readonly IPlayerManager _player = default!;
         [Dependency] private readonly IUserInterfaceManager _ui = default!;
 
+        private readonly TagSystem _tagSystem; // Stories-Cards
         private readonly ExamineSystem _examine;
         private readonly InventorySystem _inv;
         private readonly SharedCuffableSystem _cuffable;
@@ -50,14 +52,27 @@ namespace Content.Client.Inventory
         [ViewVariables]
         private readonly EntityUid _virtualHiddenEntity;
 
+        // Stories-Cards-Start
+
+        [ViewVariables]
+        private readonly EntityUid _virtualHiddenEntityCard;
+
+        [ViewVariables]
+        private const string HiddenCardEntityID = "StrippingHiddenEntityCard";
+
+        // Stories-Cards-End
+
         public StrippableBoundUserInterface(EntityUid owner, Enum uiKey) : base(owner, uiKey)
         {
+            _tagSystem = EntMan.System<TagSystem>(); // Stories-Cards
             _examine = EntMan.System<ExamineSystem>();
             _inv = EntMan.System<InventorySystem>();
             _cuffable = EntMan.System<SharedCuffableSystem>();
             _strippable = EntMan.System<StrippableSystem>();
 
             _virtualHiddenEntity = EntMan.SpawnEntity(HiddenPocketEntityId, MapCoordinates.Nullspace);
+
+            _virtualHiddenEntityCard = EntMan.SpawnEntity(HiddenCardEntityID, MapCoordinates.Nullspace); // Stories-Cards
         }
 
         protected override void Open()
@@ -172,7 +187,17 @@ namespace Content.Client.Inventory
                     button.BlockedRect.MouseFilter = MouseFilterMode.Ignore;
             }
 
-            UpdateEntityIcon(button, hand.HeldEntity);
+            // Stories-Cards-Start
+
+            var entity = hand.HeldEntity;
+
+            if (entity != null && _tagSystem.HasTag(entity.Value, "Card"))
+                entity = _virtualHiddenEntityCard;
+
+            UpdateEntityIcon(button, entity);
+
+            // Stories-Cards-End
+
             _strippingMenu!.HandsContainer.AddChild(button);
         }
 

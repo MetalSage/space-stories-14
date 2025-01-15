@@ -1,0 +1,185 @@
+{
+  "version": 1,
+  "license": "CC-BY-SA-3.0",
+  "copyright": "For Server SpaceStories",
+  "size": {
+    "x": 32,
+    "y": 32
+  },
+  "states": [
+    {
+      "name": "icon"
+    },
+    {
+      "name": "card-0"
+    },
+    {
+      "name": "desk"
+    },
+    {
+      "name": "desk-open"
+    },
+    {
+      "name": "card-1"
+    },
+    {
+      "name": "card-2"
+    },
+    {
+      "name": "card-3"
+    },
+    {
+      "name": "card-4"
+    },
+    {
+      "name": "card-5"
+    },
+    {
+      "name": "card-6"
+    },
+    {
+      "name": "card-7"
+    },
+    {
+      "name": "card-8"
+    },
+    {
+      "name": "card-9"
+    },
+    {
+      "name": "card-10"
+    },
+    {
+      "name": "card-11"
+    },
+    {
+      "name": "card-12"
+    },
+    {
+      "name": "card-13"
+    },
+    {
+      "name": "card-14"
+    },
+    {
+      "name": "card-15"
+    },
+    {
+      "name": "card-16"
+    },
+    {
+      "name": "card-17"
+    },
+    {
+      "name": "card-18"
+    },
+    {
+      "name": "card-19"
+    },
+    {
+      "name": "card-20"
+    },
+    {
+      "name": "card-21"
+    },
+    {
+      "name": "card-22"
+    },
+    {
+      "name": "card-23"
+    },
+    {
+      "name": "card-24"
+    },
+    {
+      "name": "card-25"
+    },
+    {
+      "name": "card-26"
+    },
+    {
+      "name": "card-27"
+    },
+    {
+      "name": "card-28"
+    },
+    {
+      "name": "card-29"
+    },
+    {
+      "name": "card-30"
+    },
+    {
+      "name": "card-31"
+    },
+    {
+      "name": "card-32"
+    },
+    {
+      "name": "card-33"
+    },
+    {
+      "name": "card-34"
+    },
+    {
+      "name": "card-35"
+    },
+    {
+      "name": "card-36"
+    },
+    {
+      "name": "card-37"
+    },
+    {
+      "name": "card-38"
+    },
+    {
+      "name": "card-39"
+    },
+    {
+      "name": "card-40"
+    },
+    {
+      "name": "card-41"
+    },
+    {
+      "name": "card-42"
+    },
+    {
+      "name": "card-43"
+    },
+    {
+      "name": "card-44"
+    },
+    {
+      "name": "card-45"
+    },
+    {
+      "name": "card-46"
+    },
+    {
+      "name": "card-47"
+    },
+    {
+      "name": "card-48"
+    },
+    {
+      "name": "card-49"
+    },
+    {
+      "name": "card-50"
+    },
+    {
+      "name": "card-51"
+    },
+    {
+      "name": "card-52"
+    },
+    {
+      "name": "card-53"
+    },
+    {
+      "name": "card-54"
+    }
+  ]
+}
