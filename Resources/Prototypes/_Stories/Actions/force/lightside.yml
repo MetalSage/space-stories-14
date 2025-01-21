@@ -33,6 +33,7 @@
       volume: 100
       event: !type:InstantSpawnSpellEvent
         prototype: WallForceJedi
+        posData: !type:TargetInFront
 
 - type: entity
   id: ActionHibernationTrance

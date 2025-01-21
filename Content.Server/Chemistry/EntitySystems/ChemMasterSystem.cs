@@ -186,6 +186,9 @@ namespace Content.Server.Chemistry.EntitySystems
                 return; // output can't fit pills
             }
 
+            if (message.Number >= chemMaster.Comp.MaxPillCount)
+                return;
+
             // Ensure the number is valid.
             if (message.Number == 0 || !_storageSystem.HasSpace((container, storage)))
                 return;

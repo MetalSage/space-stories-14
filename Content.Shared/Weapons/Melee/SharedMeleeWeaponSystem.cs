@@ -729,13 +729,29 @@ public abstract class SharedMeleeWeaponSystem : EntitySystem
                 false)
                 .ToList();
 
-            for (var a = 0; a < res.Count; a++) // Space Stories - start
+            // Space Stories - start (ignore HeavyAttack for ProtectiveBubble)
+            /*if (res.Count != 0)
             {
-                // if (Transform(ignore).ChildEntities.Contains(res[a].HitEntity)) // Мне просто нужно, чтобы он не бил своих детей, но его удары проходили дальше.
-                //     continue;
-                resSet.Add(res[a].HitEntity);
+                resSet.Add(res[0].HitEntity);
+            }*/
+            for (var index = 0; index < res.Count; index++)
+            {
+                if(IsContains(Transform(ignore).ChildEnumerator, index))
+                    continue;
+                resSet.Add(res[index].HitEntity);
                 break;
-            }  // Space Stories - end
+            }
+
+            bool IsContains(TransformChildrenEnumerator enumerator, int index)
+            {
+                for (var a = 0; enumerator.MoveNext(out var child); a++)
+                {
+                    if (res[index].HitEntity == child)
+                        return true;
+                }
+                return false;
+            }
+            // Space Stories - end
         }
 
         return resSet;
