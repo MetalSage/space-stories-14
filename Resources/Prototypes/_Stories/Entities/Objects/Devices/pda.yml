@@ -9,7 +9,11 @@
       - ForceRecallEquipment
   - type: Pda
     id: JediNtIDCard
-    state: pda-ert
+  - type: Appearance
+    appearanceDataInit:
+      enum.PdaVisuals.PdaType:
+        !type:String
+        pda-ert
   - type: PdaBorderColor
     borderColor: "#A32D26"
     accentHColor: "#447987"
@@ -23,19 +27,23 @@
   name: КПК агента внутрених дел
   description: Корпорация и прибыль - лучшие друзья.
   components:
-    - type: Pda
-      id: IAAIDCard
-      state: pda-lawyer
-      penSlot:
-        startingItem: PenCentcom
-        priority: -1
-        whitelist:
-          tags:
-          - Write
-    - type: PdaBorderColor
-      borderColor: "#6f6192"
-    - type: Icon
-      state: pda-lawyer
+  - type: Pda
+    id: IAAIDCard
+    penSlot:
+      startingItem: PenCentcom
+      priority: -1
+      whitelist:
+        tags:
+        - Write
+  - type: Appearance
+    appearanceDataInit:
+      enum.PdaVisuals.PdaType:
+        !type:String
+        pda-lawyer
+  - type: PdaBorderColor
+    borderColor: "#6f6192"
+  - type: Icon
+    state: pda-lawyer
 
 - type: entity
   parent: BasePDA
@@ -47,7 +55,11 @@
     sprite: _Stories/Objects/Devices/pda.rsi
   - type: Pda
     id: PRISONIDCardHeadOfPrison
-    state: pda-hosp
+  - type: Appearance
+    appearanceDataInit:
+      enum.PdaVisuals.PdaType:
+        !type:String
+        pda-hosp
   - type: Icon
     sprite: _Stories/Objects/Devices/pda.rsi
     state: pda-hosp
@@ -60,7 +72,11 @@
   components:
   - type: Pda
     id: PRISONIDCardOfficer
-    state: pda-spofficer
+  - type: Appearance
+    appearanceDataInit:
+      enum.PdaVisuals.PdaType:
+        !type:String
+        pda-spofficer
   - type: Icon
     state: pda-spofficer
 
@@ -72,7 +88,11 @@
   components:
   - type: Pda
     id: PRISONIDCardEngineer
-    state: pda-spengineer
+  - type: Appearance
+    appearanceDataInit:
+      enum.PdaVisuals.PdaType:
+        !type:String
+        pda-spengineer
   - type: Icon
     state: pda-spengineer
 
@@ -86,6 +106,10 @@
   components:
   - type: Pda
     id: PRISONIDCardMedic
-    state: pda-spmedic
+  - type: Appearance
+    appearanceDataInit:
+      enum.PdaVisuals.PdaType:
+        !type:String
+        pda-spmedic
   - type: Icon
     state: pda-spmedic
