@@ -108,7 +108,7 @@ public sealed partial class ConversionSystem
             _antag.SendBriefing(target, Loc.GetString(proto.Briefing.Value.Text ?? ""), proto.Briefing.Value.Color, proto.Briefing.Value.Sound);
 
         EntityManager.AddComponents(target, registry: proto.Components);
-        _role.MindAddRoles(mindId, proto.MindRoles);
+        // _role.MindAddRoles(mindId, proto.MindRoles); FIXME: Stories
 
         if (proto.Channels.Count > 0)
         {
