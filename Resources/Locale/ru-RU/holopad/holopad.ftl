@@ -74,6 +74,8 @@ holopad-medical-paramedic = Медицина - Парамедик
 holopad-medical-virology = Медицина - Вирусология
 holopad-medical-front = Медицина - Фронт
 holopad-medical-breakroom = Медицина - Переговорная
+holopad-medical-clinic = Медицина - Клиника
+
 # Cargo
 holopad-cargo-front = Грузы - Фронт
 holopad-cargo-bay = Грузы - Грузовой отсек
