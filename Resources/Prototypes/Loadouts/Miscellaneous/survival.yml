@@ -18,7 +18,13 @@
     - Human
     - Moth
     - Reptilian
-    - Kidan # Stories
+    # Stories-Start
+    - Kidan
+    - Avali
+    - Vulpkanin
+    - Felinid
+    - Rodentia
+    # Stories-End
 
 - type: loadoutEffectGroup
   id: EffectSpeciesVox
