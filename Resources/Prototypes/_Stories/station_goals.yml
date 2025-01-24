@@ -41,3 +41,7 @@
 - type: stationGoal
   id: StationGoalArtifactsBank
   text: station-goal-artifacts-bank
+
+- type: stationGoal
+  id: StationGoalShootingGallery
+  text: station-goal-shooting-gallery
