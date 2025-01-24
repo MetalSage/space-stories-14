@@ -1,0 +1,36 @@
+- type: job
+  id: Brigmedic
+  name: Бригмедик
+  description: Обследуйте и лечите сотрудников службы безопасности, а также не забывайте о здоровье заключенных.
+  playTimeTracker: JobBrigmedic
+  requirements:
+  - !type:DepartmentTimeRequirement
+    department: Security
+    time: 36000 #10 часов
+  - !type:DepartmentTimeRequirement
+    department: Medical
+    time: 7200 #2 часа
+  startingGear: BrigmedicGear
+  icon: "JobIconBrigmedic"
+  supervisors: job-supervisors-hos
+  canBeAntag: false
+  access:
+  - Security
+  - Brig
+  - Medical
+  - Maintenance
+  - Service
+  - External
+  - Cryogenics
+  special:
+  - !type:AddImplantSpecial
+    implants: [ MindShieldImplant ]
+
+- type: startingGear
+  id: BrigmedicGear
+  equipment:
+    id: BrigmedicPDA
+    ears: ClothingHeadsetBrigmedic
+    eyes: ClothingEyesHudMedSec
+    belt: ClothingBeltMedicalFilled
+    outerClothing: ClothingOuterCoatAMG

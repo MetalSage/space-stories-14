@@ -1,0 +1,167 @@
+- type: roleLoadout
+  id: JobBrigmedic
+  groups:
+  - BrigmedicHead
+  - MedicalMask
+  - BrigmedicJumpsuit
+  - MedicalGloves
+  - BrigmedicBackpack
+  - MedicalShoes
+  - SurvivalBrigmedic
+  - Trinkets
+
+- type: loadoutGroup
+  id: BrigmedicHead
+  name: Бригмедик, голова
+  minLimit: 0
+  loadouts:
+  - BrigmedicBeret
+  - MedicalBeret
+  - MedicalHeadMirror
+
+- type: loadoutGroup
+  id: BrigmedicJumpsuit
+  name: Бригмедик, комбинезон
+  loadouts:
+  - BrigmedicJumpsuit
+  - BrigmedicJumpskirt
+
+- type: loadoutGroup
+  id: BrigmedicBackpack
+  name: Бригмедик, рюкзак
+  loadouts:
+  # Stories-partners - start
+  # Handbag
+  - ClothingBackpackHandbagAdidos
+  - ClothingBackpackHandbagBluesky
+  - ClothingBackpackHandbagEight
+  - ClothingBackpackHandbagGachi
+  - ClothingBackpackHandbagRl
+  # Backpack
+  - ClothingBackpackAdidos
+  - ClothingBackpackBluesky
+  - ClothingBackpackEight
+  - ClothingBackpackGachi
+  - ClothingBackpackRl
+  # Duffel
+  - ClothingBackpackDuffelAdidos
+  - ClothingBackpackDuffelBluesky
+  - ClothingBackpackDuffelEight
+  - ClothingBackpackDuffelGachi
+  - ClothingBackpackDuffelRl
+  # Satchel
+  - ClothingBackpackSatchelAdidos
+  - ClothingBackpackSatchelBluesky
+  - ClothingBackpackSatchelEight
+  - ClothingBackpackSatchelGachi
+  - ClothingBackpackSatchelRl
+  # Stories-partners - end
+  - BrigmedicBackpack
+  - BrigmedicSatchel
+  - BrigmedicDuffel
+
+- type: loadoutGroup
+  id: SurvivalBrigmedic
+  name: Аварийный запас бригмедика
+  minLimit: 2
+  hidden: true
+  loadouts:
+  - EmergencyNitrogenBrigmedic
+  - EmergencyOxygenBrigmedic
+  - LoadoutSpeciesVoxNitrogen
+
+# Берет бригмедика
+- type: loadout
+  id: BrigmedicBeret
+  equipment:
+    head: ClothingHeadHatBeretBrigmedic
+
+# Комбинезон бригмедика
+- type: loadout
+  id: BrigmedicJumpsuit
+  equipment:
+    jumpsuit: ClothingUniformJumpsuitBrigmedic
+
+# Юбка-комбинезон бригмедика
+- type: loadout
+  id: BrigmedicJumpskirt
+  equipment:
+    jumpsuit: ClothingUniformJumpskirtBrigmedic
+
+# Рюкзак бригмедика
+- type: loadout
+  id: BrigmedicBackpack
+  equipment:
+    back: ClothingBackpackBrigmedic
+
+# Сумка бригмедика
+- type: loadout
+  id: BrigmedicSatchel
+  equipment:
+    back: ClothingBackpackSatchelBrigmedic
+
+# Вещмешок бригмедика
+- type: loadout
+  id: BrigmedicDuffel
+  equipment:
+    back: ClothingBackpackDuffelBrigmedic
+
+# Аварийный набор с азотом для бригмедика
+- type: loadout
+  id: EmergencyNitrogenBrigmedic
+  effects:
+  - !type:GroupLoadoutEffect
+    proto: NitrogenBreather
+  storage:
+    back:
+    - BoxSurvivalBrigmedicNitrogen
+
+- type: entity
+  parent: BoxCardboard
+  id: BoxSurvivalBrigmedicNitrogen
+  name: аварийный запас
+  description: Коробка с базовым набором для выживания.
+  suffix: Бригмедик Азот N2
+  components:
+  - type: StorageFill
+    contents:
+    - id: ClothingMaskBreathMedicalSecurity
+    - id: EmergencyNitrogenTankFilled
+    - id: EmergencyMedipen
+    - id: Flare
+    - id: FoodSnackNutribrick
+    - id: DrinkWaterBottleFull
+  - type: Sprite
+    layers:
+    - state: internals
+    - state: emergencytank
+
+# Аварийный набор с кислородом для бригмедика
+- type: loadout
+  id: EmergencyOxygenBrigmedic
+  effects:
+  - !type:GroupLoadoutEffect
+    proto: OxygenBreather
+  storage:
+    back:
+    - BoxSurvivalBrigmedic
+
+- type: entity
+  parent: BoxCardboard
+  id: BoxSurvivalBrigmedic
+  name: аварийный запас
+  description: Коробка с базовым набором для выживания.
+  suffix: Бригмедик
+  components:
+  - type: StorageFill
+    contents:
+    - id: ClothingMaskBreathMedicalSecurity
+    - id: EmergencyOxygenTankFilled
+    - id: EmergencyMedipen
+    - id: Flare
+    - id: FoodSnackNutribrick
+    - id: DrinkWaterBottleFull
+  - type: Sprite
+    layers:
+    - state: internals
+    - state: emergencytank

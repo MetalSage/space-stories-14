@@ -130,6 +130,9 @@
 - type: playTimeTracker
   id: JobSecurityOfficer
 
+- type: playTimeTracker # Stories
+  id: JobBrigmedic
+
 - type: playTimeTracker
   id: JobServiceWorker
 

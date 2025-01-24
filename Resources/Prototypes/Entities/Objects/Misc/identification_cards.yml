@@ -457,6 +457,8 @@
     layers:
     - state: default
     - state: idbrigmedic
+    - type: PresetIdCard # Stories
+      job: Brigmedic
 
 - type: entity
   parent: IDCardStandard
