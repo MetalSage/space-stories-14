@@ -1,32 +1,4 @@
 - type: lobbyBackground
-  id: GlorySSSP
-  background: /Textures/_Stories/LobbyScreens/GlorySSSP.jpg
-
-- type: lobbyBackground
-  id: Nuclear_environment
-  background: /Textures/_Stories/LobbyScreens/Nuclear_environment.jpg
-
-- type: lobbyBackground
-  id: Nuclear_environmentV2
-  background: /Textures/_Stories/LobbyScreens/Nuclear_environmentV2.jpg
-
-- type: lobbyBackground
-  id: Paramedic
-  background: /Textures/_Stories/LobbyScreens/Paramedic.jpg
-
-- type: lobbyBackground
-  id: Starbow
-  background: /Textures/_Stories/LobbyScreens/Starbow.jpg
-
-- type: lobbyBackground
-  id: Therapy
-  background: /Textures/_Stories/LobbyScreens/Therapy.jpg
-
-- type: lobbyBackground
-  id: Zombie
-  background: /Textures/_Stories/LobbyScreens/Zombie.jpg
-
-- type: lobbyBackground
   id: Atmos
   background: /Textures/_Stories/LobbyScreens/atmos.jpg
 
@@ -61,3 +33,40 @@
 - type: lobbyBackground
   id: Spaf
   background: /Textures/_Stories/LobbyScreens/spaf.jpg
+
+# Drawn by Doner
+- type: lobbyBackground
+  id: GlorySSSP
+  background: /Textures/_Stories/LobbyScreens/GlorySSSP.jpg
+
+- type: lobbyBackground
+  id: Nuclear_environment
+  background: /Textures/_Stories/LobbyScreens/Nuclear_environment.jpg
+
+- type: lobbyBackground
+  id: Nuclear_environmentV2
+  background: /Textures/_Stories/LobbyScreens/Nuclear_environmentV2.jpg
+
+- type: lobbyBackground
+  id: Paramedic
+  background: /Textures/_Stories/LobbyScreens/Paramedic.jpg
+
+- type: lobbyBackground
+  id: Starbow
+  background: /Textures/_Stories/LobbyScreens/Starbow.jpg
+
+- type: lobbyBackground
+  id: Therapy
+  background: /Textures/_Stories/LobbyScreens/Therapy.jpg
+
+- type: lobbyBackground
+  id: Zombie
+  background: /Textures/_Stories/LobbyScreens/Zombie.jpg
+
+- type: lobbyBackground
+  id: Space_surfer
+  background: /Textures/_Stories/LobbyScreens/Space_surfer.png
+
+- type: lobbyBackground
+  id: Traitor_situation
+  background: /Textures/_Stories/LobbyScreens/Traitor_situation.png
