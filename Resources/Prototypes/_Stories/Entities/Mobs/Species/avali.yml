@@ -9,6 +9,8 @@
     hideLayersOnEquip:
     - HeadTop
     - HeadSide
+  - type: Hunger
+  - type: Thirst
   - type: Sprite
     drawdepth: Mobs
   - type: Vocal

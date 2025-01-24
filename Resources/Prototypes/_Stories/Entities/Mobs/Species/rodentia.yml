@@ -11,6 +11,8 @@
     - HeadTop
     - HeadSide
     - Snout
+  - type: Hunger
+  - type: Thirst
   - type: Icon
     sprite: _Stories/Mobs/Rodentia/parts.rsi
     state: full

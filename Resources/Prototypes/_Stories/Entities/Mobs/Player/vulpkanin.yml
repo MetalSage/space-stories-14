@@ -4,6 +4,8 @@
   parent: BaseMobVulpkanin
   id: MobVulpkanin
   components:
+    - type: Hunger
+    - type: Thirst
     - type: CombatMode
     - type: InteractionPopup
       successChance: 1
