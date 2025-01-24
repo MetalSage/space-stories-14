@@ -1,0 +1,15 @@
+- type: entity
+  parent: ClothingBackpackDuffelSyndicateBundle
+  id: ClothingBackpackDuffelCrateTacticalMaid
+  name: чёрно-красный вещмешок
+  description: Вместительный и удобный вещмешок цвета эбонита и крови, в который влезут «игрушки» для любых возрастов.
+  components:
+  - type: Storage
+    grid:
+    - 0,0,8,4
+  - type: StorageFill
+    contents:
+    - id: ClothingUniformJumpskirtTacticalMaid
+    - id: ClothingHeadHatTacticalMaidHeadband
+    - id: ClothingHandsTacticalMaidGloves
+    - id: ClothingShoesColorBlack
