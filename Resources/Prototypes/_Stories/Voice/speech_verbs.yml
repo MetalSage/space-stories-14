@@ -1,4 +1,13 @@
 - type: speechVerb
+  id: Kidan
+  name: chat-speech-verb-name-kidan
+  speechVerbStrings:
+  - chat-speech-verb-insect-1
+  - chat-speech-verb-insect-2
+  - chat-speech-verb-insect-3
+  - chat-speech-verb-skeleton-2
+
+- type: speechVerb
   id: Vulpkanin
   name: chat-speech-verb-name-vulpkanin
   speechVerbStrings:

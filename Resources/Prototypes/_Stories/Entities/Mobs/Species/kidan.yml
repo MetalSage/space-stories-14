@@ -17,7 +17,6 @@
     requiredLegs: 2
   - type: Speech
     speechVerb: Kidan
-#    speechSounds: Kidan # оно работает, но звуки просто ужас
   - type: Butcherable
     butcheringType: Spike
     spawned:
