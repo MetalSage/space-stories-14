@@ -11,7 +11,7 @@
   - Trinkets
 
 - type: loadoutGroup
-  id: BrigmedicHead
+  id: STBrigmedicHead
   name: Бригмедик, голова
   minLimit: 0
   loadouts:
