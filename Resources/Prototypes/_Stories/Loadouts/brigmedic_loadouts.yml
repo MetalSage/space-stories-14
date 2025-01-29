@@ -12,7 +12,7 @@
 
 - type: loadoutGroup
   id: STBrigmedicHead
-  name: Бригмедик, голова
+  name: loadout-group-STBrigmedicHead-head
   minLimit: 0
   loadouts:
   - STBrigmedicBeret
@@ -21,14 +21,14 @@
 
 - type: loadoutGroup
   id: STBrigmedicJumpsuit
-  name: Бригмедик, комбинезон
+  name: loadout-group-STBrigmedicHead-jumpsuits
   loadouts:
   - STBrigmedicJumpsuit
   - STBrigmedicJumpskirt
 
 - type: loadoutGroup
   id: STBrigmedicBackpack
-  name: Бригмедик, рюкзак
+  name: loadout-group-STBrigmedicHead-backpack
   loadouts:
   # Stories-partners - start
   # Handbag
@@ -62,7 +62,7 @@
 
 - type: loadoutGroup
   id: SurvivalSTBrigmedic
-  name: Аварийный запас бригмедика
+  name: survival box brigmedic
   minLimit: 2
   hidden: true
   loadouts:
@@ -119,9 +119,9 @@
 - type: entity
   parent: BoxCardboard
   id: BoxSurvivalSTBrigmedicNitrogen
-  name: аварийный запас
-  description: Коробка с базовым набором для выживания.
-  suffix: Бригмедик Азот N2
+  name: survival box brigmedic
+  description: It's a box with basic internals inside.
+  suffix: Brigmedic N2
   components:
   - type: StorageFill
     contents:
@@ -149,9 +149,9 @@
 - type: entity
   parent: BoxCardboard
   id: BoxSurvivalSTBrigmedic
-  name: аварийный запас
-  description: Коробка с базовым набором для выживания.
-  suffix: Бригмедик
+  name: survival box brigmedic
+  description: It's a box with basic internals inside.
+  suffix: Brigmedic
   components:
   - type: StorageFill
     contents:
