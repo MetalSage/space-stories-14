@@ -1,5 +1,5 @@
 - type: job
-  id: Brigmedic
+  id: STBrigmedic
   name: Бригмедик
   description: Обследуйте и лечите сотрудников службы безопасности, а также не забывайте о здоровье заключенных.
   playTimeTracker: STJobBrigmedic
