@@ -84,7 +84,7 @@
 
 # Юбка-комбинезон бригмедика
 - type: loadout
-  id: BrigmedicJumpskirt
+  id: STBrigmedicJumpskirt
   equipment:
     jumpsuit: ClothingUniformJumpskirtBrigmedic
 
