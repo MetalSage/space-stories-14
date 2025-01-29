@@ -131,7 +131,7 @@
   id: JobSecurityOfficer
 
 - type: playTimeTracker # Stories
-  id: JobBrigmedic
+  id: STJobBrigmedic
 
 - type: playTimeTracker
   id: JobServiceWorker
