@@ -69,7 +69,7 @@
     boardName: wires-board-name-airalarm
     layoutId: AirAlarm
   - type: AccessReader
-    access: [["Atmospherics"]]
+    access: [["Atmospherics"], ["PrisonEng"]] # [["Atmospherics"]] # Stories
   - type: ContainerFill
     containers:
       board: [ AirAlarmElectronics ]
