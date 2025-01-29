@@ -78,7 +78,7 @@
 
 # Комбинезон бригмедика
 - type: loadout
-  id: BrigmedicJumpsuit
+  id: STBrigmedicJumpsuit
   equipment:
     jumpsuit: ClothingUniformJumpsuitBrigmedic
 
