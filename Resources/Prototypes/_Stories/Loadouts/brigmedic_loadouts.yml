@@ -138,7 +138,7 @@
 
 # Аварийный набор с кислородом для бригмедика
 - type: loadout
-  id: EmergencyOxygenBrigmedic
+  id: STEmergencyOxygenBrigmedic
   effects:
   - !type:GroupLoadoutEffect
     proto: OxygenBreather
