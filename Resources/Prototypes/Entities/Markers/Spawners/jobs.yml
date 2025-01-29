@@ -492,7 +492,7 @@
   name: brigmedic
   components:
   - type: SpawnPoint # Stories
-    job_id: Brigmedic
+    job_id: STBrigmedic
   - type: Sprite
     layers:
       - state: green
