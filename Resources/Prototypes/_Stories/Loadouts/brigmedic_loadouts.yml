@@ -72,7 +72,7 @@
 
 # Берет бригмедика
 - type: loadout
-  id: BrigmedicBeret
+  id: STBrigmedicBeret
   equipment:
     head: ClothingHeadHatBeretBrigmedic
 
