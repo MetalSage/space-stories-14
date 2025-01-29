@@ -108,7 +108,7 @@
 
 # Аварийный набор с азотом для бригмедика
 - type: loadout
-  id: EmergencyNitrogenBrigmedic
+  id: STEmergencyNitrogenBrigmedic
   effects:
   - !type:GroupLoadoutEffect
     proto: NitrogenBreather
