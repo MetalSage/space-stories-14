@@ -144,7 +144,7 @@
     proto: OxygenBreather
   storage:
     back:
-    - BoxSurvivalBrigmedic
+    - STBoxSurvivalBrigmedic
 
 - type: entity
   parent: BoxCardboard
