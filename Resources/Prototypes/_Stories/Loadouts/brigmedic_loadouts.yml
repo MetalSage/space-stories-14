@@ -90,7 +90,7 @@
 
 # Рюкзак бригмедика
 - type: loadout
-  id: BrigmedicBackpack
+  id: STBrigmedicBackpack
   equipment:
     back: ClothingBackpackBrigmedic
 
