@@ -61,7 +61,7 @@
   - BrigmedicDuffel
 
 - type: loadoutGroup
-  id: SurvivalBrigmedic
+  id: STSurvivalBrigmedic
   name: Аварийный запас бригмедика
   minLimit: 2
   hidden: true
