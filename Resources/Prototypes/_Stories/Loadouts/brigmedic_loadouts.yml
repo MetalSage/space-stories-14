@@ -96,7 +96,7 @@
 
 # Сумка бригмедика
 - type: loadout
-  id: BrigmedicSatchel
+  id: STBrigmedicSatchel
   equipment:
     back: ClothingBackpackSatchelBrigmedic
 
