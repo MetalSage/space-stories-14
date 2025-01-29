@@ -7,7 +7,7 @@
   - MedicalGloves
   - STBrigmedicBackpack
   - MedicalShoes
-  - BoxSurvivalSTBrigmedic
+  - SurvivalSTBrigmedic
   - Trinkets
 
 - type: loadoutGroup
@@ -61,13 +61,13 @@
   - STBrigmedicDuffel
 
 - type: loadoutGroup
-  id: STSurvivalBrigmedic
+  id: SurvivalSTBrigmedic
   name: Аварийный запас бригмедика
   minLimit: 2
   hidden: true
   loadouts:
-  - STEmergencyNitrogenBrigmedic
-  - STEmergencyOxygenBrigmedic
+  - EmergencyNitrogenSTBrigmedic
+  - EmergencyOxygenSTBrigmedic
   - LoadoutSpeciesVoxNitrogen
 
 # Берет бригмедика
@@ -108,7 +108,7 @@
 
 # Аварийный набор с азотом для бригмедика
 - type: loadout
-  id: STEmergencyNitrogenBrigmedic
+  id: EmergencyNitrogenSTBrigmedic
   effects:
   - !type:GroupLoadoutEffect
     proto: NitrogenBreather
@@ -138,7 +138,7 @@
 
 # Аварийный набор с кислородом для бригмедика
 - type: loadout
-  id: STEmergencyOxygenBrigmedic
+  id: EmergencyOxygenSTBrigmedic
   effects:
   - !type:GroupLoadoutEffect
     proto: OxygenBreather
