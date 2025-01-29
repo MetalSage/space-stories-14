@@ -27,7 +27,7 @@
   - STBrigmedicJumpskirt
 
 - type: loadoutGroup
-  id: BrigmedicBackpack
+  id: STBrigmedicBackpack
   name: Бригмедик, рюкзак
   loadouts:
   # Stories-partners - start
