@@ -10,7 +10,7 @@
   - !type:DepartmentTimeRequirement
     department: Medical
     time: 7200 #2 часа
-  startingGear: BrigmedicGear
+  startingGear: STBrigmedicGear
   icon: "JobIconBrigmedic"
   supervisors: job-supervisors-hos
   canBeAntag: false
