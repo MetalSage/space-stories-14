@@ -2,7 +2,7 @@
   id: Brigmedic
   name: Бригмедик
   description: Обследуйте и лечите сотрудников службы безопасности, а также не забывайте о здоровье заключенных.
-  playTimeTracker: JobBrigmedic
+  playTimeTracker: STJobBrigmedic
   requirements:
   - !type:DepartmentTimeRequirement
     department: Security
