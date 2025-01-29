@@ -20,7 +20,7 @@
   - MedicalHeadMirror
 
 - type: loadoutGroup
-  id: BrigmedicJumpsuit
+  id: STBrigmedicJumpsuit
   name: Бригмедик, комбинезон
   loadouts:
   - BrigmedicJumpsuit
