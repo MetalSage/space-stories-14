@@ -118,7 +118,7 @@
 
 - type: entity
   parent: BoxCardboard
-  id: BoxSurvivalBrigmedicNitrogen
+  id: STBoxSurvivalBrigmedicNitrogen
   name: аварийный запас
   description: Коробка с базовым набором для выживания.
   suffix: Бригмедик Азот N2
