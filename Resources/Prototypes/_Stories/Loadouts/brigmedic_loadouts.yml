@@ -57,7 +57,7 @@
   - ClothingBackpackSatchelRl
   # Stories-partners - end
   - STBrigmedicBackpack
-  - BrigmedicSatchel
+  - STBrigmedicSatchel
   - STBrigmedicDuffel
 
 - type: loadoutGroup
