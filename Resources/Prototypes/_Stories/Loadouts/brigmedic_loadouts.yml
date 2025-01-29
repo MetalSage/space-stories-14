@@ -114,7 +114,7 @@
     proto: NitrogenBreather
   storage:
     back:
-    - BoxSurvivalBrigmedicNitrogen
+    - STBoxSurvivalBrigmedicNitrogen
 
 - type: entity
   parent: BoxCardboard
