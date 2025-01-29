@@ -67,7 +67,7 @@
   hidden: true
   loadouts:
   - EmergencyNitrogenBrigmedic
-  - EmergencyOxygenBrigmedic
+  - STEmergencyOxygenBrigmedic
   - LoadoutSpeciesVoxNitrogen
 
 # Берет бригмедика
