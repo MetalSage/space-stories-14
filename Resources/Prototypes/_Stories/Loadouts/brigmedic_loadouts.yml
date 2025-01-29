@@ -58,7 +58,7 @@
   # Stories-partners - end
   - STBrigmedicBackpack
   - BrigmedicSatchel
-  - BrigmedicDuffel
+  - STBrigmedicDuffel
 
 - type: loadoutGroup
   id: STSurvivalBrigmedic
