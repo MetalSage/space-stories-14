@@ -457,7 +457,7 @@
     layers:
     - state: default
     - state: idbrigmedic
-    - type: PresetIdCard # Stories
+    - type: PresetIdCard # Stories-Brigmedic
       job: STBrigmedic
 
 - type: entity
