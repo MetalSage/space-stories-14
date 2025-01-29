@@ -27,7 +27,7 @@
     implants: [ MindShieldImplant ]
 
 - type: startingGear
-  id: BrigmedicGear
+  id: STBrigmedicGear
   equipment:
     id: BrigmedicPDA
     ears: ClothingHeadsetBrigmedic
