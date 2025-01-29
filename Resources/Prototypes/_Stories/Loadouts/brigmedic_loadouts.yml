@@ -1,13 +1,13 @@
 - type: roleLoadout
-  id: STJobBrigmedic
+  id: JobSTBrigmedic
   groups:
-  - BrigmedicHead
+  - STBrigmedicHead
   - MedicalMask
-  - BrigmedicJumpsuit
+  - STBrigmedicJumpsuit
   - MedicalGloves
-  - BrigmedicBackpack
+  - STBrigmedicBackpack
   - MedicalShoes
-  - SurvivalBrigmedic
+  - BoxSurvivalSTBrigmedic
   - Trinkets
 
 - type: loadoutGroup
@@ -15,7 +15,7 @@
   name: Бригмедик, голова
   minLimit: 0
   loadouts:
-  - BrigmedicBeret
+  - STBrigmedicBeret
   - MedicalBeret
   - MedicalHeadMirror
 
@@ -114,11 +114,11 @@
     proto: NitrogenBreather
   storage:
     back:
-    - STBoxSurvivalBrigmedicNitrogen
+    - BoxSurvivalSTBrigmedicNitrogen
 
 - type: entity
   parent: BoxCardboard
-  id: STBoxSurvivalBrigmedicNitrogen
+  id: BoxSurvivalSTBrigmedicNitrogen
   name: аварийный запас
   description: Коробка с базовым набором для выживания.
   suffix: Бригмедик Азот N2
@@ -144,11 +144,11 @@
     proto: OxygenBreather
   storage:
     back:
-    - STBoxSurvivalBrigmedic
+    - BoxSurvivalSTBrigmedic
 
 - type: entity
   parent: BoxCardboard
-  id: STBoxSurvivalBrigmedic
+  id: BoxSurvivalSTBrigmedic
   name: аварийный запас
   description: Коробка с базовым набором для выживания.
   suffix: Бригмедик
