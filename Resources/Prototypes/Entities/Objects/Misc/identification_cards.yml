@@ -458,7 +458,7 @@
     - state: default
     - state: idbrigmedic
     - type: PresetIdCard # Stories
-      job: Brigmedic
+      job: STBrigmedic
 
 - type: entity
   parent: IDCardStandard
