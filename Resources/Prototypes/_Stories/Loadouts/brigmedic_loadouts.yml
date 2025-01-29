@@ -23,7 +23,7 @@
   id: STBrigmedicJumpsuit
   name: Бригмедик, комбинезон
   loadouts:
-  - BrigmedicJumpsuit
+  - STBrigmedicJumpsuit
   - STBrigmedicJumpskirt
 
 - type: loadoutGroup
