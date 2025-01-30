@@ -62,7 +62,7 @@
 
 - type: loadoutGroup
   id: SurvivalSTBrigmedic
-  name: survival box brigmedic
+  name: loadout-group-SurvivalSTBrigmedic
   minLimit: 2
   hidden: true
   loadouts:
