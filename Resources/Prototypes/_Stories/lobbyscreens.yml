@@ -68,6 +68,6 @@
   background: /Textures/_Stories/LobbyScreens/Space_surfer.jpg
 
 - type: lobbyBackground
-  id: Traitor_situation
+  id: Nuclear_operative
   background: /Textures/_Stories/LobbyScreens/Nuclear_operative.jpg
 
