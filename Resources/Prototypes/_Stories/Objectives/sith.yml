@@ -12,7 +12,6 @@
       - EmpireMemberRole
 
 - type: entity
-  categories: [ HideSpawnMenu ]
   parent: [BaseInquisitorObjective, BaseKillObjective]
   id: KillJediNtObjective
   description: Уничтожьте его.
@@ -30,7 +29,6 @@
     requireDead: true
 
 - type: entity
-  categories: [ HideSpawnMenu ]
   parent: [BaseInquisitorObjective, BaseSurviveObjective]
   id: SithSurviveObjective
   name: Выжить.
@@ -43,7 +41,6 @@
       state: sith
 
 - type: entity
-  categories: [ HideSpawnMenu ]
   parent: BaseInquisitorObjective
   id: HypnosisObjective
   description: Императору нужны новые подданные.
