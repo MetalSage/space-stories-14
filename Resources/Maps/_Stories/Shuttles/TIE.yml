@@ -1589,44 +1589,14 @@ entities:
     components:
     - type: Transform
       parent: 74
-    - type: SolutionContainerManager
-      solutions: null
-      containers:
-      - drink
-    - type: Physics
-      canCollide: False
-    - type: ContainerContainer
-      containers:
-        solution@drink: !type:ContainerSlot
-          ent: 76
   - uid: 77
     components:
     - type: Transform
       parent: 74
-    - type: SolutionContainerManager
-      solutions: null
-      containers:
-      - drink
-    - type: Physics
-      canCollide: False
-    - type: ContainerContainer
-      containers:
-        solution@drink: !type:ContainerSlot
-          ent: 78
   - uid: 80
     components:
     - type: Transform
       parent: 74
-    - type: SolutionContainerManager
-      solutions: null
-      containers:
-      - drink
-    - type: Physics
-      canCollide: False
-    - type: ContainerContainer
-      containers:
-        solution@drink: !type:ContainerSlot
-          ent: 81
 - proto: DrinkNukieCan
   entities:
   - uid: 18
@@ -1634,30 +1604,10 @@ entities:
     - type: Transform
       pos: 8.26943,1.7199001
       parent: 1
-    - type: SolutionContainerManager
-      solutions: null
-      containers:
-      - drink
-    - type: Physics
-      canCollide: False
-    - type: ContainerContainer
-      containers:
-        solution@drink: !type:ContainerSlot
-          ent: 19
   - uid: 82
     components:
     - type: Transform
       parent: 74
-    - type: SolutionContainerManager
-      solutions: null
-      containers:
-      - drink
-    - type: Physics
-      canCollide: False
-    - type: ContainerContainer
-      containers:
-        solution@drink: !type:ContainerSlot
-          ent: 83
 - proto: FoodDonutChaos
   entities:
   - uid: 104
@@ -1681,58 +1631,18 @@ entities:
     components:
     - type: Transform
       parent: 74
-    - type: SolutionContainerManager
-      solutions: null
-      containers:
-      - food
-    - type: Physics
-      canCollide: False
-    - type: ContainerContainer
-      containers:
-        solution@food: !type:ContainerSlot
-          ent: 85
   - uid: 86
     components:
     - type: Transform
       parent: 74
-    - type: SolutionContainerManager
-      solutions: null
-      containers:
-      - food
-    - type: Physics
-      canCollide: False
-    - type: ContainerContainer
-      containers:
-        solution@food: !type:ContainerSlot
-          ent: 87
   - uid: 88
     components:
     - type: Transform
       parent: 74
-    - type: SolutionContainerManager
-      solutions: null
-      containers:
-      - food
-    - type: Physics
-      canCollide: False
-    - type: ContainerContainer
-      containers:
-        solution@food: !type:ContainerSlot
-          ent: 89
   - uid: 90
     components:
     - type: Transform
       parent: 74
-    - type: SolutionContainerManager
-      solutions: null
-      containers:
-      - food
-    - type: Physics
-      canCollide: False
-    - type: ContainerContainer
-      containers:
-        solution@food: !type:ContainerSlot
-          ent: 91
 - proto: GasPipeBend
   entities:
   - uid: 119
@@ -2110,52 +2020,6 @@ entities:
       rot: -3.5343688864486467E-08 rad
       pos: 8.669613,1.8102653
       parent: 1
-    - type: Storage
-      storedItems:
-        75:
-          position: 0,0
-          _rotation: South
-        77:
-          position: 1,0
-          _rotation: South
-        79:
-          position: 2,0
-          _rotation: South
-        80:
-          position: 3,0
-          _rotation: South
-        82:
-          position: 4,0
-          _rotation: South
-        84:
-          position: 5,0
-          _rotation: South
-        86:
-          position: 5,1
-          _rotation: South
-        88:
-          position: 0,2
-          _rotation: South
-        90:
-          position: 1,2
-          _rotation: South
-    - type: ContainerContainer
-      containers:
-        storagebase: !type:Container
-          showEnts: False
-          occludes: True
-          ents:
-          - 75
-          - 77
-          - 79
-          - 80
-          - 82
-          - 84
-          - 86
-          - 88
-          - 90
-    - type: Physics
-      canCollide: False
 - proto: MedkitCombatFilled
   entities:
   - uid: 185
