@@ -44,6 +44,18 @@ namespace Content.IntegrationTests.Tests
 
         private static readonly string[] GameMaps =
         {
+            // Stories-Start
+            "StoriesBagel",
+            "StoriesBeta",
+            "StoriesBox",
+            "StoriesFland",
+            "StoriesKilo",
+            "StoriesMeta",
+            "StoriesCore",
+            "StoriesOmega",
+            "CorvaxDelta",
+            "StoriesPrison",
+            // Stories-End
             "Dev",
             "TestTeg",
             "Fland",
