@@ -5,7 +5,6 @@
 
 [whitelist]
 enabled = true
-reason = "Требуется разрешение на подключение к этому серверу."
 
 [adminlogs]
 enabled = false
