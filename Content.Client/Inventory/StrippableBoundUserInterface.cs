@@ -24,6 +24,7 @@ using Robust.Shared.Input;
 using Robust.Shared.Map;
 using static Content.Client.Inventory.ClientInventorySystem;
 using static Robust.Client.UserInterface.Control;
+using Content.Shared.Tag; // Stories-Cards
 
 namespace Content.Client.Inventory
 {
@@ -50,14 +51,28 @@ namespace Content.Client.Inventory
         [ViewVariables]
         private readonly EntityUid _virtualHiddenEntity;
 
+        // Stories-Cards
+
+        [ViewVariables]
+        private readonly EntityUid _virtualHiddenEntityCard;
+
+        [ViewVariables]
+        private const string HiddenCardEntityID = "StrippingHiddenEntityCard";
+
+        private readonly TagSystem _tagSystem;
+
+        // Stories-Cards
+
         public StrippableBoundUserInterface(EntityUid owner, Enum uiKey) : base(owner, uiKey)
         {
             _examine = EntMan.System<ExamineSystem>();
             _inv = EntMan.System<InventorySystem>();
             _cuffable = EntMan.System<SharedCuffableSystem>();
             _strippable = EntMan.System<StrippableSystem>();
+            _tagSystem = EntMan.System<TagSystem>(); // Stories-Cards
 
             _virtualHiddenEntity = EntMan.SpawnEntity(HiddenPocketEntityId, MapCoordinates.Nullspace);
+            _virtualHiddenEntityCard = EntMan.SpawnEntity(HiddenCardEntityID, MapCoordinates.Nullspace); // Stories-Cards
         }
 
         protected override void Open()
@@ -80,6 +95,7 @@ namespace Content.Client.Inventory
                 _strippingMenu.OnDirty -= UpdateMenu;
 
             EntMan.DeleteEntity(_virtualHiddenEntity);
+            EntMan.DeleteEntity(_virtualHiddenEntityCard); // Stories-Cards
             base.Dispose(disposing);
         }
 
@@ -173,6 +189,18 @@ namespace Content.Client.Inventory
             }
 
             UpdateEntityIcon(button, hand.HeldEntity);
+
+            // Stories-Cards
+
+            var entity = hand.HeldEntity;
+
+            if (entity != null && _tagSystem.HasTag(entity.Value, "Card"))
+                entity = _virtualHiddenEntityCard;
+
+            UpdateEntityIcon(button, entity);
+
+            // Stories-Cards
+
             _strippingMenu!.HandsContainer.AddChild(button);
         }
 
