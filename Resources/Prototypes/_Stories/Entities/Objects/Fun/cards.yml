@@ -1,0 +1,1287 @@
+- type: entity
+  parent: [BaseItem, BaseFoldable]
+  abstract: true
+  id: cardBase
+  name: карта
+  components:
+  - type: Appearance
+  - type: Foldable
+    canFoldInsideContainer: true
+  - type: Sprite
+    sprite: _Stories/Objects/Fun/card.rsi
+  - type: Tag
+    tags:
+    - Card
+
+# Clubs
+- type: entity
+  parent: cardBase
+  categories: [ HideSpawnMenu ]
+  id: Clubs1
+  name: карта
+  components:
+  - type: Sprite
+    layers:
+    - state: Back
+      map: [ "unfoldedLayer" ]
+  - type: GenericVisualizer
+    visuals:
+      enum.FoldedVisuals.State:
+        foldedLayer:
+          True: { state: Clubs1 }
+          False: { state: Back }
+  - type: Card
+    name: "Это трефы туз."
+
+- type: entity
+  parent: cardBase
+  categories: [ HideSpawnMenu ]
+  id: Clubs2
+  name: карта
+  components:
+  - type: Sprite
+    layers:
+    - state: Back
+      map: [ "unfoldedLayer" ]
+  - type: GenericVisualizer
+    visuals:
+      enum.FoldedVisuals.State:
+        foldedLayer:
+          True: { state: Clubs2 }
+          False: { state: Back }
+  - type: Card
+    name: "Это трефы 2."
+
+- type: entity
+  parent: cardBase
+  categories: [ HideSpawnMenu ]
+  id: Clubs3
+  name: карта
+  components:
+  - type: Sprite
+    layers:
+    - state: Back
+      map: [ "unfoldedLayer" ]
+  - type: GenericVisualizer
+    visuals:
+      enum.FoldedVisuals.State:
+        foldedLayer:
+          True: { state: Clubs3 }
+          False: { state: Back }
+  - type: Card
+    name: "Это трефы 3."
+
+- type: entity
+  parent: cardBase
+  categories: [ HideSpawnMenu ]
+  id: Clubs4
+  name: карта
+  components:
+  - type: Sprite
+    layers:
+    - state: Back
+      map: [ "unfoldedLayer" ]
+  - type: GenericVisualizer
+    visuals:
+      enum.FoldedVisuals.State:
+        foldedLayer:
+          True: { state: Clubs4 }
+          False: { state: Back }
+  - type: Card
+    name: "Это трефы 4."
+
+- type: entity
+  parent: cardBase
+  categories: [ HideSpawnMenu ]
+  id: Clubs5
+  name: карта
+  components:
+  - type: Sprite
+    layers:
+    - state: Back
+      map: [ "unfoldedLayer" ]
+  - type: GenericVisualizer
+    visuals:
+      enum.FoldedVisuals.State:
+        foldedLayer:
+          True: { state: Clubs5 }
+          False: { state: Back }
+  - type: Card
+    name: "Это трефы 5."
+
+- type: entity
+  parent: cardBase
+  categories: [ HideSpawnMenu ]
+  id: Clubs6
+  name: карта
+  components:
+  - type: Sprite
+    layers:
+    - state: Back
+      map: [ "unfoldedLayer" ]
+  - type: GenericVisualizer
+    visuals:
+      enum.FoldedVisuals.State:
+        foldedLayer:
+          True: { state: Clubs6 }
+          False: { state: Back }
+  - type: Card
+    name: "Это трефы 6."
+
+- type: entity
+  parent: cardBase
+  categories: [ HideSpawnMenu ]
+  id: Clubs7
+  name: карта
+  components:
+  - type: Sprite
+    layers:
+    - state: Back
+      map: [ "unfoldedLayer" ]
+  - type: GenericVisualizer
+    visuals:
+      enum.FoldedVisuals.State:
+        foldedLayer:
+          True: { state: Clubs7 }
+          False: { state: Back }
+  - type: Card
+    name: "Это трефы 7."
+
+- type: entity
+  parent: cardBase
+  categories: [ HideSpawnMenu ]
+  id: Clubs8
+  name: карта
+  components:
+  - type: Sprite
+    layers:
+    - state: Back
+      map: [ "unfoldedLayer" ]
+  - type: GenericVisualizer
+    visuals:
+      enum.FoldedVisuals.State:
+        foldedLayer:
+          True: { state: Clubs8 }
+          False: { state: Back }
+  - type: Card
+    name: "Это трефы 8."
+
+- type: entity
+  parent: cardBase
+  categories: [ HideSpawnMenu ]
+  id: Clubs9
+  name: карта
+  components:
+  - type: Sprite
+    layers:
+    - state: Back
+      map: [ "unfoldedLayer" ]
+  - type: GenericVisualizer
+    visuals:
+      enum.FoldedVisuals.State:
+        foldedLayer:
+          True: { state: Clubs9 }
+          False: { state: Back }
+  - type: Card
+    name: "Это трефы 9."
+
+- type: entity
+  parent: cardBase
+  categories: [ HideSpawnMenu ]
+  id: Clubs10
+  name: карта
+  components:
+  - type: Sprite
+    layers:
+    - state: Back
+      map: [ "unfoldedLayer" ]
+  - type: GenericVisualizer
+    visuals:
+      enum.FoldedVisuals.State:
+        foldedLayer:
+          True: { state: Clubs10 }
+          False: { state: Back }
+  - type: Card
+    name: "Это трефы 10."
+
+- type: entity
+  parent: cardBase
+  categories: [ HideSpawnMenu ]
+  id: Clubs11
+  name: карта
+  components:
+  - type: Sprite
+    layers:
+    - state: Back
+      map: [ "unfoldedLayer" ]
+  - type: GenericVisualizer
+    visuals:
+      enum.FoldedVisuals.State:
+        foldedLayer:
+          True: { state: Clubs11 }
+          False: { state: Back }
+  - type: Card
+    name: "Это трефы король."
+
+- type: entity
+  parent: cardBase
+  categories: [ HideSpawnMenu ]
+  id: Clubs12
+  name: карта
+  components:
+  - type: Sprite
+    layers:
+    - state: Back
+      map: [ "unfoldedLayer" ]
+  - type: GenericVisualizer
+    visuals:
+      enum.FoldedVisuals.State:
+        foldedLayer:
+          True: { state: Clubs12 }
+          False: { state: Back }
+  - type: Card
+    name: "Это трефы дама."
+
+- type: entity
+  parent: cardBase
+  categories: [ HideSpawnMenu ]
+  id: Clubs13
+  name: карта
+  components:
+  - type: Sprite
+    layers:
+    - state: Back
+      map: [ "unfoldedLayer" ]
+  - type: GenericVisualizer
+    visuals:
+      enum.FoldedVisuals.State:
+        foldedLayer:
+          True: { state: Clubs13 }
+          False: { state: Back }
+  - type: Card
+    name: "Это трефы валет."
+
+# Diamonds
+- type: entity
+  parent: cardBase
+  categories: [ HideSpawnMenu ]
+  id: Diamonds1
+  name: карта
+  components:
+  - type: Sprite
+    layers:
+    - state: Back
+      map: [ "unfoldedLayer" ]
+  - type: GenericVisualizer
+    visuals:
+      enum.FoldedVisuals.State:
+        foldedLayer:
+          True: { state: Diamonds1 }
+          False: { state: Back }
+  - type: Card
+    name: "Это бубны туз."
+
+- type: entity
+  parent: cardBase
+  categories: [ HideSpawnMenu ]
+  id: Diamonds2
+  name: карта
+  components:
+  - type: Sprite
+    layers:
+    - state: Back
+      map: [ "unfoldedLayer" ]
+  - type: GenericVisualizer
+    visuals:
+      enum.FoldedVisuals.State:
+        foldedLayer:
+          True: { state: Diamonds2 }
+          False: { state: Back }
+  - type: Card
+    name: "Это бубны 2."
+
+- type: entity
+  parent: cardBase
+  categories: [ HideSpawnMenu ]
+  id: Diamonds3
+  name: карта
+  components:
+  - type: Sprite
+    layers:
+    - state: Back
+      map: [ "unfoldedLayer" ]
+  - type: GenericVisualizer
+    visuals:
+      enum.FoldedVisuals.State:
+        foldedLayer:
+          True: { state: Diamonds3 }
+          False: { state: Back }
+  - type: Card
+    name: "Это бубны 3."
+
+- type: entity
+  parent: cardBase
+  categories: [ HideSpawnMenu ]
+  id: Diamonds4
+  name: карта
+  components:
+  - type: Sprite
+    layers:
+    - state: Back
+      map: [ "unfoldedLayer" ]
+  - type: GenericVisualizer
+    visuals:
+      enum.FoldedVisuals.State:
+        foldedLayer:
+          True: { state: Diamonds4 }
+          False: { state: Back }
+  - type: Card
+    name: "Это бубны 4."
+
+- type: entity
+  parent: cardBase
+  categories: [ HideSpawnMenu ]
+  id: Diamonds5
+  name: карта
+  components:
+  - type: Sprite
+    layers:
+    - state: Back
+      map: [ "unfoldedLayer" ]
+  - type: GenericVisualizer
+    visuals:
+      enum.FoldedVisuals.State:
+        foldedLayer:
+          True: { state: Diamonds5 }
+          False: { state: Back }
+  - type: Card
+    name: "Это бубны 5."
+
+- type: entity
+  parent: cardBase
+  categories: [ HideSpawnMenu ]
+  id: Diamonds6
+  name: карта
+  components:
+  - type: Sprite
+    layers:
+    - state: Back
+      map: [ "unfoldedLayer" ]
+  - type: GenericVisualizer
+    visuals:
+      enum.FoldedVisuals.State:
+        foldedLayer:
+          True: { state: Diamonds6 }
+          False: { state: Back }
+  - type: Card
+    name: "Это бубны 6."
+
+- type: entity
+  parent: cardBase
+  categories: [ HideSpawnMenu ]
+  id: Diamonds7
+  name: карта
+  components:
+  - type: Sprite
+    layers:
+    - state: Back
+      map: [ "unfoldedLayer" ]
+  - type: GenericVisualizer
+    visuals:
+      enum.FoldedVisuals.State:
+        foldedLayer:
+          True: { state: Diamonds7 }
+          False: { state: Back }
+  - type: Card
+    name: "Это бубны 7."
+
+- type: entity
+  parent: cardBase
+  categories: [ HideSpawnMenu ]
+  id: Diamonds8
+  name: карта
+  components:
+  - type: Sprite
+    layers:
+    - state: Back
+      map: [ "unfoldedLayer" ]
+  - type: GenericVisualizer
+    visuals:
+      enum.FoldedVisuals.State:
+        foldedLayer:
+          True: { state: Diamonds8 }
+          False: { state: Back }
+  - type: Card
+    name: "Это бубны 8."
+
+- type: entity
+  parent: cardBase
+  categories: [ HideSpawnMenu ]
+  id: Diamonds9
+  name: карта
+  components:
+  - type: Sprite
+    layers:
+    - state: Back
+      map: [ "unfoldedLayer" ]
+  - type: GenericVisualizer
+    visuals:
+      enum.FoldedVisuals.State:
+        foldedLayer:
+          True: { state: Diamonds9 }
+          False: { state: Back }
+  - type: Card
+    name: "Это бубны 9."
+
+- type: entity
+  parent: cardBase
+  categories: [ HideSpawnMenu ]
+  id: Diamonds10
+  name: карта
+  components:
+  - type: Sprite
+    layers:
+    - state: Back
+      map: [ "unfoldedLayer" ]
+  - type: GenericVisualizer
+    visuals:
+      enum.FoldedVisuals.State:
+        foldedLayer:
+          True: { state: Diamonds10 }
+          False: { state: Back }
+  - type: Card
+    name: "Это бубны 10."
+
+- type: entity
+  parent: cardBase
+  categories: [ HideSpawnMenu ]
+  id: Diamonds11
+  name: карта
+  components:
+  - type: Sprite
+    layers:
+    - state: Back
+      map: [ "unfoldedLayer" ]
+  - type: GenericVisualizer
+    visuals:
+      enum.FoldedVisuals.State:
+        foldedLayer:
+          True: { state: Diamonds11 }
+          False: { state: Back }
+  - type: Card
+    name: "Это бубны король."
+
+- type: entity
+  parent: cardBase
+  categories: [ HideSpawnMenu ]
+  id: Diamonds12
+  name: карта
+  components:
+  - type: Sprite
+    layers:
+    - state: Back
+      map: [ "unfoldedLayer" ]
+  - type: GenericVisualizer
+    visuals:
+      enum.FoldedVisuals.State:
+        foldedLayer:
+          True: { state: Diamonds12 }
+          False: { state: Back }
+  - type: Card
+    name: "Это бубны дама."
+
+- type: entity
+  parent: cardBase
+  categories: [ HideSpawnMenu ]
+  id: Diamonds13
+  name: карта
+  components:
+  - type: Sprite
+    layers:
+    - state: Back
+      map: [ "unfoldedLayer" ]
+  - type: GenericVisualizer
+    visuals:
+      enum.FoldedVisuals.State:
+        foldedLayer:
+          True: { state: Diamonds13 }
+          False: { state: Back }
+  - type: Card
+    name: "Это бубны валет."
+
+# Hearts
+- type: entity
+  parent: cardBase
+  categories: [ HideSpawnMenu ]
+  id: Hearts1
+  name: карта
+  components:
+  - type: Sprite
+    layers:
+    - state: Back
+      map: [ "unfoldedLayer" ]
+  - type: GenericVisualizer
+    visuals:
+      enum.FoldedVisuals.State:
+        foldedLayer:
+          True: { state: Hearts1 }
+          False: { state: Back }
+  - type: Card
+    name: "Это червы туз."
+
+- type: entity
+  parent: cardBase
+  categories: [ HideSpawnMenu ]
+  id: Hearts2
+  name: карта
+  components:
+  - type: Sprite
+    layers:
+    - state: Back
+      map: [ "unfoldedLayer" ]
+  - type: GenericVisualizer
+    visuals:
+      enum.FoldedVisuals.State:
+        foldedLayer:
+          True: { state: Hearts2 }
+          False: { state: Back }
+  - type: Card
+    name: "Это червы 2."
+
+- type: entity
+  parent: cardBase
+  categories: [ HideSpawnMenu ]
+  id: Hearts3
+  name: карта
+  components:
+  - type: Sprite
+    layers:
+    - state: Back
+      map: [ "unfoldedLayer" ]
+  - type: GenericVisualizer
+    visuals:
+      enum.FoldedVisuals.State:
+        foldedLayer:
+          True: { state: Hearts3 }
+          False: { state: Back }
+  - type: Card
+    name: "Это червы 3."
+
+- type: entity
+  parent: cardBase
+  categories: [ HideSpawnMenu ]
+  id: Hearts4
+  name: карта
+  components:
+  - type: Sprite
+    layers:
+    - state: Back
+      map: [ "unfoldedLayer" ]
+  - type: GenericVisualizer
+    visuals:
+      enum.FoldedVisuals.State:
+        foldedLayer:
+          True: { state: Hearts4 }
+          False: { state: Back }
+  - type: Card
+    name: "Это червы 4."
+
+- type: entity
+  parent: cardBase
+  categories: [ HideSpawnMenu ]
+  id: Hearts5
+  name: карта
+  components:
+  - type: Sprite
+    layers:
+    - state: Back
+      map: [ "unfoldedLayer" ]
+  - type: GenericVisualizer
+    visuals:
+      enum.FoldedVisuals.State:
+        foldedLayer:
+          True: { state: Hearts5 }
+          False: { state: Back }
+  - type: Card
+    name: "Это червы 5."
+
+- type: entity
+  parent: cardBase
+  categories: [ HideSpawnMenu ]
+  id: Hearts6
+  name: карта
+  components:
+  - type: Sprite
+    layers:
+    - state: Back
+      map: [ "unfoldedLayer" ]
+  - type: GenericVisualizer
+    visuals:
+      enum.FoldedVisuals.State:
+        foldedLayer:
+          True: { state: Hearts6 }
+          False: { state: Back }
+  - type: Card
+    name: "Это червы 6."
+
+- type: entity
+  parent: cardBase
+  categories: [ HideSpawnMenu ]
+  id: Hearts7
+  name: карта
+  components:
+  - type: Sprite
+    layers:
+    - state: Back
+      map: [ "unfoldedLayer" ]
+  - type: GenericVisualizer
+    visuals:
+      enum.FoldedVisuals.State:
+        foldedLayer:
+          True: { state: Hearts7 }
+          False: { state: Back }
+  - type: Card
+    name: "Это червы 7."
+
+- type: entity
+  parent: cardBase
+  categories: [ HideSpawnMenu ]
+  id: Hearts8
+  name: карта
+  components:
+  - type: Sprite
+    layers:
+    - state: Back
+      map: [ "unfoldedLayer" ]
+  - type: GenericVisualizer
+    visuals:
+      enum.FoldedVisuals.State:
+        foldedLayer:
+          True: { state: Hearts8 }
+          False: { state: Back }
+  - type: Card
+    name: "Это червы 8."
+
+- type: entity
+  parent: cardBase
+  categories: [ HideSpawnMenu ]
+  id: Hearts9
+  name: карта
+  components:
+  - type: Sprite
+    layers:
+    - state: Back
+      map: [ "unfoldedLayer" ]
+  - type: GenericVisualizer
+    visuals:
+      enum.FoldedVisuals.State:
+        foldedLayer:
+          True: { state: Hearts9 }
+          False: { state: Back }
+  - type: Card
+    name: "Это червы 9."
+
+- type: entity
+  parent: cardBase
+  categories: [ HideSpawnMenu ]
+  id: Hearts10
+  name: карта
+  components:
+  - type: Sprite
+    layers:
+    - state: Back
+      map: [ "unfoldedLayer" ]
+  - type: GenericVisualizer
+    visuals:
+      enum.FoldedVisuals.State:
+        foldedLayer:
+          True: { state: Hearts10 }
+          False: { state: Back }
+  - type: Card
+    name: "Это червы 10."
+
+- type: entity
+  parent: cardBase
+  categories: [ HideSpawnMenu ]
+  id: Hearts11
+  name: карта
+  components:
+  - type: Sprite
+    layers:
+    - state: Back
+      map: [ "unfoldedLayer" ]
+  - type: GenericVisualizer
+    visuals:
+      enum.FoldedVisuals.State:
+        foldedLayer:
+          True: { state: Hearts11 }
+          False: { state: Back }
+  - type: Card
+    name: "Это червы король."
+
+- type: entity
+  parent: cardBase
+  categories: [ HideSpawnMenu ]
+  id: Hearts12
+  name: карта
+  components:
+  - type: Sprite
+    layers:
+    - state: Back
+      map: [ "unfoldedLayer" ]
+  - type: GenericVisualizer
+    visuals:
+      enum.FoldedVisuals.State:
+        foldedLayer:
+          True: { state: Hearts12 }
+          False: { state: Back }
+  - type: Card
+    name: "Это червы дама."
+
+- type: entity
+  parent: cardBase
+  categories: [ HideSpawnMenu ]
+  id: Hearts13
+  name: карта
+  components:
+  - type: Sprite
+    layers:
+    - state: Back
+      map: [ "unfoldedLayer" ]
+  - type: GenericVisualizer
+    visuals:
+      enum.FoldedVisuals.State:
+        foldedLayer:
+          True: { state: Hearts13 }
+          False: { state: Back }
+  - type: Card
+    name: "Это червы валет."
+
+- type: entity
+  parent: cardBase
+  categories: [ HideSpawnMenu ]
+  id: Hearts14
+  name: карта
+  components:
+  - type: Sprite
+    layers:
+    - state: Back
+      map: [ "unfoldedLayer" ]
+  - type: GenericVisualizer
+    visuals:
+      enum.FoldedVisuals.State:
+        foldedLayer:
+          True: { state: Hearts14 }
+          False: { state: Back }
+  - type: Card
+    name: "Это червы джокер."
+
+# Spades
+- type: entity
+  parent: cardBase
+  categories: [ HideSpawnMenu ]
+  id: Spades1
+  name: карта
+  components:
+  - type: Sprite
+    layers:
+    - state: Back
+      map: [ "unfoldedLayer" ]
+  - type: GenericVisualizer
+    visuals:
+      enum.FoldedVisuals.State:
+        foldedLayer:
+          True: { state: Spades1 }
+          False: { state: Back }
+  - type: Card
+    name: "Это пики туз."
+
+- type: entity
+  parent: cardBase
+  categories: [ HideSpawnMenu ]
+  id: Spades2
+  name: карта
+  components:
+  - type: Sprite
+    layers:
+    - state: Back
+      map: [ "unfoldedLayer" ]
+  - type: GenericVisualizer
+    visuals:
+      enum.FoldedVisuals.State:
+        foldedLayer:
+          True: { state: Spades2 }
+          False: { state: Back }
+  - type: Card
+    name: "Это пики 2."
+
+- type: entity
+  parent: cardBase
+  categories: [ HideSpawnMenu ]
+  id: Spades3
+  name: карта
+  components:
+  - type: Sprite
+    layers:
+    - state: Back
+      map: [ "unfoldedLayer" ]
+  - type: GenericVisualizer
+    visuals:
+      enum.FoldedVisuals.State:
+        foldedLayer:
+          True: { state: Spades3 }
+          False: { state: Back }
+  - type: Card
+    name: "Это пики 3."
+
+- type: entity
+  parent: cardBase
+  categories: [ HideSpawnMenu ]
+  id: Spades4
+  name: карта
+  components:
+  - type: Sprite
+    layers:
+    - state: Back
+      map: [ "unfoldedLayer" ]
+  - type: GenericVisualizer
+    visuals:
+      enum.FoldedVisuals.State:
+        foldedLayer:
+          True: { state: Spades4 }
+          False: { state: Back }
+  - type: Card
+    name: "Это пики 4."
+
+- type: entity
+  parent: cardBase
+  categories: [ HideSpawnMenu ]
+  id: Spades5
+  name: карта
+  components:
+  - type: Sprite
+    layers:
+    - state: Back
+      map: [ "unfoldedLayer" ]
+  - type: GenericVisualizer
+    visuals:
+      enum.FoldedVisuals.State:
+        foldedLayer:
+          True: { state: Spades5 }
+          False: { state: Back }
+  - type: Card
+    name: "Это пики 5."
+
+- type: entity
+  parent: cardBase
+  categories: [ HideSpawnMenu ]
+  id: Spades6
+  name: карта
+  components:
+  - type: Sprite
+    layers:
+    - state: Back
+      map: [ "unfoldedLayer" ]
+  - type: GenericVisualizer
+    visuals:
+      enum.FoldedVisuals.State:
+        foldedLayer:
+          True: { state: Spades6 }
+          False: { state: Back }
+  - type: Card
+    name: "Это пики 6."
+
+- type: entity
+  parent: cardBase
+  categories: [ HideSpawnMenu ]
+  id: Spades7
+  name: карта
+  components:
+  - type: Sprite
+    layers:
+    - state: Back
+      map: [ "unfoldedLayer" ]
+  - type: GenericVisualizer
+    visuals:
+      enum.FoldedVisuals.State:
+        foldedLayer:
+          True: { state: Spades7 }
+          False: { state: Back }
+  - type: Card
+    name: "Это пики 7."
+
+- type: entity
+  parent: cardBase
+  categories: [ HideSpawnMenu ]
+  id: Spades8
+  name: карта
+  components:
+  - type: Sprite
+    layers:
+    - state: Back
+      map: [ "unfoldedLayer" ]
+  - type: GenericVisualizer
+    visuals:
+      enum.FoldedVisuals.State:
+        foldedLayer:
+          True: { state: Spades8 }
+          False: { state: Back }
+  - type: Card
+    name: "Это пики 8."
+
+- type: entity
+  parent: cardBase
+  categories: [ HideSpawnMenu ]
+  id: Spades9
+  name: карта
+  components:
+  - type: Sprite
+    layers:
+    - state: Back
+      map: [ "unfoldedLayer" ]
+  - type: GenericVisualizer
+    visuals:
+      enum.FoldedVisuals.State:
+        foldedLayer:
+          True: { state: Spades9 }
+          False: { state: Back }
+  - type: Card
+    name: "Это пики 9."
+
+- type: entity
+  parent: cardBase
+  categories: [ HideSpawnMenu ]
+  id: Spades10
+  name: карта
+  components:
+  - type: Sprite
+    layers:
+    - state: Back
+      map: [ "unfoldedLayer" ]
+  - type: GenericVisualizer
+    visuals:
+      enum.FoldedVisuals.State:
+        foldedLayer:
+          True: { state: Spades10 }
+          False: { state: Back }
+  - type: Card
+    name: "Это пики 10."
+
+- type: entity
+  parent: cardBase
+  categories: [ HideSpawnMenu ]
+  id: Spades11
+  name: карта
+  components:
+  - type: Sprite
+    layers:
+    - state: Back
+      map: [ "unfoldedLayer" ]
+  - type: GenericVisualizer
+    visuals:
+      enum.FoldedVisuals.State:
+        foldedLayer:
+          True: { state: Spades11 }
+          False: { state: Back }
+  - type: Card
+    name: "Это пики король."
+
+- type: entity
+  parent: cardBase
+  categories: [ HideSpawnMenu ]
+  id: Spades12
+  name: карта
+  components:
+  - type: Sprite
+    layers:
+    - state: Back
+      map: [ "unfoldedLayer" ]
+  - type: GenericVisualizer
+    visuals:
+      enum.FoldedVisuals.State:
+        foldedLayer:
+          True: { state: Spades12 }
+          False: { state: Back }
+  - type: Card
+    name: "Это пики дама."
+
+- type: entity
+  parent: cardBase
+  categories: [ HideSpawnMenu ]
+  id: Spades13
+  name: карта
+  components:
+  - type: Sprite
+    layers:
+    - state: Back
+      map: [ "unfoldedLayer" ]
+  - type: GenericVisualizer
+    visuals:
+      enum.FoldedVisuals.State:
+        foldedLayer:
+          True: { state: Spades13 }
+          False: { state: Back }
+  - type: Card
+    name: "Это пики валет."
+
+- type: entity
+  parent: cardBase
+  categories: [ HideSpawnMenu ]
+  id: Spades14
+  name: карта
+  components:
+  - type: Sprite
+    layers:
+    - state: Back
+      map: [ "unfoldedLayer" ]
+  - type: GenericVisualizer
+    visuals:
+      enum.FoldedVisuals.State:
+        foldedLayer:
+          True: { state: Spades14 }
+          False: { state: Back }
+  - type: Card
+    name: "Это пики джокер."
+
+  # Other
+
+- type: entity
+  parent: cardBase
+  id: cardRandom
+  name: карта
+  suffix: Случайная карта
+  description: "Обычная игральная карта"
+  components:
+  - type: Sprite
+    layers:
+    - state: Back
+      map: [ "unfoldedLayer" ]
+    - state: Clubs1
+      map: ["foldedLayer"]
+      visible: false
+  - type: RandomSpawner
+    prototypes:
+      - Clubs1
+      - Clubs2
+      - Clubs3
+      - Clubs4
+      - Clubs5
+      - Clubs6
+      - Clubs7
+      - Clubs8
+      - Clubs9
+      - Clubs10
+      - Clubs11
+      - Clubs12
+      - Clubs13
+      - Diamonds1
+      - Diamonds2
+      - Diamonds3
+      - Diamonds4
+      - Diamonds5
+      - Diamonds6
+      - Diamonds7
+      - Diamonds8
+      - Diamonds9
+      - Diamonds10
+      - Diamonds11
+      - Diamonds12
+      - Diamonds13
+      - Hearts1
+      - Hearts2
+      - Hearts3
+      - Hearts4
+      - Hearts5
+      - Hearts6
+      - Hearts7
+      - Hearts8
+      - Hearts9
+      - Hearts10
+      - Hearts11
+      - Hearts12
+      - Hearts13
+      - Hearts14
+      - Spades1
+      - Spades2
+      - Spades3
+      - Spades4
+      - Spades5
+      - Spades6
+      - Spades7
+      - Spades8
+      - Spades9
+      - Spades10
+      - Spades11
+      - Spades12
+      - Spades13
+      - Spades14
+    chance: 1
+
+- type: entity
+  name: колода карт
+  id: cardDeck
+  categories: [ HideSpawnMenu ]
+  parent: BaseItem
+  components:
+  - type: Sprite
+    sprite: _Stories/Objects/Fun/card.rsi
+    state: Back
+    layers:
+      - state: Clubs1
+  - type: CardStack
+  - type: Item
+    size: Ginormous
+  - type: CardDeck
+  - type: Appearance
+
+- type: entity
+  name: колода карт
+  id: cardDeckFull
+  parent: cardDeck
+  suffix: Полная
+  components:
+  - type: Sprite
+    sprite: _Stories/Objects/Fun/card.rsi
+    state: Back
+    layers:
+      - state: Clubs1
+  - type: CardStack
+    content:
+    - Clubs1
+    - Clubs2
+    - Clubs3
+    - Clubs4
+    - Clubs5
+    - Clubs6
+    - Clubs7
+    - Clubs8
+    - Clubs9
+    - Clubs10
+    - Clubs11
+    - Clubs12
+    - Clubs13
+    - Diamonds1
+    - Diamonds2
+    - Diamonds3
+    - Diamonds4
+    - Diamonds5
+    - Diamonds6
+    - Diamonds7
+    - Diamonds8
+    - Diamonds9
+    - Diamonds10
+    - Diamonds11
+    - Diamonds12
+    - Diamonds13
+    - Hearts1
+    - Hearts2
+    - Hearts3
+    - Hearts4
+    - Hearts5
+    - Hearts6
+    - Hearts7
+    - Hearts8
+    - Hearts9
+    - Hearts10
+    - Hearts11
+    - Hearts12
+    - Hearts13
+    - Hearts14
+    - Spades1
+    - Spades2
+    - Spades3
+    - Spades4
+    - Spades5
+    - Spades6
+    - Spades7
+    - Spades8
+    - Spades9
+    - Spades10
+    - Spades11
+    - Spades12
+    - Spades13
+    - Spades14
+  - type: Item
+    size: Huge
+  - type: CardDeck
+  - type: Appearance
+
+- type: entity
+  name: упаковка карт
+  id: cardDeckBox
+  parent: [ BaseItemCabinet, BaseItem ]
+  components:
+    - type: Openable
+      closeable: true
+      sound:
+        path: /Audio/_Stories/Items/CardDeckBox/open.ogg
+      closeSound:
+        path: /Audio/_Stories/Items/CardDeckBox/close.ogg
+    - type: CardDeckBox
+    - type: Sprite
+      sprite: _Stories/Objects/Fun/card.rsi
+      layers:
+      - state: closed
+        map: ["enum.OpenableVisuals.Layer"]
+      - state: box-1
+        map: ["enum.ItemCabinetVisuals.Layer"]
+        visible: true
+    - type: ItemSlots
+      slots:
+        ItemCabinet:
+          ejectOnInteract: true
+          whitelist:
+            components:
+            - CardDeck
+          insertSound:
+            path: /Audio/_Stories/Items/CardDeckBox/adddeck.ogg
+          ejectSound:
+            path: /Audio/_Stories/Items/CardDeckBox/removedeck.ogg
+
+- type: entity
+  parent: cardDeckBox
+  id: cardDeckBoxOpen
+  suffix: Open
+  components:
+  - type: Openable
+    opened: true
+
+- type: entity
+  parent: cardDeckBox
+  id: cardDeckBoxFilled
+  suffix: Filled
+  components:
+  - type: ContainerFill
+    containers:
+      ItemCabinet:
+      - cardDeckFull
+
+- type: entity
+  parent: [cardDeckBoxFilled, cardDeckBoxOpen]
+  id: cardDeckBoxFilledOpen
+  suffix: Filled, Open
+
+
+- type: entity
+  parent: BaseItem
+  id: cardFan
+  name: веер карт
+  components:
+  - type: Tag
+    tags:
+    - Card
+  - type: Appearance
+  - type: CardFan
+  - type: CardStack
+  - type: Sprite
+    sprite: _Stories/Objects/Fun/card.rsi
+    state: Back
+    layers:
+      - state: Clubs1
+  - type: UserInterface
+    interfaces:
+      enum.CardFanUiKey.Key:
+        type: FanMenuBoundUserInterface
+  - type: ActivatableUI
+    inHandsOnly: true
+    key: enum.CardFanUiKey.Key
