@@ -76,6 +76,12 @@ namespace Content.Shared.Verbs
         public static readonly VerbCategory InstrumentStyle =
             new("verb-categories-instrument-style", null);
 
+        // Stories-Cards
+        public static readonly VerbCategory Flip =
+            new("Перевернуть", null);
+
+        // Stories-Cards
+
         public static readonly VerbCategory ChannelSelect = new("verb-categories-channel-select", null);
 
         public static readonly VerbCategory SetSensor = new("verb-categories-set-sensor", null);
