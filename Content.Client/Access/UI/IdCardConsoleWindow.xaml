@@ -31,6 +31,6 @@
             <OptionButton Name="JobPresetOptionButton" />
         </GridContainer>
         <Control Name="AccessLevelControlContainer" />
-        <Button Name="GiveAllAccessButton" Text="Выдать все доступы" HorizontalAlignment="Right" />
+        <Button Name="GiveAllAccessButton" Text="Выдать полный доступ" HorizontalAlignment="Right" />
     </BoxContainer>
 </DefaultWindow>
