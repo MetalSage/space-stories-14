@@ -21,3 +21,7 @@
 - type: accessLevel
   id: Prisoner
   name: Заключенный
+
+- type: accessLevel
+  id: Sss
+  name: Судо лекс
