@@ -30,6 +30,8 @@ namespace Content.Client.Access.UI
         // The job that will be picked if the ID doesn't have a job on the station.
         private static ProtoId<JobPrototype> _defaultJob = "Passenger";
 
+        private List<ProtoId<AccessLevelPrototype>> _accessLevels; // Stories-Access
+
         public IdCardConsoleWindow(IdCardConsoleBoundUserInterface owner, IPrototypeManager prototypeManager,
             List<ProtoId<AccessLevelPrototype>> accessLevels)
         {
@@ -38,6 +40,8 @@ namespace Content.Client.Access.UI
             _logMill = _logManager.GetSawmill(SharedIdCardConsoleSystem.Sawmill);
 
             _owner = owner;
+
+            _accessLevels = accessLevels; // Stories-Access
 
             FullNameLineEdit.OnTextEntered += _ => SubmitData();
             FullNameLineEdit.OnTextChanged += _ =>
@@ -52,6 +56,8 @@ namespace Content.Client.Access.UI
                 JobTitleSaveButton.Disabled = JobTitleLineEdit.Text == _lastJobTitle;
             };
             JobTitleSaveButton.OnPressed += _ => SubmitData();
+
+            GiveAllAccessButton.OnPressed += _ => AddAllAccess();
 
             var jobs = _prototypeManager.EnumeratePrototypes<JobPrototype>().ToList();
             jobs.Sort((x, y) => string.Compare(x.LocalizedName, y.LocalizedName, StringComparison.CurrentCulture));
@@ -87,6 +93,25 @@ namespace Content.Client.Access.UI
                 }
             }
         }
+
+        // Stories-Access
+
+        private void AddAllAccess()
+        {
+            ClearAllAccess();
+
+            foreach (var accessLevel in _accessLevels)
+            {
+                if (_accessButtons.ButtonsList.TryGetValue(accessLevel, out var button) && !button.Disabled)
+                {
+                    button.Pressed = true;
+                }
+            }
+
+            SubmitData();
+        }
+
+        // Stories-Access
 
         private void SelectJobPreset(OptionButton.ItemSelectedEventArgs args)
         {
