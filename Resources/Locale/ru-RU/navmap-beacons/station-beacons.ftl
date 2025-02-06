@@ -7,6 +7,7 @@ station-beacon-captain = Капитан
 station-beacon-hop = Кабинет ГП
 station-beacon-security = Служба безопасности
 station-beacon-brig = Бриг
+station-beacon-brig-med = Бригмед
 station-beacon-warden = Смотритель
 station-beacon-hos = Кабинет ГСБ
 station-beacon-armory = Оружейная
