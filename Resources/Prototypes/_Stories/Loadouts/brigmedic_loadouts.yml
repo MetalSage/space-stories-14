@@ -1,5 +1,5 @@
 - type: roleLoadout
-  id: JobSTBrigmedic
+  id: STJobBrigmedic
   groups:
   - STBrigmedicHead
   - MedicalMask
@@ -7,7 +7,7 @@
   - MedicalGloves
   - STBrigmedicBackpack
   - MedicalShoes
-  - SurvivalSTBrigmedic
+  - STSurvivalBrigmedic
   - Trinkets
 
 - type: loadoutGroup
@@ -61,13 +61,13 @@
   - STBrigmedicDuffel
 
 - type: loadoutGroup
-  id: SurvivalSTBrigmedic
-  name: loadout-group-SurvivalSTBrigmedic
+  id: STSurvivalBrigmedic
+  name: loadout-group-STSurvivalBrigmedic
   minLimit: 2
   hidden: true
   loadouts:
-  - EmergencyNitrogenSTBrigmedic
-  - EmergencyOxygenSTBrigmedic
+  - STEmergencyNitrogenBrigmedic
+  - STEmergencyOxygenBrigmedic
   - LoadoutSpeciesVoxNitrogen
 
 # Берет бригмедика
@@ -108,17 +108,17 @@
 
 # Аварийный набор с азотом для бригмедика
 - type: loadout
-  id: EmergencyNitrogenSTBrigmedic
+  id: STEmergencyNitrogenBrigmedic
   effects:
   - !type:GroupLoadoutEffect
     proto: NitrogenBreather
   storage:
     back:
-    - BoxSurvivalSTBrigmedicNitrogen
+    - STBoxSurvivalBrigmedicNitrogen
 
 - type: entity
   parent: BoxCardboard
-  id: BoxSurvivalSTBrigmedicNitrogen
+  id: STBoxSurvivalBrigmedicNitrogen
   name: survival box brigmedic
   description: It's a box with basic internals inside.
   suffix: Brigmedic N2
@@ -138,17 +138,17 @@
 
 # Аварийный набор с кислородом для бригмедика
 - type: loadout
-  id: EmergencyOxygenSTBrigmedic
+  id: STEmergencyOxygenBrigmedic
   effects:
   - !type:GroupLoadoutEffect
     proto: OxygenBreather
   storage:
     back:
-    - BoxSurvivalSTBrigmedic
+    - STBoxSurvivalBrigmedic
 
 - type: entity
   parent: BoxCardboard
-  id: BoxSurvivalSTBrigmedic
+  id: STBoxSurvivalBrigmedic
   name: survival box brigmedic
   description: It's a box with basic internals inside.
   suffix: Brigmedic

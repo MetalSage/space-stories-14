@@ -38,11 +38,11 @@ loadout-group-STBrigmedicHead-head = Бригмедик, голова
 loadout-group-STBrigmedicHead-mask = Бригмедик, маска
 loadout-group-STBrigmedicHead-jumpsuits = Бригмедик, комбинезон
 loadout-group-STBrigmedicHead-backpack = Бригмедик, рюкзак
-loadout-group-SurvivalSTBrigmedic = аварийный запас бригмедика
-ent-BoxSurvivalSTBrigmedic = аварийный запас бригмедика
+loadout-group-STSurvivalBrigmedic = аварийный запас бригмедика
+ent-STBoxSurvivalBrigmedic = аварийный запас бригмедика
     .desc = Коробка с базовым набором для выживания.
     .suffix = Бригмедик
-ent-BoxSurvivalSTBrigmedicNitrogen = аварийный запас бригмедика
+ent-STSurvivalBrigmedicNitrogen = аварийный запас бригмедика
     .suffix = Бригмедик Азот N2
     .desc = { ent-BoxSurvival.desc }
 

@@ -117,7 +117,7 @@
 
 #Brigmedic
 
-# Stories-Commented-Start
+# Stories-Brigmedic-Start
 #- type: startingGear
 #  id: BrigmedicGear
 #  equipment:
@@ -132,7 +132,7 @@
 #    ears: ClothingHeadsetBrigmedic
 #    mask: ClothingMaskBreathMedicalSecurity
 #    belt: ClothingBeltMedicalFilled
-# Stories-Commented-End
+# Stories-Brigmedic-End
 
 # Aghost
 - type: startingGear
