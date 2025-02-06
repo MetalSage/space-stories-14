@@ -5,6 +5,8 @@
   sounds:
     Growl:
       collection: VulpkaninGrowls
+    Howl:
+      collection: VulpkaninHowl
     Snarl:
       collection: VulpkaninSnarls
     Bark:
