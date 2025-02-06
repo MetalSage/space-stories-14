@@ -51,7 +51,6 @@
       collection: MaleDeathGasp
 
 - type: emoteSounds
-  parent: FemaleHuman
   id: FemaleVulpkanin
   params:
     variation: 0.125
