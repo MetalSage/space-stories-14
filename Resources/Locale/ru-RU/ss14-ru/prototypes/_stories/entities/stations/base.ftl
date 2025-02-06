@@ -1,2 +1,2 @@
-ent-PrisonStation = { ent-BaseStation }
+ent-STPrisonStation = { ent-BaseStation }
     .desc = { ent-BaseStation.desc }

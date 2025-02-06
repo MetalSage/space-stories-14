@@ -1,6 +1,6 @@
 - type: entity
-  id: BasePRISONStationAlertLevels
+  id: STBasePrisonStationAlertLevels
   abstract: true
   components:
     - type: AlertLevel
-      alertLevelPrototype: PRISONstationAlerts
+      alertLevelPrototype: STPrisonStationAlerts

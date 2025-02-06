@@ -1,10 +1,10 @@
 - type: entity
-  id: PrisonStation
+  id: STPrisonStation
   parent:
     - BaseStation
     - BaseStationJobsSpawning
     - BaseStationNanotrasen
-    - BasePRISONStationAlertLevels
+    - STBasePrisonStationAlertLevels
     - BaseStationRecords
   categories: [ HideSpawnMenu ]
   components:
