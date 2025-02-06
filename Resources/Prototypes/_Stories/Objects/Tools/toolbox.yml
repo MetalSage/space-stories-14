@@ -1,8 +1,8 @@
 - type: entity
-  name: Старинный ящик для инструментов
+  name: ancient toolbox
   parent: ToolboxBase
   id: STToolboxAncient
-  description: A bright red toolbox, stocked with emergency tools.
+  description: A toolbox covered with cobwebs and dust.
   components:
   - type: Sprite
     sprite: _Stories/Objects/Tools/Toolboxes/toolbox_ancient.rsi
