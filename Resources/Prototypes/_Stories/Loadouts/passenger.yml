@@ -5,7 +5,7 @@
   loadouts:
   - ToolboxAncient
 
-# Древний ящик для инструментов
+# Старинный ящик для инструментов
 
 - type: loadout
   id: ToolboxAncient
