@@ -46,7 +46,7 @@
   - Survival
   - Trinkets
   - GroupSpeciesBreathTool
-  - PassengerToolbox # Stories
+  - STPassengerToolbox # Stories-Loadouts
 
 - type: roleLoadout
   id: JobBartender

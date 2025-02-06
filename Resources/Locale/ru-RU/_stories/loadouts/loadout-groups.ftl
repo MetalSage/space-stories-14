@@ -38,4 +38,4 @@ loadout-group-detective-belt = Детектив, пояс
 
 # Ассистент
 
-loadout-group-passenger-storage = Ассистент, хранилища
+stories-loadout-group-passenger-storage = Ассистент, хранилища

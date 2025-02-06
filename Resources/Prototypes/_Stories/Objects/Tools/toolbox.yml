@@ -1,7 +1,7 @@
 - type: entity
   name: Старинный ящик для инструментов
   parent: ToolboxBase
-  id: ToolboxAncient
+  id: STToolboxAncient
   description: A bright red toolbox, stocked with emergency tools.
   components:
   - type: Sprite
