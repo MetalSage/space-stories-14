@@ -1,5 +1,5 @@
 - type: entity
-  name: Старинный ящик для инструментов
+  name: Древний ящик для инструментов
   parent: ToolboxBase
   id: ToolboxAncient
   description: A bright red toolbox, stocked with emergency tools.
