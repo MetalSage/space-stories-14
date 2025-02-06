@@ -35,3 +35,7 @@ loadout-group-Jedi-outer-clothing = Страж Клинка, верхняя од
 # Детектив
 
 loadout-group-detective-belt = Детектив, пояс
+
+# Ассистент
+
+loadout-group-passenger-storage = Ассистент, хранилища
