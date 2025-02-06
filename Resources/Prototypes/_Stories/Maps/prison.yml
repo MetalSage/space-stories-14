@@ -6,7 +6,7 @@
   maxPlayers: 15
   stations:
     Prison:
-      stationProto: PrisonStation
+      stationProto: STPrisonStation
       components:
         - type: StationNameSetup
           mapNameTemplate: '{0} Prison Station {1}'

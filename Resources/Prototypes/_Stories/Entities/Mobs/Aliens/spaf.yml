@@ -47,7 +47,6 @@
   - type: Puller
     needsHands: false
   - type: Hunger
-    currentHunger: 25
     thresholds: # only animals and rats are derived from this prototype so let's override it here and in rats' proto
       Overfed: 200
       Okay: 50

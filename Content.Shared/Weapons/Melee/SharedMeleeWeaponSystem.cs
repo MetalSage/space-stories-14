@@ -729,11 +729,19 @@ public abstract class SharedMeleeWeaponSystem : EntitySystem
                 false)
                 .ToList();
 
-            // Space Stories - start (ignore HeavyAttack for ProtectiveBubble)
-            /*if (res.Count != 0)
+            /* Space Stories - start (ignore HeavyAttack for ProtectiveBubble)
+            if (res.Count != 0)
             {
-                resSet.Add(res[0].HitEntity);
-            }*/
+                // If there's exact distance overlap, we simply have to deal with all overlapping objects to avoid selecting randomly.
+                var resChecked = res.Where(x => x.Distance.Equals(res[0].Distance));
+                foreach (var r in resChecked)
+                {
+                    if (Interaction.InRangeUnobstructed(ignore, r.HitEntity, range + 0.1f, overlapCheck: false))
+                        resSet.Add(r.HitEntity);
+                }
+            }
+            */
+
             for (var index = 0; index < res.Count; index++)
             {
                 if(IsContains(Transform(ignore).ChildEnumerator, index))
@@ -741,7 +749,6 @@ public abstract class SharedMeleeWeaponSystem : EntitySystem
                 resSet.Add(res[index].HitEntity);
                 break;
             }
-
             bool IsContains(TransformChildrenEnumerator enumerator, int index)
             {
                 for (var a = 0; enumerator.MoveNext(out var child); a++)
