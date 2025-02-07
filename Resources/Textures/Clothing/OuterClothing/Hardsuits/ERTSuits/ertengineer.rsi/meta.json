@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "license": "CC-BY-SA-3.0",
-  "copyright": "Taken from paradisestation at commit https://github.com/ParadiseSS13/Paradise/commit/12c21ced8432015485484b17e311dcceb7c458f6. Vox state by Flareguy for Space Station 14",
+  "license": "CC-BY-SA-3.0 & Собственная лицензия. Копирование, модификация и использование вне проекта Space Stories полностью запрещено без предварительного согласия текущего владельца проекта",
+  "copyright": "Taken from paradisestation at commit https://github.com/ParadiseSS13/Paradise/commit/12c21ced8432015485484b17e311dcceb7c458f6 & equipped-HELMET-vox state создано XcenLegend(discord:xcenlegend) для SpaceStories(Server SS14).",
   "size": {
     "x": 32,
     "y": 32
