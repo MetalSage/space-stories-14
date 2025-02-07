@@ -395,3 +395,55 @@
   - type: EnergySword
     colorOptions:
       - Red
+
+# Blue
+
+- type: entity
+  name: синий световой меч
+  parent: Lightsaber
+  id: LightsaberBlue
+  suffix: Blue
+  description: Особенное оружие, созданное сколь для элегантного боя, сколь и для церемонний, его работа связана с кайбер-кристаллом внутри.
+  components:
+  - type: EnergySword
+    colorOptions:
+    - DodgerBlue
+
+# Green
+
+- type: entity
+  name: зелёный световой меч
+  parent: Lightsaber
+  id: LightsaberGreen
+  suffix: Green
+  description: Особенное оружие, созданное сколь для элегантного боя, сколь и для церемонний, его работа связана с кайбер-кристаллом внутри.
+  components:
+  - type: EnergySword
+    colorOptions:
+    - MediumSpringGreen
+
+# Yellow
+
+- type: entity
+  name: жёлтый световой меч
+  parent: Lightsaber
+  id: LightsaberYellow
+  suffix: Yellow
+  description: Особенное оружие, созданное сколь для элегантного боя, сколь и для церемонний, его работа связана с кайбер-кристаллом внутри.
+  components:
+  - type: EnergySword
+    colorOptions:
+    - Yellow
+
+# Purple
+
+- type: entity
+  name: фиолетовый световой меч
+  parent: Lightsaber
+  id: LightsaberPurple
+  suffix: Purple
+  description: Особенное оружие, созданное сколь для элегантного боя, сколь и для церемонний, его работа связана с кайбер-кристаллом внутри.
+  components:
+  - type: EnergySword
+    colorOptions:
+    - MediumOrchid
