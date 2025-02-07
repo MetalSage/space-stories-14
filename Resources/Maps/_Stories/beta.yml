@@ -48181,18 +48181,6 @@ entities:
     - type: Transform
       pos: 27.314047,-6.7651405
       parent: 2
-    - type: Storage
-      storedItems:
-        7145:
-          position: 0,0
-          _rotation: South
-    - type: ContainerContainer
-      containers:
-        storagebase: !type:Container
-          showEnts: False
-          occludes: True
-          ents:
-          - 7145
   - uid: 7146
     components:
     - type: Transform
@@ -48203,18 +48191,6 @@ entities:
     - type: Transform
       pos: 43.5,1.5
       parent: 2
-    - type: Storage
-      storedItems:
-        7148:
-          position: 0,0
-          _rotation: South
-    - type: ContainerContainer
-      containers:
-        storagebase: !type:Container
-          showEnts: False
-          occludes: True
-          ents:
-          - 7148
   - uid: 7149
     components:
     - type: Transform
