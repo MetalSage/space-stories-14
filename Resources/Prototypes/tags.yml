@@ -214,9 +214,6 @@
   id: CaptainSabre
 
 - type: Tag
-  id: Card
-
-- type: Tag
   id: Carpet
 
 - type: Tag

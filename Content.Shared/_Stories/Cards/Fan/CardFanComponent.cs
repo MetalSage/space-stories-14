@@ -10,7 +10,7 @@ public sealed partial class CardFanComponent : Component
     public SoundSpecifier ShuffleSound = new SoundPathSpecifier("/Audio/_Stories/Items/Cards/FanShuffle.ogg");
 
     [DataField("addSound")]
-    public SoundSpecifier AddCard = new SoundCollectionSpecifier("fanAdd");
+    public SoundSpecifier AddCard = new SoundCollectionSpecifier("FanAdd");
 }
 [Serializable, NetSerializable]
 public enum CardFanStackVisuals : byte

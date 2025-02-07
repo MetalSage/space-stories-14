@@ -49,7 +49,7 @@ public sealed class CardStackSystem : EntitySystem
         if (!args.IsInDetailsRange)
             return;
 
-        args.PushMarkup($"Всего карт в колоде: {component.Cards.Count}");
+        args.PushMarkup(Loc.GetString("card-count-total", ("cardsTotal", component.Cards.Count)));
     }
     private void OnMapInit(EntityUid uid, CardStackComponent comp, MapInitEvent args)
     {
@@ -69,10 +69,8 @@ public sealed class CardStackSystem : EntitySystem
         var maxCards = 216;
         if (!Resolve(uid, ref comp))
             return;
-
         if (!TryComp(card, out CardComponent? _))
             return;
-
         if (comp.Cards.Count > maxCards)
             return;
 
@@ -87,7 +85,6 @@ public sealed class CardStackSystem : EntitySystem
     {
         if (!Resolve(uid, ref comp))
             return;
-
         if (!TryComp(card, out CardComponent? _))
             return;
 
@@ -98,9 +95,7 @@ public sealed class CardStackSystem : EntitySystem
         if (comp.Cards.Count == 0)
         {
             if (_net.IsServer)
-            {
                 EntityManager.QueueDeleteEntity(uid);
-            }
         }
         Dirty(uid, comp);
     }
@@ -134,7 +129,6 @@ public sealed class CardStackSystem : EntitySystem
     {
         if (!TryComp<CardStackComponent>(args.Target, out var deckStackComp))
             return;
-
         if (_handsSystem.GetActiveItem(args.User) != null)
             return;
 
@@ -149,12 +143,8 @@ public sealed class CardStackSystem : EntitySystem
     public void ShuffleCards(EntityUid uid, CardStackComponent component)
     {
         if (_net.IsServer)
-        {
             _robustRandom.Shuffle(component.Cards);
-        }
-
         _appearance.SetData(uid, CardStackVisuals.Shuffled, true);
-
         Dirty(uid, component);
     }
     public void Split(EntityUid uid, CardStackComponent component, EntityUid user)
@@ -176,12 +166,10 @@ public sealed class CardStackSystem : EntitySystem
         }
 
         if (_net.IsClient)
-        {
             return;
-        }
 
         var spawnPos = Transform(user).Coordinates;
-        var entityCreated = Spawn("cardDeck", spawnPos);
+        var entityCreated = Spawn("CardDeck", spawnPos);
 
         if (TryComp<CardStackComponent>(entityCreated, out var stackComponent))
         {
@@ -189,14 +177,11 @@ public sealed class CardStackSystem : EntitySystem
             {
                 AddCard(entityCreated, card, stackComponent);
             }
-            _popup.PopupEntity($"Взято {cardsSplit} карт!", user);
+            _popup.PopupEntity(Loc.GetString("card-split-take", ("cardsSplit", cardsSplit)), user);
             _handsSystem.TryPickup(user, entityCreated);
             if (_net.IsClient)
-            {
                 _audio.PlayPredicted(component.AddCard, Transform(uid).Coordinates, user);
-            }
         }
-
         Dirty(uid, component);
     }
     private void OnGetAlternativeVerb(EntityUid uid, CardStackComponent component, GetVerbsEvent<AlternativeVerb> args)
@@ -206,11 +191,11 @@ public sealed class CardStackSystem : EntitySystem
 
         args.Verbs.Add(new AlternativeVerb()
         {
-            Text = Loc.GetString("Перетасовать"),
+            Text = Loc.GetString("card-shuffle"),
             Act = () =>
             {
                 ShuffleCards(uid, component);
-                _popup.PopupClient("Перетасовано!", args.User);
+                _popup.PopupClient(Loc.GetString("card-shuffle-success"), args.User);
                 if (TryComp<CardFanComponent>(uid, out var fanComp))
                 {
                     _audio.PlayPredicted(fanComp.ShuffleSound, Transform(uid).Coordinates, args.User);
@@ -219,13 +204,12 @@ public sealed class CardStackSystem : EntitySystem
                 {
                     _audio.PlayPredicted(deckComp.ShuffleSound, Transform(uid).Coordinates, args.User);
                 }
-
             },
             Priority = 2
         });
         args.Verbs.Add(new AlternativeVerb()
         {
-            Text = "Разделить на половину",
+            Text = Loc.GetString("card-split"),
             Act = () =>
             {
                 Split(uid, component, args.User);
@@ -234,7 +218,7 @@ public sealed class CardStackSystem : EntitySystem
         });
         args.Verbs.Add(new()
         {
-            Text = Loc.GetString("Перевернуть все"),
+            Text = Loc.GetString("card-flip-all"),
             Act = () =>
             {
                 foreach (var card in component.Cards)
@@ -246,12 +230,12 @@ public sealed class CardStackSystem : EntitySystem
                     folded = foldable.IsFolded;
                     _appearance.SetData(uid, CardVisuals.State, folded);
                 }
-                _popup.PopupClient("Перевёрнуты!", args.User);
+                _popup.PopupClient(Loc.GetString("card-flip-success"), args.User);
             },
         });
         args.Verbs.Add(new()
         {
-            Text = Loc.GetString("Перевернуть лицевой стороной"),
+            Text = Loc.GetString("card-flip-face"),
             Act = () =>
             {
                 foreach (var card in component.Cards)
@@ -263,13 +247,13 @@ public sealed class CardStackSystem : EntitySystem
                     folded = foldable.IsFolded;
                     _appearance.SetData(uid, CardVisuals.State, folded);
                 }
-                _popup.PopupClient("Перевёрнуты!", args.User);
+                _popup.PopupClient(Loc.GetString("card-flip-success"), args.User);
             },
             Category = VerbCategory.Flip
         });
         args.Verbs.Add(new()
         {
-            Text = Loc.GetString("Перевернуть задней стороной"),
+            Text = Loc.GetString("card-flip-back"),
             Act = () =>
             {
                 foreach (var card in component.Cards)
@@ -281,7 +265,7 @@ public sealed class CardStackSystem : EntitySystem
                     folded = foldable.IsFolded;
                     _appearance.SetData(uid, CardVisuals.State, folded);
                 }
-                _popup.PopupClient("Перевёрнуты!", args.User);
+                _popup.PopupClient(Loc.GetString("card-flip-success"), args.User);
             },
             Category = VerbCategory.Flip
         });

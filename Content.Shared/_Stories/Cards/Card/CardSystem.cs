@@ -33,9 +33,7 @@ public sealed class CardSystem : EntitySystem
         if (!TryComp<FoldableComponent>(uid, out var foldable))
             return;
         if (args.IsInDetailsRange && foldable.IsFolded)
-        {
             args.PushMarkup($"{component.Name}");
-        }
     }
     private void CreateDeck(EntityUid user, EntityUid target, CardComponent? component = null)
     {
@@ -43,14 +41,9 @@ public sealed class CardSystem : EntitySystem
         var usedEntity = _handsSystem.GetActiveItem(user);
 
         if (usedEntity == target)
-        {
             return;
-        }
-
         if (usedEntity == null)
-        {
             return;
-        }
 
         if (_net.IsServer)
         {
@@ -58,19 +51,17 @@ public sealed class CardSystem : EntitySystem
                 return;
 
             var spawnPos = Transform(user).Coordinates;
-            var entityCreated = Spawn("cardDeck", spawnPos);
+            var entityCreated = Spawn("CardDeck", spawnPos);
 
             if (!TryComp<CardStackComponent>(entityCreated, out var stackComp))
                 return;
 
             stackComponent = stackComp;
-
             _stackSystem.AddCard(entityCreated, usedEntity.Value, stackComp);
             _stackSystem.AddCard(entityCreated, target, stackComp);
 
             _handsSystem.TryPickupAnyHand(user, entityCreated);
         }
-
         _audio.PlayPredicted(stackComponent.AddCard, Transform(user).Coordinates, user);
     }
     private void OnActivateInWorld(EntityUid uid, CardComponent comp, ActivateInWorldEvent args)
@@ -90,38 +81,30 @@ public sealed class CardSystem : EntitySystem
 
         if (usedEntity == target)
             return;
-
         if (usedEntity == null)
             return;
-
         if (!_tagSystem.HasTag(usedEntity.Value, "Card"))
             return;
 
         var spawnPos = Transform(user).Coordinates;
 
-
         if (_net.IsServer)
         {
-            var entityCreated = Spawn("cardFan", spawnPos);
+            var entityCreated = Spawn("CardFan", spawnPos);
 
             if (!TryComp<CardStackComponent>(entityCreated, out var stackComp))
                 return;
-
             if (!TryComp<CardFanComponent>(entityCreated, out var fanComp))
                 return;
 
             fanComponent = fanComp;
-
             _stackSystem.AddCard(entityCreated, usedEntity.Value, stackComp);
             _stackSystem.AddCard(entityCreated, target, stackComp);
-
             _handsSystem.TryPickupAnyHand(user, entityCreated);
 
             Dirty(entityCreated, stackComp);
         }
-
         _audio.PlayPredicted(fanComponent.AddCard, Transform(user).Coordinates, user);
-
     }
     private void OnCardSelected(EntityUid uid, CardFanComponent component, CardSelectedMessage message)
     {
@@ -132,11 +115,8 @@ public sealed class CardSystem : EntitySystem
         if (!TryGetEntity(message.User, out var user))
             return;
 
-
         _stackSystem.RemoveCard(uid, cardEntity.Value, stackComp);
-
         _handsSystem.TryPickupAnyHand(user.Value, cardEntity.Value);
-
         _appearance.SetData(uid, CardFanStackVisuals.CardsCount, stackComp.Cards.Count);
     }
 }

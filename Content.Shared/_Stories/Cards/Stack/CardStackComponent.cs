@@ -19,10 +19,10 @@ public sealed partial class CardStackComponent : Component
     public Container CardContainer = default!;
 
     [DataField("addCardSound")]
-    public SoundSpecifier AddCard = new SoundCollectionSpecifier("addCard");
+    public SoundSpecifier AddCard = new SoundCollectionSpecifier("AddCard");
 
     [DataField("removeCardSound")]
-    public SoundSpecifier RemoveCard = new SoundCollectionSpecifier("removeCard");
+    public SoundSpecifier RemoveCard = new SoundCollectionSpecifier("RemoveCard");
 }
 
 [Serializable, NetSerializable]

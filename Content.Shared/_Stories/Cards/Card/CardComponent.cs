@@ -7,7 +7,7 @@ namespace Content.Shared._Stories.Cards.Card;
 public sealed partial class CardComponent : Component
 {
     [DataField("name", readOnly: true), AutoNetworkedField]
-    public string Name = "";
+    public string Name;
 }
 
 [Serializable, NetSerializable]

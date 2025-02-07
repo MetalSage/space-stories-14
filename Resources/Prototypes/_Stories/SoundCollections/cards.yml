@@ -1,11 +1,11 @@
 - type: soundCollection
-  id: shuffleDeck
+  id: ShuffleDeck
   files:
   - /Audio/_Stories/Items/Cards/Shuffle1.ogg
   - /Audio/_Stories/Items/Cards/Shuffle2.ogg
 
 - type: soundCollection
-  id: addCard
+  id: AddCard
   files:
   - /Audio/_Stories/Items/Cards/AddCard1.ogg
   - /Audio/_Stories/Items/Cards/AddCard2.ogg
@@ -13,7 +13,7 @@
   - /Audio/_Stories/Items/Cards/AddCard4.ogg
 
 - type: soundCollection
-  id: removeCard
+  id: RemoveCard
   files:
   - /Audio/_Stories/Items/Cards/RemoveCard1.ogg
   - /Audio/_Stories/Items/Cards/RemoveCard2.ogg
@@ -25,7 +25,7 @@
   - /Audio/_Stories/Items/Cards/RemoveCard8.ogg
 
 - type: soundCollection
-  id: fanAdd
+  id: FanAdd
   files:
   - /Audio/_Stories/Items/Cards/FanAdd1.ogg
   - /Audio/_Stories/Items/Cards/FanAdd2.ogg

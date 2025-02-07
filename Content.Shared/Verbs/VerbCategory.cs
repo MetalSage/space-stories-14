@@ -78,8 +78,7 @@ namespace Content.Shared.Verbs
 
         // Stories-Cards
         public static readonly VerbCategory Flip =
-            new("Перевернуть", null);
-
+            new(Loc.GetString("card-flip-verb"), null);
         // Stories-Cards
 
         public static readonly VerbCategory ChannelSelect = new("verb-categories-channel-select", null);

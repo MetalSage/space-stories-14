@@ -1,4 +1,7 @@
 - type: Tag
+  id: Card
+
+- type: Tag
   id: ForceRecallEquipment
 
 - type: Tag

@@ -1,7 +1,7 @@
 - type: entity
   parent: [BaseItem, BaseFoldable]
   abstract: true
-  id: cardBase
+  id: CardBase
   name: карта
   components:
   - type: Appearance
@@ -15,7 +15,7 @@
 
 # Clubs
 - type: entity
-  parent: cardBase
+  parent: CardBase
   categories: [ HideSpawnMenu ]
   id: Clubs1
   name: карта
@@ -34,7 +34,7 @@
     name: "Это трефы туз."
 
 - type: entity
-  parent: cardBase
+  parent: CardBase
   categories: [ HideSpawnMenu ]
   id: Clubs2
   name: карта
@@ -53,7 +53,7 @@
     name: "Это трефы 2."
 
 - type: entity
-  parent: cardBase
+  parent: CardBase
   categories: [ HideSpawnMenu ]
   id: Clubs3
   name: карта
@@ -72,7 +72,7 @@
     name: "Это трефы 3."
 
 - type: entity
-  parent: cardBase
+  parent: CardBase
   categories: [ HideSpawnMenu ]
   id: Clubs4
   name: карта
@@ -91,7 +91,7 @@
     name: "Это трефы 4."
 
 - type: entity
-  parent: cardBase
+  parent: CardBase
   categories: [ HideSpawnMenu ]
   id: Clubs5
   name: карта
@@ -110,7 +110,7 @@
     name: "Это трефы 5."
 
 - type: entity
-  parent: cardBase
+  parent: CardBase
   categories: [ HideSpawnMenu ]
   id: Clubs6
   name: карта
@@ -129,7 +129,7 @@
     name: "Это трефы 6."
 
 - type: entity
-  parent: cardBase
+  parent: CardBase
   categories: [ HideSpawnMenu ]
   id: Clubs7
   name: карта
@@ -148,7 +148,7 @@
     name: "Это трефы 7."
 
 - type: entity
-  parent: cardBase
+  parent: CardBase
   categories: [ HideSpawnMenu ]
   id: Clubs8
   name: карта
@@ -167,7 +167,7 @@
     name: "Это трефы 8."
 
 - type: entity
-  parent: cardBase
+  parent: CardBase
   categories: [ HideSpawnMenu ]
   id: Clubs9
   name: карта
@@ -186,7 +186,7 @@
     name: "Это трефы 9."
 
 - type: entity
-  parent: cardBase
+  parent: CardBase
   categories: [ HideSpawnMenu ]
   id: Clubs10
   name: карта
@@ -205,7 +205,7 @@
     name: "Это трефы 10."
 
 - type: entity
-  parent: cardBase
+  parent: CardBase
   categories: [ HideSpawnMenu ]
   id: Clubs11
   name: карта
@@ -224,7 +224,7 @@
     name: "Это трефы король."
 
 - type: entity
-  parent: cardBase
+  parent: CardBase
   categories: [ HideSpawnMenu ]
   id: Clubs12
   name: карта
@@ -243,7 +243,7 @@
     name: "Это трефы дама."
 
 - type: entity
-  parent: cardBase
+  parent: CardBase
   categories: [ HideSpawnMenu ]
   id: Clubs13
   name: карта
@@ -263,7 +263,7 @@
 
 # Diamonds
 - type: entity
-  parent: cardBase
+  parent: CardBase
   categories: [ HideSpawnMenu ]
   id: Diamonds1
   name: карта
@@ -282,7 +282,7 @@
     name: "Это бубны туз."
 
 - type: entity
-  parent: cardBase
+  parent: CardBase
   categories: [ HideSpawnMenu ]
   id: Diamonds2
   name: карта
@@ -301,7 +301,7 @@
     name: "Это бубны 2."
 
 - type: entity
-  parent: cardBase
+  parent: CardBase
   categories: [ HideSpawnMenu ]
   id: Diamonds3
   name: карта
@@ -320,7 +320,7 @@
     name: "Это бубны 3."
 
 - type: entity
-  parent: cardBase
+  parent: CardBase
   categories: [ HideSpawnMenu ]
   id: Diamonds4
   name: карта
@@ -339,7 +339,7 @@
     name: "Это бубны 4."
 
 - type: entity
-  parent: cardBase
+  parent: CardBase
   categories: [ HideSpawnMenu ]
   id: Diamonds5
   name: карта
@@ -358,7 +358,7 @@
     name: "Это бубны 5."
 
 - type: entity
-  parent: cardBase
+  parent: CardBase
   categories: [ HideSpawnMenu ]
   id: Diamonds6
   name: карта
@@ -377,7 +377,7 @@
     name: "Это бубны 6."
 
 - type: entity
-  parent: cardBase
+  parent: CardBase
   categories: [ HideSpawnMenu ]
   id: Diamonds7
   name: карта
@@ -396,7 +396,7 @@
     name: "Это бубны 7."
 
 - type: entity
-  parent: cardBase
+  parent: CardBase
   categories: [ HideSpawnMenu ]
   id: Diamonds8
   name: карта
@@ -415,7 +415,7 @@
     name: "Это бубны 8."
 
 - type: entity
-  parent: cardBase
+  parent: CardBase
   categories: [ HideSpawnMenu ]
   id: Diamonds9
   name: карта
@@ -434,7 +434,7 @@
     name: "Это бубны 9."
 
 - type: entity
-  parent: cardBase
+  parent: CardBase
   categories: [ HideSpawnMenu ]
   id: Diamonds10
   name: карта
@@ -453,7 +453,7 @@
     name: "Это бубны 10."
 
 - type: entity
-  parent: cardBase
+  parent: CardBase
   categories: [ HideSpawnMenu ]
   id: Diamonds11
   name: карта
@@ -472,7 +472,7 @@
     name: "Это бубны король."
 
 - type: entity
-  parent: cardBase
+  parent: CardBase
   categories: [ HideSpawnMenu ]
   id: Diamonds12
   name: карта
@@ -491,7 +491,7 @@
     name: "Это бубны дама."
 
 - type: entity
-  parent: cardBase
+  parent: CardBase
   categories: [ HideSpawnMenu ]
   id: Diamonds13
   name: карта
@@ -511,7 +511,7 @@
 
 # Hearts
 - type: entity
-  parent: cardBase
+  parent: CardBase
   categories: [ HideSpawnMenu ]
   id: Hearts1
   name: карта
@@ -530,7 +530,7 @@
     name: "Это червы туз."
 
 - type: entity
-  parent: cardBase
+  parent: CardBase
   categories: [ HideSpawnMenu ]
   id: Hearts2
   name: карта
@@ -549,7 +549,7 @@
     name: "Это червы 2."
 
 - type: entity
-  parent: cardBase
+  parent: CardBase
   categories: [ HideSpawnMenu ]
   id: Hearts3
   name: карта
@@ -568,7 +568,7 @@
     name: "Это червы 3."
 
 - type: entity
-  parent: cardBase
+  parent: CardBase
   categories: [ HideSpawnMenu ]
   id: Hearts4
   name: карта
@@ -587,7 +587,7 @@
     name: "Это червы 4."
 
 - type: entity
-  parent: cardBase
+  parent: CardBase
   categories: [ HideSpawnMenu ]
   id: Hearts5
   name: карта
@@ -606,7 +606,7 @@
     name: "Это червы 5."
 
 - type: entity
-  parent: cardBase
+  parent: CardBase
   categories: [ HideSpawnMenu ]
   id: Hearts6
   name: карта
@@ -625,7 +625,7 @@
     name: "Это червы 6."
 
 - type: entity
-  parent: cardBase
+  parent: CardBase
   categories: [ HideSpawnMenu ]
   id: Hearts7
   name: карта
@@ -644,7 +644,7 @@
     name: "Это червы 7."
 
 - type: entity
-  parent: cardBase
+  parent: CardBase
   categories: [ HideSpawnMenu ]
   id: Hearts8
   name: карта
@@ -663,7 +663,7 @@
     name: "Это червы 8."
 
 - type: entity
-  parent: cardBase
+  parent: CardBase
   categories: [ HideSpawnMenu ]
   id: Hearts9
   name: карта
@@ -682,7 +682,7 @@
     name: "Это червы 9."
 
 - type: entity
-  parent: cardBase
+  parent: CardBase
   categories: [ HideSpawnMenu ]
   id: Hearts10
   name: карта
@@ -701,7 +701,7 @@
     name: "Это червы 10."
 
 - type: entity
-  parent: cardBase
+  parent: CardBase
   categories: [ HideSpawnMenu ]
   id: Hearts11
   name: карта
@@ -720,7 +720,7 @@
     name: "Это червы король."
 
 - type: entity
-  parent: cardBase
+  parent: CardBase
   categories: [ HideSpawnMenu ]
   id: Hearts12
   name: карта
@@ -739,7 +739,7 @@
     name: "Это червы дама."
 
 - type: entity
-  parent: cardBase
+  parent: CardBase
   categories: [ HideSpawnMenu ]
   id: Hearts13
   name: карта
@@ -758,7 +758,7 @@
     name: "Это червы валет."
 
 - type: entity
-  parent: cardBase
+  parent: CardBase
   categories: [ HideSpawnMenu ]
   id: Hearts14
   name: карта
@@ -778,7 +778,7 @@
 
 # Spades
 - type: entity
-  parent: cardBase
+  parent: CardBase
   categories: [ HideSpawnMenu ]
   id: Spades1
   name: карта
@@ -797,7 +797,7 @@
     name: "Это пики туз."
 
 - type: entity
-  parent: cardBase
+  parent: CardBase
   categories: [ HideSpawnMenu ]
   id: Spades2
   name: карта
@@ -816,7 +816,7 @@
     name: "Это пики 2."
 
 - type: entity
-  parent: cardBase
+  parent: CardBase
   categories: [ HideSpawnMenu ]
   id: Spades3
   name: карта
@@ -835,7 +835,7 @@
     name: "Это пики 3."
 
 - type: entity
-  parent: cardBase
+  parent: CardBase
   categories: [ HideSpawnMenu ]
   id: Spades4
   name: карта
@@ -854,7 +854,7 @@
     name: "Это пики 4."
 
 - type: entity
-  parent: cardBase
+  parent: CardBase
   categories: [ HideSpawnMenu ]
   id: Spades5
   name: карта
@@ -873,7 +873,7 @@
     name: "Это пики 5."
 
 - type: entity
-  parent: cardBase
+  parent: CardBase
   categories: [ HideSpawnMenu ]
   id: Spades6
   name: карта
@@ -892,7 +892,7 @@
     name: "Это пики 6."
 
 - type: entity
-  parent: cardBase
+  parent: CardBase
   categories: [ HideSpawnMenu ]
   id: Spades7
   name: карта
@@ -911,7 +911,7 @@
     name: "Это пики 7."
 
 - type: entity
-  parent: cardBase
+  parent: CardBase
   categories: [ HideSpawnMenu ]
   id: Spades8
   name: карта
@@ -930,7 +930,7 @@
     name: "Это пики 8."
 
 - type: entity
-  parent: cardBase
+  parent: CardBase
   categories: [ HideSpawnMenu ]
   id: Spades9
   name: карта
@@ -949,7 +949,7 @@
     name: "Это пики 9."
 
 - type: entity
-  parent: cardBase
+  parent: CardBase
   categories: [ HideSpawnMenu ]
   id: Spades10
   name: карта
@@ -968,7 +968,7 @@
     name: "Это пики 10."
 
 - type: entity
-  parent: cardBase
+  parent: CardBase
   categories: [ HideSpawnMenu ]
   id: Spades11
   name: карта
@@ -987,7 +987,7 @@
     name: "Это пики король."
 
 - type: entity
-  parent: cardBase
+  parent: CardBase
   categories: [ HideSpawnMenu ]
   id: Spades12
   name: карта
@@ -1006,7 +1006,7 @@
     name: "Это пики дама."
 
 - type: entity
-  parent: cardBase
+  parent: CardBase
   categories: [ HideSpawnMenu ]
   id: Spades13
   name: карта
@@ -1025,7 +1025,7 @@
     name: "Это пики валет."
 
 - type: entity
-  parent: cardBase
+  parent: CardBase
   categories: [ HideSpawnMenu ]
   id: Spades14
   name: карта
@@ -1046,7 +1046,7 @@
   # Other
 
 - type: entity
-  parent: cardBase
+  parent: CardBase
   id: cardRandom
   name: карта
   suffix: Случайная карта
@@ -1119,7 +1119,7 @@
 
 - type: entity
   name: колода карт
-  id: cardDeck
+  id: CardDeck
   categories: [ HideSpawnMenu ]
   parent: BaseItem
   components:
@@ -1136,8 +1136,8 @@
 
 - type: entity
   name: колода карт
-  id: cardDeckFull
-  parent: cardDeck
+  id: CardDeckFull
+  parent: CardDeck
   suffix: Полная
   components:
   - type: Sprite
@@ -1208,7 +1208,7 @@
 
 - type: entity
   name: упаковка карт
-  id: cardDeckBox
+  id: CardDeckBox
   parent: [ BaseItemCabinet, BaseItem ]
   components:
     - type: Openable
@@ -1239,33 +1239,32 @@
             path: /Audio/_Stories/Items/CardDeckBox/removedeck.ogg
 
 - type: entity
-  parent: cardDeckBox
-  id: cardDeckBoxOpen
-  suffix: Open
+  parent: CardDeckBox
+  id: CardDeckBoxOpen
+  suffix: Открыта
   components:
   - type: Openable
     opened: true
 
 - type: entity
-  parent: cardDeckBox
-  id: cardDeckBoxFilled
-  suffix: Filled
+  parent: CardDeckBox
+  id: STCardDeckBoxFilled
+  suffix: Заполнена
   components:
   - type: ContainerFill
     containers:
       ItemCabinet:
-      - cardDeckFull
+      - CardDeckFull
 
 - type: entity
-  parent: [cardDeckBoxFilled, cardDeckBoxOpen]
-  id: cardDeckBoxFilledOpen
-  suffix: Filled, Open
-
+  parent: [STCardDeckBoxFilled, CardDeckBoxOpen]
+  id: STCardDeckBoxFilledOpen
+  suffix: Заполнена, открыта
 
 - type: entity
   parent: BaseItem
-  id: cardFan
-  name: веер карт
+  id: CardFan
+  name: карточный веер
   components:
   - type: Tag
     tags:

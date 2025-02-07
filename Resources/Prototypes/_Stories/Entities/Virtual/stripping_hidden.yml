@@ -1,7 +1,7 @@
 ﻿- type: entity
-  id: StrippingHiddenEntityCard
-  name: скрытая карта
-  description: Вы не можете посмотреть, что за карта в руке.
+  id: STStrippingHiddenEntityCard
+  name: hidden card
+  description: You can't peek at what card is in hand.
   categories: [ HideSpawnMenu ]
   components:
   - type: Sprite
