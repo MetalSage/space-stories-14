@@ -1,0 +1,17 @@
+- type: loadoutEffectGroup
+  id: STBeginnerJedi
+  effects:
+  - !type:JobRequirementLoadoutEffect
+    requirement:
+      !type:RoleTimeRequirement
+      role: JobJediNt
+      time: 36000 # 10 hours
+
+- type: loadoutEffectGroup
+  id: STMasterJedi
+  effects:
+  - !type:JobRequirementLoadoutEffect
+    requirement:
+      !type:RoleTimeRequirement
+      role: JobJediNt
+      time: 108000 # 30 hours

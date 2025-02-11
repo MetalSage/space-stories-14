@@ -395,3 +395,55 @@
   - type: EnergySword
     colorOptions:
       - Red
+
+# Blue
+
+- type: entity
+  name: blue lightsaber
+  parent: Lightsaber
+  id: STLightsaberBlue
+  suffix: Blue
+  description: A special weapon designed for elegant combat as well as for ceremonies, its work is connected with the kyber crystal inside.
+  components:
+  - type: EnergySword
+    colorOptions:
+    - DodgerBlue
+
+# Green
+
+- type: entity
+  name: green lightsaber
+  parent: Lightsaber
+  id: STLightsaberGreen
+  suffix: Green
+  description: A special weapon designed for elegant combat as well as for ceremonies, its work is connected with the kyber crystal inside.
+  components:
+  - type: EnergySword
+    colorOptions:
+    - MediumSpringGreen
+
+# Yellow
+
+- type: entity
+  name: yellow lightsaber
+  parent: Lightsaber
+  id: STLightsaberYellow
+  suffix: Yellow
+  description: A special weapon designed for elegant combat as well as for ceremonies, its work is connected with the kyber crystal inside.
+  components:
+  - type: EnergySword
+    colorOptions:
+    - Yellow
+
+# Purple
+
+- type: entity
+  name: purple lightsaber
+  parent: Lightsaber
+  id: STLightsaberPurple
+  suffix: Purple
+  description: A special weapon designed for elegant combat as well as for ceremonies, its work is connected with the kyber crystal inside.
+  components:
+  - type: EnergySword
+    colorOptions:
+    - MediumOrchid

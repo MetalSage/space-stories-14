@@ -124,7 +124,10 @@
   name: loadout-group-Jedi-lightsaber
   minLimit: 1
   loadouts:
-  - Lightsaber
+  - STLightsaberBlue
+  - STLightsaberGreen
+  - STLightsaberYellow
+  - STLightsaberPurple
   # Stories-Partners-Start
   - LightsaberShort
   - LightsaberDouble
@@ -192,12 +195,39 @@
   equipment:
     pocket1: LightsaberShort
 
-# Обычный меч
+# Синий меч
 
 - type: loadout
-  id: Lightsaber
+  id: STLightsaberBlue
   equipment:
-    pocket1: Lightsaber
+    pocket1: STLightsaberBlue
+
+# Зелёный меч
+
+- type: loadout
+  id: STLightsaberGreen
+  equipment:
+    pocket1: STLightsaberGreen
+
+# Жёлтый меч
+
+- type: loadout
+  id: STLightsaberYellow
+  effects:
+  - !type:GroupLoadoutEffect
+    proto: BeginnerJedi
+  equipment:
+    pocket1: STLightsaberYellow
+
+# Фиолетовый меч
+
+- type: loadout
+  id: STLightsaberPurple
+  effects:
+  - !type:GroupLoadoutEffect
+    proto: MasterJedi
+  equipment:
+    pocket1: STLightsaberPurple
 
 # Накидка джедая
 
