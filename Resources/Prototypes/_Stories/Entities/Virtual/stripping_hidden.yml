@@ -1,0 +1,10 @@
+﻿- type: entity
+  id: STStrippingHiddenEntityCard
+  name: hidden card
+  description: You can't peek at what card is in hand.
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Sprite
+    texture: Interface/VerbIcons/information.svg.192dpi.png
+    scale: 0.3,0.3
+
