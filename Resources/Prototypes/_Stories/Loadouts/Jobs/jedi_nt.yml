@@ -1,5 +1,5 @@
 - type: loadoutEffectGroup
-  id: BeginnerJedi
+  id: STBeginnerJedi
   effects:
   - !type:JobRequirementLoadoutEffect
     requirement:
@@ -8,7 +8,7 @@
       time: 36000 # 10 hours
 
 - type: loadoutEffectGroup
-  id: MasterJedi
+  id: STMasterJedi
   effects:
   - !type:JobRequirementLoadoutEffect
     requirement:

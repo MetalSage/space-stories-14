@@ -401,7 +401,7 @@
 - type: entity
   name: синий световой меч
   parent: Lightsaber
-  id: LightsaberBlue
+  id: STLightsaberBlue
   suffix: Blue
   description: Особенное оружие, созданное сколь для элегантного боя, сколь и для церемонний, его работа связана с кайбер-кристаллом внутри.
   components:
@@ -414,7 +414,7 @@
 - type: entity
   name: зелёный световой меч
   parent: Lightsaber
-  id: LightsaberGreen
+  id: STLightsaberGreen
   suffix: Green
   description: Особенное оружие, созданное сколь для элегантного боя, сколь и для церемонний, его работа связана с кайбер-кристаллом внутри.
   components:
@@ -427,7 +427,7 @@
 - type: entity
   name: жёлтый световой меч
   parent: Lightsaber
-  id: LightsaberYellow
+  id: STLightsaberYellow
   suffix: Yellow
   description: Особенное оружие, созданное сколь для элегантного боя, сколь и для церемонний, его работа связана с кайбер-кристаллом внутри.
   components:
@@ -440,7 +440,7 @@
 - type: entity
   name: фиолетовый световой меч
   parent: Lightsaber
-  id: LightsaberPurple
+  id: STLightsaberPurple
   suffix: Purple
   description: Особенное оружие, созданное сколь для элегантного боя, сколь и для церемонний, его работа связана с кайбер-кристаллом внутри.
   components:
