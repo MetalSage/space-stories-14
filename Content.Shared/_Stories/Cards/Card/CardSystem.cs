@@ -47,11 +47,11 @@ public sealed class CardSystem : EntitySystem
 
         if (_net.IsServer)
         {
-            if (!_tagSystem.HasTag(usedEntity.Value, "Card"))
+            if (!_tagSystem.HasTag(usedEntity.Value, "STCard"))
                 return;
 
             var spawnPos = Transform(user).Coordinates;
-            var entityCreated = Spawn("CardDeck", spawnPos);
+            var entityCreated = Spawn("STCardDeck", spawnPos);
 
             if (!TryComp<CardStackComponent>(entityCreated, out var stackComp))
                 return;
@@ -83,14 +83,14 @@ public sealed class CardSystem : EntitySystem
             return;
         if (usedEntity == null)
             return;
-        if (!_tagSystem.HasTag(usedEntity.Value, "Card"))
+        if (!_tagSystem.HasTag(usedEntity.Value, "STCard"))
             return;
 
         var spawnPos = Transform(user).Coordinates;
 
         if (_net.IsServer)
         {
-            var entityCreated = Spawn("CardFan", spawnPos);
+            var entityCreated = Spawn("STCardFan", spawnPos);
 
             if (!TryComp<CardStackComponent>(entityCreated, out var stackComp))
                 return;

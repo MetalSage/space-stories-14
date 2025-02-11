@@ -1,5 +1,5 @@
 - type: Tag
-  id: Card
+  id: STCard
 
 - type: Tag
   id: ForceRecallEquipment

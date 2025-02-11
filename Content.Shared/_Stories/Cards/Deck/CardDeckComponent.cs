@@ -7,7 +7,7 @@ namespace Content.Shared._Stories.Cards.Deck;
 public sealed partial class CardDeckComponent : Component
 {
     [DataField("shuffleSound")]
-    public SoundSpecifier ShuffleSound = new SoundCollectionSpecifier("ShuffleDeck");
+    public SoundSpecifier ShuffleSound = new SoundCollectionSpecifier("STShuffleDeck");
 }
 
 [Serializable, NetSerializable]

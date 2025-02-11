@@ -169,7 +169,11 @@ public sealed class CardStackSystem : EntitySystem
             return;
 
         var spawnPos = Transform(user).Coordinates;
-        var entityCreated = Spawn("CardDeck", spawnPos);
+        var entityCreated = new EntityUid();
+        if (TryComp<CardDeckComponent>(uid, out var cardDeckComp))
+            entityCreated = Spawn("STCardDeck", spawnPos);
+        else if (TryComp<CardFanComponent>(uid, out var cardStackComp))
+            entityCreated = Spawn("STCardFan", spawnPos);
 
         if (TryComp<CardStackComponent>(entityCreated, out var stackComponent))
         {
@@ -261,7 +265,7 @@ public sealed class CardStackSystem : EntitySystem
                     var folded = false;
                     if (!TryComp<FoldableComponent>(card, out var foldable))
                         return;
-                    _foldableSystem.TryToggleFold(card, foldable);
+                    _foldableSystem.SetFolded(card, foldable, false);
                     folded = foldable.IsFolded;
                     _appearance.SetData(uid, CardVisuals.State, folded);
                 }

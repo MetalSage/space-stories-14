@@ -1,7 +1,7 @@
 - type: entity
   parent: [BaseItem, BaseFoldable]
   abstract: true
-  id: CardBase
+  id: STCardBase
   name: карта
   components:
   - type: Appearance
@@ -11,13 +11,13 @@
     sprite: _Stories/Objects/Fun/card.rsi
   - type: Tag
     tags:
-    - Card
+    - STCard
 
 # Clubs
 - type: entity
-  parent: CardBase
+  parent: STCardBase
   categories: [ HideSpawnMenu ]
-  id: Clubs1
+  id: STClubs1
   name: карта
   components:
   - type: Sprite
@@ -34,9 +34,9 @@
     name: "Это трефы туз."
 
 - type: entity
-  parent: CardBase
+  parent: STCardBase
   categories: [ HideSpawnMenu ]
-  id: Clubs2
+  id: STClubs2
   name: карта
   components:
   - type: Sprite
@@ -53,9 +53,9 @@
     name: "Это трефы 2."
 
 - type: entity
-  parent: CardBase
+  parent: STCardBase
   categories: [ HideSpawnMenu ]
-  id: Clubs3
+  id: STClubs3
   name: карта
   components:
   - type: Sprite
@@ -72,9 +72,9 @@
     name: "Это трефы 3."
 
 - type: entity
-  parent: CardBase
+  parent: STCardBase
   categories: [ HideSpawnMenu ]
-  id: Clubs4
+  id: STClubs4
   name: карта
   components:
   - type: Sprite
@@ -91,9 +91,9 @@
     name: "Это трефы 4."
 
 - type: entity
-  parent: CardBase
+  parent: STCardBase
   categories: [ HideSpawnMenu ]
-  id: Clubs5
+  id: STClubs5
   name: карта
   components:
   - type: Sprite
@@ -110,9 +110,9 @@
     name: "Это трефы 5."
 
 - type: entity
-  parent: CardBase
+  parent: STCardBase
   categories: [ HideSpawnMenu ]
-  id: Clubs6
+  id: STClubs6
   name: карта
   components:
   - type: Sprite
@@ -129,9 +129,9 @@
     name: "Это трефы 6."
 
 - type: entity
-  parent: CardBase
+  parent: STCardBase
   categories: [ HideSpawnMenu ]
-  id: Clubs7
+  id: STClubs7
   name: карта
   components:
   - type: Sprite
@@ -148,9 +148,9 @@
     name: "Это трефы 7."
 
 - type: entity
-  parent: CardBase
+  parent: STCardBase
   categories: [ HideSpawnMenu ]
-  id: Clubs8
+  id: STClubs8
   name: карта
   components:
   - type: Sprite
@@ -167,9 +167,9 @@
     name: "Это трефы 8."
 
 - type: entity
-  parent: CardBase
+  parent: STCardBase
   categories: [ HideSpawnMenu ]
-  id: Clubs9
+  id: STClubs9
   name: карта
   components:
   - type: Sprite
@@ -186,9 +186,9 @@
     name: "Это трефы 9."
 
 - type: entity
-  parent: CardBase
+  parent: STCardBase
   categories: [ HideSpawnMenu ]
-  id: Clubs10
+  id: STClubs10
   name: карта
   components:
   - type: Sprite
@@ -205,9 +205,9 @@
     name: "Это трефы 10."
 
 - type: entity
-  parent: CardBase
+  parent: STCardBase
   categories: [ HideSpawnMenu ]
-  id: Clubs11
+  id: STClubs11
   name: карта
   components:
   - type: Sprite
@@ -224,9 +224,9 @@
     name: "Это трефы король."
 
 - type: entity
-  parent: CardBase
+  parent: STCardBase
   categories: [ HideSpawnMenu ]
-  id: Clubs12
+  id: STClubs12
   name: карта
   components:
   - type: Sprite
@@ -243,9 +243,9 @@
     name: "Это трефы дама."
 
 - type: entity
-  parent: CardBase
+  parent: STCardBase
   categories: [ HideSpawnMenu ]
-  id: Clubs13
+  id: STClubs13
   name: карта
   components:
   - type: Sprite
@@ -263,9 +263,9 @@
 
 # Diamonds
 - type: entity
-  parent: CardBase
+  parent: STCardBase
   categories: [ HideSpawnMenu ]
-  id: Diamonds1
+  id: STDiamonds1
   name: карта
   components:
   - type: Sprite
@@ -282,9 +282,9 @@
     name: "Это бубны туз."
 
 - type: entity
-  parent: CardBase
+  parent: STCardBase
   categories: [ HideSpawnMenu ]
-  id: Diamonds2
+  id: STDiamonds2
   name: карта
   components:
   - type: Sprite
@@ -301,9 +301,9 @@
     name: "Это бубны 2."
 
 - type: entity
-  parent: CardBase
+  parent: STCardBase
   categories: [ HideSpawnMenu ]
-  id: Diamonds3
+  id: STDiamonds3
   name: карта
   components:
   - type: Sprite
@@ -320,9 +320,9 @@
     name: "Это бубны 3."
 
 - type: entity
-  parent: CardBase
+  parent: STCardBase
   categories: [ HideSpawnMenu ]
-  id: Diamonds4
+  id: STDiamonds4
   name: карта
   components:
   - type: Sprite
@@ -339,9 +339,9 @@
     name: "Это бубны 4."
 
 - type: entity
-  parent: CardBase
+  parent: STCardBase
   categories: [ HideSpawnMenu ]
-  id: Diamonds5
+  id: STDiamonds5
   name: карта
   components:
   - type: Sprite
@@ -358,9 +358,9 @@
     name: "Это бубны 5."
 
 - type: entity
-  parent: CardBase
+  parent: STCardBase
   categories: [ HideSpawnMenu ]
-  id: Diamonds6
+  id: STDiamonds6
   name: карта
   components:
   - type: Sprite
@@ -377,9 +377,9 @@
     name: "Это бубны 6."
 
 - type: entity
-  parent: CardBase
+  parent: STCardBase
   categories: [ HideSpawnMenu ]
-  id: Diamonds7
+  id: STDiamonds7
   name: карта
   components:
   - type: Sprite
@@ -396,9 +396,9 @@
     name: "Это бубны 7."
 
 - type: entity
-  parent: CardBase
+  parent: STCardBase
   categories: [ HideSpawnMenu ]
-  id: Diamonds8
+  id: STDiamonds8
   name: карта
   components:
   - type: Sprite
@@ -415,9 +415,9 @@
     name: "Это бубны 8."
 
 - type: entity
-  parent: CardBase
+  parent: STCardBase
   categories: [ HideSpawnMenu ]
-  id: Diamonds9
+  id: STDiamonds9
   name: карта
   components:
   - type: Sprite
@@ -434,9 +434,9 @@
     name: "Это бубны 9."
 
 - type: entity
-  parent: CardBase
+  parent: STCardBase
   categories: [ HideSpawnMenu ]
-  id: Diamonds10
+  id: STDiamonds10
   name: карта
   components:
   - type: Sprite
@@ -453,9 +453,9 @@
     name: "Это бубны 10."
 
 - type: entity
-  parent: CardBase
+  parent: STCardBase
   categories: [ HideSpawnMenu ]
-  id: Diamonds11
+  id: STDiamonds11
   name: карта
   components:
   - type: Sprite
@@ -472,9 +472,9 @@
     name: "Это бубны король."
 
 - type: entity
-  parent: CardBase
+  parent: STCardBase
   categories: [ HideSpawnMenu ]
-  id: Diamonds12
+  id: STDiamonds12
   name: карта
   components:
   - type: Sprite
@@ -491,9 +491,9 @@
     name: "Это бубны дама."
 
 - type: entity
-  parent: CardBase
+  parent: STCardBase
   categories: [ HideSpawnMenu ]
-  id: Diamonds13
+  id: STDiamonds13
   name: карта
   components:
   - type: Sprite
@@ -511,9 +511,9 @@
 
 # Hearts
 - type: entity
-  parent: CardBase
+  parent: STCardBase
   categories: [ HideSpawnMenu ]
-  id: Hearts1
+  id: STHearts1
   name: карта
   components:
   - type: Sprite
@@ -530,9 +530,9 @@
     name: "Это червы туз."
 
 - type: entity
-  parent: CardBase
+  parent: STCardBase
   categories: [ HideSpawnMenu ]
-  id: Hearts2
+  id: STHearts2
   name: карта
   components:
   - type: Sprite
@@ -549,9 +549,9 @@
     name: "Это червы 2."
 
 - type: entity
-  parent: CardBase
+  parent: STCardBase
   categories: [ HideSpawnMenu ]
-  id: Hearts3
+  id: STHearts3
   name: карта
   components:
   - type: Sprite
@@ -568,9 +568,9 @@
     name: "Это червы 3."
 
 - type: entity
-  parent: CardBase
+  parent: STCardBase
   categories: [ HideSpawnMenu ]
-  id: Hearts4
+  id: STHearts4
   name: карта
   components:
   - type: Sprite
@@ -587,9 +587,9 @@
     name: "Это червы 4."
 
 - type: entity
-  parent: CardBase
+  parent: STCardBase
   categories: [ HideSpawnMenu ]
-  id: Hearts5
+  id: STHearts5
   name: карта
   components:
   - type: Sprite
@@ -606,9 +606,9 @@
     name: "Это червы 5."
 
 - type: entity
-  parent: CardBase
+  parent: STCardBase
   categories: [ HideSpawnMenu ]
-  id: Hearts6
+  id: STHearts6
   name: карта
   components:
   - type: Sprite
@@ -625,9 +625,9 @@
     name: "Это червы 6."
 
 - type: entity
-  parent: CardBase
+  parent: STCardBase
   categories: [ HideSpawnMenu ]
-  id: Hearts7
+  id: STHearts7
   name: карта
   components:
   - type: Sprite
@@ -644,9 +644,9 @@
     name: "Это червы 7."
 
 - type: entity
-  parent: CardBase
+  parent: STCardBase
   categories: [ HideSpawnMenu ]
-  id: Hearts8
+  id: STHearts8
   name: карта
   components:
   - type: Sprite
@@ -663,9 +663,9 @@
     name: "Это червы 8."
 
 - type: entity
-  parent: CardBase
+  parent: STCardBase
   categories: [ HideSpawnMenu ]
-  id: Hearts9
+  id: STHearts9
   name: карта
   components:
   - type: Sprite
@@ -682,9 +682,9 @@
     name: "Это червы 9."
 
 - type: entity
-  parent: CardBase
+  parent: STCardBase
   categories: [ HideSpawnMenu ]
-  id: Hearts10
+  id: STHearts10
   name: карта
   components:
   - type: Sprite
@@ -701,9 +701,9 @@
     name: "Это червы 10."
 
 - type: entity
-  parent: CardBase
+  parent: STCardBase
   categories: [ HideSpawnMenu ]
-  id: Hearts11
+  id: STHearts11
   name: карта
   components:
   - type: Sprite
@@ -720,9 +720,9 @@
     name: "Это червы король."
 
 - type: entity
-  parent: CardBase
+  parent: STCardBase
   categories: [ HideSpawnMenu ]
-  id: Hearts12
+  id: STHearts12
   name: карта
   components:
   - type: Sprite
@@ -739,9 +739,9 @@
     name: "Это червы дама."
 
 - type: entity
-  parent: CardBase
+  parent: STCardBase
   categories: [ HideSpawnMenu ]
-  id: Hearts13
+  id: STHearts13
   name: карта
   components:
   - type: Sprite
@@ -758,9 +758,9 @@
     name: "Это червы валет."
 
 - type: entity
-  parent: CardBase
+  parent: STCardBase
   categories: [ HideSpawnMenu ]
-  id: Hearts14
+  id: STHearts14
   name: карта
   components:
   - type: Sprite
@@ -778,9 +778,9 @@
 
 # Spades
 - type: entity
-  parent: CardBase
+  parent: STCardBase
   categories: [ HideSpawnMenu ]
-  id: Spades1
+  id: STSpades1
   name: карта
   components:
   - type: Sprite
@@ -797,9 +797,9 @@
     name: "Это пики туз."
 
 - type: entity
-  parent: CardBase
+  parent: STCardBase
   categories: [ HideSpawnMenu ]
-  id: Spades2
+  id: STSpades2
   name: карта
   components:
   - type: Sprite
@@ -816,9 +816,9 @@
     name: "Это пики 2."
 
 - type: entity
-  parent: CardBase
+  parent: STCardBase
   categories: [ HideSpawnMenu ]
-  id: Spades3
+  id: STSpades3
   name: карта
   components:
   - type: Sprite
@@ -835,9 +835,9 @@
     name: "Это пики 3."
 
 - type: entity
-  parent: CardBase
+  parent: STCardBase
   categories: [ HideSpawnMenu ]
-  id: Spades4
+  id: STSpades4
   name: карта
   components:
   - type: Sprite
@@ -854,9 +854,9 @@
     name: "Это пики 4."
 
 - type: entity
-  parent: CardBase
+  parent: STCardBase
   categories: [ HideSpawnMenu ]
-  id: Spades5
+  id: STSpades5
   name: карта
   components:
   - type: Sprite
@@ -873,9 +873,9 @@
     name: "Это пики 5."
 
 - type: entity
-  parent: CardBase
+  parent: STCardBase
   categories: [ HideSpawnMenu ]
-  id: Spades6
+  id: STSpades6
   name: карта
   components:
   - type: Sprite
@@ -892,9 +892,9 @@
     name: "Это пики 6."
 
 - type: entity
-  parent: CardBase
+  parent: STCardBase
   categories: [ HideSpawnMenu ]
-  id: Spades7
+  id: STSpades7
   name: карта
   components:
   - type: Sprite
@@ -911,9 +911,9 @@
     name: "Это пики 7."
 
 - type: entity
-  parent: CardBase
+  parent: STCardBase
   categories: [ HideSpawnMenu ]
-  id: Spades8
+  id: STSpades8
   name: карта
   components:
   - type: Sprite
@@ -930,9 +930,9 @@
     name: "Это пики 8."
 
 - type: entity
-  parent: CardBase
+  parent: STCardBase
   categories: [ HideSpawnMenu ]
-  id: Spades9
+  id: STSpades9
   name: карта
   components:
   - type: Sprite
@@ -949,9 +949,9 @@
     name: "Это пики 9."
 
 - type: entity
-  parent: CardBase
+  parent: STCardBase
   categories: [ HideSpawnMenu ]
-  id: Spades10
+  id: STSpades10
   name: карта
   components:
   - type: Sprite
@@ -968,9 +968,9 @@
     name: "Это пики 10."
 
 - type: entity
-  parent: CardBase
+  parent: STCardBase
   categories: [ HideSpawnMenu ]
-  id: Spades11
+  id: STSpades11
   name: карта
   components:
   - type: Sprite
@@ -987,9 +987,9 @@
     name: "Это пики король."
 
 - type: entity
-  parent: CardBase
+  parent: STCardBase
   categories: [ HideSpawnMenu ]
-  id: Spades12
+  id: STSpades12
   name: карта
   components:
   - type: Sprite
@@ -1006,9 +1006,9 @@
     name: "Это пики дама."
 
 - type: entity
-  parent: CardBase
+  parent: STCardBase
   categories: [ HideSpawnMenu ]
-  id: Spades13
+  id: STSpades13
   name: карта
   components:
   - type: Sprite
@@ -1025,9 +1025,9 @@
     name: "Это пики валет."
 
 - type: entity
-  parent: CardBase
+  parent: STCardBase
   categories: [ HideSpawnMenu ]
-  id: Spades14
+  id: STSpades14
   name: карта
   components:
   - type: Sprite
@@ -1046,8 +1046,8 @@
   # Other
 
 - type: entity
-  parent: CardBase
-  id: cardRandom
+  parent: STCardBase
+  id: STCardRandom
   name: карта
   suffix: Случайная карта
   description: "Обычная игральная карта"
@@ -1061,65 +1061,65 @@
       visible: false
   - type: RandomSpawner
     prototypes:
-      - Clubs1
-      - Clubs2
-      - Clubs3
-      - Clubs4
-      - Clubs5
-      - Clubs6
-      - Clubs7
-      - Clubs8
-      - Clubs9
-      - Clubs10
-      - Clubs11
-      - Clubs12
-      - Clubs13
-      - Diamonds1
-      - Diamonds2
-      - Diamonds3
-      - Diamonds4
-      - Diamonds5
-      - Diamonds6
-      - Diamonds7
-      - Diamonds8
-      - Diamonds9
-      - Diamonds10
-      - Diamonds11
-      - Diamonds12
-      - Diamonds13
-      - Hearts1
-      - Hearts2
-      - Hearts3
-      - Hearts4
-      - Hearts5
-      - Hearts6
-      - Hearts7
-      - Hearts8
-      - Hearts9
-      - Hearts10
-      - Hearts11
-      - Hearts12
-      - Hearts13
-      - Hearts14
-      - Spades1
-      - Spades2
-      - Spades3
-      - Spades4
-      - Spades5
-      - Spades6
-      - Spades7
-      - Spades8
-      - Spades9
-      - Spades10
-      - Spades11
-      - Spades12
-      - Spades13
-      - Spades14
+      - STClubs1
+      - STClubs2
+      - STClubs3
+      - STClubs4
+      - STClubs5
+      - STClubs6
+      - STClubs7
+      - STClubs8
+      - STClubs9
+      - STClubs10
+      - STClubs11
+      - STClubs12
+      - STClubs13
+      - STDiamonds1
+      - STDiamonds2
+      - STDiamonds3
+      - STDiamonds4
+      - STDiamonds5
+      - STDiamonds6
+      - STDiamonds7
+      - STDiamonds8
+      - STDiamonds9
+      - STDiamonds10
+      - STDiamonds11
+      - STDiamonds12
+      - STDiamonds13
+      - STHearts1
+      - STHearts2
+      - STHearts3
+      - STHearts4
+      - STHearts5
+      - STHearts6
+      - STHearts7
+      - STHearts8
+      - STHearts9
+      - STHearts10
+      - STHearts11
+      - STHearts12
+      - STHearts13
+      - STHearts14
+      - STSpades1
+      - STSpades2
+      - STSpades3
+      - STSpades4
+      - STSpades5
+      - STSpades6
+      - STSpades7
+      - STSpades8
+      - STSpades9
+      - STSpades10
+      - STSpades11
+      - STSpades12
+      - STSpades13
+      - STSpades14
     chance: 1
 
 - type: entity
   name: колода карт
-  id: CardDeck
+  id: STCardDeck
   categories: [ HideSpawnMenu ]
   parent: BaseItem
   components:
@@ -1136,8 +1136,8 @@
 
 - type: entity
   name: колода карт
-  id: CardDeckFull
-  parent: CardDeck
+  id: STCardDeckFull
+  parent: STCardDeck
   suffix: Полная
   components:
   - type: Sprite
@@ -1147,60 +1147,60 @@
       - state: Clubs1
   - type: CardStack
     content:
-    - Clubs1
-    - Clubs2
-    - Clubs3
-    - Clubs4
-    - Clubs5
-    - Clubs6
-    - Clubs7
-    - Clubs8
-    - Clubs9
-    - Clubs10
-    - Clubs11
-    - Clubs12
-    - Clubs13
-    - Diamonds1
-    - Diamonds2
-    - Diamonds3
-    - Diamonds4
-    - Diamonds5
-    - Diamonds6
-    - Diamonds7
-    - Diamonds8
-    - Diamonds9
-    - Diamonds10
-    - Diamonds11
-    - Diamonds12
-    - Diamonds13
-    - Hearts1
-    - Hearts2
-    - Hearts3
-    - Hearts4
-    - Hearts5
-    - Hearts6
-    - Hearts7
-    - Hearts8
-    - Hearts9
-    - Hearts10
-    - Hearts11
-    - Hearts12
-    - Hearts13
-    - Hearts14
-    - Spades1
-    - Spades2
-    - Spades3
-    - Spades4
-    - Spades5
-    - Spades6
-    - Spades7
-    - Spades8
-    - Spades9
-    - Spades10
-    - Spades11
-    - Spades12
-    - Spades13
-    - Spades14
+    - STClubs1
+    - STClubs2
+    - STClubs3
+    - STClubs4
+    - STClubs5
+    - STClubs6
+    - STClubs7
+    - STClubs8
+    - STClubs9
+    - STClubs10
+    - STClubs11
+    - STClubs12
+    - STClubs13
+    - STDiamonds1
+    - STDiamonds2
+    - STDiamonds3
+    - STDiamonds4
+    - STDiamonds5
+    - STDiamonds6
+    - STDiamonds7
+    - STDiamonds8
+    - STDiamonds9
+    - STDiamonds10
+    - STDiamonds11
+    - STDiamonds12
+    - STDiamonds13
+    - STHearts1
+    - STHearts2
+    - STHearts3
+    - STHearts4
+    - STHearts5
+    - STHearts6
+    - STHearts7
+    - STHearts8
+    - STHearts9
+    - STHearts10
+    - STHearts11
+    - STHearts12
+    - STHearts13
+    - STHearts14
+    - STSpades1
+    - STSpades2
+    - STSpades3
+    - STSpades4
+    - STSpades5
+    - STSpades6
+    - STSpades7
+    - STSpades8
+    - STSpades9
+    - STSpades10
+    - STSpades11
+    - STSpades12
+    - STSpades13
+    - STSpades14
   - type: Item
     size: Huge
   - type: CardDeck
@@ -1208,7 +1208,7 @@
 
 - type: entity
   name: упаковка карт
-  id: CardDeckBox
+  id: STCardDeckBox
   parent: [ BaseItemCabinet, BaseItem ]
   components:
     - type: Openable
@@ -1234,36 +1234,36 @@
             components:
             - CardDeck
           insertSound:
-            path: /Audio/_Stories/Items/CardDeckBox/adddeck.ogg
+            path: /Audio/_Stories/Items/CardDeckBox/addeck.ogg
           ejectSound:
             path: /Audio/_Stories/Items/CardDeckBox/removedeck.ogg
 
 - type: entity
-  parent: CardDeckBox
-  id: CardDeckBoxOpen
+  parent: STCardDeckBox
+  id: STCardDeckBoxOpen
   suffix: Открыта
   components:
   - type: Openable
     opened: true
 
 - type: entity
-  parent: CardDeckBox
+  parent: STCardDeckBox
   id: STCardDeckBoxFilled
   suffix: Заполнена
   components:
   - type: ContainerFill
     containers:
       ItemCabinet:
-      - CardDeckFull
+      - STCardDeckFull
 
 - type: entity
-  parent: [STCardDeckBoxFilled, CardDeckBoxOpen]
+  parent: [STCardDeckBoxFilled, STCardDeckBoxOpen]
   id: STCardDeckBoxFilledOpen
   suffix: Заполнена, открыта
 
 - type: entity
   parent: BaseItem
-  id: CardFan
+  id: STCardFan
   name: карточный веер
   components:
   - type: Tag
