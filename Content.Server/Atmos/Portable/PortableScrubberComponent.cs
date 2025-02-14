@@ -29,7 +29,11 @@ namespace Content.Server.Atmos.Portable
             Gas.WaterVapor,
             Gas.Ammonia,
             Gas.NitrousOxide,
-            Gas.Frezon
+            Gas.Frezon,
+            // Stories-Gas start
+            Gas.BZ,
+            Gas.Healium,
+            // Stories-Gas end
         };
 
         [ViewVariables(VVAccess.ReadWrite)]
