@@ -163,7 +163,7 @@
   id: DragonSpawn
   components:
   - type: StationEvent
-    weight: 5
+    weight: 6.5
     earliestStart: 40
     reoccurrenceDelay: 20
     minimumPlayers: 20
@@ -192,7 +192,7 @@
   id: NinjaSpawn
   components:
   - type: StationEvent
-    weight: 5
+    weight: 6
     duration: null
     earliestStart: 30
     reoccurrenceDelay: 20
@@ -241,7 +241,7 @@
   id: RevenantSpawn
   components:
   - type: StationEvent
-    weight: 5
+    weight: 7.5
     duration: 1
     earliestStart: 45
     minimumPlayers: 20
@@ -273,8 +273,6 @@
       path: /Audio/Announcements/gasleak_end.ogg # Corvax-Announcements
       params:
         volume: -4
-    earliestStart: 10
-    minimumPlayers: 5
     weight: 8
   - type: GasLeakRule
 
@@ -361,7 +359,7 @@
       path: /Audio/Announcements/attention.ogg
     earliestStart: 20
     minimumPlayers: 15
-    weight: 6
+    weight: 5
     duration: 60
   - type: VentCrittersRule
     entries:
@@ -382,7 +380,7 @@
       path: /Audio/Announcements/attention.ogg
     earliestStart: 20
     minimumPlayers: 15
-    weight: 6
+    weight: 5
     duration: 60
   - type: VentCrittersRule
     entries:
@@ -403,7 +401,7 @@
       path: /Audio/Announcements/attention.ogg
     earliestStart: 20
     minimumPlayers: 15
-    weight: 6
+    weight: 5
     duration: 60
   - type: VentCrittersRule
     entries:
@@ -420,7 +418,7 @@
       path: /Audio/Announcements/attention.ogg
     earliestStart: 20
     minimumPlayers: 20
-    weight: 6.5
+    weight: 1.5
     duration: 60
   - type: VentCrittersRule
     entries:
@@ -466,8 +464,8 @@
   components:
   - type: StationEvent
     earliestStart: 35
-    weight: 7.5
-    minimumPlayers: 25
+    weight: 5.5
+    minimumPlayers: 20
     duration: 1
   - type: RuleGrids
   - type: LoadMapRule
