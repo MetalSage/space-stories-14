@@ -199,7 +199,7 @@
     startAudio:
       path: /Audio/Announcements/attention.ogg
     earliestStart: 15
-    weight: 6.5
+    weight: 6
     duration: 50
     minimumPlayers: 30
   - type: VentCrittersRule
