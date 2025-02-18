@@ -165,6 +165,8 @@ public sealed partial class ChatSystem
             }
             return result.ToString();
         }))());
+        if (message == "")
+            return message;
 
         // Поиск и замена сленга
         foreach (var pair in SlangReplace)
