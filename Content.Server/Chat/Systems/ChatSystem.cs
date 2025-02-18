@@ -179,6 +179,14 @@ public sealed partial class ChatSystem : SharedChatSystem
         bool ignoreActionBlocker = false
         )
     {
+        // Stories-ChatFilter start
+        if (IsContainsBanWords(message))
+        {
+            message = "кашляет";
+            desiredType = InGameICChatType.Emote;
+        }
+        // Stories-ChatFilter end
+
         if (HasComp<GhostComponent>(source))
         {
             // Ghosts can only send dead chat messages, so we'll forward it to InGame OOC.
@@ -227,14 +235,6 @@ public sealed partial class ChatSystem : SharedChatSystem
             || (CultureInfo.CurrentCulture.IsNeutralCulture && CultureInfo.CurrentCulture.Name == "en");
 
         message = SanitizeInGameICMessage(source, message, out var emoteStr, shouldCapitalize, shouldPunctuate, shouldCapitalizeTheWordI);
-
-        // Stories-ReplaceWords start
-        if (message == "Text-emote-cough") // Через "Text-emote-cough" чтобы можно было написать "кашель" в общий чат (не эмоут)
-        {
-            message = "кашляет";
-            desiredType = InGameICChatType.Emote;
-        }
-        // Stories-ReplaceWords end
 
         // Was there an emote in the message? If so, send it.
         if (player != null && emoteStr != message && emoteStr != null)
@@ -774,7 +774,7 @@ public sealed partial class ChatSystem : SharedChatSystem
     private string SanitizeInGameICMessage(EntityUid source, string message, out string? emoteStr, bool capitalize = true, bool punctuate = false, bool capitalizeTheWordI = true)
     {
         var newMessage = SanitizeMessageReplaceWords(message.Trim());
-        newMessage = ReplaceWords(newMessage); // Stories-ReplaceWords
+        newMessage = ReplaceWords(newMessage); // Stories-ChatFilter
         GetRadioKeycodePrefix(source, newMessage, out newMessage, out var prefix);
 
         // Sanitize it first as it might change the word order
