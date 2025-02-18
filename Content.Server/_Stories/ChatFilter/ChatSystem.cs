@@ -126,7 +126,7 @@ public sealed partial class ChatSystem
         { "слава Украине", "кхе-кхе" }, { "славаУкраине", "кхе-кхе" }, { "слава России", "кхе-кхе" }, { "славаРоссии", "кхе-кхе" }
     };
 
-    private static readonly List<string> BanwordReplace = new()
+    private static readonly List<string> Banwords = new()
     {
         "пидр", "педр", "пидор", "пидар", "педар", "педик",
         "даун",
@@ -145,7 +145,7 @@ public sealed partial class ChatSystem
         var words = message.Split(new[] { ' ', '\t', '\n', '\r' }, StringSplitOptions.RemoveEmptyEntries);
         foreach (var word in words)
         {
-            foreach (var bannedWord in BanwordReplace)
+            foreach (var bannedWord in Banwords)
             {
                 if (word.StartsWith(bannedWord, StringComparison.OrdinalIgnoreCase))
                     return true;
