@@ -1,5 +1,5 @@
-reagent-name-bz = бз
-reagent-desc-bz = Мощный токсин, усыпляющий слизней.
+stories-reagent-name-bz = бз
+stories-reagent-desc-bz = Мощный токсин, усыпляющий слизней.
 
-reagent-name-healium = хилиум
-reagent-desc-healium = Мощное снотворное средство с целительными свойствами.
+stories-reagent-name-healium = хилиум
+stories-reagent-desc-healium = Мощное снотворное средство с целительными свойствами.

@@ -1,7 +1,7 @@
 - type: reagent
   id: BZ
-  name: reagent-name-bz
-  desc: reagent-desc-bz
+  name: stories-reagent-name-bz
+  desc: stories-reagent-desc-bz
   physicalDesc: reagent-physical-desc-gaseous
   flavor: bitter
   color: "#9370db"
@@ -105,8 +105,8 @@
 
 - type: reagent
   id: Healium
-  name: reagent-name-healium
-  desc: reagent-desc-healium
+  name: stories-reagent-name-healium
+  desc: stories-reagent-desc-healium
   physicalDesc: reagent-physical-desc-gaseous
   flavor: sweet
   color: "#8b0000"

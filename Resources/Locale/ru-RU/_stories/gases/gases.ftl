@@ -1,2 +1,2 @@
-gases-bz = БЗ
-gases-healium = Хилиум
+stories-gases-bz = БЗ
+stories-gases-healium = Хилиум
