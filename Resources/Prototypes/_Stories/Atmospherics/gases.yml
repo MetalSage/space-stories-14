@@ -5,7 +5,7 @@
   heatCapacityRatio: 1.4
   molarMass: 10
   color: 9370db
-  reagent: BZ
+  reagent: STBZ
   pricePerMole: 0.15
 
 - type: gas
@@ -15,5 +15,5 @@
   heatCapacityRatio: 1.4
   molarMass: 10
   color: 8b0000
-  reagent: Healium
+  reagent: STHealium
   pricePerMole: 0.8

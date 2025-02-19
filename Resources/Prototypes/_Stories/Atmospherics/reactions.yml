@@ -1,5 +1,5 @@
 - type: gasReaction
-  id: bzFormation
+  id: STbzFormation
   priority: 2
   maximumTemperature: 313.149 # Atmospherics.FireMinimumTemperatureToExist - 60
   minimumRequirements:
@@ -16,7 +16,7 @@
   - !type:BZFormationReaction {}
 
 - type: gasReaction
-  id: HealiumProduction
+  id: STHealiumProduction
   priority: 2
   minimumRequirements:
   - 0     # oxygen

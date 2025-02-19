@@ -1,5 +1,5 @@
 - type: reagent
-  id: BZ
+  id: STBZ
   name: stories-reagent-name-bz
   desc: stories-reagent-desc-bz
   physicalDesc: reagent-physical-desc-gaseous
@@ -11,7 +11,7 @@
       - !type:Emote
         conditions:
         - !type:ReagentThreshold
-          reagent: BZ
+          reagent: STBZ
           min: 0.2
         - !type:OrganType
           type: Slime
@@ -22,7 +22,7 @@
       - !type:HealthChange
         conditions:
         - !type:ReagentThreshold
-          reagent: BZ
+          reagent: STBZ
           min: 0.5
         - !type:OrganType
           type: Slime
@@ -36,7 +36,7 @@
       - !type:GenericStatusEffect
         conditions:
         - !type:ReagentThreshold
-          reagent: BZ
+          reagent: STBZ
           min: 1
         - !type:OrganType
           type: Slime
@@ -49,7 +49,7 @@
       - !type:Emote
         conditions:
         - !type:ReagentThreshold
-          reagent: BZ
+          reagent: STBZ
           min: 0.2
         - !type:OrganType
           type: Slime
@@ -60,7 +60,7 @@
       - !type:Emote
         conditions:
         - !type:ReagentThreshold
-          reagent: BZ
+          reagent: STBZ
           min: 0.2
         - !type:OrganType
           type: Slime
@@ -71,7 +71,7 @@
       - !type:PopupMessage
         conditions:
         - !type:ReagentThreshold
-          reagent: BZ
+          reagent: STBZ
           min: 0.5
         - !type:OrganType
           type: Slime
@@ -83,7 +83,7 @@
       - !type:MovespeedModifier
         conditions:
         - !type:ReagentThreshold
-          reagent: BZ
+          reagent: STBZ
           min: 1
         - !type:OrganType
           type: Slime
@@ -93,7 +93,7 @@
       - !type:GenericStatusEffect
         conditions:
         - !type:ReagentThreshold
-          reagent: BZ
+          reagent: STBZ
           min: 1
         - !type:OrganType
           type: Slime
@@ -104,7 +104,7 @@
         type: Add
 
 - type: reagent
-  id: Healium
+  id: STHealium
   name: stories-reagent-name-healium
   desc: stories-reagent-desc-healium
   physicalDesc: reagent-physical-desc-gaseous
@@ -116,7 +116,7 @@
       - !type:HealthChange
         conditions:
         - !type:ReagentThreshold
-          reagent: Healium
+          reagent: STHealium
           min: 0.5
         scaleByQuantity: true
         ignoreResistances: true
@@ -131,7 +131,7 @@
       - !type:PopupMessage
         conditions:
         - !type:ReagentThreshold
-          reagent: Healium
+          reagent: STHealium
           min: 0.5
         type: Local
         visualType: Medium
@@ -140,14 +140,14 @@
       - !type:MovespeedModifier
         conditions:
         - !type:ReagentThreshold
-          reagent: Healium
+          reagent: STHealium
           min: 1
         walkSpeedModifier: 0.65
         sprintSpeedModifier: 0.65
       - !type:GenericStatusEffect
         conditions:
         - !type:ReagentThreshold
-          reagent: Healium
+          reagent: STHealium
           min: 1.8
         key: ForcedSleep
         component: ForcedSleeping
