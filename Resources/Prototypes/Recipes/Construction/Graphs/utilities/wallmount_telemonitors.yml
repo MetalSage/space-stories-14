@@ -38,7 +38,7 @@
             - tool: Screwing
               doAfter: 2
             - tag: SurveillanceCameraMonitorCircuitboard
-              name: surveillance camera monitor board
+              name: монитор камер наблюдения
               icon:
                 sprite: Objects/Misc/module.rsi
                 state: cpuboard
@@ -127,7 +127,7 @@
             - tool: Screwing
               doAfter: 2
             - tag: ComputerTelevisionCircuitboard
-              name: television board
+              name: консольная плата для телевизора
               icon:
                 sprite: Objects/Misc/module.rsi
                 state: cpuboard

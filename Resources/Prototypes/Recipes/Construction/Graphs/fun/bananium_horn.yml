@@ -7,7 +7,7 @@
         - to: bananiumHorn
           steps:
             - tag: Pipe
-              name: pipe
+              name: труба
               icon:
                 sprite: Structures/Piping/Atmospherics/pipe.rsi
                 state: pipeStraight
