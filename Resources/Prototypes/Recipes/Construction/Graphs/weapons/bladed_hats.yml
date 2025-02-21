@@ -13,7 +13,7 @@
           state: shard1
         doAfter: 1
       - tag: BrimFlatcapGrey
-        name: a grey flatcap
+        name: серая плоская кепка
         icon:
           sprite: Clothing/Head/Hats/greyflatcap.rsi
           state: icon
@@ -35,7 +35,7 @@
           state: shard1
         doAfter: 1
       - tag: BrimFlatcapBrown
-        name: a brown flatcap
+        name: коричневая плоская кепка
         icon:
           sprite: Clothing/Head/Hats/brownflatcap.rsi
           state: icon
