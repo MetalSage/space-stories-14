@@ -800,9 +800,9 @@
 
 # INTERCOM
 - type: construction
-  name: intercom
+  name: интерком
   id: IntercomAssembly
-  graph: интерком
+  graph: Intercom
   startNode: start
   targetNode: intercom
   category: construction-category-structures
