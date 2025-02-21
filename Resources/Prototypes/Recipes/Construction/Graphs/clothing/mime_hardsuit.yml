@@ -34,7 +34,7 @@
                 state: black
               doAfter: 1
             - tag: MimeBelt
-              name: suspenders
+              name: подтяжки
               icon:
                 sprite: Clothing/Belt/suspenders_red.rsi
                 state: icon

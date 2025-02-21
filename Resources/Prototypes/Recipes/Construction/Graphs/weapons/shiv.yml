@@ -22,7 +22,7 @@
     - to: icon
       steps:
       - tag: GlassShard
-        name: glass shard
+        name: осколок стекла
         icon:
           sprite: Objects/Materials/Shards/shard.rsi
           state: shard1
