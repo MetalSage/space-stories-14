@@ -6,6 +6,7 @@
   - type: MindRole
     antagPrototype: EmpireMember
     exclusiveAntag: true
+    roleType: TeamAntagonist
   - type: EmpireMemberRole
 
 - type: entity
@@ -26,6 +27,7 @@
   - type: MindRole
     antagPrototype: Shadowling
     exclusiveAntag: true
+    roleType: TeamAntagonist
   - type: ShadowlingRole
 
 - type: entity

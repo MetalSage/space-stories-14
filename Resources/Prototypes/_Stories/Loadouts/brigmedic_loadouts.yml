@@ -1,0 +1,167 @@
+- type: roleLoadout
+  id: JobSTBrigmedic
+  groups:
+  - STBrigmedicHead
+  - MedicalMask
+  - STBrigmedicJumpsuit
+  - MedicalGloves
+  - STBrigmedicBackpack
+  - MedicalShoes
+  - STSurvivalBrigmedic
+  - Trinkets
+
+- type: loadoutGroup
+  id: STBrigmedicHead
+  name: loadout-group-STBrigmedicHead-head
+  minLimit: 0
+  loadouts:
+  - STBrigmedicBeret
+  - MedicalBeret
+  - MedicalHeadMirror
+
+- type: loadoutGroup
+  id: STBrigmedicJumpsuit
+  name: loadout-group-STBrigmedicHead-jumpsuits
+  loadouts:
+  - STBrigmedicJumpsuit
+  - STBrigmedicJumpskirt
+
+- type: loadoutGroup
+  id: STBrigmedicBackpack
+  name: loadout-group-STBrigmedicHead-backpack
+  loadouts:
+  # Stories-partners - start
+  # Handbag
+  - ClothingBackpackHandbagAdidos
+  - ClothingBackpackHandbagBluesky
+  - ClothingBackpackHandbagEight
+  - ClothingBackpackHandbagGachi
+  - ClothingBackpackHandbagRl
+  # Backpack
+  - ClothingBackpackAdidos
+  - ClothingBackpackBluesky
+  - ClothingBackpackEight
+  - ClothingBackpackGachi
+  - ClothingBackpackRl
+  # Duffel
+  - ClothingBackpackDuffelAdidos
+  - ClothingBackpackDuffelBluesky
+  - ClothingBackpackDuffelEight
+  - ClothingBackpackDuffelGachi
+  - ClothingBackpackDuffelRl
+  # Satchel
+  - ClothingBackpackSatchelAdidos
+  - ClothingBackpackSatchelBluesky
+  - ClothingBackpackSatchelEight
+  - ClothingBackpackSatchelGachi
+  - ClothingBackpackSatchelRl
+  # Stories-partners - end
+  - STBrigmedicBackpack
+  - STBrigmedicSatchel
+  - STBrigmedicDuffel
+
+- type: loadoutGroup
+  id: STSurvivalBrigmedic
+  name: loadout-group-STSurvivalBrigmedic
+  minLimit: 2
+  hidden: true
+  loadouts:
+  - STEmergencyNitrogenBrigmedic
+  - STEmergencyOxygenBrigmedic
+  - LoadoutSpeciesVoxNitrogen
+
+# Берет бригмедика
+- type: loadout
+  id: STBrigmedicBeret
+  equipment:
+    head: ClothingHeadHatBeretBrigmedic
+
+# Комбинезон бригмедика
+- type: loadout
+  id: STBrigmedicJumpsuit
+  equipment:
+    jumpsuit: ClothingUniformJumpsuitBrigmedic
+
+# Юбка-комбинезон бригмедика
+- type: loadout
+  id: STBrigmedicJumpskirt
+  equipment:
+    jumpsuit: ClothingUniformJumpskirtBrigmedic
+
+# Рюкзак бригмедика
+- type: loadout
+  id: STBrigmedicBackpack
+  equipment:
+    back: ClothingBackpackBrigmedic
+
+# Сумка бригмедика
+- type: loadout
+  id: STBrigmedicSatchel
+  equipment:
+    back: ClothingBackpackSatchelBrigmedic
+
+# Вещмешок бригмедика
+- type: loadout
+  id: STBrigmedicDuffel
+  equipment:
+    back: ClothingBackpackDuffelBrigmedic
+
+# Аварийный набор с азотом для бригмедика
+- type: loadout
+  id: STEmergencyNitrogenBrigmedic
+  effects:
+  - !type:GroupLoadoutEffect
+    proto: NitrogenBreather
+  storage:
+    back:
+    - STBoxSurvivalBrigmedicNitrogen
+
+- type: entity
+  parent: BoxCardboard
+  id: STBoxSurvivalBrigmedicNitrogen
+  name: survival box brigmedic
+  description: It's a box with basic internals inside.
+  suffix: Brigmedic N2
+  components:
+  - type: StorageFill
+    contents:
+    - id: ClothingMaskBreathMedicalSecurity
+    - id: EmergencyNitrogenTankFilled
+    - id: EmergencyMedipen
+    - id: Flare
+    - id: FoodSnackNutribrick
+    - id: DrinkWaterBottleFull
+  - type: Sprite
+    layers:
+    - state: internals
+    - state: emergencytank
+
+# Аварийный набор с кислородом для бригмедика
+- type: loadout
+  id: STEmergencyOxygenBrigmedic
+  effects:
+  - !type:GroupLoadoutEffect
+    proto: OxygenBreather
+  storage:
+    back:
+    - STBoxSurvivalBrigmedic
+
+- type: entity
+  parent: BoxCardboard
+  id: STBoxSurvivalBrigmedic
+  name: survival box brigmedic
+  description: It's a box with basic internals inside.
+  suffix: Brigmedic
+  components:
+  - type: StorageFill
+    contents:
+    - id: ClothingMaskBreathMedicalSecurity
+    - id: EmergencyOxygenTankFilled
+    - id: EmergencyMedipen
+    - id: Flare
+    - id: FoodSnackNutribrick
+    - id: DrinkWaterBottleFull
+  - type: Sprite
+    layers:
+    - state: internals
+    - state: emergencytank

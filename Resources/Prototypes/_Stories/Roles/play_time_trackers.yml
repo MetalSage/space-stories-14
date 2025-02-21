@@ -18,3 +18,6 @@
 
 - type: playTimeTracker
   id: JobJediNt
+
+- type: playTimeTracker
+  id: STJobBrigmedic

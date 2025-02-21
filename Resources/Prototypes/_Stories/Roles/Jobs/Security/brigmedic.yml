@@ -1,0 +1,36 @@
+- type: job
+  id: STBrigmedic
+  name: job-name-STBrigmedic
+  description: job-description-STBrigmedic
+  playTimeTracker: STJobBrigmedic
+  requirements:
+  - !type:DepartmentTimeRequirement
+    department: Security
+    time: 36000 #10 часов
+  - !type:DepartmentTimeRequirement
+    department: Medical
+    time: 7200 #2 часа
+  startingGear: STBrigmedicGear
+  icon: "JobIconBrigmedic"
+  supervisors: job-supervisors-hos
+  canBeAntag: false
+  access:
+  - Security
+  - Brig
+  - Medical
+  - Maintenance
+  - Service
+  - External
+  - Cryogenics
+  special:
+  - !type:AddImplantSpecial
+    implants: [ MindShieldImplant ]
+
+- type: startingGear
+  id: STBrigmedicGear
+  equipment:
+    id: BrigmedicPDA
+    ears: ClothingHeadsetBrigmedic
+    eyes: ClothingEyesHudMedSec
+    belt: ClothingBeltMedicalFilled
+    outerClothing: ClothingOuterCoatAMG

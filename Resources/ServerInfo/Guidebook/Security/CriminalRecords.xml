@@ -15,8 +15,9 @@
 
   - Собственно криминальные записи
 
-  В разделе записей вы можете:
-  - Просмотреть информацию, связанную со статусом члена экипажа и о члене экипажа: такую как его имя, отпечатки пальцев и ДНК.
+  - The filter button below the crew list can be used to show only wanted, detained, or paroled crew.
+  In the record section you can:
+    - See security-related information about a crewmember like their name, fingerprints and DNA.
 
   - Изменить статус безопасности на [color=gray]Нет[/color], [color=yellow]В розыске[/color] и [color=red]Задержан[/color]. При установке статуса "В розыске" вам будет предложено указать причину.
 

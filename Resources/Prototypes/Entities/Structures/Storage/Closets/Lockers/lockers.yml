@@ -153,7 +153,7 @@
     stateDoorOpen: eng_secure_open
     stateDoorClosed: eng_secure_door
   - type: AccessReader
-    access: [ [ "Engineering" ] ]
+    access: [ [ "Engineering" ], ["PrisonEng"]] # [ [ "Engineering" ] ] # Stories-Prison
 
 # Freezer
 - type: entity

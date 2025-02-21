@@ -32,6 +32,24 @@ loadout-group-Jedi-backpack = Страж Клинка, рюкзак
 loadout-group-Jedi-lightsaber = Страж Клинка, световой меч
 loadout-group-Jedi-outer-clothing = Страж Клинка, верхняя одежда
 
+# Бригмедик
+
+loadout-group-STBrigmedicHead-head = Бригмедик, голова
+loadout-group-STBrigmedicHead-mask = Бригмедик, маска
+loadout-group-STBrigmedicHead-jumpsuits = Бригмедик, комбинезон
+loadout-group-STBrigmedicHead-backpack = Бригмедик, рюкзак
+loadout-group-STSurvivalBrigmedic = аварийный запас бригмедика
+ent-STBoxSurvivalBrigmedic = аварийный запас бригмедика
+    .desc = Коробка с базовым набором для выживания.
+    .suffix = Бригмедик
+ent-STSurvivalBrigmedicNitrogen = аварийный запас бригмедика
+    .suffix = Бригмедик Азот N2
+    .desc = { ent-BoxSurvival.desc }
+
 # Детектив
 
 loadout-group-detective-belt = Детектив, пояс
+
+# Ассистент
+
+stories-loadout-group-passenger-storage = Ассистент, хранилища

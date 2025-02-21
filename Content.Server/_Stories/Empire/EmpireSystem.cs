@@ -28,18 +28,12 @@ public sealed class EmpireSystem : EntitySystem
         SubscribeLocalEvent<EmpireMemberRoleComponent, GetBriefingEvent>(OnGetBriefing);
         SubscribeLocalEvent<HypnotizedEmpireMemberRoleComponent, GetBriefingEvent>(OnGetBriefing);
     }
-    private void OnGetBriefing(EntityUid uid, EmpireMemberRoleComponent comp, ref GetBriefingEvent args)
+    private void OnGetBriefing(Entity<EmpireMemberRoleComponent> role, ref GetBriefingEvent args)
     {
-        if (!TryComp<MindComponent>(uid, out var mind) || mind.OwnedEntity == null)
-            return;
-
         args.Append(Loc.GetString("empire-briefing"));
     }
-    private void OnGetBriefing(EntityUid uid, HypnotizedEmpireMemberRoleComponent comp, ref GetBriefingEvent args)
+    private void OnGetBriefing(Entity<HypnotizedEmpireMemberRoleComponent> role, ref GetBriefingEvent args)
     {
-        if (!TryComp<MindComponent>(uid, out var mind) || mind.OwnedEntity == null)
-            return;
-
         args.Append(Loc.GetString("hypnosis-empire-briefing"));
     }
 }

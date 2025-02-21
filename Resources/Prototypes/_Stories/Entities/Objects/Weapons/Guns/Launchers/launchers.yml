@@ -5,6 +5,9 @@
   id: HandTetherGun
   description: Вот это да! Ваша рука может манипулировать гравитацией вокруг объектов.
   components:
+    - type: Sprite
+      sprite: _Stories/Actions/force.rsi
+      state: telekines
     - type: Unremoveable
     - type: TetherGun
       maxForce: 1000

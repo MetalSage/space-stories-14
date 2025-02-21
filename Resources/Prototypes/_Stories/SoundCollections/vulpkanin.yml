@@ -24,3 +24,7 @@
   files:
   - /Audio/_Stories/Voice/Vulpkanin/dog_whine.ogg
 
+- type: soundCollection
+  id: VulpkaninHowl
+  files:
+  - /Audio/_Stories/Voice/Vulpkanin/dog_howl.ogg

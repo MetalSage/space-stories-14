@@ -197,7 +197,7 @@
   - type: Sprite
     sprite: Structures/Storage/Crates/engicrate_secure.rsi
   - type: AccessReader
-    access: [["Engineering"]]
+    access: [["Engineering"], ["PrisonEng"]] # [["Engineering"]] # Stories-Prison
 
 - type: entity
   parent: CrateBaseSecure

@@ -102,15 +102,15 @@
     state: pda-spengineer
 
 - type: entity
-  parent:
-    - PRISONPDAHeadOfPrison
-    - BaseMedicalPDA
+  parent: BaseMedicalPDA
   id: PRISONPDAMedic
   name: КПК врача тюрьмы
   description: Этот КПК - ваш путь к свободе.
   components:
+  - type: Sprite
+    sprite: _Stories/Objects/Devices/pda.rsi
   - type: Pda
-    id: PRISONIDCardMedic
+    id: PRISONIDCardHeadOfPrison
     state: pda-spmedic
   - type: Appearance
     appearanceDataInit:
@@ -118,4 +118,5 @@
         !type:String
         pda-spmedic
   - type: Icon
+    sprite: _Stories/Objects/Devices/pda.rsi
     state: pda-spmedic

@@ -9,7 +9,7 @@
     components:
     - BorgChassis
   available: false
-  icon: Interface/Actions/scream.png
+  icon: _Stories/Interface/Emotes/meow_2.png
   chatMessages: ["emote-meow"]
   chatTriggers:
   - meow
@@ -37,7 +37,7 @@
     components:
     - BorgChassis
   available: false
-  icon: Interface/Actions/scream.png
+  icon: _Stories/Interface/Emotes/meow_1.png
   chatMessages: ["emote-mew"]
   chatTriggers:
   - mew
@@ -56,7 +56,7 @@
     components:
     - BorgChassis
   available: false
-  icon: Interface/Actions/scream.png
+  icon: _Stories/Interface/Emotes/love.png
   chatMessages: ["emote-purr"]
   chatTriggers:
   - purr
@@ -78,6 +78,7 @@
     components:
     - BorgChassis
   available: false
+  icon: _Stories/Interface/Emotes/raw.png
   chatMessages: ["emote-growls"]
   chatTriggers:
   - growl
@@ -99,6 +100,7 @@
     components:
     - BorgChassis
   available: false
+  icon: _Stories/Interface/Emotes/bark.png
   chatMessages: ["emote-barks"]
   chatTriggers:
   - bark
@@ -120,6 +122,7 @@
     components:
     - BorgChassis
   available: false
+  icon: _Stories/Interface/Emotes/angry_grrr.png
   chatMessages: ["emote-snarls"]
   chatTriggers:
   - snarl
@@ -140,6 +143,7 @@
     components:
     - BorgChassis
   available: false
+  icon: _Stories/Interface/Emotes/whine.png
   chatMessages: ["emote-whines"]
   chatTriggers:
   - whine
@@ -159,6 +163,7 @@
     components:
     - BorgChassis
   available: false
+  icon: _Stories/Interface/Emotes/howl.png
   chatMessages: ["emote-howls"]
   chatTriggers:
   - howl

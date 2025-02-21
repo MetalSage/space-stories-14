@@ -1,5 +1,5 @@
 - type: entity
-  parent: ClothingOuterStorageBase
+  parent: ClothingOuterStorageToggleableBase
   id: ClothingOuterCoatJedi
   name: накидка джедая
   description: Длинный вид одежды, который свободно лежит на плечах, охватывая шею.

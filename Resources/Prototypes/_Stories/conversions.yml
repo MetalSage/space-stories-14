@@ -35,6 +35,6 @@
   components:
     - type: HypnotizedEmpire
   mindRoles:
-    - MindRoleShadowlingThrall
+    - MindRoleHypnotizedEmpireMember
   channels:
     - Empire

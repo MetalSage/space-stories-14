@@ -69,7 +69,7 @@
     boardName: wires-board-name-airalarm
     layoutId: AirAlarm
   - type: AccessReader
-    access: [["Atmospherics"]]
+    access: [["Atmospherics"], ["PrisonEng"]] # [["Atmospherics"]] # Stories-Prison
   - type: ContainerFill
     containers:
       board: [ AirAlarmElectronics ]
@@ -112,6 +112,10 @@
               collection: MetalGlassBreak
               params:
                 volume: -4
+  - type: GuideHelp
+    guides:
+    - AirAlarms
+    - DeviceMonitoringAndControl
 
 - type: entity
   id: AirAlarmAssembly

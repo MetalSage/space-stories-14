@@ -1,94 +1,81 @@
-# BASE STORIES CONFIG
+# Базовая предустановка конфигурации, используемая на всех серверах Space Stories.
+# Загружается перед настройками конфигурации, специфичными для сервера.
 
 # [config]
 # presets = "Stories/stories"
 
-[game]
-desc                    = """
-                  📕 𝗦𝗽𝗮𝗰𝗲 𝗦𝘁𝗼𝗿𝗶𝗲𝘀 - Сервер, который ценит Role Play, создавай свои истории у нас! 📘
-•────────────────────────────────── ✧ ──────────────────────────────────•
-  🌠 ⋮ Сервер со средним уровнем требований к ролевому отыгрышу.
-  🔐 ⋮ Космическая тюрьма - отдаленный объект в космосе, содержащий опасных преступников.
-  🌑 ⋮ Тенеморф - полубог, боящийся света, порабощающий экипаж с целью захватить галактику.
-  ⚔️ ⋮ Страж Клинка - воин света, защищающий командование станции своими мечом и магией.
-  🔥  ⋮ Инквизитор - воин тьмы, прибывший на станцию, чтобы уничтожить Стража Клинка.
-  🦠 ⋮ S.P.A.F. - слизень, пожирающий членов экипажа ради продолжения своего рода.
-  🔊 ⋮ TTS - 130 уникальных голосов, чтобы выразить уникальность ваших персонажей.
-  🐌 ⋮ Ползание - уникальная механика, позволяющая вам упасть и ползти.
-  👔 ⋮ Отзывчивая администрация, которая покажет, расскажет и поможет Вам освоится.
-•────────────────────────────────── ✧ ──────────────────────────────────•
-                                            📚 Присоединяйтесь к нашему дружному сообществу 📚"""
-map_pool                = "StoriesDefaultMapPool"
-lobbyduration           = 210
-round_restart_time      = 120
-contraband_examine      = false
-secret_weight_prototype = "StoriesSecret"
-
-[infolinks]
-bug_report = "https://github.com/MetalSage/space-stories-14/issues/new/choose"
-discord    = "https://discord.gg/space-stories"
-forum      = "https://forum.spacestories.club"
-github     = "https://github.com/MetalSage/space-stories-14"
-patreon    = "https://boosty.to/spacestories14"
-wiki       = "https://spacestories.club"
-appeal     = "https://discord.gg/space-stories"
-
-[server]
-rules_file = "StoriesRuleset"
-
-[shuttle]
-auto_call_time             = 0
-emergency_dock_time        = 120
-emergency_transit_time_min = 30
-emergency_transit_time_max = 60
-
-[net]
-tickrate        = 30
-max_connections = 1024
-
-[vote]
-restart_enabled                       = true
-preset_enabled                        = false
-map_enabled                           = false
-restart_not_allowed_when_admin_online = true
-
-[netres]
-limit = 10
-
 [admin]
-deadmin_on_join             = true
+deadmin_on_join = true
+new_player_threshold = 600
+role_ban_default_severity = "minor"
+department_ban_default_severity = "minor"
+server_ban_default_severity = "medium"
 server_ban_hwid_ban_default = false
 
 [ahelp]
 admin_prefix = true
 admin_prefix_webhook = true
 
-[chat]
-rate_limit_period                = 1.5
-rate_limit_count                 = 1
-rate_limit_announce_admins_delay = 10
-max_message_length               = 500
-
-[atmos]
-max_explosion_range = 5
-
-[rules]
-time = 180.0
-
-[queue]
-enabled = true
+[auth]
+mode = 1
 
 [biomass]
 easy_mode = false
 
+[chat]
+rate_limit_period = 1
+rate_limit_count = 1
+rate_limit_announce_admins_delay = 10
+max_message_length = 500
+
+[game]
+contraband_examine = false
+round_restart_time = 120
+lobbyduration = 210
+map_pool = "StoriesDefaultMapPool"
+secret_weight_prototype = "StoriesSecret"
+
+[gateway]
+generator_enabled = false
+
+[hub]
+tags = "lang:ru,rp:med,region:eu_e"
+
 [ic]
 flavor_text = true
+
+[infolinks]
+bug_report = "https://github.com/MetalSage/space-stories-14/issues/new/choose"
+discord = "https://discord.gg/space-stories"
+forum = "https://forum.spacestories.club"
+github = "https://github.com/MetalSage/space-stories-14"
+patreon = "https://boosty.to/spacestories14"
+wiki = "https://spacestories.club"
+appeal = "https://discord.gg/space-stories"
+
+[net]
+tickrate = 25
 
 [procgen]
 preload = false
 
-[gateway]
-generator_enabled = false
+[queue]
+enabled = true
+
+[server]
+rules_file = "StoriesRuleset"
+
+[shuttle]
+auto_call_time = 0
+emergency_dock_time = 120
+emergency_transit_time_min = 60
+emergency_transit_time_max = 120
+
+[vote]
+restart_enabled = true
+preset_enabled = false
+map_enabled = false
+restart_not_allowed_when_admin_online = true
 
 [viewport]
 maximum_width = 26

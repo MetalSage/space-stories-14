@@ -1,0 +1,16 @@
+# Toolbox
+- type: loadoutGroup
+  id: STPassengerToolbox
+  name: stories-loadout-group-passenger-storage
+  loadouts:
+  - STToolboxAncient
+
+# Старинный ящик для инструментов
+
+- type: loadout
+  id: STToolboxAncient
+  effects:
+  - !type:GroupLoadoutEffect
+    proto: GreyTider
+  equipment:
+    pocket1: STToolboxAncient

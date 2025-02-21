@@ -16,10 +16,10 @@
   - type: Vocal
     sounds:
       Male: MaleFelinid
-      Unsexed: UnisexFelinid
+      Unsexed: MaleFelinid
       Female: FemaleFelinid
   - type: Speech
-    allowedEmotes: ['Hiss', 'Meow', 'Mew', 'Growl', 'Purr']
+    allowedEmotes: ['Meow', 'Mew', 'Growl', 'Purr']
 
 - type: entity
   parent: BaseSpeciesDummy
