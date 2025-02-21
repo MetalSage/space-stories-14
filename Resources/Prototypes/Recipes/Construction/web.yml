@@ -1,11 +1,11 @@
 - type: construction
-  name: паутинная стена
+  name: web wall
   id: WallWeb
   graph: WebStructures
   startNode: start
   targetNode: wall
   category: construction-category-structures
-  description: Довольно слабая, но шелковисто-гладкая стенка.
+  description: A fairly weak yet silky smooth wall.
   icon:
     sprite: Structures/Walls/web.rsi
     state: full
@@ -20,13 +20,13 @@
     - !type:TileNotBlocked
 
 - type: construction
-  name: паутинный стол
+  name: web table
   id: TableWeb
   graph: WebStructures
   startNode: start
   targetNode: table
   category: construction-category-furniture
-  description: Очень гладкий и удивительно прочный.
+  description: Essential for any serious web development.
   icon:
     sprite: Structures/Furniture/Tables/web.rsi
     state: full
@@ -41,13 +41,13 @@
     - !type:TileNotBlocked
 
 - type: construction
-  name: паутинная кровать
+  name: web bed
   id: WebBed
   graph: WebStructures
   startNode: start
   targetNode: bed
   category: construction-category-furniture
-  description: Забавный факт, то что вы едите пауков во сне - ложь.
+  description: Fun fact, you eating spiders in your sleep is false.
   icon:
     sprite: Structures/Web/bed.rsi
     state: icon
@@ -62,13 +62,13 @@
     - !type:TileNotBlocked
 
 - type: construction
-  name: паутинный стул
+  name: web chair
   id: ChairWeb
   graph: WebStructures
   startNode: start
   targetNode: chair
   category: construction-category-furniture
-  description: Вы хотите серьезно заняться веб-разработкой? Приобретите это кресло!
+  description: You want to get serious about web development? Get this chair!
   icon:
     sprite: Structures/Web/chair.rsi
     state: icon
@@ -80,13 +80,13 @@
     - SpiderCraft
 
 - type: construction
-  name: паутинный ящик
+  name: web crate
   id: CrateWeb
   graph: WebStructures
   startNode: start
   targetNode: crate
   category: construction-category-storage
-  description: Для хранения продуктов и других вещей. Не такой прочный, как обычный ящик, и его нельзя заварить.
+  description: For containment of food and other things. Not as durable as a normal crate, and can't be welded shut.
   icon:
     sprite: Structures/Storage/Crates/web.rsi
     state: icon
@@ -99,13 +99,13 @@
     - SpiderCraft
 
 - type: construction
-  name: паутинная дверь
+  name: web door
   id: WebDoor
   graph: WebStructures
   startNode: start
   targetNode: door
   category: construction-category-structures
-  description: Ручная дверь, сделанная из паутины, обычно расположенная прямо перед ямой или ловушкой.
+  description: A manual door made from web, normally placed right before a pit or trap.
   icon:
     sprite: Structures/Doors/web_door.rsi
     state: closed
