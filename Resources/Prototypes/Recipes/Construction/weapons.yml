@@ -5,7 +5,7 @@
   startNode: start
   targetNode: icon
   category: construction-category-weapons
-  description: Неприметная кепка с вшитыми осколками стекла.
+  description: Неприметная кепка с вшитыми осколками стекла. # Stories-CraftTranslate
   icon: { sprite: Clothing/Head/Hats/greyflatcap.rsi, state: icon }
   objectType: Item
 
@@ -16,7 +16,7 @@
   startNode: start
   targetNode: icon
   category: construction-category-weapons
-  description: Неприметная кепка с вшитыми осколками стекла.
+  description: Неприметная кепка с вшитыми осколками стекла. # Stories-CraftTranslate
   icon: { sprite: Clothing/Head/Hats/brownflatcap.rsi, state: icon }
   objectType: Item
 
@@ -27,7 +27,7 @@
   startNode: start
   targetNode: icon
   category: construction-category-weapons
-  description: Осколок стекла, обернутый куском ткани.
+  description: Осколок стекла, обернутый куском ткани. # Stories-CraftTranslate
   icon: { sprite: Objects/Weapons/Melee/shiv.rsi, state: icon }
   objectType: Item
 
@@ -38,7 +38,7 @@
   startNode: start
   targetNode: icon
   category: construction-category-weapons
-  description: Осколок армированного стекла, обернутый куском ткани.
+  description: Осколок армированного стекла, обернутый куском ткани. # Stories-CraftTranslate
   icon: { sprite: Objects/Weapons/Melee/reinforced_shiv.rsi, state: icon }
   objectType: Item
 
@@ -49,7 +49,7 @@
   startNode: start
   targetNode: icon
   category: construction-category-weapons
-  description: Осколок плазмы, обернутый куском ткани.
+  description: Осколок плазмы, обернутый куском ткани. # Stories-CraftTranslate
   icon: { sprite: Objects/Weapons/Melee/plasma_shiv.rsi, state: icon }
   objectType: Item
 
@@ -60,7 +60,7 @@
   startNode: start
   targetNode: icon
   category: construction-category-weapons
-  description: Осколок урана, обернутый куском ткани.
+  description: Осколок урана, обернутый куском ткани. # Stories-CraftTranslate
   icon: { sprite: Objects/Weapons/Melee/uranium_shiv.rsi, state: icon }
   objectType: Item
 
@@ -71,7 +71,7 @@
   startNode: start
   targetNode: spear
   category: construction-category-weapons
-  description: Копье для тех случаев, когда нужно проделать в ком-нибудь дырки.
+  description: Копье для тех случаев, когда нужно проделать в ком-нибудь дырки. # Stories-CraftTranslate
   icon: { sprite: Objects/Weapons/Melee/spear.rsi, state: spear }
   objectType: Item
 
@@ -82,7 +82,7 @@
   startNode: start
   targetNode: spear
   category: construction-category-weapons
-  description: Усиленное копье для тех случаев, когда нужно проделать в ком-нибудь дырки.
+  description: Усиленное копье для тех случаев, когда нужно проделать в ком-нибудь дырки. # Stories-CraftTranslate
   icon: { sprite: Objects/Weapons/Melee/reinforced_spear.rsi, state: spear }
   objectType: Item
 
@@ -93,7 +93,7 @@
   startNode: start
   targetNode: spear
   category: construction-category-weapons
-  description: Плазменное копье для тех случаев, когда нужно проделать в ком-нибудь дырки.
+  description: Плазменное копье для тех случаев, когда нужно проделать в ком-нибудь дырки. # Stories-CraftTranslate
   icon: { sprite: Objects/Weapons/Melee/plasma_spear.rsi, state: spear }
   objectType: Item
 
@@ -104,7 +104,7 @@
   startNode: start
   targetNode: spear
   category: construction-category-weapons
-  description: Урановое копье для тех случаев, когда нужно проделать в ком-нибудь дырки.
+  description: Урановое копье для тех случаев, когда нужно проделать в ком-нибудь дырки. # Stories-CraftTranslate
   icon: { sprite: Objects/Weapons/Melee/uranium_spear.rsi, state: spear }
   objectType: Item
 
@@ -115,7 +115,7 @@
   startNode: start
   targetNode: bola
   category: construction-category-weapons
-  description: Простое оружие для того, чтобы сбить кого-нибудь на расстоянии.
+  description: Простое оружие для того, чтобы сбить кого-нибудь на расстоянии. # Stories-CraftTranslate
   icon: { sprite: Objects/Weapons/Throwable/bola.rsi, state: icon }
   objectType: Item
 
@@ -126,7 +126,7 @@
   startNode: start
   targetNode: woodenBuckler
   category: construction-category-weapons
-  description: Красиво вырезанный деревянный щит!
+  description: Красиво вырезанный деревянный щит! # Stories-CraftTranslate
   icon: { sprite: Objects/Weapons/Melee/shields.rsi, state: buckler-icon }
   objectType: Item
 
@@ -137,7 +137,7 @@
   startNode: start
   targetNode: makeshiftShield
   category: construction-category-weapons
-  description: Грубый и разваливающийся на части. Зачем вам это понадобилось?
+  description: Грубый и разваливающийся на части. Зачем вам это понадобилось? # Stories-CraftTranslate
   icon: { sprite: Objects/Weapons/Melee/shields.rsi, state: makeshift-icon }
   objectType: Item
 
@@ -148,7 +148,7 @@
   startNode: start
   targetNode: ImprovisedArrow
   category: construction-category-weapons
-  description: Стрела с наконечником из осколков стекла, предназначенная для стрельбы из лука.
+  description: Стрела с наконечником из осколков стекла, предназначенная для стрельбы из лука. # Stories-CraftTranslate
   icon: { sprite: Objects/Weapons/Guns/Bow/bow.rsi, state: wielded-arrow }
   objectType: Item
 
@@ -159,7 +159,7 @@
   startNode: start
   targetNode: ImprovisedArrowPlasma
   category: construction-category-weapons
-  description: Стрела с наконечником из осколков плазменного стекла, предназначенная для стрельбы из лука.
+  description: Стрела с наконечником из осколков плазменного стекла, предназначенная для стрельбы из лука. # Stories-CraftTranslate
   icon: { sprite: Objects/Weapons/Guns/Bow/bow.rsi, state: wielded-arrow }
   objectType: Item
 
@@ -170,7 +170,7 @@
   startNode: start
   targetNode: ImprovisedArrowUranium
   category: construction-category-weapons
-  description: Стрела с наконечником из осколков уранового стекла, предназначенная для стрельбы из лука.
+  description: Стрела с наконечником из осколков уранового стекла, предназначенная для стрельбы из лука. # Stories-CraftTranslate
   icon: { sprite: Objects/Weapons/Guns/Bow/bow.rsi, state: wielded-arrow }
   objectType: Item
 
@@ -181,7 +181,7 @@
   startNode: start
   targetNode: ImprovisedBow
   category: construction-category-weapons
-  description: Примитивный лук, сделанный из дерева и ткани. Ничего особенного, но он справлялся со своей задачей на протяжении тысячелетий.
+  description: Примитивный лук, сделанный из дерева и ткани. Ничего особенного, но он справлялся со своей задачей на протяжении тысячелетий. # Stories-CraftTranslate
   icon: { sprite: Objects/Weapons/Guns/Bow/bow.rsi, state: unwielded }
   objectType: Item
 
@@ -192,6 +192,6 @@
   startNode: start
   targetNode: spear
   category: construction-category-weapons
-  description: Объединённые вместе кости и шелк.
+  description: Объединённые вместе кости и шелк. # Stories-CraftTranslate
   icon: { sprite: Objects/Weapons/Melee/bone_spear.rsi, state: spear }
   objectType: Item

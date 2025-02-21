@@ -5,7 +5,7 @@
   startNode: start
   targetNode: torch
   category: construction-category-tools
-  description: Сделанный из дерева факел.
+  description: Сделанный из дерева факел. # Stories-CraftTranslate
   icon: { sprite: Objects/Misc/torch.rsi, state: icon }
   objectType: Item
 
@@ -16,7 +16,7 @@
   startNode: start
   targetNode: logic_gate
   category: construction-category-tools
-  description: Двоичный логический элемент для передачи сигналов.
+  description: Двоичный логический элемент для передачи сигналов. # Stories-CraftTranslate
   icon: { sprite: Objects/Devices/gates.rsi, state: or_icon }
   objectType: Item
 
@@ -27,7 +27,7 @@
   startNode: start
   targetNode: edge_detector
   category: construction-category-tools
-  description: Детектор для сигналов.
+  description: Детектор для сигналов. # Stories-CraftTranslate
   icon: { sprite: Objects/Devices/gates.rsi, state: edge_detector }
   objectType: Item
 
@@ -38,7 +38,7 @@
   startNode: start
   targetNode: power_sensor
   category: construction-category-tools
-  description: Устройство проверки сети питания для сигналов.
+  description: Устройство проверки сети питания для сигналов. # Stories-CraftTranslate
   icon: { sprite: Objects/Devices/gates.rsi, state: power_sensor }
   objectType: Item
 
@@ -49,6 +49,6 @@
   startNode: start
   targetNode: memory_cell
   category: construction-category-tools
-  description: Ячейка памяти для сигналов.
+  description: Ячейка памяти для сигналов. # Stories-CraftTranslate
   icon: { sprite: Objects/Devices/gates.rsi, state: memory_cell }
   objectType: Item

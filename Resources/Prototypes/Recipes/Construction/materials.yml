@@ -5,13 +5,13 @@
   startNode: start
   targetNode: MetalRod
   category: construction-category-materials
-  description: Прочный металлический стержень, который можно использовать для различных целей.
+  description: Прочный металлический стержень, который можно использовать для различных целей. # Stories-CraftTranslate
   icon: { sprite: Objects/Materials/parts.rsi, state: rods }
   objectType: Item
 
 - type: construction
   name: бронестекло # Stories-CraftTranslate
-  description: Лист армированного стекла.
+  description: Лист армированного стекла. # Stories-CraftTranslate
   id: SheetRGlass
   graph: Glass
   startNode: start
@@ -22,7 +22,7 @@
 
 - type: construction
   name: заводное стекло # Stories-CraftTranslate
-  description: Лист стекла, армированный латунью.
+  description: Лист стекла, армированный латунью. # Stories-CraftTranslate
   id: SheetClockworkGlass
   graph: Glass
   startNode: start
@@ -33,7 +33,7 @@
 
 - type: construction
   name: плазменное стекло # Stories-CraftTranslate
-  description: Лист полупрозрачной плазмы.
+  description: Лист полупрозрачной плазмы. # Stories-CraftTranslate
   id: SheetPGlass
   graph: Glass
   startNode: start
@@ -44,7 +44,7 @@
 
 - type: construction
   name: плазменное бронестекло # Stories-CraftTranslate
-  description: Лист армированной полупрозрачной плазмы.
+  description: Лист армированной полупрозрачной плазмы. # Stories-CraftTranslate
   id: SheetRPGlass
   graph: Glass
   startNode: start
@@ -55,7 +55,7 @@
 
 - type: construction
   name: плазменное бронестекло # Stories-CraftTranslate
-  description: Лист армированной полупрозрачной плазмы.
+  description: Лист армированной полупрозрачной плазмы. # Stories-CraftTranslate
   id: SheetRPGlass0
   graph: Glass
   startNode: start
@@ -66,7 +66,7 @@
 
 - type: construction
   name: плазменное бронестекло # Stories-CraftTranslate
-  description: Лист армированной полупрозрачной плазмы.
+  description: Лист армированной полупрозрачной плазмы. # Stories-CraftTranslate
   id: SheetRPGlass1
   graph: Glass
   startNode: start
@@ -82,13 +82,13 @@
   startNode: start
   targetNode: MaterialDurathread
   category: construction-category-materials
-  description: Высококачественная ткань, используемая для изготовления прочной одежды.
+  description: Высококачественная ткань, используемая для изготовления прочной одежды. # Stories-CraftTranslate
   icon: { sprite: Objects/Materials/materials.rsi, state: durathread }
   objectType: Item
 
 - type: construction
   name: урановое стекло # Stories-CraftTranslate
-  description: Лист уранового стекла.
+  description: Лист уранового стекла. # Stories-CraftTranslate
   id: SheetUGlass
   graph: Glass
   startNode: start
@@ -99,7 +99,7 @@
 
 - type: construction
   name: урановое бронестекло # Stories-CraftTranslate
-  description: Лист армированного уранового стекла.
+  description: Лист армированного уранового стекла. # Stories-CraftTranslate
   id: SheetRUGlass
   graph: Glass
   startNode: start
@@ -110,7 +110,7 @@
 
 - type: construction
   name: урановое бронестекло # Stories-CraftTranslate
-  description: Лист армированного уранового стекла.
+  description: Лист армированного уранового стекла. # Stories-CraftTranslate
   id: SheetRUGlass0
   graph: Glass
   startNode: start
@@ -121,7 +121,7 @@
 
 - type: construction
   name: урановое бронестекло # Stories-CraftTranslate
-  description: Лист армированного уранового стекла.
+  description: Лист армированного уранового стекла. # Stories-CraftTranslate
   id: SheetRUGlass1
   graph: Glass
   startNode: start

@@ -7,7 +7,7 @@
   startNode: start
   targetNode: steeltile
   category: construction-category-tiles
-  description: "Четыре стальные станционные плиты."
+  description: "Четыре стальные станционные плиты." # Stories-CraftTranslate
   icon: { sprite: Objects/Tiles/tile.rsi, state: steel }
   objectType: Item
 
@@ -18,7 +18,7 @@
   startNode: start
   targetNode: woodtile
   category: construction-category-tiles
-  description: "Четыре куска деревянной станционной плитки."
+  description: "Четыре куска деревянной станционной плитки." # Stories-CraftTranslate
   icon: { sprite: Objects/Tiles/tile.rsi, state: wood }
   objectType: Item
 
@@ -29,7 +29,7 @@
   startNode: start
   targetNode: filledPlate
   category: construction-category-tiles
-  description: "Четыре части латунной станционной плитки, совместимы только с латунным покрытием."
+  description: "Четыре части латунной станционной плитки, совместимы только с латунным покрытием." # Stories-CraftTranslate
   icon: { sprite: Objects/Tiles/tile.rsi, state: brass-filled }
   objectType: Item
 
@@ -40,7 +40,7 @@
   startNode: start
   targetNode: reebe
   category: construction-category-tiles
-  description: "Четыре части гладкой латунной станционной плитки, совместимы только с латунным покрытием."
+  description: "Четыре части гладкой латунной станционной плитки, совместимы только с латунным покрытием." # Stories-CraftTranslate
   icon: { sprite: Objects/Tiles/tile.rsi, state: reebe }
   objectType: Item
 
@@ -51,7 +51,7 @@
   startNode: start
   targetNode: whitetile
   category: construction-category-tiles
-  description: "Четыре белые станционные плитки."
+  description: "Четыре белые станционные плитки." # Stories-CraftTranslate
   icon: { sprite: Objects/Tiles/tile.rsi, state: white }
   objectType: Item
 
@@ -62,7 +62,7 @@
   startNode: start
   targetNode: darktile
   category: construction-category-tiles
-  description: "Четыре тёмные станционные плитки."
+  description: "Четыре тёмные станционные плитки." # Stories-CraftTranslate
   icon: { sprite: Objects/Tiles/tile.rsi, state: dark }
   objectType: Item
 
@@ -73,7 +73,7 @@
   startNode: start
   targetNode: fleshTile
   category: construction-category-tiles
-  description: "Четыре мясные плитки."
+  description: "Четыре мясные плитки." # Stories-CraftTranslate
   icon: { sprite: Objects/Tiles/tile.rsi, state: meat }
   objectType: Item
 
@@ -194,6 +194,6 @@
   startNode: start
   targetNode: woodtilelarge
   category: construction-category-tiles
-  description: "Четыре куска деревянной станционной плитки."
+  description: "Четыре куска деревянной станционной плитки." # Stories-CraftTranslate
   icon: { sprite: Objects/Tiles/tile.rsi, state: wood-large }
   objectType: Item

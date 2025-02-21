@@ -2,7 +2,7 @@
 - type: construction
   id: FilingCabinet
   name: картотечный шкаф # Stories-CraftTranslate
-  description: Шкаф для хранения всего, что пожелаете.
+  description: Шкаф для хранения всего, что пожелаете. # Stories-CraftTranslate
   graph: FilingCabinet
   startNode: start
   targetNode: filingCabinet
@@ -19,7 +19,7 @@
 - type: construction
   id: TallCabinet
   name: высокий шкаф # Stories-CraftTranslate
-  description: Шкаф для хранения всего, что пожелаете.
+  description: Шкаф для хранения всего, что пожелаете. # Stories-CraftTranslate
   graph: FilingCabinet
   startNode: start
   targetNode: tallCabinet
@@ -36,7 +36,7 @@
 - type: construction
   id: ChestDrawer
   name: комод # Stories-CraftTranslate
-  description: Маленький шкафчик для хранения предметов. Теперь на колёсиках!
+  description: Маленький шкафчик для хранения предметов. Теперь на колёсиках! # Stories-CraftTranslate
   graph: FilingCabinet
   startNode: start
   targetNode: chestDrawer
@@ -54,7 +54,7 @@
 - type: construction
   id: ShowCase
   name: витрина # Stories-CraftTranslate
-  description: Крепкая витрина для дорогостоящего экспоната.
+  description: Крепкая витрина для дорогостоящего экспоната. # Stories-CraftTranslate
   graph: GlassBox
   startNode: start
   targetNode: glassBox
@@ -73,7 +73,7 @@
 - type: construction
   id: ShelfWood
   name: деревянная полка # Stories-CraftTranslate
-  description: Удобное место для размещения, ээ, да чего угодно.
+  description: Удобное место для размещения, ээ, да чего угодно. # Stories-CraftTranslate
   graph: Shelf
   startNode: start
   targetNode: ShelfWood
@@ -89,7 +89,7 @@
 - type: construction
   id: ShelfMetal
   name: металлическая полка # Stories-CraftTranslate
-  description: Прочное место для размещения, ээ, да чего угодно.
+  description: Прочное место для размещения, ээ, да чего угодно. # Stories-CraftTranslate
   graph: Shelf
   startNode: start
   targetNode: ShelfMetal
@@ -105,7 +105,7 @@
 - type: construction
   id: ShelfGlass
   name: стеклянная полка # Stories-CraftTranslate
-  description: Как обычная полка! Но хрупкая и без стенок!
+  description: Как обычная полка! Но хрупкая и без стенок! # Stories-CraftTranslate
   graph: Shelf
   startNode: start
   targetNode: ShelfGlass
@@ -122,7 +122,7 @@
 - type: construction
   id: ShelfRWood
   name: прочная деревянная полка # Stories-CraftTranslate
-  description: Идеальное место для хранения всех ваших винтажных пластинок.
+  description: Идеальное место для хранения всех ваших винтажных пластинок. # Stories-CraftTranslate
   graph: Shelf
   startNode: start
   targetNode: ShelfRWood
@@ -138,7 +138,7 @@
 - type: construction
   id: ShelfRMetal
   name: прочная металлическая полка # Stories-CraftTranslate
-  description: Красивый и прочный, будет хранить ваши вещи в безопасности.
+  description: Красивый и прочный, будет хранить ваши вещи в безопасности. # Stories-CraftTranslate
   graph: Shelf
   startNode: start
   targetNode: ShelfRMetal
@@ -154,7 +154,7 @@
 - type: construction
   id: ShelfRGlass
   name: прочная стеклянная полка # Stories-CraftTranslate
-  description: Прозрачный корпус, высокая прочность, блестящий пластик. Как это не любить?
+  description: Прозрачный корпус, высокая прочность, блестящий пластик. Как это не любить? # Stories-CraftTranslate
   graph: Shelf
   startNode: start
   targetNode: ShelfRGlass
@@ -171,7 +171,7 @@
 - type: construction
   id: ShelfBar
   name: барная полка # Stories-CraftTranslate
-  description: Удобное место для хранения всей вашей выпивки, специально разработанное для хранения большего количества бутылок!
+  description: Удобное место для хранения всей вашей выпивки, специально разработанное для хранения большего количества бутылок! # Stories-CraftTranslate
   graph: Shelf
   startNode: start
   targetNode: ShelfBar
@@ -187,7 +187,7 @@
 - type: construction
   id: ShelfKitchen
   name: кухонная полка # Stories-CraftTranslate
-  description: Для хранения ножей, специй и всего прочего!
+  description: Для хранения ножей, специй и всего прочего! # Stories-CraftTranslate
   graph: Shelf
   startNode: start
   targetNode: ShelfKitchen
@@ -203,7 +203,7 @@
 - type: construction
   id: ShelfChemistry
   name: химическая полка # Stories-CraftTranslate
-  description: Идеально подходит для обеспечения безопасности самых важных химических веществ, а также для того, чтобы они не попали в руки неуклюжих клоунов!
+  description: Идеально подходит для обеспечения безопасности самых важных химических веществ, а также для того, чтобы они не попали в руки неуклюжих клоунов! # Stories-CraftTranslate
   graph: Shelf
   startNode: start
   targetNode: ShelfChemistry

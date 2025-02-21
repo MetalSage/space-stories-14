@@ -5,7 +5,7 @@
   startNode: start
   targetNode: grenade
   category: construction-category-weapons
-  description: Соберите гранату, используя триггер и химический заряд.
+  description: Соберите гранату, используя триггер и химический заряд. # Stories-CraftTranslate
   icon:
     sprite: Objects/Weapons/Grenades/modular.rsi
     state: complete
@@ -18,7 +18,7 @@
   startNode: start
   targetNode: mine
   category: construction-category-weapons
-  description: Соберите наземную мину, используя химический заряд.
+  description: Соберите наземную мину, используя химический заряд. # Stories-CraftTranslate
   icon:
     sprite: Objects/Misc/landmine.rsi
     state: landmine

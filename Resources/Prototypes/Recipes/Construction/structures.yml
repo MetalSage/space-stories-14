@@ -5,7 +5,7 @@
   startNode: start
   targetNode: girder
   category: construction-category-structures
-  description: Большой металлический каркас; Его необходимо покрыть листами металла, чтобы он считался стеной.
+  description: Большой металлический каркас; Его необходимо покрыть листами металла, чтобы он считался стеной. # Stories-CraftTranslate
   icon:
     sprite: /Textures/Structures/Walls/solid.rsi
     state: wall_girder
@@ -23,7 +23,7 @@
   startNode: start
   targetNode: reinforcedGirder
   category: construction-category-structures
-  description: Большой каркас из металла и пластали; Его необходимо покрыть листами пластали, чтобы он считался укреплённой стеной.
+  description: Большой каркас из металла и пластали; Его необходимо покрыть листами пластали, чтобы он считался укреплённой стеной. # Stories-CraftTranslate
   icon:
     sprite: /Textures/Structures/Walls/solid.rsi
     state: reinforced_wall_girder
@@ -41,7 +41,7 @@
   startNode: start
   targetNode: clockGirder
   category: construction-category-structures
-  description: Огромная шестерня с кронштейнами для дополнительного покрытия.
+  description: Огромная шестерня с кронштейнами для дополнительного покрытия. # Stories-CraftTranslate
   icon:
     sprite: /Textures/Structures/Walls/clock.rsi
     state: wall_gear
@@ -59,7 +59,7 @@
   startNode: start
   targetNode: wall
   category: construction-category-structures
-  description: Удерживает воздух внутри, а ассистентов снаружи.
+  description: Удерживает воздух внутри, а ассистентов снаружи. # Stories-CraftTranslate
   icon:
     sprite: Structures/Walls/solid.rsi
     state: full
@@ -77,7 +77,7 @@
   startNode: start
   targetNode: reinforcedWall
   category: construction-category-structures
-  description: Удерживает воздух внутри, а ассистентов снаружи.
+  description: Удерживает воздух внутри, а ассистентов снаружи. # Stories-CraftTranslate
   icon:
     sprite: Structures/Walls/solid.rsi
     state: rgeneric
@@ -95,7 +95,7 @@
   startNode: start
   targetNode: clockworkWall
   category: construction-category-structures
-  description: Удерживает воздух внутри, а ассистентов снаружи.
+  description: Удерживает воздух внутри, а ассистентов снаружи. # Stories-CraftTranslate
   icon:
     sprite: Structures/Walls/clock.rsi
     state: full
@@ -113,7 +113,7 @@
   startNode: start
   targetNode: woodWall
   category: construction-category-structures
-  description: Удерживает воздух внутри, а ассистентов снаружи.
+  description: Удерживает воздух внутри, а ассистентов снаружи. # Stories-CraftTranslate
   icon:
     sprite: Structures/Walls/wood.rsi
     state: full
@@ -131,7 +131,7 @@
   startNode: start
   targetNode: uraniumWall
   category: construction-category-structures
-  description: Удерживает воздух внутри, а ассистентов снаружи.
+  description: Удерживает воздух внутри, а ассистентов снаружи. # Stories-CraftTranslate
   icon:
     sprite: Structures/Walls/uranium.rsi
     state: full
@@ -149,7 +149,7 @@
   startNode: start
   targetNode: silverWall
   category: construction-category-structures
-  description: Удерживает воздух внутри, а ассистентов снаружи.
+  description: Удерживает воздух внутри, а ассистентов снаружи. # Stories-CraftTranslate
   icon:
     sprite: Structures/Walls/silver.rsi
     state: full
@@ -167,7 +167,7 @@
   startNode: start
   targetNode: plasticWall
   category: construction-category-structures
-  description: Удерживает воздух внутри, а ассистентов снаружи.
+  description: Удерживает воздух внутри, а ассистентов снаружи. # Stories-CraftTranslate
   icon:
     sprite: Structures/Walls/plastic.rsi
     state: full
@@ -185,7 +185,7 @@
   startNode: start
   targetNode: plasmaWall
   category: construction-category-structures
-  description: Удерживает воздух внутри, а ассистентов снаружи.
+  description: Удерживает воздух внутри, а ассистентов снаружи. # Stories-CraftTranslate
   icon:
     sprite: Structures/Walls/plasma.rsi
     state: full
@@ -203,7 +203,7 @@
   startNode: start
   targetNode: goldWall
   category: construction-category-structures
-  description: Удерживает воздух внутри, а ассистентов снаружи.
+  description: Удерживает воздух внутри, а ассистентов снаружи. # Stories-CraftTranslate
   icon:
     sprite: Structures/Walls/gold.rsi
     state: full
@@ -221,7 +221,7 @@
   startNode: start
   targetNode: shuttleWall
   category: construction-category-structures
-  description: Удерживает воздух внутри, а ассистентов снаружи.
+  description: Удерживает воздух внутри, а ассистентов снаружи. # Stories-CraftTranslate
   icon:
     sprite: Structures/Walls/shuttle.rsi
     state: full
@@ -239,7 +239,7 @@
   startNode: start
   targetNode: shuttleInteriorWall
   category: construction-category-structures
-  description: Удерживает воздух внутри, а ассистентов снаружи.
+  description: Удерживает воздух внутри, а ассистентов снаружи. # Stories-CraftTranslate
   icon:
     sprite: Structures/Walls/shuttleinterior.rsi
     state: full
@@ -257,7 +257,7 @@
   startNode: start
   targetNode: diagonalshuttleWall
   category: construction-category-structures
-  description: Удерживает воздух внутри, а ассистентов снаружи.
+  description: Удерживает воздух внутри, а ассистентов снаружи. # Stories-CraftTranslate
   icon:
     sprite: Structures/Walls/shuttle_diagonal.rsi
     state: state0
@@ -275,7 +275,7 @@
   startNode: start
   targetNode: bananiumWall
   category: construction-category-structures
-  description: Удерживает воздух внутри, а ассистентов снаружи.
+  description: Удерживает воздух внутри, а ассистентов снаружи. # Stories-CraftTranslate
   icon:
     sprite: Structures/Walls/clown.rsi
     state: full
@@ -293,7 +293,7 @@
   startNode: start
   targetNode: meatWall
   category: construction-category-structures
-  description: Sticky.
+  description: Липкая. # Stories-CraftTranslate
   icon:
     sprite: Structures/Walls/meat.rsi
     state: full
@@ -311,7 +311,7 @@
   startNode: start
   targetNode: grille
   category: construction-category-structures
-  description: Хлипкий каркас из металлических прутьев.
+  description: Хлипкий каркас из металлических прутьев. # Stories-CraftTranslate
   conditions:
     - !type:TileNotBlocked
       failIfSpace: false
@@ -329,7 +329,7 @@
   startNode: start
   targetNode: clockGrille
   category: construction-category-structures
-  description: Хлипкий каркас из металлических прутьев, собранный в традиционном Ратварском стиле.
+  description: Хлипкий каркас из металлических прутьев, собранный в традиционном Ратварском стиле. # Stories-CraftTranslate
   conditions:
     - !type:TileNotBlocked
       failIfSpace: false
@@ -347,7 +347,7 @@
   startNode: start
   targetNode: grilleDiagonal
   category: construction-category-structures
-  description: Хлипкий каркас из металлических прутьев.
+  description: Хлипкий каркас из металлических прутьев. # Stories-CraftTranslate
   conditions:
     - !type:TileNotBlocked
       failIfSpace: false
@@ -364,7 +364,7 @@
   startNode: start
   targetNode: clockworkGrilleDiagonal
   category: construction-category-structures
-  description: Хлипкий каркас из металлических прутьев, собранный в традиционном Ратварском стиле.
+  description: Хлипкий каркас из металлических прутьев, собранный в традиционном Ратварском стиле. # Stories-CraftTranslate
   conditions:
     - !type:TileNotBlocked
       failIfSpace: false
@@ -381,7 +381,7 @@
   startNode: start
   targetNode: window
   category: construction-category-structures
-  description: Прозрачное.
+  description: Прозрачное. # Stories-CraftTranslate
   canBuildInImpassable: true
   conditions:
     - !type:EmptyOrWindowValidInTile
@@ -400,7 +400,7 @@
   startNode: start
   targetNode: windowDiagonal
   category: construction-category-structures
-  description: Прозрачное.
+  description: Прозрачное. # Stories-CraftTranslate
   canBuildInImpassable: true
   conditions:
     - !type:EmptyOrWindowValidInTile
@@ -418,7 +418,7 @@
   startNode: start
   targetNode: reinforcedWindow
   category: construction-category-structures
-  description: Смотри не заляпай.
+  description: Прозрачное, но прочное. # Stories-CraftTranslate
   canBuildInImpassable: true
   conditions:
     - !type:EmptyOrWindowValidInTile
@@ -437,7 +437,7 @@
   startNode: start
   targetNode: reinforcedWindowDiagonal
   category: construction-category-structures
-  description: Прозрачное и крепкое.
+  description: Прозрачное и крепкое. # Stories-CraftTranslate
   canBuildInImpassable: true
   conditions:
     - !type:EmptyOrWindowValidInTile
@@ -455,7 +455,7 @@
   startNode: start
   targetNode: tintedWindow
   category: construction-category-structures
-  description: Не прозрачное, но лазеры все равно проходят насквозь.
+  description: Не прозрачное, но лазеры все равно проходят насквозь. # Stories-CraftTranslate
   canBuildInImpassable: true
   conditions:
     - !type:EmptyOrWindowValidInTile
@@ -474,7 +474,7 @@
   startNode: start
   targetNode: clockworkWindow
   category: construction-category-structures
-  description: Прозрачное и крепкое, с золотистым оттенком.
+  description: Прозрачное и крепкое, с золотистым оттенком. # Stories-CraftTranslate
   canBuildInImpassable: true
   conditions:
     - !type:EmptyOrWindowValidInTile
@@ -493,7 +493,7 @@
   startNode: start
   targetNode: clockworkWindowDiagonal
   category: construction-category-structures
-  description: Прозрачное и крепкое, с золотистым оттенком.
+  description: Прозрачное и крепкое, с золотистым оттенком. # Stories-CraftTranslate
   canBuildInImpassable: true
   conditions:
     - !type:EmptyOrWindowValidInTile
@@ -512,7 +512,7 @@
   targetNode: plasmaWindow
   category: construction-category-structures
   canBuildInImpassable: true
-  description: Прозрачное, с фиолетовым оттенком.
+  description: Прозрачное, с фиолетовым оттенком. # Stories-CraftTranslate
   conditions:
     - !type:EmptyOrWindowValidInTile
     - !type:NoWindowsInTile
@@ -531,7 +531,7 @@
   targetNode: reinforcedPlasmaWindow
   category: construction-category-structures
   canBuildInImpassable: true
-  description: Прозрачное и очень прочное, с фиолетовым оттенком.
+  description: Прозрачное и очень прочное, с фиолетовым оттенком. # Stories-CraftTranslate
   conditions:
     - !type:EmptyOrWindowValidInTile
     - !type:NoWindowsInTile
@@ -550,7 +550,7 @@
   targetNode: shuttleWindow
   category: construction-category-structures
   canBuildInImpassable: true
-  description: Сверхпрочный, способный выдерживать давление сверхсветовой скорости или выдерживать повреждения от снарядов.
+  description: Сверхпрочный, способный выдерживать давление сверхсветовой скорости или выдерживать повреждения от снарядов. # Stories-CraftTranslate
   conditions:
     - !type:EmptyOrWindowValidInTile
     - !type:NoWindowsInTile
@@ -569,7 +569,7 @@
   targetNode: plasmaWindowDiagonal
   category: construction-category-structures
   canBuildInImpassable: true
-  description: Прозрачное, с фиолетовым оттенком.
+  description: Прозрачное, с фиолетовым оттенком. # Stories-CraftTranslate
   conditions:
     - !type:EmptyOrWindowValidInTile
     - !type:NoWindowsInTile
@@ -587,7 +587,7 @@
   targetNode: reinforcedPlasmaWindowDiagonal
   category: construction-category-structures
   canBuildInImpassable: true
-  description: Прозрачное и очень прочное, с фиолетовым оттенком.
+  description: Прозрачное и очень прочное, с фиолетовым оттенком. # Stories-CraftTranslate
   conditions:
     - !type:EmptyOrWindowValidInTile
     - !type:NoWindowsInTile
@@ -604,7 +604,7 @@
   startNode: start
   targetNode: windowDirectional
   category: construction-category-structures
-  description: Прозрачное.
+  description: Прозрачное. # Stories-CraftTranslate
   canBuildInImpassable: true
   conditions:
     - !type:EmptyOrWindowValidInTile
@@ -622,7 +622,7 @@
   startNode: start
   targetNode: windowReinforcedDirectional
   category: construction-category-structures
-  description: Прозрачное, но прочное.
+  description: Прозрачное, но прочное. # Stories-CraftTranslate
   canBuildInImpassable: true
   conditions:
     - !type:EmptyOrWindowValidInTile
@@ -640,7 +640,7 @@
   startNode: start
   targetNode: windowClockworkDirectional
   category: construction-category-structures
-  description: Прозрачное и крепкое, с золотистым оттенком.
+  description: Прозрачное и крепкое, с золотистым оттенком. # Stories-CraftTranslate
   canBuildInImpassable: true
   conditions:
     - !type:EmptyOrWindowValidInTile
@@ -659,7 +659,7 @@
   targetNode: plasmaWindowDirectional
   category: construction-category-structures
   canBuildInImpassable: true
-  description: Прозрачное, с фиолетовым оттенком.
+  description: Прозрачное, с фиолетовым оттенком. # Stories-CraftTranslate
   conditions:
     - !type:EmptyOrWindowValidInTile
     - !type:NoWindowsInTile
@@ -677,7 +677,7 @@
   targetNode: plasmaReinforcedWindowDirectional
   category: construction-category-structures
   canBuildInImpassable: true
-  description: Прозрачное и очень крепкое, с фиолетовым оттенком.
+  description: Прозрачное и очень крепкое, с фиолетовым оттенком. # Stories-CraftTranslate
   conditions:
     - !type:EmptyOrWindowValidInTile
     - !type:NoWindowsInTile
@@ -695,7 +695,7 @@
   targetNode: uraniumWindow
   category: construction-category-structures
   canBuildInImpassable: true
-  description: Прозрачное, с добавлением РадоАбсорбента для защиты от смертельной дозы радиации.
+  description: Прозрачное, с добавлением РадоАбсорбента для защиты от смертельной дозы радиации. # Stories-CraftTranslate
   conditions:
     - !type:EmptyOrWindowValidInTile
     - !type:NoWindowsInTile
@@ -714,7 +714,7 @@
   targetNode: reinforcedUraniumWindow
   category: construction-category-structures
   canBuildInImpassable: true
-  description: Прозрачное и очень крепкое, с добавлением РадоАбсорбента для защиты вас от смертельной дозы радиации.
+  description: Прозрачное и очень крепкое, с добавлением РадоАбсорбента для защиты вас от смертельной дозы радиации. # Stories-CraftTranslate
   conditions:
     - !type:EmptyOrWindowValidInTile
     - !type:NoWindowsInTile
@@ -733,7 +733,7 @@
   targetNode: uraniumWindowDiagonal
   category: construction-category-structures
   canBuildInImpassable: true
-  description: Прозрачное, с добавлением РадоАбсорбента для защиты вас от смертельной дозы радиации.
+  description: Прозрачное, с добавлением РадоАбсорбента для защиты вас от смертельной дозы радиации. # Stories-CraftTranslate
   conditions:
     - !type:EmptyOrWindowValidInTile
     - !type:NoWindowsInTile
@@ -751,7 +751,7 @@
   targetNode: reinforcedUraniumWindowDiagonal
   category: construction-category-structures
   canBuildInImpassable: true
-  description: Прозрачное и очень крепкое, с добавлением РадоАбсорбента для защиты вас от смертельной дозы радиации.
+  description: Прозрачное и очень крепкое, с добавлением РадоАбсорбента для защиты вас от смертельной дозы радиации. # Stories-CraftTranslate
   conditions:
     - !type:EmptyOrWindowValidInTile
     - !type:NoWindowsInTile
@@ -768,7 +768,7 @@
   startNode: start
   targetNode: Firelock
   category: construction-category-structures
-  description: Это противопожарный шлюз - он блокирует помещение, когда в нем срабатывает пожарная сигнализация. Будьте внимательны, чтобы вас не раздавило!
+  description: Это противопожарный шлюз - он блокирует помещение, когда в нем срабатывает пожарная сигнализация. Будьте внимательны, чтобы вас не раздавило! # Stories-CraftTranslate
   icon:
     sprite: Structures/Doors/Airlocks/Standard/firelock.rsi
     state: closed
@@ -786,7 +786,7 @@
   startNode: start
   targetNode: FirelockGlass
   category: construction-category-structures
-  description: Это противопожарный шлюз - он блокирует помещение, когда в нем срабатывает пожарная сигнализация. Будьте внимательны, чтобы вас не раздавило!
+  description: Это противопожарный шлюз - он блокирует помещение, когда в нем срабатывает пожарная сигнализация. Будьте внимательны, чтобы вас не раздавило! # Stories-CraftTranslate
   icon:
     sprite: Structures/Doors/Airlocks/Glass/firelock.rsi
     state: closed
@@ -804,7 +804,7 @@
   startNode: start
   targetNode: FirelockEdge
   category: construction-category-structures
-  description: Это противопожарный шлюз - он блокирует помещение, когда в нем срабатывает пожарная сигнализация. Будьте внимательны, чтобы вас не раздавило!
+  description: Это противопожарный шлюз - он блокирует помещение, когда в нем срабатывает пожарная сигнализация. Будьте внимательны, чтобы вас не раздавило! # Stories-CraftTranslate
   icon:
     sprite: Structures/Doors/edge_door_hazard.rsi
     state: closed
@@ -821,7 +821,7 @@
   startNode: start
   targetNode: Shutters
   category: construction-category-structures
-  description: Это ставни - подключите его к кнопке, чтобы открывать и закрывать.
+  description: Это ставни - подключите его к кнопке, чтобы открывать и закрывать. # Stories-CraftTranslate
   icon:
     sprite: Structures/Doors/Shutters/shutters.rsi
     state: closed
@@ -836,7 +836,7 @@
   startNode: start
   targetNode: ShuttersWindow
   category: construction-category-structures
-  description: Это ставни - подключите его к кнопке, чтобы открывать и закрывать.
+  description: Это ставни - подключите его к кнопке, чтобы открывать и закрывать. # Stories-CraftTranslate
   icon:
     sprite: Structures/Doors/Shutters/shutters_window.rsi
     state: closed
@@ -851,7 +851,7 @@
   startNode: start
   targetNode: ShuttersRadiation
   category: construction-category-structures
-  description: Это ставни - подключите его к кнопке, чтобы открывать и закрывать.
+  description: Это ставни - подключите его к кнопке, чтобы открывать и закрывать. # Stories-CraftTranslate
   icon:
     sprite: Structures/Doors/Shutters/shutters_radiation.rsi
     state: closed
@@ -866,7 +866,7 @@
   startNode: start
   targetNode: blastdoor
   category: construction-category-structures
-  description: Имеется надпись "ОПАСНОСТЬ ВЗРЫВА".
+  description: Имеется надпись "ОПАСНОСТЬ ВЗРЫВА". # Stories-CraftTranslate
   icon:
     sprite: Structures/Doors/Shutters/blastdoor.rsi
     state: closed
@@ -881,7 +881,7 @@
   startNode: start
   targetNode: Catwalk
   category: construction-category-structures
-  description: Совсем как решетка. Только выглядит лучше.
+  description: Совсем как решетка. Только выглядит лучше. # Stories-CraftTranslate
   conditions:
     - !type:TileNotBlocked
       failIfSpace: false
@@ -903,7 +903,7 @@
   startNode: start
   targetNode: BananiumFloor
   category: construction-category-structures
-  description: Скользкий пол из ярко-желтого бананиума.
+  description: Скользкий пол из ярко-желтого бананиума. # Stories-CraftTranslate
   conditions:
     - !type:TileNotBlocked
       failIfSpace: false
@@ -924,7 +924,7 @@
   startNode: start
   targetNode: barricadefull
   category: construction-category-structures
-  description: Импровизированная баррикада из деревянных досок.
+  description: Импровизированная баррикада из деревянных досок. # Stories-CraftTranslate
   icon:
     sprite: Structures/barricades.rsi
     state: barricade_full
@@ -941,7 +941,7 @@
   startNode: start
   targetNode: barricadefull
   category: construction-category-structures
-  description: Импровизированная баррикада из деревянных досок.
+  description: Импровизированная баррикада из деревянных досок. # Stories-CraftTranslate
   icon:
     sprite: Structures/barricades.rsi
     state: barricade_directional
@@ -958,7 +958,7 @@
   startNode: start
   targetNode: railing
   category: construction-category-structures
-  description: Простые перила, предназначенные для защиты таких идиотов как вы от падения.
+  description: Простые перила, предназначенные для защиты таких идиотов как вы от падения. # Stories-CraftTranslate
   icon:
     sprite: Structures/Walls/railing.rsi
     state: side
@@ -975,7 +975,7 @@
   startNode: start
   targetNode: railingCorner
   category: construction-category-structures
-  description: Простые перила, предназначенные для защиты таких идиотов как вы от падения.
+  description: Простые перила, предназначенные для защиты таких идиотов как вы от падения. # Stories-CraftTranslate
   icon:
     sprite: Structures/Walls/railing.rsi
     state: corner
@@ -992,7 +992,7 @@
   startNode: start
   targetNode: railingCornerSmall
   category: construction-category-structures
-  description: Простые перила, предназначенные для защиты таких идиотов как вы от падения.
+  description: Простые перила, предназначенные для защиты таких идиотов как вы от падения. # Stories-CraftTranslate
   icon:
     sprite: Structures/Walls/railing.rsi
     state: corner_small
@@ -1009,7 +1009,7 @@
   startNode: start
   targetNode: railingRound
   category: construction-category-structures
-  description: Простые перила, предназначенные для защиты таких идиотов как вы от падения.
+  description: Простые перила, предназначенные для защиты таких идиотов как вы от падения. # Stories-CraftTranslate
   icon:
     sprite: Structures/Walls/railing.rsi
     state: round
@@ -1027,7 +1027,7 @@
   startNode: start
   targetNode: straight
   category: construction-category-structures
-  description: Часть сетчатого забора, предназначенного для огораживания территорий.
+  description: Часть сетчатого забора, предназначенного для огораживания территорий. # Stories-CraftTranslate
   icon:
     sprite: Structures/Walls/fence.rsi
     state: straight
@@ -1044,7 +1044,7 @@
   startNode: start
   targetNode: corner
   category: construction-category-structures
-  description: Часть сетчатого забора, предназначенного для огораживания территорий.
+  description: Часть сетчатого забора, предназначенного для огораживания территорий. # Stories-CraftTranslate
   icon:
     sprite: Structures/Walls/fence.rsi
     state: corner
@@ -1061,7 +1061,7 @@
   startNode: start
   targetNode: end
   category: construction-category-structures
-  description: Часть сетчатого забора, предназначенного для огораживания территорий.
+  description: Часть сетчатого забора, предназначенного для огораживания территорий. # Stories-CraftTranslate
   icon:
     sprite: Structures/Walls/fence.rsi
     state: end
@@ -1078,7 +1078,7 @@
   startNode: start
   targetNode: gate
   category: construction-category-structures
-  description: Легкий способ пройти через сетчатый забор.
+  description: Легкий способ пройти через сетчатый забор. # Stories-CraftTranslate
   icon:
     sprite: Structures/Walls/fence.rsi
     state: door_closed
@@ -1096,7 +1096,7 @@
   startNode: start
   targetNode: straight
   category: construction-category-structures
-  description: Часть деревянного забора, предназначенного для огораживания территорий.
+  description: Часть деревянного забора, предназначенного для огораживания территорий. # Stories-CraftTranslate
   icon:
     sprite: Structures/Walls/wooden_fence.rsi
     state: straight
@@ -1113,7 +1113,7 @@
   startNode: start
   targetNode: end
   category: construction-category-structures
-  description: Часть деревянного забора, предназначенного для огораживания территорий.
+  description: Часть деревянного забора, предназначенного для огораживания территорий. # Stories-CraftTranslate
   icon:
     sprite: Structures/Walls/wooden_fence.rsi
     state: end
@@ -1130,7 +1130,7 @@
   startNode: start
   targetNode: corner
   category: construction-category-structures
-  description: Часть деревянного забора, предназначенного для огораживания территорий.
+  description: Часть деревянного забора, предназначенного для огораживания территорий. # Stories-CraftTranslate
   icon:
     sprite: Structures/Walls/wooden_fence.rsi
     state: corner
@@ -1147,7 +1147,7 @@
   startNode: start
   targetNode: tjunction
   category: construction-category-structures
-  description: Часть деревянного забора, предназначенного для огораживания территорий.
+  description: Часть деревянного забора, предназначенного для огораживания территорий. # Stories-CraftTranslate
   icon:
     sprite: Structures/Walls/wooden_fence.rsi
     state: tjunction
@@ -1164,7 +1164,7 @@
   startNode: start
   targetNode: gate
   category: construction-category-structures
-  description: Часть деревянного забора, предназначенного для огораживания территорий.
+  description: Часть деревянного забора, предназначенного для огораживания территорий. # Stories-CraftTranslate
   icon:
     sprite: Structures/Walls/wooden_fence.rsi
     state: door_closed
@@ -1182,7 +1182,7 @@
   startNode: start
   targetNode: straight_small
   category: construction-category-structures
-  description: Часть деревянного забора, предназначенного для огораживания территорий.
+  description: Часть деревянного забора, предназначенного для огораживания территорий. # Stories-CraftTranslate
   icon:
     sprite: Structures/Walls/wooden_fence.rsi
     state: straight_small
@@ -1199,7 +1199,7 @@
   startNode: start
   targetNode: end_small
   category: construction-category-structures
-  description: Часть деревянного забора, предназначенного для огораживания территорий.
+  description: Часть деревянного забора, предназначенного для огораживания территорий. # Stories-CraftTranslate
   icon:
     sprite: Structures/Walls/wooden_fence.rsi
     state: end_small
@@ -1216,7 +1216,7 @@
   startNode: start
   targetNode: corner_small
   category: construction-category-structures
-  description: Часть деревянного забора, предназначенного для огораживания территорий.
+  description: Часть деревянного забора, предназначенного для огораживания территорий. # Stories-CraftTranslate
   icon:
     sprite: Structures/Walls/wooden_fence.rsi
     state: corner_small
@@ -1233,7 +1233,7 @@
   startNode: start
   targetNode: tjunction_small
   category: construction-category-structures
-  description: Часть деревянного забора, предназначенного для огораживания территорий.
+  description: Часть деревянного забора, предназначенного для огораживания территорий. # Stories-CraftTranslate
   icon:
     sprite: Structures/Walls/wooden_fence.rsi
     state: tjunction_small
@@ -1250,7 +1250,7 @@
   startNode: start
   targetNode: gate_small
   category: construction-category-structures
-  description: Часть деревянного забора, предназначенного для огораживания территорий.
+  description: Часть деревянного забора, предназначенного для огораживания территорий. # Stories-CraftTranslate
   icon:
     sprite: Structures/Walls/wooden_fence.rsi
     state: door_closed_small
@@ -1268,7 +1268,7 @@
   startNode: start
   targetNode: airlock
   category: construction-category-structures
-  description: Он открывается, он закрывается, и он может вас раздавить.
+  description: Он открывается, он закрывается, и он может вас раздавить. # Stories-CraftTranslate
   icon:
     sprite: Structures/Doors/Airlocks/Standard/basic.rsi
     state: assembly
@@ -1285,7 +1285,7 @@
   startNode: start
   targetNode: glassAirlock
   category: construction-category-structures
-  description: Он открывается, он закрывается, и он может вас раздавить.
+  description: Он открывается, он закрывается, и он может вас раздавить. # Stories-CraftTranslate
   icon:
     sprite: Structures/Doors/Airlocks/Glass/glass.rsi
     state: assembly
@@ -1302,7 +1302,7 @@
   startNode: start
   targetNode: airlock
   category: construction-category-structures
-  description: Он открывается, он закрывается, и он может вас раздавить.
+  description: Он открывается, он закрывается, и он может вас раздавить. # Stories-CraftTranslate
   icon:
     sprite: Structures/Doors/Airlocks/Standard/clockwork_pinion.rsi
     state: assembly
@@ -1319,7 +1319,7 @@
   startNode: start
   targetNode: glassAirlock
   category: construction-category-structures
-  description: Он открывается, он закрывается, и он может вас раздавить.
+  description: Он открывается, он закрывается, и он может вас раздавить. # Stories-CraftTranslate
   icon:
     sprite: Structures/Doors/Airlocks/Glass/clockwork_pinion.rsi
     state: assembly
@@ -1336,7 +1336,7 @@
   startNode: start
   targetNode: airlock
   category: construction-category-structures
-  description: Он открывается, он закрывается, и он может вас раздавить. Necessary for connecting two space craft together.
+  description: Он открывается, он закрывается, и он может вас раздавить. Необходим для стыковки двух космических кораблей. # Stories-CraftTranslate
   icon:
     sprite: Structures/Doors/Airlocks/Glass/shuttle.rsi
     state: closed
@@ -1354,7 +1354,7 @@
   startNode: start
   targetNode: airlockGlass
   category: construction-category-structures
-  description: Он открывается, он закрывается, и он может вас раздавить. Necessary for connecting two space craft together. This one has a window.
+  description: Он открывается, он закрывается, и он может вас раздавить. Необходим для стыковки двух космических кораблей. В этом есть окно. # Stories-CraftTranslate
   icon:
     sprite: Structures/Doors/Airlocks/Glass/shuttle.rsi
     state: closed
@@ -1372,7 +1372,7 @@
   startNode: start
   targetNode: windoor
   category: construction-category-structures
-  description: Он открывается, закрывается, и вы можете видеть сквозь него! И он может быть сделан из плазмы, урана или обычного стекла!
+  description: Он открывается, закрывается, и вы можете видеть сквозь него! И он может быть сделан из плазмы, урана или обычного стекла! # Stories-CraftTranslate
   icon:
     sprite: Structures/Doors/Windoors/windoor.rsi
     state: closed
@@ -1389,7 +1389,7 @@
   startNode: start
   targetNode: windoorSecure
   category: construction-category-structures
-  description: Это прочная дверь, и сквозь нее можно видеть! И она может быть сделана из плазмы, урана или обычного стекла!
+  description: Это прочная дверь, и сквозь нее можно видеть! И она может быть сделана из плазмы, урана или обычного стекла! # Stories-CraftTranslate
   icon:
     sprite: Structures/Doors/Windoors/windoor.rsi
     state: closed
@@ -1406,7 +1406,7 @@
   startNode: start
   targetNode: windoorClockwork
   category: construction-category-structures
-  description: Он открывается, закрывается, и вы можете видеть сквозь него! Выглядит прочным.
+  description: Он открывается, закрывается, и вы можете видеть сквозь него! Выглядит прочным. # Stories-CraftTranslate
   icon:
     sprite: Structures/Doors/Windoors/clockwork_windoor.rsi
     state: closed
@@ -1424,7 +1424,7 @@
   startNode: start
   targetNode: tubeLight
   category: construction-category-structures
-  description: Настенный светильник. Оснащён лампой-трубкой.
+  description: Настенный светильник. Оснащён лампой-трубкой. # Stories-CraftTranslate
   icon:
     sprite: Structures/Wallmounts/Lighting/light_tube.rsi
     state: base
@@ -1444,7 +1444,7 @@
   startNode: start
   targetNode: bulbLight
   category: construction-category-structures
-  description: Настенный светильник. Оснащён светодиодной лампой.
+  description: Настенный светильник. Оснащён светодиодной лампой. # Stories-CraftTranslate
   icon:
     sprite: Structures/Wallmounts/Lighting/light_small.rsi
     state: base
@@ -1463,7 +1463,7 @@
   startNode: start
   targetNode: emergencyLight
   category: construction-category-structures
-  description: Это аварийная лампа.
+  description: Это аварийная лампа. # Stories-CraftTranslate
   icon:
     sprite: Structures/Wallmounts/Lighting/emergency_light.rsi
     state: base
@@ -1481,7 +1481,7 @@
   startNode: start
   targetNode: groundLight
   category: construction-category-structures
-  description: Фонарный столб. Оснащён лампой-трубкой.
+  description: Фонарный столб. Оснащён лампой-трубкой. # Stories-CraftTranslate
   icon:
     sprite: Structures/Lighting/LightPosts/small_light_post.rsi
     state: base
@@ -1499,7 +1499,7 @@
   startNode: start
   targetNode: strobeLight
   category: construction-category-structures
-  description: Настенный светильник. Оснащён светодиодной лампой.
+  description: Настенный светильник. Оснащён светодиодной лампой. # Stories-CraftTranslate
   icon:
     sprite: Structures/Wallmounts/Lighting/strobe_light.rsi
     state: base
@@ -1518,7 +1518,7 @@
   startNode: start
   targetNode: entity
   category: construction-category-structures
-  description: Конвейерная лента, обычно используется для быстрой транспортировки большого количества объектов в другое место.
+  description: Конвейерная лента, обычно используется для быстрой транспортировки большого количества объектов в другое место. # Stories-CraftTranslate
   objectType: Structure
   placementMode: SnapgridCenter
   canBuildInImpassable: false
@@ -1535,7 +1535,7 @@
   startNode: start
   targetNode: metalDoor
   category: construction-category-structures
-  description: Примитивная дверь с ручным управлением, как у пещерных людей.
+  description: Примитивная дверь с ручным управлением, как у пещерных людей. # Stories-CraftTranslate
   objectType: Structure
   placementMode: SnapgridCenter
   canBuildInImpassable: false
@@ -1552,7 +1552,7 @@
   startNode: start
   targetNode: woodDoor
   category: construction-category-structures
-  description: Примитивная дверь с ручным управлением, как у пещерных людей.
+  description: Примитивная дверь с ручным управлением, как у пещерных людей. # Stories-CraftTranslate
   objectType: Structure
   placementMode: SnapgridCenter
   canBuildInImpassable: false
@@ -1569,7 +1569,7 @@
   startNode: start
   targetNode: plasmaDoor
   category: construction-category-structures
-  description: Примитивная дверь с ручным управлением, как у пещерных людей.
+  description: Примитивная дверь с ручным управлением, как у пещерных людей. # Stories-CraftTranslate
   objectType: Structure
   placementMode: SnapgridCenter
   canBuildInImpassable: false
@@ -1586,7 +1586,7 @@
   startNode: start
   targetNode: goldDoor
   category: construction-category-structures
-  description: Примитивная дверь с ручным управлением, как у пещерных людей.
+  description: Примитивная дверь с ручным управлением, как у пещерных людей. # Stories-CraftTranslate
   objectType: Structure
   placementMode: SnapgridCenter
   canBuildInImpassable: false
@@ -1603,7 +1603,7 @@
   startNode: start
   targetNode: silverDoor
   category: construction-category-structures
-  description: Примитивная дверь с ручным управлением, как у пещерных людей.
+  description: Примитивная дверь с ручным управлением, как у пещерных людей. # Stories-CraftTranslate
   objectType: Structure
   placementMode: SnapgridCenter
   canBuildInImpassable: false
@@ -1620,7 +1620,7 @@
   startNode: start
   targetNode: paperDoor
   category: construction-category-structures
-  description: Примитивная дверь с ручным управлением, как у пещерных людей.
+  description: Примитивная дверь с ручным управлением, как у пещерных людей. # Stories-CraftTranslate
   objectType: Structure
   placementMode: SnapgridCenter
   canBuildInImpassable: false
@@ -1636,7 +1636,7 @@
   targetNode: plasticFlaps
   category: construction-category-structures
   placementMode: SnapgridCenter
-  description: Пластиковые шторки для пропускания предметов и защиты от посторонних.
+  description: Пластиковые шторки для пропускания предметов и защиты от посторонних. # Stories-CraftTranslate
   objectType: Structure
   canBuildInImpassable: false
   icon:
@@ -1653,7 +1653,7 @@
   targetNode: opaqueFlaps
   category: construction-category-structures
   placementMode: SnapgridCenter
-  description: Непрозрачные пластиковые шторки для пропускания предметов и защиты от посторонних.
+  description: Непрозрачные пластиковые шторки для пропускания предметов и защиты от посторонних. # Stories-CraftTranslate
   objectType: Structure
   canBuildInImpassable: false
   icon:
@@ -1670,7 +1670,7 @@
   targetNode: statue
   category: construction-category-structures
   placementMode: SnapgridCenter
-  description: Статуя одного из храбрых карпов, благодаря которому мы находимся там, где находимся. С настоящими зубами!
+  description: Статуя одного из храбрых карпов, благодаря которому мы находимся там, где находимся. С настоящими зубами! # Stories-CraftTranslate
   objectType: Structure
   canBuildInImpassable: false
   icon:
@@ -1687,7 +1687,7 @@
   targetNode: bananiumStatue
   category: construction-category-structures
   placementMode: SnapgridCenter
-  description: Статуя клоуна, сделанная из бананиума.
+  description: Статуя клоуна, сделанная из бананиума. # Stories-CraftTranslate
   objectType: Structure
   canBuildInImpassable: false
   icon:
@@ -1703,7 +1703,7 @@
   startNode: start
   targetNode: bananiumDoor
   category: construction-category-structures
-  description: Примитивная дверь, сделанная из бананиума, издает звуковой сигнал.
+  description: Примитивная дверь, сделанная из бананиума, издает звуковой сигнал. # Stories-CraftTranslate
   objectType: Structure
   placementMode: SnapgridCenter
   canBuildInImpassable: false
@@ -1720,7 +1720,7 @@
   startNode: start
   targetNode: bananiumAltar
   category: construction-category-structures
-  description: Бананиумовый алтарь, посвящённый Хонкоматери.
+  description: Бананиумовый алтарь, посвящённый Хонкоматери. # Stories-CraftTranslate
   icon:
     sprite: Structures/Furniture/Altars/Cults/bananium.rsi
     state: full
@@ -1738,7 +1738,7 @@
   startNode: start
   targetNode: solidSecretDoor
   category: construction-category-structures
-  description: Потайная дверь в стене.
+  description: Потайная дверь в стене. # Stories-CraftTranslate
   objectType: Structure
   placementMode: SnapgridCenter
   canBuildInImpassable: false

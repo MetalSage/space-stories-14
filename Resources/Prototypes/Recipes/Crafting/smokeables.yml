@@ -5,7 +5,7 @@
   startNode: start
   targetNode: joint
   category: construction-category-misc
-  description: "Самокрутка из высушенного растения, завёрнутого в тонкую бумагу."
+  description: "Самокрутка из высушенного растения, завёрнутого в тонкую бумагу." # Stories-CraftTranslate
   icon: { sprite: Objects/Consumable/Smokeables/Cannabis/joint.rsi, state: unlit-icon }
   objectType: Item
 
@@ -16,7 +16,7 @@
   startNode: start
   targetNode: jointRainbow
   category: construction-category-misc
-  description: "Самокрутка из высушенного растения, завёрнутого в тонкую бумагу."
+  description: "Самокрутка из высушенного растения, завёрнутого в тонкую бумагу." # Stories-CraftTranslate
   icon: { sprite: Objects/Consumable/Smokeables/Cannabis/joint.rsi, state: unlit-icon }
   objectType: Item
 
@@ -27,7 +27,7 @@
   startNode: start
   targetNode: blunt
   category: construction-category-misc
-  description: "Самокрутка из высушенного растения, завёрнутого в высушенный табачный лист."
+  description: "Самокрутка из высушенного растения, завёрнутого в высушенный табачный лист." # Stories-CraftTranslate
   icon: { sprite: Objects/Consumable/Smokeables/Cannabis/blunt.rsi, state: unlit-icon }
   objectType: Item
 
@@ -38,7 +38,7 @@
   startNode: start
   targetNode: bluntRainbow
   category: construction-category-misc
-  description: "Самокрутка из высушенного растения, завёрнутого в высушенный табачный лист."
+  description: "Самокрутка из высушенного растения, завёрнутого в высушенный табачный лист." # Stories-CraftTranslate
   icon: { sprite: Objects/Consumable/Smokeables/Cannabis/blunt.rsi, state: unlit-icon }
   objectType: Item
 
@@ -49,7 +49,7 @@
   startNode: start
   targetNode: cigarette
   category: construction-category-misc
-  description: "Скрутка с табаком и никотином."
+  description: "Скрутка с табаком и никотином." # Stories-CraftTranslate
   icon: { sprite: Objects/Consumable/Smokeables/Cigarettes/cigarette.rsi, state: unlit-icon }
   objectType: Item
 
@@ -62,7 +62,7 @@
   startNode: start
   targetNode: ground
   category: construction-category-misc
-  description: "Измельчённая конопля, готовая унести вас в трип."
+  description: "Измельчённая конопля, готовая унести вас в трип." # Stories-CraftTranslate
   icon: { sprite: Objects/Misc/reagent_fillings.rsi, state: powderpile }
 #    color: darkgreen
   objectType: Item
@@ -74,7 +74,7 @@
   startNode: start
   targetNode: groundRainbow
   category: construction-category-misc
-  description: "Измельчённая радужная конопля, готовая унести вас в трип."
+  description: "Измельчённая радужная конопля, готовая унести вас в трип." # Stories-CraftTranslate
   icon: { sprite: Objects/Specific/Hydroponics/rainbow_cannabis.rsi, state: powderpile_rainbow }
   objectType: Item
 
@@ -85,7 +85,7 @@
   startNode: start
   targetNode: ground
   category: construction-category-misc
-  description: "Измельчённый табак, идеально подходящий для самокруток."
+  description: "Измельчённый табак, идеально подходящий для самокруток." # Stories-CraftTranslate
   icon: { sprite: Objects/Misc/reagent_fillings.rsi, state: powderpile }
 #    color: brown
   objectType: Item

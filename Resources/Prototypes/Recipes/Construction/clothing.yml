@@ -5,7 +5,7 @@
   startNode: start
   targetNode: clownHardsuit
   category: construction-category-clothing
-  description: Самодельный клоунский скафандр.
+  description: Самодельный клоунский скафандр. # Stories-CraftTranslate
   icon: { sprite: Clothing/OuterClothing/Hardsuits/clown.rsi, state: icon }
   objectType: Item
 
@@ -16,7 +16,7 @@
   startNode: start
   targetNode: mimeHardsuit
   category: construction-category-clothing
-  description: Самодельный мимский скафандр.
+  description: Самодельный мимский скафандр. # Stories-CraftTranslate
   icon: { sprite: Clothing/OuterClothing/Hardsuits/mime.rsi, state: icon }
   objectType: Item
 
@@ -27,7 +27,7 @@
   startNode: start
   targetNode: armor
   category: construction-category-clothing
-  description: Доспехи из костей.
+  description: Доспехи из костей. # Stories-CraftTranslate
   icon: { sprite: Clothing/OuterClothing/Armor/bone_armor.rsi, state: icon }
   objectType: Item
 
@@ -38,7 +38,7 @@
   startNode: start
   targetNode: helmet
   category: construction-category-clothing
-  description: Шлем, сделанный из костей.
+  description: Шлем, сделанный из костей. # Stories-CraftTranslate
   icon: { sprite: Clothing/Head/Helmets/bone_helmet.rsi, state: icon }
   objectType: Item
 
@@ -49,7 +49,7 @@
   startNode: start
   targetNode: mask
   category: construction-category-clothing
-  description: Маска клоуна, украшенных банановой кожурой.
+  description: Маска клоуна, украшенных банановой кожурой. # Stories-CraftTranslate
   icon: { sprite: Clothing/Mask/clown_banana.rsi, state: icon }
   objectType: Item
 
@@ -60,7 +60,7 @@
   startNode: start
   targetNode: jumpsuit
   category: construction-category-clothing
-  description: Костюм клоуна, украшенных банановой кожурой.
+  description: Костюм клоуна, украшенных банановой кожурой. # Stories-CraftTranslate
   icon: { sprite: Clothing/Uniforms/Jumpsuit/clown_banana.rsi, state: icon }
   objectType: Item
 
@@ -71,7 +71,7 @@
   startNode: start
   targetNode: shoes
   category: construction-category-clothing
-  description: Пара клоунских туфель, украшенных банановой кожурой.
+  description: Пара клоунских туфель, украшенных банановой кожурой. # Stories-CraftTranslate
   icon: { sprite: Clothing/Shoes/Specific/clown_banana.rsi, state: icon }
   objectType: Item
 
@@ -82,7 +82,7 @@
   startNode: start
   targetNode: medsecHud
   category: construction-category-clothing
-  description: Две визора, объединённых руками.
+  description: Две визора, объединённых руками. # Stories-CraftTranslate
   icon: { sprite: Clothing/Eyes/Hud/medsec.rsi, state: icon }
   objectType: Item
 
@@ -93,7 +93,7 @@
   startNode: start
   targetNode: shoes
   category: construction-category-clothing
-  description: Удобные, но преследуемые призраками уток, которых вы кормили хлебом в детстве.
+  description: Удобные, но преследуемые призраками уток, которых вы кормили хлебом в детстве. # Stories-CraftTranslate
   icon: { sprite: Clothing/Shoes/Misc/duck-slippers.rsi, state: icon }
   objectType: Item
 
@@ -104,7 +104,7 @@
   startNode: start
   targetNode: glassesSec
   category: construction-category-clothing
-  description: Пара солнцезащитных очков, объединённых для того, чтобы иметь встроенный визор службы безопасности.
+  description: Пара солнцезащитных очков, объединённых для того, чтобы иметь встроенный визор службы безопасности. # Stories-CraftTranslate
   icon: { sprite: Clothing/Eyes/Glasses/secglasses.rsi, state: icon }
   objectType: Item
 
@@ -115,7 +115,7 @@
   startNode: start
   targetNode: Quiver
   category: construction-category-clothing
-  description: Вмещает до 15 стрел и плотно облегает талию.
+  description: Вмещает до 15 стрел и плотно облегает талию. # Stories-CraftTranslate
   icon: { sprite: Clothing/Belt/quiver.rsi, state: icon }
   objectType: Item
 
@@ -126,6 +126,6 @@
   startNode: start
   targetNode: helmet
   category: construction-category-clothing
-  description: Продвинутое снаряжение службы безопасности. Защищает станцию от никчёмных сотрудников.
+  description: Продвинутое снаряжение службы безопасности. Защищает станцию от никчёмных сотрудников. # Stories-CraftTranslate
   icon: { sprite: Clothing/Head/Helmets/justice.rsi, state: icon }
   objectType: Item

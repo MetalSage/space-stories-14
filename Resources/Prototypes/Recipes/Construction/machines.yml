@@ -5,7 +5,7 @@
   startNode: start
   targetNode: computer
   category: construction-category-machines
-  description: Каркас, используемый для создания чего-либо с помощью машинной платы.
+  description: Каркас, используемый для создания чего-либо с помощью машинной платы. # Stories-CraftTranslate
   placementMode: SnapgridCenter
   canBuildInImpassable: false
   icon:
@@ -14,7 +14,7 @@
 
 - type: construction
   name: каркас машины # Stories-CraftTranslate
-  description: Строящаяся машина. Требуется больше деталей.
+  description: Строящаяся машина. Требуется больше деталей. # Stories-CraftTranslate
   id: MachineFrame
   graph: Machine
   startNode: start
@@ -34,7 +34,7 @@
   startNode: start
   targetNode: LeverNode
   category: construction-category-machines
-  description: Рычаг для управления машинами. Он имеет 3 рабочих состояния.
+  description: Рычаг для управления машинами. Он имеет 3 рабочих состояния. # Stories-CraftTranslate
   objectType: Structure
   canBuildInImpassable: false
   icon:
@@ -50,7 +50,7 @@
   startNode: start
   targetNode: LightSwitchNode
   category: construction-category-machines
-  description: Это переключатель источников света, использующих локальный контроллер питания.
+  description: Это переключатель источников света, использующих локальный контроллер питания. # Stories-CraftTranslate
   icon:
     sprite: Structures/Wallmounts/switch.rsi
     state: on
@@ -68,7 +68,7 @@
   startNode: start
   targetNode: SignalSwitchNode
   category: construction-category-machines
-  description: Это переключатель питания устройств.
+  description: Это переключатель питания устройств. # Stories-CraftTranslate
   icon:
     sprite: Structures/Wallmounts/switch.rsi
     state: on
@@ -86,7 +86,7 @@
   startNode: start
   targetNode: SignalButtonNode
   category: construction-category-machines
-  description: Эта кнопка что-то активирует.
+  description: Эта кнопка что-то активирует. # Stories-CraftTranslate
   icon:
     sprite: Structures/Wallmounts/switch.rsi
     state: on
@@ -104,7 +104,7 @@
   startNode: start
   targetNode: LightSwitchDirectionalNode
   category: construction-category-machines
-  description: Это переключатель источников света, использующих локальный контроллер питания.
+  description: Это переключатель источников света, использующих локальный контроллер питания. # Stories-CraftTranslate
   icon:
     sprite: Structures/Wallmounts/switch.rsi
     state: on
@@ -122,7 +122,7 @@
   startNode: start
   targetNode: SignalSwitchDirectionalNode
   category: construction-category-machines
-  description: Это переключатель питания устройств.
+  description: Это переключатель питания устройств. # Stories-CraftTranslate
   icon:
     sprite: Structures/Wallmounts/switch.rsi
     state: on
@@ -140,7 +140,7 @@
   startNode: start
   targetNode: SignalButtonDirectionalNode
   category: construction-category-machines
-  description: Эта кнопка что-то активирует.
+  description: Эта кнопка что-то активирует. # Stories-CraftTranslate
   icon:
     sprite: Structures/Wallmounts/switch.rsi
     state: on

@@ -5,7 +5,7 @@
   startNode: start
   targetNode: wall
   category: construction-category-structures
-  description: Довольно слабая, но шелковисто-гладкая стенка.
+  description: Довольно слабая, но шелковисто-гладкая стенка. # Stories-CraftTranslate
   icon:
     sprite: Structures/Walls/web.rsi
     state: full
@@ -26,7 +26,7 @@
   startNode: start
   targetNode: table
   category: construction-category-furniture
-  description: Очень гладкий и удивительно прочный.
+  description: Очень гладкий и удивительно прочный. # Stories-CraftTranslate
   icon:
     sprite: Structures/Furniture/Tables/web.rsi
     state: full
@@ -47,7 +47,7 @@
   startNode: start
   targetNode: bed
   category: construction-category-furniture
-  description: Забавный факт, то что вы едите пауков во сне - ложь.
+  description: Забавный факт, то что вы едите пауков во сне - ложь. # Stories-CraftTranslate
   icon:
     sprite: Structures/Web/bed.rsi
     state: icon
@@ -68,7 +68,7 @@
   startNode: start
   targetNode: chair
   category: construction-category-furniture
-  description: Вы хотите серьезно заняться веб-разработкой? Приобретите это кресло!
+  description: Вы хотите серьезно заняться веб-разработкой? Приобретите это кресло! # Stories-CraftTranslate
   icon:
     sprite: Structures/Web/chair.rsi
     state: icon
@@ -86,7 +86,7 @@
   startNode: start
   targetNode: crate
   category: construction-category-storage
-  description: Для хранения продуктов и других вещей. Не такой прочный, как обычный ящик, и его нельзя заварить.
+  description: Для хранения продуктов и других вещей. Не такой прочный, как обычный ящик, и его нельзя заварить. # Stories-CraftTranslate
   icon:
     sprite: Structures/Storage/Crates/web.rsi
     state: icon
@@ -105,7 +105,7 @@
   startNode: start
   targetNode: door
   category: construction-category-structures
-  description: Ручная дверь, сделанная из паутины, обычно расположенная прямо перед ямой или ловушкой.
+  description: Ручная дверь, сделанная из паутины, обычно расположенная прямо перед ямой или ловушкой. # Stories-CraftTranslate
   icon:
     sprite: Structures/Doors/web_door.rsi
     state: closed

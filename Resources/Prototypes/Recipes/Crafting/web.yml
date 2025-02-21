@@ -5,7 +5,7 @@
   startNode: start
   targetNode: tile
   category: construction-category-tiles
-  description: "Красиво и гладко."
+  description: "Красиво и гладко." # Stories-CraftTranslate
   entityWhitelist:
     tags:
     - SpiderCraft
@@ -21,7 +21,7 @@
   startNode: start
   targetNode: coat
   category: construction-category-clothing
-  description: "Удивительно тепла и прочна."
+  description: "Удивительно тепла и прочна." # Stories-CraftTranslate
   entityWhitelist:
     tags:
     - SpiderCraft
@@ -37,7 +37,7 @@
   startNode: start
   targetNode: jumpsuit
   category: construction-category-clothing
-  description: "По крайней мере, это хоть что-то."
+  description: "По крайней мере, это хоть что-то." # Stories-CraftTranslate
   entityWhitelist:
     tags:
     - SpiderCraft
@@ -53,7 +53,7 @@
   startNode: start
   targetNode: jumpskirt
   category: construction-category-clothing
-  description: "По крайней мере, это хоть что-то."
+  description: "По крайней мере, это хоть что-то." # Stories-CraftTranslate
   entityWhitelist:
     tags:
     - SpiderCraft
@@ -69,7 +69,7 @@
   startNode: start
   targetNode: cloth
   category: construction-category-materials
-  description: "На ощупь совсем как ткань, как ни странно."
+  description: "На ощупь совсем как ткань, как ни странно." # Stories-CraftTranslate
   entityWhitelist:
     tags:
     - SpiderCraft
@@ -85,7 +85,7 @@
   startNode: start
   targetNode: shield
   category: construction-category-clothing
-  description: "Он достаточно толстый, чтобы справиться с несколькими ударами, но, вероятно, плох против огня."
+  description: "Он достаточно толстый, чтобы справиться с несколькими ударами, но, вероятно, плох против огня." # Stories-CraftTranslate
   entityWhitelist:
     tags:
     - SpiderCraft
@@ -101,7 +101,7 @@
   startNode: start
   targetNode: boots
   category: construction-category-clothing
-  description: "Плотно сплетенное полотно, должно защищать от холода."
+  description: "Плотно сплетенное полотно, должно защищать от холода." # Stories-CraftTranslate
   entityWhitelist:
     tags:
     - SpiderCraft

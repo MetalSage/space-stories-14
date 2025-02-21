@@ -6,7 +6,7 @@
   startNode: start
   targetNode: chair
   category: construction-category-furniture
-  description: Вы сидите на нём. Либо по вашей воле, либо по принуждению.
+  description: Вы сидите на нём. Либо по вашей воле, либо по принуждению. # Stories-CraftTranslate
   icon:
     sprite: Structures/Furniture/chairs.rsi
     state: chair
@@ -23,7 +23,7 @@
   startNode: start
   targetNode: stool
   category: construction-category-furniture
-  description: Вы сидите на нём. Либо по вашей воле, либо по принуждению.
+  description: Вы сидите на нём. Либо по вашей воле, либо по принуждению. # Stories-CraftTranslate
   icon:
     sprite: Structures/Furniture/chairs.rsi
     state: stool
@@ -40,7 +40,7 @@
   startNode: start
   targetNode: stoolBar
   category: construction-category-furniture
-  description: Вы сидите на нём. Либо по вашей воле, либо по принуждению.
+  description: Вы сидите на нём. Либо по вашей воле, либо по принуждению. # Stories-CraftTranslate
   icon:
     sprite: Structures/Furniture/chairs.rsi
     state: bar
@@ -57,7 +57,7 @@
   startNode: start
   targetNode: chairBrass
   category: construction-category-furniture
-  description: Вы сидите на нём. Либо по вашей воле, либо по принуждению.
+  description: Вы сидите на нём. Либо по вашей воле, либо по принуждению. # Stories-CraftTranslate
   icon:
     sprite: Structures/Furniture/chairs.rsi
     state: brass_chair
@@ -74,7 +74,7 @@
   startNode: start
   targetNode: chairOffice
   category: construction-category-furniture
-  description: Вы сидите на нём. Либо по вашей воле, либо по принуждению.
+  description: Вы сидите на нём. Либо по вашей воле, либо по принуждению. # Stories-CraftTranslate
   icon:
     sprite: Structures/Furniture/chairs.rsi
     state: office-white
@@ -91,7 +91,7 @@
   startNode: start
   targetNode: chairOfficeDark
   category: construction-category-furniture
-  description: Вы сидите на нём. Либо по вашей воле, либо по принуждению.
+  description: Вы сидите на нём. Либо по вашей воле, либо по принуждению. # Stories-CraftTranslate
   icon:
     sprite: Structures/Furniture/chairs.rsi
     state: office-dark
@@ -108,7 +108,7 @@
   startNode: start
   targetNode: chairComfy
   category: construction-category-furniture
-  description: Выглядит удобным.
+  description: Выглядит удобным. # Stories-CraftTranslate
   icon:
     sprite: Structures/Furniture/chairs.rsi
     state: comfy
@@ -125,7 +125,7 @@
   startNode: start
   targetNode: chairPilotSeat
   category: construction-category-furniture
-  description: Кресло пилота престижного корабля.
+  description: Кресло пилота престижного корабля. # Stories-CraftTranslate
   icon:
     sprite: Structures/Furniture/chairs.rsi
     state: shuttle
@@ -142,7 +142,7 @@
   startNode: start
   targetNode: chairWood
   category: construction-category-furniture
-  description: Вы сидите на нём. Либо по вашей воле, либо по принуждению.
+  description: Вы сидите на нём. Либо по вашей воле, либо по принуждению. # Stories-CraftTranslate
   icon:
     sprite: Structures/Furniture/chairs.rsi
     state: wooden
@@ -159,7 +159,7 @@
   startNode: start
   targetNode: chairMeat
   category: construction-category-furniture
-  description: Неприятно потный.
+  description: Неприятно потный. # Stories-CraftTranslate
   icon:
     sprite: Structures/Furniture/chairs.rsi
     state: meat
@@ -176,7 +176,7 @@
   startNode: start
   targetNode: chairRitual
   category: construction-category-furniture
-  description: Выглядит неудобно.
+  description: Выглядит неудобно. # Stories-CraftTranslate
   icon:
     sprite: Structures/Furniture/chairs.rsi
     state: ritual
@@ -193,7 +193,7 @@
   startNode: start
   targetNode: chairFolding
   category: construction-category-furniture
-  description: Удобный переносной стул.
+  description: Удобный переносной стул. # Stories-CraftTranslate
   icon:
     sprite: Structures/Furniture/folding_chair.rsi
     state: folding
@@ -210,7 +210,7 @@
   startNode: start
   targetNode: chairSteelBench
   category: construction-category-furniture
-  description: Длинная скамья, созданная для метро. Реально стандартный дизайн.
+  description: Длинная скамья, созданная для метро. Реально стандартный дизайн. # Stories-CraftTranslate
   icon:
     sprite: Structures/Furniture/chairs.rsi
     state: steel-bench
@@ -227,7 +227,7 @@
   startNode: start
   targetNode: chairWoodBench
   category: construction-category-furniture
-  description: Получили занозу? По крайней мере, она экологически чистая.
+  description: Получили занозу? По крайней мере, она экологически чистая. # Stories-CraftTranslate
   icon:
     sprite: Structures/Furniture/chairs.rsi
     state: wooden-bench
@@ -244,7 +244,7 @@
   startNode: start
   targetNode: redComfBench
   category: construction-category-furniture
-  description: Скамейка с очень удобной спинкой.
+  description: Скамейка с очень удобной спинкой. # Stories-CraftTranslate
   icon:
     sprite: Structures/Furniture/Bench/comf_bench.rsi
     state: full
@@ -261,7 +261,7 @@
   startNode: start
   targetNode: blueComfBench
   category: construction-category-furniture
-  description: Скамейка с очень удобной спинкой.
+  description: Скамейка с очень удобной спинкой. # Stories-CraftTranslate
   icon:
     sprite: Structures/Furniture/Bench/comf_bench.rsi
     state: full
@@ -279,7 +279,7 @@
   startNode: start
   targetNode: Table
   category: construction-category-furniture
-  description: Квадратный лист металла, стоящий на четырёх металлических ножках.
+  description: Квадратный лист металла, стоящий на четырёх металлических ножках. # Stories-CraftTranslate
   icon:
     sprite: Structures/Furniture/Tables/generic.rsi
     state: full
@@ -296,7 +296,7 @@
   startNode: start
   targetNode: TableReinforced
   category: construction-category-furniture
-  description: Квадратный лист металла, стоящий на четырёх металлических ножках. Очень прочный.
+  description: Квадратный лист металла, стоящий на четырёх металлических ножках. Очень прочный. # Stories-CraftTranslate
   icon:
     sprite: Structures/Furniture/Tables/reinforced.rsi
     state: full
@@ -313,7 +313,7 @@
   startNode: start
   targetNode: TableGlass
   category: construction-category-furniture
-  description: Квадратный лист стекла, стоящий на четырёх металлических ножках.
+  description: Квадратный лист стекла, стоящий на четырёх металлических ножках. # Stories-CraftTranslate
   icon:
     sprite: Structures/Furniture/Tables/glass.rsi
     state: full
@@ -330,7 +330,7 @@
   startNode: start
   targetNode: TableReinforcedGlass
   category: construction-category-furniture
-  description: Квадратный лист стекла, стоящий на четырёх металлических ножках. Очень прочный.
+  description: Квадратный лист стекла, стоящий на четырёх металлических ножках. Очень прочный. # Stories-CraftTranslate
   icon:
     sprite: Structures/Furniture/Tables/r_glass.rsi
     state: full
@@ -347,7 +347,7 @@
   startNode: start
   targetNode: TablePlasmaGlass
   category: construction-category-furniture
-  description: Квадратный лист плазмы, стоящий на четырёх металлических ножках. Красивый!
+  description: Квадратный лист плазмы, стоящий на четырёх металлических ножках. Красивый! # Stories-CraftTranslate
   icon:
     sprite: Structures/Furniture/Tables/plasma.rsi
     state: full
@@ -364,7 +364,7 @@
   startNode: start
   targetNode: TableBrass
   category: construction-category-furniture
-  description: Блестящий, устойчивый к коррозии стол из латуни. Стимпанк!
+  description: Блестящий, устойчивый к коррозии стол из латуни. Стимпанк! # Stories-CraftTranslate
   icon:
     sprite: Structures/Furniture/Tables/brass.rsi
     state: full
@@ -381,7 +381,7 @@
   startNode: start
   targetNode: TableWood
   category: construction-category-furniture
-  description: Беречь от огня. По слухам, он легко горит.
+  description: Беречь от огня. По слухам, он легко горит. # Stories-CraftTranslate
   icon:
     sprite: Structures/Furniture/Tables/wood.rsi
     state: full
@@ -398,7 +398,7 @@
   startNode: start
   targetNode: TableCarpet
   category: construction-category-furniture
-  description: Квадратный кусок дерева, стоящий на четырех ножках и накрытый тканью. (А чего вы ожидали?)
+  description: Квадратный кусок дерева, стоящий на четырех ножках и накрытый тканью. (А чего вы ожидали?) # Stories-CraftTranslate
   icon:
     sprite: Structures/Furniture/Tables/carpet.rsi
     state: full
@@ -415,7 +415,7 @@
   startNode: start
   targetNode: TableFancyBlack
   category: construction-category-furniture
-  description: Стол, накрытый красивой скатертью.
+  description: Стол, накрытый красивой скатертью. # Stories-CraftTranslate
   icon:
     sprite: Structures/Furniture/Tables/Fancy/black.rsi
     state: full
@@ -432,7 +432,7 @@
   startNode: start
   targetNode: TableFancyBlue
   category: construction-category-furniture
-  description: Стол, накрытый красивой скатертью.
+  description: Стол, накрытый красивой скатертью. # Stories-CraftTranslate
   icon:
     sprite: Structures/Furniture/Tables/Fancy/blue.rsi
     state: full
@@ -449,7 +449,7 @@
   startNode: start
   targetNode: TableFancyCyan
   category: construction-category-furniture
-  description: Стол, накрытый красивой скатертью.
+  description: Стол, накрытый красивой скатертью. # Stories-CraftTranslate
   icon:
     sprite: Structures/Furniture/Tables/Fancy/cyan.rsi
     state: full
@@ -466,7 +466,7 @@
   startNode: start
   targetNode: TableFancyGreen
   category: construction-category-furniture
-  description: Стол, накрытый красивой скатертью.
+  description: Стол, накрытый красивой скатертью. # Stories-CraftTranslate
   icon:
     sprite: Structures/Furniture/Tables/Fancy/green.rsi
     state: full
@@ -483,7 +483,7 @@
   startNode: start
   targetNode: TableFancyOrange
   category: construction-category-furniture
-  description: Стол, накрытый красивой скатертью.
+  description: Стол, накрытый красивой скатертью. # Stories-CraftTranslate
   icon:
     sprite: Structures/Furniture/Tables/Fancy/orange.rsi
     state: full
@@ -500,7 +500,7 @@
   startNode: start
   targetNode: TableFancyPurple
   category: construction-category-furniture
-  description: Стол, накрытый красивой скатертью.
+  description: Стол, накрытый красивой скатертью. # Stories-CraftTranslate
   icon:
     sprite: Structures/Furniture/Tables/Fancy/purple.rsi
     state: full
@@ -517,7 +517,7 @@
   startNode: start
   targetNode: TableFancyPink
   category: construction-category-furniture
-  description: Стол, накрытый красивой скатертью.
+  description: Стол, накрытый красивой скатертью. # Stories-CraftTranslate
   icon:
     sprite: Structures/Furniture/Tables/Fancy/pink.rsi
     state: full
@@ -534,7 +534,7 @@
   startNode: start
   targetNode: TableFancyRed
   category: construction-category-furniture
-  description: Стол, накрытый красивой скатертью.
+  description: Стол, накрытый красивой скатертью. # Stories-CraftTranslate
   icon:
     sprite: Structures/Furniture/Tables/Fancy/red.rsi
     state: full
@@ -551,7 +551,7 @@
   startNode: start
   targetNode: TableFancyWhite
   category: construction-category-furniture
-  description: Стол, накрытый красивой скатертью.
+  description: Стол, накрытый красивой скатертью. # Stories-CraftTranslate
   icon:
     sprite: Structures/Furniture/Tables/Fancy/white.rsi
     state: full
@@ -568,7 +568,7 @@
   startNode: start
   targetNode: CounterMetal
   category: construction-category-furniture
-  description: Отличное место чтобы пропустить стаканчик.
+  description: Отличное место чтобы пропустить стаканчик. # Stories-CraftTranslate
   icon:
     sprite: Structures/Furniture/Tables/countermetal.rsi
     state: full
@@ -585,7 +585,7 @@
   startNode: start
   targetNode: CounterWood
   category: construction-category-furniture
-  description: Беречь от огня. По слухам, она легко горит.
+  description: Беречь от огня. По слухам, она легко горит. # Stories-CraftTranslate
   icon:
     sprite: Structures/Furniture/Tables/counterwood.rsi
     state: full
@@ -603,7 +603,7 @@
   startNode: start
   targetNode: toilet
   category: construction-category-furniture
-  description: Устройство для смыва человеческих экскрементов.
+  description: Устройство для смыва человеческих экскрементов. # Stories-CraftTranslate
   icon:
     sprite: Structures/Furniture/toilet.rsi
     state: disposal
@@ -617,7 +617,7 @@
 - type: construction
   id: Bed
   name: кровать # Stories-CraftTranslate
-  description: На ней можно лежать, спать или пристегиваться ремнями. Отдых в ней обеспечивает чрезвычайно медленное исцеление.
+  description: На ней можно лежать, спать или пристегиваться ремнями. Отдых в ней обеспечивает чрезвычайно медленное исцеление. # Stories-CraftTranslate
   graph: bed
   startNode: start
   targetNode: bed
@@ -634,7 +634,7 @@
 - type: construction
   id: MedicalBed
   name: больничная койка # Stories-CraftTranslate
-  description: Больничная койка для реабилитации пациентов. Отдых в ней обеспечивает медленное исцеление.
+  description: Больничная койка для реабилитации пациентов. Отдых в ней обеспечивает медленное исцеление. # Stories-CraftTranslate
   graph: bed
   startNode: start
   targetNode: medicalbed
@@ -651,7 +651,7 @@
 - type: construction
   id: DogBed
   name: собачья лежанка # Stories-CraftTranslate
-  description: Удобная лежанка для собак. Вы даже можете пристегнуть своего питомца в случае, отключения гравитации.
+  description: Удобная лежанка для собак. Вы даже можете пристегнуть своего питомца в случае, отключения гравитации. # Stories-CraftTranslate
   graph: bed
   startNode: start
   targetNode: dogbed
@@ -668,7 +668,7 @@
 - type: construction
   id: Dresser
   name: комод # Stories-CraftTranslate
-  description: Деревянный комод, может хранить вещи внутри.
+  description: Деревянный комод, может хранить вещи внутри. # Stories-CraftTranslate
   graph: Dresser
   startNode: start
   targetNode: dresser
@@ -686,7 +686,7 @@
 - type: construction
   id: Rack
   name: стойка # Stories-CraftTranslate
-  description: Стойка для хранения вещей.
+  description: Стойка для хранения вещей. # Stories-CraftTranslate
   graph: Rack
   startNode: start
   targetNode: Rack
@@ -704,7 +704,7 @@
 - type: construction
   id: MeatSpike
   name: мясной крюк # Stories-CraftTranslate
-  description: Крюк для снятия мяса с животных.
+  description: Крюк для снятия мяса с животных. # Stories-CraftTranslate
   graph: MeatSpike
   startNode: start
   targetNode: MeatSpike
@@ -721,7 +721,7 @@
 - type: construction
   id: Curtains
   name: шторы # Stories-CraftTranslate
-  description: Содержат менее 1% ртути.
+  description: Содержат менее 1% ртути. # Stories-CraftTranslate
   graph: Curtains
   startNode: start
   targetNode: Curtains
@@ -736,7 +736,7 @@
 - type: construction
   id: CurtainsBlack
   name: чёрные шторы # Stories-CraftTranslate
-  description: Скрывают то, что не должны видеть другие.
+  description: Скрывают то, что не должны видеть другие. # Stories-CraftTranslate
   graph: Curtains
   startNode: start
   targetNode: CurtainsBlack
@@ -751,7 +751,7 @@
 - type: construction
   id: CurtainsBlue
   name: синие шторы # Stories-CraftTranslate
-  description: Скрывают то, что не должны видеть другие.
+  description: Скрывают то, что не должны видеть другие. # Stories-CraftTranslate
   graph: Curtains
   startNode: start
   targetNode: CurtainsBlue
@@ -766,7 +766,7 @@
 - type: construction
   id: CurtainsCyan
   name: голубые шторы # Stories-CraftTranslate
-  description: Скрывают то, что не должны видеть другие.
+  description: Скрывают то, что не должны видеть другие. # Stories-CraftTranslate
   graph: Curtains
   startNode: start
   targetNode: CurtainsCyan
@@ -781,7 +781,7 @@
 - type: construction
   id: CurtainsGreen
   name: зелёные шторы # Stories-CraftTranslate
-  description: Скрывают то, что не должны видеть другие.
+  description: Скрывают то, что не должны видеть другие. # Stories-CraftTranslate
   graph: Curtains
   startNode: start
   targetNode: CurtainsGreen
@@ -796,7 +796,7 @@
 - type: construction
   id: CurtainsOrange
   name: оранжевые шторы # Stories-CraftTranslate
-  description: Скрывают то, что не должны видеть другие.
+  description: Скрывают то, что не должны видеть другие. # Stories-CraftTranslate
   graph: Curtains
   startNode: start
   targetNode: CurtainsOrange
@@ -811,7 +811,7 @@
 - type: construction
   id: CurtainsPink
   name: розовые шторы # Stories-CraftTranslate
-  description: Скрывают то, что не должны видеть другие.
+  description: Скрывают то, что не должны видеть другие. # Stories-CraftTranslate
   graph: Curtains
   startNode: start
   targetNode: CurtainsPink
@@ -826,7 +826,7 @@
 - type: construction
   id: CurtainsPurple
   name: фиолетовые шторы # Stories-CraftTranslate
-  description: Скрывают то, что не должны видеть другие.
+  description: Скрывают то, что не должны видеть другие. # Stories-CraftTranslate
   graph: Curtains
   startNode: start
   targetNode: CurtainsPurple
@@ -841,7 +841,7 @@
 - type: construction
   id: CurtainsRed
   name: красные шторы # Stories-CraftTranslate
-  description: Скрывают то, что не должны видеть другие.
+  description: Скрывают то, что не должны видеть другие. # Stories-CraftTranslate
   graph: Curtains
   startNode: start
   targetNode: CurtainsRed
@@ -856,7 +856,7 @@
 - type: construction
   id: CurtainsWhite
   name: белые шторы # Stories-CraftTranslate
-  description: Скрывают то, что не должны видеть другие.
+  description: Скрывают то, что не должны видеть другие. # Stories-CraftTranslate
   graph: Curtains
   startNode: start
   targetNode: CurtainsWhite
@@ -871,7 +871,7 @@
 - type: construction
   id: Bookshelf
   name: книжный шкаф # Stories-CraftTranslate
-  description: Преимущественно, наполнен книгами.
+  description: Преимущественно, наполнен книгами. # Stories-CraftTranslate
   graph: Bookshelf
   startNode: start
   targetNode: bookshelf
@@ -888,7 +888,7 @@
 - type: construction
   id: NoticeBoard
   name: информационная доска # Stories-CraftTranslate
-  description: Деревянная доска объявлений, на которую можно прикреплять бумагу.
+  description: Деревянная доска объявлений, на которую можно прикреплять бумагу. # Stories-CraftTranslate
   graph: NoticeBoard
   startNode: start
   targetNode: noticeBoard
@@ -906,7 +906,7 @@
 - type: construction
   id: Mannequin
   name: манекен # Stories-CraftTranslate
-  description: Деревянный манекен, предназначенный для демонстрации одежды.
+  description: Деревянный манекен, предназначенный для демонстрации одежды. # Stories-CraftTranslate
   graph: Mannequin
   startNode: start
   targetNode: mannequin

@@ -5,7 +5,7 @@
   startNode: start
   targetNode: potatobattery
   category: construction-category-misc
-  description: Поистине гениальный источник энергии.
+  description: Поистине гениальный источник энергии. # Stories-CraftTranslate
   icon: { sprite: Objects/Power/power_cells.rsi, state: potato }
   objectType: Item
 
@@ -16,7 +16,7 @@
   startNode: start
   targetNode: potatoai
   category: construction-category-misc
-  description: Картофель - идеальный источник питания чипа.
+  description: Картофель - идеальный источник питания чипа. # Stories-CraftTranslate
   icon: { sprite: Objects/Fun/pai.rsi, state: icon-potato-off }
   objectType: Item
 
@@ -27,6 +27,6 @@
   startNode: start
   targetNode: potatoaichip
   category: construction-category-misc
-  description: Искусно созданный(?) чип искусственного интеллекта, требующий настолько же импровизированный источник питания.
+  description: Искусно созданный(?) чип искусственного интеллекта, требующий настолько же импровизированный источник питания. # Stories-CraftTranslate
   icon: { sprite: Objects/Misc/potatoai_chip.rsi, state: icon }
   objectType: Item

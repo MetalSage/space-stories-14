@@ -6,7 +6,7 @@
   targetNode: plushie
   category: construction-category-misc
   objectType: Item
-  description: Игрушка, которой можно напугать медицинский отдел.
+  description: Игрушка, которой можно напугать медицинский отдел. # Stories-CraftTranslate
   icon:
     sprite: Mobs/Ghosts/revenant.rsi
     state: icon
@@ -19,7 +19,7 @@
   targetNode: suit
   category: construction-category-misc
   objectType: Item
-  description: Сделай себя таким же, как Иан!
+  description: Сделай себя таким же, как Иан! # Stories-CraftTranslate
   icon:
     sprite: Clothing/OuterClothing/Suits/iansuit.rsi
     state: icon

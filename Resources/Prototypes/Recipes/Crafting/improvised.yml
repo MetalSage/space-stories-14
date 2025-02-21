@@ -5,7 +5,7 @@
   startNode: start
   targetNode: bat
   category: construction-category-weapons
-  description: Прочная бейсбольная бита.
+  description: Прочная бейсбольная бита. # Stories-CraftTranslate
   icon:
     sprite: Objects/Weapons/Melee/baseball_bat.rsi
     state: icon
@@ -18,7 +18,7 @@
   startNode: start
   targetNode: ghost_sheet
   category: construction-category-clothing
-  description: Стань жутким привидением. Бу!
+  description: Стань жутким привидением. Бу! # Stories-CraftTranslate
   icon:
     sprite: Clothing/OuterClothing/Misc/ghostsheet.rsi
     state: icon
@@ -31,7 +31,7 @@
   startNode: start
   targetNode: cuffscable
   category: construction-category-tools
-  description: "Самодельные наручники, изготовленные из запасных кабелей."
+  description: "Самодельные наручники, изготовленные из запасных кабелей." # Stories-CraftTranslate
   icon: { sprite: Objects/Misc/cablecuffs.rsi, state: cuff }
   objectType: Item
 
@@ -42,7 +42,7 @@
   startNode: start
   targetNode: msstunprod
   category: construction-category-weapons
-  description: "Самодельная шок-палка."
+  description: "Самодельная шок-палка." # Stories-CraftTranslate
   icon: { sprite: Objects/Weapons/Melee/stunprod.rsi, state: stunprod_off }
   objectType: Item
 
@@ -54,7 +54,7 @@
   targetNode: muzzle
   category: construction-category-tools
   objectType: Item
-  description: "Чтобы прекратить этот ужасный шум."
+  description: "Чтобы прекратить этот ужасный шум." # Stories-CraftTranslate
   icon:
     sprite: Clothing/Mask/muzzle.rsi
     state: icon
@@ -67,7 +67,7 @@
   targetNode: cannon
   category: construction-category-weapons
   objectType: Item
-  description: Этот сукин сын может выстрелить из всего, что в него поместится, используя совсем немного газа.
+  description: Этот сукин сын может выстрелить из всего, что в него поместится, используя совсем немного газа. # Stories-CraftTranslate
   icon:
     sprite: Objects/Weapons/Guns/Cannons/pneumatic_cannon.rsi
     state: icon
@@ -80,7 +80,7 @@
   targetNode: gauze
   category: construction-category-tools
   objectType: Item
-  description: Когда у тебя действительно ничего не останется.
+  description: Когда у тебя действительно ничего не останется. # Stories-CraftTranslate
   icon:
     sprite: Objects/Specific/Medical/medical.rsi
     state: gauze
@@ -93,7 +93,7 @@
   targetNode: blindfold
   category: construction-category-tools
   objectType: Item
-  description: Лучше надейся, что все закроют глаза на то, что ты создаешь этот странный предмет...
+  description: Лучше надейся, что все закроют глаза на то, что ты создаешь этот странный предмет... # Stories-CraftTranslate
   icon:
     sprite: Clothing/Eyes/Misc/blindfold.rsi
     state: icon
@@ -105,7 +105,7 @@
   startNode: start
   targetNode: flowerwreath
   category: construction-category-clothing
-  description: Венок из красочных цветов. Можно носить как на голове, так и на шее.
+  description: Венок из красочных цветов. Можно носить как на голове, так и на шее. # Stories-CraftTranslate
   icon:
     sprite: Clothing/Head/Misc/flower-wreath.rsi
     state: icon
@@ -119,7 +119,7 @@
   targetNode: rag
   category: construction-category-tools
   objectType: Item
-  description: Влажной тряпкой вытереть пол. Так будет лучше, чем весь день скользить по нему.
+  description: Влажной тряпкой вытереть пол. Так будет лучше, чем весь день скользить по нему. # Stories-CraftTranslate
   icon:
     sprite: Objects/Specific/Janitorial/rag.rsi
     state: rag
@@ -132,7 +132,7 @@
   targetNode: shotgun
   category: construction-category-weapons
   objectType: Item
-  description: Дерьмовый однозарядный дробовик, сделанный из найденных и изготовленных вручную из оружейных деталей. Боеприпасы в комплект не входят.
+  description: Дерьмовый однозарядный дробовик, сделанный из найденных и изготовленных вручную из оружейных деталей. Боеприпасы в комплект не входят. # Stories-CraftTranslate
   icon:
     sprite: Objects/Weapons/Guns/Shotguns/improvised_shotgun.rsi
     state: icon
@@ -145,7 +145,7 @@
   targetNode: shell
   category: construction-category-weapons
   objectType: Item
-  description: Самодельный патрон для дробовика, который стреляет болезненной стеклянной шрапнелью. Разброс осколков настолько велик, что они не могут попасть в широкую стену сарая.
+  description: Самодельный патрон для дробовика, который стреляет болезненной стеклянной шрапнелью. Разброс осколков настолько велик, что они не могут попасть в широкую стену сарая. # Stories-CraftTranslate
   icon:
     sprite: Objects/Weapons/Guns/Ammunition/Casings/shotgun_shell.rsi
     state: improvised
@@ -158,7 +158,7 @@
   targetNode: riflestock
   category: construction-category-weapons
   objectType: Item
-  description: Деревянный приклад, необходимый для изготовления самодельного огнестрельного оружия.
+  description: Деревянный приклад, необходимый для изготовления самодельного огнестрельного оружия. # Stories-CraftTranslate
   icon:
     sprite: Objects/Misc/rifle_stock.rsi
     state: icon
@@ -171,7 +171,7 @@
   targetNode: firebomb
   category: construction-category-weapons
   objectType: Item
-  description: Слабое самодельное зажигательное устройство.
+  description: Слабое самодельное зажигательное устройство. # Stories-CraftTranslate
   icon:
     sprite: Objects/Weapons/Bombs/ied.rsi
     state: icon
@@ -183,7 +183,7 @@
   startNode: start
   targetNode: cottoncloth
   category: construction-category-misc
-  description: "Это самодельный кусок хлопчатобумажной ткани, на ощупь он грубый."
+  description: "Это самодельный кусок хлопчатобумажной ткани, на ощупь он грубый." # Stories-CraftTranslate
   icon:
     sprite: Objects/Materials/materials.rsi
     state: cloth_3
@@ -196,7 +196,7 @@
   startNode: start
   targetNode: strawhat
   category: construction-category-clothing
-  description: Модная шляпа для жарких деньков! Не рекомендуется носить около источников огня.
+  description: Модная шляпа для жарких деньков! Не рекомендуется носить около источников огня. # Stories-CraftTranslate
   icon:
     sprite: Clothing/Head/Hats/straw_hat.rsi
     state: icon
@@ -210,7 +210,7 @@
   targetNode: pipebomb
   category: construction-category-weapons
   objectType: Item
-  description: Самодельное взрывное устройство, сделанное из труб и проводов.
+  description: Самодельное взрывное устройство, сделанное из труб и проводов. # Stories-CraftTranslate
   icon:
     sprite: Objects/Weapons/Bombs/pipebomb.rsi
     state: icon
@@ -223,7 +223,7 @@
   targetNode: rollingpin
   category: construction-category-tools
   objectType: Item
-  description: Скалка, используется для приготовления пищи и защиты кухни.
+  description: Скалка, используется для приготовления пищи и защиты кухни. # Stories-CraftTranslate
   icon:
     sprite: Objects/Tools/rolling_pin.rsi
     state: icon
@@ -236,7 +236,7 @@
   targetNode: petCarrier
   category: construction-category-misc
   objectType: Item
-  description: Позволяет удобно переносить крупных животных.
+  description: Позволяет удобно переносить крупных животных. # Stories-CraftTranslate
   icon:
     sprite: Objects/Storage/petcarrier.rsi
     state: icon
@@ -249,7 +249,7 @@
   targetNode: hardsuitGoliath
   category: construction-category-clothing
   objectType: Item
-  description: Легковесный скафандр, украшенный лоскутами толстой, хитиновой шкуры голиафа.
+  description: Легковесный скафандр, украшенный лоскутами толстой, хитиновой шкуры голиафа. # Stories-CraftTranslate
   icon:
     sprite: Clothing/OuterClothing/Hardsuits/goliath.rsi
     state: icon

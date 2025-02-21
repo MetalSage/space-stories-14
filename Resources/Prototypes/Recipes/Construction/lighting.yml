@@ -5,7 +5,7 @@
   startNode: start
   targetNode: icon
   category: construction-category-utilities
-  description: Мощная лампа, внутри которой находится голубой кристалл.
+  description: Мощная лампа, внутри которой находится голубой кристалл. # Stories-CraftTranslate
   icon: { sprite: Objects/Power/light_tube.rsi, state: normal }
   objectType: Item
 
@@ -16,7 +16,7 @@
   startNode: start
   targetNode: icon
   category: construction-category-utilities
-  description: Мощная лампа, внутри которой находится синий кристалл.
+  description: Мощная лампа, внутри которой находится синий кристалл. # Stories-CraftTranslate
   icon: { sprite: Objects/Power/light_tube.rsi, state: normal }
   objectType: Item
 
@@ -27,7 +27,7 @@
   startNode: start
   targetNode: icon
   category: construction-category-utilities
-  description: Мощная лампа, внутри которой находится розовый кристалл.
+  description: Мощная лампа, внутри которой находится розовый кристалл. # Stories-CraftTranslate
   icon: { sprite: Objects/Power/light_tube.rsi, state: normal }
   objectType: Item
 
@@ -38,7 +38,7 @@
   startNode: start
   targetNode: icon
   category: construction-category-utilities
-  description: Мощная лампа, внутри которой находится оранжевый кристалл.
+  description: Мощная лампа, внутри которой находится оранжевый кристалл. # Stories-CraftTranslate
   icon: { sprite: Objects/Power/light_tube.rsi, state: normal }
   objectType: Item
 
@@ -49,7 +49,7 @@
   startNode: start
   targetNode: icon
   category: construction-category-utilities
-  description: Мощная лампа, внутри которой находится красный кристалл.
+  description: Мощная лампа, внутри которой находится красный кристалл. # Stories-CraftTranslate
   icon: { sprite: Objects/Power/light_tube.rsi, state: normal }
   objectType: Item
 
@@ -60,6 +60,6 @@
   startNode: start
   targetNode: icon
   category: construction-category-utilities
-  description: Мощная лампа, внутри которой находится зелёный кристалл.
+  description: Мощная лампа, внутри которой находится зелёный кристалл. # Stories-CraftTranslate
   icon: { sprite: Objects/Power/light_tube.rsi, state: normal }
   objectType: Item

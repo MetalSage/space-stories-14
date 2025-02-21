@@ -6,7 +6,7 @@
   startNode: start
   targetNode: camera
   category: construction-category-utilities
-  description: "Камера наблюдения. Она следит. Скоро."
+  description: "Камера наблюдения. Она следит. Скоро." # Stories-CraftTranslate
   icon:
     sprite: Structures/Wallmounts/camera.rsi
     state: camera
@@ -20,7 +20,7 @@
   startNode: start
   targetNode: Telescreen
   category: construction-category-utilities
-  description: "Настенный монитор для камер наблюдения."
+  description: "Настенный монитор для камер наблюдения." # Stories-CraftTranslate
   icon:
     sprite: Structures/Machines/computers.rsi
     state: telescreen_frame
@@ -35,7 +35,7 @@
   startNode: start
   targetNode: station_map
   category: construction-category-structures
-  description: Карта станции.
+  description: Карта станции. # Stories-CraftTranslate
   icon:
     sprite: Structures/Machines/station_map.rsi
     state: station_map0
@@ -54,7 +54,7 @@
   startNode: start
   targetNode: apc
   category: construction-category-utilities
-  description: "Локальный контроллер питания (ЛКП). Управляет мощностью тока. В области."
+  description: "Локальный контроллер питания (ЛКП). Управляет мощностью тока. В области." # Stories-CraftTranslate
   icon:
     sprite: Structures/Power/apc.rsi
     state: base
@@ -69,7 +69,7 @@
   startNode: start
   targetNode: cable_terminal
   category: construction-category-utilities
-  description: "Подключается к устройствам, таких как СМЭС. Красные кабели должны подключаться к устройству."
+  description: "Подключается к устройствам, таких как СМЭС. Красные кабели должны подключаться к устройству." # Stories-CraftTranslate
   icon:
     sprite: Structures/Power/cable_terminal.rsi
     state: term
@@ -84,7 +84,7 @@
   startNode: start
   targetNode: substation
   category: construction-category-utilities
-  description: "Настенная подстанция для компактных помещений. Прежде чем возводить стену, обязательно проложите под ней кабель."
+  description: "Настенная подстанция для компактных помещений. Прежде чем возводить стену, обязательно проложите под ней кабель." # Stories-CraftTranslate
   icon:
     sprite: Structures/Power/substation.rsi
     state: substation_wall
@@ -99,7 +99,7 @@
   startNode: start
   targetNode: generator
   category: construction-category-utilities
-  description: "Настенный генератор для компактных пространств. Обязательно поместите кабель внизу, прежде чем строить стену."
+  description: "Настенный генератор для компактных пространств. Обязательно поместите кабель внизу, прежде чем строить стену." # Stories-CraftTranslate
   icon:
     sprite: Structures/Power/Generation/wallmount_generator.rsi
     state: panel
@@ -114,7 +114,7 @@
   startNode: start
   targetNode: APU
   category: construction-category-utilities
-  description: "Настенный ВСУ для компактных шаттлов. Обязательно поместите кабель внизу, прежде чем строить стену."
+  description: "Настенный ВСУ для компактных шаттлов. Обязательно поместите кабель внизу, прежде чем строить стену." # Stories-CraftTranslate
   icon:
     sprite: Structures/Power/Generation/wallmount_generator.rsi
     state: panel
@@ -125,7 +125,7 @@
 # DISPOSALS
 - type: construction
   name: утилизационный блок # Stories-CraftTranslate
-  description: Пневматическая установка для утилизации отходов.
+  description: Пневматическая установка для утилизации отходов. # Stories-CraftTranslate
   id: DisposalUnit
   graph: DisposalMachine
   startNode: start
@@ -139,7 +139,7 @@
 
 - type: construction
   name: почтовый блок # Stories-CraftTranslate
-  description: Пневматическая установка для доставки почты.
+  description: Пневматическая установка для доставки почты. # Stories-CraftTranslate
   id: MailingUnit
   graph: DisposalMachine
   startNode: start
@@ -154,7 +154,7 @@
 - type: construction
   name: утилизационная труба # Stories-CraftTranslate
   id: DisposalPipe
-  description: Большой сегмент трубы, используемый при создании системы утилизации.
+  description: Большой сегмент трубы, используемый при создании системы утилизации. # Stories-CraftTranslate
   graph: DisposalPipe
   startNode: start
   targetNode: pipe
@@ -167,7 +167,7 @@
 
 - type: construction
   name: маркировщик утилизационной трубы # Stories-CraftTranslate
-  description: Труба, маркирующая объекты для отправки определённому адресату.
+  description: Труба, маркирующая объекты для отправки определённому адресату. # Stories-CraftTranslate
   id: DisposalTagger
   graph: DisposalPipe
   startNode: start
@@ -181,7 +181,7 @@
 
 - type: construction
   name: ствол утилизационной трубы # Stories-CraftTranslate
-  description: Труба, используемая в качестве точки входа в систему утилизации.
+  description: Труба, используемая в качестве точки входа в систему утилизации. # Stories-CraftTranslate
   id: DisposalTrunk
   graph: DisposalPipe
   startNode: start
@@ -195,7 +195,7 @@
 
 - type: construction
   name: маршрутизатор утилизационной трубы # Stories-CraftTranslate
-  description: Трёхсторонний маршрутизатор. Объекты с совпадающими маркерами уходят в сторону с помощью настраиваемых фильтров.
+  description: Трёхсторонний маршрутизатор. Объекты с совпадающими маркерами уходят в сторону с помощью настраиваемых фильтров. # Stories-CraftTranslate
   id: DisposalRouter
   graph: DisposalPipe
   startNode: start
@@ -211,7 +211,7 @@
 - type: construction
   hide: true
   name: маршрутизатор утилизационной трубы # Stories-CraftTranslate
-  description: Трёхсторонний маршрутизатор. Объекты с совпадающими маркерами уходят в сторону с помощью настраиваемых фильтров.
+  description: Трёхсторонний маршрутизатор. Объекты с совпадающими маркерами уходят в сторону с помощью настраиваемых фильтров. # Stories-CraftTranslate
   id: DisposalRouterFlipped
   graph: DisposalPipe
   startNode: start
@@ -226,7 +226,7 @@
 
 - type: construction
   name: сигнальный утилизационный маршрутизатор # Stories-CraftTranslate
-  description: Трёхсторонний маршрутизатор, управляемый сигналами.
+  description: Трёхсторонний маршрутизатор, управляемый сигналами. # Stories-CraftTranslate
   id: DisposalSignalRouter
   graph: DisposalPipe
   startNode: start
@@ -242,7 +242,7 @@
 - type: construction
   hide: true
   name: сигнальный утилизационный маршрутизатор # Stories-CraftTranslate
-  description: Трёхсторонний маршрутизатор, управляемый сигналами.
+  description: Трёхсторонний маршрутизатор, управляемый сигналами. # Stories-CraftTranslate
   id: DisposalSignalRouterFlipped
   graph: DisposalPipe
   startNode: start
@@ -257,7 +257,7 @@
 
 - type: construction
   name: развязка утилизационной трубы # Stories-CraftTranslate
-  description: Трёхсторонняя развязка. Стрелка указывает на место выхода объектов.
+  description: Трёхсторонняя развязка. Стрелка указывает на место выхода объектов. # Stories-CraftTranslate
   id: DisposalJunction
   graph: DisposalPipe
   startNode: start
@@ -273,7 +273,7 @@
 - type: construction
   hide: true
   name: развязка утилизационной трубы # Stories-CraftTranslate
-  description: Трёхсторонняя развязка. Стрелка указывает на место выхода объектов.
+  description: Трёхсторонняя развязка. Стрелка указывает на место выхода объектов. # Stories-CraftTranslate
   id: DisposalJunctionFlipped
   graph: DisposalPipe
   startNode: start
@@ -288,7 +288,7 @@
 
 - type: construction
   name: Y-развязка утилизационной трубы # Stories-CraftTranslate
-  description: Трёхсторонняя развязка с альтернативным местом выхода.
+  description: Трёхсторонняя развязка с альтернативным местом выхода. # Stories-CraftTranslate
   id: DisposalYJunction
   graph: DisposalPipe
   startNode: start
@@ -302,7 +302,7 @@
 
 - type: construction
   name: изгиб утилизационной трубы # Stories-CraftTranslate
-  description: Труба, согнутая под прямым углом.
+  description: Труба, согнутая под прямым углом. # Stories-CraftTranslate
   id: DisposalBend
   graph: DisposalPipe
   startNode: start
@@ -322,7 +322,7 @@
   startNode: start
   targetNode: air_alarm
   category: construction-category-structures
-  description: Воздушная сигнализация. Сигнализация... воздуха?
+  description: Воздушная сигнализация. Сигнализация... воздуха? # Stories-CraftTranslate
   icon:
     sprite: Structures/Wallmounts/air_monitors.rsi
     state: alarm0
@@ -340,7 +340,7 @@
   startNode: start
   targetNode: fire_alarm
   category: construction-category-structures
-  description: Пожарная сигнализация. Огонь!
+  description: Пожарная сигнализация. Огонь! # Stories-CraftTranslate
   icon:
     sprite: Structures/Wallmounts/air_monitors.rsi
     state: fire0
@@ -358,7 +358,7 @@
   startNode: start
   targetNode: sensor
   category: construction-category-structures
-  description: Воздушный сенсор. Чувствует воздух.
+  description: Воздушный сенсор. Чувствует воздух. # Stories-CraftTranslate
   icon:
     sprite: Structures/Specific/Atmospherics/sensor.rsi
     state: gsensor1
@@ -373,7 +373,7 @@
   startNode: start
   targetNode: sensor
   category: construction-category-structures
-  description: Сообщает о состоянии газа в присоединенной сети труб.
+  description: Сообщает о состоянии газа в присоединенной сети труб. # Stories-CraftTranslate
   icon:
     sprite: Structures/Piping/Atmospherics/gas_pipe_sensor.rsi
     state: icon
@@ -385,7 +385,7 @@
 - type: construction
   name: половина газовой трубы # Stories-CraftTranslate
   id: GasPipeHalf
-  description: Половина газовой трубы. Не скейтборд.
+  description: Половина газовой трубы. Не скейтборд. # Stories-CraftTranslate
   graph: GasPipe
   startNode: start
   targetNode: half
@@ -399,7 +399,7 @@
 - type: construction
   name: прямая газовая труба # Stories-CraftTranslate
   id: GasPipeStraight
-  description: Отрезок прямой трубы.
+  description: Отрезок прямой трубы. # Stories-CraftTranslate
   graph: GasPipe
   startNode: start
   targetNode: straight
@@ -413,7 +413,7 @@
 - type: construction
   name: угловая газовая труба # Stories-CraftTranslate
   id: GasPipeBend
-  description: Угловая труба, согнутый под углом 90 градусов.
+  description: Угловая труба, согнутый под углом 90 градусов. # Stories-CraftTranslate
   graph: GasPipe
   startNode: start
   targetNode: bend
@@ -427,7 +427,7 @@
 - type: construction
   name: Т-образная газовая труба # Stories-CraftTranslate
   id: GasPipeTJunction
-  description: Отрезок трубы с Т-образным соединением.
+  description: Отрезок трубы с Т-образным соединением. # Stories-CraftTranslate
   graph: GasPipe
   startNode: start
   targetNode: tjunction
@@ -441,7 +441,7 @@
 - type: construction
   name: четверная газовая труба # Stories-CraftTranslate
   id: GasPipeFourway
-  description: Отрезок трубы с четверным соединением.
+  description: Отрезок трубы с четверным соединением. # Stories-CraftTranslate
   graph: GasPipe
   startNode: start
   targetNode: fourway
@@ -455,7 +455,7 @@
 # ATMOS UNARY
 - type: construction
   name: вентиляция # Stories-CraftTranslate
-  description: Подает газ в помещение.
+  description: Подает газ в помещение. # Stories-CraftTranslate
   id: GasVentPump
   graph: GasUnary
   startNode: start
@@ -476,7 +476,7 @@
 
 - type: construction
   name: пассивная вентиляция # Stories-CraftTranslate
-  description: Вентиляция не требующее питания, которая выравнивает уровень газов с обеих сторон
+  description: Вентиляция не требующее питания, которая выравнивает уровень газов с обеих сторон # Stories-CraftTranslate
   id: GasPassiveVent
   graph: GasUnary
   startNode: start
@@ -497,7 +497,7 @@
 
 - type: construction
   name: скруббер # Stories-CraftTranslate
-  description: Высасывает газ в подключенные трубы.
+  description: Высасывает газ в подключенные трубы. # Stories-CraftTranslate
   id: GasVentScrubber
   graph: GasUnary
   startNode: start
@@ -518,7 +518,7 @@
 
 - type: construction
   name: инжектор # Stories-CraftTranslate
-  description: Впрыскивает газ в атмосферу.
+  description: Впрыскивает газ в атмосферу. # Stories-CraftTranslate
   id: GasOutletInjector
   graph: GasUnary
   startNode: start
@@ -541,7 +541,7 @@
 - type: construction
   name: газовый насос # Stories-CraftTranslate
   id: GasPressurePump
-  description: Насос, перемещающий газ под определённым давлением.
+  description: Насос, перемещающий газ под определённым давлением. # Stories-CraftTranslate
   graph: GasBinary
   startNode: start
   targetNode: pressurepump
@@ -561,7 +561,7 @@
 
 - type: construction
   name: объёмный газовый насос # Stories-CraftTranslate
-  description: Насос, перемещающий газ с определённым объёмом.
+  description: Насос, перемещающий газ с определённым объёмом. # Stories-CraftTranslate
   id: GasVolumePump
   graph: GasBinary
   startNode: start
@@ -583,7 +583,7 @@
 - type: construction
   id: GasPassiveGate
   name: пассивный клапан # Stories-CraftTranslate
-  description: Односторонний воздушный клапан, не требующий питания.
+  description: Односторонний воздушный клапан, не требующий питания. # Stories-CraftTranslate
   graph: GasBinary
   startNode: start
   targetNode: passivegate
@@ -604,7 +604,7 @@
 - type: construction
   id: GasValve
   name: ручной клапан # Stories-CraftTranslate
-  description: Труба с клапаном, которым можно перекрыть поток проходящего по ней газа.
+  description: Труба с клапаном, которым можно перекрыть поток проходящего по ней газа. # Stories-CraftTranslate
   graph: GasBinary
   startNode: start
   targetNode: valve
@@ -625,7 +625,7 @@
 - type: construction
   id: SignalControlledValve
   name: сигнальный клапан # Stories-CraftTranslate
-  description: Можно контролировать при помощи сигналов.
+  description: Можно контролировать при помощи сигналов. # Stories-CraftTranslate
   graph: GasBinary
   startNode: start
   targetNode: signalvalve
@@ -646,7 +646,7 @@
 - type: construction
   id: GasPort
   name: соединительный порт # Stories-CraftTranslate
-  description: Для подключения портативных устройств, связанных с управлением атмосферой.
+  description: Для подключения портативных устройств, связанных с управлением атмосферой. # Stories-CraftTranslate
   graph: GasBinary
   startNode: start
   targetNode: port
@@ -667,7 +667,7 @@
 - type: construction
   id: GasDualPortVentPump
   name: двухпортовая вентиляция # Stories-CraftTranslate
-  description: Имеет клапан и прикреплённый к нему насос. Один вход для закачивания воздуха, другой - для откачивания.
+  description: Имеет клапан и прикреплённый к нему насос. Один вход для закачивания воздуха, другой - для откачивания. # Stories-CraftTranslate
   graph: GasBinary
   startNode: start
   targetNode: dualportventpump
@@ -686,7 +686,7 @@
 - type: construction
   id: HeatExchanger
   name: радиатор # Stories-CraftTranslate
-  description: Переносит тепло между трубой и окружающей средой.
+  description: Переносит тепло между трубой и окружающей средой. # Stories-CraftTranslate
   graph: GasBinary
   startNode: start
   targetNode: radiator
@@ -700,7 +700,7 @@
 - type: construction
   id: HeatExchangerBend
   name: угловой радиатор # Stories-CraftTranslate
-  description: Переносит тепло между трубой и окружающей средой.
+  description: Переносит тепло между трубой и окружающей средой. # Stories-CraftTranslate
   graph: GasBinary
   startNode: start
   targetNode: bendradiator
@@ -715,7 +715,7 @@
 - type: construction
   id: GasFilter
   name: газовый фильтр # Stories-CraftTranslate
-  description: Очень полезен для фильтрации газов.
+  description: Очень полезен для фильтрации газов. # Stories-CraftTranslate
   graph: GasTrinary
   startNode: start
   targetNode: filter
@@ -733,7 +733,7 @@
   id: GasFilterFlipped
   hide: true
   name: газовый фильтр # Stories-CraftTranslate
-  description: Очень полезен для фильтрации газов.
+  description: Очень полезен для фильтрации газов. # Stories-CraftTranslate
   graph: GasTrinary
   startNode: start
   targetNode: filterflipped
@@ -750,7 +750,7 @@
 - type: construction
   id: GasMixer
   name: газовый смеситель # Stories-CraftTranslate
-  description: Очень полезен для смешивания газов.
+  description: Очень полезен для смешивания газов. # Stories-CraftTranslate
   graph: GasTrinary
   startNode: start
   targetNode: mixer
@@ -768,7 +768,7 @@
   id: GasMixerFlipped
   hide: true
   name: газовый смеситель # Stories-CraftTranslate
-  description: Очень полезен для смешивания газов.
+  description: Очень полезен для смешивания газов. # Stories-CraftTranslate
   graph: GasTrinary
   startNode: start
   targetNode: mixerflipped
@@ -785,7 +785,7 @@
 - type: construction
   id: PressureControlledValve
   name: пневматический клапан # Stories-CraftTranslate
-  description: Двунаправленный клапан, управляемый давлением. Открывается, если давление в одной трубе ниже давления другой трубы на 101,325 кПа.
+  description: Двунаправленный клапан, управляемый давлением. Открывается, если давление в одной трубе ниже давления другой трубы на 101,325 кПа. # Stories-CraftTranslate
   graph: GasTrinary
   startNode: start
   targetNode: pneumaticvalve
@@ -806,7 +806,7 @@
   startNode: start
   targetNode: intercom
   category: construction-category-structures
-  description: Интерком. На случай, когда необходимо что-то сообщить станции.
+  description: Интерком. На случай, когда необходимо что-то сообщить станции. # Stories-CraftTranslate
   icon:
     sprite: Structures/Wallmounts/intercom.rsi
     state: base
@@ -825,7 +825,7 @@
   startNode: start
   targetNode: signal
   category: construction-category-utilities
-  description: "Настенный таймер для подачи на устройства сигналов через определённое время."
+  description: "Настенный таймер для подачи на устройства сигналов через определённое время." # Stories-CraftTranslate
   icon:
     sprite: Structures/Wallmounts/switch.rsi
     state: on
@@ -842,7 +842,7 @@
   startNode: start
   targetNode: screen
   category: construction-category-utilities
-  description: "Настенный таймер для подачи на устройства сигналов через определённое время. У этого есть экран для отображения текста."
+  description: "Настенный таймер для подачи на устройства сигналов через определённое время. У этого есть экран для отображения текста." # Stories-CraftTranslate
   icon:
     sprite: Structures/Wallmounts/signalscreen.rsi
     state: signalscreen
@@ -860,7 +860,7 @@
   startNode: start
   targetNode: brig
   category: construction-category-utilities
-  description: "Настенный таймер для подачи на устройства сигналов через определённое время. У этого есть экран для отображения текста и требует доступа службы безопасности для использования"
+  description: "Настенный таймер для подачи на устройства сигналов через определённое время. У этого есть экран для отображения текста и требует доступа службы безопасности для использования" # Stories-CraftTranslate
   icon:
     sprite: Structures/Wallmounts/signalscreen.rsi
     state: signalscreen
