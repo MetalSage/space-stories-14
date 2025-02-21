@@ -1,5 +1,5 @@
 ﻿- type: construction
-  name: компьютер
+  name: компьютер # Stories-CraftTranslate
   id: Computer
   graph: Computer
   startNode: start
@@ -13,7 +13,7 @@
     state: 4
 
 - type: construction
-  name: каркас машины
+  name: каркас машины # Stories-CraftTranslate
   description: Строящаяся машина. Требуется больше деталей.
   id: MachineFrame
   graph: Machine
@@ -28,7 +28,7 @@
 
 # Switching
 - type: construction
-  name: двухпозиционный рычаг
+  name: двухпозиционный рычаг # Stories-CraftTranslate
   id: TwoWayLeverRecipe
   graph: LeverGraph
   startNode: start
@@ -44,7 +44,7 @@
     - !type:TileNotBlocked
 
 - type: construction
-  name: переключатель сети ЛКП
+  name: переключатель сети ЛКП # Stories-CraftTranslate
   id: LightSwitchRecipe
   graph: LightSwitchGraph
   startNode: start
@@ -62,7 +62,7 @@
     - !type:WallmountCondition
 
 - type: construction
-  name: переключатель сигнала
+  name: переключатель сигнала # Stories-CraftTranslate
   id: SignalSwitchRecipe
   graph: SignalSwitchGraph
   startNode: start
@@ -80,7 +80,7 @@
     - !type:WallmountCondition
 
 - type: construction
-  name: кнопка сигнала
+  name: кнопка сигнала # Stories-CraftTranslate
   id: SignalButtonRecipe
   graph: SignalButtonGraph
   startNode: start
@@ -98,7 +98,7 @@
     - !type:WallmountCondition
 
 - type: construction
-  name: направленный переключатель сети ЛКП
+  name: направленный переключатель сети ЛКП # Stories-CraftTranslate
   id: LightSwitchDirectionalRecipe
   graph: LightSwitchDirectionalGraph
   startNode: start
@@ -116,7 +116,7 @@
     - !type:WallmountCondition
 
 - type: construction
-  name: направленный переключатель сигнала
+  name: направленный переключатель сигнала # Stories-CraftTranslate
   id: SignalSwitchDirectionalRecipe
   graph: SignalSwitchDirectionalGraph
   startNode: start
@@ -134,7 +134,7 @@
     - !type:WallmountCondition
 
 - type: construction
-  name: направленная кнопка сигнала
+  name: направленная кнопка сигнала # Stories-CraftTranslate
   id: SignalButtonDirectionalRecipe
   graph: SignalButtonDirectionalGraph
   startNode: start

@@ -1,5 +1,5 @@
 - type: construction
-  name: чистобот
+  name: чистобот # Stories-CraftTranslate
   id: cleanbot
   graph: CleanBot
   startNode: start
@@ -12,7 +12,7 @@
     state: cleanbot
 
 - type: construction
-  name: пожарбот
+  name: пожарбот # Stories-CraftTranslate
   id: firebot
   graph: FireBot
   startNode: start
@@ -25,7 +25,7 @@
     state: firebot
 
 - type: construction
-  name: хонкбот
+  name: хонкбот # Stories-CraftTranslate
   id: honkbot
   graph: HonkBot
   startNode: start
@@ -38,7 +38,7 @@
     state: honkbot
 
 - type: construction
-  name: кринжбот
+  name: кринжбот # Stories-CraftTranslate
   id: jonkbot
   graph: JonkBot
   startNode: start
@@ -51,7 +51,7 @@
     state: jonkbot
 
 - type: construction
-  name: медибот
+  name: медибот # Stories-CraftTranslate
   id: medibot
   graph: MediBot
   startNode: start
@@ -64,7 +64,7 @@
     state: medibot
 
 - type: construction
-  name: мимбот
+  name: мимбот # Stories-CraftTranslate
   id: mimebot
   graph: MimeBot
   startNode: start
@@ -77,7 +77,7 @@
     state: mimebot
 
 - type: construction
-  name: грузобот
+  name: грузобот # Stories-CraftTranslate
   id: supplybot
   graph: SupplyBot
   startNode: start

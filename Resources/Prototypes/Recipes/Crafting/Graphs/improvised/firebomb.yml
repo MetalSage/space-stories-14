@@ -7,13 +7,13 @@
     - to: empty
       steps:
       - tag: DrinkCan
-        name: пустая банка
+        name: пустая банка # Stories-CraftTranslate
         icon:
           sprite: Objects/Consumable/Drinks/cola.rsi
           state: icon_open
         doAfter: 1
       - tag: Igniter
-        name: воспламенитель
+        name: воспламенитель # Stories-CraftTranslate
         icon:
           sprite: Objects/Devices/igniter.rsi
           state: icon

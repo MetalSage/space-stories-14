@@ -1,5 +1,5 @@
 ﻿- type: construction
-  name: плюшевый ревенант
+  name: плюшевый ревенант # Stories-CraftTranslate
   id: PlushieGhostRevenant
   graph: PlushieGhostRevenant
   startNode: start
@@ -12,7 +12,7 @@
     state: icon
 
 - type: construction
-  name: костюм Иана
+  name: костюм Иана # Stories-CraftTranslate
   id: ClothingOuterSuitIan
   graph: ClothingOuterSuitIan
   startNode: start

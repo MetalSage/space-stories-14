@@ -1,5 +1,5 @@
 - type: construction
-  name: паутинный пол
+  name: паутинный пол # Stories-CraftTranslate
   id: TileWeb
   graph: WebObjects
   startNode: start
@@ -15,7 +15,7 @@
   objectType: Item
 
 - type: construction
-  name: паутинная зимняя куртка
+  name: паутинная зимняя куртка # Stories-CraftTranslate
   id: ClothingOuterWinterWeb
   graph: WebObjects
   startNode: start
@@ -31,7 +31,7 @@
   objectType: Item
 
 - type: construction
-  name: паутинный комбинезон
+  name: паутинный комбинезон # Stories-CraftTranslate
   id: ClothingUniformJumpsuitWeb
   graph: WebObjects
   startNode: start
@@ -47,7 +47,7 @@
   objectType: Item
 
 - type: construction
-  name: паутинная юбка-комбинезон
+  name: паутинная юбка-комбинезон # Stories-CraftTranslate
   id: ClothingUniformJumpskirtWeb
   graph: WebObjects
   startNode: start
@@ -63,7 +63,7 @@
   objectType: Item
 
 - type: construction
-  name: шёлк
+  name: шёлк # Stories-CraftTranslate
   id: SilkWovenCloth
   graph: WebObjects
   startNode: start
@@ -79,7 +79,7 @@
   objectType: Item
 
 - type: construction
-  name: паутинный щит
+  name: паутинный щит # Stories-CraftTranslate
   id: WebShield
   graph: WebObjects
   startNode: start
@@ -95,7 +95,7 @@
   objectType: Item
 
 - type: construction
-  name: зимние ботинки из паутины
+  name: зимние ботинки из паутины # Stories-CraftTranslate
   id: ClothingShoesBootsWinterWeb
   graph: WebObjects
   startNode: start

@@ -7,19 +7,19 @@
         - to: jumpsuit
           steps:
             - tag: BananaPeel
-              name: банановая кожура
+              name: банановая кожура # Stories-CraftTranslate
               icon:
                 sprite: Objects/Specific/Hydroponics/banana.rsi
                 state: peel
               doAfter: 1
             - tag: BananaPeel
-              name: банановая кожура
+              name: банановая кожура # Stories-CraftTranslate
               icon:
                 sprite: Objects/Specific/Hydroponics/banana.rsi
                 state: peel
               doAfter: 1
             - tag: BananaPeel
-              name: банановая кожура
+              name: банановая кожура # Stories-CraftTranslate
               icon:
                 sprite: Objects/Specific/Hydroponics/banana.rsi
                 state: peel
@@ -28,7 +28,7 @@
               amount: 1
               doAfter: 1
             - tag: ClownSuit
-              name: костюм клоуна
+              name: костюм клоуна # Stories-CraftTranslate
               icon:
                 sprite: Clothing/Uniforms/Jumpsuit/clown.rsi
                 state: icon
@@ -45,19 +45,19 @@
         - to: shoes
           steps:
             - tag: BananaPeel
-              name: банановая кожура
+              name: банановая кожура # Stories-CraftTranslate
               icon:
                 sprite: Objects/Specific/Hydroponics/banana.rsi
                 state: peel
               doAfter: 1
             - tag: BananaPeel
-              name: банановая кожура
+              name: банановая кожура # Stories-CraftTranslate
               icon:
                 sprite: Objects/Specific/Hydroponics/banana.rsi
                 state: peel
               doAfter: 1
             - tag: BananaPeel
-              name: банановая кожура
+              name: банановая кожура # Stories-CraftTranslate
               icon:
                 sprite: Objects/Specific/Hydroponics/banana.rsi
                 state: peel
@@ -83,19 +83,19 @@
         - to: mask
           steps:
             - tag: BananaPeel
-              name: банановая кожура
+              name: банановая кожура # Stories-CraftTranslate
               icon:
                 sprite: Objects/Specific/Hydroponics/banana.rsi
                 state: peel
               doAfter: 1
             - tag: BananaPeel
-              name: банановая кожура
+              name: банановая кожура # Stories-CraftTranslate
               icon:
                 sprite: Objects/Specific/Hydroponics/banana.rsi
                 state: peel
               doAfter: 1
             - tag: BananaPeel
-              name: банановая кожура
+              name: банановая кожура # Stories-CraftTranslate
               icon:
                 sprite: Objects/Specific/Hydroponics/banana.rsi
                 state: peel

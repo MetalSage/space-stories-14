@@ -1,5 +1,5 @@
 - type: construction
-  name: бейсбольная бита
+  name: бейсбольная бита # Stories-CraftTranslate
   id: bat
   graph: WoodenBat
   startNode: start
@@ -12,7 +12,7 @@
   objectType: Item
 
 - type: construction
-  name: простыня-призрак
+  name: простыня-призрак # Stories-CraftTranslate
   id: ghost_sheet
   graph: GhostSheet
   startNode: start
@@ -25,7 +25,7 @@
   objectType: Item
 
 - type: construction
-  name: самодельные наручники
+  name: самодельные наручники # Stories-CraftTranslate
   id: makeshifthandcuffs
   graph: makeshifthandcuffs
   startNode: start
@@ -36,7 +36,7 @@
   objectType: Item
 
 - type: construction
-  name: шок-палка
+  name: шок-палка # Stories-CraftTranslate
   id: makeshiftstunprod
   graph: makeshiftstunprod
   startNode: start
@@ -47,7 +47,7 @@
   objectType: Item
 
 - type: construction
-  name: намордник
+  name: намордник # Stories-CraftTranslate
   id: muzzle
   graph: Muzzle
   startNode: start
@@ -60,7 +60,7 @@
     state: icon
 
 - type: construction
-  name: импровизированная пневматическая пушка
+  name: импровизированная пневматическая пушка # Stories-CraftTranslate
   id: pneumaticcannon
   graph: PneumaticCannon
   startNode: start
@@ -73,7 +73,7 @@
     state: icon
 
 - type: construction
-  name: марлевый бинт
+  name: марлевый бинт # Stories-CraftTranslate
   id: gauze
   graph: Gauze
   startNode: start
@@ -86,7 +86,7 @@
     state: gauze
 
 - type: construction
-  name: повязка на глаза
+  name: повязка на глаза # Stories-CraftTranslate
   id: blindfold
   graph: Blindfold
   startNode: start
@@ -99,7 +99,7 @@
     state: icon
 
 - type: construction
-  name: цветочный венок
+  name: цветочный венок # Stories-CraftTranslate
   id: flowerwreath
   graph: flowerwreath
   startNode: start
@@ -112,7 +112,7 @@
   objectType: Item
 
 - type: construction
-  name: тряпка
+  name: тряпка # Stories-CraftTranslate
   id: rag
   graph: Rag
   startNode: start
@@ -125,7 +125,7 @@
     state: rag
 
 - type: construction
-  name: самодельный дробовик
+  name: самодельный дробовик # Stories-CraftTranslate
   id: improvisedshotgun
   graph: ImprovisedShotgunGraph
   startNode: start
@@ -138,7 +138,7 @@
     state: icon
 
 - type: construction
-  name: самодельный ружейный патрон
+  name: самодельный ружейный патрон # Stories-CraftTranslate
   id: ShellShotgunImprovised
   graph: ImprovisedShotgunShellGraph
   startNode: start
@@ -151,7 +151,7 @@
     state: improvised
 
 - type: construction
-  name: ружейное ложе
+  name: ружейное ложе # Stories-CraftTranslate
   id: riflestock
   graph: RifleStockGraph
   startNode: start
@@ -164,7 +164,7 @@
     state: icon
 
 - type: construction
-  name: зажигательная бомба
+  name: зажигательная бомба # Stories-CraftTranslate
   id: firebomb
   graph: FireBomb
   startNode: start
@@ -177,7 +177,7 @@
     state: icon
 
 - type: construction
-  name: ткань
+  name: ткань # Stories-CraftTranslate
   id: CottonWovenCloth
   graph: CottonObjects
   startNode: start
@@ -190,7 +190,7 @@
   objectType: Item
 
 - type: construction
-  name: соломенная шляпа
+  name: соломенная шляпа # Stories-CraftTranslate
   id: strawHat
   graph: StrawHat
   startNode: start
@@ -203,7 +203,7 @@
   objectType: Item
 
 - type: construction
-  name: трубчатая бомба
+  name: трубчатая бомба # Stories-CraftTranslate
   id: pipebomb
   graph: PipeBomb
   startNode: start
@@ -216,7 +216,7 @@
     state: icon
 
 - type: construction
-  name: скалка
+  name: скалка # Stories-CraftTranslate
   id: rollingpin
   graph: WoodenRollingPin
   startNode: start
@@ -229,7 +229,7 @@
     state: icon
 
 - type: construction
-  name: переноска для животных
+  name: переноска для животных # Stories-CraftTranslate
   id: PetCarrier
   graph: PetCarrier
   startNode: start

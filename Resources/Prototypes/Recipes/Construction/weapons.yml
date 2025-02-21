@@ -1,5 +1,5 @@
 - type: construction
-  name: серая плоская кепка с лезвием
+  name: серая плоская кепка с лезвием # Stories-CraftTranslate
   id: BladedFlatcapGrey
   graph: BladedFlatcapGrey
   startNode: start
@@ -10,7 +10,7 @@
   objectType: Item
 
 - type: construction
-  name: коричневая плоская кепка с лезвием
+  name: коричневая плоская кепка с лезвием # Stories-CraftTranslate
   id: BladedFlatcapBrown
   graph: BladedFlatcapBrown
   startNode: start
@@ -21,7 +21,7 @@
   objectType: Item
 
 - type: construction
-  name: заточка
+  name: заточка # Stories-CraftTranslate
   id: Shiv
   graph: Shiv
   startNode: start
@@ -32,7 +32,7 @@
   objectType: Item
 
 - type: construction
-  name: усиленная заточка
+  name: усиленная заточка # Stories-CraftTranslate
   id: ReinforcedShiv
   graph: ReinforcedShiv
   startNode: start
@@ -43,7 +43,7 @@
   objectType: Item
 
 - type: construction
-  name: плазменая заточка
+  name: плазменая заточка # Stories-CraftTranslate
   id: PlasmaShiv
   graph: PlasmaShiv
   startNode: start
@@ -54,7 +54,7 @@
   objectType: Item
 
 - type: construction
-  name: урановая заточка
+  name: урановая заточка # Stories-CraftTranslate
   id: UraniumShiv
   graph: UraniumShiv
   startNode: start
@@ -65,7 +65,7 @@
   objectType: Item
 
 - type: construction
-  name: копьё
+  name: копьё # Stories-CraftTranslate
   id: Spear
   graph: Spear
   startNode: start
@@ -76,7 +76,7 @@
   objectType: Item
 
 - type: construction
-  name: усиленноё копьё
+  name: усиленноё копьё # Stories-CraftTranslate
   id: SpearReinforced
   graph: SpearReinforced
   startNode: start
@@ -87,7 +87,7 @@
   objectType: Item
 
 - type: construction
-  name: плазменное копьё
+  name: плазменное копьё # Stories-CraftTranslate
   id: SpearPlasma
   graph: SpearPlasma
   startNode: start
@@ -98,7 +98,7 @@
   objectType: Item
 
 - type: construction
-  name: урановое копьё
+  name: урановое копьё # Stories-CraftTranslate
   id: SpearUranium
   graph: SpearUranium
   startNode: start
@@ -109,7 +109,7 @@
   objectType: Item
 
 - type: construction
-  name: бола
+  name: бола # Stories-CraftTranslate
   id: Bola
   graph: Bola
   startNode: start
@@ -120,7 +120,7 @@
   objectType: Item
 
 - type: construction
-  name: деревянный баклер
+  name: деревянный баклер # Stories-CraftTranslate
   id: WoodenBuckler
   graph: WoodenBuckler
   startNode: start
@@ -131,7 +131,7 @@
   objectType: Item
 
 - type: construction
-  name: импровизированный щит
+  name: импровизированный щит # Stories-CraftTranslate
   id: MakeshiftShield
   graph: MakeshiftShield
   startNode: start
@@ -142,7 +142,7 @@
   objectType: Item
 
 - type: construction
-  name: стрела из осколка стекла
+  name: стрела из осколка стекла # Stories-CraftTranslate
   id: ImprovisedArrow
   graph: ImprovisedArrow
   startNode: start
@@ -153,7 +153,7 @@
   objectType: Item
 
 - type: construction
-  name: стрела из осколка плазменного стекла
+  name: стрела из осколка плазменного стекла # Stories-CraftTranslate
   id: ImprovisedArrowPlasma
   graph: ImprovisedArrowPlasma
   startNode: start
@@ -164,7 +164,7 @@
   objectType: Item
 
 - type: construction
-  name: стрела из осколка уранового стекла
+  name: стрела из осколка уранового стекла # Stories-CraftTranslate
   id: ImprovisedArrowUranium
   graph: ImprovisedArrowUranium
   startNode: start
@@ -175,7 +175,7 @@
   objectType: Item
 
 - type: construction
-  name: стрела из осколка стекла
+  name: стрела из осколка стекла # Stories-CraftTranslate
   id: ImprovisedBow
   graph: ImprovisedBow
   startNode: start
@@ -186,7 +186,7 @@
   objectType: Item
 
 - type: construction
-  name: костяное копьё
+  name: костяное копьё # Stories-CraftTranslate
   id: SpearBone
   graph: SpearBone
   startNode: start

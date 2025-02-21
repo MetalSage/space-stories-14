@@ -1,5 +1,5 @@
 - type: construction
-  name: бананиумовый клаксон
+  name: бананиумовый клаксон # Stories-CraftTranslate
   id: HornBananium
   graph: BananiumHorn
   startNode: start

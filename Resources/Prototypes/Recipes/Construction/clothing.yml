@@ -1,5 +1,5 @@
 - type: construction
-  name: скафандр клоуна
+  name: скафандр клоуна # Stories-CraftTranslate
   id: ClownHardsuit
   graph: ClownHardsuit
   startNode: start
@@ -10,7 +10,7 @@
   objectType: Item
 
 - type: construction
-  name: скафандр мима
+  name: скафандр мима # Stories-CraftTranslate
   id: MimeHardsuit
   graph: MimeHardsuit
   startNode: start
@@ -21,7 +21,7 @@
   objectType: Item
 
 - type: construction
-  name: костяной доспех
+  name: костяной доспех # Stories-CraftTranslate
   id: BoneArmor
   graph: BoneArmor
   startNode: start
@@ -32,7 +32,7 @@
   objectType: Item
 
 - type: construction
-  name: костяной шлем
+  name: костяной шлем # Stories-CraftTranslate
   id: BoneHelmet
   graph: BoneHelmet
   startNode: start
@@ -43,7 +43,7 @@
   objectType: Item
 
 - type: construction
-  name: банановая маска клоуна
+  name: банановая маска клоуна # Stories-CraftTranslate
   id: BananaClownMask
   graph: BananaClownMask
   startNode: start
@@ -54,7 +54,7 @@
   objectType: Item
 
 - type: construction
-  name: банановый костюм клоуна
+  name: банановый костюм клоуна # Stories-CraftTranslate
   id: BananaClownJumpsuit
   graph: BananaClownJumpsuit
   startNode: start
@@ -65,7 +65,7 @@
   objectType: Item
 
 - type: construction
-  name: банановые клоунские туфли
+  name: банановые клоунские туфли # Stories-CraftTranslate
   id: BananaClownShoes
   graph: BananaClownShoes
   startNode: start
@@ -76,7 +76,7 @@
   objectType: Item
 
 - type: construction
-  name: мед-охранный визор
+  name: мед-охранный визор # Stories-CraftTranslate
   id: ClothingEyesHudMedSec
   graph: HudMedSec
   startNode: start
@@ -87,7 +87,7 @@
   objectType: Item
 
 - type: construction
-  name: тапки-уточки
+  name: тапки-уточки # Stories-CraftTranslate
   id: ClothingShoeSlippersDuck
   graph: ClothingShoeSlippersDuck
   startNode: start
@@ -98,7 +98,7 @@
   objectType: Item
 
 - type: construction
-  name: очки охраны
+  name: очки охраны # Stories-CraftTranslate
   id: ClothingEyesGlassesSecurity
   graph: GlassesSecHUD
   startNode: start
@@ -109,7 +109,7 @@
   objectType: Item
 
 - type: construction
-  name: колчан
+  name: колчан # Stories-CraftTranslate
   id: ClothingBeltQuiver
   graph: Quiver
   startNode: start
@@ -120,7 +120,7 @@
   objectType: Item
 
 - type: construction
-  name: шлем правосудия
+  name: шлем правосудия # Stories-CraftTranslate
   id: ClothingHeadHelmetJustice
   graph: HelmetJustice
   startNode: start

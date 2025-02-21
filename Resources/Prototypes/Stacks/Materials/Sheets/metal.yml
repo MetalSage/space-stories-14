@@ -1,20 +1,20 @@
 - type: stack
   id: Steel
-  name: сталь
+  name: сталь # Stories-CraftTranslate
   icon: { sprite: /Textures/Objects/Materials/Sheets/metal.rsi, state: steel }
   spawn: SheetSteel1
   maxCount: 30
 
 - type: stack
   id: Plasteel
-  name: пласталь
+  name: пласталь # Stories-CraftTranslate
   icon: { sprite: /Textures/Objects/Materials/Sheets/metal.rsi, state: plasteel }
   spawn: SheetPlasteel1
   maxCount: 30
 
 - type: stack
   id: Brass
-  name: латунь
+  name: латунь # Stories-CraftTranslate
   icon: { sprite: /Textures/Objects/Materials/Sheets/metal.rsi, state: brass }
   spawn: SheetBrass1
   maxCount: 30

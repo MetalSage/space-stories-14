@@ -10,31 +10,31 @@
               amount: 5
               doAfter: 1
             - tag: SuitEVA
-              name: скафандр EVA
+              name: скафандр EVA # Stories-CraftTranslate
               icon:
                 sprite: Clothing/OuterClothing/Suits/eva.rsi
                 state: icon
               doAfter: 1
             - tag: HelmetEVA
-              name: шлем EVA
+              name: шлем EVA # Stories-CraftTranslate
               icon:
                 sprite: Clothing/Head/Helmets/eva.rsi
                 state: icon
               doAfter: 1
             - tag: CrayonRed
-              name: красный мелок
+              name: красный мелок # Stories-CraftTranslate
               icon:
                 sprite: Objects/Fun/crayons.rsi
                 state: red
               doAfter: 1
             - tag: CrayonBlack
-              name: чёрный мелок
+              name: чёрный мелок # Stories-CraftTranslate
               icon:
                 sprite: Objects/Fun/crayons.rsi
                 state: black
               doAfter: 1
             - tag: MimeBelt
-              name: подтяжки
+              name: подтяжки # Stories-CraftTranslate
               icon:
                 sprite: Clothing/Belt/suspenders_red.rsi
                 state: icon

@@ -1,5 +1,5 @@
 - type: construction
-  name: факел
+  name: факел # Stories-CraftTranslate
   id: LightTorch
   graph: LightTorch
   startNode: start
@@ -10,7 +10,7 @@
   objectType: Item
 
 - type: construction
-  name: логический элемент
+  name: логический элемент # Stories-CraftTranslate
   id: LogicGate
   graph: LogicGate
   startNode: start
@@ -21,7 +21,7 @@
   objectType: Item
 
 - type: construction
-  name: детектор сигнала
+  name: детектор сигнала # Stories-CraftTranslate
   id: EdgeDetector
   graph: LogicGate
   startNode: start
@@ -32,7 +32,7 @@
   objectType: Item
 
 - type: construction
-  name: датчик питания
+  name: датчик питания # Stories-CraftTranslate
   id: PowerSensor
   graph: LogicGate
   startNode: start
@@ -43,7 +43,7 @@
   objectType: Item
 
 - type: construction
-  name: ячейка памяти
+  name: ячейка памяти # Stories-CraftTranslate
   id: MemoryCell
   graph: LogicGate
   startNode: start

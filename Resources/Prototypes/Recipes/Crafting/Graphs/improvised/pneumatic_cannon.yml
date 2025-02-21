@@ -10,13 +10,13 @@
         icon:
           sprite: Structures/Piping/Atmospherics/pipe.rsi
           state: pipeStraight
-        name: труба
+        name: труба # Stories-CraftTranslate
       - tag: Handcuffs
         icon:
           sprite: Objects/Misc/cablecuffs.rsi
           state: cuff
           color: red
-        name: наручники
+        name: наручники # Stories-CraftTranslate
       - material: Steel
         amount: 6
         doAfter: 10

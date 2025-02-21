@@ -13,7 +13,7 @@
         amount: 1
         doAfter: 0.5
       - tag: GlassShard
-        name: осколок стекла
+        name: осколок стекла # Stories-CraftTranslate
         icon:
           sprite: Objects/Materials/Shards/shard.rsi
           state: shard1
@@ -37,7 +37,7 @@
         amount: 1
         doAfter: 0.5
       - tag: PlasmaGlassShard
-        name: осколок плазменного стекла
+        name: осколок плазменного стекла # Stories-CraftTranslate
         icon:
           sprite: Objects/Materials/Shards/shard.rsi
           state: shard1
@@ -61,7 +61,7 @@
         amount: 1
         doAfter: 0.5
       - tag: UraniumGlassShard
-        name: осколок уранового стекла
+        name: осколок уранового стекла # Stories-CraftTranslate
         icon:
           sprite: Objects/Materials/Shards/shard.rsi
           state: shard1

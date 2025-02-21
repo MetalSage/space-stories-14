@@ -1,5 +1,5 @@
 ﻿- type: construction
-  name: металлический стержень
+  name: металлический стержень # Stories-CraftTranslate
   id: MetalRod
   graph: MetalRod
   startNode: start
@@ -10,7 +10,7 @@
   objectType: Item
 
 - type: construction
-  name: бронестекло
+  name: бронестекло # Stories-CraftTranslate
   description: Лист армированного стекла.
   id: SheetRGlass
   graph: Glass
@@ -21,7 +21,7 @@
   objectType: Item
 
 - type: construction
-  name: заводное стекло
+  name: заводное стекло # Stories-CraftTranslate
   description: Лист стекла, армированный латунью.
   id: SheetClockworkGlass
   graph: Glass
@@ -32,7 +32,7 @@
   objectType: Item
 
 - type: construction
-  name: плазменное стекло
+  name: плазменное стекло # Stories-CraftTranslate
   description: Лист полупрозрачной плазмы.
   id: SheetPGlass
   graph: Glass
@@ -43,7 +43,7 @@
   objectType: Item
 
 - type: construction
-  name: плазменное бронестекло
+  name: плазменное бронестекло # Stories-CraftTranslate
   description: Лист армированной полупрозрачной плазмы.
   id: SheetRPGlass
   graph: Glass
@@ -54,7 +54,7 @@
   objectType: Item
 
 - type: construction
-  name: плазменное бронестекло
+  name: плазменное бронестекло # Stories-CraftTranslate
   description: Лист армированной полупрозрачной плазмы.
   id: SheetRPGlass0
   graph: Glass
@@ -65,7 +65,7 @@
   objectType: Item
 
 - type: construction
-  name: плазменное бронестекло
+  name: плазменное бронестекло # Stories-CraftTranslate
   description: Лист армированной полупрозрачной плазмы.
   id: SheetRPGlass1
   graph: Glass
@@ -76,7 +76,7 @@
   objectType: Item
 
 - type: construction
-  name: дюраткань
+  name: дюраткань # Stories-CraftTranslate
   id: MaterialDurathread
   graph: Durathread
   startNode: start
@@ -87,7 +87,7 @@
   objectType: Item
 
 - type: construction
-  name: урановое стекло
+  name: урановое стекло # Stories-CraftTranslate
   description: Лист уранового стекла.
   id: SheetUGlass
   graph: Glass
@@ -98,7 +98,7 @@
   objectType: Item
 
 - type: construction
-  name: урановое бронестекло
+  name: урановое бронестекло # Stories-CraftTranslate
   description: Лист армированного уранового стекла.
   id: SheetRUGlass
   graph: Glass
@@ -109,7 +109,7 @@
   objectType: Item
 
 - type: construction
-  name: урановое бронестекло
+  name: урановое бронестекло # Stories-CraftTranslate
   description: Лист армированного уранового стекла.
   id: SheetRUGlass0
   graph: Glass
@@ -120,7 +120,7 @@
   objectType: Item
 
 - type: construction
-  name: урановое бронестекло
+  name: урановое бронестекло # Stories-CraftTranslate
   description: Лист армированного уранового стекла.
   id: SheetRUGlass1
   graph: Glass

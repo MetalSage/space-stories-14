@@ -1,5 +1,5 @@
 - type: construction
-  name: картофельная батарея
+  name: картофельная батарея # Stories-CraftTranslate
   id: PowerCellPotato
   graph: PowerCellPotato
   startNode: start
@@ -10,7 +10,7 @@
   objectType: Item
 
 - type: construction
-  name: картофельный ИИ
+  name: картофельный ИИ # Stories-CraftTranslate
   id: PotatoAI
   graph: PotatoAI
   startNode: start
@@ -21,7 +21,7 @@
   objectType: Item
 
 - type: construction
-  name: сверхкомпактный чип ИИ
+  name: сверхкомпактный чип ИИ # Stories-CraftTranslate
   id: PotatoAIChip
   graph: PotatoAIChip
   startNode: start

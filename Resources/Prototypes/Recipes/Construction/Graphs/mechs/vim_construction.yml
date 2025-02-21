@@ -7,7 +7,7 @@
     - to: vim
       steps:
       - tag: VoiceTrigger
-        name: голосовой триггер
+        name: голосовой триггер # Stories-CraftTranslate
         icon:
           sprite: "Objects/Devices/voice.rsi"
           state: "voice"
@@ -16,7 +16,7 @@
           key: "enum.MechAssemblyVisuals.State"
           data: 1
       - component: PowerCell
-        name: батарея
+        name: батарея # Stories-CraftTranslate
         store: battery-container
         icon:
           sprite: Objects/Power/power_cells.rsi

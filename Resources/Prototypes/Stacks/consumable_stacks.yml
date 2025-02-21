@@ -31,55 +31,55 @@
 
 - type: stack
   id: PaperRolling
-  name: сигаретная бумага
+  name: сигаретная бумага # Stories-CraftTranslate
   icon: { sprite: /Textures/Objects/Consumable/Smokeables/Cigarettes/paper.rsi, state: cigpaper }
   spawn: PaperRolling
   maxCount: 5
 
 - type: stack
   id: CigaretteFilter
-  name: сигаретный фильтр
+  name: сигаретный фильтр # Stories-CraftTranslate
   icon: { sprite: /Textures/Objects/Consumable/Smokeables/Cigarettes/paper.rsi, state: cigfilter }
   spawn: CigaretteFilter
   maxCount: 5
 
 - type: stack
   id: GroundTobacco
-  name: измельчённый табак
+  name: измельчённый табак # Stories-CraftTranslate
   icon: { sprite: /Textures/Objects/Misc/reagent_fillings.rsi, state: powderpile }
   spawn: GroundTobacco
   maxCount: 5
 
 - type: stack
   id: GroundCannabis
-  name: измельчённая конопля
+  name: измельчённая конопля # Stories-CraftTranslate
   icon: { sprite: /Textures/Objects/Misc/reagent_fillings.rsi, state: powderpile }
   spawn: GroundCannabis
   maxCount:
 
 - type: stack
   id: GroundCannabisRainbow
-  name: измельчённая радужная конопля
+  name: измельчённая радужная конопля # Stories-CraftTranslate
   icon: { sprite: /Textures/Objects/Specific/Hydroponics/rainbow_cannabis.rsi, state: powderpile_rainbow }
   spawn: GroundCannabisRainbow
   maxCount:
 
 - type: stack
   id: LeavesTobaccoDried
-  name: сушёные листья табака
+  name: сушёные листья табака # Stories-CraftTranslate
   icon: { sprite: /Textures/Objects/Specific/Hydroponics/tobacco.rsi, state: dried }
   spawn: LeavesTobaccoDried
   maxCount: 5
 
 - type: stack
   id: LeavesCannabisDried
-  name: сушёные листья конопли
+  name: сушёные листья конопли # Stories-CraftTranslate
   icon: { sprite: /Textures/Objects/Specific/Hydroponics/tobacco.rsi, state: dried }
   spawn: LeavesCannabisDried
   maxCount: 5
 
 - type: stack
   id: LeavesCannabisRainbowDried
-  name: сушёные листья радужной конопли
+  name: сушёные листья радужной конопли # Stories-CraftTranslate
   icon: { sprite: /Textures/Objects/Specific/Hydroponics/rainbow_cannabis.rsi, state: dried }
   spawn: LeavesCannabisRainbowDried

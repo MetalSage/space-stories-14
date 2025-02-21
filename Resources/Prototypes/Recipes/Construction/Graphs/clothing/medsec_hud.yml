@@ -7,13 +7,13 @@
         - to: medsecHud
           steps:
             - tag: HudMedical
-              name: медицинский визор
+              name: медицинский визор # Stories-CraftTranslate
               icon:
                 sprite: Clothing/Eyes/Hud/med.rsi
                 state: icon
               doAfter: 5
             - tag: HudSecurity
-              name: визор охраны
+              name: визор охраны # Stories-CraftTranslate
               icon:
                 sprite: Clothing/Eyes/Hud/sec.rsi
                 state: icon
@@ -22,7 +22,7 @@
               amount: 5
               doAfter: 5
             - tag: Radio
-              name: рация
+              name: рация # Stories-CraftTranslate
               icon:
                 sprite: Objects/Devices/communication.rsi
                 state: walkietalkie

@@ -10,17 +10,17 @@
         icon:
           sprite: Structures/Piping/Atmospherics/pipe.rsi
           state: pipeStraight
-        name: труба
+        name: труба # Stories-CraftTranslate
       - tag: ModularReceiver
         icon:
           sprite: Objects/Misc/modular_receiver.rsi
           state: icon
-        name: модульный ресивер
+        name: модульный ресивер # Stories-CraftTranslate
       - tag: RifleStock
         icon:
           sprite: Objects/Misc/rifle_stock.rsi
           state: icon
-        name: ружейное ложе
+        name: ружейное ложе # Stories-CraftTranslate
       - material: Cloth
         amount: 3
         doAfter: 10

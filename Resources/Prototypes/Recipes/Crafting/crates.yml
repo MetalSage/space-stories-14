@@ -1,5 +1,5 @@
 - type: construction
-  name: ящик для скота
+  name: ящик для скота # Stories-CraftTranslate
   id: CrateLivestock
   graph: CrateLivestock
   startNode: start
@@ -10,7 +10,7 @@
   objectType: Structure
 
 - type: construction
-  name: стальной ящик
+  name: стальной ящик # Stories-CraftTranslate
   id: CrateGenericSteel
   graph: CrateGenericSteel
   startNode: start
@@ -21,7 +21,7 @@
   objectType: Structure
 
 - type: construction
-  name: защищённый ящик
+  name: защищённый ящик # Stories-CraftTranslate
   id: CrateSecure
   graph: CrateSecure
   startNode: start
@@ -32,7 +32,7 @@
   objectType: Structure
 
 - type: construction
-  name: холодильник
+  name: холодильник # Stories-CraftTranslate
   id: CrateFreezer
   graph: CrateFreezer
   startNode: start
@@ -43,7 +43,7 @@
   objectType: Structure
 
 - type: construction
-  name: пластиковый ящик
+  name: пластиковый ящик # Stories-CraftTranslate
   id: CratePlastic
   graph: CratePlastic
   startNode: start
@@ -54,7 +54,7 @@
   objectType: Structure
 
 - type: construction
-  name: картонная коробка
+  name: картонная коробка # Stories-CraftTranslate
   id: BigBox
   graph: BaseBigBox
   startNode: start
@@ -65,7 +65,7 @@
   objectType: Structure
 
 - type: construction
-  name: картонная коробка
+  name: картонная коробка # Stories-CraftTranslate
   id: BoxCardboard
   graph: BoxCardboard
   startNode: start
@@ -76,7 +76,7 @@
   objectType: Item
 
 - type: construction
-  name: коробка пиццы
+  name: коробка пиццы # Stories-CraftTranslate
   id: FoodBoxPizza
   graph: FoodBoxPizza
   startNode: start
@@ -89,7 +89,7 @@
   objectType: Item
 
 - type: construction
-  name: гроб
+  name: гроб # Stories-CraftTranslate
   id: CrateCoffin
   graph: CrateCoffin
   startNode: start

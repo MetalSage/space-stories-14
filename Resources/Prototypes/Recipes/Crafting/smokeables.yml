@@ -1,5 +1,5 @@
 - type: construction
-  name: косяк
+  name: косяк # Stories-CraftTranslate
   id: smokeableJoint
   graph: smokeableJoint
   startNode: start
@@ -10,7 +10,7 @@
   objectType: Item
 
 - type: construction
-  name: косяк радужной конопли
+  name: косяк радужной конопли # Stories-CraftTranslate
   id: smokeableJointRainbow
   graph: smokeableJointRainbow
   startNode: start
@@ -21,7 +21,7 @@
   objectType: Item
 
 - type: construction
-  name: блант
+  name: блант # Stories-CraftTranslate
   id: smokeableBlunt
   graph: smokeableBlunt
   startNode: start
@@ -32,7 +32,7 @@
   objectType: Item
 
 - type: construction
-  name: блант радужной конопли
+  name: блант радужной конопли # Stories-CraftTranslate
   id: smokeableBluntRainbow
   graph: smokeableBluntRainbow
   startNode: start
@@ -43,7 +43,7 @@
   objectType: Item
 
 - type: construction
-  name: сигарета
+  name: сигарета # Stories-CraftTranslate
   id: smokeableCigarette
   graph: smokeableCigarette
   startNode: start
@@ -56,7 +56,7 @@
 # I wanted to put a hand-grinder here but we need construction graphs that use non-consumed catalysts first.
 
 - type: construction
-  name: измельчённая конопля
+  name: измельчённая конопля # Stories-CraftTranslate
   id: smokeableGroundCannabis
   graph: smokeableGroundCannabis
   startNode: start
@@ -68,7 +68,7 @@
   objectType: Item
 
 - type: construction
-  name: измельчённая радужная конопля
+  name: измельчённая радужная конопля # Stories-CraftTranslate
   id: smokeableGroundCannabisRainbow
   graph: smokeableGroundCannabisRainbow
   startNode: start
@@ -79,7 +79,7 @@
   objectType: Item
 
 - type: construction
-  name: измельчённый табак
+  name: измельчённый табак # Stories-CraftTranslate
   id: smokeableGroundTobacco
   graph: smokeableGroundTobacco
   startNode: start

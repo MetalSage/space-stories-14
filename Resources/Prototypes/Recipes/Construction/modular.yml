@@ -1,5 +1,5 @@
 - type: construction
-  name: модульная граната
+  name: модульная граната # Stories-CraftTranslate
   id: ModularGrenadeRecipe
   graph: ModularGrenadeGraph
   startNode: start
@@ -12,7 +12,7 @@
   objectType: Item
 
 - type: construction
-  name: модульная мина
+  name: модульная мина # Stories-CraftTranslate
   id: ModularMineRecipe
   graph: ModularMineGraph
   startNode: start

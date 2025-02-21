@@ -1,5 +1,5 @@
 - type: construction
-  name: каркас
+  name: каркас # Stories-CraftTranslate
   id: Girder
   graph: Girder
   startNode: start
@@ -17,7 +17,7 @@
     - !type:TileNotBlocked
 
 - type: construction
-  name: укреплённый каркас
+  name: укреплённый каркас # Stories-CraftTranslate
   id: ReinforcedGirder
   graph: Girder
   startNode: start
@@ -35,7 +35,7 @@
     - !type:TileNotBlocked
 
 - type: construction
-  name: каркас-шестерня
+  name: каркас-шестерня # Stories-CraftTranslate
   id: ClockworkGirder
   graph: ClockworkGirder
   startNode: start
@@ -53,7 +53,7 @@
     - !type:TileNotBlocked
 
 - type: construction
-  name: стена
+  name: стена # Stories-CraftTranslate
   id: Wall
   graph: Girder
   startNode: start
@@ -71,7 +71,7 @@
     - !type:TileNotBlocked
 
 - type: construction
-  name: укреплённая стена
+  name: укреплённая стена # Stories-CraftTranslate
   id: ReinforcedWall
   graph: Girder
   startNode: start
@@ -89,7 +89,7 @@
     - !type:TileNotBlocked
 
 - type: construction
-  name: заводная стена
+  name: заводная стена # Stories-CraftTranslate
   id: WallClock
   graph: ClockworkGirder
   startNode: start
@@ -107,7 +107,7 @@
     - !type:TileNotBlocked
 
 - type: construction
-  name: деревянная стена
+  name: деревянная стена # Stories-CraftTranslate
   id: WoodWall
   graph: Barricade
   startNode: start
@@ -125,7 +125,7 @@
     - !type:TileNotBlocked
 
 - type: construction
-  name: урановая стена
+  name: урановая стена # Stories-CraftTranslate
   id: UraniumWall
   graph: Girder
   startNode: start
@@ -143,7 +143,7 @@
     - !type:TileNotBlocked
 
 - type: construction
-  name: серебряная стена
+  name: серебряная стена # Stories-CraftTranslate
   id: SilverWall
   graph: Girder
   startNode: start
@@ -161,7 +161,7 @@
     - !type:TileNotBlocked
 
 - type: construction
-  name: пластиковая стена
+  name: пластиковая стена # Stories-CraftTranslate
   id: PlasticWall
   graph: Girder
   startNode: start
@@ -179,7 +179,7 @@
     - !type:TileNotBlocked
 
 - type: construction
-  name: плазменная стена
+  name: плазменная стена # Stories-CraftTranslate
   id: PlasmaWall
   graph: Girder
   startNode: start
@@ -197,7 +197,7 @@
     - !type:TileNotBlocked
 
 - type: construction
-  name: золотая стена
+  name: золотая стена # Stories-CraftTranslate
   id: GoldWall
   graph: Girder
   startNode: start
@@ -215,7 +215,7 @@
     - !type:TileNotBlocked
 
 - type: construction
-  name: стена шаттла
+  name: стена шаттла # Stories-CraftTranslate
   id: ShuttleWall
   graph: Girder
   startNode: start
@@ -233,7 +233,7 @@
     - !type:TileNotBlocked
 
 - type: construction
-  name: внутренняя стена шаттла
+  name: внутренняя стена шаттла # Stories-CraftTranslate
   id: InteriorShuttleWall
   graph: Girder
   startNode: start
@@ -251,7 +251,7 @@
     - !type:TileNotBlocked
 
 - type: construction
-  name: диагональная стена шаттла
+  name: диагональная стена шаттла # Stories-CraftTranslate
   id: DiagonalShuttleWall
   graph: Girder
   startNode: start
@@ -269,7 +269,7 @@
     - !type:TileNotBlocked
 
 - type: construction
-  name: бананиумовая стена
+  name: бананиумовая стена # Stories-CraftTranslate
   id: ClownWall
   graph: Girder
   startNode: start
@@ -287,7 +287,7 @@
     - !type:TileNotBlocked
 
 - type: construction
-  name: мясная стена
+  name: мясная стена # Stories-CraftTranslate
   id: MeatWall
   graph: Girder
   startNode: start
@@ -305,7 +305,7 @@
   - !type:TileNotBlocked
 
 - type: construction
-  name: решётка
+  name: решётка # Stories-CraftTranslate
   id: Grille
   graph: Grille
   startNode: start
@@ -323,7 +323,7 @@
   canRotate: false
 
 - type: construction
-  name: заводная решётка
+  name: заводная решётка # Stories-CraftTranslate
   id: ClockGrille
   graph: ClockGrille
   startNode: start
@@ -341,7 +341,7 @@
   canRotate: false
 
 - type: construction
-  name: диагональная решётка
+  name: диагональная решётка # Stories-CraftTranslate
   id: GrilleDiagonal
   graph: GrilleDiagonal
   startNode: start
@@ -358,7 +358,7 @@
   placementMode: SnapgridCenter
 
 - type: construction
-  name: диагональная заводная решётка
+  name: диагональная заводная решётка # Stories-CraftTranslate
   id: ClockworkGrilleDiagonal
   graph: GrilleDiagonal
   startNode: start
@@ -375,7 +375,7 @@
   placementMode: SnapgridCenter
 
 - type: construction
-  name: окно
+  name: окно # Stories-CraftTranslate
   id: Window
   graph: Window
   startNode: start
@@ -394,7 +394,7 @@
   canRotate: false
 
 - type: construction
-  name: диагональное окно
+  name: диагональное окно # Stories-CraftTranslate
   id: WindowDiagonal
   graph: WindowDiagonal
   startNode: start
@@ -412,7 +412,7 @@
   placementMode: SnapgridCenter
 
 - type: construction
-  name: бронированное окно
+  name: бронированное окно # Stories-CraftTranslate
   id: ReinforcedWindow
   graph: Window
   startNode: start
@@ -431,7 +431,7 @@
   canRotate: false
 
 - type: construction
-  name: диагональное бронированное окно
+  name: диагональное бронированное окно # Stories-CraftTranslate
   id: ReinforcedWindowDiagonal
   graph: WindowDiagonal
   startNode: start
@@ -449,7 +449,7 @@
   placementMode: SnapgridCenter
 
 - type: construction
-  name: матовое окно
+  name: матовое окно # Stories-CraftTranslate
   id: TintedWindow
   graph: Window
   startNode: start
@@ -468,7 +468,7 @@
   canRotate: false
 
 - type: construction
-  name: заводное окно
+  name: заводное окно # Stories-CraftTranslate
   id: ClockworkWindow
   graph: Window
   startNode: start
@@ -487,7 +487,7 @@
   canRotate: false
 
 - type: construction
-  name: диагональное заводное окно
+  name: диагональное заводное окно # Stories-CraftTranslate
   id: ClockworkWindowDiagonal
   graph: WindowDiagonal
   startNode: start
@@ -505,7 +505,7 @@
   placementMode: SnapgridCenter
 
 - type: construction
-  name: плазменное окно
+  name: плазменное окно # Stories-CraftTranslate
   id: PlasmaWindow
   graph: Window
   startNode: start
@@ -524,7 +524,7 @@
   canRotate: false
 
 - type: construction
-  name: плазменное бронеокно
+  name: плазменное бронеокно # Stories-CraftTranslate
   id: ReinforcedPlasmaWindow
   graph: Window
   startNode: start
@@ -543,7 +543,7 @@
   canRotate: false
 
 - type: construction
-  name: окно шаттла
+  name: окно шаттла # Stories-CraftTranslate
   id: ShuttleWindow
   graph: Window
   startNode: start
@@ -562,7 +562,7 @@
   canRotate: false
 
 - type: construction
-  name: диагональное плазменное окно
+  name: диагональное плазменное окно # Stories-CraftTranslate
   id: PlasmaWindowDiagonal
   graph: WindowDiagonal
   startNode: start
@@ -580,7 +580,7 @@
   placementMode: SnapgridCenter
 
 - type: construction
-  name: диагональное плазменное бронеокно
+  name: диагональное плазменное бронеокно # Stories-CraftTranslate
   id: ReinforcedPlasmaWindowDiagonal
   graph: WindowDiagonal
   startNode: start
@@ -598,7 +598,7 @@
   placementMode: SnapgridCenter
 
 - type: construction
-  name: диагональное окно
+  name: диагональное окно # Stories-CraftTranslate
   id: WindowDirectional
   graph: WindowDirectional
   startNode: start
@@ -616,7 +616,7 @@
   placementMode: SnapgridCenter
 
 - type: construction
-  name: диагональное бронированное окно
+  name: диагональное бронированное окно # Stories-CraftTranslate
   id: WindowReinforcedDirectional
   graph: WindowDirectional
   startNode: start
@@ -634,7 +634,7 @@
   placementMode: SnapgridCenter
 
 - type: construction
-  name: диагональное заводное окно
+  name: диагональное заводное окно # Stories-CraftTranslate
   id: WindowClockworkDirectional
   graph: WindowDirectional
   startNode: start
@@ -652,7 +652,7 @@
   placementMode: SnapgridCenter
 
 - type: construction
-  name: диагональное плазменное окно
+  name: диагональное плазменное окно # Stories-CraftTranslate
   id: PlasmaWindowDirectional
   graph: WindowDirectional
   startNode: start
@@ -670,7 +670,7 @@
   placementMode: SnapgridCenter
 
 - type: construction
-  name: диагональное плазменное бронеокно
+  name: диагональное плазменное бронеокно # Stories-CraftTranslate
   id: PlasmaReinforcedWindowDirectional
   graph: WindowDirectional
   startNode: start
@@ -688,7 +688,7 @@
   placementMode: SnapgridCenter
 
 - type: construction
-  name: урановое окно
+  name: урановое окно # Stories-CraftTranslate
   id: UraniumWindow
   graph: Window
   startNode: start
@@ -707,7 +707,7 @@
   canRotate: false
 
 - type: construction
-  name: урановое бронеокно
+  name: урановое бронеокно # Stories-CraftTranslate
   id: ReinforcedUraniumWindow
   graph: Window
   startNode: start
@@ -726,7 +726,7 @@
   canRotate: false
 
 - type: construction
-  name: диагональное урановое бронеокно
+  name: диагональное урановое бронеокно # Stories-CraftTranslate
   id: UraniumWindowDiagonal
   graph: WindowDiagonal
   startNode: start
@@ -744,7 +744,7 @@
   placementMode: SnapgridCenter
 
 - type: construction
-  name: диагональное урановое бронеокно
+  name: диагональное урановое бронеокно # Stories-CraftTranslate
   id: ReinforcedUraniumWindowDiagonal
   graph: WindowDiagonal
   startNode: start
@@ -762,7 +762,7 @@
   placementMode: SnapgridCenter
 
 - type: construction
-  name: пожарный шлюз
+  name: пожарный шлюз # Stories-CraftTranslate
   id: Firelock
   graph: Firelock
   startNode: start
@@ -780,7 +780,7 @@
     - !type:TileNotBlocked
 
 - type: construction
-  name: стеклянный пожарный шлюз
+  name: стеклянный пожарный шлюз # Stories-CraftTranslate
   id: FirelockGlass
   graph: Firelock
   startNode: start
@@ -798,7 +798,7 @@
     - !type:TileNotBlocked
 
 - type: construction
-  name: тонкий пожарный шлюз
+  name: тонкий пожарный шлюз # Stories-CraftTranslate
   id: FirelockEdge
   graph: Firelock
   startNode: start
@@ -815,7 +815,7 @@
     - !type:TileNotBlocked
 
 - type: construction
-  name: ставни
+  name: ставни # Stories-CraftTranslate
   id: Shutters
   graph: Shutters
   startNode: start
@@ -830,7 +830,7 @@
   canBuildInImpassable: true
 
 - type: construction
-  name: оконные ставни
+  name: оконные ставни # Stories-CraftTranslate
   id: ShuttersWindow
   graph: Shutters
   startNode: start
@@ -845,7 +845,7 @@
   canBuildInImpassable: true
 
 - type: construction
-  name: радиационные ставни
+  name: радиационные ставни # Stories-CraftTranslate
   id: ShuttersRadiation
   graph: Shutters
   startNode: start
@@ -860,7 +860,7 @@
   canBuildInImpassable: true
 
 - type: construction
-  name: гермозатвор
+  name: гермозатвор # Stories-CraftTranslate
   id: BlastDoor
   graph: BlastDoor
   startNode: start
@@ -875,7 +875,7 @@
   canBuildInImpassable: true
 
 - type: construction
-  name: мостик
+  name: мостик # Stories-CraftTranslate
   id: Catwalk
   graph: Catwalk
   startNode: start
@@ -897,7 +897,7 @@
   canBuildInImpassable: false
 
 - type: construction
-  name: бананиумовый пол
+  name: бананиумовый пол # Stories-CraftTranslate
   id: FloorBananium
   graph: FloorBananium
   startNode: start
@@ -918,7 +918,7 @@
   canBuildInImpassable: false
 
 - type: construction
-  name: деревянная баррикада
+  name: деревянная баррикада # Stories-CraftTranslate
   id: Barricade
   graph: Barricade
   startNode: start
@@ -935,7 +935,7 @@
     - !type:TileNotBlocked
 
 - type: construction
-  name: направленная деревянная баррикада
+  name: направленная деревянная баррикада # Stories-CraftTranslate
   id: BarricadeDirectional
   graph: BarricadeDirectional
   startNode: start
@@ -952,7 +952,7 @@
     - !type:TileNotBlocked
 
 - type: construction
-  name: перила
+  name: перила # Stories-CraftTranslate
   id: Railing
   graph: Railing
   startNode: start
@@ -969,7 +969,7 @@
   - !type:TileNotBlocked
 
 - type: construction
-  name: угловые перила
+  name: угловые перила # Stories-CraftTranslate
   id: RailingCorner
   graph: Railing
   startNode: start
@@ -986,7 +986,7 @@
   - !type:TileNotBlocked
 
 - type: construction
-  name: маленькие угловые перила
+  name: маленькие угловые перила # Stories-CraftTranslate
   id: RailingCornerSmall
   graph: Railing
   startNode: start
@@ -1003,7 +1003,7 @@
   - !type:TileNotBlocked
 
 - type: construction
-  name: круговые перила
+  name: круговые перила # Stories-CraftTranslate
   id: RailingRound
   graph: Railing
   startNode: start
@@ -1021,7 +1021,7 @@
 
 # Chain link fencing
 - type: construction
-  name: сетка-рабица
+  name: сетка-рабица # Stories-CraftTranslate
   id: FenceMetal
   graph: FenceMetal
   startNode: start
@@ -1038,7 +1038,7 @@
   - !type:TileNotBlocked
 
 - type: construction
-  name: угловая сетка-рабица
+  name: угловая сетка-рабица # Stories-CraftTranslate
   id: FenceMetalCorner
   graph: FenceMetal
   startNode: start
@@ -1055,7 +1055,7 @@
   - !type:TileNotBlocked
 
 - type: construction
-  name: конец сетки-рабица
+  name: конец сетки-рабица # Stories-CraftTranslate
   id: FenceMetalEnd
   graph: FenceMetal
   startNode: start
@@ -1072,7 +1072,7 @@
   - !type:TileNotBlocked
 
 - type: construction
-  name: ворота сетки-рабицы
+  name: ворота сетки-рабицы # Stories-CraftTranslate
   id: FenceMetalGate
   graph: FenceMetal
   startNode: start
@@ -1090,7 +1090,7 @@
 
 #Wooden fence high
 - type: construction
-  name: деревянный забор
+  name: деревянный забор # Stories-CraftTranslate
   id: FenceWood
   graph: FenceWood
   startNode: start
@@ -1107,7 +1107,7 @@
   - !type:TileNotBlocked
 
 - type: construction
-  name: конец деревянного забора
+  name: конец деревянного забора # Stories-CraftTranslate
   id: FenceWoodEnd
   graph: FenceWood
   startNode: start
@@ -1124,7 +1124,7 @@
   - !type:TileNotBlocked
 
 - type: construction
-  name: угловой деревянный забор
+  name: угловой деревянный забор # Stories-CraftTranslate
   id: FenceWoodCorner
   graph: FenceWood
   startNode: start
@@ -1141,7 +1141,7 @@
   - !type:TileNotBlocked
 
 - type: construction
-  name: Т-образный деревянный забор
+  name: Т-образный деревянный забор # Stories-CraftTranslate
   id: FenceWoodTJunction
   graph: FenceWood
   startNode: start
@@ -1158,7 +1158,7 @@
   - !type:TileNotBlocked
 
 - type: construction
-  name: ворота деревянного забора
+  name: ворота деревянного забора # Stories-CraftTranslate
   id: FenceWoodGate
   graph: FenceWood
   startNode: start
@@ -1176,7 +1176,7 @@
 
 #Wooden fence small
 - type: construction
-  name: небольшой деревянный забор
+  name: небольшой деревянный забор # Stories-CraftTranslate
   id: FenceWoodSmall
   graph: FenceWood
   startNode: start
@@ -1193,7 +1193,7 @@
   - !type:TileNotBlocked
 
 - type: construction
-  name: конец небольшого деревянного забора
+  name: конец небольшого деревянного забора # Stories-CraftTranslate
   id: FenceWoodEndSmall
   graph: FenceWood
   startNode: start
@@ -1210,7 +1210,7 @@
   - !type:TileNotBlocked
 
 - type: construction
-  name: угловой небольшой деревянный забор
+  name: угловой небольшой деревянный забор # Stories-CraftTranslate
   id: FenceWoodCornerSmall
   graph: FenceWood
   startNode: start
@@ -1227,7 +1227,7 @@
   - !type:TileNotBlocked
 
 - type: construction
-  name: Т-образный небольшой деревянный забор
+  name: Т-образный небольшой деревянный забор # Stories-CraftTranslate
   id: FenceWoodTJunctionSmall
   graph: FenceWood
   startNode: start
@@ -1244,7 +1244,7 @@
   - !type:TileNotBlocked
 
 - type: construction
-  name: ворота деревянного забора
+  name: ворота деревянного забора # Stories-CraftTranslate
   id: FenceWoodGateSmall
   graph: FenceWood
   startNode: start
@@ -1262,7 +1262,7 @@
 
 #Airlocks
 - type: construction
-  name: шлюз
+  name: шлюз # Stories-CraftTranslate
   id: Airlock
   graph: Airlock
   startNode: start
@@ -1279,7 +1279,7 @@
     - !type:TileNotBlocked
 
 - type: construction
-  name: стеклянный шлюз
+  name: стеклянный шлюз # Stories-CraftTranslate
   id: AirlockGlass
   graph: Airlock
   startNode: start
@@ -1296,7 +1296,7 @@
     - !type:TileNotBlocked
 
 - type: construction
-  name: заводной шлюз
+  name: заводной шлюз # Stories-CraftTranslate
   id: PinionAirlock
   graph: PinionAirlock
   startNode: start
@@ -1313,7 +1313,7 @@
     - !type:TileNotBlocked
 
 - type: construction
-  name: стеклянный заводной шлюз
+  name: стеклянный заводной шлюз # Stories-CraftTranslate
   id: PinionAirlockGlass
   graph: PinionAirlock
   startNode: start
@@ -1330,7 +1330,7 @@
     - !type:TileNotBlocked
 
 - type: construction
-  name: стыковочный шлюз
+  name: стыковочный шлюз # Stories-CraftTranslate
   id: AirlockShuttle
   graph: AirlockShuttle
   startNode: start
@@ -1348,7 +1348,7 @@
   - !type:TileNotBlocked
 
 - type: construction
-  name: стыковочный шлюз с окном
+  name: стыковочный шлюз с окном # Stories-CraftTranslate
   id: AirlockGlassShuttle
   graph: AirlockShuttle
   startNode: start
@@ -1366,7 +1366,7 @@
     - !type:TileNotBlocked
 
 - type: construction
-  name: раздвижное окно
+  name: раздвижное окно # Stories-CraftTranslate
   id: Windoor
   graph: Windoor
   startNode: start
@@ -1383,7 +1383,7 @@
     - !type:TileNotBlocked
 
 - type: construction
-  name: раздвижное бронеокно
+  name: раздвижное бронеокно # Stories-CraftTranslate
   id: SecureWindoor
   graph: Windoor
   startNode: start
@@ -1400,7 +1400,7 @@
     - !type:TileNotBlocked
 
 - type: construction
-  name: раздвижное заводное окно
+  name: раздвижное заводное окно # Stories-CraftTranslate
   id: ClockworkWindoor
   graph: Windoor
   startNode: start
@@ -1418,7 +1418,7 @@
 
 #lighting
 - type: construction
-  name: светильник
+  name: светильник # Stories-CraftTranslate
   id: LightTubeFixture
   graph: LightFixture
   startNode: start
@@ -1438,7 +1438,7 @@
     - !type:TileNotBlocked
 
 - type: construction
-  name: маленький светильник
+  name: маленький светильник # Stories-CraftTranslate
   id: LightSmallFixture
   graph: LightFixture
   startNode: start
@@ -1457,7 +1457,7 @@
     - !type:TileNotBlocked
 
 - type: construction
-  name: аварийная лампа
+  name: аварийная лампа # Stories-CraftTranslate
   id: EmergencyLightFixture
   graph: LightFixture
   startNode: start
@@ -1475,7 +1475,7 @@
     - !type:TileNotBlocked
 
 - type: construction
-  name: фонарный столб
+  name: фонарный столб # Stories-CraftTranslate
   id: LightGroundFixture
   graph: LightFixture
   startNode: start
@@ -1493,7 +1493,7 @@
     - !type:TileNotBlocked
 
 - type: construction
-  name: стробоскоп
+  name: стробоскоп # Stories-CraftTranslate
   id: LightStrobeFixture
   graph: LightFixture
   startNode: start
@@ -1512,7 +1512,7 @@
 
 #conveyor
 - type: construction
-  name: конвейерная лента
+  name: конвейерная лента # Stories-CraftTranslate
   id: ConveyorBelt
   graph: ConveyorGraph
   startNode: start
@@ -1529,7 +1529,7 @@
     - !type:TileNotBlocked
 
 - type: construction
-  name: металлическая дверь
+  name: металлическая дверь # Stories-CraftTranslate
   id: MetalDoor
   graph: DoorGraph
   startNode: start
@@ -1546,7 +1546,7 @@
     - !type:TileNotBlocked
 
 - type: construction
-  name: деревянная дверь
+  name: деревянная дверь # Stories-CraftTranslate
   id: WoodDoor
   graph: DoorGraph
   startNode: start
@@ -1563,7 +1563,7 @@
     - !type:TileNotBlocked
 
 - type: construction
-  name: плазменная дверь
+  name: плазменная дверь # Stories-CraftTranslate
   id: PlasmaDoor
   graph: DoorGraph
   startNode: start
@@ -1580,7 +1580,7 @@
     - !type:TileNotBlocked
 
 - type: construction
-  name: золотая дверь
+  name: золотая дверь # Stories-CraftTranslate
   id: GoldDoor
   graph: DoorGraph
   startNode: start
@@ -1597,7 +1597,7 @@
     - !type:TileNotBlocked
 
 - type: construction
-  name: серебряная дверь
+  name: серебряная дверь # Stories-CraftTranslate
   id: SilverDoor
   graph: DoorGraph
   startNode: start
@@ -1614,7 +1614,7 @@
     - !type:TileNotBlocked
 
 - type: construction
-  name: бумажная дверь
+  name: бумажная дверь # Stories-CraftTranslate
   id: PaperDoor
   graph: DoorGraph
   startNode: start
@@ -1629,7 +1629,7 @@
     state: closed
 
 - type: construction
-  name: пластиковые шторки
+  name: пластиковые шторки # Stories-CraftTranslate
   id: PlasticFlapsClear
   graph: PlasticFlapsGraph
   startNode: start
@@ -1646,7 +1646,7 @@
     - !type:TileNotBlocked
 
 - type: construction
-  name: непрозрачные пластиковые шторки
+  name: непрозрачные пластиковые шторки # Stories-CraftTranslate
   id: PlasticFlapsOpaque
   graph: PlasticFlapsGraph
   startNode: start
@@ -1663,7 +1663,7 @@
     - !type:TileNotBlocked
 
 - type: construction
-  name: статуя карпа
+  name: статуя карпа # Stories-CraftTranslate
   id: CarpStatue
   graph: CarpStatue
   startNode: start
@@ -1680,7 +1680,7 @@
   - !type:TileNotBlocked
 
 - type: construction
-  name: бананиумовая статуя клоуна
+  name: бананиумовая статуя клоуна # Stories-CraftTranslate
   id: BananiumClownStatue
   graph: BananiumStatueClown
   startNode: start
@@ -1697,7 +1697,7 @@
     - !type:TileNotBlocked
 
 - type: construction
-  name: бананиумовая дверь
+  name: бананиумовая дверь # Stories-CraftTranslate
   id: BananiumDoor
   graph: DoorGraph
   startNode: start
@@ -1714,7 +1714,7 @@
     - !type:TileNotBlocked
 
 - type: construction
-  name: бананиумовый алтарь
+  name: бананиумовый алтарь # Stories-CraftTranslate
   id: BananiumAltar
   graph: BananiumAltarGraph
   startNode: start
@@ -1732,7 +1732,7 @@
     - !type:TileNotBlocked
 
 - type: construction
-  name: плотная потайная дверь
+  name: плотная потайная дверь # Stories-CraftTranslate
   id: SolidSecretDoor
   graph: SecretDoor
   startNode: start

@@ -1,6 +1,6 @@
 # SURVEILLANCE
 - type: construction
-  name: камера
+  name: камера # Stories-CraftTranslate
   id: camera
   graph: SurveillanceCamera
   startNode: start
@@ -14,7 +14,7 @@
   placementMode: SnapgridCenter
 
 - type: construction
-  name: телеэкран
+  name: телеэкран # Stories-CraftTranslate
   id: WallmountTelescreen
   graph: WallmountTelescreen
   startNode: start
@@ -29,7 +29,7 @@
   canBuildInImpassable: true
 
 - type: construction
-  name: карта станции
+  name: карта станции # Stories-CraftTranslate
   id: StationMap
   graph: StationMap
   startNode: start
@@ -48,7 +48,7 @@
 
 # POWER
 - type: construction
-  name: ЛКП
+  name: ЛКП # Stories-CraftTranslate
   id: APC
   graph: APC
   startNode: start
@@ -63,7 +63,7 @@
   canBuildInImpassable: true
 
 - type: construction
-  name: кабельный терминал
+  name: кабельный терминал # Stories-CraftTranslate
   id: CableTerminal
   graph: CableTerminal
   startNode: start
@@ -78,7 +78,7 @@
   canBuildInImpassable: false
 
 - type: construction
-  name: настенная подстанция
+  name: настенная подстанция # Stories-CraftTranslate
   id: WallmountSubstation
   graph: WallmountSubstation
   startNode: start
@@ -93,7 +93,7 @@
   canBuildInImpassable: true
 
 - type: construction
-  name: настенный генератор
+  name: настенный генератор # Stories-CraftTranslate
   id: WallmountGenerator
   graph: WallmountGenerator
   startNode: start
@@ -108,7 +108,7 @@
   canBuildInImpassable: true
 
 - type: construction
-  name: настенная ВСУ
+  name: настенная ВСУ # Stories-CraftTranslate
   id: WallmountGeneratorAPU
   graph: WallmountGenerator
   startNode: start
@@ -124,7 +124,7 @@
 
 # DISPOSALS
 - type: construction
-  name: утилизационный блок
+  name: утилизационный блок # Stories-CraftTranslate
   description: Пневматическая установка для утилизации отходов.
   id: DisposalUnit
   graph: DisposalMachine
@@ -138,7 +138,7 @@
     state: "disposal"
 
 - type: construction
-  name: почтовый блок
+  name: почтовый блок # Stories-CraftTranslate
   description: Пневматическая установка для доставки почты.
   id: MailingUnit
   graph: DisposalMachine
@@ -152,7 +152,7 @@
     state: "mailing"
 
 - type: construction
-  name: утилизационная труба
+  name: утилизационная труба # Stories-CraftTranslate
   id: DisposalPipe
   description: Большой сегмент трубы, используемый при создании системы утилизации.
   graph: DisposalPipe
@@ -166,7 +166,7 @@
     state: conpipe-s
 
 - type: construction
-  name: маркировщик утилизационной трубы
+  name: маркировщик утилизационной трубы # Stories-CraftTranslate
   description: Труба, маркирующая объекты для отправки определённому адресату.
   id: DisposalTagger
   graph: DisposalPipe
@@ -180,7 +180,7 @@
     state: conpipe-tagger
 
 - type: construction
-  name: ствол утилизационной трубы
+  name: ствол утилизационной трубы # Stories-CraftTranslate
   description: Труба, используемая в качестве точки входа в систему утилизации.
   id: DisposalTrunk
   graph: DisposalPipe
@@ -194,7 +194,7 @@
     state: conpipe-t
 
 - type: construction
-  name: маршрутизатор утилизационной трубы
+  name: маршрутизатор утилизационной трубы # Stories-CraftTranslate
   description: Трёхсторонний маршрутизатор. Объекты с совпадающими маркерами уходят в сторону с помощью настраиваемых фильтров.
   id: DisposalRouter
   graph: DisposalPipe
@@ -210,7 +210,7 @@
 
 - type: construction
   hide: true
-  name: маршрутизатор утилизационной трубы
+  name: маршрутизатор утилизационной трубы # Stories-CraftTranslate
   description: Трёхсторонний маршрутизатор. Объекты с совпадающими маркерами уходят в сторону с помощью настраиваемых фильтров.
   id: DisposalRouterFlipped
   graph: DisposalPipe
@@ -225,7 +225,7 @@
   mirror: DisposalRouter
 
 - type: construction
-  name: сигнальный утилизационный маршрутизатор
+  name: сигнальный утилизационный маршрутизатор # Stories-CraftTranslate
   description: Трёхсторонний маршрутизатор, управляемый сигналами.
   id: DisposalSignalRouter
   graph: DisposalPipe
@@ -241,7 +241,7 @@
 
 - type: construction
   hide: true
-  name: сигнальный утилизационный маршрутизатор
+  name: сигнальный утилизационный маршрутизатор # Stories-CraftTranslate
   description: Трёхсторонний маршрутизатор, управляемый сигналами.
   id: DisposalSignalRouterFlipped
   graph: DisposalPipe
@@ -256,7 +256,7 @@
   mirror: DisposalSignalRouter
 
 - type: construction
-  name: развязка утилизационной трубы
+  name: развязка утилизационной трубы # Stories-CraftTranslate
   description: Трёхсторонняя развязка. Стрелка указывает на место выхода объектов.
   id: DisposalJunction
   graph: DisposalPipe
@@ -272,7 +272,7 @@
 
 - type: construction
   hide: true
-  name: развязка утилизационной трубы
+  name: развязка утилизационной трубы # Stories-CraftTranslate
   description: Трёхсторонняя развязка. Стрелка указывает на место выхода объектов.
   id: DisposalJunctionFlipped
   graph: DisposalPipe
@@ -287,7 +287,7 @@
   mirror: DisposalJunction
 
 - type: construction
-  name: Y-развязка утилизационной трубы
+  name: Y-развязка утилизационной трубы # Stories-CraftTranslate
   description: Трёхсторонняя развязка с альтернативным местом выхода.
   id: DisposalYJunction
   graph: DisposalPipe
@@ -301,7 +301,7 @@
     state: conpipe-y
 
 - type: construction
-  name: изгиб утилизационной трубы
+  name: изгиб утилизационной трубы # Stories-CraftTranslate
   description: Труба, согнутая под прямым углом.
   id: DisposalBend
   graph: DisposalPipe
@@ -316,7 +316,7 @@
 
 # ATMOS
 - type: construction
-  name: воздушная сигнализация
+  name: воздушная сигнализация # Stories-CraftTranslate
   id: AirAlarmFixture
   graph: AirAlarm
   startNode: start
@@ -334,7 +334,7 @@
   - !type:WallmountCondition {}
 
 - type: construction
-  name: пожарная сигнализация
+  name: пожарная сигнализация # Stories-CraftTranslate
   id: FireAlarm
   graph: FireAlarm
   startNode: start
@@ -352,7 +352,7 @@
   - !type:WallmountCondition {}
 
 - type: construction
-  name: сенсор воздуха
+  name: сенсор воздуха # Stories-CraftTranslate
   id: AirSensor
   graph: AirSensor
   startNode: start
@@ -367,7 +367,7 @@
   canRotate: true
 
 - type: construction
-  name: датчик газовой трубы
+  name: датчик газовой трубы # Stories-CraftTranslate
   id: GasPipeSensor
   graph: GasPipeSensor
   startNode: start
@@ -383,7 +383,7 @@
 
 # ATMOS PIPES
 - type: construction
-  name: половина газовой трубы
+  name: половина газовой трубы # Stories-CraftTranslate
   id: GasPipeHalf
   description: Половина газовой трубы. Не скейтборд.
   graph: GasPipe
@@ -397,7 +397,7 @@
     state: pipeHalf
 
 - type: construction
-  name: прямая газовая труба
+  name: прямая газовая труба # Stories-CraftTranslate
   id: GasPipeStraight
   description: Отрезок прямой трубы.
   graph: GasPipe
@@ -411,7 +411,7 @@
     state: pipeStraight
 
 - type: construction
-  name: угловая газовая труба
+  name: угловая газовая труба # Stories-CraftTranslate
   id: GasPipeBend
   description: Угловая труба, согнутый под углом 90 градусов.
   graph: GasPipe
@@ -425,7 +425,7 @@
     state: pipeBend
 
 - type: construction
-  name: Т-образная газовая труба
+  name: Т-образная газовая труба # Stories-CraftTranslate
   id: GasPipeTJunction
   description: Отрезок трубы с Т-образным соединением.
   graph: GasPipe
@@ -439,7 +439,7 @@
     state: pipeTJunction
 
 - type: construction
-  name: четверная газовая труба
+  name: четверная газовая труба # Stories-CraftTranslate
   id: GasPipeFourway
   description: Отрезок трубы с четверным соединением.
   graph: GasPipe
@@ -454,7 +454,7 @@
 
 # ATMOS UNARY
 - type: construction
-  name: вентиляция
+  name: вентиляция # Stories-CraftTranslate
   description: Подает газ в помещение.
   id: GasVentPump
   graph: GasUnary
@@ -475,7 +475,7 @@
     - !type:NoUnstackableInTile
 
 - type: construction
-  name: пассивная вентиляция
+  name: пассивная вентиляция # Stories-CraftTranslate
   description: Вентиляция не требующее питания, которая выравнивает уровень газов с обеих сторон
   id: GasPassiveVent
   graph: GasUnary
@@ -496,7 +496,7 @@
     - !type:NoUnstackableInTile
 
 - type: construction
-  name: скруббер
+  name: скруббер # Stories-CraftTranslate
   description: Высасывает газ в подключенные трубы.
   id: GasVentScrubber
   graph: GasUnary
@@ -517,7 +517,7 @@
     - !type:NoUnstackableInTile
 
 - type: construction
-  name: инжектор
+  name: инжектор # Stories-CraftTranslate
   description: Впрыскивает газ в атмосферу.
   id: GasOutletInjector
   graph: GasUnary
@@ -539,7 +539,7 @@
 
 # ATMOS BINARY
 - type: construction
-  name: газовый насос
+  name: газовый насос # Stories-CraftTranslate
   id: GasPressurePump
   description: Насос, перемещающий газ под определённым давлением.
   graph: GasBinary
@@ -560,7 +560,7 @@
     - !type:NoUnstackableInTile
 
 - type: construction
-  name: объёмный газовый насос
+  name: объёмный газовый насос # Stories-CraftTranslate
   description: Насос, перемещающий газ с определённым объёмом.
   id: GasVolumePump
   graph: GasBinary
@@ -582,7 +582,7 @@
 
 - type: construction
   id: GasPassiveGate
-  name: пассивный клапан
+  name: пассивный клапан # Stories-CraftTranslate
   description: Односторонний воздушный клапан, не требующий питания.
   graph: GasBinary
   startNode: start
@@ -603,7 +603,7 @@
 
 - type: construction
   id: GasValve
-  name: ручной клапан
+  name: ручной клапан # Stories-CraftTranslate
   description: Труба с клапаном, которым можно перекрыть поток проходящего по ней газа.
   graph: GasBinary
   startNode: start
@@ -624,7 +624,7 @@
 
 - type: construction
   id: SignalControlledValve
-  name: сигнальный клапан
+  name: сигнальный клапан # Stories-CraftTranslate
   description: Можно контролировать при помощи сигналов.
   graph: GasBinary
   startNode: start
@@ -645,7 +645,7 @@
 
 - type: construction
   id: GasPort
-  name: соединительный порт
+  name: соединительный порт # Stories-CraftTranslate
   description: Для подключения портативных устройств, связанных с управлением атмосферой.
   graph: GasBinary
   startNode: start
@@ -666,7 +666,7 @@
 
 - type: construction
   id: GasDualPortVentPump
-  name: двухпортовая вентиляция
+  name: двухпортовая вентиляция # Stories-CraftTranslate
   description: Имеет клапан и прикреплённый к нему насос. Один вход для закачивания воздуха, другой - для откачивания.
   graph: GasBinary
   startNode: start
@@ -685,7 +685,7 @@
 
 - type: construction
   id: HeatExchanger
-  name: радиатор
+  name: радиатор # Stories-CraftTranslate
   description: Переносит тепло между трубой и окружающей средой.
   graph: GasBinary
   startNode: start
@@ -699,7 +699,7 @@
 
 - type: construction
   id: HeatExchangerBend
-  name: угловой радиатор
+  name: угловой радиатор # Stories-CraftTranslate
   description: Переносит тепло между трубой и окружающей средой.
   graph: GasBinary
   startNode: start
@@ -714,7 +714,7 @@
 # ATMOS TRINARY
 - type: construction
   id: GasFilter
-  name: газовый фильтр
+  name: газовый фильтр # Stories-CraftTranslate
   description: Очень полезен для фильтрации газов.
   graph: GasTrinary
   startNode: start
@@ -732,7 +732,7 @@
 - type: construction
   id: GasFilterFlipped
   hide: true
-  name: газовый фильтр
+  name: газовый фильтр # Stories-CraftTranslate
   description: Очень полезен для фильтрации газов.
   graph: GasTrinary
   startNode: start
@@ -749,7 +749,7 @@
 
 - type: construction
   id: GasMixer
-  name: газовый смеситель
+  name: газовый смеситель # Stories-CraftTranslate
   description: Очень полезен для смешивания газов.
   graph: GasTrinary
   startNode: start
@@ -767,7 +767,7 @@
 - type: construction
   id: GasMixerFlipped
   hide: true
-  name: газовый смеситель
+  name: газовый смеситель # Stories-CraftTranslate
   description: Очень полезен для смешивания газов.
   graph: GasTrinary
   startNode: start
@@ -784,7 +784,7 @@
 
 - type: construction
   id: PressureControlledValve
-  name: пневматический клапан
+  name: пневматический клапан # Stories-CraftTranslate
   description: Клапан, регулируемый давлением.
   graph: GasTrinary
   startNode: start
@@ -800,7 +800,7 @@
 
 # INTERCOM
 - type: construction
-  name: интерком
+  name: интерком # Stories-CraftTranslate
   id: IntercomAssembly
   graph: Intercom
   startNode: start
@@ -819,7 +819,7 @@
 
 # TIMERS
 - type: construction
-  name: таймер сигнала
+  name: таймер сигнала # Stories-CraftTranslate
   id: SignalTimer
   graph: Timer
   startNode: start
@@ -836,7 +836,7 @@
   - !type:WallmountCondition
 
 - type: construction
-  name: таймер сигнала с экраном
+  name: таймер сигнала с экраном # Stories-CraftTranslate
   id: ScreenTimer
   graph: Timer
   startNode: start
@@ -854,7 +854,7 @@
   - !type:WallmountCondition
 
 - type: construction
-  name: бриг-таймер
+  name: бриг-таймер # Stories-CraftTranslate
   id: BrigTimer
   graph: Timer
   startNode: start

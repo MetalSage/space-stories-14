@@ -1,5 +1,5 @@
 - type: construction
-  name: паутинная стена
+  name: паутинная стена # Stories-CraftTranslate
   id: WallWeb
   graph: WebStructures
   startNode: start
@@ -20,7 +20,7 @@
     - !type:TileNotBlocked
 
 - type: construction
-  name: паутинный стол
+  name: паутинный стол # Stories-CraftTranslate
   id: TableWeb
   graph: WebStructures
   startNode: start
@@ -41,7 +41,7 @@
     - !type:TileNotBlocked
 
 - type: construction
-  name: паутинная кровать
+  name: паутинная кровать # Stories-CraftTranslate
   id: WebBed
   graph: WebStructures
   startNode: start
@@ -62,7 +62,7 @@
     - !type:TileNotBlocked
 
 - type: construction
-  name: паутинный стул
+  name: паутинный стул # Stories-CraftTranslate
   id: ChairWeb
   graph: WebStructures
   startNode: start
@@ -80,7 +80,7 @@
     - SpiderCraft
 
 - type: construction
-  name: паутинный ящик
+  name: паутинный ящик # Stories-CraftTranslate
   id: CrateWeb
   graph: WebStructures
   startNode: start
@@ -99,7 +99,7 @@
     - SpiderCraft
 
 - type: construction
-  name: паутинная дверь
+  name: паутинная дверь # Stories-CraftTranslate
   id: WebDoor
   graph: WebStructures
   startNode: start

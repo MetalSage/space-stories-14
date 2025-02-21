@@ -1,7 +1,7 @@
 # These should be lathe recipes but lathe code sucks so hard rn so they'll be crafted by hand.
 
 - type: construction
-  name: стальная плитка
+  name: стальная плитка # Stories-CraftTranslate
   id: TileSteel
   graph: TileSteel
   startNode: start
@@ -12,7 +12,7 @@
   objectType: Item
 
 - type: construction
-  name: деревянный пол
+  name: деревянный пол # Stories-CraftTranslate
   id: TileWood
   graph: TileWood
   startNode: start
@@ -23,7 +23,7 @@
   objectType: Item
 
 - type: construction
-  name: заполненная латунная плитка
+  name: заполненная латунная плитка # Stories-CraftTranslate
   id: TileBrassFilled
   graph: TilesBrass
   startNode: start
@@ -34,7 +34,7 @@
   objectType: Item
 
 - type: construction
-  name: гладкая латунная плитка
+  name: гладкая латунная плитка # Stories-CraftTranslate
   id: TileBrassReebe
   graph: TilesBrass
   startNode: start
@@ -45,7 +45,7 @@
   objectType: Item
 
 - type: construction
-  name: белая плитка
+  name: белая плитка # Stories-CraftTranslate
   id: TileWhite
   graph: TileWhite
   startNode: start
@@ -56,7 +56,7 @@
   objectType: Item
 
 - type: construction
-  name: тёмная плитка
+  name: тёмная плитка # Stories-CraftTranslate
   id: TileDark
   graph: TileDark
   startNode: start
@@ -67,7 +67,7 @@
   objectType: Item
 
 - type: construction
-  name: пол из плоти
+  name: пол из плоти # Stories-CraftTranslate
   id: TileFlesh
   graph: TileFlesh
   startNode: start
@@ -188,7 +188,7 @@
 #   objectType: Item
 
 - type: construction
-  name: большой деревянный пол
+  name: большой деревянный пол # Stories-CraftTranslate
   id: TileWoodLarge
   graph: TileWoodLarge
   startNode: start

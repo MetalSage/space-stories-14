@@ -1,6 +1,6 @@
 #chairs
 - type: construction
-  name: стул
+  name: стул # Stories-CraftTranslate
   id: Chair
   graph: Seat
   startNode: start
@@ -17,7 +17,7 @@
     - !type:TileNotBlocked
 
 - type: construction
-  name: табурет
+  name: табурет # Stories-CraftTranslate
   id: Stool
   graph: Seat
   startNode: start
@@ -34,7 +34,7 @@
     - !type:TileNotBlocked
 
 - type: construction
-  name: барный стул
+  name: барный стул # Stories-CraftTranslate
   id: StoolBar
   graph: Seat
   startNode: start
@@ -51,7 +51,7 @@
     - !type:TileNotBlocked
 
 - type: construction
-  name: латунный стул
+  name: латунный стул # Stories-CraftTranslate
   id: ChairBrass
   graph: Seat
   startNode: start
@@ -68,7 +68,7 @@
     - !type:TileNotBlocked
 
 - type: construction
-  name: белое офисное кресло
+  name: белое офисное кресло # Stories-CraftTranslate
   id: ChairOfficeLight
   graph: Seat
   startNode: start
@@ -85,7 +85,7 @@
     - !type:TileNotBlocked
 
 - type: construction
-  name: тёмное офисное кресло
+  name: тёмное офисное кресло # Stories-CraftTranslate
   id: ChairOfficeDark
   graph: Seat
   startNode: start
@@ -102,7 +102,7 @@
     - !type:TileNotBlocked
 
 - type: construction
-  name: удобное кресло
+  name: удобное кресло # Stories-CraftTranslate
   id: ChairComfy
   graph: Seat
   startNode: start
@@ -119,7 +119,7 @@
     - !type:TileNotBlocked
 
 - type: construction
-  name: кресло пилота
+  name: кресло пилота # Stories-CraftTranslate
   id: chairPilotSeat
   graph: Seat
   startNode: start
@@ -136,7 +136,7 @@
     - !type:TileNotBlocked
 
 - type: construction
-  name: деревянный стул
+  name: деревянный стул # Stories-CraftTranslate
   id: ChairWood
   graph: Seat
   startNode: start
@@ -153,7 +153,7 @@
     - !type:TileNotBlocked
 
 - type: construction
-  name: мясной стул
+  name: мясной стул # Stories-CraftTranslate
   id: ChairMeat
   graph: Seat
   startNode: start
@@ -170,7 +170,7 @@
   - !type:TileNotBlocked
 
 - type: construction
-  name: ритуальный стул
+  name: ритуальный стул # Stories-CraftTranslate
   id: ChairRitual
   graph: RitualSeat
   startNode: start
@@ -187,7 +187,7 @@
     - !type:TileNotBlocked
 
 - type: construction
-  name: раскладной стул
+  name: раскладной стул # Stories-CraftTranslate
   id: ChairFolding
   graph: Seat
   startNode: start
@@ -204,7 +204,7 @@
     - !type:TileNotBlocked
 
 - type: construction
-  name: стальная скамейка
+  name: стальная скамейка # Stories-CraftTranslate
   id: ChairSteelBench
   graph: Seat
   startNode: start
@@ -221,7 +221,7 @@
     - !type:TileNotBlocked
 
 - type: construction
-  name: деревянная скамейка
+  name: деревянная скамейка # Stories-CraftTranslate
   id: ChairWoodBench
   graph: Seat
   startNode: start
@@ -238,7 +238,7 @@
     - !type:TileNotBlocked
 
 - type: construction
-  name: удобная скамейка
+  name: удобная скамейка # Stories-CraftTranslate
   id: RedComfBench
   graph: Seat
   startNode: start
@@ -255,7 +255,7 @@
     - !type:TileNotBlocked
 
 - type: construction
-  name: удобная синяя скамейка
+  name: удобная синяя скамейка # Stories-CraftTranslate
   id: BlueComfBench
   graph: Seat
   startNode: start
@@ -273,7 +273,7 @@
 
 #tables
 - type: construction
-  name: стальной стол
+  name: стальной стол # Stories-CraftTranslate
   id: Table
   graph: Table
   startNode: start
@@ -290,7 +290,7 @@
     - !type:TileNotBlocked
 
 - type: construction
-  name: стол их пластали
+  name: стол их пластали # Stories-CraftTranslate
   id: TableReinforced
   graph: Table
   startNode: start
@@ -307,7 +307,7 @@
     - !type:TileNotBlocked
 
 - type: construction
-  name: стеклянный стол
+  name: стеклянный стол # Stories-CraftTranslate
   id: TableGlass
   graph: Table
   startNode: start
@@ -324,7 +324,7 @@
     - !type:TileNotBlocked
 
 - type: construction
-  name: стол из бронестекла
+  name: стол из бронестекла # Stories-CraftTranslate
   id: TableReinforcedGlass
   graph: Table
   startNode: start
@@ -341,7 +341,7 @@
     - !type:TileNotBlocked
 
 - type: construction
-  name: стол из плазменного стекла
+  name: стол из плазменного стекла # Stories-CraftTranslate
   id: TablePlasmaGlass
   graph: Table
   startNode: start
@@ -358,7 +358,7 @@
     - !type:TileNotBlocked
 
 - type: construction
-  name: латунный стол
+  name: латунный стол # Stories-CraftTranslate
   id: TableBrass
   graph: Table
   startNode: start
@@ -375,7 +375,7 @@
     - !type:TileNotBlocked
 
 - type: construction
-  name: деревянный стол
+  name: деревянный стол # Stories-CraftTranslate
   id: TableWood
   graph: Table
   startNode: start
@@ -392,7 +392,7 @@
     - !type:TileNotBlocked
 
 - type: construction
-  name: игорный стол
+  name: игорный стол # Stories-CraftTranslate
   id: TableCarpet
   graph: Table
   startNode: start
@@ -409,7 +409,7 @@
     - !type:TileNotBlocked
 
 - type: construction
-  name: красивый чёрный стол
+  name: красивый чёрный стол # Stories-CraftTranslate
   id: TableFancyBlack
   graph: Table
   startNode: start
@@ -426,7 +426,7 @@
     - !type:TileNotBlocked
 
 - type: construction
-  name: красивый синий стол
+  name: красивый синий стол # Stories-CraftTranslate
   id: TableFancyBlue
   graph: Table
   startNode: start
@@ -443,7 +443,7 @@
     - !type:TileNotBlocked
 
 - type: construction
-  name: красивый голубой стол
+  name: красивый голубой стол # Stories-CraftTranslate
   id: TableFancyCyan
   graph: Table
   startNode: start
@@ -460,7 +460,7 @@
     - !type:TileNotBlocked
 
 - type: construction
-  name: красивый зелёный стол
+  name: красивый зелёный стол # Stories-CraftTranslate
   id: TableFancyGreen
   graph: Table
   startNode: start
@@ -477,7 +477,7 @@
     - !type:TileNotBlocked
 
 - type: construction
-  name: красивый оранжевый стол
+  name: красивый оранжевый стол # Stories-CraftTranslate
   id: TableFancyOrange
   graph: Table
   startNode: start
@@ -494,7 +494,7 @@
     - !type:TileNotBlocked
 
 - type: construction
-  name: красивый фиолетовый стол
+  name: красивый фиолетовый стол # Stories-CraftTranslate
   id: TableFancyPurple
   graph: Table
   startNode: start
@@ -511,7 +511,7 @@
     - !type:TileNotBlocked
 
 - type: construction
-  name: красивый розовый стол
+  name: красивый розовый стол # Stories-CraftTranslate
   id: TableFancyPink
   graph: Table
   startNode: start
@@ -528,7 +528,7 @@
     - !type:TileNotBlocked
 
 - type: construction
-  name: красивый красный стол
+  name: красивый красный стол # Stories-CraftTranslate
   id: TableFancyRed
   graph: Table
   startNode: start
@@ -545,7 +545,7 @@
     - !type:TileNotBlocked
 
 - type: construction
-  name: красивый белый стол
+  name: красивый белый стол # Stories-CraftTranslate
   id: TableFancyWhite
   graph: Table
   startNode: start
@@ -562,7 +562,7 @@
     - !type:TileNotBlocked
 
 - type: construction
-  name: металлическая стойка
+  name: металлическая стойка # Stories-CraftTranslate
   id: TableCounterMetal
   graph: Table
   startNode: start
@@ -579,7 +579,7 @@
     - !type:TileNotBlocked
 
 - type: construction
-  name: деревянная стойка
+  name: деревянная стойка # Stories-CraftTranslate
   id: TableCounterWood
   graph: Table
   startNode: start
@@ -597,7 +597,7 @@
 
 #bathroom
 - type: construction
-  name: туалет
+  name: туалет # Stories-CraftTranslate
   id: ToiletEmpty
   graph: Toilet
   startNode: start
@@ -616,7 +616,7 @@
 #bedroom
 - type: construction
   id: Bed
-  name: кровать
+  name: кровать # Stories-CraftTranslate
   description: На ней можно лежать, спать или пристегиваться ремнями. Отдых в ней обеспечивает чрезвычайно медленное исцеление.
   graph: bed
   startNode: start
@@ -633,7 +633,7 @@
 
 - type: construction
   id: MedicalBed
-  name: больничная койка
+  name: больничная койка # Stories-CraftTranslate
   description: Больничная койка для реабилитации пациентов. Отдых в ней обеспечивает медленное исцеление.
   graph: bed
   startNode: start
@@ -650,7 +650,7 @@
 
 - type: construction
   id: DogBed
-  name: собачья лежанка
+  name: собачья лежанка # Stories-CraftTranslate
   description: Удобная лежанка для собак. Вы даже можете пристегнуть своего питомца в случае, отключения гравитации.
   graph: bed
   startNode: start
@@ -667,7 +667,7 @@
 
 - type: construction
   id: Dresser
-  name: комод
+  name: комод # Stories-CraftTranslate
   description: Деревянный комод, может хранить вещи внутри.
   graph: Dresser
   startNode: start
@@ -685,7 +685,7 @@
 #racks
 - type: construction
   id: Rack
-  name: стойка
+  name: стойка # Stories-CraftTranslate
   description: Стойка для хранения вещей.
   graph: Rack
   startNode: start
@@ -703,7 +703,7 @@
 #misc
 - type: construction
   id: MeatSpike
-  name: мясной крюк
+  name: мясной крюк # Stories-CraftTranslate
   description: Крюк для снятия мяса с животных.
   graph: MeatSpike
   startNode: start
@@ -720,7 +720,7 @@
 
 - type: construction
   id: Curtains
-  name: шторы
+  name: шторы # Stories-CraftTranslate
   description: Содержат менее 1% ртути.
   graph: Curtains
   startNode: start
@@ -735,7 +735,7 @@
 
 - type: construction
   id: CurtainsBlack
-  name: чёрные шторы
+  name: чёрные шторы # Stories-CraftTranslate
   description: Скрывают то, что не должны видеть другие.
   graph: Curtains
   startNode: start
@@ -750,7 +750,7 @@
 
 - type: construction
   id: CurtainsBlue
-  name: синие шторы
+  name: синие шторы # Stories-CraftTranslate
   description: Скрывают то, что не должны видеть другие.
   graph: Curtains
   startNode: start
@@ -765,7 +765,7 @@
 
 - type: construction
   id: CurtainsCyan
-  name: голубые шторы
+  name: голубые шторы # Stories-CraftTranslate
   description: Скрывают то, что не должны видеть другие.
   graph: Curtains
   startNode: start
@@ -780,7 +780,7 @@
 
 - type: construction
   id: CurtainsGreen
-  name: зелёные шторы
+  name: зелёные шторы # Stories-CraftTranslate
   description: Скрывают то, что не должны видеть другие.
   graph: Curtains
   startNode: start
@@ -795,7 +795,7 @@
 
 - type: construction
   id: CurtainsOrange
-  name: оранжевые шторы
+  name: оранжевые шторы # Stories-CraftTranslate
   description: Скрывают то, что не должны видеть другие.
   graph: Curtains
   startNode: start
@@ -810,7 +810,7 @@
 
 - type: construction
   id: CurtainsPink
-  name: розовые шторы
+  name: розовые шторы # Stories-CraftTranslate
   description: Скрывают то, что не должны видеть другие.
   graph: Curtains
   startNode: start
@@ -825,7 +825,7 @@
 
 - type: construction
   id: CurtainsPurple
-  name: фиолетовые шторы
+  name: фиолетовые шторы # Stories-CraftTranslate
   description: Скрывают то, что не должны видеть другие.
   graph: Curtains
   startNode: start
@@ -840,7 +840,7 @@
 
 - type: construction
   id: CurtainsRed
-  name: красные шторы
+  name: красные шторы # Stories-CraftTranslate
   description: Скрывают то, что не должны видеть другие.
   graph: Curtains
   startNode: start
@@ -855,7 +855,7 @@
 
 - type: construction
   id: CurtainsWhite
-  name: белые шторы
+  name: белые шторы # Stories-CraftTranslate
   description: Скрывают то, что не должны видеть другие.
   graph: Curtains
   startNode: start
@@ -870,7 +870,7 @@
 
 - type: construction
   id: Bookshelf
-  name: книжный шкаф
+  name: книжный шкаф # Stories-CraftTranslate
   description: Преимущественно, наполнен книгами.
   graph: Bookshelf
   startNode: start
@@ -887,7 +887,7 @@
 
 - type: construction
   id: NoticeBoard
-  name: информационная доска
+  name: информационная доска # Stories-CraftTranslate
   description: Деревянная доска объявлений, на которую можно прикреплять бумагу.
   graph: NoticeBoard
   startNode: start
@@ -905,7 +905,7 @@
 
 - type: construction
   id: Mannequin
-  name: манекен
+  name: манекен # Stories-CraftTranslate
   description: Деревянный манекен, предназначенный для демонстрации одежды.
   graph: Mannequin
   startNode: start

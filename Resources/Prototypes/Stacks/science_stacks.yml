@@ -1,24 +1,24 @@
 ﻿- type: stack
   id: ArtifactFragment
-  name: фрагмент артефакта
+  name: фрагмент артефакта # Stories-CraftTranslate
   spawn: ArtifactFragment1
   maxCount: 30
 
 - type: stack
   id: Capacitor
-  name: конденсатор
+  name: конденсатор # Stories-CraftTranslate
   icon: { sprite: /Textures/Objects/Misc/stock_parts.rsi, state: capacitor }
   spawn: CapacitorStockPart
   maxCount: 10
 
 - type: stack
   id: Manipulator
-  name: манипулятор
+  name: манипулятор # Stories-CraftTranslate
   spawn: MicroManipulatorStockPart
   maxCount: 10
 
 - type: stack
   id: MatterBin
-  name: ёмкость материи
+  name: ёмкость материи # Stories-CraftTranslate
   spawn: MatterBinStockPart
   maxCount: 10

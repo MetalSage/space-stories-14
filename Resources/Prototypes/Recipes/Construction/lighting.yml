@@ -1,5 +1,5 @@
 ﻿- type: construction
-  name: голубая лампа-трубка
+  name: голубая лампа-трубка # Stories-CraftTranslate
   id: CyanLight
   graph: CyanLight
   startNode: start
@@ -10,7 +10,7 @@
   objectType: Item
 
 - type: construction
-  name: синяя лампа-трубка
+  name: синяя лампа-трубка # Stories-CraftTranslate
   id: BlueLight
   graph: BlueLight
   startNode: start
@@ -21,7 +21,7 @@
   objectType: Item
 
 - type: construction
-  name: розовая лампа-трубка
+  name: розовая лампа-трубка # Stories-CraftTranslate
   id: PinkLight
   graph: PinkLight
   startNode: start
@@ -32,7 +32,7 @@
   objectType: Item
 
 - type: construction
-  name: оранжевая лампа-трубка
+  name: оранжевая лампа-трубка # Stories-CraftTranslate
   id: OrangeLight
   graph: OrangeLight
   startNode: start
@@ -43,7 +43,7 @@
   objectType: Item
 
 - type: construction
-  name: красная лампа-трубка
+  name: красная лампа-трубка # Stories-CraftTranslate
   id: RedLight
   graph: RedLight
   startNode: start
@@ -54,7 +54,7 @@
   objectType: Item
 
 - type: construction
-  name: зелёная лампа-трубка
+  name: зелёная лампа-трубка # Stories-CraftTranslate
   id: GreenLight
   graph: GreenLight
   startNode: start
