@@ -242,14 +242,14 @@
     state: icon
 
 - type: construction
-  name: goliath hardsuit
+  name: скафандр голиафа # Stories-CraftTranslate
   id: HardsuitGoliath
   graph: HardsuitGoliath
   startNode: start
   targetNode: hardsuitGoliath
   category: construction-category-clothing
   objectType: Item
-  description: A lightweight hardsuit, adorned with a patchwork of thick, chitinous goliath hide.
+  description: Легковесный скафандр, украшенный лоскутами толстой, хитиновой шкуры голиафа.
   icon:
     sprite: Clothing/OuterClothing/Hardsuits/goliath.rsi
     state: icon
