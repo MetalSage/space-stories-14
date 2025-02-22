@@ -64,5 +64,5 @@ air-alarm-ui-thresholds-upper-bound = Верхняя аварийная гран
 air-alarm-ui-thresholds-lower-bound = Нижняя аварийная граница
 air-alarm-ui-thresholds-upper-warning-bound = Верхняя тревожная граница
 air-alarm-ui-thresholds-lower-warning-bound = Нижняя тревожная граница
-air-alarm-ui-thresholds-copy = Копирование пороговых значений на все устройства
-air-alarm-ui-thresholds-copy-tooltip = Копирует пороговые значения датчиков этого устройства на все устройства на вкладке "Воздушная сигнализация".
+air-alarm-ui-thresholds-copy = Скопировать значение границы на все устройства
+air-alarm-ui-thresholds-copy-tooltip = Скопировать значение границы сенсора этого устройства на все устройства на этой вкладке воздушной сигнализации.
