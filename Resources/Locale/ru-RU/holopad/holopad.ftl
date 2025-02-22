@@ -1,136 +1,144 @@
 # Window headers
 holopad-window-title = { CAPITALIZE($title) }
 holopad-window-subtitle = [color=white][bold]Система голографической связи[/bold][/color]
-holopad-window-options = [color=darkgray][font size=10][italic]Выберите пункт из списка ниже[/italic][/font][/color]
+holopad-window-options = [color=darkgray][font size=10][italic]Пожалуйста, выберите вариант из списка ниже[/italic][/font][/color]
 # Call status
-holopad-window-no-calls-in-progress = Нет активных голографических звонков
-holopad-window-incoming-call = Входящий голографический звонок от:
-holopad-window-outgoing-call = Установление соединения...
-holopad-window-call-in-progress = Голографический звонок в процессе
-holopad-window-call-ending = Отключение...
+holopad-window-no-calls-in-progress = Никакие голо-звонки не ведутся
+holopad-window-incoming-call = Входящий голо-звонок от:
+holopad-window-relay-label = Происходит из:
+holopad-window-outgoing-call = Попытка установить соединение...
+holopad-window-call-in-progress = Ведётся голо-звонок
+holopad-window-call-ending = Отсоединение...
 holopad-window-call-rejected = Не удалось установить соединение
-holopad-window-ai-request = Запрос присутствия от:
-holopad-window-emergency-broadcast-in-progress = [color=#cf2f2f][bold]В процессе экстренного оповещения[/bold][/color]
-holopad-window-controls-locked-out = Управление этим устройством заблокировано для:
-holopad-window-controls-unlock-countdown = Разблокировка произойдёт автоматически через: { $countdown }
+holopad-window-ai-request = Ваше присутствие запрашивает:
+holopad-window-emergency-broadcast-in-progress = [color=#cf2f2f][bold]Ведётся экстренная трансляция[/bold][/color]
+holopad-window-controls-locked-out = Управление этим устройством заблокировано:
+holopad-window-controls-unlock-countdown = Оно автоматически разблокируется через: { $countdown }
 # Buttons
 holopad-window-answer-call = Ответить на звонок
-holopad-window-end-call = Закончить звонок
-holopad-window-request-station-ai = Запросить ИИ станции
+holopad-window-end-call = Завершить звонок
+holopad-window-request-station-ai = Запросить станционный ИИ
 holopad-window-activate-projector = Активировать проектор
-holopad-window-emergency-broadcast = Экстренное оповещение
-holopad-window-emergency-broadcast-with-countdown = Экстренное оповещение ({ $countdown })
-holopad-window-access-denied = Доступ запрещён
+holopad-window-emergency-broadcast = Экстренная трансляция
+holopad-window-emergency-broadcast-with-countdown = Экстренная трансляция ({ $countdown })
+holopad-window-access-denied = В доступе отказано
 # Contact list
-holopad-window-select-contact-from-list = Выберите контакт для начала голографического звонка
-holopad-window-fetching-contacts-list = В данный момент нет доступных голографических устройств
+holopad-window-select-contact-from-list = Выберите контакт для начала голо-звонка
+holopad-window-fetching-contacts-list = Нет голопадов, с которыми можно связаться
 holopad-window-contact-label = { CAPITALIZE($label) }
+holopad-window-filter-line-placeholder = Поиск контакта
 # Flavor
-holopad-window-flavor-left = ⚠ Не входить, пока проектор активен
+holopad-window-flavor-left = ⚠ Не входите пока проектор активен
 holopad-window-flavor-right = v3.0.9
 # Holograms
-holopad-hologram-name = Голограмма { THE($name) }
+holopad-hologram-name = голограмма { $name }
 # Holopad actions
-holopad-activate-projector-verb = Активировать голографический проектор
-holopad-ai-is-unable-to-reach-holopad = Вы не можете взаимодействовать с источником вызова, он слишком удалён от вашего центра.
+holopad-activate-projector-verb = Активировать голопроектор
+holopad-ai-is-unable-to-reach-holopad = Вы не можете связаться с источником вызова, он находится слишком далеко от вашего ядра.
+holopad-ai-is-unable-to-activate-projector = Вы не можете активировать голопроектор, он находится слишком далеко от вашего ядра.
 # Mapping prototypes
 # General
-holopad-general-tools = Общее - Инструменты
-holopad-general-cryosleep = Общее - Криосон
-holopad-general-theater = Общее - Кинозал
-holopad-general-disposals = Общее - Утилизация
-holopad-general-eva = Общее - Хранилище EVA
-holopad-general-lounge = Общее - Лаунж
-holopad-general-arcade = Общее - Аркада
-holopad-general-evac = Общее - Эвакуация
-holopad-general-arrivals = Общее - Прибытия
+holopad-general-tools = Общий - Инструменты
+holopad-general-cryosleep = Общий - Криосон
+holopad-general-theater = Общий - Театр
+holopad-general-disposals = Общий - Мусоросброс
+holopad-general-eva = Общий - хранилище EVA
+holopad-general-lounge = Общий - Зона отдыха
+holopad-general-arcade = Общий - Аркады
+holopad-general-evac = Общий - Эвак
+holopad-general-arrivals = Общий - Прибытие
 # Command
 holopad-command-bridge = Командование - Мостик
-holopad-command-vault = Командование - Трюм
-holopad-command-bridge-hallway = Командование - Коридор Мостика
-holopad-command-meeting-room = Командование - Зал для собраний
-holopad-command-lounge = Командование - Лаунж
+holopad-command-vault = Командование - Хранилище
+holopad-command-bridge-hallway = Командование - Коридор мостика
+holopad-command-meeting-room = Командование - Комната собраний
+holopad-command-lounge = Командование - Зона отдыха
 holopad-command-captain = Командование - Капитан
 holopad-command-hop = Командование - ГП
 holopad-command-cmo = Командование - ГВ
 holopad-command-qm = Командование - КМ
-holopad-command-ce = Командование - ГИ
+holopad-command-ce = Командование - СИ
 holopad-command-rd = Командование - НР
 holopad-command-hos = Командование - ГСБ
 # Science
-holopad-science-anomaly = Наука - Аномалия
-holopad-science-artifact = Наука - Артефакт
-holopad-science-robotics = Наука - Робототехника
-holopad-science-rnd = Наука - R&D
-holopad-science-front = Наука - Фронт
-holopad-science-breakroom = Наука - Переговорная
+holopad-science-anomaly = Научный - Аномалистика
+holopad-science-artifact = Научный - Ксеноархеология
+holopad-science-artifact-north = Научный - Ксеноархеология Север
+holopad-science-artifact-south = Научный - Ксеноархеология Юг
+holopad-science-robotics = Научный - Робототехника
+holopad-science-rnd = Научный - РНД
+holopad-science-front = Научный - Приёмная
+holopad-science-breakroom = Научный - Комната отдыха
 # Medical
-holopad-medical-medbay = Медицина - Медицинский отсек
-holopad-medical-chemistry = Медицина - Химия
-holopad-medical-cryopods = Медицина - Криокапсулы
-holopad-medical-morgue = Медицина - Морг
-holopad-medical-surgery = Медицина - Хирургия
-holopad-medical-paramedic = Медицина - Парамедик
-holopad-medical-virology = Медицина - Вирусология
-holopad-medical-front = Медицина - Фронт
-holopad-medical-breakroom = Медицина - Переговорная
-holopad-medical-clinic = Медицина - Клиника
-
+holopad-medical-medbay = Медицинский - Медбей
+holopad-medical-chemistry = Медицинский - Химия
+holopad-medical-cryopods = Медицинский - Криоподы
+holopad-medical-morgue = Медицинский - Морг
+holopad-medical-surgery = Медицинский - Хирургия
+holopad-medical-paramedic = Медицинский - Парамедик
+holopad-medical-virology = Медицинский - Вирусология
+holopad-medical-front = Медицинский - Приёмная
+holopad-medical-breakroom = Медицинский - Комната отдыха
+holopad-medical-clinic = Медицинский - Клиника
 # Cargo
-holopad-cargo-front = Грузы - Фронт
-holopad-cargo-bay = Грузы - Грузовой отсек
-holopad-cargo-salvage-bay = Грузы - Отсек для спасательных работ
-holopad-cargo-breakroom = Грузы - Переговорная
-holopad-cargo-ats = Грузы - ATS
-holopad-cargo-shuttle = Грузы - Шаттл
+holopad-cargo-front = Снабжение - Приёмная
+holopad-cargo-bay = Снабжение - Грузовой отсек
+holopad-cargo-salvage-bay = Снабжение - Утилизаторский отсек
+holopad-cargo-breakroom = Снабжение - Комната отдыха
+holopad-cargo-ats = Снабжение - АТС
+holopad-cargo-shuttle = Снабжение - Шаттл
+holopad-cargo-mailroom = Снабжение - Почта
 # Engineering
-holopad-engineering-atmos-front = Инженерия - Атмосфера - Фронт
-holopad-engineering-atmos-main = Инженерия - Атмосфера - Главный отсек
-holopad-engineering-atmos-teg = Инженерия - Атмосфера - ТИГ
-holopad-engineering-storage = Инженерия - Хранилище
-holopad-engineering-breakroom = Инженерия - Переговорная
-holopad-engineering-front = Инженерия - Фронт
-holopad-engineering-telecoms = Инженерия - Связь
-holopad-engineering-tech-vault = Инженерия - Технологический трюм
-holopad-engineering-ame = Инженерия - ДАМ
-holopad-engineering-power = Инженерия - Энергоснабжение
-# Security
-holopad-security-front = Безопасность - Фронт
-holopad-security-brig = Безопасность - Изолятор
-holopad-security-warden = Безопасность - Начальник тюрьмы
-holopad-security-interrogation = Безопасность - Допрос
-holopad-security-breakroom = Безопасность - Переговорная
-holopad-security-detective = Безопасность - Детектив
-holopad-security-perma = Безопасность - Перма
-holopad-security-courtroom = Безопасность - Судебный зал
-holopad-security-lawyer = Безопасность - Юрист
-holopad-security-armory = Безопасность - Арсенал
-holopad-security-locker-room = Безопасность - Гардероб
-holopad-security-brig-med = Безопасность - Медицинский изолятор
+holopad-engineering-atmos-front = Атмос - Приёмная
+holopad-engineering-atmos-main = Атмос - Главный
+holopad-engineering-atmos-teg = Атмос - ТЭГ
+holopad-engineering-storage = Инженерия - Склад
+holopad-engineering-breakroom = Инженерный - Комната отдыха
+holopad-engineering-front = Инженерный - Приёмная
+holopad-engineering-telecoms = Инженерный - Телекоммуникации
+holopad-engineering-tech-vault = Инженерный - Техническое хранилище
+holopad-engineering-ame = Инженерный - ДАМ
+holopad-engineering-power = Инженерный - Питание
+holopad-engineering-main = Инженерный - Главный
+# S ecurity
+holopad-security-front = СБ - Приёмная
+holopad-security-brig = СБ - Бриг
+holopad-security-warden = СБ - Смотритель
+holopad-security-interrogation = СБ - Допросная
+holopad-security-breakroom = СБ - Комната отдыха
+holopad-security-detective = СБ - Детектив
+holopad-security-perma = СБ - Перма
+holopad-security-courtroom = СБ - Зал суда
+holopad-security-lawyer = СБ - Адвокат
+holopad-security-armory = СБ - Оружейная
+holopad-security-locker-room = СБ - Раздевалка
+holopad-security-brig-med = СБ - Бригмед
+holopad-security-evac-checkpoint = СБ - КПП Эвакуация
+holopad-security-arrivals-checkpoint = СБ - КПП Прибытие
 # Service
-holopad-service-janitor = Обслуживание - Уборщик
-holopad-service-bar = Обслуживание - Бар
-holopad-service-kitchen = Обслуживание - Кухня
-holopad-service-botany = Обслуживание - Ботаника
-holopad-service-chapel = Обслуживание - Часовня
-holopad-service-library = Обслуживание - Библиотека
-holopad-service-newsroom = Обслуживание - Новостная комната
-holopad-service-zookeeper = Обслуживание - Зоотехник
-holopad-service-boxer = Обслуживание - Боксёр
-holopad-service-clown = Обслуживание - Клоун
-holopad-service-musician = Обслуживание - Музыкант
-holopad-service-mime = Обслуживание - Мим
-holopad-service-clown-mime = Обслуживание - Клоун/Мим
-holopad-service-gameroom = Обслуживание - Игровая комната
+holopad-service-janitor = Сервис - Уборщик
+holopad-service-bar = Сервис - Бар
+holopad-service-kitchen = Сервис - Кухня
+holopad-service-botany = Сервис - Гидропоника
+holopad-service-chapel = Сервис - Церковь
+holopad-service-library = Сервис - Библиотека
+holopad-service-newsroom = Сервис - Новостная
+holopad-service-zookeeper = Сервис - Зоотехник
+holopad-service-boxer = Сервис - Боксёр
+holopad-service-clown = Сервис - Клоун
+holopad-service-musician = Сервис - Музыкант
+holopad-service-mime = Сервис - Мим
+holopad-service-clown-mime = Сервис - Клоун/Мим
+holopad-service-gameroom = Сервис - Игровая комната
 # AI
 holopad-ai-core = ИИ - Ядро
-holopad-ai-main = ИИ - Главный модуль
+holopad-ai-main = ИИ - Главный
 holopad-ai-upload = ИИ - Загрузка
 holopad-ai-backup-power = ИИ - Резервное питание
 holopad-ai-entrance = ИИ - Вход
-holopad-ai-chute = ИИ - Лаз
+holopad-ai-chute = ИИ - Транспортный блок
 # Long Range
 holopad-station-bridge = Станция - Мостик
 holopad-station-cargo-bay = Станция - Грузовой отсек
 # CentComm
-holopad-centcomm-evac = Центральное Командование - Шаттл для эвакуации
+holopad-centcomm-evac = Центком - Эвакуационный шаттл

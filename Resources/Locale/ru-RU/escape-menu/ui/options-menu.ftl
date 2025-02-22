@@ -44,9 +44,6 @@ ui-options-interface-label = Интерфейс
 
 ## Graphics menu
 
-ui-options-auto-fill-highlights = Автоматически заполнять выделения информацией персонажа
-ui-options-highlights-color = Цвет выделения:
-ui-options-highlights-color-example = Это выделенный текст!
 ui-options-show-held-item = Показать удерживаемый элемент рядом с курсором
 ui-options-show-combat-mode-indicators = Показать индикатор боевого режима рядом с курсором
 ui-options-opaque-storage-window = Непрозрачность окна хранилища
@@ -98,12 +95,6 @@ ui-options-parallax-low-quality = Низкокачественный парал�
 ui-options-fps-counter = Показать счётчик FPS
 ui-options-vp-width = Ширина окна игры:
 ui-options-hud-layout = Тип HUD:
-ui-options-postprocess = Cosmetic Post-processing
-ui-options-postprocess-tooltip =
-    When enabled, cosmetic post-processing effects such as
-    additive lighting will be present. This does not control
-    post-process effects that affect the game or otherwise
-    carry some form of gameplay-related meaning.
 
 ## Controls menu
 

@@ -1,2 +1,2 @@
-ent-HolopadMachineCircuitboard = плата голографического устройства
-    .desc = Печатная плата голографического устройства.
+ent-HolopadMachineCircuitboard = голопад (машинная плата)
+    .desc = Печатная плата голопада.
