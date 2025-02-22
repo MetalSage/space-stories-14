@@ -1,0 +1,16 @@
+- type: entity
+  parent: BaseItem
+  id: Garrote
+  name: удавка
+  description: Приспособление, используемое не иначе, как для скрытных убийств.
+  components:
+  - type: Sprite
+    sprite: _Stories/Objects/Weapons/Special/garrote.rsi
+    state: icon
+  - type: Item
+    size: Small
+  - type: Garrote
+    damage:
+      types:
+        Asphyxiation: 5
+  - type: Wieldable
