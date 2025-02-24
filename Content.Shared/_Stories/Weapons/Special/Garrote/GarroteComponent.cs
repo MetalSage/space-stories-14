@@ -1,6 +1,6 @@
 using Content.Shared.Damage;
 
-namespace Content.Shared._Stories.Garrote;
+namespace Content.Shared._Stories.Weapons.Special.Garrote;
 
 [RegisterComponent]
 public sealed partial class GarroteComponent : Component

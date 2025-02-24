@@ -5,7 +5,7 @@ using Content.Shared.Speech.Muting;
 using Content.Shared.StatusEffect;
 using Content.Shared.Stunnable;
 
-namespace Content.Shared._Stories.Garrote;
+namespace Content.Shared._Stories.Weapons.Special.Garrote;
 
 public abstract class SharedGarroteSystem : EntitySystem
 {

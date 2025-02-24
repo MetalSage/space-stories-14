@@ -11,7 +11,7 @@ using Content.Shared.Mobs.Components;
 using Content.Shared.Popups;
 using Content.Shared.Wieldable.Components;
 using Robust.Shared.Player;
-using Content.Shared._Stories.Garrote;
+using Content.Shared._Stories.Weapons.Special.Garrote;
 
 namespace Content.Server._Stories.Garrote;
 
