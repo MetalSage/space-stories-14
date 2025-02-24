@@ -5,9 +5,9 @@
   productEntity: Garrote
   discountCategory: usualDiscounts
   discountDownTo:
-    Telecrystal: 2
+    Telecrystal: 6
   cost:
-    Telecrystal: 4
+    Telecrystal: 8
   categories:
   - UplinkWeaponry
 
