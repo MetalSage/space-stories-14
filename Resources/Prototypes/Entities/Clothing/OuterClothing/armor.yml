@@ -273,23 +273,21 @@
     sprite: Clothing/OuterClothing/Armor/captain_carapace.rsi
   - type: Clothing
     sprite: Clothing/OuterClothing/Armor/captain_carapace.rsi
-  # Stories-commented start
-  # - type: Armor
+  # - type: Armor # Stories-commented start
   #   modifiers:
   #     coefficients:
   #       Blunt: 0.5
   #       Slash: 0.5
   #       Piercing: 0.6
   #       Heat: 0.5
-  #       Caustic: 0.9
-  # - type: ClothingSpeedModifier
-  #   walkModifier: 1.0
-  #   sprintModifier: 1.0
-  # - type: HeldSpeedModifier
-  # - type: ExplosionResistance
+  #       Caustic: 0.9 # Stories-commented end
+  - type: ClothingSpeedModifier
+    walkModifier: 1.0
+    sprintModifier: 1.0
+  - type: HeldSpeedModifier
+  # - type: ExplosionResistance # Stories-commented
   #   damageCoefficient: 0.65
-  # - type: GroupExamine
-  # Stories-commented end
+  - type: GroupExamine
 
 - type: entity
   parent: [ ClothingOuterBaseLarge, BaseMajorContraband, AllowSuitStorageClothing ]
