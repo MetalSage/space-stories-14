@@ -1,8 +1,8 @@
 - type: entity
   parent: BaseItem
-  id: Garrote
-  name: удавка
-  description: Приспособление, используемое не иначе, как для скрытных убийств.
+  id: STGarrote
+  name: garrote
+  description: A device used only for covert assassinations.
   components:
   - type: Sprite
     sprite: _Stories/Objects/Weapons/Special/garrote.rsi

@@ -2,7 +2,7 @@
   id: UplinkGarrote
   name: Удавка
   description: Излюбленный профессионалами инструмент для скрытых убийств. Позволяет взять стоящую к вам спиной жертву в мёртвую хватку, неминуемо убивая её.
-  productEntity: Garrote
+  productEntity: STGarrote
   discountCategory: usualDiscounts
   discountDownTo:
     Telecrystal: 6
