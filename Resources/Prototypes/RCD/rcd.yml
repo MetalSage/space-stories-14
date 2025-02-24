@@ -165,7 +165,7 @@
   sprite: /Textures/Interface/Radial/RCD/airlock.png
   mode: ConstructObject
   prototype: Airlock
-  cost: 4
+  cost: 5 # 4 # Stories
   delay: 4
   collisionMask: FullTileMask
   rotation: Camera
@@ -177,7 +177,7 @@
   sprite: /Textures/Interface/Radial/RCD/glass_airlock.png
   mode: ConstructObject
   prototype: AirlockGlass
-  cost: 4
+  cost: 5 # 4 # Stories
   delay: 4
   collisionMask: FullTileMask
   rotation: Camera
@@ -189,7 +189,7 @@
   sprite: /Textures/Interface/Radial/RCD/firelock.png
   mode: ConstructObject
   prototype: Firelock
-  cost: 4
+  cost: 5 # 4 # Stories
   delay: 3
   collisionMask: FullTileMask
   rotation: Camera

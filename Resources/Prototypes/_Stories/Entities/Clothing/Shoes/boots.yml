@@ -59,16 +59,16 @@
       sprite: _Stories/Clothing/Shoes/Boots/jedi_nomad.rsi
 
 - type: entity
-  parent: ClothingShoesBootsMag
+  parent: ClothingShoesBootsJack
   id: ClothingShoesBootsExe
   name: сапоги хранителя
   description: Продвинутая обувь, гарантирующая удобство носителя и полное сцепление с любой поверхностью.
   components:
-  - type: Sprite
-    sprite: _Stories/Clothing/Shoes/Boots/exe_boots.rsi
-    state: icon
-  - type: Clothing
-    sprite: _Stories/Clothing/Shoes/Boots/exe_boots.rsi
   - type: Tag
     tags:
-    - WhitelistChameleon
+    - ForceRecallEquipment
+  - type: NoSlip
+  - type: Sprite
+    sprite: _Stories/Clothing/Shoes/Boots/exe_boots.rsi
+  - type: Clothing
+    sprite: _Stories/Clothing/Shoes/Boots/exe_boots.rsi

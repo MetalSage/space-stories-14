@@ -2,6 +2,7 @@
 - type: loadoutGroup
   id: STPassengerToolbox
   name: stories-loadout-group-passenger-storage
+  minLimit: 0
   loadouts:
   - STToolboxAncient
 
@@ -12,5 +13,5 @@
   effects:
   - !type:GroupLoadoutEffect
     proto: GreyTider
-  equipment:
-    pocket1: STToolboxAncient
+  inhand:
+    - STToolboxAncient

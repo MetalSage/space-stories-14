@@ -14,7 +14,7 @@
           data: 1
 
       - tag: HonkerCentralControlModule
-        name: H.O.N.K. central control module
+        name: центральный модуль управления Х.О.Н.К. # Stories-CraftTranslate
         icon:
           sprite: "Objects/Misc/module.rsi"
           state: "mainboard"
@@ -31,7 +31,7 @@
           data: 3
 
       - tag: HonkerPeripheralsControlModule
-        name: H.O.N.K. peripherals control module
+        name: модуль управления периферией Х.О.Н.К. # Stories-CraftTranslate
         icon:
           sprite: "Objects/Misc/module.rsi"
           state: id_mod
@@ -48,7 +48,7 @@
           data: 5
 
       - tag: HonkerTargetingControlModule
-        name: H.O.N.K. weapon control and targeting module
+        name: модуль управления огнём Х.О.Н.К. # Stories-CraftTranslate
         icon:
           sprite: "Objects/Misc/module.rsi"
           state: id_mod
@@ -68,7 +68,7 @@
 #currently mechs don't support upgrading. add them back in once that's squared away.
 
       - component: PowerCell
-        name: power cell
+        name: батарея # Stories-CraftTranslate
         store: battery-container
         icon:
           sprite: Objects/Power/power_cells.rsi
@@ -89,7 +89,7 @@
         icon:
           sprite: "Clothing/Mask/clown.rsi"
           state: "icon"
-        name: "a clown's mask"
+        name: "маска клоуна" # Stories-CraftTranslate
         doAfter: 1
         completed:
         - !type:VisualizerDataInt
@@ -100,7 +100,7 @@
         icon:
           sprite: "Clothing/Shoes/Specific/clown.rsi"
           state: "icon"
-        name: "a clown's shoes"
+        name: "клоунские туфли" # Stories-CraftTranslate
         doAfter: 1
         completed:
         - !type:VisualizerDataInt

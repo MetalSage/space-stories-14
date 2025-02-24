@@ -7,7 +7,7 @@
         - to: solarassembly
           steps:
             - tag: SolarAssemblyFlatpack
-              name: solar assembly parts
+              name: упаковка каркаса солнечной панели # Stories-CraftTranslate
               icon:
                 sprite: Objects/Devices/flatpack.rsi
                 state: solar-assembly-part
@@ -57,7 +57,7 @@
             - !type:EntityAnchored
           steps:
             - tag: SolarTrackerElectronics
-              name: solar tracker electronics
+              name: микросхема солнечного трекера # Stories-CraftTranslate
               icon:
                 sprite: Objects/Misc/module.rsi
                 state: engineering

@@ -1,197 +1,197 @@
 - type: construction
-  name: grey bladed flatcap
+  name: серая плоская кепка с лезвием # Stories-CraftTranslate
   id: BladedFlatcapGrey
   graph: BladedFlatcapGrey
   startNode: start
   targetNode: icon
   category: construction-category-weapons
-  description: An inconspicuous hat with glass shards sewn into the brim.
+  description: Неприметная кепка с вшитыми осколками стекла. # Stories-CraftTranslate
   icon: { sprite: Clothing/Head/Hats/greyflatcap.rsi, state: icon }
   objectType: Item
 
 - type: construction
-  name: brown bladed flatcap
+  name: коричневая плоская кепка с лезвием # Stories-CraftTranslate
   id: BladedFlatcapBrown
   graph: BladedFlatcapBrown
   startNode: start
   targetNode: icon
   category: construction-category-weapons
-  description: An inconspicuous hat with glass shards sewn into the brim.
+  description: Неприметная кепка с вшитыми осколками стекла. # Stories-CraftTranslate
   icon: { sprite: Clothing/Head/Hats/brownflatcap.rsi, state: icon }
   objectType: Item
 
 - type: construction
-  name: glass shiv
+  name: заточка # Stories-CraftTranslate
   id: Shiv
   graph: Shiv
   startNode: start
   targetNode: icon
   category: construction-category-weapons
-  description: A glass shard with a piece of cloth wrapped around it.
+  description: Осколок стекла, обернутый куском ткани. # Stories-CraftTranslate
   icon: { sprite: Objects/Weapons/Melee/shiv.rsi, state: icon }
   objectType: Item
 
 - type: construction
-  name: reinforced shiv
+  name: усиленная заточка # Stories-CraftTranslate
   id: ReinforcedShiv
   graph: ReinforcedShiv
   startNode: start
   targetNode: icon
   category: construction-category-weapons
-  description: A reinforced glass shard with a piece of cloth wrapped around it.
+  description: Осколок армированного стекла, обернутый куском ткани. # Stories-CraftTranslate
   icon: { sprite: Objects/Weapons/Melee/reinforced_shiv.rsi, state: icon }
   objectType: Item
 
 - type: construction
-  name: plasma shiv
+  name: плазменая заточка # Stories-CraftTranslate
   id: PlasmaShiv
   graph: PlasmaShiv
   startNode: start
   targetNode: icon
   category: construction-category-weapons
-  description: A plasma shard with a piece of cloth wrapped around it.
+  description: Осколок плазмы, обернутый куском ткани. # Stories-CraftTranslate
   icon: { sprite: Objects/Weapons/Melee/plasma_shiv.rsi, state: icon }
   objectType: Item
 
 - type: construction
-  name: uranium shiv
+  name: урановая заточка # Stories-CraftTranslate
   id: UraniumShiv
   graph: UraniumShiv
   startNode: start
   targetNode: icon
   category: construction-category-weapons
-  description: A uranium shard with a piece of cloth wrapped around it.
+  description: Осколок урана, обернутый куском ткани. # Stories-CraftTranslate
   icon: { sprite: Objects/Weapons/Melee/uranium_shiv.rsi, state: icon }
   objectType: Item
 
 - type: construction
-  name: crude spear
+  name: копьё # Stories-CraftTranslate
   id: Spear
   graph: Spear
   startNode: start
   targetNode: spear
   category: construction-category-weapons
-  description: A crude spear for when you need to put holes in somebody.
+  description: Копье для тех случаев, когда нужно проделать в ком-нибудь дырки. # Stories-CraftTranslate
   icon: { sprite: Objects/Weapons/Melee/spear.rsi, state: spear }
   objectType: Item
 
 - type: construction
-  name: crude reinforced spear
+  name: усиленноё копьё # Stories-CraftTranslate
   id: SpearReinforced
   graph: SpearReinforced
   startNode: start
   targetNode: spear
   category: construction-category-weapons
-  description: A crude reinforced spear for when you need to put holes in somebody.
+  description: Усиленное копье для тех случаев, когда нужно проделать в ком-нибудь дырки. # Stories-CraftTranslate
   icon: { sprite: Objects/Weapons/Melee/reinforced_spear.rsi, state: spear }
   objectType: Item
 
 - type: construction
-  name: crude plasma spear
+  name: плазменное копьё # Stories-CraftTranslate
   id: SpearPlasma
   graph: SpearPlasma
   startNode: start
   targetNode: spear
   category: construction-category-weapons
-  description: A crude plasma spear for when you need to put holes in somebody.
+  description: Плазменное копье для тех случаев, когда нужно проделать в ком-нибудь дырки. # Stories-CraftTranslate
   icon: { sprite: Objects/Weapons/Melee/plasma_spear.rsi, state: spear }
   objectType: Item
 
 - type: construction
-  name: crude uranium spear
+  name: урановое копьё # Stories-CraftTranslate
   id: SpearUranium
   graph: SpearUranium
   startNode: start
   targetNode: spear
   category: construction-category-weapons
-  description: A crude uranium spear for when you need to put holes in somebody.
+  description: Урановое копье для тех случаев, когда нужно проделать в ком-нибудь дырки. # Stories-CraftTranslate
   icon: { sprite: Objects/Weapons/Melee/uranium_spear.rsi, state: spear }
   objectType: Item
 
 - type: construction
-  name: makeshift bola
+  name: бола # Stories-CraftTranslate
   id: Bola
   graph: Bola
   startNode: start
   targetNode: bola
   category: construction-category-weapons
-  description: A simple weapon for tripping someone at a distance.
+  description: Простое оружие для того, чтобы сбить кого-нибудь на расстоянии. # Stories-CraftTranslate
   icon: { sprite: Objects/Weapons/Throwable/bola.rsi, state: icon }
   objectType: Item
 
 - type: construction
-  name: wooden buckler
+  name: деревянный баклер # Stories-CraftTranslate
   id: WoodenBuckler
   graph: WoodenBuckler
   startNode: start
   targetNode: woodenBuckler
   category: construction-category-weapons
-  description: A nicely carved wooden shield!
+  description: Красиво вырезанный деревянный щит! # Stories-CraftTranslate
   icon: { sprite: Objects/Weapons/Melee/shields.rsi, state: buckler-icon }
   objectType: Item
 
 - type: construction
-  name: makeshift shield
+  name: импровизированный щит # Stories-CraftTranslate
   id: MakeshiftShield
   graph: MakeshiftShield
   startNode: start
   targetNode: makeshiftShield
   category: construction-category-weapons
-  description: Crude and falling apart. Why would you make this?
+  description: Грубый и разваливающийся на части. Зачем вам это понадобилось? # Stories-CraftTranslate
   icon: { sprite: Objects/Weapons/Melee/shields.rsi, state: makeshift-icon }
   objectType: Item
 
 - type: construction
-  name: glass shard arrow
+  name: стрела из осколка стекла # Stories-CraftTranslate
   id: ImprovisedArrow
   graph: ImprovisedArrow
   startNode: start
   targetNode: ImprovisedArrow
   category: construction-category-weapons
-  description: An arrow tipped with pieces of a glass shard, for use with a bow.
+  description: Стрела с наконечником из осколков стекла, предназначенная для стрельбы из лука. # Stories-CraftTranslate
   icon: { sprite: Objects/Weapons/Guns/Bow/bow.rsi, state: wielded-arrow }
   objectType: Item
 
 - type: construction
-  name: plasma glass shard arrow
+  name: стрела из осколка плазменного стекла # Stories-CraftTranslate
   id: ImprovisedArrowPlasma
   graph: ImprovisedArrowPlasma
   startNode: start
   targetNode: ImprovisedArrowPlasma
   category: construction-category-weapons
-  description: An arrow tipped with pieces of a plasma glass shard, for use with a bow.
+  description: Стрела с наконечником из осколков плазменного стекла, предназначенная для стрельбы из лука. # Stories-CraftTranslate
   icon: { sprite: Objects/Weapons/Guns/Bow/bow.rsi, state: wielded-arrow }
   objectType: Item
 
 - type: construction
-  name: uranium glass shard arrow
+  name: стрела из осколка уранового стекла # Stories-CraftTranslate
   id: ImprovisedArrowUranium
   graph: ImprovisedArrowUranium
   startNode: start
   targetNode: ImprovisedArrowUranium
   category: construction-category-weapons
-  description: An arrow tipped with pieces of a uranium glass shard, for use with a bow.
+  description: Стрела с наконечником из осколков уранового стекла, предназначенная для стрельбы из лука. # Stories-CraftTranslate
   icon: { sprite: Objects/Weapons/Guns/Bow/bow.rsi, state: wielded-arrow }
   objectType: Item
 
 - type: construction
-  name: improvised bow
+  name: стрела из осколка стекла # Stories-CraftTranslate
   id: ImprovisedBow
   graph: ImprovisedBow
   startNode: start
   targetNode: ImprovisedBow
   category: construction-category-weapons
-  description: A shoddily constructed bow made out of wood and cloth. It's not much, but it's gotten the job done for millennia.
+  description: Примитивный лук, сделанный из дерева и ткани. Ничего особенного, но он справлялся со своей задачей на протяжении тысячелетий. # Stories-CraftTranslate
   icon: { sprite: Objects/Weapons/Guns/Bow/bow.rsi, state: unwielded }
   objectType: Item
 
 - type: construction
-  name: bone spear
+  name: костяное копьё # Stories-CraftTranslate
   id: SpearBone
   graph: SpearBone
   startNode: start
   targetNode: spear
   category: construction-category-weapons
-  description: Bones and silk combined together.
+  description: Объединённые вместе кости и шелк. # Stories-CraftTranslate
   icon: { sprite: Objects/Weapons/Melee/bone_spear.rsi, state: spear }
   objectType: Item

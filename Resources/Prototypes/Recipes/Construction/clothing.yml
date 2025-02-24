@@ -1,131 +1,131 @@
 - type: construction
-  name: clown hardsuit
+  name: скафандр клоуна # Stories-CraftTranslate
   id: ClownHardsuit
   graph: ClownHardsuit
   startNode: start
   targetNode: clownHardsuit
   category: construction-category-clothing
-  description: A modified hardsuit fit for a clown.
+  description: Самодельный клоунский скафандр. # Stories-CraftTranslate
   icon: { sprite: Clothing/OuterClothing/Hardsuits/clown.rsi, state: icon }
   objectType: Item
 
 - type: construction
-  name: mime hardsuit
+  name: скафандр мима # Stories-CraftTranslate
   id: MimeHardsuit
   graph: MimeHardsuit
   startNode: start
   targetNode: mimeHardsuit
   category: construction-category-clothing
-  description: A modified hardsuit fit for a mime.
+  description: Самодельный мимский скафандр. # Stories-CraftTranslate
   icon: { sprite: Clothing/OuterClothing/Hardsuits/mime.rsi, state: icon }
   objectType: Item
 
 - type: construction
-  name: bone armor
+  name: костяной доспех # Stories-CraftTranslate
   id: BoneArmor
   graph: BoneArmor
   startNode: start
   targetNode: armor
   category: construction-category-clothing
-  description: Armor made of bones.
+  description: Доспехи из костей. # Stories-CraftTranslate
   icon: { sprite: Clothing/OuterClothing/Armor/bone_armor.rsi, state: icon }
   objectType: Item
 
 - type: construction
-  name: bone helmet
+  name: костяной шлем # Stories-CraftTranslate
   id: BoneHelmet
   graph: BoneHelmet
   startNode: start
   targetNode: helmet
   category: construction-category-clothing
-  description: Helmet made of bones.
+  description: Шлем, сделанный из костей. # Stories-CraftTranslate
   icon: { sprite: Clothing/Head/Helmets/bone_helmet.rsi, state: icon }
   objectType: Item
 
 - type: construction
-  name: banana clown mask
+  name: банановая маска клоуна # Stories-CraftTranslate
   id: BananaClownMask
   graph: BananaClownMask
   startNode: start
   targetNode: mask
   category: construction-category-clothing
-  description: A clown mask upgraded with banana peels.
+  description: Маска клоуна, украшенных банановой кожурой. # Stories-CraftTranslate
   icon: { sprite: Clothing/Mask/clown_banana.rsi, state: icon }
   objectType: Item
 
 - type: construction
-  name: banana clown suit
+  name: банановый костюм клоуна # Stories-CraftTranslate
   id: BananaClownJumpsuit
   graph: BananaClownJumpsuit
   startNode: start
   targetNode: jumpsuit
   category: construction-category-clothing
-  description: A clown suit upgraded with banana peels.
+  description: Костюм клоуна, украшенных банановой кожурой. # Stories-CraftTranslate
   icon: { sprite: Clothing/Uniforms/Jumpsuit/clown_banana.rsi, state: icon }
   objectType: Item
 
 - type: construction
-  name: banana clown shoes
+  name: банановые клоунские туфли # Stories-CraftTranslate
   id: BananaClownShoes
   graph: BananaClownShoes
   startNode: start
   targetNode: shoes
   category: construction-category-clothing
-  description: A pair of clown shoes upgraded with banana peels.
+  description: Пара клоунских туфель, украшенных банановой кожурой. # Stories-CraftTranslate
   icon: { sprite: Clothing/Shoes/Specific/clown_banana.rsi, state: icon }
   objectType: Item
 
 - type: construction
-  name: medsec hud
+  name: мед-охранный визор # Stories-CraftTranslate
   id: ClothingEyesHudMedSec
   graph: HudMedSec
   startNode: start
   targetNode: medsecHud
   category: construction-category-clothing
-  description: Two huds joined by arms
+  description: Две визора, объединённых руками. # Stories-CraftTranslate
   icon: { sprite: Clothing/Eyes/Hud/medsec.rsi, state: icon }
   objectType: Item
 
 - type: construction
-  name: ducky slippers
+  name: тапки-уточки # Stories-CraftTranslate
   id: ClothingShoeSlippersDuck
   graph: ClothingShoeSlippersDuck
   startNode: start
   targetNode: shoes
   category: construction-category-clothing
-  description: Comfy, yet haunted by the ghosts of ducks you fed bread to as a child.
+  description: Удобные, но преследуемые призраками уток, которых вы кормили хлебом в детстве. # Stories-CraftTranslate
   icon: { sprite: Clothing/Shoes/Misc/duck-slippers.rsi, state: icon }
   objectType: Item
 
 - type: construction
-  name: security glasses
+  name: очки охраны # Stories-CraftTranslate
   id: ClothingEyesGlassesSecurity
   graph: GlassesSecHUD
   startNode: start
   targetNode: glassesSec
   category: construction-category-clothing
-  description: A pair of sunglasses, modified to have a built-in security HUD.
+  description: Пара солнцезащитных очков, объединённых для того, чтобы иметь встроенный визор службы безопасности. # Stories-CraftTranslate
   icon: { sprite: Clothing/Eyes/Glasses/secglasses.rsi, state: icon }
   objectType: Item
 
 - type: construction
-  name: quiver
+  name: колчан # Stories-CraftTranslate
   id: ClothingBeltQuiver
   graph: Quiver
   startNode: start
   targetNode: Quiver
   category: construction-category-clothing
-  description: Can hold up to 15 arrows, and fits snug around your waist.
+  description: Вмещает до 15 стрел и плотно облегает талию. # Stories-CraftTranslate
   icon: { sprite: Clothing/Belt/quiver.rsi, state: icon }
   objectType: Item
 
 - type: construction
-  name: justice helm
+  name: шлем правосудия # Stories-CraftTranslate
   id: ClothingHeadHelmetJustice
   graph: HelmetJustice
   startNode: start
   targetNode: helmet
   category: construction-category-clothing
-  description: Advanced security gear. Protects the station from ne'er-do-wells.
+  description: Продвинутое снаряжение службы безопасности. Защищает станцию от никчёмных сотрудников. # Stories-CraftTranslate
   icon: { sprite: Clothing/Head/Helmets/justice.rsi, state: icon }
   objectType: Item

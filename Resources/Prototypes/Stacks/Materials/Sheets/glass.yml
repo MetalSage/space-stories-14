@@ -1,48 +1,48 @@
 - type: stack
   id: Glass
-  name: glass
+  name: стекло # Stories-CraftTranslate
   icon: { sprite: /Textures/Objects/Materials/Sheets/glass.rsi, state: glass }
   spawn: SheetGlass1
   maxCount: 30
 
 - type: stack
   id: ReinforcedGlass
-  name: reinforced glass
+  name: бронестекло # Stories-CraftTranslate
   icon: { sprite: /Textures/Objects/Materials/Sheets/glass.rsi, state: rglass }
   spawn: SheetRGlass1
   maxCount: 30
 
 - type: stack
   id: PlasmaGlass
-  name: plasma glass
+  name: плазменное стекло # Stories-CraftTranslate
   icon: { sprite: /Textures/Objects/Materials/Sheets/glass.rsi, state: pglass }
   spawn: SheetPGlass1
   maxCount: 30
 
 - type: stack
   id: ReinforcedPlasmaGlass
-  name: reinforced plasma glass
+  name: плазменное бронестекло # Stories-CraftTranslate
   icon: { sprite: /Textures/Objects/Materials/Sheets/glass.rsi, state: rpglass }
   spawn: SheetRPGlass1
   maxCount: 30
 
 - type: stack
   id: UraniumGlass
-  name: uranium glass
+  name: урановое стекло # Stories-CraftTranslate
   icon: { sprite: /Textures/Objects/Materials/Sheets/glass.rsi, state: uglass }
   spawn: SheetUGlass1
   maxCount: 30
 
 - type: stack
   id: ReinforcedUraniumGlass
-  name: reinforced uranium glass
+  name: урановое бронестекло # Stories-CraftTranslate
   icon: { sprite: /Textures/Objects/Materials/Sheets/glass.rsi, state: ruglass }
   spawn: SheetRUGlass1
   maxCount: 30
 
 - type: stack
   id: ClockworkGlass
-  name: clockwork glass
+  name: заводное стекло # Stories-CraftTranslate
   icon: { sprite: /Textures/Objects/Materials/Sheets/glass.rsi, state: cglass }
   spawn: SheetClockworkGlass1
   maxCount: 30

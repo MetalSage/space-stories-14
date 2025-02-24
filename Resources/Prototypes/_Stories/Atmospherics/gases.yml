@@ -1,0 +1,19 @@
+- type: gas
+  id: 9
+  name: stories-gases-bz
+  specificHeat: 20
+  heatCapacityRatio: 1.4
+  molarMass: 10
+  color: 9370db
+  reagent: STBZ
+  pricePerMole: 0.15
+
+- type: gas
+  id: 10
+  name: stories-gases-healium
+  specificHeat: 20
+  heatCapacityRatio: 1.4
+  molarMass: 10
+  color: 8b0000
+  reagent: STHealium
+  pricePerMole: 0.8

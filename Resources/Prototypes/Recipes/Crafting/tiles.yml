@@ -1,79 +1,79 @@
 # These should be lathe recipes but lathe code sucks so hard rn so they'll be crafted by hand.
 
 - type: construction
-  name: steel tile
+  name: стальная плитка # Stories-CraftTranslate
   id: TileSteel
   graph: TileSteel
   startNode: start
   targetNode: steeltile
   category: construction-category-tiles
-  description: "Four steel station tiles."
+  description: "Четыре стальные станционные плиты." # Stories-CraftTranslate
   icon: { sprite: Objects/Tiles/tile.rsi, state: steel }
   objectType: Item
 
 - type: construction
-  name: wood floor
+  name: деревянный пол # Stories-CraftTranslate
   id: TileWood
   graph: TileWood
   startNode: start
   targetNode: woodtile
   category: construction-category-tiles
-  description: "Four pieces of wooden station flooring."
+  description: "Четыре куска деревянной станционной плитки." # Stories-CraftTranslate
   icon: { sprite: Objects/Tiles/tile.rsi, state: wood }
   objectType: Item
-  
+
 - type: construction
-  name: filled brass plate
+  name: заполненная латунная плитка # Stories-CraftTranslate
   id: TileBrassFilled
   graph: TilesBrass
   startNode: start
   targetNode: filledPlate
   category: construction-category-tiles
-  description: "Four pieces of brass station flooring, only compatible with brass plating."
+  description: "Четыре части латунной станционной плитки, совместимы только с латунным покрытием." # Stories-CraftTranslate
   icon: { sprite: Objects/Tiles/tile.rsi, state: brass-filled }
   objectType: Item
-  
+
 - type: construction
-  name: smooth brass plate
+  name: гладкая латунная плитка # Stories-CraftTranslate
   id: TileBrassReebe
   graph: TilesBrass
   startNode: start
   targetNode: reebe
   category: construction-category-tiles
-  description: "Four pieces of smooth brass station flooring, only compatible with brass plating."
+  description: "Четыре части гладкой латунной станционной плитки, совместимы только с латунным покрытием." # Stories-CraftTranslate
   icon: { sprite: Objects/Tiles/tile.rsi, state: reebe }
   objectType: Item
 
 - type: construction
-  name: white tile
+  name: белая плитка # Stories-CraftTranslate
   id: TileWhite
   graph: TileWhite
   startNode: start
   targetNode: whitetile
   category: construction-category-tiles
-  description: "Four white station tiles."
+  description: "Четыре белые станционные плитки." # Stories-CraftTranslate
   icon: { sprite: Objects/Tiles/tile.rsi, state: white }
   objectType: Item
 
 - type: construction
-  name: dark tile
+  name: тёмная плитка # Stories-CraftTranslate
   id: TileDark
   graph: TileDark
   startNode: start
   targetNode: darktile
   category: construction-category-tiles
-  description: "Four dark station tiles."
+  description: "Четыре тёмные станционные плитки." # Stories-CraftTranslate
   icon: { sprite: Objects/Tiles/tile.rsi, state: dark }
   objectType: Item
 
 - type: construction
-  name: flesh tile
+  name: пол из плоти # Stories-CraftTranslate
   id: TileFlesh
   graph: TileFlesh
   startNode: start
   targetNode: fleshTile
   category: construction-category-tiles
-  description: "Four fleshy tiles."
+  description: "Четыре мясные плитки." # Stories-CraftTranslate
   icon: { sprite: Objects/Tiles/tile.rsi, state: meat }
   objectType: Item
 
@@ -188,12 +188,12 @@
 #   objectType: Item
 
 - type: construction
-  name: large wood floor
+  name: большой деревянный пол # Stories-CraftTranslate
   id: TileWoodLarge
   graph: TileWoodLarge
   startNode: start
   targetNode: woodtilelarge
   category: construction-category-tiles
-  description: "Four pieces of wooden station flooring."
+  description: "Четыре куска деревянной станционной плитки." # Stories-CraftTranslate
   icon: { sprite: Objects/Tiles/tile.rsi, state: wood-large }
   objectType: Item
