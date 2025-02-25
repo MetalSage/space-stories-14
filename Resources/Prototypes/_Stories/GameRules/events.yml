@@ -1,4 +1,14 @@
 - type: entity
+  id: BaseStationEventMediumDelay
+  parent: BaseGameRule
+  abstract: true
+  components:
+  - type: GameRule
+    delay:
+      min:  30
+      max:  40
+
+- type: entity
   parent: BaseGameRule
   id: SithSpawn
   components:

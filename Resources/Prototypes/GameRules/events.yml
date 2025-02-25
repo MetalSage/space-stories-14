@@ -353,7 +353,7 @@
 
 - type: entity
   id: SlimesSpawn
-  parent: BaseStationEventShortDelay
+  parent: BaseStationEventMediumDelay # BaseStationEventShortDelay # Stories-Sponsors
   components:
   - type: StationEvent
     startAnnouncement: station-event-vent-creatures-start-announcement
@@ -374,7 +374,7 @@
 
 - type: entity
   id: SnakeSpawn
-  parent: BaseStationEventShortDelay
+  parent: BaseStationEventMediumDelay # BaseStationEventShortDelay # Stories-Sponsors
   components:
   - type: StationEvent
     startAnnouncement: station-event-vent-creatures-start-announcement
@@ -395,7 +395,7 @@
 
 - type: entity
   id: SpiderSpawn
-  parent: BaseStationEventShortDelay
+  parent: BaseStationEventMediumDelay # BaseStationEventShortDelay # Stories-Sponsors
   components:
   - type: StationEvent
     startAnnouncement: station-event-vent-creatures-start-announcement
@@ -412,7 +412,7 @@
 
 - type: entity
   id: SpiderClownSpawn
-  parent: BaseStationEventShortDelay
+  parent: BaseStationEventMediumDelay # BaseStationEventShortDelay # Stories-Sponsors
   components:
   - type: StationEvent
     startAnnouncement: station-event-vent-creatures-start-announcement
