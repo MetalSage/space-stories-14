@@ -163,7 +163,7 @@
   id: DragonSpawn
   components:
   - type: StationEvent
-    weight: 6.5
+    weight: 5 # 6.5 # Stories-Sponsors
     earliestStart: 40
     reoccurrenceDelay: 20
     minimumPlayers: 20
@@ -192,7 +192,7 @@
   id: NinjaSpawn
   components:
   - type: StationEvent
-    weight: 6
+    weight: 5 # 6 # Stories-Sponsors
     duration: null
     earliestStart: 30
     reoccurrenceDelay: 20
@@ -241,7 +241,7 @@
   id: RevenantSpawn
   components:
   - type: StationEvent
-    weight: 7.5
+    weight: 5 # 7.5 # Stories-Sponsors
     duration: 1
     earliestStart: 45
     minimumPlayers: 20
@@ -273,6 +273,8 @@
       path: /Audio/Announcements/gasleak_end.ogg # Corvax-Announcements
       params:
         volume: -4
+    earliestStart: 10 # Stories-Sponsors
+    minimumPlayers: 5 # Stories-Sponsors
     weight: 8
   - type: GasLeakRule
 
@@ -359,7 +361,7 @@
       path: /Audio/Announcements/attention.ogg
     earliestStart: 20
     minimumPlayers: 15
-    weight: 5
+    weight: 6 # 5 # Stories-Sponsors
     duration: 60
   - type: VentCrittersRule
     entries:
@@ -380,7 +382,7 @@
       path: /Audio/Announcements/attention.ogg
     earliestStart: 20
     minimumPlayers: 15
-    weight: 5
+    weight: 6 # 5 # Stories-Sponsors
     duration: 60
   - type: VentCrittersRule
     entries:
@@ -401,7 +403,7 @@
       path: /Audio/Announcements/attention.ogg
     earliestStart: 20
     minimumPlayers: 15
-    weight: 5
+    weight: 6 # 5 # Stories-Sponsors
     duration: 60
   - type: VentCrittersRule
     entries:
@@ -418,7 +420,7 @@
       path: /Audio/Announcements/attention.ogg
     earliestStart: 20
     minimumPlayers: 20
-    weight: 1.5
+    weight: 6.5 # 1.5 # Stories-Sponsors
     duration: 60
   - type: VentCrittersRule
     entries:
@@ -464,8 +466,8 @@
   components:
   - type: StationEvent
     earliestStart: 35
-    weight: 5.5
-    minimumPlayers: 20
+    weight: 7.5 # 5.5 # Stories-Sponsors
+    minimumPlayers: 25 # 20 # Stories-Sponsors
     duration: 1
   - type: RuleGrids
   - type: LoadMapRule
