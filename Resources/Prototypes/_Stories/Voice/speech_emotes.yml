@@ -88,6 +88,26 @@
   - рычание
   - рычит
 
+- type: emote
+  id: Hiss
+  name: emote-name-hiss
+  category: Vocal
+  whitelist:
+    components:
+    - Vocal
+  blacklist:
+    components:
+    - BorgChassis
+  available: false
+  icon: _Stories/Interface/Emotes/shhh.png
+  chatMessages: ["emote-hiss"]
+  chatTriggers:
+  - hiss
+  - hissed
+  - hissing
+  - шипение
+  - шипит
+
 #Vulpkanin
 - type: emote
   id: Bark
