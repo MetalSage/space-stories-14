@@ -1,4 +1,4 @@
-stories-reagent-name-bz = бз
+stories-reagent-name-bz = бизет
 stories-reagent-desc-bz = Мощный токсин, усыпляющий слизней.
 
 stories-reagent-name-healium = хилиум
