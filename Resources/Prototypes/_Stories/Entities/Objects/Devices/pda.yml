@@ -55,7 +55,6 @@
     sprite: _Stories/Objects/Devices/pda.rsi
   - type: Pda
     id: PRISONIDCardHeadOfPrison
-    state: pda-hosp
   - type: Appearance
     appearanceDataInit:
       enum.PdaVisuals.PdaType:
