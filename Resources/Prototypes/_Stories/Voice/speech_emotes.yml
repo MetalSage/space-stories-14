@@ -2,7 +2,7 @@
 
 - type: emote
   id: Grumble
-  name: Ворчать
+  name: emote-name-grumble
   category: Vocal
   whitelist:
     components:
@@ -29,7 +29,7 @@
 
 - type: emote
   id: Moan
-  name: Стон
+  name: emote-name-moan
   category: Vocal
   whitelist:
     components:
@@ -62,7 +62,7 @@
     - BorgChassis
   available: false
   icon: Interface/Emotes/vocal.png
-  name: Шевелить усиками
+  name: emote-name-waves-antennae
   chatMessages: ["emote-waves-antennae"]
   chatTriggers:
   - waves antennae
@@ -95,7 +95,7 @@
     - BorgChassis
   available: false
   icon: Interface/Emotes/vocal.png
-  name: Резко шевелить усиками
+  name: emote-name-waves-antennae-sharply
   chatMessages: ["emote-waves-antennae-sharply"]
   chatTriggers:
   - waves antennae sharply
