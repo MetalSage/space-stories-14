@@ -60,7 +60,7 @@ public sealed class GarroteSystem : SharedGarroteSystem
             return;
         }
 
-        if (GetEntityDirection(userTransform) != GetEntityDirection(targetTransform) && _actionBlocker.CanInteract(args.Target.Value, null))
+        if (comp.CheckDirection && GetEntityDirection(userTransform) != GetEntityDirection(targetTransform) && _actionBlocker.CanInteract(args.Target.Value, null))
         {
             var message = Loc.GetString("garrote-component-must-be-behind", ("target", args.Target));
             _popupSystem.PopupEntity(message, args.Target.Value, args.User);
