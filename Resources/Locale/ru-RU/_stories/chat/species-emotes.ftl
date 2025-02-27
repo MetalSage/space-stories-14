@@ -16,3 +16,7 @@ emote-barks = лает.
 emote-snarls = рычит, оскаливая зубы.
 emote-whines = скулит.
 emote-howls = воет.
+emote-grumble = ворчит
+emote-moan = стонет
+emote-waves-antennae = шевелит антенками
+emote-waves-antennae-sharply = резко машет антенками
