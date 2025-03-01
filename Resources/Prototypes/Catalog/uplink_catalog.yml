@@ -1702,6 +1702,16 @@
 
  # Pointless
 
+- type: listing # Space stories
+  id: UplinkRichard
+  name: uplink-richard-name
+  description: uplink-richard-desc
+  productEntity: ClothingHeadHatRichard
+  cost:
+    Telecrystal: 1
+  categories:
+  - UplinkPointless
+
 - type: listing
   id: UplinkBarberScissors
   name: uplink-barber-scissors-name
