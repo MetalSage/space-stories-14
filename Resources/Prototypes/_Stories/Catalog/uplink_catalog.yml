@@ -12,6 +12,24 @@
   - UplinkWeaponry
 
 - type: listing
+  id: UplinkTCMiner
+  name: uplink-tc-miner-name
+  description: uplink-tc-miner-desc
+  productEntity: TCminerFlatpack
+  discountCategory: rareDiscounts
+  discountDownTo:
+    Telecrystal: 11 # МАКСИМАЛЬНО что можно сделать, если сделать >10тк то агент сможет купить 2 раундстартом, не хорошо.
+  cost:
+    Telecrystal: 12
+  categories:
+  - UplinkDisruption
+  conditions:
+  - !type:StoreWhitelistCondition
+    blacklist:
+      tags:
+        - NukeOpsUplink # биткоин нюкеры были бы забавными но увы имба
+
+- type: listing
   id: UplinkClothingTacticalMaid
   name: Набор горничной синдиката
   description: Предполагается, что у лучших горничных должны быть дизайнерские костюмы.

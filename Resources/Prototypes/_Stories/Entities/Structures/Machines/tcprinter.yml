@@ -1,0 +1,77 @@
+- type: entity
+  id: TCminer
+  name: майнер телекристалов
+  parent: [BaseMachine, BaseSyndicateContraband]
+  description: Очень громкая машина, использующая технологию блюспейс-блокчейна для создания телекристалов раз в 50 секунд. Обычно, требует 25КВт энергии для работы.
+  components:
+  - type: BatterySelfRecharger
+    autoRecharge: true
+    autoRechargeRate: -1000000 # господь храни щиткод
+  - type: PowerConsumer
+    voltage: High
+    drawRate: 25000 # стартовое значение потребления
+  - type: TelecrystalMiner
+  - type: Battery
+    maxCharge: 1000
+    pricePerJoule: 0.0003
+  - type: Sprite
+    noRot: true
+    sprite: _Stories/Structures/Machines/tc_printer.rsi
+    layers:
+    - map: ["computerLayerBody"]
+      state: icon
+    - map: ["computerLayerScreen"]
+      state: unshaded
+  - type: ItemSlots
+    slots:
+      tc_slot:
+        name: Telecrystal
+        insertSound:
+          path: /Audio/Effects/pop.ogg
+        ejectSound:
+          path: /Audio/Effects/pop.ogg
+        whitelist:
+          components:
+          - Telecrystal
+  - type: NodeContainer
+    examinable: true
+    nodes:
+      input:
+        !type:CableDeviceNode
+        nodeGroupID: HVPower
+  - type: Transform
+    anchored: true
+  - type: Physics
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeAabb
+          bounds: "-0.40,-0.40,0.40,0.40"
+        density: 90
+        mask:
+        - MachineMask
+        layer:
+        - MachineLayer
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 25
+      behaviors:
+      - !type:DoActsBehavior
+        acts: [ "Destruction" ]
+  - type: PointLight
+    radius: 0.8
+    energy: 0.5
+    color: "#ff0000"
+  - type: AmbientOnPowered
+
+- type: entity
+  parent: BaseFlatpack
+  id: TCminerFlatpack
+  name: упакованый майнер телекристалов
+  description: Упакованый майнер телекристалов, на удивление лёгок.
+  components:
+  - type: Flatpack
+    entity: TCminer
