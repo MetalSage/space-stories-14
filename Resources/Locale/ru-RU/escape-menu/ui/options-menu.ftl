@@ -2,6 +2,7 @@
 
 ui-options-title = Игровые настройки
 ui-options-tab-accessibility = Доступность
+ui-options-tab-admin = Администратор
 ui-options-tab-graphics = Графика
 ui-options-tab-controls = Управление
 ui-options-tab-audio = Аудио
@@ -259,5 +260,12 @@ cmd-options-help = Использование: options [tab]
 ui-options-enable-color-name = Цветные имена персонажей
 ui-options-colorblind-friendly = Режим для дальтоников
 ui-options-reduced-motion = Снижение интенсивности визуальных эффектов
-ui-options-chat-window-opacity = Прозрачность окна чата
 ui-options-screen-shake-intensity = Интенсивность дрожания экрана
+ui-options-chat-window-opacity = Прозрачность окна чата
+ui-options-speech-bubble-text-opacity = Прозрачность окна всплывающего текста
+ui-options-speech-bubble-speaker-opacity = Прозрачность иконки общения
+ui-options-speech-bubble-background-opacity = Прозрачность фона окна всплывающего текста
+
+## Admin menu
+
+ui-options-enable-classic-overlay = Вернуть классический оверлей антагонистов

@@ -1,6 +1,6 @@
-ent-AirSensorFreezerBase = { ent-AirSensorBase }
+ent-AirSensorFreezerBase = { ent-AirSensor }
     .suffix = Атмосфера холодильника
-    .desc = { ent-AirSensorBase.desc }
+    .desc = { ent-AirSensor.desc }
 ent-AirSensorFreezer = { ent-AirSensorFreezerBase }
     .desc = { ent-AirSensorFreezerBase.desc }
 ent-GasVentPumpFreezer = { ent-AirSensorFreezerBase }

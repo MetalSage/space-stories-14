@@ -175,7 +175,7 @@
   objectType: Item
 
 - type: construction
-  name: стрела из осколка стекла # Stories-CraftTranslate
+  name: самодельный лук # Stories-CraftTranslate
   id: ImprovisedBow
   graph: ImprovisedBow
   startNode: start

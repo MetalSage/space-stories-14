@@ -1,4 +1,4 @@
-ent-CratePermaEscapeSpawner = Perma Escape Crate Spawner
+ent-CratePermaEscapeSpawner = Спавнер Ящика Побега с Пермы
     .desc = { ent-CrateEmptySpawner.desc }
 ent-CratePermaEscapeDigging = { ent-CrateGenericSteel }
     .suffix = Копание

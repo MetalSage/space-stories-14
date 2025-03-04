@@ -1,2 +1,4 @@
-ent-CentcomComputerComms = centcom communications computer
+ent-CentcomComputerComms = коммуникационный компьютер центком
     .desc = { ent-ComputerComms.desc }
+ent-CentcommComputerComms = центральный командный коммуникационный компьютер
+    .desc = Компьютер, используемый для подачи объявлений по всему миру с помощью клавиатуры. Превосходный аналог обычного коммуникационного компьютера.

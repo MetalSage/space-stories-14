@@ -2,7 +2,8 @@
   id: PrintedDocumentReportStationRecipe
   result: PrintedDocumentReportStation
   icon: _Stories/Interface/Printer/reports.png
-  category: Reports
+  categories:
+  - Reports
   completetime: 2
   applyMaterialDiscount: false
   materials:
@@ -13,7 +14,8 @@
   id: PrintedDocumentReporDepartmentRecipe
   result: PrintedDocumentReporDepartment
   icon: _Stories/Interface/Printer/reports.png
-  category: Reports
+  categories:
+  - Reports
   completetime: 2
   applyMaterialDiscount: false
   materials:
@@ -24,7 +26,8 @@
   id: PrintedDocumentReportEmployeePerformanceRecipe
   result: PrintedDocumentReportEmployeePerformance
   icon: _Stories/Interface/Printer/reports.png
-  category: Reports
+  categories:
+  - Reports
   completetime: 2
   applyMaterialDiscount: false
   materials:
@@ -35,7 +38,8 @@
   id: PrintedDocumentInternalAffairsAgentsReportRecipe
   result: PrintedDocumentInternalAffairsAgentsReport
   icon: _Stories/Interface/Printer/reports.png
-  category: Reports
+  categories:
+  - Reports
   completetime: 2
   applyMaterialDiscount: false
   materials:
@@ -46,7 +50,8 @@
   id: PrintedDocumentConditionReportRecipe
   result: PrintedDocumentConditionReport
   icon: _Stories/Interface/Printer/reports.png
-  category: Reports
+  categories:
+  - Reports
   completetime: 2
   applyMaterialDiscount: false
   materials:
@@ -57,7 +62,8 @@
   id: PrintedDocumentReportStudyObjectRecipe
   result: PrintedDocumentReportStudyObject
   icon: _Stories/Interface/Printer/reports.png
-  category: Reports
+  categories:
+  - Reports
   completetime: 2
   applyMaterialDiscount: false
   materials:
@@ -68,7 +74,8 @@
   id: PrintedDocumentExperimentReportRecipe
   result: PrintedDocumentExperimentReport
   icon: _Stories/Interface/Printer/reports.png
-  category: Reports
+  categories:
+  - Reports
   completetime: 2
   applyMaterialDiscount: false
   materials:
@@ -79,7 +86,8 @@
   id: PrintedDocumentDisposalReportRecipe
   result: PrintedDocumentDisposalReport
   icon: _Stories/Interface/Printer/reports.png
-  category: Reports
+  categories:
+  - Reports
   completetime: 2
   applyMaterialDiscount: false
   materials:
@@ -90,7 +98,8 @@
   id: PrintedDocumentApplicationAppointmentInterimRecipe
   result: PrintedDocumentApplicationAppointmentInterim
   icon: _Stories/Interface/Printer/statements.png
-  category: Statements
+  categories:
+  - Statements
   completetime: 2
   applyMaterialDiscount: false
   materials:
@@ -101,7 +110,8 @@
   id: PrintedDocumentApplicationEmploymentRecipe
   result: PrintedDocumentApplicationEmployment
   icon: _Stories/Interface/Printer/statements.png
-  category: Statements
+  categories:
+  - Statements
   completetime: 2
   applyMaterialDiscount: false
   materials:
@@ -112,7 +122,8 @@
   id: PrintedDocumentLetterResignationRecipe
   result: PrintedDocumentLetterResignation
   icon: _Stories/Interface/Printer/statements.png
-  category: Statements
+  categories:
+  - Statements
   completetime: 2
   applyMaterialDiscount: false
   materials:
@@ -123,7 +134,8 @@
   id: PrintedDocumentApplicationAccessRecipe
   result: PrintedDocumentApplicationAccess
   icon: _Stories/Interface/Printer/statements.png
-  category: Statements
+  categories:
+  - Statements
   completetime: 2
   applyMaterialDiscount: false
   materials:
@@ -134,7 +146,8 @@
   id: PrintedDocumentApplicationEquipmentRecipe
   result: PrintedDocumentApplicationEquipment
   icon: _Stories/Interface/Printer/statements.png
-  category: Statements
+  categories:
+  - Statements
   completetime: 2
   applyMaterialDiscount: false
   materials:
@@ -145,7 +158,8 @@
   id: PrintedDocumentEvacuationShuttleRequestRecipe
   result: PrintedDocumentEvacuationShuttleRequest
   icon: _Stories/Interface/Printer/inquiries.png
-  category: InquiriesAndAppeals
+  categories:
+  - InquiriesAndAppeals
   completetime: 2
   applyMaterialDiscount: false
   materials:
@@ -156,7 +170,8 @@
   id: PrintedDocumentShuttleRegistrationRequestRecipe
   result: PrintedDocumentShuttleRegistrationRequest
   icon: _Stories/Interface/Printer/inquiries.png
-  category: InquiriesAndAppeals
+  categories:
+  - InquiriesAndAppeals
   completetime: 2
   applyMaterialDiscount: false
   materials:
@@ -167,7 +182,8 @@
   id: PrintedDocumentRequestCallMembersCentralCommitteeDSORecipe
   result: PrintedDocumentRequestCallMembersCentralCommitteeDSO
   icon: _Stories/Interface/Printer/inquiries.png
-  category: InquiriesAndAppeals
+  categories:
+  - InquiriesAndAppeals
   completetime: 2
   applyMaterialDiscount: false
   materials:
@@ -178,7 +194,8 @@
   id: PrintedDocumentRequestChangeSalaryRecipe
   result: PrintedDocumentRequestChangeSalary
   icon: _Stories/Interface/Printer/inquiries.png
-  category: InquiriesAndAppeals
+  categories:
+  - InquiriesAndAppeals
   completetime: 2
   applyMaterialDiscount: false
   materials:
@@ -189,7 +206,8 @@
   id: PrintedDocumentRequestForNonlistedEmploymentRecipe
   result: PrintedDocumentRequestForNonlistedEmployment
   icon: _Stories/Interface/Printer/inquiries.png
-  category: InquiriesAndAppeals
+  categories:
+  - InquiriesAndAppeals
   completetime: 2
   applyMaterialDiscount: false
   materials:
@@ -200,7 +218,8 @@
   id: PrintedDocumentRequestForPromotionRecipe
   result: PrintedDocumentRequestForPromotion
   icon: _Stories/Interface/Printer/inquiries.png
-  category: InquiriesAndAppeals
+  categories:
+  - InquiriesAndAppeals
   completetime: 2
   applyMaterialDiscount: false
   materials:
@@ -211,7 +230,8 @@
   id: PrintedDocumentRequestEuthanasiaRecipe
   result: PrintedDocumentRequestEuthanasia
   icon: _Stories/Interface/Printer/inquiries.png
-  category: InquiriesAndAppeals
+  categories:
+  - InquiriesAndAppeals
   completetime: 2
   applyMaterialDiscount: false
   materials:
@@ -222,7 +242,8 @@
   id: PrintedDocumentRequestConstructionWorkRecipe
   result: PrintedDocumentRequestConstructionWork
   icon: _Stories/Interface/Printer/inquiries.png
-  category: InquiriesAndAppeals
+  categories:
+  - InquiriesAndAppeals
   completetime: 2
   applyMaterialDiscount: false
   materials:
@@ -233,7 +254,8 @@
   id: PrintedDocumentComplaintOffenseRecipe
   result: PrintedDocumentComplaintOffense
   icon: _Stories/Interface/Printer/complaintst.png
-  category: Complaintst
+  categories:
+  - Complaintst
   completetime: 2
   applyMaterialDiscount: false
   materials:
@@ -244,7 +266,8 @@
   id: PrintedDocumentPermissionEquipmentRecipe
   result: PrintedDocumentPermissionEquipment
   icon: _Stories/Interface/Printer/permissions.png
-  category: Permissions
+  categories:
+  - Permissions
   completetime: 2
   applyMaterialDiscount: false
   materials:
@@ -256,7 +279,8 @@
   id: PrintedDocumentSearchPermissionRecipe
   result: PrintedDocumentSearchPermission
   icon: _Stories/Interface/Printer/permissions.png
-  category: Permissions
+  categories:
+  - Permissions
   completetime: 2
   applyMaterialDiscount: false
   materials:
@@ -267,7 +291,8 @@
   id: PrintedDocumentPrescriptionDrugAuthorizationRecipe
   result: PrintedDocumentPrescriptionDrugAuthorization
   icon: _Stories/Interface/Printer/permissions.png
-  category: Permissions
+  categories:
+  - Permissions
   completetime: 2
   applyMaterialDiscount: false
   materials:
@@ -278,7 +303,8 @@
   id: PrintedDocumentPermissionDisposeBodyRecipe
   result: PrintedDocumentPermissionDisposeBody
   icon: _Stories/Interface/Printer/permissions.png
-  category: Permissions
+  categories:
+  - Permissions
   completetime: 2
   applyMaterialDiscount: false
   materials:
@@ -289,7 +315,8 @@
   id: PrintedDocumentConstructionPermitRecipe
   result: PrintedDocumentConstructionPermit
   icon: _Stories/Interface/Printer/permissions.png
-  category: Permissions
+  categories:
+  - Permissions
   completetime: 2
   applyMaterialDiscount: false
   materials:
@@ -300,7 +327,8 @@
   id: PrintedDocumentOrderDismissalRecipe
   result: PrintedDocumentOrderDismissal
   icon: _Stories/Interface/Printer/instructions.png
-  category: OrdersAndInstructions
+  categories:
+  - OrdersAndInstructions
   completetime: 2
   applyMaterialDiscount: false
   materials:
@@ -311,7 +339,8 @@
   id: PrintedDocumentOrderDeprivationAccessRecipe
   result: PrintedDocumentOrderDeprivationAccess
   icon: _Stories/Interface/Printer/instructions.png
-  category: OrdersAndInstructions
+  categories:
+  - OrdersAndInstructions
   completetime: 2
   applyMaterialDiscount: false
   materials:
@@ -322,7 +351,8 @@
   id: PrintedDocumentOrderEncouragementRecipe
   result: PrintedDocumentOrderEncouragement
   icon: _Stories/Interface/Printer/instructions.png
-  category: OrdersAndInstructions
+  categories:
+  - OrdersAndInstructions
   completetime: 2
   applyMaterialDiscount: false
   materials:
@@ -333,7 +363,8 @@
   id: PrintedDocumentOrderParolePrisonerRecipe
   result: PrintedDocumentOrderParolePrisoner
   icon: _Stories/Interface/Printer/instructions.png
-  category: OrdersAndInstructions
+  categories:
+  - OrdersAndInstructions
   completetime: 2
   applyMaterialDiscount: false
   materials:
@@ -344,7 +375,8 @@
   id: PrintedDocumentOrderRecognizingSentienceCreatureRecipe
   result: PrintedDocumentOrderRecognizingSentienceCreature
   icon: _Stories/Interface/Printer/instructions.png
-  category: OrdersAndInstructions
+  categories:
+  - OrdersAndInstructions
   completetime: 2
   applyMaterialDiscount: false
   materials:
@@ -355,7 +387,8 @@
   id: PrintedDocumentOrderMedicalInterventionRecipe
   result: PrintedDocumentOrderMedicalIntervention
   icon: _Stories/Interface/Printer/instructions.png
-  category: OrdersAndInstructions
+  categories:
+  - OrdersAndInstructions
   completetime: 2
   applyMaterialDiscount: false
   materials:
@@ -366,7 +399,8 @@
   id: PrintedDocumentProductManufacturingOrderRecipe
   result: PrintedDocumentProductManufacturingOrder
   icon: _Stories/Interface/Printer/orders.png
-  category: Orders
+  categories:
+  - Orders
   completetime: 2
   applyMaterialDiscount: false
   materials:
@@ -377,7 +411,8 @@
   id: PrintedDocumentOrderPurchaseResourcesEquipmentRecipe
   result: PrintedDocumentOrderPurchaseResourcesEquipment
   icon: _Stories/Interface/Printer/orders.png
-  category: Orders
+  categories:
+  - Orders
   completetime: 2
   applyMaterialDiscount: false
   materials:
@@ -388,7 +423,8 @@
   id: PrintedDocumentOrderingSpecialEquipmentRecipe
   result: PrintedDocumentOrderingSpecialEquipment
   icon: _Stories/Interface/Printer/orders.png
-  category: Orders
+  categories:
+  - Orders
   completetime: 2
   applyMaterialDiscount: false
   materials:
@@ -399,7 +435,8 @@
   id: PrintedDocumentCertificateRecipe
   result: PrintedDocumentCertificate
   icon: _Stories/Interface/Printer/evidence.png
-  category: Evidence
+  categories:
+  - Evidence
   completetime: 2
   applyMaterialDiscount: false
   materials:
@@ -410,7 +447,8 @@
   id: PrintedDocumentCertificateAdvancedTrainingRecipe
   result: PrintedDocumentCertificateAdvancedTraining
   icon: _Stories/Interface/Printer/evidence.png
-  category: Evidence
+  categories:
+  - Evidence
   completetime: 2
   applyMaterialDiscount: false
   materials:
@@ -421,7 +459,8 @@
   id: PrintedDocumentCertificateOffenseRecipe
   result: PrintedDocumentCertificateOffense
   icon: _Stories/Interface/Printer/evidence.png
-  category: Evidence
+  categories:
+  - Evidence
   completetime: 2
   applyMaterialDiscount: false
   materials:
@@ -432,7 +471,8 @@
   id: PrintedDocumentDeathCertificateRecipe
   result: PrintedDocumentDeathCertificate
   icon: _Stories/Interface/Printer/evidence.png
-  category: Evidence
+  categories:
+  - Evidence
   completetime: 2
   applyMaterialDiscount: false
   materials:
@@ -443,7 +483,8 @@
   id: PrintedDocumentMarriageCertificateRecipe
   result: PrintedDocumentMarriageCertificate
   icon: _Stories/Interface/Printer/evidence.png
-  category: Evidence
+  categories:
+  - Evidence
   completetime: 2
   applyMaterialDiscount: false
   materials:
@@ -454,7 +495,8 @@
   id: PrintedDocumentDivorceCertificateRecipe
   result: PrintedDocumentDivorceCertificate
   icon: _Stories/Interface/Printer/evidence.png
-  category: Evidence
+  categories:
+  - Evidence
   completetime: 2
   applyMaterialDiscount: false
   materials:
@@ -465,7 +507,8 @@
   id: PrintedDocumentClosingIndictmentRecipe
   result: PrintedDocumentClosingIndictment
   icon: _Stories/Interface/Printer/decisions.png
-  category: ConclusionsAndDecisions
+  categories:
+  - ConclusionsAndDecisions
   completetime: 2
   applyMaterialDiscount: false
   materials:
@@ -476,7 +519,8 @@
   id: PrintedDocumentSentenceRecipe
   result: PrintedDocumentSentence
   icon: _Stories/Interface/Printer/decisions.png
-  category: ConclusionsAndDecisions
+  categories:
+  - ConclusionsAndDecisions
   completetime: 2
   applyMaterialDiscount: false
   materials:
@@ -487,7 +531,8 @@
   id: PrintedDocumentJudgmentRecipe
   result: PrintedDocumentJudgment
   icon: _Stories/Interface/Printer/decisions.png
-  category: ConclusionsAndDecisions
+  categories:
+  - ConclusionsAndDecisions
   completetime: 2
   applyMaterialDiscount: false
   materials:
@@ -498,7 +543,8 @@
   id: PrintedDocumentStatementHealtheRecipe
   result: PrintedDocumentStatementHealth
   icon: _Stories/Interface/Printer/decisions.png
-  category: ConclusionsAndDecisions
+  categories:
+  - ConclusionsAndDecisions
   completetime: 2
   applyMaterialDiscount: false
   materials:
@@ -508,7 +554,8 @@
 - type: latheRecipe
   id: PrintedDocumentErrorLoadingFormHeaderRecipe
   result: PrintedDocumentErrorLoadingFormHeader
-  category: ErrorDocument
+  categories:
+  - ErrorDocument
   completetime: 2
   applyMaterialDiscount: false
   materials:
@@ -518,7 +565,8 @@
 - type: latheRecipe
   id: PrintedDocumentNoticeOfLiquidationRecipe
   result: PrintedDocumentNoticeOfLiquidation
-  category: ErrorDocument
+  categories:
+  - ErrorDocument
   completetime: 2
   applyMaterialDiscount: false
   materials:
@@ -528,7 +576,8 @@
 - type: latheRecipe
   id: PrintedDocumentBusinessDealRecipe
   result: PrintedDocumentBusinessDeal
-  category: ErrorDocument
+  categories:
+  - ErrorDocument
   completetime: 2
   applyMaterialDiscount: false
   materials:
@@ -538,7 +587,8 @@
 - type: latheRecipe
   id: PrintedDocumentNoteBeginningMilitaryActionsRecipe
   result: PrintedDocumentNoteBeginningMilitaryActions
-  category: ErrorDocument
+  categories:
+  - ErrorDocument
   completetime: 2
   applyMaterialDiscount: false
   materials:
@@ -548,7 +598,8 @@
 - type: latheRecipe
   id: PrintedDocumentReportAccomplishmentGoalsRecipe
   result: PrintedDocumentReportAccomplishmentGoals
-  category: ErrorDocument
+  categories:
+  - ErrorDocument
   completetime: 2
   applyMaterialDiscount: false
   materials:

@@ -1,0 +1,29 @@
+﻿changecvar-simple-debug_test_cvar = Ничего не делает.
+changecvar-full-debug_test_cvar = Просто тестовый cvar. Ничего не делает.
+
+changecvar-simple-events_enabled = Контролирует, должны ли в игре запускаться события станции.
+changecvar-full-events_enabled = Контролирует, должны ли в игре запускаться события станции.
+
+changecvar-simple-shuttle_auto_call_time = Время после начала раунда для автоматического вызова шаттла.
+changecvar-full-shuttle_auto_call_time = Время в минутах после начала раунда для автоматического вызова шаттла. Установите нулевое значение для отключения.
+
+changecvar-simple-playtest_all_damage_modifier = Множитель для всех повреждений.
+changecvar-full-playtest_all_damage_modifier = Множитель для всех повреждений.
+changecvar-simple-playtest_all_heal_modifier = Множитель для всего лечения.
+changecvar-full-playtest_all_heal_modifier = Множитель для всего лечения.
+changecvar-simple-playtest_melee_damage_modifier = Множитель, влияющий на урон от оружия ближнего боя.
+changecvar-full-playtest_melee_damage_modifier = Множитель, влияющий на весь урон, наносимый атаками в ближнем бою.
+changecvar-simple-playtest_projectile_damage_modifier = Множитель, влияющий на урон от снарядов.
+changecvar-full-playtest_projectile_damage_modifier = Множитель, влияющий на весь урон, наносимый снарядами.
+changecvar-simple-playtest_hitscan_damage_modifier = Множитель, влияющий на урон от лазерного луча.
+changecvar-full-playtest_hitscan_damage_modifier = Множитель, влияющий на весь урон, наносимый лазерным оружием.
+changecvar-simple-playtest_thrown_damage_modifier = Множитель, влияющий на урон от метательного оружия.
+changecvar-full-playtest_thrown_damage_modifier = Множитель, влияющий на весь урон, наносимый метательным оружием.
+changecvar-simple-playtest_topicals_heal_modifier = Множитель, влияющий на применяемое лечение.
+changecvar-full-playtest_topicals_heal_modifier = Множитель, влияющий на всё применяемое лечение.
+changecvar-simple-playtest_reagent_damage_modifier = Множитель, влияющий на повреждение реагентами.
+changecvar-full-playtest_reagent_damage_modifier = Множитель, влияющий на весь урон, наносимый реагентами.
+changecvar-simple-playtest_reagent_heal_modifier = Множитель, влияющий на лечение реагентами.
+changecvar-full-playtest_reagent_heal_modifier = Множитель, влияющий на все процессы лечением реагентами.
+changecvar-simple-playtest_explosion_damage_modifier = Множитель, влияющий на урон от взрыва.
+changecvar-full-playtest_explosion_damage_modifier = Множитель, влияющий на весь урон, наносимый взрывчаткой.

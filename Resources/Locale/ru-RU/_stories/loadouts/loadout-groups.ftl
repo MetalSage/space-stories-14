@@ -42,7 +42,7 @@ loadout-group-STSurvivalBrigmedic = аварийный запас бригмед
 ent-STBoxSurvivalBrigmedic = аварийный запас бригмедика
     .desc = Коробка с базовым набором для выживания.
     .suffix = Бригмедик
-ent-STSurvivalBrigmedicNitrogen = аварийный запас бригмедика
+ent-STBoxSurvivalBrigmedicNitrogen = аварийный запас бригмедика
     .suffix = Бригмедик Азот N2
     .desc = { ent-BoxSurvival.desc }
 

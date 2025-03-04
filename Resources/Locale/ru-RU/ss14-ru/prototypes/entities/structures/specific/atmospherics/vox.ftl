@@ -1,6 +1,6 @@
-ent-AirSensorVoxBase = { ent-AirSensorBase }
+ent-AirSensorVoxBase = { ent-AirSensor }
     .suffix = Атмосфера воксов
-    .desc = { ent-AirSensorBase.desc }
+    .desc = { ent-AirSensor.desc }
 ent-AirSensorVox = { ent-AirSensorVoxBase }
     .desc = { ent-AirSensorVoxBase.desc }
 ent-GasVentPumpVox = { ent-AirSensorVoxBase }

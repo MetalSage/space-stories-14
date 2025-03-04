@@ -28,23 +28,23 @@ ion-storm-law-not-having-harmful = ОТСУТСТВИЕ { $adjective } { $thing 
 # thing is a concept or require
 ion-storm-law-requires =
     { $who } { $plural ->
-        [true] ТРЕБУЮТ
-       *[false] ТРЕБУЕТ
+        [true] ТРЕБУЕТ
+       *[false] ТРЕБУЮТ
     } { $thing }
 ion-storm-law-requires-subjects =
     { $who } { $plural ->
-        [true] ТРЕБУЮТ
-       *[false] ТРЕБУЕТ
+        [true] ТРЕБУЕТ
+       *[false] ТРЕБУЮТ
     } { $joined } { $subjects }
 ion-storm-law-allergic =
     { $who } { $plural ->
-        [true] ИМЕЮТ
-       *[false] ИМЕЕТ
+        [true] ИМЕЕТ
+       *[false] ИМЕЮТ
     } { $severity } АЛЛЕРГИЮ НА { $allergy }
 ion-storm-law-allergic-subjects =
     { $who } { $plural ->
-        [true] ИМЕЮТ
-       *[false] ИМЕЕТ
+        [true] ИМЕЕТ
+       *[false] ИМЕЮТ
     } { $severity } АЛЛЕРГИЮ НА { $adjective } { $subjects }
 ion-storm-law-feeling = { $who } { $feeling } { $concept }
 ion-storm-law-feeling-subjects = { $who } { $feeling } { $joined } { $subjects }
