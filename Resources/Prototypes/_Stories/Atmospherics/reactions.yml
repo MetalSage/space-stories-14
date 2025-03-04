@@ -32,7 +32,7 @@
   effects:
   - !type:HealiumProductionReaction {}
 
-  - type: gasReaction
+- type: gasReaction
   id: STNitrylFormation
   priority: 2
   minimumTemperature: 873.149 # 600 Celsius
@@ -51,7 +51,7 @@
   effects:
   - !type:NitrylFormationReaction {}
 
-  - type: gasReaction
+- type: gasReaction
   id: STPluoxiumFormation
   priority: 2
   maximumTemperature: 273.149
