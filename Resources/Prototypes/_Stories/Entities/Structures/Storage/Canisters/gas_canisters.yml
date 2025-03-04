@@ -233,7 +233,7 @@
 
 - type: entity
   parent: GasCanisterBrokenBase
-  id: STPluuoxiumCanisterBroken
+  id: STPluoxiumCanisterBroken
   categories: [ HideSpawnMenu ]
   components:
   - type: Sprite
