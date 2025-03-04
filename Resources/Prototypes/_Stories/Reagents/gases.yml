@@ -169,11 +169,20 @@
         - !type:ReagentThreshold
           reagent: STNitryl
           min: 0.5
+        ignoreResistances: true
+        damage:
+          types:
+            Poison: 0.2
+      - !type:HealthChange
+        conditions:
+        - !type:ReagentThreshold
+          reagent: STNitryl
+          min: 2
         scaleByQuantity: true
         ignoreResistances: true
         damage:
           types:
-            Poision: 0.1
+            Poison: 3
       - !type:MovespeedModifier
         conditions:
         - !type:ReagentThreshold
