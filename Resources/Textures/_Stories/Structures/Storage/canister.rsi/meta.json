@@ -1,7 +1,7 @@
 {
   "version": 1,
   "license": "CC-BY-SA-3.0 & Собственная лицензия. Копирование, модификация и использование вне проекта Space Stories полностью запрещено без предварительного согласия текущего владельца проекта",
-  "copyright": "Taken from TauCetiClassic at commit https://github.com/TauCetiStation/TauCetiClassic/tree/13b5c47145804dd24507b75f250de5e87d34e194 & bz, bz-1, healium, healium-1 states Редактировано Shegare(discord:shegare) для SpaceStories(Server SS14).",
+  "copyright": "Taken from TauCetiClassic at commit https://github.com/TauCetiStation/TauCetiClassic/tree/13b5c47145804dd24507b75f250de5e87d34e194 & bz, bz-1, healium, healium-1 states Редактировано Shegare(discord:shegare) для SpaceStories(Server SS14). nitryl, nitryl-1, pluoxium, pluoxium-1 Редактировано NoElka (discord: no_elka) Для SpaceStories(Server SS14)",
   "size": {
     "x": 32,
     "y": 32
@@ -18,6 +18,18 @@
     },
     {
       "name": "healium-1"
+    },
+    {
+      "name": "nitryl"
+    },
+    {
+      "name": "nitryl-1"
+    },
+    {
+      "name": "pluoxium"
+    },
+    {
+      "name": "pluoxium-1"
     },
     {
       "name": "can-connector"

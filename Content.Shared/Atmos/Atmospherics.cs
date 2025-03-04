@@ -203,7 +203,7 @@ namespace Content.Shared.Atmos
         /// <summary>
         ///     Total number of gases. Increase this if you want to add more!
         /// </summary>
-        public const int TotalNumberOfGases = 11; // 9 // Stories-Gas
+        public const int TotalNumberOfGases = 13; // 9 // Stories-Gas
 
         /// <summary>
         ///     This is the actual length of the gases arrays in mixtures.
@@ -296,6 +296,27 @@ namespace Content.Shared.Atmos
         ///     The amount of energy 1 mol of Healium forming from BZ and frezon releases.
         /// </summary>
         public const float HealiumProductionEnergy = 10e3f;
+
+        /// <summary>
+        ///     The amount of energy 1 mol of Pluoxium forming from Tritium, Oxygen and Carbon Dioxide releases.
+        /// </summary>
+        public const float PluoxiumProductionEnergy = 20e3f;
+
+        /// <summary>
+        ///     Some number taken from the air to keep Pluoxium from instantly converting everything.
+        /// </summary>
+        public const float PluoxiumProductionRate = 20f;
+
+
+        /// <summary>
+        ///     The amount of energy 1 mol of Nitryl forming from Healium, BZ and Nitrogen consumes.
+        /// </summary>
+        public const float NitrylProductionEnergy = -40e3f;
+
+        /// <summary>
+        ///     The optimal temperature for Nitryl production reaction.
+        /// </summary>
+        public const float NitrylProductionMaxEfficiencyTemperature = 5273.15f;
         // Stories-Gas end
 
         /// <summary>
@@ -388,6 +409,8 @@ namespace Content.Shared.Atmos
         // Stories-Gas start
         BZ = 9,
         Healium = 10,
+        Nitryl = 11,
+        Pluoxium = 12,
         // Stories-Gas end
     }
 }

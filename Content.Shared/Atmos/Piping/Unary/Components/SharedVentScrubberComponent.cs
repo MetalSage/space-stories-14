@@ -26,6 +26,8 @@ namespace Content.Shared.Atmos.Piping.Unary.Components
             // Stories-Gas start
             Gas.BZ,
             Gas.Healium,
+            Gas.Nitryl,
+            Gas.Pluoxium,
             // Stories-Gas end
         };
 
