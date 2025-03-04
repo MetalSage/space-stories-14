@@ -33,6 +33,8 @@ public sealed partial class GasArtifactComponent : Component
         // Stories-Gas start
         Gas.BZ,
         Gas.Healium,
+        Gas.Nitryl,
+        Gas.Pluoxium,
         // Stories-Gas end
     };
 

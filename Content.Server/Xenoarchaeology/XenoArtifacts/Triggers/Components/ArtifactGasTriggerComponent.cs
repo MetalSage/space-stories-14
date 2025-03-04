@@ -23,6 +23,8 @@ public sealed partial class ArtifactGasTriggerComponent : Component
         // Stories-Gas start
         Gas.BZ,
         Gas.Healium,
+        Gas.Nitryl,
+        Gas.Pluoxium,
         // Stories-Gas end
     };
 

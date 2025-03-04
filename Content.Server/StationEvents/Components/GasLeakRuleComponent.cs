@@ -16,7 +16,9 @@ public sealed partial class GasLeakRuleComponent : Component
         Gas.WaterVapor, // the fog
         // Stories-Gas start
         Gas.BZ,
-        Gas.Healium
+        Gas.Healium,
+        Gas.Nitryl,
+        Gas.Pluoxium,
         // Stories-Gas end
     };
 
