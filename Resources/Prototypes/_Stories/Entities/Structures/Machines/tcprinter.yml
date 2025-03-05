@@ -65,7 +65,10 @@
     radius: 0.8
     energy: 0.5
     color: "#ff0000"
-  - type: AmbientOnPowered
+  - type: InteractionPopup
+    interactDelay: 0.5
+    successChance: 1
+    interactSuccessSound: /Audio/Effects/chime.ogg
 
 - type: entity
   parent: BaseFlatpack

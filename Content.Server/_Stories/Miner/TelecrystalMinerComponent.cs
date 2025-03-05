@@ -49,8 +49,16 @@ public sealed partial class TelecrystalMinerComponent : Component
     [DataField("powerDraw")]
     public float PowerDraw = 25000f;
 
-    // резерв
+    [DataField("defaultPowerDraw")] // значение в которое будет возвращатся энергопотребление после перезагрузки
+    public float DefaultPowerDraw = 25000f;
 
-    // public TimeSpan? StartTime = null;
-    // public TimeSpan LastUpdate = TimeSpan.Zero;
+    [DataField("maxPowerDraw")] // максимальное энергопотребление
+    public float MaxPowerDraw = 50000f;
+
+    [DataField("powerIncreasePerTC")]
+    public float PowerIncreasePerTC = 500f;
+
+    [DataField] // а нафиг скобочки пишу я кста
+    public bool IsDisabled = true;
+
 }
