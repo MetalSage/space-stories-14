@@ -19,7 +19,7 @@
       Unsexed: MaleFelinid
       Female: FemaleFelinid
   - type: Speech
-    allowedEmotes: ['Meow', 'Mew', 'Growl', 'Purr']
+    allowedEmotes: ['Hiss', 'Meow', 'Mew', 'Growl', 'Purr']
 
 - type: entity
   parent: BaseSpeciesDummy

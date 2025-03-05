@@ -12,6 +12,7 @@
   - type: TemperatureProtection
     heatingCoefficient: 0.005
     coolingCoefficient: 0.005
+  - type: AllowSuitStorage
   - type: Sprite
     sprite: _Stories/Clothing/OuterClothing/Coats/jedi.rsi
   - type: Clothing

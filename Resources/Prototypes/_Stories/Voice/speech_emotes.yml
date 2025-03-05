@@ -1,3 +1,115 @@
+# Kidan
+
+- type: emote
+  id: Grumble
+  name: emote-name-grumble
+  category: Vocal
+  whitelist:
+    components:
+    - Vocal
+  blacklist:
+    components:
+    - BorgChassis
+  available: false
+  icon: Interface/Emotes/vocal.png
+  chatMessages: ["emote-grumble"]
+  chatTriggers:
+  - grumble
+  - grumble.
+  - grumble!
+  - grumbles
+  - grumbles.
+  - grumbles!
+  - grumbled
+  - grumbled.
+  - grumbled!
+  - ворчит
+  - ворчит.
+  - ворчит!
+
+- type: emote
+  id: Moan
+  name: emote-name-moan
+  category: Vocal
+  whitelist:
+    components:
+    - Vocal
+  blacklist:
+    components:
+    - BorgChassis
+  available: false
+  icon: Interface/Emotes/vocal.png
+  chatMessages: ["emote-moan"]
+  chatTriggers:
+  - moan
+  - moan.
+  - moan!
+  - moans
+  - moans.
+  - moans!
+  - стонет
+  - стонет.
+  - стонет!
+
+- type: emote
+  id: WigglesAntennae
+  category: Vocal
+  whitelist:
+    components:
+    - Vocal
+  blacklist:
+    components:
+    - BorgChassis
+  available: false
+  icon: Interface/Emotes/vocal.png
+  name: emote-name-waves-antennae
+  chatMessages: ["emote-waves-antennae"]
+  chatTriggers:
+  - waves antennae
+  - waves antennae.
+  - waves antennae!
+  - wiggles antennae
+  - wiggles antennae.
+  - wiggles antennae!
+  - шевелит антенками
+  - шевелит антенками.
+  - шевелит антенками!
+  - машет антенками
+  - машет антенками.
+  - машет антенками!
+  - шевелит усиками
+  - шевелит усиками.
+  - шевелит усиками!
+  - машет усиками
+  - машет усиками.
+  - машет усиками!
+
+- type: emote
+  id: WavesAntennaeSharply
+  category: Vocal
+  whitelist:
+    components:
+    - Vocal
+  blacklist:
+    components:
+    - BorgChassis
+  available: false
+  icon: Interface/Emotes/vocal.png
+  name: emote-name-waves-antennae-sharply
+  chatMessages: ["emote-waves-antennae-sharply"]
+  chatTriggers:
+  - waves antennae sharply
+  - waves antennae sharply.
+  - waves antennae sharply!
+  - резко машет усиками
+  - резко машет усиками.
+  - резко машет усиками!
+  - резко машет антенками
+  - резко машет антенками.
+  - резко машет антенками!
+
+# Felinid
+
 - type: emote
   id: Meow
   name: emote-name-meow
@@ -88,7 +200,28 @@
   - рычание
   - рычит
 
-#Vulpkanin
+- type: emote
+  id: Hiss
+  name: emote-name-hiss
+  category: Vocal
+  whitelist:
+    components:
+    - Vocal
+  blacklist:
+    components:
+    - BorgChassis
+  available: false
+  icon: _Stories/Interface/Emotes/shhh.png
+  chatMessages: ["emote-hiss"]
+  chatTriggers:
+  - hiss
+  - hissed
+  - hissing
+  - шипение
+  - шипит
+
+# Vulpkanin
+
 - type: emote
   id: Bark
   name: emote-name-bark

@@ -4,6 +4,7 @@ using Content.Shared.Mobs.Components;
 using Content.Shared.Speech.Muting;
 using Content.Shared.StatusEffect;
 using Content.Shared.Stunnable;
+using Robust.Shared.GameStates;
 
 namespace Content.Shared._Stories.Weapons.Special.Garrote;
 
@@ -22,7 +23,9 @@ public abstract class SharedGarroteSystem : EntitySystem
 
     private void OnGarroteDoAfter(EntityUid uid, GarroteComponent comp, GarroteDoAfterEvent args)
     {
-        if (args.Target == null || !TryComp<MobStateComponent>(args.Target, out var mobState))
+        if (args.Target == null
+            || !TryComp<MobStateComponent>(args.Target, out var mobState)
+            || !TryComp<StatusEffectsComponent>(args.Target, out var statusEffectsComp))
             return;
 
         if (args.Cancelled || mobState.CurrentState != MobState.Alive)
@@ -30,8 +33,9 @@ public abstract class SharedGarroteSystem : EntitySystem
 
         _damageable.TryChangeDamage(args.Target, comp.Damage, origin: args.User);
 
-        _stun.TryStun(args.Target.Value, 2 * comp.DoAfterTime, true);
-        _statusEffect.TryAddStatusEffect<MutedComponent>(args.Target.Value, "Muted", 2 * comp.DoAfterTime, refresh: true);
+        _stun.TryStun(args.Target.Value, comp.DurationStatusEffects, true);
+        _statusEffect.TryAddStatusEffect<MutedComponent>(args.Target.Value, "Muted", comp.DurationStatusEffects, refresh: true);
+        Dirty(args.Target.Value, statusEffectsComp);
 
         args.Repeat = true;
     }

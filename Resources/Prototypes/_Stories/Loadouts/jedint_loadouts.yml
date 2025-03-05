@@ -215,7 +215,7 @@
   id: STLightsaberYellow
   effects:
   - !type:GroupLoadoutEffect
-    proto: BeginnerJedi
+    proto: STBeginnerJedi
   equipment:
     pocket1: STLightsaberYellow
 
@@ -225,7 +225,7 @@
   id: STLightsaberPurple
   effects:
   - !type:GroupLoadoutEffect
-    proto: MasterJedi
+    proto: STMasterJedi
   equipment:
     pocket1: STLightsaberPurple
 

@@ -9,7 +9,6 @@
       - ForceRecallEquipment
   - type: Pda
     id: JediNtIDCard
-    state: pda-ert
   - type: Appearance
     appearanceDataInit:
       enum.PdaVisuals.PdaType:
@@ -30,7 +29,6 @@
   components:
   - type: Pda
     id: IAAIDCard
-    state: pda-lawyer
     penSlot:
       startingItem: PenCentcom
       priority: -1
@@ -57,7 +55,6 @@
     sprite: _Stories/Objects/Devices/pda.rsi
   - type: Pda
     id: PRISONIDCardHeadOfPrison
-    state: pda-hosp
   - type: Appearance
     appearanceDataInit:
       enum.PdaVisuals.PdaType:
@@ -75,7 +72,6 @@
   components:
   - type: Pda
     id: PRISONIDCardOfficer
-    state: pda-spofficer
   - type: Appearance
     appearanceDataInit:
       enum.PdaVisuals.PdaType:
@@ -92,7 +88,6 @@
   components:
   - type: Pda
     id: PRISONIDCardEngineer
-    state: pda-spengineer
   - type: Appearance
     appearanceDataInit:
       enum.PdaVisuals.PdaType:
@@ -111,7 +106,6 @@
     sprite: _Stories/Objects/Devices/pda.rsi
   - type: Pda
     id: PRISONIDCardHeadOfPrison
-    state: pda-spmedic
   - type: Appearance
     appearanceDataInit:
       enum.PdaVisuals.PdaType:
