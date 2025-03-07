@@ -39,6 +39,17 @@ public sealed class TelecrystalMinerSystem : EntitySystem
         component.StartTime = _gameTiming.CurTime;
         component.PowerDraw = component.DefaultPowerDraw;
         component.IsDisabled = false;
+        var originStation = _station.GetOwningStation(uid);
+
+        if (originStation != null)
+        {
+            component.OriginStation = originStation;
+        } // щиткод взят с системы нюки
+        else
+        {
+            var transform = Transform(uid);
+            component.OriginMapGrid = (transform.MapID, transform.GridUid);
+        }
     }
 
     private void OnShutdown(EntityUid uid, TelecrystalMinerComponent component, ComponentShutdown args)
@@ -53,12 +64,7 @@ public sealed class TelecrystalMinerSystem : EntitySystem
             return;
         component.IsDisabled = false;
         component.PowerDraw = component.DefaultPowerDraw;
-        _popup.PopupEntity(Loc.GetString("tc-miner-restarted"), uid, PopupType.Medium);
-        // господь убей меня, этот комментарий я пишу в момент когда уже ну не могу
-        // для тех кто будет разгребать этот щиткод:
-        // попап не работает, да и еще в последнем тесте каждый тик увеличивалось потребление на 500, что типо не гуд
-        // сори я просто уже ну пиздец, голова с плеч
-        // todo: доделать это :CatFuckingDied:
+        _popup.PopupEntity(Loc.GetString("tc-miner-restarted"), args.User, PopupType.Medium);
     }
 
     public override void Update(float frameTime)
@@ -68,11 +74,24 @@ public sealed class TelecrystalMinerSystem : EntitySystem
 
         while (query.MoveNext(out var entity, out var miner, out var battery, out var powerConsumer))
         {
+            // чекаем станцию
+            var currentStation = _station.GetOwningStation(entity);
+            if (currentStation == null || miner.OriginStation != null && currentStation != miner.OriginStation)
+            {
+                // если не на станции то увы :j_jokerge:
+                continue;
+            }
+            if (miner.IsDisabled)
+            {
+                powerConsumer.NetworkLoad.ReceivingPower = 0;
+                continue;
+            }
+
             powerConsumer.NetworkLoad.DesiredPower = miner.PowerDraw;
             if (powerConsumer.NetworkLoad.ReceivingPower < miner.PowerDraw)
             {
                 miner.IsDisabled = true;
-                continue; // ниче не делаем, пусть игрок сам перезапускает майер
+                continue; // пусть игрок сам перезапускает майер
             }
 
             if (miner.StartTime == null)

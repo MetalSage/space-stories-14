@@ -31,7 +31,7 @@
         ejectSound:
           path: /Audio/Effects/pop.ogg
         whitelist:
-          components:
+          tags:
           - Telecrystal
   - type: NodeContainer
     examinable: true
@@ -68,7 +68,7 @@
   - type: InteractionPopup
     interactDelay: 0.5
     successChance: 1
-    interactSuccessSound: /Audio/Effects/chime.ogg
+    interactSuccessSound: /Audio/Effects/pop.ogg
 
 - type: entity
   parent: BaseFlatpack

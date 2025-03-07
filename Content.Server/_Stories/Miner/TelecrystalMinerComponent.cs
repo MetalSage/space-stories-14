@@ -1,6 +1,6 @@
-using Content.Server.Power.Components;
 using Robust.Shared.Serialization.TypeSerializers.Implementations.Custom;
 using Robust.Shared.Audio;
+using Robust.Shared.Map;
 
 namespace Content.Server._Stories.Miner;
 
@@ -61,4 +61,7 @@ public sealed partial class TelecrystalMinerComponent : Component
     [DataField] // а нафиг скобочки пишу я кста
     public bool IsDisabled = true;
 
+    public (MapId, EntityUid?)? OriginMapGrid;
+    // оно работает не трогай ;-;
+    public EntityUid? OriginStation;
 }
