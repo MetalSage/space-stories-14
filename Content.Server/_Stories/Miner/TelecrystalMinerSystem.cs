@@ -64,21 +64,22 @@ public sealed class TelecrystalMinerSystem : EntitySystem
             return;
         component.IsDisabled = false;
         component.PowerDraw = component.DefaultPowerDraw;
-        _popup.PopupEntity(Loc.GetString("tc-miner-restarted"), args.User, PopupType.Medium);
+        _chat.TrySendInGameICMessage(uid, Loc.GetString("tc-miner-restarted"), InGameICChatType.Speak, false);
     }
 
     public override void Update(float frameTime)
     {
-        var query = EntityQueryEnumerator<TelecrystalMinerComponent, BatteryComponent, PowerConsumerComponent>();
+        var query = EntityQueryEnumerator<TelecrystalMinerComponent, PowerConsumerComponent>();
         var currentTime = _gameTiming.CurTime;
 
-        while (query.MoveNext(out var entity, out var miner, out var battery, out var powerConsumer))
+        while (query.MoveNext(out var uid, out var miner, out var powerConsumer))
         {
             // чекаем станцию
-            var currentStation = _station.GetOwningStation(entity);
+            var currentStation = _station.GetOwningStation(uid);
             if (currentStation == null || miner.OriginStation != null && currentStation != miner.OriginStation)
             {
                 // если не на станции то увы :j_jokerge:
+                miner.IsDisabled = true;
                 continue;
             }
             if (miner.IsDisabled)
@@ -88,9 +89,11 @@ public sealed class TelecrystalMinerSystem : EntitySystem
             }
 
             powerConsumer.NetworkLoad.DesiredPower = miner.PowerDraw;
-            if (powerConsumer.NetworkLoad.ReceivingPower < miner.PowerDraw)
+            if (miner.PowerDraw >= miner.MaxPowerDraw)
             {
                 miner.IsDisabled = true;
+                powerConsumer.NetworkLoad.DesiredPower = 0;
+                _chat.TrySendInGameICMessage(uid, Loc.GetString("tc-miner-overload"), InGameICChatType.Speak, false);
                 continue; // пусть игрок сам перезапускает майер
             }
 
@@ -102,7 +105,7 @@ public sealed class TelecrystalMinerSystem : EntitySystem
                 continue;
 
             miner.LastUpdate = currentTime;
-            _audio.PlayPvs(miner.MiningSound, entity);
+            _audio.PlayPvs(miner.MiningSound, uid);
 
             if ((currentTime - miner.StartTime.Value).TotalSeconds >= 50)
             {
@@ -110,12 +113,12 @@ public sealed class TelecrystalMinerSystem : EntitySystem
                 miner.AccumulatedTC += 1;
                 miner.PowerDraw = Math.Min(miner.PowerDraw + miner.PowerIncreasePerTC, miner.MaxPowerDraw);
 
-                if (!_containerSystem.TryGetContainer(entity, "tc_slot", out var container))
+                if (!_containerSystem.TryGetContainer(uid, "tc_slot", out var container))
                     continue;
 
                 if (container.ContainedEntities.Count == 0)
                 {
-                    var newTC = _entityManager.SpawnEntity("Telecrystal", Transform(entity).Coordinates);
+                    var newTC = _entityManager.SpawnEntity("Telecrystal", Transform(uid).Coordinates);
                     if (TryComp(newTC, out StackComponent? newStack))
                     {
                         _stackSystem.SetCount(newTC, 1);
@@ -131,11 +134,11 @@ public sealed class TelecrystalMinerSystem : EntitySystem
             if (!miner.Notified && miner.AccumulatedTC >= 12)
             {
                 miner.Notified = true;
-                var station = _station.GetOwningStation(entity);
+                var station = _station.GetOwningStation(uid);
                 if (station != null)
                 {
                     var msg = Loc.GetString("announcement-tc-miner-10mins",
-                        ("location", FormattedMessage.RemoveMarkupOrThrow(_navMap.GetNearestBeaconString((entity, Transform(entity))))));
+                        ("location", FormattedMessage.RemoveMarkupOrThrow(_navMap.GetNearestBeaconString((uid, Transform(uid))))));
                     _chat.DispatchGlobalAnnouncement(msg, playSound: false, colorOverride: Color.Red);
                     _audio.PlayGlobal("/Audio/Misc/notice1.ogg", Filter.Broadcast(), true); // пиздец.
                 }

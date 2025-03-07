@@ -69,6 +69,7 @@
     interactDelay: 0.5
     successChance: 1
     interactSuccessSound: /Audio/Effects/pop.ogg
+  - type: Speech # i want to fucking kill myself
 
 - type: entity
   parent: BaseFlatpack
