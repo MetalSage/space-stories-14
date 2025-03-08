@@ -1,7 +1,7 @@
 ﻿{
   "version": 1,
-  "license": "CC-BY-SA-3.0",
-  "copyright": "Taken from tgstation at commit https://github.com/tgstation/tgstation/commit/bfc9c6ba8126ee8c41564d68c4bfb9ce37faa8f8",
+  "license": "CC-BY-SA-3.0 & Собственная лицензия. Копирование, модификация и использование вне проекта Space Stories полностью запрещено без предварительного согласия текущего владельца проекта",
+  "copyright": "Taken from tgstation at commit https://github.com/tgstation/tgstation/commit/bfc9c6ba8126ee8c41564d68c4bfb9ce37faa8f8 & icon state создано Xcenlegend(discord:xcenlegend) для SpaceStories(Server SS14).",
   "size": {
     "x": 32,
     "y": 32
@@ -67,7 +67,6 @@
       "name": "lit-icon",
       "delays": [
         [
-          0.1,
           0.1,
           0.1,
           0.1,
