@@ -1,7 +1,7 @@
-{
+﻿{
   "version": 1,
-  "license": "CC-BY-SA-3.0",
-  "copyright": "Made by ps3moira (github)",
+  "license": "CC-BY-SA-3.0 & Собственная лицензия. Копирование, модификация и использование вне проекта Space Stories полностью запрещено без предварительного согласия текущего владельца проекта",
+  "copyright": "Modified states taken from cev-eris at commit https://github.com/discordia-space/CEV-Eris/commit/f18aa05685f13c8b424867e4219a1e727019c026 & Создано Xcenlegend(discord:xcenlegend) для SpaceStories(Server SS14).",
   "size": {
     "x": 32,
     "y": 32
