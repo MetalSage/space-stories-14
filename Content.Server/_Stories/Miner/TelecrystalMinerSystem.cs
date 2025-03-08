@@ -76,10 +76,13 @@ public sealed class TelecrystalMinerSystem : EntitySystem
         {
             // чекаем станцию
             var currentStation = _station.GetOwningStation(uid);
-            if (currentStation == null || miner.OriginStation != null && currentStation != miner.OriginStation)
+            if (currentStation == null || miner.OriginStation != null && currentStation != miner.OriginStation && miner.IsDisabled == false)
             {
-                // если не на станции то увы :j_jokerge:
-                miner.IsDisabled = true;
+                if (!miner.IsDisabled) // если не на станции то увы :j_jokerge:
+                {
+                    miner.IsDisabled = true;
+                    _chat.TrySendInGameICMessage(uid, Loc.GetString("tc-miner-nongrid"), InGameICChatType.Speak, false);
+                }
                 continue;
             }
             if (miner.IsDisabled)
