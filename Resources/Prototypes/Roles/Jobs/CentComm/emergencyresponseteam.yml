@@ -367,8 +367,10 @@
     ears: ClothingHeadsetAltCentCom
     belt: ClothingBeltMedicalFilled
     pocket1: Flare
+    pocket2: WeaponPistolMk58 # Stories
   storage:
     back:
+    - MagazinePistol # Stories
     - Hypospray
     - MedkitCombatFilled
     - MedkitCombatFilled
@@ -391,8 +393,10 @@
     ears: ClothingHeadsetAltCentCom
     belt: ClothingBeltMedicalFilled
     pocket1: Flare
+    pocket2: WeaponPistolMk58 # Stories
   storage:
     back:
+    - MagazinePistol # Stories
     - Hypospray
     - MedkitCombatFilled
     - MedkitCombatFilled
