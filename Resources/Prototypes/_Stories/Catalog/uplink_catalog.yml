@@ -112,3 +112,21 @@
     Telecrystal: 26
   categories:
   - UplinkPointless
+
+- type: listing
+  id: UplinkClothingEyesHudSyndicateAgent
+  name: Визор агента
+  description: Высокотехнологичный визор для точного обнаружения гуманоидов, оснащенный индикатором здоровья, который позволяет отслеживать состояние как вражеских, так и дружественных сил, повышая эффективность и безопасность операций.
+  productEntity: ClothingEyesHudSyndicateAgent
+  discountCategory: rareDiscounts
+  discountDownTo:
+    Telecrystal: 3
+  cost:
+    Telecrystal: 4
+  categories:
+    - UplinkWearables
+  conditions:
+    - !type:StoreWhitelistCondition
+      whitelist:
+        tags:
+          - NukeOpsUplink
