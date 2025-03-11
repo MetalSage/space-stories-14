@@ -101,10 +101,10 @@ public sealed partial class FrozeBulletsActionEvent : InstantActionEvent
 }
 public sealed partial class RecallLightsaberEvent : InstantActionEvent { }
 public sealed partial class RecallEquipmentsEvent : InstantActionEvent { }
-public sealed partial class SithPolymorphEvent : InstantActionEvent
+public sealed partial class InquisitorPolymorphEvent : InstantActionEvent
 {
     [DataField("prototype", customTypeSerializer: typeof(PrototypeIdSerializer<PolymorphPrototype>))]
-    public string PolymorphPrototype { get; set; } = "SithGhost";
+    public string PolymorphPrototype { get; set; } = "InquisitorGhost";
 
     /// <summary>
     /// How long the smoke stays for, after it has spread.

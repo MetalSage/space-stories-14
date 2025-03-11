@@ -1,8 +1,8 @@
 - type: job
-  id: JediNt
+  id: GuardianNt
   name: страж клинка
   description: Встань на защиту командования станции со своим крутым мечом и способностями!
-  playTimeTracker: JobJediNt
+  playTimeTracker: JobGuardianNt
   requirements:
     - !type:RoleTimeRequirement
       role: JobHeadOfSecurity
@@ -16,8 +16,8 @@
     - !type:RoleTimeRequirement
       role: JobDetective
       time: 18000 # 5 hours
-  startingGear: JediNtGear
-  icon: "JobIconJediNt"
+  startingGear: GuardianNtGear
+  icon: "JobIconGuardianNt"
   supervisors: job-supervisors-centcom
   canBeAntag: false
   accessGroups:
@@ -29,12 +29,12 @@
     components:
     - type: Force
     - type: ForceUser
-      preset: Jedi
+      preset: Guardian
 
 - type: startingGear
-  id: JediNtGear
+  id: GuardianNtGear
   equipment:
-    id: JediNtPDA
-    ears: ClothingHeadsetJediNtAlt
+    id: GuardianNtPDA
+    ears: ClothingHeadsetGuardianNtAlt
     gloves: ClothingHandsGlovesCombat
     eyes: ClothingEyesGlassesSecurity

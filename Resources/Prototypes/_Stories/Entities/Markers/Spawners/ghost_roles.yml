@@ -2,7 +2,7 @@
   categories: [ HideSpawnMenu ]
   parent: BaseAntagSpawner
   suffix: Инквизитор
-  id: SpawnPointSith
+  id: SpawnPointInquisitor
   components:
   - type: SpawnPoint
   - type: GhostRole
@@ -13,8 +13,8 @@
     sprite: Markers/jobs.rsi
     layers:
       - state: green
-      - sprite: _Stories/Mobs/Ghosts/sith.rsi
-        state: sith
+      - sprite: _Stories/Mobs/Ghosts/inquisitor.rsi
+        state: inquisitor
 
 - type: entity
   id: SpawnPointGhostSpaf

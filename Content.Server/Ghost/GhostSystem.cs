@@ -1,6 +1,6 @@
 using System.Linq;
 using System.Numerics;
-using Content.Server._Corvax.Sponsors;
+using Content.Server._Stories.Partners;
 using Content.Server.Database;
 using Content.Server.Administration.Logs;
 using Content.Server.Chat.Managers;
@@ -45,7 +45,7 @@ namespace Content.Server.Ghost
     {
         [Dependency] private readonly SharedActionsSystem _actions = default!;
         [Dependency] private readonly IAdminLogManager _adminLog = default!;
-        [Dependency] private readonly SponsorsManager _partners = default!;
+        [Dependency] private readonly PartnersManager _partners = default!;
         [Dependency] private readonly SharedEyeSystem _eye = default!;
         [Dependency] private readonly FollowerSystem _followerSystem = default!;
         [Dependency] private readonly IGameTiming _gameTiming = default!;

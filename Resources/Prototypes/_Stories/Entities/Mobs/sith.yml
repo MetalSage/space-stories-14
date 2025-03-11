@@ -1,9 +1,9 @@
 - type: entity
-  id: MobSithGhost
+  id: MobInquisitorGhost
   name: инквизитор
   description: Очень страшный.
   components:
-  - type: SithGhost
+  - type: InquisitorGhost
     range: 5
   - type: PassiveGhostBoo
     range: 5
@@ -19,9 +19,9 @@
   - type: Sprite
     noRot: true
     drawdepth: Ghosts
-    sprite: _Stories/Mobs/Ghosts/sith.rsi
+    sprite: _Stories/Mobs/Ghosts/inquisitor.rsi
     layers:
-    - state: sith
+    - state: inquisitor
   - type: Clickable
   - type: StatusEffects
     allowed:

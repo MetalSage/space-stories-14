@@ -5,9 +5,9 @@ using Content.Server.Administration.Notes;
 using Content.Server.Afk;
 using Content.Server.Chat.Managers;
 using Content.Server.Connection;
-using Content.Server._Corvax.DiscordAuth;
-using Content.Server._Corvax.JoinQueue;
-using Content.Server._Corvax.Sponsors;
+using Content.Server._Stories.DiscordAuth;
+using Content.Server._Stories.JoinQueue;
+using Content.Server._Stories.Partners;
 using Content.Server._Stories.TTS;
 using Content.Server.Database;
 using Content.Server.Discord;
@@ -46,7 +46,7 @@ namespace Content.Server.IoC
             IoCManager.Register<IMoMMILink, MoMMILink>();
             IoCManager.Register<IServerPreferencesManager, ServerPreferencesManager>();
             IoCManager.Register<IServerDbManager, ServerDbManager>();
-            IoCManager.Register<IPartnersManager, PartnersManager>();
+            IoCManager.Register<IPartnersApiClient, PartnersApiClient>(); // Corvax-Sponsors
             IoCManager.Register<RecipeManager, RecipeManager>();
             IoCManager.Register<INodeGroupFactory, NodeGroupFactory>();
             IoCManager.Register<IConnectionManager, ConnectionManager>();
@@ -67,7 +67,7 @@ namespace Content.Server.IoC
             IoCManager.Register<IAdminLogManager, AdminLogManager>();
             IoCManager.Register<PlayTimeTrackingManager>();
             IoCManager.Register<UserDbDataManager>();
-            IoCManager.Register<SponsorsManager>(); // Corvax-Sponsors
+            IoCManager.Register<PartnersManager>(); // Corvax-Sponsors
             IoCManager.Register<JoinQueueManager>(); // Corvax-Queue
             IoCManager.Register<DiscordAuthManager>(); // Corvax-DiscordAuth
             IoCManager.Register<TTSManager>(); // Stories-TTS

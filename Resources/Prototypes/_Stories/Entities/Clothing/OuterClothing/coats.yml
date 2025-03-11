@@ -1,6 +1,6 @@
 - type: entity
   parent: ClothingOuterStorageToggleableBase
-  id: ClothingOuterCoatJedi
+  id: ClothingOuterCoatGuardian
   name: накидка джедая
   description: Длинный вид одежды, который свободно лежит на плечах, охватывая шею.
   components:
@@ -8,15 +8,15 @@
     tags:
       - ForceRecallEquipment
   - type: ToggleableClothing
-    clothingPrototype: ClothingHeadHatHoodJedihood
+    clothingPrototype: ClothingHeadHatHoodGuardianhood
   - type: TemperatureProtection
     heatingCoefficient: 0.005
     coolingCoefficient: 0.005
   - type: AllowSuitStorage
   - type: Sprite
-    sprite: _Stories/Clothing/OuterClothing/Coats/jedi.rsi
+    sprite: _Stories/Clothing/OuterClothing/Coats/guardian.rsi
   - type: Clothing
-    sprite: _Stories/Clothing/OuterClothing/Coats/jedi.rsi
+    sprite: _Stories/Clothing/OuterClothing/Coats/guardian.rsi
   - type: Armor
     modifiers:
       coefficients:

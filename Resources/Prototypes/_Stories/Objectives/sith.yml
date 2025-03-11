@@ -13,7 +13,7 @@
 
 - type: entity
   parent: [BaseInquisitorObjective, BaseKillObjective]
-  id: KillJediNtObjective
+  id: KillGuardianNtObjective
   description: Уничтожьте его.
   components:
   - type: Objective
@@ -22,7 +22,7 @@
   - type: TargetObjective
     title: objective-condition-kill-head-title
   - type: PickRandomJobPerson
-    jobID: JediNt
+    jobID: GuardianNt
   - type: KillPersonCondition
     # don't count missing evac as killing as heads are higher profile, so you really need to do the dirty work
     # if ce flies a shittle to centcom you better find a way onto it
@@ -30,15 +30,15 @@
 
 - type: entity
   parent: [BaseInquisitorObjective, BaseSurviveObjective]
-  id: SithSurviveObjective
+  id: InquisitorSurviveObjective
   name: Выжить.
   description: У вас нет планов умирать.
   components:
   - type: Objective
     difficulty: 1.0
     icon:
-      sprite: _Stories/Mobs/Ghosts/sith.rsi
-      state: sith
+      sprite: _Stories/Mobs/Ghosts/inquisitor.rsi
+      state: inquisitor
 
 - type: entity
   parent: BaseInquisitorObjective
@@ -47,10 +47,10 @@
   components:
   - type: Objective
     icon:
-      sprite: _Stories/Mobs/Ghosts/sith.rsi
+      sprite: _Stories/Mobs/Ghosts/inquisitor.rsi
       state: empire
   - type: NumberObjective
     min: 3
     max: 3
-    title: objective-sith-hypnosis-title
+    title: objective-inquisitor-hypnosis-title
   - type: HypnosisCondition

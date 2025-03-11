@@ -3,9 +3,9 @@ using Content.Client.Changelog;
 using Content.Client.Chat.Managers;
 using Content.Client.Clickable;
 using Content.Client.DebugMon;
-using Content.Client._Corvax.DiscordAuth;
-using Content.Client._Corvax.JoinQueue;
-using Content.Client._Corvax.Sponsors;
+using Content.Client._Stories.DiscordAuth;
+using Content.Client._Stories.JoinQueue;
+using Content.Client._Stories.Partners;
 using Content.Client.Options;
 using Content.Client.Eui;
 using Content.Client.Fullscreen;
@@ -63,7 +63,7 @@ namespace Content.Client.IoC
             collection.Register<PlayerRateLimitManager>();
             collection.Register<SharedPlayerRateLimitManager, PlayerRateLimitManager>();
             collection.Register<TitleWindowManager>();
-            IoCManager.Register<SponsorsManager>(); // Corvax-Sponsors
+            IoCManager.Register<PartnersManager>(); // Corvax-Sponsors
             IoCManager.Register<JoinQueueManager>(); // Corvax-Queue
             IoCManager.Register<DiscordAuthManager>(); // Corvax-DiscordAuth
         }

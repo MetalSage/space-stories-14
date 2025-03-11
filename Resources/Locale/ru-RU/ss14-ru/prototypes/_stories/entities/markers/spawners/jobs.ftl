@@ -1,5 +1,5 @@
 ent-SpawnPointJobBaseStories = { ent-MarkerBase }
     .suffix = Job Spawn
     .desc = { ent-MarkerBase.desc }
-ent-SpawnPointJediNt = jedint
+ent-SpawnPointGuardianNt = guardiannt
     .desc = { ent-SpawnPointJobBaseStories.desc }

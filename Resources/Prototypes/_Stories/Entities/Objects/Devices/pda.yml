@@ -1,6 +1,6 @@
 - type: entity
   parent: BaseSecurityPDA
-  id: JediNtPDA
+  id: GuardianNtPDA
   name: КПК стража клинка
   description: Красный значит мощный. На нём имеются царапины от светового меча.
   components:
@@ -8,7 +8,7 @@
     tags:
       - ForceRecallEquipment
   - type: Pda
-    id: JediNtIDCard
+    id: GuardianNtIDCard
   - type: Appearance
     appearanceDataInit:
       enum.PdaVisuals.PdaType:

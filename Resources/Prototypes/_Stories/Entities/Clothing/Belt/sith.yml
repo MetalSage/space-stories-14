@@ -1,13 +1,13 @@
 - type: entity
   parent: ClothingBeltStorageBase
-  id: ClothingBeltSith
+  id: ClothingBeltInquisitor
   name: пояс инквизитора
   description: Просто пояс.
   components:
   - type: Sprite
-    sprite: _Stories/Clothing/Belt/belt_sith.rsi
+    sprite: _Stories/Clothing/Belt/belt_inquisitor.rsi
   - type: Clothing
-    sprite: _Stories/Clothing/Belt/belt_sith.rsi
+    sprite: _Stories/Clothing/Belt/belt_inquisitor.rsi
   - type: Tag
     tags:
       - ForceRecallEquipment

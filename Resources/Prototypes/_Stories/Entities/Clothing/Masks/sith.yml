@@ -1,6 +1,6 @@
 - type: entity
   parent: ClothingMaskGas
-  id: ClothingMaskGasSith
+  id: ClothingMaskGasInquisitor
   name: маска инквизитора
   description: Зловещая маска. Она так манит надеть её...
   components:
@@ -10,9 +10,9 @@
   - type: Item
     size: Tiny
   - type: Sprite
-    sprite: _Stories/Clothing/Mask/mask_sith.rsi
+    sprite: _Stories/Clothing/Mask/mask_inquisitor.rsi
   - type: Clothing
-    sprite: _Stories/Clothing/Mask/mask_sith.rsi
+    sprite: _Stories/Clothing/Mask/mask_inquisitor.rsi
   - type: Armor
     modifiers:
       coefficients:

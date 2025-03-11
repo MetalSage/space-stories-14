@@ -1,12 +1,12 @@
-ent-ClothingUniformJumpsuitJedi = роба джедая
+ent-ClothingUniformJumpsuitGuardian = роба джедая
     .desc = Свободная роба, носимая членами Ордена джедаев.
-ent-ClothingUniformJumpsuitJediNt = униформа стража клинка
+ent-ClothingUniformJumpsuitGuardianNt = униформа стража клинка
     .desc = Специальная униформа, никак не повышающая точность владения мечом.
 ent-ClothingUniformJumpsuitSith = униформа инквизитора
     .desc = Однажды на одной станции Галактической Империи...
 ent-ClothingUniformJumpsuitKylo = униформа кайло рена
     .desc = Однажды на одной станции Первого Ордена...
-ent-ClothingUniformJumpsuitJediNomad = униформа путника
+ent-ClothingUniformJumpsuitGuardianNomad = униформа путника
     .desc = Униформа, никак не повышающая точность владения мечом.
 ent-ClothingUniformJumpsuitExe = униформа хранителя
     .desc = Специальная униформа, никак не повышающая точность владения мечом.

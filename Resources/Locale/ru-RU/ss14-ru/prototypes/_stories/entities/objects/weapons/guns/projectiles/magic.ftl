@@ -1,4 +1,4 @@
-ent-JediPushBall = base bullet rubber
+ent-GuardianPushBall = base bullet rubber
     .desc = { ent-BaseBullet.desc }
 ent-BulletRedPlazma = disabler bolt
     .desc = { ent-BaseBullet.desc }

@@ -1,4 +1,4 @@
-ent-ClothingBackpackSatchelJediNt = сумка стража клинка
+ent-ClothingBackpackSatchelGuardianNt = сумка стража клинка
     .desc = Где же моя помадка?
 ent-ClothingBackpackSatchelAdidos = сумка
     .desc = Модная сумка.

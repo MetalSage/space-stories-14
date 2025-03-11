@@ -38,21 +38,21 @@
 
 - type: entity
   parent: BaseFigurineStories
-  id: ToyFigurineSith
+  id: ToyFigurineInquisitor
   name: фигурка инквизитора
   description: Я пришел за тобой!
   components:
   - type: Sprite
-    state: sith
+    state: inquisitor
 
 - type: entity
   parent: BaseFigurineStories
-  id: ToyFigurineJediNt
+  id: ToyFigurineGuardianNt
   name: фигурка стража клинка
   description: Он такой красивый!
   components:
   - type: Sprite
-    state: jedint
+    state: guardiannt
 
 - type: entity
   parent: BaseFigurineStories

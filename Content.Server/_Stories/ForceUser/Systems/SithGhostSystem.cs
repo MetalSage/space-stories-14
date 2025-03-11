@@ -7,7 +7,7 @@ using Content.Shared.Mind;
 using Content.Shared.Mind.Components;
 
 namespace Content.Server._Stories.ForceUser.Systems;
-public sealed partial class SithGhostSystem : EntitySystem
+public sealed partial class InquisitorGhostSystem : EntitySystem
 {
     [Dependency] private readonly SharedActionsSystem _actions = default!;
     [Dependency] private readonly PoweredLightSystem _poweredLight = default!;
@@ -18,10 +18,10 @@ public sealed partial class SithGhostSystem : EntitySystem
     public override void Initialize()
     {
         base.Initialize();
-        SubscribeLocalEvent<SithGhostComponent, MindAddedMessage>(OnInit);
-        SubscribeLocalEvent<SithGhostComponent, RevertPolymorphActionEvent>(OnRevert);
+        SubscribeLocalEvent<InquisitorGhostComponent, MindAddedMessage>(OnInit);
+        SubscribeLocalEvent<InquisitorGhostComponent, RevertPolymorphActionEvent>(OnRevert);
     }
-    private void OnInit(EntityUid uid, SithGhostComponent component, MindAddedMessage args)
+    private void OnInit(EntityUid uid, InquisitorGhostComponent component, MindAddedMessage args)
     {
         if (_mind.TryGetMind(uid, out var mind, out _))
             _actions.RemoveProvidedActions(uid, mind);
@@ -32,7 +32,7 @@ public sealed partial class SithGhostSystem : EntitySystem
             }
         _actions.AddAction(uid, component.RevertActionPrototype);
     }
-    private void OnRevert(EntityUid uid, SithGhostComponent component, RevertPolymorphActionEvent args)
+    private void OnRevert(EntityUid uid, InquisitorGhostComponent component, RevertPolymorphActionEvent args)
     {
         foreach (var (ent, comp) in _lookup.GetEntitiesInRange<PoweredLightComponent>(_xform.GetMapCoordinates(uid), component.Range))
         {

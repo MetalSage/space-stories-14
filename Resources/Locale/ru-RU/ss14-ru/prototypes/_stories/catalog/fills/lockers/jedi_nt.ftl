@@ -1,3 +1,3 @@
-ent-LockerJediNtFilled = { ent-LockerJediNt }
+ent-LockerGuardianNtFilled = { ent-LockerGuardianNt }
     .suffix = Заполненный
-    .desc = { ent-LockerJediNt.desc }
+    .desc = { ent-LockerGuardianNt.desc }

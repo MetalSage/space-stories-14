@@ -1,6 +1,6 @@
 - type: entity
   parent: ClothingBackpack
-  id: ClothingBackpackJediNt
+  id: ClothingBackpackGuardianNt
   name: рюкзак стража клинка
   description: Кажется, вы где-то это уже видели.
   components:
@@ -8,7 +8,7 @@
     tags:
       - ForceRecallEquipment
   - type: Sprite
-    sprite: _Stories/Clothing/Back/Backpacks/jedi_nt.rsi
+    sprite: _Stories/Clothing/Back/Backpacks/guardian_nt.rsi
 
 - type: entity
   parent: ClothingBackpack

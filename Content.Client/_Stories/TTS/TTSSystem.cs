@@ -1,5 +1,5 @@
 ﻿using Content.Shared.Chat;
-using Content.Shared._Corvax.CCCVars;
+using Content.Shared._Stories.SCCVars;
 using Content.Shared._Stories.TTS;
 using Robust.Client.Audio;
 using Robust.Client.ResourceManagement;
@@ -45,14 +45,14 @@ public sealed class TTSSystem : EntitySystem
     {
         _sawmill = Logger.GetSawmill("tts");
         _res.AddRoot(Prefix, _contentRoot);
-        _cfg.OnValueChanged(CCCVars.TTSVolume, OnTtsVolumeChanged, true);
+        _cfg.OnValueChanged(SCCVars.TTSVolume, OnTtsVolumeChanged, true);
         SubscribeNetworkEvent<PlayTTSEvent>(OnPlayTTS);
     }
 
     public override void Shutdown()
     {
         base.Shutdown();
-        _cfg.UnsubValueChanged(CCCVars.TTSVolume, OnTtsVolumeChanged);
+        _cfg.UnsubValueChanged(SCCVars.TTSVolume, OnTtsVolumeChanged);
         _contentRoot.Dispose();
     }
 

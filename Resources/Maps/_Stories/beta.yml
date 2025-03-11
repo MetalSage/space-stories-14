@@ -69986,7 +69986,7 @@ entities:
     - type: Transform
       pos: 22.5,0.5
       parent: 2
-- proto: LockerJediNt
+- proto: LockerGuardianNt
   entities:
   - uid: 10142
     components:
@@ -82113,7 +82113,7 @@ entities:
     - type: Transform
       pos: 37.5,-5.5
       parent: 2
-- proto: SpawnPointJediNt
+- proto: SpawnPointGuardianNt
   entities:
   - uid: 12159
     components:

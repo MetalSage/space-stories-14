@@ -1,5 +1,5 @@
 using System.Diagnostics.CodeAnalysis;
-using Content.Client._Corvax.Sponsors;
+using Content.Client._Stories.Partners;
 using Content.Shared.Humanoid.Prototypes;
 using Robust.Shared.Player;
 using Robust.Shared.Prototypes;
@@ -19,7 +19,7 @@ public sealed partial class PartnerLoadoutEffect : LoadoutEffect
 
         try
         {
-            var manager = collection.Resolve<SponsorsManager>();
+            var manager = collection.Resolve<PartnersManager>();
             if (!manager.TryGetInfo(out var sponsorInfo) || sponsorInfo.Tier < MinTier)
             {
                 return false;

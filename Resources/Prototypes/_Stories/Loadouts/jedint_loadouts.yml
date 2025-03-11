@@ -1,22 +1,22 @@
 - type: roleLoadout
-  id: JobJediNt
+  id: JobGuardianNt
   groups:
-  - JediNtHead
-  - JediNtMask
-  - JediNtNeck
-  - JediNtJumpsuit
-  - JediNtBelt
-  - JediNtBackpack
-  - JediNtOuterClothing
-  - JediNtShoes
-  - JediNtLightsaber
+  - GuardianNtHead
+  - GuardianNtMask
+  - GuardianNtNeck
+  - GuardianNtJumpsuit
+  - GuardianNtBelt
+  - GuardianNtBackpack
+  - GuardianNtOuterClothing
+  - GuardianNtShoes
+  - GuardianNtLightsaber
   - SurvivalSecurity
   - Trinkets
   - GroupSpeciesBreathTool
 
 - type: loadoutGroup
-  id: JediNtHead
-  name: loadout-group-Jedi-head
+  id: GuardianNtHead
+  name: loadout-group-Guardian-head
   minLimit: 0
   loadouts:
   # Stories-Partners-Start
@@ -24,8 +24,8 @@
   # Stories-Partners-End
 
 - type: loadoutGroup
-  id: JediNtMask
-  name: loadout-group-Jedi-mask
+  id: GuardianNtMask
+  name: loadout-group-Guardian-mask
   minLimit: 0
   loadouts:
   # Stories-Partners-Start
@@ -33,53 +33,53 @@
   # Stories-Partners-End
 
 - type: loadoutGroup
-  id: JediNtShoes
-  name: loadout-group-Jedi-shoes
+  id: GuardianNtShoes
+  name: loadout-group-Guardian-shoes
   loadouts:
-  - ClothingShoesBootsJackJediNt
+  - ClothingShoesBootsJackGuardianNt
   # Stories-Partners-Start
-  - ClothingShoesBootsJackJedi
-  - ClothingShoesBootsJackJediNomad
+  - ClothingShoesBootsJackGuardian
+  - ClothingShoesBootsJackGuardianNomad
   - ClothingShoesBootsExe
   # Stories-Partners-End
 
 - type: loadoutGroup
-  id: JediNtBelt
-  name: loadout-group-Jedi-belt
+  id: GuardianNtBelt
+  name: loadout-group-Guardian-belt
   loadouts:
   - SecurityBelt
-  - ClothingBeltJedi
+  - ClothingBeltGuardian
   - ClothingBeltSheathExe
 
 - type: loadoutGroup
-  id: JediNtNeck
-  name: loadout-group-Jedi-neck
+  id: GuardianNtNeck
+  name: loadout-group-Guardian-neck
   minLimit: 0
   loadouts:
   # Stories-Partners-Start
-  - ClothingNeckMantleJediNt
+  - ClothingNeckMantleGuardianNt
   # Stories-Partners-End
   - ClothingNeckCloakExe
-  - ClothingNeckMantleJediNomad
+  - ClothingNeckMantleGuardianNomad
 
 - type: loadoutGroup
-  id: JediNtJumpsuit
-  name: loadout-group-Jedi-jumpsuits
+  id: GuardianNtJumpsuit
+  name: loadout-group-Guardian-jumpsuits
   minLimit: 1
   loadouts:
-  - ClothingUniformJumpsuitJediNt
+  - ClothingUniformJumpsuitGuardianNt
   # Stories-Partners-Start
-  - ClothingUniformJumpsuitJedi
-  - ClothingUniformJumpsuitJediNomad
+  - ClothingUniformJumpsuitGuardian
+  - ClothingUniformJumpsuitGuardianNomad
   - ClothingUniformJumpsuitExe
   # Stories-Partners-End
 
 - type: loadoutGroup
-  id: JediNtBackpack
-  name: loadout-group-Jedi-backpack
+  id: GuardianNtBackpack
+  name: loadout-group-Guardian-backpack
   loadouts:
-  - ClothingBackpackJediNt
-  - ClothingBackpackSatchelJediNt
+  - ClothingBackpackGuardianNt
+  - ClothingBackpackSatchelGuardianNt
   # Stories-Partners-Start
   # Adidos
   - ClothingBackpackHandbagAdidos
@@ -109,19 +109,19 @@
   # Stories-Partners-End
 
 - type: loadoutGroup
-  id: JediNtOuterClothing
-  name: loadout-group-Jedi-outer-clothing
+  id: GuardianNtOuterClothing
+  name: loadout-group-Guardian-outer-clothing
   minLimit: 0
   loadouts:
-  - ClothingOuterVestJediNt
+  - ClothingOuterVestGuardianNt
   # Stories-Partners-Start
-  - ClothingOuterCoatJedi
+  - ClothingOuterCoatGuardian
   - ClothingOuterVestArmorExe
   # Stories-Partners-End
 
 - type: loadoutGroup
-  id: JediNtLightsaber
-  name: loadout-group-Jedi-lightsaber
+  id: GuardianNtLightsaber
+  name: loadout-group-Guardian-lightsaber
   minLimit: 1
   loadouts:
   - STLightsaberBlue
@@ -215,7 +215,7 @@
   id: STLightsaberYellow
   effects:
   - !type:GroupLoadoutEffect
-    proto: STBeginnerJedi
+    proto: STBeginnerGuardian
   equipment:
     pocket1: STLightsaberYellow
 
@@ -225,19 +225,19 @@
   id: STLightsaberPurple
   effects:
   - !type:GroupLoadoutEffect
-    proto: STMasterJedi
+    proto: STMasterGuardian
   equipment:
     pocket1: STLightsaberPurple
 
 # Накидка джедая
 
 - type: loadout
-  id: ClothingOuterCoatJedi
+  id: ClothingOuterCoatGuardian
   effects:
   - !type:GroupLoadoutEffect
     proto: PartnerMinTier1
   equipment:
-    outerClothing: ClothingOuterCoatJedi
+    outerClothing: ClothingOuterCoatGuardian
 
 # Бронежилет хранителя
 
@@ -252,33 +252,33 @@
 # Бронежилет стража
 
 - type: loadout
-  id: ClothingOuterVestJediNt
+  id: ClothingOuterVestGuardianNt
   equipment:
-    outerClothing: ClothingOuterVestJediNt
+    outerClothing: ClothingOuterVestGuardianNt
 
 # Рюкзак стража
 
 - type: loadout
-  id: ClothingBackpackJediNt
+  id: ClothingBackpackGuardianNt
   equipment:
-    back: ClothingBackpackJediNt
+    back: ClothingBackpackGuardianNt
 
 # Рюкзак стража
 
 - type: loadout
-  id: ClothingBackpackSatchelJediNt
+  id: ClothingBackpackSatchelGuardianNt
   equipment:
-    back: ClothingBackpackSatchelJediNt
+    back: ClothingBackpackSatchelGuardianNt
 
 # Роба джедая
 
 - type: loadout
-  id: ClothingUniformJumpsuitJedi
+  id: ClothingUniformJumpsuitGuardian
   effects:
   - !type:GroupLoadoutEffect
     proto: PartnerMinTier1
   equipment:
-    jumpsuit: ClothingUniformJumpsuitJedi
+    jumpsuit: ClothingUniformJumpsuitGuardian
 
 # Комбинезон хранителя
 
@@ -293,19 +293,19 @@
 # Комбинезон путника
 
 - type: loadout
-  id: ClothingUniformJumpsuitJediNomad
+  id: ClothingUniformJumpsuitGuardianNomad
   effects:
   - !type:GroupLoadoutEffect
     proto: PartnerMinTier3
   equipment:
-    jumpsuit: ClothingUniformJumpsuitJediNomad
+    jumpsuit: ClothingUniformJumpsuitGuardianNomad
 
 # Униформа стража
 
 - type: loadout
-  id: ClothingUniformJumpsuitJediNt
+  id: ClothingUniformJumpsuitGuardianNt
   equipment:
-    jumpsuit: ClothingUniformJumpsuitJediNt
+    jumpsuit: ClothingUniformJumpsuitGuardianNt
 
 # Плащ хранителя
 
@@ -320,36 +320,36 @@
 # Мантия стража
 
 - type: loadout
-  id: ClothingNeckMantleJediNt
+  id: ClothingNeckMantleGuardianNt
   equipment:
-    neck: ClothingNeckMantleJediNt
+    neck: ClothingNeckMantleGuardianNt
 
 # Мантия путника
 
 - type: loadout
-  id: ClothingNeckMantleJediNomad
+  id: ClothingNeckMantleGuardianNomad
   effects:
   - !type:GroupLoadoutEffect
     proto: PartnerMinTier3
   equipment:
-    neck: ClothingNeckMantleJediNomad
+    neck: ClothingNeckMantleGuardianNomad
 
 # Ботинки стража
 
 - type: loadout
-  id: ClothingShoesBootsJackJediNt
+  id: ClothingShoesBootsJackGuardianNt
   equipment:
-    shoes: ClothingShoesBootsJackJediNt
+    shoes: ClothingShoesBootsJackGuardianNt
 
 # Ботинки путника
 
 - type: loadout
-  id: ClothingShoesBootsJackJediNomad
+  id: ClothingShoesBootsJackGuardianNomad
   effects:
   - !type:GroupLoadoutEffect
     proto: PartnerMinTier3
   equipment:
-    shoes: ClothingShoesBootsJackJediNomad
+    shoes: ClothingShoesBootsJackGuardianNomad
 
 # Ботинки хранителя
 
@@ -364,22 +364,22 @@
 # Ботинки джедая
 
 - type: loadout
-  id: ClothingShoesBootsJackJedi
+  id: ClothingShoesBootsJackGuardian
   effects:
   - !type:GroupLoadoutEffect
     proto: PartnerMinTier1
   equipment:
-    shoes: ClothingShoesBootsJackJedi
+    shoes: ClothingShoesBootsJackGuardian
 
 # Пояс джедая
 
 - type: loadout
-  id: ClothingBeltJedi
+  id: ClothingBeltGuardian
   effects:
   - !type:GroupLoadoutEffect
     proto: PartnerMinTier1
   equipment:
-    belt: ClothingBeltJedi
+    belt: ClothingBeltGuardian
 
 # Пояс хранителя
 

@@ -12,19 +12,19 @@
 
 - type: entity
   parent: IDCardStandard
-  id: JediNtIDCard
+  id: GuardianNtIDCard
   name: ID карта стража клинка
   description: Карта, необходимая для доступа в различные области станции.
   components:
     - type: Sprite
       layers:
         - state: centcom
-        - state: idjedint
+        - state: idguardiannt
           sprite: _Stories/Objects/Misc/id_cards.rsi
     - type: Item
       heldPrefix: blue
     - type: PresetIdCard
-      job: JediNt
+      job: GuardianNt
 
 - type: entity
   parent: IDCardStandard

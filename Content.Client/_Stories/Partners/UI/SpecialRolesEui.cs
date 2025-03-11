@@ -6,7 +6,7 @@ using Robust.Shared.Utility;
 using Content.Shared._Stories.Partners;
 using Robust.Client.Player;
 using Content.Client.GameTicking.Managers;
-using Content.Client._Corvax.Sponsors;
+using Content.Client._Stories.Partners;
 
 namespace Content.Client._Stories.Partners.UI;
 
@@ -14,7 +14,7 @@ public sealed class SpecialRolesEui : BaseEui
 {
     [Dependency] private readonly IPlayerManager _playerManager = default!;
     [Dependency] private readonly IEntityManager _entity = default!;
-    [Dependency] private readonly SponsorsManager _partners = default!;
+    [Dependency] private readonly PartnersManager _partners = default!;
     private readonly ClientGameTicker _gameTicker = default!;
     [ViewVariables] private readonly SpecialRolesMenu _menu;
     [ViewVariables] public string CurrentRole { get; set; } = default!;

@@ -5,9 +5,9 @@ using Content.Server.Administration.Managers;
 using Content.Server.Afk;
 using Content.Server.Chat.Managers;
 using Content.Server.Connection;
-using Content.Server._Corvax.DiscordAuth;
-using Content.Server._Corvax.JoinQueue;
-using Content.Server._Corvax.Sponsors;
+using Content.Server._Stories.DiscordAuth;
+using Content.Server._Stories.JoinQueue;
+using Content.Server._Stories.Partners;
 using Content.Server._Stories.TTS;
 using Content.Server.Database;
 using Content.Server.EUI;
@@ -53,7 +53,6 @@ namespace Content.Server.Entry
         private IServerDbManager? _dbManager;
         private IWatchlistWebhookManager _watchlistWebhookManager = default!;
         private IConnectionManager? _connectionManager;
-        private IPartnersManager? _partnersManager; // Stories
 
         /// <inheritdoc />
         public override void Init()
@@ -102,7 +101,6 @@ namespace Content.Server.Entry
                 _sysMan = IoCManager.Resolve<IEntitySystemManager>();
                 _dbManager = IoCManager.Resolve<IServerDbManager>();
                 _watchlistWebhookManager = IoCManager.Resolve<IWatchlistWebhookManager>();
-                _partnersManager = IoCManager.Resolve<IPartnersManager>(); // Stories
 
                 logManager.GetSawmill("Storage").Level = LogLevel.Info;
                 logManager.GetSawmill("db.ef").Level = LogLevel.Info;
@@ -110,13 +108,12 @@ namespace Content.Server.Entry
                 IoCManager.Resolve<IAdminLogManager>().Initialize();
                 IoCManager.Resolve<IConnectionManager>().Initialize();
                 _dbManager.Init();
-                _partnersManager.Init(); // Stories
                 IoCManager.Resolve<IServerPreferencesManager>().Init();
                 IoCManager.Resolve<INodeGroupFactory>().Initialize();
                 IoCManager.Resolve<ContentNetworkResourceManager>().Initialize();
                 IoCManager.Resolve<GhostKickManager>().Initialize();
                 IoCManager.Resolve<DiscordAuthManager>().Initialize(); // Corvax-DiscordAuth
-                IoCManager.Resolve<SponsorsManager>().Initialize(); // Corvax-Sponsors
+                IoCManager.Resolve<PartnersManager>().Initialize(); // Corvax-Sponsors
                 IoCManager.Resolve<JoinQueueManager>().Initialize(); // Corvax-Queue
                 IoCManager.Resolve<TTSManager>().Initialize(); // Stories-TTS
                 IoCManager.Resolve<ServerInfoManager>().Initialize();
