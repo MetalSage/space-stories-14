@@ -2,5 +2,5 @@ ent-BaseEffectProtectiveBubble = { "" }
     .desc = { "" }
 ent-EffectProtectiveBubble = { ent-BaseEffectProtectiveBubble }
     .desc = { ent-BaseEffectProtectiveBubble.desc }
-ent-EffectSithProtectiveBubble = { ent-BaseEffectProtectiveBubble }
+ent-EffectInquisitorProtectiveBubble = { ent-BaseEffectProtectiveBubble }
     .desc = { ent-BaseEffectProtectiveBubble.desc }

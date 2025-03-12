@@ -1,4 +1,4 @@
-ent-ClothingShoesSith = ботинки инквизитора
+ent-ClothingShoesInquisitor = ботинки инквизитора
     .desc = Обычные черные ботинки.
 ent-ClothingShoesBootsJackGuardian = подкованные сапоги джедая
     .desc = Созданы, чтобы ваши ножки не промокли на далеких планетах.

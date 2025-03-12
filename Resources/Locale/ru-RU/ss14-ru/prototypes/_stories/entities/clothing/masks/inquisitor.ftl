@@ -1,2 +1,2 @@
-ent-ClothingMaskGasSith = маска инквизитора
+ent-ClothingMaskGasInquisitor = маска инквизитора
     .desc = Зловещая маска. Она так манит надеть её...

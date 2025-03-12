@@ -1,4 +1,4 @@
-ent-SpawnPointSith = { ent-BaseAntagSpawner }
+ent-SpawnPointInquisitor = { ent-BaseAntagSpawner }
     .suffix = Инквизитор
     .desc = { ent-BaseAntagSpawner.desc }
 ent-SpawnPointGhostSpaf = spaf spawn point
