@@ -8161,7 +8161,7 @@ entities:
     components:
     - type: MetaData
       desc: Картонная коробка для хранения запасный карт.
-      name: Коробка ID карт зеков
+      name: Коробка ID карт заключённых
     - type: Transform
       parent: 399
     - type: Storage
@@ -42521,7 +42521,7 @@ entities:
       setupAvailableNetworks:
       - SurveillanceCameraSecurity
       nameSet: True
-      id: Камеры зеков
+      id: Камеры заключённых
   - uid: 5994
     components:
     - type: Transform
@@ -42762,7 +42762,7 @@ entities:
       setupAvailableNetworks:
       - SurveillanceCameraSecurity
       nameSet: True
-      id: Зона содержания зеков Камеры 2
+      id: Зона содержания заключённых Камеры 2
   - uid: 6017
     components:
     - type: Transform
@@ -42773,7 +42773,7 @@ entities:
       setupAvailableNetworks:
       - SurveillanceCameraSecurity
       nameSet: True
-      id: Зона содержания зеков Элитные  1
+      id: Зона содержания заключённых Элитные  1
   - uid: 6018
     components:
     - type: Transform
@@ -42784,7 +42784,7 @@ entities:
       setupAvailableNetworks:
       - SurveillanceCameraSecurity
       nameSet: True
-      id: Зона содержания зеков Камеры 3
+      id: Зона содержания заключённых Камеры 3
   - uid: 6019
     components:
     - type: Transform
@@ -42795,7 +42795,7 @@ entities:
       setupAvailableNetworks:
       - SurveillanceCameraSecurity
       nameSet: True
-      id: Зона содержания зеков Камеры 1
+      id: Зона содержания заключённых Камеры 1
   - uid: 6020
     components:
     - type: Transform
