@@ -1,6 +1,17 @@
 meta:
-  format: 6
-  postmapinit: false
+  format: 7
+  category: Map
+  engineVersion: 247.2.0
+  forkId: ""
+  forkVersion: ""
+  time: 03/14/2025 10:07:12
+  entityCount: 15120
+maps:
+- 1
+grids:
+- 2
+orphans: []
+nullspace: []
 tilemap:
   0: Space
   55: FloorArcadeBlue
@@ -85,7 +96,6 @@ entities:
     - type: MovedGrids
     - type: Broadphase
     - type: OccluderTree
-    - type: LoadedMap
     - type: Parallax
       parallax: CoreStation
     - type: MapLight
@@ -6783,11 +6793,19 @@ entities:
           - 0
           - 0
           - 0
+          - 0
+          - 0
+          - 0
+          - 0
         - volume: 2500
           temperature: 293.15
           moles:
           - 21.824879
           - 82.10312
+          - 0
+          - 0
+          - 0
+          - 0
           - 0
           - 0
           - 0
@@ -6813,9 +6831,17 @@ entities:
           - 0
           - 0
           - 0
+          - 0
+          - 0
+          - 0
+          - 0
         - volume: 2500
           temperature: 293.15
           moles:
+          - 0
+          - 0
+          - 0
+          - 0
           - 0
           - 0
           - 0
@@ -6843,6 +6869,10 @@ entities:
           - 0
           - 0
           - 0
+          - 0
+          - 0
+          - 0
+          - 0
         - volume: 2500
           temperature: 293.15
           moles:
@@ -6858,11 +6888,19 @@ entities:
           - 0
           - 0
           - 0
+          - 0
+          - 0
+          - 0
+          - 0
         - volume: 2500
           temperature: 293.15
           moles:
           - 0
           - 6666.982
+          - 0
+          - 0
+          - 0
+          - 0
           - 0
           - 0
           - 0
@@ -8945,7 +8983,7 @@ entities:
       pos: -2.5,18.5
       parent: 2
     - type: Door
-      secondsUntilStateChange: -282469.84
+      secondsUntilStateChange: -282596.2
       state: Opening
     - type: DeviceLinkSource
       lastSignals:
@@ -9164,7 +9202,7 @@ entities:
       pos: 70.5,-0.5
       parent: 2
     - type: Door
-      secondsUntilStateChange: -112905.98
+      secondsUntilStateChange: -113032.305
       state: Opening
     - type: DeviceLinkSource
       lastSignals:
@@ -9565,7 +9603,7 @@ entities:
       pos: 30.5,-13.5
       parent: 2
     - type: Door
-      secondsUntilStateChange: -144972.67
+      secondsUntilStateChange: -145099
       state: Opening
     - type: DeviceLinkSource
       lastSignals:
@@ -9793,7 +9831,7 @@ entities:
       pos: 9.5,14.5
       parent: 2
     - type: Door
-      secondsUntilStateChange: -14397.596
+      secondsUntilStateChange: -14523.928
       state: Opening
     - type: DeviceLinkSource
       lastSignals:
@@ -9957,7 +9995,7 @@ entities:
       pos: 38.5,-9.5
       parent: 2
     - type: Door
-      secondsUntilStateChange: -120011.47
+      secondsUntilStateChange: -120137.8
       state: Opening
     - type: DeviceLinkSource
       lastSignals:
@@ -9968,7 +10006,7 @@ entities:
       pos: 43.5,-9.5
       parent: 2
     - type: Door
-      secondsUntilStateChange: -132781.55
+      secondsUntilStateChange: -132907.88
       state: Opening
     - type: DeviceLinkSource
       lastSignals:
@@ -37983,6 +38021,10 @@ entities:
         - 0
         - 0
         - 0
+        - 0
+        - 0
+        - 0
+        - 0
   - uid: 5677
     components:
     - type: Transform
@@ -38011,6 +38053,10 @@ entities:
         moles:
         - 1.7459903
         - 6.568249
+        - 0
+        - 0
+        - 0
+        - 0
         - 0
         - 0
         - 0
@@ -38108,6 +38154,10 @@ entities:
         moles:
         - 1.7459903
         - 6.568249
+        - 0
+        - 0
+        - 0
+        - 0
         - 0
         - 0
         - 0
@@ -38242,6 +38292,10 @@ entities:
         - 0
         - 0
         - 0
+        - 0
+        - 0
+        - 0
+        - 0
     - type: ContainerContainer
       containers:
         entity_storage: !type:Container
@@ -38278,6 +38332,10 @@ entities:
         - 0
         - 0
         - 0
+        - 0
+        - 0
+        - 0
+        - 0
   - uid: 5716
     components:
     - type: Transform
@@ -38291,6 +38349,10 @@ entities:
         moles:
         - 1.8856695
         - 7.0937095
+        - 0
+        - 0
+        - 0
+        - 0
         - 0
         - 0
         - 0
@@ -38340,6 +38402,10 @@ entities:
         - 0
         - 0
         - 0
+        - 0
+        - 0
+        - 0
+        - 0
   - uid: 5720
     components:
     - type: Transform
@@ -38353,6 +38419,10 @@ entities:
         moles:
         - 1.8856695
         - 7.0937095
+        - 0
+        - 0
+        - 0
+        - 0
         - 0
         - 0
         - 0
@@ -38407,6 +38477,10 @@ entities:
         - 0
         - 0
         - 0
+        - 0
+        - 0
+        - 0
+        - 0
   - uid: 5725
     components:
     - type: Transform
@@ -38420,6 +38494,10 @@ entities:
         moles:
         - 1.7459903
         - 6.568249
+        - 0
+        - 0
+        - 0
+        - 0
         - 0
         - 0
         - 0
@@ -38453,6 +38531,10 @@ entities:
         - 0
         - 0
         - 0
+        - 0
+        - 0
+        - 0
+        - 0
   - uid: 5727
     components:
     - type: Transform
@@ -38471,6 +38553,10 @@ entities:
         moles:
         - 1.7459903
         - 6.568249
+        - 0
+        - 0
+        - 0
+        - 0
         - 0
         - 0
         - 0
@@ -38521,6 +38607,10 @@ entities:
         - 0
         - 0
         - 0
+        - 0
+        - 0
+        - 0
+        - 0
 - proto: ClosetWall
   entities:
   - uid: 5733
@@ -38547,6 +38637,10 @@ entities:
         - 0
         - 0
         - 0
+        - 0
+        - 0
+        - 0
+        - 0
   - uid: 5734
     components:
     - type: Transform
@@ -38561,6 +38655,10 @@ entities:
         moles:
         - 1.7459903
         - 6.568249
+        - 0
+        - 0
+        - 0
+        - 0
         - 0
         - 0
         - 0
@@ -45994,7 +46092,7 @@ entities:
       deviceLists:
       - 35
     - type: Door
-      secondsUntilStateChange: -3443.075
+      secondsUntilStateChange: -3569.4065
       state: Closing
     - type: Firelock
       emergencyCloseCooldown: 90307.2763613
@@ -68855,7 +68953,7 @@ entities:
       pos: 35.5,-39.5
       parent: 2
     - type: Door
-      secondsUntilStateChange: -96609.92
+      secondsUntilStateChange: -96736.25
       state: Closing
 - proto: HydroponicsToolClippers
   entities:
@@ -69796,6 +69894,10 @@ entities:
         - 0
         - 0
         - 0
+        - 0
+        - 0
+        - 0
+        - 0
     - type: ContainerContainer
       containers:
         entity_storage: !type:Container
@@ -69943,6 +70045,10 @@ entities:
         - 0
         - 0
         - 0
+        - 0
+        - 0
+        - 0
+        - 0
     - type: ContainerContainer
       containers:
         entity_storage: !type:Container
@@ -69954,38 +70060,6 @@ entities:
           showEnts: False
           occludes: True
           ent: null
-- proto: LockerHeadOfPersonnelFilled
-  entities:
-  - uid: 10140
-    components:
-    - type: Transform
-      pos: -5.5,16.5
-      parent: 2
-    - type: EntityStorage
-      air:
-        volume: 200
-        immutable: False
-        temperature: 293.14673
-        moles:
-        - 1.7459903
-        - 6.568249
-        - 0
-        - 0
-        - 0
-        - 0
-        - 0
-        - 0
-        - 0
-        - 0
-        - 0
-        - 0
-- proto: LockerHeadOfSecurityFilled
-  entities:
-  - uid: 10141
-    components:
-    - type: Transform
-      pos: 22.5,0.5
-      parent: 2
 - proto: LockerGuardianNt
   entities:
   - uid: 10142
@@ -70011,6 +70085,46 @@ entities:
         - 0
         - 0
         - 0
+        - 0
+        - 0
+        - 0
+        - 0
+- proto: LockerHeadOfPersonnelFilled
+  entities:
+  - uid: 10140
+    components:
+    - type: Transform
+      pos: -5.5,16.5
+      parent: 2
+    - type: EntityStorage
+      air:
+        volume: 200
+        immutable: False
+        temperature: 293.14673
+        moles:
+        - 1.7459903
+        - 6.568249
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+- proto: LockerHeadOfSecurityFilled
+  entities:
+  - uid: 10141
+    components:
+    - type: Transform
+      pos: 22.5,0.5
+      parent: 2
 - proto: LockerMedicalFilled
   entities:
   - uid: 10143
@@ -70095,6 +70209,10 @@ entities:
         - 0
         - 0
         - 0
+        - 0
+        - 0
+        - 0
+        - 0
     - type: ContainerContainer
       containers:
         entity_storage: !type:Container
@@ -70137,6 +70255,10 @@ entities:
         moles:
         - 1.7459903
         - 6.568249
+        - 0
+        - 0
+        - 0
+        - 0
         - 0
         - 0
         - 0
@@ -70263,6 +70385,10 @@ entities:
         moles:
         - 1.7459903
         - 6.568249
+        - 0
+        - 0
+        - 0
+        - 0
         - 0
         - 0
         - 0
@@ -82040,6 +82166,13 @@ entities:
     - type: Transform
       pos: 46.5,-33.5
       parent: 2
+- proto: SpawnPointChaplain
+  entities:
+  - uid: 15120
+    components:
+    - type: Transform
+      pos: -14.5,-2.5
+      parent: 2
 - proto: SpawnPointChef
   entities:
   - uid: 12148
@@ -82087,6 +82220,13 @@ entities:
     - type: Transform
       pos: 15.5,-22.5
       parent: 2
+- proto: SpawnPointGuardianNt
+  entities:
+  - uid: 12159
+    components:
+    - type: Transform
+      pos: 57.5,15.5
+      parent: 2
 - proto: SpawnPointHeadOfPersonnel
   entities:
   - uid: 12155
@@ -82112,13 +82252,6 @@ entities:
     components:
     - type: Transform
       pos: 37.5,-5.5
-      parent: 2
-- proto: SpawnPointGuardianNt
-  entities:
-  - uid: 12159
-    components:
-    - type: Transform
-      pos: 57.5,15.5
       parent: 2
 - proto: SpawnPointLawyer
   entities:
@@ -97263,6 +97396,10 @@ entities:
         moles:
         - 1.7459903
         - 6.568249
+        - 0
+        - 0
+        - 0
+        - 0
         - 0
         - 0
         - 0
