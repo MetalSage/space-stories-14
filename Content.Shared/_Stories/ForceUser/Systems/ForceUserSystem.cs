@@ -1,7 +1,6 @@
 using Content.Shared.Actions;
 using Content.Shared.Popups;
 using Content.Shared.Weapons.Ranged.Events;
-using Content.Shared._Stories.Force.Lightsaber;
 using Robust.Shared.Prototypes;
 using Content.Shared.Alert;
 using Robust.Shared.Serialization.Manager;
@@ -40,6 +39,7 @@ public abstract partial class SharedForceUserSystem : EntitySystem
         var severity = ContentHelpers.RoundToLevels(MathF.Max(0f, args.NewVolume.Float()), args.MaxVolume.Float(), 20);
         _alerts.ShowAlert(uid, component.AlertType(), (short) severity);
     }
+
     private void OnStart(EntityUid uid, ForceUserComponent component, ComponentStartup args)
     {
         if (!_proto.TryIndex<ForcePresetPrototype>(component.Preset, out var proto))
@@ -49,7 +49,10 @@ public abstract partial class SharedForceUserSystem : EntitySystem
         }
 
         if (!_force.SetVolume(uid, proto.Volume, proto.PassiveVolume, proto.MaxVolume))
-            _sawmill.Error($"{ToPrettyString(uid)} failed to set force volume");
+        {
+            RemComp(uid, component);
+            return;
+        }
 
         EntityManager.RemoveComponents(uid, proto.ToRemove);
         EntityManager.AddComponents(uid, proto.ToAdd);
