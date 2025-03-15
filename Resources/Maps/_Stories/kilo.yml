@@ -1,6 +1,17 @@
 meta:
-  format: 6
-  postmapinit: false
+  format: 7
+  category: Map
+  engineVersion: 247.2.0
+  forkId: ""
+  forkVersion: ""
+  time: 03/14/2025 10:11:20
+  entityCount: 30155
+maps:
+- 1
+grids:
+- 2
+orphans: []
+nullspace: []
 tilemap:
   0: Space
   7: FloorAsteroidSand
@@ -71,7 +82,6 @@ entities:
     - type: MovedGrids
     - type: Broadphase
     - type: OccluderTree
-    - type: LoadedMap
   - uid: 2
     components:
     - type: MetaData
@@ -14631,9 +14641,17 @@ entities:
           - 0
           - 0
           - 0
+          - 0
+          - 0
+          - 0
+          - 0
         - volume: 2500
           immutable: True
           moles:
+          - 0
+          - 0
+          - 0
+          - 0
           - 0
           - 0
           - 0
@@ -14651,6 +14669,10 @@ entities:
           moles:
           - 21.824879
           - 82.10312
+          - 0
+          - 0
+          - 0
+          - 0
           - 0
           - 0
           - 0
@@ -14676,11 +14698,19 @@ entities:
           - 0
           - 0
           - 0
+          - 0
+          - 0
+          - 0
+          - 0
         - volume: 2500
           temperature: 235
           moles:
           - 21.824879
           - 82.10312
+          - 0
+          - 0
+          - 0
+          - 0
           - 0
           - 0
           - 0
@@ -14706,6 +14736,10 @@ entities:
           - 0
           - 0
           - 0
+          - 0
+          - 0
+          - 0
+          - 0
         - volume: 2500
           temperature: 293.15
           moles:
@@ -14721,10 +14755,18 @@ entities:
           - 0
           - 0
           - 0
+          - 0
+          - 0
+          - 0
+          - 0
         - volume: 2500
           temperature: 293.15
           moles:
           - 6666.982
+          - 0
+          - 0
+          - 0
+          - 0
           - 0
           - 0
           - 0
@@ -14751,11 +14793,19 @@ entities:
           - 0
           - 0
           - 0
+          - 0
+          - 0
+          - 0
+          - 0
         - volume: 2500
           temperature: 293.15
           moles:
           - 23.57087
           - 88.67137
+          - 0
+          - 0
+          - 0
+          - 0
           - 0
           - 0
           - 0
@@ -14781,6 +14831,10 @@ entities:
           - 0
           - 0
           - 0
+          - 0
+          - 0
+          - 0
+          - 0
         - volume: 2500
           temperature: 293.15
           moles:
@@ -14796,11 +14850,19 @@ entities:
           - 0
           - 0
           - 0
+          - 0
+          - 0
+          - 0
+          - 0
         - volume: 2500
           temperature: 293.1495
           moles:
           - 20.078888
           - 75.53487
+          - 0
+          - 0
+          - 0
+          - 0
           - 0
           - 0
           - 0
@@ -17176,7 +17238,7 @@ entities:
       pos: -8.5,-12.5
       parent: 2
     - type: Door
-      secondsUntilStateChange: -15035.875
+      secondsUntilStateChange: -15250.73
       state: Opening
     - type: DeviceLinkSource
       lastSignals:
@@ -18396,6 +18458,7 @@ entities:
   - uid: 536
     components:
     - type: Transform
+      rot: -1.5707963267948966 rad
       pos: 30.5,40.5
       parent: 2
   - uid: 537
@@ -60995,6 +61058,10 @@ entities:
         - 0
         - 0
         - 0
+        - 0
+        - 0
+        - 0
+        - 0
       open: True
       removedMasks: 20
     - type: Fixtures
@@ -91369,6 +91436,10 @@ entities:
         - 0
         - 0
         - 0
+        - 0
+        - 0
+        - 0
+        - 0
     - type: ContainerContainer
       containers:
         entity_storage: !type:Container
@@ -91401,6 +91472,10 @@ entities:
         moles:
         - 1.8856695
         - 7.0937095
+        - 0
+        - 0
+        - 0
+        - 0
         - 0
         - 0
         - 0
@@ -91447,6 +91522,10 @@ entities:
         - 0
         - 0
         - 0
+        - 0
+        - 0
+        - 0
+        - 0
     - type: ContainerContainer
       containers:
         entity_storage: !type:Container
@@ -91474,6 +91553,10 @@ entities:
         moles:
         - 1.7459903
         - 6.568249
+        - 0
+        - 0
+        - 0
+        - 0
         - 0
         - 0
         - 0
@@ -91522,6 +91605,10 @@ entities:
         - 0
         - 0
         - 0
+        - 0
+        - 0
+        - 0
+        - 0
     - type: ContainerContainer
       containers:
         entity_storage: !type:Container
@@ -91547,6 +91634,10 @@ entities:
         moles:
         - 1.7459903
         - 6.568249
+        - 0
+        - 0
+        - 0
+        - 0
         - 0
         - 0
         - 0
@@ -91620,6 +91711,10 @@ entities:
         - 0
         - 0
         - 0
+        - 0
+        - 0
+        - 0
+        - 0
     - type: ContainerContainer
       containers:
         entity_storage: !type:Container
@@ -91646,6 +91741,10 @@ entities:
         moles:
         - 1.8856695
         - 7.0937095
+        - 0
+        - 0
+        - 0
+        - 0
         - 0
         - 0
         - 0
@@ -91690,6 +91789,10 @@ entities:
         - 0
         - 0
         - 0
+        - 0
+        - 0
+        - 0
+        - 0
     - type: ContainerContainer
       containers:
         entity_storage: !type:Container
@@ -91724,6 +91827,10 @@ entities:
         - 0
         - 0
         - 0
+        - 0
+        - 0
+        - 0
+        - 0
   - uid: 14983
     components:
     - type: Transform
@@ -91747,6 +91854,10 @@ entities:
         - 0
         - 0
         - 0
+        - 0
+        - 0
+        - 0
+        - 0
   - uid: 14984
     components:
     - type: Transform
@@ -91760,6 +91871,10 @@ entities:
         moles:
         - 1.7459903
         - 6.568249
+        - 0
+        - 0
+        - 0
+        - 0
         - 0
         - 0
         - 0
@@ -91820,6 +91935,10 @@ entities:
         - 0
         - 0
         - 0
+        - 0
+        - 0
+        - 0
+        - 0
     - type: ContainerContainer
       containers:
         entity_storage: !type:Container
@@ -91851,6 +91970,10 @@ entities:
         moles:
         - 1.7459903
         - 6.568249
+        - 0
+        - 0
+        - 0
+        - 0
         - 0
         - 0
         - 0
@@ -91957,6 +92080,10 @@ entities:
         - 0
         - 0
         - 0
+        - 0
+        - 0
+        - 0
+        - 0
     - type: ContainerContainer
       containers:
         entity_storage: !type:Container
@@ -91986,6 +92113,10 @@ entities:
         moles:
         - 1.7459903
         - 6.568249
+        - 0
+        - 0
+        - 0
+        - 0
         - 0
         - 0
         - 0
@@ -92040,6 +92171,10 @@ entities:
         immutable: False
         temperature: 75.31249
         moles:
+        - 0
+        - 0
+        - 0
+        - 0
         - 0
         - 0
         - 0
@@ -92449,15 +92584,6 @@ entities:
     - type: Transform
       pos: -47.586777,39.59303
       parent: 2
-- proto: ClothingHeadHatCatEars
-  entities:
-  - uid: 15079
-    components:
-    - type: Transform
-      parent: 15078
-    - type: Physics
-      canCollide: False
-    - type: InsideEntityStorage
 - proto: ClothingHeadHatChef
   entities:
   - uid: 15080
@@ -92613,6 +92739,22 @@ entities:
     - type: Transform
       pos: -67.480286,-4.3370085
       parent: 2
+- proto: ClothingMaskBlushingClown
+  entities:
+  - uid: 15131
+    components:
+    - type: Transform
+      pos: 14.542659,20.49795
+      parent: 2
+- proto: ClothingMaskBlushingMime
+  entities:
+  - uid: 8878
+    components:
+    - type: Transform
+      parent: 8873
+    - type: Physics
+      canCollide: False
+    - type: InsideEntityStorage
 - proto: ClothingMaskBreath
   entities:
   - uid: 15103
@@ -92802,22 +92944,6 @@ entities:
 - proto: ClothingMaskScaredMime
   entities:
   - uid: 8877
-    components:
-    - type: Transform
-      parent: 8873
-    - type: Physics
-      canCollide: False
-    - type: InsideEntityStorage
-- proto: ClothingMaskSexyClown
-  entities:
-  - uid: 15131
-    components:
-    - type: Transform
-      pos: 14.542659,20.49795
-      parent: 2
-- proto: ClothingMaskSexyMime
-  entities:
-  - uid: 8878
     components:
     - type: Transform
       parent: 8873
@@ -95373,6 +95499,10 @@ entities:
         - 0
         - 0
         - 0
+        - 0
+        - 0
+        - 0
+        - 0
     - type: ContainerContainer
       containers:
         entity_storage: !type:Container
@@ -95561,6 +95691,10 @@ entities:
         - 0
         - 0
         - 0
+        - 0
+        - 0
+        - 0
+        - 0
     - type: ContainerContainer
       containers:
         entity_storage: !type:Container
@@ -95678,6 +95812,10 @@ entities:
         - 0
         - 0
         - 0
+        - 0
+        - 0
+        - 0
+        - 0
     - type: ContainerContainer
       containers:
         entity_storage: !type:Container
@@ -95703,6 +95841,10 @@ entities:
         moles:
         - 1.7459903
         - 6.568249
+        - 0
+        - 0
+        - 0
+        - 0
         - 0
         - 0
         - 0
@@ -95748,17 +95890,10 @@ entities:
         - 0
         - 0
         - 0
-    - type: ContainerContainer
-      containers:
-        entity_storage: !type:Container
-          showEnts: False
-          occludes: True
-          ents:
-          - 15079
-        paper_label: !type:ContainerSlot
-          showEnts: False
-          occludes: True
-          ent: null
+        - 0
+        - 0
+        - 0
+        - 0
   - uid: 15160
     components:
     - type: Transform
@@ -95772,6 +95907,10 @@ entities:
         moles:
         - 1.7459903
         - 6.568249
+        - 0
+        - 0
+        - 0
+        - 0
         - 0
         - 0
         - 0
@@ -95806,6 +95945,10 @@ entities:
         moles:
         - 1.7459903
         - 6.568249
+        - 0
+        - 0
+        - 0
+        - 0
         - 0
         - 0
         - 0
@@ -95894,6 +96037,10 @@ entities:
         - 0
         - 0
         - 0
+        - 0
+        - 0
+        - 0
+        - 0
   - uid: 15579
     components:
     - type: Transform
@@ -95907,6 +96054,10 @@ entities:
         moles:
         - 1.8856695
         - 7.0937095
+        - 0
+        - 0
+        - 0
+        - 0
         - 0
         - 0
         - 0
@@ -96002,6 +96153,10 @@ entities:
         - 0
         - 0
         - 0
+        - 0
+        - 0
+        - 0
+        - 0
   - uid: 15589
     components:
     - type: Transform
@@ -96015,6 +96170,10 @@ entities:
         moles:
         - 1.7459903
         - 6.568249
+        - 0
+        - 0
+        - 0
+        - 0
         - 0
         - 0
         - 0
@@ -96064,6 +96223,10 @@ entities:
         - 0
         - 0
         - 0
+        - 0
+        - 0
+        - 0
+        - 0
     - type: ContainerContainer
       containers:
         entity_storage: !type:Container
@@ -96094,6 +96257,10 @@ entities:
         moles:
         - 1.7459903
         - 6.568249
+        - 0
+        - 0
+        - 0
+        - 0
         - 0
         - 0
         - 0
@@ -96158,6 +96325,10 @@ entities:
         - 0
         - 0
         - 0
+        - 0
+        - 0
+        - 0
+        - 0
   - uid: 15599
     components:
     - type: MetaData
@@ -96174,6 +96345,10 @@ entities:
         moles:
         - 1.7459903
         - 6.568249
+        - 0
+        - 0
+        - 0
+        - 0
         - 0
         - 0
         - 0
@@ -96269,6 +96444,10 @@ entities:
         - 0
         - 0
         - 0
+        - 0
+        - 0
+        - 0
+        - 0
   - uid: 15615
     components:
     - type: Transform
@@ -96311,6 +96490,10 @@ entities:
         - 0
         - 0
         - 0
+        - 0
+        - 0
+        - 0
+        - 0
     - type: ContainerContainer
       containers:
         entity_storage: !type:Container
@@ -96335,6 +96518,10 @@ entities:
         moles:
         - 1.7459903
         - 6.568249
+        - 0
+        - 0
+        - 0
+        - 0
         - 0
         - 0
         - 0
@@ -96404,6 +96591,10 @@ entities:
         moles:
         - 1.7459903
         - 6.568249
+        - 0
+        - 0
+        - 0
+        - 0
         - 0
         - 0
         - 0
@@ -100466,12 +100657,6 @@ entities:
       rot: 3.141592653589793 rad
       pos: 30.5,38.5
       parent: 2
-  - uid: 16315
-    components:
-    - type: Transform
-      rot: -1.5707963267948966 rad
-      pos: 31.5,41.5
-      parent: 2
   - uid: 16316
     components:
     - type: Transform
@@ -102119,6 +102304,12 @@ entities:
       parent: 2
 - proto: DisposalTrunk
   entities:
+  - uid: 16315
+    components:
+    - type: Transform
+      rot: -1.5707963267948966 rad
+      pos: 31.5,41.5
+      parent: 2
   - uid: 16600
     components:
     - type: Transform
@@ -102328,12 +102519,6 @@ entities:
     - type: Transform
       rot: 1.5707963267948966 rad
       pos: 27.5,41.5
-      parent: 2
-  - uid: 16637
-    components:
-    - type: Transform
-      rot: -1.5707963267948966 rad
-      pos: 32.5,41.5
       parent: 2
   - uid: 16638
     components:
@@ -102758,11 +102943,6 @@ entities:
     - type: Transform
       pos: 27.5,41.5
       parent: 2
-  - uid: 16717
-    components:
-    - type: Transform
-      pos: 32.5,41.5
-      parent: 2
   - uid: 16718
     components:
     - type: Transform
@@ -102822,6 +103002,11 @@ entities:
     components:
     - type: Transform
       pos: -45.5,6.5
+      parent: 2
+  - uid: 30155
+    components:
+    - type: Transform
+      pos: 31.5,41.5
       parent: 2
 - proto: DisposalYJunction
   entities:
@@ -104719,7 +104904,7 @@ entities:
       pos: 24.5,3.5
       parent: 2
     - type: Door
-      secondsUntilStateChange: -12181.768
+      secondsUntilStateChange: -12396.623
       state: Closing
     - type: DeviceNetwork
       deviceLists:
@@ -138580,6 +138765,10 @@ entities:
         - 0
         - 0
         - 0
+        - 0
+        - 0
+        - 0
+        - 0
 - proto: GunSafeDisabler
   entities:
   - uid: 21761
@@ -140376,6 +140565,10 @@ entities:
         - 0
         - 0
         - 0
+        - 0
+        - 0
+        - 0
+        - 0
     - type: ContainerContainer
       containers:
         entity_storage: !type:Container
@@ -140429,6 +140622,10 @@ entities:
         - 0
         - 0
         - 0
+        - 0
+        - 0
+        - 0
+        - 0
     - type: ContainerContainer
       containers:
         entity_storage: !type:Container
@@ -140467,6 +140664,10 @@ entities:
         - 0
         - 0
         - 0
+        - 0
+        - 0
+        - 0
+        - 0
     - type: ContainerContainer
       containers:
         entity_storage: !type:Container
@@ -140495,6 +140696,10 @@ entities:
         moles:
         - 1.7459903
         - 6.568249
+        - 0
+        - 0
+        - 0
+        - 0
         - 0
         - 0
         - 0
@@ -140550,6 +140755,10 @@ entities:
         moles:
         - 1.7459903
         - 6.568249
+        - 0
+        - 0
+        - 0
+        - 0
         - 0
         - 0
         - 0
@@ -140748,6 +140957,10 @@ entities:
         - 0
         - 0
         - 0
+        - 0
+        - 0
+        - 0
+        - 0
     - type: ContainerContainer
       containers:
         entity_storage: !type:Container
@@ -140837,6 +141050,10 @@ entities:
         - 0
         - 0
         - 0
+        - 0
+        - 0
+        - 0
+        - 0
     - type: ContainerContainer
       containers:
         entity_storage: !type:Container
@@ -140876,6 +141093,10 @@ entities:
         moles:
         - 1.7459903
         - 6.568249
+        - 0
+        - 0
+        - 0
+        - 0
         - 0
         - 0
         - 0
@@ -140946,6 +141167,10 @@ entities:
         moles:
         - 1.7459903
         - 6.568249
+        - 0
+        - 0
+        - 0
+        - 0
         - 0
         - 0
         - 0
@@ -141038,6 +141263,10 @@ entities:
         - 0
         - 0
         - 0
+        - 0
+        - 0
+        - 0
+        - 0
   - uid: 22103
     components:
     - type: Transform
@@ -141051,6 +141280,10 @@ entities:
         moles:
         - 1.7459903
         - 6.568249
+        - 0
+        - 0
+        - 0
+        - 0
         - 0
         - 0
         - 0
@@ -141084,6 +141317,10 @@ entities:
         - 0
         - 0
         - 0
+        - 0
+        - 0
+        - 0
+        - 0
   - uid: 22105
     components:
     - type: Transform
@@ -141097,6 +141334,10 @@ entities:
         moles:
         - 1.7459903
         - 6.568249
+        - 0
+        - 0
+        - 0
+        - 0
         - 0
         - 0
         - 0
@@ -141130,6 +141371,10 @@ entities:
         - 0
         - 0
         - 0
+        - 0
+        - 0
+        - 0
+        - 0
   - uid: 22107
     components:
     - type: Transform
@@ -141143,6 +141388,10 @@ entities:
         moles:
         - 1.7459903
         - 6.568249
+        - 0
+        - 0
+        - 0
+        - 0
         - 0
         - 0
         - 0
@@ -141213,6 +141462,10 @@ entities:
         - 0
         - 0
         - 0
+        - 0
+        - 0
+        - 0
+        - 0
     - type: ContainerContainer
       containers:
         entity_storage: !type:Container
@@ -141249,6 +141502,10 @@ entities:
         moles:
         - 1.7459903
         - 6.568249
+        - 0
+        - 0
+        - 0
+        - 0
         - 0
         - 0
         - 0
@@ -142078,6 +142335,10 @@ entities:
         - 0
         - 0
         - 0
+        - 0
+        - 0
+        - 0
+        - 0
   - uid: 22251
     components:
     - type: Transform
@@ -142092,6 +142353,10 @@ entities:
         moles:
         - 1.7459903
         - 6.568249
+        - 0
+        - 0
+        - 0
+        - 0
         - 0
         - 0
         - 0
@@ -150181,15 +150446,15 @@ entities:
       parent: 2
 - proto: RandomVending
   entities:
+  - uid: 16637
+    components:
+    - type: Transform
+      pos: 32.5,41.5
+      parent: 2
   - uid: 23627
     components:
     - type: Transform
       pos: 11.5,-15.5
-      parent: 2
-  - uid: 23628
-    components:
-    - type: Transform
-      pos: 33.5,41.5
       parent: 2
   - uid: 23629
     components:
@@ -150270,6 +150535,11 @@ entities:
       parent: 2
 - proto: RandomVendingSnacks
   entities:
+  - uid: 23628
+    components:
+    - type: Transform
+      pos: 33.5,41.5
+      parent: 2
   - uid: 23644
     components:
     - type: Transform
@@ -150304,11 +150574,6 @@ entities:
     components:
     - type: Transform
       pos: 32.5,45.5
-      parent: 2
-  - uid: 23651
-    components:
-    - type: Transform
-      pos: 34.5,41.5
       parent: 2
   - uid: 23652
     components:
@@ -158544,6 +158809,13 @@ entities:
     - type: Transform
       pos: -16.5,-15.5
       parent: 2
+- proto: SpawnPointGuardianNt
+  entities:
+  - uid: 25111
+    components:
+    - type: Transform
+      pos: -55.5,-22.5
+      parent: 2
 - proto: SpawnPointHeadOfPersonnel
   entities:
   - uid: 25108
@@ -158564,13 +158836,6 @@ entities:
     components:
     - type: Transform
       pos: 29.5,-13.5
-      parent: 2
-- proto: SpawnPointGuardianNt
-  entities:
-  - uid: 25111
-    components:
-    - type: Transform
-      pos: -55.5,-22.5
       parent: 2
 - proto: SpawnPointLatejoin
   entities:
@@ -158733,6 +158998,18 @@ entities:
     components:
     - type: Transform
       pos: 36.5,10.5
+      parent: 2
+- proto: SpawnPointResearchAssistant
+  entities:
+  - uid: 16717
+    components:
+    - type: Transform
+      pos: 35.5,41.5
+      parent: 2
+  - uid: 26186
+    components:
+    - type: Transform
+      pos: 35.5,42.5
       parent: 2
 - proto: SpawnPointResearchDirector
   entities:
@@ -160499,9 +160776,6 @@ entities:
     - type: Transform
       pos: -1.5,29.5
       parent: 2
-    - type: DeviceNetwork
-      configurators:
-      - invalid
 - proto: SurveillanceCameraRouterService
   entities:
   - uid: 25396
@@ -160860,9 +161134,6 @@ entities:
       rot: 1.5707963267948966 rad
       pos: -54.5,-24.5
       parent: 2
-    - type: DeviceNetwork
-      configurators:
-      - invalid
     - type: SurveillanceCamera
       setupAvailableNetworks:
       - SurveillanceCameraSecurity
@@ -164681,8 +164952,6 @@ entities:
       parent: 2
     - type: ItemToggle
       activated: True
-    - type: ItemToggleActiveSound
-      playingStream: invalid
     - type: PointLight
       enabled: True
     - type: MeleeWeapon
@@ -164749,8 +165018,6 @@ entities:
       parent: 2
     - type: ItemToggle
       activated: True
-    - type: ItemToggleActiveSound
-      playingStream: invalid
     - type: PointLight
       enabled: True
     - type: MeleeWeapon
@@ -165491,10 +165758,10 @@ entities:
       parent: 2
 - proto: VendingMachineSciDrobe
   entities:
-  - uid: 26186
+  - uid: 23651
     components:
     - type: Transform
-      pos: 35.5,41.5
+      pos: 34.5,41.5
       parent: 2
   - uid: 26187
     components:
