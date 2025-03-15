@@ -1,4 +1,14 @@
 - type: listing
+  id: UplinkRichard
+  name: uplink-richard-name
+  description: uplink-richard-desc
+  productEntity: ClothingHeadHatRichard
+  cost:
+    Telecrystal: 1
+  categories:
+  - UplinkPointless
+
+- type: listing
   id: UplinkGarrote
   name: Удавка
   description: Излюбленный профессионалами инструмент для скрытых убийств. Позволяет взять стоящую к вам спиной жертву в мёртвую хватку, неминуемо убивая её.
