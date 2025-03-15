@@ -1,18 +1,3 @@
-using Content.Shared.Actions;
-using Content.Shared.Popups;
-using Content.Shared.Weapons.Melee.Events;
-using Content.Shared.Weapons.Ranged.Events;
-using Content.Shared.Hands.EntitySystems;
-using Content.Shared._Stories.Force.Lightsaber;
-using Robust.Shared.Physics.Events;
-using Content.Shared.Weapons.Misc;
-using Robust.Shared.Prototypes;
-using Robust.Shared.Serialization.Manager;
-using Content.Shared._Stories.ForceUser.Actions.Events;
-using Robust.Shared.Timing;
-using Content.Shared.Atmos.Piping;
-using Content.Shared.Body.Components;
-using Content.Shared._Stories.ForceUser;
 using Robust.Shared.Utility;
 using Content.Shared.FixedPoint;
 using Content.Shared.Alert;
@@ -57,7 +42,7 @@ public sealed partial class ForceSystem : EntitySystem // TODO: Навести �
             return false;
         }
 
-        if (!Resolve(uid, ref component))
+        if (!TryComp(uid, out component))
             return false;
 
         component.Volume = volume;
