@@ -30,13 +30,13 @@ namespace Content.Server._Stories.StationGoal
             }
 
             var stationGoalPaper = IoCManager.Resolve<IEntityManager>().System<StationGoalPaperSystem>();
-            if (!stationGoalPaper.SendStationGoal(proto))
+            if (!stationGoalPaper.TrySendStationGoal(proto))
             {
                 shell.WriteError("Station goal was not sent");
                 return;
             }
         }
-        
+
         public CompletionResult GetCompletion(IConsoleShell shell, string[] args)
         {
             if (args.Length == 1)
