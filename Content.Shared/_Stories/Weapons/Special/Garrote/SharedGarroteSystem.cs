@@ -4,7 +4,6 @@ using Content.Shared.Mobs.Components;
 using Content.Shared.Speech.Muting;
 using Content.Shared.StatusEffect;
 using Content.Shared.Stunnable;
-using Robust.Shared.GameStates;
 
 namespace Content.Shared._Stories.Weapons.Special.Garrote;
 
@@ -13,6 +12,7 @@ public abstract class SharedGarroteSystem : EntitySystem
     [Dependency] private readonly DamageableSystem _damageable = default!;
     [Dependency] private readonly StatusEffectsSystem _statusEffect = default!;
     [Dependency] private readonly SharedStunSystem _stun = default!;
+    [Dependency] protected readonly SharedTransformSystem _transformSystem = default!;
 
     public override void Initialize()
     {
@@ -46,16 +46,19 @@ public abstract class SharedGarroteSystem : EntitySystem
     /// <remarks>
     ///     Does not check for the presence of TransformComponent.
     /// </remarks>
-    public static bool IsRightTargetDistance(TransformComponent user, TransformComponent target, float maxUseDistance)
+    public bool IsRightTargetDistance(TransformComponent user, TransformComponent target, float maxUseDistance)
     {
-        return (Math.Abs(user.LocalPosition.X - target.LocalPosition.X) <= maxUseDistance
-            && Math.Abs(user.LocalPosition.Y - target.LocalPosition.Y) <= maxUseDistance);
+        var userPosition = _transformSystem.GetWorldPositionRotation(user).WorldPosition;
+        var targetPosition = _transformSystem.GetWorldPositionRotation(target).WorldPosition;
+
+        return (Math.Abs(userPosition.X - targetPosition.X) <= maxUseDistance
+            && Math.Abs(userPosition.Y - targetPosition.Y) <= maxUseDistance);
     }
 
     /// <remarks>
     ///     Does not check for the presence of TransformComponent.
     /// </remarks>
-    public static Direction GetEntityDirection(TransformComponent entityTransform)
+    public Direction GetEntityDirection(TransformComponent entityTransform)
     {
         double entityLocalRotation;
 
