@@ -1,4 +1,8 @@
 - type: stationGoal
+  id: StationGoalFree
+  text: station-goal-free
+
+- type: stationGoal
   id: StationGoalShuttle
   text: station-goal-shuttle
 
