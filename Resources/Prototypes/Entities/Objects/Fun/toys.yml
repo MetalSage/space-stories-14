@@ -1391,7 +1391,7 @@
   name: toy sword
   description: New Sandy-Cat plastic sword! Comes with realistic sound and full color! Looks almost like the real thing!
   components:
-    - type: EnergySword # Stories - AntiMeta
+    - type: EnergySword # Stories-AntiMeta
       # colorOptions:
       #   - DodgerBlue
     - type: ItemToggle
