@@ -33,6 +33,8 @@ namespace Content.Server.Atmos.Portable
             // Stories-Gas start
             Gas.BZ,
             Gas.Healium,
+            Gas.Nitryl,
+            Gas.Pluoxium,
             // Stories-Gas end
         };
 

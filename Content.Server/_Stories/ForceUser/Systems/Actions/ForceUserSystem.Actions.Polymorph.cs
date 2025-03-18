@@ -9,9 +9,9 @@ public sealed partial class ForceUserSystem
 {
     public void InitializePolymorph()
     {
-        SubscribeLocalEvent<ForceUserComponent, SithPolymorphEvent>(OnPolymorph);
+        SubscribeLocalEvent<ForceUserComponent, InquisitorPolymorphEvent>(OnPolymorph);
     }
-    private void OnPolymorph(EntityUid uid, ForceUserComponent comp, SithPolymorphEvent args)
+    private void OnPolymorph(EntityUid uid, ForceUserComponent comp, InquisitorPolymorphEvent args)
     {
         if (args.Handled)
             return;

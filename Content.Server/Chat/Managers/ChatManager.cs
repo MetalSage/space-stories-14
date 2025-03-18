@@ -4,7 +4,7 @@ using System.Runtime.InteropServices;
 using Content.Server.Administration.Logs;
 using Content.Server.Administration.Managers;
 using Content.Server.Administration.Systems;
-using Content.Server._Corvax.Sponsors;
+using Content.Server._Stories.Partners;
 using Content.Server.MoMMI;
 using Content.Server.Players.RateLimiting;
 using Content.Server.Preferences.Managers;
@@ -45,7 +45,7 @@ internal sealed partial class ChatManager : IChatManager
     [Dependency] private readonly INetConfigurationManager _netConfigManager = default!;
     [Dependency] private readonly IEntityManager _entityManager = default!;
     [Dependency] private readonly PlayerRateLimitManager _rateLimitManager = default!;
-    [Dependency] private readonly SponsorsManager _sponsors = default!; // Corvax-Sponsors
+    [Dependency] private readonly PartnersManager _sponsors = default!; // Corvax-Sponsors
 
     /// <summary>
     /// The maximum length a player-sent message can be sent

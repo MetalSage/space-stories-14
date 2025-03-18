@@ -1,11 +1,17 @@
 - type: entity
   parent: BaseGameRule
-  id: SithSpawn
+  id: BaseInquisitorSpawn
+
+
+
+- type: entity
+  parent: BaseGameRule
+  id: InquisitorSpawn
   components:
   - type: AntagObjectives
     objectives:
-    - KillJediNtObjective
-    - SithSurviveObjective
+    - KillGuardianNtObjective
+    - InquisitorSurviveObjective
     - HypnosisObjective
   - type: AntagLoadProfileRule
     speciesOverride: Human
@@ -14,21 +20,21 @@
     #Once the issues are fixed the species should be removed from this list to be enabled.
     #Balance concerns are not a valid reason to disable a species, except for high-impact Nukie-specific exploits.
     - Vox
-  # - type: StationEvent
-  #   earliestStart: 35
-  #   weight: 5.5
-  #   minimumPlayers: 20
-  #   duration: 1
+  - type: StationEvent
+    earliestStart: 35
+    weight: 0
+    minimumPlayers: 25
+    duration: 1
   - type: RuleGrids
   - type: LoadMapRule
     preloadedGrid: TIE
   - type: AntagSelection
     definitions:
-    - spawnerPrototype: SpawnPointSith
+    - spawnerPrototype: SpawnPointInquisitor
       min: 1
       max: 1
       pickPlayer: false
-      startingGear: SithGear
+      startingGear: InquisitorGear
       components:
       - type: Barotrauma
         protectionSlots:
@@ -87,8 +93,8 @@
         - StaminaModifier
       - type: RandomMetadata
         nameSegments:
-        - names_sith_title
-        - names_sith
+        - names_inquisitor_title
+        - names_inquisitor
       - type: NpcFactionMember
         factions:
         - Syndicate
@@ -106,22 +112,22 @@
     #Once the issues are fixed the species should be removed from this list to be enabled.
     #Balance concerns are not a valid reason to disable a species, except for high-impact Nukie-specific exploits.
     - Vox
-  # - type: StationEvent
-  #   earliestStart: 35
-  #   weight: 5.5
-  #   minimumPlayers: 20
-  #   duration: 1
+  - type: StationEvent
+    earliestStart: 35
+    weight: 0
+    minimumPlayers: 20
+    duration: 1
   - type: RuleGrids
   - type: LoadMapRule
     preloadedGrid: TIE
   - type: AntagObjectives
     objectives:
-    - KillJediNtObjective
-    - SithSurviveObjective
+    - KillGuardianNtObjective
+    - InquisitorSurviveObjective
     - HypnosisObjective
   - type: AntagSelection
     definitions:
-    - spawnerPrototype: SpawnPointSith
+    - spawnerPrototype: SpawnPointInquisitor
       min: 1
       max: 1
       pickPlayer: false
@@ -182,8 +188,8 @@
         - StaminaModifier
       - type: RandomMetadata
         nameSegments:
-        - names_sith_title
-        - names_sith
+        - names_inquisitor_title
+        - names_inquisitor
       - type: NpcFactionMember
         factions:
         - Syndicate

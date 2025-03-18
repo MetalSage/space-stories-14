@@ -4,5 +4,5 @@ namespace Content.Server.Objectives.Components;
 public sealed partial class PickRandomJobPersonComponent : Component
 {
     [DataField("jobID")]
-    public string JobID { get; private set; } = "JediNt";
+    public string JobID { get; private set; } = "GuardianNt";
 }

@@ -100,6 +100,111 @@
     locked: true
 
 - type: entity
+  parent: GasCanister
+  id: STNitrylCanister
+  name: nitryl canister
+  components:
+  - type: Sprite
+    sprite: _Stories/Structures/Storage/canister.rsi
+    layers:
+    - state: nitryl
+  - type: GasCanister
+    gasMixture:
+      volume: 1000
+      moles:
+      - 0 # oxygen
+      - 0 # nitrogen
+      - 0 # CO2
+      - 0 # Plasma
+      - 0 # Tritium
+      - 0 #  Water vapor
+      - 0 # Miasma
+      - 0 # N2O
+      - 0 # Frezon
+      - 0 # BZ
+      - 0 # Healium
+      - 1871.71051 # Nitryl
+      temperature: 293.15
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 600
+      behaviors:
+        - !type:DoActsBehavior
+          acts: [ "Destruction" ]
+    - trigger:
+        !type:DamageTrigger
+        damage: 300
+      behaviors:
+      - !type:PlaySoundBehavior
+        sound:
+          collection: MetalBreak
+      - !type:SpawnEntitiesBehavior
+        spawn:
+          STNitrylCanisterBroken:
+            min: 1
+            max: 1
+      - !type:DoActsBehavior
+        acts: [ "Destruction" ]
+      - !type:DumpCanisterBehavior
+  - type: Lock
+    locked: true
+
+- type: entity
+  parent: GasCanister
+  id: STPluoxiumCanister
+  name: pluoxium canister
+  components:
+  - type: Sprite
+    sprite: _Stories/Structures/Storage/canister.rsi
+    layers:
+    - state: pluoxium
+  - type: GasCanister
+    gasMixture:
+      volume: 1000
+      moles:
+      - 0 # oxygen
+      - 0 # nitrogen
+      - 0 # CO2
+      - 0 # Plasma
+      - 0 # Tritium
+      - 0 #  Water vapor
+      - 0 # Miasma
+      - 0 # N2O
+      - 0 # Frezon
+      - 0 # BZ
+      - 0 # Healium
+      - 0 # Nitryl
+      - 1871.71051 #Pluoxium
+      temperature: 293.15
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 600
+      behaviors:
+        - !type:DoActsBehavior
+          acts: [ "Destruction" ]
+    - trigger:
+        !type:DamageTrigger
+        damage: 300
+      behaviors:
+      - !type:PlaySoundBehavior
+        sound:
+          collection: MetalBreak
+      - !type:SpawnEntitiesBehavior
+        spawn:
+          STPluoxiumCanisterBroken:
+            min: 1
+            max: 1
+      - !type:DoActsBehavior
+        acts: [ "Destruction" ]
+      - !type:DumpCanisterBehavior
+  - type: Lock
+    locked: true
+
+- type: entity
   parent: GasCanisterBrokenBase
   id: STBZCanisterBroken
   categories: [ HideSpawnMenu ]
@@ -116,3 +221,21 @@
   - type: Sprite
     sprite: _Stories/Structures/Storage/canister.rsi
     state: healium-1
+
+- type: entity
+  parent: GasCanisterBrokenBase
+  id: STNitrylCanisterBroken
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Sprite
+    sprite: _Stories/Structures/Storage/canister.rsi
+    state: nitryl-1
+
+- type: entity
+  parent: GasCanisterBrokenBase
+  id: STPluoxiumCanisterBroken
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Sprite
+    sprite: _Stories/Structures/Storage/canister.rsi
+    state: pluoxium-1

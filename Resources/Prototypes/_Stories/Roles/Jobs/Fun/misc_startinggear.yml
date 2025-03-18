@@ -1,19 +1,19 @@
 - type: startingGear
-  id: SithGear
+  id: InquisitorGear
   equipment:
-    jumpsuit: ClothingUniformJumpsuitSith
-    mask: ClothingMaskGasSith
-    neck: ClothingNeckCloakSith
+    jumpsuit: ClothingUniformJumpsuitInquisitor
+    mask: ClothingMaskGasInquisitor
+    neck: ClothingNeckCloakInquisitor
     eyes: ClothingEyesHudSyndicate
-    gloves: ClothingHandsGlovesSith
-    outerClothing: ClothingOuterVestSith
-    shoes: ClothingShoesSith
+    gloves: ClothingHandsGlovesInquisitor
+    outerClothing: ClothingOuterVestInquisitor
+    shoes: ClothingShoesInquisitor
     id: AgentIDCard
     back: JetpackBlackFilled
     ears: ClothingHeadsetGrey
     pocket1: LightsaberDoubleRed
     pocket2: PinpointerUniversal
-    belt: ClothingBeltSith
+    belt: ClothingBeltInquisitor
 
 - type: startingGear
   id: KyloGear
@@ -22,11 +22,11 @@
     mask: ClothingMaskGasSyndicate
     neck: ClothingNeckCloakKylo
     gloves: ClothingHandsGlovesCombat
-    outerClothing: ClothingOuterVestSith
-    shoes: ClothingShoesSith
+    outerClothing: ClothingOuterVestInquisitor
+    shoes: ClothingShoesInquisitor
     id: AgentIDCard
     back: JetpackBlackFilled
     ears: ClothingHeadsetGrey
     pocket1: LightsaberCrossguardRed
     pocket2: PinpointerUniversal
-    belt: ClothingBeltSith
+    belt: ClothingBeltInquisitor

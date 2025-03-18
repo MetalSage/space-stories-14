@@ -63,3 +63,69 @@
   description: Мощная лампа, внутри которой находится зелёный кристалл. # Stories-CraftTranslate
   icon: { sprite: Objects/Power/light_tube.rsi, state: normal }
   objectType: Item
+
+- type: construction
+  name: голубая лампа # Stories-CraftTranslate
+  id: CyanLightBulb
+  graph: CyanLightBulb
+  startNode: start
+  targetNode: icon
+  category: construction-category-utilities
+  description: Мощная электрическая лампочка, внутри которой находится голубой кристалл. # Stories-CraftTranslate
+  icon: { sprite: Objects/Power/light_bulb.rsi, state: normal }
+  objectType: Item
+
+- type: construction
+  name: синяя лампа # Stories-CraftTranslate
+  id: BlueLightBulb
+  graph: BlueLightBulb
+  startNode: start
+  targetNode: icon
+  category: construction-category-utilities
+  description: Мощная электрическая лампочка, внутри которой находится синий кристалл. # Stories-CraftTranslate
+  icon: { sprite: Objects/Power/light_bulb.rsi, state: normal }
+  objectType: Item
+
+- type: construction
+  name: розовая лампа # Stories-CraftTranslate
+  id: PinkLightBulb
+  graph: PinkLightBulb
+  startNode: start
+  targetNode: icon
+  category: construction-category-utilities
+  description: Мощная электрическая лампочка, внутри которой находится розовый кристалл. # Stories-CraftTranslate
+  icon: { sprite: Objects/Power/light_bulb.rsi, state: normal }
+  objectType: Item
+
+- type: construction
+  name: оранжевая лампа # Stories-CraftTranslate
+  id: OrangeLightBulb
+  graph: OrangeLightBulb
+  startNode: start
+  targetNode: icon
+  category: construction-category-utilities
+  description: Мощная электрическая лампочка, внутри которой находится оранжевый кристалл. # Stories-CraftTranslate
+  icon: { sprite: Objects/Power/light_bulb.rsi, state: normal }
+  objectType: Item
+
+- type: construction
+  name: красная лампа # Stories-CraftTranslate
+  id: RedLightBulb
+  graph: RedLightBulb
+  startNode: start
+  targetNode: icon
+  category: construction-category-utilities
+  description: Мощная электрическая лампочка, внутри которой находится красный кристалл. # Stories-CraftTranslate
+  icon: { sprite: Objects/Power/light_bulb.rsi, state: normal }
+  objectType: Item
+
+- type: construction
+  name: зелёная лампа # Stories-CraftTranslate
+  id: GreenLightBulb
+  graph: GreenLightBulb
+  startNode: start
+  targetNode: icon
+  category: construction-category-utilities
+  description: Мощная электрическая лампочка, внутри которой находится зелёный кристалл. # Stories-CraftTranslate
+  icon: { sprite: Objects/Power/light_bulb.rsi, state: normal }
+  objectType: Item

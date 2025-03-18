@@ -7,6 +7,7 @@ special-roles-status-success = [color=#008000][bold] Успешно! Вы мож
 special-role-reason-error = Ошибка внутри игры! Напишите в дискорд.
 special-role-reason-notingame = Вы не в игре! Заходите!
 special-role-reason-notpartner = Вы не партнёр проекта! Поддержите нас, если хотите!
+special-role-reason-notokens = У вас закончились токены, возвращайтесь завтра!
 special-role-reason-partnernotallowedproto = Вы партнёр, но к этому у вас нет доступа! Поддержите нас сильнее, если хотите!
 special-role-reason-wrongplayerstate = Вам надо быть членом экипажа или призраком!
 special-role-reason-alreadyantag = Вы уже антагонист! Повезло.

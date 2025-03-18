@@ -135,7 +135,7 @@ public sealed partial class PrisonSystem : EntitySystem
         var prototype = _prototypeManager.Index(component.GameMap);
 
         _map.CreateMap(out var mapId, false);
-        _gameTicker.LoadGameMap(prototype, mapId, null);
+        _gameTicker.LoadGameMap(prototype, out mapId, null);
 
         var prison = _station.GetStationInMap(mapId);
 

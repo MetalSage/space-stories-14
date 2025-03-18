@@ -1,4 +1,4 @@
-using Content.Server._Corvax.Sponsors;
+using Content.Server._Stories.Partners;
 using Content.Shared.Administration;
 using Robust.Shared.Console;
 using Content.Server.EUI;
@@ -10,7 +10,7 @@ namespace Content.Server._Stories.Partners.Commands;
 [AnyCommand]
 public sealed class OpenSpecialRolesCommand : IConsoleCommand
 {
-    [Dependency] private readonly SponsorsManager _partners = default!;
+    [Dependency] private readonly PartnersManager _partners = default!;
     [Dependency] private readonly EuiManager _euiManager = default!;
     public string Command => "openspecialrolesui";
     public string Description => "Открыть меню выдачи спец. ролей.";

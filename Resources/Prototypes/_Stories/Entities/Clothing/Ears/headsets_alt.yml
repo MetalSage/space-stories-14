@@ -1,6 +1,6 @@
 - type: entity
   parent: ClothingHeadsetAlt
-  id: ClothingHeadsetJediNtAlt
+  id: ClothingHeadsetGuardianNtAlt
   name: полноразмерная гарнитура стража клинка
   description: Наконец-то тут есть командная частота.
   components:
@@ -14,6 +14,6 @@
           - EncryptionKeySecurity
           - EncryptionKeyCommand
     - type: Sprite
-      sprite: _Stories/Clothing/Ears/Headsets/jedi_nt.rsi
+      sprite: _Stories/Clothing/Ears/Headsets/guardian_nt.rsi
     - type: Clothing
-      sprite: _Stories/Clothing/Ears/Headsets/jedi_nt.rsi
+      sprite: _Stories/Clothing/Ears/Headsets/guardian_nt.rsi

@@ -166,7 +166,7 @@ public sealed partial class ChatSystem
             StringBuilder result = new StringBuilder();
             foreach (char ch in message)
             {
-                if (ch != '+' && ch != '/' && ch != '*')
+                if (ch != '+' && ch != '/' && ch != '\\' && ch != '*')
                     result.Append(ch);
             }
             return result.ToString();

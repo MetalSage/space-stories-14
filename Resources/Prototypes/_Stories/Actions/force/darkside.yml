@@ -1,5 +1,5 @@
 # - type: entity
-#   id: ActionSithCreateProtectiveBubble
+#   id: ActionInquisitorCreateProtectiveBubble
 #   name: Защитный пузырь инквизитора
 #   description: Создайте защитный телекинетический кокон, который отразит любые лазеры, сильно уменьшит урон от пуль и защитит от взрывов и давления. Почти не защищает от ударов ближнего боя.
 #   categories: [ HideSpawnMenu ]
@@ -11,7 +11,7 @@
 #       state: shield
 #     itemIconStyle: NoItem
 #     event: !type:CreateProtectiveBubbleEvent
-#       proto: EffectSithProtectiveBubble
+#       proto: EffectInquisitorProtectiveBubble
 
 - type: entity
   id: ActionLifeSteal
@@ -39,7 +39,7 @@
         doAfterTime: 1
 
 - type: entity
-  id: ActionSithGhost
+  id: ActionInquisitorGhost
   name: Теневой призрак
   description: Станьте призраком и проходите сквозь стены. В таком состоянии вы не можете воздействовать на мир, но всегда можете вернуться.
   categories: [ HideSpawnMenu ]
@@ -47,7 +47,7 @@
   - type: InstantAction
     useDelay: 5
     itemIconStyle: BigAction
-    icon: { sprite: _Stories/Actions/force.rsi, state: sith }
+    icon: { sprite: _Stories/Actions/force.rsi, state: inquisitor }
     event: !type:DoAfterUserEvent
       hidden: false
       needHand: false
@@ -56,7 +56,7 @@
       breakOnMove: true
       event: !type:InstantForceUserActionEvent
         volume: 100
-        event: !type:SithPolymorphEvent
+        event: !type:InquisitorPolymorphEvent
 
 - type: entity
   id: ActionFrozeBullets
@@ -197,11 +197,11 @@
         event: !type:HypnosisTargetActionEvent
 
 - type: entity
-  id: ActionSithRevertPolymorph
+  id: ActionInquisitorRevertPolymorph
   name: Вернуться в обычную форму
   description: Перестаньте бегать и сразитесь!
   categories: [ HideSpawnMenu ]
   components:
   - type: InstantAction
-    icon: { sprite: _Stories/Actions/force.rsi, state: sith }
+    icon: { sprite: _Stories/Actions/force.rsi, state: inquisitor }
     event: !type:RevertPolymorphActionEvent

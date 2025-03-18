@@ -125,3 +125,5 @@ ent-SeniorOfficerIDCard = ID карта инструктора СБ
 ent-UniversalIDCard = универсальная ID карта
     .desc = ID карта, которая позволит вам осуществить свои самые сокровенные желания.
     .suffix = Админ
+ent-WizardIDCard = ID карта волшебника
+    .desc = { ent-IDCardStandard.desc }

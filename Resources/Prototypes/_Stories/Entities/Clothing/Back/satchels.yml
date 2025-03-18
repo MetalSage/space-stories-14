@@ -1,6 +1,6 @@
 - type: entity
   parent: ClothingBackpackSatchel
-  id: ClothingBackpackSatchelJediNt
+  id: ClothingBackpackSatchelGuardianNt
   name: сумка стража клинка
   description: Где же моя помадка?
   components:
@@ -8,7 +8,7 @@
     tags:
       - ForceRecallEquipment
   - type: Sprite
-    sprite: _Stories/Clothing/Back/Satchels/satchel_jedint.rsi
+    sprite: _Stories/Clothing/Back/Satchels/satchel_guardiannt.rsi
 
 - type: entity
   parent: ClothingBackpackSatchel

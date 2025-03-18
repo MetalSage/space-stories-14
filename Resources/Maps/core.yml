@@ -121632,7 +121632,7 @@ entities:
     - type: Transform
       pos: -18.5,-26.5
       parent: 2
-- proto: SpawnPointJediNt
+- proto: SpawnPointGuardianNt
   entities:
   - uid: 8860
     components:

@@ -1,6 +1,6 @@
 ent-IAAIDCard = ID карта агента внутренних дел
     .desc = { ent-PRISONIDCardHeadOfPrison.desc }
-ent-JediNtIDCard = ID карта стража клинка
+ent-GuardianNtIDCard = ID карта стража клинка
     .desc = Карта, необходимая для доступа в различные области станции.
 ent-PRISONIDCardHeadOfPrison = ID карта начальника тюрьмы
     .desc = Карта, необходимая для доступа в различные области станции.

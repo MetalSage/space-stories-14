@@ -1,2 +1,2 @@
-ent-WallForceJedi = Барьер Силы
+ent-WallForceGuardian = Барьер Силы
     .desc = { "" }

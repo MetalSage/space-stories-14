@@ -98,6 +98,17 @@
   objectType: Item
 
 - type: construction
+  name: плюшевые тапочки в виде унатха # Stories-CraftTranslate
+  id: ClothingShoeSlippersLizard
+  graph: ClothingShoeSlippersLizard
+  startNode: start
+  targetNode: shoes
+  category: construction-category-clothing
+  description: Очаровательные тапочки, напоминающие унатха. Сочетайте их с какой-нибудь другой одеждой зеленого цвета, и вы станете самым крутым членом экипажа на станции! # Stories-CraftTranslate
+  icon: { sprite: Clothing/Shoes/Misc/lizard-slippers.rsi, state: icon }
+  objectType: Item
+
+- type: construction
   name: очки охраны # Stories-CraftTranslate
   id: ClothingEyesGlassesSecurity
   graph: GlassesSecHUD

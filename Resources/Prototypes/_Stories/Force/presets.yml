@@ -21,7 +21,7 @@
   name: Инквизитор
   side: Dark
   volume: 140
-  alert: SithForceVolume
+  alert: InquisitorForceVolume
   maxVolume: 150
   passiveVolume: 10
   componentsToAdd:
@@ -46,11 +46,11 @@
   - type: Strippable
 
 - type: forcePreset
-  id: Jedi
+  id: Guardian
   name: Джедай
   side: Light
   volume: 140
-  alert: JediNtForceVolume
+  alert: GuardianNtForceVolume
   maxVolume: 150
   passiveVolume: 10
   componentsToAdd:

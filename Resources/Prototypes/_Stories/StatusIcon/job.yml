@@ -21,10 +21,10 @@
 
 - type: jobIcon
   parent: JobIcon
-  id: JobIconJediNt
+  id: JobIconGuardianNt
   icon:
     sprite: /Textures/_Stories/Interface/Misc/job_icons.rsi
-    state: JediNtSecurity
+    state: GuardianNtSecurity
 
 - type: jobIcon
   parent: JobIcon

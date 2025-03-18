@@ -1,0 +1,12 @@
+- type: entity
+  id: LockerGuardianNtFilled
+  suffix: Filled
+  parent: LockerGuardianNt
+  components:
+  - type: StorageFill
+    contents:
+      - id: ClothingUniformJumpsuitGuardian
+      - id: ClothingShoesBootsJackGuardian
+      - id: ClothingOuterCoatGuardian
+      - id: ClothingHeadsetGuardianNtAlt
+      - id: ClothingBeltGuardian

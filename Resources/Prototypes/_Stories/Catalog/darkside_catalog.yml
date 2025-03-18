@@ -1,8 +1,8 @@
 - type: listing
-  id: ActionSithGhost
+  id: ActionInquisitorGhost
   name: Теневой призрак
   description: Станьте призраком и проходите сквозь стены. В таком состоянии вы не можете воздействовать на мир, но всегда можете вернуться.
-  productAction: ActionSithGhost
+  productAction: ActionInquisitorGhost
   cost:
     SkillPoint: 5
   categories:
@@ -12,10 +12,10 @@
     stock: 1
 
 # - type: listing
-#   id: ActionSithCreateProtectiveBubble
+#   id: ActionInquisitorCreateProtectiveBubble
 #   name: Защитный пузырь инквизитора
 #   description: Создайте защитный телекинетический кокон, который отразит любые лазеры, сильно уменьшит урон от пуль и защитит от взрывов и давления. Почти не защищает от ударов ближнего боя.
-#   productAction: ActionSithCreateProtectiveBubble
+#   productAction: ActionInquisitorCreateProtectiveBubble
 #   cost:
 #     SkillPoint: 1
 #   categories:

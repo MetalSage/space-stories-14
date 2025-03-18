@@ -1,4 +1,4 @@
-ent-ClothingBackpackJediNt = рюкзак стража клинка
+ent-ClothingBackpackGuardianNt = рюкзак стража клинка
     .desc = Кажется, вы где-то это уже видели.
 ent-ClothingBackpackAdidos = рюкзак
     .desc = Вы носите это на спине и кладёте в него предметы.

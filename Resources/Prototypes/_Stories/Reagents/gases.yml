@@ -117,7 +117,7 @@
         conditions:
         - !type:ReagentThreshold
           reagent: STHealium
-          min: 0.5
+          min: 0.3
         scaleByQuantity: true
         ignoreResistances: true
         damage:
@@ -132,7 +132,10 @@
         conditions:
         - !type:ReagentThreshold
           reagent: STHealium
-          min: 0.5
+          min: 0.3
+        - !type:ReagentThreshold
+          reagent: STNitryl
+          max: 0.3
         type: Local
         visualType: Medium
         messages: [ "effect-sleepy" ]
@@ -149,7 +152,130 @@
         - !type:ReagentThreshold
           reagent: STHealium
           min: 1.8
+        - !type:ReagentThreshold
+          reagent: STNitryl
+          max: 0.5
         key: ForcedSleep
         component: ForcedSleeping
         time: 3
         type: Add
+
+- type: reagent
+  id: STNitryl
+  name: stories-reagent-name-nitryl
+  desc: stories-reagent-desc-nitryl
+  physicalDesc: reagent-physical-desc-gaseous
+  flavor: sweet
+  color: "#12ca21"
+  metabolisms:
+    Gas:
+      effects:
+      - !type:HealthChange
+        conditions:
+        - !type:ReagentThreshold
+          reagent: STNitryl
+          min: 0.3
+        ignoreResistances: true
+        damage:
+          types:
+            Poison: 0.15
+      - !type:HealthChange
+        conditions:
+        - !type:ReagentThreshold
+          reagent: STNitryl
+          min: 2
+        scaleByQuantity: true
+        ignoreResistances: true
+        damage:
+          types:
+            Poison: 3
+      - !type:MovespeedModifier
+        conditions:
+        - !type:ReagentThreshold
+          reagent: STNitryl
+          min: 1
+        walkSpeedModifier: 1.2
+        sprintSpeedModifier: 1.2
+      - !type:GenericStatusEffect
+        conditions:
+        - !type:ReagentThreshold
+          reagent: STNitryl
+          min: 1
+        key: ForcedSleep
+        component: ForcedSleeping
+        time: 2
+        type: Remove
+      - !type:GenericStatusEffect
+        conditions:
+        - !type:ReagentThreshold
+          reagent: STNitryl
+          min: 1
+        key: Stun
+        time: 2
+        type: Remove
+      - !type:GenericStatusEffect
+        conditions:
+        - !type:ReagentThreshold
+          reagent: STNitryl
+          min: 1
+        key: KnockedDown
+        time: 2
+        type: Remove
+      - !type:GenericStatusEffect
+        conditions:
+        - !type:ReagentThreshold
+          reagent: STNitryl
+          min: 1
+        key: Drowsiness
+        time: 10
+        type: Remove
+
+- type: reagent
+  id: STPluoxium
+  name: stories-reagent-name-pluoxium
+  desc: stories-reagent-desc-pluoxium
+  physicalDesc: reagent-physical-desc-gaseous
+  flavor: bitter
+  color: "#3434aa"
+  metabolisms:
+    Gas:
+      effects:
+      - !type:Oxygenate
+        conditions:
+        - !type:OrganType
+          type: Human
+        factor: 5
+      - !type:Oxygenate
+        conditions:
+        - !type:OrganType
+          type: Animal
+        factor: 5
+      - !type:Oxygenate
+        conditions:
+        - !type:OrganType
+          type: Rat
+        factor: 5
+      - !type:Oxygenate
+        conditions:
+        - !type:OrganType
+          type: Plant
+        factor: 5
+      - !type:HealthChange #stronger than oxygen, thus even more toxic for vox
+        conditions:
+        - !type:OrganType
+          type: Vox
+        scaleByQuantity: true
+        ignoreResistances: true
+        damage:
+          types:
+            Poison:
+              12
+      - !type:AdjustAlert
+        alertType: Toxins
+        conditions:
+          - !type:ReagentThreshold
+            min: 0.5
+          - !type:OrganType
+            type: Vox
+        clear: true
+        time: 5

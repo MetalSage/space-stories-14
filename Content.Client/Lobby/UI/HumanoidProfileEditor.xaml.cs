@@ -11,7 +11,7 @@ using Content.Client.Stylesheets;
 using Content.Client.UserInterface.Systems.Guidebook;
 using Content.Shared.CCVar;
 using Content.Shared.Clothing;
-using Content.Shared._Corvax.CCCVars;
+using Content.Shared._Stories.SCCVars;
 using Content.Shared.GameTicking;
 using Content.Shared.Guidebook;
 using Content.Shared.Humanoid;
@@ -214,7 +214,7 @@ namespace Content.Client.Lobby.UI
             // Corvax-TTS-Start
             #region Voice
 
-            if (configurationManager.GetCVar(CCCVars.TTSEnabled))
+            if (configurationManager.GetCVar(SCCVars.TTSEnabled))
             {
                 TTSContainer.Visible = true;
                 InitializeVoice();

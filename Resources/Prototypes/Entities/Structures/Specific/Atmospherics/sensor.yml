@@ -27,6 +27,8 @@
       Frezon: danger
       BZ: danger # Stories-gas
       Healium: stationNO # Stories-gas
+      Nitryl: danger # Stories-gas
+      Pluoxium: danger # Stories-gas
   - type: Tag
     tags:
       - AirSensor

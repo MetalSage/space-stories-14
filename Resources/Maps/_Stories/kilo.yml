@@ -158565,7 +158565,7 @@ entities:
     - type: Transform
       pos: 29.5,-13.5
       parent: 2
-- proto: SpawnPointJediNt
+- proto: SpawnPointGuardianNt
   entities:
   - uid: 25111
     components:

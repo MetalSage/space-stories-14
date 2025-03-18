@@ -1,11 +1,6 @@
 - type: specialRole
   id: traitor
   gameRule: Traitor
-  gameRulesBlacklist:
-  - Zombie
-  - Revolutionary
-  - Nukeops
-  - Shadowling
 
 - type: specialRole
   id: initialinfected
@@ -44,6 +39,10 @@
   id: spaceninja
   state: Ghost
   gameRule: NinjaSpawn
+  gameRulesBlacklist:
+  - InquisitorSpawn
+  - KyloSpawn
+  - LoneOpsSpawn
 
 - type: specialRole
   id: loneops
@@ -51,30 +50,42 @@
   gameRule: LoneOpsSpawn
   gameRulesBlacklist:
   - Nukeops
+  - InquisitorSpawn
+  - KyloSpawn
+  - LoneOpsSpawn
 
 - type: specialRole
   id: dragon
   state: Ghost
   gameRule: DragonSpawn
+  gameRulesBlacklist:
+  - Nukeops
+  - Shadowling
+  - InquisitorSpawn
+  - KyloSpawn
+  - LoneOpsSpawn
 
 - type: specialRole
   id: inquisitor
   state: Ghost
-  gameRule: SithSpawn
+  gameRule: InquisitorSpawn
   gameRulesBlacklist:
-  - SithSpawn
-  - KyloSpawn
-  - Zombie
+  - Revolutionary
   - Nukeops
   - Shadowling
+  - Zombie
+  - InquisitorSpawn
+  - KyloSpawn
+  - LoneOpsSpawn
 
 - type: specialRole
   id: kylo
   state: Ghost
   gameRule: KyloSpawn
   gameRulesBlacklist:
-  - SithSpawn
-  - KyloSpawn
-  - Zombie
+  - Revolutionary
   - Nukeops
   - Shadowling
+  - InquisitorSpawn
+  - KyloSpawn
+  - LoneOpsSpawn

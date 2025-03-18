@@ -8,19 +8,19 @@
   },
   "states": [
     {
-      "name": "push"
+        "name": "push"
     },
     {
-      "name": "telekines"
+        "name": "telekines"
     },
     {
-      "name": "shield"
+        "name": "shield"
     },
     {
-    "name": "stopshield"
+        "name": "stopshield"
     },
     {
-      "name": "sword"
+        "name": "sword"
     },
     {
         "name": "flash"
@@ -59,10 +59,10 @@
         "name": "hypnosis"
     },
     {
-      "name": "lightning"
+        "name": "lightning"
     },
     {
-        "name": "sith"
+        "name": "inquisitor"
     },
     {
         "name": "pulse"

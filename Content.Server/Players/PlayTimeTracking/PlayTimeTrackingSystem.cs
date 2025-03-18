@@ -16,7 +16,7 @@ using Content.Shared.Players;
 using Content.Shared.Players.PlayTimeTracking;
 using Content.Shared.Preferences;
 using Content.Shared.Roles;
-using Content.Server._Corvax.Sponsors;
+using Content.Server._Stories.Partners;
 using Robust.Server.GameObjects;
 using Robust.Server.Player;
 using Robust.Shared.Configuration;
@@ -36,7 +36,7 @@ public sealed class PlayTimeTrackingSystem : EntitySystem
     [Dependency] private readonly IAfkManager _afk = default!;
     [Dependency] private readonly IConfigurationManager _cfg = default!;
     [Dependency] private readonly MindSystem _minds = default!;
-    [Dependency] private readonly SponsorsManager _sponsors = default!;
+    [Dependency] private readonly PartnersManager _sponsors = default!;
     [Dependency] private readonly IPlayerManager _playerManager = default!;
     [Dependency] private readonly IServerPreferencesManager _preferencesManager = default!;
     [Dependency] private readonly IPrototypeManager _prototypes = default!;

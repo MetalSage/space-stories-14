@@ -1,6 +1,6 @@
 - type: entity
   parent: ClothingOuterArmorBasic
-  id: ClothingOuterVestJediNt
+  id: ClothingOuterVestGuardianNt
   name: утепленный бронежилет стража клинка
   description: Потому что кто-то сказал, что бронежилеты могут быть утеплены. Ваш щит уже утеплен!
   components:
@@ -11,9 +11,9 @@
       heatingCoefficient: 0.005
       coolingCoefficient: 0.005
     - type: Sprite
-      sprite: _Stories/Clothing/OuterClothing/Vests/jedi_nt.rsi
+      sprite: _Stories/Clothing/OuterClothing/Vests/guardian_nt.rsi
     - type: Clothing
-      sprite: _Stories/Clothing/OuterClothing/Vests/jedi_nt.rsi
+      sprite: _Stories/Clothing/OuterClothing/Vests/guardian_nt.rsi
 
 - type: entity
   parent: ClothingOuterArmorBasic
@@ -45,7 +45,7 @@
 
 - type: entity
   parent: ClothingOuterArmorBasic
-  id: ClothingOuterVestSith
+  id: ClothingOuterVestInquisitor
   name: бронежилет инквизитора
   description: Грозный бронежилет, обеспечивающий высокую защиту от механических повреждений.
   components:
@@ -61,6 +61,6 @@
     tags:
     - ForceRecallEquipment
   - type: Sprite
-    sprite: _Stories/Clothing/OuterClothing/Vests/sith_armor.rsi
+    sprite: _Stories/Clothing/OuterClothing/Vests/inquisitor_armor.rsi
   - type: Clothing
-    sprite: _Stories/Clothing/OuterClothing/Vests/sith_armor.rsi
+    sprite: _Stories/Clothing/OuterClothing/Vests/inquisitor_armor.rsi
