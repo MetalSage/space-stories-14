@@ -12,4 +12,4 @@
             - ReagentId: Kvass
               Quantity: 30
     - type: Sprite
-      sprite: Objects/Consumable/Drinks/kvass.rsi
+      sprite: _Stories/Structures/Storage/kvass.rsi
