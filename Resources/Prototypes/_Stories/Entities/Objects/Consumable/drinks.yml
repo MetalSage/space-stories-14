@@ -13,3 +13,4 @@
               Quantity: 30
     - type: Sprite
       sprite: _Stories/Structures/Storage/kvass.rsi
+      state: kvass

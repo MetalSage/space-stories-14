@@ -5,5 +5,5 @@
     state: kvass
   product: KvassTankFull
   cost: 2000
-  category: Food
+  category: cargoproduct-category-name-food
   group: market
