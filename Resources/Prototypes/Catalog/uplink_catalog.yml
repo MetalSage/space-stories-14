@@ -1061,7 +1061,7 @@
   - UplinkDisruption
   conditions:
   - !type:StoreWhitelistCondition
-    whitelist: # Stories
+    whitelist: # blacklist # Stories
       tags:
       - NukeOpsUplink
   - !type:BuyerWhitelistCondition
@@ -1080,7 +1080,7 @@
   - UplinkDisruption
   conditions:
   - !type:StoreWhitelistCondition
-    whitelist: # Stories
+    whitelist: # blacklist # Stories
       tags:
       - NukeOpsUplink
   - !type:BuyerWhitelistCondition
