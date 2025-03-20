@@ -5,6 +5,7 @@ using Content.Server.Chat;
 using Content.Server.Chat.Systems;
 using Content.Server.Emoting.Systems;
 using Content.Server.Speech.EntitySystems;
+using Content.Shared._Stories.Nightvision;
 using Content.Shared.Anomaly.Components;
 using Content.Shared.Bed.Sleep;
 using Content.Shared.Cloning;
@@ -163,6 +164,8 @@ namespace Content.Server.Zombies
             if (component.EmoteSoundsId == null)
                 return;
             _protoManager.TryIndex(component.EmoteSoundsId, out component.EmoteSounds);
+
+            AddComp<NightvisionComponent>(uid); // Stories
         }
 
         private void OnEmote(EntityUid uid, ZombieComponent component, ref EmoteEvent args)
