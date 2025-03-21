@@ -32,6 +32,7 @@
   - Visitor
   - Zookeeper
   - ServiceWorker
+  - PartyMaker # Stories-Event-Restricted
 
 - type: department
   id: CentralCommand
@@ -75,6 +76,7 @@
   - ERTSecurity
   - ERTEngineer
   - DeathSquad
+  - CommandMaid # Stories-Event-Restricted
   primary: false
   weight: 100
 
@@ -101,6 +103,7 @@
   - MedicalIntern
   - Psychologist
   - Paramedic
+  - SecurityClown # Stories-Event-Restricted
 
 - type: department
   id: Security

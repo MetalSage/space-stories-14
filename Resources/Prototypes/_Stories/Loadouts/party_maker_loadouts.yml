@@ -1,0 +1,7 @@
+- type: roleLoadout
+  id: JobPartyMaker
+  groups:
+  - GroupTankHarness
+  - CommonBackpack
+  - Survival
+  - GroupSpeciesBreathTool
