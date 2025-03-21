@@ -77,6 +77,10 @@
   components:
   - type: StationEvent
     startAnnouncementColor: "#18abf5"
+    startAudio: # Corvax-Announcements
+      path: /Audio/Announcements/flux.ogg
+      params:
+        volume: -4
     weight: 8
     duration: 35
     startAudio: # Corvax-Announcements
@@ -95,6 +99,10 @@
       max:  30
   - type: StationEvent
     startAnnouncementColor: "#18abf5"
+    startAudio: # Corvax-Announcements
+      path: /Audio/Announcements/blusp_anomalies.ogg
+      params:
+        volume: -4
     weight: 8
     duration: 35
     startAudio: # Corvax-Announcements
@@ -164,7 +172,7 @@
   id: DragonSpawn
   components:
   - type: StationEvent
-    weight: 5
+    weight: 5 # 6.5 # Stories
     earliestStart: 40
     reoccurrenceDelay: 20
     minimumPlayers: 20
@@ -193,7 +201,7 @@
   id: NinjaSpawn
   components:
   - type: StationEvent
-    weight: 5
+    weight: 5 # 6 # Stories
     duration: null
     earliestStart: 30
     reoccurrenceDelay: 20
@@ -242,7 +250,7 @@
   id: RevenantSpawn
   components:
   - type: StationEvent
-    weight: 5
+    weight: 5 # 7.5 # Stories
     duration: 1
     earliestStart: 45
     minimumPlayers: 20
@@ -400,7 +408,7 @@
       path: /Audio/Announcements/attention.ogg
     earliestStart: 20
     minimumPlayers: 15
-    weight: 6
+    weight: 6 # 5 # Stories
     duration: 60
   - type: VentCrittersRule
     entries:
@@ -421,7 +429,7 @@
       path: /Audio/Announcements/attention.ogg
     earliestStart: 20
     minimumPlayers: 15
-    weight: 6
+    weight: 6 # 5 # Stories
     duration: 60
   - type: VentCrittersRule
     entries:
@@ -442,7 +450,7 @@
       path: /Audio/Announcements/attention.ogg
     earliestStart: 20
     minimumPlayers: 15
-    weight: 6
+    weight: 6 # 5 # Stories
     duration: 60
   - type: VentCrittersRule
     entries:
@@ -459,7 +467,7 @@
       path: /Audio/Announcements/attention.ogg
     earliestStart: 20
     minimumPlayers: 20
-    weight: 6.5
+    weight: 6.5 # 1.5 # Stories
     duration: 60
   - type: VentCrittersRule
     entries:
@@ -505,8 +513,8 @@
   components:
   - type: StationEvent
     earliestStart: 35
-    weight: 7.5
-    minimumPlayers: 25
+    weight: 7.5 # 5.5 # Stories
+    minimumPlayers: 25 # 20 # Stories
     duration: 1
   - type: RuleGrids
   - type: LoadMapRule
