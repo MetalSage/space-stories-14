@@ -165,7 +165,7 @@ namespace Content.Server.Zombies
                 return;
             _protoManager.TryIndex(component.EmoteSoundsId, out component.EmoteSounds);
 
-            AddComp<NightvisionComponent>(uid); // Stories
+            EnsureComp<NightvisionComponent>(uid); // Stories
         }
 
         private void OnEmote(EntityUid uid, ZombieComponent component, ref EmoteEvent args)
