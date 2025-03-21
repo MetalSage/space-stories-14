@@ -21,7 +21,7 @@
   - type: SubGamemodes
     rules:
     - id: Thief
-      prob: 0.25
+      prob: 0.25 # 0.5 # Stories
     - id: SubWizard
       prob: 0.05
 
@@ -192,7 +192,7 @@
     definitions:
     - prefRoles: [ Traitor ]
       max: 8
-      playerRatio: 15
+      playerRatio: 15 # 10 # Stories
       blacklist:
         components:
         - AntagImmune
@@ -391,10 +391,10 @@
   parent: BaseGameRule
   components:
   - type: BasicStationEventScheduler
-    minimumTimeUntilFirstEvent: 1800 # 30 mins
+    minimumTimeUntilFirstEvent: 1800 # 30 mins # 1200 # Stories
     minMaxEventTiming:
-      min: 1200 # 20 mins
-      max: 3600 # 60 mins
+      min: 1200 # 20 mins # 600 # Stories
+      max: 3600 # 60 mins # 1800 # Stories
     scheduledGameRules: !type:NestedSelector
       tableId: UnknownShuttlesFriendlyTable
 
@@ -406,15 +406,15 @@
   - type: RoundstartStationVariationRule
     rules:
     - id: BasicPoweredLightVariationPass
-      prob: 0.50
+      prob: 0.50 # Stories
     - id: BasicTrashVariationPass
-      prob: 0.50
+      prob: 0.50 # Stories
     - id: SolidWallRustingVariationPass
-      prob: 0.50
+      prob: 0.50 # Stories
     - id: ReinforcedWallRustingVariationPass
-      prob: 0.50
+      prob: 0.50 # Stories
     - id: BasicPuddleMessVariationPass
-      prob: 0.50
+      prob: 0.50 # 0.99 # Stories
       orGroup: puddleMess
     - id: BloodbathPuddleMessVariationPass
       prob: 0.01
