@@ -1,7 +1,8 @@
+# Weapons
 - type: listing
-  id: UplinkGarrote
-  name: Удавка
-  description: Излюбленный профессионалами инструмент для скрытых убийств. Позволяет взять стоящую к вам спиной жертву в мёртвую хватку, неминуемо убивая её.
+  id: STUplinkGarrote
+  name: uplink-garrote-name 
+  description: uplink-garrote-desc
   productEntity: STGarrote
   discountCategory: usualDiscounts
   discountDownTo:
@@ -11,10 +12,11 @@
   categories:
   - UplinkWeaponry
 
+# Pointless
 - type: listing
-  id: UplinkClothingTacticalMaid
-  name: Набор горничной синдиката
-  description: Предполагается, что у лучших горничных должны быть дизайнерские костюмы.
+  id: STUplinkClothingTacticalMaid
+  name: uplink-costume-tactical-maid-name
+  description: uplink-costume-tactical-maid-desc
   productEntity: ClothingBackpackDuffelCrateTacticalMaid
   cost:
     Telecrystal: 6
@@ -22,19 +24,31 @@
   - UplinkPointless
 
 - type: listing
-  id: UplinkRadioJammerIndustrial
-  name: Экспериментальный глушитель связи
-  description: Это устройство является улучшенной версией обычного глушителя связи. Радиус действия увеличен, но и потребление больше. (Замаскирован под %%%%%%%)
+  id: STUplinkDogEars
+  name: uplink-dog-ears-name
+  description: uplink-dog-ears-desc
+  productEntity: ClothingHeadHatDogEars
+  cost:
+    Telecrystal: 26
+  categories:
+  - UplinkPointless
+
+# Disruption
+- type: listing
+  id: STUplinkRadioJammerIndustrial
+  name: uplink-radio-jammer-idndustrial-name
+  description: uplink-radio-jammer-idndustrial-desc
   productEntity: RadioJammerIndustrial
   cost:
     Telecrystal: 6
   categories:
   - UplinkDisruption
 
+# Wearables
 - type: listing
-  id: UplinkNightvision
-  name: Прибор ночного видения
-  description: Позволяет видеть в полной темноте. Работает на ядерной батарее внутри и совсем не вреден для глаз.
+  id: STUplinkNightvision
+  name: uplink-nightvision-name
+  description: uplink-nightvision-desc
   productEntity: ClothingEyesNightvision
   discountCategory: rareDiscounts
   discountDownTo:
@@ -50,9 +64,9 @@
         - NukeOpsUplink
 
 - type: listing
-  id: UplinkNightvisionNukeOps
-  name: Прибор ночного видения
-  description: Позволяет видеть в полной темноте. Работает на ядерной батарее внутри и совсем не вреден для глаз.
+  id: STUplinkNightvisionNukeOps
+  name: uplink-nightvision-name
+  description: uplink-nightvision-desc
   productEntity: ClothingEyesNightvision
   discountCategory: rareDiscounts
   discountDownTo:
@@ -68,9 +82,9 @@
         - NukeOpsUplink
 
 - type: listing
-  id: UplinkClothingEyesThermalVisionMonocular
-  name: Монокль термального зрения
-  description: Новейшая разведочная технология, которую поместили внутрь монокля. Позволяет видеть органические цели в полной темноте и даже через стены.
+  id: STUplinkClothingEyesThermalVisionMonocular
+  name: uplink-clothing-eyes-thermal-vision-monocular-name
+  description: uplink-clothing-eyes-thermal-vision-monocular-desc
   productEntity: ClothingEyesThermalVisionMonocular
   discountCategory: rareDiscounts
   discountDownTo:
@@ -86,9 +100,9 @@
           - NukeOpsUplink
 
 - type: listing
-  id: UplinkClothingEyesThermalVisionHud
-  name: Термальный визор оперативника
-  description: Новейшая разведочная технология, которую поместили внутрь визора. Позволяет видеть органические цели в полной темноте и даже через стены. Этот вариант специально для Ядерных Оперативников имеет встроенный визор Синдиката.
+  id: STUplinkClothingEyesThermalVisionHud
+  name: uplink-clothing-eyes-thermal-vision-hud-name
+  description: uplink-clothing-eyes-thermal-vision-hud-desc
   productEntity: ClothingEyesThermalVisionHud
   discountCategory: rareDiscounts
   discountDownTo:
@@ -102,13 +116,3 @@
       whitelist:
         tags:
           - NukeOpsUplink
-
-- type: listing
-  id: UplinkDogEars
-  name: Собачьи ушки
-  description: Тяф!
-  productEntity: ClothingHeadHatDogEars
-  cost:
-    Telecrystal: 26
-  categories:
-  - UplinkPointless
