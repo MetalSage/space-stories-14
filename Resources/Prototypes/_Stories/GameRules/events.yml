@@ -2,8 +2,6 @@
   parent: BaseGameRule
   id: BaseInquisitorSpawn
 
-
-
 - type: entity
   parent: BaseGameRule
   id: InquisitorSpawn
@@ -212,3 +210,18 @@
     specialEntries:
     - id: SpawnPointGhostSpaf
       prob: 0.001
+
+- type: entity
+  id: STJobDistributionError
+  parent: BaseGameRule
+  components:
+  - type: StationEvent
+    startAnnouncement: stories-station-event-job-distribution-error-announcement
+    minimumPlayers: 25
+    weight: 3
+    duration: 1
+  - type: JobDistributionErrorRule
+    jobs:
+    - STSecurityClown
+    - STPartyMaker
+    - STCommandMaid

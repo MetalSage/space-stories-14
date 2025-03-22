@@ -46,3 +46,29 @@
   icon:
     sprite: /Textures/_Stories/Interface/Misc/job_icons.rsi
     state: IAA
+
+# Event-Restricted-Jobs
+
+- type: jobIcon
+  parent: JobIcon
+  id: JobIconSTCommandMaid
+  icon:
+    sprite: /Textures/_Stories/Interface/Misc/job_icons.rsi
+    state: CommandMaid
+  allowSelection: false
+
+- type: jobIcon
+  parent: JobIcon
+  id: JobIconSTPartyMaker
+  icon:
+    sprite: /Textures/_Stories/Interface/Misc/job_icons.rsi
+    state: PartyMaker
+  allowSelection: false
+
+- type: jobIcon
+  parent: JobIcon
+  id: JobIconSTSecurityClown
+  icon:
+    sprite: /Textures/_Stories/Interface/Misc/job_icons.rsi
+    state: SecurityClown
+  allowSelection: false

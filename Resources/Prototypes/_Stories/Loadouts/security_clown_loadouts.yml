@@ -1,0 +1,6 @@
+- type: roleLoadout
+  id: JobSTSecurityClown
+  groups:
+  - ClownBackpack
+  - SurvivalSecurity
+  - GroupSpeciesBreathToolSecurity

@@ -1,0 +1,12 @@
+- type: entity
+  parent: ClothingHeadsetCommand
+  id: STClothingHeadsetCommandService
+  name: command-service headset
+  description: A headset with a command and service channels.
+  components:
+  - type: ContainerFill
+    containers:
+      key_slots:
+      - EncryptionKeyCommand
+      - EncryptionKeyService
+      - EncryptionKeyCommon

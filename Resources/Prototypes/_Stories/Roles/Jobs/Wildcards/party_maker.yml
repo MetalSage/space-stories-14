@@ -1,0 +1,25 @@
+- type: job
+  id: STPartyMaker
+  name: stories-job-name-party-maker
+  description: stories-job-description-party-maker
+  playTimeTracker: JobSTPartyMaker
+  startingGear: STPartyMakerGear
+  icon: "JobIconSTPartyMaker"
+  supervisors: job-supervisors-hop
+  setPreference: false
+  access:
+  - Service
+  - Maintenance
+  - Theatre
+
+- type: startingGear
+  id: STPartyMakerGear
+  equipment:
+    jumpsuit: ClothingUniformJumpsuitHawaiBlack
+    id: STPartyMakerPDA
+    ears: ClothingHeadsetService
+    eyes: ClothingEyesGlassesSunglasses
+    shoes: ClothingShoesColorBlack
+  storage:
+    back:
+    - SuperSynthesizerInstrument

@@ -99,3 +99,44 @@
       slots:
         - idcard
       sprite: Objects/Misc/id_cards.rsi
+
+# Event-Restricted-Jobs
+
+- type: entity
+  parent: IDCardStandard
+  id: STSecurityClownIDCard
+  name: security clown ID card
+  components:
+  - type: Sprite
+    sprite: _Stories/Objects/Misc/id_cards.rsi
+    layers:
+    - state: default
+    - state: idsecurityclown
+  - type: PresetIdCard
+    job: STSecurityClown
+
+- type: entity
+  parent: IDCardStandard
+  id: STCommandMaidIDCard
+  name: command maid ID card
+  components:
+  - type: Sprite
+    sprite: _Stories/Objects/Misc/id_cards.rsi
+    layers:
+    - state: default
+    - state: idcommandmaid
+  - type: PresetIdCard
+    job: STCommandMaid
+
+- type: entity
+  parent: IDCardStandard
+  id: STPartyMakerIDCard
+  name: party maker ID card
+  components:
+  - type: Sprite
+    sprite: _Stories/Objects/Misc/id_cards.rsi
+    layers:
+    - state: default
+    - state: idpartymaker
+  - type: PresetIdCard
+    job: STPartyMaker

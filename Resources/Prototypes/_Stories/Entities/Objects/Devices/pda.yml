@@ -114,3 +114,32 @@
   - type: Icon
     sprite: _Stories/Objects/Devices/pda.rsi
     state: pda-spmedic
+
+# Event-Restricted-Jobs
+
+- type: entity
+  parent: ClownPDA
+  id: STSecurityClownPDA
+  name: security clown PDA
+  description: Who has a pink PDA in security?
+  components:
+  - type: Pda
+    id: STSecurityClownIDCard
+
+- type: entity
+  parent: JanitorPDA
+  id: STCommandMaidPDA
+  name: command maid PDA
+  description: Command gets their own janitorial staff?  This says a lot about society...
+  components:
+  - type: Pda
+    id: STCommandMaidIDCard
+
+- type: entity
+  parent: MusicianPDA
+  id: STPartyMakerPDA
+  name: party maker PDA
+  description: The best helper to make a party.
+  components:
+  - type: Pda
+    id: STPartyMakerIDCard
