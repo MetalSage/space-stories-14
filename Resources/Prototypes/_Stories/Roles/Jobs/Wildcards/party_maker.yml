@@ -1,7 +1,7 @@
 - type: job
   id: PartyMaker
-  name: job-name-party-maker
-  description: job-name-party-maker
+  name: stories-job-name-party-maker
+  description: stories-job-description-party-maker
   playTimeTracker: JobPartyMaker
   startingGear: PartyMakerGear
   icon: "JobIconPartyMaker"

@@ -1,7 +1,7 @@
 - type: job
   id: SecurityClown
-  name: job-name-security-clown
-  description: job-description-security-clown
+  name: stories-job-name-security-clown
+  description: stories-job-description-security-clown
   playTimeTracker: JobSecurityClown
   requirements:
   - !type:OverallPlaytimeRequirement

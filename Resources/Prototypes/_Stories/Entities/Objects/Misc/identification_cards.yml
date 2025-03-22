@@ -100,7 +100,7 @@
         - idcard
       sprite: Objects/Misc/id_cards.rsi
 
-# event-resctricted jobs
+# Event-Restricted-Jobs
 
 - type: entity
   parent: IDCardStandard

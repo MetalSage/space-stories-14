@@ -5,11 +5,11 @@ JobPilot = пилот
 job-name-STBrigmedic = бригмедик
 STBrigmedic = бригмедик
 
-# event-restricted-jobs
+# Event-Restricted-Jobs
 
-job-name-security-clown = Клоун Службы Безопасности
-job-name-command-maid = Горничная Капитана
-job-name-party-maker = Партимейкер
+stories-job-name-security-clown = Клоун Службы Безопасности
+stories-job-name-command-maid = Горничная Капитана
+stories-job-name-party-maker = Партимейкер
 
 JobSecurityClown = Security Clown
 JobCommandMaid = Горничная Капитана

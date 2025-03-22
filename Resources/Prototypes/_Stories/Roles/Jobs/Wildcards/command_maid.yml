@@ -1,7 +1,7 @@
 - type: job
   id: CommandMaid
-  name: job-name-command-maid
-  description: job-description-command-maid
+  name: stories-job-name-command-maid
+  description: stories-job-description-command-maid
   playTimeTracker: JobCommandMaid
   requirements:
   - !type:RoleTimeRequirement

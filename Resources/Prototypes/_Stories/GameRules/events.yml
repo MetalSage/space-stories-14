@@ -216,7 +216,7 @@
   parent: BaseGameRule
   components:
   - type: StationEvent
-    startAnnouncement: station-event-job-distribution-error-announcement
+    startAnnouncement: stories-station-event-job-distribution-error-announcement
     minimumPlayers: 25
     weight: 3
     duration: 1
