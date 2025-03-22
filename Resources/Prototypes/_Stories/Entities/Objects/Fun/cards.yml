@@ -1268,7 +1268,7 @@
   components:
   - type: Tag
     tags:
-    - Card
+    - STCard
   - type: Appearance
   - type: CardFan
   - type: CardStack
