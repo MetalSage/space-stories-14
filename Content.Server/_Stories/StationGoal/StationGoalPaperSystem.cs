@@ -3,6 +3,7 @@ using Content.Server.Fax;
 using Content.Shared.Fax.Components;
 using Content.Shared.GameTicking;
 using Content.Shared.Paper;
+using Robust.Server.Player;
 using Robust.Shared.Prototypes;
 using Robust.Shared.Random;
 
@@ -16,6 +17,7 @@ namespace Content.Server._Stories.StationGoal
         [Dependency] private readonly IPrototypeManager _prototypeManager = default!;
         [Dependency] private readonly IRobustRandom _random = default!;
         [Dependency] private readonly FaxSystem _faxSystem = default!;
+        [Dependency] private readonly IPlayerManager _playerManager = default!;
 
         public override void Initialize()
         {
@@ -28,18 +30,28 @@ namespace Content.Server._Stories.StationGoal
             SendRandomGoal();
         }
 
-        public bool SendRandomGoal()
+        public void SendRandomGoal()
         {
             var availableGoals = _prototypeManager.EnumeratePrototypes<StationGoalPrototype>().ToList();
+
+            foreach (var findGoal in availableGoals)
+            {
+                if (_playerManager.PlayerCount <= findGoal.OnlineLess)
+                {
+                    TrySendStationGoal(findGoal);
+                    return;
+                }
+            }
+
             var goal = _random.Pick(availableGoals);
-            return SendStationGoal(goal);
+            TrySendStationGoal(goal);
         }
 
         /// <summary>
         ///     Send a station goal to all faxes which are authorized to receive it.
         /// </summary>
         /// <returns>True if at least one fax received paper</returns>
-        public bool SendStationGoal(StationGoalPrototype goal)
+        public bool TrySendStationGoal(StationGoalPrototype goal)
         {
             var faxes = EntityManager.EntityQuery<FaxMachineComponent>();
             var wasSent = false;

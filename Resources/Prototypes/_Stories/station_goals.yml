@@ -1,4 +1,9 @@
 - type: stationGoal
+  id: StationGoalFree
+  text: station-goal-free
+  onlineLess: 20
+
+- type: stationGoal
   id: StationGoalShuttle
   text: station-goal-shuttle
 
