@@ -116,3 +116,21 @@
       whitelist:
         tags:
           - NukeOpsUplink
+
+- type: listing
+  id: STUplinkClothingEyesHudSyndicateAgent
+  name: uplink-clothing-eyes-hud-syndicate-agent-name 
+  description: uplink-clothing-eyes-hud-syndicate-agent-desc
+  productEntity: ClothingEyesHudSyndicateAgent
+  discountCategory: rareDiscounts
+  discountDownTo:
+    Telecrystal: 3
+  cost:
+    Telecrystal: 4
+  categories:
+    - UplinkWearables
+  conditions:
+    - !type:StoreWhitelistCondition
+      whitelist:
+        tags:
+          - NukeOpsUplink
