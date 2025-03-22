@@ -11,6 +11,6 @@ stories-job-name-security-clown = Клоун Службы Безопасност
 stories-job-name-command-maid = Горничная Капитана
 stories-job-name-party-maker = Партимейкер
 
-JobSTSecurityClown = Security Clown
+JobSTSecurityClown = Клоун Службы Безопасности
 JobSTCommandMaid = Горничная Капитана
 JobSTPartyMaker = Партимейкер
