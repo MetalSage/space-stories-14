@@ -6,6 +6,8 @@ uplink-costume-tactical-maid-name = Набор горничной синдика
 uplink-costume-tactical-maid-desc = Предполагается, что у лучших горничных должны быть дизайнерские костюмы.
 uplink-dog-ears-name = Собачьи ушки
 uplink-dog-ears-desc = Тяф!
+uplink-richard-name = Маска Ричарда
+uplink-richard-desc = Тебе нравится причинять боль людям, не так ли?
 # Utility
 uplink-radio-jammer-idndustrial-name = Экспериментальный глушитель связи
 uplink-radio-jammer-idndustrial-desc = Это устройство является улучшенной версией обычного глушителя связи. Радиус действия увеличен, но и потребление больше. (Замаскирован под %%%%%%%)

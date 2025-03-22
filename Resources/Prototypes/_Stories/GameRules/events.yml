@@ -93,8 +93,8 @@
         - StaminaModifier
       - type: RandomMetadata
         nameSegments:
-        - names_inquisitor_title
-        - names_inquisitor
+        - InquisitorTitle
+        - Inquisitor
       - type: NpcFactionMember
         factions:
         - Syndicate
@@ -188,8 +188,8 @@
         - StaminaModifier
       - type: RandomMetadata
         nameSegments:
-        - names_inquisitor_title
-        - names_inquisitor
+        - InquisitorTitle
+        - Inquisitor
       - type: NpcFactionMember
         factions:
         - Syndicate

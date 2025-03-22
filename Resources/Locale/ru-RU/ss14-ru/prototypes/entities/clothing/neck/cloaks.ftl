@@ -50,3 +50,5 @@ ent-ClothingNeckCloakEnby = плащ кладоискателя
     .desc = Этот плащ принадлежал жадному искателю сокровищ.
 ent-ClothingNeckCloakPan = поварской плащ
     .desc = Предназначен для ношения вместе со сковородой.
+ent-ClothingNeckCloakAroace = плащ пилота
+    .desc = Плащ вручается лучшим пилотам Nanotrasen на планетах с пригодной для жизни атмосферой.

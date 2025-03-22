@@ -1,0 +1,307 @@
+<Document>
+  #Модификаторы
+
+  ##Отягчающие Обстоятельства
+  <Table Columns="4">
+
+    <ColorBox Color="#ba2e2e">
+      <Box>
+        Код
+      </Box>
+    </ColorBox>
+    <ColorBox Color="#ba2e2e">
+      <Box>
+        Название
+      </Box>
+    </ColorBox>
+    <ColorBox Color="#ba2e2e">
+      <Box>
+        Описание
+      </Box>
+    </ColorBox>
+    <ColorBox Color="#ba2e2e">
+      <Box>
+        Влияние на меру наказания
+      </Box>
+    </ColorBox>
+
+    <ColorBox>
+      <Box>
+        [bold]ОО-1[/bold]
+      </Box>
+    </ColorBox>
+    <ColorBox>
+      <Box>
+        [bold]Рецидив[/bold]
+      </Box>
+    </ColorBox>
+    <ColorBox>
+      <Box>
+        Совершение лицом нового преступления по той же статье после осуждения за предыдущее деяние.
+      </Box>
+    </ColorBox>
+    <ColorBox>
+      <Box>
+        +5 минут к сроку заключения за каждый случай рецидива.
+      </Box>
+    </ColorBox>
+
+    <ColorBox>
+      <Box>
+        [bold]ОО-2[/bold]
+      </Box>
+    </ColorBox>
+    <ColorBox>
+      <Box VerticalAlignment="Stretch" Margin="2">
+        [bold]Преступление против должностного лица[/bold]
+      </Box>
+    </ColorBox>
+    <ColorBox>
+      <Box VerticalAlignment="Stretch" Margin="2">
+        Нарушение Корпоративного Закона, направленное против должностного лица.
+      </Box>
+    </ColorBox>
+    <ColorBox>
+      <Box VerticalAlignment="Stretch" Margin="2">
+        +10 минут к сроку заключения.
+      </Box>
+    </ColorBox>
+
+    <ColorBox>
+      <Box>
+        [bold]ОО-3[/bold]
+      </Box>
+    </ColorBox>
+    <ColorBox>
+      <Box VerticalAlignment="Stretch" Margin="2">
+        Подстрекательство
+      </Box>
+    </ColorBox>
+    <ColorBox>
+      <Box VerticalAlignment="Stretch" Margin="2">
+        Склонение другого лица к совершению преступления путем уговора, подкупа, угрозы или другим способом.
+      </Box>
+    </ColorBox>
+    <ColorBox>
+      <Box VerticalAlignment="Stretch" Margin="2">
+        Полное наказание по статьям, к нарушению которых оказывалось склонение.
+      </Box>
+    </ColorBox>
+
+  </Table>
+
+  ##Смягчающие Обстоятельства
+  <Table Columns="4">
+
+    <ColorBox Color="#146b34">
+      <Box>
+        Код
+      </Box>
+    </ColorBox>
+    <ColorBox Color="#146b34">
+      <Box>
+        Название
+      </Box>
+    </ColorBox>
+    <ColorBox Color="#146b34">
+      <Box>
+        Описание
+      </Box>
+    </ColorBox>
+    <ColorBox Color="#146b34">
+      <Box>
+        Влияние на меру наказания
+      </Box>
+    </ColorBox>
+
+    <ColorBox>
+      <Box>
+        [bold]СО-1[/bold]
+      </Box>
+    </ColorBox>
+    <ColorBox>
+      <Box>
+        [bold]Отсутствие умысла[/bold]
+      </Box>
+    </ColorBox>
+    <ColorBox>
+      <Box>
+        Преступление было совершенно непредумышленно, без цели навредить кому-либо.
+      </Box>
+    </ColorBox>
+    <ColorBox>
+      <Box>
+        Снижение срока заключения на 75%.
+      </Box>
+    </ColorBox>
+
+    <ColorBox>
+      <Box>
+        [bold]СО-2[/bold]
+      </Box>
+    </ColorBox>
+    <ColorBox>
+      <Box VerticalAlignment="Stretch" Margin="2">
+        [bold]Пособничество под принуждением[/bold]
+      </Box>
+    </ColorBox>
+    <ColorBox>
+      <Box Orientation="Vertical" Margin="2">
+        Установлено что обвиняемый находился под контролем разума и был успешно деконвертирован
+
+        [bold]ИЛИ[/bold]
+
+        Соучастие в совершении преступлений под угрозой физического, ментального насилия или имущественного вреда.
+
+        [bold]Примечание:[/bold] может не применяться, если нарушены статьи 3xx и выше (исключая статью 500) на усмотрение Служб Безопасности или вышестоящих лиц.
+      </Box>
+    </ColorBox>
+    <ColorBox>
+      <Box Orientation="Vertical" Margin="2">
+        Снятие обвинений по статье "Мятеж"
+
+        [bold]И[/bold]
+
+        Снижение срока заключения на 75%.
+      </Box>
+    </ColorBox>
+
+    <ColorBox>
+      <Box>
+        [bold]СО-3[/bold]
+      </Box>
+    </ColorBox>
+    <ColorBox>
+      <Box VerticalAlignment="Stretch" Margin="2">
+        [bold]Крайняя необходимость[/bold]
+      </Box>
+    </ColorBox>
+    <ColorBox>
+      <Box VerticalAlignment="Stretch" Margin="2">
+        Вынужденные действия в целях самозащиты, защиты здоровья и жизни своих коллег, а также сохранности своего рабочего места и станции в целом.
+      </Box>
+    </ColorBox>
+    <ColorBox>
+      <Box VerticalAlignment="Stretch" Margin="2">
+        Снятие обвинений
+      </Box>
+    </ColorBox>
+
+    <ColorBox>
+      <Box>
+        [bold]СО-4[/bold]
+      </Box>
+    </ColorBox>
+    <ColorBox>
+      <Box VerticalAlignment="Stretch" Margin="2">
+        [bold]Сотрудничество со следствием[/bold]
+      </Box>
+    </ColorBox>
+    <ColorBox>
+      <Box Orientation="Vertical" Margin="2">
+        Передача себя в руки правосудия до задержания
+
+        [bold]ИЛИ[/bold]
+
+        Добровольная помощь следствию по раскрытию чужих преступлений.
+      </Box>
+    </ColorBox>
+    <ColorBox>
+      <Box VerticalAlignment="Stretch" Margin="2">
+        Снижение срока заключения на 50%.
+      </Box>
+    </ColorBox>
+
+  </Table>
+
+  ##Нарушения заключённых станции
+  <Table Columns="4">
+
+    <ColorBox Color="#57000C">
+      <Box>
+        Способ содерж.
+      </Box>
+    </ColorBox>
+    <ColorBox Color="#57000C">
+      <Box>
+        Вандализм
+      </Box>
+    </ColorBox>
+    <ColorBox Color="#57000C">
+      <Box>
+        Попытка побега
+      </Box>
+    </ColorBox>
+    <ColorBox Color="#57000C">
+      <Box>
+        Побег
+      </Box>
+    </ColorBox>
+
+    <ColorBox>
+      <Box>
+        Тюремное закл.
+      </Box>
+    </ColorBox>
+    <ColorBox>
+      <Box>
+        Перезапуск таймера
+      </Box>
+    </ColorBox>
+    <ColorBox>
+      <Box>
+        Перезапуск таймера или перевод в карцер на весь срок заключения
+      </Box>
+    </ColorBox>
+    <ColorBox>
+      <Box>
+        Заключение на тот же срок + 10 минут
+      </Box>
+    </ColorBox>
+
+    <ColorBox>
+      <Box>
+        Пермабриг
+      </Box>
+    </ColorBox>
+    <ColorBox>
+      <Box>
+        Перевод в карцер на 10 минут
+      </Box>
+    </ColorBox>
+    <ColorBox>
+      <Box>
+        Перевод в карцер на 10 минут. Повторная попытка побега является основанием для казни
+      </Box>
+    </ColorBox>
+    <ColorBox>
+      <Box>
+        Может быть применена летальная сила с последующим возвращением в место содержания, либо ликвидация (без возможности к реанимации или клонированию)
+      </Box>
+    </ColorBox>
+
+    <ColorBox>
+      <Box>
+        Карцер
+      </Box>
+    </ColorBox>
+    <ColorBox>
+      <Box>
+        Добавление 10 минут ко времени содержания в карцере
+      </Box>
+    </ColorBox>
+    <ColorBox>
+      <Box>
+        Попытка побега из карцера может караться казнью
+      </Box>
+    </ColorBox>
+    <ColorBox>
+      <Box>
+        Казнь на месте
+        (без возможности к реанимации или клонированию)
+      </Box>
+    </ColorBox>
+
+  </Table>
+
+</Document>

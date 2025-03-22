@@ -3,6 +3,7 @@
   name: Hacker
   side: Debug
   volume: 500
+  alert: ForceVolume
   maxVolume: 1000
   componentsToAdd:
   - type: Empire
@@ -28,7 +29,7 @@
   - type: Prying
     speedModifier: 3
     pryPowered: !type:Bool
-        true
+      true
     force: !type:Bool
       true
     useSound:

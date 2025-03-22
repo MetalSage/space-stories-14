@@ -1,8 +1,12 @@
-using System.Linq;
-using System.Numerics;
+using Robust.Client.GameObjects;
+using Robust.Client.Player;
+using Robust.Client.UserInterface;
+using Robust.Client.UserInterface.Controls;
+using Robust.Shared.Input;
+using Robust.Shared.Map;
 using Content.Client.Examine;
-using Content.Client.Strip;
 using Content.Client.Stylesheets;
+using Content.Client.Strip;
 using Content.Client.UserInterface.Controls;
 using Content.Client.UserInterface.Systems.Hands.Controls;
 using Content.Client.Verbs.UI;
@@ -15,15 +19,12 @@ using Content.Shared.Input;
 using Content.Shared.Inventory;
 using Content.Shared.Inventory.VirtualItem;
 using Content.Shared.Strip.Components;
-using JetBrains.Annotations;
-using Robust.Client.GameObjects;
-using Robust.Client.Player;
-using Robust.Client.UserInterface;
-using Robust.Client.UserInterface.Controls;
-using Robust.Shared.Input;
-using Robust.Shared.Map;
+using Content.Shared.Tag;
 using static Content.Client.Inventory.ClientInventorySystem;
 using static Robust.Client.UserInterface.Control;
+using JetBrains.Annotations;
+using System.Linq;
+using System.Numerics;
 
 namespace Content.Client.Inventory
 {
@@ -49,15 +50,25 @@ namespace Content.Client.Inventory
 
         [ViewVariables]
         private readonly EntityUid _virtualHiddenEntity;
+        // Stories-Cards
+        [ViewVariables]
+        private readonly EntityUid _virtualHiddenEntityCard;
 
+        [ViewVariables]
+        private const string HiddenCardEntityID = "STStrippingHiddenEntityCard";
+
+        private readonly TagSystem _tagSystem;
+        // Stories-Cards
         public StrippableBoundUserInterface(EntityUid owner, Enum uiKey) : base(owner, uiKey)
         {
             _examine = EntMan.System<ExamineSystem>();
             _inv = EntMan.System<InventorySystem>();
             _cuffable = EntMan.System<SharedCuffableSystem>();
             _strippable = EntMan.System<StrippableSystem>();
+            _tagSystem = EntMan.System<TagSystem>(); // Stories-Cards
 
             _virtualHiddenEntity = EntMan.SpawnEntity(HiddenPocketEntityId, MapCoordinates.Nullspace);
+            _virtualHiddenEntityCard = EntMan.SpawnEntity(HiddenCardEntityID, MapCoordinates.Nullspace); // Stories-Cards
         }
 
         protected override void Open()
@@ -78,6 +89,7 @@ namespace Content.Client.Inventory
                 _strippingMenu.OnDirty -= UpdateMenu;
 
             EntMan.DeleteEntity(_virtualHiddenEntity);
+            EntMan.DeleteEntity(_virtualHiddenEntityCard); // Stories-Cards
             base.Dispose(disposing);
         }
 
@@ -171,6 +183,15 @@ namespace Content.Client.Inventory
             }
 
             UpdateEntityIcon(button, hand.HeldEntity);
+
+            // Stories-Cards
+            var entity = hand.HeldEntity;
+
+            if (entity != null && _tagSystem.HasTag(entity.Value, "STCard"))
+                entity = _virtualHiddenEntityCard;
+
+            UpdateEntityIcon(button, entity);
+            // Stories-Cards
             _strippingMenu!.HandsContainer.AddChild(button);
         }
 

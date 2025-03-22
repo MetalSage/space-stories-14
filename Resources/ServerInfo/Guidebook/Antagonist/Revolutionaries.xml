@@ -10,7 +10,8 @@
 
   - Революционеры — это антагонисты, которых Синдикат спонсирует для захвата станции.
 
-  ## Главы Революционеров
+  ## Objectives
+  You must convert, cuff or kill all of the [textlink="Command staff" link="Command"] on station in no particular order.
 
   Your objective is [bold]not to destroy the station[/bold], but [italic]to take it over[/italic], so try to minimize damage where possible.
 
@@ -37,11 +38,11 @@
   - [bold]Visibly be destroyed upon being implanted into a [color=#5e9cff]Head Revolutionary[/color][/bold], giving you away
   - NOT protect against flash disorientation
 
-<Box>
-  <GuideEntityEmbed Entity="ClothingEyesGlassesSunglasses" Caption="Солнцезащитные очки"/>
-  <GuideEntityEmbed Entity="ClothingEyesGlassesSecurity" Caption="Очки охраны"/>
-  <GuideEntityEmbed Entity="ClothingHeadHatWelding" Caption="Сварочная маска"/>
-</Box>
+  Assume all of [color=#cb0000]Security[/color] and [color=#1b67a5]Command[/color] are implanted with mindshields already, [bold]however they can be removed using an empty implanter, obtainable from the Medical department's MedFab.[/bold]
+
+  <Box>
+    <GuideEntityEmbed Entity="MindShieldImplanter"/>
+  </Box>
 
   Такие вещи, как [color=#a4885c]Солнцезащитные очки[/color] и [color=#a4885c]Сварочная маска[/color] защищают от вспышек, и члены экипажа, носящие их, не смогут быть конвертированы в революционеров.
 

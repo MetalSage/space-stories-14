@@ -45,3 +45,5 @@ ent-ClothingNeckScarfStripedTrans = {ent-ClothingNeckScarfStripedAce}
     .desc = {ent-ClothingNeckScarfStripedAce.desc}
 ent-ClothingNeckScarfStripedLesbianLong = длинный бекон
     .desc = Длинный бекон! Идеально подходит для того, чтобы поделиться с подругой!
+ent-ClothingNeckScarfStripedAroace = полосатый aroace шарф
+    .desc = Стильный полосатый шарф aroace. Идеальный зимний аксессуар для тех, кто хорошо разбирается в моде, а также для тех, кто просто не выносит, когда холодный ветер обдувает шею.

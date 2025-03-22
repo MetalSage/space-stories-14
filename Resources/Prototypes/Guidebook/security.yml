@@ -27,11 +27,12 @@
 - type: guideEntry
   id: SpaceLaw
   name: guide-entry-rules-space-law
-  text: "/ServerInfo/Guidebook/ServerRules/SpaceLaw/SpaceLaw.xml"
+  text: "/ServerInfo/_Stories/ServerRules/SpaceLaw/SpaceStationLaw.xml" # Stories
   children:
   - SpaceLawCrimeList
+  - STCrimeModifiers # Stories
 
 - type: guideEntry
   id: SpaceLawCrimeList
   name: guide-entry-rules-sl-crime-list
-  text: "/ServerInfo/Guidebook/ServerRules/SpaceLaw/SLCrimeList.xml"
+  text: "/ServerInfo/_Stories/ServerRules/SpaceLaw/SpaceStationCrimeTable.xml" # Stories

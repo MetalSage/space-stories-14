@@ -34,6 +34,7 @@
   description: Позволяет видеть в полной темноте. Работает на ядерной батарее внутри и совсем не вреден для глаз.
   components:
   - type: NightvisionClothing # Space Stories
+    toggleOnSound: /Audio/_Stories/Misc/night_vision.ogg
   - type: Sprite
     sprite: _Stories/Clothing/Eyes/Glasses/nvg.rsi
   - type: Clothing

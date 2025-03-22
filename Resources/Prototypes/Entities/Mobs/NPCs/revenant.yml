@@ -74,11 +74,11 @@
     - StolenEssence
   - type: RandomMetadata
     nameSegments:
-    # - The
-    - RevenantType
-    # - of
-    - RevenantAdjective
-    - RevenantTheme
+    # - The # Stories-RU
+    - NamesRevenantType
+    # - of # Stories-RU
+    - NamesRevenantAdjective
+    - NamesRevenantTheme
   - type: Speech
     speechVerb: Ghost
   - type: Reactive

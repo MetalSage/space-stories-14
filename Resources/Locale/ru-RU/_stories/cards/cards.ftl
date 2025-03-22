@@ -1,0 +1,12 @@
+card-count-total = Всего карт в колоде: { $cardsTotal }.
+card-split-take = Взято { $cardsSplit } карт!
+card-split = Разделить пополам
+card-shuffle = Перетасовать
+card-shuffle-success = Перетасовано!
+card-flip-all = Перевернуть всё
+card-flip-face = Перевернуть лицевой стороной
+card-flip-back = Перевернуть задней стороной
+card-flip-verb = Перевернуть
+card-flip-success = Перевёрнуто!
+ent-STStrippingHiddenEntityCard = скрытая карта
+    .desc = Вы не можете подсмотреть, какая карта на руках.

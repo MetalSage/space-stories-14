@@ -12,7 +12,16 @@
   categories:
   - UplinkWeaponry
 
-# Pointless
+# Pointless  
+- type: listing
+  id: UplinkRichard
+  name: uplink-richard-name
+  description: uplink-richard-desc
+  productEntity: ClothingHeadHatRichard
+  cost:
+    Telecrystal: 1
+  categories:
+  - UplinkPointless
 - type: listing
   id: STUplinkClothingTacticalMaid
   name: uplink-costume-tactical-maid-name

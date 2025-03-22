@@ -3,17 +3,16 @@
   gameRule: Traitor
 
 - type: specialRole
+  id: thief
+  gameRule: Thief
+
+- type: specialRole
   id: initialinfected
   gameRule: ZombieOutbreak
   gameRulesBlacklist:
-  - Zombie
   - Revolutionary
   - Nukeops
   - Shadowling
-
-- type: specialRole
-  id: thief
-  gameRule: Thief
 
 - type: specialRole
   id: shadowling
@@ -40,6 +39,7 @@
   state: Ghost
   gameRule: NinjaSpawn
   gameRulesBlacklist:
+  - NinjaSpawn
   - InquisitorSpawn
   - KyloSpawn
   - LoneOpsSpawn
@@ -59,6 +59,7 @@
   state: Ghost
   gameRule: DragonSpawn
   gameRulesBlacklist:
+  - DragonSpawn
   - Nukeops
   - Shadowling
   - InquisitorSpawn
@@ -86,6 +87,7 @@
   - Revolutionary
   - Nukeops
   - Shadowling
+  - Zombie
   - InquisitorSpawn
   - KyloSpawn
   - LoneOpsSpawn

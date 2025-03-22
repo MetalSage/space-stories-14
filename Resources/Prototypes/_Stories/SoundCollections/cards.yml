@@ -1,0 +1,33 @@
+- type: soundCollection
+  id: STShuffleDeck
+  files:
+  - /Audio/_Stories/Items/Cards/Shuffle1.ogg
+  - /Audio/_Stories/Items/Cards/Shuffle2.ogg
+
+- type: soundCollection
+  id: STAddCard
+  files:
+  - /Audio/_Stories/Items/Cards/AddCard1.ogg
+  - /Audio/_Stories/Items/Cards/AddCard2.ogg
+  - /Audio/_Stories/Items/Cards/AddCard3.ogg
+  - /Audio/_Stories/Items/Cards/AddCard4.ogg
+
+- type: soundCollection
+  id: STRemoveCard
+  files:
+  - /Audio/_Stories/Items/Cards/RemoveCard1.ogg
+  - /Audio/_Stories/Items/Cards/RemoveCard2.ogg
+  - /Audio/_Stories/Items/Cards/RemoveCard3.ogg
+  - /Audio/_Stories/Items/Cards/RemoveCard4.ogg
+  - /Audio/_Stories/Items/Cards/RemoveCard5.ogg
+  - /Audio/_Stories/Items/Cards/RemoveCard6.ogg
+  - /Audio/_Stories/Items/Cards/RemoveCard7.ogg
+  - /Audio/_Stories/Items/Cards/RemoveCard8.ogg
+
+- type: soundCollection
+  id: STFanAdd
+  files:
+  - /Audio/_Stories/Items/Cards/FanAdd1.ogg
+  - /Audio/_Stories/Items/Cards/FanAdd2.ogg
+  - /Audio/_Stories/Items/Cards/FanAdd3.ogg
+  - /Audio/_Stories/Items/Cards/FanAdd4.ogg

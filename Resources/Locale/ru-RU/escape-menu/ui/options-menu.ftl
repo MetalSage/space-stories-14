@@ -45,6 +45,9 @@ ui-options-interface-label = Интерфейс
 
 ## Graphics menu
 
+ui-options-auto-fill-highlights = Автоматическое заполнение выделенных областей информацией о персонаже
+ui-options-highlights-color = Подсвечивание цветом:
+ui-options-highlights-color-example = Это выделенный текст!
 ui-options-show-held-item = Показать удерживаемый элемент рядом с курсором
 ui-options-show-combat-mode-indicators = Показать индикатор боевого режима рядом с курсором
 ui-options-opaque-storage-window = Непрозрачность окна хранилища
@@ -115,6 +118,11 @@ ui-options-header-shuttle = Шаттл
 ui-options-header-map-editor = Редактор карт
 ui-options-header-dev = Разработка
 ui-options-header-general = Основное
+ui-options-header-text-cursor = Текстовый курсор
+ui-options-header-text-cursor-select = Выделение текста
+ui-options-header-text-edit = Редактирование текста
+ui-options-header-text-chat = Чат
+ui-options-header-text-other = Ввод текста другим
 ui-options-hotkey-keymap = Использовать клавиши QWERTY (США)
 ui-options-hotkey-toggle-walk = Переключать шаг\бег
 ui-options-function-move-up = Двигаться вверх
@@ -257,6 +265,8 @@ ui-options-net-pvs-leave-tooltip =
     привести к неправильным предугадываниям и другим проблемам.
 cmd-options-desc = Открывает меню опций, опционально с конкретно выбранной вкладкой.
 cmd-options-help = Использование: options [tab]
+ui-options-accessability-header-visuals = Визуальные эффекты
+ui-options-accessability-header-content = Содержание
 ui-options-enable-color-name = Цветные имена персонажей
 ui-options-colorblind-friendly = Режим для дальтоников
 ui-options-reduced-motion = Снижение интенсивности визуальных эффектов

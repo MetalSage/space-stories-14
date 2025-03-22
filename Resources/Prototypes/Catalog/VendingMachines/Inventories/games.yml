@@ -5,6 +5,7 @@
     Paper: 8
     d6Dice: 8
     ChessBoard: 1
+    STCardDeckBoxFilled: 1 # Stories-Cards
     BackgammonBoard: 1
     ParchisBoard: 1
     CheckerBoard: 1
