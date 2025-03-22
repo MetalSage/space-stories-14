@@ -13,35 +13,35 @@
       <Box Orientation="Vertical">
         [bold]5-10 минут[/bold]
 
-        [color=cyan][bold]Лёгкие нарушения[/bold][/color]
+        [color=#00ff60][bold]Лёгкие нарушения[/bold][/color]
       </Box>
     </ColorBox>
     <ColorBox>
       <Box Orientation="Vertical">
         [bold]15 минут[/bold]
 
-        [color=cyan][bold]Средние нарушения[/bold][/color]
+        [color=#e9ff00][bold]Средние нарушения[/bold][/color]
       </Box>
     </ColorBox>
     <ColorBox>
       <Box Orientation="Vertical">
         [bold]25 минут[/bold]
 
-        [color=cyan][bold]Тяжкие нарушения[/bold][/color]
+        [color=#ff3200][bold]Тяжкие нарушения[/bold][/color]
       </Box>
     </ColorBox>
     <ColorBox>
       <Box Orientation="Vertical">
         [bold]40 минут[/bold]
 
-        [color=cyan][bold]Особо тяжкие нарушения[/bold][/color]
+        [color=#ff0023][bold]Особо тяжкие нарушения[/bold][/color]
       </Box>
     </ColorBox>
     <ColorBox>
       <Box Orientation="Vertical">
         [bold]Перманентное заключение[/bold]
 
-        [color=cyan][bold]Критические нарушения[/bold][/color]
+        [color=#d300ff][bold]Критические нарушения[/bold][/color]
       </Box>
     </ColorBox>
 
@@ -81,7 +81,7 @@
         [bold]00[/bold]
       </Box>
     </ColorBox>
-    <ColorBox Color="#0f4f27">
+    <ColorBox Color="#0F4F27">
       <Box VerticalAlignment="Stretch" Margin="2">
         Оск. поведение
       </Box>
@@ -112,7 +112,7 @@
         [bold]01[/bold]
       </Box>
     </ColorBox>
-    <ColorBox Color="#0f4f27">
+    <ColorBox Color="#0F4F27">
       <Box VerticalAlignment="Stretch" Margin="2">
         Лёгкий вред здоровью
       </Box>
@@ -143,7 +143,7 @@
         [bold]02[/bold]
       </Box>
     </ColorBox>
-    <ColorBox Color="#0f4f27">
+    <ColorBox Color="#0F4F27">
       <Box VerticalAlignment="Stretch" Margin="2">
         Исп. регул. веществ
       </Box>
@@ -174,7 +174,7 @@
         [bold]03[/bold]
       </Box>
     </ColorBox>
-    <ColorBox Color="#0f4f27">
+    <ColorBox Color="#0F4F27">
       <Box VerticalAlignment="Stretch" Margin="2">
 	      Злоупотребление экип.
       </Box>
@@ -205,7 +205,7 @@
         [bold]04[/bold]
       </Box>
     </ColorBox>
-    <ColorBox Color="#0f4f27">
+    <ColorBox Color="#0F4F27">
       <Box VerticalAlignment="Stretch" Margin="2">
 	  Хулиганство
       </Box>
@@ -236,7 +236,7 @@
         [bold]05[/bold]
       </Box>
     </ColorBox>
-    <ColorBox Color="#0f4f27">
+    <ColorBox Color="#0F4F27">
       <Box VerticalAlignment="Stretch" Margin="2">
         Мелкая кража
       </Box>
@@ -267,7 +267,7 @@
         [bold]06[/bold]
       </Box>
     </ColorBox>
-    <ColorBox Color="#0f4f27">
+    <ColorBox Color="#0F4F27">
       <Box VerticalAlignment="Stretch" Margin="2">
 	      Проникновение
       </Box>
@@ -298,7 +298,7 @@
         [bold]07[/bold]
       </Box>
     </ColorBox>
-    <ColorBox Color="#0f4f27">
+    <ColorBox Color="#0F4F27">
       <Box VerticalAlignment="Stretch" Margin="2">
 	      Нарушение субординации
       </Box>
@@ -329,7 +329,7 @@
         [bold]08[/bold]
       </Box>
     </ColorBox>
-    <ColorBox Color="#0f4f27">
+    <ColorBox Color="#0F4F27">
       <Box VerticalAlignment="Stretch" Margin="2">
 
       </Box>
@@ -360,7 +360,7 @@
         [bold]09[/bold]
       </Box>
     </ColorBox>
-    <ColorBox Color="#0f4f27">
+    <ColorBox Color="#0F4F27">
       <Box VerticalAlignment="Stretch" Margin="2">
         Шпионаж
       </Box>

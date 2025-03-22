@@ -27,7 +27,7 @@
 - type: guideEntry
   id: SpaceLaw
   name: guide-entry-rules-space-law
-  text: "/ServerInfo/_Stories/ServerRules/SpaceLaw/SpaceStationBRIB.xml" # Stories
+  text: "/ServerInfo/_Stories/ServerRules/SpaceLaw/SpaceStationLaw.xml" # Stories
   children:
   - SpaceLawCrimeList
   - STCrimeModifiers # Stories
@@ -35,4 +35,4 @@
 - type: guideEntry
   id: SpaceLawCrimeList
   name: guide-entry-rules-sl-crime-list
-  text: "/ServerInfo/_Stories/ServerRules/SpaceLaw/SpaceStationTableLaw.xml" # Stories
+  text: "/ServerInfo/_Stories/ServerRules/SpaceLaw/SpaceStationCrimeTable.xml" # Stories
