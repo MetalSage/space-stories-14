@@ -4,22 +4,22 @@
   ##Отягчающие Обстоятельства
   <Table Columns="4">
 
-    <ColorBox>
+    <ColorBox Color="#ba2e2e">
       <Box>
         Код
       </Box>
     </ColorBox>
-    <ColorBox Color="#2c456b">
+    <ColorBox Color="#ba2e2e">
       <Box>
         Название
       </Box>
     </ColorBox>
-    <ColorBox Color="#2c456b">
+    <ColorBox Color="#ba2e2e">
       <Box>
         Описание
       </Box>
     </ColorBox>
-    <ColorBox Color="#2c456b">
+    <ColorBox Color="#ba2e2e">
       <Box>
         Влияние на меру наказания
       </Box>
@@ -27,20 +27,20 @@
 
     <ColorBox>
       <Box>
-        ОО-1
+        [bold]ОО-1[/bold]
       </Box>
     </ColorBox>
-    <ColorBox Color="#146b34">
+    <ColorBox>
       <Box>
-        Рецидив
+        [bold]Рецидив[/bold]
       </Box>
     </ColorBox>
-    <ColorBox Color="#758000">
+    <ColorBox>
       <Box>
         Совершение лицом нового преступления по той же статье после осуждения за предыдущее деяние.
       </Box>
     </ColorBox>
-    <ColorBox Color="#801700">
+    <ColorBox>
       <Box>
         +5 минут к сроку заключения за каждый случай рецидива.
       </Box>
@@ -48,20 +48,20 @@
 
     <ColorBox>
       <Box>
-        ОО-2
+        [bold]ОО-2[/bold]
       </Box>
     </ColorBox>
-    <ColorBox Color="#0f4f27">
+    <ColorBox>
       <Box VerticalAlignment="Stretch" Margin="2">
-        Преступление против должностного лица
+        [bold]Преступление против должностного лица[/bold]
       </Box>
     </ColorBox>
-    <ColorBox Color="#414700">
+    <ColorBox>
       <Box VerticalAlignment="Stretch" Margin="2">
         Нарушение Корпоративного Закона, направленное против должностного лица.
       </Box>
     </ColorBox>
-    <ColorBox Color="#611300">
+    <ColorBox>
       <Box VerticalAlignment="Stretch" Margin="2">
         +10 минут к сроку заключения.
       </Box>
@@ -69,20 +69,20 @@
 
     <ColorBox>
       <Box>
-        ОО-3
+        [bold]ОО-3[/bold]
       </Box>
     </ColorBox>
-    <ColorBox Color="#0f4f27">
+    <ColorBox>
       <Box VerticalAlignment="Stretch" Margin="2">
         Подстрекательство
       </Box>
     </ColorBox>
-    <ColorBox Color="#414700">
+    <ColorBox>
       <Box VerticalAlignment="Stretch" Margin="2">
         Склонение другого лица к совершению преступления путем уговора, подкупа, угрозы или другим способом.
       </Box>
     </ColorBox>
-    <ColorBox Color="#611300">
+    <ColorBox>
       <Box VerticalAlignment="Stretch" Margin="2">
         Полное наказание по статьям, к нарушению которых оказывалось склонение.
       </Box>
@@ -93,22 +93,22 @@
   ##Смягчающие Обстоятельства
   <Table Columns="4">
 
-    <ColorBox>
+    <ColorBox Color="#146b34">
       <Box>
         Код
       </Box>
     </ColorBox>
-    <ColorBox Color="#2c456b">
+    <ColorBox Color="#146b34">
       <Box>
         Название
       </Box>
     </ColorBox>
-    <ColorBox Color="#2c456b">
+    <ColorBox Color="#146b34">
       <Box>
         Описание
       </Box>
     </ColorBox>
-    <ColorBox Color="#2c456b">
+    <ColorBox Color="#146b34">
       <Box>
         Влияние на меру наказания
       </Box>
@@ -116,20 +116,20 @@
 
     <ColorBox>
       <Box>
-        СО-1
+        [bold]СО-1[/bold]
       </Box>
     </ColorBox>
-    <ColorBox Color="#146b34">
+    <ColorBox>
       <Box>
-        Отсутствие умысла
+        [bold]Отсутствие умысла[/bold]
       </Box>
     </ColorBox>
-    <ColorBox Color="#758000">
+    <ColorBox>
       <Box>
         Преступление было совершенно непредумышленно, без цели навредить кому-либо.
       </Box>
     </ColorBox>
-    <ColorBox Color="#801700">
+    <ColorBox>
       <Box>
         Снижение срока заключения на 75%.
       </Box>
@@ -137,30 +137,30 @@
 
     <ColorBox>
       <Box>
-        СО-2
+        [bold]СО-2[/bold]
       </Box>
     </ColorBox>
-    <ColorBox Color="#0f4f27">
+    <ColorBox>
       <Box VerticalAlignment="Stretch" Margin="2">
-        Пособничество под принуждением
+        [bold]Пособничество под принуждением[/bold]
       </Box>
     </ColorBox>
-    <ColorBox Color="#414700">
+    <ColorBox>
       <Box Orientation="Vertical" Margin="2">
         Установлено что обвиняемый находился под контролем разума и был успешно деконвертирован
 
-        ИЛИ
+        [bold]ИЛИ[/bold]
 
         Соучастие в совершении преступлений под угрозой физического, ментального насилия или имущественного вреда.
 
-        Примечание: может не применяться, если нарушены статьи 3xx и выше (исключая статью 500) на усмотрение Служб Безопасности или вышестоящих лиц.
+        [bold]Примечание:[/bold] может не применяться, если нарушены статьи 3xx и выше (исключая статью 500) на усмотрение Служб Безопасности или вышестоящих лиц.
       </Box>
     </ColorBox>
-    <ColorBox Color="#611300">
+    <ColorBox>
       <Box Orientation="Vertical" Margin="2">
         Снятие обвинений по статье "Мятеж"
 
-        И
+        [bold]И[/bold]
 
         Снижение срока заключения на 75%.
       </Box>
@@ -168,20 +168,20 @@
 
     <ColorBox>
       <Box>
-        СО-3
+        [bold]СО-3[/bold]
       </Box>
     </ColorBox>
-    <ColorBox Color="#0f4f27">
+    <ColorBox>
       <Box VerticalAlignment="Stretch" Margin="2">
-        Крайняя необходимость
+        [bold]Крайняя необходимость[/bold]
       </Box>
     </ColorBox>
-    <ColorBox Color="#414700">
+    <ColorBox>
       <Box VerticalAlignment="Stretch" Margin="2">
         Вынужденные действия в целях самозащиты, защиты здоровья и жизни своих коллег, а также сохранности своего рабочего места и станции в целом.
       </Box>
     </ColorBox>
-    <ColorBox Color="#611300">
+    <ColorBox>
       <Box VerticalAlignment="Stretch" Margin="2">
         Снятие обвинений
       </Box>
@@ -189,24 +189,24 @@
 
     <ColorBox>
       <Box>
-        СО-4
+        [bold]СО-4[/bold]
       </Box>
     </ColorBox>
-    <ColorBox Color="#0f4f27">
+    <ColorBox>
       <Box VerticalAlignment="Stretch" Margin="2">
-        Сотрудничество со следствием
+        [bold]Сотрудничество со следствием[/bold]
       </Box>
     </ColorBox>
-    <ColorBox Color="#414700">
+    <ColorBox>
       <Box Orientation="Vertical" Margin="2">
         Передача себя в руки правосудия до задержания
 
-        ИЛИ
+        [bold]ИЛИ[/bold]
 
         Добровольная помощь следствию по раскрытию чужих преступлений.
       </Box>
     </ColorBox>
-    <ColorBox Color="#611300">
+    <ColorBox>
       <Box VerticalAlignment="Stretch" Margin="2">
         Снижение срока заключения на 50%.
       </Box>
@@ -214,25 +214,25 @@
 
   </Table>
 
-  ##Нарушения заключённых
+  ##Нарушения заключённых станции
   <Table Columns="4">
 
-    <ColorBox>
+    <ColorBox Color="#57000C">
       <Box>
-        Способ содержания
+        Способ содерж.
       </Box>
     </ColorBox>
-    <ColorBox>
+    <ColorBox Color="#57000C">
       <Box>
         Вандализм
       </Box>
     </ColorBox>
-    <ColorBox Color="#2c456b">
+    <ColorBox Color="#57000C">
       <Box>
         Попытка побега
       </Box>
     </ColorBox>
-    <ColorBox Color="#2c456b">
+    <ColorBox Color="#57000C">
       <Box>
         Побег
       </Box>
@@ -248,12 +248,12 @@
         Перезапуск таймера
       </Box>
     </ColorBox>
-    <ColorBox Color="#2c456b">
+    <ColorBox>
       <Box>
         Перезапуск таймера или перевод в карцер на весь срок заключения
       </Box>
     </ColorBox>
-    <ColorBox Color="#2c456b">
+    <ColorBox>
       <Box>
         Заключение на тот же срок + 10 минут
       </Box>
@@ -269,12 +269,12 @@
         Перевод в карцер на 10 минут
       </Box>
     </ColorBox>
-    <ColorBox Color="#2c456b">
+    <ColorBox>
       <Box>
         Перевод в карцер на 10 минут. Повторная попытка побега является основанием для казни
       </Box>
     </ColorBox>
-    <ColorBox Color="#2c456b">
+    <ColorBox>
       <Box>
         Может быть применена летальная сила с последующим возвращением в место содержания, либо ликвидация (без возможности к реанимации или клонированию)
       </Box>
@@ -290,12 +290,12 @@
         Добавление 10 минут ко времени содержания в карцере
       </Box>
     </ColorBox>
-    <ColorBox Color="#2c456b">
+    <ColorBox>
       <Box>
         Попытка побега из карцера может караться казнью
       </Box>
     </ColorBox>
-    <ColorBox Color="#2c456b">
+    <ColorBox>
       <Box>
         Казнь на месте
         (без возможности к реанимации или клонированию)
