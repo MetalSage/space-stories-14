@@ -2,7 +2,7 @@
   id: STBrigmedic
   name: job-name-STBrigmedic
   description: job-description-STBrigmedic
-  playTimeTracker: STJobBrigmedic
+  playTimeTracker: JobSTBrigmedic
   requirements:
   - !type:DepartmentTimeRequirement
     department: Security
