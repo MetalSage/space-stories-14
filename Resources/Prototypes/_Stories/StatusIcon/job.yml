@@ -51,7 +51,7 @@
 
 - type: jobIcon
   parent: JobIcon
-  id: JobIconCommandMaid
+  id: JobIconSTCommandMaid
   icon:
     sprite: /Textures/_Stories/Interface/Misc/job_icons.rsi
     state: CommandMaid
@@ -59,7 +59,7 @@
 
 - type: jobIcon
   parent: JobIcon
-  id: JobIconPartyMaker
+  id: JobIconSTPartyMaker
   icon:
     sprite: /Textures/_Stories/Interface/Misc/job_icons.rsi
     state: PartyMaker
@@ -67,7 +67,7 @@
 
 - type: jobIcon
   parent: JobIcon
-  id: JobIconSecurityClown
+  id: JobIconSTSecurityClown
   icon:
     sprite: /Textures/_Stories/Interface/Misc/job_icons.rsi
     state: SecurityClown

@@ -1,10 +1,10 @@
 - type: job
-  id: PartyMaker
+  id: STPartyMaker
   name: stories-job-name-party-maker
   description: stories-job-description-party-maker
-  playTimeTracker: JobPartyMaker
-  startingGear: PartyMakerGear
-  icon: "JobIconPartyMaker"
+  playTimeTracker: JobSTPartyMaker
+  startingGear: STPartyMakerGear
+  icon: "JobIconSTPartyMaker"
   supervisors: job-supervisors-hop
   setPreference: false
   access:
@@ -13,10 +13,10 @@
   - Theatre
 
 - type: startingGear
-  id: PartyMakerGear
+  id: STPartyMakerGear
   equipment:
     jumpsuit: ClothingUniformJumpsuitHawaiBlack
-    id: PartyMakerPDA
+    id: STPartyMakerPDA
     ears: ClothingHeadsetService
     eyes: ClothingEyesGlassesSunglasses
     shoes: ClothingShoesColorBlack

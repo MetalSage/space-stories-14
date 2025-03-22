@@ -212,7 +212,7 @@
       prob: 0.001
 
 - type: entity
-  id: JobDistributionError
+  id: STJobDistributionError
   parent: BaseGameRule
   components:
   - type: StationEvent
@@ -222,6 +222,6 @@
     duration: 1
   - type: JobDistributionErrorRule
     jobs:
-    - SecurityClown
-    - PartyMaker
-    - CommandMaid
+    - STSecurityClown
+    - STPartyMaker
+    - STCommandMaid

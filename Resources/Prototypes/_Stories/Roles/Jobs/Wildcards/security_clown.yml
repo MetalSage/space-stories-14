@@ -1,16 +1,16 @@
 - type: job
-  id: SecurityClown
+  id: STSecurityClown
   name: stories-job-name-security-clown
   description: stories-job-description-security-clown
-  playTimeTracker: JobSecurityClown
+  playTimeTracker: JobSTSecurityClown
   requirements:
   - !type:OverallPlaytimeRequirement
     time: 36000 #10 hrs
   - !type:RoleTimeRequirement
     role: JobClown
     time: 3600 #1 hr
-  startingGear: SecurityClownGear
-  icon: "JobIconSecurityClown"
+  startingGear: STSecurityClownGear
+  icon: "JobIconSTSecurityClown"
   supervisors: job-supervisors-security
   canBeAntag: false
   setPreference: true
@@ -39,13 +39,13 @@
     implants: [ SadTromboneImplant, MindShieldImplant ]
 
 - type: startingGear
-  id: SecurityClownGear
+  id: STSecurityClownGear
   equipment:
     mask: ClothingMaskClownSecurity
     jumpsuit: ClothingUniformJumpsuitClown
     shoes: ClothingShoesClown
     outerClothing: ClothingOuterArmorBasic
-    id: SecurityClownPDA
+    id: STSecurityClownPDA
     ears: ClothingHeadsetSecurity
     belt: BikeHorn
   storage:

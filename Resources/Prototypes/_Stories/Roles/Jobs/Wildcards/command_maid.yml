@@ -1,14 +1,14 @@
 - type: job
-  id: CommandMaid
+  id: STCommandMaid
   name: stories-job-name-command-maid
   description: stories-job-description-command-maid
-  playTimeTracker: JobCommandMaid
+  playTimeTracker: JobSTCommandMaid
   requirements:
   - !type:RoleTimeRequirement
     role: JobJanitor
     time: 3600 #1 hr
-  startingGear: CommandMaidGear
-  icon: "JobIconCommandMaid"
+  startingGear: STCommandMaidGear
+  icon: "JobIconSTCommandMaid"
   supervisors: job-supervisors-captain
   setPreference: false
   access:
@@ -22,11 +22,11 @@
     prototype: WeaponRevolverInspector
 
 - type: startingGear
-  id: CommandMaidGear
+  id: STCommandMaidGear
   equipment:
     jumpsuit: ClothingUniformJumpskirtJanimaid
-    id: CommandMaidPDA
+    id: STCommandMaidPDA
     gloves: ClothingHandsGlovesJanitor
-    ears: ClothingHeadsetCommandService
+    ears: STClothingHeadsetCommandService
     belt: ClothingBeltJanitorFilled
     shoes: ClothingShoesGaloshes

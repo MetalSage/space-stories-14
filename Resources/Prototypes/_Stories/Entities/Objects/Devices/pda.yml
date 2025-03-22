@@ -119,27 +119,27 @@
 
 - type: entity
   parent: ClownPDA
-  id: SecurityClownPDA
+  id: STSecurityClownPDA
   name: security clown PDA
   description: Who has a pink PDA in security?
   components:
   - type: Pda
-    id: SecurityClownIDCard
+    id: STSecurityClownIDCard
 
 - type: entity
   parent: JanitorPDA
-  id: CommandMaidPDA
+  id: STCommandMaidPDA
   name: command maid PDA
   description: Command gets their own janitorial staff?  This says a lot about society...
   components:
   - type: Pda
-    id: CommandMaidIDCard
+    id: STCommandMaidIDCard
 
 - type: entity
   parent: MusicianPDA
-  id: PartyMakerPDA
+  id: STPartyMakerPDA
   name: party maker PDA
   description: The best helper to make a party.
   components:
   - type: Pda
-    id: PartyMakerIDCard
+    id: STPartyMakerIDCard

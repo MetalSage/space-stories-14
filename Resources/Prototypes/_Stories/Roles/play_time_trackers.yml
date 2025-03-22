@@ -25,10 +25,10 @@
 # Event-Restricted-Jobs
 
 - type: playTimeTracker
-  id: JobSecurityClown
+  id: JobSTSecurityClown
 
 - type: playTimeTracker
-  id: JobCommandMaid
+  id: JobSTCommandMaid
 
 - type: playTimeTracker
-  id: JobPartyMaker
+  id: JobSTPartyMaker
