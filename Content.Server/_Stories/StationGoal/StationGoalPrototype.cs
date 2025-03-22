@@ -8,5 +8,7 @@ namespace Content.Server._Stories.StationGoal
         [IdDataField] public string ID { get; } = default!;
 
         [DataField("text")] public string Text { get; set; } = string.Empty;
+
+        [DataField("onlineLess")] public int? OnlineLess { get; set; }
     }
 }

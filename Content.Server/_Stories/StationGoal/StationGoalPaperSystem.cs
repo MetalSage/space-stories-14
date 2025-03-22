@@ -14,8 +14,6 @@ namespace Content.Server._Stories.StationGoal
     /// </summary>
     public sealed class StationGoalPaperSystem : EntitySystem
     {
-        private const int LOW_POP = 20;
-
         [Dependency] private readonly IPrototypeManager _prototypeManager = default!;
         [Dependency] private readonly IRobustRandom _random = default!;
         [Dependency] private readonly FaxSystem _faxSystem = default!;
@@ -36,15 +34,12 @@ namespace Content.Server._Stories.StationGoal
         {
             var availableGoals = _prototypeManager.EnumeratePrototypes<StationGoalPrototype>().ToList();
 
-            if (_playerManager.PlayerCount <= LOW_POP)
+            foreach (var findGoal in availableGoals)
             {
-                foreach (var findGoal in availableGoals)
+                if (_playerManager.PlayerCount <= findGoal.OnlineLess)
                 {
-                    if (findGoal.ID == "StationGoalFree")
-                    {
-                        TrySendStationGoal(findGoal);
-                        return;
-                    }
+                    TrySendStationGoal(findGoal);
+                    return;
                 }
             }
 
