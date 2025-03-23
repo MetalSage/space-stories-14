@@ -22,8 +22,8 @@
     rules:
     - id: Thief
       prob: 0.25
-    - id: SubWizard
-      prob: 0.05
+    #- id: SubWizard # Stories
+    #  prob: 0.05 # Stories
 
 - type: entity
   parent: BaseGameRule
