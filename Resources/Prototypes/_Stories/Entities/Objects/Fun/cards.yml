@@ -1135,7 +1135,7 @@
   - type: Appearance
 
 - type: entity
-  name: колода карт
+  name: колода из 54 карт
   id: STCardDeckFull
   parent: STCardDeck
   suffix: Полная
@@ -1207,6 +1207,61 @@
   - type: Appearance
 
 - type: entity
+  name: колода из 36 карт
+  description: Колода, преимущественно использующаяся в СССП.
+  id: STCardDeckFullUSSP
+  parent: STCardDeck
+  suffix: Полная
+  components:
+  - type: Sprite
+    sprite: _Stories/Objects/Fun/card.rsi
+    state: Back
+    layers:
+    - state: Clubs1
+  - type: CardStack
+    content:
+    - STClubs1
+    - STClubs6
+    - STClubs7
+    - STClubs8
+    - STClubs9
+    - STClubs10
+    - STClubs11
+    - STClubs12
+    - STClubs13
+    - STDiamonds1
+    - STDiamonds6
+    - STDiamonds7
+    - STDiamonds8
+    - STDiamonds9
+    - STDiamonds10
+    - STDiamonds11
+    - STDiamonds12
+    - STDiamonds13
+    - STHearts1
+    - STHearts6
+    - STHearts7
+    - STHearts8
+    - STHearts9
+    - STHearts10
+    - STHearts11
+    - STHearts12
+    - STHearts13
+    - STSpades1
+    - STSpades6
+    - STSpades7
+    - STSpades8
+    - STSpades9
+    - STSpades10
+    - STSpades11
+    - STSpades12
+    - STSpades13
+  - type: Item
+    size: Huge
+  - type: CardDeck
+  - type: Appearance
+
+- type: entity
   name: упаковка карт
   id: STCardDeckBox
   parent: [ BaseItemCabinet, BaseItem ]
@@ -1262,13 +1317,72 @@
   suffix: Заполнена, открыта
 
 - type: entity
+  name: упаковка карт СССП
+  id: STCardDeckBoxUSSP
+  parent: [ BaseItemCabinet, BaseItem, STCardDeckBox ]
+  components:
+  - type: GenericVisualizer
+    visuals:
+      enum.ItemCabinetVisuals.ContainsItem:
+        enum.ItemCabinetVisuals.Layer:
+          True: { visible: true }
+          False: { visible: false }
+      enum.OpenableVisuals.Opened:
+        enum.OpenableVisuals.Layer:
+          True: { state: open_ussp }
+          False: { state: closed_ussp }
+  - type: Sprite
+    sprite: _Stories/Objects/Fun/card.rsi
+    layers:
+    - state: closed_ussp
+      map: ["enum.OpenableVisuals.Layer"]
+    - state: box-1
+      map: ["enum.ItemCabinetVisuals.Layer"]
+      visible: true
+  - type: ItemSlots
+    slots:
+      ItemCabinet:
+        ejectOnInteract: true
+        whitelist:
+          components:
+          - CardDeck
+        insertSound:
+          path: /Audio/_Stories/Items/CardDeckBox/addeck.ogg
+        ejectSound:
+          path: /Audio/_Stories/Items/CardDeckBox/removedeck.ogg
+
+- type: entity
+  parent: STCardDeckBoxUSSP
+  id: STCardDeckBoxOpenUSSP
+  suffix: Открыта
+  components:
+  - type: Openable
+    opened: true
+
+- type: entity
+  parent: STCardDeckBoxUSSP
+  id: STCardDeckBoxFilledUSSP
+  suffix: Заполнена
+  components:
+  - type: ContainerFill
+    containers:
+      ItemCabinet:
+      - STCardDeckFullUSSP
+
+- type: entity
+  parent: [STCardDeckBoxFilledUSSP, STCardDeckBoxOpenUSSP]
+  id: STCardDeckBoxFilledOpenUSSP
+  suffix: Заполнена, открыта
+
+
+- type: entity
   parent: BaseItem
   id: STCardFan
   name: карточный веер
   components:
   - type: Tag
     tags:
-    - Card
+    - STCard
   - type: Appearance
   - type: CardFan
   - type: CardStack
