@@ -20,7 +20,13 @@
       "name": "open"
     },
     {
-      "name": "box_empty"
+      "name": "open_ussp"
+    },
+    {
+      "name": "closed_ussp"
+    },
+    {
+      "name": "box_full_ussp"
     },
     {
       "name": "box_full"
