@@ -22,6 +22,9 @@
   - type: Sprite
     sprite: _Stories/Mobs/Species/Kidan/parts.rsi
     state: "torso_m"
+  - type: Icon
+    sprite: _Stories/Mobs/Species/Kidan/parts.rsi
+    state: "torso_m"
   - type: Extractable
     juiceSolution:
       reagents:
@@ -65,6 +68,9 @@
   - type: Sprite
     sprite: _Stories/Mobs/Species/Kidan/parts.rsi
     state: "l_arm"
+  - type: Icon
+    sprite: _Stories/Mobs/Species/Kidan/parts.rsi
+    state: "l_arm"
 
 - type: entity
   id: RightArmKidan
@@ -72,6 +78,9 @@
   parent: [PartKidan, BaseRightArm]
   components:
   - type: Sprite
+    sprite: _Stories/Mobs/Species/Kidan/parts.rsi
+    state: "r_arm"
+  - type: Icon
     sprite: _Stories/Mobs/Species/Kidan/parts.rsi
     state: "r_arm"
 
