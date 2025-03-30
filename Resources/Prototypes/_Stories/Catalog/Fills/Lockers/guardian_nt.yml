@@ -5,8 +5,8 @@
   components:
   - type: StorageFill
     contents:
-      - id: ClothingUniformJumpsuitGuardian
-      - id: ClothingShoesBootsJackGuardian
-      - id: ClothingOuterCoatGuardian
+      - id: ClothingUniformJumpsuitGuardianNt
+      - id: ClothingHandsGlovesCombat
       - id: ClothingHeadsetGuardianNtAlt
-      - id: ClothingBeltGuardian
+      - id: ClothingEyesGlassesSecurity
+      - id: ClothingBeltSecurityFilled
