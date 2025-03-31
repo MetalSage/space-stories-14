@@ -3,9 +3,9 @@ meta:
   category: Map
   engineVersion: 248.0.2
   forkId: stories
-  forkVersion: 701720b5b2052edb609acbf501bef6352259c936
-  time: 03/29/2025 19:06:59
-  entityCount: 31787
+  forkVersion: ""
+  time: 03/31/2025 17:16:57
+  entityCount: 31786
 maps:
 - 1
 grids:
@@ -15959,7 +15959,7 @@ entities:
       pos: 23.5,-33.5
       parent: 2
     - type: Door
-      secondsUntilStateChange: -89112.54
+      secondsUntilStateChange: -89207.78
       state: Opening
     - type: DeviceLinkSource
       lastSignals:
@@ -16847,7 +16847,7 @@ entities:
       pos: -15.5,-6.5
       parent: 2
     - type: Door
-      secondsUntilStateChange: -64301.58
+      secondsUntilStateChange: -64396.816
       state: Opening
     - type: DeviceLinkSource
       lastSignals:
@@ -16946,7 +16946,7 @@ entities:
       pos: -8.5,-12.5
       parent: 2
     - type: Door
-      secondsUntilStateChange: -104696.29
+      secondsUntilStateChange: -104791.53
       state: Opening
     - type: DeviceLinkSource
       lastSignals:
@@ -97715,15 +97715,6 @@ entities:
     - type: Transform
       pos: -47.586777,39.59303
       parent: 2
-- proto: ClothingHeadHatCatEars
-  entities:
-  - uid: 15216
-    components:
-    - type: Transform
-      parent: 15215
-    - type: Physics
-      canCollide: False
-    - type: InsideEntityStorage
 - proto: ClothingHeadHatFlowerWreath
   entities:
   - uid: 15217
@@ -100841,17 +100832,6 @@ entities:
         - 0
         - 0
         - 0
-    - type: ContainerContainer
-      containers:
-        entity_storage: !type:Container
-          showEnts: False
-          occludes: True
-          ents:
-          - 15216
-        paper_label: !type:ContainerSlot
-          showEnts: False
-          occludes: True
-          ent: null
   - uid: 15283
     components:
     - type: Transform
@@ -109734,9 +109714,6 @@ entities:
     - type: Transform
       pos: -31.5,8.5
       parent: 2
-    - type: DisposalUnit
-      recentlyEjected:
-      - invalid
   - uid: 31148
     components:
     - type: Transform
@@ -111534,7 +111511,7 @@ entities:
       pos: 24.5,3.5
       parent: 2
     - type: Door
-      secondsUntilStateChange: -101842.18
+      secondsUntilStateChange: -101937.42
       state: Closing
     - type: DeviceNetwork
       deviceLists:
@@ -111861,7 +111838,7 @@ entities:
       pos: -38.5,-13.5
       parent: 2
     - type: Door
-      secondsUntilStateChange: -84708.97
+      secondsUntilStateChange: -84804.21
       state: Closing
     - type: DeviceNetwork
       deviceLists:
@@ -148627,9 +148604,6 @@ entities:
       parent: 2
     - type: MailingUnit
       tag: Научно-иследовательский отдел
-    - type: DisposalUnit
-      recentlyEjected:
-      - invalid
   - uid: 19264
     components:
     - type: Transform
@@ -166730,6 +166704,13 @@ entities:
     - type: Transform
       pos: 36.5,10.5
       parent: 2
+- proto: SpawnPointResearchAssistant
+  entities:
+  - uid: 15216
+    components:
+    - type: Transform
+      pos: 35.5,47.5
+      parent: 2
 - proto: SpawnPointResearchDirector
   entities:
   - uid: 24354
@@ -166770,11 +166751,6 @@ entities:
     components:
     - type: Transform
       pos: 35.5,43.5
-      parent: 2
-  - uid: 24361
-    components:
-    - type: Transform
-      pos: 35.5,47.5
       parent: 2
   - uid: 24362
     components:
@@ -168324,9 +168300,6 @@ entities:
     - type: Transform
       pos: -1.5,29.5
       parent: 2
-    - type: DeviceNetwork
-      configurators:
-      - invalid
 - proto: SurveillanceCameraRouterService
   entities:
   - uid: 24551
@@ -168642,9 +168615,6 @@ entities:
       rot: 1.5707963267948966 rad
       pos: -54.5,-24.5
       parent: 2
-    - type: DeviceNetwork
-      configurators:
-      - invalid
     - type: SurveillanceCamera
       setupAvailableNetworks:
       - SurveillanceCameraSecurity
@@ -172624,8 +172594,6 @@ entities:
       parent: 2
     - type: ItemToggle
       activated: True
-    - type: ItemToggleActiveSound
-      playingStream: invalid
     - type: PointLight
       enabled: True
     - type: MeleeWeapon
@@ -172692,8 +172660,6 @@ entities:
       parent: 2
     - type: ItemToggle
       activated: True
-    - type: ItemToggleActiveSound
-      playingStream: invalid
     - type: PointLight
       enabled: True
     - type: MeleeWeapon
