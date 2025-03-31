@@ -6,7 +6,7 @@
   requirements:
     - !type:RoleTimeRequirement
       role: JobSecurityOfficer
-      time: 108000 #50 hrs # Corvax-RoleTime
+      time: 72000 #20 hrs # Stories-RoleTime
   weight: 5
   startingGear: WardenGear
   icon: "JobIconWarden"
