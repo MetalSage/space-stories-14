@@ -8221,8 +8221,6 @@ entities:
       pos: -30.5,8.5
       parent: 4812
     - type: DeviceNetwork
-      configurators:
-      - invalid
       deviceLists:
       - 14023
 - proto: AltarSpawner
@@ -56710,8 +56708,6 @@ entities:
       pos: -29.5,7.5
       parent: 4812
     - type: DeviceNetwork
-      configurators:
-      - invalid
       deviceLists:
       - 14023
     - type: AtmosPipeColor
@@ -57556,8 +57552,6 @@ entities:
       pos: -31.5,7.5
       parent: 4812
     - type: DeviceNetwork
-      configurators:
-      - invalid
       deviceLists:
       - 14023
     - type: AtmosPipeColor
