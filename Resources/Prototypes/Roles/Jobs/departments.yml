@@ -103,7 +103,6 @@
   - MedicalIntern
   - Psychologist
   - Paramedic
-  - STSecurityClown # Stories-Event-Restricted-Jobs
 
 - type: department
   id: Security
@@ -116,6 +115,7 @@
   - SecurityCadet
   - SecurityOfficer
   - STBrigmedic # Stories-Brigmedic
+  - STSecurityClown # Stories-Event-Restricted-Jobs
   - Detective
   - Warden
 
