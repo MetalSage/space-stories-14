@@ -146,6 +146,7 @@
     - trayScanner
     - AccessConfiguratorUniversal
     - Multitool
+    - ClothingEyesHudOmni # Stories 
 
 #Gladiator with spear
 - type: startingGear
