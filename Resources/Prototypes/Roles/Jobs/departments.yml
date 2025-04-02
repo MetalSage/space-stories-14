@@ -23,7 +23,7 @@
   - Clown
   - HeadOfPersonnel
   - Janitor
-  - Lawyer
+  #- Lawyer # Stories
   - Librarian
   - Mime
   - Musician
@@ -60,7 +60,6 @@
   roles:
   - Captain
   - GuardianNt # Stories-Guardian
-  - IAA # Stories-IAA
   - ChiefEngineer
   - ChiefMedicalOfficer
   - HeadOfPersonnel
