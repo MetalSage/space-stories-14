@@ -28,12 +28,12 @@
 # Civilian
 
 - type: entity
-  id: STSpawnPointLawyer
+  id: STSpawnPointIAA
   parent: SpawnPointJobBase
   name: lawyer
   components:
   - type: SpawnPoint
-    job_id: Lawyer
+    job_id: IAA
   - type: Sprite
     layers:
     - state: green
