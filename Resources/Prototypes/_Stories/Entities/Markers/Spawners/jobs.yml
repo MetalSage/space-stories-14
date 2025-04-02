@@ -24,17 +24,3 @@
     layers:
     - state: green
     - state: guardiannt
-
-# Civilian
-
-- type: entity
-  id: STSpawnPointIAA
-  parent: SpawnPointJobBase
-  name: lawyer
-  components:
-  - type: SpawnPoint
-    job_id: IAA
-  - type: Sprite
-    layers:
-    - state: green
-    - state: lawyer
