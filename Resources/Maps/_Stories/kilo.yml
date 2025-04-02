@@ -1,11 +1,11 @@
 meta:
   format: 7
   category: Map
-  engineVersion: 248.0.2
-  forkId: stories
+  engineVersion: 250.0.0
+  forkId: ""
   forkVersion: ""
-  time: 03/31/2025 17:16:57
-  entityCount: 31786
+  time: 04/02/2025 10:57:49
+  entityCount: 31788
 maps:
 - 1
 grids:
@@ -15959,7 +15959,7 @@ entities:
       pos: 23.5,-33.5
       parent: 2
     - type: Door
-      secondsUntilStateChange: -89207.78
+      secondsUntilStateChange: -89303.945
       state: Opening
     - type: DeviceLinkSource
       lastSignals:
@@ -16847,7 +16847,7 @@ entities:
       pos: -15.5,-6.5
       parent: 2
     - type: Door
-      secondsUntilStateChange: -64396.816
+      secondsUntilStateChange: -64492.984
       state: Opening
     - type: DeviceLinkSource
       lastSignals:
@@ -16946,7 +16946,7 @@ entities:
       pos: -8.5,-12.5
       parent: 2
     - type: Door
-      secondsUntilStateChange: -104791.53
+      secondsUntilStateChange: -104887.695
       state: Opening
     - type: DeviceLinkSource
       lastSignals:
@@ -95757,6 +95757,12 @@ entities:
       rot: 1.5707963267948966 rad
       pos: -15.464932,-4.173052
       parent: 2
+  - uid: 24361
+    components:
+    - type: Transform
+      rot: -1.5707963267948966 rad
+      pos: -18.5,-2.5
+      parent: 2
   - uid: 28343
     components:
     - type: Transform
@@ -96172,6 +96178,18 @@ entities:
     components:
     - type: Transform
       pos: -30.5,12.5
+      parent: 2
+- proto: ChemistryBottleEpinephrine
+  entities:
+  - uid: 16721
+    components:
+    - type: Transform
+      pos: -45.287518,32.35343
+      parent: 2
+  - uid: 16722
+    components:
+    - type: Transform
+      pos: -45.428143,32.525307
       parent: 2
 - proto: ChemistryHotplate
   entities:
@@ -110366,18 +110384,6 @@ entities:
     - type: Physics
       canCollide: False
     - type: InsideEntityStorage
-- proto: EpinephrineChemistryBottle
-  entities:
-  - uid: 16721
-    components:
-    - type: Transform
-      pos: -45.287518,32.35343
-      parent: 2
-  - uid: 16722
-    components:
-    - type: Transform
-      pos: -45.428143,32.525307
-      parent: 2
 - proto: ExosuitFabricator
   entities:
   - uid: 16723
@@ -111511,7 +111517,7 @@ entities:
       pos: 24.5,3.5
       parent: 2
     - type: Door
-      secondsUntilStateChange: -101937.42
+      secondsUntilStateChange: -102033.586
       state: Closing
     - type: DeviceNetwork
       deviceLists:
@@ -111838,7 +111844,7 @@ entities:
       pos: -38.5,-13.5
       parent: 2
     - type: Door
-      secondsUntilStateChange: -84804.21
+      secondsUntilStateChange: -84900.375
       state: Closing
     - type: DeviceNetwork
       deviceLists:
@@ -167248,6 +167254,13 @@ entities:
     components:
     - type: Transform
       pos: -6.5,-28.5
+      parent: 2
+- proto: STSpawnPointIAA
+  entities:
+  - uid: 31788
+    components:
+    - type: Transform
+      pos: -18.5,-2.5
       parent: 2
 - proto: Stunbaton
   entities:

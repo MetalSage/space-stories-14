@@ -1,11 +1,11 @@
 meta:
   format: 7
   category: Map
-  engineVersion: 248.0.2
-  forkId: stories
+  engineVersion: 250.0.0
+  forkId: ""
   forkVersion: ""
-  time: 03/31/2025 17:14:19
-  entityCount: 15203
+  time: 04/02/2025 10:46:01
+  entityCount: 15204
 maps:
 - 1
 grids:
@@ -8908,7 +8908,7 @@ entities:
       pos: -2.5,18.5
       parent: 2
     - type: Door
-      secondsUntilStateChange: -288570.72
+      secondsUntilStateChange: -288594.94
       state: Opening
     - type: DeviceLinkSource
       lastSignals:
@@ -9127,7 +9127,7 @@ entities:
       pos: 70.5,-0.5
       parent: 2
     - type: Door
-      secondsUntilStateChange: -119006.87
+      secondsUntilStateChange: -119031.086
       state: Opening
     - type: DeviceLinkSource
       lastSignals:
@@ -9517,7 +9517,7 @@ entities:
       pos: 30.5,-13.5
       parent: 2
     - type: Door
-      secondsUntilStateChange: -151073.56
+      secondsUntilStateChange: -151097.78
       state: Opening
     - type: DeviceLinkSource
       lastSignals:
@@ -9755,7 +9755,7 @@ entities:
       pos: 9.5,14.5
       parent: 2
     - type: Door
-      secondsUntilStateChange: -20498.49
+      secondsUntilStateChange: -20522.709
       state: Opening
     - type: DeviceLinkSource
       lastSignals:
@@ -9919,7 +9919,7 @@ entities:
       pos: 38.5,-9.5
       parent: 2
     - type: Door
-      secondsUntilStateChange: -126112.36
+      secondsUntilStateChange: -126136.58
       state: Opening
     - type: DeviceLinkSource
       lastSignals:
@@ -9930,7 +9930,7 @@ entities:
       pos: 43.5,-9.5
       parent: 2
     - type: Door
-      secondsUntilStateChange: -138882.44
+      secondsUntilStateChange: -138906.66
       state: Opening
     - type: DeviceLinkSource
       lastSignals:
@@ -46228,7 +46228,7 @@ entities:
       deviceLists:
       - 35
     - type: Door
-      secondsUntilStateChange: -9543.97
+      secondsUntilStateChange: -9568.188
       state: Closing
     - type: Firelock
       emergencyCloseCooldown: 90307.2763613
@@ -69217,7 +69217,7 @@ entities:
       pos: 35.5,-39.5
       parent: 2
     - type: Door
-      secondsUntilStateChange: -102710.81
+      secondsUntilStateChange: -102735.03
       state: Closing
 - proto: HydroponicsToolClippers
   entities:
@@ -83479,6 +83479,13 @@ entities:
     - type: Transform
       rot: -1.5707963267948966 rad
       pos: 22.909702,-25.209143
+      parent: 2
+- proto: STSpawnPointIAA
+  entities:
+  - uid: 15204
+    components:
+    - type: Transform
+      pos: 37.5,6.5
       parent: 2
 - proto: SubstationBasic
   entities:

@@ -1,11 +1,11 @@
 meta:
   format: 7
   category: Map
-  engineVersion: 248.0.2
-  forkId: stories
-  forkVersion: 701720b5b2052edb609acbf501bef6352259c936
-  time: 04/01/2025 19:07:54
-  entityCount: 14032
+  engineVersion: 250.0.0
+  forkId: ""
+  forkVersion: ""
+  time: 04/02/2025 11:03:54
+  entityCount: 14033
 maps:
 - 473
 grids:
@@ -75452,6 +75452,13 @@ entities:
     components:
     - type: Transform
       pos: 24.5,-22.5
+      parent: 4812
+- proto: STSpawnPointIAA
+  entities:
+  - uid: 14033
+    components:
+    - type: Transform
+      pos: -17.5,15.5
       parent: 4812
 - proto: SubstationBasic
   entities:
