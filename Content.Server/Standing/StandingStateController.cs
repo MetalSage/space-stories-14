@@ -14,7 +14,7 @@ public sealed class StandingStateController : SharedStandingStateController
 
         if (standing.Standing)
         {
-            var doAfterArgs = new DoAfterArgs(EntityManager, uid, standing.DownDelay, new DownDoAfterEvent(), uid)
+            var doAfterArgs = new DoAfterArgs(EntityManager, uid, standing.DownDelay, new FellDownEvent.DownDoAfterEvent(), uid)
             {
                 BlockDuplicate = true,
                 BreakOnDamage = true,
@@ -23,7 +23,7 @@ public sealed class StandingStateController : SharedStandingStateController
         }
         else
         {
-            var doAfterArgs = new DoAfterArgs(EntityManager, uid, standing.StandDelay, new StandDoAfterEvent(), uid)
+            var doAfterArgs = new DoAfterArgs(EntityManager, uid, standing.StandDelay, new FellDownEvent.StandDoAfterEvent(), uid)
             {
                 BlockDuplicate = true,
                 BreakOnDamage = true,

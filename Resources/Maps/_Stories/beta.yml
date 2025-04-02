@@ -3,9 +3,9 @@ meta:
   category: Map
   engineVersion: 248.0.2
   forkId: stories
-  forkVersion: 701720b5b2052edb609acbf501bef6352259c936
-  time: 03/29/2025 19:50:50
-  entityCount: 15201
+  forkVersion: ""
+  time: 03/31/2025 17:14:19
+  entityCount: 15203
 maps:
 - 1
 grids:
@@ -8908,7 +8908,7 @@ entities:
       pos: -2.5,18.5
       parent: 2
     - type: Door
-      secondsUntilStateChange: -288312.9
+      secondsUntilStateChange: -288570.72
       state: Opening
     - type: DeviceLinkSource
       lastSignals:
@@ -9127,7 +9127,7 @@ entities:
       pos: 70.5,-0.5
       parent: 2
     - type: Door
-      secondsUntilStateChange: -118749.04
+      secondsUntilStateChange: -119006.87
       state: Opening
     - type: DeviceLinkSource
       lastSignals:
@@ -9517,7 +9517,7 @@ entities:
       pos: 30.5,-13.5
       parent: 2
     - type: Door
-      secondsUntilStateChange: -150815.73
+      secondsUntilStateChange: -151073.56
       state: Opening
     - type: DeviceLinkSource
       lastSignals:
@@ -9755,7 +9755,7 @@ entities:
       pos: 9.5,14.5
       parent: 2
     - type: Door
-      secondsUntilStateChange: -20240.662
+      secondsUntilStateChange: -20498.49
       state: Opening
     - type: DeviceLinkSource
       lastSignals:
@@ -9919,7 +9919,7 @@ entities:
       pos: 38.5,-9.5
       parent: 2
     - type: Door
-      secondsUntilStateChange: -125854.53
+      secondsUntilStateChange: -126112.36
       state: Opening
     - type: DeviceLinkSource
       lastSignals:
@@ -9930,7 +9930,7 @@ entities:
       pos: 43.5,-9.5
       parent: 2
     - type: Door
-      secondsUntilStateChange: -138624.61
+      secondsUntilStateChange: -138882.44
       state: Opening
     - type: DeviceLinkSource
       lastSignals:
@@ -46228,7 +46228,7 @@ entities:
       deviceLists:
       - 35
     - type: Door
-      secondsUntilStateChange: -9286.142
+      secondsUntilStateChange: -9543.97
       state: Closing
     - type: Firelock
       emergencyCloseCooldown: 90307.2763613
@@ -61790,8 +61790,6 @@ entities:
       pos: -17.5,18.5
       parent: 2
     - type: DeviceNetwork
-      configurators:
-      - invalid
       deviceLists:
       - 26
     - type: AtmosPipeColor
@@ -62822,8 +62820,6 @@ entities:
       pos: -17.5,19.5
       parent: 2
     - type: DeviceNetwork
-      configurators:
-      - invalid
       deviceLists:
       - 26
     - type: AtmosPipeColor
@@ -69221,7 +69217,7 @@ entities:
       pos: 35.5,-39.5
       parent: 2
     - type: Door
-      secondsUntilStateChange: -102452.984
+      secondsUntilStateChange: -102710.81
       state: Closing
 - proto: HydroponicsToolClippers
   entities:
@@ -82606,6 +82602,13 @@ entities:
     - type: Transform
       pos: 46.5,-35.5
       parent: 2
+- proto: SpawnPointChaplain
+  entities:
+  - uid: 15202
+    components:
+    - type: Transform
+      pos: -14.5,-2.5
+      parent: 2
 - proto: SpawnPointChef
   entities:
   - uid: 12148
@@ -82690,6 +82693,13 @@ entities:
     components:
     - type: Transform
       pos: 37.5,-5.5
+      parent: 2
+- proto: SpawnPointLawyer
+  entities:
+  - uid: 15203
+    components:
+    - type: Transform
+      pos: 37.5,5.5
       parent: 2
 - proto: SpawnPointLibrarian
   entities:

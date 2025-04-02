@@ -7,10 +7,10 @@ STBrigmedic = бригмедик
 
 # Event-Restricted-Jobs
 
-stories-job-name-security-clown = Клоун Службы Безопасности
-stories-job-name-command-maid = Горничная Капитана
-stories-job-name-party-maker = Партимейкер
+stories-job-name-security-clown = клоун СБ
+stories-job-name-command-maid = горничная капитана
+stories-job-name-party-maker = партимейкер
 
-JobSTSecurityClown = Клоун Службы Безопасности
-JobSTCommandMaid = Горничная Капитана
-JobSTPartyMaker = Партимейкер
+JobSTSecurityClown = клоун СБ
+JobSTCommandMaid = горничная капитана
+JobSTPartyMaker = партимейкер

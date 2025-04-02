@@ -278,4 +278,17 @@ ui-options-speech-bubble-background-opacity = Прозрачность фона 
 
 ## Admin menu
 
+ui-options-admin-player-panel = Меню Администратора Список Игроков
+
+ui-options-admin-playerlist-separate-symbols = Показывать отдельные символы для каждого типа роли антага
+ui-options-admin-playerlist-character-color = Цветные имена для персонажей антагонистов
+ui-options-admin-playerlist-roletype-color = Типы цветовых ролей
+
+ui-options-admin-overlay-title = Админ Оверлей
 ui-options-enable-classic-overlay = Вернуть классический оверлей антагонистов
+ui-options-enable-overlay-symbols = Добавить символьный антаг текст
+ui-options-enable-overlay-playtime = Показывать наигранное время
+ui-options-enable-overlay-starting-job = Показывать начальную работу
+ui-options-overlay-merge-distance = Расстояние слияния стека
+ui-options-overlay-ghost-fade-distance = Призрачный оверлей диапозона затухания от мыши
+ui-options-overlay-ghost-hide-distance = Призрачный оверлей скрытия диапазон от мыши

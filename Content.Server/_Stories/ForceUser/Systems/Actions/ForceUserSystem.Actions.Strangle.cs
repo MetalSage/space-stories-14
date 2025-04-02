@@ -48,7 +48,9 @@ public sealed partial class ForceUserSystem
         if (_mobState.IsAlive(uid))
         {
             _movementSpeedModifier.ChangeBaseSpeed(uid, 0, 0, 0);
-            RaiseLocalEvent(uid, new DropHandItemsEvent(), false);
+
+            var ev = new DropHandItemsEvent();
+            RaiseLocalEvent(uid, ref ev, false);
 
             _statusEffect.TryRemoveStatusEffect(uid, "KnockedDown");
             _standingState.Stand(uid);

@@ -321,6 +321,7 @@ flavor-complex-toxins-special = как исследование космоса
 flavor-complex-vodka-martini = как русский шпионский фильм
 flavor-complex-vodka-tonic = освежающе горько
 flavor-complex-coconut-rum = как орехово-ферментированный сахар
+flavor-complex-bacchus-blessing = как стена из кирпичей
 
 ### This is exactly what pilk tastes как. I'm not even joking. I might've been a little drunk though
 

@@ -296,10 +296,10 @@
   name: packet of eggplant seeds
   id: EggplantSeeds
   components:
-    - type: Seed
-      seedId: eggplant
-    - type: Sprite
-      sprite: Objects/Specific/Hydroponics/eggplant.rsi
+  - type: Seed
+    seedId: eggplant
+  - type: Sprite
+    sprite: Objects/Specific/Hydroponics/eggplant.rsi
 
 - type: entity
   parent: SeedBase
