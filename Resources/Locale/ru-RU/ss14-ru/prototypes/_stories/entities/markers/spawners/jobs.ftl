@@ -3,3 +3,5 @@ ent-SpawnPointJobBaseStories = { ent-MarkerBase }
     .desc = { ent-MarkerBase.desc }
 ent-SpawnPointGuardianNt = guardiannt
     .desc = { ent-SpawnPointJobBaseStories.desc }
+ent-STSpawnPointLawyer = юрист
+    .desc = { ent-SpawnPointJobBaseStories.desc }
