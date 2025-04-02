@@ -3,6 +3,8 @@ using Content.Server.Cloning;
 using Content.Server.GameTicking.Rules.Components;
 using Content.Server.Medical.SuitSensors;
 using Content.Server.Objectives.Components;
+using Content.Shared._Stories.Force;
+using Content.Shared._Stories.ForceUser;
 using Content.Shared.GameTicking.Components;
 using Content.Shared.Gibbing.Components;
 using Content.Shared.Medical.SuitSensor;
@@ -92,6 +94,13 @@ public sealed class ParadoxCloneRuleSystem : GameRuleSystem<ParadoxCloneRuleComp
         _sensor.SetAllSensors(clone.Value, SuitSensorMode.SensorOff);
 
         args.Entity = clone;
+
+        // Stories-ForceUser-Target Start
+        if (TryComp<ForceUserComponent>(ent.Comp.OriginalBody.Value, out var forceUser) && forceUser != null)
+        {
+            AddComp<ForceComponent>(clone.Value);
+        }
+        // Stories-ForceUser-Target End
     }
 
     private void AfterAntagEntitySelected(Entity<ParadoxCloneRuleComponent> ent, ref AfterAntagEntitySelectedEvent args)

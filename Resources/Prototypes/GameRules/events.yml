@@ -265,6 +265,11 @@
       max: 1
       pickPlayer: false
       startingGear: ParadoxCloneGear
+      # Stories-ForceUser Start
+      components:
+      - type: ForceUser
+        preset: Guardian # TODO: Зафиксить щиткод
+      # Stories-ForceUser End
       roleLoadout:
       - RoleSurvivalVoxTank # give vox something to breath in case they don't get a copy
       briefing:
