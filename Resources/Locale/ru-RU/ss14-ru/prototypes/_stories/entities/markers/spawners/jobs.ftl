@@ -3,5 +3,5 @@ ent-SpawnPointJobBaseStories = { ent-MarkerBase }
     .desc = { ent-MarkerBase.desc }
 ent-SpawnPointGuardianNt = страж клинка
     .desc = { ent-SpawnPointJobBaseStories.desc }
-ent-STSpawnPointLawyer = юрист
+ent-STSpawnPointIAA = агент внутрених дел
     .desc = { ent-SpawnPointJobBaseStories.desc }
