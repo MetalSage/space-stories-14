@@ -4,6 +4,8 @@
   parent: BaseMobSpeciesOrganic
   id: MobRodentia
   components:
+  - type: StandingState
+    crawlingSpeedModifier: 0.5
   - type: HumanoidAppearance
     species: Rodentia
     hideLayersOnEquip:
