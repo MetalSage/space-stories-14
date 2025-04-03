@@ -4,6 +4,11 @@
   parent: BaseMobSpeciesOrganic
   id: MobRodentia
   components:
+  - type: MobThresholds
+    thresholds:
+      0: Alive
+      80: Critical
+      180: Dead
   - type: SlowOnDamage
     speedModifierThresholds:
       60: 1
