@@ -9,6 +9,8 @@
     hideLayersOnEquip:
     - Hair
     - HeadTop
+  - type: Body
+    prototype: Felinid
   - type: Hunger
   - type: Thirst
   - type: Sprite
