@@ -4,6 +4,8 @@
   id: MobAvali
   name: Urist C.M McRaptor
   components:
+  - type: MovementAlwaysTouching
+  - type: CanMoveInAir
   - type: HumanoidAppearance
     species: Avali
     hideLayersOnEquip:
