@@ -4,6 +4,8 @@
   parent: BaseMobSpeciesOrganic
   id: MobRodentia
   components:
+  - type: Bloodstream
+    bloodMaxVolume: 240 # less than 20%
   - type: MobThresholds
     thresholds:
       0: Alive
