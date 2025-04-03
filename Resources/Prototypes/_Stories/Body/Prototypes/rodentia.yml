@@ -1,0 +1,49 @@
+- type: body
+  id: Rodentia
+  name: "rodentia"
+  root: torso
+  slots:
+    head:
+      part: HeadRodentia
+      connections:
+      - torso
+      organs:
+        brain: OrganHumanBrain
+        eyes: OrganHumanEyes
+    torso:
+      part: TorsoRodentia
+      connections:
+      - right_arm
+      - left_arm
+      - right_leg
+      - left_leg
+      organs:
+        heart: OrganAnimalHeart
+        lungs: OrganHumanLungs
+        stomach: OrganReptilianStomach
+        liver: OrganAnimalLiver
+        kidneys: OrganHumanKidneys
+    right_arm:
+      part: RightArmRodentia
+      connections:
+      - right_hand
+    left_arm:
+      part: LeftArmRodentia
+      connections:
+      - left_hand
+    right_hand:
+      part: RightHandRodentia
+    left_hand:
+      part: LeftHandRodentia
+    right_leg:
+      part: RightLegRodentia
+      connections:
+      - right_foot
+    left_leg:
+      part: LeftLegRodentia
+      connections:
+      - left_foot
+    right_foot:
+      part: RightFootRodentia
+    left_foot:
+      part: LeftFootRodentia

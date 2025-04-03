@@ -11,6 +11,8 @@
     - HeadTop
     - HeadSide
     - Snout
+  - type: Body
+    prototype: Rodentia
   - type: Hunger
   - type: Thirst
   - type: Icon
