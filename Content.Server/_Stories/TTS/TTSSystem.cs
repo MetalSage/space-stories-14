@@ -3,6 +3,7 @@ using System.Threading.Tasks;
 using Content.Server.Chat.Systems;
 using Content.Shared._Stories.SCCVars;
 using Content.Shared._Stories.TTS;
+using Content.Shared.Chat;
 using Content.Shared.GameTicking;
 using Robust.Shared.Configuration;
 using Robust.Shared.Player;
@@ -88,11 +89,11 @@ public sealed partial class TTSSystem : EntitySystem
             voiceId == null)
             return;
 
-        var voiceEv = new TransformSpeakerVoiceEvent(uid, voiceId);
+        var voiceEv = new TransformSpeakerNameEvent(uid, Name(uid));
         RaiseLocalEvent(uid, voiceEv);
         voiceId = voiceEv.VoiceId;
 
-        if (!GetVoicePrototype(voiceId, out var protoVoice))
+        if (voiceId == null || !GetVoicePrototype(voiceId, out var protoVoice))
             return;
 
         if (args.ObfuscatedMessage != null)
@@ -152,17 +153,5 @@ public sealed partial class TTSSystem : EntitySystem
         var textSsml = ToSsmlText(textSanitized, ssmlTraits);
 
         return await _ttsManager.ConvertTextToSpeech(speaker, textSsml);
-    }
-}
-
-public sealed class TransformSpeakerVoiceEvent : EntityEventArgs
-{
-    public EntityUid Sender;
-    public string VoiceId;
-
-    public TransformSpeakerVoiceEvent(EntityUid sender, string voiceId)
-    {
-        Sender = sender;
-        VoiceId = voiceId;
     }
 }

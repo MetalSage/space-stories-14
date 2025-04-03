@@ -1,5 +1,4 @@
-﻿using Content.Server._Stories.TTS;
-using Content.Shared._Stories.TTS;
+﻿using Content.Shared._Stories.TTS;
 using Content.Shared.VoiceMask;
 
 namespace Content.Server.VoiceMask;
@@ -8,13 +7,7 @@ public partial class VoiceMaskSystem
 {
     private void InitializeTTS()
     {
-        SubscribeLocalEvent<VoiceMaskComponent, TransformSpeakerVoiceEvent>(OnSpeakerVoiceTransform);
         SubscribeLocalEvent<VoiceMaskComponent, VoiceMaskChangeVoiceMessage>(OnChangeVoice);
-    }
-
-    private void OnSpeakerVoiceTransform(EntityUid uid, VoiceMaskComponent component, TransformSpeakerVoiceEvent args)
-    {
-        args.VoiceId = component.VoiceId;
     }
 
     private void OnChangeVoice(Entity<VoiceMaskComponent> entity, ref VoiceMaskChangeVoiceMessage msg)
