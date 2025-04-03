@@ -9,6 +9,8 @@
     hideLayersOnEquip:
     - HeadTop
     - HeadSide
+  - type: Body
+    prototype: Avali
   - type: Hunger
   - type: Thirst
   - type: Sprite
