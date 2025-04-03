@@ -4,6 +4,10 @@
   parent: BaseMobSpeciesOrganic
   id: MobRodentia
   components:
+  - type: SlowOnDamage
+    speedModifierThresholds:
+      60: 1
+      80: 1
   - type: StandingState
     crawlingSpeedModifier: 0.5
   - type: HumanoidAppearance
