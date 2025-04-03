@@ -5,6 +5,9 @@
   id: BaseMobVulpkanin
   abstract: true
   components:
+  - type: ContentEye
+    targetZoom: 1.2,1.2
+    maxZoom: 1.2,1.2
   - type: HumanoidAppearance
     species: Vulpkanin
   - type: Hunger
