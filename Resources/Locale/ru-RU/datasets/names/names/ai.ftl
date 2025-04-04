@@ -38,7 +38,6 @@ names-ai-dataset-30 = Чип
 
 # Stories-Adaptation
 names-ai-dataset-31 = К.Р.Э.Й.Г. 
-# end
 
 # Commercial supercomputer from the 70s
 names-ai-dataset-32 = Крэй-2
@@ -84,7 +83,6 @@ names-ai-dataset-61 = Рысь
 names-ai-dataset-62 = К.И.Н.Г
 # Stories-Adaptation
 names-ai-dataset-63 = ЗЕТ-1
-# end
 names-ai-dataset-64 = Рыцарь
 names-ai-dataset-65 = Луи
 
@@ -101,15 +99,13 @@ names-ai-dataset-74 = Монарх
 names-ai-dataset-75 = Дурной3000
 names-ai-dataset-76 = Мультивак
 # Stories-Adaptation
-names-ai-dataset-77 = ЗЕТ-2 
-# end
+names-ai-dataset-77 = ЗЕТ-2
 
 # A play on both NT as in NanoTrasen and NT as in windows NT, of which version 6.0 is windows vista
 names-ai-dataset-78 = NT v6.0
 names-ai-dataset-79 = Пакард Бэлл
 # Stories-Adaptation
-names-ai-dataset-80 = ЗЕТ-3 
-# end
+names-ai-dataset-80 = ЗЕТ-3
 names-ai-dataset-81 = Проект Y2K
 names-ai-dataset-82 = Откровение
 names-ai-dataset-83 = РобоДьявол
@@ -122,8 +118,7 @@ names-ai-dataset-89 = Сорокопут
 names-ai-dataset-90 = Соло
 names-ai-dataset-91 = Программа Контроля Станции
 # Stories-Adaptation
-names-ai-dataset-92 = ЗЕД 
-# end
+names-ai-dataset-92 = ЗЕД
 names-ai-dataset-93 = Супер 35
 names-ai-dataset-94 = Генеральный хирург
 names-ai-dataset-95 = TWA
