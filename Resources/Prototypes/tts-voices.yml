@@ -90,13 +90,6 @@
   id: xrenoid
 
 - type: ttsVoice
-  name: Валтос
-  description: Голос начинающего диктора Валтоса
-  sex: Female
-  speaker: valtos
-  id: valtos
-
-- type: ttsVoice
   name: Уоллес Брин
   description: Голос персонажа Уоллес Брин из игры Half-Life 2
   sex: Male
