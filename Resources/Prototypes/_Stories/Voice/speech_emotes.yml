@@ -11,7 +11,7 @@
     components:
     - BorgChassis
   available: false
-  icon: Interface/Emotes/vocal.png
+  icon: _Stories/Interface/Emotes/grumble.png
   chatMessages: ["emote-grumble"]
   chatTriggers:
   - grumble
@@ -38,7 +38,7 @@
     components:
     - BorgChassis
   available: false
-  icon: Interface/Emotes/vocal.png
+  icon: _Stories/Interface/Emotes/moan.png
   chatMessages: ["emote-moan"]
   chatTriggers:
   - moan
@@ -61,7 +61,7 @@
     components:
     - BorgChassis
   available: false
-  icon: Interface/Emotes/vocal.png
+  icon: _Stories/Interface/Emotes/wiggles_antennae.png
   name: emote-name-waves-antennae
   chatMessages: ["emote-waves-antennae"]
   chatTriggers:
@@ -94,7 +94,7 @@
     components:
     - BorgChassis
   available: false
-  icon: Interface/Emotes/vocal.png
+  icon: _Stories/Interface/Emotes/waves_antennae_sharply.png
   name: emote-name-waves-antennae-sharply
   chatMessages: ["emote-waves-antennae-sharply"]
   chatTriggers:
