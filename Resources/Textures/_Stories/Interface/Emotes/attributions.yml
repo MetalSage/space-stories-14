@@ -42,3 +42,23 @@
   license: "CC-BY-SA-3.0"
   copyright: "Created by xcenlegend for Space Stories"
   source: "https://github.com/MetalSage/space-stories-14"
+
+- files: ["grumble.png"]
+  license: "Собственная лицензия. Копирование, модификация и использование вне проекта Space Stories полностью запрещено без предварительного согласия текущего владельца проекта"
+  copyright: "Создано F3rror(discord:f3rror) для SpaceStories(Server SS14)."
+  source: "https://github.com/MetalSage/space-stories-14"
+
+- files: ["moan.png"]
+  license: "Собственная лицензия. Копирование, модификация и использование вне проекта Space Stories полностью запрещено без предварительного согласия текущего владельца проекта"
+  copyright: "Создано F3rror(discord:f3rror) для SpaceStories(Server SS14)."
+  source: "https://github.com/MetalSage/space-stories-14"
+
+- files: ["wiggles_antennae.png"]
+  license: "Собственная лицензия. Копирование, модификация и использование вне проекта Space Stories полностью запрещено без предварительного согласия текущего владельца проекта"
+  copyright: "Создано F3rror(discord:f3rror) для SpaceStories(Server SS14)."
+  source: "https://github.com/MetalSage/space-stories-14"
+
+- files: ["waves_antennae_sharply.png"]
+  license: "Собственная лицензия. Копирование, модификация и использование вне проекта Space Stories полностью запрещено без предварительного согласия текущего владельца проекта"
+  copyright: "Создано F3rror(discord:f3rror) для SpaceStories(Server SS14)."
+  source: "https://github.com/MetalSage/space-stories-14"
