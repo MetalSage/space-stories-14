@@ -1,17 +1,17 @@
 - type: body
-  id: Vulpkanin
-  name: "vulpkanin"
+  id: Avali
+  name: "avali"
   root: torso
   slots:
     head:
-      part: HeadVulpkanin
+      part: HeadAvali
       connections:
       - torso
       organs:
         brain: OrganHumanBrain
         eyes: OrganHumanEyes
     torso:
-      part: TorsoVulpkanin
+      part: TorsoAvali
       connections:
       - right_arm
       - left_arm
@@ -24,26 +24,26 @@
         liver: OrganAnimalLiver
         kidneys: OrganHumanKidneys
     right_arm:
-      part: RightArmVulpkanin
+      part: RightArmAvali
       connections:
       - right_hand
     left_arm:
-      part: LeftArmVulpkanin
+      part: LeftArmAvali
       connections:
       - left_hand
     right_hand:
-      part: RightHandVulpkanin
+      part: RightHandAvali
     left_hand:
-      part: LeftHandVulpkanin
+      part: LeftHandAvali
     right_leg:
-      part: RightLegVulpkanin
+      part: RightLegAvali
       connections:
       - right_foot
     left_leg:
-      part: LeftLegVulpkanin
+      part: LeftLegAvali
       connections:
       - left_foot
     right_foot:
-      part: RightFootVulpkanin
+      part: RightFootAvali
     left_foot:
-      part: LeftFootVulpkanin
+      part: LeftFootAvali

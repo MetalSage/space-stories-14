@@ -1,17 +1,17 @@
 - type: body
-  id: Vulpkanin
-  name: "vulpkanin"
+  id: Rodentia
+  name: "rodentia"
   root: torso
   slots:
     head:
-      part: HeadVulpkanin
+      part: HeadRodentia
       connections:
       - torso
       organs:
         brain: OrganHumanBrain
         eyes: OrganHumanEyes
     torso:
-      part: TorsoVulpkanin
+      part: TorsoRodentia
       connections:
       - right_arm
       - left_arm
@@ -24,26 +24,26 @@
         liver: OrganAnimalLiver
         kidneys: OrganHumanKidneys
     right_arm:
-      part: RightArmVulpkanin
+      part: RightArmRodentia
       connections:
       - right_hand
     left_arm:
-      part: LeftArmVulpkanin
+      part: LeftArmRodentia
       connections:
       - left_hand
     right_hand:
-      part: RightHandVulpkanin
+      part: RightHandRodentia
     left_hand:
-      part: LeftHandVulpkanin
+      part: LeftHandRodentia
     right_leg:
-      part: RightLegVulpkanin
+      part: RightLegRodentia
       connections:
       - right_foot
     left_leg:
-      part: LeftLegVulpkanin
+      part: LeftLegRodentia
       connections:
       - left_foot
     right_foot:
-      part: RightFootVulpkanin
+      part: RightFootRodentia
     left_foot:
-      part: LeftFootVulpkanin
+      part: LeftFootRodentia
