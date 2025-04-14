@@ -1,9 +1,7 @@
 - type: entity
   id: MobShadowlingGhost
   name: тенеморф
-  parent:
-  - BaseMob
-  - MobDamageable
+  parent: BaseMobJaunt
   description: Очень страшный.
   components:
   - type: ZombieImmune
@@ -36,8 +34,6 @@
   - type: MindContainer
   - type: InputMover
   - type: MobMover
-  - type: Input
-    context: "ghost"
   - type: MovementSpeedModifier
     baseWalkSpeed: 15
     baseSprintSpeed: 15
@@ -46,17 +42,6 @@
     drawdepth: Ghosts
   - type: Clickable
   - type: InteractionOutline
-  - type: Physics
-    bodyType: KinematicController
-  - type: Fixtures
-    fixtures:
-      fix1:
-        shape:
-          !type:PhysShapeCircle
-          radius: 0.40
-        density: 80
-        mask:
-        - GhostImpassable
   - type: MovementIgnoreGravity
   - type: Examiner
   - type: NoSlip
