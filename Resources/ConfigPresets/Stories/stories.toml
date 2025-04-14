@@ -46,12 +46,12 @@ flavor_text = true
 
 [infolinks]
 bug_report = "https://github.com/MetalSage/space-stories-14/issues/new/choose"
-discord = "https://discord.gg/space-stories"
+discord = "https://discord.gg/S8cjQFhFHh"
 forum = "https://forum.spacestories.club"
 github = "https://github.com/MetalSage/space-stories-14"
 patreon = "https://boosty.to/spacestories14"
 wiki = "https://spacestories.club"
-appeal = "https://discord.gg/space-stories"
+appeal = "https://discord.gg/S8cjQFhFHh"
 
 [net]
 tickrate = 25

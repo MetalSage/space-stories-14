@@ -6,7 +6,7 @@ Space Station 14 - это ремейк SS13, работающий на [Robust T
 
 ## Ссылки
 
-[Wiki](https://spacestories.club/) | [Discord](https://discord.gg/space-stories/) | [Steam](https://store.steampowered.com/app/1255460/Space_Station_14/) | [Клиент без Steam](https://spacestation14.io/about/nightlies/)
+[Wiki](https://spacestories.club/) | [Discord](https://discord.gg/S8cjQFhFHh) | [Steam](https://store.steampowered.com/app/1255460/Space_Station_14/) | [Клиент без Steam](https://spacestation14.io/about/nightlies/)
 
 ## Лицензия
 
@@ -22,7 +22,7 @@ Space Station 14 - это ремейк SS13, работающий на [Robust T
 
 ## Вклад
 
-В случае если вы хотите добавить новый контент будет лучше, если сначала вы предложите его в основной [репозиторий](https://github.com/space-wizards/space-station-14) или обсудите его необходимость на нашем сервере [Discord](https://discord.gg/space-stories/).
+В случае если вы хотите добавить новый контент будет лучше, если сначала вы предложите его в основной [репозиторий](https://github.com/space-wizards/space-station-14) или обсудите его необходимость на нашем сервере [Discord](https://discord.gg/S8cjQFhFHh).
 
 ## Сборка
 
