@@ -1,5 +1,6 @@
 - type: entity
   id: MobInquisitorGhost
+  parent: BaseMobJaunt
   name: инквизитор
   description: Очень страшный.
   components:
@@ -11,8 +12,6 @@
   - type: MindContainer
   - type: InputMover
   - type: MobMover
-  - type: Input
-    context: "ghost"
   - type: MovementSpeedModifier
     baseWalkSpeed: 15
     baseSprintSpeed: 15
@@ -27,17 +26,6 @@
     allowed:
     - Stun
   - type: InteractionOutline
-  - type: Physics
-    bodyType: KinematicController
-  - type: Fixtures
-    fixtures:
-      fix1:
-        shape:
-          !type:PhysShapeCircle
-          radius: 0.40
-        density: 80
-        mask:
-        - GhostImpassable
   - type: MovementIgnoreGravity
   - type: Damageable
     damageContainer: Biological
