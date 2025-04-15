@@ -152,8 +152,8 @@ public abstract class SharedStunSystem : EntitySystem
     private void OnKnockShutdown(EntityUid uid, KnockedDownComponent component, ComponentShutdown args)
     {
         // Stories-Crawling-Start
-        if (!_standingSystem.CanCrawl(uid))
-            _standingSystem.Stand(uid);
+        if (!_standingState.CanCrawl(uid))
+            _standingState.Stand(uid);
         else if (TryComp(uid, out ActorComponent? actor)
                  && _cfg.GetClientCVar(actor.PlayerSession.Channel,SCCVars.AutoStanding))
         {
