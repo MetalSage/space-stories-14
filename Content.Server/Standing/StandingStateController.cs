@@ -17,7 +17,7 @@ public sealed class StandingStateController : SharedStandingStateController
             var doAfterArgs = new DoAfterArgs(EntityManager, uid, standing.DownDelay, new FellDownEvent.DownDoAfterEvent(), uid)
             {
                 BlockDuplicate = true,
-                BreakOnDamage = true,
+                BreakOnDamage = false, // true // Stories-Crawling
             };
             _doAfter.TryStartDoAfter(doAfterArgs);
         }
@@ -26,7 +26,7 @@ public sealed class StandingStateController : SharedStandingStateController
             var doAfterArgs = new DoAfterArgs(EntityManager, uid, standing.StandDelay, new FellDownEvent.StandDoAfterEvent(), uid)
             {
                 BlockDuplicate = true,
-                BreakOnDamage = true,
+                BreakOnDamage = false, // true // Stories-Crawling
             };
             _doAfter.TryStartDoAfter(doAfterArgs);
         }
