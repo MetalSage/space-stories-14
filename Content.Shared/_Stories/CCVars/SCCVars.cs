@@ -90,4 +90,10 @@ public sealed class SCCVars
     /// </summary>
     public static readonly CVarDef<string> DiscordAuthApiKey =
         CVarDef.Create("discord_auth.api_key", "", CVar.SERVERONLY | CVar.CONFIDENTIAL);
+
+    /// <summary>
+    ///     Getting up a character after falling
+    /// </summary>
+    public static readonly CVarDef<bool> AutoStanding =
+        CVarDef.Create("control.auto_standing", false, CVar.CLIENT | CVar.ARCHIVE | CVar.REPLICATED);
 }
