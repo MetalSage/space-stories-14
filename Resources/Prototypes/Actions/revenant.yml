@@ -8,6 +8,16 @@
     event: !type:RevenantShopActionEvent
 
 - type: entity
+  id: ActionRevenantReap
+  name: Essence reap
+  description: Costs 10 Essence.
+  components:
+  - type: InstantAction
+    icon: Interface/Actions/shop.png
+    event: !type:RevenantReapActionEvent
+    useDelay: 60
+
+- type: entity
   id: ActionRevenantDefile
   name: Defile
   description: Costs 30 Essence.
@@ -46,3 +56,13 @@
     icon: Interface/Actions/malfunction.png
     event: !type:RevenantMalfunctionActionEvent
     useDelay: 20
+
+- type: entity
+  id: ActionRevenantGhostlyTouch
+  name: Ghostly Touch
+  description: Costs 10 Essence.
+  components:
+  - type: InstantAction
+    icon: Interface/Actions/malfunction.png
+    event: !type:RevenantGhostlyTouchActionEvent
+    useDelay: 1

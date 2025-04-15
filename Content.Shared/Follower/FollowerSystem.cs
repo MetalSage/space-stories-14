@@ -1,5 +1,6 @@
 using System.Linq;
 using System.Numerics;
+using Content.Shared._Stories.Revenant;
 using Content.Shared.Administration.Managers;
 using Content.Shared.Database;
 using Content.Shared.Follower.Components;
@@ -8,6 +9,7 @@ using Content.Shared.Hands;
 using Content.Shared.Movement.Events;
 using Content.Shared.Movement.Pulling.Events;
 using Content.Shared.Polymorph;
+using Content.Shared.Revenant.Components;
 using Content.Shared.Tag;
 using Content.Shared.Verbs;
 using Robust.Shared.Containers;
@@ -93,7 +95,7 @@ public sealed class FollowerSystem : EntitySystem
         if (ev.User == ev.Target || IsClientSide(ev.Target))
             return;
 
-        if (HasComp<GhostComponent>(ev.User))
+        if (HasComp<GhostComponent>(ev.User) || HasComp<RevenantComponent>(ev.User))
         {
             var verb = new AlternativeVerb()
             {
@@ -218,7 +220,10 @@ public sealed class FollowerSystem : EntitySystem
 
         _physicsSystem.SetLinearVelocity(follower, Vector2.Zero);
 
-        EnsureComp<OrbitVisualsComponent>(follower);
+        if (TryComp<RevenantComponent>(follower, out _))
+            EnsureComp<HaloVisualsComponent>(follower);
+        else
+            EnsureComp<OrbitVisualsComponent>(follower);
 
         var followerEv = new StartedFollowingEntityEvent(entity, follower);
         var entityEv = new EntityStartedFollowingEvent(entity, follower);
@@ -249,6 +254,7 @@ public sealed class FollowerSystem : EntitySystem
         {
             RemComp<FollowerComponent>(uid);
             RemComp<OrbitVisualsComponent>(uid);
+            RemComp<HaloVisualsComponent>(uid);
         }
 
         var uidEv = new StoppedFollowingEntityEvent(target, uid);

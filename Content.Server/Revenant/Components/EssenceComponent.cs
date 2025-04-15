@@ -22,4 +22,7 @@ public sealed partial class EssenceComponent : Component
     /// </summary>
     [ViewVariables(VVAccess.ReadWrite)]
     public float EssenceAmount = 0f;
+
+    [ViewVariables(VVAccess.ReadWrite)]
+    public float EssenceLossMultiplier = 0.1f;
 }

@@ -201,6 +201,24 @@ public sealed partial class RevenantComponent : Component
     public EntityWhitelist? MalfunctionBlacklist;
     #endregion
 
+    #region Essence Reaping
+
+    [ViewVariables(VVAccess.ReadWrite), DataField("reapRadius")]
+    public float ReapRadius = 5f;
+
+    [DataField]
+    public TimeSpan JitterDuration = TimeSpan.FromSeconds(5.0f);
+
+    /// <summary>
+    /// The status effects applied after the ability
+    /// the first float corresponds to amount of time the entity is stunned.
+    /// the second corresponds to the amount of time the entity is made solid.
+    /// </summary>
+    [DataField("reapDebuffs")]
+    public Vector2 ReapDebuffs = new(1, 0);
+
+    #endregion Essence Reaping
+
     [DataField]
     public ProtoId<AlertPrototype> EssenceAlert = "Essence";
 
@@ -216,4 +234,5 @@ public sealed partial class RevenantComponent : Component
     #endregion
 
     [DataField] public EntityUid? Action;
+    [DataField] public EntityUid? ReapAction;
 }

@@ -48,6 +48,8 @@ public sealed partial class RevenantSystem : EntitySystem
 
     [ValidatePrototypeId<EntityPrototype>]
     private const string RevenantShopId = "ActionRevenantShop";
+    [ValidatePrototypeId<EntityPrototype>]
+    private const string RevenantReapId = "ActionRevenantReap";
 
     public override void Initialize()
     {
@@ -97,6 +99,7 @@ public sealed partial class RevenantSystem : EntitySystem
     private void OnMapInit(EntityUid uid, RevenantComponent component, MapInitEvent args)
     {
         _action.AddAction(uid, ref component.Action, RevenantShopId);
+        _action.AddAction(uid, ref component.ReapAction, RevenantReapId);
     }
 
     private void OnStatusAdded(EntityUid uid, RevenantComponent component, StatusEffectAddedEvent args)
