@@ -98,7 +98,7 @@ public sealed class StandingStateSystem : EntitySystem
         standingState.Standing = false;
         standingState.CanStandUp = true;
         Dirty(uid, standingState);
-        RaiseLocalEvent(uid, new DownedEvent(), false);
+        // RaiseLocalEvent(uid, new DownedEvent(), false); // Stories-Crawling
         _movementSpeedModifier.RefreshMovementSpeedModifiers(uid); // Stories-Crawling
 
         // Seemed like the best place to put it
