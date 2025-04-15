@@ -20,7 +20,7 @@ public sealed class LegsParalyzedSystem : EntitySystem
         SubscribeLocalEvent<LegsParalyzedComponent, BuckledEvent>(OnBuckled);
         SubscribeLocalEvent<LegsParalyzedComponent, UnbuckledEvent>(OnUnbuckled);
         SubscribeLocalEvent<LegsParalyzedComponent, ThrowPushbackAttemptEvent>(OnThrowPushbackAttempt);
-        // SubscribeLocalEvent<LegsParalyzedComponent, UpdateCanMoveEvent>(OnUpdateCanMoveEvent); // Stories-Crawling
+        SubscribeLocalEvent<LegsParalyzedComponent, UpdateCanMoveEvent>(OnUpdateCanMoveEvent);
     }
 
     private void OnStartup(EntityUid uid, LegsParalyzedComponent component, ComponentStartup args)
@@ -31,10 +31,7 @@ public sealed class LegsParalyzedSystem : EntitySystem
 
     private void OnShutdown(EntityUid uid, LegsParalyzedComponent component, ComponentShutdown args)
     {
-        // Stories-Crawling-Start
-        if (!_standingSystem.CanCrawl(uid))
-            _standingSystem.Stand(uid);
-        // Stories-Crawling-End
+        _standingSystem.Stand(uid);
         _bodySystem.UpdateMovementSpeed(uid);
     }
 
