@@ -65,6 +65,7 @@ namespace Content.IntegrationTests.Tests
             "StoriesBox",
             "StoriesFland",
             "StoriesKilo",
+            "StoriesLima",
             "StoriesMeta",
             "StoriesCore",
             "StoriesOmega",
