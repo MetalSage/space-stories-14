@@ -1,11 +1,11 @@
 meta:
   format: 7
   category: Map
-  engineVersion: 248.0.2
-  forkId: stories
-  forkVersion: 74e5d56768b08e2dc55323db49857f2465c2d466
-  time: 04/18/2025 17:51:38
-  entityCount: 28830
+  engineVersion: 250.0.0
+  forkId: ""
+  forkVersion: ""
+  time: 04/18/2025 18:57:12
+  entityCount: 28831
 maps:
 - 1
 grids:
@@ -13160,7 +13160,7 @@ entities:
       pos: 5.5,-61.5
       parent: 2
     - type: Door
-      secondsUntilStateChange: -127214.35
+      secondsUntilStateChange: -127405.414
       state: Opening
     - type: DeviceLinkSource
       lastSignals:
@@ -13369,7 +13369,7 @@ entities:
       pos: 29.5,-79.5
       parent: 2
     - type: Door
-      secondsUntilStateChange: -165523.83
+      secondsUntilStateChange: -165714.89
       state: Opening
     - type: DeviceLinkSource
       lastSignals:
@@ -13401,7 +13401,7 @@ entities:
       pos: 16.5,-101.5
       parent: 2
     - type: Door
-      secondsUntilStateChange: -94265.88
+      secondsUntilStateChange: -94456.945
       state: Opening
     - type: DeviceLinkSource
       lastSignals:
@@ -15436,7 +15436,7 @@ entities:
       pos: 42.5,-69.5
       parent: 2
     - type: Door
-      secondsUntilStateChange: -165778.6
+      secondsUntilStateChange: -165969.66
       state: Opening
     - type: DeviceLinkSource
       lastSignals:
@@ -69086,6 +69086,27 @@ entities:
     - type: Transform
       pos: 12.5,-64.5
       parent: 2
+- proto: ChemistryBottleEZNutrient
+  entities:
+  - uid: 13581
+    components:
+    - type: Transform
+      pos: 2.235147,-43.241177
+      parent: 2
+- proto: ChemistryBottleLeft4Zed
+  entities:
+  - uid: 19911
+    components:
+    - type: Transform
+      pos: 2.641397,-43.2568
+      parent: 2
+- proto: ChemistryBottleRobustHarvest
+  entities:
+  - uid: 22295
+    components:
+    - type: Transform
+      pos: 2.594522,-43.522427
+      parent: 2
 - proto: ChemistryEmptyBottle02
   entities:
   - uid: 10894
@@ -70179,8 +70200,6 @@ entities:
     components:
     - type: Transform
       parent: 11090
-    - type: Physics
-      canCollide: False
 - proto: ClothingBeltMedicalEMTFilled
   entities:
   - uid: 11096
@@ -70445,8 +70464,6 @@ entities:
     components:
     - type: Transform
       parent: 11090
-    - type: Physics
-      canCollide: False
 - proto: ClothingHeadHatWelding
   entities:
   - uid: 11137
@@ -70508,8 +70525,6 @@ entities:
     components:
     - type: Transform
       parent: 11146
-    - type: Physics
-      canCollide: False
 - proto: ClothingMaskBreath
   entities:
   - uid: 11148
@@ -70551,8 +70566,6 @@ entities:
     components:
     - type: Transform
       parent: 11090
-    - type: Physics
-      canCollide: False
 - proto: ClothingMaskSterile
   entities:
   - uid: 11153
@@ -70633,8 +70646,6 @@ entities:
     components:
     - type: Transform
       parent: 11090
-    - type: Physics
-      canCollide: False
 - proto: ClothingOuterHospitalGown
   entities:
   - uid: 11165
@@ -70847,8 +70858,6 @@ entities:
     components:
     - type: Transform
       parent: 11090
-    - type: Physics
-      canCollide: False
 - proto: Cobweb1
   entities:
   - uid: 11197
@@ -84467,7 +84476,6 @@ entities:
     - type: Transform
       pos: 57.5,-69.5
       parent: 2
-    - type: UserInterface
     - type: ActiveUserInterface
 - proto: DresserWardenFilled
   entities:
@@ -84899,13 +84907,6 @@ entities:
     components:
     - type: Transform
       pos: -29.5,-96.5
-      parent: 2
-- proto: EZNutrientChemistryBottle
-  entities:
-  - uid: 13581
-    components:
-    - type: Transform
-      pos: 2.235147,-43.241177
       parent: 2
 - proto: FatExtractor
   entities:
@@ -131364,13 +131365,6 @@ entities:
     - type: Transform
       pos: 26.5,-71.5
       parent: 2
-- proto: Left4ZedChemistryBottle
-  entities:
-  - uid: 19911
-    components:
-    - type: Transform
-      pos: 2.641397,-43.2568
-      parent: 2
 - proto: LightReplacer
   entities:
   - uid: 19912
@@ -133037,20 +133031,10 @@ entities:
     - type: ContainerContainer
       containers:
         jumpsuit: !type:ContainerSlot
-          showEnts: False
-          occludes: False
           ent: 11095
         outerClothing: !type:ContainerSlot
-          showEnts: False
-          occludes: False
           ent: 11094
-        neck: !type:ContainerSlot
-          showEnts: False
-          occludes: False
-          ent: null
         mask: !type:ContainerSlot
-          showEnts: False
-          occludes: False
           ent: 11093
         eyes: !type:ContainerSlot
           showEnts: False
@@ -145212,13 +145196,6 @@ entities:
     - type: Transform
       pos: 14.5,-109.5
       parent: 2
-- proto: RobustHarvestChemistryBottle
-  entities:
-  - uid: 22295
-    components:
-    - type: Transform
-      pos: 2.594522,-43.522427
-      parent: 2
 - proto: RockGuitarInstrument
   entities:
   - uid: 22296
@@ -151329,6 +151306,13 @@ entities:
     - type: Transform
       rot: 3.141592653589793 rad
       pos: 60.49778,-55.56317
+      parent: 2
+- proto: STSpawnPointIAA
+  entities:
+  - uid: 28831
+    components:
+    - type: Transform
+      pos: -19.5,-85.5
       parent: 2
 - proto: Stunbaton
   entities:
