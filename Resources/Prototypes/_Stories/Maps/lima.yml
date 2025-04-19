@@ -1,6 +1,6 @@
 - type: gameMap
   id: StoriesLima
-  mapName: 'Lima Station'
+  mapName: '[КТ] Lima Station'
   mapPath: /Maps/_Stories/lima.yml
   minPlayers: 50
   stations:
