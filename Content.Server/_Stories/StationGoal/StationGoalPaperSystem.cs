@@ -34,14 +34,7 @@ namespace Content.Server._Stories.StationGoal
         {
             var availableGoals = _prototypeManager.EnumeratePrototypes<StationGoalPrototype>().ToList();
 
-            foreach (var findGoal in availableGoals)
-            {
-                if (_playerManager.PlayerCount <= findGoal.OnlineLess)
-                {
-                    TrySendStationGoal(findGoal);
-                    return;
-                }
-            }
+            availableGoals.RemoveAll(IsNotEnoughPlayers);
 
             var goal = _random.Pick(availableGoals);
             TrySendStationGoal(goal);
@@ -51,6 +44,11 @@ namespace Content.Server._Stories.StationGoal
         ///     Send a station goal to all faxes which are authorized to receive it.
         /// </summary>
         /// <returns>True if at least one fax received paper</returns>
+        
+        private bool IsNotEnoughPlayers(StationGoalPrototype checkGoal)
+        {
+            return (_playerManager.PlayerCount < checkGoal.OnlineLess);
+        }
         public bool TrySendStationGoal(StationGoalPrototype goal)
         {
             var faxes = EntityManager.EntityQuery<FaxMachineComponent>();

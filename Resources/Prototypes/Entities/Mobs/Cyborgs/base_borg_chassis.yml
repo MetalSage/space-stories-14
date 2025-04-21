@@ -236,6 +236,7 @@
     - DoorBumpOpener
     - FootstepSound
     - CanPilot
+    - Unimplantable
   - type: Emoting
   - type: TTS # Stories-TTS
     voice: adventure_core

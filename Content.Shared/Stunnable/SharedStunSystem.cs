@@ -1,3 +1,4 @@
+using Content.Shared._Stories.SCCVars;
 using Content.Shared.ActionBlocker;
 using Content.Shared.Administration.Logs;
 using Content.Shared.Interaction;
@@ -5,7 +6,9 @@ using Content.Shared.Interaction.Events;
 using Content.Shared.Inventory.Events;
 using Content.Shared.Item;
 using Content.Shared.Bed.Sleep;
+using Content.Shared.CCVar;
 using Content.Shared.Database;
+using Content.Shared.DoAfter;
 using Content.Shared.Hands;
 using Content.Shared.Mobs;
 using Content.Shared.Mobs.Components;
@@ -16,9 +19,11 @@ using Content.Shared.StatusEffect;
 using Content.Shared.Throwing;
 using Content.Shared.Whitelist;
 using Robust.Shared.Audio.Systems;
+using Robust.Shared.Configuration;
 using Robust.Shared.Physics.Components;
 using Robust.Shared.Physics.Events;
 using Robust.Shared.Physics.Systems;
+using Robust.Shared.Player;
 
 namespace Content.Shared.Stunnable;
 
@@ -32,6 +37,11 @@ public abstract class SharedStunSystem : EntitySystem
     [Dependency] private readonly EntityWhitelistSystem _entityWhitelist = default!;
     [Dependency] private readonly StandingStateSystem _standingState = default!;
     [Dependency] private readonly StatusEffectsSystem _statusEffect = default!;
+    // Stories-Crawling-Start
+    [Dependency] private readonly StandingStateSystem _standingSystem = default!;
+    [Dependency] private readonly SharedDoAfterSystem _doAfter = default!;
+    [Dependency] private readonly INetConfigurationManager _cfg = default!;
+    // Stories-Crawling-End
 
     /// <summary>
     /// Friction modifier for knocked down players.
@@ -144,6 +154,19 @@ public abstract class SharedStunSystem : EntitySystem
         // Stories-Crawling-Start
         if (!_standingState.CanCrawl(uid))
             _standingState.Stand(uid);
+        else if (TryComp(uid, out ActorComponent? actor)
+                 && _cfg.GetClientCVar(actor.PlayerSession.Channel,SCCVars.AutoStanding))
+        {
+            if (!TryComp<StandingStateComponent>(uid, out var standing) || !standing.CanCrawl || !standing.CanStandUp)
+                return;
+
+            var doAfterArgs = new DoAfterArgs(EntityManager, uid, standing.StandDelay, new FellDownEvent.StandDoAfterEvent(), uid)
+            {
+                BlockDuplicate = true,
+                BreakOnDamage = false,
+            };
+            _doAfter.TryStartDoAfter(doAfterArgs);
+        }
         // Stories-Crawling-End
     }
 

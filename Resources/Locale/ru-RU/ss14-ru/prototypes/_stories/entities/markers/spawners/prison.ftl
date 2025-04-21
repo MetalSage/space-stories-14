@@ -1,10 +1,10 @@
-ent-PRISONSpawnPointPrisoner = prisoner
-    .desc = { ent-SpawnPointJobBase.desc }
-ent-PRISONSpawnPointHeadOfPrison = headofsp
+ent-PRISONSpawnPointPrisoner = заключенный космической тюрьмы
     .desc = { ent-SpawnPointJobBaseStories.desc }
-ent-PRISONSpawnPointOfficer = spofficer
+ent-PRISONSpawnPointHeadOfPrison = начальник космической тюрьмы
     .desc = { ent-SpawnPointJobBaseStories.desc }
-ent-PRISONSpawnPointEngineer = spengineer
+ent-PRISONSpawnPointOfficer = офицер космической тюрьмы
     .desc = { ent-SpawnPointJobBaseStories.desc }
-ent-PRISONSpawnPointMedic = spmedic
+ent-PRISONSpawnPointEngineer = инженер космической тюрьмы
+    .desc = { ent-SpawnPointJobBaseStories.desc }
+ent-PRISONSpawnPointMedic = медик космической тюрьмы
     .desc = { ent-SpawnPointJobBaseStories.desc }

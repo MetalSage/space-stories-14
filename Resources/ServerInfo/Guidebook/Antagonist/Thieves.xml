@@ -1,5 +1,5 @@
 <Document>
-  # Воры
+  # Thieves
 
   <Box>
     [color=#999999][italic]"Йоинк! Я возьму это! И это! О, не возражай, если я это сделаю!"[/italic][/color]
@@ -24,8 +24,8 @@
     <GuideEntityEmbed Entity="ClothingHandsChameleonThief" Caption="ваши воровские перчатки"/>
   </Box>
 
-  ## Инструменты для торговли
-  У вас есть еще два туза в рукаве: [color=cyan]воровской маяк[/color] и [color=cyan]набор инструментов.[/color]
+  ## Tools of the Trade
+  You've got two more aces up your stolen sleeves: your [color=cyan]beacon[/color] and your [color=cyan]satchel.[/color]
 
   [color=cyan]Маяк[/color] обеспечивает телепорт для безделушек, которые нелегко было бы пронести с собой в эвакуационном шаттле. Просто найдите укромное место на станции, чтобы включить маяк, а затем установите его координаты.
   Все блестяшки, находящиеся рядом с ним, будут [bold]телепортированы в ваше хранилище по окончании смены[/bold], что поможет выполнить ваши задачи.
@@ -34,11 +34,10 @@
     <GuideEntityEmbed Entity="ThiefBeacon"/>
   </Box>
 
-  Ваш [color=cyan]набор инструментов[/color] содержит... ну, все, что вы не забыли взять с собой. [bold]Вы можете выбрать два готовых набора[/bold], которые помогут вам совершать более масштабные ограбления.
-  Подтвердите свой выбор в безопасном месте, так как ящик с инструментами исчезнет, а снаряжение упадет к вашим ногам.
+  Your [color=cyan]satchel[/color] contains... well, whatever you remembered to pack. [bold]You can select two pre-made kits[/bold] to help you complete grander heists.
 
   <Box>
-    <GuideEntityEmbed Entity="ToolboxThief"/>
+    <GuideEntityEmbed Entity="SatchelThief"/>
   </Box>
   <Box>
     <GuideEntityEmbed Entity="StorageImplanter" Caption="Anatomy"/>
@@ -52,16 +51,16 @@
     <GuideEntityEmbed Entity="Telecrystal" Caption="Набор Синдиката"/>
   </Box>
 
-  ## Главный предмет коллекции
-  Ваша клептомания заведет вас в тупик. Однажды вам захочется украсть несколько статуэток. В другой раз вам захочется украсть промышленную машину.
+  ## Centerpiece of the Collection
+  Your kleptomania will take you places. One day, you'll feel like stealing a few figurines. Another day, you'll feel like stealing an industrial machine.
 
-  Неважно. Все они со временем станут частью вашей коллекции.
+  No matter. They'll all be a part of your collection within a matter of time.
 
   Вы можете украсть предметы, [bold]забрав их с собой[/bold], когда доберетесь до ЦентКома. В противном случае вы можете украсть более крупные предметы, [bold]оставив их рядом с вашим маяком.[/bold]
 
   Некоторые [italic]живые[/italic] объекты могут не содействовать вам. Убедитесь, что они живы и будут с вами или с вашим маяком, когда смена закончится.
 
-  Вещи, которые вы можете пожелать:
+  Things that you may desire include but are not limited to:
 
   <Box>
    <GuideEntityEmbed Entity="ToyFigurineGreytider" Caption="Фигурки"/>

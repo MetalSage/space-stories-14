@@ -8,8 +8,7 @@
     difficulty: 1.0
   - type: RoleRequirement
     roles:
-      mindRoles:
-      - EmpireMemberRole
+    - EmpireMemberRole
 
 - type: entity
   parent: [BaseInquisitorObjective, BaseKillObjective]

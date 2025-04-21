@@ -1,6 +1,6 @@
-ent-GuardianPushBall = base bullet rubber
+ent-GuardianPushBall =  резиновая пуля
     .desc = { ent-BaseBullet.desc }
-ent-BulletRedPlazma = disabler bolt
+ent-BulletRedPlazma = стан заряд
     .desc = { ent-BaseBullet.desc }
 ent-BulletImpactEffectRedPlazma = { "" }
     .desc = { "" }

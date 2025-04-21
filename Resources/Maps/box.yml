@@ -1,11 +1,11 @@
 meta:
   format: 7
   category: Map
-  engineVersion: 248.0.2
-  forkId: stories
-  forkVersion: 701720b5b2052edb609acbf501bef6352259c936
-  time: 03/29/2025 19:41:26
-  entityCount: 28299
+  engineVersion: 250.0.0
+  forkId: ""
+  forkVersion: ""
+  time: 04/02/2025 10:47:25
+  entityCount: 28300
 maps:
 - 780
 grids:
@@ -7832,7 +7832,7 @@ entities:
             0: 61423
           8,-1:
             0: 12320
-            4: 34944
+            2: 34944
           -8,-4:
             0: 30583
           -8,-5:
@@ -8186,7 +8186,7 @@ entities:
             0: 30583
           6,-12:
             1: 4369
-            2: 204
+            4: 204
             3: 49152
           6,-11:
             1: 61713
@@ -8195,10 +8195,10 @@ entities:
             0: 29424
           6,-13:
             1: 4369
-            2: 49152
+            4: 49152
             3: 204
           7,-12:
-            2: 17
+            4: 17
             3: 4096
             1: 17476
           7,-11:
@@ -8207,7 +8207,7 @@ entities:
           7,-10:
             0: 61680
           7,-13:
-            2: 4096
+            4: 4096
             1: 17476
             3: 17
           8,-12:
@@ -8245,7 +8245,7 @@ entities:
             1: 8704
           8,0:
             0: 63523
-            4: 8
+            2: 8
           8,1:
             0: 61440
           8,2:
@@ -8529,24 +8529,24 @@ entities:
             1: 35064
             3: 771
           9,0:
-            4: 15
+            2: 15
             0: 65296
           9,1:
             0: 47232
           9,2:
             0: 48955
           9,-1:
-            4: 65520
+            2: 65520
             0: 1
           10,0:
-            4: 1
+            2: 1
             0: 65292
           10,1:
             0: 56789
           10,2:
             0: 64961
           10,-1:
-            4: 4368
+            2: 4368
             0: 57548
           11,0:
             0: 30543
@@ -10346,50 +10346,50 @@ entities:
           - 0
           - 0
         - volume: 2500
-          temperature: 293.15
-          moles:
-          - 0
-          - 0
-          - 0
-          - 6666.982
-          - 0
-          - 0
-          - 0
-          - 0
-          - 0
-          - 0
-          - 0
-          - 0
-          - 0
-          - 0
-          - 0
-          - 0
-        - volume: 2500
-          temperature: 293.15
-          moles:
-          - 0
-          - 0
-          - 0
-          - 0
-          - 0
-          - 0
-          - 0
-          - 0
-          - 0
-          - 0
-          - 0
-          - 0
-          - 0
-          - 0
-          - 0
-          - 0
-        - volume: 2500
           temperature: 235
           moles:
           - 27.225372
           - 102.419266
           - 0
           - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+        - volume: 2500
+          temperature: 293.15
+          moles:
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+        - volume: 2500
+          temperature: 293.15
+          moles:
+          - 0
+          - 0
+          - 0
+          - 6666.982
           - 0
           - 0
           - 0
@@ -13733,7 +13733,7 @@ entities:
       pos: 24.5,16.5
       parent: 8364
     - type: Door
-      secondsUntilStateChange: -95517.83
+      secondsUntilStateChange: -95552.59
       state: Opening
     - type: DeviceLinkSource
       lastSignals:
@@ -15253,7 +15253,7 @@ entities:
       pos: 9.5,25.5
       parent: 8364
     - type: Door
-      secondsUntilStateChange: -8774.323
+      secondsUntilStateChange: -8809.09
       state: Opening
     - type: DeviceLinkSource
       lastSignals:
@@ -68375,6 +68375,19 @@ entities:
     - type: Transform
       pos: 21.5,-20.5
       parent: 8364
+- proto: ChemistryBottleRobustHarvest
+  entities:
+  - uid: 13505
+    components:
+    - type: Transform
+      pos: -19.744875,7.720537
+      parent: 8364
+  - uid: 13547
+    components:
+    - type: Transform
+      rot: 2.9154674848541617E-05 rad
+      pos: -22.735086,7.7025566
+      parent: 8364
 - proto: ChemistryHotplate
   entities:
   - uid: 18903
@@ -88286,7 +88299,7 @@ entities:
       pos: 18.5,-13.5
       parent: 8364
     - type: Door
-      secondsUntilStateChange: -2748.8342
+      secondsUntilStateChange: -2783.6008
       state: Closing
   - uid: 13388
     components:
@@ -88294,7 +88307,7 @@ entities:
       pos: 18.5,-14.5
       parent: 8364
     - type: Door
-      secondsUntilStateChange: -2784.5342
+      secondsUntilStateChange: -2819.3008
       state: Closing
   - uid: 13389
     components:
@@ -88462,7 +88475,7 @@ entities:
       pos: -34.5,-14.5
       parent: 8364
     - type: Door
-      secondsUntilStateChange: -89706.37
+      secondsUntilStateChange: -89741.13
       state: Closing
   - uid: 15010
     components:
@@ -145510,19 +145523,6 @@ entities:
     - type: Transform
       pos: -3.5,-23.2
       parent: 8364
-- proto: RobustHarvestChemistryBottle
-  entities:
-  - uid: 13505
-    components:
-    - type: Transform
-      pos: -19.744875,7.720537
-      parent: 8364
-  - uid: 13547
-    components:
-    - type: Transform
-      rot: 2.9154674848541617E-05 rad
-      pos: -22.735086,7.7025566
-      parent: 8364
 - proto: RockGuitarInstrument
   entities:
   - uid: 25902
@@ -151830,6 +151830,13 @@ entities:
     components:
     - type: Transform
       pos: 62.5,-33.5
+      parent: 8364
+- proto: STSpawnPointIAA
+  entities:
+  - uid: 4612
+    components:
+    - type: Transform
+      pos: -11.5,16.5
       parent: 8364
 - proto: SubstationBasic
   entities:
