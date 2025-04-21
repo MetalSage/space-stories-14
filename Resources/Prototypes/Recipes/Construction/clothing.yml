@@ -82,7 +82,7 @@
   startNode: start
   targetNode: medsecHud
   category: construction-category-clothing
-  description: Две визора, объединённых руками. # Stories-CraftTranslate
+  description: Два визора, объединённых руками. # Stories-CraftTranslate
   icon: { sprite: Clothing/Eyes/Hud/medsec.rsi, state: icon }
   objectType: Item
 
