@@ -50,7 +50,10 @@ public sealed class RevenantAbilitiesSystem : EntitySystem
     #region Abilities
     private void OnGhostlyTouch(EntityUid uid, RevenantComponent component, RevenantGhostlyTouchActionEvent args)
     {
-        // Сделать как
+        DamageSpecifier dspec = new();
+        dspec.DamageDict.Add("Cold", 5f);
+        _damage.TryChangeDamage(args.Target, dspec, true, origin: uid);
+        _jittering.DoJitter(args.Target, component.JitterDuration, true, 1f, 1f);
     }
     private void OnReap(EntityUid uid, RevenantComponent component, RevenantReapActionEvent args)
     {
@@ -90,13 +93,14 @@ public sealed class RevenantAbilitiesSystem : EntitySystem
         var mobState = GetEntityQuery<MobStateComponent>();
         foreach (var ent in lookup)
         {
+            if (!TryComp<EssenceComponent>(ent, out var _))
+                continue;
             if (!mobState.HasComponent(ent) || !_mobState.IsAlive(ent) || TryComp<RevenantComponent>(ent, out _))
                 continue;
             _popup.PopupEntity("Goida", ent, ent);
             _jittering.DoJitter(ent, time, true, 1f, 1f);
         }
     }
-
 
     private bool TryUseAbility(EntityUid uid, RevenantComponent component, FixedPoint2 abilityCost, Vector2 debuffs)
     {

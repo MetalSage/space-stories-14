@@ -49,3 +49,16 @@
   conditions:
   - !type:ListingLimitedStockCondition
     stock: 1
+
+- type: listing
+  id: RevenantGhostlyTouch
+  name: Ghostly Touch
+  description: sss
+  productAction: ActionRevenantGhostlyTouch
+  cost:
+    StolenEssence: 10
+  categories:
+  - RevenantAbilities
+  conditions:
+  - !type:ListingLimitedStockCondition
+    stock: 1

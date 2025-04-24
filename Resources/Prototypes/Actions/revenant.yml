@@ -59,10 +59,12 @@
 
 - type: entity
   id: ActionRevenantGhostlyTouch
-  name: Ghostly Touch
-  description: Costs 10 Essence.
+  name: "[color=red]Ghostly Touch[/color]"
+  description: SSS
   components:
-  - type: InstantAction
-    icon: Interface/Actions/malfunction.png
+  - type: EntityTargetAction
+    icon: _Stories/Actions/spaf.rsi/spaf_devour.png
+    iconOn: _Stories/Actions/spaf.rsi/spaf_devour_on.png
     event: !type:RevenantGhostlyTouchActionEvent
     useDelay: 1
+
