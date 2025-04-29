@@ -1,16 +1,16 @@
 meta:
   format: 7
-  category: Map
-  engineVersion: 251.0.0
-  forkId: ""
-  forkVersion: ""
-  time: 04/29/2025 12:38:59
+  category: Grid
+  engineVersion: 248.0.2
+  forkId: stories
+  forkVersion: 74e5d56768b08e2dc55323db49857f2465c2d466
+  time: 04/28/2025 20:03:31
   entityCount: 263
-maps:
-- 249
+maps: []
 grids:
-- 1d
-orphans: []
+- 1
+orphans:
+- 1
 nullspace: []
 tilemap:
   3: Space
@@ -29,7 +29,9 @@ entities:
       name: TIE-Fighter
     - type: Transform
       pos: -2.265625,2.765625
-      parent: 249
+    - type: Tag
+      tags:
+      - STEmpire
     - type: MapGrid
       chunks:
         0,0:
@@ -288,18 +290,6 @@ entities:
         chunkSize: 4
     - type: GasTileOverlay
     - type: RadiationGridResistance
-  - uid: 249
-    components:
-    - type: MetaData
-      name: Map Entity
-    - type: Transform
-    - type: Map
-      mapPaused: True
-    - type: PhysicsMap
-    - type: GridTree
-    - type: MovedGrids
-    - type: Broadphase
-    - type: OccluderTree
 - proto: AirAlarm
   entities:
   - uid: 259
@@ -1239,6 +1229,40 @@ entities:
       rot: 3.141592653589793 rad
       pos: 3.5,-2.5
       parent: 1
+    - type: ContainerContainer
+      containers:
+        jumpsuit: !type:ContainerSlot
+          showEnts: False
+          occludes: False
+          ent: null
+        outerClothing: !type:ContainerSlot
+          showEnts: False
+          occludes: False
+          ent: null
+        neck: !type:ContainerSlot
+          showEnts: False
+          occludes: False
+          ent: 249
+        mask: !type:ContainerSlot
+          showEnts: False
+          occludes: False
+          ent: null
+        eyes: !type:ContainerSlot
+          showEnts: False
+          occludes: False
+          ent: null
+        head: !type:ContainerSlot
+          showEnts: False
+          occludes: False
+          ent: null
+        suitstorage: !type:ContainerSlot
+          showEnts: False
+          occludes: False
+          ent: null
+        back: !type:ContainerSlot
+          showEnts: False
+          occludes: False
+          ent: null
 - proto: MedkitCombatFilled
   entities:
   - uid: 218
