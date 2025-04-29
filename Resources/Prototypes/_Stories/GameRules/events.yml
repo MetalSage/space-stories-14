@@ -18,7 +18,8 @@
     - HypnosisObjective
   - type: AntagLoadProfileRule
     speciesOverride: Human
-    speciesOverrideBlacklist: Vox
+    speciesOverrideBlacklist:
+    - Vox
   - type: RuleGrids
   - type: LoadMapRule
     mapPath: /Maps/_Stories/Nonstations/inquisitor_station.yml
@@ -111,7 +112,8 @@
     - HypnosisObjective
   - type: AntagLoadProfileRule
     speciesOverride: Human
-    speciesOverrideBlacklist: Vox
+    speciesOverrideBlacklist:
+    - Vox
   - type: RuleGrids
   - type: LoadMapRule
     mapPath: /Maps/_Stories/Nonstations/inquisitor_station.yml
