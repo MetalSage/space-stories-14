@@ -28,3 +28,8 @@
   id: Vulpkanin
   coefficients:
     Heat: 1.15
+
+- type: damageModifierSet
+  id: Avali
+  coefficients:
+    Heat: 1.3

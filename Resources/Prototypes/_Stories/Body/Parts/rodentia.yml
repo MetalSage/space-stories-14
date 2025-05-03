@@ -1,0 +1,141 @@
+#Limbs that spawn when gibbed should get descriptions.
+- type: entity
+  id: PartRodentia
+  parent: [BaseItem, BasePart]
+  name: "rodentia body part"
+  abstract: true
+  components:
+  - type: Damageable
+    damageContainer: Biological
+
+- type: entity
+  id: TorsoRodentia
+  name: "rodentia torso"
+  parent: [PartRodentia, BaseTorso]
+  components:
+  - type: Sprite
+    netsync: false
+    sprite: _Stories/Mobs/Rodentia/parts.rsi
+    state: "torso_m"
+  - type: Icon
+    sprite: _Stories/Mobs/Rodentia/parts.rsi
+    state: "torso_m"
+
+- type: entity
+  id: HeadRodentia
+  name: "rodentia head"
+  parent: [PartRodentia, BaseHead]
+  components:
+  - type: Sprite
+    netsync: false
+    sprite: _Stories/Mobs/Rodentia/parts.rsi
+    state: "head_m"
+  - type: Icon
+    sprite: _Stories/Mobs/Rodentia/parts.rsi
+    state: "head_m"
+  - type: InputMover
+  - type: GhostOnMove
+
+- type: entity
+  id: LeftArmRodentia
+  name: "left rodentia arm"
+  parent: [PartRodentia, BaseLeftArm]
+  components:
+  - type: Sprite
+    netsync: false
+    sprite: _Stories/Mobs/Rodentia/parts.rsi
+    state: "l_arm"
+  - type: Icon
+    sprite: _Stories/Mobs/Rodentia/parts.rsi
+    state: "l_arm"
+
+- type: entity
+  id: RightArmRodentia
+  name: "right rodentia arm"
+  parent: [PartRodentia, BaseRightArm]
+  components:
+  - type: Sprite
+    netsync: false
+    sprite: _Stories/Mobs/Rodentia/parts.rsi
+    state: "r_arm"
+  - type: Icon
+    sprite: _Stories/Mobs/Rodentia/parts.rsi
+    state: "r_arm"
+
+- type: entity
+  id: LeftHandRodentia
+  name: "left rodentia hand"
+  parent: [PartRodentia, BaseLeftHand]
+  components:
+  - type: Sprite
+    netsync: false
+    sprite: _Stories/Mobs/Rodentia/parts.rsi
+    state: "l_hand"
+  - type: Icon
+    sprite: _Stories/Mobs/Rodentia/parts.rsi
+    state: "l_hand"
+
+- type: entity
+  id: RightHandRodentia
+  name: "right rodentia hand"
+  parent: [PartRodentia, BaseRightHand]
+  components:
+  - type: Sprite
+    netsync: false
+    sprite: _Stories/Mobs/Rodentia/parts.rsi
+    state: "r_hand"
+  - type: Icon
+    sprite: _Stories/Mobs/Rodentia/parts.rsi
+    state: "r_hand"
+
+- type: entity
+  id: LeftLegRodentia
+  name: "left rodentia leg"
+  parent: [PartRodentia, BaseLeftLeg]
+  components:
+  - type: Sprite
+    netsync: false
+    sprite: _Stories/Mobs/Rodentia/parts.rsi
+    state: "l_leg"
+  - type: Icon
+    sprite: _Stories/Mobs/Rodentia/parts.rsi
+    state: "l_leg"
+
+- type: entity
+  id: RightLegRodentia
+  name: "right rodentia leg"
+  parent: [PartRodentia, BaseRightLeg]
+  components:
+  - type: Sprite
+    netsync: false
+    sprite: _Stories/Mobs/Rodentia/parts.rsi
+    state: "r_leg"
+  - type: Icon
+    sprite: _Stories/Mobs/Rodentia/parts.rsi
+    state: "r_leg"
+
+- type: entity
+  id: LeftFootRodentia
+  name: "left rodentia foot"
+  parent: [PartRodentia, BaseLeftFoot]
+  components:
+  - type: Sprite
+    netsync: false
+    sprite: _Stories/Mobs/Rodentia/parts.rsi
+    state: "l_foot"
+  - type: Icon
+    sprite: _Stories/Mobs/Rodentia/parts.rsi
+    state: "l_foot"
+
+- type: entity
+  id: RightFootRodentia
+  name: "right rodentia foot"
+  parent: [PartRodentia, BaseRightFoot]
+  components:
+  - type: Sprite
+    netsync: false
+    sprite: _Stories/Mobs/Rodentia/parts.rsi
+    state: "r_foot"
+  - type: Icon
+    sprite: _Stories/Mobs/Rodentia/parts.rsi
+    state: "r_foot"
