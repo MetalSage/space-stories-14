@@ -598,7 +598,7 @@
   placementMode: SnapgridCenter
 
 - type: construction
-  name: диагональное окно # Stories-CraftTranslate
+  name: направленое окно # Stories-CraftTranslate
   id: WindowDirectional
   graph: WindowDirectional
   startNode: start
@@ -616,7 +616,7 @@
   placementMode: SnapgridCenter
 
 - type: construction
-  name: диагональное бронированное окно # Stories-CraftTranslate
+  name: направленое бронированное окно # Stories-CraftTranslate
   id: WindowReinforcedDirectional
   graph: WindowDirectional
   startNode: start
@@ -634,7 +634,7 @@
   placementMode: SnapgridCenter
 
 - type: construction
-  name: диагональное заводное окно # Stories-CraftTranslate
+  name: направленое заводное окно # Stories-CraftTranslate
   id: WindowClockworkDirectional
   graph: WindowDirectional
   startNode: start
@@ -652,7 +652,7 @@
   placementMode: SnapgridCenter
 
 - type: construction
-  name: диагональное плазменное окно # Stories-CraftTranslate
+  name: направленое плазменное окно # Stories-CraftTranslate
   id: PlasmaWindowDirectional
   graph: WindowDirectional
   startNode: start
@@ -670,7 +670,7 @@
   placementMode: SnapgridCenter
 
 - type: construction
-  name: диагональное плазменное бронеокно # Stories-CraftTranslate
+  name: направленое плазменное бронеокно # Stories-CraftTranslate
   id: PlasmaReinforcedWindowDirectional
   graph: WindowDirectional
   startNode: start
