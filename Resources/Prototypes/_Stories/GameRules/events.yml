@@ -8,8 +8,9 @@
   components:
   - type: StationEvent
     earliestStart: 35
-    weight: 0
-    minimumPlayers: 25
+    reoccurrenceDelay: 60
+    weight: 7.5
+    minimumPlayers: 15
     duration: 1
   - type: AntagObjectives
     objectives:
@@ -102,8 +103,9 @@
   components:
   - type: StationEvent
     earliestStart: 35
-    weight: 0
-    minimumPlayers: 25
+    reoccurrenceDelay: 60
+    weight: 7.5
+    minimumPlayers: 15
     duration: 1
   - type: AntagObjectives
     objectives:
