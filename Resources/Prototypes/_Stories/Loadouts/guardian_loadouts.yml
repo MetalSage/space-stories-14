@@ -1,0 +1,392 @@
+- type: roleLoadout
+  id: JobGuardianNt
+  groups:
+  - GuardianNtHead
+  - GuardianNtMask
+  - GuardianNtNeck
+  - GuardianNtJumpsuit
+  - GuardianNtBelt
+  - GuardianNtBackpack
+  - GuardianNtOuterClothing
+  - GuardianNtShoes
+  - GuardianNtLightsaber
+  - SurvivalSecurity
+  - Trinkets
+  - GroupSpeciesBreathTool
+
+- type: loadoutGroup
+  id: GuardianNtHead
+  name: loadout-group-Guardian-head
+  minLimit: 0
+  loadouts:
+  # Stories-Partners-Start
+  - ClothingHeadHatExe
+  # Stories-Partners-End
+
+- type: loadoutGroup
+  id: GuardianNtMask
+  name: loadout-group-Guardian-mask
+  minLimit: 0
+  loadouts:
+  # Stories-Partners-Start
+  - ClothingMaskGasExe
+  # Stories-Partners-End
+
+- type: loadoutGroup
+  id: GuardianNtShoes
+  name: loadout-group-Guardian-shoes
+  loadouts:
+  - ClothingShoesBootsJackGuardianNt
+  # Stories-Partners-Start
+  - ClothingShoesBootsJackGuardian
+  - ClothingShoesBootsJackGuardianNomad
+  - ClothingShoesBootsExe
+  # Stories-Partners-End
+
+- type: loadoutGroup
+  id: GuardianNtBelt
+  name: loadout-group-Guardian-belt
+  loadouts:
+  - SecurityBelt
+  - ClothingBeltGuardian
+  - ClothingBeltSheathExe
+
+- type: loadoutGroup
+  id: GuardianNtNeck
+  name: loadout-group-Guardian-neck
+  minLimit: 0
+  loadouts:
+  # Stories-Partners-Start
+  - ClothingNeckMantleGuardianNt
+  # Stories-Partners-End
+  - ClothingNeckCloakExe
+  - ClothingNeckMantleGuardianNomad
+
+- type: loadoutGroup
+  id: GuardianNtJumpsuit
+  name: loadout-group-Guardian-jumpsuits
+  minLimit: 1
+  loadouts:
+  - ClothingUniformJumpsuitGuardianNt
+  # Stories-Partners-Start
+  - ClothingUniformJumpsuitGuardian
+  - ClothingUniformJumpsuitGuardianNomad
+  - ClothingUniformJumpsuitExe
+  # Stories-Partners-End
+
+- type: loadoutGroup
+  id: GuardianNtBackpack
+  name: loadout-group-Guardian-backpack
+  loadouts:
+  - ClothingBackpackGuardianNt
+  - ClothingBackpackSatchelGuardianNt
+  # Stories-Partners-Start
+  # Adidos
+  - ClothingBackpackHandbagAdidos
+  - ClothingBackpackAdidos
+  - ClothingBackpackDuffelAdidos
+  - ClothingBackpackSatchelAdidos
+  # Bluesky
+  - ClothingBackpackHandbagBluesky
+  - ClothingBackpackBluesky
+  - ClothingBackpackDuffelBluesky
+  - ClothingBackpackSatchelBluesky
+  # Eight
+  - ClothingBackpackHandbagEight
+  - ClothingBackpackEight
+  - ClothingBackpackDuffelEight
+  - ClothingBackpackSatchelEight
+  # Gachi
+  - ClothingBackpackHandbagGachi
+  - ClothingBackpackGachi
+  - ClothingBackpackDuffelGachi
+  - ClothingBackpackSatchelGachi
+  # Rl
+  - ClothingBackpackHandbagRl
+  - ClothingBackpackRl
+  - ClothingBackpackDuffelRl
+  - ClothingBackpackSatchelRl
+  # Stories-Partners-End
+
+- type: loadoutGroup
+  id: GuardianNtOuterClothing
+  name: loadout-group-Guardian-outer-clothing
+  minLimit: 0
+  loadouts:
+  - ClothingOuterVestGuardianNt
+  # Stories-Partners-Start
+  - ClothingOuterCoatGuardian
+  - ClothingOuterVestArmorExe
+  # Stories-Partners-End
+
+- type: loadoutGroup
+  id: GuardianNtLightsaber
+  name: loadout-group-Guardian-lightsaber
+  minLimit: 1
+  loadouts:
+  - STLightsaberBlue
+  - STLightsaberGreen
+  - STLightsaberYellow
+  - STLightsaberPurple
+  # Stories-Partners-Start
+  - LightsaberShort
+  - LightsaberDouble
+  - LightsaberCrossguard
+  - LightsaberRapier
+  # Stories-Partners-End
+
+# Маска хранителя
+
+- type: loadout
+  id: ClothingMaskGasExe
+  effects:
+  - !type:GroupLoadoutEffect
+    proto: PartnerMinTier4
+  equipment:
+    mask: ClothingMaskGasExe
+
+# Шляпа хранителя
+
+- type: loadout
+  id: ClothingHeadHatExe
+  effects:
+  - !type:GroupLoadoutEffect
+    proto: PartnerMinTier4
+  equipment:
+    head: ClothingHeadHatExe
+
+# Рапира
+
+- type: loadout
+  id: LightsaberRapier
+  effects:
+  - !type:GroupLoadoutEffect
+    proto: PartnerMinTier4
+  equipment:
+    pocket1: LightsaberRapier
+
+# Двухклинковый меч
+
+- type: loadout
+  id: LightsaberDouble
+  effects:
+  - !type:GroupLoadoutEffect
+    proto: PartnerMinTier1
+  equipment:
+    pocket1: LightsaberDouble
+
+# Меч с боковыми лезвиями
+
+- type: loadout
+  id: LightsaberCrossguard
+  effects:
+  - !type:GroupLoadoutEffect
+    proto: PartnerMinTier4
+  equipment:
+    pocket1: LightsaberCrossguard
+
+# Короткий меч
+
+- type: loadout
+  id: LightsaberShort
+  effects:
+  - !type:GroupLoadoutEffect
+    proto: PartnerMinTier3
+  equipment:
+    pocket1: LightsaberShort
+
+# Синий меч
+
+- type: loadout
+  id: STLightsaberBlue
+  equipment:
+    pocket1: STLightsaberBlue
+
+# Зелёный меч
+
+- type: loadout
+  id: STLightsaberGreen
+  equipment:
+    pocket1: STLightsaberGreen
+
+# Жёлтый меч
+
+- type: loadout
+  id: STLightsaberYellow
+  effects:
+  - !type:GroupLoadoutEffect
+    proto: STBeginnerGuardian
+  equipment:
+    pocket1: STLightsaberYellow
+
+# Фиолетовый меч
+
+- type: loadout
+  id: STLightsaberPurple
+  effects:
+  - !type:GroupLoadoutEffect
+    proto: STMasterGuardian
+  equipment:
+    pocket1: STLightsaberPurple
+
+# Накидка джедая
+
+- type: loadout
+  id: ClothingOuterCoatGuardian
+  effects:
+  - !type:GroupLoadoutEffect
+    proto: PartnerMinTier1
+  equipment:
+    outerClothing: ClothingOuterCoatGuardian
+
+# Бронежилет хранителя
+
+- type: loadout
+  id: ClothingOuterVestArmorExe
+  effects:
+  - !type:GroupLoadoutEffect
+    proto: PartnerMinTier4
+  equipment:
+    outerClothing: ClothingOuterVestArmorExe
+
+# Бронежилет стража
+
+- type: loadout
+  id: ClothingOuterVestGuardianNt
+  equipment:
+    outerClothing: ClothingOuterVestGuardianNt
+
+# Рюкзак стража
+
+- type: loadout
+  id: ClothingBackpackGuardianNt
+  equipment:
+    back: ClothingBackpackGuardianNt
+
+# Рюкзак стража
+
+- type: loadout
+  id: ClothingBackpackSatchelGuardianNt
+  equipment:
+    back: ClothingBackpackSatchelGuardianNt
+
+# Роба джедая
+
+- type: loadout
+  id: ClothingUniformJumpsuitGuardian
+  effects:
+  - !type:GroupLoadoutEffect
+    proto: PartnerMinTier1
+  equipment:
+    jumpsuit: ClothingUniformJumpsuitGuardian
+
+# Комбинезон хранителя
+
+- type: loadout
+  id: ClothingUniformJumpsuitExe
+  effects:
+  - !type:GroupLoadoutEffect
+    proto: PartnerMinTier4
+  equipment:
+    jumpsuit: ClothingUniformJumpsuitExe
+
+# Комбинезон путника
+
+- type: loadout
+  id: ClothingUniformJumpsuitGuardianNomad
+  effects:
+  - !type:GroupLoadoutEffect
+    proto: PartnerMinTier3
+  equipment:
+    jumpsuit: ClothingUniformJumpsuitGuardianNomad
+
+# Униформа стража
+
+- type: loadout
+  id: ClothingUniformJumpsuitGuardianNt
+  equipment:
+    jumpsuit: ClothingUniformJumpsuitGuardianNt
+
+# Плащ хранителя
+
+- type: loadout
+  id: ClothingNeckCloakExe
+  effects:
+  - !type:GroupLoadoutEffect
+    proto: PartnerMinTier4
+  equipment:
+    neck: ClothingNeckCloakExe
+
+# Мантия стража
+
+- type: loadout
+  id: ClothingNeckMantleGuardianNt
+  equipment:
+    neck: ClothingNeckMantleGuardianNt
+
+# Мантия путника
+
+- type: loadout
+  id: ClothingNeckMantleGuardianNomad
+  effects:
+  - !type:GroupLoadoutEffect
+    proto: PartnerMinTier3
+  equipment:
+    neck: ClothingNeckMantleGuardianNomad
+
+# Ботинки стража
+
+- type: loadout
+  id: ClothingShoesBootsJackGuardianNt
+  equipment:
+    shoes: ClothingShoesBootsJackGuardianNt
+
+# Ботинки путника
+
+- type: loadout
+  id: ClothingShoesBootsJackGuardianNomad
+  effects:
+  - !type:GroupLoadoutEffect
+    proto: PartnerMinTier3
+  equipment:
+    shoes: ClothingShoesBootsJackGuardianNomad
+
+# Ботинки хранителя
+
+- type: loadout
+  id: ClothingShoesBootsExe
+  effects:
+  - !type:GroupLoadoutEffect
+    proto: PartnerMinTier4
+  equipment:
+    shoes: ClothingShoesBootsExe
+
+# Ботинки джедая
+
+- type: loadout
+  id: ClothingShoesBootsJackGuardian
+  effects:
+  - !type:GroupLoadoutEffect
+    proto: PartnerMinTier1
+  equipment:
+    shoes: ClothingShoesBootsJackGuardian
+
+# Пояс джедая
+
+- type: loadout
+  id: ClothingBeltGuardian
+  effects:
+  - !type:GroupLoadoutEffect
+    proto: PartnerMinTier1
+  equipment:
+    belt: ClothingBeltGuardian
+
+# Пояс хранителя
+
+- type: loadout
+  id: ClothingBeltSheathExe
+  effects:
+  - !type:GroupLoadoutEffect
+    proto: PartnerMinTier4
+  equipment:
+    belt: ClothingBeltSheathExe

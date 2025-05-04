@@ -84,3 +84,7 @@ ent-BulletLaserSpreadNarrow = узкий лазерный залп
     .desc = { ent-BulletLaser.desc }
 ent-BulletDisablerSmgSpread = оглушающий лазерный залп
     .desc = { ent-BulletDisablerSmg.desc }
+ent-BulletEnergyTurretLaser = лазерный заряд
+    .desc = { ent-BulletDisablerSmg.desc }
+ent-BulletEnergyTurretDisabler = заряд станнера
+    .desc = { ent-BulletDisablerSmg.desc }

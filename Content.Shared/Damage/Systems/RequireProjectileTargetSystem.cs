@@ -1,3 +1,4 @@
+using Content.Shared.Mobs;
 using Content.Shared.Projectiles;
 using Content.Shared.Weapons.Ranged.Components;
 using Content.Shared.Standing;
@@ -15,6 +16,7 @@ public sealed class RequireProjectileTargetSystem : EntitySystem
         SubscribeLocalEvent<RequireProjectileTargetComponent, PreventCollideEvent>(PreventCollide);
         SubscribeLocalEvent<RequireProjectileTargetComponent, StoodEvent>(StandingBulletHit);
         SubscribeLocalEvent<RequireProjectileTargetComponent, DownedEvent>(LayingBulletPass);
+        SubscribeLocalEvent<RequireProjectileTargetComponent, MobStateChangedEvent>(OnMobStateChanged); // Stories-Crawling
     }
 
     private void PreventCollide(Entity<RequireProjectileTargetComponent> ent, ref PreventCollideEvent args)
@@ -62,4 +64,11 @@ public sealed class RequireProjectileTargetSystem : EntitySystem
     {
         SetActive(ent, true);
     }
+
+    // Stories-Crawling Start
+    private void OnMobStateChanged(EntityUid uid, RequireProjectileTargetComponent component, MobStateChangedEvent args)
+    {
+        RaiseLocalEvent(uid, new DownedEvent(), false);
+    }
+    // Stories-Crawling End
 }

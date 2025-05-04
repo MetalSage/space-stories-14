@@ -6,6 +6,10 @@ lathe-menu-search-designs = Поиск проектов
 lathe-menu-category-all = Всё
 lathe-menu-search-filter = Фильтр
 lathe-menu-amount = Кол-во:
+lathe-menu-recipe-count = { $count ->
+    [1] {$count} Рецепт
+    *[other] {$count} Рецепты
+}
 lathe-menu-reagent-slot-examine = Сбоку имеется отверстие для мензурки.
 lathe-reagent-dispense-no-container = Жидкость выливается из { $name } на пол!
 lathe-menu-result-reagent-display = { $reagent } ({ $amount }ед.)

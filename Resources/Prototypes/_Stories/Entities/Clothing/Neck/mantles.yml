@@ -1,6 +1,6 @@
 - type: entity
   parent: ClothingNeckBase
-  id: ClothingNeckMantleJediNomad
+  id: ClothingNeckMantleGuardianNomad
   name: мантия путника
   description: Похоже, тут выгравировано "o k h r i m m". Что же это может значить?
   components:
@@ -8,13 +8,13 @@
     tags:
       - ForceRecallEquipment
   - type: Sprite
-    sprite: _Stories/Clothing/Neck/mantles/jedi_nomad.rsi
+    sprite: _Stories/Clothing/Neck/mantles/guardian_nomad.rsi
   - type: Clothing
-    sprite: _Stories/Clothing/Neck/mantles/jedi_nomad.rsi
+    sprite: _Stories/Clothing/Neck/mantles/guardian_nomad.rsi
 
 - type: entity
   parent: ClothingNeckBase
-  id: ClothingNeckMantleJediNt
+  id: ClothingNeckMantleGuardianNt
   name: мантия стража клинка
   description: Похоже, тут выгравировано "W o o b y". Что же это может значить?
   components:
@@ -22,6 +22,6 @@
     tags:
       - ForceRecallEquipment
   - type: Sprite
-    sprite: _Stories/Clothing/Neck/mantles/jedi_nt_mantle_shoulder.rsi
+    sprite: _Stories/Clothing/Neck/mantles/guardian_nt_mantle_shoulder.rsi
   - type: Clothing
-    sprite: _Stories/Clothing/Neck/mantles/jedi_nt_mantle_shoulder.rsi
+    sprite: _Stories/Clothing/Neck/mantles/guardian_nt_mantle_shoulder.rsi

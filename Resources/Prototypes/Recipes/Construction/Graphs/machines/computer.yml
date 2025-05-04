@@ -24,7 +24,7 @@
           steps:
             - component: ComputerBoard
               store: board
-              name: any computer circuit board
+              name: любая машинная плата # Stories-CraftTranslate
               icon:
                 sprite: "Objects/Misc/module.rsi"
                 state: "id_mod"

@@ -1,0 +1,53 @@
+- type: entity
+  id: MobInquisitorGhost
+  parent: BaseMobJaunt
+  name: инквизитор
+  description: Очень страшный.
+  components:
+  - type: InquisitorGhost
+    range: 5
+  - type: PassiveGhostBoo
+    range: 5
+    seconds: 0.5
+  - type: MindContainer
+  - type: InputMover
+  - type: MobMover
+  - type: MovementSpeedModifier
+    baseWalkSpeed: 15
+    baseSprintSpeed: 15
+  - type: Sprite
+    noRot: true
+    drawdepth: Ghosts
+    sprite: _Stories/Mobs/Ghosts/inquisitor.rsi
+    layers:
+    - state: inquisitor
+  - type: Clickable
+  - type: StatusEffects
+    allowed:
+    - Stun
+  - type: InteractionOutline
+  - type: MovementIgnoreGravity
+  - type: Damageable
+    damageContainer: Biological
+  - type: Examiner
+  - type: NoSlip
+  - type: Actions
+  - type: TTS
+    voice: hagraven
+  - type: Eye
+    drawFov: false
+    visMask:
+      - Normal
+      - Ghost
+  - type: ContentEye
+    maxZoom: 1.2, 1.2
+  - type: DoAfter
+  - type: Alerts
+  - type: PointLight
+    color: DarkRed
+    radius: 2
+    softness: 1
+  - type: Visibility
+    layer: 2 #ghost vis layer
+  - type: Speech
+    speechVerb: Ghost

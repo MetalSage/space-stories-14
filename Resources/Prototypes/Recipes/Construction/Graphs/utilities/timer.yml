@@ -37,7 +37,7 @@
         steps:
         - tag: TimerSignalElectronics
           store: board
-          name: "signal timer electronics"
+          name: "микросхема таймера сигнала" # Stories-CraftTranslate
           icon:
             sprite: "Objects/Misc/module.rsi"
             state: "charger_APC"
@@ -46,7 +46,7 @@
         steps:
         - tag: TimerScreenElectronics
           store: board
-          name: "screen timer electronics"
+          name: "микросхема таймера сигнала с экраном" # Stories-CraftTranslate
           icon:
             sprite: "Objects/Misc/module.rsi"
             state: "charger_APC"
@@ -55,7 +55,7 @@
         steps:
         - tag: TimerBrigElectronics
           store: board
-          name: "brig timer electronics"
+          name: "микросхема бриг-таймера" # Stories-CraftTranslate
           icon:
             sprite: "Objects/Misc/module.rsi"
             state: "charger_APC"

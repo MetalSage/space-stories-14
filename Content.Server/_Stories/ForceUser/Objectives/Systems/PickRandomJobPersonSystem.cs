@@ -70,7 +70,7 @@ public sealed class PickRandomJobPersonSystem : EntitySystem
 
         _target.SetTarget(uid, targetMindUid, target);
 
-        if (comp.JobID == "JediNt" && targetUid != null) // FIXME: SHITCODED
+        if (comp.JobID == "GuardianNt" && targetUid != null) // FIXME: SHITCODED
         {
             _store.TryAddCurrency(new Dictionary<string, FixedPoint2>
             { {"SkillPoint", 10} }, targetUid.Value);

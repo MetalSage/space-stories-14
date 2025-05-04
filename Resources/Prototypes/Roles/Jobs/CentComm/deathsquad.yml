@@ -13,6 +13,9 @@
   - PrisonAllAccess # Stories
   access:
   - CentralCommand
+  special:
+  - !type:AddImplantSpecial
+    implants: [ MindShieldImplant, DeathRattleImplantCentcomm ]
 
 - type: startingGear
   id: DeathSquadGear
@@ -32,7 +35,7 @@
   storage:
     back:
     - WeaponPulsePistol
-    - WeaponRevolverMateba
+    - WeaponRevolverMatebaAP
     - SpeedLoaderMagnumAP
     - SpeedLoaderMagnumAP
     - BoxFlashbang

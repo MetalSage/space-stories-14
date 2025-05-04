@@ -9,3 +9,12 @@
   - PRISONMedic
   - PRISONOfficer
   - PRISONPrisoner
+
+- type: department
+  id: STJuridical
+  name: stories-department-Juridical
+  description: stories-department-Juridical-description
+  color: "#6d5d53"
+  roles:
+  - IAA
+  - Lawyer

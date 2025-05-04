@@ -48,7 +48,7 @@ barsign-prototype-description-emergency-rum-party = Недавно продли�
 ## The Combo Cafe
 
 barsign-prototype-name-combo-cafe = Комбо Кафе
-barsign-prototype-description-combo-cafe = Известны по всей системе своими совершенно не креативными комбинациями напитков.
+barsign-prototype-description-combo-cafe = Известны по всей системе своими совершенно некреативными комбинациями напитков.
 
 ## The Ale Nath
 
@@ -58,7 +58,7 @@ barsign-prototype-description-ale-nath = По какой-то причине п�
 ## The Net
 
 barsign-prototype-name-the-net = Сеть
-barsign-prototype-description-the-net = Не заметишь как затянет на пару часов.
+barsign-prototype-description-the-net = Незаметишь как затянет на пару часов.
 
 ## Maid Cafe
 
@@ -88,7 +88,7 @@ barsign-prototype-description-zocalo = Ранее находилось в Кос
 ## LV426
 
 barsign-prototype-name-lv426 = LV-426
-barsign-prototype-description-lv426 = Выпить с модной маской на лице явно важнее, чем сходить в мед отсек.
+barsign-prototype-description-lv426 = Выпить с модной маской на лице явно важнее, чем сходить в медотсек.
 
 ## The Wiggle Roomm
 
@@ -98,7 +98,7 @@ barsign-prototype-description-wiggle-room = MoMMI маневрируют в та
 ## The Lightbulb
 
 barsign-prototype-name-the-lightbulb = Лампочка
-barsign-prototype-description-the-lightbulb = Кафе, популярное среди ниан и молей. Однажды его закрыли на неделю после того, как барменша использовала нафталин для обработки своей запасной униформы.
+barsign-prototype-description-the-lightbulb = Кафе, популярное среди молей и мотыльков. Однажды его закрыли на неделю после того, как барменша использовала нафталин для обработки своей запасной униформы.
 
 ## The Loose Goose
 
@@ -119,6 +119,15 @@ barsign-prototype-description-emprah = Нравится и фанатикам, �
 
 barsign-prototype-name-spacebucks = Спейсбакс
 barsign-prototype-description-spacebucks = От них нельзя скрыться, даже в космосе, и даже после того, как некоторые стали называть их "срубли".
+
+## Maltroach
+barsign-prototype-name-maltroach = Мольтаракан
+barsign-prototype-description-maltroach = Пищит!
+
+## Whiskey Echoes
+barsign-prototype-name-whiskeyechoes = Вискей Эхо
+barsign-prototype-description-whiskeyechoes = Элитный бар для элитных сотрудников... подождите, это же станция Нанотрейзен. Почему этот знак есть в базе данных?
+
 
 ## EmpBarSign
 

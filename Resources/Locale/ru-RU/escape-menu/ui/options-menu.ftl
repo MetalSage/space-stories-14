@@ -2,6 +2,7 @@
 
 ui-options-title = Игровые настройки
 ui-options-tab-accessibility = Доступность
+ui-options-tab-admin = Администратор
 ui-options-tab-graphics = Графика
 ui-options-tab-controls = Управление
 ui-options-tab-audio = Аудио
@@ -35,6 +36,7 @@ ui-options-lobby-music = Музыка в лобби
 ui-options-restart-sounds = Звуки перезапуска раунда
 ui-options-event-music = Музыка событий
 ui-options-admin-sounds = Музыка админов
+ui-options-bwoink-sound = Звуковое уведомление AHelp
 ui-options-volume-label = Громкость
 ui-options-display-label = Дисплей
 ui-options-quality-label = Качество
@@ -43,8 +45,8 @@ ui-options-interface-label = Интерфейс
 
 ## Graphics menu
 
-ui-options-auto-fill-highlights = Автоматически заполнять выделения информацией персонажа
-ui-options-highlights-color = Цвет выделения:
+ui-options-auto-fill-highlights = Автоматическое заполнение выделенных областей информацией о персонаже
+ui-options-highlights-color = Подсвечивание цветом:
 ui-options-highlights-color-example = Это выделенный текст!
 ui-options-show-held-item = Показать удерживаемый элемент рядом с курсором
 ui-options-show-combat-mode-indicators = Показать индикатор боевого режима рядом с курсором
@@ -97,12 +99,6 @@ ui-options-parallax-low-quality = Низкокачественный парал�
 ui-options-fps-counter = Показать счётчик FPS
 ui-options-vp-width = Ширина окна игры:
 ui-options-hud-layout = Тип HUD:
-ui-options-postprocess = Cosmetic Post-processing
-ui-options-postprocess-tooltip =
-    When enabled, cosmetic post-processing effects such as
-    additive lighting will be present. This does not control
-    post-process effects that affect the game or otherwise
-    carry some form of gameplay-related meaning.
 
 ## Controls menu
 
@@ -122,6 +118,11 @@ ui-options-header-shuttle = Шаттл
 ui-options-header-map-editor = Редактор карт
 ui-options-header-dev = Разработка
 ui-options-header-general = Основное
+ui-options-header-text-cursor = Текстовый курсор
+ui-options-header-text-cursor-select = Выделение текста
+ui-options-header-text-edit = Редактирование текста
+ui-options-header-text-chat = Чат
+ui-options-header-text-other = Ввод текста другим
 ui-options-hotkey-keymap = Использовать клавиши QWERTY (США)
 ui-options-hotkey-toggle-walk = Переключать шаг\бег
 ui-options-function-move-up = Двигаться вверх
@@ -264,8 +265,30 @@ ui-options-net-pvs-leave-tooltip =
     привести к неправильным предугадываниям и другим проблемам.
 cmd-options-desc = Открывает меню опций, опционально с конкретно выбранной вкладкой.
 cmd-options-help = Использование: options [tab]
+ui-options-accessability-header-visuals = Визуальные эффекты
+ui-options-accessability-header-content = Содержание
 ui-options-enable-color-name = Цветные имена персонажей
 ui-options-colorblind-friendly = Режим для дальтоников
 ui-options-reduced-motion = Снижение интенсивности визуальных эффектов
-ui-options-chat-window-opacity = Прозрачность окна чата
 ui-options-screen-shake-intensity = Интенсивность дрожания экрана
+ui-options-chat-window-opacity = Прозрачность окна чата
+ui-options-speech-bubble-text-opacity = Прозрачность окна всплывающего текста
+ui-options-speech-bubble-speaker-opacity = Прозрачность иконки общения
+ui-options-speech-bubble-background-opacity = Прозрачность фона окна всплывающего текста
+
+## Admin menu
+
+ui-options-admin-player-panel = Меню Администратора Список Игроков
+
+ui-options-admin-playerlist-separate-symbols = Показывать отдельные символы для каждого типа роли антага
+ui-options-admin-playerlist-character-color = Цветные имена для персонажей антагонистов
+ui-options-admin-playerlist-roletype-color = Типы цветовых ролей
+
+ui-options-admin-overlay-title = Админ Оверлей
+ui-options-enable-classic-overlay = Вернуть классический оверлей антагонистов
+ui-options-enable-overlay-symbols = Добавить символьный антаг текст
+ui-options-enable-overlay-playtime = Показывать наигранное время
+ui-options-enable-overlay-starting-job = Показывать начальную работу
+ui-options-overlay-merge-distance = Расстояние слияния стека
+ui-options-overlay-ghost-fade-distance = Призрачный оверлей диапозона затухания от мыши
+ui-options-overlay-ghost-hide-distance = Призрачный оверлей скрытия диапазон от мыши

@@ -1,0 +1,6 @@
+- type: roleLoadout
+  id: JobSTCommandMaid
+  groups:
+  - CommonBackpack
+  - Survival
+  - GroupSpeciesBreathTool

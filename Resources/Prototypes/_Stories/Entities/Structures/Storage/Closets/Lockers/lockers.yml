@@ -1,5 +1,5 @@
 - type: entity
-  id: LockerJediNt
+  id: LockerGuardianNt
   parent: LockerBaseSecure
   name: шкаф стража клинка
   description: Арсенал моды каждого стража клинка.
@@ -8,8 +8,8 @@
       sprite: _Stories/Structures/Storage/closet.rsi
     - type: Appearance
     - type: EntityStorageVisuals
-      stateBaseClosed: jedi
-      stateDoorOpen: jedi_open
-      stateDoorClosed: jedi_door
+      stateBaseClosed: guardian
+      stateDoorOpen: guardian_open
+      stateDoorClosed: guardian_door
     - type: AccessReader
       access: [["Security"]]

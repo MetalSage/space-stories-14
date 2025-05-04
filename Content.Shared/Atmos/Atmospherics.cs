@@ -41,6 +41,12 @@ namespace Content.Shared.Atmos
         public const float T20C = 293.15f;
 
         /// <summary>
+        ///     -38.15ºC in K.
+        ///     This is used to initialize roundstart freezer rooms.
+        /// </summary>
+        public const float FreezerTemp = 235f;
+
+        /// <summary>
         ///     Do not allow any gas mixture temperatures to exceed this number. It is occasionally possible
         ///     to have very small heat capacity (e.g. room that was just unspaced) and for large amounts of
         ///     energy to be transferred to it, even for a brief moment. However, this messes up subsequent
@@ -66,6 +72,12 @@ namespace Content.Shared.Atmos
         public const float MolesCellStandard = (OneAtmosphere * CellVolume / (T20C * R));
 
         /// <summary>
+        ///     Moles in a 2.5 m^3 cell at 101.325 kPa and -38.15ºC.
+        ///     This is used in fix atmos freezer markers to ensure the air is at the correct atmospheric pressure while still being cold.
+        /// </summary>
+        public const float MolesCellFreezer = (OneAtmosphere * CellVolume / (FreezerTemp * R));
+
+        /// <summary>
         ///     Moles in a 2.5 m^3 cell at GasMinerDefaultMaxExternalPressure kPa and 20ºC
         /// </summary>
         public const float MolesCellGasMiner = (GasMinerDefaultMaxExternalPressure * CellVolume / (T20C * R));
@@ -80,6 +92,9 @@ namespace Content.Shared.Atmos
 
         public const float OxygenMolesStandard = MolesCellStandard * OxygenStandard;
         public const float NitrogenMolesStandard = MolesCellStandard * NitrogenStandard;
+
+        public const float OxygenMolesFreezer = MolesCellFreezer * OxygenStandard;
+        public const float NitrogenMolesFreezer = MolesCellFreezer * NitrogenStandard;
 
         #endregion
 
@@ -188,7 +203,7 @@ namespace Content.Shared.Atmos
         /// <summary>
         ///     Total number of gases. Increase this if you want to add more!
         /// </summary>
-        public const int TotalNumberOfGases = 9;
+        public const int TotalNumberOfGases = 13; // 9 // Stories-Gas
 
         /// <summary>
         ///     This is the actual length of the gases arrays in mixtures.
@@ -265,6 +280,44 @@ namespace Content.Shared.Atmos
         ///     Divisor for Ammonia Oxygen reaction so that it doesn't happen instantaneously.
         /// </summary>
         public const float AmmoniaOxygenReactionRate = 10f;
+
+        // Stories-Gas start
+        /// <summary>
+        ///     The amount of energy 1 mole of BZ forming from N2O and plasma releases.
+        /// </summary>
+        public const float BZFormationEnergy = 80e3f;
+
+        /// <summary>
+        ///     Some number taken from the air to keep BZ from instantly converting everything.
+        /// </summary>
+        public const float BZFormationRate = 5f;
+
+        /// <summary>
+        ///     The amount of energy 1 mol of Healium forming from BZ and frezon releases.
+        /// </summary>
+        public const float HealiumProductionEnergy = 10e3f;
+
+        /// <summary>
+        ///     The amount of energy 1 mol of Pluoxium forming from Tritium, Oxygen and Carbon Dioxide releases.
+        /// </summary>
+        public const float PluoxiumProductionEnergy = 20e3f;
+
+        /// <summary>
+        ///     Some number taken from the air to keep Pluoxium from instantly converting everything.
+        /// </summary>
+        public const float PluoxiumProductionRate = 20f;
+
+
+        /// <summary>
+        ///     The amount of energy 1 mol of Nitryl forming from Healium, BZ and Nitrogen consumes.
+        /// </summary>
+        public const float NitrylProductionEnergy = -40e3f;
+
+        /// <summary>
+        ///     The optimal temperature for Nitryl production reaction.
+        /// </summary>
+        public const float NitrylProductionMaxEfficiencyTemperature = 5273.15f;
+        // Stories-Gas end
 
         /// <summary>
         ///     Determines at what pressure the ultra-high pressure red icon is displayed.
@@ -352,6 +405,12 @@ namespace Content.Shared.Atmos
         WaterVapor = 5,
         Ammonia = 6,
         NitrousOxide = 7,
-        Frezon = 8
+        Frezon = 8,
+        // Stories-Gas start
+        BZ = 9,
+        Healium = 10,
+        Nitryl = 11,
+        Pluoxium = 12,
+        // Stories-Gas end
     }
 }

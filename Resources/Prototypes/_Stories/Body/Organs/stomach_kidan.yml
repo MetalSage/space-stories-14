@@ -4,6 +4,8 @@
   name: желудок
   categories: [ HideSpawnMenu ]
   components:
+  - type: Sprite
+    state: stomach
   - type: Organ
   - type: SolutionContainerManager
     solutions:
@@ -30,6 +32,8 @@
   name: печень
   categories: [ HideSpawnMenu ]
   components:
+  - type: Sprite
+    state: liver
   - type: Organ
   - type: Metabolizer
     maxReagents: 1
@@ -44,6 +48,8 @@
   name: сердце
   categories: [ HideSpawnMenu ]
   components:
+  - type: Sprite
+    state: heart-on
   - type: Organ
   - type: Metabolizer
     maxReagents: 2
@@ -60,6 +66,10 @@
   name: почки
   categories: [ HideSpawnMenu ]
   components:
+  - type: Sprite
+    layers:
+    - state: kidney-l
+    - state: kidney-r
   - type: Organ
   - type: Metabolizer
     maxReagents: 5

@@ -1,0 +1,39 @@
+- type: gas
+  id: 9
+  name: stories-gases-bz
+  specificHeat: 20
+  heatCapacityRatio: 1.4
+  molarMass: 10
+  color: 9370db
+  reagent: STBZ
+  pricePerMole: 0.15
+
+- type: gas
+  id: 10
+  name: stories-gases-healium
+  specificHeat: 20
+  heatCapacityRatio: 1.4
+  molarMass: 10
+  color: 8b0000
+  reagent: STHealium
+  pricePerMole: 1.2
+
+- type: gas
+  id: 11
+  name: stories-gases-nitryl
+  specificHeat: 20
+  heatCapacityRatio: 1.4
+  molarMass: 10
+  color: 12ca21
+  reagent: STNitryl
+  pricePerMole: 2.5
+
+- type: gas
+  id: 12
+  name: stories-gases-pluoxium
+  specificHeat: 20
+  heatCapacityRatio: 1.4
+  molarMass: 10
+  color: 3434aa
+  reagent: STPluoxium
+  pricePerMole: 0.6

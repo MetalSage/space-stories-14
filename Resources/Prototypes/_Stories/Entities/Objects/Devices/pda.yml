@@ -1,6 +1,6 @@
 - type: entity
   parent: BaseSecurityPDA
-  id: JediNtPDA
+  id: GuardianNtPDA
   name: КПК стража клинка
   description: Красный значит мощный. На нём имеются царапины от светового меча.
   components:
@@ -8,8 +8,7 @@
     tags:
       - ForceRecallEquipment
   - type: Pda
-    id: JediNtIDCard
-    state: pda-ert
+    id: GuardianNtIDCard
   - type: Appearance
     appearanceDataInit:
       enum.PdaVisuals.PdaType:
@@ -30,7 +29,6 @@
   components:
   - type: Pda
     id: IAAIDCard
-    state: pda-lawyer
     penSlot:
       startingItem: PenCentcom
       priority: -1
@@ -57,7 +55,6 @@
     sprite: _Stories/Objects/Devices/pda.rsi
   - type: Pda
     id: PRISONIDCardHeadOfPrison
-    state: pda-hosp
   - type: Appearance
     appearanceDataInit:
       enum.PdaVisuals.PdaType:
@@ -75,7 +72,6 @@
   components:
   - type: Pda
     id: PRISONIDCardOfficer
-    state: pda-spofficer
   - type: Appearance
     appearanceDataInit:
       enum.PdaVisuals.PdaType:
@@ -92,7 +88,6 @@
   components:
   - type: Pda
     id: PRISONIDCardEngineer
-    state: pda-spengineer
   - type: Appearance
     appearanceDataInit:
       enum.PdaVisuals.PdaType:
@@ -102,20 +97,49 @@
     state: pda-spengineer
 
 - type: entity
-  parent:
-    - PRISONPDAHeadOfPrison
-    - BaseMedicalPDA
+  parent: BaseMedicalPDA
   id: PRISONPDAMedic
   name: КПК врача тюрьмы
   description: Этот КПК - ваш путь к свободе.
   components:
+  - type: Sprite
+    sprite: _Stories/Objects/Devices/pda.rsi
   - type: Pda
-    id: PRISONIDCardMedic
-    state: pda-spmedic
+    id: PRISONIDCardHeadOfPrison
   - type: Appearance
     appearanceDataInit:
       enum.PdaVisuals.PdaType:
         !type:String
         pda-spmedic
   - type: Icon
+    sprite: _Stories/Objects/Devices/pda.rsi
     state: pda-spmedic
+
+# Event-Restricted-Jobs
+
+- type: entity
+  parent: ClownPDA
+  id: STSecurityClownPDA
+  name: security clown PDA
+  description: Who has a pink PDA in security?
+  components:
+  - type: Pda
+    id: STSecurityClownIDCard
+
+- type: entity
+  parent: JanitorPDA
+  id: STCommandMaidPDA
+  name: command maid PDA
+  description: Command gets their own janitorial staff?  This says a lot about society...
+  components:
+  - type: Pda
+    id: STCommandMaidIDCard
+
+- type: entity
+  parent: MusicianPDA
+  id: STPartyMakerPDA
+  name: party maker PDA
+  description: The best helper to make a party.
+  components:
+  - type: Pda
+    id: STPartyMakerIDCard

@@ -1,6 +1,6 @@
 - type: entity
   parent: ClothingUniformBase
-  id: ClothingUniformJumpsuitJedi
+  id: ClothingUniformJumpsuitGuardian
   name: роба джедая
   description: Свободная роба, носимая членами Ордена джедаев.
   components:
@@ -8,13 +8,13 @@
       tags:
         - ForceRecallEquipment
     - type: Sprite
-      sprite: _Stories/Clothing/Uniforms/Jumpsuit/jedi.rsi
+      sprite: _Stories/Clothing/Uniforms/Jumpsuit/guardian.rsi
     - type: Clothing
-      sprite: _Stories/Clothing/Uniforms/Jumpsuit/jedi.rsi
+      sprite: _Stories/Clothing/Uniforms/Jumpsuit/guardian.rsi
 
 - type: entity
   parent: ClothingUniformBase
-  id: ClothingUniformJumpsuitJediNt
+  id: ClothingUniformJumpsuitGuardianNt
   name: униформа стража клинка
   description: Специальная униформа, никак не повышающая точность владения мечом.
   components:
@@ -22,13 +22,13 @@
       tags:
         - ForceRecallEquipment
     - type: Sprite
-      sprite: _Stories/Clothing/Uniforms/Jumpsuit/jedi_nt.rsi
+      sprite: _Stories/Clothing/Uniforms/Jumpsuit/guardian_nt.rsi
     - type: Clothing
-      sprite: _Stories/Clothing/Uniforms/Jumpsuit/jedi_nt.rsi
+      sprite: _Stories/Clothing/Uniforms/Jumpsuit/guardian_nt.rsi
 
 - type: entity
   parent: ClothingUniformBase
-  id: ClothingUniformJumpsuitSith
+  id: ClothingUniformJumpsuitInquisitor
   name: униформа инквизитора
   description: Однажды на одной станции Галактической Империи...
   components:
@@ -36,9 +36,9 @@
       tags:
         - ForceRecallEquipment
     - type: Sprite
-      sprite: _Stories/Clothing/Uniforms/Jumpsuit/jumpsuit_sith.rsi
+      sprite: _Stories/Clothing/Uniforms/Jumpsuit/jumpsuit_inquisitor.rsi
     - type: Clothing
-      sprite: _Stories/Clothing/Uniforms/Jumpsuit/jumpsuit_sith.rsi
+      sprite: _Stories/Clothing/Uniforms/Jumpsuit/jumpsuit_inquisitor.rsi
 
 - type: entity
   parent: ClothingUniformBase
@@ -56,7 +56,7 @@
 
 - type: entity
   parent: ClothingUniformBase
-  id: ClothingUniformJumpsuitJediNomad
+  id: ClothingUniformJumpsuitGuardianNomad
   name: униформа путника
   description: Униформа, никак не повышающая точность владения мечом.
   components:
@@ -64,9 +64,9 @@
       tags:
         - ForceRecallEquipment
     - type: Sprite
-      sprite: _Stories/Clothing/Uniforms/Jumpsuit/jedi_nomad.rsi
+      sprite: _Stories/Clothing/Uniforms/Jumpsuit/guardian_nomad.rsi
     - type: Clothing
-      sprite: _Stories/Clothing/Uniforms/Jumpsuit/jedi_nomad.rsi
+      sprite: _Stories/Clothing/Uniforms/Jumpsuit/guardian_nomad.rsi
 
 - type: entity
   parent: ClothingUniformBase

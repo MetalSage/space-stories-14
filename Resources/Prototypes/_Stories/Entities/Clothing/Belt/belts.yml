@@ -1,6 +1,6 @@
 - type: entity
   parent: ClothingBeltStorageBase
-  id: ClothingBeltJedi
+  id: ClothingBeltGuardian
   name: ремень джедая
   description: Повесьте на него свой меч.
   components:
@@ -8,10 +8,10 @@
       tags:
         - ForceRecallEquipment
     - type: Sprite
-      sprite: _Stories/Clothing/Belt/jedi_belt.rsi
+      sprite: _Stories/Clothing/Belt/guardian_belt.rsi
       state: icon
     - type: Clothing
-      sprite: _Stories/Clothing/Belt/jedi_belt.rsi
+      sprite: _Stories/Clothing/Belt/guardian_belt.rsi
     - type: Storage
       whitelist:
         tags:

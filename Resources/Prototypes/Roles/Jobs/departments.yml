@@ -23,7 +23,7 @@
   - Clown
   - HeadOfPersonnel
   - Janitor
-  - Lawyer
+  #- Lawyer # Stories
   - Librarian
   - Mime
   - Musician
@@ -32,6 +32,7 @@
   - Visitor
   - Zookeeper
   - ServiceWorker
+  - STPartyMaker # Stories-Event-Restricted-Jobs
 
 - type: department
   id: CentralCommand
@@ -58,8 +59,7 @@
   color: "#334E6D"
   roles:
   - Captain
-  - JediNt # Stories-Jedi
-  - IAA # Stories-IAA
+  - GuardianNt # Stories-Guardian
   - ChiefEngineer
   - ChiefMedicalOfficer
   - HeadOfPersonnel
@@ -75,6 +75,7 @@
   - ERTSecurity
   - ERTEngineer
   - DeathSquad
+  - STCommandMaid # Stories-Event-Restricted-Jobs
   primary: false
   weight: 100
 
@@ -112,6 +113,8 @@
   - HeadOfSecurity
   - SecurityCadet
   - SecurityOfficer
+  - STBrigmedic # Stories-Brigmedic
+  - STSecurityClown # Stories-Event-Restricted-Jobs
   - Detective
   - Warden
 

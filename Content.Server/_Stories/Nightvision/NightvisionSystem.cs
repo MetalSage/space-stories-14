@@ -1,7 +1,5 @@
 using Content.Shared.Actions;
-using Content.Shared.GameTicking;
 using Content.Shared.Inventory.Events;
-using Robust.Shared.Player;
 using Robust.Shared.Timing;
 using Content.Shared._Stories.Nightvision;
 
@@ -11,6 +9,7 @@ public sealed class NightvisionSystem : EntitySystem
 {
     [Dependency] private readonly IGameTiming _gameTiming = default!;
     [Dependency] private readonly SharedActionsSystem _actions = default!;
+    [Dependency] private readonly IComponentFactory _factory = default!;
     public override void Initialize()
     {
         base.Initialize();
@@ -30,7 +29,11 @@ public sealed class NightvisionSystem : EntitySystem
             return;
 
         if (component.Enabled && !HasComp<NightvisionComponent>(args.Equipee) && (args.Slot == "eyes"))
-            AddComp<NightvisionComponent>(args.Equipee);
+        {
+            var comp = _factory.GetComponent<NightvisionComponent>();
+            comp.ToggleOnSound = component.ToggleOnSound;
+            AddComp(args.Equipee, comp);
+        }
     }
     private void OnStartUp(EntityUid uid, NightvisionComponent component, ComponentStartup args)
     {

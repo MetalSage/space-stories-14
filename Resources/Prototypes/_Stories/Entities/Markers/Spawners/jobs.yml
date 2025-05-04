@@ -11,16 +11,30 @@
   - type: Sprite
     sprite: _Stories/Markers/jobs.rsi
 
-# JediNt
+# GuardianNt
 
 - type: entity
-  id: SpawnPointJediNt
+  id: SpawnPointGuardianNt
   parent: SpawnPointJobBaseStories
-  name: jedint
+  name: guardiannt
   components:
   - type: SpawnPoint
-    job_id: JediNt
+    job_id: GuardianNt
   - type: Sprite
     layers:
     - state: green
-    - state: jedint
+    - state: guardiannt
+
+# Civilian
+
+- type: entity
+  id: STSpawnPointIAA
+  parent: SpawnPointJobBase
+  name: lawyer
+  components:
+  - type: SpawnPoint
+    job_id: IAA
+  - type: Sprite
+    layers:
+    - state: green
+    - state: lawyer

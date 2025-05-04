@@ -1,0 +1,9 @@
+names-spaf-last-dataset-1 = Хищник
+names-spaf-last-dataset-2 = Охотник
+names-spaf-last-dataset-3 = Поглотитель
+names-spaf-last-dataset-4 = Зверь
+names-spaf-last-dataset-5 = Ужас
+names-spaf-last-dataset-6 = Жнец
+names-spaf-last-dataset-7 = Костолом
+names-spaf-last-dataset-8 = Убийца
+names-spaf-last-dataset-9 = Опустошитель

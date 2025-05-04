@@ -72,7 +72,7 @@
       state: shield3_bad
 
 - type: entity
-  id: EffectSithProtectiveBubble
+  id: EffectInquisitorProtectiveBubble
   categories: [ HideSpawnMenu ]
   parent: BaseEffectProtectiveBubble
   components:
@@ -98,4 +98,4 @@
     - shader: unshaded
       map: ["enum.EffectLayers.Unshaded"]
       sprite: Objects/Weapons/Effects
-      state: sith_shield
+      state: inquisitor_shield

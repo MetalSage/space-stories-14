@@ -1,12 +1,12 @@
 ent-SheetPrinter = бумага
     .desc = Лист материала, широко применяемого на станции в различных целях.
-    .suffix = Full
+    .suffix = Полный
 ent-SheetPrinter1 = { ent-SheetPrinter }
-    .suffix = Single
+    .suffix = Единственный
     .desc = { ent-SheetPrinter.desc }
 ent-InkPrinter = чернила
     .desc = Лист материала, широко применяемого на станции в различных целях.
-    .suffix = Full
+    .suffix = Полный
 ent-InkPrinter1 = { ent-InkPrinter }
-    .suffix = Single
+    .suffix = Единственный
     .desc = { ent-InkPrinter.desc }

@@ -1,7 +1,7 @@
 <Document>
 #Стандартные Рабочие Процедуры
-  
-  
+
+
 <Box>
 <GuideEntityEmbed Entity="SignSecurity" Caption="Общее СРП Отдела"/>
 </Box>
@@ -121,7 +121,7 @@
 
 
 <Box>
-<GuideEntityEmbed Entity="ToyFigurineJediNt" Caption="Страж Клинка"/>
+<GuideEntityEmbed Entity="ToyFigurineGuardianNt" Caption="Страж Клинка"/>
 </Box>
 ##Страж Клинка обязан:
 
@@ -274,7 +274,7 @@
 	  Гамма Код
       </Box>
     </ColorBox>
-	
+
     <ColorBox>
       <Box>
 	  ГСБ
@@ -300,7 +300,7 @@
 	  Ограничения на вооружение полностью сняты (при устном разрешении ГСБ)
       </Box>
     </ColorBox>
-	
+
     <ColorBox>
       <Box>
 	  Смотритель, Офицер, Кадет, Инструктор
@@ -352,7 +352,7 @@
 	  Ограничения на вооружение полностью сняты (при устном разрешении ГСБ)
       </Box>
     </ColorBox>
-	
+
     <ColorBox>
       <Box>
 	  Страж Клинка

@@ -15,7 +15,7 @@
       event: !type:CreateProtectiveBubbleEvent {}
 
 - type: entity
-  id: ActionJediForceWall
+  id: ActionGuardianForceWall
   name: Барьер Силы
   description: Создайте нерушимый барьер 3x1 в направлении вашего взгляда, который остановит ваших врагов. Вы можете проходить сквозь свой барьер.
   categories: [ HideSpawnMenu ]
@@ -32,7 +32,7 @@
     event: !type:InstantForceUserActionEvent
       volume: 100
       event: !type:InstantSpawnSpellEvent
-        prototype: WallForceJedi
+        prototype: WallForceGuardian
         posData: !type:TargetInFront
 
 - type: entity
@@ -119,4 +119,4 @@
     event: !type:WorldTargetForceUserActionEvent
       volume: 50
       event: !type:ProjectileSpellEvent
-        prototype: JediPushBall
+        prototype: GuardianPushBall

@@ -1,6 +1,6 @@
 - type: entity
   parent: ClothingNeckBase
-  id: ClothingNeckCloakSith
+  id: ClothingNeckCloakInquisitor
   name: плащ инквизитора
   description: Невероятное произведение искусства, защищающее от космических невзгод. Заряжен неведомой энергией.
   components:
@@ -25,7 +25,7 @@
     tags:
       - ForceRecallEquipment
   - type: ToggleableClothing
-    clothingPrototype: ClothingHeadHatHoodSith
+    clothingPrototype: ClothingHeadHatHoodInquisitor
     slot: head
     requiredSlot:
     - neck
@@ -33,7 +33,7 @@
     containers:
       toggleable-clothing: !type:ContainerSlot {}
   - type: Sprite
-    sprite: _Stories/Clothing/Neck/Cloaks/cloak_sith.rsi
+    sprite: _Stories/Clothing/Neck/Cloaks/cloak_inquisitor.rsi
 
 - type: entity
   parent: ClothingNeckBase

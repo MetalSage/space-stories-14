@@ -99,52 +99,6 @@
         visible: false
         shader: unshaded
         map: [ "blade" ]
-  - type: BlockMeleeAttack
-    enabled: false
-    blockSound:
-      path: /Audio/Weapons/eblade1.ogg
-  - type: Reflect
-    reflectProb: 0.50
-    spread: 90
-    reflects:
-      - Energy
-  - type: ItemToggleDamageContacts
-    activatedSoundOnHit:
-      path: /Audio/Weapons/eblade1.ogg
-      params:
-        volume: -6
-        variation: 0.250
-    activatedDamage:
-        types:
-            Slash: 7.5
-            Heat: 7.5
-            Structural: 2
-  - type: ItemToggleDamageOtherOnHit
-    activatedSoundOnHit:
-      path: /Audio/Weapons/eblade1.ogg
-      params:
-        variation: 0.250
-    activatedDamage:
-        types:
-            Slash: 7.5
-            Heat: 7.5
-            Structural: 2
-  - type: DamageOtherOnHit
-    soundHit:
-      path: /Audio/Weapons/eblade1.ogg
-    damage:
-      types:
-        Blunt: 0
-  - type: DamageContacts
-    soundHit:
-      path: /Audio/Weapons/eblade1.ogg
-    onlyTethered: true
-    damage:
-      types:
-        Structural: 0
-    ignoreWhitelist:
-      components:
-      - ForceUser # Чувствительные к силе отражают это, так как иначе бы это было имбой против них.
 
 # Random color
 
@@ -153,53 +107,6 @@
   parent: BaseLightsaber
   id: Lightsaber
   description: Особенное оружие, созданное сколь для элегантного боя, сколь и для церемонний, его работа связана с кайбер-кристаллом внутри.
-  components:
-  - type: BlockMeleeAttack
-    enabled: false
-    blockSound:
-      path: /Audio/Weapons/eblade1.ogg
-  - type: Reflect
-    reflectProb: 0.50
-    spread: 90
-    reflects:
-      - Energy
-  - type: ItemToggleDamageContacts
-    activatedSoundOnHit:
-      path: /Audio/Weapons/eblade1.ogg
-      params:
-        volume: -6
-        variation: 0.250
-    activatedDamage:
-        types:
-            Slash: 7.5
-            Heat: 7.5
-            Structural: 2
-  - type: ItemToggleDamageOtherOnHit
-    activatedSoundOnHit:
-      path: /Audio/Weapons/eblade1.ogg
-      params:
-        variation: 0.250
-    activatedDamage:
-        types:
-            Slash: 7.5
-            Heat: 7.5
-            Structural: 2
-  - type: DamageOtherOnHit
-    soundHit:
-      path: /Audio/Weapons/eblade1.ogg
-    damage:
-      types:
-        Blunt: 0
-  - type: DamageContacts
-    soundHit:
-      path: /Audio/Weapons/eblade1.ogg
-    onlyTethered: true
-    damage:
-      types:
-        Structural: 0
-    ignoreWhitelist:
-      components:
-      - ForceUser # Чувствительные к силе отражают это, так как иначе бы это было имбой против них.
 
 - type: entity
   name: короткий световой меч
@@ -207,54 +114,6 @@
   id: LightsaberShort
   description: Особенное оружие, созданное сколь для элегантного боя, сколь и для церемонний, его работа связана с кайбер-кристаллом внутри.
   components:
-  - type: Fixtures
-    fixtures:
-      fix1:
-        shape:
-          !type:PhysShapeCircle
-          radius: 0.3
-        density: 1
-        mask:
-        - ItemMask
-        layer:
-        - FlyingMobLayer
-        restitution: 0.3
-        friction: 0.2
-  - type: MeleeWeapon
-    wideAnimationRotation: -135
-    attackRate: 2
-    damage:
-      types:
-        Blunt: 4.5
-  - type: ItemToggleMeleeWeapon
-    activatedSoundOnHit:
-      path: /Audio/Weapons/eblade1.ogg
-      params:
-        variation: 0.250
-    activatedSoundOnHitNoDamage:
-      path: /Audio/Weapons/eblade1.ogg
-      params:
-        variation: 0.250
-        volume: -10
-    activatedSoundOnSwing:
-      path: /Audio/Weapons/eblademiss.ogg
-      params:
-        variation: 0.125
-    activatedDamage:
-        types:
-            Slash: 7.5
-            Heat: 7.5
-            Structural: 5
-  - type: Reflect
-    reflectProb: 0.25
-    spread: 90
-    reflects:
-      - Energy
-  - type: BlockMeleeAttack
-    enabled: false
-    blockProb: 0.25
-    blockSound:
-      path: /Audio/Weapons/eblade1.ogg
   - type: Item
     size: Small
     sprite: _Stories/Objects/Weapons/Melee/e_sword_nomad.rsi
@@ -293,50 +152,14 @@
   id: LightsaberDouble
   description: Вариант светового меча, особенностью которого являются лезвия, излучаемые с обеих сторон рукояти.
   components:
-  - type: ItemToggleDamageContacts
-    activatedSoundOnHit:
-      path: /Audio/Weapons/eblade1.ogg
-      params:
-        volume: -6
-        variation: 0.250
-    activatedDamage:
-        types:
-            Slash: 7.5
-            Heat: 7.5
-            Structural: 15
-  - type: ItemToggleDamageOtherOnHit
-    activatedSoundOnHit:
-      path: /Audio/Weapons/eblade1.ogg
-      params:
-        variation: 0.250
-    activatedDamage:
-        types:
-            Slash: 7.5
-            Heat: 7.5
-            Structural: 15
-  - type: ItemToggleMeleeWeapon
-    activatedSoundOnSwing:
-      path: /Audio/Weapons/eblademiss.ogg
-      params:
-        volume: 3
-        variation: 0.250
-    activatedDamage:
-        types:
-            Slash: 11.25
-            Heat: 11.25
-            Structural: 15
   - type: ItemToggleActiveSound
     activeSound:
       path: /Audio/Weapons/ebladehum.ogg
       params:
         volume: 3
-  - type: MeleeWeapon
-    wideAnimationRotation: -135
-    attackRate: 1.5
-    angle: 100
-    damage:
-      types:
-        Blunt: 4.5
+  - type: Item
+    size: Small
+    sprite: _Stories/Objects/Weapons/Melee/e_sword_double-inhands.rsi
   - type: Sprite
     sprite: Objects/Weapons/Melee/e_sword_double.rsi
     layers:
@@ -346,9 +169,6 @@
         visible: false
         shader: unshaded
         map: [ "blade" ]
-  - type: Item
-    size: Small
-    sprite: _Stories/Objects/Weapons/Melee/e_sword_double-inhands.rsi
 
 # Red
 
@@ -395,3 +215,55 @@
   - type: EnergySword
     colorOptions:
       - Red
+
+# Blue
+
+- type: entity
+  name: blue lightsaber
+  parent: Lightsaber
+  id: STLightsaberBlue
+  suffix: Blue
+  description: A special weapon designed for elegant combat as well as for ceremonies, its work is connected with the kyber crystal inside.
+  components:
+  - type: EnergySword
+    colorOptions:
+    - DodgerBlue
+
+# Green
+
+- type: entity
+  name: green lightsaber
+  parent: Lightsaber
+  id: STLightsaberGreen
+  suffix: Green
+  description: A special weapon designed for elegant combat as well as for ceremonies, its work is connected with the kyber crystal inside.
+  components:
+  - type: EnergySword
+    colorOptions:
+    - MediumSpringGreen
+
+# Yellow
+
+- type: entity
+  name: yellow lightsaber
+  parent: Lightsaber
+  id: STLightsaberYellow
+  suffix: Yellow
+  description: A special weapon designed for elegant combat as well as for ceremonies, its work is connected with the kyber crystal inside.
+  components:
+  - type: EnergySword
+    colorOptions:
+    - Yellow
+
+# Purple
+
+- type: entity
+  name: purple lightsaber
+  parent: Lightsaber
+  id: STLightsaberPurple
+  suffix: Purple
+  description: A special weapon designed for elegant combat as well as for ceremonies, its work is connected with the kyber crystal inside.
+  components:
+  - type: EnergySword
+    colorOptions:
+    - MediumOrchid

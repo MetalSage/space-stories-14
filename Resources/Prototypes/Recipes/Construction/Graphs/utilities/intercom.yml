@@ -39,7 +39,7 @@
       steps:
       - tag: IntercomElectronics
         store: board
-        name: "intercom electronics"
+        name: "микросхема интеркома" # Stories-CraftTranslate
         icon:
           sprite: "Objects/Misc/module.rsi"
           state: "id_mod"

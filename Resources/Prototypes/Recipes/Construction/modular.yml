@@ -1,24 +1,24 @@
 - type: construction
-  name: modular grenade
+  name: модульная граната # Stories-CraftTranslate
   id: ModularGrenadeRecipe
   graph: ModularGrenadeGraph
   startNode: start
   targetNode: grenade
   category: construction-category-weapons
-  description: Construct a grenade using a trigger and a payload.
+  description: Соберите гранату, используя триггер и химический заряд. # Stories-CraftTranslate
   icon:
     sprite: Objects/Weapons/Grenades/modular.rsi
     state: complete
   objectType: Item
 
 - type: construction
-  name: modular mine
+  name: модульная мина # Stories-CraftTranslate
   id: ModularMineRecipe
   graph: ModularMineGraph
   startNode: start
   targetNode: mine
   category: construction-category-weapons
-  description: Construct a landmine using a payload.
+  description: Соберите наземную мину, используя химический заряд. # Stories-CraftTranslate
   icon:
     sprite: Objects/Misc/landmine.rsi
     state: landmine

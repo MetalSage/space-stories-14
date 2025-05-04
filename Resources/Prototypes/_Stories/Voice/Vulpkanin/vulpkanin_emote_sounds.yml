@@ -5,6 +5,8 @@
   sounds:
     Growl:
       collection: VulpkaninGrowls
+    Howl:
+      collection: VulpkaninHowl
     Snarl:
       collection: VulpkaninSnarls
     Bark:
@@ -49,7 +51,6 @@
       collection: MaleDeathGasp
 
 - type: emoteSounds
-  parent: FemaleHuman
   id: FemaleVulpkanin
   params:
     variation: 0.125

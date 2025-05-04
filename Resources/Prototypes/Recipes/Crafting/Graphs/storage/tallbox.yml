@@ -75,7 +75,7 @@
         amount: 2
         doAfter: 5
       - tag: FreezerElectronics
-        name: freezer electronics
+        name: микросхема холодильника # Stories-CraftTranslate
         icon:
           sprite: Objects/Misc/module.rsi
           state: door_electronics

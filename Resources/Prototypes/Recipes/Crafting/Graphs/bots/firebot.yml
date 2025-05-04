@@ -10,24 +10,24 @@
         icon:
           sprite: Objects/Misc/fire_extinguisher.rsi
           state: fire_extinguisher_open
-        name: fire extinguisher
+        name: огнетушитель # Stories-CraftTranslate
       - tag: FireHelmet
-        icon: 
+        icon:
           sprite: Clothing/Head/Helmets/firehelmet.rsi
           state: icon
-        name: fire helmet
+        name: пожарный шлем # Stories-CraftTranslate
         doAfter: 2
       - tag: ProximitySensor
         icon:
           sprite: Objects/Misc/proximity_sensor.rsi
           state: icon
-        name: proximity sensor
+        name: датчик движения # Stories-CraftTranslate
         doAfter: 2
       - tag: BorgArm
         icon:
           sprite: Mobs/Silicon/drone.rsi
           state: l_hand
-        name: borg arm
+        name: рука киборга # Stories-CraftTranslate
         doAfter: 2
   - node: bot
     entity: MobFireBot

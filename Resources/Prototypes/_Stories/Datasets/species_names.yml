@@ -1,0 +1,47 @@
+- type: localizedDataset
+  id: AvaliUnisex
+  values:
+    prefix: names-avali-unisex-dataset-
+    count: 20
+
+- type: localizedDataset
+  id: KidanMale
+  values:
+    prefix: names-kidan-male-dataset-
+    count: 120
+
+- type: localizedDataset
+  id: RodentiaMale
+  values:
+    prefix: names-rodentia-male-dataset-
+    count: 166
+
+- type: localizedDataset
+  id: RodentiaFemale
+  values:
+    prefix: names-rodentia-female-dataset-
+    count: 158
+
+- type: localizedDataset
+  id: RodentiaLast
+  values:
+    prefix: names-rodentia-last-dataset-
+    count: 86
+
+- type: localizedDataset
+  id: VulpkaninMale
+  values:
+    prefix: names-vulpkanin-male-dataset-
+    count: 345
+
+- type: localizedDataset
+  id: VulpkaninFemale
+  values:
+    prefix: names-vulpkanin-female-dataset-
+    count: 344
+
+- type: localizedDataset
+  id: VulpkaninLast
+  values:
+    prefix: names-vulpkanin-last-dataset-
+    count: 252

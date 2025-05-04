@@ -17,4 +17,18 @@
   id: JobIAA
 
 - type: playTimeTracker
-  id: JobJediNt
+  id: JobGuardianNt
+
+- type: playTimeTracker
+  id: STJobBrigmedic
+
+# Event-Restricted-Jobs
+
+- type: playTimeTracker
+  id: JobSTSecurityClown
+
+- type: playTimeTracker
+  id: JobSTCommandMaid
+
+- type: playTimeTracker
+  id: JobSTPartyMaker

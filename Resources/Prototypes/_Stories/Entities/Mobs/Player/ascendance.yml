@@ -112,6 +112,7 @@
     - ShadowlingMind
     globalReceive: true
   - type: Puller
+    needsHands: false
   - type: Access
     enabled: true
     groups:

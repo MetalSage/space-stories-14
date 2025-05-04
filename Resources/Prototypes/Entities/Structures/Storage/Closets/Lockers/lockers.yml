@@ -153,7 +153,7 @@
     stateDoorOpen: eng_secure_open
     stateDoorClosed: eng_secure_door
   - type: AccessReader
-    access: [ [ "Engineering" ] ]
+    access: [ [ "Engineering" ], ["PrisonEng"]] # [ [ "Engineering" ] ] # Stories-Prison
 
 # Freezer
 - type: entity
@@ -338,7 +338,7 @@
     stateDoorOpen: armory_open
     stateDoorClosed: brigmedic_door
   - type: AccessReader
-    access: [["Medical"]]
+    access: [["Security"]] # [["Medical"]] # Stories-Brigmedic
 
 # Security Officer
 - type: entity

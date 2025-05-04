@@ -1,6 +1,6 @@
 - type: entity
   parent: ClothingHeadBase
-  id: ClothingHeadHatHoodJedihood
+  id: ClothingHeadHatHoodGuardianhood
   name: капюшон джедая
   categories: [ HideSpawnMenu ]
   description: Достаточно крут, чтобы вы его носили.
@@ -15,13 +15,13 @@
     tags:
       - ForceRecallEquipment
   - type: Sprite
-    sprite: _Stories/Clothing/Head/Hoods/jedi.rsi
+    sprite: _Stories/Clothing/Head/Hoods/guardian.rsi
   - type: Clothing
-    sprite: _Stories/Clothing/Head/Hoods/jedi.rsi
+    sprite: _Stories/Clothing/Head/Hoods/guardian.rsi
 
 - type: entity
   parent: ClothingHeadBase
-  id: ClothingHeadHatHoodSith
+  id: ClothingHeadHatHoodInquisitor
   name: капюшон инквизитора
   categories: [ HideSpawnMenu ]
   description: Какой же вы злодей без крутого капюшона?
@@ -49,9 +49,9 @@
     tags:
       - ForceRecallEquipment
   - type: Sprite
-    sprite: _Stories/Clothing/Head/Hoods/helmet_sith.rsi
+    sprite: _Stories/Clothing/Head/Hoods/helmet_inquisitor.rsi
   - type: Clothing
-    sprite: _Stories/Clothing/Head/Hoods/helmet_sith.rsi
+    sprite: _Stories/Clothing/Head/Hoods/helmet_inquisitor.rsi
 
 - type: entity
   parent: ClothingHeadBase

@@ -1,24 +1,10 @@
 - type: guideEntry
-  id: STSpaceLaw
-  name: Таблица Статей
-  priority: -1
-  text: "/ServerInfo/_Stories/ServerRules/SpaceLaw/SpaceStationTableLaw.xml"
-  children:
-  - STSpaceLawSpace
-  - STBasicRightsOfIntelligentBeings
-
-- type: guideEntry
-  id: STSpaceLawSpace
-  name: Корпоративный Закон
-  text: "/ServerInfo/_Stories/ServerRules/SpaceLaw/SpaceStationLaw.xml"
-
-- type: guideEntry
   id: STSopSec
   name: СРП СБ
   priority: -1
   text: "/ServerInfo/_Stories/ServerRules/SpaceLaw/SpaceStationSop.xml"
 
 - type: guideEntry
-  id: STBasicRightsOfIntelligentBeings
-  name: ОПРС
-  text: "/ServerInfo/_Stories/ServerRules/SpaceLaw/SpaceStationBRIB.xml"
+  id: STCrimeModifiers
+  name: Модификаторы
+  text: "/ServerInfo/_Stories/ServerRules/SpaceLaw/SpaceStationCrimeModifiers.xml"

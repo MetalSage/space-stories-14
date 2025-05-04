@@ -1,0 +1,13 @@
+- type: entity
+  parent: BaseItem
+  id: STGarrote
+  name: garrote
+  description: A device used only for covert assassinations.
+  components:
+  - type: Sprite
+    sprite: _Stories/Objects/Weapons/Special/garrote.rsi
+    state: icon
+  - type: Item
+    size: Small
+  - type: Garrote
+  - type: Wieldable

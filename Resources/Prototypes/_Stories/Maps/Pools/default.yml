@@ -2,10 +2,11 @@
   id: StoriesDefaultMapPool
   maps:
   - StoriesBagel
-  # - StoriesBeta
+  - StoriesBeta
   - StoriesBox
   - StoriesFland
-  # - StoriesKilo
+  - StoriesKilo
+  - StoriesLima
   - StoriesMeta
   - StoriesCore
   - StoriesOmega

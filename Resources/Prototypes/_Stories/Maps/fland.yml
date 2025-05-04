@@ -51,7 +51,7 @@
             SecurityOfficer: [ 8, 8 ]
             Detective: [ 1, 1 ]
             SecurityCadet: [ 4, 4 ]
-            IAA: [ 1, 1 ]
+            Lawyer: [ 1, 1 ]
             #supply
             Quartermaster: [ 1, 1 ]
             SalvageSpecialist: [ 3, 3 ]
@@ -65,4 +65,6 @@
             StationAi: [ 1, 1 ]
             Borg: [ 2, 2 ]
             #stories content
-            JediNt: [ 1, 1 ]
+            GuardianNt: [ 1, 1 ]
+            IAA: [ 1, 1 ]
+            STBrigmedic: [ 1, 1 ]

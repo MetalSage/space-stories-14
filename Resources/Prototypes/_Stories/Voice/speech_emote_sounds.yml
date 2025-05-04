@@ -28,5 +28,65 @@
       collection: Weh
     Gasp:
       collection: KidanGasp
+    MonkeyScreeches:
+      collection: MonkeyScreeches
+    RobotBeep:
+      collection: RobotBeeps
+    Yawn:
+      collection: MaleYawn
+    Snore:
+      collection: Snores
+    Honk:
+      collection: BikeHorn
+    Whistle:
+      collection: Whistles
+    Hew:
+      collection: Hew
+    DefaultDeathgasp:
+      collection: KidanDeathGasp
+
+- type: emoteSounds
+  id: FemaleKidan
+  params:
+    variation: 0.125
+  sounds:
+    Sneeze:
+      collection: KidanSneeze
+    Cough:
+      collection: KidanCough
+    Scream:
+      collection: KidanScream
+    Laugh:
+      collection: KidanLaugh
+    Sigh:
+      collection: KidanSigh
+    Crying:
+      collection: KidanCry
+    Grumble:
+      collection: KidanGrumble
+    Moan:
+      collection: KidanMoan
+    WigglesAntennae:
+      collection: KidanWigglesAtennae
+    WavesAntennaeSharply:
+      collection: KidanWavesAntennaeSharply
+    Weh:
+      collection: Weh
+    Gasp:
+      collection: KidanGasp
+    MonkeyScreeches:
+      collection: MonkeyScreeches
+    RobotBeep:
+      collection: RobotBeeps
+    Yawn:
+      collection: FemaleYawn
+    Snore:
+      collection: Snores
+    Honk:
+      collection: BikeHorn
+    Whistle:
+      collection: Whistles
+    Hew:
+      collection: Hew
     DefaultDeathgasp:
       collection: KidanDeathGasp

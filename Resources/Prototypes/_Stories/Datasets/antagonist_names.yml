@@ -1,0 +1,23 @@
+- type: localizedDataset
+  id: Inquisitor
+  values:
+    prefix: names-inquisitor-dataset-
+    count: 36
+
+- type: localizedDataset
+  id: InquisitorTitle
+  values:
+    prefix: names-inquisitor-title-dataset-
+    count: 1
+
+- type: localizedDataset
+  id: SpafFirst
+  values:
+    prefix: names-spaf-first-dataset-
+    count: 6
+
+- type: localizedDataset
+  id: SpafLast
+  values:
+    prefix: names-spaf-last-dataset-
+    count: 9

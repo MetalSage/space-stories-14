@@ -1,0 +1,16 @@
+descriptions-atv-dataset-1 = Универсальное транспортное средство.
+descriptions-atv-dataset-2 = Транспортное средство для уничтожения муравьев.
+descriptions-atv-dataset-3 = Обычное транспортное средство для выращивания овощей.
+descriptions-atv-dataset-4 = На самом деле - Два транспортных средства.
+descriptions-atv-dataset-5 = Любая типизированная переменная.
+descriptions-atv-dataset-6 = Транспортное средство для оказания неотложной помощи.
+descriptions-atv-dataset-7 = Вирус, передающийся по алгоритму.
+descriptions-atv-dataset-8 = Вакансия малолетнего алкоголика.
+descriptions-atv-dataset-9 = Вулкан, разрывающий жопу.
+descriptions-atv-dataset-10 = А-телевидение.
+descriptions-atv-dataset-11 = Неуклюжий бродяга.
+descriptions-atv-dataset-12 = Волонтер, занимающийся арт-трагедиями.
+descriptions-atv-dataset-13 = Вакансия в кафе "Тако" открыта автоматически.
+descriptions-atv-dataset-14 = Еще один потрясающий вид.
+descriptions-atv-dataset-15 = Все - Девственницы.
+descriptions-atv-dataset-16 = Ужасная машина.

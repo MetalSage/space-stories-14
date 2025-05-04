@@ -6,12 +6,12 @@
   components:
   - type: StorageFill
     contents:
-      - id: Syringe
-        amount: 6
+    - id: Syringe
+      amount: 6
   - type: Sprite
     layers:
-      - state: box_medical # Corvax-Resprite
-      - state: syringe
+    - state: box
+    - state: syringe
 
 - type: entity
   name: pill canister box
@@ -21,12 +21,12 @@
   components:
   - type: StorageFill
     contents:
-      - id: PillCanister
-        amount: 9
+    - id: PillCanister
+      amount: 9
   - type: Sprite
     layers:
-      - state: box_medical # Corvax-Resprite
-      - state: pillbox
+    - state: box
+    - state: pillbox
 
 - type: entity
   name: bottle box
@@ -36,12 +36,12 @@
   components:
   - type: StorageFill
     contents:
-      - id: ChemistryEmptyBottle01
-        amount: 6
+    - id: ChemistryEmptyBottle01
+      amount: 6
   - type: Sprite
     layers:
-      - state: box
-      - state: bottle
+    - state: box
+    - state: bottle
 
 - type: entity
   name: sterile mask box
@@ -51,12 +51,12 @@
   components:
   - type: StorageFill
     contents:
-      - id: ClothingMaskSterile
-        amount: 4
+    - id: ClothingMaskSterile
+      amount: 4
   - type: Sprite
     layers:
-      - state: box_medical # Corvax-Resprite
-      - state: sterile
+    - state: box
+    - state: sterile
 
 - type: entity
   name: latex gloves box
@@ -66,12 +66,12 @@
   components:
   - type: StorageFill
     contents:
-      - id: ClothingHandsGlovesLatex
-        amount: 4
+    - id: ClothingHandsGlovesLatex
+      amount: 4
   - type: Sprite
     layers:
-      - state: box_medical # Corvax-Resprite
-      - state: latex
+    - state: box
+    - state: latex
 
 - type: entity
   name: nitrile gloves box
@@ -81,12 +81,12 @@
   components:
   - type: StorageFill
     contents:
-      - id: ClothingHandsGlovesNitrile
-        amount: 4
+    - id: ClothingHandsGlovesNitrile
+      amount: 4
   - type: Sprite
     layers:
-      - state: box_medical # Corvax-Resprite
-      - state: nitrile
+    - state: box
+    - state: nitrile
 
 - type: entity
   name: body bag box
@@ -96,15 +96,15 @@
   components:
   - type: StorageFill
     contents:
-      - id: BodyBagFolded
-        amount: 4
+    - id: BodyBagFolded
+      amount: 4
   - type: Sprite
     layers:
-      - state: box_medical # Corvax-Resprite
-      - state: bodybags
+    - state: box
+    - state: bodybags
     whitelist:
       tags:
-        - BodyBag
+      - BodyBag
 
 - type: entity
   name: vial box
@@ -117,9 +117,9 @@
     - 0,0,2,1
   - type: StorageFill
     contents:
-      - id: BaseChemistryEmptyVial
-        amount: 6
+    - id: BaseChemistryEmptyVial
+      amount: 6
   - type: Sprite
     layers:
-      - state: box
-      - state: vials
+    - state: box
+    - state: vials

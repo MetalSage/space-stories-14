@@ -1,0 +1,11 @@
+- type: polymorph
+  id: InquisitorGhost
+  configuration:
+    entity: MobInquisitorGhost
+    forced: true
+    duration: 5
+    inventory: None
+    transferName: false
+    transferDamage: false
+    revertOnCrit: true
+    revertOnDeath: true

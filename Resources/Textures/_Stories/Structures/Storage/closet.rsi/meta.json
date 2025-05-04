@@ -53,13 +53,13 @@
       "name": "sp_open"
     },
     {
-        "name": "jedi"
+      "name": "guardian"
     },
     {
-        "name": "jedi_door"
+      "name": "guardian_door"
     },
     {
-        "name": "jedi_open"
+      "name": "guardian_open"
     }
   ]
 }

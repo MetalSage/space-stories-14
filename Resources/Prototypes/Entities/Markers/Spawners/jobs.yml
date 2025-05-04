@@ -239,7 +239,7 @@
   name: lawyer
   components:
   - type: SpawnPoint
-    job_id: IAA # Corvax-IAA: Lawyer replaced with IAA
+    job_id: Lawyer
   - type: Sprite
     layers:
       - state: green
@@ -491,6 +491,8 @@
   parent: SpawnPointJobBase
   name: brigmedic
   components:
+  - type: SpawnPoint # Stories-Brigmedic
+    job_id: STBrigmedic
   - type: Sprite
     layers:
       - state: green

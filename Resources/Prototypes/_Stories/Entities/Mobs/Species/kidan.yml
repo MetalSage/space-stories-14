@@ -16,7 +16,7 @@
     prototype: Kidan
     requiredLegs: 2
   - type: Speech
-    speechVerb: Kidan
+    allowedEmotes: ['Grumble', 'Moan', 'WigglesAntennae', 'WavesAntennaeSharply']
   - type: Butcherable
     butcheringType: Spike
     spawned:
@@ -42,7 +42,7 @@
   - type: Vocal
     sounds:
       Male: UnsexedKidan
-      Female: UnsexedKidan
+      Female: FemaleKidan
       Unsexed: UnsexedKidan
   - type: Damageable
     damageContainer: Biological

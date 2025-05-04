@@ -6,16 +6,6 @@
   name: часть тела кидана
   abstract: true
   components:
-  - type: Damageable
-    damageContainer: Biological
-  - type: BodyPart
-  - type: ContainerContainer
-    containers:
-      bodypart: !type:Container
-        ents: []
-  - type: Tag
-    tags:
-      - Trash
   - type: Extractable
     juiceSolution:
       reagents:
@@ -27,7 +17,7 @@
 - type: entity
   id: TorsoKidan
   name: торс кидана
-  parent: PartKidan
+  parent: [PartKidan, BaseTorso]
   components:
   - type: Sprite
     sprite: _Stories/Mobs/Species/Kidan/parts.rsi
@@ -35,8 +25,6 @@
   - type: Icon
     sprite: _Stories/Mobs/Species/Kidan/parts.rsi
     state: "torso_m"
-  - type: BodyPart
-    partType: Torso
   - type: Extractable
     juiceSolution:
       reagents:
@@ -48,7 +36,7 @@
 - type: entity
   id: HeadKidan
   name: голова кидана
-  parent: PartKidan
+  parent: [PartKidan, BaseHead]
   components:
   - type: Sprite
     sprite: _Stories/Mobs/Species/Kidan/parts.rsi
@@ -75,7 +63,7 @@
 - type: entity
   id: LeftArmKidan
   name: левая рука кидана
-  parent: PartKidan
+  parent: [PartKidan, BaseLeftArm]
   components:
   - type: Sprite
     sprite: _Stories/Mobs/Species/Kidan/parts.rsi
@@ -83,14 +71,11 @@
   - type: Icon
     sprite: _Stories/Mobs/Species/Kidan/parts.rsi
     state: "l_arm"
-  - type: BodyPart
-    partType: Arm
-    symmetry: Left
 
 - type: entity
   id: RightArmKidan
   name: правая рука кидана
-  parent: PartKidan
+  parent: [PartKidan, BaseRightArm]
   components:
   - type: Sprite
     sprite: _Stories/Mobs/Species/Kidan/parts.rsi
@@ -98,14 +83,11 @@
   - type: Icon
     sprite: _Stories/Mobs/Species/Kidan/parts.rsi
     state: "r_arm"
-  - type: BodyPart
-    partType: Arm
-    symmetry: Right
 
 - type: entity
   id: LeftHandKidan
   name: левая кисть кидана
-  parent: PartKidan
+  parent: [PartKidan, BaseLeftHand]
   components:
   - type: Sprite
     sprite: _Stories/Mobs/Species/Kidan/parts.rsi
@@ -120,7 +102,7 @@
 - type: entity
   id: RightHandKidan
   name: правая кисть кидана
-  parent: PartKidan
+  parent: [PartKidan, BaseRightHand]
   components:
   - type: Sprite
     sprite: _Stories/Mobs/Species/Kidan/parts.rsi
@@ -135,7 +117,7 @@
 - type: entity
   id: LeftLegKidan
   name: левая нога кидана
-  parent: PartKidan
+  parent: [PartKidan, BaseLeftLeg]
   components:
   - type: Sprite
     sprite: _Stories/Mobs/Species/Kidan/parts.rsi
@@ -153,7 +135,7 @@
 - type: entity
   id: RightLegKidan
   name: правая нога кидана
-  parent: PartKidan
+  parent: [PartKidan, BaseRightLeg]
   components:
   - type: Sprite
     sprite: _Stories/Mobs/Species/Kidan/parts.rsi
@@ -171,7 +153,7 @@
 - type: entity
   id: LeftFootKidan
   name: левая стопа кидана
-  parent: PartKidan
+  parent: [PartKidan, BaseLeftFoot]
   components:
   - type: Sprite
     sprite: _Stories/Mobs/Species/Kidan/parts.rsi
@@ -186,7 +168,7 @@
 - type: entity
   id: RightFootKidan
   name: правая стопа кидана
-  parent: PartKidan
+  parent: [PartKidan, BaseRightFoot]
   components:
   - type: Sprite
     sprite: _Stories/Mobs/Species/Kidan/parts.rsi

@@ -1,13 +1,13 @@
 - type: gamePreset
   id: Shadowling
   alias:
-    - shadowling
+  - shadowling
   name: Тенеморфы
   description: На станции обитают тенеморфы. Это опасные гуманоидные существа, цель которых поработить всю станцию. Если они сделают это, то галактика будет обречена на вымирание.
   showInVote: true
   rules:
-    - Shadowling
-    - SubGamemodesRule
-    - BasicStationEventScheduler
-    - MeteorSwarmScheduler
-    - BasicRoundstartVariation
+  - Shadowling
+  - SubGamemodesRule
+  - BasicStationEventScheduler
+  - MeteorSwarmScheduler
+  - BasicRoundstartVariation

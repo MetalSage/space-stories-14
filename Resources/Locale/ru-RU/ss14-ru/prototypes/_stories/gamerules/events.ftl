@@ -1,4 +1,4 @@
-ent-SithSpawn = { ent-BaseGameRule }
+ent-InquisitorSpawn = { ent-BaseGameRule }
     .desc = { ent-BaseGameRule.desc }
 ent-KyloSpawn = { ent-BaseGameRule }
     .desc = { ent-BaseGameRule.desc }

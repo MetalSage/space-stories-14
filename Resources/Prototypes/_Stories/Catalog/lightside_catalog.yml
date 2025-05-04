@@ -25,10 +25,10 @@
     stock: 1
 
 - type: listing
-  id: ActionJediForceWall
+  id: ActionGuardianForceWall
   name: Барьер Силы
   description: Создайте нерушимый барьер 3x1 в направлении вашего взгляда, который остановит ваших врагов. Вы можете проходить сквозь свой барьер.
-  productAction: ActionJediForceWall
+  productAction: ActionGuardianForceWall
   cost:
     SkillPoint: 3
   categories:

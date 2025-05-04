@@ -6,7 +6,7 @@ using System.Text;
 using System.Text.Json.Serialization;
 using System.Threading;
 using System.Threading.Tasks;
-using Content.Shared._Corvax.CCCVars;
+using Content.Shared._Stories.SCCVars;
 using Prometheus;
 using Robust.Shared.Configuration;
 using System.Collections.Specialized;
@@ -48,13 +48,13 @@ public sealed class TTSManager
     public void Initialize()
     {
         _sawmill = Logger.GetSawmill("tts");
-        _cfg.OnValueChanged(CCCVars.TTSMaxCache, val =>
+        _cfg.OnValueChanged(SCCVars.TTSMaxCache, val =>
         {
             _maxCachedCount = val;
             ResetCache();
         }, true);
-        _cfg.OnValueChanged(CCCVars.TTSApiUrl, v => _apiUrl = v, true);
-        _cfg.OnValueChanged(CCCVars.TTSApiToken, v =>
+        _cfg.OnValueChanged(SCCVars.TTSApiUrl, v => _apiUrl = v, true);
+        _cfg.OnValueChanged(SCCVars.TTSApiToken, v =>
         {
             _httpClient.DefaultRequestHeaders.Authorization = new System.Net.Http.Headers.AuthenticationHeaderValue("Bearer", v);
             _apiToken = v;
@@ -90,7 +90,7 @@ public sealed class TTSManager
         var reqTime = DateTime.UtcNow;
         try
         {
-            var timeout = _cfg.GetCVar(CCCVars.TTSApiTimeout);
+            var timeout = _cfg.GetCVar(SCCVars.TTSApiTimeout);
             var cts = new CancellationTokenSource(TimeSpan.FromSeconds(timeout));
 
             var requestUrl = $"{_apiUrl}" + ToQueryString(new NameValueCollection() {

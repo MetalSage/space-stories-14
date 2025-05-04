@@ -1,23 +1,11 @@
 using Content.Shared.Inventory.Events;
 using Content.Shared._Stories.ForceUser;
-using Content.Shared.Interaction.Events;
-using Content.Shared.Popups;
 using Content.Shared.Item;
 using Content.Shared.Weapons.Misc;
 using Content.Shared._Stories.Force.Lightsaber;
-using Content.Server.Weapons.Melee.EnergySword;
-using Content.Server._Stories.TetherGun;
 using Content.Shared.Damage;
 using Robust.Shared.Random;
-using Content.Shared.Throwing;
-using Content.Shared.Item.ItemToggle;
 using Content.Shared.Item.ItemToggle.Components;
-using Content.Shared.Hands.EntitySystems;
-using Content.Shared.Physics;
-using Content.Shared.Interaction;
-using Content.Server._Stories.ForceUser;
-using Content.Shared.Verbs;
-using Content.Shared._Stories.ForceUser.Actions.Events;
 
 namespace Content.Server._Stories.ForceUser;
 
