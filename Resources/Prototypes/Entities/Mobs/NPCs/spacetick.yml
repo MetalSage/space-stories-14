@@ -79,6 +79,10 @@
   - type: Speech
     speechVerb: SmallMob
   - type: NonSpreaderZombie
+  # Stories-Start
+  - type: MobCollision
+    fixtureId: empty
+  # Stories-End
 
 - type: entity
   id: MobTickSalvage

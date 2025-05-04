@@ -125,8 +125,12 @@
     attributes:
       gender: male
   - type: Sharp
-  - type: TTS # Stories-TTS
+  # Stories-Start
+  - type: MobCollision
+    fixtureId: empty
+  - type: TTS
     voice: twitch
+  # Stories-End
 
 - type: entity
   id: MobRatKingBuff
@@ -204,6 +208,10 @@
     - map: [ "enum.DamageStateVisualLayers.BaseUnshaded"]
       state: eyes
       shader: unshaded
+  # Stories-Start
+  - type: MobCollision
+    fixtureId: empty
+  # Stories-End
 
   - type: SpriteMovement
     movementLayers:
