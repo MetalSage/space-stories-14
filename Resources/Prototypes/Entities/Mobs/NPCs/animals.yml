@@ -249,6 +249,10 @@
   - type: NpcFactionMember
     factions:
     - Passive
+  # Stories-Start
+  - type: MobCollision
+    fixtureId: empty
+  # Stories-End
 
 - type: entity
   parent: MobChicken
@@ -410,6 +414,10 @@
     damage:
       types:
         Piercing: 0
+  # Stories-Start
+  - type: MobCollision
+    fixtureId: empty
+  # Stories-End
 
 - type: entity
   name: glockroach
@@ -684,6 +692,10 @@
   - type: NpcFactionMember
     factions:
     - Passive
+  # Stories-Start
+  - type: MobCollision
+    fixtureId: empty
+  # Stories-End
 
 - type: entity
   name: white duck #Quack
@@ -1805,6 +1817,10 @@
       Taco: RatTaco
       Burger: RatBurger
       Skewer: RatSkewer
+  # Stories-Start
+  - type: MobCollision
+    fixtureId: empty
+  # Stories-End
 
 - type: entity
   parent: MobMouse
@@ -1985,7 +2001,10 @@
   - type: Tag
     tags:
     - VimPilot
-
+  # Stories-Start
+  - type: MobCollision
+    fixtureId: empty
+  # Stories-End
 
 - type: entity
   name: slug
@@ -2033,6 +2052,10 @@
     interactSuccessSpawn: EffectHearts
   - type: Bloodstream
     bloodMaxVolume: 50
+  # Stories-Start
+  - type: MobCollision
+    fixtureId: empty
+  # Stories-End
 
 - type: entity
   name: frog
@@ -2092,6 +2115,10 @@
   - type: Tag
     tags:
     - VimPilot
+  # Stories-Start
+  - type: MobCollision
+    fixtureId: empty
+  # Stories-End
 
 # Would be cool to have some functionality for the parrot to be able to sit on stuff
 - type: entity
@@ -2328,6 +2355,10 @@
   - type: Damageable
     damageContainer: Biological
     damageModifierSet: Scale
+  # Stories-Start
+  - type: MobCollision
+    fixtureId: empty
+  # Stories-End
 
 # Code unique spider prototypes or combine them all into one spider and get a
 # random sprite state when you spawn it.
@@ -3380,6 +3411,10 @@
   - type: FireVisuals
     sprite: Mobs/Effects/onfire.rsi
     normalState: Mouse_burning
+  # Stories-Start
+  - type: MobCollision
+    fixtureId: empty
+  # Stories-End
 
 - type: entity
   name: pig

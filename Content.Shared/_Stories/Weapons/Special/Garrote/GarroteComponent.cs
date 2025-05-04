@@ -37,7 +37,7 @@ public sealed partial class GarroteComponent : Component
     };
 
     [DataField("maxUseDistance")]
-    public float MaxUseDistance = 0.5f;
+    public float MaxUseDistance = 0.8f;
 
     [DataField("checkDirection")]
     public bool CheckDirection = true;

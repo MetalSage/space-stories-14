@@ -81,6 +81,8 @@
   - type: Stealth
     enabledOnDeath: false
     enabled: false
+  - type: MobCollision
+    fixtureId: empty
 
 - type: entity
   name: S.P.A.F.
