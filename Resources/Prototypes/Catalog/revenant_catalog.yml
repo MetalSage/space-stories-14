@@ -62,3 +62,16 @@
   conditions:
   - !type:ListingLimitedStockCondition
     stock: 1
+
+- type: listing
+  id: RevenantRebirth
+  name: Rebirth
+  description: sss
+  productAction: ActionRevenantRebirth
+  cost:
+    StolenEssence: 10
+  categories:
+  - RevenantAbilities
+  conditions:
+  - !type:ListingLimitedStockCondition
+    stock: 1

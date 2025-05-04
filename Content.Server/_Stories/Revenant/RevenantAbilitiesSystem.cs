@@ -1,15 +1,24 @@
+using System.Linq;
 using System.Numerics;
 using System.Security.Cryptography;
 using Content.Server.Actions;
+using Content.Server.Administration;
+using Content.Server.Forensics;
+using Content.Server.Forensics.Components;
 using Content.Server.GameTicking;
+using Content.Server.Prayer;
 using Content.Server.Revenant.Components;
 using Content.Server.Revenant.EntitySystems;
 using Content.Server.Store.Systems;
+using Content.Server.Temperature.Components;
 using Content.Shared._Stories.Revenant;
+using Content.Shared.Actions;
 using Content.Shared.Alert;
 using Content.Shared.Damage;
+using Content.Shared.Database;
 using Content.Shared.DoAfter;
 using Content.Shared.FixedPoint;
+using Content.Shared.Forensics.Components;
 using Content.Shared.Interaction;
 using Content.Shared.Jittering;
 using Content.Shared.Maps;
@@ -19,10 +28,16 @@ using Content.Shared.Physics;
 using Content.Shared.Popups;
 using Content.Shared.Revenant.Components;
 using Content.Shared.StatusEffect;
+using Content.Shared.Store.Components;
 using Content.Shared.Stunnable;
 using Content.Shared.Tag;
+using Content.Shared.Temperature;
+using Content.Shared.Verbs;
 using Robust.Server.GameObjects;
+using Robust.Shared.Player;
+using Robust.Shared.Prototypes;
 using Robust.Shared.Random;
+using Robust.Shared.Utility;
 
 namespace Content.Server._Stories.Revenant;
 
@@ -38,22 +53,97 @@ public sealed class RevenantAbilitiesSystem : EntitySystem
     [Dependency] private readonly SharedJitteringSystem _jittering = default!;
     [Dependency] private readonly StoreSystem _store = default!;
     [Dependency] private readonly DamageableSystem _damage = default!;
+    [Dependency] private readonly QuickDialogSystem _quickDialog = default!;
+    [Dependency] private readonly PrayerSystem _prayerSystem = default!;
+    [Dependency] private readonly SharedActionsSystem _actions = default!;
 
     public override void Initialize()
     {
         base.Initialize();
 
+        SubscribeLocalEvent<RevenantComponent, RevenantDieEvent>(OnDie);
+        SubscribeLocalEvent<RevenantComponent, RevenantRebirthToggledEvent>(OnRebirthToggled);
         SubscribeLocalEvent<RevenantComponent, RevenantReapActionEvent>(OnReap);
         SubscribeLocalEvent<RevenantComponent, RevenantGhostlyTouchActionEvent>(OnGhostlyTouch);
+        SubscribeLocalEvent<GetVerbsEvent<Verb>>(GetVerbs);
     }
 
     #region Abilities
+
+    private void OnRebirthToggled(EntityUid uid, RevenantComponent comp, RevenantRebirthToggledEvent ev)
+    {
+        comp.RebirthEnabled = !comp.RebirthEnabled;
+    }
+
+    private void OnDie(EntityUid uid, RevenantComponent comp, RevenantDieEvent args)
+    {
+        if (!TryComp<StoreComponent>(uid, out var store))
+            return;
+        if (comp.IsRebirthed || !comp.RebirthEnabled)
+            return;
+        foreach (var listing in store.BoughtEntities)
+        {
+            if (listing.ToString() != "RevenantRebirth")
+                return;
+        }
+        Log.Debug("fgsg");
+        comp.IsRebirthed = true;
+        var actions = _actions.GetActions(uid);
+        foreach (var action in actions)
+        {
+            if (action.ToString() != "RevenantRebirth")
+                return;
+            _actions.RemoveAction(action.Id);
+        }
+    }
+
+    private void GetVerbs(GetVerbsEvent<Verb> ev)
+    {
+        if (!TryComp(ev.Target, out ActorComponent? targetActor))
+            return;
+
+
+        var player = targetActor.PlayerSession;
+
+        var verb = new Verb()
+        {
+            Act = () =>
+            {
+                _quickDialog.OpenDialog(player, "Subtle Message", "Message", "Popup Message", (string message, string popupMessage) =>
+                {
+                    _prayerSystem.SendSubtleMessage(targetActor.PlayerSession, player, message, popupMessage == "" ? Loc.GetString("prayer-popup-subtle-default") : popupMessage);
+                });
+            },
+            Impact = LogImpact.Low,
+            Text = Loc.GetString("verb-follow-text"),
+            Icon = new SpriteSpecifier.Texture(new("/Textures/Interface/VerbIcons/open.svg.192dpi.png"))
+        };
+        ev.Verbs.Add(verb);
+    }
     private void OnGhostlyTouch(EntityUid uid, RevenantComponent component, RevenantGhostlyTouchActionEvent args)
     {
+        if (args.Handled)
+            return;
         DamageSpecifier dspec = new();
-        dspec.DamageDict.Add("Cold", 5f);
+        dspec.DamageDict.Add("Cold", 10f);
         _damage.TryChangeDamage(args.Target, dspec, true, origin: uid);
         _jittering.DoJitter(args.Target, component.JitterDuration, true, 1f, 1f);
+
+        args.Handled = true;
+
+        if (TryComp<TemperatureComponent>(args.Target, out var temp))
+        {
+            float lastTemp = temp.CurrentTemperature;
+            temp.CurrentTemperature -= component.TemperatureDrop;
+            float delta = temp.CurrentTemperature - lastTemp;
+
+            RaiseLocalEvent(uid, new OnTemperatureChangeEvent(temp.CurrentTemperature, lastTemp, delta), true);
+        }
+
+        if (HasComp<IgnoresFingerprintsComponent>(args.Target))
+            return;
+        var forensics = EnsureComp<ForensicsComponent>(args.Target);
+        forensics.Fingerprints.Add(Loc.GetString("revenant-fingerprint"));
     }
     private void OnReap(EntityUid uid, RevenantComponent component, RevenantReapActionEvent args)
     {

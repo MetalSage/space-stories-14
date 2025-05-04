@@ -1,0 +1,1 @@
+revenant-fingerprint = отпечаток ладони

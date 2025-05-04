@@ -3,6 +3,7 @@ using Content.Server.Actions;
 using Content.Server.GameTicking;
 using Content.Server.Store.Components;
 using Content.Server.Store.Systems;
+using Content.Shared._Stories.Revenant;
 using Content.Shared.Alert;
 using Content.Shared.Damage;
 using Content.Shared.DoAfter;
@@ -154,6 +155,7 @@ public sealed partial class RevenantSystem : EntitySystem
         if (component.Essence <= 0)
         {
             Spawn(component.SpawnOnDeathPrototype, Transform(uid).Coordinates);
+            RaiseLocalEvent(uid, new RevenantDieEvent());
             QueueDel(uid);
         }
         return true;

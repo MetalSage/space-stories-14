@@ -219,6 +219,21 @@ public sealed partial class RevenantComponent : Component
 
     #endregion Essence Reaping
 
+    #region Ghostly Touch
+    [DataField]
+    public float TemperatureDrop = 46f;
+    #endregion Ghostly Touch
+
+    #region Rebirth
+
+    [DataField]
+    public bool IsRebirthed;
+
+    [DataField]
+    public bool RebirthEnabled;
+
+    #endregion Rebirth
+
     [DataField]
     public ProtoId<AlertPrototype> EssenceAlert = "Essence";
 

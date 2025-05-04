@@ -8,16 +8,6 @@
     event: !type:RevenantShopActionEvent
 
 - type: entity
-  id: ActionRevenantReap
-  name: Essence reap
-  description: Costs 10 Essence.
-  components:
-  - type: InstantAction
-    icon: Interface/Actions/shop.png
-    event: !type:RevenantReapActionEvent
-    useDelay: 60
-
-- type: entity
   id: ActionRevenantDefile
   name: Defile
   description: Costs 30 Essence.
@@ -59,12 +49,31 @@
 
 - type: entity
   id: ActionRevenantGhostlyTouch
-  name: "[color=red]Ghostly Touch[/color]"
+  name: Ghostly Touch
   description: SSS
   components:
   - type: EntityTargetAction
     icon: _Stories/Actions/spaf.rsi/spaf_devour.png
     iconOn: _Stories/Actions/spaf.rsi/spaf_devour_on.png
     event: !type:RevenantGhostlyTouchActionEvent
+    useDelay: 15
+
+- type: entity
+  id: ActionRevenantRebirth
+  name: Rebirth
+  description: Costs 534534 Essence.
+  components:
+  - type: InstantAction
+    icon: Interface/Actions/shop.png
+    event: !type:RevenantRebirthToggledEvent
     useDelay: 1
 
+- type: entity
+  id: ActionRevenantReap
+  name: Essence reap
+  description: Costs 10 Essence.
+  components:
+  - type: InstantAction
+    icon: Interface/Actions/shop.png
+    event: !type:RevenantReapActionEvent
+    useDelay: 60
