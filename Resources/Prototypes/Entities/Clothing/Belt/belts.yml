@@ -44,6 +44,7 @@
         - TrayScanner
         - GasAnalyzer
         - HandLabeler
+        - EnergySword
   - type: ItemMapper
     mapLayers:
       drill:
@@ -125,6 +126,7 @@
         - Geiger
         - TrayScanner
         - GasAnalyzer
+        - EnergySword
   - type: ItemMapper
     mapLayers:
       drill:
@@ -228,6 +230,7 @@
       components:
         - LightReplacer
         - SmokeOnTrigger
+        - EnergySword
     maxItemSize: Large
   - type: ItemMapper
     mapLayers:
@@ -277,6 +280,7 @@
         - Injector
         - Pill
         - HandLabeler
+        - EnergySword
   - type: ItemMapper
     mapLayers:
       bottle:
@@ -351,6 +355,7 @@
         - Seed
         - Smokable
         - HandLabeler
+        - EnergySword
   - type: ItemMapper
     mapLayers:
       hatchet:
@@ -412,6 +417,7 @@
         - Mousetrap
         - Smokable
         - Utensil
+        - EnergySword
   - type: ItemMapper
     mapLayers:
       kitchenknife:
@@ -492,6 +498,7 @@
         - DoorRemote
         - Whistle
         - BalloonPopper
+        - EnergySword
   - type: ItemMapper
     mapLayers:
       flashbang:
@@ -611,6 +618,7 @@
         - Gun
         - BallisticAmmoProvider
         - CartridgeAmmo
+        - EnergySword
 
 - type: entity
   parent: ClothingBeltSecurity
