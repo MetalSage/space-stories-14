@@ -1,6 +1,6 @@
 ### Interaction Messages
 
-food-you-need-to-hold-utensil = Вы должны держать { $utensil }, чтобы съесть это!
+food-you-need-to-hold-utensil = Вы должны держать {INDEFINITE($utensil)} {$utensil}, чтобы съесть это!
 food-nom = Ням. { $flavors }
 food-swallow = Вы проглатываете { $food }. { $flavors }
 food-has-used-storage = Вы не можете съесть { $food } пока внутри что-то есть.

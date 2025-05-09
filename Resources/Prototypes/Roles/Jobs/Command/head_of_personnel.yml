@@ -12,10 +12,10 @@
       time: 18000 #5 hrs # Corvax-RoleTime
     - !type:DepartmentTimeRequirement
       department: Security
-      time: 36000 # 10 hrs
+      time: 36000 # 10 hrs # Corvax-RoleTime
     - !type:DepartmentTimeRequirement
       department: Command
-      time: 36000 # 10 hours
+      time: 36000 # 10 hours # Corvax-RoleTime
   weight: 20
   startingGear: HoPGear
   icon: "JobIconHeadOfPersonnel"

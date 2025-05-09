@@ -11,6 +11,8 @@ device-frequency-prototype-name-cyborg-control = Управление кибор
 device-frequency-prototype-name-robotics-console = Консоль управления робототехникой
 device-frequency-prototype-name-turret = Сторожевая Турель
 device-frequency-prototype-name-turret-control = Подконтрольная Сторожевая Турель
+device-frequency-prototype-name-xenoborg = Ксеноборг
+device-frequency-prototype-name-mothership = Материнский корабль
 
 ## camera frequencies
 

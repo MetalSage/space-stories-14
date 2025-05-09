@@ -59,8 +59,14 @@
     - SingularityEngine
     - SingularityTeslaEngine
     - Power
+  - type: Tag
+    tags:
+    - GhostOnlyWarp
   - type: WarpPoint
     follow: true
     location: "! сингулярность"
+    blacklist:
+      tags:
+      - GhostOnlyWarp
   - type: Sprite
     sprite: null

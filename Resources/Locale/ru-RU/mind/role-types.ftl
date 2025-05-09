@@ -16,3 +16,19 @@ role-type-free-agent-color = #ffff00
 role-type-familiar-color = #6495ed
 role-type-silicon-color = #6495ed
 role-type-silicon-antagonist-color =#c832e6
+
+# Ideally, subtype names should be short
+role-subtype-traitor = Предатель
+role-subtype-thief = Вор
+role-subtype-ninja = Ниндзя
+role-subtype-nukie = Оперативник
+role-subtype-traitor-reinforcement = Подкрепление
+role-subtype-revolutionary = Революционер
+role-subtype-head-revolutionary = Глава Революции
+role-subtype-initial-infected = Инфицированный
+role-subtype-zombie = Зомби
+role-subtype-dragon = Дракон
+role-subtype-survivor = Выживший
+role-subtype-subverted = Неисправный
+role-subtype-paradox-clone = Парадокс
+role-subtype-wizard = Волшебник

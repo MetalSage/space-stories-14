@@ -233,24 +233,6 @@
     - !type:TileNotBlocked
 
 - type: construction
-  name: внутренняя стена шаттла # Stories-CraftTranslate
-  id: InteriorShuttleWall
-  graph: Girder
-  startNode: start
-  targetNode: shuttleInteriorWall
-  category: construction-category-structures
-  description: Удерживает воздух внутри, а ассистентов снаружи. # Stories-CraftTranslate
-  icon:
-    sprite: Structures/Walls/shuttleinterior.rsi
-    state: full
-  objectType: Structure
-  placementMode: SnapgridCenter
-  canRotate: false
-  canBuildInImpassable: false
-  conditions:
-    - !type:TileNotBlocked
-
-- type: construction
   name: диагональная стена шаттла # Stories-CraftTranslate
   id: DiagonalShuttleWall
   graph: Girder
@@ -813,6 +795,23 @@
   canBuildInImpassable: false
   conditions:
     - !type:TileNotBlocked
+
+- type: construction
+  name: турникет # Stories-CraftTranslate
+  id: Turnstile
+  graph: Turnstile
+  startNode: start
+  targetNode: turnstile
+  category: construction-category-structures
+  description: Механическая дверь, обеспечивающая односторонний доступ и препятствующая проникновению посторонних. # Stories-CraftTranslate
+  icon:
+    sprite: Structures/Doors/turnstile.rsi
+    state: turnstile
+  objectType: Structure
+  placementMode: SnapgridCenter
+  canBuildInImpassable: false
+  conditions:
+  - !type:TileNotBlocked
 
 - type: construction
   name: ставни # Stories-CraftTranslate

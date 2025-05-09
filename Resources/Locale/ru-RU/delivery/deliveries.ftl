@@ -33,3 +33,6 @@ ent-MailParentsNeedMoneySpam = Помогите маме и папе!
 
 ent-CargoMailTeleporter = почтовый телепорт
     .desc = Периодически телепортирует почту для доставки по всей станции.
+
+ent-MailSpamLetter = спам-письмо
+    .desc = Даже космос не защищен от нежелательной почты.

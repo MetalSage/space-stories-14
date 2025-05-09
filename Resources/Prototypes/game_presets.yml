@@ -39,6 +39,7 @@
     - Traitor
     - Revolutionary
     - Zombie
+    - Wizard
     - Shadowling # Stories
     - KesslerSyndromeScheduler
     - RampingStationEventScheduler
@@ -60,6 +61,7 @@
     - Traitor
     - Revolutionary
     - Zombie
+    - Wizard
     - Shadowling # Stories
     - BasicStationEventScheduler
     - KesslerSyndromeScheduler

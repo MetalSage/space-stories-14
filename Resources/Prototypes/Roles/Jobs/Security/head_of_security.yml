@@ -9,12 +9,12 @@
       time: 36000 #10 hrs # Stories-RoleTime
     - !type:RoleTimeRequirement
       role: JobSecurityOfficer
-      time: 36000 #10 hrs
+      time: 36000 #10 hrs # Corvax-RoleTime
     - !type:DepartmentTimeRequirement
       department: Security
-      time: 108000 # 30 hrs
+      time: 108000 # 30 hrs # Corvax-RoleTime
     - !type:OverallPlaytimeRequirement
-      time: 144000 #40 hrs
+      time: 144000 #40 hrs # Corvax-RoleTime
   weight: 10
   startingGear: HoSGear
   icon: "JobIconHeadOfSecurity"
