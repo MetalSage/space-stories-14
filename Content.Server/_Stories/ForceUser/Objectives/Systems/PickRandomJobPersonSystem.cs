@@ -24,7 +24,7 @@ public sealed class PickRandomJobPersonSystem : EntitySystem
     [Dependency] private readonly TargetObjectiveSystem _target = default!;
     [Dependency] private readonly IChatManager _chatManager = default!;
 
-    private const float UdateDelay = 30f;
+    private const float UdateDelay = 10f;
     private float _updateTime = 0;
 
     public override void Initialize()
