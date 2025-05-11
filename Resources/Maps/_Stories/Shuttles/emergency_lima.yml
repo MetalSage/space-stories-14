@@ -1,16 +1,16 @@
 meta:
   format: 7
-  category: Map
+  category: Grid
   engineVersion: 251.0.0
-  forkId: stories
-  forkVersion: 1f30a5d8d317f86f66b6dc6faaae579edea433f7
-  time: 05/04/2025 12:19:44
-  entityCount: 622
-maps:
-- 1
+  forkId: ""
+  forkVersion: ""
+  time: 05/11/2025 15:47:48
+  entityCount: 621
+maps: []
 grids:
 - 2
-orphans: []
+orphans:
+- 2
 nullspace: []
 tilemap:
   2: Space
@@ -29,25 +29,13 @@ tilemap:
 entities:
 - proto: ""
   entities:
-  - uid: 1
-    components:
-    - type: MetaData
-      name: Map Entity
-    - type: Transform
-    - type: Map
-      mapPaused: True
-    - type: PhysicsMap
-    - type: GridTree
-    - type: MovedGrids
-    - type: Broadphase
-    - type: OccluderTree
   - uid: 2
     components:
     - type: MetaData
       name: NT Evac Lima
     - type: Transform
       pos: -0.515625,-0.453125
-      parent: 1
+      parent: invalid
     - type: MapGrid
       chunks:
         0,0:
@@ -624,21 +612,7 @@ entities:
       linkedPorts:
         581:
         - DoorStatus: DoorBolt
-- proto: AirlockExternalLocked
-  entities:
-  - uid: 579
-    components:
-    - type: Transform
-      rot: 3.141592653589793 rad
-      pos: 9.5,16.5
-      parent: 2
-    - type: DeviceLinkSink
-      invokeCounter: 1
-    - type: DeviceLinkSource
-      linkedPorts:
-        578:
-        - DoorStatus: DoorBolt
-- proto: AirlockGlassShuttle
+- proto: AirlockExternalGlassShuttleEmergencyLocked
   entities:
   - uid: 153
     components:
@@ -670,6 +644,20 @@ entities:
       rot: -1.5707963267948966 rad
       pos: -0.5,-0.5
       parent: 2
+- proto: AirlockExternalLocked
+  entities:
+  - uid: 579
+    components:
+    - type: Transform
+      rot: 3.141592653589793 rad
+      pos: 9.5,16.5
+      parent: 2
+    - type: DeviceLinkSink
+      invokeCounter: 1
+    - type: DeviceLinkSource
+      linkedPorts:
+        578:
+        - DoorStatus: DoorBolt
 - proto: AirlockMedicalGlassLocked
   entities:
   - uid: 584
