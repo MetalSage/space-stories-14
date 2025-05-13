@@ -4,11 +4,18 @@
   id: MobAvali
   name: Urist C.M McRaptor
   components:
+  - type: MovementAlwaysTouching
+  - type: CanMoveInAir
+  - type: MovementSpeedModifier
+    weightlessAcceleration: 0.8
+    weightlessModifier: 0.6
   - type: HumanoidAppearance
     species: Avali
     hideLayersOnEquip:
     - HeadTop
     - HeadSide
+  - type: Body
+    prototype: Avali
   - type: Hunger
   - type: Thirst
   - type: Sprite

@@ -53,6 +53,7 @@
     heatDamage:
       types:
         Heat : 3 #per second, scales with temperature & other constants
+    atmosTemperatureTransferEfficiency: 0.01
   - type: Wagging
     action: ActionToggleVulpkaninWagging
 
