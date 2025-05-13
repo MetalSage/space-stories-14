@@ -4,8 +4,6 @@
   id: MobFelinid
   name: Urist McFelinid
   components:
-  - type: StandingState
-    crawlingSpeedModifier: 0.5
   - type: HumanoidAppearance
     species: Felinid
     hideLayersOnEquip:

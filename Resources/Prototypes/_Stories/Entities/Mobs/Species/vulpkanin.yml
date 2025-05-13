@@ -5,8 +5,6 @@
   id: BaseMobVulpkanin
   abstract: true
   components:
-  - type: StandingState
-    crawlingSpeedModifier: 0.5
   - type: ContentEye
     targetZoom: 1.2,1.2
     maxZoom: 1.2,1.2
