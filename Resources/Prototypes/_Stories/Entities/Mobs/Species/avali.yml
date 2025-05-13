@@ -4,9 +4,6 @@
   id: MobAvali
   name: Urist C.M McRaptor
   components:
-  - type: Damageable
-    damageContainer: Biological
-    damageModifierSet: Avali
   - type: MovementAlwaysTouching
   - type: CanMoveInAir
   - type: MovementSpeedModifier
