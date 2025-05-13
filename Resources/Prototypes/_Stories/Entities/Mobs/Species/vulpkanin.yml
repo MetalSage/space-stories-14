@@ -5,9 +5,6 @@
   id: BaseMobVulpkanin
   abstract: true
   components:
-  - type: ContentEye
-    targetZoom: 1.2,1.2
-    maxZoom: 1.2,1.2
   - type: HumanoidAppearance
     species: Vulpkanin
   - type: Hunger
@@ -56,6 +53,7 @@
     heatDamage:
       types:
         Heat : 3 #per second, scales with temperature & other constants
+    atmosTemperatureTransferEfficiency: 0.01
   - type: Wagging
     action: ActionToggleVulpkaninWagging
 
