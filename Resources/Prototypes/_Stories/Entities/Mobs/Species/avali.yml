@@ -4,22 +4,14 @@
   id: MobAvali
   name: Urist C.M McRaptor
   components:
-  - type: Temperature
-    heatDamageThreshold: 320
-    coldDamageThreshold: 230
-    currentTemperature: 310.15
-    specificHeat: 46
-    coldDamage:
-      types:
-        Cold: 0.05
-    heatDamage:
-      types:
-        Heat: 3
   - type: Damageable
     damageContainer: Biological
     damageModifierSet: Avali
   - type: MovementAlwaysTouching
   - type: CanMoveInAir
+  - type: MovementSpeedModifier
+    weightlessAcceleration: 0.8
+    weightlessModifier: 0.6
   - type: HumanoidAppearance
     species: Avali
     hideLayersOnEquip:
