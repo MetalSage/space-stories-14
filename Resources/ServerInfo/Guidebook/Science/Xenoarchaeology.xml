@@ -2,12 +2,16 @@
   # Ксеноархеология
   Ксеноархеология - это подразделение научного отдела, занимающееся исследованиями и экспериментами над инопланетными артефактами.
 
-  ## Артефакты
-  <Box>
-    <GuideEntityEmbed Entity="ComplexXenoArtifact" Caption=""/>
-    <GuideEntityEmbed Entity="SimpleXenoArtifactItem" Caption=""/>
-  </Box>
-  Артефакты представляют собой случайно сгенерированные структуры-графы. Они состоят из узлов, соединенных друг с другом, обход которых является главной целью ученых, работающих над ними.
+By researching the unique things each artifact can do, you gain Research Points, increase the artifact's sale value, and potentially discover a useful ability or two that can help your department or the whole station!
+
+## Artifact Nodes
+<Box>
+<GuideEntityEmbed Entity="ComplexXenoArtifact" Caption=""/>
+<GuideEntityEmbed Entity="ComplexXenoArtifactItem" Caption=""/>
+</Box>
+Artifacts consist of a randomly-generated tree of nodes. These nodes have a "[color=#a4885c]depth[/color]", representing how dangerous the node is, and the number of other nodes connected to it, called "[color=#a4885c]edges[/color]",
+
+Artifacts always start at depth zero, the root of the tree. Travelling the tree to find as many nodes as possible is the main goal of the scientists working on them. Knowledge is extracted from nodes to gain Research Points and increase the artifact's sale value.
 
   Каждый узел состоит из двух основных компонентов: [color=#a4885c]стимула[/color] и [color=#a4885c]реакции[/color]. Стимул - это внешнее поведение, которое вызывает реакцию. У одних реакций эффект мгновенный, а другие могут вызывать постоянные изменения. Срабатывание реакции вызывает перемещение артефакта к одному из соединённых узлов.
 

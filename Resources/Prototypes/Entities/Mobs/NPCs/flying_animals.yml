@@ -9,3 +9,7 @@
   - type: NoSlip
   - type: MovementAlwaysTouching
   - type: CanMoveInAir
+  # Stories-Start
+  - type: MobCollision
+    fixtureId: empty
+  # Stories-End

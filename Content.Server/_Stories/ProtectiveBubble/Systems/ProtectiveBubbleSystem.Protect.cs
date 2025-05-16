@@ -1,5 +1,6 @@
 using Robust.Shared.Physics.Events;
 using Content.Server._Stories.ForceUser.ProtectiveBubble.Components;
+using Content.Server.Administration.Commands;
 using Content.Shared.Projectiles;
 using Content.Shared.Damage;
 using Content.Shared.Rounding;
@@ -18,6 +19,20 @@ public sealed partial class ProtectiveBubbleSystem
         SubscribeLocalEvent<ProtectiveBubbleComponent, StartCollideEvent>(OnEntityEnter);
         SubscribeLocalEvent<ProtectiveBubbleComponent, PreventCollideEvent>(OnCollide);
         SubscribeLocalEvent<ProtectiveBubbleComponent, DamageChangedEvent>(OnDamage);
+    }
+    public void UpdateBubble(float frameTime)
+    {
+        var query = EntityQueryEnumerator<ProtectiveBubbleComponent>();
+        while (query.MoveNext(out var uid, out var component))
+        {
+            component.CurrentLifeTime -= frameTime;
+
+            if (component.CurrentLifeTime <= 0)
+            {
+                OnShutdown(uid, component, new ComponentShutdown());
+                _entityManager.DeleteEntity(uid);
+            }
+        }
     }
     private void OnDamage(EntityUid uid, ProtectiveBubbleComponent component, DamageChangedEvent args)
     {

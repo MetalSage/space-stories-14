@@ -5,3 +5,5 @@ ent-MopBucketFull = ведро для швабры
     .desc = { ent-MopBucket.desc }
 ent-JanitorialTrolley = тележка уборщика
     .desc = Это альфа и омега санитарии.
+ent-MopBucketCubeWrapped = кубик ведра для швабры
+    .desc = Разверните это, чтобы получился кубик для ведра для швабры.

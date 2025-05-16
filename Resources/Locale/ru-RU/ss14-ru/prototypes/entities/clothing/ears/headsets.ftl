@@ -36,3 +36,5 @@ ent-ClothingHeadsetGrey = гарнитура ассистента
     .desc = { ent-ClothingHeadset.desc }
 ent-ClothingHeadsetFreelance = гарнитура фрилансера
     .desc = Такими пользуются группы бродячих фрилансеров.
+ent-ClothingHeadsetWizard = гарнитура волшебника
+    .desc = Гарнитура которой пользовались страшные космические волшебники.

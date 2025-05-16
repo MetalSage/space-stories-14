@@ -5,6 +5,10 @@ spellbook-blink-name = Прыжок
 spellbook-blink-desc = Не моргайте, иначе вы не заметите, как телепортируетесь.
 spellbook-voidapplause-name = Хлопок пустоты
 spellbook-voidapplause-desc = Поменяйтесь местами с целью, разве вам не захотелось потанцевать буги?
+
+spellbook-knock-name = Стук
+spellbook-knock-desc = Открывает все воздушные шлюзы, ящики и заблокированные шкафчики поблизости.
+
 spellbook-force-wall-name = Силовой барьер
 spellbook-force-wall-desc = Создайте три стены чистой энергии, через которые вы можете пройти, а другие - нет.
 spellbook-repulse-name = Импульс

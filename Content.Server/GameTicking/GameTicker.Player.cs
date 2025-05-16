@@ -30,13 +30,10 @@ namespace Content.Server.GameTicking
 
             if (_mind.TryGetMind(session.UserId, out var mindId, out var mind))
             {
-                if (args.OldStatus == SessionStatus.Connecting && args.NewStatus == SessionStatus.Connected)
-				{
-                    mind.Session = session;
+                if (args.NewStatus != SessionStatus.Disconnected)
+                {
                     _pvsOverride.AddSessionOverride(mindId.Value, session);
                 }
-
-                DebugTools.Assert(mind.Session == session);
             }
 
             DebugTools.Assert(session.GetMind() == mindId);
@@ -126,12 +123,11 @@ namespace Content.Server.GameTicking
                 case SessionStatus.Disconnected:
                 {
                     _chatManager.SendAdminAnnouncement(Loc.GetString("player-leave-message", ("name", args.Session.Name)));
-                    if (mind != null)
+                    if (mindId != null)
                     {
-                        _pvsOverride.ClearOverride(GetNetEntity(mindId!.Value));
-                        mind.Session = null;
+                        _pvsOverride.RemoveSessionOverride(mindId.Value, session);
                     }
-                    
+
                     if (_playerGameStatuses.ContainsKey(args.Session.UserId)) // Corvax-Queue: Delete data only if player was in game
                         _userDb.ClientDisconnected(session);
                     break;

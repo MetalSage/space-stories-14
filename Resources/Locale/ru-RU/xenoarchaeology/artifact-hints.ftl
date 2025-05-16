@@ -41,3 +41,41 @@ artifact-trigger-hint-plasma = Газообразная плазма
 artifact-trigger-hint-land = Активное замедление
 artifact-trigger-hint-examine = Внимательное изучение
 artifact-trigger-hint-medical = Терапевтические химикаты
+
+xenoarch-trigger-tip-music = Гармоничные звуковые вибрации
+xenoarch-trigger-tip-heat = Газ с высокой температурой
+xenoarch-trigger-tip-cold = Газ с низкой температурой
+xenoarch-trigger-tip-no-oxygen = Безкислородная среда
+xenoarch-trigger-tip-water = Вода
+xenoarch-trigger-tip-co2 = Углекислый газ
+xenoarch-trigger-tip-plasma = Газообразная плазма
+xenoarch-trigger-tip-tritium = Тритий
+xenoarch-trigger-tip-ammonia = Аммиак
+xenoarch-trigger-tip-n2o = Оксид азота
+xenoarch-trigger-tip-frezon = Фрезон
+xenoarch-trigger-tip-radiation = Радиация
+xenoarch-trigger-tip-brute-damage = Физический урон
+xenoarch-trigger-tip-interaction = Физическое взаимодействие
+xenoarch-trigger-tip-wrenching = Затягивание
+xenoarch-trigger-tip-prying = Монтирование
+xenoarch-trigger-tip-screwing = Свинчивание
+xenoarch-trigger-tip-pulsing = Пульсация
+xenoarch-trigger-tip-pressure-low = Низкое давление
+xenoarch-trigger-tip-pressure-high = Высокое давление
+xenoarch-trigger-tip-examine = Тщательная проверка
+xenoarch-trigger-tip-timer = Регулярная самопроизвольная активация
+xenoarch-trigger-tip-blood = Кровь
+xenoarch-trigger-tip-throw = Бросок
+xenoarch-trigger-tip-death = Смерть
+xenoarch-trigger-tip-magnet = Магнитные волны
+
+### Подсказки описания
+xenoarch-trigger-examine-wrenching = Есть свободный элемент, вращающийся вокруг.
+xenoarch-trigger-examine-prying = Панель поднимается с поверхности.
+xenoarch-trigger-examine-screwing = Есть выступающая секция с небольшим углублением.
+xenoarch-trigger-examine-pulsing = Открытый диод торчит из поверхности артефакта.
+xenoarch-trigger-examine-timer = На поверхности покрыты резьбой и царапинами... Вы едва можете разглядеть число: [italic]{$time}[/italic]
+
+### Подсказки эффектов
+xenoarch-effect-puddle = Производит лужу из следующих реагентов: {$reagent}
+xenoarch-effect-foam = Производит пену из следующих реагентов: {$reagent}

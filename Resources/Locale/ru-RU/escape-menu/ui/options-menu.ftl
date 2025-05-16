@@ -217,6 +217,16 @@ ui-options-function-hotbar7 = 7 слот хотбара
 ui-options-function-hotbar8 = 8 слот хотбара
 ui-options-function-hotbar9 = 9 слот хотбара
 ui-options-function-hotbar0 = 0 слот хотбара
+ui-options-function-hotbarshift1 = Shift+1 слот хотбара
+ui-options-function-hotbarshift2 = Shift+2 слот хотбара
+ui-options-function-hotbarshift3 = Shift+3 слот хотбара
+ui-options-function-hotbarshift4 = Shift+4 слот хотбара
+ui-options-function-hotbarshift5 = Shift+5 слот хотбара
+ui-options-function-hotbarshift6 = Shift+6 слот хотбара
+ui-options-function-hotbarshift7 = Shift+7 слот хотбара
+ui-options-function-hotbarshift8 = Shift+8 слот хотбара
+ui-options-function-hotbarshift9 = Shift+9 слот хотбара
+ui-options-function-hotbarshift0 = Shift+0 слот хотбара
 ui-options-function-loadout1 = 1 страница хотбара
 ui-options-function-loadout2 = 2 страница хотбара
 ui-options-function-loadout3 = 3 страница хотбара
@@ -280,15 +290,37 @@ ui-options-speech-bubble-background-opacity = Прозрачность фона 
 
 ui-options-admin-player-panel = Меню Администратора Список Игроков
 
-ui-options-admin-playerlist-separate-symbols = Показывать отдельные символы для каждого типа роли антага
-ui-options-admin-playerlist-character-color = Цветные имена для персонажей антагонистов
-ui-options-admin-playerlist-roletype-color = Типы цветовых ролей
+ui-options-admin-player-tab-symbol-setting = Столбец символов антагониста
+ui-options-admin-player-tab-symbol-setting-off = Без символа антагониста
+ui-options-admin-player-tab-symbol-setting-basic = Показывать стандартный символ антагониста
+ui-options-admin-player-tab-symbol-setting-specific = Показывать особенный символ антагониста
+
+ui-options-admin-player-tab-role-setting = Настройки отображения ролей
+ui-options-admin-player-tab-role-setting-roletype = Показывать тип роли
+ui-options-admin-player-tab-role-setting-subtype = Показывать подтип
+ui-options-admin-player-tab-role-setting-roletypesubtype = Показать тип и подтип роли
+ui-options-admin-player-tab-role-setting-subtyperoletype = Показать подтип и тип роли
+
+ui-options-admin-player-tab-color-setting = Настройки цветов
+ui-options-admin-player-tab-color-setting-off = Я ненавижу цвета
+ui-options-admin-player-tab-color-setting-character = Разноцветные имена символов-антагонистов
+ui-options-admin-player-tab-color-setting-roletype = Разноцветные типы всех ролей
+ui-options-admin-player-tab-color-setting-both = Разноцветные рамки
 
 ui-options-admin-overlay-title = Админ Оверлей
-ui-options-enable-classic-overlay = Вернуть классический оверлей антагонистов
-ui-options-enable-overlay-symbols = Добавить символьный антаг текст
-ui-options-enable-overlay-playtime = Показывать наигранное время
-ui-options-enable-overlay-starting-job = Показывать начальную работу
-ui-options-overlay-merge-distance = Расстояние слияния стека
-ui-options-overlay-ghost-fade-distance = Призрачный оверлей диапозона затухания от мыши
-ui-options-overlay-ghost-hide-distance = Призрачный оверлей скрытия диапазон от мыши
+
+ui-options-admin-overlay-antag-format = Стиль метки антагониста
+ui-options-admin-overlay-antag-format-binary = Показать статус антагониста
+ui-options-admin-overlay-antag-format-roletype = Показывать тип роли антагониста
+ui-options-admin-overlay-antag-format-subtype = Показывать подтип
+
+ui-options-admin-overlay-antag-symbol = Стиль символа антагониста
+ui-options-admin-overlay-antag-symbol-off = Без символа антагониста
+ui-options-admin-overlay-antag-symbol-basic = Показывать стандартный символ антагониста
+ui-options-admin-overlay-antag-symbol-specific = Показывать особенный символ антагониста
+
+ui-options-admin-enable-overlay-playtime = Показывать наигранное время
+ui-options-admin-enable-overlay-starting-job = Показывать начальную работу
+ui-options-admin-overlay-merge-distance = Расстояние слияния стека
+ui-options-admin-overlay-ghost-fade-distance = Призрачный оверлей диапозона затухания от мыши
+ui-options-admin-overlay-ghost-hide-distance = Призрачный оверлей скрытия диапазон от мыши
