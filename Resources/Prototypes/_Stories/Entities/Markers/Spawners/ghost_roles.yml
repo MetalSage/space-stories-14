@@ -1,8 +1,9 @@
 - type: entity
-  categories: [ HideSpawnMenu ]
-  parent: BaseAntagSpawner
-  suffix: Инквизитор
+  categories: [ HideSpawnMenu, Spawner ]
   id: SpawnPointInquisitor
+  name: ghost role spawn point
+  suffix: Inquisitor
+  parent: BaseAntagSpawner
   components:
   - type: SpawnPoint
   - type: GhostRole
@@ -14,11 +15,12 @@
     layers:
       - state: green
       - sprite: _Stories/Mobs/Ghosts/inquisitor.rsi
-        state: inquisitor
+        state: icon
 
 - type: entity
+  categories: [ HideSpawnMenu, Spawner ]
   id: SpawnPointGhostSpaf
-  name: spaf spawn point
+  name: ghost role spawn point
   suffix: S.P.A.F.
   parent: MarkerBase
   components:

@@ -1,3 +1,4 @@
+ui-options-hotkey-auto-standing = Автоподъём с пола
 ui-options-function-toggle-standing = Лежать/Встать на пол
 
 ui-options-postprocess = Косметическая постобработка (может вызывать проблемы с производительностью)

@@ -218,75 +218,48 @@
 
         - to: TableFancyBlack
           steps:
-            - tag: CarpetBlack
-              name: чёрный ковёр # Stories-CraftTranslate
-              icon:
-                sprite: Objects/Tiles/tile.rsi
-                state: carpet-black
+            - material: FloorCarpetBlack
+              amount: 1
 
         - to: TableFancyBlue
           steps:
-            - tag: CarpetBlue
-              name: синий ковёр # Stories-CraftTranslate
-              icon:
-                sprite: Objects/Tiles/tile.rsi
-                state: carpet-blue
+            - material: FloorCarpetBlue
+              amount: 1
 
         - to: TableFancyCyan
           steps:
-            - tag: CarpetCyan
-              name: голубой ковёр # Stories-CraftTranslate
-              icon:
-                sprite: Objects/Tiles/tile.rsi
-                state: carpet-cyan
+            - material: FloorCarpetCyan
+              amount: 1
 
         - to: TableFancyGreen
           steps:
-            - tag: CarpetGreen
-              name: зелёный ковёр # Stories-CraftTranslate
-              icon:
-                sprite: Objects/Tiles/tile.rsi
-                state: carpet-green
+            - material: FloorCarpetGreen
+              amount: 1
 
         - to: TableFancyOrange
           steps:
-            - tag: CarpetOrange
-              name: оранжевый ковёр # Stories-CraftTranslate
-              icon:
-                sprite: Objects/Tiles/tile.rsi
-                state: carpet-orange
+            - material: FloorCarpetOrange
+              amount: 1
 
         - to: TableFancyPurple
           steps:
-            - tag: CarpetPurple
-              name: фиолетовый ковёр # Stories-CraftTranslate
-              icon:
-                sprite: Objects/Tiles/tile.rsi
-                state: carpet-purple
+            - material: FloorCarpetPurple
+              amount: 1
 
         - to: TableFancyPink
           steps:
-            - tag: CarpetPink
-              name: розовый ковёр # Stories-CraftTranslate
-              icon:
-                sprite: Objects/Tiles/tile.rsi
-                state: carpet-pink
+            - material: FloorCarpetPink
+              amount: 1
 
         - to: TableFancyRed
           steps:
-            - tag: CarpetRed
-              name: красный ковёр # Stories-CraftTranslate
-              icon:
-                sprite: Objects/Tiles/tile.rsi
-                state: carpet-red
+            - material: FloorCarpetRed
+              amount: 1
 
         - to: TableFancyWhite
           steps:
-            - tag: CarpetWhite
-              name: белый ковёр # Stories-CraftTranslate
-              icon:
-                sprite: Objects/Tiles/tile.rsi
-                state: carpet-white
+            - material: FloorCarpetWhite
+              amount: 1
 
     - node: TableCarpet
       entity: TableCarpet

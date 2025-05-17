@@ -233,24 +233,6 @@
     - !type:TileNotBlocked
 
 - type: construction
-  name: внутренняя стена шаттла # Stories-CraftTranslate
-  id: InteriorShuttleWall
-  graph: Girder
-  startNode: start
-  targetNode: shuttleInteriorWall
-  category: construction-category-structures
-  description: Удерживает воздух внутри, а ассистентов снаружи. # Stories-CraftTranslate
-  icon:
-    sprite: Structures/Walls/shuttleinterior.rsi
-    state: full
-  objectType: Structure
-  placementMode: SnapgridCenter
-  canRotate: false
-  canBuildInImpassable: false
-  conditions:
-    - !type:TileNotBlocked
-
-- type: construction
   name: диагональная стена шаттла # Stories-CraftTranslate
   id: DiagonalShuttleWall
   graph: Girder
@@ -598,7 +580,7 @@
   placementMode: SnapgridCenter
 
 - type: construction
-  name: диагональное окно # Stories-CraftTranslate
+  name: направленое окно # Stories-CraftTranslate
   id: WindowDirectional
   graph: WindowDirectional
   startNode: start
@@ -616,7 +598,7 @@
   placementMode: SnapgridCenter
 
 - type: construction
-  name: диагональное бронированное окно # Stories-CraftTranslate
+  name: направленое бронированное окно # Stories-CraftTranslate
   id: WindowReinforcedDirectional
   graph: WindowDirectional
   startNode: start
@@ -634,7 +616,7 @@
   placementMode: SnapgridCenter
 
 - type: construction
-  name: диагональное заводное окно # Stories-CraftTranslate
+  name: направленое заводное окно # Stories-CraftTranslate
   id: WindowClockworkDirectional
   graph: WindowDirectional
   startNode: start
@@ -652,7 +634,7 @@
   placementMode: SnapgridCenter
 
 - type: construction
-  name: диагональное плазменное окно # Stories-CraftTranslate
+  name: направленое плазменное окно # Stories-CraftTranslate
   id: PlasmaWindowDirectional
   graph: WindowDirectional
   startNode: start
@@ -670,7 +652,7 @@
   placementMode: SnapgridCenter
 
 - type: construction
-  name: диагональное плазменное бронеокно # Stories-CraftTranslate
+  name: направленое плазменное бронеокно # Stories-CraftTranslate
   id: PlasmaReinforcedWindowDirectional
   graph: WindowDirectional
   startNode: start
@@ -813,6 +795,23 @@
   canBuildInImpassable: false
   conditions:
     - !type:TileNotBlocked
+
+- type: construction
+  name: турникет # Stories-CraftTranslate
+  id: Turnstile
+  graph: Turnstile
+  startNode: start
+  targetNode: turnstile
+  category: construction-category-structures
+  description: Механическая дверь, обеспечивающая односторонний доступ и препятствующая проникновению посторонних. # Stories-CraftTranslate
+  icon:
+    sprite: Structures/Doors/turnstile.rsi
+    state: turnstile
+  objectType: Structure
+  placementMode: SnapgridCenter
+  canBuildInImpassable: false
+  conditions:
+  - !type:TileNotBlocked
 
 - type: construction
   name: ставни # Stories-CraftTranslate

@@ -1,7 +1,7 @@
 - type: gameMap
   id: StoriesCore
   mapName: 'Core'
-  mapPath: /Maps/core.yml
+  mapPath: /Maps/_Stories/core.yml
   minPlayers: 35
   maxPlayers: 70
   stations:

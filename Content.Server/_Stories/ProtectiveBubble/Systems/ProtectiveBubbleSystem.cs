@@ -16,6 +16,7 @@ public sealed partial class ProtectiveBubbleSystem : EntitySystem
     [Dependency] private readonly IComponentFactory _factory = default!;
     [Dependency] private readonly ForceSystem _force = default!;
     [Dependency] private readonly AlertsSystem _alerts = default!;
+    [Dependency] private readonly EntityManager _entityManager = default!;
     public override void Initialize()
     {
         base.Initialize();
@@ -28,5 +29,6 @@ public sealed partial class ProtectiveBubbleSystem : EntitySystem
         base.Update(frameTime);
         UpdateProtected(frameTime);
         UpdateUser(frameTime);
+        UpdateBubble(frameTime);
     }
 }

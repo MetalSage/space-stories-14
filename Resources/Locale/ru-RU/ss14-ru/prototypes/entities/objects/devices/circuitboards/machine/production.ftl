@@ -162,3 +162,5 @@ ent-CutterMachineCircuitboard = резательный станок (машин�
     .desc = { ent-BaseMachineCircuitboard.desc }
 ent-MailTeleporterMachineCircuitboard = почтовый телепорт (машинная плата)
     .desc = Печатная плата для почтового телепорта.
+ent-MaterialSiloMachineCircuitboard = бункер ресурсов (машинная плата)
+    .desc = { ent-BaseMachineCircuitboard.desc }

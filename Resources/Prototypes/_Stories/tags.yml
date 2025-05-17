@@ -1,4 +1,7 @@
 - type: Tag
+  id: STEmpire
+
+- type: Tag
   id: STCard
 
 - type: Tag

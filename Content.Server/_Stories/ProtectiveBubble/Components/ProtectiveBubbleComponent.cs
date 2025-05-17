@@ -18,4 +18,7 @@ public sealed partial class ProtectiveBubbleComponent : Component
 
     [DataField("temperatureCoefficient")]
     public float TemperatureCoefficient = 0f;
+
+    [ViewVariables(VVAccess.ReadOnly)]
+    public float CurrentLifeTime = 240f; // 4 minutes 30 seconds
 }

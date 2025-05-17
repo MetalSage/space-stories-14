@@ -65,6 +65,7 @@ namespace Content.IntegrationTests.Tests
             "StoriesBox",
             "StoriesFland",
             "StoriesKilo",
+            "StoriesLima",
             "StoriesMeta",
             "StoriesCore",
             "StoriesOmega",
@@ -93,7 +94,9 @@ namespace Content.IntegrationTests.Tests
             "Plasma",
             "Elkridge",
             "Convex",
-            "Relic"
+            "Relic",
+            "dm01-entryway"
+
         };
 
         /// <summary>

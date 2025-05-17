@@ -25,7 +25,7 @@ public sealed class DamageForceSaySystem : EntitySystem
         base.Initialize();
 
         SubscribeLocalEvent<DamageForceSayComponent, StunnedEvent>(OnStunned);
-        SubscribeLocalEvent<DamageForceSayComponent, MobStateChangedEvent>(OnMobStateChanged);
+        // SubscribeLocalEvent<DamageForceSayComponent, MobStateChangedEvent>(OnMobStateChanged); // Stories-Crit-Speech
 
         // need to raise after mobthreshold
         // so that we don't accidentally raise one for damage before one for mobstate

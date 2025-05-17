@@ -65,6 +65,9 @@ enabled = true
 [server]
 rules_file = "StoriesRuleset"
 
+[movement]
+mob_pushing = true
+
 [shuttle]
 auto_call_time = 0
 emergency_dock_time = 120

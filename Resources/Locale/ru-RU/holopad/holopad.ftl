@@ -83,7 +83,7 @@ holopad-medical-clinic = Медицинский - Клиника
 # Cargo
 holopad-cargo-front = Снабжение - Приёмная
 holopad-cargo-bay = Снабжение - Грузовой отсек
-holopad-cargo-salvage-bay = Снабжение - Утилизаторский отсек
+holopad-cargo-salvage-bay = Снабжение - Утилизационная
 holopad-cargo-breakroom = Снабжение - Комната отдыха
 holopad-cargo-ats = Снабжение - АТС
 holopad-cargo-shuttle = Снабжение - Шаттл

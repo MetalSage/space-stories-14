@@ -324,73 +324,73 @@
 
 - type: stack
   id: FloorCarpetRed
-  name: red carpet tile
+  name: красный ковёр # Stories-CraftTranslate
   spawn: FloorCarpetItemRed
   maxCount: 30
 
 - type: stack
   id: FloorCarpetBlack
-  name: block carpet tile
+  name: чёрный ковёр # Stories-CraftTranslate
   spawn: FloorCarpetItemBlack
   maxCount: 30
 
 - type: stack
   id: FloorCarpetBlue
-  name: blue carpet tile
+  name: синий ковёр # Stories-CraftTranslate
   spawn: FloorCarpetItemBlue
   maxCount: 30
 
 - type: stack
   id: FloorCarpetGreen
-  name: green carpet tile
+  name: зелёный ковёр # Stories-CraftTranslate
   spawn: FloorCarpetItemGreen
   maxCount: 30
 
 - type: stack
   id: FloorCarpetOrange
-  name: orange carpet tile
+  name: оранжевый ковёр # Stories-CraftTranslate
   spawn: FloorCarpetItemOrange
   maxCount: 30
 
 - type: stack
   id: FloorCarpetSkyBlue
-  name: skyblue carpet tile
+  name: небесно-голубой ковёр # Stories-CraftTranslate
   spawn: FloorCarpetItemSkyBlue
   maxCount: 30
 
 - type: stack
   id: FloorCarpetPurple
-  name: purple carpet tile
+  name: фиолетовый ковёр # Stories-CraftTranslate
   spawn: FloorCarpetItemPurple
   maxCount: 30
 
 - type: stack
   id: FloorCarpetPink
-  name: pink carpet tile
+  name: розовый ковёр # Stories-CraftTranslate
   spawn: FloorCarpetItemPink
   maxCount: 30
 
 - type: stack
   id: FloorCarpetCyan
-  name: cyan carpet tile
+  name: голубой ковёр # Stories-CraftTranslate
   spawn: FloorCarpetItemCyan
   maxCount: 30
 
 - type: stack
   id: FloorCarpetWhite
-  name: white carpet tile
+  name: белый ковёр # Stories-CraftTranslate
   spawn: FloorCarpetItemWhite
   maxCount: 30
 
 - type: stack
   id: FloorTileStackCarpetClown
-  name: clown carpet tile
+  name: клоунский ковёр # Stories-CraftTranslate
   spawn: FloorTileItemCarpetClown
   maxCount: 30
 
 - type: stack
   id: FloorTileStackCarpetOffice
-  name: office carpet tile
+  name: офисный ковёр # Stories-CraftTranslate
   spawn: FloorTileItemCarpetOffice
   maxCount: 30
 

@@ -6,6 +6,11 @@
   parent: BaseGameRule
   id: InquisitorSpawn
   components:
+  - type: StationEvent
+    earliestStart: 35
+    weight: 0
+    minimumPlayers: 25
+    duration: 1
   - type: AntagObjectives
     objectives:
     - KillGuardianNtObjective
@@ -14,18 +19,10 @@
   - type: AntagLoadProfileRule
     speciesOverride: Human
     speciesOverrideBlacklist:
-    #Species that do not work with nukies should be included in this list.
-    #Once the issues are fixed the species should be removed from this list to be enabled.
-    #Balance concerns are not a valid reason to disable a species, except for high-impact Nukie-specific exploits.
     - Vox
-  - type: StationEvent
-    earliestStart: 35
-    weight: 0
-    minimumPlayers: 25
-    duration: 1
   - type: RuleGrids
   - type: LoadMapRule
-    preloadedGrid: TIE
+    mapPath: /Maps/_Stories/Nonstations/inquisitor_station.yml
   - type: AntagSelection
     definitions:
     - spawnerPrototype: SpawnPointInquisitor
@@ -103,26 +100,23 @@
   parent: BaseGameRule
   id: KyloSpawn
   components:
-  - type: AntagLoadProfileRule
-    speciesOverride: Human
-    speciesOverrideBlacklist:
-    #Species that do not work with nukies should be included in this list.
-    #Once the issues are fixed the species should be removed from this list to be enabled.
-    #Balance concerns are not a valid reason to disable a species, except for high-impact Nukie-specific exploits.
-    - Vox
   - type: StationEvent
     earliestStart: 35
     weight: 0
-    minimumPlayers: 20
+    minimumPlayers: 25
     duration: 1
-  - type: RuleGrids
-  - type: LoadMapRule
-    preloadedGrid: TIE
   - type: AntagObjectives
     objectives:
     - KillGuardianNtObjective
     - InquisitorSurviveObjective
     - HypnosisObjective
+  - type: AntagLoadProfileRule
+    speciesOverride: Human
+    speciesOverrideBlacklist:
+    - Vox
+  - type: RuleGrids
+  - type: LoadMapRule
+    mapPath: /Maps/_Stories/Nonstations/inquisitor_station.yml
   - type: AntagSelection
     definitions:
     - spawnerPrototype: SpawnPointInquisitor
