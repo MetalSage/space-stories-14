@@ -16,3 +16,5 @@ ent-SyndicateSpongeBox = коробка кубиков обезьян
 ent-SyndicateSpongeWrapped = кубик обезьяны
     .desc = Разверните его, чтобы получить кубик обезьяны.
     .suffix = Завёрнутый, Синдикат
+ent-MopBucketCube = кубик ведра для швабры
+    .desc = Просто добавьте воды! А затем еще воды!

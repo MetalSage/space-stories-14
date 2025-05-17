@@ -10,9 +10,12 @@ comp-kitchen-spike-deny-not-dead =
     }!
 comp-kitchen-spike-begin-hook-victim = { CAPITALIZE($user) } начинает насаживать вас на { $this }!
 comp-kitchen-spike-begin-hook-self = Вы начинаете насаживать себя на { $this }!
-comp-kitchen-spike-kill = { CAPITALIZE($user) } насаживает { $victim } на мясной крюк, тем самым убивая { SUBJECT($victim) }!
-comp-kitchen-spike-suicide-other = { CAPITALIZE($victim) } бросается на мясной крюк!
-comp-kitchen-spike-suicide-self = Вы бросаетесь на мясной крюк!
+
+comp-kitchen-spike-kill = { CAPITALIZE(THE($user)) } насаживает { $victim } на { $this }, мгновенно убивая { OBJECT($victim) }!
+
+comp-kitchen-spike-suicide-other = { CAPITALIZE($victim) } бросается { REFLEXIVE($victim) } на { $this }!
+comp-kitchen-spike-suicide-self = Вы бросаетесь на { $this }!
+
 comp-kitchen-spike-knife-needed = Вам нужен нож для этого.
 comp-kitchen-spike-remove-meat = Вы срезаете немного мяса с { $victim }.
 comp-kitchen-spike-remove-meat-last = Вы срезаете последний кусок мяса с { $victim }!

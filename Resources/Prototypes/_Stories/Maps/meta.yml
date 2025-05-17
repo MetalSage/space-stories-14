@@ -1,7 +1,7 @@
 - type: gameMap
   id: StoriesMeta
   mapName: '[КТ] Meta Station'
-  mapPath: /Maps/meta.yml
+  mapPath: /Maps/_Stories/meta.yml
   minPlayers: 50
   stations:
     Meta:
