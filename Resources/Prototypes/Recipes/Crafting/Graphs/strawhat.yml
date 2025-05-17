@@ -7,22 +7,22 @@
         - to: strawhat
           steps:
             - tag: Wheat
-              name: сноп пшеницы # Stories-CraftTranslate
+              name: construction-graph-tag-wheat-bushel
               icon:
                 sprite: Objects/Specific/Hydroponics/wheat.rsi
                 state: produce
             - tag: Wheat
-              name: сноп пшеницы # Stories-CraftTranslate
+              name: construction-graph-tag-wheat-bushel
               icon:
                 sprite: Objects/Specific/Hydroponics/wheat.rsi
                 state: produce
             - tag: Wheat
-              name: сноп пшеницы # Stories-CraftTranslate
+              name: construction-graph-tag-wheat-bushel
               icon:
                 sprite: Objects/Specific/Hydroponics/wheat.rsi
                 state: produce
             - tag: Wheat
-              name: сноп пшеницы # Stories-CraftTranslate
+              name: construction-graph-tag-wheat-bushel
               icon:
                 sprite: Objects/Specific/Hydroponics/wheat.rsi
                 state: produce

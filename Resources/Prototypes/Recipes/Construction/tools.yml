@@ -1,54 +1,39 @@
 - type: construction
-  name: факел # Stories-CraftTranslate
   id: LightTorch
   graph: LightTorch
   startNode: start
   targetNode: torch
   category: construction-category-tools
-  description: Сделанный из дерева факел. # Stories-CraftTranslate
-  icon: { sprite: Objects/Misc/torch.rsi, state: icon }
   objectType: Item
 
 - type: construction
-  name: логический элемент # Stories-CraftTranslate
   id: LogicGate
   graph: LogicGate
   startNode: start
   targetNode: logic_gate
   category: construction-category-tools
-  description: Двоичный логический элемент для передачи сигналов. # Stories-CraftTranslate
-  icon: { sprite: Objects/Devices/gates.rsi, state: or_icon }
   objectType: Item
 
 - type: construction
-  name: детектор сигнала # Stories-CraftTranslate
   id: EdgeDetector
   graph: LogicGate
   startNode: start
   targetNode: edge_detector
   category: construction-category-tools
-  description: Детектор для сигналов. # Stories-CraftTranslate
-  icon: { sprite: Objects/Devices/gates.rsi, state: edge_detector }
   objectType: Item
 
 - type: construction
-  name: датчик питания # Stories-CraftTranslate
   id: PowerSensor
   graph: LogicGate
   startNode: start
   targetNode: power_sensor
   category: construction-category-tools
-  description: Устройство проверки сети питания для сигналов. # Stories-CraftTranslate
-  icon: { sprite: Objects/Devices/gates.rsi, state: power_sensor }
   objectType: Item
 
 - type: construction
-  name: ячейка памяти # Stories-CraftTranslate
   id: MemoryCell
   graph: LogicGate
   startNode: start
   targetNode: memory_cell
   category: construction-category-tools
-  description: Ячейка памяти для сигналов. # Stories-CraftTranslate
-  icon: { sprite: Objects/Devices/gates.rsi, state: memory_cell }
   objectType: Item

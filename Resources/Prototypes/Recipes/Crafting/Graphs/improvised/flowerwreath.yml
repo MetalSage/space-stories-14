@@ -7,17 +7,17 @@
         - to: flowerwreath
           steps:
             - tag: Flower
-              name: цветок # Stories-CraftTranslate
+              name: construction-graph-tag-flower
               icon:
                 sprite: Objects/Specific/Hydroponics/poppy.rsi
                 state: produce
             - tag: Flower
-              name: цветок # Stories-CraftTranslate
+              name: construction-graph-tag-flower
               icon:
                 sprite: Objects/Specific/Hydroponics/poppy.rsi
                 state: produce
             - tag: Ambrosia
-              name: амброзия # Stories-CraftTranslate
+              name: construction-graph-tag-ambrosia
               icon:
                 sprite: Objects/Specific/Hydroponics/ambrosia_vulgaris.rsi
                 state: produce

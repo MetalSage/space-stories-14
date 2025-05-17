@@ -1,32 +1,23 @@
 - type: construction
-  name: картофельная батарея # Stories-CraftTranslate
   id: PowerCellPotato
   graph: PowerCellPotato
   startNode: start
   targetNode: potatobattery
   category: construction-category-misc
-  description: Поистине гениальный источник энергии. # Stories-CraftTranslate
-  icon: { sprite: Objects/Power/power_cells.rsi, state: potato }
   objectType: Item
 
 - type: construction
-  name: картофельный ИИ # Stories-CraftTranslate
   id: PotatoAI
   graph: PotatoAI
   startNode: start
   targetNode: potatoai
   category: construction-category-misc
-  description: Картофель - идеальный источник питания чипа. # Stories-CraftTranslate
-  icon: { sprite: Objects/Fun/pai.rsi, state: icon-potato-off }
   objectType: Item
 
 - type: construction
-  name: сверхкомпактный чип ИИ # Stories-CraftTranslate
   id: PotatoAIChip
   graph: PotatoAIChip
   startNode: start
   targetNode: potatoaichip
   category: construction-category-misc
-  description: Искусно созданный(?) чип искусственного интеллекта, требующий настолько же импровизированный источник питания. # Stories-CraftTranslate
-  icon: { sprite: Objects/Misc/potatoai_chip.rsi, state: icon }
   objectType: Item

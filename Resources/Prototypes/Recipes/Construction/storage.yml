@@ -1,15 +1,10 @@
 #bureaucracy
 - type: construction
   id: FilingCabinet
-  name: картотечный шкаф # Stories-CraftTranslate
-  description: Шкаф для хранения всего, что пожелаете. # Stories-CraftTranslate
   graph: FilingCabinet
   startNode: start
   targetNode: filingCabinet
   category: construction-category-storage
-  icon:
-    sprite: Structures/Storage/cabinets.rsi
-    state: filingcabinet
   objectType: Structure
   placementMode: SnapgridCenter
   canBuildInImpassable: false
@@ -18,15 +13,10 @@
 
 - type: construction
   id: TallCabinet
-  name: высокий шкаф # Stories-CraftTranslate
-  description: Шкаф для хранения всего, что пожелаете. # Stories-CraftTranslate
   graph: FilingCabinet
   startNode: start
   targetNode: tallCabinet
   category: construction-category-storage
-  icon:
-    sprite: Structures/Storage/cabinets.rsi
-    state: tallcabinet
   objectType: Structure
   placementMode: SnapgridCenter
   canBuildInImpassable: false
@@ -35,15 +25,10 @@
 
 - type: construction
   id: ChestDrawer
-  name: комод # Stories-CraftTranslate
-  description: Маленький шкафчик для хранения предметов. Теперь на колёсиках! # Stories-CraftTranslate
   graph: FilingCabinet
   startNode: start
   targetNode: chestDrawer
   category: construction-category-storage
-  icon:
-    sprite: Structures/Storage/cabinets.rsi
-    state: chestdrawer
   objectType: Structure
   placementMode: SnapgridCenter
   canBuildInImpassable: false
@@ -53,15 +38,10 @@
 # ItemCabinets
 - type: construction
   id: ShowCase
-  name: витрина # Stories-CraftTranslate
-  description: Крепкая витрина для дорогостоящего экспоната. # Stories-CraftTranslate
   graph: GlassBox
   startNode: start
   targetNode: glassBox
   category: construction-category-storage
-  icon:
-    sprite: Structures/Storage/glassbox.rsi
-    state: icon
   objectType: Structure
   placementMode: SnapgridCenter
   canBuildInImpassable: false
@@ -72,14 +52,9 @@
 # Normals
 - type: construction
   id: ShelfWood
-  name: деревянная полка # Stories-CraftTranslate
-  description: Удобное место для размещения, ээ, да чего угодно. # Stories-CraftTranslate
   graph: Shelf
   startNode: start
   targetNode: ShelfWood
-  icon:
-    sprite: Structures/Storage/Shelfs/wood.rsi
-    state: base
   objectType: Structure
   placementMode: SnapgridCenter
   canBuildInImpassable: true
@@ -88,14 +63,9 @@
 
 - type: construction
   id: ShelfMetal
-  name: металлическая полка # Stories-CraftTranslate
-  description: Прочное место для размещения, ээ, да чего угодно. # Stories-CraftTranslate
   graph: Shelf
   startNode: start
   targetNode: ShelfMetal
-  icon:
-    sprite: Structures/Storage/Shelfs/metal.rsi
-    state: base
   objectType: Structure
   placementMode: SnapgridCenter
   canBuildInImpassable: true
@@ -104,14 +74,9 @@
 
 - type: construction
   id: ShelfGlass
-  name: стеклянная полка # Stories-CraftTranslate
-  description: Как обычная полка! Но хрупкая и без стенок! # Stories-CraftTranslate
   graph: Shelf
   startNode: start
   targetNode: ShelfGlass
-  icon:
-    sprite: Structures/Storage/Shelfs/glass.rsi
-    state: base
   objectType: Structure
   placementMode: SnapgridCenter
   canBuildInImpassable: true
@@ -121,14 +86,9 @@
 # Reinforced
 - type: construction
   id: ShelfRWood
-  name: прочная деревянная полка # Stories-CraftTranslate
-  description: Идеальное место для хранения всех ваших винтажных пластинок. # Stories-CraftTranslate
   graph: Shelf
   startNode: start
   targetNode: ShelfRWood
-  icon:
-    sprite: Structures/Storage/Shelfs/wood.rsi
-    state: rbase
   objectType: Structure
   placementMode: SnapgridCenter
   canBuildInImpassable: true
@@ -137,14 +97,9 @@
 
 - type: construction
   id: ShelfRMetal
-  name: прочная металлическая полка # Stories-CraftTranslate
-  description: Красивый и прочный, будет хранить ваши вещи в безопасности. # Stories-CraftTranslate
   graph: Shelf
   startNode: start
   targetNode: ShelfRMetal
-  icon:
-    sprite: Structures/Storage/Shelfs/metal.rsi
-    state: rbase
   objectType: Structure
   placementMode: SnapgridCenter
   canBuildInImpassable: true
@@ -153,14 +108,9 @@
 
 - type: construction
   id: ShelfRGlass
-  name: прочная стеклянная полка # Stories-CraftTranslate
-  description: Прозрачный корпус, высокая прочность, блестящий пластик. Как это не любить? # Stories-CraftTranslate
   graph: Shelf
   startNode: start
   targetNode: ShelfRGlass
-  icon:
-    sprite: Structures/Storage/Shelfs/glass.rsi
-    state: rbase
   objectType: Structure
   placementMode: SnapgridCenter
   canBuildInImpassable: true
@@ -170,14 +120,9 @@
 # Departmental
 - type: construction
   id: ShelfBar
-  name: барная полка # Stories-CraftTranslate
-  description: Удобное место для хранения всей вашей выпивки, специально разработанное для хранения большего количества бутылок! # Stories-CraftTranslate
   graph: Shelf
   startNode: start
   targetNode: ShelfBar
-  icon:
-    sprite: Structures/Storage/Shelfs/Departments/Service/bar.rsi
-    state: base
   objectType: Structure
   placementMode: SnapgridCenter
   canBuildInImpassable: true
@@ -186,14 +131,9 @@
 
 - type: construction
   id: ShelfKitchen
-  name: кухонная полка # Stories-CraftTranslate
-  description: Для хранения ножей, специй и всего прочего! # Stories-CraftTranslate
   graph: Shelf
   startNode: start
   targetNode: ShelfKitchen
-  icon:
-    sprite: Structures/Storage/Shelfs/Departments/Service/kitchen.rsi
-    state: base
   objectType: Structure
   placementMode: SnapgridCenter
   canBuildInImpassable: true
@@ -202,14 +142,9 @@
 
 - type: construction
   id: ShelfChemistry
-  name: химическая полка # Stories-CraftTranslate
-  description: Идеально подходит для обеспечения безопасности самых важных химических веществ, а также для того, чтобы они не попали в руки неуклюжих клоунов! # Stories-CraftTranslate
   graph: Shelf
   startNode: start
   targetNode: ShelfChemistry
-  icon:
-    sprite: Structures/Storage/Shelfs/Departments/Medical/chemistry.rsi
-    state: base
   objectType: Structure
   placementMode: SnapgridCenter
   canBuildInImpassable: true

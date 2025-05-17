@@ -7,13 +7,13 @@
     - to: icon
       steps:
       - tag: GlassShard
-        name: осколок стекла # Stories-CraftTranslate
+        name: construction-graph-tag-glass-shard
         icon:
           sprite: Objects/Materials/Shards/shard.rsi
           state: shard1
         doAfter: 1
       - tag: BrimFlatcapGrey
-        name: серая плоская кепка # Stories-CraftTranslate
+        name: construction-graph-tag-grey-flatcap
         icon:
           sprite: Clothing/Head/Hats/greyflatcap.rsi
           state: icon
@@ -29,13 +29,13 @@
     - to: icon
       steps:
       - tag: GlassShard
-        name: осколок стекла # Stories-CraftTranslate
+        name: construction-graph-tag-glass-shard
         icon:
           sprite: Objects/Materials/Shards/shard.rsi
           state: shard1
         doAfter: 1
       - tag: BrimFlatcapBrown
-        name: коричневая плоская кепка # Stories-CraftTranslate
+        name: construction-graph-tag-brown-flatcap
         icon:
           sprite: Clothing/Head/Hats/brownflatcap.rsi
           state: icon

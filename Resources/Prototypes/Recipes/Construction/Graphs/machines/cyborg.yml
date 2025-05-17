@@ -16,14 +16,14 @@
         store: part-container
 
       - component: Flash
-        name: вспышка # Stories-CraftTranslate
+        name: construction-graph-component-flash
         store: part-container
         icon:
           sprite: Objects/Weapons/Melee/flash.rsi
           state: flash
 
       - component: Flash
-        name: вторая вспышка # Stories-CraftTranslate
+        name: construction-graph-component-second-flash
         store: part-container
         icon:
           sprite: Objects/Weapons/Melee/flash.rsi

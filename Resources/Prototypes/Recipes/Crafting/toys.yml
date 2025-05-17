@@ -1,25 +1,15 @@
 ﻿- type: construction
-  name: плюшевый ревенант # Stories-CraftTranslate
   id: PlushieGhostRevenant
   graph: PlushieGhostRevenant
   startNode: start
   targetNode: plushie
   category: construction-category-misc
   objectType: Item
-  description: Игрушка, которой можно напугать медицинский отдел. # Stories-CraftTranslate
-  icon:
-    sprite: Mobs/Ghosts/revenant.rsi
-    state: icon
 
 - type: construction
-  name: костюм Иана # Stories-CraftTranslate
   id: ClothingOuterSuitIan
   graph: ClothingOuterSuitIan
   startNode: start
   targetNode: suit
   category: construction-category-misc
   objectType: Item
-  description: Сделай себя таким же, как Иан! # Stories-CraftTranslate
-  icon:
-    sprite: Clothing/OuterClothing/Suits/iansuit.rsi
-    state: icon

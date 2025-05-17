@@ -1,20 +1,13 @@
 ﻿- type: construction
-  name: компьютер # Stories-CraftTranslate
   id: Computer
   graph: Computer
   startNode: start
   targetNode: computer
   category: construction-category-machines
-  description: Каркас, используемый для создания чего-либо с помощью машинной платы. # Stories-CraftTranslate
   placementMode: SnapgridCenter
   canBuildInImpassable: false
-  icon:
-    sprite: Structures/Machines/parts.rsi
-    state: 4
 
 - type: construction
-  name: каркас машины # Stories-CraftTranslate
-  description: Строящаяся машина. Требуется больше деталей. # Stories-CraftTranslate
   id: MachineFrame
   graph: Machine
   startNode: start
@@ -22,56 +15,39 @@
   category: construction-category-machines
   placementMode: SnapgridCenter
   canBuildInImpassable: false
-  icon:
-    sprite: Structures/Machines/parts.rsi
-    state: "box_0"
 
 # Switching
 - type: construction
-  name: двухпозиционный рычаг # Stories-CraftTranslate
   id: TwoWayLeverRecipe
   graph: LeverGraph
   startNode: start
   targetNode: LeverNode
   category: construction-category-machines
-  description: Рычаг для управления машинами. Он имеет 3 рабочих состояния. # Stories-CraftTranslate
   objectType: Structure
   canBuildInImpassable: false
-  icon:
-    sprite: Structures/conveyor.rsi
-    state: switch-off
   conditions:
     - !type:TileNotBlocked
 
 - type: construction
-  name: переключатель сети ЛКП # Stories-CraftTranslate
   id: LightSwitchRecipe
   graph: LightSwitchGraph
   startNode: start
   targetNode: LightSwitchNode
   category: construction-category-machines
-  description: Это переключатель источников света, использующих локальный контроллер питания. # Stories-CraftTranslate
-  icon:
-    sprite: Structures/Wallmounts/switch.rsi
-    state: on
   objectType: Structure
   placementMode: SnapgridCenter
   canRotate: true
   canBuildInImpassable: true
   conditions:
     - !type:WallmountCondition
+  hide: true #TODO: Fix the lightswitch, issue #34659. Until then, keep hidden so people don't build it and get confused.
 
 - type: construction
-  name: переключатель сигнала # Stories-CraftTranslate
   id: SignalSwitchRecipe
   graph: SignalSwitchGraph
   startNode: start
   targetNode: SignalSwitchNode
   category: construction-category-machines
-  description: Это переключатель питания устройств. # Stories-CraftTranslate
-  icon:
-    sprite: Structures/Wallmounts/switch.rsi
-    state: on
   objectType: Structure
   placementMode: SnapgridCenter
   canRotate: true
@@ -80,16 +56,11 @@
     - !type:WallmountCondition
 
 - type: construction
-  name: кнопка сигнала # Stories-CraftTranslate
   id: SignalButtonRecipe
   graph: SignalButtonGraph
   startNode: start
   targetNode: SignalButtonNode
   category: construction-category-machines
-  description: Эта кнопка что-то активирует. # Stories-CraftTranslate
-  icon:
-    sprite: Structures/Wallmounts/switch.rsi
-    state: on
   objectType: Structure
   placementMode: SnapgridCenter
   canRotate: true
@@ -98,34 +69,25 @@
     - !type:WallmountCondition
 
 - type: construction
-  name: направленный переключатель сети ЛКП # Stories-CraftTranslate
   id: LightSwitchDirectionalRecipe
   graph: LightSwitchDirectionalGraph
   startNode: start
   targetNode: LightSwitchDirectionalNode
   category: construction-category-machines
-  description: Это переключатель источников света, использующих локальный контроллер питания. # Stories-CraftTranslate
-  icon:
-    sprite: Structures/Wallmounts/switch.rsi
-    state: on
   objectType: Structure
   placementMode: SnapgridCenter
   canRotate: true
   canBuildInImpassable: true
   conditions:
     - !type:WallmountCondition
+  hide: true #TODO: Fix the lightswitch, issue #34659. Until then, keep hidden so people don't build it and get confused.
 
 - type: construction
-  name: направленный переключатель сигнала # Stories-CraftTranslate
   id: SignalSwitchDirectionalRecipe
   graph: SignalSwitchDirectionalGraph
   startNode: start
   targetNode: SignalSwitchDirectionalNode
   category: construction-category-machines
-  description: Это переключатель питания устройств. # Stories-CraftTranslate
-  icon:
-    sprite: Structures/Wallmounts/switch.rsi
-    state: on
   objectType: Structure
   placementMode: SnapgridCenter
   canRotate: true
@@ -134,16 +96,11 @@
     - !type:WallmountCondition
 
 - type: construction
-  name: направленная кнопка сигнала # Stories-CraftTranslate
   id: SignalButtonDirectionalRecipe
   graph: SignalButtonDirectionalGraph
   startNode: start
   targetNode: SignalButtonDirectionalNode
   category: construction-category-machines
-  description: Эта кнопка что-то активирует. # Stories-CraftTranslate
-  icon:
-    sprite: Structures/Wallmounts/switch.rsi
-    state: on
   objectType: Structure
   placementMode: SnapgridCenter
   canRotate: true

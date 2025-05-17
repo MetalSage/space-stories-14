@@ -74,7 +74,7 @@
   Заказы доставляются на станцию через орбитальную [color=cyan]Торговую станцию[/color] и доставляются на главную станцию в [color=cyan]Грузовом шаттле[color].
 
   <Box>
-    <GuideEntityEmbed Entity="ComputerCargoShuttle"/>
+    <GuideEntityEmbed Entity="ComputerShuttleCargo"/>
   </Box>
   После нажатия на компьютер вы должны увидеть изображение шаттла на радаре. Вот шаги по управлению шаттлом туда и обратно:
 

@@ -1,10 +1,7 @@
 - type: construction
-  name: бананиумовый клаксон # Stories-CraftTranslate
   id: HornBananium
   graph: BananiumHorn
   startNode: start
   targetNode: bananiumHorn
   category: construction-category-weapons
-  description: Клаксон, сделанный из бананиума. # Stories-CraftTranslate
-  icon: { sprite: Objects/Fun/bananiumhorn.rsi, state: icon }
   objectType: Item

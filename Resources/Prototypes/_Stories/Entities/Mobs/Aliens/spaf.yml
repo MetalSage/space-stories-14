@@ -94,7 +94,7 @@
     actions:
     - ActionSpafStealth
     - ActionSpafLube
-    # - ActionSpafMine Сломалось.
+    - ActionSpafMine
     - ActionSpafFood
     - ActionSpafGlue
     - ActionSpafEgg

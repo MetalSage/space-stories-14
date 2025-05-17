@@ -1,12 +1,7 @@
 ﻿- type: construction
-  name: инопланетный артефакт # Stories-CraftTranslate
   id: Artifact
   graph: Artifact
   startNode: start
   targetNode: done
   category: construction-category-misc
   objectType: Item
-  description: Странный инопланетный артефакт. # Stories-CraftTranslate
-  icon:
-    sprite: Objects/Specific/Xenoarchaeology/item_artifacts.rsi
-    state: ano01

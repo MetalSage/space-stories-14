@@ -1,142 +1,103 @@
 - type: construction
-  name: скафандр клоуна # Stories-CraftTranslate
   id: ClownHardsuit
   graph: ClownHardsuit
   startNode: start
   targetNode: clownHardsuit
   category: construction-category-clothing
-  description: Самодельный клоунский скафандр. # Stories-CraftTranslate
-  icon: { sprite: Clothing/OuterClothing/Hardsuits/clown.rsi, state: icon }
   objectType: Item
 
 - type: construction
-  name: скафандр мима # Stories-CraftTranslate
   id: MimeHardsuit
   graph: MimeHardsuit
   startNode: start
   targetNode: mimeHardsuit
   category: construction-category-clothing
-  description: Самодельный мимский скафандр. # Stories-CraftTranslate
-  icon: { sprite: Clothing/OuterClothing/Hardsuits/mime.rsi, state: icon }
   objectType: Item
 
 - type: construction
-  name: костяной доспех # Stories-CraftTranslate
   id: BoneArmor
   graph: BoneArmor
   startNode: start
   targetNode: armor
   category: construction-category-clothing
-  description: Доспехи из костей. # Stories-CraftTranslate
-  icon: { sprite: Clothing/OuterClothing/Armor/bone_armor.rsi, state: icon }
   objectType: Item
 
 - type: construction
-  name: костяной шлем # Stories-CraftTranslate
   id: BoneHelmet
   graph: BoneHelmet
   startNode: start
   targetNode: helmet
   category: construction-category-clothing
-  description: Шлем, сделанный из костей. # Stories-CraftTranslate
-  icon: { sprite: Clothing/Head/Helmets/bone_helmet.rsi, state: icon }
   objectType: Item
 
 - type: construction
-  name: банановая маска клоуна # Stories-CraftTranslate
   id: BananaClownMask
   graph: BananaClownMask
   startNode: start
   targetNode: mask
   category: construction-category-clothing
-  description: Маска клоуна, украшенных банановой кожурой. # Stories-CraftTranslate
-  icon: { sprite: Clothing/Mask/clown_banana.rsi, state: icon }
   objectType: Item
 
 - type: construction
-  name: банановый костюм клоуна # Stories-CraftTranslate
   id: BananaClownJumpsuit
   graph: BananaClownJumpsuit
   startNode: start
   targetNode: jumpsuit
   category: construction-category-clothing
-  description: Костюм клоуна, украшенных банановой кожурой. # Stories-CraftTranslate
-  icon: { sprite: Clothing/Uniforms/Jumpsuit/clown_banana.rsi, state: icon }
   objectType: Item
 
 - type: construction
-  name: банановые клоунские туфли # Stories-CraftTranslate
   id: BananaClownShoes
   graph: BananaClownShoes
   startNode: start
   targetNode: shoes
   category: construction-category-clothing
-  description: Пара клоунских туфель, украшенных банановой кожурой. # Stories-CraftTranslate
-  icon: { sprite: Clothing/Shoes/Specific/clown_banana.rsi, state: icon }
   objectType: Item
 
 - type: construction
-  name: мед-охранный визор # Stories-CraftTranslate
   id: ClothingEyesHudMedSec
   graph: HudMedSec
   startNode: start
   targetNode: medsecHud
   category: construction-category-clothing
-  description: Два визора, объединённых руками. # Stories-CraftTranslate
-  icon: { sprite: Clothing/Eyes/Hud/medsec.rsi, state: icon }
   objectType: Item
 
 - type: construction
-  name: тапки-уточки # Stories-CraftTranslate
   id: ClothingShoeSlippersDuck
   graph: ClothingShoeSlippersDuck
   startNode: start
   targetNode: shoes
   category: construction-category-clothing
-  description: Удобные, но преследуемые призраками уток, которых вы кормили хлебом в детстве. # Stories-CraftTranslate
-  icon: { sprite: Clothing/Shoes/Misc/duck-slippers.rsi, state: icon }
   objectType: Item
 
 - type: construction
-  name: плюшевые тапочки в виде унатха # Stories-CraftTranslate
   id: ClothingShoeSlippersLizard
   graph: ClothingShoeSlippersLizard
   startNode: start
   targetNode: shoes
   category: construction-category-clothing
-  description: Очаровательные тапочки, напоминающие унатха. Сочетайте их с какой-нибудь другой одеждой зеленого цвета, и вы станете самым крутым членом экипажа на станции! # Stories-CraftTranslate
-  icon: { sprite: Clothing/Shoes/Misc/lizard-slippers.rsi, state: icon }
   objectType: Item
 
 - type: construction
-  name: очки охраны # Stories-CraftTranslate
   id: ClothingEyesGlassesSecurity
   graph: GlassesSecHUD
   startNode: start
   targetNode: glassesSec
   category: construction-category-clothing
-  description: Пара солнцезащитных очков, объединённых для того, чтобы иметь встроенный визор службы безопасности. # Stories-CraftTranslate
-  icon: { sprite: Clothing/Eyes/Glasses/secglasses.rsi, state: icon }
   objectType: Item
 
 - type: construction
-  name: колчан # Stories-CraftTranslate
   id: ClothingBeltQuiver
   graph: Quiver
   startNode: start
   targetNode: Quiver
   category: construction-category-clothing
-  description: Вмещает до 15 стрел и плотно облегает талию. # Stories-CraftTranslate
-  icon: { sprite: Clothing/Belt/quiver.rsi, state: icon }
   objectType: Item
 
 - type: construction
-  name: шлем правосудия # Stories-CraftTranslate
   id: ClothingHeadHelmetJustice
   graph: HelmetJustice
   startNode: start
   targetNode: helmet
   category: construction-category-clothing
-  description: Продвинутое снаряжение службы безопасности. Защищает станцию от никчёмных сотрудников. # Stories-CraftTranslate
-  icon: { sprite: Clothing/Head/Helmets/justice.rsi, state: icon }
   objectType: Item

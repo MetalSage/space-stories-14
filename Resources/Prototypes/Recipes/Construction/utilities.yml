@@ -1,44 +1,29 @@
 # SURVEILLANCE
 - type: construction
-  name: камера # Stories-CraftTranslate
   id: camera
   graph: SurveillanceCamera
   startNode: start
   targetNode: camera
   category: construction-category-utilities
-  description: "Камера наблюдения. Она следит. Скоро." # Stories-CraftTranslate
-  icon:
-    sprite: Structures/Wallmounts/camera.rsi
-    state: camera
   objectType: Structure
   placementMode: SnapgridCenter
 
 - type: construction
-  name: телеэкран # Stories-CraftTranslate
   id: WallmountTelescreen
   graph: WallmountTelescreen
   startNode: start
   targetNode: Telescreen
   category: construction-category-utilities
-  description: "Настенный монитор для камер наблюдения." # Stories-CraftTranslate
-  icon:
-    sprite: Structures/Machines/computers.rsi
-    state: telescreen_frame
   objectType: Structure
   placementMode: SnapgridCenter
   canBuildInImpassable: true
 
 - type: construction
-  name: карта станции # Stories-CraftTranslate
   id: StationMap
   graph: StationMap
   startNode: start
   targetNode: station_map
   category: construction-category-structures
-  description: Карта станции. # Stories-CraftTranslate
-  icon:
-    sprite: Structures/Machines/station_map.rsi
-    state: station_map0
   placementMode: SnapgridCenter
   objectType: Structure
   canRotate: true
@@ -48,84 +33,57 @@
 
 # POWER
 - type: construction
-  name: ЛКП # Stories-CraftTranslate
   id: APC
   graph: APC
   startNode: start
   targetNode: apc
   category: construction-category-utilities
-  description: "Локальный контроллер питания (ЛКП). Управляет мощностью тока. В области." # Stories-CraftTranslate
-  icon:
-    sprite: Structures/Power/apc.rsi
-    state: base
   objectType: Structure
   placementMode: SnapgridCenter
   canBuildInImpassable: true
 
 - type: construction
-  name: кабельный терминал # Stories-CraftTranslate
   id: CableTerminal
   graph: CableTerminal
   startNode: start
   targetNode: cable_terminal
   category: construction-category-utilities
-  description: "Подключается к устройствам, таких как СМЭС. Красные кабели должны подключаться к устройству." # Stories-CraftTranslate
-  icon:
-    sprite: Structures/Power/cable_terminal.rsi
-    state: term
   objectType: Structure
   placementMode: SnapgridCenter
   canBuildInImpassable: false
 
 - type: construction
-  name: настенная подстанция # Stories-CraftTranslate
   id: WallmountSubstation
   graph: WallmountSubstation
   startNode: start
   targetNode: substation
   category: construction-category-utilities
-  description: "Настенная подстанция для компактных помещений. Прежде чем возводить стену, обязательно проложите под ней кабель." # Stories-CraftTranslate
-  icon:
-    sprite: Structures/Power/substation.rsi
-    state: substation_wall
   objectType: Structure
   placementMode: SnapgridCenter
   canBuildInImpassable: true
 
 - type: construction
-  name: настенный генератор # Stories-CraftTranslate
   id: WallmountGenerator
   graph: WallmountGenerator
   startNode: start
   targetNode: generator
   category: construction-category-utilities
-  description: "Настенный генератор для компактных пространств. Обязательно поместите кабель внизу, прежде чем строить стену." # Stories-CraftTranslate
-  icon:
-    sprite: Structures/Power/Generation/wallmount_generator.rsi
-    state: panel
   objectType: Structure
   placementMode: SnapgridCenter
   canBuildInImpassable: true
 
 - type: construction
-  name: настенная ВСУ # Stories-CraftTranslate
   id: WallmountGeneratorAPU
   graph: WallmountGenerator
   startNode: start
   targetNode: APU
   category: construction-category-utilities
-  description: "Настенный ВСУ для компактных шаттлов. Обязательно поместите кабель внизу, прежде чем строить стену." # Stories-CraftTranslate
-  icon:
-    sprite: Structures/Power/Generation/wallmount_generator.rsi
-    state: panel
   objectType: Structure
   placementMode: SnapgridCenter
   canBuildInImpassable: true
 
 # DISPOSALS
 - type: construction
-  name: утилизационный блок # Stories-CraftTranslate
-  description: Пневматическая установка для утилизации отходов. # Stories-CraftTranslate
   id: DisposalUnit
   graph: DisposalMachine
   startNode: start
@@ -133,13 +91,8 @@
   category: construction-category-utilities
   placementMode: SnapgridCenter
   canBuildInImpassable: false
-  icon:
-    sprite: Structures/Piping/disposal.rsi
-    state: "disposal"
 
 - type: construction
-  name: почтовый блок # Stories-CraftTranslate
-  description: Пневматическая установка для доставки почты. # Stories-CraftTranslate
   id: MailingUnit
   graph: DisposalMachine
   startNode: start
@@ -147,27 +100,17 @@
   category: construction-category-utilities
   placementMode: SnapgridCenter
   canBuildInImpassable: false
-  icon:
-    sprite: Structures/Piping/disposal.rsi
-    state: "mailing"
 
 - type: construction
-  name: утилизационная труба # Stories-CraftTranslate
   id: DisposalPipe
-  description: Большой сегмент трубы, используемый при создании системы утилизации. # Stories-CraftTranslate
   graph: DisposalPipe
   startNode: start
   targetNode: pipe
   category: construction-category-utilities
   placementMode: SnapgridCenter
   canBuildInImpassable: false
-  icon:
-    sprite: Structures/Piping/disposal.rsi
-    state: conpipe-s
 
 - type: construction
-  name: маркировщик утилизационной трубы # Stories-CraftTranslate
-  description: Труба, маркирующая объекты для отправки определённому адресату. # Stories-CraftTranslate
   id: DisposalTagger
   graph: DisposalPipe
   startNode: start
@@ -175,13 +118,8 @@
   category: construction-category-utilities
   placementMode: SnapgridCenter
   canBuildInImpassable: false
-  icon:
-    sprite: Structures/Piping/disposal.rsi
-    state: conpipe-tagger
 
 - type: construction
-  name: ствол утилизационной трубы # Stories-CraftTranslate
-  description: Труба, используемая в качестве точки входа в систему утилизации. # Stories-CraftTranslate
   id: DisposalTrunk
   graph: DisposalPipe
   startNode: start
@@ -189,13 +127,8 @@
   category: construction-category-utilities
   placementMode: SnapgridCenter
   canBuildInImpassable: false
-  icon:
-    sprite: Structures/Piping/disposal.rsi
-    state: conpipe-t
 
 - type: construction
-  name: маршрутизатор утилизационной трубы # Stories-CraftTranslate
-  description: Трёхсторонний маршрутизатор. Объекты с совпадающими маркерами уходят в сторону с помощью настраиваемых фильтров. # Stories-CraftTranslate
   id: DisposalRouter
   graph: DisposalPipe
   startNode: start
@@ -203,15 +136,10 @@
   category: construction-category-utilities
   placementMode: SnapgridCenter
   canBuildInImpassable: false
-  icon:
-    sprite: Structures/Piping/disposal.rsi
-    state: conpipe-j1s
   mirror: DisposalRouterFlipped
 
 - type: construction
   hide: true
-  name: маршрутизатор утилизационной трубы # Stories-CraftTranslate
-  description: Трёхсторонний маршрутизатор. Объекты с совпадающими маркерами уходят в сторону с помощью настраиваемых фильтров. # Stories-CraftTranslate
   id: DisposalRouterFlipped
   graph: DisposalPipe
   startNode: start
@@ -219,14 +147,9 @@
   category: construction-category-utilities
   placementMode: SnapgridCenter
   canBuildInImpassable: false
-  icon:
-    sprite: Structures/Piping/disposal.rsi
-    state: conpipe-j2s
   mirror: DisposalRouter
 
 - type: construction
-  name: сигнальный утилизационный маршрутизатор # Stories-CraftTranslate
-  description: Трёхсторонний маршрутизатор, управляемый сигналами. # Stories-CraftTranslate
   id: DisposalSignalRouter
   graph: DisposalPipe
   startNode: start
@@ -234,15 +157,10 @@
   category: construction-category-utilities
   placementMode: SnapgridCenter
   canBuildInImpassable: false
-  icon:
-    sprite: Structures/Piping/disposal.rsi
-    state: signal-router-free
   mirror: DisposalSignalRouterFlipped
 
 - type: construction
   hide: true
-  name: сигнальный утилизационный маршрутизатор # Stories-CraftTranslate
-  description: Трёхсторонний маршрутизатор, управляемый сигналами. # Stories-CraftTranslate
   id: DisposalSignalRouterFlipped
   graph: DisposalPipe
   startNode: start
@@ -250,14 +168,9 @@
   category: construction-category-utilities
   placementMode: SnapgridCenter
   canBuildInImpassable: false
-  icon:
-    sprite: Structures/Piping/disposal.rsi
-    state: signal-router-flipped-free
   mirror: DisposalSignalRouter
 
 - type: construction
-  name: развязка утилизационной трубы # Stories-CraftTranslate
-  description: Трёхсторонняя развязка. Стрелка указывает на место выхода объектов. # Stories-CraftTranslate
   id: DisposalJunction
   graph: DisposalPipe
   startNode: start
@@ -265,15 +178,10 @@
   category: construction-category-utilities
   placementMode: SnapgridCenter
   canBuildInImpassable: false
-  icon:
-    sprite: Structures/Piping/disposal.rsi
-    state: conpipe-j1
   mirror: DisposalJunctionFlipped
 
 - type: construction
   hide: true
-  name: развязка утилизационной трубы # Stories-CraftTranslate
-  description: Трёхсторонняя развязка. Стрелка указывает на место выхода объектов. # Stories-CraftTranslate
   id: DisposalJunctionFlipped
   graph: DisposalPipe
   startNode: start
@@ -281,14 +189,9 @@
   category: construction-category-utilities
   placementMode: SnapgridCenter
   canBuildInImpassable: false
-  icon:
-    sprite: Structures/Piping/disposal.rsi
-    state: conpipe-j2
   mirror: DisposalJunction
 
 - type: construction
-  name: Y-развязка утилизационной трубы # Stories-CraftTranslate
-  description: Трёхсторонняя развязка с альтернативным местом выхода. # Stories-CraftTranslate
   id: DisposalYJunction
   graph: DisposalPipe
   startNode: start
@@ -296,13 +199,17 @@
   category: construction-category-utilities
   placementMode: SnapgridCenter
   canBuildInImpassable: false
-  icon:
-    sprite: Structures/Piping/disposal.rsi
-    state: conpipe-y
 
 - type: construction
-  name: изгиб утилизационной трубы # Stories-CraftTranslate
-  description: Труба, согнутая под прямым углом. # Stories-CraftTranslate
+  id: DisposalXJunction
+  graph: DisposalPipe
+  startNode: start
+  targetNode: xJunction
+  category: construction-category-utilities
+  placementMode: SnapgridCenter
+  canBuildInImpassable: false
+
+- type: construction
   id: DisposalBend
   graph: DisposalPipe
   startNode: start
@@ -310,22 +217,14 @@
   category: construction-category-utilities
   placementMode: SnapgridCenter
   canBuildInImpassable: false
-  icon:
-    sprite: Structures/Piping/disposal.rsi
-    state: conpipe-c
 
 # ATMOS
 - type: construction
-  name: воздушная сигнализация # Stories-CraftTranslate
   id: AirAlarmFixture
   graph: AirAlarm
   startNode: start
   targetNode: air_alarm
   category: construction-category-structures
-  description: Воздушная сигнализация. Сигнализация... воздуха? # Stories-CraftTranslate
-  icon:
-    sprite: Structures/Wallmounts/air_monitors.rsi
-    state: alarm0
   placementMode: SnapgridCenter
   objectType: Structure
   canRotate: true
@@ -334,16 +233,11 @@
   - !type:WallmountCondition {}
 
 - type: construction
-  name: пожарная сигнализация # Stories-CraftTranslate
   id: FireAlarm
   graph: FireAlarm
   startNode: start
   targetNode: fire_alarm
   category: construction-category-structures
-  description: Пожарная сигнализация. Огонь! # Stories-CraftTranslate
-  icon:
-    sprite: Structures/Wallmounts/air_monitors.rsi
-    state: fire0
   placementMode: SnapgridCenter
   objectType: Structure
   canRotate: true
@@ -352,110 +246,73 @@
   - !type:WallmountCondition {}
 
 - type: construction
-  name: сенсор воздуха # Stories-CraftTranslate
   id: AirSensor
   graph: AirSensor
   startNode: start
   targetNode: sensor
   category: construction-category-structures
-  description: Воздушный сенсор. Чувствует воздух. # Stories-CraftTranslate
-  icon:
-    sprite: Structures/Specific/Atmospherics/sensor.rsi
-    state: gsensor1
   placementMode: SnapgridCenter
   objectType: Structure
   canRotate: true
 
 - type: construction
-  name: датчик газовой трубы # Stories-CraftTranslate
   id: GasPipeSensor
   graph: GasPipeSensor
   startNode: start
   targetNode: sensor
   category: construction-category-structures
-  description: Сообщает о состоянии газа в присоединенной сети труб. # Stories-CraftTranslate
-  icon:
-    sprite: Structures/Piping/Atmospherics/gas_pipe_sensor.rsi
-    state: icon
   placementMode: SnapgridCenter
   objectType: Structure
   canRotate: true
 
 # ATMOS PIPES
 - type: construction
-  name: половина газовой трубы # Stories-CraftTranslate
   id: GasPipeHalf
-  description: Половина газовой трубы. Не скейтборд. # Stories-CraftTranslate
   graph: GasPipe
   startNode: start
   targetNode: half
   category: construction-category-utilities
   placementMode: SnapgridCenter
   canBuildInImpassable: true
-  icon:
-    sprite: Structures/Piping/Atmospherics/pipe.rsi
-    state: pipeHalf
 
 - type: construction
-  name: прямая газовая труба # Stories-CraftTranslate
   id: GasPipeStraight
-  description: Отрезок прямой трубы. # Stories-CraftTranslate
   graph: GasPipe
   startNode: start
   targetNode: straight
   category: construction-category-utilities
   placementMode: SnapgridCenter
   canBuildInImpassable: true
-  icon:
-    sprite: Structures/Piping/Atmospherics/pipe.rsi
-    state: pipeStraight
 
 - type: construction
-  name: угловая газовая труба # Stories-CraftTranslate
   id: GasPipeBend
-  description: Угловая труба, согнутый под углом 90 градусов. # Stories-CraftTranslate
   graph: GasPipe
   startNode: start
   targetNode: bend
   category: construction-category-utilities
   placementMode: SnapgridCenter
   canBuildInImpassable: true
-  icon:
-    sprite: Structures/Piping/Atmospherics/pipe.rsi
-    state: pipeBend
 
 - type: construction
-  name: Т-образная газовая труба # Stories-CraftTranslate
   id: GasPipeTJunction
-  description: Отрезок трубы с Т-образным соединением. # Stories-CraftTranslate
   graph: GasPipe
   startNode: start
   targetNode: tjunction
   category: construction-category-utilities
   placementMode: SnapgridCenter
   canBuildInImpassable: true
-  icon:
-    sprite: Structures/Piping/Atmospherics/pipe.rsi
-    state: pipeTJunction
 
 - type: construction
-  name: четверная газовая труба # Stories-CraftTranslate
   id: GasPipeFourway
-  description: Отрезок трубы с четверным соединением. # Stories-CraftTranslate
   graph: GasPipe
   startNode: start
   targetNode: fourway
   category: construction-category-utilities
   placementMode: SnapgridCenter
   canBuildInImpassable: true
-  icon:
-    sprite: Structures/Piping/Atmospherics/pipe.rsi
-    state: pipeFourway
 
 # ATMOS UNARY
 - type: construction
-  name: вентиляция # Stories-CraftTranslate
-  description: Подает газ в помещение. # Stories-CraftTranslate
   id: GasVentPump
   graph: GasUnary
   startNode: start
@@ -463,20 +320,10 @@
   category: construction-category-utilities
   placementMode: SnapgridCenter
   canBuildInImpassable: false
-  icon:
-    sprite: Structures/Piping/Atmospherics/vent.rsi
-    state: vent_off
-  layers:
-  - sprite: Structures/Piping/Atmospherics/pipe.rsi
-    state: pipeHalf
-  - sprite: Structures/Piping/Atmospherics/vent.rsi
-    state: vent_off
   conditions:
     - !type:NoUnstackableInTile
 
 - type: construction
-  name: пассивная вентиляция # Stories-CraftTranslate
-  description: Вентиляция не требующее питания, которая выравнивает уровень газов с обеих сторон # Stories-CraftTranslate
   id: GasPassiveVent
   graph: GasUnary
   startNode: start
@@ -484,20 +331,10 @@
   category: construction-category-utilities
   placementMode: SnapgridCenter
   canBuildInImpassable: false
-  icon:
-    sprite: Structures/Piping/Atmospherics/vent.rsi
-    state: vent_passive
-  layers:
-  - sprite: Structures/Piping/Atmospherics/pipe.rsi
-    state: pipeHalf
-  - sprite: Structures/Piping/Atmospherics/vent.rsi
-    state: vent_passive
   conditions:
     - !type:NoUnstackableInTile
 
 - type: construction
-  name: скруббер # Stories-CraftTranslate
-  description: Высасывает газ в подключенные трубы. # Stories-CraftTranslate
   id: GasVentScrubber
   graph: GasUnary
   startNode: start
@@ -505,20 +342,10 @@
   category: construction-category-utilities
   placementMode: SnapgridCenter
   canBuildInImpassable: false
-  icon:
-    sprite: Structures/Piping/Atmospherics/scrubber.rsi
-    state: scrub_off
-  layers:
-  - sprite: Structures/Piping/Atmospherics/pipe.rsi
-    state: pipeHalf
-  - sprite: Structures/Piping/Atmospherics/scrubber.rsi
-    state: scrub_off
   conditions:
     - !type:NoUnstackableInTile
 
 - type: construction
-  name: инжектор # Stories-CraftTranslate
-  description: Впрыскивает газ в атмосферу. # Stories-CraftTranslate
   id: GasOutletInjector
   graph: GasUnary
   startNode: start
@@ -526,42 +353,22 @@
   category: construction-category-utilities
   placementMode: SnapgridCenter
   canBuildInImpassable: false
-  icon:
-    sprite: Structures/Piping/Atmospherics/outletinjector.rsi
-    state: injector
-  layers:
-  - sprite: Structures/Piping/Atmospherics/pipe.rsi
-    state: pipeHalf
-  - sprite: Structures/Piping/Atmospherics/outletinjector.rsi
-    state: injector
   conditions:
     - !type:NoUnstackableInTile
 
 # ATMOS BINARY
 - type: construction
-  name: газовый насос # Stories-CraftTranslate
   id: GasPressurePump
-  description: Насос, перемещающий газ под определённым давлением. # Stories-CraftTranslate
   graph: GasBinary
   startNode: start
   targetNode: pressurepump
   category: construction-category-utilities
   placementMode: SnapgridCenter
   canBuildInImpassable: false
-  icon:
-    sprite: Structures/Piping/Atmospherics/pump.rsi
-    state: pumpPressure
-  layers:
-  - sprite: Structures/Piping/Atmospherics/pipe.rsi
-    state: pipeStraight
-  - sprite: Structures/Piping/Atmospherics/pump.rsi
-    state: pumpPressure
   conditions:
     - !type:NoUnstackableInTile
 
 - type: construction
-  name: объёмный газовый насос # Stories-CraftTranslate
-  description: Насос, перемещающий газ с определённым объёмом. # Stories-CraftTranslate
   id: GasVolumePump
   graph: GasBinary
   startNode: start
@@ -569,162 +376,89 @@
   category: construction-category-utilities
   placementMode: SnapgridCenter
   canBuildInImpassable: false
-  icon:
-    sprite: Structures/Piping/Atmospherics/pump.rsi
-    state: pumpVolume
-  layers:
-  - sprite: Structures/Piping/Atmospherics/pipe.rsi
-    state: pipeStraight
-  - sprite: Structures/Piping/Atmospherics/pump.rsi
-    state: pumpVolume
   conditions:
     - !type:NoUnstackableInTile
 
 - type: construction
   id: GasPassiveGate
-  name: пассивный клапан # Stories-CraftTranslate
-  description: Односторонний воздушный клапан, не требующий питания. # Stories-CraftTranslate
   graph: GasBinary
   startNode: start
   targetNode: passivegate
   category: construction-category-utilities
   placementMode: SnapgridCenter
   canBuildInImpassable: false
-  icon:
-    sprite: Structures/Piping/Atmospherics/pump.rsi
-    state: pumpPassiveGate
-  layers:
-  - sprite: Structures/Piping/Atmospherics/pipe.rsi
-    state: pipeStraight
-  - sprite: Structures/Piping/Atmospherics/pump.rsi
-    state: pumpPassiveGate
   conditions:
     - !type:NoUnstackableInTile
 
 - type: construction
   id: GasValve
-  name: ручной клапан # Stories-CraftTranslate
-  description: Труба с клапаном, которым можно перекрыть поток проходящего по ней газа. # Stories-CraftTranslate
   graph: GasBinary
   startNode: start
   targetNode: valve
   category: construction-category-utilities
   placementMode: SnapgridCenter
   canBuildInImpassable: false
-  icon:
-    sprite: Structures/Piping/Atmospherics/pump.rsi
-    state: pumpManualValve
-  layers:
-  - sprite: Structures/Piping/Atmospherics/pipe.rsi
-    state: pipeStraight
-  - sprite: Structures/Piping/Atmospherics/pump.rsi
-    state: pumpManualValve
   conditions:
     - !type:NoUnstackableInTile
 
 - type: construction
   id: SignalControlledValve
-  name: сигнальный клапан # Stories-CraftTranslate
-  description: Можно контролировать при помощи сигналов. # Stories-CraftTranslate
   graph: GasBinary
   startNode: start
   targetNode: signalvalve
   category: construction-category-utilities
   placementMode: SnapgridCenter
   canBuildInImpassable: false
-  icon:
-    sprite: Structures/Piping/Atmospherics/pump.rsi
-    state: pumpSignalValve
-  layers:
-  - sprite: Structures/Piping/Atmospherics/pipe.rsi
-    state: pipeStraight
-  - sprite: Structures/Piping/Atmospherics/pump.rsi
-    state: pumpSignalValve
   conditions:
   - !type:NoUnstackableInTile
 
 - type: construction
   id: GasPort
-  name: соединительный порт # Stories-CraftTranslate
-  description: Для подключения портативных устройств, связанных с управлением атмосферой. # Stories-CraftTranslate
   graph: GasBinary
   startNode: start
   targetNode: port
   category: construction-category-utilities
   placementMode: SnapgridCenter
   canBuildInImpassable: false
-  icon:
-    sprite: Structures/Piping/Atmospherics/gascanisterport.rsi
-    state: gasCanisterPort
-  layers:
-  - sprite: Structures/Piping/Atmospherics/pipe.rsi
-    state: pipeHalf
-  - sprite: Structures/Piping/Atmospherics/gascanisterport.rsi
-    state: gasCanisterPort
   conditions:
     - !type:NoUnstackableInTile
 
 - type: construction
   id: GasDualPortVentPump
-  name: двухпортовая вентиляция # Stories-CraftTranslate
-  description: Имеет клапан и прикреплённый к нему насос. Один вход для закачивания воздуха, другой - для откачивания. # Stories-CraftTranslate
   graph: GasBinary
   startNode: start
   targetNode: dualportventpump
   category: construction-category-utilities
   placementMode: SnapgridCenter
   canBuildInImpassable: false
-  icon:
-    sprite: Structures/Piping/Atmospherics/vent.rsi
-    state: vent_off
-  layers:
-  - sprite: Structures/Piping/Atmospherics/pipe.rsi
-    state: pipeStraight
-  - sprite: Structures/Piping/Atmospherics/vent.rsi
-    state: vent_off
 
 - type: construction
   id: HeatExchanger
-  name: радиатор # Stories-CraftTranslate
-  description: Переносит тепло между трубой и окружающей средой. # Stories-CraftTranslate
   graph: GasBinary
   startNode: start
   targetNode: radiator
   category: construction-category-utilities
   placementMode: SnapgridCenter
   canBuildInImpassable: false
-  icon:
-    sprite: Structures/Piping/Atmospherics/heatexchanger.rsi
-    state: heStraight
 
 - type: construction
   id: HeatExchangerBend
-  name: угловой радиатор # Stories-CraftTranslate
-  description: Переносит тепло между трубой и окружающей средой. # Stories-CraftTranslate
   graph: GasBinary
   startNode: start
   targetNode: bendradiator
   category: construction-category-utilities
   placementMode: SnapgridCenter
   canBuildInImpassable: false
-  icon:
-    sprite: Structures/Piping/Atmospherics/heatexchanger.rsi
-    state: heBend
 
 # ATMOS TRINARY
 - type: construction
   id: GasFilter
-  name: газовый фильтр # Stories-CraftTranslate
-  description: Очень полезен для фильтрации газов. # Stories-CraftTranslate
   graph: GasTrinary
   startNode: start
   targetNode: filter
   category: construction-category-utilities
   placementMode: SnapgridCenter
   canBuildInImpassable: false
-  icon:
-    sprite: Structures/Piping/Atmospherics/gasfilter.rsi
-    state: gasFilter
   mirror: GasFilterFlipped
   conditions:
     - !type:NoUnstackableInTile
@@ -732,34 +466,24 @@
 - type: construction
   id: GasFilterFlipped
   hide: true
-  name: газовый фильтр # Stories-CraftTranslate
-  description: Очень полезен для фильтрации газов. # Stories-CraftTranslate
   graph: GasTrinary
   startNode: start
   targetNode: filterflipped
   category: construction-category-utilities
   placementMode: SnapgridCenter
   canBuildInImpassable: false
-  icon:
-    sprite: Structures/Piping/Atmospherics/gasfilter.rsi
-    state: gasFilterF
   mirror: GasFilter
   conditions:
     - !type:NoUnstackableInTile
 
 - type: construction
   id: GasMixer
-  name: газовый смеситель # Stories-CraftTranslate
-  description: Очень полезен для смешивания газов. # Stories-CraftTranslate
   graph: GasTrinary
   startNode: start
   targetNode: mixer
   category: construction-category-utilities
   placementMode: SnapgridCenter
   canBuildInImpassable: false
-  icon:
-    sprite: Structures/Piping/Atmospherics/gasmixer.rsi
-    state: gasMixer
   mirror: GasMixerFlipped
   conditions:
     - !type:NoUnstackableInTile
@@ -767,49 +491,34 @@
 - type: construction
   id: GasMixerFlipped
   hide: true
-  name: газовый смеситель # Stories-CraftTranslate
-  description: Очень полезен для смешивания газов. # Stories-CraftTranslate
   graph: GasTrinary
   startNode: start
   targetNode: mixerflipped
   category: construction-category-utilities
   placementMode: SnapgridCenter
   canBuildInImpassable: false
-  icon:
-    sprite: Structures/Piping/Atmospherics/gasmixer.rsi
-    state: gasMixerF
   mirror: GasMixer
   conditions:
     - !type:NoUnstackableInTile
 
 - type: construction
   id: PressureControlledValve
-  name: пневматический клапан # Stories-CraftTranslate
-  description: Двунаправленный клапан, управляемый давлением. Открывается, если давление в одной трубе ниже давления другой трубы на 101,325 кПа. # Stories-CraftTranslate
   graph: GasTrinary
   startNode: start
   targetNode: pneumaticvalve
   category: construction-category-utilities
   placementMode: SnapgridCenter
   canBuildInImpassable: false
-  icon:
-    sprite: Structures/Piping/Atmospherics/pneumaticvalve.rsi
-    state: off
   conditions:
     - !type:NoUnstackableInTile
 
 # INTERCOM
 - type: construction
-  name: интерком # Stories-CraftTranslate
   id: IntercomAssembly
   graph: Intercom
   startNode: start
   targetNode: intercom
   category: construction-category-structures
-  description: Интерком. На случай, когда необходимо что-то сообщить станции. # Stories-CraftTranslate
-  icon:
-    sprite: Structures/Wallmounts/intercom.rsi
-    state: base
   placementMode: SnapgridCenter
   objectType: Structure
   canRotate: true
@@ -819,16 +528,11 @@
 
 # TIMERS
 - type: construction
-  name: таймер сигнала # Stories-CraftTranslate
   id: SignalTimer
   graph: Timer
   startNode: start
   targetNode: signal
   category: construction-category-utilities
-  description: "Настенный таймер для подачи на устройства сигналов через определённое время." # Stories-CraftTranslate
-  icon:
-    sprite: Structures/Wallmounts/switch.rsi
-    state: on
   objectType: Structure
   placementMode: SnapgridCenter
   canBuildInImpassable: true
@@ -836,16 +540,11 @@
   - !type:WallmountCondition
 
 - type: construction
-  name: таймер сигнала с экраном # Stories-CraftTranslate
   id: ScreenTimer
   graph: Timer
   startNode: start
   targetNode: screen
   category: construction-category-utilities
-  description: "Настенный таймер для подачи на устройства сигналов через определённое время. У этого есть экран для отображения текста." # Stories-CraftTranslate
-  icon:
-    sprite: Structures/Wallmounts/signalscreen.rsi
-    state: signalscreen
   objectType: Structure
   canRotate: false
   placementMode: SnapgridCenter
@@ -854,16 +553,11 @@
   - !type:WallmountCondition
 
 - type: construction
-  name: бриг-таймер # Stories-CraftTranslate
   id: BrigTimer
   graph: Timer
   startNode: start
   targetNode: brig
   category: construction-category-utilities
-  description: "Настенный таймер для подачи на устройства сигналов через определённое время. У этого есть экран для отображения текста и требует доступа службы безопасности для использования" # Stories-CraftTranslate
-  icon:
-    sprite: Structures/Wallmounts/signalscreen.rsi
-    state: signalscreen
   objectType: Structure
   canRotate: false
   placementMode: SnapgridCenter

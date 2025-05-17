@@ -201,3 +201,5 @@ ent-FloorTileItemAstroAsteroidSand = астро-песок астероида
     .desc = Искусственный песок. К счастью, он не такой крупнозернистый, как настоящий.
 ent-FloorTileItemWoodLarge = большой деревянный пол
     .desc = { ent-FloorTileItemBase.desc }
+ent-FloorTileItemAstroAsteroidSandBorderless = безграничная астероидная астро-песчаная плитка
+    .desc = Искусственный песок. К счастью, он не такой шершавый, как настоящий.

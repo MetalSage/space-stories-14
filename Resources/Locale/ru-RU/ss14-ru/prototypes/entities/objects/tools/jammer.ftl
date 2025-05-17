@@ -5,3 +5,5 @@ ent-RadioJammer = { ent-AppraisalTool }
 
 # Corvax-HiddenDesc-End
 
+ent-XenoborgRadioJammer = глушительный модуль ксеноборга
+    .desc = Это устройство при активации будет глушить любую ближайшую исходящую радиосвязь, а также работу датчиков скафандров.

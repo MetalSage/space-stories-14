@@ -1,255 +1,159 @@
 - type: construction
-  name: бейсбольная бита # Stories-CraftTranslate
   id: bat
   graph: WoodenBat
   startNode: start
   targetNode: bat
   category: construction-category-weapons
-  description: Прочная бейсбольная бита. # Stories-CraftTranslate
-  icon:
-    sprite: Objects/Weapons/Melee/baseball_bat.rsi
-    state: icon
   objectType: Item
 
 - type: construction
-  name: простыня-призрак # Stories-CraftTranslate
   id: ghost_sheet
   graph: GhostSheet
   startNode: start
   targetNode: ghost_sheet
   category: construction-category-clothing
-  description: Стань жутким привидением. Бу! # Stories-CraftTranslate
-  icon:
-    sprite: Clothing/OuterClothing/Misc/ghostsheet.rsi
-    state: icon
   objectType: Item
 
 - type: construction
-  name: самодельные наручники # Stories-CraftTranslate
   id: makeshifthandcuffs
   graph: makeshifthandcuffs
   startNode: start
   targetNode: cuffscable
   category: construction-category-tools
-  description: "Самодельные наручники, изготовленные из запасных кабелей." # Stories-CraftTranslate
-  icon: { sprite: Objects/Misc/cablecuffs.rsi, state: cuff }
   objectType: Item
 
 - type: construction
-  name: шок-палка # Stories-CraftTranslate
   id: makeshiftstunprod
   graph: makeshiftstunprod
   startNode: start
   targetNode: msstunprod
   category: construction-category-weapons
-  description: "Самодельная шок-палка." # Stories-CraftTranslate
-  icon: { sprite: Objects/Weapons/Melee/stunprod.rsi, state: stunprod_off }
   objectType: Item
 
 - type: construction
-  name: намордник # Stories-CraftTranslate
   id: muzzle
   graph: Muzzle
   startNode: start
   targetNode: muzzle
   category: construction-category-tools
   objectType: Item
-  description: "Чтобы прекратить этот ужасный шум." # Stories-CraftTranslate
-  icon:
-    sprite: Clothing/Mask/muzzle.rsi
-    state: icon
 
 - type: construction
-  name: импровизированная пневматическая пушка # Stories-CraftTranslate
   id: pneumaticcannon
   graph: PneumaticCannon
   startNode: start
   targetNode: cannon
   category: construction-category-weapons
   objectType: Item
-  description: Этот сукин сын может выстрелить из всего, что в него поместится, используя совсем немного газа. # Stories-CraftTranslate
-  icon:
-    sprite: Objects/Weapons/Guns/Cannons/pneumatic_cannon.rsi
-    state: icon
 
 - type: construction
-  name: марлевый бинт # Stories-CraftTranslate
   id: gauze
   graph: Gauze
   startNode: start
   targetNode: gauze
   category: construction-category-tools
   objectType: Item
-  description: Когда у тебя действительно ничего не останется. # Stories-CraftTranslate
-  icon:
-    sprite: Objects/Specific/Medical/medical.rsi
-    state: gauze
 
 - type: construction
-  name: повязка на глаза # Stories-CraftTranslate
   id: blindfold
   graph: Blindfold
   startNode: start
   targetNode: blindfold
   category: construction-category-tools
   objectType: Item
-  description: Лучше надейся, что все закроют глаза на то, что ты создаешь этот странный предмет... # Stories-CraftTranslate
-  icon:
-    sprite: Clothing/Eyes/Misc/blindfold.rsi
-    state: icon
 
 - type: construction
-  name: цветочный венок # Stories-CraftTranslate
   id: flowerwreath
   graph: flowerwreath
   startNode: start
   targetNode: flowerwreath
   category: construction-category-clothing
-  description: Венок из красочных цветов. Можно носить как на голове, так и на шее. # Stories-CraftTranslate
-  icon:
-    sprite: Clothing/Head/Misc/flower-wreath.rsi
-    state: icon
   objectType: Item
 
 - type: construction
-  name: тряпка # Stories-CraftTranslate
   id: rag
   graph: Rag
   startNode: start
   targetNode: rag
   category: construction-category-tools
   objectType: Item
-  description: Влажной тряпкой вытереть пол. Так будет лучше, чем весь день скользить по нему. # Stories-CraftTranslate
-  icon:
-    sprite: Objects/Specific/Janitorial/rag.rsi
-    state: rag
 
 - type: construction
-  name: самодельный дробовик # Stories-CraftTranslate
   id: improvisedshotgun
   graph: ImprovisedShotgunGraph
   startNode: start
   targetNode: shotgun
   category: construction-category-weapons
   objectType: Item
-  description: Дерьмовый однозарядный дробовик, сделанный из найденных и изготовленных вручную из оружейных деталей. Боеприпасы в комплект не входят. # Stories-CraftTranslate
-  icon:
-    sprite: Objects/Weapons/Guns/Shotguns/improvised_shotgun.rsi
-    state: icon
 
 - type: construction
-  name: самодельный ружейный патрон # Stories-CraftTranslate
   id: ShellShotgunImprovised
   graph: ImprovisedShotgunShellGraph
   startNode: start
   targetNode: shell
   category: construction-category-weapons
   objectType: Item
-  description: Самодельный патрон для дробовика, который стреляет болезненной стеклянной шрапнелью. Разброс осколков настолько велик, что они не могут попасть в широкую стену сарая. # Stories-CraftTranslate
-  icon:
-    sprite: Objects/Weapons/Guns/Ammunition/Casings/shotgun_shell.rsi
-    state: improvised
 
 - type: construction
-  name: ружейное ложе # Stories-CraftTranslate
   id: riflestock
   graph: RifleStockGraph
   startNode: start
   targetNode: riflestock
   category: construction-category-weapons
   objectType: Item
-  description: Деревянный приклад, необходимый для изготовления самодельного огнестрельного оружия. # Stories-CraftTranslate
-  icon:
-    sprite: Objects/Misc/rifle_stock.rsi
-    state: icon
 
 - type: construction
-  name: зажигательная бомба # Stories-CraftTranslate
   id: firebomb
   graph: FireBomb
   startNode: start
   targetNode: firebomb
   category: construction-category-weapons
   objectType: Item
-  description: Слабое самодельное зажигательное устройство. # Stories-CraftTranslate
-  icon:
-    sprite: Objects/Weapons/Bombs/ied.rsi
-    state: icon
 
 - type: construction
-  name: ткань # Stories-CraftTranslate
   id: CottonWovenCloth
   graph: CottonObjects
   startNode: start
   targetNode: cottoncloth
   category: construction-category-misc
-  description: "Это самодельный кусок хлопчатобумажной ткани, на ощупь он грубый." # Stories-CraftTranslate
-  icon:
-    sprite: Objects/Materials/materials.rsi
-    state: cloth_3
   objectType: Item
 
 - type: construction
-  name: соломенная шляпа # Stories-CraftTranslate
   id: strawHat
   graph: StrawHat
   startNode: start
   targetNode: strawhat
   category: construction-category-clothing
-  description: Модная шляпа для жарких деньков! Не рекомендуется носить около источников огня. # Stories-CraftTranslate
-  icon:
-    sprite: Clothing/Head/Hats/straw_hat.rsi
-    state: icon
   objectType: Item
 
 - type: construction
-  name: трубчатая бомба # Stories-CraftTranslate
   id: pipebomb
   graph: PipeBomb
   startNode: start
   targetNode: pipebomb
   category: construction-category-weapons
   objectType: Item
-  description: Самодельное взрывное устройство, сделанное из труб и проводов. # Stories-CraftTranslate
-  icon:
-    sprite: Objects/Weapons/Bombs/pipebomb.rsi
-    state: icon
 
 - type: construction
-  name: скалка # Stories-CraftTranslate
   id: rollingpin
   graph: WoodenRollingPin
   startNode: start
   targetNode: rollingpin
   category: construction-category-tools
   objectType: Item
-  description: Скалка, используется для приготовления пищи и защиты кухни. # Stories-CraftTranslate
-  icon:
-    sprite: Objects/Tools/rolling_pin.rsi
-    state: icon
 
 - type: construction
-  name: переноска для животных # Stories-CraftTranslate
   id: PetCarrier
   graph: PetCarrier
   startNode: start
   targetNode: petCarrier
   category: construction-category-misc
   objectType: Item
-  description: Позволяет удобно переносить крупных животных. # Stories-CraftTranslate
-  icon:
-    sprite: Objects/Storage/petcarrier.rsi
-    state: icon
 
 - type: construction
-  name: скафандр голиафа # Stories-CraftTranslate
   id: HardsuitGoliath
   graph: HardsuitGoliath
   startNode: start
   targetNode: hardsuitGoliath
   category: construction-category-clothing
   objectType: Item
-  description: Легковесный скафандр, украшенный лоскутами толстой, хитиновой шкуры голиафа. # Stories-CraftTranslate
-  icon:
-    sprite: Clothing/OuterClothing/Hardsuits/goliath.rsi
-    state: icon

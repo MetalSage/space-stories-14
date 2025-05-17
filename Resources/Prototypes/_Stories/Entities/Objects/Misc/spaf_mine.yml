@@ -7,7 +7,18 @@
   - type: Sprite
     drawdepth: Items
     sprite: _Stories/Objects/Misc/spafmine.rsi
-    state: spafmine
+    layers:
+    - state: spafmine-inactive
+      map: [ "enum.ToggleVisuals.Layer" ]
+  - type: GenericVisualizer
+    visuals:
+      enum.ToggleVisuals.Toggled:
+        enum.ToggleVisuals.Layer:
+          True: {state: spafmine}
+          False: {state: spafmine-inactive}
   - type: FlashOnTrigger
   - type: StealthOnMove
   - type: Stealth
+  - type: ItemToggle
+    activated: true
+    onActivate: false

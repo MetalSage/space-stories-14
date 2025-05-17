@@ -12,3 +12,5 @@ ent-ChlorineChemistryVial = { ent-BaseChemistryEmptyVial }
 ent-PlasmaChemistryVial = { ent-BaseChemistryEmptyVial }
     .suffix = Плазма
     .desc = { ent-BaseChemistryEmptyVial.desc }
+ent-BorgVial = встроенная пробирка
+    .desc = Внутренний отсек, установленный в циклорга. Рассчитан на 30 единиц любой жидкости.

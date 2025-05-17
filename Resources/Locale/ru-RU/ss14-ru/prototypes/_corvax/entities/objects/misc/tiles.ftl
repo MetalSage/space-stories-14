@@ -1,6 +1,6 @@
 ent-FloorTileItemWoodParquet = паркетные доски
     .desc = { ent-FloorTileItemBase.desc }
-ent-FloorTileItemWoodBlack = темные деревянные плитки
+ent-FloorTileItemWoodBlack = черные деревянные плитки
     .desc = { ent-FloorTileItemBase.desc }
 ent-FloorTileItemWoodDark = темные деревянные плитки
     .desc = { ent-FloorTileItemBase.desc }

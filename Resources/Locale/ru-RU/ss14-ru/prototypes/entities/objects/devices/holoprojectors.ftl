@@ -21,3 +21,5 @@ ent-HoloprojectorSecurity = проектор голобарьера
 ent-HoloprojectorSecurityEmpty = { ent-HoloprojectorSecurity }
     .suffix = Пустой
     .desc = { ent-HoloprojectorSecurity.desc }
+ent-HolofanProjectorBorg = встроенный голографический проектор
+    .desc = Предотвращает идиотов от причинения дополнительного вреда экипажу во время атмосферных чрезвычайных ситуаций. Устанавливается непосредственно в инженерного циклорга и перезаряжается со временем.

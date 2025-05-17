@@ -9,7 +9,7 @@
             - material: MetalRod
               amount: 1
             - tag: PowerCellSmall
-              name: батарея малой ёмкости # Stories-CraftTranslate
+              name: construction-graph-tag-power-cell-small
               icon:
                 sprite: Objects/Power/power_cells.rsi
                 state: small
@@ -18,9 +18,9 @@
                 sprite: Objects/Misc/cablecuffs.rsi
                 state: cuff
                 color: red
-              name: наручники # Stories-CraftTranslate
+              name: construction-graph-tag-cuffs
             - tag: Igniter
-              name: воспламенитель # Stories-CraftTranslate
+              name: construction-graph-tag-igniter
               icon:
                 sprite: Objects/Devices/igniter.rsi
                 state: icon

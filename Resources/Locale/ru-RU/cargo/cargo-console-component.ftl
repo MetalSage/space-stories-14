@@ -18,7 +18,7 @@ cargo-console-menu-requests-label = Запросы
 cargo-console-menu-orders-label = Заказы
 cargo-console-menu-order-reason-description = Причина: { $reason }
 cargo-console-menu-populate-categories-all-text = Все
-cargo-console-menu-populate-orders-cargo-order-row-product-name-text = { $productName } (x{ $orderAmount }) от { $orderRequester }
+cargo-console-menu-populate-orders-cargo-order-row-product-name-text = {$productName} (x{$orderAmount}) от {$orderRequester} из [color={$accountColor}]{$account}[/color]
 cargo-console-menu-cargo-order-row-approve-button = Одобрить
 cargo-console-menu-cargo-order-row-cancel-button = Отменить
 cargo-console-menu-tab-title-orders = Заказы
@@ -81,3 +81,15 @@ cargo-funding-alloc-console-label-save-fail = [bold]Revenue Divisions Invalid![/
     [1] +
     *[-1] -
 }{$val}%)[/color]
+
+# Slip template
+cargo-acquisition-slip-body = [head=3]Информация Товара[/head]
+    {"[bold]Товар:[/bold]"} {$product}
+    {"[bold]Описание:[/bold]"} {$description}
+    {"[bold]Стоимость за единицу:[/bold"}] ${$unit}
+    {"[bold]Количество:[/bold]"} {$amount}
+    {"[bold]Стоимость:[/bold]"} ${$cost}
+
+    {"[head=3]Информация Покупки[/head]"}
+    {"[bold]Заказчик:[/bold]"} {$orderer}
+    {"[bold]Причина:[/bold]"} {$reason}

@@ -1,56 +1,41 @@
 - type: construction
   id: ClosetSteel
-  name: шкаф # Stories-CraftTranslate
   graph: ClosetSteel
   startNode: start
   targetNode: done
   category: construction-category-storage
-  description: Высокий стальной шкаф, который нельзя заблокировать. # Stories-CraftTranslate
-  icon: { sprite: Structures/Storage/closet.rsi, state: generic_icon }
   objectType: Structure
 
 - type: construction
   id: ClosetSteelSecure
-  name: защищённый шкаф # Stories-CraftTranslate
   graph: ClosetSteelSecure
   startNode: start
   targetNode: done
   category: construction-category-storage
-  description: Высокий стальной шкаф, который можно заблокировать. # Stories-CraftTranslate
-  icon: { sprite: Structures/Storage/closet.rsi, state: secure_icon }
   objectType: Structure
 
 - type: construction
   id: ClosetFreezer
-  name: холодильник # Stories-CraftTranslate
   graph: ClosetFreezer
   startNode: start
   targetNode: done
   category: construction-category-storage
-  description: Высокий стальной шкаф с возможностью замораживания. # Stories-CraftTranslate
-  icon: { sprite: Structures/Storage/closet.rsi, state: freezer_icon }
   objectType: Structure
 
 - type: construction
   id: GunSafe
-  name: оружейный сейф # Stories-CraftTranslate
   graph: GunSafe
   startNode: start
   targetNode: done
   category: construction-category-storage
-  description: Прочный оружейный сейф, который можно заблокировать. # Stories-CraftTranslate
-  icon: { sprite: Structures/Storage/closet.rsi, state: shotguncase }
   objectType: Structure
 
 - type: construction
   id: ClosetWall
-  name: технический настенный шкаф # Stories-CraftTranslate
   graph: ClosetWall
   startNode: start
   targetNode: done
   category: construction-category-storage
-  description: Стандартное хранилище Nanotrasen, теперь и на стенах. # Stories-CraftTranslate
-  icon: { sprite: Structures/Storage/wall_locker.rsi, state: generic_icon }
   objectType: Structure
   placementMode: SnapgridCenter
   canRotate: true

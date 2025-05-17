@@ -7,13 +7,13 @@
         - to: shoes
           steps:
             - tag: PlushieLizard #Weh!
-              name: плюшевый унатх # Stories-CraftTranslate
+              name: construction-graph-tag-lizard-plushie
               icon:
                 sprite: Objects/Fun/toys.rsi
                 state: plushie_lizard
               doAfter: 1
             - tag: PlushieLizard
-              name: плюшевый унатх # Stories-CraftTranslate
+              name: construction-graph-tag-lizard-plushie
               icon:
                 sprite: Objects/Fun/toys.rsi
                 state: plushie_lizard

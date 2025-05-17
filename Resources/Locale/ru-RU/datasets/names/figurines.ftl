@@ -7,7 +7,7 @@ figurines-hop-5 = Меня не было всего две секунды...
 figurines-passenger-1 = Изоли пожалуйста.
 figurines-passenger-2 = Вызывайте эвак.
 figurines-passenger-3 = ПОМОГИТЕ В ТЕХАХ!!
-figurines-passenger-4 = Я не тайдер.
+figurines-passenger-4 = Я не грейтайдер.
 figurines-passenger-5 = Сколько стоит пояс для инструментов?
 
 figurines-greytider-1 = Чувак, эта вечеринка отстой. Я, бля, ненавижу этих людей.

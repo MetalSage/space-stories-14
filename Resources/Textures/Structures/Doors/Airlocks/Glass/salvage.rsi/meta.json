@@ -190,6 +190,12 @@
                     0.4
                 ]
             ]
+        },
+        {
+            "name": "open_unlit"
+        },
+        {
+            "name": "bolted_open_unlit"
         }
     ]
 }

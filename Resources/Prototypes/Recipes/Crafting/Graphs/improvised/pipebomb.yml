@@ -10,7 +10,7 @@
         icon:
           sprite: Structures/Piping/Atmospherics/pipe.rsi
           state: pipeStraight
-        name: труба # Stories-CraftTranslate
+        name: construction-graph-tag-pipe
       - material: Steel
         amount: 1
         doAfter: 3

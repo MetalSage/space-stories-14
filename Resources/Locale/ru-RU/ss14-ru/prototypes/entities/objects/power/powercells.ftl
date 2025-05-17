@@ -51,3 +51,6 @@ ent-PowerCageMediumEmpty = { ent-PowerCageMedium }
 ent-PowerCageHighEmpty = { ent-PowerCageHigh }
     .suffix = Пустой
     .desc = { ent-PowerCageHigh.desc }
+ent-PowerCellSmallNuclear = ядерная батарея малой ёмкости
+    .suffix = Полный
+    .desc = Самозаряжающийся аккумулятор, разработанный для быстрой скорости зарядки за счёт снижения ёмкости.

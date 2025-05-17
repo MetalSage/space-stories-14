@@ -52,6 +52,7 @@ flavor-base-horrible = ужасно
 flavor-base-terrible = ужасающе
 flavor-base-mindful = разумно
 flavor-base-chewy = жевательно
+flavor-base-trashy = мусорно
 
 # Complex flavors. Put a flavor here when you want something that's more
 # specific.

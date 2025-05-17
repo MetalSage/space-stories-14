@@ -1,15 +1,10 @@
 #chairs
 - type: construction
-  name: стул # Stories-CraftTranslate
   id: Chair
   graph: Seat
   startNode: start
   targetNode: chair
   category: construction-category-furniture
-  description: Вы сидите на нём. Либо по вашей воле, либо по принуждению. # Stories-CraftTranslate
-  icon:
-    sprite: Structures/Furniture/chairs.rsi
-    state: chair
   objectType: Structure
   placementMode: SnapgridCenter
   canBuildInImpassable: false
@@ -17,16 +12,11 @@
     - !type:TileNotBlocked
 
 - type: construction
-  name: табурет # Stories-CraftTranslate
   id: Stool
   graph: Seat
   startNode: start
   targetNode: stool
   category: construction-category-furniture
-  description: Вы сидите на нём. Либо по вашей воле, либо по принуждению. # Stories-CraftTranslate
-  icon:
-    sprite: Structures/Furniture/chairs.rsi
-    state: stool
   objectType: Structure
   placementMode: SnapgridCenter
   canBuildInImpassable: false
@@ -34,16 +24,11 @@
     - !type:TileNotBlocked
 
 - type: construction
-  name: барный стул # Stories-CraftTranslate
   id: StoolBar
   graph: Seat
   startNode: start
   targetNode: stoolBar
   category: construction-category-furniture
-  description: Вы сидите на нём. Либо по вашей воле, либо по принуждению. # Stories-CraftTranslate
-  icon:
-    sprite: Structures/Furniture/chairs.rsi
-    state: bar
   objectType: Structure
   placementMode: SnapgridCenter
   canBuildInImpassable: false
@@ -51,16 +36,11 @@
     - !type:TileNotBlocked
 
 - type: construction
-  name: латунный стул # Stories-CraftTranslate
   id: ChairBrass
   graph: Seat
   startNode: start
   targetNode: chairBrass
   category: construction-category-furniture
-  description: Вы сидите на нём. Либо по вашей воле, либо по принуждению. # Stories-CraftTranslate
-  icon:
-    sprite: Structures/Furniture/chairs.rsi
-    state: brass_chair
   objectType: Structure
   placementMode: SnapgridCenter
   canBuildInImpassable: false
@@ -68,16 +48,11 @@
     - !type:TileNotBlocked
 
 - type: construction
-  name: белое офисное кресло # Stories-CraftTranslate
   id: ChairOfficeLight
   graph: Seat
   startNode: start
   targetNode: chairOffice
   category: construction-category-furniture
-  description: Вы сидите на нём. Либо по вашей воле, либо по принуждению. # Stories-CraftTranslate
-  icon:
-    sprite: Structures/Furniture/chairs.rsi
-    state: office-white
   objectType: Structure
   placementMode: SnapgridCenter
   canBuildInImpassable: false
@@ -85,16 +60,11 @@
     - !type:TileNotBlocked
 
 - type: construction
-  name: тёмное офисное кресло # Stories-CraftTranslate
   id: ChairOfficeDark
   graph: Seat
   startNode: start
   targetNode: chairOfficeDark
   category: construction-category-furniture
-  description: Вы сидите на нём. Либо по вашей воле, либо по принуждению. # Stories-CraftTranslate
-  icon:
-    sprite: Structures/Furniture/chairs.rsi
-    state: office-dark
   objectType: Structure
   placementMode: SnapgridCenter
   canBuildInImpassable: false
@@ -102,16 +72,11 @@
     - !type:TileNotBlocked
 
 - type: construction
-  name: удобное кресло # Stories-CraftTranslate
   id: ChairComfy
   graph: Seat
   startNode: start
   targetNode: chairComfy
   category: construction-category-furniture
-  description: Выглядит удобным. # Stories-CraftTranslate
-  icon:
-    sprite: Structures/Furniture/chairs.rsi
-    state: comfy
   objectType: Structure
   placementMode: SnapgridCenter
   canBuildInImpassable: false
@@ -119,16 +84,11 @@
     - !type:TileNotBlocked
 
 - type: construction
-  name: кресло пилота # Stories-CraftTranslate
   id: chairPilotSeat
   graph: Seat
   startNode: start
   targetNode: chairPilotSeat
   category: construction-category-furniture
-  description: Кресло пилота престижного корабля. # Stories-CraftTranslate
-  icon:
-    sprite: Structures/Furniture/chairs.rsi
-    state: shuttle
   objectType: Structure
   placementMode: SnapgridCenter
   canBuildInImpassable: false
@@ -136,16 +96,11 @@
     - !type:TileNotBlocked
 
 - type: construction
-  name: деревянный стул # Stories-CraftTranslate
   id: ChairWood
   graph: Seat
   startNode: start
   targetNode: chairWood
   category: construction-category-furniture
-  description: Вы сидите на нём. Либо по вашей воле, либо по принуждению. # Stories-CraftTranslate
-  icon:
-    sprite: Structures/Furniture/chairs.rsi
-    state: wooden
   objectType: Structure
   placementMode: SnapgridCenter
   canBuildInImpassable: false
@@ -153,16 +108,11 @@
     - !type:TileNotBlocked
 
 - type: construction
-  name: мясной стул # Stories-CraftTranslate
   id: ChairMeat
   graph: Seat
   startNode: start
   targetNode: chairMeat
   category: construction-category-furniture
-  description: Неприятно потный. # Stories-CraftTranslate
-  icon:
-    sprite: Structures/Furniture/chairs.rsi
-    state: meat
   objectType: Structure
   placementMode: SnapgridCenter
   canBuildInImpassable: false
@@ -170,16 +120,11 @@
   - !type:TileNotBlocked
 
 - type: construction
-  name: ритуальный стул # Stories-CraftTranslate
   id: ChairRitual
   graph: RitualSeat
   startNode: start
   targetNode: chairRitual
   category: construction-category-furniture
-  description: Выглядит неудобно. # Stories-CraftTranslate
-  icon:
-    sprite: Structures/Furniture/chairs.rsi
-    state: ritual
   objectType: Structure
   placementMode: SnapgridCenter
   canBuildInImpassable: false
@@ -187,16 +132,11 @@
     - !type:TileNotBlocked
 
 - type: construction
-  name: раскладной стул # Stories-CraftTranslate
   id: ChairFolding
   graph: Seat
   startNode: start
   targetNode: chairFolding
   category: construction-category-furniture
-  description: Удобный переносной стул. # Stories-CraftTranslate
-  icon:
-    sprite: Structures/Furniture/folding_chair.rsi
-    state: folding
   objectType: Structure
   placementMode: SnapgridCenter
   canBuildInImpassable: false
@@ -204,16 +144,11 @@
     - !type:TileNotBlocked
 
 - type: construction
-  name: стальная скамейка # Stories-CraftTranslate
   id: ChairSteelBench
   graph: Seat
   startNode: start
   targetNode: chairSteelBench
   category: construction-category-furniture
-  description: Длинная скамья, созданная для метро. Реально стандартный дизайн. # Stories-CraftTranslate
-  icon:
-    sprite: Structures/Furniture/chairs.rsi
-    state: steel-bench
   objectType: Structure
   placementMode: SnapgridCenter
   canBuildInImpassable: false
@@ -221,16 +156,11 @@
     - !type:TileNotBlocked
 
 - type: construction
-  name: деревянная скамейка # Stories-CraftTranslate
   id: ChairWoodBench
   graph: Seat
   startNode: start
   targetNode: chairWoodBench
   category: construction-category-furniture
-  description: Получили занозу? По крайней мере, она экологически чистая. # Stories-CraftTranslate
-  icon:
-    sprite: Structures/Furniture/chairs.rsi
-    state: wooden-bench
   objectType: Structure
   placementMode: SnapgridCenter
   canBuildInImpassable: false
@@ -238,16 +168,11 @@
     - !type:TileNotBlocked
 
 - type: construction
-  name: удобная скамейка # Stories-CraftTranslate
   id: RedComfBench
   graph: Seat
   startNode: start
   targetNode: redComfBench
   category: construction-category-furniture
-  description: Скамейка с очень удобной спинкой. # Stories-CraftTranslate
-  icon:
-    sprite: Structures/Furniture/Bench/comf_bench.rsi
-    state: full
   objectType: Structure
   placementMode: SnapgridCenter
   canBuildInImpassable: false
@@ -255,16 +180,11 @@
     - !type:TileNotBlocked
 
 - type: construction
-  name: удобная синяя скамейка # Stories-CraftTranslate
   id: BlueComfBench
   graph: Seat
   startNode: start
   targetNode: blueComfBench
   category: construction-category-furniture
-  description: Скамейка с очень удобной спинкой. # Stories-CraftTranslate
-  icon:
-    sprite: Structures/Furniture/Bench/comf_bench.rsi
-    state: full
   objectType: Structure
   placementMode: SnapgridCenter
   canBuildInImpassable: false
@@ -273,16 +193,11 @@
 
 #tables
 - type: construction
-  name: стальной стол # Stories-CraftTranslate
   id: Table
   graph: Table
   startNode: start
   targetNode: Table
   category: construction-category-furniture
-  description: Квадратный лист металла, стоящий на четырёх металлических ножках. # Stories-CraftTranslate
-  icon:
-    sprite: Structures/Furniture/Tables/generic.rsi
-    state: full
   objectType: Structure
   placementMode: SnapgridCenter
   canBuildInImpassable: false
@@ -290,16 +205,11 @@
     - !type:TileNotBlocked
 
 - type: construction
-  name: стол их пластали # Stories-CraftTranslate
   id: TableReinforced
   graph: Table
   startNode: start
   targetNode: TableReinforced
   category: construction-category-furniture
-  description: Квадратный лист металла, стоящий на четырёх металлических ножках. Очень прочный. # Stories-CraftTranslate
-  icon:
-    sprite: Structures/Furniture/Tables/reinforced.rsi
-    state: full
   objectType: Structure
   placementMode: SnapgridCenter
   canBuildInImpassable: false
@@ -307,16 +217,11 @@
     - !type:TileNotBlocked
 
 - type: construction
-  name: стеклянный стол # Stories-CraftTranslate
   id: TableGlass
   graph: Table
   startNode: start
   targetNode: TableGlass
   category: construction-category-furniture
-  description: Квадратный лист стекла, стоящий на четырёх металлических ножках. # Stories-CraftTranslate
-  icon:
-    sprite: Structures/Furniture/Tables/glass.rsi
-    state: full
   objectType: Structure
   placementMode: SnapgridCenter
   canBuildInImpassable: false
@@ -324,16 +229,11 @@
     - !type:TileNotBlocked
 
 - type: construction
-  name: стол из бронестекла # Stories-CraftTranslate
   id: TableReinforcedGlass
   graph: Table
   startNode: start
   targetNode: TableReinforcedGlass
   category: construction-category-furniture
-  description: Квадратный лист стекла, стоящий на четырёх металлических ножках. Очень прочный. # Stories-CraftTranslate
-  icon:
-    sprite: Structures/Furniture/Tables/r_glass.rsi
-    state: full
   objectType: Structure
   placementMode: SnapgridCenter
   canBuildInImpassable: false
@@ -341,16 +241,11 @@
     - !type:TileNotBlocked
 
 - type: construction
-  name: стол из плазменного стекла # Stories-CraftTranslate
   id: TablePlasmaGlass
   graph: Table
   startNode: start
   targetNode: TablePlasmaGlass
   category: construction-category-furniture
-  description: Квадратный лист плазмы, стоящий на четырёх металлических ножках. Красивый! # Stories-CraftTranslate
-  icon:
-    sprite: Structures/Furniture/Tables/plasma.rsi
-    state: full
   objectType: Structure
   placementMode: SnapgridCenter
   canBuildInImpassable: false
@@ -358,16 +253,11 @@
     - !type:TileNotBlocked
 
 - type: construction
-  name: латунный стол # Stories-CraftTranslate
   id: TableBrass
   graph: Table
   startNode: start
   targetNode: TableBrass
   category: construction-category-furniture
-  description: Блестящий, устойчивый к коррозии стол из латуни. Стимпанк! # Stories-CraftTranslate
-  icon:
-    sprite: Structures/Furniture/Tables/brass.rsi
-    state: full
   objectType: Structure
   placementMode: SnapgridCenter
   canBuildInImpassable: false
@@ -375,16 +265,11 @@
     - !type:TileNotBlocked
 
 - type: construction
-  name: деревянный стол # Stories-CraftTranslate
   id: TableWood
   graph: Table
   startNode: start
   targetNode: TableWood
   category: construction-category-furniture
-  description: Беречь от огня. По слухам, он легко горит. # Stories-CraftTranslate
-  icon:
-    sprite: Structures/Furniture/Tables/wood.rsi
-    state: full
   objectType: Structure
   placementMode: SnapgridCenter
   canBuildInImpassable: false
@@ -392,16 +277,11 @@
     - !type:TileNotBlocked
 
 - type: construction
-  name: игорный стол # Stories-CraftTranslate
   id: TableCarpet
   graph: Table
   startNode: start
   targetNode: TableCarpet
   category: construction-category-furniture
-  description: Квадратный кусок дерева, стоящий на четырех ножках и накрытый тканью. (А чего вы ожидали?) # Stories-CraftTranslate
-  icon:
-    sprite: Structures/Furniture/Tables/carpet.rsi
-    state: full
   objectType: Structure
   placementMode: SnapgridCenter
   canBuildInImpassable: false
@@ -409,16 +289,11 @@
     - !type:TileNotBlocked
 
 - type: construction
-  name: красивый чёрный стол # Stories-CraftTranslate
   id: TableFancyBlack
   graph: Table
   startNode: start
   targetNode: TableFancyBlack
   category: construction-category-furniture
-  description: Стол, накрытый красивой скатертью. # Stories-CraftTranslate
-  icon:
-    sprite: Structures/Furniture/Tables/Fancy/black.rsi
-    state: full
   objectType: Structure
   placementMode: SnapgridCenter
   canBuildInImpassable: false
@@ -426,16 +301,11 @@
     - !type:TileNotBlocked
 
 - type: construction
-  name: красивый синий стол # Stories-CraftTranslate
   id: TableFancyBlue
   graph: Table
   startNode: start
   targetNode: TableFancyBlue
   category: construction-category-furniture
-  description: Стол, накрытый красивой скатертью. # Stories-CraftTranslate
-  icon:
-    sprite: Structures/Furniture/Tables/Fancy/blue.rsi
-    state: full
   objectType: Structure
   placementMode: SnapgridCenter
   canBuildInImpassable: false
@@ -443,16 +313,11 @@
     - !type:TileNotBlocked
 
 - type: construction
-  name: красивый голубой стол # Stories-CraftTranslate
   id: TableFancyCyan
   graph: Table
   startNode: start
   targetNode: TableFancyCyan
   category: construction-category-furniture
-  description: Стол, накрытый красивой скатертью. # Stories-CraftTranslate
-  icon:
-    sprite: Structures/Furniture/Tables/Fancy/cyan.rsi
-    state: full
   objectType: Structure
   placementMode: SnapgridCenter
   canBuildInImpassable: false
@@ -460,16 +325,11 @@
     - !type:TileNotBlocked
 
 - type: construction
-  name: красивый зелёный стол # Stories-CraftTranslate
   id: TableFancyGreen
   graph: Table
   startNode: start
   targetNode: TableFancyGreen
   category: construction-category-furniture
-  description: Стол, накрытый красивой скатертью. # Stories-CraftTranslate
-  icon:
-    sprite: Structures/Furniture/Tables/Fancy/green.rsi
-    state: full
   objectType: Structure
   placementMode: SnapgridCenter
   canBuildInImpassable: false
@@ -477,16 +337,11 @@
     - !type:TileNotBlocked
 
 - type: construction
-  name: красивый оранжевый стол # Stories-CraftTranslate
   id: TableFancyOrange
   graph: Table
   startNode: start
   targetNode: TableFancyOrange
   category: construction-category-furniture
-  description: Стол, накрытый красивой скатертью. # Stories-CraftTranslate
-  icon:
-    sprite: Structures/Furniture/Tables/Fancy/orange.rsi
-    state: full
   objectType: Structure
   placementMode: SnapgridCenter
   canBuildInImpassable: false
@@ -494,16 +349,11 @@
     - !type:TileNotBlocked
 
 - type: construction
-  name: красивый фиолетовый стол # Stories-CraftTranslate
   id: TableFancyPurple
   graph: Table
   startNode: start
   targetNode: TableFancyPurple
   category: construction-category-furniture
-  description: Стол, накрытый красивой скатертью. # Stories-CraftTranslate
-  icon:
-    sprite: Structures/Furniture/Tables/Fancy/purple.rsi
-    state: full
   objectType: Structure
   placementMode: SnapgridCenter
   canBuildInImpassable: false
@@ -511,16 +361,11 @@
     - !type:TileNotBlocked
 
 - type: construction
-  name: красивый розовый стол # Stories-CraftTranslate
   id: TableFancyPink
   graph: Table
   startNode: start
   targetNode: TableFancyPink
   category: construction-category-furniture
-  description: Стол, накрытый красивой скатертью. # Stories-CraftTranslate
-  icon:
-    sprite: Structures/Furniture/Tables/Fancy/pink.rsi
-    state: full
   objectType: Structure
   placementMode: SnapgridCenter
   canBuildInImpassable: false
@@ -528,16 +373,11 @@
     - !type:TileNotBlocked
 
 - type: construction
-  name: красивый красный стол # Stories-CraftTranslate
   id: TableFancyRed
   graph: Table
   startNode: start
   targetNode: TableFancyRed
   category: construction-category-furniture
-  description: Стол, накрытый красивой скатертью. # Stories-CraftTranslate
-  icon:
-    sprite: Structures/Furniture/Tables/Fancy/red.rsi
-    state: full
   objectType: Structure
   placementMode: SnapgridCenter
   canBuildInImpassable: false
@@ -545,16 +385,11 @@
     - !type:TileNotBlocked
 
 - type: construction
-  name: красивый белый стол # Stories-CraftTranslate
   id: TableFancyWhite
   graph: Table
   startNode: start
   targetNode: TableFancyWhite
   category: construction-category-furniture
-  description: Стол, накрытый красивой скатертью. # Stories-CraftTranslate
-  icon:
-    sprite: Structures/Furniture/Tables/Fancy/white.rsi
-    state: full
   objectType: Structure
   placementMode: SnapgridCenter
   canBuildInImpassable: false
@@ -562,16 +397,11 @@
     - !type:TileNotBlocked
 
 - type: construction
-  name: металлическая стойка # Stories-CraftTranslate
   id: TableCounterMetal
   graph: Table
   startNode: start
   targetNode: CounterMetal
   category: construction-category-furniture
-  description: Отличное место чтобы пропустить стаканчик. # Stories-CraftTranslate
-  icon:
-    sprite: Structures/Furniture/Tables/countermetal.rsi
-    state: full
   objectType: Structure
   placementMode: SnapgridCenter
   canBuildInImpassable: false
@@ -579,16 +409,11 @@
     - !type:TileNotBlocked
 
 - type: construction
-  name: деревянная стойка # Stories-CraftTranslate
   id: TableCounterWood
   graph: Table
   startNode: start
   targetNode: CounterWood
   category: construction-category-furniture
-  description: Беречь от огня. По слухам, она легко горит. # Stories-CraftTranslate
-  icon:
-    sprite: Structures/Furniture/Tables/counterwood.rsi
-    state: full
   objectType: Structure
   placementMode: SnapgridCenter
   canBuildInImpassable: false
@@ -597,16 +422,11 @@
 
 #bathroom
 - type: construction
-  name: туалет # Stories-CraftTranslate
   id: ToiletEmpty
   graph: Toilet
   startNode: start
   targetNode: toilet
   category: construction-category-furniture
-  description: Устройство для смыва человеческих экскрементов. # Stories-CraftTranslate
-  icon:
-    sprite: Structures/Furniture/toilet.rsi
-    state: disposal
   objectType: Structure
   placementMode: SnapgridCenter
   canBuildInImpassable: false
@@ -616,15 +436,10 @@
 #bedroom
 - type: construction
   id: Bed
-  name: кровать # Stories-CraftTranslate
-  description: На ней можно лежать, спать или пристегиваться ремнями. Отдых в ней обеспечивает чрезвычайно медленное исцеление. # Stories-CraftTranslate
   graph: bed
   startNode: start
   targetNode: bed
   category: construction-category-furniture
-  icon:
-    sprite: Structures/Furniture/furniture.rsi
-    state: bed
   objectType: Structure
   placementMode: SnapgridCenter
   canBuildInImpassable: false
@@ -633,15 +448,10 @@
 
 - type: construction
   id: MedicalBed
-  name: больничная койка # Stories-CraftTranslate
-  description: Больничная койка для реабилитации пациентов. Отдых в ней обеспечивает медленное исцеление. # Stories-CraftTranslate
   graph: bed
   startNode: start
   targetNode: medicalbed
   category: construction-category-furniture
-  icon:
-    sprite: Structures/Furniture/furniture.rsi
-    state: bed-MED
   objectType: Structure
   placementMode: SnapgridCenter
   canBuildInImpassable: false
@@ -650,15 +460,10 @@
 
 - type: construction
   id: DogBed
-  name: собачья лежанка # Stories-CraftTranslate
-  description: Удобная лежанка для собак. Вы даже можете пристегнуть своего питомца в случае, отключения гравитации. # Stories-CraftTranslate
   graph: bed
   startNode: start
   targetNode: dogbed
   category: construction-category-furniture
-  icon:
-    sprite: Structures/Furniture/furniture.rsi
-    state: dogbed
   objectType: Structure
   placementMode: SnapgridCenter
   canBuildInImpassable: false
@@ -667,15 +472,10 @@
 
 - type: construction
   id: Dresser
-  name: комод # Stories-CraftTranslate
-  description: Деревянный комод, может хранить вещи внутри. # Stories-CraftTranslate
   graph: Dresser
   startNode: start
   targetNode: dresser
   category: construction-category-furniture
-  icon:
-    sprite: Structures/Furniture/furniture.rsi
-    state: dresser
   objectType: Structure
   placementMode: SnapgridCenter
   canBuildInImpassable: false
@@ -685,15 +485,10 @@
 #racks
 - type: construction
   id: Rack
-  name: стойка # Stories-CraftTranslate
-  description: Стойка для хранения вещей. # Stories-CraftTranslate
   graph: Rack
   startNode: start
   targetNode: Rack
   category: construction-category-furniture
-  icon:
-    sprite: Structures/Furniture/furniture.rsi
-    state: rack
   objectType: Structure
   placementMode: SnapgridCenter
   canBuildInImpassable: false
@@ -703,15 +498,10 @@
 #misc
 - type: construction
   id: MeatSpike
-  name: мясной крюк # Stories-CraftTranslate
-  description: Крюк для снятия мяса с животных. # Stories-CraftTranslate
   graph: MeatSpike
   startNode: start
   targetNode: MeatSpike
   category: construction-category-furniture
-  icon:
-    sprite: Structures/meat_spike.rsi
-    state: spike
   objectType: Structure
   placementMode: SnapgridCenter
   canBuildInImpassable: false
@@ -720,165 +510,110 @@
 
 - type: construction
   id: Curtains
-  name: шторы # Stories-CraftTranslate
-  description: Содержат менее 1% ртути. # Stories-CraftTranslate
   graph: Curtains
   startNode: start
   targetNode: Curtains
   category: construction-category-furniture
-  icon:
-    sprite: Structures/Decoration/Curtains/hospital.rsi
-    state: closed
   objectType: Structure
   placementMode: SnapgridCenter
   canBuildInImpassable: true
 
 - type: construction
   id: CurtainsBlack
-  name: чёрные шторы # Stories-CraftTranslate
-  description: Скрывают то, что не должны видеть другие. # Stories-CraftTranslate
   graph: Curtains
   startNode: start
   targetNode: CurtainsBlack
   category: construction-category-furniture
-  icon:
-    sprite: Structures/Decoration/Curtains/black.rsi
-    state: closed
   objectType: Structure
   placementMode: SnapgridCenter
   canBuildInImpassable: true
 
 - type: construction
   id: CurtainsBlue
-  name: синие шторы # Stories-CraftTranslate
-  description: Скрывают то, что не должны видеть другие. # Stories-CraftTranslate
   graph: Curtains
   startNode: start
   targetNode: CurtainsBlue
   category: construction-category-furniture
-  icon:
-    sprite: Structures/Decoration/Curtains/blue.rsi
-    state: closed
   objectType: Structure
   placementMode: SnapgridCenter
   canBuildInImpassable: true
 
 - type: construction
   id: CurtainsCyan
-  name: голубые шторы # Stories-CraftTranslate
-  description: Скрывают то, что не должны видеть другие. # Stories-CraftTranslate
   graph: Curtains
   startNode: start
   targetNode: CurtainsCyan
   category: construction-category-furniture
-  icon:
-    sprite: Structures/Decoration/Curtains/cyan.rsi
-    state: closed
   objectType: Structure
   placementMode: SnapgridCenter
   canBuildInImpassable: true
 
 - type: construction
   id: CurtainsGreen
-  name: зелёные шторы # Stories-CraftTranslate
-  description: Скрывают то, что не должны видеть другие. # Stories-CraftTranslate
   graph: Curtains
   startNode: start
   targetNode: CurtainsGreen
   category: construction-category-furniture
-  icon:
-    sprite: Structures/Decoration/Curtains/green.rsi
-    state: closed
   objectType: Structure
   placementMode: SnapgridCenter
   canBuildInImpassable: true
 
 - type: construction
   id: CurtainsOrange
-  name: оранжевые шторы # Stories-CraftTranslate
-  description: Скрывают то, что не должны видеть другие. # Stories-CraftTranslate
   graph: Curtains
   startNode: start
   targetNode: CurtainsOrange
   category: construction-category-furniture
-  icon:
-    sprite: Structures/Decoration/Curtains/orange.rsi
-    state: closed
   objectType: Structure
   placementMode: SnapgridCenter
   canBuildInImpassable: true
 
 - type: construction
   id: CurtainsPink
-  name: розовые шторы # Stories-CraftTranslate
-  description: Скрывают то, что не должны видеть другие. # Stories-CraftTranslate
   graph: Curtains
   startNode: start
   targetNode: CurtainsPink
   category: construction-category-furniture
-  icon:
-    sprite: Structures/Decoration/Curtains/pink.rsi
-    state: closed
   objectType: Structure
   placementMode: SnapgridCenter
   canBuildInImpassable: true
 
 - type: construction
   id: CurtainsPurple
-  name: фиолетовые шторы # Stories-CraftTranslate
-  description: Скрывают то, что не должны видеть другие. # Stories-CraftTranslate
   graph: Curtains
   startNode: start
   targetNode: CurtainsPurple
   category: construction-category-furniture
-  icon:
-    sprite: Structures/Decoration/Curtains/purple.rsi
-    state: closed
   objectType: Structure
   placementMode: SnapgridCenter
   canBuildInImpassable: true
 
 - type: construction
   id: CurtainsRed
-  name: красные шторы # Stories-CraftTranslate
-  description: Скрывают то, что не должны видеть другие. # Stories-CraftTranslate
   graph: Curtains
   startNode: start
   targetNode: CurtainsRed
   category: construction-category-furniture
-  icon:
-    sprite: Structures/Decoration/Curtains/red.rsi
-    state: closed
   objectType: Structure
   placementMode: SnapgridCenter
   canBuildInImpassable: true
 
 - type: construction
   id: CurtainsWhite
-  name: белые шторы # Stories-CraftTranslate
-  description: Скрывают то, что не должны видеть другие. # Stories-CraftTranslate
   graph: Curtains
   startNode: start
   targetNode: CurtainsWhite
   category: construction-category-furniture
-  icon:
-    sprite: Structures/Decoration/Curtains/white.rsi
-    state: closed
   objectType: Structure
   placementMode: SnapgridCenter
   canBuildInImpassable: true
 
 - type: construction
   id: Bookshelf
-  name: книжный шкаф # Stories-CraftTranslate
-  description: Преимущественно, наполнен книгами. # Stories-CraftTranslate
   graph: Bookshelf
   startNode: start
   targetNode: bookshelf
   category: construction-category-furniture
-  icon:
-    sprite: Structures/Furniture/bookshelf.rsi
-    state: base
   objectType: Structure
   placementMode: SnapgridCenter
   canBuildInImpassable: false
@@ -887,15 +622,10 @@
 
 - type: construction
   id: NoticeBoard
-  name: информационная доска # Stories-CraftTranslate
-  description: Деревянная доска объявлений, на которую можно прикреплять бумагу. # Stories-CraftTranslate
   graph: NoticeBoard
   startNode: start
   targetNode: noticeBoard
   category: construction-category-furniture
-  icon:
-    sprite: Structures/Wallmounts/noticeboard.rsi
-    state: noticeboard
   objectType: Structure
   placementMode: SnapgridCenter
   canRotate: true
@@ -905,15 +635,10 @@
 
 - type: construction
   id: Mannequin
-  name: манекен # Stories-CraftTranslate
-  description: Деревянный манекен, предназначенный для демонстрации одежды. # Stories-CraftTranslate
   graph: Mannequin
   startNode: start
   targetNode: mannequin
   category: construction-category-furniture
-  icon:
-    sprite: Structures/Decoration/mannequin.rsi
-    state: mannequin
   objectType: Structure
   placementMode: SnapgridCenter
   canRotate: true

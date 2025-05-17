@@ -42,7 +42,7 @@
             - !type:EntityAnchored
           steps:
             - tag: SignalTrigger
-              name: сигнальный триггер # Stories-CraftTranslate
+              name: construction-graph-tag-signal-trigger
               icon:
                 sprite: Objects/Devices/signaltrigger.rsi
                 state: signaltrigger

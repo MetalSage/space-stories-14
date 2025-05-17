@@ -1,0 +1,19 @@
+stack-floor-tile-item-wood-black = чёрные деревянные плитки
+stack-floor-tile-item-wood-dark = тёмные деревянные плитки
+stack-floor-tile-item-wood-light = светлые деревянные плитки
+stack-floor-tile-item-wood-red = красные деревянные плитки
+stack-floor-tile-item-wood-large-black = большие чёрные деревянные плитки
+stack-floor-tile-item-wood-large-dark = большие тёмные деревянные плитки
+stack-floor-tile-item-wood-large-light = большие светлые деревянные плитки
+stack-floor-tile-item-wood-large-red = большие красные деревянные плитки
+stack-floor-tile-item-wood-parquet-black = чёрные паркетные доски
+stack-floor-tile-item-wood-parquet-dark = тёмные паркетные доски
+stack-floor-tile-item-wood-parquet-light = светлые паркетные доски
+stack-floor-tile-item-wood-parquet-red = красные паркетные доски
+stack-floor-tile-item-wood-chess = деревянные плитки "шахматный орнамент"
+stack-floor-tile-item-wood-chess-black = чёрные деревянные плитки "шахматный орнамент"
+stack-floor-tile-item-wood-chess-dark = тёмные деревянные плитки "шахматный орнамент"
+stack-floor-tile-item-wood-chess-light = светлые деревянные плитки "шахматный орнамент"
+stack-floor-tile-item-wood-chess-red = красные деревянные плитки "шахматный орнамент"
+
+stack-ink-printer = чернила
