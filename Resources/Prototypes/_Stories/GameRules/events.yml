@@ -90,6 +90,7 @@
         nameSegments:
         - InquisitorTitle
         - Inquisitor
+        nameFormat: name-format-standard
       - type: NpcFactionMember
         factions:
         - Syndicate
@@ -182,6 +183,7 @@
         nameSegments:
         - InquisitorTitle
         - Inquisitor
+        nameFormat: name-format-standard
       - type: NpcFactionMember
         factions:
         - Syndicate
