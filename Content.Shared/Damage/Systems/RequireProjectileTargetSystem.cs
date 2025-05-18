@@ -68,7 +68,8 @@ public sealed class RequireProjectileTargetSystem : EntitySystem
     // Stories-Crawling Start
     private void OnMobStateChanged(EntityUid uid, RequireProjectileTargetComponent component, MobStateChangedEvent args)
     {
-        RaiseLocalEvent(uid, new DownedEvent(), false);
+        if (args.NewMobState != MobState.Alive)
+            RaiseLocalEvent(uid, new DownedEvent(), false);
     }
     // Stories-Crawling End
 }
