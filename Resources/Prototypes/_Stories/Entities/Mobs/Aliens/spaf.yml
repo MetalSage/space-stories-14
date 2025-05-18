@@ -111,6 +111,7 @@
     nameSegments:
     - SpafFirst
     - SpafLast
+    nameFormat: name-format-standard
   - type: MeleeWeapon
     altDisarm: false
     soundHit:
