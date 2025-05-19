@@ -182,6 +182,8 @@ public sealed class NukeopsRuleSystem : GameRuleSystem<NukeopsRuleComponent>
             if (nuke.Status != NukeStatus.ARMED)
                 continue;
 
+            // Stories-MRP Start
+            /*
             // UH OH
             if (nukeTransform.MapUid != null && centcomms.Contains(nukeTransform.MapUid.Value))
             {
@@ -189,6 +191,8 @@ public sealed class NukeopsRuleSystem : GameRuleSystem<NukeopsRuleComponent>
                 SetWinType((ent, ent), WinType.OpsMajor);
                 return;
             }
+            */
+            // Stories-MRP End
 
             if (nukeTransform.GridUid == null || ent.Comp.TargetStation == null)
                 continue;
