@@ -9,7 +9,7 @@ genpop-prisoner-id-examine-wait = Вы отбыли {$minutes} {$minutes ->
     [1] секунду
     *[other] секунды
 } из вашего {$sentence} минутного срока за {$crime}.
-genpop-prisoner-id-examine-wait-perm = Вы отбываете пожизненное заключение за {$crime}.
+genpop-prisoner-id-examine-wait-perm = Вы отбываете бессрочное заключение за {$crime}.
 genpop-prisoner-id-examine-served = Вы отбыли свой срок за {$crime}.
 
 genpop-locker-name-default = шкафчик заключенного
@@ -19,7 +19,7 @@ genpop-locker-name-used = шкафчик заключенного ({$name})
 genpop-locker-desc-used = Это безопасный шкафчик для личных вещей заключенного на время его пребывания в тюрьме. Он содержит личные вещи {$name}.
 
 genpop-locker-ui-label-name = [bold]Имя Осужденного:[/bold]
-genpop-locker-ui-label-sentence = [bold]лительность срока в минутах:[/bold] [color=gray](0 для пожизненного)[/color]
+genpop-locker-ui-label-sentence = [bold]Длительность срока в минутах:[/bold] [color=gray](0 для пожизненного)[/color]
 genpop-locker-ui-label-crime = [bold]Преступление:[/bold]
 genpop-locket-ui-button-done = Готово
 

@@ -71,11 +71,11 @@ cargo-funding-alloc-console-label-code = [bold] Код [/bold]
 cargo-funding-alloc-console-label-balance = [bold] Баланс [/bold]
 cargo-funding-alloc-console-label-cut = [bold] Доля Дохода (%) [/bold]
 
-cargo-funding-alloc-console-label-primary-cut = Доля Карго от средств из источников, не связанных с сейфом (%):
-cargo-funding-alloc-console-label-lockbox-cut = Доля Карго от средств от продаж из сейфа (%):
+cargo-funding-alloc-console-label-primary-cut = Доля Карго от средств из источников, не связанных с заблокированным ящиком (%):
+cargo-funding-alloc-console-label-lockbox-cut = Доля Карго от средств от продаж из заблокированного ящика (%):
 
-cargo-funding-alloc-console-label-help-non-adjustible = Карго получает {$percent}% прибыли от продаж, не связанных с сейфом. Остальная часть распределяется, как указано ниже:
-cargo-funding-alloc-console-label-help-adjustible = Оставшиеся средства из источников, не связанных с сейфом, распределяются, как указано ниже:
+cargo-funding-alloc-console-label-help-non-adjustible = Карго получает {$percent}% прибыли от продаж, не связанных с заблокированным ящиком. Остальная часть распределяется, как указано ниже:
+cargo-funding-alloc-console-label-help-adjustible = Оставшиеся средства из источников, не связанных с заблокированным ящиком, распределяются, как указано ниже:
 cargo-funding-alloc-console-button-save = Сохранить Изменения
 cargo-funding-alloc-console-label-save-fail = [bold]Revenue Divisions Invalid![/bold] [color=red]({$pos ->
     [1] +
