@@ -1,4 +1,5 @@
 using System.Linq;
+using Content.Server._Stories.Debuff;
 using Content.Server.Flash.Components;
 using Content.Shared.Flash.Components;
 using Content.Server.Light.EntitySystems;
@@ -125,6 +126,13 @@ namespace Content.Server.Flash
             if (attempt.Cancelled)
                 return;
 
+            // Stories-FlashDebuff Start
+            if (!TryComp<FlashDebuffComponent>(target, out var flashDebuffComponent))
+                return;
+
+            flashDuration *= flashDebuffComponent.CoefficientDuration;
+            // Stories-FlashDebuff Start
+
             // don't paralyze, slowdown or convert to rev if the target is immune to flashes
             if (!_statusEffectsSystem.TryAddStatusEffect<FlashedComponent>(target, FlashedKey, TimeSpan.FromSeconds(flashDuration / 1000f), true))
                 return;
@@ -196,6 +204,9 @@ namespace Content.Server.Flash
 
         private void OnFlashImmunityFlashAttempt(EntityUid uid, FlashImmunityComponent component, FlashAttemptEvent args)
         {
+            if (TryComp<FlashDebuffComponent>(args.User, out var comp) && comp.BlockFlashImmunity) // Stories-FlashDebuff
+                return;
+
             if (component.Enabled)
                 args.Cancel();
         }
