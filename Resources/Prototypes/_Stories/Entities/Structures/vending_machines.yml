@@ -59,10 +59,11 @@
       color: "#78645c"
 
 - type: entity
+  abstract: true 
   parent: VendingMachine
-  id: MusicalVendingMachine
+  id: MusicalVendingMachineBase
   name: МузМат
-  description: Торговый автомат с музыкальными инструментами".
+  description: Торговый автомат с музыкальными инструментами.
   components:
     - type: VendingMachine
       pack: MusVendInventory
@@ -84,9 +85,23 @@
           shader: unshaded
         - state: panel
           map: ["enum.WiresVisualLayers.MaintenancePanel"]
-    - type: AccessReader
-      access: [["Prison"]]
     - type: PointLight
       radius: 1
       energy: 1.2
       color: "#6f42d6"
+
+- type: entity
+  parent: MusicalVendingMachineBase
+  id: MusicalVendingMachine
+  suffix: Станция
+  components:
+    - type: AccessReader
+      access: [["Theatre"]]
+
+- type: entity
+  parent: MusicalVendingMachineBase
+  id: MusicalVendingMachinePrison
+  suffix: Тюрьма 
+  components:
+    - type: AccessReader
+      access: [["Prison"]]
