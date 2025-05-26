@@ -127,10 +127,8 @@ namespace Content.Server.Flash
                 return;
 
             // Stories-FlashDebuff Start
-            if (!TryComp<FlashDebuffComponent>(target, out var flashDebuffComponent))
-                return;
-
-            flashDuration *= flashDebuffComponent.CoefficientDuration;
+            TryComp<FlashDebuffComponent>(target, out var flashDebuffComponent);
+            flashDuration *= flashDebuffComponent?.CoefficientDuration ?? 1;
             // Stories-FlashDebuff Start
 
             // don't paralyze, slowdown or convert to rev if the target is immune to flashes
