@@ -1,2 +1,2 @@
-ent-ActionToggleVulpkaninWagging = action-name-toggle-wagging
-    .desc = action-description-toggle-wagging
+ent-ActionToggleVulpkaninWagging = Махать хвостом
+    .desc = Начать/перестать махать хвостом.
