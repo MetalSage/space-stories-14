@@ -4,6 +4,9 @@
   id: MobFelinid
   name: Urist McFelinid
   components:
+  - type: FootstepModifier
+    footstepSoundCollection: null
+  - type: FlashDebuff
   - type: HumanoidAppearance
     species: Felinid
     hideLayersOnEquip:
