@@ -4,8 +4,6 @@
   parent: BaseMobSpeciesOrganic
   id: MobRodentia
   components:
-  - type: Bloodstream
-    bloodMaxVolume: 240 # less than 20%
   - type: MobThresholds
     thresholds:
       0: Alive
@@ -13,8 +11,8 @@
       180: Dead
   - type: SlowOnDamage
     speedModifierThresholds:
-      60: 1
-      80: 1
+      60: 0.9
+      80: 0.7
   - type: StandingState
     crawlingSpeedModifier: 0.5
   - type: HumanoidAppearance
@@ -39,7 +37,6 @@
     netsync: false
     noRot: true
     drawdepth: Mobs
-    scale: 0.925, 0.925
     layers:
       - map: [ "enum.HumanoidVisualLayers.Chest" ]
       - map: [ "enum.HumanoidVisualLayers.Head" ]
