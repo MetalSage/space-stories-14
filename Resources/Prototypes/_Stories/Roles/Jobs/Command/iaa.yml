@@ -31,7 +31,6 @@
     id: IAAPDA
     eyes: ClothingEyesGlassesSunglasses
     ears: ClothingHeadsetIAA
-    neck: ClothingNeckLawyerbadge
   inhand:
     - BriefcaseBrown
   storage:
