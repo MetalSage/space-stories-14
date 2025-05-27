@@ -71,7 +71,7 @@
       state: l_leg
     - shader: StencilMask
       map: [ "enum.HumanoidVisualLayers.StencilMask" ]
-      sprite: Mobs/Customization/Vulpkanin/masking_helpers.rsi
+      sprite: _Stories/Mobs/Vulpkanin/masking_helpers.rsi
       state: female_full
       visible: false
     - map: [ "jumpsuit" ]
