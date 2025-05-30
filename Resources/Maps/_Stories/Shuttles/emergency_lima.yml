@@ -1,11 +1,11 @@
 meta:
   format: 7
   category: Grid
-  engineVersion: 251.0.0
-  forkId: ""
-  forkVersion: ""
-  time: 05/11/2025 15:47:48
-  entityCount: 621
+  engineVersion: 255.0.0
+  forkId: stories
+  forkVersion: 55478b05961186332a41368de322443976223537
+  time: 05/29/2025 09:10:50
+  entityCount: 624
 maps: []
 grids:
 - 2
@@ -18,6 +18,7 @@ tilemap:
   3: FloorDarkMono
   6: FloorGlass
   5: FloorMowedAstroGrass
+  13: FloorReinforced
   12: FloorShuttleOrange
   0: FloorSteel
   9: FloorSteelCheckerDark
@@ -40,7 +41,7 @@ entities:
       chunks:
         0,0:
           ind: 0,0
-          tiles: AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAQAAAAAAAQAAAAAAAQAAAAAAAQAAAAAAAQAAAAAAAgAAAAAAAgAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAwAAAAAAAQAAAAAAAwAAAAAAAAAAAAAAAAAAAAAABAAAAAAABAAAAAAABAAAAAAAAQAAAAAAAQAAAAAAAQAAAAAAAgAAAAAAAgAAAAAAAgAAAAAAAwAAAAAAAAAAAAAAAwAAAAAABQAAAAAAAwAAAAAAAAAAAAAAAwAAAAAAAQAAAAAABAAAAAAABAAAAAAAAQAAAAAAAQAAAAAAAQAAAAAAAgAAAAAAAgAAAAAAAgAAAAAAAwAAAAAABgAAAAAAAwAAAAAABQAAAAAAAwAAAAAABgAAAAAAAwAAAAAAAQAAAAAABAAAAAAABAAAAAAAAQAAAAAAAQAAAAAAAQAAAAAAAgAAAAAAAgAAAAAAAgAAAAAAAwAAAAAAAAAAAAAAAwAAAAAABQAAAAAAAwAAAAAAAAAAAAAAAwAAAAAAAQAAAAAAAQAAAAAAAQAAAAAAAQAAAAAAAQAAAAAAAQAAAAAAAgAAAAAAAgAAAAAAAgAAAAAAAwAAAAAAAAAAAAAAAwAAAAAABQAAAAAAAwAAAAAAAAAAAAAAAwAAAAAAAQAAAAAABwAAAAAABwAAAAAABwAAAAAABwAAAAAAAQAAAAAAAgAAAAAAAgAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAwAAAAAABQAAAAAAAwAAAAAAAAAAAAAAAAAAAAAACAAAAAAABwAAAAAABgAAAAAABgAAAAAABwAAAAAAAQAAAAAAAgAAAAAAAgAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAwAAAAAABQAAAAAAAwAAAAAAAAAAAAAAAAAAAAAAAQAAAAAABwAAAAAABwAAAAAABwAAAAAABwAAAAAAAQAAAAAAAgAAAAAAAgAAAAAAAgAAAAAAAAAAAAAABgAAAAAAAwAAAAAABQAAAAAAAwAAAAAABgAAAAAAAAAAAAAAAQAAAAAAAQAAAAAAAQAAAAAAAQAAAAAAAQAAAAAAAQAAAAAAAgAAAAAAAgAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAwAAAAAABQAAAAAAAwAAAAAAAAAAAAAAAAAAAAAAAwAAAAAACQAAAAAACQAAAAAACQAAAAAACQAAAAAAAQAAAAAAAgAAAAAAAgAAAAAAAgAAAAAAAwAAAAAAAAAAAAAAAwAAAAAAAQAAAAAAAwAAAAAAAAAAAAAAAwAAAAAAAQAAAAAACQAAAAAACQAAAAAACQAAAAAACQAAAAAAAQAAAAAAAgAAAAAAAgAAAAAAAgAAAAAAAwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAwAAAAAAAQAAAAAACQAAAAAACQAAAAAACQAAAAAACQAAAAAAAQAAAAAAAgAAAAAAAgAAAAAAAgAAAAAAAAAAAAAABgAAAAAAAAAAAAAABgAAAAAAAAAAAAAABgAAAAAAAAAAAAAAAQAAAAAAAwAAAAAAAwAAAAAAAwAAAAAAAwAAAAAAAQAAAAAAAgAAAAAAAgAAAAAAAgAAAAAAAwAAAAAAAwAAAAAAAwAAAAAAAAAAAAAAAwAAAAAAAwAAAAAAAwAAAAAAAQAAAAAAAwAAAAAAAwAAAAAAAwAAAAAAAwAAAAAAAQAAAAAAAgAAAAAAAgAAAAAAAgAAAAAAAQAAAAAAAQAAAAAAAQAAAAAAAwAAAAAAAQAAAAAAAQAAAAAAAQAAAAAAAQAAAAAAAQAAAAAAAQAAAAAAAQAAAAAAAQAAAAAAAQAAAAAAAgAAAAAAAgAAAAAAAgAAAAAAAQAAAAAACgAAAAAACgAAAAAACgAAAAAACgAAAAAACgAAAAAAAQAAAAAAAQAAAAAAAQAAAAAAAQAAAAAAAQAAAAAAAQAAAAAACwAAAAAAAgAAAAAAAgAAAAAAAgAAAAAA
+          tiles: AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAQAAAAAAAQAAAAAAAQAAAAAAAQAAAAAAAQAAAAAAAgAAAAAAAgAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAwAAAAAAAQAAAAAAAwAAAAAAAAAAAAAAAAAAAAAABAAAAAAABAAAAAAABAAAAAAAAQAAAAAAAQAAAAAAAQAAAAAAAgAAAAAAAgAAAAAAAgAAAAAAAwAAAAAAAAAAAAAAAwAAAAAABQAAAAAAAwAAAAAAAAAAAAAAAwAAAAAAAQAAAAAABAAAAAAABAAAAAAAAQAAAAAAAQAAAAAAAQAAAAAAAgAAAAAAAgAAAAAAAgAAAAAAAwAAAAAABgAAAAAAAwAAAAAABQAAAAAAAwAAAAAABgAAAAAAAwAAAAAAAQAAAAAABAAAAAAABAAAAAAADQAAAAAADQAAAAAAAQAAAAAAAgAAAAAAAgAAAAAAAgAAAAAAAwAAAAAAAAAAAAAAAwAAAAAABQAAAAAAAwAAAAAAAAAAAAAAAwAAAAAAAQAAAAAAAQAAAAAAAQAAAAAAAQAAAAAAAQAAAAAAAQAAAAAAAgAAAAAAAgAAAAAAAgAAAAAAAwAAAAAAAAAAAAAAAwAAAAAABQAAAAAAAwAAAAAAAAAAAAAAAwAAAAAAAQAAAAAABwAAAAAABwAAAAAABwAAAAAABwAAAAAAAQAAAAAAAgAAAAAAAgAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAwAAAAAABQAAAAAAAwAAAAAAAAAAAAAAAAAAAAAACAAAAAAABwAAAAAABgAAAAAABgAAAAAABwAAAAAAAQAAAAAAAgAAAAAAAgAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAwAAAAAABQAAAAAAAwAAAAAAAAAAAAAAAAAAAAAAAQAAAAAABwAAAAAABwAAAAAABwAAAAAABwAAAAAAAQAAAAAAAgAAAAAAAgAAAAAAAgAAAAAAAAAAAAAABgAAAAAAAwAAAAAABQAAAAAAAwAAAAAABgAAAAAAAAAAAAAAAQAAAAAAAQAAAAAAAQAAAAAAAQAAAAAAAQAAAAAAAQAAAAAAAgAAAAAAAgAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAwAAAAAABQAAAAAAAwAAAAAAAAAAAAAAAAAAAAAAAwAAAAAACQAAAAAACQAAAAAACQAAAAAACQAAAAAAAQAAAAAAAgAAAAAAAgAAAAAAAgAAAAAAAwAAAAAAAAAAAAAAAwAAAAAAAQAAAAAAAwAAAAAAAAAAAAAAAwAAAAAAAQAAAAAACQAAAAAACQAAAAAACQAAAAAACQAAAAAAAQAAAAAAAgAAAAAAAgAAAAAAAgAAAAAAAwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAwAAAAAAAQAAAAAACQAAAAAACQAAAAAACQAAAAAACQAAAAAAAQAAAAAAAgAAAAAAAgAAAAAAAgAAAAAAAAAAAAAABgAAAAAAAAAAAAAABgAAAAAAAAAAAAAABgAAAAAAAAAAAAAAAQAAAAAAAwAAAAAAAwAAAAAAAwAAAAAAAwAAAAAAAQAAAAAAAgAAAAAAAgAAAAAAAgAAAAAAAwAAAAAAAwAAAAAAAwAAAAAAAAAAAAAAAwAAAAAAAwAAAAAAAwAAAAAAAQAAAAAAAwAAAAAAAwAAAAAAAwAAAAAAAwAAAAAAAQAAAAAAAgAAAAAAAgAAAAAAAgAAAAAAAQAAAAAAAQAAAAAAAQAAAAAAAwAAAAAAAQAAAAAAAQAAAAAAAQAAAAAAAQAAAAAAAQAAAAAAAQAAAAAAAQAAAAAAAQAAAAAAAQAAAAAAAgAAAAAAAgAAAAAAAgAAAAAAAQAAAAAACgAAAAAACgAAAAAACgAAAAAACgAAAAAACgAAAAAAAQAAAAAAAQAAAAAAAQAAAAAAAQAAAAAAAQAAAAAAAQAAAAAACwAAAAAAAgAAAAAAAgAAAAAAAgAAAAAA
           version: 6
         0,-1:
           ind: 0,-1
@@ -583,7 +584,8 @@ entities:
     - type: DeviceLinkSource
       linkedPorts:
         580:
-        - DoorStatus: DoorBolt
+        - - DoorStatus
+          - DoorBolt
 - proto: AirlockExternalGlassCommandLocked
   entities:
   - uid: 578
@@ -597,7 +599,8 @@ entities:
     - type: DeviceLinkSource
       linkedPorts:
         579:
-        - DoorStatus: DoorBolt
+        - - DoorStatus
+          - DoorBolt
 - proto: AirlockExternalGlassEngineeringLocked
   entities:
   - uid: 580
@@ -611,8 +614,24 @@ entities:
     - type: DeviceLinkSource
       linkedPorts:
         581:
-        - DoorStatus: DoorBolt
-- proto: AirlockExternalGlassShuttleEmergencyLocked
+        - - DoorStatus
+          - DoorBolt
+- proto: AirlockExternalLocked
+  entities:
+  - uid: 579
+    components:
+    - type: Transform
+      rot: 3.141592653589793 rad
+      pos: 9.5,16.5
+      parent: 2
+    - type: DeviceLinkSink
+      invokeCounter: 1
+    - type: DeviceLinkSource
+      linkedPorts:
+        578:
+        - - DoorStatus
+          - DoorBolt
+- proto: AirlockGlassShuttle
   entities:
   - uid: 153
     components:
@@ -644,20 +663,6 @@ entities:
       rot: -1.5707963267948966 rad
       pos: -0.5,-0.5
       parent: 2
-- proto: AirlockExternalLocked
-  entities:
-  - uid: 579
-    components:
-    - type: Transform
-      rot: 3.141592653589793 rad
-      pos: 9.5,16.5
-      parent: 2
-    - type: DeviceLinkSink
-      invokeCounter: 1
-    - type: DeviceLinkSource
-      linkedPorts:
-        578:
-        - DoorStatus: DoorBolt
 - proto: AirlockMedicalGlassLocked
   entities:
   - uid: 584
@@ -1352,6 +1357,11 @@ entities:
       parent: 2
 - proto: CableHV
   entities:
+  - uid: 1
+    components:
+    - type: Transform
+      pos: 11.5,-0.5
+      parent: 2
   - uid: 278
     components:
     - type: Transform
@@ -1361,11 +1371,6 @@ entities:
     components:
     - type: Transform
       pos: 11.5,0.5
-      parent: 2
-  - uid: 280
-    components:
-    - type: Transform
-      pos: 10.5,0.5
       parent: 2
 - proto: CableMV
   entities:
@@ -1608,6 +1613,16 @@ entities:
     components:
     - type: Transform
       pos: 9.5,0.5
+      parent: 2
+  - uid: 623
+    components:
+    - type: Transform
+      pos: 10.5,-0.5
+      parent: 2
+  - uid: 624
+    components:
+    - type: Transform
+      pos: 11.5,-0.5
       parent: 2
 - proto: CableTerminal
   entities:
@@ -3209,6 +3224,13 @@ entities:
       parent: 2
     - type: PowerSupplier
       supplyRate: 25000
+- proto: GravityGeneratorMini
+  entities:
+  - uid: 280
+    components:
+    - type: Transform
+      pos: 10.5,0.5
+      parent: 2
 - proto: Grille
   entities:
   - uid: 8
@@ -3360,43 +3382,62 @@ entities:
     - type: DeviceLinkSource
       linkedPorts:
         178:
-        - Pressed: Toggle
+        - - Pressed
+          - Toggle
         177:
-        - Pressed: Toggle
+        - - Pressed
+          - Toggle
         176:
-        - Pressed: Toggle
+        - - Pressed
+          - Toggle
         165:
-        - Pressed: Toggle
+        - - Pressed
+          - Toggle
         164:
-        - Pressed: Toggle
+        - - Pressed
+          - Toggle
         163:
-        - Pressed: Toggle
+        - - Pressed
+          - Toggle
         162:
-        - Pressed: Toggle
+        - - Pressed
+          - Toggle
         161:
-        - Pressed: Toggle
+        - - Pressed
+          - Toggle
         175:
-        - Pressed: Toggle
+        - - Pressed
+          - Toggle
         174:
-        - Pressed: Toggle
+        - - Pressed
+          - Toggle
         96:
-        - Pressed: Toggle
+        - - Pressed
+          - Toggle
         170:
-        - Pressed: Toggle
+        - - Pressed
+          - Toggle
         171:
-        - Pressed: Toggle
+        - - Pressed
+          - Toggle
         172:
-        - Pressed: Toggle
+        - - Pressed
+          - Toggle
         173:
-        - Pressed: Toggle
+        - - Pressed
+          - Toggle
         169:
-        - Pressed: Toggle
+        - - Pressed
+          - Toggle
         168:
-        - Pressed: Toggle
+        - - Pressed
+          - Toggle
         167:
-        - Pressed: Toggle
+        - - Pressed
+          - Toggle
         166:
-        - Pressed: Toggle
+        - - Pressed
+          - Toggle
 - proto: LockableButtonMedical
   entities:
   - uid: 586
@@ -3416,9 +3457,11 @@ entities:
     - type: DeviceLinkSource
       linkedPorts:
         179:
-        - Pressed: Toggle
+        - - Pressed
+          - Toggle
         180:
-        - Pressed: Toggle
+        - - Pressed
+          - Toggle
 - proto: LockerEvidence
   entities:
   - uid: 479
@@ -3681,20 +3724,17 @@ entities:
   - uid: 25
     components:
     - type: Transform
-      rot: 1.5707963267948966 rad
-      pos: -0.5,3.5
+      pos: -0.5,4.5
       parent: 2
   - uid: 26
     components:
     - type: Transform
-      rot: 1.5707963267948966 rad
-      pos: -0.5,4.5
+      pos: -0.5,5.5
       parent: 2
   - uid: 27
     components:
     - type: Transform
-      rot: 1.5707963267948966 rad
-      pos: -0.5,5.5
+      pos: -0.5,3.5
       parent: 2
   - uid: 28
     components:
@@ -3837,12 +3877,13 @@ entities:
     - type: Transform
       pos: 10.5,7.5
       parent: 2
-- proto: SubstationBasic
+- proto: SubstationWallBasic
   entities:
   - uid: 30
     components:
     - type: Transform
-      pos: 10.5,0.5
+      rot: 3.141592653589793 rad
+      pos: 11.5,-0.5
       parent: 2
 - proto: SuitStorageNTSRA
   entities:
