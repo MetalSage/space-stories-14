@@ -122,10 +122,9 @@
         ignoreResistances: true
         damage:
           groups:
+            Brute: -0.3
             Burn: -0.3
             Toxin: -0.3
-          types:
-            Blunt: -0.3
       - !type:ModifyBleedAmount
         amount: -0.15
       - !type:PopupMessage
