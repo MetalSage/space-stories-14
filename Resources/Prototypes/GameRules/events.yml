@@ -24,6 +24,7 @@
     - id: SpiderClownSpawn
     - id: SpiderSpawn
     - id: VentClog
+    - id: STJobDistributionError # Stories
 
 - type: entityTable
   id: BasicAntagEventsTable
@@ -39,8 +40,12 @@
     - id: ZombieOutbreak
     - id: LoneOpsSpawn
     - id: DerelictCyborgSpawn
-    #- id: WizardSpawn # Stories
-    - id: SpafMigration # Stories
+    # Stories Start
+    #- id: WizardSpawn 
+    - id: SpafMigration
+    - id: InquisitorSpawn
+    - id: KyloSpawn
+    # Stories End
 
 - type: entity
   id: BaseStationEvent
