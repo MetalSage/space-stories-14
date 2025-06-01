@@ -48,11 +48,11 @@ public sealed class CardDeckSystem : EntitySystem
         var layerIndex = 1;
         var maxCardsInDeck = 5;
 
-        var totalCards = Math.Min(maxCardsInDeck, cardStack.Cards.Count);
+        var totalCards = Math.Min(maxCardsInDeck, cardStack.CardContainer.ContainedEntities.Count);
         if (totalCards == 0)
             return;
 
-        foreach (var card in cardStack.Cards.Take(totalCards))
+        foreach (var card in cardStack.CardContainer.ContainedEntities.Take(totalCards))
         {
             if (!TryComp<SpriteComponent>(card, out var cardSprite) ||
                 !TryComp<FoldableComponent>(card, out var foldable))

@@ -41,7 +41,7 @@ public sealed partial class FanMenu : RadialMenu
         if (!_entManager.TryGetComponent<CardStackComponent>(_owner, out var stackComp))
             return;
 
-        foreach (var card in stackComp.Cards)
+        foreach (var card in stackComp.CardContainer.ContainedEntities)
         {
             if (!_entManager.TryGetComponent<SpriteComponent>(card, out var cardSprite))
                 continue;

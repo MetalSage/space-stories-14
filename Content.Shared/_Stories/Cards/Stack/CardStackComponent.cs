@@ -6,14 +6,11 @@ using Robust.Shared.Containers;
 
 namespace Content.Shared._Stories.Cards.Stack;
 
-[RegisterComponent, NetworkedComponent, AutoGenerateComponentState]
+[RegisterComponent, NetworkedComponent]
 public sealed partial class CardStackComponent : Component
 {
     [DataField("content")]
     public List<EntProtoId> InitialContent = [];
-
-    [DataField, AutoNetworkedField]
-    public List<EntityUid> Cards = [];
 
     [ViewVariables]
     public Container CardContainer = default!;
@@ -30,4 +27,14 @@ public enum CardStackVisuals : byte
 {
     CardsCount,
     Shuffled
+}
+public sealed class CardAddedEvent : EntityEventArgs
+{
+    public EntityUid User;
+    public EntityUid Card;
+    public CardAddedEvent(EntityUid user, EntityUid card)
+    {
+        User = user;
+        Card = card;
+    }
 }

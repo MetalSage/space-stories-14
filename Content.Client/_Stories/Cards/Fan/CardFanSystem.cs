@@ -44,9 +44,9 @@ public sealed class CardFanSystem : EntitySystem
         var angleStart = 135f;
         var angleEnd = 225f;
 
-        var totalCards = Math.Min(maxCardsInFan, cardStack.Cards.Count);
+        var totalCards = Math.Min(maxCardsInFan, cardStack.CardContainer.ContainedEntities.Count);
 
-        foreach (var card in cardStack.Cards.Take(totalCards))
+        foreach (var card in cardStack.CardContainer.ContainedEntities.Take(totalCards))
         {
             if (!TryComp<SpriteComponent>(card, out var cardSprite) ||
                 !TryComp<FoldableComponent>(card, out var foldable))
