@@ -1,0 +1,156 @@
+- type: entity
+  parent: FaxMachineBase
+  id: STFaxMachineCaptains
+  name: факс дальнего действия капитана
+  description: Блюспейс-технологии на службе бюрократии.
+  suffix: "Ядерные Коды"
+  components:
+    - type: Sprite
+      sprite: _Stories/Structures/Machines/fax_machine/fax_machine_captain.rsi
+      drawdepth: SmallObjects
+      layers:
+      - state: icon
+        map: [ "enum.FaxMachineVisuals.VisualState" ]
+    - type: Icon
+      sprite: _Stories/Structures/Machines/fax_machine/fax_machine_captain.rsi
+      state: icon
+    - type: FaxMachine
+      name: "Офис Капитана"
+      receiveNukeCodes: true
+      receiveStationGoal: true # Corvax-StationGoal
+    - type: StealTarget
+      stealGroup: FaxMachineCaptain
+
+- type: entity
+  parent: FaxMachineBase
+  id: STFaxMachineCargo
+  name: факс дальнего действия 
+  description: Блюспейс-технологии на службе бюрократии.
+  suffix: Снабжение
+  components:
+    - type: Sprite
+      sprite: _Stories/Structures/Machines/fax_machine/fax_machine_cargo.rsi
+      drawdepth: SmallObjects
+      layers:
+      - state: icon
+        map: [ "enum.FaxMachineVisuals.VisualState" ]
+    - type: Icon
+      sprite: _Stories/Structures/Machines/fax_machine/fax_machine_cargo.rsi
+      state: icon
+    - type: FaxMachine
+      name: "Снабжение"
+
+- type: entity
+  parent: FaxMachineBase
+  id: STFaxMachineEngeneering
+  name: факс дальнего действия 
+  description: Блюспейс-технологии на службе бюрократии.
+  suffix: Инженерный
+  components:
+    - type: Sprite
+      sprite: _Stories/Structures/Machines/fax_machine/fax_machine_engeneering.rsi
+      drawdepth: SmallObjects
+      layers:
+      - state: icon
+        map: [ "enum.FaxMachineVisuals.VisualState" ]
+    - type: Icon
+      sprite: _Stories/Structures/Machines/fax_machine/fax_machine_engeneering.rsi
+      state: icon
+    - type: FaxMachine
+      name: "Инженерный отдел"
+
+- type: entity
+  parent: FaxMachineBase
+  id: STFaxMachineScientist
+  name: факс дальнего действия 
+  description: Блюспейс-технологии на службе бюрократии.
+  suffix: Научный
+  components:
+    - type: Sprite
+      sprite: _Stories/Structures/Machines/fax_machine/fax_machine_scientist.rsi
+      drawdepth: SmallObjects
+      layers:
+      - state: icon
+        map: [ "enum.FaxMachineVisuals.VisualState" ]
+    - type: Icon
+      sprite: _Stories/Structures/Machines/fax_machine/fax_machine_scientist.rsi
+      state: icon
+    - type: FaxMachine
+      name: "Научный отдел"
+
+- type: entity
+  parent: FaxMachineBase
+  id: STFaxMachineSecurity
+  name: факс дальнего действия 
+  description: Блюспейс-технологии на службе бюрократии.
+  suffix: CБ
+  components:
+    - type: Sprite
+      sprite: _Stories/Structures/Machines/fax_machine/fax_machine_security.rsi
+      drawdepth: SmallObjects
+      layers:
+      - state: icon
+        map: [ "enum.FaxMachineVisuals.VisualState" ]
+    - type: Icon
+      sprite: _Stories/Structures/Machines/fax_machine/fax_machine_security.rsi
+      state: icon
+    - type: FaxMachine
+      name: "Служба Безопасности"
+
+- type: entity
+  parent: FaxMachineBase
+  id: STFaxMachineMedical
+  name: факс дальнего действия 
+  description: Блюспейс-технологии на службе бюрократии.
+  suffix: Медецинский
+  components:
+    - type: Sprite
+      sprite: _Stories/Structures/Machines/fax_machine/fax_machine_medical.rsi
+      drawdepth: SmallObjects
+      layers:
+      - state: icon
+        map: [ "enum.FaxMachineVisuals.VisualState" ]
+    - type: Icon
+      sprite: _Stories/Structures/Machines/fax_machine/fax_machine_medical.rsi
+      state: icon
+    - type: FaxMachine
+      name: "Медецинский отдел"
+
+- type: entity
+  parent: FaxMachineBase
+  id: STFaxMachineHop
+  name: факс дальнего действия 
+  description: Блюспейс-технологии на службе бюрократии.
+  suffix: Глава Персонала
+  components:
+    - type: Sprite
+      sprite: _Stories/Structures/Machines/fax_machine/fax_machine_hop.rsi
+      drawdepth: SmallObjects
+      layers:
+      - state: icon
+        map: [ "enum.FaxMachineVisuals.VisualState" ]
+    - type: Icon
+      sprite: _Stories/Structures/Machines/fax_machine/fax_machine_hop.rsi
+      state: icon
+    - type: FaxMachine
+      name: "Глава Персонала"
+
+- type: entity
+  parent: FaxMachineBase
+  id: STFaxMachineCentcom
+  description: Блюспейс-технологии на службе бюрократии.
+  name: факс дальнего действия центком
+  suffix: Центком
+  components:
+    - type: Sprite
+      sprite: _Stories/Structures/Machines/fax_machine/fax_machine_centcom.rsi
+      drawdepth: SmallObjects
+      layers:
+      - state: icon
+        map: [ "enum.FaxMachineVisuals.VisualState" ]
+    - type: Icon
+      sprite: _Stories/Structures/Machines/fax_machine/fax_machine_centcom.rsi
+      state: icon
+    - type: FaxMachine
+      name: "Центральное командование"
+      notifyAdmins: true
