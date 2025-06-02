@@ -71,6 +71,10 @@
   - type: Reflect
   - type: IgnitionSource
     temperature: 700
+  - type: Clothing
+    quickEquip: false
+    slots:
+    - belt
 
 - type: entity
   name: energy sword
