@@ -25,3 +25,14 @@
     sprite: _Stories/Clothing/Neck/mantles/guardian_nt_mantle_shoulder.rsi
   - type: Clothing
     sprite: _Stories/Clothing/Neck/mantles/guardian_nt_mantle_shoulder.rsi
+
+- type: entity
+  parent: [ClothingNeckBase, BaseCommandContraband]
+  id: ClothingShoulderMantleHoS
+  name: HoS's Shoulder Mantle
+  description: A comfortable and chique mantle befitting of only the most experienced captain.
+  components:
+  - type: Sprite
+    sprite: Clothing/Neck/mantles/hosmantle_shoulder.rsi
+  - type: Clothing
+    sprite: Clothing/Neck/mantles/hosmantle_shoulder.rsi

@@ -1294,6 +1294,7 @@
   loadouts:
   - HeadofSecurityCloak
   - HeadofSecurityMantle
+  - HeadofSecurityNeck # Stories
 
 - type: loadoutGroup
   id: HeadofSecurityOuterClothing

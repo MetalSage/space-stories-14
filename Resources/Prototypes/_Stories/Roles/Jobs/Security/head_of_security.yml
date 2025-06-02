@@ -1,0 +1,7 @@
+- type: loadout
+  id: HeadofSecurityNeck
+  equipment:
+    neck: ClothingShoulderMantleHoS
+  effects:
+  - !type:GroupLoadoutEffect
+    proto: MasterHoS
