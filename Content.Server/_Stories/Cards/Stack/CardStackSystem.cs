@@ -160,11 +160,7 @@ public sealed class CardStackSystem : SharedCardStackSystem
     {
         if (!Resolve(uid, ref comp) || !TryComp(card, out CardComponent? _))
             return;
-
         _containerSystem.Remove(card, comp.CardContainer);
-        // if (user != null)
-        //     _handsSystem.TryPickupAnyHand(user.Value, card);
-        _appearance.SetData(uid, CardStackVisuals.CardsCount, comp.CardContainer.ContainedEntities.Count);
 
         if (comp.CardContainer.ContainedEntities.Count == 0)
             EntityManager.DeleteEntity(uid);

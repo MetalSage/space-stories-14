@@ -5,11 +5,15 @@ using Content.Shared._Stories.Cards.Stack;
 
 namespace Content.Server._Stories.Cards.Deck;
 
-public sealed class CardDeckSystem : SharedCardStackSystem
+public sealed class CardDeckSystem : EntitySystem
 {
     [Dependency] private readonly SharedTransformSystem _transformSystem = default!;
 
-    protected override void CombineDecks(EntityUid uid, EntityUid target, CardStackComponent component)
+    public override void Initialize()
+    {
+        base.Initialize();
+    }
+    private void CombineDecks(EntityUid uid, EntityUid target, CardStackComponent component)
     {
         if (!TryComp<CardStackComponent>(target, out var targetStack))
             return;
@@ -18,10 +22,10 @@ public sealed class CardDeckSystem : SharedCardStackSystem
 
         foreach (var card in cardsToMove)
         {
-            RemoveCard(uid, card, component);
+            // RemoveCard(uid, card, component);
             _transformSystem.SetCoordinates(card, EntityCoordinates.Invalid);
 
-            AddCard(target, card, targetStack);
+            // AddCard(target, card, targetStack);
         }
     }
 }

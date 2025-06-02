@@ -39,12 +39,15 @@ public abstract class SharedCardStackSystem : EntitySystem
     }
     private void OnActivateInWorldEvent(EntityUid uid, CardStackComponent comp, ActivateInWorldEvent args)
     {
+        _audio.PlayPredicted(comp.RemoveCard, Transform(uid).Coordinates, args.User);
+
         var card = comp.CardContainer.ContainedEntities.Last();
         RemoveCard(uid, card, comp);
         _handsSystem.TryPickupAnyHand(args.User, card);
-        _audio.PlayPredicted(comp.RemoveCard, Transform(uid).Coordinates, args.User);
+
+        _appearance.SetData(uid, CardStackVisuals.CardsCount, comp.CardContainer.ContainedEntities.Count);
     }
-    protected virtual void CombineDecks(EntityUid uid, EntityUid target, CardStackComponent component) { }
+    protected void CombineDecks(EntityUid uid, EntityUid target, CardStackComponent component) { }
     protected virtual void RemoveCard(EntityUid uid, EntityUid card, CardStackComponent? comp = null) { }
     protected void AddCard(EntityUid uid, EntityUid card, CardStackComponent? comp = null)
     {
