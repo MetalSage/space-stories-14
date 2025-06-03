@@ -102,7 +102,7 @@
   id: STFaxMachineMedical
   name: факс дальнего действия 
   description: Блюспейс-технологии на службе бюрократии.
-  suffix: Медецинский
+  suffix: Медицинский
   components:
     - type: Sprite
       sprite: _Stories/Structures/Machines/fax_machine/fax_machine_medical.rsi
@@ -114,7 +114,7 @@
       sprite: _Stories/Structures/Machines/fax_machine/fax_machine_medical.rsi
       state: icon
     - type: FaxMachine
-      name: "Медецинский отдел"
+      name: "Медицинский отдел"
 
 - type: entity
   parent: FaxMachineBase
