@@ -1,0 +1,9 @@
+ent-RandomCableHVSpawner = спавнер кабеля ВВ
+    .suffix = 50%
+    .desc = { ent-MarkerBase.desc }
+ent-RandomCableMVSpawner = спавнер кабеля СВ
+    .suffix = 50%
+    .desc = { ent-MarkerBase.desc }
+ent-RandomCableApcExtensionSpawner = спавнер кабеля НВ
+    .suffix = 50%
+    .desc = { ent-MarkerBase.desc }

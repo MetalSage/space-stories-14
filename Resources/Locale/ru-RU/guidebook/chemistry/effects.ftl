@@ -225,6 +225,13 @@ reagent-effect-guidebook-electrocute =
         [1] Бьёт током
        *[other] бьют током
     } употребившего в течении { NATURALFIXED($time, 3) }
+    
+reagent-effect-guidebook-emote =
+   { $chance ->
+       [1] Заставит
+       *[other] заставляет
+   } метаболизатора [bold][color=white]{$emote}[/color][/bold]
+    
 reagent-effect-guidebook-extinguish-reaction =
     { $chance ->
         [1] Гасит

@@ -94,3 +94,5 @@ command-description-xenoartifact-averageResearch =
    Рассчитывает количество исследовательских очков, при всех активациях.
 command-description-xenoartifact-unlockAllNodes =
    Разблокирует все узлы артефакта.
+command-description-jobboard-completeJob =
+   Завершает указанное задание доски заданий по утилизации для станции.
