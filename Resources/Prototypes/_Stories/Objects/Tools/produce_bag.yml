@@ -8,6 +8,11 @@
     sprite: _Stories/Objects/Specific/Hydroponics/Equipment/produce_bag.rsi
     state: icon
   - type: Storage
+    grid:
+    - 0,0,7,4
+    maxItemSize: Small
+    quickInsert: true
+    areaInsert: true
     whitelist:
       components:
-        - Produces
+        - Produce
