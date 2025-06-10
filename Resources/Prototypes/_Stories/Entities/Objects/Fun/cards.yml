@@ -12,7 +12,33 @@
   - type: Tag
     tags:
     - STCard
-
+  - type: EmbeddableProjectile
+    sound:
+      params:
+        volume: -1
+      path: /Audio/Weapons/star_hit.ogg
+    removalTime: 0.5
+  - type: LandAtCursor
+  - type: DamageOtherOnHit
+    damage:
+      types:
+        Slash: 2
+        Piercing: 1
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape: !type:PolygonShape
+          radius: 0.1
+          vertices:
+          - -0.18,-0.23
+          - 0.18,-0.23
+          - 0.18,0.23
+          - -0.18,0.23
+        density: 5
+        mask:
+        - ItemMask
+        restitution: 0.3
+        friction: 0.2
 # Clubs
 - type: entity
   parent: STCardBase
