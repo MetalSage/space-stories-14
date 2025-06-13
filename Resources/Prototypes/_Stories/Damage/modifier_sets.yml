@@ -1,12 +1,30 @@
+# Маленький пузырь хуже рвется и протыкается, но слаб к тупым ударам из-за маленького размера, а к температурам слаб из-за малого объема?
 - type: damageModifierSet
-  id: ProtectiveBubble
+  id: SmallProtectiveBubble
   coefficients:
     Slash: 0.5
     Piercing: 0.5
-    Cold: 0.5
-    Heat: 0.5
+    Cold: 2
+    Heat: 2
+    Blunt: 2
+
+- type: damageModifierSet
+  id: ProtectiveBubble
+  coefficients:
+    Slash: 0.75
+    Piercing: 5
+    Cold: 0.2
+    Heat: 0.2
     Blunt: 0.5
-    Caustic: 0.5
+
+- type: damageModifierSet
+  id: LargeProtectiveBubble
+  coefficients:
+    Slash: 1
+    Piercing: 10
+    Cold: 0.1
+    Heat: 0.1
+    Blunt: 0.1
 
 - type: damageModifierSet
   id: Kidan

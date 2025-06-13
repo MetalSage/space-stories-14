@@ -1,7 +1,7 @@
 # Weapons
 - type: listing
   id: STUplinkGarrote
-  name: uplink-garrote-name 
+  name: uplink-garrote-name
   description: uplink-garrote-desc
   productEntity: STGarrote
   discountCategory: usualDiscounts
@@ -12,7 +12,7 @@
   categories:
   - UplinkWeaponry
 
-# Pointless  
+# Pointless
 - type: listing
   id: UplinkRichard
   name: uplink-richard-name
@@ -128,7 +128,7 @@
 
 - type: listing
   id: STUplinkClothingEyesHudSyndicateAgent
-  name: uplink-clothing-eyes-hud-syndicate-agent-name 
+  name: uplink-clothing-eyes-hud-syndicate-agent-name
   description: uplink-clothing-eyes-hud-syndicate-agent-desc
   productEntity: ClothingEyesHudSyndicateAgent
   discountCategory: rareDiscounts
@@ -143,3 +143,16 @@
       whitelist:
         tags:
           - NukeOpsUplink
+
+- type: listing
+  id: STPortableShieldSyndicate
+  name: портативный голощит синдиката
+  description: Высокотехнологичный генератор щита, адаптированный для мобильности.
+  productEntity: PortableShieldSyndicate
+  discountCategory: rareDiscounts
+  discountDownTo:
+    Telecrystal: 12
+  cost:
+    Telecrystal: 16
+  categories:
+    - UplinkWearables

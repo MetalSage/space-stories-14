@@ -7,7 +7,7 @@ using Robust.Shared.Physics.Components;
 using Content.Shared.Physics;
 using Content.Shared.Mobs;
 using Content.Shared._Stories.Empire.Components;
-using Content.Server._Stories.ForceUser.ProtectiveBubble.Components;
+using Content.Shared._Stories.ProtectiveBubble.Components;
 using Content.Shared.Store.Components;
 
 namespace Content.Server._Stories.ForceUser;
