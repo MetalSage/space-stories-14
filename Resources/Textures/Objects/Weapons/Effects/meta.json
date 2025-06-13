@@ -8,20 +8,6 @@
   },
   "states": [
     {
-        "name": "inquisitor_shield",
-        "delays": [
-          [
-            0.1,
-            0.1,
-            0.1,
-            0.1,
-            0.1,
-            0.1,
-            0.1
-          ]
-        ]
-      },
-    {
       "name": "shield2",
       "delays": [
         [
@@ -30,24 +16,6 @@
           0.1,
           0.1,
           0.1,
-          0.1,
-          0.1
-        ]
-      ]
-    },
-    {
-      "name": "shield3",
-      "delays": [
-        [
-          0.1,
-          0.1
-        ]
-      ]
-    },
-    {
-      "name": "shield3_bad",
-      "delays": [
-        [
           0.1,
           0.1
         ]

@@ -1,27 +1,52 @@
+using Content.Shared._Stories.ProtectiveBubble.Components;
+using Content.Shared.Damage;
+using Content.Server._Stories.ForceUser.Components;
 using Content.Shared._Stories.ForceUser;
-using Content.Shared._Stories.ForceUser.Actions.Events;
-using Content.Shared.Chemistry.Components;
-using Content.Shared.Coordinates.Helpers;
-using Content.Shared.Maps;
-using Content.Server._Stories.ForceUser.ProtectiveBubble.Components;
+using Content.Shared.Weapons.Melee.EnergySword;
 
 namespace Content.Server._Stories.ForceUser;
+
 public sealed partial class ForceUserSystem
 {
-    public void InitializeProtectiveBubble()
+    // TODO: Перенести в компонент ForceUserProtectiveBubble.
+    public const float ProtectiveBubbleVolumeCost = 5f;
+
+    public readonly DamageSpecifier ProtectiveBubbleRegeneration = new()
     {
-        SubscribeLocalEvent<ForceUserComponent, CreateProtectiveBubbleEvent>(OnProtectiveBubble);
-    }
-    private void OnProtectiveBubble(EntityUid uid, ForceUserComponent comp, CreateProtectiveBubbleEvent args)
+        DamageDict = {
+        { "Blunt", -2.5f },
+        { "Slash", -2.5f },
+        { "Piercing", -5f },
+        { "Heat", -2.5f }
+        }
+    };
+
+    public readonly DamageSpecifier ProtectiveBubbleDegradation = new()
     {
-        if (args.Handled)
-            return;
+        DamageDict = {
+        { "Blunt", 5f },
+        { "Slash", 5f },
+        { "Piercing", 10f },
+        { "Heat", 5f }
+        }
+    };
 
-        if (HasComp<ProtectiveBubbleUserComponent>(uid))
-            return;
+    public void UpdateProtectiveBubble(float frameTime)
+    {
+        var query = EntityQueryEnumerator<ForceUserProtectiveBubbleComponent, ProtectiveBubbleComponent>();
+        while (query.MoveNext(out var uid, out var forceBubble, out var bubble))
+        {
+            if (!(bubble.User is { } bubbleUser))
+                continue;
 
-        _bubble.StartBubbleWithUser(args.Proto, uid);
+            // FIXME: Очень глупо делать это каждый тик.
+            if (TryComp<ForceUserComponent>(bubbleUser, out var forceUser) && TryComp<EnergySwordComponent>(forceUser.Lightsaber, out var sword))
+                _bubble.SetColor(uid, sword.ActivatedColor);
 
-        args.Handled = true;
+            if (_force.TryRemoveVolume(bubbleUser, ProtectiveBubbleVolumeCost * frameTime))
+                _damageable.TryChangeDamage(uid, ProtectiveBubbleRegeneration * frameTime, true);
+            else
+                _damageable.TryChangeDamage(uid, ProtectiveBubbleDegradation * frameTime, true);
+        }
     }
 }

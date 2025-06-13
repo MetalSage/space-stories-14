@@ -32,13 +32,14 @@ using Robust.Shared.Random;
 using Content.Shared.Item.ItemToggle;
 using Content.Shared.Interaction;
 using Content.Server.Beam;
-using Content.Server._Stories.ForceUser.ProtectiveBubble.Systems;
+using Content.Server._Stories.ProtectiveBubble;
 using Robust.Shared.Prototypes;
 using Content.Server._Stories.Conversion;
 
 namespace Content.Server._Stories.ForceUser;
 public sealed partial class ForceUserSystem : SharedForceUserSystem
 {
+    [Dependency] private readonly ProtectiveBubbleSystem _bubble = default!;
     [Dependency] private readonly IMapManager _mapManager = default!;
     [Dependency] private readonly BeamSystem _beam = default!;
     [Dependency] private readonly SharedDoAfterSystem _doAfterSystem = default!;
@@ -65,7 +66,6 @@ public sealed partial class ForceUserSystem : SharedForceUserSystem
     [Dependency] private readonly FlammableSystem _flammable = default!;
     [Dependency] private readonly ThrowingSystem _throwing = default!;
     [Dependency] private readonly SharedTransformSystem _xform = default!;
-    [Dependency] private readonly ProtectiveBubbleSystem _bubble = default!;
     [Dependency] private readonly TetherGunSystem _tetherGunSystem = default!;
     [Dependency] private readonly SharedPopupSystem _popup = default!;
     [Dependency] private readonly SharedHandsSystem _hands = default!;
@@ -88,7 +88,6 @@ public sealed partial class ForceUserSystem : SharedForceUserSystem
         InitializeSimpleActions();
         InitializeStrangle();
         InitializePolymorph();
-        InitializeProtectiveBubble();
         InitializeLightsaber();
         InitializeLightning();
         InitializeSteal();
@@ -96,5 +95,6 @@ public sealed partial class ForceUserSystem : SharedForceUserSystem
     public override void Update(float frameTime)
     {
         base.Update(frameTime);
+        UpdateProtectiveBubble(frameTime);
     }
 }

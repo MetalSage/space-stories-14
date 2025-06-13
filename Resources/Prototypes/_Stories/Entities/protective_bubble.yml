@@ -1,0 +1,216 @@
+- type: entity
+  id: BaseProtectiveBubble
+  abstract: true
+  components:
+  - type: Appearance
+  - type: ItemToggle
+    activated: true
+    onUse: false
+  - type: ItemTogglePointLight
+  - type: ToggleableLightVisuals
+    spriteLayer: bubble
+  - type: PointLight
+    radius: 3
+    energy: 2
+    color: white
+    netsync: false
+  - type: Physics
+    canCollide: true
+    bodyType: Static
+  - type: AmbientSound
+    volume: -15
+    range: 14
+    sound:
+      path: /Audio/_Stories/Misc/ProtectiveBubble/active.ogg
+  - type: Tag
+    tags:
+    - HideContextMenu
+
+- type: entity
+  id: ProtectiveBubble
+  categories: [ HideSpawnMenu ]
+  parent: BaseProtectiveBubble
+  components:
+  - type: ForceUserProtectiveBubble
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 100
+      behaviors:
+      - !type:PlaySoundBehavior
+        sound:
+          path: /Audio/Weapons/block_metal1.ogg
+      - !type:DoActsBehavior
+        acts: [ "Destruction" ]
+  - type: Damageable
+    damageModifierSet: ProtectiveBubble
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeCircle
+          radius: 0.75
+        density: 0
+        mask:
+        - Impassable
+        layer:
+        - MobLayer
+        restitution: 0  # fite me
+        friction: 0
+  - type: Sprite
+    drawdepth: Effects
+    noRot: true
+    layers:
+    - shader: unshaded
+      map: [ "bubble" ]
+      sprite: _Stories/ProtectiveBubbles/ForceShield.rsi
+      state: shield
+
+# Syndi
+
+- type: entity
+  id: SmallProtectiveBubbleSyndicate
+  name: малый защитный пузырь
+  categories: [ HideSpawnMenu ]
+  parent: BaseProtectiveBubble
+  components:
+  - type: ExplosionResistance
+    damageCoefficient: 1
+  - type: Damageable
+    damageModifierSet: SmallProtectiveBubble
+  - type: PointLight
+    radius: 6
+    energy: 4
+    color: Red
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 500
+      behaviors:
+      - !type:PlaySoundBehavior
+        sound:
+          path: /Audio/Weapons/block_metal1.ogg
+      - !type:DoActsBehavior
+        acts: [ "Destruction" ]
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeCircle
+          radius: 0.75
+        density: 0
+        mask:
+        - Impassable
+        layer:
+        - MobLayer
+        restitution: 0  # fite me
+        friction: 0
+  - type: Sprite
+    drawdepth: Effects
+    noRot: true
+    layers:
+    - shader: unshaded
+      map: [ "bubble" ]
+      sprite: _Stories/ProtectiveBubbles/ForceShield.rsi
+      state: shield
+      color: Red
+
+- type: entity
+  id: ProtectiveBubbleSyndicate
+  name: защитный пузырь
+  categories: [ HideSpawnMenu ]
+  parent: BaseProtectiveBubble
+  components:
+  # Большая площадь?
+  - type: ExplosionResistance
+    damageCoefficient: 5
+  - type: Damageable
+    damageModifierSet: ProtectiveBubble
+  - type: PointLight
+    radius: 6
+    energy: 4
+    color: Red
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 750
+      behaviors:
+      - !type:PlaySoundBehavior
+        sound:
+          path: /Audio/Weapons/block_metal1.ogg
+      - !type:DoActsBehavior
+        acts: [ "Destruction" ]
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeCircle
+          radius: 1.5
+        density: 0
+        mask:
+        - Impassable
+        layer:
+        - MobLayer
+        restitution: 0  # fite me
+        friction: 0
+  - type: Sprite
+    drawdepth: Effects
+    noRot: true
+    layers:
+    - shader: unshaded
+      map: [ "bubble" ]
+      sprite: _Stories/ProtectiveBubbles/3x3_ForceShield.rsi
+      state: shield
+      color: Red
+
+- type: entity
+  id: LargeProtectiveBubbleSyndicate
+  name: огромный защитный пузырь
+  categories: [ HideSpawnMenu ]
+  parent: BaseProtectiveBubble
+  components:
+  # Очень большая площадь?
+  - type: ExplosionResistance
+    damageCoefficient: 10
+  - type: Damageable
+    damageModifierSet: LargeProtectiveBubble
+  - type: PointLight
+    radius: 12
+    energy: 8
+    color: Red
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 1000
+      behaviors:
+      - !type:PlaySoundBehavior
+        sound:
+          path: /Audio/Weapons/block_metal1.ogg
+      - !type:DoActsBehavior
+        acts: [ "Destruction" ]
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeCircle
+          radius: 3
+        density: 0
+        mask:
+        - Impassable
+        layer:
+        - MobLayer
+        restitution: 0  # fite me
+        friction: 0
+  - type: Sprite
+    drawdepth: Effects
+    noRot: true
+    layers:
+    - shader: unshaded
+      map: [ "bubble" ]
+      sprite: _Stories/ProtectiveBubbles/6x6_ForceShield.rsi
+      state: shield
+      color: Red

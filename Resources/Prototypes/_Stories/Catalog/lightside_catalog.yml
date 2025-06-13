@@ -17,7 +17,7 @@
   description: Защитит вас от взрывов, давления, высоких и низких температур, пуль, ударов, лазеров. Он восстанавливается, используя вашу силу, и выдерживает 100 урона.
   productAction: ActionCreateProtectiveBubble
   cost:
-    SkillPoint: 5
+    SkillPoint: 3
   categories:
   - ForceLight
   conditions:

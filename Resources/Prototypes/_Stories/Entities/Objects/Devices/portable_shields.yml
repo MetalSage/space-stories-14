@@ -1,0 +1,55 @@
+- type: entity
+  parent: Clothing
+  id: PortableShieldSyndicate
+  name: портативный голощит синдиката
+  description: Высокотехнологичный генератор щита, адаптированный для мобильности. Он пропускает пули изнутри и способен принять много урона на себя. Можно починить сварочным аппаратом.
+  components:
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeCircle
+          radius: 0.75
+        density: 0
+        mask:
+        - Impassable
+        layer:
+        - MobLayer
+        restitution: 0  # fite me
+        friction: 0
+  - type: ItemToggle
+    onUse: false
+    soundActivate:
+      path: /Audio/_Stories/Misc/ProtectiveBubble/activate.ogg
+  - type: ProtectiveBubbleGenerator
+    selectableTypes:
+    - SmallProtectiveBubbleSyndicate
+    - ProtectiveBubbleSyndicate
+    - LargeProtectiveBubbleSyndicate
+  - type: ClothingSpeedModifier
+    walkModifier: 0.5
+    sprintModifier: 0.5
+  - type: HeldSpeedModifier
+  - type: Damageable
+  - type: Repairable
+    fuelCost: 10
+    doAfterDelay: 4
+    damage:
+      groups:
+        Brute: -90
+        Burn: -90
+  - type: Item
+    size: Ginormous
+  - type: Sprite
+    noRot: true
+    sprite: _Stories/Objects/Devices/portable_shield_syndi.rsi
+    state: charging
+  - type: Clothing
+    equippedPrefix: charging
+    quickEquip: false
+    slots:
+    - back
+  - type: StaticPrice
+    price: 5000
+  - type: Tag
+    tags: [] # ignore "WhitelistChameleon" tag

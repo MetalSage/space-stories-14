@@ -5,12 +5,15 @@ using Robust.Shared.GameStates;
 using Robust.Shared.Serialization.TypeSerializers.Implementations.Custom;
 using Robust.Shared.Prototypes;
 
-namespace Content.Server._Stories.ForceUser.ProtectiveBubble.Components;
+namespace Content.Shared._Stories.ProtectiveBubble.Components;
 
 [RegisterComponent]
 public sealed partial class ProtectiveBubbleComponent : Component
 {
-    [ViewVariables(VVAccess.ReadOnly), AutoNetworkedField]
+    [DataField]
+    public Color Color = Color.White;
+
+    [ViewVariables(VVAccess.ReadOnly)]
     public EntityUid? User;
 
     [ViewVariables(VVAccess.ReadOnly)]
@@ -18,7 +21,4 @@ public sealed partial class ProtectiveBubbleComponent : Component
 
     [DataField("temperatureCoefficient")]
     public float TemperatureCoefficient = 0f;
-
-    [ViewVariables(VVAccess.ReadOnly)]
-    public float CurrentLifeTime = 240f; // 4 minutes 30 seconds
 }

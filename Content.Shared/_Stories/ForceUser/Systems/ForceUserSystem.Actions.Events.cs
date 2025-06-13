@@ -81,7 +81,7 @@ public sealed partial class ForceDashActionEvent : WorldTargetActionEvent
 public sealed partial class CreateProtectiveBubbleEvent : InstantActionEvent
 {
     [DataField("proto")]
-    public EntProtoId Proto = "EffectProtectiveBubble";
+    public EntProtoId Proto = "ProtectiveBubble";
 }
 public sealed partial class StopProtectiveBubbleEvent : InstantActionEvent { }
 #endregion
