@@ -1,0 +1,24 @@
+- type: entity
+  name: медипен-вакцина от спидорака
+  parent: ChemicalMedipen
+  id: AntiVirusMedipen
+  description: Медипен с вакциной от спидорака.
+  components:
+  - type: Sprite
+    sprite: Objects/Specific/Medical/medipen.rsi
+    layers:
+    - state: microstimpen
+      map: ["enum.SolutionContainerLayers.Fill"]
+  - type: SolutionContainerVisuals
+    maxFillLevels: 1
+    changeColor: false
+    emptySpriteName: microstimpen_empty
+  - type: SolutionContainerManager
+    solutions:
+      pen:
+        maxVol: 15
+        reagents:
+        - ReagentId: AntiSpidorak
+          Quantity: 15
+  - type: Tag
+    tags: []

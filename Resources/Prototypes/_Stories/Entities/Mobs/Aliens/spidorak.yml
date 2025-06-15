@@ -1,0 +1,58 @@
+- type: entity
+  name: Спидорак # Название придумали игроки на Space Stories Marine Corps на одном ивенте
+  parent: MobTick
+  id: MobSpidorak
+  description: Очень страшный скорпион из далекого космоса. Не дайте ему себя укусить.
+  components:
+  # Ход конем, чтобы спидораки не могли отспидорачить друг друга
+  # Они все еще вводят спидорак в других спидораках, но он почему-то не метаболизируется. Вот и славно.
+  - type: Bloodstream
+    chemicalSolutionName: spidorakChemicals
+  - type: StatusIcon
+    bounds: -0.5,-0.5,0.5,0.5
+  - type: Spidorak
+  - type: ReagentStatusIcon
+    solution: melee
+    reagent:
+      ReagentId: Spidorak
+    statusIcon: SpidorakReady
+  - type: GhostRole
+    name: Спидорак
+    description: Кусайте экипаж, заражая их смертельным вирусом, который создает больше спидораков после смерти носителя.
+    raffle:
+      settings: default
+  - type: Nightvision
+  - type: Vocal
+    sounds:
+      Unsexed: Spidorak
+  - type: FootstepModifier
+    footstepSoundCollection:
+      collection: FootstepSpidorak
+  - type: Sprite
+    drawdepth: Mobs
+    layers:
+    - map: ["enum.DamageStateVisualLayers.Base"]
+      state: alive
+      sprite: _Stories/Mobs/Aliens/spidorak.rsi
+  - type: SolutionContainerManager
+    solutions:
+      melee:
+        reagents:
+        - ReagentId: Spidorak
+          Quantity: 1
+          maxVol: 1
+  - type: SolutionRegeneration
+    duration: 60
+    solution: melee
+    generated:
+      reagents:
+      - ReagentId: Spidorak
+        Quantity: 1
+  - type: MeleeChemicalInjector
+    pierceArmor: False
+    solution: melee
+    transferAmount: 1
+  - type: Tag
+    tags:
+      - CannotSuicide
+      - FootstepSound

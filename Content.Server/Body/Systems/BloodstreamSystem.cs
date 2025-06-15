@@ -76,10 +76,12 @@ public sealed class BloodstreamSystem : EntitySystem
         {
             switch (effect)
             {
-                case CreateEntityReactionEffect: // Prevent entities from spawning in the bloodstream
-                case AreaReactionEffect: // No spontaneous smoke or foam leaking out of blood vessels.
-                    args.Cancelled = true;
-                    return;
+                // STORIES SPIDORAKS - start
+                // case CreateEntityReactionEffect: // Prevent entities from spawning in the bloodstream
+                // case AreaReactionEffect: // No spontaneous smoke or foam leaking out of blood vessels.
+                //     args.Cancelled = true;
+                //     return;
+                // STORIES SPIDORAKS - end
             }
         }
 

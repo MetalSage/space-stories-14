@@ -53,7 +53,10 @@
             "name": "PartyMaker"
         },
         {
-            "name": "SecurityClown"
+            "name": "SpidorakInfected"
+        },
+        {
+            "name": "SpidorakReady"
         }
     ]
 }

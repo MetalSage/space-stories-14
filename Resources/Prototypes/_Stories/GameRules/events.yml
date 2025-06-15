@@ -223,3 +223,23 @@
     - STSecurityClown
     - STPartyMaker
     - STCommandMaid
+
+- type: entity
+  id: SpidorakSpawn
+  parent: BaseStationEventLongDelay
+  components:
+  - type: StationEvent
+    startAnnouncementColor: DarkRed
+    startAnnouncement: station-event-vent-spidorak-start-announcement
+    startAudio:
+      path: /Audio/_Stories/Spidorak/alert.ogg
+      params:
+        volume: -8
+    earliestStart: 20
+    minimumPlayers: 30
+    weight: 6.5
+    duration: 1
+  - type: VentCrittersRule
+    entries:
+    - id: SpawnPointGhostSpidorak
+      prob: 0.025

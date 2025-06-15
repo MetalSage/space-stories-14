@@ -1,0 +1,138 @@
+# Вирусы, болезни на прототипах. Гениально.
+- type: reagent
+  id: Spidorak
+  name: спидорак
+  desc: Опасная болезнь, которая превращает людей в спидораков.
+  group: Biological
+  flavor: metallic
+  color: "#8000FF"
+  worksOnTheDead: false
+  physicalDesc: reagent-physical-desc-ferrous
+  metabolisms:
+    Poison:
+      metabolismRate: 1.0
+      effects:
+      # 0 - 5 минута
+      # Чтобы вирус не пропал, пока метаболизируется, он сам добавляет себя. (На 1.1 больше для развития)
+      - !type:AdjustReagent
+        reagent: Spidorak
+        amount: 1.1
+        conditions:
+        - !type:ReagentThreshold
+          reagent: Spidorak
+          max: 58
+      # 5 - 10 минута
+      - !type:AdjustTemperature
+        amount: 6000
+        conditions:
+        - !type:ReagentThreshold
+          reagent: Spidorak
+          min: 31
+      - !type:PopupMessage
+        type: Local
+        visualType: MediumCaution
+        messages: [ "Вы плохо себя чувствуете!" ]
+        probability: 0.1
+        conditions:
+        - !type:ReagentThreshold
+          reagent: Spidorak
+          min: 31
+          max: 46
+      - !type:Emote
+        emote: Cough
+        showInChat: true
+        probability: 0.1
+        conditions:
+        - !type:ReagentThreshold
+          reagent: Spidorak
+          min: 31
+      # 7 минут 30 секунд - 9 минут 30 секунд
+      - !type:PopupMessage
+        type: Local
+        visualType: LargeCaution
+        messages: [ "Вы ужасно себя чувствуете!" ]
+        probability: 0.1
+        conditions:
+        - !type:ReagentThreshold
+          reagent: Spidorak
+          min: 46
+          max: 58
+      # 9 минут 30 секунд - 10 минут
+      # Чтобы вирус не пропал, пока метаболизируется, он сам добавляет себя. (На 1.1 больше для развития) (На 1.0 больше, так Electrocute съедает 1.0)
+      - !type:AdjustReagent
+        reagent: Spidorak
+        amount: 2.1
+        conditions:
+        - !type:ReagentThreshold
+          reagent: Spidorak
+          min: 58
+      - !type:Electrocute
+        electrocuteDamageScale: 0
+        conditions:
+        - !type:ReagentThreshold
+          reagent: Spidorak
+          min: 58
+          max: 60.5
+      - !type:Emote
+        emote: Scream
+        showInChat: true
+        probability: 0.9
+        conditions:
+        - !type:ReagentThreshold
+          reagent: Spidorak
+          min: 58
+      # 9 минут 50 секунд - 10 минут
+      - !type:Paralyze
+        conditions:
+        - !type:ReagentThreshold
+          reagent: Spidorak
+          min: 60.5
+      # 10 минут
+      - !type:HealthChange
+        damage:
+          groups:
+            Airloss: 200
+        conditions:
+        - !type:ReagentThreshold
+          reagent: Spidorak
+          min: 61
+      - !type:CreateEntityReactionEffect
+        entity: MobSpidorak
+        number: 3 # 3 * 1 (метаболизм) = 3 спидорака спавнится
+        conditions:
+        - !type:ReagentThreshold
+          reagent: Spidorak
+          min: 61
+      - !type:PopupMessage
+        type: Pvs
+        visualType: LargeCaution
+        messages: [ "Спидораки вылезают из тела!" ]
+        probability: 1.0
+        conditions:
+        - !type:ReagentThreshold
+          reagent: Spidorak
+          min: 61
+
+- type: reagent
+  id: AntiSpidorak
+  name: анти-спидорак
+  desc: Это спасает от спидорака.
+  group: Biological
+  flavor: metallic
+  color: "#800000"
+  physicalDesc: reagent-physical-desc-ferrous
+  worksOnTheDead: true
+  metabolisms:
+    Poison:
+      metabolismRate: 1
+      effects:
+      # Самовосстановление с запасом в метаболизме, чтобы реагент не пропадал, даже от ипекака или кровопускания.
+      # Фича, делаем кровопускание людям с вакцинной и получаем вакцину.
+      - !type:AdjustReagent
+        reagent: AntiSpidorak
+        amount: 2
+        max: 50
+      # Удаляет реагент спидорака при метаболизме.
+      - !type:AdjustReagent
+        reagent: Spidorak
+        amount: -100
