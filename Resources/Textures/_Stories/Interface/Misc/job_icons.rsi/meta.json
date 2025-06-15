@@ -54,6 +54,12 @@
         },
         {
             "name": "SecurityClown"
+        },
+        {
+            "name": "SpidorakInfected"
+        },
+        {
+            "name": "SpidorakReady"
         }
     ]
 }

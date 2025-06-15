@@ -1,0 +1,23 @@
+- type: reagentIcon
+  id: SpidorakReady
+  priority: 11
+  locationPreference: Right
+  isShaded: false
+  showTo:
+    components:
+    - Spidorak
+  icon:
+    sprite: /Textures/_Stories/Interface/Misc/job_icons.rsi
+    state: SpidorakReady
+
+- type: reagentIcon
+  id: SpidorakInfected
+  priority: 11
+  locationPreference: Right
+  isShaded: false
+  showTo:
+    components:
+    - Spidorak
+  icon:
+    sprite: /Textures/_Stories/Interface/Misc/job_icons.rsi
+    state: SpidorakInfected

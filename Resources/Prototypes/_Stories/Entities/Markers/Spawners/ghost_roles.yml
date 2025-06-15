@@ -38,3 +38,24 @@
       - state: green
       - sprite: _Stories/Mobs/Aliens/spaf.rsi
         state: spaf
+
+- type: entity
+  categories: [ HideSpawnMenu, Spawner ]
+  id: SpawnPointGhostSpidorak
+  name: ghost role spawn point
+  suffix: Спидорак
+  parent: MarkerBase
+  components:
+  - type: GhostRole
+    name: Спидорак
+    description: Кусайте экипаж, заражая их смертельным вирусом, который создает больше спидораков после смерти носителя.
+    raffle:
+      settings: default
+  - type: GhostRoleMobSpawner
+    prototype: MobSpidorak
+  - type: Sprite
+    sprite: Markers/jobs.rsi
+    layers:
+      - state: green
+      - sprite: _Stories/Mobs/Aliens/spidorak.rsi
+        state: alive
