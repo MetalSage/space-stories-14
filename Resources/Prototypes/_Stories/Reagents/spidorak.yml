@@ -1,8 +1,8 @@
 # Вирусы, болезни на прототипах. Гениально.
 - type: reagent
   id: Spidorak
-  name: спидорак
-  desc: Опасная болезнь, которая превращает людей в спидораков.
+  name: reagent-name-spidorak
+  desc: reagent-desc-spidorak
   group: Biological
   flavor: metallic
   color: "#8000FF"
@@ -115,8 +115,8 @@
 
 - type: reagent
   id: AntiSpidorak
-  name: анти-спидорак
-  desc: Это спасает от спидорака.
+  name: reagent-name-anti-spidorak
+  desc: reagent-desc-anti-spidorak
   group: Biological
   flavor: metallic
   color: "#800000"
@@ -131,7 +131,10 @@
       - !type:AdjustReagent
         reagent: AntiSpidorak
         amount: 2
-        max: 50
+        conditions:
+        - !type:ReagentThreshold
+          reagent: AntiSpidorak
+          max: 50
       # Удаляет реагент спидорака при метаболизме.
       - !type:AdjustReagent
         reagent: Spidorak

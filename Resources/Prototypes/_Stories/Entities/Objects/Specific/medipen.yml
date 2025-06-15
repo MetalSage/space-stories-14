@@ -1,7 +1,7 @@
 - type: entity
   name: медипен-вакцина от спидорака
   parent: ChemicalMedipen
-  id: AntiVirusMedipen
+  id: AntiSpidorakMedipen
   description: Медипен с вакциной от спидорака.
   components:
   - type: Sprite
