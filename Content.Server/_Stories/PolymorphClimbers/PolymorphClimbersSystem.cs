@@ -18,7 +18,12 @@ public sealed partial class PolymorphClimbersSystem : EntitySystem
 
     private void OnClimbedOn(Entity<PolymorphClimbersComponent> entity, ref ClimbedOnEvent args)
     {
-        if (_entityWhitelist.IsBlacklistFailOrNull(entity.Comp.Blacklist, args.Climber) && _entityWhitelist.IsWhitelistPassOrNull(entity.Comp.Blacklist, args.Climber))
-            _polymorph.PolymorphEntity(args.Climber, entity.Comp.Polymorph);
+        if (_entityWhitelist.IsBlacklistPass(entity.Comp.Blacklist, args.Climber))
+            return;
+
+        if (_entityWhitelist.IsWhitelistFail(entity.Comp.Whitelist, args.Climber))
+            return;
+
+        _polymorph.PolymorphEntity(args.Climber, entity.Comp.Polymorph);
     }
 }
