@@ -28,3 +28,11 @@
   frequency: 9361
   color: "#00FF00"
   longRange: true
+
+- type: radioChannel
+  id: Unholy
+  name: Нежить
+  frequency: 98783
+  keycode: 'я'
+  color: "#7d52a8"
+  longRange: true

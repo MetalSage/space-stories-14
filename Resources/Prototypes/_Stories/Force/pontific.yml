@@ -1,0 +1,8 @@
+- type: forcePreset
+  id: Pontific
+  name: Понтифик
+  side: Light
+  volume: 290
+  alert: PontificFel
+  maxVolume: 300
+  passiveVolume: 0.01

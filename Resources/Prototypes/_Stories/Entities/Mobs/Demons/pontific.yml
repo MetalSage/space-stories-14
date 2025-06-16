@@ -1,0 +1,82 @@
+﻿- type: entity
+  name: Понтифик
+  id: MobPontific
+  parent: BaseUnholy
+  description: Таинственное и зловещее существо. Его фигура искажена ритуальными одеяниями, покрыта тёмными татуировками и загадочными символами, излучающими зловещую ауру.
+  components:
+  - type: PassiveDamage
+    allowedStates:
+    - Alive
+    - Critical
+    damageCap: 0
+    damage:
+      types:
+        Holy: -0.07 # 4 в минуту
+      groups:
+        Brute: -0.25 # 15 в минуту
+        Burn: -0.25 # 15 в минуту
+        Airloss: -0.25 # 15 в минуту
+  - type: Force
+  - type: ForceUser
+    shopAction: ActionPontificPrayer # FIXME: Затычка
+    preset: Pontific
+  - type: GenericVisualizer
+    visuals:
+      enum.PontificVisuals.State:
+        enum.DamageStateVisualLayers.Base:
+          Base: { state: base, sprite: _Stories/Mobs/Demons/pontific.rsi }
+          Flame: { state: pontific_flame, sprite: _Stories/Mobs/Demons/pontific.rsi }
+          Prayer: { state: pontific_prayer, sprite: _Stories/Mobs/Demons/pontific_prayer.rsi }
+  - type: Sprite
+    drawdepth: Mobs
+    layers:
+    - map: ["enum.DamageStateVisualLayers.Base"]
+      state: base
+      sprite: _Stories/Mobs/Demons/pontific.rsi
+  - type: MobThresholds
+    thresholds:
+      0: Alive
+      600: Dead
+  - type: MeleeWeapon
+    range: 2.0
+    hidden: true
+    angle: 0
+    soundHit:
+      collection: AlienClaw
+    animation: WeaponArcBite
+    damage:
+      types:
+        Slash: 15
+      groups:
+        Brute: 15
+  - type: SlowOnDamage
+    speedModifierThresholds:
+      450: 0.9
+      500: 0.8
+      550: 0.7
+  - type: Pontific
+    actions:
+    # - ActionPontificPrayer
+    - ActionPontificBloodyAltar
+    - ActionPontificSpawnMonk
+    - ActionPontificSpawnGuardian
+    - ActionPontificFelLightning
+    - ActionPontificFlameSwords
+    - ActionPontificKudzu
+  - type: MovementSpeedModifier
+    baseWalkSpeed: 4
+    baseSprintSpeed: 5
+  - type: Damageable
+    damageContainer: BiologicalMetaphysical
+    damageModifierSet: PontificModifierSet
+
+- type: damageModifierSet
+  id: PontificModifierSet
+  coefficients:
+    Blunt: 0.5
+    Slash: 0.5
+    Heat: 0.5
+    Cold: 0.5
+    Piercing: 0.5
+    Caustic: 0.9
+    Holy: 0.1

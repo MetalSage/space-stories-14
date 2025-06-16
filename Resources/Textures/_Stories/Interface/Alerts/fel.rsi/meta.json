@@ -1,0 +1,44 @@
+﻿{
+  "version": 1,
+  "size": {
+    "x": 32,
+    "y": 32
+  },
+  "license": "CC-BY-SA-3.0",
+  "copyright": "DarkStation",
+  "states": [
+    {
+      "name": "fel0"
+    },
+    {
+      "name": "fel1"
+    },
+    {
+      "name": "fel2"
+    },
+    {
+      "name": "fel3"
+    },
+    {
+      "name": "fel4"
+    },
+    {
+      "name": "fel5"
+    },
+    {
+      "name": "fel6"
+    },
+    {
+      "name": "fel7"
+    },
+    {
+      "name": "fel8"
+    },
+    {
+      "name": "fel9"
+    },
+    {
+      "name": "fel10"
+    }
+  ]
+}

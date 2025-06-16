@@ -1,0 +1,290 @@
+- type: entity
+  id: BaseUnholy
+  abstract: true
+  parent: [ SimpleSpaceMobBase, MobCombat ]
+  components:
+  # TODO:
+  # - type: Unholy
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTypeTrigger
+        damageType: Blunt
+        damage: 400
+      behaviors:
+      - !type:GibBehavior { }
+    - trigger:
+        !type:DamageTypeTrigger
+        damageType: Holy
+        damage: 200
+      behaviors:
+      - !type:SpawnEntitiesBehavior
+        spawnInContainer: true
+        spawn:
+          Ash:
+            min: 1
+            max: 1
+      - !type:BurnBodyBehavior { }
+      - !type:PlaySoundBehavior
+        sound:
+          collection: MeatLaserImpact
+    - trigger:
+        !type:DamageTypeTrigger
+        damageType: Heat
+        damage: 1500
+      behaviors:
+      - !type:SpawnEntitiesBehavior
+        spawnInContainer: true
+        spawn:
+          Ash:
+            min: 1
+            max: 1
+      - !type:BurnBodyBehavior { }
+      - !type:PlaySoundBehavior
+        sound:
+          collection: MeatLaserImpact
+  - type: Hands
+  - type: MobStateActions
+    actions:
+      Critical: []
+  - type: Bloodstream
+    bloodMaxVolume: 25
+    bloodReagent: DemonsBlood
+    bloodlossDamage:
+      types:
+        Bloodloss: 0
+    bloodlossHealDamage:
+      types:
+        Bloodloss: -1
+  - type: PassiveDamage
+    allowedStates:
+    - Alive
+    - Critical
+    damageCap: 0
+    damage:
+      # types:
+      #   Holy: -0.07 # 4 в минуту
+      groups:
+        Brute: -0.25 # 15 в минуту
+        Burn: -0.25 # 15 в минуту
+        Airloss: -0.25 # 15 в минуту
+  - type: DamageStateVisuals
+    states:
+      Alive:
+        Base: base
+      Critical:
+        Base: dead
+      Dead:
+        Base: dead
+  - type: NPCImprintingOnSpawnBehaviour
+    spawnFriendsSearchRadius: 300 # Слуги понтифика могут использовать алтарь Понтифика, чтобы создавать больше слуг.
+    follow: true
+    whitelist:
+      components:
+      - Pontific
+  - type: HTN
+    rootTask:
+      task: DragonCarpCompound
+  - type: NpcFactionMember
+    factions:
+    - Unholy
+  - type: MovementSpeedModifier
+    baseWalkSpeed: 4
+    baseSprintSpeed: 5
+  - type: MobState
+    allowedStates:
+    - Alive
+    - Critical
+    # - Dead
+  - type: MobThresholds
+    thresholds:
+      0: Alive
+      75: Critical
+  - type: Stamina
+    critThreshold: 50
+  - type: MeleeWeapon
+    soundHit:
+      path: /Audio/Weapons/Xeno/alien_claw_flesh3.ogg
+    angle: 0
+    animation: WeaponArcClaw
+    damage:
+      types:
+        Slash: 12
+  - type: ZombieImmune
+  - type: InputMover
+  - type: MobMover
+  - type: TTS
+    voice: gman
+  - type: Prying # Open door from xeno.yml.
+    pryPowered: true
+    force: true
+    speedModifier: 1.5
+    useSound:
+      path: /Audio/Items/crowbar.ogg
+  - type: Puller
+    needsHands: false
+  - type: NoSlip
+  - type: IntrinsicRadioReceiver
+  - type: IntrinsicRadioTransmitter
+    channels:
+    - Unholy
+  - type: ActiveRadio
+    channels:
+    - Unholy
+  - type: Speech
+  - type: TypingIndicator
+    proto: guardian
+  - type: Tag
+    tags:
+    - CannotSuicide
+    - DoorBumpOpener
+    - FootstepSound
+
+- type: entity
+  name: тёмный рыцарь
+  id: MobFallenGuard
+  parent: BaseUnholy
+  description: Мрачная и грозная фигура. Его броня покрыта царапинами и ржавчиной, а на ней видны следы давно забытых сражений. В его взгляде — холодная решимость и безразличие к жизни, словно он давно потерял всякую надежду.
+  components:
+  - type: MovementSpeedModifier
+    baseWalkSpeed: 1
+    baseSprintSpeed: 1.5
+  - type: Sprite
+    drawdepth: Mobs
+    sprite: _Stories/Mobs/Demons/fallenguardian.rsi
+    layers:
+      - map: [ "enum.DamageStateVisualLayers.Base" ]
+        state: base
+  - type: MobThresholds
+    thresholds:
+      0: Alive
+      200: Critical
+  - type: MeleeWeapon
+    range: 2.0
+    hidden: true
+    angle: 0
+    soundHit:
+      collection: AlienClaw
+    animation: WeaponArcBite
+    damage:
+      types:
+        Slash: 15
+      groups:
+        Brute: 15
+  - type: GhostRole
+    allowMovement: true
+    allowSpeech: true
+    makeSentient: true
+    name: тёмный рыцарь
+    description: Мрачная и грозная фигура. Его броня покрыта царапинами и ржавчиной, а на ней видны следы давно забытых сражений. В его взгляде — холодная решимость и безразличие к жизни, словно он давно потерял всякую надежду.
+  - type: GhostTakeoverAvailable
+  - type: SlowOnDamage
+    speedModifierThresholds:
+      80: 0.9
+      140: 0.8
+  - type: Damageable
+    damageContainer: BiologicalMetaphysical
+    damageModifierSet: FallenGuardModifierSet
+
+- type: damageModifierSet
+  id: FallenGuardModifierSet
+  coefficients:
+    Blunt: 0.2
+    Slash: 0.2
+    Piercing: 0.2
+    Heat: 0.5
+    Cold: 0.5
+    Caustic: 0.9
+
+- type: entity
+  name: осквернённый
+  id: MobDesecrated
+  parent: BaseUnholy
+  description: Изломанная тень своего прежнего я. Его тело покрыто шрамами, трещинами и пятнами тёмной плоти, словно он был разрушен внутренней тьмой и чужими силами. Глаза — пустые и безжизненные, в них читается отчаяние и безумие, а движения — неуклюжие и хаотичные
+  components:
+  - type: Sprite
+    drawdepth: Mobs
+    sprite: _Stories/Mobs/Demons/desecrated.rsi
+    layers:
+    - map: [ "enum.DamageStateVisualLayers.Base" ]
+      state: base
+  - type: MobThresholds
+    thresholds:
+      0: Alive
+      150: Critical
+  - type: GhostRole
+    allowMovement: true
+    allowSpeech: true
+    makeSentient: true
+    name: осквернённый
+    description: Изломанная тень своего прежнего я. Его тело покрыто шрамами, трещинами и пятнами тёмной плоти, словно он был разрушен внутренней тьмой и чужими силами. Глаза — пустые и безжизненные, в них читается отчаяние и безумие, а движения — неуклюжие и хаотичные
+  - type: GhostTakeoverAvailable
+  - type: SlowOnDamage
+    speedModifierThresholds:
+      70: 0.9
+      100: 0.8
+      120: 0.5
+  - type: Damageable
+    damageContainer: BiologicalMetaphysical
+    damageModifierSet: DesecratedModifierSet
+
+- type: damageModifierSet
+  id: DesecratedModifierSet
+  coefficients:
+    Blunt: 0.9
+    Slash: 0.9
+    Piercing: 0.9
+    Caustic: 0.9
+
+- type: entity
+  name: тёмный монах
+  id: MobCursedMonk
+  parent: BaseUnholy
+  description: Таинственный и зловещий фигурант. Его одеяния состоят из рваных, запятнанных ткани и ритуальных накидок, покрытых загадочными символами и кровавыми пятнами. Лицо скрыто под капюшоном, а в глазах — холодное безразличие и древняя мудрость, пропитанная тьмой.
+  components:
+  - type: PassiveDamage
+    allowedStates:
+    - Alive
+    - Critical
+    damageCap: 0
+    damage:
+      types:
+        Holy: -0.07 # 4 в минуту
+      groups:
+        Brute: -0.25 # 15 в минуту
+        Burn: -0.25 # 15 в минуту
+        Airloss: -0.25 # 15 в минуту
+  - type: Sprite
+    drawdepth: Mobs
+    sprite: _Stories/Mobs/Demons/cursedmonk.rsi
+    layers:
+      - map: ["enum.DamageStateVisualLayers.Base"]
+        state: base
+  - type: MobThresholds
+    thresholds:
+      0: Alive
+      200: Critical
+  - type: GhostRole
+    allowMovement: true
+    allowSpeech: true
+    makeSentient: true
+    name: тёмный монах
+    description: Таинственный и зловещий фигурант. Его одеяния состоят из рваных, запятнанных ткани и ритуальных накидок, покрытых загадочными символами и кровавыми пятнами. Лицо скрыто под капюшоном, а в глазах — холодное безразличие и древняя мудрость, пропитанная тьмой.
+  - type: GhostTakeoverAvailable
+  - type: SlowOnDamage
+    speedModifierThresholds:
+      80: 0.9
+      120: 0.8
+      160: 0.5
+  - type: Damageable
+    damageContainer: BiologicalMetaphysical
+    damageModifierSet: CursedmonkModifierSet
+
+- type: damageModifierSet
+  id: CursedmonkModifierSet
+  coefficients:
+    Blunt: 0.9
+    Slash: 0.9
+    Piercing: 0.9
+    Caustic: 0.9
+    Holy: 0.1

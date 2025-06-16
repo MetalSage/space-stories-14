@@ -1,0 +1,35 @@
+﻿{
+    "version": 1,
+    "license": "CC-BY-SA-3.0",
+    "copyright": "by Dark Station (Ononacina)",
+    "size": {
+        "x": 32,
+        "y": 32
+    },
+    "states": [
+        {
+            "name": "call_guardian"
+        },
+        {
+            "name": "call_monk"
+        },
+        {
+            "name": "desecrated_statue"
+        },
+        {
+            "name": "faith_attack"
+        },
+        {
+            "name": "fel_lightning"
+        },
+        {
+            "name": "flame_swords"
+        },
+        {
+            "name": "prayer"
+        },
+        {
+            "name": "kudzu"
+        }
+    ]
+}

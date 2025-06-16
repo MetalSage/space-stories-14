@@ -1,0 +1,50 @@
+﻿- type: entity
+  id: PontificKudzu
+  parent: Kudzu
+  name: осквернённые лилии
+  description: Зловещие и жуткие растения, медленно заполняющие коридоры и залы станции. Их длинные, изломанные стебли покрыты тёмной, почти чёрной кожицей, а лепестки — бледные, с пятнами кровавого цвета и загадочными символами, словно вырезанными или впитавшими тёмную энергию.
+  components:
+  - type: Sprite
+    drawdepth: FloorObjects
+    sprite: _Stories/Objects/Misc/pontific_kudzu.rsi
+    state: kudzu_11
+  - type: GrowingKudzu
+  - type: Kudzu
+    spriteVariants: 3
+    spreadChance: 0.2
+    growthTickChance: 0.3
+    damageRecovery:
+      types:
+        Slash: -0.5
+        Heat: -1.0
+        Cold: -1.0
+        Blunt: -0.5
+  - type: Reactive
+    groups:
+      Flammable: [ Touch ]
+      Extinguish: [ Touch ]
+    reactions:
+    - reagents: [ Holywater ]
+      methods: [ Touch ]
+      effects:
+      - !type:HealthChange
+        scaled: true
+        damage:
+          types:
+            Heat: 10
+  - type: SpeedModifierContacts
+    walkSpeedModifier: 0.2
+    sprintSpeedModifier: 0.2
+    ignoreWhitelist:
+      components:
+      - IgnoreKudzu
+      # TODO:
+      # - Unholy
+  - type: DamageContacts
+    damage:
+      types:
+        Cold: 5
+    # TODO:
+    # ignoreWhitelist:
+    #   components:
+    #   - Unholy

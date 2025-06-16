@@ -14,7 +14,10 @@ namespace Content.Shared._Stories.ForceUser.Actions.Events;
 // "Простые" события, которые не нуждаются в Content.Shared._Stories.ForceUser.Components
 // ? Возможно стоит их убрать отсюда?
 #region Simple
-public sealed partial class LightningStrikeEvent : EntityTargetActionEvent { }
+public sealed partial class LightningStrikeEvent : EntityTargetActionEvent
+{
+    public EntProtoId Proto = "Lightning";
+}
 public sealed partial class EmpActionEvent : InstantActionEvent
 {
     [DataField("range"), ViewVariables(VVAccess.ReadWrite)]
