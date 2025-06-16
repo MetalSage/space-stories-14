@@ -1,0 +1,53 @@
+﻿- type: entity
+  id: PontificAltar
+  parent: AltarBase
+  name: алтарь Понтифика
+  description: "Зловещая и древняя структура. Его поверхность покрыта тёмными ритуальными символами и изломанными каменными резьбами, излучающими зловещий свет. Когда человек смотрит на него, ощущение становится невыносимым: кажется, что тьма внутри алтаря шепчет ему на ухо, зовёт забраться на него. Взгляд на алтарь вызывает ощущение, что он способен связаться с древними силами, скрывающимися за гранями реальности, и что за этим зовом скрывается нечто гораздо более опасное. Кажется, что алтарь — это мост между мирами, и кто осмелится взобраться на него, может обрести силу или потерять свою душу навсегда."
+  components:
+  - type: PolymorphClimbers
+    polymorph: Desecrated
+    whitelist:
+      components:
+      - HumanoidAppearance
+    blacklist:
+      components:
+      - Pontific
+      # TODO:
+      # - Unholy
+      # - Holy
+  - type: Sprite
+    layers:
+      - sprite: _Stories/Structures/dark_altar.rsi
+        state: dark_altar
+  - type: Destructible
+    thresholds:
+      - trigger:
+          !type:DamageTrigger
+          damage: 600
+        behaviors:
+          - !type:DoActsBehavior
+            acts: [ "Destruction" ]
+      - trigger:
+          !type:DamageTrigger
+          damage: 300
+        behaviors:
+          - !type:SpawnEntitiesBehavior
+            spawn:
+              SheetSteel:
+                min: 5
+                max: 5
+          - !type:PlaySoundBehavior
+            sound:
+              collection: MetalBreak
+          - !type:DoActsBehavior
+            acts: [ "Destruction" ]
+  - type: PointLight
+    enabled: true
+    radius: 2
+    color: "#2c1b1b"
+  - type: TelecomExempt
+  - type: RadioMicrophone
+    broadcastChannel: Unholy
+    enabled: True
+    toggleOnInteract: false
+    unobstructedRequired: true

@@ -1,2 +1,12 @@
 - type: statusEffect
+  id: PontificPrayer
+  alert: PontificPrayer
+  alwaysAllowed: true
+
+- type: statusEffect
+  id: PontificFlame
+  alert: PontificFlame
+  alwaysAllowed: true
+
+- type: statusEffect
   id: FrozeBullets

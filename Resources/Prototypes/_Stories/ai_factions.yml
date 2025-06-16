@@ -7,3 +7,19 @@
   - PetsNT
   - Zombie
   - Revolutionary
+
+- type: npcFaction
+  id: Unholy
+  hostile:
+  - NanoTrasen
+  - Syndicate
+  - Passive
+  - PetsNT
+  # - Zombie
+  - Revolutionary
+  - Xeno
+  - AllHostile
+  - Wizard
+  - Dragon
+  - Xenoborg
+

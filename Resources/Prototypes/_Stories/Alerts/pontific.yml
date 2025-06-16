@@ -1,0 +1,66 @@
+﻿- type: alert
+  id: PontificFel
+  category: Thirst
+  icons:
+    - sprite: /Textures/_Stories/Interface/Alerts/fel.rsi
+      state: fel0
+    - sprite: /Textures/_Stories/Interface/Alerts/fel.rsi
+      state: fel0
+    - sprite: /Textures/_Stories/Interface/Alerts/fel.rsi
+      state: fel1
+    - sprite: /Textures/_Stories/Interface/Alerts/fel.rsi
+      state: fel1
+    - sprite: /Textures/_Stories/Interface/Alerts/fel.rsi
+      state: fel2
+    - sprite: /Textures/_Stories/Interface/Alerts/fel.rsi
+      state: fel2
+    - sprite: /Textures/_Stories/Interface/Alerts/fel.rsi
+      state: fel3
+    - sprite: /Textures/_Stories/Interface/Alerts/fel.rsi
+      state: fel3
+    - sprite: /Textures/_Stories/Interface/Alerts/fel.rsi
+      state: fel4
+    - sprite: /Textures/_Stories/Interface/Alerts/fel.rsi
+      state: fel4
+    - sprite: /Textures/_Stories/Interface/Alerts/fel.rsi
+      state: fel5
+    - sprite: /Textures/_Stories/Interface/Alerts/fel.rsi
+      state: fel5
+    - sprite: /Textures/_Stories/Interface/Alerts/fel.rsi
+      state: fel6
+    - sprite: /Textures/_Stories/Interface/Alerts/fel.rsi
+      state: fel6
+    - sprite: /Textures/_Stories/Interface/Alerts/fel.rsi
+      state: fel7
+    - sprite: /Textures/_Stories/Interface/Alerts/fel.rsi
+      state: fel7
+    - sprite: /Textures/_Stories/Interface/Alerts/fel.rsi
+      state: fel8
+    - sprite: /Textures/_Stories/Interface/Alerts/fel.rsi
+      state: fel9
+    - sprite: /Textures/_Stories/Interface/Alerts/fel.rsi
+      state: fel10
+    - sprite: /Textures/_Stories/Interface/Alerts/fel.rsi
+      state: fel10
+  name: Скверна
+  description: Количество накопленной скверны.
+  minSeverity: 0
+  maxSeverity: 19
+
+- type: alert
+  id: PontificPrayer
+  category: Thirst
+  icons:
+    - sprite: /Textures/_Stories/Actions/pontific.rsi
+      state: prayer
+  name: Тёмный молебнен
+  description: Ритуал, вызывающий тёмные силы в этот мир. Восстанавливает скверну.
+
+- type: alert
+  id: PontificFlame
+  category: Thirst
+  icons:
+    - sprite: /Textures/_Stories/Actions/pontific.rsi
+      state: flame_swords
+  name: Тёмное пламя
+  description: Ваши мечи горят скверным пламенем, сильно увеличивая скорость и урон.
