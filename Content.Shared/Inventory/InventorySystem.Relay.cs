@@ -26,6 +26,7 @@ using Content.Shared.Temperature;
 using Content.Shared.Verbs;
 using Content.Shared.Weapons.Ranged.Events;
 using Content.Shared.Zombies;
+using Content.Shared.Interaction.Events;
 
 namespace Content.Shared.Inventory;
 
@@ -54,6 +55,9 @@ public partial class InventorySystem
 
         // Corvax-TTS
         SubscribeLocalEvent<InventoryComponent, TransformSpeakerVoiceEvent>(RelayInventoryEvent);
+
+        // Stories
+        SubscribeLocalEvent<InventoryComponent, ContactInteractionEvent>(RelayInventoryEvent);
 
         // by-ref events
         SubscribeLocalEvent<InventoryComponent, RefreshFrictionModifiersEvent>(RefRelayInventoryEvent);
