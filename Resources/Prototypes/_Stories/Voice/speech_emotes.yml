@@ -1,3 +1,20 @@
+# Мы все дальше от бога...
+
+- type: emote
+  id: Farting
+  name: chat-emote-name-farting
+  category: General
+  whitelist:
+    components:
+    - Vocal
+  blacklist:
+    tags:
+    - SiliconEmotes
+  chatMessages: ["chat-emote-msg-farting"]
+  chatTriggers:
+    - пердит
+    - пукает
+
 # Kidan
 
 - type: emote
