@@ -98,6 +98,9 @@ public sealed class SpeedModifierContactsSystem : EntitySystem
                 if (_whitelistSystem.IsWhitelistPass(slowContactsComponent.IgnoreWhitelist, uid))
                     continue;
 
+                if (_whitelistSystem.IsWhitelistFail(slowContactsComponent.Whitelist, uid))
+                    continue;
+
                 // Entities that are airborne should not be affected by contact slowdowns that are specified to not affect airborne entities.
                 if (isAirborne && !slowContactsComponent.AffectAirborne)
                     continue;
