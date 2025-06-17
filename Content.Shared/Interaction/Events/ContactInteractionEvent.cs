@@ -11,7 +11,7 @@ namespace Content.Shared.Interaction.Events;
 public sealed class ContactInteractionEvent : HandledEntityEventArgs, IInventoryRelayEvent // Stories
 {
     public SlotFlags TargetSlots { get; } = SlotFlags.All; // Stories
-    public readonly EntityUid Other;
+    public EntityUid Other;
 
     public ContactInteractionEvent(EntityUid other)
     {
