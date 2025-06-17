@@ -27,6 +27,7 @@ using Content.Shared.Verbs;
 using Content.Shared.Weapons.Ranged.Events;
 using Content.Shared.Zombies;
 using Content.Shared.Interaction.Events;
+using Robust.Shared.Physics.Events;
 
 namespace Content.Shared.Inventory;
 
@@ -58,6 +59,7 @@ public partial class InventorySystem
 
         // Stories
         SubscribeLocalEvent<InventoryComponent, ContactInteractionEvent>(RelayInventoryEvent);
+        SubscribeLocalEvent<InventoryComponent, StartCollideEvent>(RelayStartCollideEvent);
 
         // by-ref events
         SubscribeLocalEvent<InventoryComponent, RefreshFrictionModifiersEvent>(RefRelayInventoryEvent);
@@ -93,6 +95,22 @@ public partial class InventorySystem
         SubscribeLocalEvent<InventoryComponent, GetVerbsEvent<InnateVerb>>(OnGetInnateVerbs);
 
     }
+
+    // Stories - start
+    public void RelayStartCollideEvent(Entity<InventoryComponent> inventory, ref StartCollideEvent args)
+    {
+        // this copies the by-ref event if it is a struct
+        var ev = new InventoryRelayedEvent<StartCollideEvent>(args);
+        var enumerator = new InventorySlotEnumerator(inventory, SlotFlags.All);
+        while (enumerator.NextItem(out var item))
+        {
+            RaiseLocalEvent(item, ev);
+        }
+
+        // and now we copy it back
+        args = ev.Args;
+    }
+    // Stories - end
 
     protected void RefRelayInventoryEvent<T>(EntityUid uid, InventoryComponent component, ref T args) where T : IInventoryRelayEvent
     {
