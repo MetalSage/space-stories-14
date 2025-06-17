@@ -1,6 +1,8 @@
+using Robust.Shared.GameStates;
+
 namespace Content.Shared._Stories.Pontific;
 
-[RegisterComponent]
+[RegisterComponent, NetworkedComponent]
 public sealed partial class PontificFlameComponent : Component
 {
     [DataField]
