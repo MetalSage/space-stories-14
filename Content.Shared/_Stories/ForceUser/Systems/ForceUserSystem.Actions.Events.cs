@@ -16,6 +16,7 @@ namespace Content.Shared._Stories.ForceUser.Actions.Events;
 #region Simple
 public sealed partial class LightningStrikeEvent : EntityTargetActionEvent
 {
+    [DataField]
     public EntProtoId Proto = "Lightning";
 }
 public sealed partial class EmpActionEvent : InstantActionEvent
