@@ -1,0 +1,28 @@
+- type: entity
+  parent:
+  - Incorporeal
+  - BaseMob
+  id: TargetingTeleporterEye
+  name: камера таргетированного портала
+  description: Молитесь, чтобы оттуда вышли милые пони.
+  categories: [ HideSpawnMenu, DoNotMap ]
+  components:
+  - type: NoFTL
+  - type: Tag
+    tags:
+    - GhostOnlyWarp
+  - type: WarpPoint
+    follow: true
+    blacklist:
+      tags:
+      - GhostOnlyWarp
+  - type: Eye
+    pvsScale: 1.5
+  - type: Visibility
+    layer: 2
+  - type: Sprite
+    sprite: _Stories/Effects/camera.rsi
+    layers:
+    - state: camera_target
+      shader: unshaded
+      map: ["base"]

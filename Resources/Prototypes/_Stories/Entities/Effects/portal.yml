@@ -1,0 +1,55 @@
+- type: entity
+  id: BluspacePortalEnter
+  parent: BasePortal
+  name: блюспейс дыра входа
+  description: Выглядит как приключение на 5 минут!
+  components:
+  - type: Sprite
+    sprite: /Textures/_Stories/Effects/bluespace_portal.rsi
+    layers:
+    - state: enter
+  - type: PointLight
+    color: "#b0ebf5"
+    radius: 3
+    energy: 1
+    netsync: false
+
+- type: entity
+  id: BluspacePortalExit
+  parent: BasePortal
+  name: блюспейс дыра выхода
+  description: Выглядит как приключение на 5 минут!
+  components:
+  - type: Sprite
+    sprite: /Textures/_Stories/Effects/bluespace_portal.rsi
+    layers:
+    - state: exit
+  - type: PointLight
+    color: "#b0ebf5"
+    radius: 3
+    energy: 1
+    netsync: false
+
+- type: entity
+  id: TargetingTeleporter
+  parent: BluspacePortalEnter
+  name: блюспейс дыра на станцию
+  description: Позволяет телепортироваться в любое место на станции. Это путешествие в один конец.
+  suffix: Нет пути назад
+  components:
+  - type: Portal
+    randomTeleport: false
+  - type: TargetingTeleporter
+    wayback: false
+    stationBlacklist:
+      components:
+      - Prison
+  - type: Sprite
+    sprite: /Textures/_Stories/Effects/bluespace_portal.rsi
+    layers:
+    - state: enter
+  - type: PointLight
+    color: "#b0ebf5"
+    radius: 3
+    energy: 1
+    netsync: false
