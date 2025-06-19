@@ -223,3 +223,17 @@
     - STSecurityClown
     - STPartyMaker
     - STCommandMaid
+
+- type: entity
+  id: RadiationOutburst
+  parent: BaseGameRule
+  components:
+  - type: StationEvent
+    startAudio:
+      path: /Audio/Announcements/attention.ogg
+      weight: 5
+      minimumPlayers: 5
+      duration: 1
+  - type: RadiationOutburstRule
+    severity: 5
+    maxSeverity: 3
