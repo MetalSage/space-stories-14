@@ -1,0 +1,29 @@
+- type: entity
+  id: ActionTargettingTeleporterSetExitPortal
+  name: Установить портал
+  description: Установит выход портала там, где вы находитесь.
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: InstantAction
+    useDelay: 1
+    priority: 0
+    icon:
+      sprite: /Textures/_Stories/Effects/bluespace_portal.rsi
+      state: exit
+    itemIconStyle: NoItem
+    event: !type:TargettingTeleporterSetExitPortalEvent {}
+
+- type: entity
+  id: ActionTargettingTeleporterExit
+  name: Выйти
+  description: Выйти, не установив выход портала.
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: InstantAction
+    useDelay: 1
+    priority: 1
+    icon:
+      sprite: Markers/cross.rsi
+      state: red
+    itemIconStyle: NoItem
+    event: !type:TargettingTeleporterExitEvent {}
