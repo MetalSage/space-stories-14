@@ -46,6 +46,7 @@
     radius: 2
     color: "#2c1b1b"
   - type: TelecomExempt
+  - type: ActiveListener
   - type: RadioMicrophone
     broadcastChannel: Unholy
     enabled: True
