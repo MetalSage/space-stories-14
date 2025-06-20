@@ -34,7 +34,6 @@ entities:
     - type: OccluderTree
   - uid: 2
     components:
-    - type: FTLGridToStationMap
     - type: MetaData
       name: Pontific hub
     - type: Transform
