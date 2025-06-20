@@ -1,0 +1,141 @@
+# Вирусы, болезни на прототипах. Гениально.
+- type: reagent
+  id: Corpium
+  name: reagent-name-corpium
+  desc: reagent-desc-corpium
+  group: Biological
+  flavor: metallic
+  color: "#8000FF"
+  worksOnTheDead: false
+  physicalDesc: reagent-physical-desc-ferrous
+  metabolisms:
+    Poison:
+      metabolismRate: 1.0
+      effects:
+      # 0 - 5 минута
+      # Чтобы вирус не пропал, пока метаболизируется, он сам добавляет себя. (На 1.1 больше для развития)
+      - !type:AdjustReagent
+        reagent: Corpium
+        amount: 1.1
+        conditions:
+        - !type:ReagentThreshold
+          reagent: Corpium
+          max: 58
+      # 5 - 10 минута
+      - !type:AdjustTemperature
+        amount: 6000
+        conditions:
+        - !type:ReagentThreshold
+          reagent: Corpium
+          min: 31
+      - !type:PopupMessage
+        type: Local
+        visualType: MediumCaution
+        messages: [ "Вы плохо себя чувствуете!" ]
+        probability: 0.1
+        conditions:
+        - !type:ReagentThreshold
+          reagent: Corpium
+          min: 31
+          max: 46
+      - !type:Emote
+        emote: Cough
+        showInChat: true
+        probability: 0.1
+        conditions:
+        - !type:ReagentThreshold
+          reagent: Corpium
+          min: 31
+      # 7 минут 30 секунд - 9 минут 30 секунд
+      - !type:PopupMessage
+        type: Local
+        visualType: LargeCaution
+        messages: [ "Вы ужасно себя чувствуете!" ]
+        probability: 0.1
+        conditions:
+        - !type:ReagentThreshold
+          reagent: Corpium
+          min: 46
+          max: 58
+      # 9 минут 30 секунд - 10 минут
+      # Чтобы вирус не пропал, пока метаболизируется, он сам добавляет себя. (На 1.1 больше для развития) (На 1.0 больше, так Electrocute съедает 1.0)
+      - !type:AdjustReagent
+        reagent: Corpium
+        amount: 2.1
+        conditions:
+        - !type:ReagentThreshold
+          reagent: Corpium
+          min: 58
+      - !type:Electrocute
+        electrocuteDamageScale: 0
+        conditions:
+        - !type:ReagentThreshold
+          reagent: Corpium
+          min: 58
+          max: 60.5
+      - !type:Emote
+        emote: Scream
+        showInChat: true
+        probability: 0.9
+        conditions:
+        - !type:ReagentThreshold
+          reagent: Corpium
+          min: 58
+      # 9 минут 50 секунд - 10 минут
+      - !type:Paralyze
+        conditions:
+        - !type:ReagentThreshold
+          reagent: Corpium
+          min: 60.5
+      # 10 минут
+      - !type:HealthChange
+        damage:
+          groups:
+            Airloss: 200
+        conditions:
+        - !type:ReagentThreshold
+          reagent: Corpium
+          min: 61
+      - !type:CreateEntityReactionEffect
+        entity: MobCorpium
+        number: 3 # 3 * 1 (метаболизм) = 3 корпиума спавнится
+        conditions:
+        - !type:ReagentThreshold
+          reagent: Corpium
+          min: 61
+      - !type:PopupMessage
+        type: Pvs
+        visualType: LargeCaution
+        messages: [ "Корпиумы вылезают из тела!" ]
+        probability: 1.0
+        conditions:
+        - !type:ReagentThreshold
+          reagent: Corpium
+          min: 61
+
+- type: reagent
+  id: AntiCorpium
+  name: reagent-name-anti-corpium
+  desc: reagent-desc-anti-corpium
+  group: Biological
+  flavor: metallic
+  color: "#800000"
+  physicalDesc: reagent-physical-desc-ferrous
+  worksOnTheDead: true
+  metabolisms:
+    Poison:
+      metabolismRate: 1
+      effects:
+      # Самовосстановление с запасом в метаболизме, чтобы реагент не пропадал, даже от ипекака или кровопускания.
+      # Фича, делаем кровопускание людям с вакцинной и получаем вакцину.
+      - !type:AdjustReagent
+        reagent: AntiCorpium
+        amount: 2
+        conditions:
+        - !type:ReagentThreshold
+          reagent: AntiCorpium
+          max: 50
+      # Удаляет реагент корпиума при метаболизме.
+      - !type:AdjustReagent
+        reagent: Corpium
+        amount: -100

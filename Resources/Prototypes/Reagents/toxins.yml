@@ -44,6 +44,11 @@
         visualType: MediumCaution
         messages: [ "generic-reagent-effect-burning-insides" ]
         probability: 0.33
+      # Stories corpiums - start
+      - !type:AdjustReagent
+        reagent: Corpium
+        amount: -100
+      # Stories corpiums - end
 
 - type: reagent
   id: ChloralHydrate

@@ -54,6 +54,12 @@
         },
         {
             "name": "SecurityClown"
+        },
+        {
+            "name": "CorpiumInfected"
+        },
+        {
+            "name": "CorpiumReady"
         }
     ]
 }

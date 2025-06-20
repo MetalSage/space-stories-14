@@ -1,0 +1,4 @@
+- type: soundCollection
+  id: FootstepCorpium
+  files:
+  - /Audio/_Stories/Corpium/footstep.ogg
