@@ -47,6 +47,7 @@
     color: "#2c1b1b"
   - type: TelecomExempt
   - type: ActiveListener
+    range: 4
   - type: RadioMicrophone
     broadcastChannel: Unholy
     enabled: True
