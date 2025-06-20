@@ -25,6 +25,12 @@
     - category: Thirst
     - alertType: Magboots
     - alertType: Pacified
+    # Stories - start
+    - alertType: PontificFel
+    - alertType: PontificPrayer
+    - alertType: PontificFlame
+    - alertType: Holy
+    # Stories - end
 
 - type: entity
   id: AlertSpriteView

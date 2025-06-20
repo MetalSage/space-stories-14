@@ -27,3 +27,27 @@
           ActionShadowlingHatch: 0
       mindRoles:
       - MindRoleShadowling
+
+- type: entity
+  parent: BaseGameRule
+  id: Pontific
+  components:
+  - type: GameRule
+    minPlayers: 20
+  - type: RuleGrids
+  - type: LoadMapRule
+    mapPath: /Maps/_Stories/Nonstations/pontific.yml
+  - type: AntagSpawner
+    prototype: MobPontific
+  - type: AntagSelection
+    selectionTime: PrePlayerSpawn
+    agentName: pontific-round-end-agent-name
+    definitions:
+    - prefRoles: [ Pontific ]
+      spawnerPrototype: SpawnPointPontific
+      mindRoles:
+      - MindRolePontific
+      briefing:
+        text: pontific-role-greeting
+        color: "#7d52a8"
+        sound: /Audio/_Stories/Pontific/pontific_start.ogg

@@ -31,7 +31,7 @@
 
 - type: radioChannel
   id: Unholy
-  name: Нежить
+  name: chat-radio-unholy
   frequency: 98783
   keycode: 'я'
   color: "#7d52a8"
