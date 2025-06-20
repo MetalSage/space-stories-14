@@ -1,0 +1,41 @@
+<Document>
+  # Священник против нежити
+
+  <Box>
+    <GuideEntityEmbed Entity="Bible" Caption="Библия"/>
+  </Box>
+
+  - [color=Yellow]Библия[/color] — это ваш главный инструмент против нежити. Нажмите ей по ёмкости с водой, чтобы сделать [color=cyan]святую воду[/color]. Или вы можете просто избивать ею нежить, ведь она наносит много уникального [color=Yellow]святого урона[/color].
+
+  <Box>
+    <GuideEntityEmbed Entity="WaterDropletHat" Caption="Святая вода"/>
+  </Box>
+  - [color=cyan]Святая вода[/color] позволяет освещать предметы, просто обливая их. Освещенные предметы имеют уникальные свойства. В основном, они защищают от [color=#7d52a8]нежити[/color]. Вы можете понять, что предмет освящен, осмотрев его. Священник является единственным существом, которое освящено и может быть таковым.
+
+
+  <Box>
+    <GuideEntityEmbed Entity="FireExtinguisher" Caption="Огнетушитель"/>
+    <GuideEntityEmbed Entity="SprayBottle" Caption="Распылитель"/>
+    <GuideEntityEmbed Entity="WeaponSprayNozzle" Caption="Форсунка-распылитель"/>
+    <GuideEntityEmbed Entity="BorgMegaSprayBottle" Caption="Мега-распылитель"/>
+  </Box>
+
+  - Распылите [color=cyan]святую воду[/color] с помощью какого-то инструмента, чтобы получть святой тайл.
+
+  <Box>
+    <GuideEntityEmbed Entity="HolyFloorEntityInfinity" Caption="Святой тайл"/>
+  </Box>
+
+  - Святой тайл не даёт большеству [color=#7d52a8]нежити[/color] пройти через него, наносит им урон, оттакливает их.
+
+ <Box>
+    <GuideEntityEmbed Entity="ChaplainCross" Caption="Крест"/>
+  </Box>
+  - Крест является предметом, который можно освятить святой водой. Его основное предназначение в том, чтобы защитить от [color=#7d52a8]нежити[/color] остальной экипаж, кроме священника. Он защищает человека защитными свойствами святых предметов, когда висит на шее или когда он в руках.
+  - Не забывайте, что [color=cyan]святая вода[/color] освящает крест лишь на ограниченное время.
+
+  Прочитайте про вашего главного врага, чтобы знать его способности:
+  - [textlink="понтифика" link="Pontific"].
+</Document>
+
+
