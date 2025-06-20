@@ -1,0 +1,20 @@
+{
+  "version": 1,
+  "license": "CC-BY-SA-4.0",
+  "copyright": "Taken from TauCetiClassic at https://github.com/TauCetiStation/TauCetiClassic/blob/f000553bd62f772449953ae393cda32b4f7cb617/icons/obj/abductor.dmi",
+  "size": {
+    "x": 32,
+    "y": 32
+  },
+  "states": [
+    {
+      "name": "camera_target",
+      "delays": [
+        [
+          1,
+          1
+        ]
+      ]
+    }
+  ]
+}

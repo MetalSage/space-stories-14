@@ -1,0 +1,117 @@
+﻿- type: entity
+  id: ActionPontificPrayer
+  name: Тёмный молебнен
+  description: Ритуал, вызывающий тёмные силы в этот мир. Восстанавливает скверну.
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: InstantAction
+    icon:
+      sprite: _Stories/Actions/pontific.rsi
+      state: prayer
+    useDelay: 120
+    itemIconStyle: NoItem
+    event: !type:PontificPrayerEvent
+
+- type: entity
+  id: ActionPontificBloodyAltar
+  name: Тёмный алтарь
+  description: Вызывает из тьмы алтарь. Затаскивайте на него существ, чтобы обратить их в осквернённых. Требует 150 скверны.
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: InstantAction
+    icon:
+      sprite: _Stories/Actions/pontific.rsi
+      state: desecrated_statue
+    useDelay: 300
+    itemIconStyle: NoItem
+    event: !type:InstantForceUserActionEvent
+      volume: 150
+      event: !type:CreateEntityEvent
+        proto: PontificAltar
+
+- type: entity
+  id: ActionPontificSpawnMonk
+  name: Призывать монаха
+  description: Призывает проклятого монаха, который очень устойчив к святому урону. Требует 50 скверны.
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: InstantAction
+    icon:
+      sprite: _Stories/Actions/pontific.rsi
+      state: call_monk
+    useDelay: 240
+    itemIconStyle: NoItem
+    event: !type:InstantForceUserActionEvent
+      volume: 50
+      event: !type:CreateEntityEvent
+        proto: MobCursedMonk
+
+- type: entity
+  id: ActionPontificSpawnGuardian
+  name: Призывать рыцаря
+  description: Призывает проклятого рыцаря. Это очень бронированный воин, но медлительный. Требует 100 скверны.
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: InstantAction
+    icon:
+      sprite: _Stories/Actions/pontific.rsi
+      state: call_guardian
+    useDelay: 240
+    itemIconStyle: NoItem
+    event: !type:InstantForceUserActionEvent
+      volume: 100
+      event: !type:CreateEntityEvent
+        proto: MobFallenGuard
+
+- type: entity
+  id: ActionPontificFelLightning
+  name: Тёмная молния
+  description: Мощная молния наполненная тёмной энергией. Требует 50 скверны.
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: EntityTargetAction
+    icon:
+      sprite: _Stories/Actions/pontific.rsi
+      state: fel_lightning
+    useDelay: 15
+    itemIconStyle: NoItem
+    event: !type:EntityTargetForceUserActionEvent
+      volume: 50
+      event: !type:LightningStrikeEvent
+        proto: LightningRevenant
+    canTargetSelf: false
+    interactOnMiss: false
+    range: 6
+
+- type: entity
+  id: ActionPontificFlameSwords
+  name: Тёмное пламя
+  description: Ваши мечи загорятся скверным пламенем, сильно увеличивая скорость и урон. Требует 80 скверны.
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: InstantAction
+    icon:
+      sprite: _Stories/Actions/pontific.rsi
+      state: flame_swords
+    useDelay: 60
+    itemIconStyle: NoItem
+    event: !type:InstantForceUserActionEvent
+      volume: 80
+      event: !type:PontificFlameSwordsEvent
+
+- type: entity
+  id: ActionPontificKudzu
+  name: Осквернённые лилии
+  description: Создаёт осквернённые лилии, которые распространяются и медленно заполняют станцию. Требует 50 скверны.
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: InstantAction
+    icon:
+      sprite: _Stories/Actions/pontific.rsi
+      state: kudzu
+    useDelay: 180
+    itemIconStyle: NoItem
+    event: !type:InstantForceUserActionEvent
+      volume: 50
+      event: !type:CreateEntityEvent
+        proto: PontificKudzu

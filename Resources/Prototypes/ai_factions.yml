@@ -9,6 +9,7 @@
   - Revolutionary
   - AllHostile
   - Wizard
+  - Unholy # Stories
 
 - type: npcFaction
   id: NanoTrasen
@@ -23,6 +24,7 @@
   - Wizard
   - Xenoborg
   - Shadowling # Stories-Shadowling
+  - Unholy # Stories
 
 - type: npcFaction
   id: Mouse
@@ -44,6 +46,7 @@
   - AllHostile
   - Wizard
   - Dragon
+  - Unholy # Stories
 
 - type: npcFaction
   id: SimpleHostile
@@ -59,6 +62,7 @@
   - AllHostile
   - Wizard
   - Xenoborg
+  - Unholy # Stories
 
 - type: npcFaction
   id: SimpleNeutral
@@ -76,6 +80,7 @@
   - Wizard
   - Xenoborg
   - Shadowling # Stories-Shadowling
+  - Unholy # Stories
 
 - type: npcFaction
   id: Xeno
@@ -90,6 +95,7 @@
   - Wizard
   - Dragon
   - Xenoborg
+  - Unholy # Stories
 
 - type: npcFaction
   id: Zombie
@@ -117,6 +123,7 @@
   - AllHostile
   - Wizard
   - Xenoborg
+  - Unholy # Stories
 
 - type: npcFaction
   id: AllHostile
@@ -134,6 +141,7 @@
   - Revolutionary
   - Wizard
   - Xenoborg
+  - Unholy # Stories
 
 - type: npcFaction
   id: Wizard
@@ -151,6 +159,7 @@
   - Revolutionary
   - AllHostile
   - Xenoborg
+  - Unholy # Stories
 
 - type: npcFaction
   id: Xenoborg
@@ -167,3 +176,4 @@
   # cause they are hostile to them
   - SimpleHostile
   - AllHostile
+  - Unholy # Stories

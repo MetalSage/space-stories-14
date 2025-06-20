@@ -1,0 +1,15 @@
+﻿- type: polymorph
+  id: Desecrated
+  configuration:
+    entity: MobDesecrated
+    forced: true
+    inventory: None
+    polymorphSound:
+      path: /Audio/_Stories/Pontific/polymorph.ogg
+    exitPolymorphSound:
+      path: /Audio/_Stories/Pontific/revert.ogg
+    allowRepeatedMorphs: false
+    transferDamage: false
+    transferName: false
+    revertOnCrit: false
+    revertOnDeath: false

@@ -39,3 +39,13 @@
     antagPrototype: ShadowlingThrall
     exclusiveAntag: true
   - type: ShadowlingThrallRole
+
+- type: entity
+  parent: BaseMindRoleAntag
+  id: MindRolePontific
+  name: Pontific Role
+  components:
+  - type: MindRole
+    antagPrototype: Pontific
+    roleType: FreeAgent
+    subtype: role-subtype-pontific

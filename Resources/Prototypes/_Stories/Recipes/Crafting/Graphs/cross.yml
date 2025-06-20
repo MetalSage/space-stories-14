@@ -1,0 +1,13 @@
+﻿- type: constructionGraph
+  id: ChaplainCross
+  start: start
+  graph:
+  - node: start
+    edges:
+    - to: cross
+      steps:
+      - material: WoodPlank
+        amount: 5
+        doAfter: 4
+  - node: cross
+    entity: ChaplainCross
