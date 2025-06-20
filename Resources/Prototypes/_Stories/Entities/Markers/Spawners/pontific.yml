@@ -1,0 +1,11 @@
+- type: entity
+  id: SpawnPointPontific
+  parent: MarkerBase
+  name: pontific
+  components:
+  - type: SpawnPoint
+  - type: Sprite
+    layers:
+    - state: green
+    - sprite: _Stories/Mobs/Demons/pontific.rsi
+      state: base

@@ -3,8 +3,20 @@
   abstract: true
   parent: [ SimpleSpaceMobBase, MobCombat ]
   components:
-  # TODO:
-  # - type: Unholy
+  - type: Reactive
+    groups:
+      Flammable: [Touch]
+      Extinguish: [Touch]
+      Acidic: [Touch, Ingestion]
+    reactions:
+    - reagents: [ Holywater ]
+      methods: [ Touch ]
+      effects:
+      - !type:Revert
+        conditions:
+        - !type:MobStateCondition
+          mobstate: Dead
+  - type: Unholy
   - type: Destructible
     thresholds:
     - trigger:
@@ -16,7 +28,7 @@
     - trigger:
         !type:DamageTypeTrigger
         damageType: Holy
-        damage: 200
+        damage: 500
       behaviors:
       - !type:SpawnEntitiesBehavior
         spawnInContainer: true
@@ -44,9 +56,6 @@
         sound:
           collection: MeatLaserImpact
   - type: Hands
-  - type: MobStateActions
-    actions:
-      Critical: []
   - type: Bloodstream
     bloodMaxVolume: 25
     bloodReagent: DemonsBlood
@@ -59,7 +68,7 @@
   - type: PassiveDamage
     allowedStates:
     - Alive
-    - Critical
+    - Dead
     damageCap: 0
     damage:
       # types:
@@ -72,8 +81,6 @@
     states:
       Alive:
         Base: base
-      Critical:
-        Base: dead
       Dead:
         Base: dead
   - type: NPCImprintingOnSpawnBehaviour
@@ -94,12 +101,12 @@
   - type: MobState
     allowedStates:
     - Alive
-    - Critical
-    # - Dead
+    - Dead
   - type: MobThresholds
+    allowRevives: true
     thresholds:
       0: Alive
-      75: Critical
+      75: Dead
   - type: Stamina
     critThreshold: 50
   - type: MeleeWeapon
@@ -156,9 +163,10 @@
       - map: [ "enum.DamageStateVisualLayers.Base" ]
         state: base
   - type: MobThresholds
+    allowRevives: true
     thresholds:
       0: Alive
-      200: Critical
+      200: Dead
   - type: MeleeWeapon
     range: 2.0
     hidden: true
@@ -175,7 +183,7 @@
     allowMovement: true
     allowSpeech: true
     makeSentient: true
-    name: тёмный рыцарь
+    name: Тёмный рыцарь
     description: Мрачная и грозная фигура. Его броня покрыта царапинами и ржавчиной, а на ней видны следы давно забытых сражений. В его взгляде — холодная решимость и безразличие к жизни, словно он давно потерял всякую надежду.
   - type: GhostTakeoverAvailable
   - type: SlowOnDamage
@@ -209,14 +217,15 @@
     - map: [ "enum.DamageStateVisualLayers.Base" ]
       state: base
   - type: MobThresholds
+    allowRevives: true
     thresholds:
       0: Alive
-      150: Critical
+      150: Dead
   - type: GhostRole
     allowMovement: true
     allowSpeech: true
     makeSentient: true
-    name: осквернённый
+    name: Осквернённый
     description: Изломанная тень своего прежнего я. Его тело покрыто шрамами, трещинами и пятнами тёмной плоти, словно он был разрушен внутренней тьмой и чужими силами. Глаза — пустые и безжизненные, в них читается отчаяние и безумие, а движения — неуклюжие и хаотичные
   - type: GhostTakeoverAvailable
   - type: SlowOnDamage
@@ -242,6 +251,9 @@
   parent: BaseUnholy
   description: Таинственный и зловещий фигурант. Его одеяния состоят из рваных, запятнанных ткани и ритуальных накидок, покрытых загадочными символами и кровавыми пятнами. Лицо скрыто под капюшоном, а в глазах — холодное безразличие и древняя мудрость, пропитанная тьмой.
   components:
+  - type: Unholy
+    resistanceCoefficient: 0.1
+    ignoreProtectionImpulse: true
   - type: PassiveDamage
     allowedStates:
     - Alive
@@ -261,14 +273,15 @@
       - map: ["enum.DamageStateVisualLayers.Base"]
         state: base
   - type: MobThresholds
+    allowRevives: true
     thresholds:
       0: Alive
-      200: Critical
+      200: Dead
   - type: GhostRole
     allowMovement: true
     allowSpeech: true
     makeSentient: true
-    name: тёмный монах
+    name: Тёмный монах
     description: Таинственный и зловещий фигурант. Его одеяния состоят из рваных, запятнанных ткани и ритуальных накидок, покрытых загадочными символами и кровавыми пятнами. Лицо скрыто под капюшоном, а в глазах — холодное безразличие и древняя мудрость, пропитанная тьмой.
   - type: GhostTakeoverAvailable
   - type: SlowOnDamage

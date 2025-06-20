@@ -4,6 +4,11 @@
   parent: BaseUnholy
   description: Таинственное и зловещее существо. Его фигура искажена ритуальными одеяниями, покрыта тёмными татуировками и загадочными символами, излучающими зловещую ауру.
   components:
+  - type: Nightvision
+  - type: ComplexInteraction
+  - type: Unholy
+    resistanceCoefficient: 0.1
+    ignoreProtectionImpulse: true
   - type: PassiveDamage
     allowedStates:
     - Alive
@@ -34,6 +39,7 @@
       state: base
       sprite: _Stories/Mobs/Demons/pontific.rsi
   - type: MobThresholds
+    allowRevives: true
     thresholds:
       0: Alive
       600: Dead
@@ -56,7 +62,7 @@
       550: 0.7
   - type: Pontific
     actions:
-    # - ActionPontificPrayer
+    # - ActionPontificPrayer FIXME: Перенесено в ForceUser как затычка
     - ActionPontificBloodyAltar
     - ActionPontificSpawnMonk
     - ActionPontificSpawnGuardian

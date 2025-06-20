@@ -11,3 +11,18 @@
   - BasicStationEventScheduler
   - MeteorSwarmScheduler
   - BasicRoundstartVariation
+
+- type: gamePreset
+  id: Pontific
+  alias:
+  - pontific
+  name: Пробуждение Понтифика
+  description: "На станцию прибывает таинственное и зловещее существо — Понтифик, связанное с тёмными силами."
+  showInVote: true
+  rules:
+  - Pontific
+  - SubGamemodesRule
+  - BasicStationEventScheduler
+  - MeteorSwarmScheduler
+  - SpaceTrafficControlEventScheduler
+  - BasicRoundstartVariation

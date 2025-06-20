@@ -1,6 +1,6 @@
 ﻿- type: entity
   id: PontificKudzu
-  parent: Kudzu
+  parent: FleshKudzu
   name: осквернённые лилии
   description: Зловещие и жуткие растения, медленно заполняющие коридоры и залы станции. Их длинные, изломанные стебли покрыты тёмной, почти чёрной кожицей, а лепестки — бледные, с пятнами кровавого цвета и загадочными символами, словно вырезанными или впитавшими тёмную энергию.
   components:
@@ -8,17 +8,6 @@
     drawdepth: FloorObjects
     sprite: _Stories/Objects/Misc/pontific_kudzu.rsi
     state: kudzu_11
-  - type: GrowingKudzu
-  - type: Kudzu
-    spriteVariants: 3
-    spreadChance: 0.2
-    growthTickChance: 0.3
-    damageRecovery:
-      types:
-        Slash: -0.5
-        Heat: -1.0
-        Cold: -1.0
-        Blunt: -0.5
   - type: Reactive
     groups:
       Flammable: [ Touch ]
@@ -28,23 +17,30 @@
       methods: [ Touch ]
       effects:
       - !type:HealthChange
-        scaled: true
         damage:
           types:
-            Heat: 10
+            Heat: 100
   - type: SpeedModifierContacts
     walkSpeedModifier: 0.2
     sprintSpeedModifier: 0.2
     ignoreWhitelist:
       components:
       - IgnoreKudzu
-      # TODO:
-      # - Unholy
+      - Unholy
   - type: DamageContacts
     damage:
       types:
-        Cold: 5
-    # TODO:
-    # ignoreWhitelist:
-    #   components:
-    #   - Unholy
+        Slash: 5
+    ignoreWhitelist:
+      components:
+      - Unholy
+  - type: Kudzu
+    growthTickChance: 1
+    spreadChance: 1
+    # Heals each time it manages to do a growth tick:
+    damageRecovery:
+      types:
+        Slash: -0.5
+        Heat: -1.0
+        Cold: -1.0
+        Blunt: -0.5 # Needs to be balanced (approx 3x) with vacuum damage to stall but not kill Kudzu

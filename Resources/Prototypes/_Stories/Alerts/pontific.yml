@@ -1,6 +1,5 @@
 ﻿- type: alert
   id: PontificFel
-  category: Thirst
   icons:
     - sprite: /Textures/_Stories/Interface/Alerts/fel.rsi
       state: fel0
@@ -49,7 +48,6 @@
 
 - type: alert
   id: PontificPrayer
-  category: Thirst
   icons:
     - sprite: /Textures/_Stories/Actions/pontific.rsi
       state: prayer
@@ -58,7 +56,6 @@
 
 - type: alert
   id: PontificFlame
-  category: Thirst
   icons:
     - sprite: /Textures/_Stories/Actions/pontific.rsi
       state: flame_swords

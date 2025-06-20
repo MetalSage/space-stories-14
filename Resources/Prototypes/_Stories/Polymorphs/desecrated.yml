@@ -9,7 +9,7 @@
     exitPolymorphSound:
       path: /Audio/_Stories/Pontific/revert.ogg
     allowRepeatedMorphs: false
-    transferDamage: true
+    transferDamage: false
     transferName: false
     revertOnCrit: false
     revertOnDeath: false
