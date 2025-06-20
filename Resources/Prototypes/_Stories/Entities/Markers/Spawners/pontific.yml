@@ -1,8 +1,14 @@
 - type: entity
   id: SpawnPointPontific
-  parent: MarkerBase
+  categories: [ HideSpawnMenu, Spawner ]
+  parent: BaseAntagSpawner
   name: pontific
   components:
+  - type: GhostRole
+    name: Понтифик
+    description: Таинственное и зловещее существо. Его фигура искажена ритуальными одеяниями, покрыта тёмными татуировками и загадочными символами, излучающими зловещую ауру.
+    mindRoles:
+    - MindRoleGhostRoleFreeAgent
   - type: SpawnPoint
   - type: Sprite
     layers:
