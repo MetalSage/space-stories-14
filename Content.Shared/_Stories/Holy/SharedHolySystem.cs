@@ -61,20 +61,8 @@ public abstract partial class SharedHolySystem : EntitySystem
         base.Initialize();
         InitializeProtection();
 
-        SubscribeLocalEvent<HolyComponent, ComponentInit>(OnInit);
         SubscribeLocalEvent<HolyComponent, ExaminedEvent>(OnExamined);
         SubscribeLocalEvent<UnholyComponent, ExaminedEvent>(OnExamined);
-    }
-
-    private void OnInit(Entity<HolyComponent> entity, ref ComponentInit args)
-    {
-        if (!TryComp<UseDelayComponent>(entity, out var useDelay))
-            return;
-
-        if (entity.Comp.ProtectionDelay is { } delay)
-            _useDelay.SetLength((entity, useDelay), delay, HolyDelay);
-        else if (!_useDelay.TryGetDelayInfo((entity, useDelay), out _, HolyDelay))
-            _useDelay.SetLength((entity, useDelay), TimeSpan.Zero, HolyDelay); // Ставим ноль для нормальной работы системы защиты.
     }
 
     private void OnExamined(Entity<HolyComponent> entity, ref ExaminedEvent args)
