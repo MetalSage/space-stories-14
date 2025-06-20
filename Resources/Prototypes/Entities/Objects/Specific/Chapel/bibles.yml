@@ -9,7 +9,10 @@
     guides:
     - STChaplain
   - type: Holy
-    protectionDelay: 0
+  - type: UseDelay
+    delays:
+      Holy:
+        length: 0
   # Stories - end
   - type: UseDelay
     delay: 10.0

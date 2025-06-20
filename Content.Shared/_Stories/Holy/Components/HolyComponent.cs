@@ -23,9 +23,6 @@ public sealed partial class HolyComponent : Component
     public ProtoId<DamageModifierSetPrototype> ProtectionDamageDamageModifierSet = "Holy";
 
     [DataField]
-    public TimeSpan? ProtectionDelay = null;
-
-    [DataField]
     public SoundPathSpecifier? ProtectionSound = new SoundPathSpecifier("/Audio/Effects/lightburn.ogg");
 
     [DataField]

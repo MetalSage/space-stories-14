@@ -15,8 +15,9 @@ public abstract partial class SharedHolySystem : EntitySystem
 
         if (TryComp<UseDelayComponent>(holy, out var useDelay))
         {
-            if (!_useDelay.TryResetDelay((holy, useDelay), true, HolyDelay))
-                return false;
+            if (_useDelay.TryGetDelayInfo((holy, useDelay), out _, HolyDelay)) // Если Delay настроен
+                if (!_useDelay.TryResetDelay((holy, useDelay), true, HolyDelay))
+                    return false;
         }
 
         ApplyProtection((target, unholy), holy);

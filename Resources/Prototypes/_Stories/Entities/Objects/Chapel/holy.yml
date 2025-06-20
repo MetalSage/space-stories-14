@@ -2,5 +2,9 @@
   id: BaseHolyItem
   abstract: true
   components:
+  - type: UseDelay
+    delays:
+      Holy:
+        length: 0.5
   - type: Holy
-    protectionDelay: 0.5
+
