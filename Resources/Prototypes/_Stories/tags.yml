@@ -12,3 +12,6 @@
 
 - type: Tag
   id: Prison
+
+- type: Tag
+  id: HolyFloor

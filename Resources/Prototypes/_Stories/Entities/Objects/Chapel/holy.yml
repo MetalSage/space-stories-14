@@ -1,0 +1,6 @@
+- type: entity
+  id: BaseHolyItem
+  abstract: true
+  components:
+  - type: Holy
+    protectionDelay: 0.5
