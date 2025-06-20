@@ -6,6 +6,10 @@
   name: revenant
   description: A spooky ghostie.
   components:
+  - type: Unholy
+    resistanceCoefficient: 0.5
+    ignoreProtectionImpulse: false
+    detectable: true
   - type: Input
     context: "ghost"
   - type: Spectral
