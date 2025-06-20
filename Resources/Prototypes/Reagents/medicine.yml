@@ -576,6 +576,11 @@
     Medicine:
       metabolismRate: 0.1
       effects:
+      # Stories - start
+      - !type:AdjustReagent
+        reagent: Corpium
+        amount: -100
+      # Stories - end
       - !type:HealthChange
         damage:
           types:
