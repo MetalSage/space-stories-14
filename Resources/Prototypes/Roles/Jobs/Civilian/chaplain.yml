@@ -16,6 +16,10 @@
   - !type:AddComponentSpecial
     components:
     - type: BibleUser #Lets them heal with bibles
+    # Stories - start
+    - type: Chaplain
+    - type: Holy
+    # Stories - end
 
 - type: startingGear
   id: ChaplainGear
@@ -27,3 +31,4 @@
     back:
     - Bible
     - RubberStampChaplain
+    - ChaplainCross # Stories

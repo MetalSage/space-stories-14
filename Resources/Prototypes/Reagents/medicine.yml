@@ -1123,9 +1123,11 @@
       methods: [ Touch ]
       effects:
       - !type:ExtinguishReaction
+      - !type:BlessReaction # STORIES
     Acidic:
       methods: [ Touch ]
       effects:
+      - !type:BlessReaction # STORIES
       - !type:HealthChange
         scaleByQuantity: true
         ignoreResistances: false
@@ -1136,6 +1138,10 @@
   - !type:PlantAdjustWater
     amount: 1
   tileReactions:
+  - !type:CreateEntityTileReaction
+    entity: HolyFloorEntity
+    maxOnTileWhitelist:
+      tags: [ HolyFloor ]
   - !type:ExtinguishTileReaction { }
 
 - type: reagent

@@ -28,3 +28,10 @@
   id: Vulpkanin
   coefficients:
     Heat: 1.15
+
+- type: damageModifierSet
+  id: Holy
+  coefficients:
+    Slash: 0.5
+    Piercing: 0.5
+    Blunt: 0.5

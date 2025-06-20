@@ -23,3 +23,8 @@
   - Dragon
   - Xenoborg
 
+- type: npcFaction
+  id: Holy
+  hostile:
+  - Unholy
+  - Shadowling

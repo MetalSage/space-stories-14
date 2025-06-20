@@ -10,3 +10,8 @@
 
 - type: statusEffect
   id: FrozeBullets
+
+- type: statusEffect
+  id: Holy
+  alert: Holy
+  alwaysAllowed: true
