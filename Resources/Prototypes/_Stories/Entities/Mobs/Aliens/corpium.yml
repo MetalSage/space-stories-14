@@ -1,52 +1,52 @@
 - type: entity
-  name: Спидорак # Название придумали игроки на Space Stories Marine Corps на одном ивенте
+  name: Корпиум
   parent: MobTick
-  id: MobSpidorak
+  id: MobCorpium
   description: Очень страшный скорпион из далекого космоса. Не дайте ему себя укусить.
   components:
-  # Ход конем, чтобы спидораки не могли отспидорачить друг друга
-  # Они все еще вводят спидорак в других спидораках, но он почему-то не метаболизируется. Вот и славно.
+  # Ход конем, чтобы корпиумы не могли откорпиумить друг друга
+  # Они все еще вводят корпиум в других корпиумов, но он почему-то не метаболизируется. Вот и славно.
   - type: Bloodstream
-    chemicalSolutionName: spidorakChemicals
+    chemicalSolutionName: corpiumChemicals
   - type: StatusIcon
     bounds: -0.5,-0.5,0.5,0.5
-  - type: Spidorak
+  - type: Corpium
   - type: ReagentStatusIcon
     solution: melee
     reagent:
-      ReagentId: Spidorak
-    statusIcon: SpidorakReady
+      ReagentId: Corpium
+    statusIcon: CorpiumReady
   - type: GhostRole
-    name: Спидорак
-    description: Кусайте экипаж, заражая их смертельным вирусом, который создает больше спидораков после смерти носителя.
+    name: Корпиум
+    description: Кусайте экипаж, заражая их смертельным вирусом, который создает больше корпиумов после смерти носителя.
     raffle:
       settings: default
   - type: Nightvision
   - type: Vocal
     sounds:
-      Unsexed: Spidorak
+      Unsexed: Corpium
   - type: FootstepModifier
     footstepSoundCollection:
-      collection: FootstepSpidorak
+      collection: FootstepCorpium
   - type: Sprite
     drawdepth: Mobs
     layers:
     - map: ["enum.DamageStateVisualLayers.Base"]
       state: alive
-      sprite: _Stories/Mobs/Aliens/spidorak.rsi
+      sprite: _Stories/Mobs/Aliens/corpium.rsi
   - type: SolutionContainerManager
     solutions:
       melee:
         maxVol: 1
         reagents:
-        - ReagentId: Spidorak
+        - ReagentId: Corpium
           Quantity: 1
   - type: SolutionRegeneration
     duration: 60
     solution: melee
     generated:
       reagents:
-      - ReagentId: Spidorak
+      - ReagentId: Corpium
         Quantity: 1
   - type: MeleeChemicalInjector
     pierceArmor: False

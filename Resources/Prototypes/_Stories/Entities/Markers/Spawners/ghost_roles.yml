@@ -41,21 +41,21 @@
 
 - type: entity
   categories: [ HideSpawnMenu, Spawner ]
-  id: SpawnPointGhostSpidorak
+  id: SpawnPointGhostCorpium
   name: ghost role spawn point
-  suffix: Спидорак
+  suffix: Корпиум
   parent: MarkerBase
   components:
   - type: GhostRole
-    name: Спидорак
-    description: Кусайте экипаж, заражая их смертельным вирусом, который создает больше спидораков после смерти носителя.
+    name: Корпиум
+    description: Кусайте экипаж, заражая их смертельным вирусом, который создает больше корпиумов после смерти носителя.
     raffle:
       settings: default
   - type: GhostRoleMobSpawner
-    prototype: MobSpidorak
+    prototype: MobCorpium
   - type: Sprite
     sprite: Markers/jobs.rsi
     layers:
       - state: green
-      - sprite: _Stories/Mobs/Aliens/spidorak.rsi
+      - sprite: _Stories/Mobs/Aliens/corpium.rsi
         state: alive

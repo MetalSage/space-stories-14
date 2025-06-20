@@ -56,10 +56,10 @@
             "name": "SecurityClown"
         },
         {
-            "name": "SpidorakInfected"
+            "name": "CorpiumInfected"
         },
         {
-            "name": "SpidorakReady"
+            "name": "CorpiumReady"
         }
     ]
 }

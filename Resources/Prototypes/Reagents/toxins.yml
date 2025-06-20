@@ -44,11 +44,11 @@
         visualType: MediumCaution
         messages: [ "generic-reagent-effect-burning-insides" ]
         probability: 0.33
-      # Stories spidoraks - start
+      # Stories corpiums - start
       - !type:AdjustReagent
-        reagent: Spidorak
+        reagent: Corpium
         amount: -100
-      # Stories spidoraks - end
+      # Stories corpiums - end
 
 - type: reagent
   id: ChloralHydrate

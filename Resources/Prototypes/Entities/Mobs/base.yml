@@ -243,6 +243,6 @@
   - type: ReagentStatusIcon
     solution: chemicals
     reagent:
-      ReagentId: Spidorak
-    statusIcon: SpidorakInfected
+      ReagentId: Corpium
+    statusIcon: CorpiumInfected
   # Stories - end

@@ -1,8 +1,8 @@
 - type: entity
-  name: медипен-вакцина от спидорака
+  name: медипен-вакцина от корпиума
   parent: ChemicalMedipen
-  id: AntiSpidorakMedipen
-  description: Медипен с вакциной от спидорака.
+  id: AntiCorpiumMedipen
+  description: Медипен с вакциной от корпиума.
   components:
   - type: Sprite
     sprite: Objects/Specific/Medical/medipen.rsi
@@ -18,7 +18,7 @@
       pen:
         maxVol: 15
         reagents:
-        - ReagentId: AntiSpidorak
+        - ReagentId: AntiCorpium
           Quantity: 15
   - type: Tag
     tags: []

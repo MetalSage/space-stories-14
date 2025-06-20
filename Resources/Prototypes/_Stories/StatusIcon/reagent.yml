@@ -1,23 +1,23 @@
 - type: reagentIcon
-  id: SpidorakReady
+  id: CorpiumReady
   priority: 11
   locationPreference: Right
   isShaded: false
   showTo:
     components:
-    - Spidorak
+    - Corpium
   icon:
     sprite: /Textures/_Stories/Interface/Misc/job_icons.rsi
-    state: SpidorakReady
+    state: CorpiumReady
 
 - type: reagentIcon
-  id: SpidorakInfected
+  id: CorpiumInfected
   priority: 11
   locationPreference: Right
   isShaded: false
   showTo:
     components:
-    - Spidorak
+    - Corpium
   icon:
     sprite: /Textures/_Stories/Interface/Misc/job_icons.rsi
-    state: SpidorakInfected
+    state: CorpiumInfected

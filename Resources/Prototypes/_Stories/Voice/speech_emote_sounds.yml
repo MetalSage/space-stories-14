@@ -92,9 +92,9 @@
       collection: KidanDeathGasp
 
 - type: emoteSounds
-  id: Spidorak
+  id: Corpium
   params:
     variation: 0.125
   sounds:
     Scream:
-      path: /Audio/_Stories/Spidorak/scream.ogg
+      path: /Audio/_Stories/Corpium/scream.ogg

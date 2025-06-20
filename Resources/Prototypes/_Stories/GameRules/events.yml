@@ -225,14 +225,14 @@
     - STCommandMaid
 
 - type: entity
-  id: SpidorakSpawn
+  id: CorpiumSpawn
   parent: BaseStationEventLongDelay
   components:
   - type: StationEvent
     startAnnouncementColor: DarkRed
-    startAnnouncement: station-event-vent-spidorak-start-announcement
+    startAnnouncement: station-event-vent-corpium-start-announcement
     startAudio:
-      path: /Audio/_Stories/Spidorak/alert.ogg
+      path: /Audio/_Stories/Corpium/alert.ogg
       params:
         volume: -8
     earliestStart: 20
@@ -241,5 +241,5 @@
     duration: 1
   - type: VentCrittersRule
     entries:
-    - id: SpawnPointGhostSpidorak
+    - id: SpawnPointGhostCorpium
       prob: 0.025

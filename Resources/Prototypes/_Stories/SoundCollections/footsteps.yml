@@ -1,4 +1,4 @@
 - type: soundCollection
-  id: FootstepSpidorak
+  id: FootstepCorpium
   files:
-  - /Audio/_Stories/Spidorak/footstep.ogg
+  - /Audio/_Stories/Corpium/footstep.ogg

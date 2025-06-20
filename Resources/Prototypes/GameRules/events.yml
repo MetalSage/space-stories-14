@@ -44,7 +44,7 @@
     #- id: WizardSpawn
     - id: SpafMigration
     - id: InquisitorSpawn
-    - id: SpidorakSpawn
+    - id: CorpiumSpawn
     # Stories End
 
 - type: entity
