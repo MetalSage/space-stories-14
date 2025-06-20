@@ -10,6 +10,9 @@
     - prefRoles: [ Shadowling ]
       max: 2
       playerRatio: 30
+      blacklist:
+        components:
+        - Holy
       briefing:
         text: shadowling-role-greeting
         color: DarkRed
