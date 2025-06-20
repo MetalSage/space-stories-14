@@ -16,7 +16,8 @@ public sealed partial class PontificSystem
 
     private void OnPrayerInit(Entity<PontificPrayerComponent> entity, ref ComponentInit args)
     {
-        _appearance.SetData(entity, PontificVisuals.State, PontificState.Prayer);
+        if (HasComp<AppearanceComponent>(entity))
+            _appearance.SetData(entity, PontificVisuals.State, PontificState.Prayer);
 
         EnsureComp<ForceComponent>(entity).PassiveVolume = 10;
         EnsureComp<StunnedComponent>(entity);
@@ -25,8 +26,9 @@ public sealed partial class PontificSystem
 
     private void OnPrayerShutdown(Entity<PontificPrayerComponent> entity, ref ComponentShutdown args)
     {
-        if (_appearance.TryGetData(entity, PontificVisuals.State, out var data) && data is PontificState.Prayer)
-            _appearance.SetData(entity, PontificVisuals.State, PontificState.Base);
+        if (HasComp<AppearanceComponent>(entity))
+            if (_appearance.TryGetData(entity, PontificVisuals.State, out var data) && data is PontificState.Prayer)
+                _appearance.SetData(entity, PontificVisuals.State, PontificState.Base);
 
         EnsureComp<ForceComponent>(entity).PassiveVolume = 0.01f;
 
