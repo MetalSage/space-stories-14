@@ -622,7 +622,7 @@ entities:
     - type: Transform
       pos: 3.4431849,-1.4448863
       parent: 2
-- proto: SpawnPointPontific
+- proto: SpawnPointNukies
   entities:
   - uid: 203
     components:
