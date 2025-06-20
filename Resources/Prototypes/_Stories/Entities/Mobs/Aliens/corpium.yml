@@ -42,7 +42,7 @@
         - ReagentId: Corpium
           Quantity: 1
   - type: SolutionRegeneration
-    duration: 60
+    duration: 180
     solution: melee
     generated:
       reagents:
