@@ -578,7 +578,7 @@
       effects:
       # Stories - start
       - !type:AdjustReagent
-        reagent: Corpium
+        reagent: STCorpium
         amount: -100
       # Stories - end
       - !type:HealthChange

@@ -1,7 +1,7 @@
 - type: entity
   name: медипен-вакцина от корпиума
   parent: ChemicalMedipen
-  id: AntiCorpiumMedipen
+  id: STAntiCorpiumMedipen
   description: Медипен с вакциной от корпиума.
   components:
   - type: Sprite
@@ -18,7 +18,7 @@
       pen:
         maxVol: 15
         reagents:
-        - ReagentId: AntiCorpium
+        - ReagentId: STAntiCorpium
           Quantity: 15
   - type: Tag
     tags: []

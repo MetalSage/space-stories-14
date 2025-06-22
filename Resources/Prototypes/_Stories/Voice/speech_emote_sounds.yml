@@ -92,7 +92,7 @@
       collection: KidanDeathGasp
 
 - type: emoteSounds
-  id: Corpium
+  id: STCorpium
   params:
     variation: 0.125
   sounds:

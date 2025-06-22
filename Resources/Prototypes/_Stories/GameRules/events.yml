@@ -225,7 +225,7 @@
     - STCommandMaid
 
 - type: entity
-  id: CorpiumSpawn
+  id: STCorpiumSpawn
   parent: BaseStationEventLongDelay
   components:
   - type: StationEvent
@@ -241,5 +241,5 @@
     duration: 1
   - type: VentCrittersRule
     entries:
-    - id: SpawnPointGhostCorpium
+    - id: STSpawnPointGhostCorpium
       prob: 0.025

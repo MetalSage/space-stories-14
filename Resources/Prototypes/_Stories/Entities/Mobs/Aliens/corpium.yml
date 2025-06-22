@@ -1,11 +1,9 @@
 - type: entity
   name: Корпиум
   parent: MobTick
-  id: MobCorpium
+  id: STMobCorpium
   description: Очень страшный скорпион из далекого космоса. Не дайте ему себя укусить.
   components:
-  # Ход конем, чтобы корпиумы не могли откорпиумить друг друга
-  # Они все еще вводят корпиум в других корпиумов, но он почему-то не метаболизируется. Вот и славно.
   - type: Bloodstream
     chemicalSolutionName: corpiumChemicals
   - type: StatusIcon
@@ -14,8 +12,8 @@
   - type: ReagentStatusIcon
     solution: melee
     reagent:
-      ReagentId: Corpium
-    statusIcon: CorpiumReady
+      ReagentId: STCorpium
+    statusIcon: STCorpiumReady
   - type: GhostRole
     name: Корпиум
     description: Кусайте экипаж, заражая их смертельным вирусом, который создает больше корпиумов после смерти носителя.
@@ -24,10 +22,10 @@
   - type: Nightvision
   - type: Vocal
     sounds:
-      Unsexed: Corpium
+      Unsexed: STCorpium
   - type: FootstepModifier
     footstepSoundCollection:
-      collection: FootstepCorpium
+      collection: STFootstepCorpium
   - type: Sprite
     drawdepth: Mobs
     layers:
@@ -39,14 +37,14 @@
       melee:
         maxVol: 1
         reagents:
-        - ReagentId: Corpium
+        - ReagentId: STCorpium
           Quantity: 1
   - type: SolutionRegeneration
     duration: 180
     solution: melee
     generated:
       reagents:
-      - ReagentId: Corpium
+      - ReagentId: STCorpium
         Quantity: 1
   - type: MeleeChemicalInjector
     pierceArmor: False

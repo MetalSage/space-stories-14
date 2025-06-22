@@ -243,6 +243,6 @@
   - type: ReagentStatusIcon
     solution: chemicals
     reagent:
-      ReagentId: Corpium
-    statusIcon: CorpiumInfected
+      ReagentId: STCorpium
+    statusIcon: STCorpiumInfected
   # Stories - end

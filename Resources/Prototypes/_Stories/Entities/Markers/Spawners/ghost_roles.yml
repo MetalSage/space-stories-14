@@ -41,7 +41,7 @@
 
 - type: entity
   categories: [ HideSpawnMenu, Spawner ]
-  id: SpawnPointGhostCorpium
+  id: STSpawnPointGhostCorpium
   name: ghost role spawn point
   suffix: Корпиум
   parent: MarkerBase
@@ -52,7 +52,7 @@
     raffle:
       settings: default
   - type: GhostRoleMobSpawner
-    prototype: MobCorpium
+    prototype: STMobCorpium
   - type: Sprite
     sprite: Markers/jobs.rsi
     layers:

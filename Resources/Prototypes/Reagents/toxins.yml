@@ -46,7 +46,7 @@
         probability: 0.33
       # Stories corpiums - start
       - !type:AdjustReagent
-        reagent: Corpium
+        reagent: STCorpium
         amount: -100
       # Stories corpiums - end
 
