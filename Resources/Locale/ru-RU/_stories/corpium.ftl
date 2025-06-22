@@ -5,3 +5,7 @@ reagent-name-corpium = корпиум
 reagent-desc-corpium = Опасная болезнь, которая превращает людей в злых корпиумов.
 reagent-name-anti-corpium = анти-корпиум
 reagent-desc-anti-corpium = Это спасает от корпиума.
+
+corpium-effect-feel-bad = Вы плохо себя чувствуете!
+corpium-effect-feel-very-bad = Вы ужасно себя чувствуете!
+corpium-effect-spawn-entities = Корпиумы вылезают из тела!

@@ -76,12 +76,12 @@ public sealed class BloodstreamSystem : EntitySystem
         {
             switch (effect)
             {
-                // Stories Corpiums - start
+                // Stories-Corpium-Start
                 // case CreateEntityReactionEffect: // Prevent entities from spawning in the bloodstream
                 // case AreaReactionEffect: // No spontaneous smoke or foam leaking out of blood vessels.
                 //     args.Cancelled = true;
                 //     return;
-                // Stories Corpiums - end
+                // Stories-Corpium-End
             }
         }
 

@@ -27,7 +27,7 @@
       - !type:PopupMessage
         type: Local
         visualType: MediumCaution
-        messages: [ "Вы плохо себя чувствуете!" ]
+        messages: [ "corpium-effect-feel-bad" ]
         probability: 0.1
         conditions:
         - !type:ReagentThreshold
@@ -45,7 +45,7 @@
       - !type:PopupMessage
         type: Local
         visualType: LargeCaution
-        messages: [ "Вы ужасно себя чувствуете!" ]
+        messages: [ "corpium-effect-feel-very-bad" ]
         probability: 0.1
         conditions:
         - !type:ReagentThreshold
@@ -97,7 +97,7 @@
       - !type:PopupMessage
         type: Pvs
         visualType: LargeCaution
-        messages: [ "Корпиумы вылезают из тела!" ]
+        messages: [ "corpium-effect-spawn-entities" ]
         probability: 1.0
         conditions:
         - !type:ReagentThreshold
