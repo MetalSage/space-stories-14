@@ -1,7 +1,7 @@
 - type: reagent
   id: STCorpium
-  name: reagent-name-corpium
-  desc: reagent-desc-corpium
+  name: stories-reagent-name-corpium
+  desc: stories-reagent-desc-corpium
   group: Biological
   flavor: metallic
   color: "#8000FF"
@@ -27,7 +27,7 @@
       - !type:PopupMessage
         type: Local
         visualType: MediumCaution
-        messages: [ "corpium-effect-feel-bad" ]
+        messages: [ "stories-corpium-effect-feel-bad" ]
         probability: 0.1
         conditions:
         - !type:ReagentThreshold
@@ -45,7 +45,7 @@
       - !type:PopupMessage
         type: Local
         visualType: LargeCaution
-        messages: [ "corpium-effect-feel-very-bad" ]
+        messages: [ "stories-corpium-effect-feel-very-bad" ]
         probability: 0.1
         conditions:
         - !type:ReagentThreshold
@@ -97,7 +97,7 @@
       - !type:PopupMessage
         type: Pvs
         visualType: LargeCaution
-        messages: [ "corpium-effect-spawn-entities" ]
+        messages: [ "stories-corpium-effect-spawn-entities" ]
         probability: 1.0
         conditions:
         - !type:ReagentThreshold
@@ -106,8 +106,8 @@
 
 - type: reagent
   id: STAntiCorpium
-  name: reagent-name-anti-corpium
-  desc: reagent-desc-anti-corpium
+  name: stories-reagent-name-anti-corpium
+  desc: stories-reagent-desc-anti-corpium
   group: Biological
   flavor: metallic
   color: "#800000"

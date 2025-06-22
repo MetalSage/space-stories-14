@@ -1,8 +1,8 @@
 - type: entity
-  name: Корпиум
+  name: Corpium
   parent: MobTick
   id: STMobCorpium
-  description: Очень страшный скорпион из далекого космоса. Не дайте ему себя укусить.
+  description: A very scary scorpion from outer space. Don't let it bite you.
   components:
   - type: Bloodstream
     chemicalSolutionName: corpiumChemicals
@@ -15,8 +15,8 @@
       ReagentId: STCorpium
     statusIcon: STCorpiumReady
   - type: GhostRole
-    name: Корпиум
-    description: Кусайте экипаж, заражая их смертельным вирусом, который создает больше корпиумов после смерти носителя.
+    name: stories-ghost-role-information-corpium-name
+    description: stories-ghost-role-information-corpium-desc
     raffle:
       settings: default
   - type: Nightvision

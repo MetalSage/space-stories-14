@@ -230,7 +230,7 @@
   components:
   - type: StationEvent
     startAnnouncementColor: DarkRed
-    startAnnouncement: station-event-vent-corpium-start-announcement
+    startAnnouncement: stories-station-event-vent-corpium-start-announcement
     startAudio:
       path: /Audio/_Stories/Corpium/alert.ogg
       params:

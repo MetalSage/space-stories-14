@@ -1,8 +1,8 @@
 - type: entity
-  name: медипен-вакцина от корпиума
+  name: medipen-vaccine against corpium
   parent: ChemicalMedipen
   id: STAntiCorpiumMedipen
-  description: Медипен с вакциной от корпиума.
+  description: Medipen with corpium vaccine.
   components:
   - type: Sprite
     sprite: Objects/Specific/Medical/medipen.rsi

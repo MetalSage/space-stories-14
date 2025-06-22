@@ -43,12 +43,12 @@
   categories: [ HideSpawnMenu, Spawner ]
   id: STSpawnPointGhostCorpium
   name: ghost role spawn point
-  suffix: Корпиум
+  suffix: Corpium
   parent: MarkerBase
   components:
   - type: GhostRole
-    name: Корпиум
-    description: Кусайте экипаж, заражая их смертельным вирусом, который создает больше корпиумов после смерти носителя.
+    name: stories-ghost-role-information-corpium-name
+    description: stories-ghost-role-information-corpium-desc
     raffle:
       settings: default
   - type: GhostRoleMobSpawner
