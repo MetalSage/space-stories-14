@@ -4,6 +4,14 @@
   id: STMobCorpium
   description: A very scary scorpion from outer space. Don't let it bite you.
   components:
+  - type: HTN
+    rootTask:
+      task: DragonCarpCompound
+  - type: NPCImprintingOnSpawnBehaviour
+    spawnFriendsSearchRadius: 3
+    whitelist:
+      components:
+      - Corpium
   - type: MobStateActions
     actions:
       Alive:
