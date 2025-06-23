@@ -1,0 +1,26 @@
+- type: entity
+  id: STActionCorpiumHit
+  name: The mating sting
+  description: Has a 100% chance of hitting the target, even if they are wearing a hardsuit.
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: EntityTargetAction
+    useDelay: 300
+    range: 1
+    itemIconStyle: BigAction
+    whitelist:
+      components:
+      - Body
+    canTargetSelf: true
+    interactOnMiss: false
+    sound: !type:SoundPathSpecifier
+      path: /Audio/Effects/bite.ogg
+    icon:
+      sprite: _Stories/Actions/corpium.rsi
+      state: hit
+    event: !type:InjectReagentsToTargetEvent
+      solution:
+        maxVol: 1
+        reagents:
+        - ReagentId: STCorpium
+          Quantity: 1

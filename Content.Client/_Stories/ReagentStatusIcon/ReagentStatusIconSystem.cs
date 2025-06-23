@@ -1,6 +1,7 @@
 using Content.Client.Chemistry.Containers.EntitySystems;
 using Content.Shared._Stories.ReagentStatusIcon;
 using Content.Shared.Ghost;
+using Content.Shared.Mobs.Components;
 using Content.Shared.StatusIcon.Components;
 using Content.Shared.Whitelist;
 using Robust.Client.Player;
@@ -25,6 +26,9 @@ namespace Content.Client._Stories.ReagentStatusIcon
         {
             var viewer = _playerManager.LocalSession?.AttachedEntity;
             var showTo = _prototype.Index(component.StatusIcon).ShowTo;
+
+            if (TryComp<MobStateComponent>(uid, out var state) && !component.AllowedStates.Contains(state.CurrentState))
+                return;
 
             if (!(_prototype.Index(component.StatusIcon).VisibleToGhosts && HasComp<GhostComponent>(viewer)))
             {
