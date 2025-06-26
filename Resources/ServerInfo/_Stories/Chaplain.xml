@@ -20,7 +20,7 @@
     <GuideEntityEmbed Entity="BorgMegaSprayBottle" Caption="Мега-распылитель"/>
   </Box>
 
-  - Распылите [color=cyan]святую воду[/color] с помощью какого-то инструмента, чтобы получть святой тайл.
+  - Распылите [color=cyan]святую воду[/color] с помощью какого-то инструмента, чтобы получить святой тайл.
 
   <Box>
     <GuideEntityEmbed Entity="HolyFloorEntityInfinity" Caption="Святой тайл"/>

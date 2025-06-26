@@ -5,7 +5,7 @@ public sealed partial class UnholyComponent : Component
 {
 
     /// <summary>
-    /// Коэффициент сопротивления светлым силам. 0, чтобы быть польностью неуязвимым.
+    /// Коэффициент сопротивления светлым силам. 0, чтобы быть полностью неуязвимым.
     /// </summary>
     [DataField]
     public float ResistanceCoefficient = 1f;
