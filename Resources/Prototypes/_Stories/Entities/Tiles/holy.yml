@@ -1,8 +1,8 @@
 - type: entity
-  id: HolyFloorEntityInfinity
-  name: святой тайл
-  description: О благослови великий тайл.
-  suffix: Вечный
+  id: STHolyFloorEntityInfinity
+  name: holy tile
+  description: O bless the great tile.
+  suffix: Infinity
   placement:
     mode: SnapgridCenter
     snap:
@@ -21,7 +21,7 @@
       - state: holy_land
   - type: Tag
     tags:
-      - HolyFloor
+      - STHolyFloor
       - HideContextMenu
   - type: Holy
     protectionImpulseSpeed: 5
@@ -47,10 +47,10 @@
         hard: false
 
 - type: entity
-  id: HolyFloorEntity
-  name: святой тайл
-  description: О благослови великий тайл.
-  parent: HolyFloorEntityInfinity
+  id: STHolyFloorEntity
+  name: holy tile
+  description: O bless the great tile.
+  parent: STHolyFloorEntityInfinity
   suffix: 30 секунд
   placement:
     mode: SnapgridCenter

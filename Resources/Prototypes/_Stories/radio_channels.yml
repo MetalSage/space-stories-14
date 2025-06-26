@@ -30,8 +30,8 @@
   longRange: true
 
 - type: radioChannel
-  id: Unholy
-  name: chat-radio-unholy
+  id: STUnholy
+  name: stories-chat-radio-unholy
   frequency: 98783
   keycode: 'я'
   color: "#7d52a8"

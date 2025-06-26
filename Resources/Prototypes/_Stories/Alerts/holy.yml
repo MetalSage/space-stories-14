@@ -1,7 +1,7 @@
 - type: alert
-  id: Holy
+  id: STHoly
   icons:
     - sprite: _Stories/Objects/Chapel/cross.rsi
       state: icon
-  name: Благословение
-  description: Святая сила защищает вас.
+  name: stories-alerts-holy-name
+  description: stories-alerts-holy-desc

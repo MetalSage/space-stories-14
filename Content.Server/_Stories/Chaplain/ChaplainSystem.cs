@@ -12,7 +12,7 @@ public sealed partial class ChaplainSystem : EntitySystem
     [Dependency] private readonly BodySystem _body = default!;
 
     [ValidatePrototypeId<EmotePrototype>]
-    private const string FartingEmote = "Farting";
+    private const string FartingEmote = "STFarting";
     private const float FartGibbingSearchRange = 0.5f;
 
     public override void Initialize()

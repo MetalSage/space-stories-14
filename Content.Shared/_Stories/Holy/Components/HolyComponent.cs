@@ -20,7 +20,7 @@ public sealed partial class HolyComponent : Component
     };
 
     [DataField]
-    public ProtoId<DamageModifierSetPrototype> ProtectionDamageDamageModifierSet = "Holy";
+    public ProtoId<DamageModifierSetPrototype> ProtectionDamageDamageModifierSet = "STHoly";
 
     [DataField]
     public SoundPathSpecifier? ProtectionSound = new SoundPathSpecifier("/Audio/Effects/lightburn.ogg");

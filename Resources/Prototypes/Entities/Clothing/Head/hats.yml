@@ -951,7 +951,7 @@
         Blunt: 0.95
 
 - type: entity
-  parent: [ ClothingHeadBase, BaseHolyItem ] # Stories
+  parent: [ ClothingHeadBase, STBaseHolyItem ] # Stories
   id: ClothingHeadHatHolyWatermelon
   name: watermelon halo
   description: Holy moly.

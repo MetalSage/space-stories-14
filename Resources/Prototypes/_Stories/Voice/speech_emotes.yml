@@ -1,8 +1,8 @@
 # Мы все дальше от бога...
 
 - type: emote
-  id: Farting
-  name: chat-emote-name-farting
+  id: STFarting
+  name: stories-chat-emote-name-farting
   category: General
   whitelist:
     components:
@@ -10,7 +10,7 @@
   blacklist:
     tags:
     - SiliconEmotes
-  chatMessages: ["chat-emote-msg-farting"]
+  chatMessages: ["stories-chat-emote-msg-farting"]
   chatTriggers:
     - пердит
     - пукает

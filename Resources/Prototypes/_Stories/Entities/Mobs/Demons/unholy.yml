@@ -1,5 +1,5 @@
 - type: entity
-  id: BaseUnholy
+  id: STBaseUnholy
   abstract: true
   parent: [ SimpleSpaceMobBase, MobCombat ]
   components:
@@ -94,7 +94,7 @@
       task: DragonCarpCompound
   - type: NpcFactionMember
     factions:
-    - Unholy
+    - STUnholy
   - type: MovementSpeedModifier
     baseWalkSpeed: 4
     baseSprintSpeed: 5
@@ -134,10 +134,10 @@
   - type: IntrinsicRadioReceiver
   - type: IntrinsicRadioTransmitter
     channels:
-    - Unholy
+    - STUnholy
   - type: ActiveRadio
     channels:
-    - Unholy
+    - STUnholy
   - type: Speech
   - type: TypingIndicator
     proto: guardian
@@ -148,10 +148,10 @@
     - FootstepSound
 
 - type: entity
-  name: тёмный рыцарь
-  id: MobFallenGuard
-  parent: BaseUnholy
-  description: Мрачная и грозная фигура. Его броня покрыта царапинами и ржавчиной, а на ней видны следы давно забытых сражений. В его взгляде — холодная решимость и безразличие к жизни, словно он давно потерял всякую надежду.
+  name: dark knight
+  id: STMobFallenGuard
+  parent: STBaseUnholy
+  description: A grim and menacing figure. His armor is covered in scratches and rust, and there are traces of long-forgotten battles on it. In his gaze there is a cold determination and indifference to life, as if he had long ago lost all hope.
   components:
   - type: MovementSpeedModifier
     baseWalkSpeed: 1
@@ -183,8 +183,8 @@
     allowMovement: true
     allowSpeech: true
     makeSentient: true
-    name: Тёмный рыцарь
-    description: Мрачная и грозная фигура. Его броня покрыта царапинами и ржавчиной, а на ней видны следы давно забытых сражений. В его взгляде — холодная решимость и безразличие к жизни, словно он давно потерял всякую надежду.
+    name: stories-ghost-role-information-fallen-guard-name
+    description: stories-ghost-role-information-fallen-guard-description
   - type: GhostTakeoverAvailable
   - type: SlowOnDamage
     speedModifierThresholds:
@@ -192,10 +192,10 @@
       140: 0.8
   - type: Damageable
     damageContainer: BiologicalMetaphysical
-    damageModifierSet: FallenGuardModifierSet
+    damageModifierSet: STFallenGuardModifierSet
 
 - type: damageModifierSet
-  id: FallenGuardModifierSet
+  id: STFallenGuardModifierSet
   coefficients:
     Blunt: 0.2
     Slash: 0.2
@@ -205,10 +205,10 @@
     Caustic: 0.9
 
 - type: entity
-  name: осквернённый
-  id: MobDesecrated
-  parent: BaseUnholy
-  description: Изломанная тень своего прежнего я. Его тело покрыто шрамами, трещинами и пятнами тёмной плоти, словно он был разрушен внутренней тьмой и чужими силами. Глаза — пустые и безжизненные, в них читается отчаяние и безумие, а движения — неуклюжие и хаотичные
+  name: desecrated
+  id: STMobDesecrated
+  parent: STBaseUnholy
+  description: A broken shadow of his former self, his body is covered in scars, cracks and patches of dark flesh, as if he had been destroyed by inner darkness and alien forces. His eyes are empty and lifeless, filled with despair and madness, and his movements are clumsy and chaotic.
   components:
   - type: Sprite
     drawdepth: Mobs
@@ -225,8 +225,8 @@
     allowMovement: true
     allowSpeech: true
     makeSentient: true
-    name: Осквернённый
-    description: Изломанная тень своего прежнего я. Его тело покрыто шрамами, трещинами и пятнами тёмной плоти, словно он был разрушен внутренней тьмой и чужими силами. Глаза — пустые и безжизненные, в них читается отчаяние и безумие, а движения — неуклюжие и хаотичные
+    name: stories-ghost-role-information-desecrated-name
+    description: stories-ghost-role-information-desecrated-description
   - type: GhostTakeoverAvailable
   - type: SlowOnDamage
     speedModifierThresholds:
@@ -235,10 +235,10 @@
       120: 0.5
   - type: Damageable
     damageContainer: BiologicalMetaphysical
-    damageModifierSet: DesecratedModifierSet
+    damageModifierSet: STDesecratedModifierSet
 
 - type: damageModifierSet
-  id: DesecratedModifierSet
+  id: STDesecratedModifierSet
   coefficients:
     Blunt: 0.9
     Slash: 0.9
@@ -246,10 +246,10 @@
     Caustic: 0.9
 
 - type: entity
-  name: тёмный монах
-  id: MobCursedMonk
-  parent: BaseUnholy
-  description: Таинственный и зловещий фигурант. Его одеяния состоят из рваных, запятнанных ткани и ритуальных накидок, покрытых загадочными символами и кровавыми пятнами. Лицо скрыто под капюшоном, а в глазах — холодное безразличие и древняя мудрость, пропитанная тьмой.
+  name: dark monk
+  id: STMobCursedMonk
+  parent: STBaseUnholy
+  description: A mysterious and sinister figure. His robes consist of torn, stained fabrics and ritual capes covered in mysterious symbols and blood stains. His face is hidden under a hood, and in his eyes there is a cold indifference and ancient wisdom, soaked in darkness.
   components:
   - type: Unholy
     resistanceCoefficient: 0.1
@@ -281,8 +281,8 @@
     allowMovement: true
     allowSpeech: true
     makeSentient: true
-    name: Тёмный монах
-    description: Таинственный и зловещий фигурант. Его одеяния состоят из рваных, запятнанных ткани и ритуальных накидок, покрытых загадочными символами и кровавыми пятнами. Лицо скрыто под капюшоном, а в глазах — холодное безразличие и древняя мудрость, пропитанная тьмой.
+    name: stories-ghost-role-information-cursed-monk-name
+    description: stories-ghost-role-information-cursed-monk-description
   - type: GhostTakeoverAvailable
   - type: SlowOnDamage
     speedModifierThresholds:
@@ -291,10 +291,10 @@
       160: 0.5
   - type: Damageable
     damageContainer: BiologicalMetaphysical
-    damageModifierSet: CursedmonkModifierSet
+    damageModifierSet: STCursedmonkModifierSet
 
 - type: damageModifierSet
-  id: CursedmonkModifierSet
+  id: STCursedmonkModifierSet
   coefficients:
     Blunt: 0.9
     Slash: 0.9

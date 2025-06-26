@@ -1,6 +1,6 @@
 ﻿- type: entity
   parent: BaseItem
-  id: BaseCross
+  id: STBaseCross
   abstract: true
   components:
   - type: GuideHelp
@@ -14,19 +14,19 @@
     size: Tiny
   - type: UseDelay
     delays:
-      Holy:
+      STHoly:
         length: 3.0
-
-- type: entity
-  name: крест
-  parent: BaseCross
-  id: ChaplainCross
-  description: Используется для защиты от нечести.
-  components:
-  - type: Appearance
   - type: StatusEffects
     allowed:
-    - Holy
+    - STHoly
+
+- type: entity
+  name: cross
+  parent: STBaseCross
+  id: STChaplainCross
+  description: Used to protect against evil.
+  components:
+  - type: Appearance
   - type: Reactive
     groups:
       Acidic: [Touch]
@@ -66,14 +66,14 @@
     sprite: _Stories/Objects/Chapel/cross.rsi
     state: icon
   - type: Construction
-    graph: ChaplainCross
+    graph: STChaplainCross
     node: cross
 
 - type: entity
-  parent: BaseCross
-  id: SilverCross
-  name: серебряный крест
-  description: Серебро 960 пробы.
+  parent: STBaseCross
+  id: STSilverCross
+  name: silver cross
+  description: Silver 960 assay value.
   components:
   - type: Clothing
     quickEquip: true

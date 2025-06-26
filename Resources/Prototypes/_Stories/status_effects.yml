@@ -1,17 +1,17 @@
 - type: statusEffect
-  id: PontificPrayer
-  alert: PontificPrayer
+  id: STPontificPrayer
+  alert: STPontificPrayer
   alwaysAllowed: true
 
 - type: statusEffect
-  id: PontificFlame
-  alert: PontificFlame
+  id: STPontificFlame
+  alert: STPontificFlame
   alwaysAllowed: true
 
 - type: statusEffect
   id: FrozeBullets
 
 - type: statusEffect
-  id: Holy
-  alert: Holy
+  id: STHoly
+  alert: STHoly
   alwaysAllowed: true

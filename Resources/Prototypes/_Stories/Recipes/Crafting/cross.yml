@@ -1,6 +1,6 @@
 ﻿- type: construction
-  id: cross
-  graph: ChaplainCross
+  id: STCross
+  graph: STChaplainCross
   startNode: start
   targetNode: cross
   category: construction-category-misc

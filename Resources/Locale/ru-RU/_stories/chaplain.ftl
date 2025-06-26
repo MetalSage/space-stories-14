@@ -1,1 +1,1 @@
-guide-entry-chaplain = Священник
+stories-guide-entry-chaplain = Священник

@@ -9,10 +9,10 @@ namespace Content.Shared._Stories.Pontific;
 public sealed partial class PontificSystem : EntitySystem
 {
     [ValidatePrototypeId<StatusEffectPrototype>]
-    private const string PontificFlameStatusEffect = "PontificFlame";
+    private const string PontificFlameStatusEffect = "STPontificFlame";
 
     [ValidatePrototypeId<StatusEffectPrototype>]
-    private const string PontificPrayerStatusEffect = "PontificPrayer";
+    private const string PontificPrayerStatusEffect = "STPontificPrayer";
 
     [Dependency] private readonly MovementSpeedModifierSystem _movementSpeed = default!;
     [Dependency] private readonly SharedAppearanceSystem _appearance = default!;

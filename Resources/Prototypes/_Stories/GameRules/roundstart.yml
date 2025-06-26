@@ -33,7 +33,7 @@
 
 - type: entity
   parent: BaseGameRule
-  id: Pontific
+  id: STPontific
   components:
   - type: GameRule
     minPlayers: 20
@@ -41,16 +41,16 @@
   - type: LoadMapRule
     mapPath: /Maps/_Stories/Nonstations/pontific.yml
   - type: AntagSpawner
-    prototype: MobPontific
+    prototype: STMobPontific
   - type: AntagSelection
     selectionTime: PrePlayerSpawn
-    agentName: pontific-round-end-agent-name
+    agentName: stories-pontific-round-end-agent-name
     definitions:
-    - prefRoles: [ Pontific ]
-      spawnerPrototype: SpawnPointPontific
+    - prefRoles: [ STPontific ]
+      spawnerPrototype: STSpawnPointPontific
       mindRoles:
-      - MindRolePontific
+      - STMindRolePontific
       briefing:
-        text: pontific-role-greeting
+        text: stories-pontific-role-greeting
         color: "#7d52a8"
         sound: /Audio/_Stories/Pontific/pontific_start.ogg

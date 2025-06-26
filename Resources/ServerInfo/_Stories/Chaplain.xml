@@ -23,13 +23,13 @@
   - Распылите [color=cyan]святую воду[/color] с помощью какого-то инструмента, чтобы получить святой тайл.
 
   <Box>
-    <GuideEntityEmbed Entity="HolyFloorEntityInfinity" Caption="Святой тайл"/>
+    <GuideEntityEmbed Entity="STHolyFloorEntityInfinity" Caption="Святой тайл"/>
   </Box>
 
   - Святой тайл не даёт большеству [color=#7d52a8]нежити[/color] пройти через него, наносит им урон, оттакливает их.
 
  <Box>
-    <GuideEntityEmbed Entity="ChaplainCross" Caption="Крест"/>
+    <GuideEntityEmbed Entity="STChaplainCross" Caption="Крест"/>
   </Box>
   - Крест является предметом, который можно освятить святой водой. Его основное предназначение в том, чтобы защитить от [color=#7d52a8]нежити[/color] остальной экипаж, кроме священника. Он защищает человека защитными свойствами святых предметов, когда висит на шее или когда он в руках.
   - Не забывайте, что [color=cyan]святая вода[/color] освящает крест лишь на ограниченное время.

@@ -2,9 +2,9 @@
   parent:
   - Incorporeal
   - BaseMob
-  id: TargetingTeleporterEye
-  name: камера таргетированного портала
-  description: Молитесь, чтобы оттуда вышли милые пони.
+  id: STTargetingTeleporterEye
+  name: targeted portal camera
+  description: Pray that cute ponies come out of there.
   categories: [ HideSpawnMenu, DoNotMap ]
   components:
   - type: NoFTL

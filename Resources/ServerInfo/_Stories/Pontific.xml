@@ -2,25 +2,25 @@
   # Понтифик
 
   <Box>
-    <GuideEntityEmbed Entity="MobPontific" Caption="Понтифик"/>
+    <GuideEntityEmbed Entity="STMobPontific" Caption="Понтифик"/>
   </Box>
 
   - [color=#7d52a8]Понтифик[/color] — загадочное и могущественное существо, обладающее тёмной магией и древними знаниями. В этом руководстве вы найдете информацию о его характеристиках, способностях.
   <Box>
-    <GuideEntityEmbed Entity="MobCursedMonk" Caption="Тёмный монах"/>
-    <GuideEntityEmbed Entity="MobFallenGuard" Caption="Тёмный рыцарь"/>
-    <GuideEntityEmbed Entity="MobDesecrated" Caption="Осквернённый"/>
+    <GuideEntityEmbed Entity="STMobCursedMonk" Caption="Тёмный монах"/>
+    <GuideEntityEmbed Entity="STMobFallenGuard" Caption="Тёмный рыцарь"/>
+    <GuideEntityEmbed Entity="STMobDesecrated" Caption="Осквернённый"/>
   </Box>
 
   - [color=#7d52a8]Нежить[/color], из которой состоит ваша армия. Тёмного монаха и тёмного рыцаря вы можете призвать с помощью способностей. Осквернённый может быть получен только из алтаря Понтифика.
   <Box>
-    <GuideEntityEmbed Entity="PontificKudzu" Caption="Осквернённые лилии"/>
+    <GuideEntityEmbed Entity="STPontificKudzu" Caption="Осквернённые лилии"/>
   </Box>
   - Зловещие и жуткие растения, медленно заполняющие коридоры и залы станции. Вы можете использовать их, чтобы защитить свою базу от внезапных появлений офицеров СБ.
   - Не забывайте, что [color=cyan]святая вода[/color] легко уничтожает их.
 
   <Box>
-    <GuideEntityEmbed Entity="PontificAltar" Caption="Алтарь Понтифика"/>
+    <GuideEntityEmbed Entity="STPontificAltar" Caption="Алтарь Понтифика"/>
   </Box>
   - Затаскивайте на него мертвых или живых людей, чтобы создавать [color=#7d52a8]осквернённых[/color]. Кроме того, экипаж может связаться с вами через него, но зачем это вам?
   - [color=cyan]Святая вода[/color] обращает [color=#7d52a8]осквернённых[/color] обратно в людей.

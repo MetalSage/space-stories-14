@@ -1,8 +1,8 @@
 ﻿- type: entity
-  name: Понтифик
-  id: MobPontific
-  parent: BaseUnholy
-  description: Таинственное и зловещее существо. Его фигура искажена ритуальными одеяниями, покрыта тёмными татуировками и загадочными символами, излучающими зловещую ауру.
+  name: Pontific
+  id: STMobPontific
+  parent: STBaseUnholy
+  description: A mysterious and sinister creature, its figure is distorted by ritual robes, covered with dark tattoos and mysterious symbols, radiating a sinister aura.
   components:
   - type: Nightvision
   - type: ComplexInteraction
@@ -23,8 +23,8 @@
         Airloss: -0.25 # 15 в минуту
   - type: Force
   - type: ForceUser
-    shopAction: ActionPontificPrayer # FIXME: Затычка
-    preset: Pontific
+    shopAction: STActionPontificPrayer # FIXME: Затычка
+    preset: STPontific
   - type: GenericVisualizer
     visuals:
       enum.PontificVisuals.State:
@@ -62,22 +62,22 @@
       550: 0.7
   - type: Pontific
     actions:
-    # - ActionPontificPrayer FIXME: Перенесено в ForceUser как затычка
-    - ActionPontificBloodyAltar
-    - ActionPontificSpawnMonk
-    - ActionPontificSpawnGuardian
-    - ActionPontificFelLightning
-    - ActionPontificFlameSwords
-    - ActionPontificKudzu
+    # - STActionPontificPrayer FIXME: Перенесено в ForceUser как затычка
+    - STActionPontificBloodyAltar
+    - STActionPontificSpawnMonk
+    - STActionPontificSpawnGuardian
+    - STActionPontificFelLightning
+    - STActionPontificFlameSwords
+    - STActionPontificKudzu
   - type: MovementSpeedModifier
     baseWalkSpeed: 4
     baseSprintSpeed: 5
   - type: Damageable
     damageContainer: BiologicalMetaphysical
-    damageModifierSet: PontificModifierSet
+    damageModifierSet: STPontificModifierSet
 
 - type: damageModifierSet
-  id: PontificModifierSet
+  id: STPontificModifierSet
   coefficients:
     Blunt: 0.5
     Slash: 0.5

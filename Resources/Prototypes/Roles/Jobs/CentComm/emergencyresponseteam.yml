@@ -144,10 +144,10 @@
     - Lantern
     - Bible
     - CrowbarRed
-    - ChaplainCross # Stories
-    - ChaplainCross # Stories
-    - ChaplainCross # Stories
-    - ChaplainCross # Stories
+    - STChaplainCross # Stories
+    - STChaplainCross # Stories
+    - STChaplainCross # Stories
+    - STChaplainCross # Stories
     - Lighter
 
 - type: startingGear
@@ -175,10 +175,10 @@
     - Lantern
     - Bible
     - CrowbarRed
-    - ChaplainCross # Stories
-    - ChaplainCross # Stories
-    - ChaplainCross # Stories
-    - ChaplainCross # Stories
+    - STChaplainCross # Stories
+    - STChaplainCross # Stories
+    - STChaplainCross # Stories
+    - STChaplainCross # Stories
     - Lighter
 
 # Engineer

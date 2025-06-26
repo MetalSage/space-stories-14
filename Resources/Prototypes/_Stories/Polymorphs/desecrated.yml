@@ -1,7 +1,7 @@
 ﻿- type: polymorph
-  id: Desecrated
+  id: STDesecrated
   configuration:
-    entity: MobDesecrated
+    entity: STMobDesecrated
     forced: true
     inventory: None
     polymorphSound:

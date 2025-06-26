@@ -1,20 +1,19 @@
 ﻿- type: entity
-  id: PontificAltar
+  id: STPontificAltar
   parent: AltarBase
-  name: алтарь Понтифика
-  description: "Зловещая и древняя структура. Его поверхность покрыта тёмными ритуальными символами и изломанными каменными резьбами, излучающими зловещий свет. Когда человек смотрит на него, ощущение становится невыносимым: кажется, что тьма внутри алтаря шепчет ему на ухо, зовёт забраться на него. Взгляд на алтарь вызывает ощущение, что он способен связаться с древними силами, скрывающимися за гранями реальности, и что за этим зовом скрывается нечто гораздо более опасное. Кажется, что алтарь — это мост между мирами, и кто осмелится взобраться на него, может обрести силу или потерять свою душу навсегда."
+  name: altar of the Pontific
+  description: An ominous and ancient structure.
   components:
   - type: PolymorphClimbers
-    polymorph: Desecrated
+    polymorph: STDesecrated
     whitelist:
       components:
       - HumanoidAppearance
     blacklist:
       components:
       - Pontific
-      # TODO:
-      # - Unholy
-      # - Holy
+      - Unholy
+      - Holy
   - type: Sprite
     layers:
       - sprite: _Stories/Structures/dark_altar.rsi
@@ -49,7 +48,7 @@
   - type: ActiveListener
     range: 4
   - type: RadioMicrophone
-    broadcastChannel: Unholy
+    broadcastChannel: STUnholy
     enabled: True
     toggleOnInteract: false
     unobstructedRequired: true

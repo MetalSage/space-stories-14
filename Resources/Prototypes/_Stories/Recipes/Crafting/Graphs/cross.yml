@@ -1,5 +1,5 @@
 ﻿- type: constructionGraph
-  id: ChaplainCross
+  id: STChaplainCross
   start: start
   graph:
   - node: start
@@ -10,4 +10,4 @@
         amount: 5
         doAfter: 4
   - node: cross
-    entity: ChaplainCross
+    entity: STChaplainCross

@@ -575,7 +575,7 @@ entities:
       rot: -1.5707963267948966 rad
       pos: -2.5,-2.5
       parent: 2
-- proto: PontificAltar
+- proto: STPontificAltar
   entities:
   - uid: 204
     components:
@@ -584,7 +584,7 @@ entities:
       parent: 2
     - type: ActiveListener
       range: 4
-- proto: PontificKudzu
+- proto: STPontificKudzu
   entities:
   - uid: 205
     components:
@@ -643,14 +643,14 @@ entities:
     - type: Transform
       pos: -2.5,-2.5
       parent: 2
-- proto: TargetingTeleporter
+- proto: STTargetingTeleporter
   entities:
   - uid: 3
     components:
     - type: Transform
       pos: 0.5,0.5
       parent: 2
-    - type: TargetingTeleporter
+    - type: STTargetingTeleporter
 - proto: ToyFigurineGuardianNt
   entities:
   - uid: 213

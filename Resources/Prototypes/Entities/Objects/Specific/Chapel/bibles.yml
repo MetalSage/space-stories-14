@@ -1,7 +1,7 @@
 - type: entity
   name: bible
   description: New Interstellar Version 2340.
-  parent: [ BaseStorageItem, BaseHolyItem ] # Stories
+  parent: [ BaseStorageItem, STBaseHolyItem ] # Stories
   id: Bible
   components:
   # Stories - start
@@ -12,7 +12,7 @@
   - type: UseDelay
     delay: 10.0
     delays:
-      Holy:
+      STHoly:
         length: 0
   # Stories - end
   - type: Bible

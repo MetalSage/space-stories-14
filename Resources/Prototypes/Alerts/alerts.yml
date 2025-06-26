@@ -26,10 +26,10 @@
     - alertType: Magboots
     - alertType: Pacified
     # Stories - start
-    - alertType: PontificFel
-    - alertType: PontificPrayer
-    - alertType: PontificFlame
-    - alertType: Holy
+    - alertType: STPontificFel
+    - alertType: STPontificPrayer
+    - alertType: STPontificFlame
+    - alertType: STHoly
     # Stories - end
 
 - type: entity

@@ -1,5 +1,5 @@
 ﻿- type: alert
-  id: PontificFel
+  id: STPontificFel
   icons:
     - sprite: /Textures/_Stories/Interface/Alerts/fel.rsi
       state: fel0
@@ -41,23 +41,23 @@
       state: fel10
     - sprite: /Textures/_Stories/Interface/Alerts/fel.rsi
       state: fel10
-  name: Скверна
-  description: Количество накопленной скверны.
+  name: stories-alerts-pontific-fel-name
+  description: stories-alerts-pontific-fel-desc
   minSeverity: 0
   maxSeverity: 19
 
 - type: alert
-  id: PontificPrayer
+  id: STPontificPrayer
   icons:
     - sprite: /Textures/_Stories/Actions/pontific.rsi
       state: prayer
-  name: Тёмный молебнен
-  description: Ритуал, вызывающий тёмные силы в этот мир. Восстанавливает скверну.
+  name: stories-alerts-pontific-prayer-name
+  description: stories-alerts-pontific-prayer-desc
 
 - type: alert
-  id: PontificFlame
+  id: STPontificFlame
   icons:
     - sprite: /Textures/_Stories/Actions/pontific.rsi
       state: flame_swords
-  name: Тёмное пламя
-  description: Ваши мечи горят скверным пламенем, сильно увеличивая скорость и урон.
+  name: stories-alerts-pontific-flame-name
+  description: stories-alerts-pontific-flame-desc

@@ -42,10 +42,10 @@
 
 - type: entity
   parent: BaseMindRoleAntag
-  id: MindRolePontific
+  id: STMindRolePontific
   name: Pontific Role
   components:
   - type: MindRole
-    antagPrototype: Pontific
+    antagPrototype: STPontific
     roleType: FreeAgent
-    subtype: role-subtype-pontific
+    subtype: stories-role-subtype-pontific

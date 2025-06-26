@@ -1,7 +1,7 @@
 ﻿- type: entity
-  id: ActionPontificPrayer
-  name: Тёмный молебнен
-  description: Ритуал, вызывающий тёмные силы в этот мир. Восстанавливает скверну.
+  id: STActionPontificPrayer
+  name: Dark Prayer Service
+  description: A ritual that summons dark forces into this world. Restores filth.
   categories: [ HideSpawnMenu ]
   components:
   - type: InstantAction
@@ -13,9 +13,9 @@
     event: !type:PontificPrayerEvent
 
 - type: entity
-  id: ActionPontificBloodyAltar
-  name: Тёмный алтарь
-  description: Вызывает из тьмы алтарь. Затаскивайте на него существ, чтобы обратить их в осквернённых. Требует 150 скверны.
+  id: STActionPontificBloodyAltar
+  name: Dark Altar
+  description: Summons an altar from the darkness. Drag creatures onto it to turn them corrupted. Requires 150 Corruption.
   categories: [ HideSpawnMenu ]
   components:
   - type: InstantAction
@@ -27,12 +27,12 @@
     event: !type:InstantForceUserActionEvent
       volume: 150
       event: !type:CreateEntityEvent
-        proto: PontificAltar
+        proto: STPontificAltar
 
 - type: entity
-  id: ActionPontificSpawnMonk
-  name: Призывать монаха
-  description: Призывает проклятого монаха, который очень устойчив к святому урону. Требует 50 скверны.
+  id: STActionPontificSpawnMonk
+  name: Summon a monk
+  description: Summons a cursed monk who is highly resistant to holy damage. Requires 50 Corruption.
   categories: [ HideSpawnMenu ]
   components:
   - type: InstantAction
@@ -44,12 +44,12 @@
     event: !type:InstantForceUserActionEvent
       volume: 50
       event: !type:CreateEntityEvent
-        proto: MobCursedMonk
+        proto: STMobCursedMonk
 
 - type: entity
-  id: ActionPontificSpawnGuardian
-  name: Призывать рыцаря
-  description: Призывает проклятого рыцаря. Это очень бронированный воин, но медлительный. Требует 100 скверны.
+  id: STActionPontificSpawnGuardian
+  name: Summon a knight
+  description: Summons a cursed knight. This is a heavily armored warrior, but slow. Requires 100 corruption.
   categories: [ HideSpawnMenu ]
   components:
   - type: InstantAction
@@ -61,12 +61,12 @@
     event: !type:InstantForceUserActionEvent
       volume: 100
       event: !type:CreateEntityEvent
-        proto: MobFallenGuard
+        proto: STMobFallenGuard
 
 - type: entity
-  id: ActionPontificFelLightning
-  name: Тёмная молния
-  description: Мощная молния наполненная тёмной энергией. Требует 50 скверны.
+  id: STActionPontificFelLightning
+  name: Dark Lightning
+  description: A powerful bolt of lightning filled with dark energy. Requires 50 Corruption.
   categories: [ HideSpawnMenu ]
   components:
   - type: EntityTargetAction
@@ -84,9 +84,9 @@
     range: 6
 
 - type: entity
-  id: ActionPontificFlameSwords
-  name: Тёмное пламя
-  description: Ваши мечи загорятся скверным пламенем, сильно увеличивая скорость и урон. Требует 80 скверны.
+  id: STActionPontificFlameSwords
+  name: Dark Flame
+  description: Your swords will burn with fel flames, greatly increasing speed and damage. Requires 80 fel.
   categories: [ HideSpawnMenu ]
   components:
   - type: InstantAction
@@ -100,9 +100,9 @@
       event: !type:PontificFlameSwordsEvent
 
 - type: entity
-  id: ActionPontificKudzu
-  name: Осквернённые лилии
-  description: Создаёт осквернённые лилии, которые распространяются и медленно заполняют станцию. Требует 50 скверны.
+  id: STActionPontificKudzu
+  name: Desecrated Lilies
+  description: Creates corrupted lilies that spread and slowly fill the station. Requires 50 corruption.
   categories: [ HideSpawnMenu ]
   components:
   - type: InstantAction
@@ -114,4 +114,4 @@
     event: !type:InstantForceUserActionEvent
       volume: 50
       event: !type:CreateEntityEvent
-        proto: PontificKudzu
+        proto: STPontificKudzu

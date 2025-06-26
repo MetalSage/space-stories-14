@@ -43,12 +43,12 @@ public abstract partial class SharedHolySystem : EntitySystem
     [Dependency] private readonly IGameTiming _timing = default!;
 
     [ValidatePrototypeId<StatusEffectPrototype>]
-    private const string HolyStatusEffect = "Holy";
+    private const string HolyStatusEffect = "STHoly";
 
     [ValidatePrototypeId<NpcFactionPrototype>]
-    private const string HolyFaction = "Holy";
+    private const string HolyFaction = "STHoly";
 
-    private const string HolyDelay = "Holy";
+    private const string HolyDelay = "STHoly";
 
     public override void Update(float frameTime)
     {
@@ -73,11 +73,11 @@ public abstract partial class SharedHolySystem : EntitySystem
         if (_statusEffects.TryGetTime(entity, HolyStatusEffect, out var timeNullable) && timeNullable is { } time)
         {
             var curTime = _timing.CurTime;
-            var timeLeft = (TimeSpan)(time.Item2 - curTime);
-            args.PushMarkup(Loc.GetString("holy-examine-time", ("time", timeLeft.ToString("hh\\:mm\\:ss"))));
+            var timeLeft = time.Item2 - curTime;
+            args.PushMarkup(Loc.GetString("stories-holy-examine-time", ("time", timeLeft.ToString("hh\\:mm\\:ss"))));
         }
         else
-            args.PushMarkup(Loc.GetString("holy-examine"));
+            args.PushMarkup(Loc.GetString("stories-holy-examine"));
     }
 
     private void OnExamined(Entity<UnholyComponent> entity, ref ExaminedEvent args)
@@ -89,7 +89,7 @@ public abstract partial class SharedHolySystem : EntitySystem
             if (!IsHoly(args.Examiner) || !entity.Comp.Detectable)
                 return;
 
-        args.PushMarkup(Loc.GetString("unholy-examine"));
+        args.PushMarkup(Loc.GetString("stories-unholy-examine"));
     }
 
 }

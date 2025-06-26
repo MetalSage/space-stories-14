@@ -1,11 +1,11 @@
 - type: trait
-  id: Unholy
-  name: trait-unholy-name
-  description: trait-unholy-desc
+  id: STUnholy
+  name: stories-trait-unholy-name
+  description: stories-trait-unholy-desc
   category: Disabilities
   blacklist:
     components:
       - Holy # Проклятый священник
   components:
-    - type: Unholy
-      detectable: false
+  - type: Unholy
+    detectable: false

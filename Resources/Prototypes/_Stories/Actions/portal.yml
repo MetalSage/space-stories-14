@@ -1,5 +1,5 @@
 - type: entity
-  id: ActionTargettingTeleporterSetExitPortal
+  id: STActionTargettingTeleporterSetExitPortal
   name: Установить портал
   description: Установит выход портала там, где вы находитесь.
   categories: [ HideSpawnMenu ]
@@ -14,7 +14,7 @@
     event: !type:TargettingTeleporterSetExitPortalEvent {}
 
 - type: entity
-  id: ActionTargettingTeleporterExit
+  id: STActionTargettingTeleporterExit
   name: Выйти
   description: Выйти, не установив выход портала.
   categories: [ HideSpawnMenu ]

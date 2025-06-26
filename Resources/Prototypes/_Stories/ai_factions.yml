@@ -9,7 +9,7 @@
   - Revolutionary
 
 - type: npcFaction
-  id: Unholy
+  id: STUnholy
   hostile:
   - NanoTrasen
   - Syndicate
@@ -22,9 +22,10 @@
   - Wizard
   - Dragon
   - Xenoborg
+  - STHoly
 
 - type: npcFaction
-  id: Holy
+  id: STHoly
   hostile:
-  - Unholy
+  - STUnholy
   - Shadowling

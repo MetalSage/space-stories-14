@@ -1,8 +1,8 @@
 - type: entity
-  id: BluspacePortalEnter
+  id: STBluspacePortalEnter
   parent: BasePortal
-  name: блюспейс дыра входа
-  description: Выглядит как приключение на 5 минут!
+  name: bluespace entry hole
+  description: Looks like a 5 minute adventure!
   components:
   - type: Sprite
     sprite: /Textures/_Stories/Effects/bluespace_portal.rsi
@@ -15,10 +15,10 @@
     netsync: false
 
 - type: entity
-  id: BluspacePortalExit
+  id: STBluspacePortalExit
   parent: BasePortal
-  name: блюспейс дыра выхода
-  description: Выглядит как приключение на 5 минут!
+  name: bluespace exit hole
+  description: Looks like a 5 minute adventure!
   components:
   - type: Sprite
     sprite: /Textures/_Stories/Effects/bluespace_portal.rsi
@@ -31,11 +31,11 @@
     netsync: false
 
 - type: entity
-  id: TargetingTeleporter
-  parent: BluspacePortalEnter
-  name: блюспейс дыра на станцию
-  description: Позволяет телепортироваться в любое место на станции. Это путешествие в один конец.
-  suffix: Нет пути назад
+  id: STTargetingTeleporter
+  parent: STBluspacePortalEnter
+  name: bluespace hole to the station
+  description: Allows you to teleport anywhere on the station. This is a one-way trip.
+  suffix: No wayback
   components:
   - type: Portal
     randomTeleport: false

@@ -1139,9 +1139,9 @@
     amount: 1
   tileReactions:
   - !type:CreateEntityTileReaction
-    entity: HolyFloorEntity
+    entity: STHolyFloorEntity
     maxOnTileWhitelist:
-      tags: [ HolyFloor ]
+      tags: [ STHolyFloor ]
   - !type:ExtinguishTileReaction { }
 
 - type: reagent

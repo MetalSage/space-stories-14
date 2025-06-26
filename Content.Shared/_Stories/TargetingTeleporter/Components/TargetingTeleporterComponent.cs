@@ -17,7 +17,7 @@ public sealed partial class TargetingTeleporterComponent : Component
     public EntityUid? GridUid;
 
     [DataField(readOnly: true)]
-    public EntProtoId? EyeEntityProto = "TargetingTeleporterEye";
+    public EntProtoId? EyeEntityProto = "STTargetingTeleporterEye";
 
     [DataField]
     public EntityWhitelist? StationWhitelist = null;
@@ -32,7 +32,7 @@ public sealed partial class TargetingTeleporterComponent : Component
     public bool Wayback = true;
 
     [DataField("exitPortalPrototype", customTypeSerializer: typeof(PrototypeIdSerializer<EntityPrototype>))]
-    public string ExitPortalPrototype = "BluspacePortalExit";
+    public string ExitPortalPrototype = "STBluspacePortalExit";
 
     [DataField("newPortalSound")]
     public SoundSpecifier NewPortalSound =
