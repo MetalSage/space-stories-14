@@ -115,8 +115,9 @@ public abstract partial class SharedHolySystem
 
         if (TryComp<UseDelayComponent>(entity, out var useDelay))
         {
-            if (!_useDelay.TryResetDelay((entity, useDelay), true, HolyDelay))
-                return;
+            if (_useDelay.TryGetDelayInfo((entity, useDelay), out _, HolyDelay)) // Если Delay настроен
+                if (!_useDelay.TryResetDelay((entity, useDelay), true, HolyDelay))
+                    return;
         }
 
         if (!TryComp<UnholyComponent>(origin, out var unholy))
