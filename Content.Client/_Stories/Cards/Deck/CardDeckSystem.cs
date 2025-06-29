@@ -21,19 +21,17 @@ public sealed class CardDeckSystem : EntitySystem
         SubscribeLocalEvent<CardDeckBoxComponent, AppearanceChangeEvent>(OnAppearanceBoxChanged);
         SubscribeLocalEvent<CardDeckBoxComponent, OpenableOpenedEvent>(OnOpenedBox);
     }
-
     private void OnAppearanceChanged(EntityUid uid, CardDeckComponent comp, ref AppearanceChangeEvent args)
     {
         if (!TryComp<SpriteComponent>(uid, out var sprite))
             return;
 
         sprite.LayerSetVisible(0, false);
-        UpdateStackVisuals(uid, comp, sprite);
-        if (_appearance.TryGetData<bool>(uid, CardStackVisuals.Shuffled, out var shuffled))
+        if (_appearance.TryGetData<bool>(uid, CardStackVisuals.Shuffled, out var shuffled) && shuffled)
         {
-            if (shuffled)
-                _appearance.SetData(uid, CardStackVisuals.Shuffled, false);
+            _appearance.SetData(uid, CardStackVisuals.Shuffled, false);
         }
+        UpdateStackVisuals(uid, comp, sprite);
     }
 
     public void UpdateStackVisuals(EntityUid uid, CardDeckComponent comp, SpriteComponent sprite)
@@ -48,11 +46,7 @@ public sealed class CardDeckSystem : EntitySystem
         var layerIndex = 1;
         var maxCardsInDeck = 5;
 
-        var totalCards = Math.Min(maxCardsInDeck, cardStack.CardContainer.ContainedEntities.Count);
-        if (totalCards == 0)
-            return;
-
-        foreach (var card in cardStack.CardContainer.ContainedEntities.Take(totalCards))
+        foreach (var card in cardStack.CardContainer.ContainedEntities)
         {
             if (!TryComp<SpriteComponent>(card, out var cardSprite) ||
                 !TryComp<FoldableComponent>(card, out var foldable))
@@ -61,13 +55,15 @@ public sealed class CardDeckSystem : EntitySystem
             var cardLayer = foldable.IsFolded ? cardSprite.LayerGetState(1) : cardSprite.LayerGetState(0);
             processedLayers.Add(cardLayer);
             var layer = sprite.AddLayer(cardLayer);
-            var cardIndex = layerIndex - 1;
 
-            sprite.LayerSetOffset(layer, new Vector2(0, offset * layerIndex));
+            var offsetMultiplier = Math.Min(layerIndex - 1, maxCardsInDeck - 1);
+            sprite.LayerSetOffset(layer, new Vector2(0, offset * offsetMultiplier));
+
             sprite.LayerSetRotation(layer, Angle.FromDegrees(90));
             sprite.LayerSetVisible(layer, true);
             layerIndex++;
         }
+
     }
     private void OnOpenedBox(EntityUid uid, CardDeckBoxComponent comp, OpenableOpenedEvent args)
     {

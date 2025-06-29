@@ -17,6 +17,7 @@ public sealed class CardSystem : SharedCardSystem
     [Dependency] private readonly SharedHandsSystem _handsSystem = default!;
     [Dependency] private readonly INetManager _net = default!;
     [Dependency] private readonly SharedAudioSystem _audio = default!;
+    [Dependency] private readonly SharedContainerSystem _containerSystem = default!;
     public override void Initialize()
     {
         base.Initialize();
@@ -24,7 +25,6 @@ public sealed class CardSystem : SharedCardSystem
     }
     protected override void CreateFan(EntityUid user, EntityUid target, CardComponent? component = null)
     {
-        var fanComponent = new CardFanComponent();
         var usedEntity = _handsSystem.GetActiveItem(user);
 
         if (usedEntity == target
@@ -40,13 +40,13 @@ public sealed class CardSystem : SharedCardSystem
             || !TryComp<CardFanComponent>(entityCreated, out var fanComp))
             return;
 
-        fanComponent = fanComp;
-        RaiseLocalEvent(entityCreated, new CardAddedEvent(entityCreated, usedEntity.Value));
-        RaiseLocalEvent(entityCreated, new CardAddedEvent(entityCreated, target));
+        _containerSystem.Insert(usedEntity.Value, stackComp.CardContainer);
+        _containerSystem.Insert(target, stackComp.CardContainer);
+
         _handsSystem.TryPickupAnyHand(user, entityCreated);
         Dirty(entityCreated, stackComp);
 
-        _audio.PlayLocal(fanComponent.AddCard, usedEntity.Value, user);
+        _audio.PlayLocal(fanComp.AddCard, usedEntity.Value, user);
     }
     protected override void CreateDeck(EntityUid user, EntityUid target, CardComponent? component = null)
     {
@@ -63,8 +63,10 @@ public sealed class CardSystem : SharedCardSystem
         if (!TryComp<CardStackComponent>(entityCreated, out var stackComp))
             return;
 
-        RaiseLocalEvent(entityCreated, new CardAddedEvent(entityCreated, usedEntity.Value));
-        RaiseLocalEvent(entityCreated, new CardAddedEvent(entityCreated, target));
+        _containerSystem.Insert(usedEntity.Value, stackComp.CardContainer);
+        _containerSystem.Insert(target, stackComp.CardContainer);
+        if (TryComp<CardStackComponent>(entityCreated, out var cardStack))
+            Dirty(entityCreated, cardStack);
 
         _handsSystem.TryPickupAnyHand(user, entityCreated);
         _audio.PlayLocal(stackComp.AddCard, usedEntity.Value, user);

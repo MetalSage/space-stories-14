@@ -11,6 +11,7 @@ using Content.Shared.Popups;
 using Content.Shared.Verbs;
 using Robust.Shared.Audio.Systems;
 using Robust.Shared.Containers;
+using Robust.Shared.Map;
 using Robust.Shared.Network;
 using Robust.Shared.Random;
 
@@ -32,121 +33,61 @@ public sealed class CardStackSystem : SharedCardStackSystem
     {
         base.Initialize();
         SubscribeLocalEvent<CardStackComponent, MapInitEvent>(OnMapInit);
-        SubscribeLocalEvent<CardStackComponent, InteractUsingEvent>(OnInteractUsing);
-        SubscribeLocalEvent<CardStackComponent, GetVerbsEvent<AlternativeVerb>>(OnGetAlternativeVerb);
         SubscribeLocalEvent<CardStackComponent, CardAddedEvent>(OnCardAdded);
         SubscribeLocalEvent<CardStackComponent, CardRemovedEvent>(OnCardRemoved);
     }
-    private void OnGetAlternativeVerb(EntityUid uid, CardStackComponent component, GetVerbsEvent<AlternativeVerb> args)
+    protected override void Split(EntityUid uid, CardStackComponent component, EntityUid user)
     {
-        if (!args.CanAccess || !args.CanInteract || args.Hands == null)
+        if (component.CardContainer.ContainedEntities.Count <= 1)
             return;
 
-        args.Verbs.Add(new AlternativeVerb()
+        var splitCount = component.CardContainer.ContainedEntities.Count / 2;
+        var cardsToMove = new List<EntityUid>();
+        for (int i = 0; i < splitCount; i++)
         {
-            Text = Loc.GetString("card-shuffle"),
-            Act = () =>
-            {
-                ShuffleCards(uid, component);
-                _popup.PopupClient(Loc.GetString("card-shuffle-success"), args.User);
-                if (TryComp<CardFanComponent>(uid, out var fanComp))
-                {
-                    _audio.PlayPredicted(fanComp.ShuffleSound, Transform(uid).Coordinates, args.User);
-                }
-                else if (TryComp<CardDeckComponent>(uid, out var deckComp))
-                {
-                    _audio.PlayPredicted(deckComp.ShuffleSound, Transform(uid).Coordinates, args.User);
-                }
-            },
-            Priority = 2
-        });
-        args.Verbs.Add(new AlternativeVerb()
+            var card = component.CardContainer.ContainedEntities.Last();
+            cardsToMove.Add(card);
+            RemoveCard(uid, card, component);
+            _transformSystem.SetCoordinates(card, EntityCoordinates.Invalid);
+
+            _appearance.SetData(uid, CardStackVisuals.CardsCount, component.CardContainer.ContainedEntities.Count);
+        }
+
+        var spawnPos = Transform(user).Coordinates;
+        var entityCreated = new EntityUid();
+        if (TryComp<CardDeckComponent>(uid, out _))
+            entityCreated = Spawn("STCardDeck", spawnPos);
+        else if (TryComp<CardFanComponent>(uid, out _))
+            entityCreated = Spawn("STCardFan", spawnPos);
+
+        if (TryComp<CardStackComponent>(entityCreated, out var stackComponent))
         {
-            Text = Loc.GetString("card-split"),
-            Act = () =>
+            foreach (var card in cardsToMove)
             {
-                Split(uid, component, args.User);
-            },
-            Priority = 1
-        });
-        args.Verbs.Add(new()
-        {
-            Text = Loc.GetString("card-flip-all"),
-            Act = () =>
-            {
-                foreach (var card in component.CardContainer.ContainedEntities)
-                {
-                    var folded = false;
-                    if (!TryComp<FoldableComponent>(card, out var foldable))
-                        return;
-                    _foldableSystem.TryToggleFold(card, foldable);
-                    folded = foldable.IsFolded;
-                    _appearance.SetData(uid, CardVisuals.State, folded);
-                }
-                _popup.PopupClient(Loc.GetString("card-flip-success"), args.User);
-            },
-        });
-        args.Verbs.Add(new()
-        {
-            Text = Loc.GetString("card-flip-face"),
-            Act = () =>
-            {
-                foreach (var card in component.CardContainer.ContainedEntities)
-                {
-                    var folded = false;
-                    if (!TryComp<FoldableComponent>(card, out var foldable))
-                        return;
-                    _foldableSystem.SetFolded(card, foldable, true);
-                    folded = foldable.IsFolded;
-                    _appearance.SetData(uid, CardVisuals.State, folded);
-                }
-                _popup.PopupClient(Loc.GetString("card-flip-success"), args.User);
-            },
-            Category = VerbCategory.Flip
-        });
-        args.Verbs.Add(new()
-        {
-            Text = Loc.GetString("card-flip-back"),
-            Act = () =>
-            {
-                foreach (var card in component.CardContainer.ContainedEntities)
-                {
-                    var folded = false;
-                    if (!TryComp<FoldableComponent>(card, out var foldable))
-                        return;
-                    _foldableSystem.SetFolded(card, foldable, false);
-                    folded = foldable.IsFolded;
-                    _appearance.SetData(uid, CardVisuals.State, folded);
-                }
-                _popup.PopupClient(Loc.GetString("card-flip-success"), args.User);
-            },
-            Category = VerbCategory.Flip
-        });
-    }
-    public void ShuffleCards(EntityUid uid, CardStackComponent component)
-    {
-        _robustRandom.Shuffle(component.CardContainer.ContainedEntities.ToList());
-        _appearance.SetData(uid, CardStackVisuals.Shuffled, true);
+                _containerSystem.Insert(card, stackComponent.CardContainer);
+            }
+
+            _popup.PopupEntity(Loc.GetString("card-split-take", ("cardsSplit", splitCount)), user);
+            _handsSystem.TryPickup(user, entityCreated);
+            _audio.PlayPvs(component.AddCard, Transform(uid).Coordinates);
+        }
         Dirty(uid, component);
     }
-    private void OnInteractUsing(EntityUid uid, CardStackComponent comp, InteractUsingEvent args)
+    protected override void ShuffleCards(EntityUid uid, CardStackComponent component)
     {
-        if (!TryComp<CardStackComponent>(args.Target, out var targetStack))
-            return;
+        var listToShuffle = component.CardContainer.ContainedEntities.ToList();
+        _robustRandom.Shuffle(listToShuffle);
+        foreach (var card in listToShuffle)
+        {
+            _containerSystem.Remove(card, component.CardContainer);
+        }
 
-        if (TryComp<CardComponent>(args.Used, out var _))
+        foreach (var card in listToShuffle)
         {
-            AddCard(args.Target, args.Used, targetStack);
-            if (TryComp<CardFanComponent>(uid, out var fanComp))
-                _audio.PlayPredicted(fanComp.AddCard, Transform(uid).Coordinates, args.User);
-            else
-                _audio.PlayPredicted(comp.AddCard, Transform(uid).Coordinates, args.User);
+            _containerSystem.Insert(card, component.CardContainer);
         }
-        else if (TryComp<CardStackComponent>(args.Used, out var uidStack))
-        {
-            CombineDecks(args.Used, args.Target, uidStack);
-            _audio.PlayPredicted(comp.AddCard, Transform(uid).Coordinates, args.User);
-        }
+        Dirty(uid, component);
+        _appearance.SetData(uid, CardStackVisuals.Shuffled, true);
     }
     private void OnCardAdded(EntityUid uid, CardStackComponent comp, CardAddedEvent args)
     {
@@ -156,9 +97,9 @@ public sealed class CardStackSystem : SharedCardStackSystem
     {
         RemoveCard(uid, args.Card, comp);
     }
-    protected override void RemoveCard(EntityUid uid, EntityUid card, CardStackComponent? comp = null)
+    protected override void RemoveCard(EntityUid uid, EntityUid card, CardStackComponent comp)
     {
-        if (!Resolve(uid, ref comp) || !TryComp(card, out CardComponent? _))
+        if (!TryComp(card, out CardComponent? _))
             return;
         _containerSystem.Remove(card, comp.CardContainer);
 

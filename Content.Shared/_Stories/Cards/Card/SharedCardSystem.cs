@@ -31,10 +31,9 @@ public abstract class SharedCardSystem : EntitySystem
     }
     private void OnExamined(EntityUid uid, CardComponent component, ExaminedEvent args)
     {
-        if (!TryComp<FoldableComponent>(uid, out var foldable))
+        if (!TryComp<FoldableComponent>(uid, out var foldable) || !args.IsInDetailsRange || !foldable.IsFolded)
             return;
-        if (args.IsInDetailsRange && foldable.IsFolded)
-            args.PushMarkup($"{component.Name}");
+        args.PushMarkup($"{component.Name}");
     }
     protected virtual void CreateDeck(EntityUid user, EntityUid target, CardComponent? component = null) { }
     private void OnActivateInWorld(EntityUid uid, CardComponent comp, ActivateInWorldEvent args)
