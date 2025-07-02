@@ -9,6 +9,7 @@ using Content.Shared.Item;
 using Content.Shared.Mobs.Components;
 using Content.Shared.Tag;
 using Content.Shared.Construction.Components;
+using Content.Shared.Stacks;
 
 namespace Content.Server.StationEvents.Events;
 
@@ -59,6 +60,9 @@ public sealed class RadiationOutburstRule : StationEventSystem<RadiationOutburst
             if (EntityManager.HasComponent<AnchorableComponent>(targetUid)) // Нельзя ли прикрутить этот объект (Станционные маяки, трубы и т.п.)
                 continue;
 
+            if (EntityManager.HasComponent<StackComponent>(targetUid)) // Не стакается ли объект (если стак из 30 то радиация в 30 раз больше)
+                continue;
+            
             targetList.Add((targetUid, target));
         }
 
