@@ -145378,20 +145378,6 @@ entities:
     - type: Transform
       pos: -18.43759,-87.53334
       parent: 2
-- proto: RubberStampHos
-  entities:
-  - uid: 22406
-    components:
-    - type: Transform
-      pos: -59.502663,-53.360744
-      parent: 2
-- proto: RubberStampSyndicate
-  entities:
-  - uid: 22407
-    components:
-    - type: Transform
-      pos: -1.1571338,-110.906044
-      parent: 2
 - proto: SalvageCanisterSpawner
   entities:
   - uid: 22408

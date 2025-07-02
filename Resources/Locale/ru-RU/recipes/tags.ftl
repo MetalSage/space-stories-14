@@ -66,8 +66,9 @@ construction-graph-tag-ambrosia = амброзия
 construction-graph-tag-rifle-stock = приклад винтовки
 construction-graph-tag-match-stick = спичка
 construction-graph-tag-potato = картофель
-construction-graphic-tag-wheat-bushel = мешок пшеницы
-construction-graphic-tag-corgi-hide = шкура корги
+construction-graph-tag-wheat-bushel = мешок пшеницы
+construction-graph-tag-corgi-hide = шкура корги
+soil-construction-graph-any-mushroom = любой гриб
 
 # toys
 construction-graph-tag-rubber-ducky = резиновая утка
@@ -119,7 +120,7 @@ construction-graph-tag-wallmount-generator-circuit-board = микросхема 
 construction-graph-tag-wallmount-apu-circuit-board = микросхема настенной ВСУ
 construction-graph-tag-wallmount-substation-circuit-board = микросхема настенной подстанции
 construction-graph-tag-surveillance-camera-monitor-board = монитор беспроводных камер наблюдения
-construction-graph-tag-television-board = консольная плата плата телевизора
+construction-graph-tag-television-board = консольная плата телевизора
 construction-graph-tag-freezer-electronics = микросхема холодильника
 
 # crystals

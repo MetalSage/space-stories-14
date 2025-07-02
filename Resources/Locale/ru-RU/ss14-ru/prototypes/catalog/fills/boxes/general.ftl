@@ -1,7 +1,7 @@
 ent-BoxCardboard = картонная коробка
     .desc = Картонная коробка для хранения вещей.
 ent-BoxMousetrap = коробка мышеловок
-    .desc = Коробка, наполненая мышеловками. Постарайтесь не поймать себя за руку.
+    .desc = Коробка, наполненная мышеловками. Постарайтесь не поймать себя за руку.
 ent-BoxLightbulb = коробка лампочек
     .desc = Из-за формы коробки в неё помещаются только лампочки и лампочки-трубки.
 ent-BoxWarmLightbulb = коробка тёплых лампочек
@@ -51,11 +51,9 @@ ent-BoxEncryptionKeySecurity = коробка ключей шифрования 
     .desc = { ent-BoxEncryptionKeyPassenger.desc }
 ent-BoxEncryptionKeyService = коробка ключей шифрования сервисного отдела
     .desc = { ent-BoxEncryptionKeyPassenger.desc }
-# Corvax-HiddenDesc-Start
 ent-BoxEncryptionKeySyndie = коробка ключей шифрования
-    .suffix = коробка ключей шифрования Синдиката
     .desc = { ent-BoxEncryptionKeyPassenger.desc }
-# Corvax-HiddenDesc-End
+    .suffix = Синдикат
 ent-BoxLeadLined = освинцованная коробка
     .desc = Эта коробка препятствует распространению радиации.
     .suffix = DEBUG
@@ -71,3 +69,5 @@ ent-BoxLightbulbColorfulMixed = коробка разноцветных ламп
     .desc = { ent-BoxLightbulb.desc }
 ent-BoxLighttubeColorfulMixed = коробка разноцветных ламп
     .desc = { ent-BoxLightbulb.desc }
+ent-BoxUtensil = коробка столовых приборов
+    .desc = Коробка, наполненная вилками и ложками.

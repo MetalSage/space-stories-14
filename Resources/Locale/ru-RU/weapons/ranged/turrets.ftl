@@ -5,7 +5,7 @@ ent-WeaponEnergyTurretAI = сторожевая турель ИИ
 
 deployable-turret-component-activating = Разворачивание...
 deployable-turret-component-deactivating = Деактивация...
-deployable-turret-component-activate = Активать
+deployable-turret-component-activate = Активировать
 deployable-turret-component-deactivate = Деактивировать
 deployable-turret-component-access-denied = Доступ запрещен
 deployable-turret-component-no-ammo = Оружейные системы исчерпаны

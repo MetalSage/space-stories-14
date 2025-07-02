@@ -1242,7 +1242,7 @@ entities:
         neck: !type:ContainerSlot
           showEnts: False
           occludes: False
-          ent: 249
+          ent: null
         mask: !type:ContainerSlot
           showEnts: False
           occludes: False

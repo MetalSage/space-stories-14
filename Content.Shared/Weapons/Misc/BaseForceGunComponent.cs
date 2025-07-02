@@ -5,7 +5,7 @@ namespace Content.Shared.Weapons.Misc;
 public abstract partial class BaseForceGunComponent : Component
 {
     [ViewVariables(VVAccess.ReadWrite), DataField("lineColor"), AutoNetworkedField]
-    public Color? LineColor = Color.Orange;
+    public Color? LineColor = Color.Orange; // Stories (может быть null)
 
     /// <summary>
     /// The entity the tethered target has a joint to.

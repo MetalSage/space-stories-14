@@ -52,13 +52,17 @@ public sealed class TetherGunOverlay : Overlay
 
             if (forceQuery.TryGetComponent(tethered.Tetherer, out var force))
             {
+                // Stories Start
                 if (force.LineColor == null) return;
                 color = force.LineColor.Value;
+                // Stories End
             }
             else if (tetherQuery.TryGetComponent(tethered.Tetherer, out var tether))
             {
+                // Stories Start
                 if (tether.LineColor == null) return;
                 color = tether.LineColor.Value;
+                // Stories End
             }
 
             worldHandle.DrawRect(rotated, color.WithAlpha(0.3f));

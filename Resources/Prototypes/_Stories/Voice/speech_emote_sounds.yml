@@ -90,3 +90,11 @@
       collection: Hew
     DefaultDeathgasp:
       collection: KidanDeathGasp
+
+- type: emoteSounds
+  id: STCorpium
+  params:
+    variation: 0.125
+  sounds:
+    Scream:
+      path: /Audio/_Stories/Corpium/scream.ogg

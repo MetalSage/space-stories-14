@@ -38,3 +38,24 @@
       - state: green
       - sprite: _Stories/Mobs/Aliens/spaf.rsi
         state: spaf
+
+- type: entity
+  categories: [ HideSpawnMenu, Spawner ]
+  id: STSpawnPointGhostCorpium
+  name: ghost role spawn point
+  suffix: Corpium
+  parent: MarkerBase
+  components:
+  - type: GhostRole
+    name: stories-ghost-role-information-corpium-name
+    description: stories-ghost-role-information-corpium-desc
+    raffle:
+      settings: default
+  - type: GhostRoleMobSpawner
+    prototype: STMobCorpium
+  - type: Sprite
+    sprite: Markers/jobs.rsi
+    layers:
+      - state: green
+      - sprite: _Stories/Mobs/Aliens/corpium.rsi
+        state: alive

@@ -1,0 +1,73 @@
+- type: entity
+  name: Corpium
+  parent: MobTick
+  id: STMobCorpium
+  description: A very scary scorpion from outer space. Don't let it bite you.
+  components:
+  - type: HTN
+    rootTask:
+      task: DragonCarpCompound
+  - type: NPCImprintingOnSpawnBehaviour
+    spawnFriendsSearchRadius: 3
+    whitelist:
+      components:
+      - Corpium
+  - type: MobStateActions
+    actions:
+      Alive:
+      - STActionCorpiumHit
+  - type: GhostRole
+    makeSentient: true
+    name: stories-ghost-role-information-corpium-name
+    description: stories-ghost-role-information-corpium-desc
+    raffle:
+      settings: short
+  - type: GhostTakeoverAvailable
+  - type: Bloodstream
+    chemicalSolutionName: corpiumChemicals
+  - type: StatusIcon
+    bounds: -0.5,-0.5,0.5,0.5
+  - type: Corpium
+  - type: ReagentStatusIcon
+    allowedStates:
+    - Alive
+    - Critical
+    solution: melee
+    reagent:
+      ReagentId: STCorpium
+    statusIcon: STCorpiumReady
+  - type: Nightvision
+  - type: Vocal
+    sounds:
+      Unsexed: STCorpium
+  - type: FootstepModifier
+    footstepSoundCollection:
+      collection: STFootstepCorpium
+  - type: Sprite
+    drawdepth: Mobs
+    layers:
+    - map: ["enum.DamageStateVisualLayers.Base"]
+      state: alive
+      sprite: _Stories/Mobs/Aliens/corpium.rsi
+  - type: SolutionContainerManager
+    solutions:
+      melee:
+        maxVol: 1
+        reagents:
+        - ReagentId: STCorpium
+          Quantity: 1
+  - type: SolutionRegeneration
+    duration: 180
+    solution: melee
+    generated:
+      reagents:
+      - ReagentId: STCorpium
+        Quantity: 1
+  - type: MeleeChemicalInjector
+    pierceArmor: False
+    solution: melee
+    transferAmount: 1
+  - type: Tag
+    tags:
+      - CannotSuicide
+      - FootstepSound

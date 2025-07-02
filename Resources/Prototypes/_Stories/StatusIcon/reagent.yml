@@ -1,0 +1,23 @@
+- type: reagentIcon
+  id: STCorpiumReady
+  priority: 11
+  locationPreference: Right
+  isShaded: false
+  showTo:
+    components:
+    - Corpium
+  icon:
+    sprite: /Textures/_Stories/Interface/Misc/job_icons.rsi
+    state: CorpiumReady
+
+- type: reagentIcon
+  id: STCorpiumInfected
+  priority: 11
+  locationPreference: Right
+  isShaded: false
+  showTo:
+    components:
+    - Corpium
+  icon:
+    sprite: /Textures/_Stories/Interface/Misc/job_icons.rsi
+    state: CorpiumInfected
