@@ -231,7 +231,7 @@
   - type: StationEvent
     startAudio:
       path: /Audio/Announcements/attention.ogg
-      weight: 5
+      weight: 4
       minimumPlayers: 5
       duration: 1
   - type: RadiationOutburstRule

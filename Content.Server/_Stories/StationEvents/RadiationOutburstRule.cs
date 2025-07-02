@@ -7,10 +7,11 @@ using Content.Shared.GameTicking.Components;
 using Content.Shared.Item;
 using Content.Shared.Mobs.Components;
 using Content.Shared.Tag;
+using Content.Shared.Construction.Components;
 
 namespace Content.Server.StationEvents.Events;
 
-public sealed class RadiationOutburst : StationEventSystem<RadiationOutburstRuleComponent>
+public sealed class RadiationOutburstRule : StationEventSystem<RadiationOutburstRuleComponent>
 {
     [Dependency] private readonly IPrototypeManager _prototype = default!;
     [Dependency] private readonly IRobustRandom _random = default!;
@@ -22,6 +23,7 @@ public sealed class RadiationOutburst : StationEventSystem<RadiationOutburstRule
 	
 	public override void Initialize()
 	{
+        base.Initialize();
 		_mobStateQuery = GetEntityQuery<MobStateComponent>();
 	}
 
@@ -36,14 +38,17 @@ public sealed class RadiationOutburst : StationEventSystem<RadiationOutburstRule
         var query = EntityQueryEnumerator<ItemComponent, TransformComponent>();
         while (query.MoveNext(out var targetUid, out var target, out var xform))
         {
-            if (StationSystem.GetOwningStation(targetUid, xform) != station)
+            // Проверки
+
+            if (StationSystem.GetOwningStation(targetUid, xform) != station) // На выбранной ли станции объект
                 continue;
-			
-			if (_containerSystem.TryFindComponentOnEntityContainerOrParent(targetUid, _mobStateQuery, ref mobState))
-				continue;
-			
-			if (_tagSystem.HasTag(targetUid, HighRiskItemTag))
-				continue;
+
+            if (_containerSystem.TryFindComponentOnEntityContainerOrParent(targetUid, _mobStateQuery, ref mobState)) // Не относится ли объект к живому существу
+                continue;
+            if (_tagSystem.HasTag(targetUid, HighRiskItemTag)) // Не является ли объект хайриском
+                continue;
+            if (EntityManager.HasComponent<AnchorableComponent>(targetUid)) // Нельзя ли прикрутить этот объект (Станционные маяки, трубы и т.п.)
+                continue;
 
             targetList.Add((targetUid, target));
         }
@@ -54,16 +59,17 @@ public sealed class RadiationOutburst : StationEventSystem<RadiationOutburstRule
         var Rads = 0;
         foreach (var target in targetList)
         {
-            Rads = _random.Next(0, component.maxSeverity); // Либо меньше предметов с большей радиоактивностью или наоборот
+            Rads = _random.Next(1, component.maxSeverity); // Либо меньше предметов с большей радиоактивностью или наоборот
             currentSeverity -= Rads;
             if (currentSeverity <= 0)
                 break;
 
             var radiationComp = EnsureComp<RadiationSourceComponent>(target);
             radiationComp.Intensity = Rads;
+            Log.Debug($"Irradiating {target.Owner.Id} with {Rads} severity.");
         }
 
-        ChatSystem.DispatchStationAnnouncement( //Оповещение
+        ChatSystem.DispatchStationAnnouncement(
             station.Value,
             Loc.GetString("station-event-radiation-outburst-announcement"),
             playDefaultSound: false,
