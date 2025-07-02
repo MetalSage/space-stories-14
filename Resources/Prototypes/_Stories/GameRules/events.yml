@@ -225,6 +225,26 @@
     - STCommandMaid
 
 - type: entity
+  id: STCorpiumSpawn
+  parent: BaseStationEventLongDelay
+  components:
+  - type: StationEvent
+    startAnnouncementColor: DarkRed
+    startAnnouncement: stories-station-event-vent-corpium-start-announcement
+    startAudio:
+      path: /Audio/_Stories/Corpium/alert.ogg
+      params:
+        volume: -8
+    earliestStart: 20
+    minimumPlayers: 30
+    weight: 6.5
+    duration: 1
+  - type: VentCrittersRule
+    entries:
+    - id: STSpawnPointGhostCorpium
+      prob: 0.025
+
+- type: entity
   id: RadiationOutburst
   parent: BaseGameRule
   components:
