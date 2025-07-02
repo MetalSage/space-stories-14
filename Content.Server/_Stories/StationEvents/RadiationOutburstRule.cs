@@ -1,4 +1,5 @@
 using Content.Server.StationEvents.Components;
+using Content.Server.Construction.Components;
 using Robust.Shared.Random;
 using Robust.Shared.Prototypes;
 using Robust.Shared.Containers;
@@ -19,12 +20,14 @@ public sealed class RadiationOutburstRule : StationEventSystem<RadiationOutburst
 	[Dependency] private readonly TagSystem _tagSystem = default!;
 	
 	private EntityQuery<MobStateComponent> _mobStateQuery;
+    private EntityQuery<MachineComponent> _machineQuery;
 	private static readonly ProtoId<TagPrototype> HighRiskItemTag = "HighRiskItem";
-	
-	public override void Initialize()
-	{
+
+    public override void Initialize()
+    {
         base.Initialize();
-		_mobStateQuery = GetEntityQuery<MobStateComponent>();
+        _mobStateQuery = GetEntityQuery<MobStateComponent>();
+        _machineQuery = GetEntityQuery<MachineComponent>();
 	}
 
     protected override void Started(EntityUid uid, RadiationOutburstRuleComponent component, GameRuleComponent gameRule, GameRuleStartedEvent args)
@@ -33,6 +36,7 @@ public sealed class RadiationOutburstRule : StationEventSystem<RadiationOutburst
             return;
 		
 		MobStateComponent? mobState = null;
+        MachineComponent? machine = null;
 
         var targetList = new List<Entity<ItemComponent>>();
         var query = EntityQueryEnumerator<ItemComponent, TransformComponent>();
@@ -45,8 +49,13 @@ public sealed class RadiationOutburstRule : StationEventSystem<RadiationOutburst
 
             if (_containerSystem.TryFindComponentOnEntityContainerOrParent(targetUid, _mobStateQuery, ref mobState)) // Не относится ли объект к живому существу
                 continue;
+
+            if (_containerSystem.TryFindComponentOnEntityContainerOrParent(targetUid, _machineQuery, ref machine)) // Не является ли её родитель машиной (чтобы не фонили предметы из которых она собрана)
+                continue;
+
             if (_tagSystem.HasTag(targetUid, HighRiskItemTag)) // Не является ли объект хайриском
                 continue;
+
             if (EntityManager.HasComponent<AnchorableComponent>(targetUid)) // Нельзя ли прикрутить этот объект (Станционные маяки, трубы и т.п.)
                 continue;
 
