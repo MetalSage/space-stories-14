@@ -17,26 +17,26 @@ public sealed class RadiationOutburstRule : StationEventSystem<RadiationOutburst
 {
     [Dependency] private readonly IPrototypeManager _prototype = default!;
     [Dependency] private readonly IRobustRandom _random = default!;
-	[Dependency] private readonly SharedContainerSystem _containerSystem = default!;
-	[Dependency] private readonly TagSystem _tagSystem = default!;
-	
-	private EntityQuery<MobStateComponent> _mobStateQuery;
+    [Dependency] private readonly SharedContainerSystem _containerSystem = default!;
+    [Dependency] private readonly TagSystem _tagSystem = default!;
+
+    private EntityQuery<MobStateComponent> _mobStateQuery;
     private EntityQuery<MachineComponent> _machineQuery;
-	private static readonly ProtoId<TagPrototype> HighRiskItemTag = "HighRiskItem";
+    private static readonly ProtoId<TagPrototype> HighRiskItemTag = "HighRiskItem";
 
     public override void Initialize()
     {
         base.Initialize();
         _mobStateQuery = GetEntityQuery<MobStateComponent>();
         _machineQuery = GetEntityQuery<MachineComponent>();
-	}
+    }
 
     protected override void Started(EntityUid uid, RadiationOutburstRuleComponent component, GameRuleComponent gameRule, GameRuleStartedEvent args)
     {
         if (!TryGetRandomStation(out var station))
             return;
-		
-		MobStateComponent? mobState = null;
+
+        MobStateComponent? mobState = null;
         MachineComponent? machine = null;
 
         var targetList = new List<Entity<ItemComponent>>();
@@ -62,7 +62,7 @@ public sealed class RadiationOutburstRule : StationEventSystem<RadiationOutburst
 
             if (EntityManager.HasComponent<StackComponent>(targetUid)) // Не стакается ли объект (если стак из 30 то радиация в 30 раз больше)
                 continue;
-            
+
             targetList.Add((targetUid, target));
         }
 
