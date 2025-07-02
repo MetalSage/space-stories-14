@@ -237,7 +237,7 @@
   - type: RadiationOutburstRule
     severity: 5
     maxSeverity: 3
-    
+
 - type: entity
   id: STCorpiumSpawn
   parent: BaseStationEventLongDelay
