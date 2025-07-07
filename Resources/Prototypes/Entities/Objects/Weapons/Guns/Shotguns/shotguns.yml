@@ -123,8 +123,8 @@
     selectedMode: SemiAuto
     availableModes:
     - Burst
-    # stories duplet end
     - SemiAuto
+    # stories duplet end
   - type: BallisticAmmoProvider
     capacity: 2
   - type: Construction
@@ -210,8 +210,8 @@
     selectedMode: SemiAuto
     availableModes:
     - Burst
-    # stories duplet end
     - SemiAuto
+    # stories duplet end
   - type: BallisticAmmoProvider
     capacity: 2
   - type: Construction
