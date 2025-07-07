@@ -116,7 +116,15 @@
     sprite: Objects/Weapons/Guns/Shotguns/db_shotgun_inhands_64x.rsi
   - type: GunRequiresWield #remove when inaccuracy on spreads is fixed
   - type: Gun
-    fireRate: 3
+    fireRate: 3 
+    # stories duplet start 
+    burstFireRate: 30
+    shotsPerBurst: 2
+    selectedMode: SemiAuto
+    availableModes:
+    - Burst
+    # stories duplet end
+    - SemiAuto
   - type: BallisticAmmoProvider
     capacity: 2
   - type: Construction
@@ -196,6 +204,14 @@
     sprite: Objects/Weapons/Guns/Shotguns/sawn_inhands_64x.rsi
   - type: Gun
     fireRate: 3
+    # stories duplet start 
+    burstFireRate: 30
+    shotsPerBurst: 2
+    selectedMode: SemiAuto
+    availableModes:
+    - Burst
+    # stories duplet end
+    - SemiAuto
   - type: BallisticAmmoProvider
     capacity: 2
   - type: Construction
