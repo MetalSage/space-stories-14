@@ -165,7 +165,7 @@
   desc: stories-reagent-desc-nitryl
   physicalDesc: reagent-physical-desc-gaseous
   flavor: sweet
-  color: "#12ca21"
+  color: "#916130"
   metabolisms:
     Gas:
       effects:

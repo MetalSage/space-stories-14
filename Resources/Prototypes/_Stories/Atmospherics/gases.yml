@@ -26,7 +26,8 @@
   specificHeat: 20
   heatCapacityRatio: 1.4
   molarMass: 10
-  color: 12ca21
+  gasOverlaySprite: /Textures/_Stories/Effects/atmospherics.rsi
+  color: 916130
   reagent: STNitryl
   pricePerMole: 2.5
 
