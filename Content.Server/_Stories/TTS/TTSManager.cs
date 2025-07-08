@@ -1,7 +1,7 @@
-﻿using System.Linq;
+﻿using System.Collections.Concurrent;
+using System.Linq;
 using System.Net;
 using System.Net.Http;
-using System.Net.Http.Json;
 using System.Text;
 using System.Text.Json.Serialization;
 using System.Threading;
@@ -14,7 +14,6 @@ using System.Web;
 
 namespace Content.Server._Stories.TTS;
 
-// ReSharper disable once InconsistentNaming
 public sealed class TTSManager
 {
     private static readonly Histogram RequestTimings = Metrics.CreateHistogram(
@@ -39,8 +38,11 @@ public sealed class TTSManager
     private readonly HttpClient _httpClient = new();
 
     private ISawmill _sawmill = default!;
-    private readonly Dictionary<string, byte[]> _cache = new();
+    private readonly ConcurrentDictionary<string, byte[]> _cache = new();
     private readonly List<string> _cacheKeysSeq = new();
+
+    private readonly ConcurrentDictionary<string, Task<byte[]?>> _pendingRequests = new();
+
     private int _maxCachedCount = 200;
     private string _apiUrl = string.Empty;
     private string _apiToken = string.Empty;
@@ -68,35 +70,36 @@ public sealed class TTSManager
     /// <param name="speaker">Identifier of speaker</param>
     /// <param name="text">SSML formatted text</param>
     /// <returns>OGG audio bytes or null if failed</returns>
-    public async Task<byte[]?> ConvertTextToSpeech(string speaker, string text)
+    public Task<byte[]?> ConvertTextToSpeech(string speaker, string text)
     {
         WantedCount.Inc();
         var cacheKey = GenerateCacheKey(speaker, text);
+
         if (_cache.TryGetValue(cacheKey, out var data))
         {
             ReusedCount.Inc();
             _sawmill.Debug($"Use cached sound for '{text}' speech by '{speaker}' speaker");
-            return data;
+            return Task.FromResult<byte[]?>(data);
         }
+        
+        return _pendingRequests.GetOrAdd(cacheKey, (key) => GenerateAndCacheAudio(speaker, text, key));
+    }
 
+    private async Task<byte[]?> GenerateAndCacheAudio(string speaker, string text, string cacheKey)
+    {
         _sawmill.Debug($"Generate new audio for '{text}' speech by '{speaker}' speaker");
-
-        var body = new GenerateVoiceRequest
-        {
-            Text = text,
-            Speaker = speaker,
-        };
 
         var reqTime = DateTime.UtcNow;
         try
         {
             var timeout = _cfg.GetCVar(SCCVars.TTSApiTimeout);
-            var cts = new CancellationTokenSource(TimeSpan.FromSeconds(timeout));
+            using var cts = new CancellationTokenSource(TimeSpan.FromSeconds(timeout));
 
             var requestUrl = $"{_apiUrl}" + ToQueryString(new NameValueCollection() {
                 { "speaker", speaker },
                 { "text", text },
                 { "ext", "ogg" }});
+
             var response = await _httpClient.GetAsync(requestUrl, cts.Token);
             if (!response.IsSuccessStatusCode)
             {
@@ -112,14 +115,18 @@ public sealed class TTSManager
 
             var soundData = await response.Content.ReadAsByteArrayAsync();
 
-            _cache.Add(cacheKey, soundData);
-            _cacheKeysSeq.Add(cacheKey);
-            if (_cache.Count > _maxCachedCount)
+            _cache.TryAdd(cacheKey, soundData);
+            lock (_cacheKeysSeq)
             {
-                var firstKey = _cacheKeysSeq.First();
-                _cache.Remove(firstKey);
-                _cacheKeysSeq.Remove(firstKey);
+                _cacheKeysSeq.Add(cacheKey);
+                if (_cacheKeysSeq.Count > _maxCachedCount)
+                {
+                    var firstKey = _cacheKeysSeq.First();
+                    _cache.TryRemove(firstKey, out _);
+                    _cacheKeysSeq.Remove(firstKey);
+                }
             }
+
 
             _sawmill.Debug($"Generated new audio for '{text}' speech by '{speaker}' speaker ({soundData.Length} bytes)");
             RequestTimings.WithLabels("Success").Observe((DateTime.UtcNow - reqTime).TotalSeconds);
@@ -138,8 +145,12 @@ public sealed class TTSManager
             _sawmill.Error($"Failed of request generation new sound for '{text}' speech by '{speaker}' speaker\n{e}");
             return null;
         }
+        finally
+        {
+            _pendingRequests.TryRemove(cacheKey, out _);
+        }
     }
-
+    
     private static string ToQueryString(NameValueCollection nvc)
     {
         var array = (
@@ -154,7 +165,7 @@ public sealed class TTSManager
     public void ResetCache()
     {
         _cache.Clear();
-        _cacheKeysSeq.Clear();
+        lock (_cacheKeysSeq) _cacheKeysSeq.Clear();
     }
 
     private string GenerateCacheKey(string speaker, string text)

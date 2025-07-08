@@ -1,12 +1,17 @@
+using System.Linq;
+using Content.Server._Stories.TTS;
 using Content.Server.Administration.Logs;
 using Content.Server.Chat.Systems;
 using Content.Server.Power.Components;
 using Content.Server.Radio.Components;
+using Content.Shared._Stories.SCCVars;
+using Content.Shared._Stories.TTS;
 using Content.Shared.Chat;
 using Content.Shared.Database;
 using Content.Shared.Radio;
 using Content.Shared.Radio.Components;
 using Content.Shared.Speech;
+using Robust.Shared.Enums;
 using Robust.Shared.Map;
 using Robust.Shared.Network;
 using Robust.Shared.Player;
@@ -14,6 +19,7 @@ using Robust.Shared.Prototypes;
 using Robust.Shared.Random;
 using Robust.Shared.Replays;
 using Robust.Shared.Utility;
+using Robust.Shared.Configuration;
 
 namespace Content.Server.Radio.EntitySystems;
 
@@ -28,6 +34,12 @@ public sealed class RadioSystem : EntitySystem
     [Dependency] private readonly IPrototypeManager _prototype = default!;
     [Dependency] private readonly IRobustRandom _random = default!;
     [Dependency] private readonly ChatSystem _chat = default!;
+    
+    // Stories-TTS Start
+    [Dependency] private readonly TTSSystem _tts = default!; 
+    [Dependency] private readonly TtsAudioProcessingSystem _ttsProcessing = default!;
+    [Dependency] private readonly IConfigurationManager _cfg = default!;
+    // Stories-TTS End
 
     // set used to prevent radio feedback loops.
     private readonly HashSet<string> _messages = new();
@@ -54,9 +66,48 @@ public sealed class RadioSystem : EntitySystem
 
     private void OnIntrinsicReceive(EntityUid uid, IntrinsicRadioReceiverComponent component, ref RadioReceiveEvent args)
     {
-        if (TryComp(uid, out ActorComponent? actor))
-            _netMan.ServerSendMessage(args.ChatMsg, actor.PlayerSession.Channel);
+        // Stories-TTS Start
+        if (!TryComp(uid, out ActorComponent? actor))
+            return;
+
+        var playerSession = actor.PlayerSession;
+        if (playerSession.Status != SessionStatus.InGame)
+            return;
+
+        _netMan.ServerSendMessage(args.ChatMsg, playerSession.Channel);
+        // Stories-TTS End
     }
+    
+    // Stories-TTS Start
+    private async void ProcessAndSendRadioTts(EntityUid messageSource, string message, RadioChannelPrototype channel, IEnumerable<ICommonSession> recipients)
+    {
+        if (!_cfg.GetCVar(SCCVars.TTSEnabled))
+            return;
+
+        var voiceId = GetVoiceId(messageSource);
+        var soundData = await _tts.GenerateTTS(message, voiceId);
+
+        if (soundData == null)
+            return;
+
+        byte[] processedSoundData = await _ttsProcessing.ApplyRadioEffect(soundData);
+
+        var ttsEvent = new PlayTTSEvent(processedSoundData, sourceUid: null, isWhisper: false, originalSourceUid: GetNetEntity(messageSource));
+
+        var filter = Filter.Empty().AddPlayers(recipients.ToList());
+        RaiseNetworkEvent(ttsEvent, filter);
+    }
+
+    private string GetVoiceId(EntityUid sourceUid)
+    {
+        if (TryComp<TTSComponent>(sourceUid, out var tts) && !string.IsNullOrEmpty(tts.VoicePrototypeId) &&
+            _prototype.TryIndex<TTSVoicePrototype>(tts.VoicePrototypeId, out var protoVoice))
+        {
+            return protoVoice.Speaker;
+        }
+        return "father_grigori";
+    }
+    // Stories-TTS End
 
     /// <summary>
     /// Send radio message to all active radio listeners
@@ -121,6 +172,8 @@ public sealed class RadioSystem : EntitySystem
         var hasActiveServer = HasActiveServer(sourceMapId, channel.ID);
         var sourceServerExempt = _exemptQuery.HasComp(radioSource);
 
+        var recipientUids = new List<EntityUid>(); // Stories-TTS
+        
         var radioQuery = EntityQueryEnumerator<ActiveRadioComponent, TransformComponent>();
         while (canSend && radioQuery.MoveNext(out var receiver, out var radio, out var transform))
         {
@@ -148,7 +201,33 @@ public sealed class RadioSystem : EntitySystem
 
             // send the message
             RaiseLocalEvent(receiver, ref ev);
+
+            recipientUids.Add(receiver); // Stories-TTS
         }
+
+        // Stories-TTS Start
+        if (canSend && recipientUids.Count > 0)
+        {
+            var sessions = new List<ICommonSession>();
+            var actorQuery = GetEntityQuery<ActorComponent>();
+            foreach (var uid in recipientUids)
+            {
+                var parent = Transform(uid).ParentUid;
+                var target = actorQuery.HasComponent(uid) ? uid : (actorQuery.HasComponent(parent) ? parent : (EntityUid?) null);
+
+                if (target.HasValue && actorQuery.TryGetComponent(target.Value, out var actor))
+                {
+                    if (actor.PlayerSession.Status == SessionStatus.InGame)
+                        sessions.Add(actor.PlayerSession);
+                }
+            }
+
+            if (sessions.Count > 0)
+            {
+                ProcessAndSendRadioTts(messageSource, message, channel, sessions);
+            }
+        }
+        // Stories-TTS End
 
         if (name != Name(messageSource))
             _adminLogger.Add(LogType.Chat, LogImpact.Low, $"Radio message from {ToPrettyString(messageSource):user} as {name} on {channel.LocalizedName}: {message}");

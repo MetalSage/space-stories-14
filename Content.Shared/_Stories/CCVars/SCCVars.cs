@@ -3,7 +3,7 @@
 namespace Content.Shared._Stories.SCCVars;
 
 /// <summary>
-///     Corvax modules console variables
+///     Stories modules console variables
 /// </summary>
 [CVarDefs]
 // ReSharper disable once InconsistentNaming
@@ -18,6 +18,12 @@ public sealed class SCCVars
     /// </summary>
     public static readonly CVarDef<bool> TTSEnabled =
         CVarDef.Create("tts.enabled", false, CVar.SERVER | CVar.REPLICATED | CVar.ARCHIVE);
+
+    /// <summary>
+    /// Whether the TTS system is enabled on the client.
+    /// </summary>
+    public static readonly CVarDef<bool> TTSEnabledClient =
+        CVarDef.Create("tts.enabled_client", true, CVar.CLIENTONLY | CVar.ARCHIVE);
 
     /// <summary>
     /// URL of the TTS server API.
@@ -38,7 +44,13 @@ public sealed class SCCVars
         CVarDef.Create("tts.api_timeout", 5, CVar.SERVERONLY | CVar.ARCHIVE);
 
     /// <summary>
-    /// Default volume setting of TTS sound
+    /// Default volume setting of TTS sound for radio
+    /// </summary>
+    public static readonly CVarDef<float> TTSVolumeRadio =
+        CVarDef.Create("tts.volume_radio", 0.5f, CVar.CLIENTONLY | CVar.ARCHIVE);
+
+    /// <summary>
+    /// Default volume setting of TTS sound for others
     /// </summary>
     public static readonly CVarDef<float> TTSVolume =
         CVarDef.Create("tts.volume", 0f, CVar.CLIENTONLY | CVar.ARCHIVE);
@@ -48,6 +60,22 @@ public sealed class SCCVars
     /// </summary>
     public static readonly CVarDef<int> TTSMaxCache =
         CVarDef.Create("tts.max_cache", 250, CVar.SERVERONLY | CVar.ARCHIVE);
+
+    /// <summary>
+    /// Enable a radio effect for TTS messages sent over radio channels.
+    /// </summary>
+    public static readonly CVarDef<bool> TTSRadioEffect =
+        CVarDef.Create("scc.tts.radio_effect_enabled", true, CVar.SERVERONLY | CVar.REPLICATED);
+
+    /// <summary>
+    /// The path to the FFmpeg executable for audio processing.
+    /// </summary>
+    public static readonly CVarDef<string> TTSFfmpegPath =
+        CVarDef.Create("scc.tts.ffmpeg_path", "", CVar.SERVERONLY);
+
+    public static readonly CVarDef<string> TTSFfmpegArguments =
+        CVarDef.Create("scc.tts.ffmpeg_arguments", "-i pipe:0 -f ogg -v quiet -filter_complex \"[0:a]highpass=f=1000,lowpass=f=500[filtered];[filtered]acrusher=level_in=1:level_out=1:bits=4:mix=0.5:mode=log[crushed];[crushed]loudnorm=I=-12:LRA=7\" pipe:1",
+            CVar.SERVERONLY);
 
     /*
      * Sponsors

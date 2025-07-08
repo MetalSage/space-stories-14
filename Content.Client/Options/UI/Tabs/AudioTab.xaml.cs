@@ -57,7 +57,12 @@ public sealed partial class AudioTab : Control
         // Stories-TTS-Start
         Control.AddOptionPercentSlider(
             SCCVars.TTSVolume,
-            SliderVolumeTtsVolume,
+            SliderTtsVolume,
+            scale: ContentAudioSystem.TtsMultiplier);
+        
+        Control.AddOptionPercentSlider(
+            SCCVars.TTSVolumeRadio,
+            SliderTtsVolumeRadio,
             scale: ContentAudioSystem.TtsMultiplier);
         // Stories-TTS-End
 
