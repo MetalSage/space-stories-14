@@ -34,9 +34,9 @@ public sealed class RadioSystem : EntitySystem
     [Dependency] private readonly IPrototypeManager _prototype = default!;
     [Dependency] private readonly IRobustRandom _random = default!;
     [Dependency] private readonly ChatSystem _chat = default!;
-    
+
     // Stories-TTS Start
-    [Dependency] private readonly TTSSystem _tts = default!; 
+    [Dependency] private readonly TTSSystem _tts = default!;
     [Dependency] private readonly TtsAudioProcessingSystem _ttsProcessing = default!;
     [Dependency] private readonly IConfigurationManager _cfg = default!;
     // Stories-TTS End
@@ -77,7 +77,7 @@ public sealed class RadioSystem : EntitySystem
         _netMan.ServerSendMessage(args.ChatMsg, playerSession.Channel);
         // Stories-TTS End
     }
-    
+
     // Stories-TTS Start
     private async void ProcessAndSendRadioTts(EntityUid messageSource, string message, RadioChannelPrototype channel, IEnumerable<ICommonSession> recipients)
     {
@@ -173,7 +173,7 @@ public sealed class RadioSystem : EntitySystem
         var sourceServerExempt = _exemptQuery.HasComp(radioSource);
 
         var recipientUids = new List<EntityUid>(); // Stories-TTS
-        
+
         var radioQuery = EntityQueryEnumerator<ActiveRadioComponent, TransformComponent>();
         while (canSend && radioQuery.MoveNext(out var receiver, out var radio, out var transform))
         {

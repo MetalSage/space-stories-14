@@ -1,4 +1,4 @@
-﻿using System.Diagnostics.CodeAnalysis;
+using System.Diagnostics.CodeAnalysis;
 using System.Threading.Tasks;
 using Content.Server.Chat.Systems;
 using Content.Shared._Stories.SCCVars;
@@ -108,7 +108,7 @@ public sealed partial class TTSSystem : EntitySystem
     private async void HandleSay(EntityUid uid, string message, string speaker)
     {
         var soundData = await GenerateTTS(message, speaker);
-        if (soundData is null) 
+        if (soundData is null)
             return;
 
         var ttsEvent = new PlayTTSEvent(soundData, GetNetEntity(uid));
@@ -130,7 +130,7 @@ public sealed partial class TTSSystem : EntitySystem
         var xformQuery = GetEntityQuery<TransformComponent>();
         var sourceXform = xformQuery.GetComponent(source);
         var sourceCoords = sourceXform.Coordinates;
-        
+
         var recipients = new List<ICommonSession>();
         foreach (var player in Filter.Pvs(source).Recipients)
         {

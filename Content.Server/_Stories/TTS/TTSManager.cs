@@ -1,4 +1,4 @@
-﻿using System.Collections.Concurrent;
+using System.Collections.Concurrent;
 using System.Linq;
 using System.Net;
 using System.Net.Http;
@@ -81,7 +81,7 @@ public sealed class TTSManager
             _sawmill.Debug($"Use cached sound for '{text}' speech by '{speaker}' speaker");
             return Task.FromResult<byte[]?>(data);
         }
-        
+
         return _pendingRequests.GetOrAdd(cacheKey, (key) => GenerateAndCacheAudio(speaker, text, key));
     }
 
@@ -150,7 +150,7 @@ public sealed class TTSManager
             _pendingRequests.TryRemove(cacheKey, out _);
         }
     }
-    
+
     private static string ToQueryString(NameValueCollection nvc)
     {
         var array = (
