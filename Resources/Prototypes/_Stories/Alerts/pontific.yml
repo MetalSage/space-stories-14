@@ -1,0 +1,63 @@
+﻿- type: alert
+  id: STPontificFel
+  icons:
+    - sprite: /Textures/_Stories/Interface/Alerts/fel.rsi
+      state: fel0
+    - sprite: /Textures/_Stories/Interface/Alerts/fel.rsi
+      state: fel0
+    - sprite: /Textures/_Stories/Interface/Alerts/fel.rsi
+      state: fel1
+    - sprite: /Textures/_Stories/Interface/Alerts/fel.rsi
+      state: fel1
+    - sprite: /Textures/_Stories/Interface/Alerts/fel.rsi
+      state: fel2
+    - sprite: /Textures/_Stories/Interface/Alerts/fel.rsi
+      state: fel2
+    - sprite: /Textures/_Stories/Interface/Alerts/fel.rsi
+      state: fel3
+    - sprite: /Textures/_Stories/Interface/Alerts/fel.rsi
+      state: fel3
+    - sprite: /Textures/_Stories/Interface/Alerts/fel.rsi
+      state: fel4
+    - sprite: /Textures/_Stories/Interface/Alerts/fel.rsi
+      state: fel4
+    - sprite: /Textures/_Stories/Interface/Alerts/fel.rsi
+      state: fel5
+    - sprite: /Textures/_Stories/Interface/Alerts/fel.rsi
+      state: fel5
+    - sprite: /Textures/_Stories/Interface/Alerts/fel.rsi
+      state: fel6
+    - sprite: /Textures/_Stories/Interface/Alerts/fel.rsi
+      state: fel6
+    - sprite: /Textures/_Stories/Interface/Alerts/fel.rsi
+      state: fel7
+    - sprite: /Textures/_Stories/Interface/Alerts/fel.rsi
+      state: fel7
+    - sprite: /Textures/_Stories/Interface/Alerts/fel.rsi
+      state: fel8
+    - sprite: /Textures/_Stories/Interface/Alerts/fel.rsi
+      state: fel9
+    - sprite: /Textures/_Stories/Interface/Alerts/fel.rsi
+      state: fel10
+    - sprite: /Textures/_Stories/Interface/Alerts/fel.rsi
+      state: fel10
+  name: stories-alerts-pontific-fel-name
+  description: stories-alerts-pontific-fel-desc
+  minSeverity: 0
+  maxSeverity: 19
+
+- type: alert
+  id: STPontificPrayer
+  icons:
+    - sprite: /Textures/_Stories/Actions/pontific.rsi
+      state: prayer
+  name: stories-alerts-pontific-prayer-name
+  description: stories-alerts-pontific-prayer-desc
+
+- type: alert
+  id: STPontificFlame
+  icons:
+    - sprite: /Textures/_Stories/Actions/pontific.rsi
+      state: flame_swords
+  name: stories-alerts-pontific-flame-name
+  description: stories-alerts-pontific-flame-desc

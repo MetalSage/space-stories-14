@@ -1,0 +1,8 @@
+- type: forcePreset
+  id: STPontific
+  name: Понтифик
+  side: Light
+  volume: 290
+  alert: STPontificFel
+  maxVolume: 300
+  passiveVolume: 0.01

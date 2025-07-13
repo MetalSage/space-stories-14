@@ -11,3 +11,18 @@
   - BasicStationEventScheduler
   - MeteorSwarmScheduler
   - BasicRoundstartVariation
+
+- type: gamePreset
+  id: STPontific
+  alias:
+  - pontific
+  name: stories-pontific-title
+  description: stories-pontific-desc
+  showInVote: true
+  rules:
+  - STPontific
+  - SubGamemodesRule
+  - BasicStationEventScheduler
+  - MeteorSwarmScheduler
+  - SpaceTrafficControlEventScheduler
+  - BasicRoundstartVariation

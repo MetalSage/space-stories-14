@@ -1,0 +1,10 @@
+- type: antag
+  id: STPontific
+  name: stories-roles-antag-pontific-name
+  antagonist: true
+  setPreference: true
+  objective: stories-roles-antag-pontific-objective
+  guides: [ STPontific ]
+  requirements:
+  - !type:OverallPlaytimeRequirement
+    time: 72000 # 10h Stories-RoleTime

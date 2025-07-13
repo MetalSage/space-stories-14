@@ -1,0 +1,46 @@
+﻿- type: entity
+  id: STPontificKudzu
+  parent: FleshKudzu
+  name: desecrated lilies
+  description: Sinister and eerie plants, slowly filling the corridors and halls of the station. Their long, broken stems are covered in dark, almost black skin, and their petals are pale, with blood-colored spots and mysterious symbols, as if carved or absorbed by dark energy.
+  components:
+  - type: Sprite
+    drawdepth: FloorObjects
+    sprite: _Stories/Objects/Misc/pontific_kudzu.rsi
+    state: kudzu_11
+  - type: Reactive
+    groups:
+      Flammable: [ Touch ]
+      Extinguish: [ Touch ]
+    reactions:
+    - reagents: [ Holywater ]
+      methods: [ Touch ]
+      effects:
+      - !type:HealthChange
+        damage:
+          types:
+            Heat: 100
+  - type: SpeedModifierContacts
+    walkSpeedModifier: 0.2
+    sprintSpeedModifier: 0.2
+    ignoreWhitelist:
+      components:
+      - IgnoreKudzu
+      - Unholy
+  - type: DamageContacts
+    damage:
+      types:
+        Slash: 5
+    ignoreWhitelist:
+      components:
+      - Unholy
+  - type: Kudzu
+    growthTickChance: 1
+    spreadChance: 1
+    # Heals each time it manages to do a growth tick:
+    damageRecovery:
+      types:
+        Slash: -0.5
+        Heat: -1.0
+        Cold: -1.0
+        Blunt: -0.5 # Needs to be balanced (approx 3x) with vacuum damage to stall but not kill Kudzu

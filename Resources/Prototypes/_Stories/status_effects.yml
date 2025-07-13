@@ -1,2 +1,17 @@
 - type: statusEffect
+  id: STPontificPrayer
+  alert: STPontificPrayer
+  alwaysAllowed: true
+
+- type: statusEffect
+  id: STPontificFlame
+  alert: STPontificFlame
+  alwaysAllowed: true
+
+- type: statusEffect
   id: FrozeBullets
+
+- type: statusEffect
+  id: STHoly
+  alert: STHoly
+  alwaysAllowed: true

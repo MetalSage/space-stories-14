@@ -4,6 +4,9 @@ using Content.Shared.Hands.Components;
 using Content.Shared.Movement.Systems;
 using Content.Shared.Projectiles;
 using Content.Shared.Weapons.Ranged.Events;
+using Robust.Shared.Physics.Events;
+using Content.Shared.Interaction.Events;
+using Content.Shared.Damage;
 
 namespace Content.Shared.Hands.EntitySystems;
 
@@ -14,6 +17,12 @@ public abstract partial class SharedHandsSystem
         SubscribeLocalEvent<HandsComponent, GetEyeOffsetRelayedEvent>(RelayEvent);
         SubscribeLocalEvent<HandsComponent, GetEyePvsScaleRelayedEvent>(RelayEvent);
         SubscribeLocalEvent<HandsComponent, RefreshMovementSpeedModifiersEvent>(RelayEvent);
+
+        // Stories-Pontific-Start
+        SubscribeLocalEvent<HandsComponent, ContactInteractionEvent>(RelayEvent);
+        SubscribeLocalEvent<HandsComponent, StartCollideEvent>(RefRelayEvent);
+        SubscribeLocalEvent<HandsComponent, DamageModifyEvent>(RelayEvent);
+        // Stories-Pontific-End
 
         // By-ref events.
         SubscribeLocalEvent<HandsComponent, ExtinguishEvent>(RefRelayEvent);
