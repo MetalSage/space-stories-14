@@ -1,4 +1,16 @@
 ﻿- type: entity
+  id: STActioPontificToggleNightvision
+  name: Ночное зрение
+  description: Переключить своё ночное зрение.
+  components:
+  - type: InstantAction
+    useDelay: 5
+    icon:
+      sprite: _Stories/Actions/pontific.rsi
+      state: nightvision
+    event: !type:ToggleNightvisionEvent
+
+- type: entity
   id: STActionPontificPrayer
   name: Dark Prayer Service
   description: A ritual that summons dark forces into this world. Restores filth.

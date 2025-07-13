@@ -5,6 +5,7 @@
   description: A mysterious and sinister creature, its figure is distorted by ritual robes, covered with dark tattoos and mysterious symbols, radiating a sinister aura.
   components:
   - type: Nightvision
+    toggleAction: STActioPontificToggleNightvision
   - type: ComplexInteraction
   - type: Unholy
     resistanceCoefficient: 0.1
@@ -49,7 +50,7 @@
     angle: 0
     soundHit:
       collection: AlienClaw
-    animation: WeaponArcBite
+    animation: WeaponArcClaw
     damage:
       types:
         Slash: 15
