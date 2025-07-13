@@ -1,6 +1,7 @@
 using Content.Server.Bible.Components;
 using Content.Server.Ghost.Roles.Events;
 using Content.Server.Popups;
+using Content.Shared._Stories.Holy;
 using Content.Shared.ActionBlocker;
 using Content.Shared.Actions;
 using Content.Shared.Bible;
@@ -114,6 +115,11 @@ namespace Content.Server.Bible
 
                 return;
             }
+
+            // Stories-Pontific-Start
+            if (HasComp<UnholyComponent>(args.Target.Value))
+                return;
+            // Stories-Pontific-End
 
             // This only has a chance to fail if the target is not wearing anything on their head and is not a familiar.
             if (!_invSystem.TryGetSlotEntity(args.Target.Value, "head", out var _) && !HasComp<FamiliarComponent>(args.Target.Value))
