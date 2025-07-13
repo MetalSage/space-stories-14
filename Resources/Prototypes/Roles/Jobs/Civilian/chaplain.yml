@@ -16,10 +16,10 @@
   - !type:AddComponentSpecial
     components:
     - type: BibleUser #Lets them heal with bibles
-    # Stories - start
+    # Stories-Pontific-Start
     - type: Chaplain
     - type: Holy
-    # Stories - end
+    # Stories-Pontific-End
 
 - type: startingGear
   id: ChaplainGear

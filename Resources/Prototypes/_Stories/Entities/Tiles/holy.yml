@@ -22,6 +22,7 @@
   - type: Tag
     tags:
       - STHolyFloor
+      - SpreaderIgnore
       - HideContextMenu
   - type: Holy
     protectionImpulseSpeed: 5

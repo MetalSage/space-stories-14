@@ -112,10 +112,10 @@
   - !type:AddComponentSpecial
     components:
     - type: BibleUser #Lets them heal with bibles
-    # Stories - start
+    # Stories-Pontific-Start
     - type: Chaplain
     - type: Holy
-    # Stories - end
+    # Stories-Pontific-End
   - !type:AddImplantSpecial
     implants: [ MindShieldImplant, DeathRattleImplantCentcomm ]
 
@@ -144,10 +144,10 @@
     - Lantern
     - Bible
     - CrowbarRed
-    - STChaplainCross # Stories
-    - STChaplainCross # Stories
-    - STChaplainCross # Stories
-    - STChaplainCross # Stories
+    - STChaplainCross # Stories-Pontific
+    - STChaplainCross # Stories-Pontific
+    - STChaplainCross # Stories-Pontific
+    - STChaplainCross # Stories-Pontific
     - Lighter
 
 - type: startingGear
@@ -175,10 +175,10 @@
     - Lantern
     - Bible
     - CrowbarRed
-    - STChaplainCross # Stories
-    - STChaplainCross # Stories
-    - STChaplainCross # Stories
-    - STChaplainCross # Stories
+    - STChaplainCross # Stories-Pontific
+    - STChaplainCross # Stories-Pontific
+    - STChaplainCross # Stories-Pontific
+    - STChaplainCross # Stories-Pontific
     - Lighter
 
 # Engineer

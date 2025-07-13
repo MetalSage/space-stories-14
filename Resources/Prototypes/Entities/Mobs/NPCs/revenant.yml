@@ -6,9 +6,11 @@
   name: revenant
   description: A spooky ghostie.
   components:
+  # Stories-Pontific-Start
   - type: Unholy
     resistanceCoefficient: 0.5
     ignoreProtectionImpulse: false
+  # Stories-Pontific-End
     detectable: true
   - type: Input
     context: "ghost"

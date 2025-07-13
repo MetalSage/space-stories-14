@@ -33,7 +33,7 @@ namespace Content.Server.Forensics
 
         public override void Initialize()
         {
-            SubscribeLocalEvent<FingerprintComponent, ContactInteractionEvent>(OnInteract); // Stories: По логике, ничего не должно сломаться после замены HandsComponent, ведь метод обращается к FingerprintComponent
+            SubscribeLocalEvent<FingerprintComponent, ContactInteractionEvent>(OnInteract); // Stories-Pontific: По логике, ничего не должно сломаться после замены HandsComponent, ведь метод обращается к FingerprintComponent
             SubscribeLocalEvent<FingerprintComponent, MapInitEvent>(OnFingerprintInit, after: new[] { typeof(BloodstreamSystem) });
             // The solution entities are spawned on MapInit as well, so we have to wait for that to be able to set the DNA in the bloodstream correctly without ResolveSolution failing
             SubscribeLocalEvent<DnaComponent, MapInitEvent>(OnDNAInit, after: new[] { typeof(BloodstreamSystem) });
@@ -61,7 +61,7 @@ namespace Content.Server.Forensics
             }
         }
 
-        private void OnInteract(EntityUid uid, FingerprintComponent component, ContactInteractionEvent args) // Stories
+        private void OnInteract(EntityUid uid, FingerprintComponent component, ContactInteractionEvent args) // Stories-Pontific
         {
             ApplyEvidence(uid, args.Other);
         }

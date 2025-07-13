@@ -1,10 +1,10 @@
 - type: entity
   name: bible
   description: New Interstellar Version 2340.
-  parent: [ BaseStorageItem, STBaseHolyItem ] # Stories
+  parent: [ BaseStorageItem, STBaseHolyItem ] # Stories-Pontific
   id: Bible
   components:
-  # Stories - start
+  # Stories-Pontific-Start
   - type: GuideHelp
     guides:
     - STChaplain
@@ -14,7 +14,7 @@
     delays:
       STHoly:
         length: 0
-  # Stories - end
+  # Stories-Pontific-End
   - type: Bible
     damage:
       groups:

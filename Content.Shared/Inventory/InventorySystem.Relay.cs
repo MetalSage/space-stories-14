@@ -57,9 +57,10 @@ public partial class InventorySystem
         // Corvax-TTS
         SubscribeLocalEvent<InventoryComponent, TransformSpeakerVoiceEvent>(RelayInventoryEvent);
 
-        // Stories
+        // Stories-Pontific-Start
         SubscribeLocalEvent<InventoryComponent, ContactInteractionEvent>(RelayInventoryEvent);
         SubscribeLocalEvent<InventoryComponent, StartCollideEvent>(RelayStartCollideEvent);
+        // Stories-Pontific-End
 
         // by-ref events
         SubscribeLocalEvent<InventoryComponent, RefreshFrictionModifiersEvent>(RefRelayInventoryEvent);
@@ -96,7 +97,7 @@ public partial class InventorySystem
 
     }
 
-    // Stories - start
+    // Stories-Pontific-Start
     public void RelayStartCollideEvent(Entity<InventoryComponent> inventory, ref StartCollideEvent args)
     {
         // this copies the by-ref event if it is a struct
@@ -110,7 +111,7 @@ public partial class InventorySystem
         // and now we copy it back
         args = ev.Args;
     }
-    // Stories - end
+    // Stories-Pontific-End
 
     protected void RefRelayInventoryEvent<T>(EntityUid uid, InventoryComponent component, ref T args) where T : IInventoryRelayEvent
     {

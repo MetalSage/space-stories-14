@@ -55,7 +55,6 @@
       - !type:PlaySoundBehavior
         sound:
           collection: MeatLaserImpact
-  - type: Hands
   - type: Bloodstream
     bloodMaxVolume: 25
     bloodReagent: DemonsBlood
@@ -173,7 +172,7 @@
     angle: 0
     soundHit:
       collection: AlienClaw
-    animation: WeaponArcBite
+    animation: WeaponArcClaw
     damage:
       types:
         Slash: 15

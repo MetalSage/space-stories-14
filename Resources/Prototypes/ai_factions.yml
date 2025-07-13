@@ -9,7 +9,7 @@
   - Revolutionary
   - AllHostile
   - Wizard
-  - STUnholy # Stories
+  - STUnholy # Stories-Pontific
 
 - type: npcFaction
   id: NanoTrasen
@@ -24,7 +24,7 @@
   - Wizard
   - Xenoborg
   - Shadowling # Stories-Shadowling
-  - STUnholy # Stories
+  - STUnholy # Stories-Pontific
 
 - type: npcFaction
   id: Mouse
@@ -46,7 +46,7 @@
   - AllHostile
   - Wizard
   - Dragon
-  - STUnholy # Stories
+  - STUnholy # Stories-Pontific
 
 - type: npcFaction
   id: SimpleHostile
@@ -62,7 +62,7 @@
   - AllHostile
   - Wizard
   - Xenoborg
-  - STUnholy # Stories
+  - STUnholy # Stories-Pontific
 
 - type: npcFaction
   id: SimpleNeutral
@@ -80,7 +80,7 @@
   - Wizard
   - Xenoborg
   - Shadowling # Stories-Shadowling
-  - STUnholy # Stories
+  - STUnholy # Stories-Pontific
 
 - type: npcFaction
   id: Xeno
@@ -95,7 +95,7 @@
   - Wizard
   - Dragon
   - Xenoborg
-  - STUnholy # Stories
+  - STUnholy # Stories-Pontific
 
 - type: npcFaction
   id: Zombie
@@ -123,7 +123,7 @@
   - AllHostile
   - Wizard
   - Xenoborg
-  - STUnholy # Stories
+  - STUnholy # Stories-Pontific
 
 - type: npcFaction
   id: AllHostile
@@ -141,7 +141,7 @@
   - Revolutionary
   - Wizard
   - Xenoborg
-  - STUnholy # Stories
+  - STUnholy # Stories-Pontific
 
 - type: npcFaction
   id: Wizard
@@ -159,7 +159,7 @@
   - Revolutionary
   - AllHostile
   - Xenoborg
-  - STUnholy # Stories
+  - STUnholy # Stories-Pontific
 
 - type: npcFaction
   id: Xenoborg
@@ -176,4 +176,4 @@
   # cause they are hostile to them
   - SimpleHostile
   - AllHostile
-  - STUnholy # Stories
+  - STUnholy # Stories-Pontific

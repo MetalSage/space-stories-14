@@ -2151,7 +2151,7 @@
 
 - type: entity
   name: holymelon
-  parent: [FoodProduceBase, ItemHeftyBase, STBaseHolyItem] # Stories
+  parent: [FoodProduceBase, ItemHeftyBase, STBaseHolyItem] # Stories-Pontific
   id: FoodHolymelon
   description: The water within this melon has been blessed by some deity that's particularly fond of watermelon.
   components:
@@ -2215,7 +2215,7 @@
 
 - type: entity
   name: holymelon slice
-  parent: [ ProduceSliceBase, STBaseHolyItem ] # Stories
+  parent: [ ProduceSliceBase, STBaseHolyItem ] # Stories-Pontific
   id: FoodHolymelonSlice
   description: Juicy golden and red slice.
   components:

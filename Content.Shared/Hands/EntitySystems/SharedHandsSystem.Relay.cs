@@ -18,10 +18,11 @@ public abstract partial class SharedHandsSystem
         SubscribeLocalEvent<HandsComponent, GetEyePvsScaleRelayedEvent>(RelayEvent);
         SubscribeLocalEvent<HandsComponent, RefreshMovementSpeedModifiersEvent>(RelayEvent);
 
-        // Stories
+        // Stories-Pontific-Start
         SubscribeLocalEvent<HandsComponent, ContactInteractionEvent>(RelayEvent);
         SubscribeLocalEvent<HandsComponent, StartCollideEvent>(RefRelayEvent);
         SubscribeLocalEvent<HandsComponent, DamageModifyEvent>(RelayEvent);
+        // Stories-Pontific-End
 
         // By-ref events.
         SubscribeLocalEvent<HandsComponent, ExtinguishEvent>(RefRelayEvent);

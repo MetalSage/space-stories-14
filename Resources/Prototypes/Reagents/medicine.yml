@@ -1123,25 +1123,27 @@
       methods: [ Touch ]
       effects:
       - !type:ExtinguishReaction
-      - !type:BlessReaction # STORIES
+      - !type:BlessReaction # Stories-Pontific
     Acidic:
       methods: [ Touch ]
       effects:
-      - !type:BlessReaction # STORIES
+      - !type:BlessReaction # Stories-Pontific
       - !type:HealthChange
         scaleByQuantity: true
         ignoreResistances: false
         damage:
           types:
-            Holy: 2.5 # Stories
+            Holy: 2.5 # Stories-Pontific
   plantMetabolism:
   - !type:PlantAdjustWater
     amount: 1
   tileReactions:
+  # Stories-Pontific-Start
   - !type:CreateEntityTileReaction
     entity: STHolyFloorEntity
     maxOnTileWhitelist:
       tags: [ STHolyFloor ]
+  # Stories-Pontific-End
   - !type:ExtinguishTileReaction { }
 
 - type: reagent

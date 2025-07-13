@@ -25,12 +25,12 @@
     - category: Thirst
     - alertType: Magboots
     - alertType: Pacified
-    # Stories - start
+    # Stories-Pontific-Start
     - alertType: STPontificFel
     - alertType: STPontificPrayer
     - alertType: STPontificFlame
     - alertType: STHoly
-    # Stories - end
+    # Stories-Pontific-End
 
 - type: entity
   id: AlertSpriteView

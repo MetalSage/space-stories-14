@@ -1018,7 +1018,7 @@
     pocket1: PlushieSharkGrey
     pocket2: FoodSnackEnergy
   inhand:
-  - STChaplainCross # Stories
+  - STChaplainCross # Stories-Pontific
 
 - type: startingGear
   id: VisitorChaplainAlt
@@ -1033,7 +1033,7 @@
     pocket1: PlushiePenguin
     pocket2: DrinkCoconutWaterCarton
   inhand:
-  - STChaplainCross # Stories
+  - STChaplainCross # Stories-Pontific
 
 - type: startingGear
   id: VisitorChef
