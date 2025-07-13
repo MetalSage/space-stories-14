@@ -35,9 +35,5 @@ public sealed partial class TargetingTeleporterComponent : Component
     public string ExitPortalPrototype = "STBluspacePortalExit";
 
     [DataField("newPortalSound")]
-    public SoundSpecifier NewPortalSound =
-        new SoundPathSpecifier("/Audio/Machines/high_tech_confirm.ogg")
-        {
-            Params = AudioParams.Default.WithVolume(-2f)
-        };
+    public SoundSpecifier? NewPortalSound = null;
 }
