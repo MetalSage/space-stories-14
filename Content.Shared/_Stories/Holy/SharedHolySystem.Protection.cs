@@ -123,7 +123,7 @@ public abstract partial class SharedHolySystem
         if (!TryComp<UnholyComponent>(origin, out var unholy))
             return;
 
-        var coefficient = unholy.ResistanceCoefficient;
+        var coefficient = 1 + (1 - unholy.ResistanceCoefficient);
 
         // У меня есть некоторые сомнения насчет кода ниже
 
