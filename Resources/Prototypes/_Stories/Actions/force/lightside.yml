@@ -1,26 +1,29 @@
 - type: entity
+  parent: BaseAction
   id: ActionCreateProtectiveBubble
   name: Защитный пузырь
   description: Создайте защитный телекинетический кокон, который отразит любые лазеры, сильно уменьшит урон от пуль и защитит от взрывов и давления. Почти не защищает от ударов ближнего боя.
   categories: [ HideSpawnMenu ]
   components:
-  - type: InstantAction
+  - type: Action
     useDelay: 300
     icon:
       sprite: _Stories/Actions/force.rsi
       state: shield
     itemIconStyle: NoItem
+  - type: InstantAction    
     event: !type:InstantForceUserActionEvent
       volume: 100
       event: !type:CreateProtectiveBubbleEvent {}
 
 - type: entity
+  parent: BaseAction
   id: ActionGuardianForceWall
   name: Барьер Силы
   description: Создайте нерушимый барьер 3x1 в направлении вашего взгляда, который остановит ваших врагов. Вы можете проходить сквозь свой барьер.
   categories: [ HideSpawnMenu ]
   components:
-  - type: InstantAction
+  - type: Action
     useDelay: 10
     priority: -17
     itemIconStyle: BigAction
@@ -29,6 +32,7 @@
     icon:
       sprite: _Stories/Actions/force.rsi
       state: forcewall
+  - type: InstantAction    
     event: !type:InstantForceUserActionEvent
       volume: 100
       event: !type:InstantSpawnSpellEvent
@@ -36,18 +40,20 @@
         posData: !type:TargetInFront
 
 - type: entity
+  parent: BaseAction
   id: ActionHibernationTrance
   name: Гибернационный транс
   description: Вы излечите множество своих ранений, восстановите жажду и голод, остановите кровотечение, но будете спать на протяжении 2 минут. Вы можете войти в транс даже в критическом состоянии.
   categories: [ HideSpawnMenu ]
   components:
-  - type: InstantAction
+  - type: Action
     useDelay: 180
     icon:
       sprite: _Stories/Actions/force.rsi
       state: trance
     itemIconStyle: NoItem
     checkCanInteract: false
+  - type: InstantAction    
     event: !type:InstantForceUserActionEvent
       volume: 100
       event: !type:InjectReagentsEvent
@@ -68,25 +74,25 @@
             Quantity: 30
 
 - type: entity
+  parent: BaseAction
   id: ActionHealingTouch
   name: Целебное прикосновение
   description: Излечивает легкие травмы. Можно использовать на себе.
   categories: [ HideSpawnMenu ]
   components:
-  - type: EntityTargetAction
+  - type: Action
     useDelay: 60
-    range: 1
     itemIconStyle: BigAction
+    icon:
+      sprite: _Stories/Actions/force.rsi
+      state: healingtouch
+    sound: !type:SoundPathSpecifier
+      path: /Audio/Items/Medical/ointment_begin.ogg
+  - type: EntityTargetAction
     whitelist:
       components:
       - Body
     canTargetSelf: true
-    interactOnMiss: false
-    sound: !type:SoundPathSpecifier
-      path: /Audio/Items/Medical/ointment_begin.ogg
-    icon:
-      sprite: _Stories/Actions/force.rsi
-      state: healingtouch
     event: !type:DoAfterTargetEvent
       needHand: true
       delay: 2
@@ -100,23 +106,29 @@
             reagents:
             - ReagentId: Omnizine
               Quantity: 7.5
+  - type: TargetAction
+    range: 1
+    interactOnMiss: false
 
 - type: entity
+  parent: BaseAction
   id: ActionPushBall
   name: Силовой толчок
   description: Создайте сильный толчок, который может сбить человека с ног. Полностью ослабевает, пролетев 4 тайла.
   components:
-  - type: WorldTargetAction
+  - type: Action
     useDelay: 10
     itemIconStyle: BigAction
-    checkCanAccess: false
-    range: 60
-    sound: !type:SoundPathSpecifier
-      path: /Audio/Magic/forcewall.ogg
     icon:
       sprite: _Stories/Actions/force.rsi
       state: push
+    sound: !type:SoundPathSpecifier
+      path: /Audio/Magic/forcewall.ogg
+  - type: WorldTargetAction
     event: !type:WorldTargetForceUserActionEvent
       volume: 50
       event: !type:ProjectileSpellEvent
         prototype: GuardianPushBall
+  - type: TargetAction
+    range: 60
+    checkCanAccess: false

@@ -216,6 +216,22 @@ public sealed partial class SsdIconPrototype : StatusIconPrototype, IInheritingP
     public bool Abstract { get; private set; }
 }
 
+/// <summary>
+/// StatusIcons for reagent indication
+/// </summary>
+[Prototype]
+public sealed partial class ReagentIconPrototype : StatusIconPrototype, IInheritingPrototype
+{
+    /// <inheritdoc />
+    [ParentDataField(typeof(AbstractPrototypeIdArraySerializer<ReagentIconPrototype>))]
+    public string[]? Parents { get; private set; }
+
+    /// <inheritdoc />
+    [NeverPushInheritance]
+    [AbstractDataField]
+    public bool Abstract { get; private set; }
+}
+
 [Serializable, NetSerializable]
 public enum StatusIconLocationPreference : byte
 {

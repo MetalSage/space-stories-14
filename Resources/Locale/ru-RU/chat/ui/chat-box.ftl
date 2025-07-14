@@ -29,7 +29,6 @@ hud-chatbox-channel-Server = Сервер
 hud-chatbox-channel-Visual = Визуальный
 hud-chatbox-channel-Damage = Повреждения
 hud-chatbox-channel-Unspecified = Неопределённый
-
 # Stories-Highlights (ленивый Метал...)
 hud-chatbox-highlights = Выделенные слова:
 hud-chatbox-highlights-button = Отправить

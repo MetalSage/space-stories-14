@@ -24,6 +24,7 @@
     - id: SpiderClownSpawn
     - id: SpiderSpawn
     - id: VentClog
+    - id: STJobDistributionError # Stories
 
 - type: entityTable
   id: BasicAntagEventsTable
@@ -39,8 +40,12 @@
     - id: ZombieOutbreak
     - id: LoneOpsSpawn
     - id: DerelictCyborgSpawn
-    #- id: WizardSpawn # Stories
-    - id: SpafMigration # Stories
+    # Stories Start
+    #- id: WizardSpawn
+    - id: SpafMigration
+    - id: InquisitorSpawn
+    - id: STCorpiumSpawn
+    # Stories End
 
 - type: entity
   id: BaseStationEvent
@@ -551,7 +556,7 @@
     earliestStart: 35
     weight: 7.5
     minimumPlayers: 25
-    duration: 1
+    duration: null # LoneOpsSpawn needs an infinite duration so that it inherits the NukeOpsRule things of an actually appropriate end scrreen (not always "Neutral outcome!") and... ending the game if the station is nuked.
   - type: RuleGrids
   - type: LoadMapRule
     gridPath: /Maps/Shuttles/ShuttleEvent/striker.yml

@@ -1,0 +1,24 @@
+- type: entity
+  name: medipen-vaccine against corpium
+  parent: ChemicalMedipen
+  id: STAntiCorpiumMedipen
+  description: Medipen with corpium vaccine.
+  components:
+  - type: Sprite
+    sprite: Objects/Specific/Medical/medipen.rsi
+    layers:
+    - state: microstimpen
+      map: ["enum.SolutionContainerLayers.Fill"]
+  - type: SolutionContainerVisuals
+    maxFillLevels: 1
+    changeColor: false
+    emptySpriteName: microstimpen_empty
+  - type: SolutionContainerManager
+    solutions:
+      pen:
+        maxVol: 15
+        reagents:
+        - ReagentId: STAntiCorpium
+          Quantity: 15
+  - type: Tag
+    tags: []

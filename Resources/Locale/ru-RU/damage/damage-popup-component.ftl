@@ -6,5 +6,4 @@
         [hit] Удар
        *[other] Неизвестно
     }
-
 damage-popup-component-switched = Целевой количество для ввода: { -damage-popup-component-type(setting: $setting) }

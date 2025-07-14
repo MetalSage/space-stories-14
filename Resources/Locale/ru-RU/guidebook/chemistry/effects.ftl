@@ -77,6 +77,21 @@ reagent-effect-guidebook-health-change =
                *[both] изменяют здоровье на
             }
     } { $changes }
+reagent-effect-guidebook-even-health-change =
+    { $chance ->
+        [1]
+            { $healsordeals ->
+                [heals] Равномерно излечивает
+                [deals] Равномерно наносит
+               *[both] Равномерно изменяет здоровье на
+            }
+       *[other]
+            { $healsordeals ->
+                [heals] равномерно излечивают
+                [deals] равномерно наносят
+               *[both] равномерно изменяют здоровье на
+            }
+    } { $changes }
 reagent-effect-guidebook-status-effect =
     { $type ->
         [add]
@@ -225,6 +240,11 @@ reagent-effect-guidebook-electrocute =
         [1] Бьёт током
        *[other] бьют током
     } употребившего в течении { NATURALFIXED($time, 3) }
+reagent-effect-guidebook-emote =
+    { $chance ->
+        [1] Заставит
+       *[other] заставляет
+    } метаболизатора [bold][color=white]{ $emote }[/color][/bold]
 reagent-effect-guidebook-extinguish-reaction =
     { $chance ->
         [1] Гасит
@@ -337,8 +357,8 @@ reagent-effect-guidebook-add-to-solution-reaction =
 reagent-effect-guidebook-artifact-unlock =
     { $chance ->
         [1] Помогает
-        *[other] помогают
-        } разблокируйте инопланетный артефакт.
+       *[other] помогают
+    } разблокируйте инопланетный артефакт.
 reagent-effect-guidebook-plant-attribute =
     { $chance ->
         [1] Изменяет

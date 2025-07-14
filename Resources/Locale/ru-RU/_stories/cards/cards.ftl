@@ -9,5 +9,3 @@ card-flip-face = Перевернуть лицевой стороной
 card-flip-back = Перевернуть задней стороной
 card-flip-verb = Перевернуть
 card-flip-success = Перевёрнуто!
-ent-STStrippingHiddenEntityCard = скрытая карта
-    .desc = Вы не можете подсмотреть, какая карта на руках.

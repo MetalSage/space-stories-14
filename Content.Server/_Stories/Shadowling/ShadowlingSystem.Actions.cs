@@ -232,7 +232,7 @@ public sealed partial class ShadowlingSystem
         if (args.Handled)
             return;
 
-        _flash.Flash(args.Target, uid, null, 15000, 0.8f, false); // FIXME: Hardcode
+        _flash.Flash(args.Target, uid, null, TimeSpan.FromMilliseconds(15000), 0.8f, false); // FIXME: Hardcode
         _stun.TryStun(args.Target, TimeSpan.FromSeconds(5), false); // FIXME: Hardcode
 
         args.Handled = true;

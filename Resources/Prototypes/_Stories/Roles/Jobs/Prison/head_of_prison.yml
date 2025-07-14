@@ -43,3 +43,10 @@
     eyes: PRISONClothingEyesGlasses
     belt: PRISONClothingBeltSheathFilled
 
+- type: chameleonOutfit
+  id: PRISONHeadOfPrisonChameleonOutfit
+  job: PRISONHeadOfPrison
+  hasMindShield: true
+  equipment:
+    mask: ClothingMaskGasSecurity
+    neck: Dinkystar

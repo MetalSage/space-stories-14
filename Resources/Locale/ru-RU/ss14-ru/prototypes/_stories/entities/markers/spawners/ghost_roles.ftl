@@ -4,3 +4,6 @@ ent-SpawnPointInquisitor = { ent-BaseAntagSpawner }
 ent-SpawnPointGhostSpaf = { ent-BaseAntagSpawner }
     .suffix = S.P.A.F.
     .desc = { ent-MarkerBase.desc }
+ent-STSpawnPointGhostCorpium = { ent-BaseAntagSpawner }
+    .suffix = Корпиум
+    .desc = { ent-MarkerBase.desc }

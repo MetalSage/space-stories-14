@@ -1,0 +1,129 @@
+- type: reagent
+  id: STCorpium
+  name: stories-reagent-name-corpium
+  desc: stories-reagent-desc-corpium
+  group: Biological
+  flavor: metallic
+  color: "#8000FF"
+  worksOnTheDead: false
+  physicalDesc: reagent-physical-desc-ferrous
+  metabolisms:
+    Poison:
+      metabolismRate: 1.0
+      effects:
+      - !type:AdjustReagent
+        reagent: STCorpium
+        amount: 1.1
+        conditions:
+        - !type:ReagentThreshold
+          reagent: STCorpium
+          max: 58
+      - !type:AdjustTemperature
+        amount: 6000
+        conditions:
+        - !type:ReagentThreshold
+          reagent: STCorpium
+          min: 31
+      - !type:PopupMessage
+        type: Local
+        visualType: MediumCaution
+        messages: [ "stories-corpium-effect-feel-bad" ]
+        probability: 0.1
+        conditions:
+        - !type:ReagentThreshold
+          reagent: STCorpium
+          min: 31
+          max: 46
+      - !type:Emote
+        emote: Cough
+        showInChat: true
+        probability: 0.1
+        conditions:
+        - !type:ReagentThreshold
+          reagent: STCorpium
+          min: 31
+      - !type:PopupMessage
+        type: Local
+        visualType: LargeCaution
+        messages: [ "stories-corpium-effect-feel-very-bad" ]
+        probability: 0.1
+        conditions:
+        - !type:ReagentThreshold
+          reagent: STCorpium
+          min: 46
+          max: 58
+      - !type:AdjustReagent
+        reagent: STCorpium
+        amount: 2.1
+        conditions:
+        - !type:ReagentThreshold
+          reagent: STCorpium
+          min: 58
+      - !type:Electrocute
+        electrocuteDamageScale: 0
+        conditions:
+        - !type:ReagentThreshold
+          reagent: STCorpium
+          min: 58
+          max: 60.5
+      - !type:Emote
+        emote: Scream
+        showInChat: true
+        probability: 0.9
+        conditions:
+        - !type:ReagentThreshold
+          reagent: STCorpium
+          min: 58
+      - !type:Paralyze
+        conditions:
+        - !type:ReagentThreshold
+          reagent: STCorpium
+          min: 60.5
+      - !type:HealthChange
+        damage:
+          groups:
+            Airloss: 200
+        conditions:
+        - !type:ReagentThreshold
+          reagent: STCorpium
+          min: 61
+      - !type:CreateEntityReactionEffect
+        entity: STMobCorpium
+        number: 3
+        conditions:
+        - !type:ReagentThreshold
+          reagent: STCorpium
+          min: 61
+      - !type:PopupMessage
+        type: Pvs
+        visualType: LargeCaution
+        messages: [ "stories-corpium-effect-spawn-entities" ]
+        probability: 1.0
+        conditions:
+        - !type:ReagentThreshold
+          reagent: STCorpium
+          min: 61
+
+- type: reagent
+  id: STAntiCorpium
+  name: stories-reagent-name-anti-corpium
+  desc: stories-reagent-desc-anti-corpium
+  group: Biological
+  flavor: metallic
+  color: "#800000"
+  physicalDesc: reagent-physical-desc-ferrous
+  worksOnTheDead: true
+  metabolisms:
+    Poison:
+      metabolismRate: 1
+      effects:
+      - !type:AdjustReagent
+        reagent: STAntiCorpium
+        amount: 2
+        conditions:
+        - !type:ReagentThreshold
+          reagent: STAntiCorpium
+          max: 50
+      - !type:AdjustReagent
+        reagent: STCorpium
+        amount: -100

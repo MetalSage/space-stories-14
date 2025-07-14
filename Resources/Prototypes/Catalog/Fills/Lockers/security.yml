@@ -5,6 +5,7 @@
   components:
   - type: StorageFill
     contents:
+      - id: ClothingHandsKnuckleDustersStun # Stories
       - id: FlashlightSeclite
       - id: WeaponDisabler
       - id: ClothingBeltSecurityFilled
@@ -31,6 +32,7 @@
   components:
   - type: StorageFill
     contents:
+      - id: ClothingHandsKnuckleDustersStun # Stories
       - id: FlashlightSeclite
       - id: WeaponDisabler
       - id: ClothingBeltSecurityFilled

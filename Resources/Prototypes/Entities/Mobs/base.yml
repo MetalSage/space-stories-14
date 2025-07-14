@@ -108,6 +108,8 @@
     - Shock
     - Cold
     - Caustic
+    - Asphyxiation
+    - Radiation
   - type: DamageOnHighSpeedImpact
     damage:
       types:
@@ -239,3 +241,14 @@
     bloodlossHealDamage:
       types:
         Bloodloss: -1
+  # Stories-Corpium-Start
+  - type: StatusIcon
+  - type: ReagentStatusIcon
+    allowedStates:
+    - Alive
+    - Critical
+    solution: chemicals
+    reagent:
+      ReagentId: STCorpium
+    statusIcon: STCorpiumInfected
+  # Stories-Corpium-End
