@@ -20,7 +20,7 @@ public sealed class ParadoxCloneRuleSystem : GameRuleSystem<ParadoxCloneRuleComp
     [Dependency] private readonly IRobustRandom _random = default!;
     [Dependency] private readonly CloningSystem _cloning = default!;
     [Dependency] private readonly SuitSensorSystem _sensor = default!;
-    [Dependency] private readonly SharedForceUserSystem _forceUserSystem = default!;
+    [Dependency] private readonly SharedForceUserSystem _forceUserSystem = default!; // Stories
 
 
     public override void Initialize()
