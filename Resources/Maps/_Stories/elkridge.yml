@@ -1,10 +1,10 @@
 meta:
   format: 7
   category: Map
-  engineVersion: 262.0.0
+  engineVersion: 260.2.0
   forkId: ""
   forkVersion: ""
-  time: 07/06/2025 14:48:19
+  time: 07/11/2025 09:26:51
   entityCount: 17584
 maps:
 - 1
@@ -54,7 +54,9 @@ entities:
     - type: Transform
     - type: Map
       mapPaused: True
+    - type: PhysicsMap
     - type: GridTree
+    - type: MovedGrids
     - type: Broadphase
     - type: OccluderTree
   - uid: 2
@@ -10938,34 +10940,55 @@ entities:
     components:
     - type: Transform
       parent: 4
+    - type: InstantAction
+      originalIconColor: '#FFFFFFFF'
+      container: 4
   - uid: 7
     components:
     - type: Transform
       parent: 6
+    - type: InstantAction
+      originalIconColor: '#FFFFFFFF'
+      container: 6
   - uid: 10
     components:
     - type: Transform
       parent: 9
+    - type: InstantAction
+      originalIconColor: '#FFFFFFFF'
+      container: 9
   - uid: 13
     components:
     - type: Transform
       parent: 12
+    - type: InstantAction
+      originalIconColor: '#FFFFFFFF'
+      container: 12
 - proto: ActionToggleJetpack
   entities:
   - uid: 8
     components:
     - type: Transform
       parent: 6
+    - type: InstantAction
+      originalIconColor: '#FFFFFFFF'
+      container: 6
   - uid: 11
     components:
     - type: Transform
       parent: 9
+    - type: InstantAction
+      originalIconColor: '#FFFFFFFF'
+      container: 9
 - proto: ActionToggleLight
   entities:
   - uid: 15
     components:
     - type: Transform
       parent: 14
+    - type: InstantAction
+      originalIconColor: '#FFFFFFFF'
+      container: 14
 - proto: AirAlarm
   entities:
   - uid: 16
@@ -14500,7 +14523,7 @@ entities:
       pos: 47.5,5.5
       parent: 2
     - type: Door
-      secondsUntilStateChange: -464382.34
+      secondsUntilStateChange: -464428.78
       state: Opening
     - type: DeviceLinkSource
       lastSignals:
@@ -41702,6 +41725,25 @@ entities:
     - type: Transform
       pos: -13.084935,-44.300785
       parent: 2
+- proto: CapacitorStockPart
+  entities:
+  - uid: 5546
+    components:
+    - type: Transform
+      pos: -19.233772,25.963198
+      parent: 2
+  - uid: 5547
+    components:
+    - type: Transform
+      pos: 32.166813,-17.551153
+      parent: 2
+    - type: Stack
+      count: 2
+  - uid: 5548
+    components:
+    - type: Transform
+      pos: 27.703878,37.44894
+      parent: 2
 - proto: CaptainIDCard
   entities:
   - uid: 5549
@@ -48388,6 +48430,20 @@ entities:
     - type: Transform
       pos: 34.637638,-22.083765
       parent: 2
+    - type: HandheldLight
+      toggleActionEntity: 15
+    - type: ContainerContainer
+      containers:
+        cell_slot: !type:ContainerSlot
+          showEnts: False
+          occludes: True
+          ent: null
+        actions: !type:Container
+          showEnts: False
+          occludes: True
+          ents:
+          - 15
+    - type: ActionsContainer
   - uid: 6774
     components:
     - type: Transform
@@ -49287,6 +49343,13 @@ entities:
       rot: 3.141592653589793 rad
       pos: 24.5,45.5
       parent: 2
+- proto: ComputerSalvageJobBoard
+  entities:
+  - uid: 6810
+    components:
+    - type: Transform
+      pos: 21.5,40.5
+      parent: 2
 - proto: ComputerShuttleCargo
   entities:
   - uid: 6882
@@ -49298,11 +49361,6 @@ entities:
     components:
     - type: Transform
       pos: -37.5,-5.5
-      parent: 2
-  - uid: 6884
-    components:
-    - type: Transform
-      pos: 14.5,39.5
       parent: 2
   - uid: 6885
     components:
@@ -56031,11 +56089,27 @@ entities:
     - type: Transform
       pos: 14.614994,-25.351982
       parent: 2
+    - type: GasTank
+      toggleActionEntity: 5
+    - type: ActionsContainer
+    - type: ContainerContainer
+      containers:
+        actions: !type:Container
+          ents:
+          - 5
   - uid: 12
     components:
     - type: Transform
       pos: -42.005676,-47.54647
       parent: 2
+    - type: GasTank
+      toggleActionEntity: 13
+    - type: ActionsContainer
+    - type: ContainerContainer
+      containers:
+        actions: !type:Container
+          ents:
+          - 13
 - proto: EmergencyLight
   entities:
   - uid: 8034
@@ -84114,11 +84188,33 @@ entities:
     - type: Transform
       pos: 21.593834,-14.542587
       parent: 2
+    - type: GasTank
+      toggleActionEntity: 7
+    - type: Jetpack
+      toggleActionEntity: 8
+    - type: ActionsContainer
+    - type: ContainerContainer
+      containers:
+        actions: !type:Container
+          ents:
+          - 8
+          - 7
   - uid: 9
     components:
     - type: Transform
       pos: 21.578209,-14.323837
       parent: 2
+    - type: GasTank
+      toggleActionEntity: 10
+    - type: Jetpack
+      toggleActionEntity: 11
+    - type: ActionsContainer
+    - type: ContainerContainer
+      containers:
+        actions: !type:Container
+          ents:
+          - 11
+          - 10
 - proto: Joint
   entities:
   - uid: 11809
@@ -86199,6 +86295,13 @@ entities:
     - type: Transform
       pos: 13.618376,-18.105558
       parent: 2
+- proto: MatterBinStockPart
+  entities:
+  - uid: 12065
+    components:
+    - type: Transform
+      pos: -13.066984,24.89437
+      parent: 2
 - proto: Mattress
   entities:
   - uid: 12066
@@ -86340,30 +86443,6 @@ entities:
     components:
     - type: Transform
       pos: 35.608074,7.556761
-      parent: 2
-- proto: MicroManipulatorStockPart
-  entities:
-  - uid: 5546
-    components:
-    - type: Transform
-      pos: -19.233772,25.963198
-      parent: 2
-  - uid: 5547
-    components:
-    - type: Transform
-      pos: 32.166813,-17.551153
-      parent: 2
-    - type: Stack
-      count: 2
-  - uid: 5548
-    components:
-    - type: Transform
-      pos: 27.703878,37.44894
-      parent: 2
-  - uid: 12065
-    components:
-    - type: Transform
-      pos: -13.066984,24.89437
       parent: 2
 - proto: MicrophoneInstrument
   entities:

@@ -1,10 +1,10 @@
 meta:
   format: 7
   category: Map
-  engineVersion: 262.0.0
+  engineVersion: 260.2.0
   forkId: ""
   forkVersion: ""
-  time: 07/06/2025 14:51:33
+  time: 07/11/2025 09:34:35
   entityCount: 14221
 maps:
 - 473
@@ -56,7 +56,9 @@ entities:
     - type: Transform
     - type: Map
       mapPaused: True
+    - type: PhysicsMap
     - type: GridTree
+    - type: MovedGrids
     - type: Broadphase
     - type: OccluderTree
   - uid: 4812
@@ -5225,6 +5227,9 @@ entities:
     components:
     - type: Transform
       parent: 7580
+    - type: EntityTargetAction
+      originalIconColor: '#FFFFFFFF'
+      container: 7580
 - proto: ActionToggleInternals
   entities:
   - uid: 7926
@@ -5233,30 +5238,47 @@ entities:
     components:
     - type: Transform
       parent: 13154
+    - type: InstantAction
+      originalIconColor: '#FFFFFFFF'
+      container: 13154
   - uid: 7927
     mapInit: true
     paused: true
     components:
     - type: Transform
       parent: 13153
+    - type: InstantAction
+      originalIconColor: '#FFFFFFFF'
+      container: 13153
 - proto: ActionToggleLight
   entities:
   - uid: 6594
     components:
     - type: Transform
       parent: 12120
+    - type: InstantAction
+      originalIconColor: '#FFFFFFFF'
+      container: 12120
   - uid: 8328
     components:
     - type: Transform
       parent: 6409
+    - type: InstantAction
+      originalIconColor: '#FFFFFFFF'
+      container: 6409
   - uid: 8638
     components:
     - type: Transform
       parent: 1481
+    - type: InstantAction
+      container: 1481
   - uid: 9825
     components:
     - type: Transform
       parent: 10704
+    - type: InstantAction
+      originalIconColor: '#FFFFFFFF'
+      container: 10704
 - proto: AirAlarm
   entities:
   - uid: 729
@@ -9102,7 +9124,7 @@ entities:
   - uid: 13265
     components:
     - type: Transform
-      pos: 23.03569,17.459896
+      pos: 22.60081,17.492435
       parent: 4812
   - uid: 13656
     components:
@@ -12745,7 +12767,7 @@ entities:
   - uid: 9501
     components:
     - type: Transform
-      pos: 22.50444,17.647528
+      pos: 22.366434,17.750248
       parent: 4812
   - uid: 13721
     components:
@@ -29193,6 +29215,23 @@ entities:
     - type: Transform
       pos: -31.5,33.5
       parent: 4812
+- proto: CapacitorStockPart
+  entities:
+  - uid: 6210
+    components:
+    - type: Transform
+      pos: 7.701914,-18.299206
+      parent: 4812
+  - uid: 6211
+    components:
+    - type: Transform
+      pos: 7.451914,-18.299206
+      parent: 4812
+  - uid: 6212
+    components:
+    - type: Transform
+      pos: 7.5679626,-16.149172
+      parent: 4812
 - proto: CaptainIDCard
   entities:
   - uid: 2588
@@ -32008,12 +32047,6 @@ entities:
       rot: 1.5707963267948966 rad
       pos: -38.5,10.5
       parent: 4812
-  - uid: 9225
-    components:
-    - type: Transform
-      rot: -1.5707963267948966 rad
-      pos: 23.5,16.5
-      parent: 4812
   - uid: 9566
     components:
     - type: Transform
@@ -32360,6 +32393,11 @@ entities:
     components:
     - type: Transform
       pos: -17.5,15.5
+      parent: 4812
+  - uid: 9225
+    components:
+    - type: Transform
+      pos: 23.5,16.5
       parent: 4812
   - uid: 9575
     components:
@@ -34327,6 +34365,20 @@ entities:
     - type: Transform
       pos: -42.855858,-7.1805997
       parent: 4812
+    - type: HandheldLight
+      toggleActionEntity: 6594
+    - type: ContainerContainer
+      containers:
+        cell_slot: !type:ContainerSlot
+          showEnts: False
+          occludes: True
+          ent: null
+        actions: !type:Container
+          showEnts: False
+          occludes: True
+          ents:
+          - 6594
+    - type: ActionsContainer
 - proto: ClothingHeadHatOutlawHat
   entities:
   - uid: 9510
@@ -34592,6 +34644,14 @@ entities:
     - type: Transform
       pos: -18.519077,-23.380693
       parent: 4812
+    - type: Stethoscope
+      actionEntity: 917
+    - type: ActionsContainer
+    - type: ContainerContainer
+      containers:
+        actions: !type:Container
+          ents:
+          - 917
 - proto: ClothingNeckTieRed
   entities:
   - uid: 10922
@@ -35469,6 +35529,13 @@ entities:
     - type: Transform
       rot: 1.5707963267948966 rad
       pos: 22.5,16.5
+      parent: 4812
+- proto: ComputerSalvageJobBoard
+  entities:
+  - uid: 9459
+    components:
+    - type: Transform
+      pos: 23.5,17.5
       parent: 4812
 - proto: ComputerShuttleCargo
   entities:
@@ -40115,6 +40182,14 @@ entities:
     - type: Transform
       pos: -8.938086,-28.268738
       parent: 4812
+    - type: GasTank
+      toggleActionEntity: 7926
+    - type: ActionsContainer
+    - type: ContainerContainer
+      containers:
+        actions: !type:Container
+          ents:
+          - 7926
 - proto: DoubleEmergencyOxygenTankFilled
   entities:
   - uid: 13153
@@ -40122,6 +40197,14 @@ entities:
     - type: Transform
       pos: -8.781836,-28.440613
       parent: 4812
+    - type: GasTank
+      toggleActionEntity: 7927
+    - type: ActionsContainer
+    - type: ContainerContainer
+      containers:
+        actions: !type:Container
+          ents:
+          - 7927
 - proto: Dresser
   entities:
   - uid: 1254
@@ -62773,7 +62856,7 @@ entities:
   - uid: 13255
     components:
     - type: Transform
-      pos: 23.53569,17.595407
+      pos: 29.374247,16.390873
       parent: 4812
 - proto: HandheldHealthAnalyzer
   entities:
@@ -63840,6 +63923,22 @@ entities:
     - type: Transform
       pos: 24.580408,-19.166311
       parent: 4812
+    - type: HandheldLight
+      toggleActionEntity: 8638
+    - type: ContainerContainer
+      containers:
+        cell_slot: !type:ContainerSlot
+          showEnts: False
+          occludes: True
+          ent: null
+        actions: !type:Container
+          showEnts: False
+          occludes: True
+          ents:
+          - 8638
+    - type: Physics
+      canCollide: True
+    - type: ActionsContainer
   - uid: 1520
     components:
     - type: Transform
@@ -63941,6 +64040,26 @@ entities:
     - type: Transform
       pos: -4.4936132,-15.203495
       parent: 4812
+    - type: HandheldLight
+      toggleActionEntity: 8328
+    - type: ContainerContainer
+      containers:
+        cellslot_cell_container: !type:ContainerSlot
+          showEnts: False
+          occludes: True
+          ent: null
+        cell_slot: !type:ContainerSlot
+          showEnts: False
+          occludes: True
+          ent: null
+        actions: !type:Container
+          showEnts: False
+          occludes: True
+          ents:
+          - 8328
+    - type: Physics
+      canCollide: True
+    - type: ActionsContainer
   - uid: 7077
     components:
     - type: Transform
@@ -63976,6 +64095,26 @@ entities:
     - type: Transform
       pos: -28.458933,-5.183518
       parent: 4812
+    - type: HandheldLight
+      toggleActionEntity: 9825
+    - type: ContainerContainer
+      containers:
+        cellslot_cell_container: !type:ContainerSlot
+          showEnts: False
+          occludes: True
+          ent: null
+        cell_slot: !type:ContainerSlot
+          showEnts: False
+          occludes: True
+          ent: null
+        actions: !type:Container
+          showEnts: False
+          occludes: True
+          ents:
+          - 9825
+    - type: Physics
+      canCollide: True
+    - type: ActionsContainer
   - uid: 10811
     components:
     - type: Transform
@@ -65374,6 +65513,18 @@ entities:
     - type: Transform
       pos: -37.5,-28.5
       parent: 4812
+- proto: MatterBinStockPart
+  entities:
+  - uid: 6200
+    components:
+    - type: Transform
+      pos: 7.405039,-15.314831
+      parent: 4812
+  - uid: 6201
+    components:
+    - type: Transform
+      pos: 7.701914,-15.330456
+      parent: 4812
 - proto: MechEquipmentGrabberSmall
   entities:
   - uid: 3442
@@ -65463,7 +65614,7 @@ entities:
   - uid: 12788
     components:
     - type: Transform
-      pos: 29.5,16.5
+      pos: 29.514872,16.69556
       parent: 4812
 - proto: MedkitToxinFilled
   entities:
@@ -65474,16 +65625,6 @@ entities:
       parent: 4812
 - proto: MicroManipulatorStockPart
   entities:
-  - uid: 6200
-    components:
-    - type: Transform
-      pos: 7.405039,-15.314831
-      parent: 4812
-  - uid: 6201
-    components:
-    - type: Transform
-      pos: 7.701914,-15.330456
-      parent: 4812
   - uid: 6202
     components:
     - type: Transform
@@ -65498,21 +65639,6 @@ entities:
     components:
     - type: Transform
       pos: 7.811289,-15.783581
-      parent: 4812
-  - uid: 6210
-    components:
-    - type: Transform
-      pos: 7.701914,-18.299206
-      parent: 4812
-  - uid: 6211
-    components:
-    - type: Transform
-      pos: 7.451914,-18.299206
-      parent: 4812
-  - uid: 6212
-    components:
-    - type: Transform
-      pos: 7.5679626,-16.149172
       parent: 4812
 - proto: MicrophoneInstrument
   entities:
@@ -78499,11 +78625,6 @@ entities:
     components:
     - type: Transform
       pos: -39.5,10.5
-      parent: 4812
-  - uid: 9459
-    components:
-    - type: Transform
-      pos: 23.5,17.5
       parent: 4812
   - uid: 9585
     components:
