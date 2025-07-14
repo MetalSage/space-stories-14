@@ -15,68 +15,66 @@ stack-reinforced-plasma-glass = плазменное бронестекло
 stack-reinforced-uranium-glass = урановое бронестекло
 stack-gunpowder = порох
 stack-cardboard = картон
-
-stack-bones = {$amount ->
-    [1] кость
-    *[other] костей
-}
-stack-cloth = {$amount ->
-    [1] ткань
-    *[other] ткани
-}
-stack-lv-cable = {$amount ->
-    [1] нв кабель
-    *[other] нв кабелей
-}
-stack-mv-cable = {$amount ->
-    [1] св кабель
-    *[other] св кабелей
-}
-stack-hv-cable = {$amount ->
-    [1] вв кабель
-    *[other] вв кабелей
-}
-stack-wood-plank = {$amount ->
-    [1] деревянную доску
-    *[other] деревянных досок
-}
-stack-durathread = {$amount ->
-    [1] дюраткань
-    *[other] дюраткани
-}
-stack-rods = {$amount ->
-    [1] стержень
-    *[other] стержней
-}
-stack-meat-sheet = {$amount ->
-    [1] мясной лист
-    *[other] мясных листов
-}
-stack-space-carp-tooth = {$amount ->
-    [1] зуб
-    *[other] зубов
-} космического карпа
-stack-paper = {$amount ->
-    [1] бумага
-    *[other] бумаги
-}
-stack-diamond = {$amount ->
-    [1] алмаз
-    *[other] алмазов
-}
-stack-silk = {$amount ->
-    [1] шёлк
-    *[other] шёлка
-}
-stack-cotton = {$amount ->
-    [1] хлопок
-    *[other] хлопока
-}
-stack-artifact-fragment = {$amount ->
-    [1] фрагмент
-    *[other] фрагментов
-} артефакта
-
+stack-bones = { $amount ->
+        [1] кость
+       *[other] костей
+    }
+stack-cloth = { $amount ->
+        [1] ткань
+       *[other] ткани
+    }
+stack-lv-cable = { $amount ->
+        [1] нв кабель
+       *[other] нв кабелей
+    }
+stack-mv-cable = { $amount ->
+        [1] св кабель
+       *[other] св кабелей
+    }
+stack-hv-cable = { $amount ->
+        [1] вв кабель
+       *[other] вв кабелей
+    }
+stack-wood-plank = { $amount ->
+        [1] деревянную доску
+       *[other] деревянных досок
+    }
+stack-durathread = { $amount ->
+        [1] дюраткань
+       *[other] дюраткани
+    }
+stack-rods = { $amount ->
+        [1] стержень
+       *[other] стержней
+    }
+stack-meat-sheet = { $amount ->
+        [1] мясной лист
+       *[other] мясных листов
+    }
+stack-space-carp-tooth = { $amount ->
+        [1] зуб
+       *[other] зубов
+    } космического карпа
+stack-paper = { $amount ->
+        [1] бумага
+       *[other] бумаги
+    }
+stack-diamond = { $amount ->
+        [1] алмаз
+       *[other] алмазов
+    }
+stack-silk = { $amount ->
+        [1] шёлк
+       *[other] шёлка
+    }
+stack-cotton = { $amount ->
+        [1] хлопок
+       *[other] хлопока
+    }
+stack-artifact-fragment = { $amount ->
+        [1] фрагмент
+       *[other] фрагментов
+    } артефакта
 # best materials
 stack-ground-tobacco = молотый табак
 stack-ground-cannabis = молотый каннабис
@@ -84,16 +82,14 @@ stack-ground-rainbow-cannabis = молотый радужный каннабис
 stack-dried-tobacco-leaves = высушенные листья табака
 stack-dried-cannabis-leaves = высушенные листья каннабиса
 stack-dried-rainbow-cannabis-leaves = высушенные листья радужного каннабиса
-
-stack-cigarette-filter = сигаретный {$amount ->
-    [1] фильтр
-    *[other] фильтров
-}
-stack-rolling-paper = рулон {$amount ->
-    [1] бумаги
-    *[other] бумаг
-}
-
+stack-cigarette-filter = сигаретный { $amount ->
+        [1] фильтр
+       *[other] фильтров
+    }
+stack-rolling-paper = рулон { $amount ->
+        [1] бумаги
+       *[other] бумаг
+    }
 stack-fulton = фултон
 stack-credit = кредит
 stack-plasma = плазма
@@ -157,6 +153,7 @@ stack-white-steel-vertical-pavement = вертикальное белое ста
 stack-steel-dark-checker-tile = тёмная клетчатая стальная плитка
 stack-steel-light-checker-tile = светлая клетчатая стальная плитка
 stack-steel-tile = стальная плитка
+stack-techmaint-floor-dark = тёмный технический пол
 stack-wood-floor = деревянный пол
 stack-techmaint-floor = технический пол
 stack-freezer-tile = плитка холодильника
@@ -179,6 +176,7 @@ stack-grey-shuttle-tile = серая плитка шаттла
 stack-black-shuttle-tile = черная плитка шаттла
 stack-eighties-floor-tile = плитка пола 80-х
 stack-blue-arcade-tile = синяя аркадная плитка
+stack-black-carpet-tile = чёрная ковровая плитка
 stack-red-arcade-tile = красная аркадная плитка
 stack-red-carpet-tile = красная ковровая плитка
 stack-block-carpet-tile = блочная ковровая плитка
@@ -229,6 +227,11 @@ stack-mowed-astro-grass-floor = стриженый астро-травяной �
 stack-jungle-astro-grass-floor = джунглевый астро-травяной пол
 stack-astro-ice-floor = астро-ледяной пол
 stack-astro-snow-floor = астро-снежный пол
+stack-xeno-floor = ксенопол
+stack-xeno-steel = ксеностальная плитка
+stack-xeno-steel-corner = ксеностальная угловая плитка
+stack-xeno-maint = ксенотехнический пол
+stack-dark-squiggly = тёмная стальная волнистая плитка
 stack-large-wood-floor = большой деревянный пол
 stack-red-circuit-floor = пол с красными цепями
 stack-asteroid-astro-sand-floor = астероидный астро-песчаный пол

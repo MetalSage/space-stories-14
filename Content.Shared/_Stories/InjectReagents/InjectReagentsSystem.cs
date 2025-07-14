@@ -75,7 +75,7 @@ public sealed partial class InjectReagentsToTargetEvent : EntityTargetActionEven
     [DataField("solutionTarget")]
     public string SolutionTarget { get; set; } = "chemicals";
 }
-public sealed partial class InjectReagentsInRangeEvent : InstantActionEvent
+public sealed partial class InjectReagentsInRangeEvent : EntityTargetActionEvent
 {
     [DataField]
     public bool InjectToPerformer { get; set; } = false;

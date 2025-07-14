@@ -1129,6 +1129,9 @@
     layers:
       - state: Clubs1
   - type: CardStack
+  - type: ContainerContainer
+    containers:
+      card-stack-container: !type:Container
   - type: Item
     size: Ginormous
   - type: CardDeck
@@ -1201,6 +1204,9 @@
     - STSpades12
     - STSpades13
     - STSpades14
+  - type: ContainerContainer
+    containers:
+      card-stack-container: !type:Container
   - type: Item
     size: Huge
   - type: CardDeck
@@ -1256,6 +1262,9 @@
     - STSpades11
     - STSpades12
     - STSpades13
+  - type: ContainerContainer
+    containers:
+      card-stack-container: !type:Container
   - type: Item
     size: Huge
   - type: CardDeck
@@ -1385,6 +1394,9 @@
     - STCard
   - type: Appearance
   - type: CardFan
+  - type: ContainerContainer
+    containers:
+      card-stack-container: !type:Container
   - type: CardStack
   - type: Sprite
     sprite: _Stories/Objects/Fun/card.rsi

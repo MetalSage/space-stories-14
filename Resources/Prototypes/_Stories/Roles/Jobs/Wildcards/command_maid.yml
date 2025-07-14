@@ -30,3 +30,13 @@
     ears: STClothingHeadsetCommandService
     belt: ClothingBeltJanitorFilled
     shoes: ClothingShoesGaloshes
+
+- type: chameleonOutfit
+  id: STCommandMaidChameleonOutfit
+  job: STCommandMaid
+  equipment:
+    head: ClothingHeadHatPurplesoft
+    eyes: ClothingEyesGlasses
+    mask: ClothingMaskBreath
+    neck: ClothingNeckScarfStripedPurple
+    outerClothing: ClothingOuterWinterJani

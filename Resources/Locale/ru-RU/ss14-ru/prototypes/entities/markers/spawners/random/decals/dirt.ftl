@@ -1,0 +1,17 @@
+ent-DecalSpawnerDirtBase = Спавнер Декалей Грязи
+    .desc = { ent-DecalSpawnerBase.desc }
+ent-DecalSpawnerDirtSingle = { ent-DecalSpawnerDirtBase }
+    .suffix = Грязь, Радиус 0
+    .desc = { ent-DecalSpawnerDirtBase.desc }
+ent-DecalSpawnerDirtNear = { ent-DecalSpawnerDirtBase }
+    .suffix = Грязь, Радиус 1.5
+    .desc = { ent-DecalSpawnerDirtBase.desc }
+ent-DecalSpawnerDirtWide = { ent-DecalSpawnerDirtBase }
+    .suffix = Грязь, Радиус 3
+    .desc = { ent-DecalSpawnerDirtBase.desc }
+ent-DecalSpawnerDirtMonospace = { ent-DecalSpawnerDirtBase }
+    .suffix = Грязь, Моноширинный, Радиус 1
+    .desc = { ent-DecalSpawnerDirtBase.desc }
+ent-DecalSpawnerBurns = { ent-DecalSpawnerDirtMonospace }
+    .suffix = Ожоги, Радиус 1
+    .desc = { ent-DecalSpawnerDirtMonospace.desc }

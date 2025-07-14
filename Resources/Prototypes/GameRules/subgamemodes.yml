@@ -25,10 +25,13 @@
       allowNonHumans: true
       multiAntagSetting: NotExclusive
       startingGear: ThiefGear
+      components:
       # Stories-Thief Start
-      # components:
       # - type: Pacified
       # Stories-Thief End
+      - type: Thieving
+        stripTimeReduction: 2
+        stealthy: true
       mindRoles:
       - MindRoleThief
       briefing:

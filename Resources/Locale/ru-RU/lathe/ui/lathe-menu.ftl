@@ -7,9 +7,9 @@ lathe-menu-category-all = Всё
 lathe-menu-search-filter = Фильтр
 lathe-menu-amount = Кол-во:
 lathe-menu-recipe-count = { $count ->
-    [1] {$count} Рецепт
-    *[other] {$count} Рецепты
-}
+        [1] { $count } Рецепт
+       *[other] { $count } Рецепты
+    }
 lathe-menu-reagent-slot-examine = Сбоку имеется отверстие для мензурки.
 lathe-reagent-dispense-no-container = Жидкость выливается из { $name } на пол!
 lathe-menu-result-reagent-display = { $reagent } ({ $amount }ед.)
@@ -27,7 +27,7 @@ lathe-menu-material-amount-missing =
        *[other] { NATURALFIXED($amount, 2) } { $unit } { $material } ([color=red]{ NATURALFIXED($missingAmount, 2) } { $unit } не хватает[/color])
     }
 lathe-menu-no-materials-message = Материалы не загружены
-lathe-menu-silo-linked-message = Бункер Соединен
+lathe-menu-silo-linked-message = Силос Соединен
 lathe-menu-fabricating-message = Производится...
 lathe-menu-materials-title = Материалы
 lathe-menu-queue-title = Очередь производства

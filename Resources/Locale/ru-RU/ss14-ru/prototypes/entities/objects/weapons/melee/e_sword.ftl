@@ -25,6 +25,7 @@ ent-EnergySwordDouble = игрушечный двухклинковый меч
     .desc = Новый двойной пластиковый меч от Sandy-Cat! В два раза больше эпика и громких звуков!
 ent-HyperEutacticBlade = большой игрушечный меч
     .desc = Новый пластиковый меч от Sandy-Cat! Имеет реалистичный звук и насыщенный цвет! Почти как настоящий!
+
 # Corvax-HiddenDesc-End
 
 ent-EnergyDaggerLoudBlue = энергетический кинжал

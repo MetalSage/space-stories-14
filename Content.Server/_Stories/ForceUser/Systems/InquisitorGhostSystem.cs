@@ -3,6 +3,7 @@ using Content.Shared.Actions;
 using Content.Server.Light.Components;
 using Content.Shared.Polymorph;
 using Content.Server._Stories.ForceUser.Components;
+using Content.Shared.Actions.Components;
 using Content.Shared.Mind;
 using Content.Shared.Mind.Components;
 

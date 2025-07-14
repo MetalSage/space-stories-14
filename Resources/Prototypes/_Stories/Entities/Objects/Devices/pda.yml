@@ -7,6 +7,8 @@
   - type: Tag
     tags:
       - ForceRecallEquipment
+      - WhitelistChameleon
+      - WhitelistChameleonPDA
   - type: Pda
     id: GuardianNtIDCard
   - type: Appearance

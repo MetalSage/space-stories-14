@@ -1,2 +1,2 @@
-ent-STPrisonStation = { ent-BaseStation }
-    .desc = { ent-BaseStation.desc }
+ent-STBasePrisonStationAlertLevels = { "" }
+    .desc = { "" }

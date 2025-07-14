@@ -5,6 +5,7 @@ using Content.Shared.Throwing;
 using Content.Server.Nutrition.Components;
 using Content.Shared.StatusEffect;
 using Content.Shared.CombatMode.Pacification;
+using Content.Shared.Nutrition.Components;
 
 namespace Content.Server._Stories.Spaf;
 

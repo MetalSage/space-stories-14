@@ -6,12 +6,10 @@ ent-TrainingBomb = учебная бомба
 ent-SyndicateBomb = бомба
     .suffix = бомба Синдиката
     .desc = Это бомба с таймером! Она тикает? Вы хотели стать героем!? Самое время!
-
 # Corvax-HiddenDesc-End
-
 ent-SyndicateBombFake = { ent-SyndicateBomb }
     .suffix = Обманка
     .desc = { ent-SyndicateBomb.desc }
-ent-DebugHardBomb = DEBUG бомба
+ent-DebugHardBomb = ОТЛАДОЧНАЯ бомба
+    .suffix = ОТЛАДКА
     .desc = Господи, она сейчас взорвётся.
-    .suffix = DEBUG

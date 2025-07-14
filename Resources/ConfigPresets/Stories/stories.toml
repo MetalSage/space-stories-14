@@ -7,9 +7,9 @@
 [admin]
 deadmin_on_join = true
 new_player_threshold = 600
-role_ban_default_severity = "minor"
-department_ban_default_severity = "minor"
-server_ban_default_severity = "medium"
+role_ban_default_severity = "high"
+department_ban_default_severity = "high"
+server_ban_default_severity = "high"
 server_ban_hwid_ban_default = false
 
 [ahelp]

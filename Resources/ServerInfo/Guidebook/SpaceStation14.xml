@@ -5,9 +5,9 @@
 
   Раунды обычно длятся от [color=cyan]45 до 90 минут[/color], но игроки могут покинуть игру и присоединиться к ней в любой момент во время раунда.
 
-  ## Шаттл-терминал
-  Если вы присоединитесь к игре в середине смены, то скорее всего, появитесь в [color=lime]шаттле-терминале[/color].
-  Здесь вы можете заказать напитки, пообщаться с другими игроками и дождаться, пока шаттл доставит вас на станцию.
+## Shuttle Terminal
+If you join in the middle of a shift, you will likely spawn on the [color=lime]shuttle terminal[/color].
+Here you can grab drinks, converse with other players, and wait for the shuttle to take you to the station.
 
   На стенах есть мониторы, на которых указано время прибытия шаттла.
   Следите за тем, чтобы оставаться внутри шаттла-терминала и не стоять в зоне посадки шаттла. [color=#EB2D3A][bold]Вас могут раздавить прилетающие шаттлы.[/bold][/color]
@@ -36,8 +36,8 @@
     <GuideEntityEmbed Entity="CryogenicSleepUnit"/>
   </Box>
 
-  Если вам нужно досрочно завершить раунд, вы можете сделать это с помощью [color=lime]капсулы криогенного сна[/color].
-  Просто зайдя внутрь и выйдя из игры, вы сохраните свои вещи и будете уверены, что они не будут украдены или использованы не по назначению.
+If you need to leave a round early, you can do so through a [color=lime]cryogenic sleep unit[/color].
+Simply going inside and leaving the game will store your belongings and ensure that they are not stolen or misused.
 
   ## Дополнительная информация
   Изучаете элементы управления? [textlink="Нажмите сюда, Элементы управления" link="Controls"]

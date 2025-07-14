@@ -10,7 +10,6 @@ STBrigmedic = бригмедик
 stories-job-name-security-clown = клоун СБ
 stories-job-name-command-maid = горничная капитана
 stories-job-name-party-maker = партимейкер
-
 JobSTSecurityClown = клоун СБ
 JobSTCommandMaid = горничная капитана
 JobSTPartyMaker = партимейкер

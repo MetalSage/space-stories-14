@@ -40,7 +40,7 @@ public sealed partial class ForceUserSystem
             _toggleSystem.TryDeactivate(uid);
 
         if (args.Origin != uid && args.Origin != null)
-            _throwing.TryThrow(uid, _xform.GetWorldPosition(uid, GetEntityQuery<TransformComponent>()) - _xform.GetWorldPosition(Transform(args.Origin.Value), GetEntityQuery<TransformComponent>()), 10, uid, 0);
+            _throwing.TryThrow(uid, _transform.GetWorldPosition(uid, GetEntityQuery<TransformComponent>()) - _transform.GetWorldPosition(Transform(args.Origin.Value), GetEntityQuery<TransformComponent>()), 10, uid, 0);
     }
     private void OnTryPickUp(EntityUid uid, LightsaberComponent component, GettingPickedUpAttemptEvent args)
     {
