@@ -4,10 +4,8 @@ using Robust.Client.UserInterface.XAML;
 using Content.Client.UserInterface.Controls;
 using Content.Shared.Foldable;
 using System.Numerics;
-using System.Linq;
-
+using Content.Shared._Stories.Cards.Card;
 using Content.Shared._Stories.Cards.Stack;
-using Content.Shared._Stories.Cards.Fan;
 
 namespace Content.Client._Stories.Cards.Fan.UI;
 
@@ -19,7 +17,6 @@ public sealed partial class FanMenu : RadialMenu
     private FanMenuBoundUserInterface? _boundUI;
     public Action<NetEntity, NetEntity>? OnCardSelectedMessageAction;
 
-
     public FanMenu(EntityUid uid, FanMenuBoundUserInterface boundUI, EntityUid user)
     {
         IoCManager.InjectDependencies(this);
@@ -29,41 +26,34 @@ public sealed partial class FanMenu : RadialMenu
         _user = user;
 
         var main = FindControl<RadialContainer>("Main");
+        main.RemoveAllChildren();
 
-        foreach (var child in main.Children.ToList())
-        {
-            main.RemoveChild(child);
-        }
-
-
-        if (!_entManager.TryGetComponent<CardFanComponent>(_owner, out var fanComp))
-            return;
         if (!_entManager.TryGetComponent<CardStackComponent>(_owner, out var stackComp))
             return;
 
         foreach (var card in stackComp.CardContainer.ContainedEntities)
         {
-            if (!_entManager.TryGetComponent<SpriteComponent>(card, out var cardSprite))
+            if (!TryGetCardComponents(card, out var cardComp, out var cardSprite, out var foldable, out var cardMeta) ||
+                cardComp == null || cardSprite == null || foldable == null || cardMeta == null)
                 continue;
-            if (!_entManager.TryGetComponent<FoldableComponent>(card, out var foldable))
-                continue;
+
+            var cardName = foldable.IsFolded ? cardComp.Name : cardMeta.EntityName;
+            var cardLayer = cardSprite.LayerGetState(1);
 
             var button = new FanMenuButton()
             {
                 StyleClasses = { "RadialMenuButton" },
                 SetSize = new Vector2(64f, 64f),
+                ToolTip = cardName,
             };
-
-
-            var cardLayer = cardSprite.LayerGetState(1);
 
             var rsi = cardSprite.BaseRSI;
             if (rsi == null)
-                return;
+                continue;
             rsi.TryGetState(cardLayer, out var layer);
             if (layer == null)
-                return;
-            var t = layer.Frame0;
+                continue;
+            var texture = layer.Frame0;
 
             if (cardLayer != null)
             {
@@ -71,15 +61,14 @@ public sealed partial class FanMenu : RadialMenu
                 {
                     VerticalAlignment = VAlignment.Center,
                     HorizontalAlignment = HAlignment.Center,
-                    Texture = t,
+                    Texture = texture,
                     TextureScale = new Vector2(2f, 2f),
                 };
                 button.AddChild(tex);
             }
-
             button.SetCard(card);
-
             main.AddChild(button);
+
             button.OnPressed += _ =>
             {
                 OnCardSelectedMessageAction?.Invoke(_entManager.GetNetEntity(card), _entManager.GetNetEntity(_user));
@@ -91,7 +80,25 @@ public sealed partial class FanMenu : RadialMenu
             return;
         OnCardSelectedMessageAction += _boundUI.OnCardSelected;
     }
+
+    private bool TryGetCardComponents(EntityUid card,
+        out CardComponent? cardComp,
+        out SpriteComponent? cardSprite,
+        out FoldableComponent? foldable,
+        out MetaDataComponent? cardMeta)
+    {
+        cardComp = null;
+        cardSprite = null;
+        foldable = null;
+        cardMeta = null;
+
+        return _entManager.TryGetComponent(card, out cardComp) &&
+               _entManager.TryGetComponent(card, out cardSprite) &&
+               _entManager.TryGetComponent(card, out foldable) &&
+               _entManager.TryGetComponent(card, out cardMeta);
+    }
 }
+
 public sealed class FanMenuButton : RadialMenuTextureButton
 {
     private EntityUid _cardEntity;
