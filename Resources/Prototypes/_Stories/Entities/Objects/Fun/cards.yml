@@ -916,6 +916,9 @@
   - type: Item
     size: Small
   - type: CardStack
+  - type: ContainerContainer
+    containers:
+      card-stack-container: !type:Container
   - type: CardDeck
   - type: Appearance
 
@@ -1178,6 +1181,9 @@
     layers:
     - state: Clubs1
   - type: CardFan
+  - type: ContainerContainer
+    containers:
+      card-stack-container: !type:Container
   - type: CardStack
   - type: Tag
     tags:
