@@ -1,5 +1,3 @@
-using Robust.Shared.GameObjects;
-using Robust.Shared.Serialization.Manager.Attributes;
 using Robust.Shared.Serialization;
 
 namespace Content.Shared._Stories.Cards.Fan
