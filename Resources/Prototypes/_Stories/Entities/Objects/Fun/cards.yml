@@ -1,17 +1,22 @@
 - type: entity
   parent: [BaseItem, BaseFoldable]
+  categories: [ HideSpawnMenu ]
   abstract: true
   id: STCardBase
   name: карта
   components:
-  - type: Appearance
-  - type: Foldable
-    canFoldInsideContainer: true
   - type: Sprite
     sprite: _Stories/Objects/Fun/card.rsi
+    layers:
+    - state: Back
+      map: [ "unfoldedLayer" ]
   - type: Tag
     tags:
     - STCard
+  - type: Foldable
+    canFoldInsideContainer: true
+  - type: Card
+  - type: Appearance
 
 # Clubs
 - type: entity
@@ -20,10 +25,6 @@
   id: STClubs1
   name: карта
   components:
-  - type: Sprite
-    layers:
-    - state: Back
-      map: [ "unfoldedLayer" ]
   - type: GenericVisualizer
     visuals:
       enum.FoldedVisuals.State:
@@ -31,7 +32,7 @@
           True: { state: Clubs1 }
           False: { state: Back }
   - type: Card
-    name: "Это трефы туз."
+    name: "трефы 1"
 
 - type: entity
   parent: STCardBase
@@ -39,10 +40,6 @@
   id: STClubs2
   name: карта
   components:
-  - type: Sprite
-    layers:
-    - state: Back
-      map: [ "unfoldedLayer" ]
   - type: GenericVisualizer
     visuals:
       enum.FoldedVisuals.State:
@@ -50,7 +47,7 @@
           True: { state: Clubs2 }
           False: { state: Back }
   - type: Card
-    name: "Это трефы 2."
+    name: "трефы 2"
 
 - type: entity
   parent: STCardBase
@@ -58,10 +55,6 @@
   id: STClubs3
   name: карта
   components:
-  - type: Sprite
-    layers:
-    - state: Back
-      map: [ "unfoldedLayer" ]
   - type: GenericVisualizer
     visuals:
       enum.FoldedVisuals.State:
@@ -69,7 +62,7 @@
           True: { state: Clubs3 }
           False: { state: Back }
   - type: Card
-    name: "Это трефы 3."
+    name: "трефы 3"
 
 - type: entity
   parent: STCardBase
@@ -77,10 +70,6 @@
   id: STClubs4
   name: карта
   components:
-  - type: Sprite
-    layers:
-    - state: Back
-      map: [ "unfoldedLayer" ]
   - type: GenericVisualizer
     visuals:
       enum.FoldedVisuals.State:
@@ -88,7 +77,7 @@
           True: { state: Clubs4 }
           False: { state: Back }
   - type: Card
-    name: "Это трефы 4."
+    name: "трефы 4"
 
 - type: entity
   parent: STCardBase
@@ -96,10 +85,6 @@
   id: STClubs5
   name: карта
   components:
-  - type: Sprite
-    layers:
-    - state: Back
-      map: [ "unfoldedLayer" ]
   - type: GenericVisualizer
     visuals:
       enum.FoldedVisuals.State:
@@ -107,7 +92,7 @@
           True: { state: Clubs5 }
           False: { state: Back }
   - type: Card
-    name: "Это трефы 5."
+    name: "трефы 5"
 
 - type: entity
   parent: STCardBase
@@ -115,10 +100,6 @@
   id: STClubs6
   name: карта
   components:
-  - type: Sprite
-    layers:
-    - state: Back
-      map: [ "unfoldedLayer" ]
   - type: GenericVisualizer
     visuals:
       enum.FoldedVisuals.State:
@@ -126,7 +107,7 @@
           True: { state: Clubs6 }
           False: { state: Back }
   - type: Card
-    name: "Это трефы 6."
+    name: "трефы 6"
 
 - type: entity
   parent: STCardBase
@@ -134,10 +115,6 @@
   id: STClubs7
   name: карта
   components:
-  - type: Sprite
-    layers:
-    - state: Back
-      map: [ "unfoldedLayer" ]
   - type: GenericVisualizer
     visuals:
       enum.FoldedVisuals.State:
@@ -145,7 +122,7 @@
           True: { state: Clubs7 }
           False: { state: Back }
   - type: Card
-    name: "Это трефы 7."
+    name: "трефы 7"
 
 - type: entity
   parent: STCardBase
@@ -153,10 +130,6 @@
   id: STClubs8
   name: карта
   components:
-  - type: Sprite
-    layers:
-    - state: Back
-      map: [ "unfoldedLayer" ]
   - type: GenericVisualizer
     visuals:
       enum.FoldedVisuals.State:
@@ -164,7 +137,7 @@
           True: { state: Clubs8 }
           False: { state: Back }
   - type: Card
-    name: "Это трефы 8."
+    name: "трефы 8"
 
 - type: entity
   parent: STCardBase
@@ -172,10 +145,6 @@
   id: STClubs9
   name: карта
   components:
-  - type: Sprite
-    layers:
-    - state: Back
-      map: [ "unfoldedLayer" ]
   - type: GenericVisualizer
     visuals:
       enum.FoldedVisuals.State:
@@ -183,7 +152,7 @@
           True: { state: Clubs9 }
           False: { state: Back }
   - type: Card
-    name: "Это трефы 9."
+    name: "трефы 9"
 
 - type: entity
   parent: STCardBase
@@ -191,10 +160,6 @@
   id: STClubs10
   name: карта
   components:
-  - type: Sprite
-    layers:
-    - state: Back
-      map: [ "unfoldedLayer" ]
   - type: GenericVisualizer
     visuals:
       enum.FoldedVisuals.State:
@@ -202,7 +167,7 @@
           True: { state: Clubs10 }
           False: { state: Back }
   - type: Card
-    name: "Это трефы 10."
+    name: "трефы 10"
 
 - type: entity
   parent: STCardBase
@@ -210,10 +175,6 @@
   id: STClubs11
   name: карта
   components:
-  - type: Sprite
-    layers:
-    - state: Back
-      map: [ "unfoldedLayer" ]
   - type: GenericVisualizer
     visuals:
       enum.FoldedVisuals.State:
@@ -221,7 +182,7 @@
           True: { state: Clubs11 }
           False: { state: Back }
   - type: Card
-    name: "Это трефы король."
+    name: "трефы король"
 
 - type: entity
   parent: STCardBase
@@ -229,10 +190,6 @@
   id: STClubs12
   name: карта
   components:
-  - type: Sprite
-    layers:
-    - state: Back
-      map: [ "unfoldedLayer" ]
   - type: GenericVisualizer
     visuals:
       enum.FoldedVisuals.State:
@@ -240,7 +197,7 @@
           True: { state: Clubs12 }
           False: { state: Back }
   - type: Card
-    name: "Это трефы дама."
+    name: "трефы дама"
 
 - type: entity
   parent: STCardBase
@@ -248,10 +205,6 @@
   id: STClubs13
   name: карта
   components:
-  - type: Sprite
-    layers:
-    - state: Back
-      map: [ "unfoldedLayer" ]
   - type: GenericVisualizer
     visuals:
       enum.FoldedVisuals.State:
@@ -259,7 +212,7 @@
           True: { state: Clubs13 }
           False: { state: Back }
   - type: Card
-    name: "Это трефы валет."
+    name: "трефы валет"
 
 # Diamonds
 - type: entity
@@ -268,10 +221,6 @@
   id: STDiamonds1
   name: карта
   components:
-  - type: Sprite
-    layers:
-    - state: Back
-      map: [ "unfoldedLayer" ]
   - type: GenericVisualizer
     visuals:
       enum.FoldedVisuals.State:
@@ -279,7 +228,7 @@
           True: { state: Diamonds1 }
           False: { state: Back }
   - type: Card
-    name: "Это бубны туз."
+    name: "бубны туз"
 
 - type: entity
   parent: STCardBase
@@ -287,10 +236,6 @@
   id: STDiamonds2
   name: карта
   components:
-  - type: Sprite
-    layers:
-    - state: Back
-      map: [ "unfoldedLayer" ]
   - type: GenericVisualizer
     visuals:
       enum.FoldedVisuals.State:
@@ -298,7 +243,7 @@
           True: { state: Diamonds2 }
           False: { state: Back }
   - type: Card
-    name: "Это бубны 2."
+    name: "бубны 2"
 
 - type: entity
   parent: STCardBase
@@ -306,10 +251,6 @@
   id: STDiamonds3
   name: карта
   components:
-  - type: Sprite
-    layers:
-    - state: Back
-      map: [ "unfoldedLayer" ]
   - type: GenericVisualizer
     visuals:
       enum.FoldedVisuals.State:
@@ -317,7 +258,7 @@
           True: { state: Diamonds3 }
           False: { state: Back }
   - type: Card
-    name: "Это бубны 3."
+    name: "бубны 3"
 
 - type: entity
   parent: STCardBase
@@ -325,10 +266,6 @@
   id: STDiamonds4
   name: карта
   components:
-  - type: Sprite
-    layers:
-    - state: Back
-      map: [ "unfoldedLayer" ]
   - type: GenericVisualizer
     visuals:
       enum.FoldedVisuals.State:
@@ -336,7 +273,7 @@
           True: { state: Diamonds4 }
           False: { state: Back }
   - type: Card
-    name: "Это бубны 4."
+    name: "бубны 4"
 
 - type: entity
   parent: STCardBase
@@ -344,10 +281,6 @@
   id: STDiamonds5
   name: карта
   components:
-  - type: Sprite
-    layers:
-    - state: Back
-      map: [ "unfoldedLayer" ]
   - type: GenericVisualizer
     visuals:
       enum.FoldedVisuals.State:
@@ -355,7 +288,7 @@
           True: { state: Diamonds5 }
           False: { state: Back }
   - type: Card
-    name: "Это бубны 5."
+    name: "бубны 5"
 
 - type: entity
   parent: STCardBase
@@ -363,10 +296,6 @@
   id: STDiamonds6
   name: карта
   components:
-  - type: Sprite
-    layers:
-    - state: Back
-      map: [ "unfoldedLayer" ]
   - type: GenericVisualizer
     visuals:
       enum.FoldedVisuals.State:
@@ -374,7 +303,7 @@
           True: { state: Diamonds6 }
           False: { state: Back }
   - type: Card
-    name: "Это бубны 6."
+    name: "бубны 6"
 
 - type: entity
   parent: STCardBase
@@ -382,10 +311,6 @@
   id: STDiamonds7
   name: карта
   components:
-  - type: Sprite
-    layers:
-    - state: Back
-      map: [ "unfoldedLayer" ]
   - type: GenericVisualizer
     visuals:
       enum.FoldedVisuals.State:
@@ -393,7 +318,7 @@
           True: { state: Diamonds7 }
           False: { state: Back }
   - type: Card
-    name: "Это бубны 7."
+    name: "бубны 7"
 
 - type: entity
   parent: STCardBase
@@ -401,10 +326,6 @@
   id: STDiamonds8
   name: карта
   components:
-  - type: Sprite
-    layers:
-    - state: Back
-      map: [ "unfoldedLayer" ]
   - type: GenericVisualizer
     visuals:
       enum.FoldedVisuals.State:
@@ -412,7 +333,7 @@
           True: { state: Diamonds8 }
           False: { state: Back }
   - type: Card
-    name: "Это бубны 8."
+    name: "бубны 8"
 
 - type: entity
   parent: STCardBase
@@ -420,10 +341,6 @@
   id: STDiamonds9
   name: карта
   components:
-  - type: Sprite
-    layers:
-    - state: Back
-      map: [ "unfoldedLayer" ]
   - type: GenericVisualizer
     visuals:
       enum.FoldedVisuals.State:
@@ -431,7 +348,7 @@
           True: { state: Diamonds9 }
           False: { state: Back }
   - type: Card
-    name: "Это бубны 9."
+    name: "бубны 9"
 
 - type: entity
   parent: STCardBase
@@ -439,10 +356,6 @@
   id: STDiamonds10
   name: карта
   components:
-  - type: Sprite
-    layers:
-    - state: Back
-      map: [ "unfoldedLayer" ]
   - type: GenericVisualizer
     visuals:
       enum.FoldedVisuals.State:
@@ -450,7 +363,7 @@
           True: { state: Diamonds10 }
           False: { state: Back }
   - type: Card
-    name: "Это бубны 10."
+    name: "бубны 10"
 
 - type: entity
   parent: STCardBase
@@ -458,10 +371,6 @@
   id: STDiamonds11
   name: карта
   components:
-  - type: Sprite
-    layers:
-    - state: Back
-      map: [ "unfoldedLayer" ]
   - type: GenericVisualizer
     visuals:
       enum.FoldedVisuals.State:
@@ -469,7 +378,7 @@
           True: { state: Diamonds11 }
           False: { state: Back }
   - type: Card
-    name: "Это бубны король."
+    name: "бубны король"
 
 - type: entity
   parent: STCardBase
@@ -477,10 +386,6 @@
   id: STDiamonds12
   name: карта
   components:
-  - type: Sprite
-    layers:
-    - state: Back
-      map: [ "unfoldedLayer" ]
   - type: GenericVisualizer
     visuals:
       enum.FoldedVisuals.State:
@@ -488,7 +393,7 @@
           True: { state: Diamonds12 }
           False: { state: Back }
   - type: Card
-    name: "Это бубны дама."
+    name: "бубны дама"
 
 - type: entity
   parent: STCardBase
@@ -496,10 +401,6 @@
   id: STDiamonds13
   name: карта
   components:
-  - type: Sprite
-    layers:
-    - state: Back
-      map: [ "unfoldedLayer" ]
   - type: GenericVisualizer
     visuals:
       enum.FoldedVisuals.State:
@@ -507,7 +408,7 @@
           True: { state: Diamonds13 }
           False: { state: Back }
   - type: Card
-    name: "Это бубны валет."
+    name: "бубны валет"
 
 # Hearts
 - type: entity
@@ -516,10 +417,6 @@
   id: STHearts1
   name: карта
   components:
-  - type: Sprite
-    layers:
-    - state: Back
-      map: [ "unfoldedLayer" ]
   - type: GenericVisualizer
     visuals:
       enum.FoldedVisuals.State:
@@ -527,7 +424,7 @@
           True: { state: Hearts1 }
           False: { state: Back }
   - type: Card
-    name: "Это червы туз."
+    name: "червы туз"
 
 - type: entity
   parent: STCardBase
@@ -535,10 +432,6 @@
   id: STHearts2
   name: карта
   components:
-  - type: Sprite
-    layers:
-    - state: Back
-      map: [ "unfoldedLayer" ]
   - type: GenericVisualizer
     visuals:
       enum.FoldedVisuals.State:
@@ -546,7 +439,7 @@
           True: { state: Hearts2 }
           False: { state: Back }
   - type: Card
-    name: "Это червы 2."
+    name: "червы 2"
 
 - type: entity
   parent: STCardBase
@@ -554,10 +447,6 @@
   id: STHearts3
   name: карта
   components:
-  - type: Sprite
-    layers:
-    - state: Back
-      map: [ "unfoldedLayer" ]
   - type: GenericVisualizer
     visuals:
       enum.FoldedVisuals.State:
@@ -565,7 +454,7 @@
           True: { state: Hearts3 }
           False: { state: Back }
   - type: Card
-    name: "Это червы 3."
+    name: "червы 3"
 
 - type: entity
   parent: STCardBase
@@ -573,10 +462,6 @@
   id: STHearts4
   name: карта
   components:
-  - type: Sprite
-    layers:
-    - state: Back
-      map: [ "unfoldedLayer" ]
   - type: GenericVisualizer
     visuals:
       enum.FoldedVisuals.State:
@@ -584,7 +469,7 @@
           True: { state: Hearts4 }
           False: { state: Back }
   - type: Card
-    name: "Это червы 4."
+    name: "червы 4"
 
 - type: entity
   parent: STCardBase
@@ -592,10 +477,6 @@
   id: STHearts5
   name: карта
   components:
-  - type: Sprite
-    layers:
-    - state: Back
-      map: [ "unfoldedLayer" ]
   - type: GenericVisualizer
     visuals:
       enum.FoldedVisuals.State:
@@ -603,7 +484,7 @@
           True: { state: Hearts5 }
           False: { state: Back }
   - type: Card
-    name: "Это червы 5."
+    name: "червы 5"
 
 - type: entity
   parent: STCardBase
@@ -611,10 +492,6 @@
   id: STHearts6
   name: карта
   components:
-  - type: Sprite
-    layers:
-    - state: Back
-      map: [ "unfoldedLayer" ]
   - type: GenericVisualizer
     visuals:
       enum.FoldedVisuals.State:
@@ -622,7 +499,7 @@
           True: { state: Hearts6 }
           False: { state: Back }
   - type: Card
-    name: "Это червы 6."
+    name: "червы 6"
 
 - type: entity
   parent: STCardBase
@@ -630,10 +507,6 @@
   id: STHearts7
   name: карта
   components:
-  - type: Sprite
-    layers:
-    - state: Back
-      map: [ "unfoldedLayer" ]
   - type: GenericVisualizer
     visuals:
       enum.FoldedVisuals.State:
@@ -641,7 +514,7 @@
           True: { state: Hearts7 }
           False: { state: Back }
   - type: Card
-    name: "Это червы 7."
+    name: "червы 7"
 
 - type: entity
   parent: STCardBase
@@ -649,10 +522,6 @@
   id: STHearts8
   name: карта
   components:
-  - type: Sprite
-    layers:
-    - state: Back
-      map: [ "unfoldedLayer" ]
   - type: GenericVisualizer
     visuals:
       enum.FoldedVisuals.State:
@@ -660,7 +529,7 @@
           True: { state: Hearts8 }
           False: { state: Back }
   - type: Card
-    name: "Это червы 8."
+    name: "червы 8"
 
 - type: entity
   parent: STCardBase
@@ -668,10 +537,6 @@
   id: STHearts9
   name: карта
   components:
-  - type: Sprite
-    layers:
-    - state: Back
-      map: [ "unfoldedLayer" ]
   - type: GenericVisualizer
     visuals:
       enum.FoldedVisuals.State:
@@ -679,7 +544,7 @@
           True: { state: Hearts9 }
           False: { state: Back }
   - type: Card
-    name: "Это червы 9."
+    name: "червы 9"
 
 - type: entity
   parent: STCardBase
@@ -687,10 +552,6 @@
   id: STHearts10
   name: карта
   components:
-  - type: Sprite
-    layers:
-    - state: Back
-      map: [ "unfoldedLayer" ]
   - type: GenericVisualizer
     visuals:
       enum.FoldedVisuals.State:
@@ -698,7 +559,7 @@
           True: { state: Hearts10 }
           False: { state: Back }
   - type: Card
-    name: "Это червы 10."
+    name: "червы 10"
 
 - type: entity
   parent: STCardBase
@@ -706,10 +567,6 @@
   id: STHearts11
   name: карта
   components:
-  - type: Sprite
-    layers:
-    - state: Back
-      map: [ "unfoldedLayer" ]
   - type: GenericVisualizer
     visuals:
       enum.FoldedVisuals.State:
@@ -717,7 +574,7 @@
           True: { state: Hearts11 }
           False: { state: Back }
   - type: Card
-    name: "Это червы король."
+    name: "червы король"
 
 - type: entity
   parent: STCardBase
@@ -725,10 +582,6 @@
   id: STHearts12
   name: карта
   components:
-  - type: Sprite
-    layers:
-    - state: Back
-      map: [ "unfoldedLayer" ]
   - type: GenericVisualizer
     visuals:
       enum.FoldedVisuals.State:
@@ -736,7 +589,7 @@
           True: { state: Hearts12 }
           False: { state: Back }
   - type: Card
-    name: "Это червы дама."
+    name: "червы дама"
 
 - type: entity
   parent: STCardBase
@@ -744,10 +597,6 @@
   id: STHearts13
   name: карта
   components:
-  - type: Sprite
-    layers:
-    - state: Back
-      map: [ "unfoldedLayer" ]
   - type: GenericVisualizer
     visuals:
       enum.FoldedVisuals.State:
@@ -755,7 +604,7 @@
           True: { state: Hearts13 }
           False: { state: Back }
   - type: Card
-    name: "Это червы валет."
+    name: "червы валет"
 
 - type: entity
   parent: STCardBase
@@ -763,10 +612,6 @@
   id: STHearts14
   name: карта
   components:
-  - type: Sprite
-    layers:
-    - state: Back
-      map: [ "unfoldedLayer" ]
   - type: GenericVisualizer
     visuals:
       enum.FoldedVisuals.State:
@@ -774,7 +619,7 @@
           True: { state: Hearts14 }
           False: { state: Back }
   - type: Card
-    name: "Это червы джокер."
+    name: "червы джокер"
 
 # Spades
 - type: entity
@@ -783,10 +628,6 @@
   id: STSpades1
   name: карта
   components:
-  - type: Sprite
-    layers:
-    - state: Back
-      map: [ "unfoldedLayer" ]
   - type: GenericVisualizer
     visuals:
       enum.FoldedVisuals.State:
@@ -794,7 +635,7 @@
           True: { state: Spades1 }
           False: { state: Back }
   - type: Card
-    name: "Это пики туз."
+    name: "пики туз"
 
 - type: entity
   parent: STCardBase
@@ -802,10 +643,6 @@
   id: STSpades2
   name: карта
   components:
-  - type: Sprite
-    layers:
-    - state: Back
-      map: [ "unfoldedLayer" ]
   - type: GenericVisualizer
     visuals:
       enum.FoldedVisuals.State:
@@ -813,7 +650,7 @@
           True: { state: Spades2 }
           False: { state: Back }
   - type: Card
-    name: "Это пики 2."
+    name: "пики 2"
 
 - type: entity
   parent: STCardBase
@@ -821,10 +658,6 @@
   id: STSpades3
   name: карта
   components:
-  - type: Sprite
-    layers:
-    - state: Back
-      map: [ "unfoldedLayer" ]
   - type: GenericVisualizer
     visuals:
       enum.FoldedVisuals.State:
@@ -832,7 +665,7 @@
           True: { state: Spades3 }
           False: { state: Back }
   - type: Card
-    name: "Это пики 3."
+    name: "пики 3"
 
 - type: entity
   parent: STCardBase
@@ -840,10 +673,6 @@
   id: STSpades4
   name: карта
   components:
-  - type: Sprite
-    layers:
-    - state: Back
-      map: [ "unfoldedLayer" ]
   - type: GenericVisualizer
     visuals:
       enum.FoldedVisuals.State:
@@ -851,7 +680,7 @@
           True: { state: Spades4 }
           False: { state: Back }
   - type: Card
-    name: "Это пики 4."
+    name: "пики 4"
 
 - type: entity
   parent: STCardBase
@@ -859,10 +688,6 @@
   id: STSpades5
   name: карта
   components:
-  - type: Sprite
-    layers:
-    - state: Back
-      map: [ "unfoldedLayer" ]
   - type: GenericVisualizer
     visuals:
       enum.FoldedVisuals.State:
@@ -870,7 +695,7 @@
           True: { state: Spades5 }
           False: { state: Back }
   - type: Card
-    name: "Это пики 5."
+    name: "пики 5"
 
 - type: entity
   parent: STCardBase
@@ -878,10 +703,6 @@
   id: STSpades6
   name: карта
   components:
-  - type: Sprite
-    layers:
-    - state: Back
-      map: [ "unfoldedLayer" ]
   - type: GenericVisualizer
     visuals:
       enum.FoldedVisuals.State:
@@ -889,7 +710,7 @@
           True: { state: Spades6 }
           False: { state: Back }
   - type: Card
-    name: "Это пики 6."
+    name: "пики 6"
 
 - type: entity
   parent: STCardBase
@@ -897,10 +718,6 @@
   id: STSpades7
   name: карта
   components:
-  - type: Sprite
-    layers:
-    - state: Back
-      map: [ "unfoldedLayer" ]
   - type: GenericVisualizer
     visuals:
       enum.FoldedVisuals.State:
@@ -908,7 +725,7 @@
           True: { state: Spades7 }
           False: { state: Back }
   - type: Card
-    name: "Это пики 7."
+    name: "пики 7"
 
 - type: entity
   parent: STCardBase
@@ -916,10 +733,6 @@
   id: STSpades8
   name: карта
   components:
-  - type: Sprite
-    layers:
-    - state: Back
-      map: [ "unfoldedLayer" ]
   - type: GenericVisualizer
     visuals:
       enum.FoldedVisuals.State:
@@ -927,7 +740,7 @@
           True: { state: Spades8 }
           False: { state: Back }
   - type: Card
-    name: "Это пики 8."
+    name: "пики 8"
 
 - type: entity
   parent: STCardBase
@@ -935,10 +748,6 @@
   id: STSpades9
   name: карта
   components:
-  - type: Sprite
-    layers:
-    - state: Back
-      map: [ "unfoldedLayer" ]
   - type: GenericVisualizer
     visuals:
       enum.FoldedVisuals.State:
@@ -946,7 +755,7 @@
           True: { state: Spades9 }
           False: { state: Back }
   - type: Card
-    name: "Это пики 9."
+    name: "пики 9"
 
 - type: entity
   parent: STCardBase
@@ -954,10 +763,6 @@
   id: STSpades10
   name: карта
   components:
-  - type: Sprite
-    layers:
-    - state: Back
-      map: [ "unfoldedLayer" ]
   - type: GenericVisualizer
     visuals:
       enum.FoldedVisuals.State:
@@ -965,7 +770,7 @@
           True: { state: Spades10 }
           False: { state: Back }
   - type: Card
-    name: "Это пики 10."
+    name: "пики 10"
 
 - type: entity
   parent: STCardBase
@@ -973,10 +778,6 @@
   id: STSpades11
   name: карта
   components:
-  - type: Sprite
-    layers:
-    - state: Back
-      map: [ "unfoldedLayer" ]
   - type: GenericVisualizer
     visuals:
       enum.FoldedVisuals.State:
@@ -984,7 +785,7 @@
           True: { state: Spades11 }
           False: { state: Back }
   - type: Card
-    name: "Это пики король."
+    name: "пики король"
 
 - type: entity
   parent: STCardBase
@@ -992,10 +793,6 @@
   id: STSpades12
   name: карта
   components:
-  - type: Sprite
-    layers:
-    - state: Back
-      map: [ "unfoldedLayer" ]
   - type: GenericVisualizer
     visuals:
       enum.FoldedVisuals.State:
@@ -1003,7 +800,7 @@
           True: { state: Spades12 }
           False: { state: Back }
   - type: Card
-    name: "Это пики дама."
+    name: "пики дама"
 
 - type: entity
   parent: STCardBase
@@ -1011,10 +808,6 @@
   id: STSpades13
   name: карта
   components:
-  - type: Sprite
-    layers:
-    - state: Back
-      map: [ "unfoldedLayer" ]
   - type: GenericVisualizer
     visuals:
       enum.FoldedVisuals.State:
@@ -1022,7 +815,7 @@
           True: { state: Spades13 }
           False: { state: Back }
   - type: Card
-    name: "Это пики валет."
+    name: "пики валет"
 
 - type: entity
   parent: STCardBase
@@ -1030,10 +823,6 @@
   id: STSpades14
   name: карта
   components:
-  - type: Sprite
-    layers:
-    - state: Back
-      map: [ "unfoldedLayer" ]
   - type: GenericVisualizer
     visuals:
       enum.FoldedVisuals.State:
@@ -1041,16 +830,13 @@
           True: { state: Spades14 }
           False: { state: Back }
   - type: Card
-    name: "Это пики джокер."
+    name: "пики джокер"
 
-  # Other
-
+# Other
 - type: entity
   parent: STCardBase
   id: STCardRandom
-  name: карта
-  suffix: Случайная карта
-  description: "Обычная игральная карта"
+  name: случайная карта
   components:
   - type: Sprite
     layers:
@@ -1061,90 +847,87 @@
       visible: false
   - type: RandomSpawner
     prototypes:
-      - STClubs1
-      - STClubs2
-      - STClubs3
-      - STClubs4
-      - STClubs5
-      - STClubs6
-      - STClubs7
-      - STClubs8
-      - STClubs9
-      - STClubs10
-      - STClubs11
-      - STClubs12
-      - STClubs13
-      - STDiamonds1
-      - STDiamonds2
-      - STDiamonds3
-      - STDiamonds4
-      - STDiamonds5
-      - STDiamonds6
-      - STDiamonds7
-      - STDiamonds8
-      - STDiamonds9
-      - STDiamonds10
-      - STDiamonds11
-      - STDiamonds12
-      - STDiamonds13
-      - STHearts1
-      - STHearts2
-      - STHearts3
-      - STHearts4
-      - STHearts5
-      - STHearts6
-      - STHearts7
-      - STHearts8
-      - STHearts9
-      - STHearts10
-      - STHearts11
-      - STHearts12
-      - STHearts13
-      - STHearts14
-      - STSpades1
-      - STSpades2
-      - STSpades3
-      - STSpades4
-      - STSpades5
-      - STSpades6
-      - STSpades7
-      - STSpades8
-      - STSpades9
-      - STSpades10
-      - STSpades11
-      - STSpades12
-      - STSpades13
-      - STSpades14
+    - STClubs1
+    - STClubs2
+    - STClubs3
+    - STClubs4
+    - STClubs5
+    - STClubs6
+    - STClubs7
+    - STClubs8
+    - STClubs9
+    - STClubs10
+    - STClubs11
+    - STClubs12
+    - STClubs13
+    - STDiamonds1
+    - STDiamonds2
+    - STDiamonds3
+    - STDiamonds4
+    - STDiamonds5
+    - STDiamonds6
+    - STDiamonds7
+    - STDiamonds8
+    - STDiamonds9
+    - STDiamonds10
+    - STDiamonds11
+    - STDiamonds12
+    - STDiamonds13
+    - STHearts1
+    - STHearts2
+    - STHearts3
+    - STHearts4
+    - STHearts5
+    - STHearts6
+    - STHearts7
+    - STHearts8
+    - STHearts9
+    - STHearts10
+    - STHearts11
+    - STHearts12
+    - STHearts13
+    - STHearts14
+    - STSpades1
+    - STSpades2
+    - STSpades3
+    - STSpades4
+    - STSpades5
+    - STSpades6
+    - STSpades7
+    - STSpades8
+    - STSpades9
+    - STSpades10
+    - STSpades11
+    - STSpades12
+    - STSpades13
+    - STSpades14
     chance: 1
+  - type: Appearance
 
 - type: entity
-  name: колода карт
-  id: STCardDeck
-  categories: [ HideSpawnMenu ]
   parent: BaseItem
+  categories: [ HideSpawnMenu ]
+  id: STCardDeck
+  name: колода карт
   components:
   - type: Sprite
     sprite: _Stories/Objects/Fun/card.rsi
     state: Back
-    layers:
-      - state: Clubs1
-  - type: CardStack
   - type: Item
-    size: Ginormous
+    size: Small
+  - type: CardStack
   - type: CardDeck
   - type: Appearance
 
 - type: entity
-  name: колода из 54 карт
-  id: STCardDeckFull
   parent: STCardDeck
-  suffix: Полная
+  categories: [ HideSpawnMenu ]
+  id: STCardDeckFull
+  name: колода из 54 карт
   components:
   - type: Sprite
     sprite: _Stories/Objects/Fun/card.rsi
     state: Back
-    layers:
-      - state: Clubs1
   - type: CardStack
     content:
     - STClubs1
@@ -1202,22 +985,19 @@
     - STSpades13
     - STSpades14
   - type: Item
-    size: Huge
+    size: Small
   - type: CardDeck
   - type: Appearance
 
 - type: entity
-  name: колода из 36 карт
-  description: Колода, преимущественно использующаяся в СССП.
-  id: STCardDeckFullUSSP
   parent: STCardDeck
-  suffix: Полная
+  categories: [ HideSpawnMenu ]
+  id: STCardDeckFullUSSP
+  name: колода из 36 карт
   components:
   - type: Sprite
     sprite: _Stories/Objects/Fun/card.rsi
     state: Back
-    layers:
-    - state: Clubs1
   - type: CardStack
     content:
     - STClubs1
@@ -1257,46 +1037,47 @@
     - STSpades12
     - STSpades13
   - type: Item
-    size: Huge
+    size: Small
   - type: CardDeck
   - type: Appearance
 
 - type: entity
-  name: упаковка карт
-  id: STCardDeckBox
   parent: [ BaseItemCabinet, BaseItem ]
+  categories: [ HideSpawnMenu ]
+  id: STCardDeckBox
+  name: упаковка карт
   components:
-    - type: Openable
-      closeable: true
-      sound:
-        path: /Audio/_Stories/Items/CardDeckBox/open.ogg
-      closeSound:
-        path: /Audio/_Stories/Items/CardDeckBox/close.ogg
-    - type: CardDeckBox
-    - type: Sprite
-      sprite: _Stories/Objects/Fun/card.rsi
-      layers:
-      - state: closed
-        map: ["enum.OpenableVisuals.Layer"]
-      - state: box-1
-        map: ["enum.ItemCabinetVisuals.Layer"]
-        visible: true
-    - type: ItemSlots
-      slots:
-        ItemCabinet:
-          ejectOnInteract: true
-          whitelist:
-            components:
-            - CardDeck
-          insertSound:
-            path: /Audio/_Stories/Items/CardDeckBox/addeck.ogg
-          ejectSound:
-            path: /Audio/_Stories/Items/CardDeckBox/removedeck.ogg
+  - type: Openable
+    closeable: true
+    sound:
+      path: /Audio/_Stories/Items/CardDeckBox/open.ogg
+    closeSound:
+      path: /Audio/_Stories/Items/CardDeckBox/close.ogg
+  - type: CardDeckBox
+  - type: Sprite
+    sprite: _Stories/Objects/Fun/card.rsi
+    layers:
+    - state: closed
+      map: ["enum.OpenableVisuals.Layer"]
+    - state: box-1
+      map: ["enum.ItemCabinetVisuals.Layer"]
+      visible: true
+  - type: ItemSlots
+    slots:
+      ItemCabinet:
+        ejectOnInteract: true
+        whitelist:
+          components:
+          - CardDeck
+        insertSound:
+          path: /Audio/_Stories/Items/CardDeckBox/addeck.ogg
+        ejectSound:
+          path: /Audio/_Stories/Items/CardDeckBox/removedeck.ogg
 
 - type: entity
   parent: STCardDeckBox
+  categories: [ HideSpawnMenu ]
   id: STCardDeckBoxOpen
-  suffix: Открыта
   components:
   - type: Openable
     opened: true
@@ -1313,13 +1094,15 @@
 
 - type: entity
   parent: [STCardDeckBoxFilled, STCardDeckBoxOpen]
+  categories: [ HideSpawnMenu ]
   id: STCardDeckBoxFilledOpen
-  suffix: Заполнена, открыта
 
 - type: entity
-  name: упаковка карт СССП
-  id: STCardDeckBoxUSSP
   parent: [ BaseItemCabinet, BaseItem, STCardDeckBox ]
+  categories: [ HideSpawnMenu ]
+  id: STCardDeckBoxUSSP
+  name: упаковка карт СССП
+  description: Колода, преимущественно использующаяся в СССП.
   components:
   - type: GenericVisualizer
     visuals:
@@ -1353,8 +1136,8 @@
 
 - type: entity
   parent: STCardDeckBoxUSSP
+  categories: [ HideSpawnMenu ]
   id: STCardDeckBoxOpenUSSP
-  suffix: Открыта
   components:
   - type: Openable
     opened: true
@@ -1362,6 +1145,7 @@
 - type: entity
   parent: STCardDeckBoxUSSP
   id: STCardDeckBoxFilledUSSP
+  name: упаковка карт СССП
   suffix: Заполнена
   components:
   - type: ContainerFill
@@ -1371,26 +1155,30 @@
 
 - type: entity
   parent: [STCardDeckBoxFilledUSSP, STCardDeckBoxOpenUSSP]
+  categories: [ HideSpawnMenu ]
   id: STCardDeckBoxFilledOpenUSSP
-  suffix: Заполнена, открыта
-
+  name: упаковка карт СССП
+  components:
+  - type: Openable
+    opened: true
+  - type: ContainerFill
+    containers:
+      ItemCabinet:
+      - STCardDeckFullUSSP
 
 - type: entity
   parent: BaseItem
+  categories: [ HideSpawnMenu ]
   id: STCardFan
   name: карточный веер
   components:
-  - type: Tag
-    tags:
-    - STCard
-  - type: Appearance
-  - type: CardFan
-  - type: CardStack
   - type: Sprite
     sprite: _Stories/Objects/Fun/card.rsi
     state: Back
     layers:
-      - state: Clubs1
+    - state: Clubs1
+  - type: CardFan
+  - type: CardStack
   - type: UserInterface
     interfaces:
       enum.CardFanUiKey.Key:
@@ -1398,3 +1186,4 @@
   - type: ActivatableUI
     inHandsOnly: true
     key: enum.CardFanUiKey.Key
+  - type: Appearance
