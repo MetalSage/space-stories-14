@@ -1,3 +1,11 @@
+stories-ui-options-tts-label = TTS
+stories-ui-options-tts-enabled-client = Включить систему TTS
+stories-ui-options-tts-volume = Громкость TTS:
+stories-ui-options-tts-volume-radio = Громкость TTS радио:
+
+humanoid-profile-editor-voice-label = Голос:
+humanoid-profile-editor-voice-play = ▶
+
 ui-options-hotkey-auto-standing = Автоподъём с пола
 ui-options-function-toggle-standing = Лежать/Встать на пол
 
