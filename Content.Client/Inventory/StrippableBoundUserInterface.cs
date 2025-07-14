@@ -26,6 +26,7 @@ using static Robust.Client.UserInterface.Control;
 using JetBrains.Annotations;
 using System.Linq;
 using System.Numerics;
+using Robust.Shared.Prototypes;
 
 namespace Content.Client.Inventory
 {
@@ -73,8 +74,10 @@ namespace Content.Client.Inventory
         private const string HiddenCardEntityID = "STStrippingHiddenEntityCard";
 
         private readonly TagSystem _tagSystem;
+
+        private static readonly ProtoId<TagPrototype> STCardTag = "STCard";
         // Stories-Cards End
-        
+
         public StrippableBoundUserInterface(EntityUid owner, Enum uiKey) : base(owner, uiKey)
         {
             _examine = EntMan.System<ExamineSystem>();
@@ -213,12 +216,12 @@ namespace Content.Client.Inventory
             // Stories-Cards Start
             var entity = heldEntity;
 
-            if (entity != null && _tagSystem.HasTag(entity.Value, "STCard"))
+            if (entity != null && _tagSystem.HasTag(entity.Value, STCardTag))
                 entity = _virtualHiddenEntityCard;
 
             UpdateEntityIcon(button, entity);
             // Stories-Cards End
-            
+
             _strippingMenu!.HandsContainer.AddChild(button);
             LayoutContainer.SetPosition(button, new Vector2i(_handCount, 0) * (SlotControl.DefaultButtonSize + ButtonSeparation));
             _handCount++;
