@@ -70,6 +70,7 @@ namespace Content.IntegrationTests.Tests
             "CorvaxDelta",
             "StoriesElkridge",
             "StoriesPrison",
+            "StoriesSaltern",
             // Stories-End
             "Dev",
             "TestTeg",
