@@ -17,9 +17,9 @@ log-probe-label-time = Время
 log-probe-label-accessor = Использовано:
 log-probe-label-number = #
 log-probe-print-button = Печать логов
-log-probe-printout-device = Сканированное устройство: {$name}
+log-probe-printout-device = Сканированное устройство: { $name }
 log-probe-printout-header = Последние логи:
-log-probe-printout-entry = #{$number} / {$time} / {$accessor}
+log-probe-printout-entry = #{ $number } / { $time } / { $accessor }
 astro-nav-program-name = АстроНав
 med-tek-program-name = МедТек
 
@@ -29,19 +29,19 @@ nano-task-ui-heading-high-priority-tasks =
     { $amount ->
         [zero] Нет высокоприоритетных задач
         [one] 1 Высокоприоритетная задача
-       *[other] {$amount} Высокоприоритетных задач
+       *[other] { $amount } Высокоприоритетных задач
     }
 nano-task-ui-heading-medium-priority-tasks =
     { $amount ->
         [zero] Нет задач среднего приоритета
         [one] 1 Задача средней приоритетности
-       *[other] {$amount} Задач средней приоритетности
+       *[other] { $amount } Задач средней приоритетности
     }
 nano-task-ui-heading-low-priority-tasks =
     { $amount ->
         [zero] Нет низкоприоритетных задач
         [one] 1 Задача с низким приоритетом
-       *[other] {$amount} Задач с низким приоритетом
+       *[other] { $amount } Задач с низким приоритетом
     }
 nano-task-ui-done = Сделано
 nano-task-ui-revert-done = Отменить
@@ -58,12 +58,11 @@ nano-task-ui-description-placeholder = Получить что-то важное
 nano-task-ui-requester-label = Создатель:
 nano-task-ui-requester-placeholder = Джон Nanotrasen
 nano-task-ui-item-title = Редактировать задачу
-nano-task-printed-description = Описание: {$description}
-nano-task-printed-requester = Создатель: {$requester}
+nano-task-printed-description = Описание: { $description }
+nano-task-printed-requester = Создатель: { $requester }
 nano-task-printed-high-priority = Приоритет: Высокий
 nano-task-printed-medium-priority = Приоритет: Средний
 nano-task-printed-low-priority = Приоритет: Низкий
-
 # Wanted list cartridge
 wanted-list-program-name = Список разыскиваемых
 wanted-list-label-no-records = Всё спокойно, ковбой.

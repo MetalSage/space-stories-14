@@ -8,3 +8,8 @@ gas-plasma-abbreviation = P
 gas-tritium-abbreviation = T
 gas-water-vapor-abbreviation = H₂O
 gas-unknown-abbreviation = X
+# Stories
+gas-bz-abbreviation = PN₂O₃
+gas-healium-abbreviation = He₂O
+gas-nitryl-abbreviation = Ni₃
+gas-pluoxium-abbreviation = PO₅

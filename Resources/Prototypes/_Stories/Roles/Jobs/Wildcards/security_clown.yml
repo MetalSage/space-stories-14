@@ -52,3 +52,10 @@
     back:
     - Flash
     - ClownRecorder
+
+- type: chameleonOutfit
+  id: STSecurityClownChameleonOutfit
+  job: STSecurityClown
+  equipment:
+    head: ClothingHeadHatBeret
+    neck: Dinkystar

@@ -9,11 +9,11 @@
     sprite: _Stories/Objects/Misc/spafmine.rsi
     layers:
     - state: spafmine-inactive
-      map: [ "enum.ToggleVisuals.Layer" ]
+      map: [ "enum.ToggleableVisuals.Layer" ]
   - type: GenericVisualizer
     visuals:
-      enum.ToggleVisuals.Toggled:
-        enum.ToggleVisuals.Layer:
+      enum.ToggleableVisuals.Enabled:
+        enum.ToggleableVisuals.Layer:
           True: {state: spafmine}
           False: {state: spafmine-inactive}
   - type: FlashOnTrigger

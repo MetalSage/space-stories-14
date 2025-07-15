@@ -29,3 +29,14 @@
     jumpsuit: PRISONClothingUniformJumpsuitMedic
     id: PRISONPDAMedic
     ears: PRISONClothingHeadsetMedic
+
+- type: chameleonOutfit
+  id: PRISONMedicChameleonOutfit
+  job: PRISONMedic
+  equipment:
+    head: ClothingHeadHatBeretMedic
+    gloves: ClothingHandsGlovesLatex
+    mask: ClothingMaskBreathMedical
+    eyes: ClothingEyesChameleon
+    neck: ClothingNeckStethoscope
+    outerClothing: ClothingOuterCoatLab

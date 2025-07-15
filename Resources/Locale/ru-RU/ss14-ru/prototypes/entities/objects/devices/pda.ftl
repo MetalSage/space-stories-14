@@ -1,5 +1,7 @@
 ent-BasePDA = КПК
     .desc = Ассистент по персональным данным.
+ent-BaseWidePDA = { ent-BasePDA }
+    .desc = { ent-BasePDA.desc }
 ent-BaseSecurityPDA = { ent-BasePDA }
     .desc = { ent-BasePDA.desc }
 ent-BaseMedicalPDA = { ent-BasePDA }
@@ -158,5 +160,7 @@ ent-SyndiAgentPDA = медицинский ало-красный КПК
 ent-ChameleonPDA = КПК пассажира
     .desc = Почему он не серый?
     .suffix = Хамелеон
+ent-ScurretPDA = { ent-ClearPDA }
+    .desc = Временный КПК, выданный временным сотрудникам-скюрретам. Не имеет особых функций. Вава!
 ent-WizardPDA = КПК волшебника
     .desc = Вы слышите слабый шепот доносящийся из него.

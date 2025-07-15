@@ -23,3 +23,13 @@
   storage:
     back:
     - SuperSynthesizerInstrument
+
+- type: chameleonOutfit
+  id: STPartyMakerChameleonOutfit
+  job: STPartyMaker
+  equipment:
+    head: ClothingHeadHatCake
+    mask: ClothingMaskBreath
+    neck: ClothingNeckScarfStripedOrange
+    outerClothing: ClothingOuterWinterColorYellow
+    gloves: ClothingHandsGlovesColorLightBrown

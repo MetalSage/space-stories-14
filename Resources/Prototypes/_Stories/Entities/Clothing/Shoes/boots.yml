@@ -37,6 +37,7 @@
     - type: Tag
       tags:
         - ForceRecallEquipment
+        - WhitelistChameleon
     - type: NoSlip
     - type: Sprite
       sprite: _Stories/Clothing/Shoes/Boots/guardian_nt.rsi

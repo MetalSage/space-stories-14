@@ -61,9 +61,8 @@ public sealed partial class ChatSystem : SharedChatSystem
     [Dependency] private readonly SharedAudioSystem _audio = default!;
     [Dependency] private readonly ReplacementAccentSystem _wordreplacement = default!;
     [Dependency] private readonly EntityWhitelistSystem _whitelistSystem = default!;
-    [Dependency] private readonly DamageableSystem _damageable = default!;
-    [Dependency] private readonly IPrototypeManager _prototype = default!;
     [Dependency] private readonly ExamineSystemShared _examineSystem = default!;
+    [Dependency] private readonly DamageableSystem _damageable = default!; // Stories
 
     public const int VoiceRange = 10; // how far voice goes in world units
     public const int WhisperClearRange = 2; // how far whisper goes while still being understandable, in world units
@@ -412,7 +411,7 @@ public sealed partial class ChatSystem : SharedChatSystem
             return;
         }
 
-        if (!EntityManager.TryGetComponent<StationDataComponent>(station, out var stationDataComp)) return;
+        if (!TryComp<StationDataComponent>(station, out var stationDataComp)) return;
 
         var filter = _stationSystem.GetInStation(stationDataComp);
 
@@ -571,7 +570,7 @@ public sealed partial class ChatSystem : SharedChatSystem
         _replay.RecordServerMessage(new ChatMessage(ChatChannel.Whisper, message, wrappedMessage, GetNetEntity(source), null, MessageRangeHideChatForReplay(range)));
 
         // Stories-Crit-Speech-Start
-        if (_mobStateSystem.IsCritical(source) && _prototype.TryIndex<DamageTypePrototype>("Asphyxiation", out var asphyxiation))
+        if (_mobStateSystem.IsCritical(source) && _prototypeManager.TryIndex<DamageTypePrototype>("Asphyxiation", out var asphyxiation))
             _damageable.TryChangeDamage(source, new(asphyxiation, 100), true, false);
         // Stories-Crit-Speech-End
 

@@ -1,5 +1,5 @@
 - type: entity
-  name: tiles-wood-parquet
+  name: wood parquet
   parent: FloorTileItemBase
   id: FloorTileItemWoodParquet
   components:
@@ -17,7 +17,7 @@
     stackType: FloorTileWood
 
 - type: entity
-  name: tiles-wood-black
+  name: wood black
   parent: FloorTileItemBase
   id: FloorTileItemWoodBlack
   components:
@@ -32,10 +32,10 @@
       - Plating
       - FloorWoodBlack
   - type: Stack
-    stackType: FloorTileItemWoodBlack
+    stackType: FloorTileWoodBlack
 
 - type: entity
-  name: tiles-wood-dark
+  name: wood dark
   parent: FloorTileItemBase
   id: FloorTileItemWoodDark
   components:
@@ -50,10 +50,10 @@
       - Plating
       - FloorWoodDark
   - type: Stack
-    stackType: FloorTileItemWoodDark
+    stackType: FloorTileWoodDark
 
 - type: entity
-  name: tiles-wood-light
+  name: wood light
   parent: FloorTileItemBase
   id: FloorTileItemWoodLight
   components:
@@ -68,10 +68,10 @@
       - Plating
       - FloorWoodLight
   - type: Stack
-    stackType: FloorTileItemWoodLight
+    stackType: FloorTileWoodLight
 
 - type: entity
-  name: tiles-wood-red
+  name: wood red
   parent: FloorTileItemBase
   id: FloorTileItemWoodRed
   components:
@@ -86,7 +86,7 @@
       - Plating
       - FloorWoodRed
   - type: Stack
-    stackType: FloorTileItemWoodRed
+    stackType: FloorTileWoodRed
 
 - type: entity
   name: large black wood floor
@@ -104,7 +104,7 @@
       - Plating
       - FloorWoodLargeBlack
   - type: Stack
-    stackType: FloorTileItemWoodLargeBlack
+    stackType: FloorTileWoodLargeBlack
 
 - type: entity
   name: large dark wood floor
@@ -122,7 +122,7 @@
       - Plating
       - FloorWoodLargeDark
   - type: Stack
-    stackType: FloorTileItemWoodLargeDark
+    stackType: FloorTileWoodLargeDark
 
 - type: entity
   name: large light wood floor
@@ -140,7 +140,7 @@
       - Plating
       - FloorWoodLargeLight
   - type: Stack
-    stackType: FloorTileItemWoodLargeLight
+    stackType: FloorTileWoodLargeLight
 
 - type: entity
   name: large red wood floor
@@ -158,7 +158,7 @@
       - Plating
       - FloorWoodLargeRed
   - type: Stack
-    stackType: FloorTileItemWoodLargeRed
+    stackType: FloorTileWoodLargeRed
 
 - type: entity
   name: parquet black wood floor
@@ -176,7 +176,7 @@
       - Plating
       - FloorWoodParquetBlack
   - type: Stack
-    stackType: FloorTileItemWoodParquetBlack
+    stackType: FloorTileWoodParquetBlack
 
 - type: entity
   name: parquet dark wood floor
@@ -194,7 +194,7 @@
       - Plating
       - FloorWoodParquetDark
   - type: Stack
-    stackType: FloorTileItemWoodParquetDark
+    stackType: FloorTileWoodParquetDark
 
 - type: entity
   name: parquet light wood floor
@@ -212,7 +212,7 @@
       - Plating
       - FloorWoodParquetLight
   - type: Stack
-    stackType: FloorTileItemWoodParquetLight
+    stackType: FloorTileWoodParquetLight
 
 - type: entity
   name: parquet red wood floor
@@ -230,7 +230,7 @@
       - Plating
       - FloorWoodParquetRed
   - type: Stack
-    stackType: FloorTileItemWoodParquetRed
+    stackType: FloorTileWoodParquetRed
 
 - type: entity
   name: chess wood floor
@@ -248,7 +248,7 @@
       - Plating
       - FloorWoodChess
   - type: Stack
-    stackType: FloorTileItemWoodChess
+    stackType: FloorTileWoodChess
 
 - type: entity
   name: chess black wood floor
@@ -266,7 +266,7 @@
       - Plating
       - FloorWoodChessBlack
   - type: Stack
-    stackType: FloorTileItemWoodChessBlack
+    stackType: FloorTileWoodChessBlack
 
 - type: entity
   name: chess dark wood floor
@@ -284,7 +284,7 @@
       - Plating
       - FloorWoodChessDark
   - type: Stack
-    stackType: FloorTileItemWoodChessDark
+    stackType: FloorTileWoodChessDark
 
 - type: entity
   name: chess light wood floor
@@ -302,7 +302,7 @@
       - Plating
       - FloorWoodChessLight
   - type: Stack
-    stackType: FloorTileItemWoodChessLight
+    stackType: FloorTileWoodChessLight
 
 - type: entity
   name: chess red wood floor
@@ -320,4 +320,4 @@
       - Plating
       - FloorWoodChessRed
   - type: Stack
-    stackType: FloorTileItemWoodChessRed
+    stackType: FloorTileWoodChessRed

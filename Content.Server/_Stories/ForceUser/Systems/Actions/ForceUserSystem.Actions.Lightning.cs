@@ -16,7 +16,7 @@ public sealed partial class ForceUserSystem
 
         var xform = Transform(args.Performer);
 
-        var coord = _xform.GetMapCoordinates(xform);
+        var coord = _transform.GetMapCoordinates(xform);
 
         HashSet<MapCoordinates> coords = new()
         {

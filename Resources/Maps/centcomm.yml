@@ -61827,27 +61827,6 @@ entities:
     - type: ActionGrant
       actions:
       - ActionVendingThrow
-      - ActionVendingThrow
-      - ActionVendingThrow
-      - ActionVendingThrow
-      - ActionVendingThrow
-      - ActionVendingThrow
-      - ActionVendingThrow
-      - ActionVendingThrow
-      - ActionVendingThrow
-      - ActionVendingThrow
-      - ActionVendingThrow
-      - ActionVendingThrow
-      - ActionVendingThrow
-      - ActionVendingThrow
-      - ActionVendingThrow
-      - ActionVendingThrow
-      - ActionVendingThrow
-      - ActionVendingThrow
-      - ActionVendingThrow
-      - ActionVendingThrow
-      - ActionVendingThrow
-      - ActionVendingThrow
   - uid: 8811
     components:
     - type: Transform

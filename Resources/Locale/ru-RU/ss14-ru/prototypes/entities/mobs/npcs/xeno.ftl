@@ -19,3 +19,5 @@ ent-MobPurpleSnake = космическая гадюка
 ent-MobSmallPurpleSnake = космическая гадюка
     .desc = Уменьшенная версия грозной пурпурной змеи из Kepler-283c.
     .suffix = Маленькая
+ent-MobXenoLonePraetorianNoGhost = одинокий преторианец
+    .desc = Последний из своего вида.

@@ -1,0 +1,13 @@
+ent-WeaponEnergyTurretControlPanelFrame = каркас панели управления сторожевой турелью
+    .desc = Незавершённый настенный каркас для панели управления сторожевой турелью.
+ent-WeaponEnergyTurretStationControlPanelBase = панель управления сторожевой турелью
+    .desc = Настенный интерфейс для удалённой настройки рабочих параметров связанных сторожевых турелей.
+ent-WeaponEnergyTurretAIControlPanel = { ent-WeaponEnergyTurretStationControlPanelBase }
+    .suffix = ИИ, Синтетик
+    .desc = { ent-WeaponEnergyTurretStationControlPanelBase.desc }
+ent-WeaponEnergyTurretSecurityControlPanel = { ent-WeaponEnergyTurretStationControlPanelBase }
+    .suffix = Служба Безопасности
+    .desc = { ent-WeaponEnergyTurretStationControlPanelBase.desc }
+ent-WeaponEnergyTurretCommandControlPanel = { ent-WeaponEnergyTurretStationControlPanelBase }
+    .suffix = Командование
+    .desc = { ent-WeaponEnergyTurretStationControlPanelBase.desc }
