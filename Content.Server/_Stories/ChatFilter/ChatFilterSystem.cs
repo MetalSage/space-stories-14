@@ -1,10 +1,16 @@
+using System.Linq;
 using System.Text;
 using System.Text.RegularExpressions;
+using Content.Server.Administration.Logs;
+using Content.Server.Chat.Systems;
+using Content.Shared.Database;
 
-namespace Content.Server.Chat.Systems;
+namespace Content.Server._Stories.ChatFilter;
 
-public sealed partial class ChatSystem
+public sealed class ChatFilterSystem : EntitySystem
 {
+    [Dependency] private readonly IAdminLogManager _adminLogger = default!;
+
     private static readonly Dictionary<string, string> SlangReplace = new()
     {
         // Game
@@ -147,7 +153,9 @@ public sealed partial class ChatSystem
         if (string.IsNullOrEmpty(message))
             return false;
 
-        var words = message.Split(new[] { ' ', '\t', '\n', '\r' }, StringSplitOptions.RemoveEmptyEntries);
+        var cleanedMessage = new string(message.Select(c => char.IsPunctuation(c) ? ' ' : c).ToArray());
+        var words = cleanedMessage.Split(new[] { ' ' }, StringSplitOptions.RemoveEmptyEntries);
+
         foreach (var word in words)
         {
             foreach (var bannedWord in Banwords)
@@ -160,7 +168,7 @@ public sealed partial class ChatSystem
         return false;
     }
 
-    private string ReplaceWords(string message)
+    public string ReplaceWords(string message)
     {
         if (string.IsNullOrEmpty(message))
             return message;
@@ -186,5 +194,24 @@ public sealed partial class ChatSystem
         }
 
         return message;
+    }
+
+    public void CatchBanword(EntityUid source, ref string message)
+    {
+        if (IsContainsBanWords(message))
+        {
+            _adminLogger.Add(LogType.Action, LogImpact.High, $"{ToPrettyString(source):user} say ban word {message}");
+            message = "кхем-кхем...";
+        }
+    }
+
+    public void CatchBanword(EntityUid source, ref string message, ref InGameICChatType desiredType)
+    {
+        if (IsContainsBanWords(message))
+        {
+            _adminLogger.Add(LogType.Action, LogImpact.High, $"{ToPrettyString(source):user} say ban word {message}");
+            message = "кашляет";
+            desiredType = InGameICChatType.Emote;
+        }
     }
 }
