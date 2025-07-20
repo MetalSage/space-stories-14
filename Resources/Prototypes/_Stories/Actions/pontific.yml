@@ -99,14 +99,14 @@
     useDelay: 15
     itemIconStyle: NoItem
   - type: TargetAction
+    interactOnMiss: false
+    range: 6
   - type: EntityTargetAction
     event: !type:EntityTargetForceUserActionEvent
       volume: 50
       event: !type:LightningStrikeEvent
         proto: LightningRevenant
     canTargetSelf: false
-    interactOnMiss: false
-    range: 6
 
 - type: entity
   parent: BaseToggleAction
