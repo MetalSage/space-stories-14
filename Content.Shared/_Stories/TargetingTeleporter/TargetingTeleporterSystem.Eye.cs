@@ -43,6 +43,7 @@ public abstract partial class SharedTargetingTeleporterSystem
         if (proto != null)
         {
             var eye = SpawnAtPosition(proto, coords.Value);
+            _xform.SetCoordinates(eye, Transform(eye), coords.Value, rotation: Angle.Zero);
 
             var comp = _componentFactory.GetComponent<TargetingTeleporterEyeComponent>();
             comp.Teleporter = ent;

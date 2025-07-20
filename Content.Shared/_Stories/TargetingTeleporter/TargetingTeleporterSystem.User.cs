@@ -4,6 +4,7 @@ using Content.Shared.Administration.Logs;
 using Content.Shared.DoAfter;
 using Content.Shared.Ghost;
 using Content.Shared.Interaction;
+using Content.Shared.Movement.Components;
 using Content.Shared.Movement.Pulling.Components;
 using Content.Shared.Movement.Pulling.Systems;
 using Content.Shared.Movement.Systems;
@@ -36,13 +37,32 @@ public abstract partial class SharedTargetingTeleporterSystem
         SubscribeLocalEvent<TargetingTeleporterUserComponent, TargettingTeleporterSetExitPortalEvent>(OnSetExit);
     }
 
-    private void OnInit(Entity<TargetingTeleporterUserComponent> entity, ref ComponentInit args)
+    public override void Update(float frameTime)
+    {
+        base.Update(frameTime);
+
+        var query = AllEntityQuery<EyeComponent, TargetingTeleporterUserComponent, InputMoverComponent>();
+
+        while (query.MoveNext(out var uid, out var eye, out var user, out var mover))
+        {
+            if (user.Teleporter is { } teleporter && Comp<TargetingTeleporterComponent>(teleporter).GridUid is { } grid)
+            {
+                _eye.SetRotation(uid, -Transform(grid).LocalRotation);
+                mover.RelativeEntity = grid;
+                mover.RelativeRotation = 0f;
+                mover.TargetRelativeRotation = 0f;
+            }
+
+        }
+    }
+
+    public virtual void OnInit(Entity<TargetingTeleporterUserComponent> entity, ref ComponentInit args)
     {
         entity.Comp.SetExitActionEntity = _actions.AddAction(entity, "STActionTargettingTeleporterSetExitPortal");
         entity.Comp.ExitActionEntity = _actions.AddAction(entity, "STActionTargettingTeleporterExit");
     }
 
-    private void OnShutdown(Entity<TargetingTeleporterUserComponent> entity, ref ComponentShutdown args)
+    public virtual void OnShutdown(Entity<TargetingTeleporterUserComponent> entity, ref ComponentShutdown args)
     {
         _actions.RemoveAction(entity, entity.Comp.SetExitActionEntity);
         _actions.RemoveAction(entity, entity.Comp.ExitActionEntity);
