@@ -7,16 +7,18 @@
             Resizable="False">
 
     <BoxContainer Orientation="Vertical" SeparationOverride="4" MinWidth="150">
-        <changelog:ChangelogButton Access="Public" Name="ChangelogButton"/>
         <ui:VoteCallMenuButton />
-        <Button Access="Public" Name="OptionsButton" Text="{Loc 'ui-escape-options'}" />
+        <PanelContainer StyleClasses="LowDivider" Margin="0 2.5 0 2.5" />
         <Button Access="Public" Name="RulesButton" Text="{Loc 'ui-escape-rules'}" />
         <Button Access="Public" Name="GuidebookButton" Text="{Loc 'ui-escape-guidebook'}" />
         <Button Access="Public" Name="WikiButton" Text="{Loc 'ui-escape-wiki'}" />
+        <changelog:ChangelogButton Access="Public" Name="ChangelogButton" />
+        <PanelContainer StyleClasses="LowDivider" Margin="0 2.5 0 2.5" />
+        <Button Access="Public" Name="OptionsButton" Text="{Loc 'ui-escape-options'}" />
+        <PanelContainer StyleClasses="LowDivider" Margin="0 2.5 0 2.5" />
         <Button Access="Public" Name="DisconnectButton" Text="{Loc 'ui-escape-disconnect'}" />
+        <Button Access="Public" Name="QuitButton" Text="{Loc 'ui-escape-quit'}" StyleClasses="ButtonColorRed" />
         <Button Access="Public" Name="QuitButton" Text="{Loc 'ui-escape-quit'}" />
-        <!-- SPACE STORIES - start -->
-        <cc:CommandButton Command="openspecialrolesui" Text="{Loc 'ui-escape-antagselect'}" StyleClasses="ButtonColorRed" />
-        <!-- SPACE STORIES - end-->
+        <cc:CommandButton Command="openspecialrolesui" Text="{Loc 'ui-escape-antagselect'}" StyleClasses="ButtonColorRed" /> <!-- Stories -->
     </BoxContainer>
 </ui1:EscapeMenu>

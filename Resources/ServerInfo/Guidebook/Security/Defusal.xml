@@ -68,6 +68,6 @@
   - [color=red]Перерезать провод[/color]: Перерезание провода выведет болты из строя, скорее выбросьте бомбу в космос!
   - [color=green]Починить провод[/color]: Починка провода приведет к повторному включению болтов.
 
-  [color=#a4885c]Провод Пустышка[/color]
-  - Пустышки ничего не делают. Их можно свободно прощупывать, перерезать, и чинить, и они никак не повлияют на бомбу.
+  [color=#a4885c]Dummy Wire[/color]
+  - Dummy wires don't do anything. You can pulse, cut, and mend them freely without affecting the bomb at all.
 </Document>
