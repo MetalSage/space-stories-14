@@ -42,6 +42,7 @@ public abstract partial class SharedTargetingTeleporterSystem : EntitySystem
     [Dependency] private readonly INetManager _net = default!;
     [Dependency] private readonly SharedMindSystem _mind = default!;
     [Dependency] private readonly IComponentFactory _componentFactory = default!;
+    [Dependency] private readonly SharedTransformSystem _xform = default!;
     public override void Initialize()
     {
         base.Initialize();
@@ -57,7 +58,7 @@ public abstract partial class SharedTargetingTeleporterSystem : EntitySystem
         if (entity.Comp.EyeEntity != null)
         {
             var message = Loc.GetString("machine-already-in-use", ("machine", entity));
-            _popup.PopupEntity(message, entity, args.User);
+            _popup.PopupClient(message, entity, args.User);
             return;
         }
 
