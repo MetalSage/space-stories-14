@@ -28,7 +28,7 @@ public sealed partial class ForceUserSystem
         foreach (var coordinates in coords)
         {
             var user = Spawn(null, coordinates);
-            _lightning.ShootLightning(user, args.Target);
+            _lightning.ShootLightning(user, args.Target, args.Proto);
         }
 
         args.Handled = true;

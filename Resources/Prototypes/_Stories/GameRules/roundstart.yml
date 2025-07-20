@@ -10,6 +10,9 @@
     - prefRoles: [ Shadowling ]
       max: 2
       playerRatio: 30
+      blacklist:
+        components:
+        - Holy
       briefing:
         text: shadowling-role-greeting
         color: DarkRed
@@ -27,3 +30,27 @@
           ActionShadowlingHatch: 0
       mindRoles:
       - MindRoleShadowling
+
+- type: entity
+  parent: BaseGameRule
+  id: STPontific
+  components:
+  - type: GameRule
+    minPlayers: 20
+  - type: RuleGrids
+  - type: LoadMapRule
+    mapPath: /Maps/_Stories/Nonstations/pontific.yml
+  - type: AntagSpawner
+    prototype: STMobPontific
+  - type: AntagSelection
+    selectionTime: PrePlayerSpawn
+    agentName: stories-pontific-round-end-agent-name
+    definitions:
+    - prefRoles: [ STPontific ]
+      spawnerPrototype: STSpawnPointPontific
+      mindRoles:
+      - STMindRolePontific
+      briefing:
+        text: stories-pontific-role-greeting
+        color: "#7d52a8"
+        sound: /Audio/_Stories/Pontific/pontific_start.ogg

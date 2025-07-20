@@ -4,6 +4,10 @@
   parent: BaseMobShadowling
   id: MobShadowling
   components:
+    - type: Unholy # Чуть чуть нежить, но очень мощная
+      resistanceCoefficient: 0
+      ignoreProtectionImpulse: true
+      detectable: false
     - type: NameIdentifier
       group: GenericNumber
     - type: CombatMode

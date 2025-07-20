@@ -16,6 +16,10 @@
   - !type:AddComponentSpecial
     components:
     - type: BibleUser #Lets them heal with bibles
+    # Stories-Pontific-Start
+    - type: Chaplain
+    - type: Holy
+    # Stories-Pontific-End
 
 - type: startingGear
   id: ChaplainGear
@@ -27,6 +31,7 @@
     back:
     - Bible
     - RubberStampChaplain
+    - STChaplainCross # Stories
 
 - type: chameleonOutfit
   id: ChaplainChameleonOutfit
@@ -38,4 +43,3 @@
     neck: ClothingNeckStoleChaplain
     outerClothing: ClothingOuterPlagueSuit
     gloves: ClothingHandsGlovesColorBlack
-

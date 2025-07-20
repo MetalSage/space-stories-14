@@ -1,0 +1,10 @@
+- type: entity
+  id: STBaseHolyItem
+  abstract: true
+  components:
+  - type: UseDelay
+    delays:
+      STHoly:
+        length: 0.5
+  - type: Holy
+
