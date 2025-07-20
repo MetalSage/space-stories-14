@@ -1,5 +1,9 @@
-admin-solutions-window-title = Редактирование раствора - { $targetName }
+admin-solutions-window-title = Редактирование раствора — { $targetName }
 admin-solutions-window-solution-label = Целевой раствор:
+admin-solutions-window-solution-button = Решение
+admin-solutions-window-solution-button-tooltip = Открывает соответствующую серверную сущность Solution в ViewVariables. Полезно для отладки проблем с предсказанием.
+admin-solutions-window-vv-button = VV
+admin-solutions-window-vv-button-tooltip = Открывает соответствующую сущность решения в ViewVariables.
 admin-solutions-window-add-new-button = Добавить новый реагент
 admin-solutions-window-volume-label = Объём { $currentVolume }/{ $maxVolume } ед.
 admin-solutions-window-capacity-label = Вместимость (u):

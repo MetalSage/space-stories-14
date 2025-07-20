@@ -1,7 +1,5 @@
 ### Commands
 
-cmd-unlocknode-desc = Разблокирует узел на данном артефакте
-cmd-unlocknode-help = разблокировать узел <uid артефакта> <uid узла>
 cmd-parse-failure-unlocknode-arg-num = Неверное количество аргументов
 cmd-parse-failure-unlocknode-invalid-entity = Предоставленный сетевой объект не является допустимым узлом
 
