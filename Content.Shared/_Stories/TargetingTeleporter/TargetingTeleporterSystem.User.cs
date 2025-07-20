@@ -58,14 +58,14 @@ public abstract partial class SharedTargetingTeleporterSystem
 
     public virtual void OnInit(Entity<TargetingTeleporterUserComponent> entity, ref ComponentInit args)
     {
-        entity.Comp.SetExitActionEntity = _actions.AddAction(entity, "STActionTargettingTeleporterSetExitPortal");
-        entity.Comp.ExitActionEntity = _actions.AddAction(entity, "STActionTargettingTeleporterExit");
+        entity.Comp.SetExitActionEntity = _actions.AddAction(entity, entity.Comp.SetExitAction);
+        entity.Comp.ExitActionEntity = _actions.AddAction(entity, entity.Comp.ExitAction);
     }
 
     public virtual void OnShutdown(Entity<TargetingTeleporterUserComponent> entity, ref ComponentShutdown args)
     {
-        _actions.RemoveAction(entity, entity.Comp.SetExitActionEntity);
-        _actions.RemoveAction(entity, entity.Comp.ExitActionEntity);
+        _actions.RemoveAction(entity.Owner, entity.Comp.SetExitActionEntity);
+        _actions.RemoveAction(entity.Owner, entity.Comp.ExitActionEntity);
     }
 
     private void OnSetExit(Entity<TargetingTeleporterUserComponent> entity, ref TargettingTeleporterSetExitPortalEvent args)

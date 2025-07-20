@@ -1,3 +1,5 @@
+ent-BaseParadoxCloneObjective = { ent-BaseObjective }
+    .desc = { ent-BaseObjective.desc }
 ent-ParadoxCloneLivingObjective = Улететь на Центком живым и свободным.
     .desc = Вернитесь к своей прежней жизни.
 ent-ParadoxCloneKillObjective = Устранить пространственно-временной парадокс.

@@ -1,4 +1,4 @@
-ent-GuardianPushBall =  резиновая пуля
+ent-GuardianPushBall = резиновая пуля
     .desc = { ent-BaseBullet.desc }
 ent-BulletRedPlazma = стан заряд
     .desc = { ent-BaseBullet.desc }

@@ -38,7 +38,6 @@ public abstract class SharedStunSystem : EntitySystem
     [Dependency] private readonly StandingStateSystem _standingState = default!;
     [Dependency] private readonly StatusEffectsSystem _statusEffect = default!;
     // Stories-Crawling-Start
-    [Dependency] private readonly StandingStateSystem _standingSystem = default!;
     [Dependency] private readonly SharedDoAfterSystem _doAfter = default!;
     [Dependency] private readonly INetConfigurationManager _cfg = default!;
     // Stories-Crawling-End

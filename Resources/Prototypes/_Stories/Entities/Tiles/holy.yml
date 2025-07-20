@@ -8,6 +8,8 @@
     snap:
       - Wall
   components:
+  - type: Physics
+    bodyType: Static
   - type: SpeedModifierContacts
     walkSpeedModifier: 0.2
     sprintSpeedModifier: 0.2
@@ -33,7 +35,6 @@
         Heat: 5
   - type: Transform
     anchored: true
-  - type: Physics
   - type: Fixtures
     fixtures:
       fix1:

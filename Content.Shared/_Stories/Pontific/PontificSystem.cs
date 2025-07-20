@@ -48,7 +48,7 @@ public sealed partial class PontificSystem : EntitySystem
     {
         foreach (var action in entity.Comp.GrantedActions)
         {
-            _action.RemoveAction(entity, action);
+            _action.RemoveAction(entity.Owner, action);
         }
     }
 

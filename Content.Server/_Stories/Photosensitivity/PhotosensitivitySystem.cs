@@ -17,7 +17,8 @@ public sealed partial class PhotosensitivitySystem : EntitySystem
     [Dependency] private readonly MapSystem _mapSystem = default!;
     [Dependency] private readonly DamageableSystem _damageable = default!;
     [Dependency] private readonly PopupSystem _popup = default!;
-    [Dependency] private readonly ITileDefinitionManager _tileDefManager = default!;
+    [Dependency] private readonly TurfSystem _turf = default!;
+    
     private const float UpdateTimer = 2f;
     private float _timer;
     public const float MaxIllumination = 10f;
@@ -44,9 +45,7 @@ public sealed partial class PhotosensitivitySystem : EntitySystem
 
             if (gridUid != null && TryComp<MapGridComponent>(gridUid, out var grid))
             {
-                var tile = grid.GetTileRef(Transform(uid).Coordinates);
-
-                if (tile.IsSpace(_tileDefManager))
+                if (_turf.IsSpace(grid.GetTileRef(Transform(uid).Coordinates)))
                 {
                     _damageable.TryChangeDamage(uid, comp.DamageInSpace, true, false);
                     _popup.PopupEntity("Свет выжигает вас!", uid, uid);

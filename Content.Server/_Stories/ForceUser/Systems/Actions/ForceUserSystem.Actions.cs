@@ -32,7 +32,7 @@ public sealed partial class ForceUserSystem
     private void OnLookUp(EntityUid uid, ForceUserComponent component, ForceLookUpActionEvent args)
     {
         if (args.Handled) return;
-        var ents = _lookup.GetEntitiesInRange<ForceUserComponent>(_xform.GetMapCoordinates(uid), args.Range);
+        var ents = _lookup.GetEntitiesInRange<ForceUserComponent>(_transform.GetMapCoordinates(uid), args.Range);
         foreach (var ent in ents)
         {
             if (ents.Count == 1 && ent.Owner == uid)
@@ -73,7 +73,7 @@ public sealed partial class ForceUserSystem
         var strength = args.Strength;
         var lookup = _lookup.GetEntitiesInRange(args.Performer, range, LookupFlags.Dynamic | LookupFlags.Sundries);
         var xformQuery = GetEntityQuery<TransformComponent>();
-        var worldPos = _xform.GetWorldPosition(xform, xformQuery);
+        var worldPos = _transform.GetWorldPosition(xform, xformQuery);
         var physQuery = GetEntityQuery<PhysicsComponent>();
 
         foreach (var ent in lookup)
@@ -82,7 +82,7 @@ public sealed partial class ForceUserSystem
                 && (phys.CollisionMask & (int) CollisionGroup.GhostImpassable) != 0)
                 continue;
 
-            var foo = _xform.GetWorldPosition(ent, xformQuery) - worldPos;
+            var foo = _transform.GetWorldPosition(ent, xformQuery) - worldPos;
             _throwing.TryThrow(ent, foo * 10, strength, args.Performer, 0);
 
             if (_force.TryRemoveVolume(ent, _random.Next(10, 30)))
@@ -96,7 +96,7 @@ public sealed partial class ForceUserSystem
     private void OnFlashAreaEvent(FlashAreaEvent args)
     {
         if (args.Handled) return;
-        _flashSystem.FlashArea(args.Performer, args.Performer, args.Range, args.FlashDuration, slowTo: args.SlowTo, sound: args.Sound);
+        _flashSystem.FlashArea(args.Performer, args.Performer, args.Range, TimeSpan.FromMilliseconds(args.FlashDuration), slowTo: args.SlowTo, sound: args.Sound);
         args.Handled = true;
     }
     private void OnDash(ForceDashActionEvent args)
@@ -135,7 +135,7 @@ public sealed partial class ForceUserSystem
     private void OnEmp(EmpActionEvent args)
     {
         if (args.Handled) return;
-        _emp.EmpPulse(_xform.GetMapCoordinates(args.Performer), args.Range, args.EnergyConsumption, args.DisableDuration);
+        _emp.EmpPulse(_transform.GetMapCoordinates(args.Performer), args.Range, args.EnergyConsumption, args.DisableDuration);
         args.Handled = true;
     }
 }

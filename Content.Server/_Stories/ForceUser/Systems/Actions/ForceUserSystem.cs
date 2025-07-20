@@ -64,7 +64,6 @@ public sealed partial class ForceUserSystem : SharedForceUserSystem
     [Dependency] private readonly EmpSystem _emp = default!;
     [Dependency] private readonly FlammableSystem _flammable = default!;
     [Dependency] private readonly ThrowingSystem _throwing = default!;
-    [Dependency] private readonly SharedTransformSystem _xform = default!;
     [Dependency] private readonly ProtectiveBubbleSystem _bubble = default!;
     [Dependency] private readonly TetherGunSystem _tetherGunSystem = default!;
     [Dependency] private readonly SharedPopupSystem _popup = default!;

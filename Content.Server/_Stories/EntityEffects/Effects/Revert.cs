@@ -1,10 +1,12 @@
 using Content.Server.Polymorph.Systems;
 using Content.Shared.EntityEffects;
+using Content.Shared.EntityEffects.Effects;
 using Robust.Shared.Prototypes;
 
 namespace Content.Server.EntityEffects.Effects;
 
-public sealed partial class Revert : EntityEffect
+[Virtual]
+public partial class Revert : SharedRevert
 {
     protected override string? ReagentEffectGuidebookText(IPrototypeManager prototype, IEntitySystemManager entSys) => ""; // TODO
 

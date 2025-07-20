@@ -1,4 +1,5 @@
 # - type: entity
+#   parent: BaseAction
 #   id: ActionInquisitorCreateProtectiveBubble
 #   name: Защитный пузырь инквизитора
 #   description: Создайте защитный телекинетический кокон, который отразит любые лазеры, сильно уменьшит урон от пуль и защитит от взрывов и давления. Почти не защищает от ударов ближнего боя.
@@ -14,40 +15,43 @@
 #       proto: EffectInquisitorProtectiveBubble
 
 - type: entity
+  parent: BaseAction
   id: ActionLifeSteal
   name: Кража жизни
   description: Иссушает жертву, восстанавливая вас.
-  categories: [ HideSpawnMenu ]
   components:
-  - type: EntityTargetAction
+  - type: Action
     useDelay: 10
-    range: 2
     itemIconStyle: BigAction
+    icon:
+      sprite: _Stories/Actions/force.rsi
+      state: steal    
+    sound: !type:SoundPathSpecifier
+      path: /Audio/Effects/radpulse1.ogg
+  - type: EntityTargetAction    
     whitelist:
       components:
       - Body
-    canTargetSelf: false
-    interactOnMiss: false
-    sound: !type:SoundPathSpecifier
-      path: /Audio/Effects/radpulse1.ogg
-    icon:
-      sprite: _Stories/Actions/force.rsi
-      state: steal
+    canTargetSelf: false    
     event: !type:EntityTargetForceUserActionEvent
       volume: 7.5
       event: !type:StealLifeTargetEvent
         doAfterTime: 1
+  - type: TargetAction
+    range: 2
+    interactOnMiss: false
 
 - type: entity
+  parent: BaseAction
   id: ActionInquisitorGhost
   name: Теневой призрак
   description: Станьте призраком и проходите сквозь стены. В таком состоянии вы не можете воздействовать на мир, но всегда можете вернуться.
-  categories: [ HideSpawnMenu ]
   components:
-  - type: InstantAction
+  - type: Action
     useDelay: 5
     itemIconStyle: BigAction
     icon: { sprite: _Stories/Actions/force.rsi, state: inquisitor }
+  - type: InstantAction
     event: !type:DoAfterUserEvent
       hidden: false
       needHand: false
@@ -59,20 +63,23 @@
         event: !type:InquisitorPolymorphEvent
 
 - type: entity
+  parent: BaseAction
   id: ActionFrozeBullets
   name: Замедление силы
   description: Используйте телекинез, чтобы останавливать пули вокруг вас на протяжении 10 секунд.
-  categories: [ HideSpawnMenu ]
   components:
-  - type: InstantAction
-    itemIconStyle: BigAction
+  - type: Action
     useDelay: 5
     icon: { sprite: _Stories/Actions/force.rsi, state: stopbullets }
+    itemIconStyle: BigAction
+  - type: InstantAction
     event: !type:InstantForceUserActionEvent
       volume: 50
       event: !type:FrozeBulletsActionEvent
+        seconds: 100
 
 # - type: entity
+#   parent: BaseAction
 #   id: ActionRejuvenate
 #   name: Самовосстановление
 #   description: Используйте телекинез, чтобы останавливать пули вокруг вас на протяжении 10 секунд.
@@ -86,15 +93,16 @@
 #       event: !type:RejuvenateActionEvent
 
 - type: entity
+  parent: BaseAction
   id: ActionRecliningPulse
   name: Оттолкнуть
   description: Оттолкните всех вокруг вас.
-  categories: [ HideSpawnMenu ]
   components:
-  - type: InstantAction
-    itemIconStyle: BigAction
+  - type: Action
     useDelay: 30
+    itemIconStyle: BigAction    
     icon: { sprite: _Stories/Actions/force.rsi, state: pulse }
+  - type: InstantAction
     event: !type:InstantForceUserActionEvent
       volume: 100
       event: !type:RecliningPulseEvent
@@ -103,89 +111,94 @@
         range: 5
 
 - type: entity
+  parent: BaseAction
   id: ActionStrangle
   name: Удушение силой
   description: Удушающий прием техники бесконтактного боя.
-  categories: [ HideSpawnMenu ]
   components:
-  - type: EntityTargetAction
+  - type: Action
     useDelay: 10
-    range: 2
-    itemIconStyle: BigAction
-    whitelist:
-      components:
-      - Body
-    canTargetSelf: false
-    interactOnMiss: false
-    sound: !type:SoundPathSpecifier
-      path: /Audio/Effects/radpulse1.ogg
     icon:
       sprite: _Stories/Actions/force.rsi
       state: strangle
+    itemIconStyle: BigAction
+    sound: !type:SoundPathSpecifier
+      path: /Audio/Effects/radpulse1.ogg
+  - type: EntityTargetAction
+    whitelist:
+      components:
+      - Body
+    canTargetSelf: false 
     event: !type:EntityTargetForceUserActionEvent
       volume: 7.5
       event: !type:StrangleTargetEvent
         doAfterTime: 1
+  - type: TargetAction
+    range: 2
+    interactOnMiss: false
 
 - type: entity
+  parent: BaseAction
   id: ActionLightningStrike
   name: Молнии силы
   description: Направьте молнию из ваших рук в вашего врага.
-  categories: [ HideSpawnMenu ]
   components:
-  - type: EntityTargetAction
+  - type: Action
     useDelay: 5
-    range: 10
-    itemIconStyle: BigAction
-    canTargetSelf: false
-    interactOnMiss: false
     icon:
       sprite: _Stories/Actions/force.rsi
       state: lightning
+    itemIconStyle: BigAction
+  - type: EntityTargetAction    
+    canTargetSelf: false
     event: !type:EntityTargetForceUserActionEvent
       volume: 50
       event: !type:LightningStrikeEvent
+  - type: TargetAction
+    range: 10
+    interactOnMiss: false
 
 - type: entity
+  parent: BaseAction
   id: ActionIgniteTarget
   name: Пирокинез
   description: Вызывает легкое выгорание у врага.
-  categories: [ HideSpawnMenu ]
   components:
-  - type: EntityTargetAction
+  - type: Action
     useDelay: 10
-    range: 10
     itemIconStyle: BigAction
-    canTargetSelf: false
-    interactOnMiss: false
-    sound: !type:SoundPathSpecifier
-      path: /Audio/Magic/rumble.ogg
     icon:
       sprite: _Stories/Actions/force.rsi
       state: ignite
+    sound: !type:SoundPathSpecifier
+      path: /Audio/Magic/rumble.ogg
+  - type: EntityTargetAction
+    canTargetSelf: false
     event: !type:EntityTargetForceUserActionEvent
       volume: 75
       event: !type:IgniteTargetActionEvent
         stackAmount: 3.1
+  - type: TargetAction
+    range: 10
+    interactOnMiss: false
 
 - type: entity
+  parent: BaseAction
   id: ActionHypnosis
   name: Гипноз силы
   description: Обращает жертву на сторону Императора.
-  categories: [ HideSpawnMenu ]
   components:
-  - type: EntityTargetAction
+  - type: Action
     useDelay: 3
-    range: 1
     itemIconStyle: BigAction
+    icon:
+      sprite: _Stories/Actions/force.rsi
+      state: hypnosis
+  - type: EntityTargetAction
     whitelist:
       components:
       - Body
     canTargetSelf: false
-    interactOnMiss: false
-    icon:
-      sprite: _Stories/Actions/force.rsi
-      state: hypnosis
     event: !type:DoAfterTargetEvent
       hidden: true
       needHand: true
@@ -195,13 +208,17 @@
       event: !type:EntityTargetForceUserActionEvent
         volume: 100
         event: !type:HypnosisTargetActionEvent
+  - type: TargetAction
+    range: 1
+    interactOnMiss: false
 
 - type: entity
+  parent: BaseAction
   id: ActionInquisitorRevertPolymorph
   name: Вернуться в обычную форму
   description: Перестаньте бегать и сразитесь!
-  categories: [ HideSpawnMenu ]
   components:
-  - type: InstantAction
+  - type: Action
     icon: { sprite: _Stories/Actions/force.rsi, state: inquisitor }
+  - type: InstantAction
     event: !type:RevertPolymorphActionEvent

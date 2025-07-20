@@ -1,6 +1,8 @@
 ## Actions Commands loc
 
+
 ## Upgradeaction command loc
+
 upgradeaction-command-help = Использование: upgradeaction <entityUid> [level]
 upgradeaction-command-need-one-argument = upgradeaction требует как минимум один аргумент - uid сущности действия. Второй необязательный аргумент - указанный уровень.
 upgradeaction-command-max-two-arguments = upgradeaction имеет максимум два аргумента - uid сущности действия и (необязательный) устанавливаемый уровень.

@@ -67,6 +67,7 @@ research-technology-audio-visual-communication = А/В Коммуникация
 research-technology-advanced-cleaning = Продвинутая Уборка
 research-technology-meat-manipulation = Манипулирование Мясом
 research-technology-honk-mech = Мех Х.О.Н.К.
+research-technology-launcher-syringe = Шприцемёт
 research-technology-advanced-spray = Продвинутые Спреи
 research-technology-quantum-fiber-weaving = Плетение Квантового Волокна
 research-technology-bluespace-cargo-transport = Блюспейс-Транспортировка Грузов

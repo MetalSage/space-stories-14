@@ -122,8 +122,7 @@ food-sequence-burger-content-world-pea = мирно
 
 # COTTON BURGERS
 
-food-sequence-cotton-burger-gen = {$content}бургерно
-
+food-sequence-cotton-burger-gen = { $content }бургерно
 food-sequence-cotton-burger-content-cotton-bol = хлопчато
 food-sequence-cotton-burger-content-pyrotton-bol = пирохлопчато
 food-sequence-cotton-burger-content-plushie-throngler = нагибаторно

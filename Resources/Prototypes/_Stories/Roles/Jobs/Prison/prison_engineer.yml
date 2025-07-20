@@ -31,3 +31,13 @@
     id: PRISONPDAEngineer
     ears: PRISONClothingHeadsetEngi
     belt: ClothingBeltUtilityEngineering
+
+- type: chameleonOutfit
+  id: PRISONEngineerChameleonOutfit
+  job: PRISONEngineer
+  equipment:
+    head: ClothingHeadHatHardhatYellow
+    mask: ClothingMaskBreath
+    neck: ClothingNeckScarfStripedOrange
+    gloves: ClothingHandsGlovesColorYellow
+    eyes: ClothingEyesGlassesMeson
