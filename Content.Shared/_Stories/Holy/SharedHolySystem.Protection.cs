@@ -127,7 +127,9 @@ public abstract partial class SharedHolySystem
 
         // У меня есть некоторые сомнения насчет кода ниже
 
-        var damageModifierSet = (DamageModifierSet)_prototype.Index(entity.Comp.ProtectionDamageDamageModifierSet);
+        var protectionDamageDamageModifierSet = _prototype.Index(entity.Comp.ProtectionDamageDamageModifierSet);
+
+        var damageModifierSet = new DamageModifierSet() { Coefficients = new Dictionary<string, float>(protectionDamageDamageModifierSet.Coefficients), FlatReduction = new Dictionary<string, float>(protectionDamageDamageModifierSet.FlatReduction) };
 
         Dictionary<string, float> newCoefficients = new();
         foreach (var c in damageModifierSet.Coefficients)
