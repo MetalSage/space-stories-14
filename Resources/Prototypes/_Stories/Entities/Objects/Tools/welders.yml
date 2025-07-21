@@ -9,49 +9,10 @@
       path: /Audio/Items/welder_drop.ogg
   - type: Sprite
     sprite: _Stories/Objects/Tools/cold_welding.rsi
-    layers:
-      - state: icon
-      - state: cold_flame
-        visible: false
-        shader: unshaded
-        map: [ "enum.ToggleVisuals.Layer" ]
-  - type: GenericVisualizer
-    visuals:
-      enum.ToggleVisuals.Toggled:
-        enum.ToggleVisuals.Layer:
-          True: { visible: true }
-          False: { visible: false }
+    state: icon
   - type: Item
     size: Small
     sprite: _Stories/Objects/Tools/cold_welding.rsi
-  - type: ItemToggle
-    predictable: false
-    soundActivate:
-      collection: WelderOn
-      params:
-        variation: 0.125
-        volume: -5
-    soundDeactivate:
-      collection: WelderOff
-      params:
-        variation: 0.125
-        volume: -5
-  - type: ItemToggleSize
-    activatedSize: Large
-  - type: ItemToggleHot
-  - type: ComponentToggler
-    components:
-      - type: DisarmMalus
-        malus: 0.6
-  - type: ToggleableLightVisuals
-    spriteLayer: flame
-    inhandVisuals:
-      left:
-      - state: inhand-left-flame
-        shader: unshaded
-      right:
-      - state: inhand-right-flame
-        shader: unshaded
   - type: UseDelay
   - type: RefillableSolution
     solution: Welder
@@ -64,19 +25,14 @@
         maxVol: 100
   - type: Tool
     useSound:
-      collection: Welder
+      collection: ColdWelding
     qualities: Welding
   - type: Welder
+    enabled: True
     fuelReagent: FoamingAgent
     fuelConsumption: 0
     fuelLitCost: 0
     tankSafe: true
-  - type: PointLight
-    enabled: false
-    radius: 1.5
-    color: cyan
-    netsync: false
-  - type: ItemTogglePointLight
   - type: Appearance
   - type: PhysicalComposition
     materialComposition:
