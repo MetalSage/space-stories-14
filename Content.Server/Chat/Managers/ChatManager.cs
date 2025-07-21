@@ -264,8 +264,10 @@ internal sealed partial class ChatManager : IChatManager
 
     private void SendOOC(ICommonSession player, string message)
     {
-        if (player.AttachedEntity is {} attachedEntity) // Stories-ChatFilter
+        // Stories-ChatFilter Start
+        if (player.AttachedEntity is {} attachedEntity)
             _chatFilterSystem.CatchBanword(attachedEntity, ref message);
+        // Stories-ChatFilter End
 
         if (_adminManager.IsAdmin(player))
         {
