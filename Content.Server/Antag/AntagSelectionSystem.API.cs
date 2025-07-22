@@ -340,6 +340,17 @@ public sealed partial class AntagSelectionSystem
         MakeAntag(rule, player, def.Value);
     }
 
+    // Stories Start
+    public void ForceMakeAntag<T>(ICommonSession? player, string defaultRule, string registerRule) where T : Component
+    {
+        var rule = ForceGetGameRuleEnt<T>(defaultRule, registerRule);
+
+        if (!TryGetNextAvailableDefinition(rule, out var def))
+            def = rule.Comp.Definitions.Last();
+        MakeAntag(rule, player, def.Value);
+    }
+    // Stories End
+
     /// <summary>
     /// Tries to grab one of the weird specific antag gamerule ents or starts a new one.
     /// This is gross code but also most of this is pretty gross to begin with.
@@ -358,6 +369,29 @@ public sealed partial class AntagSelectionSystem
         GameTicker.StartGameRule(ruleEnt);
         return (ruleEnt, antag);
     }
+
+    // Stories Start
+    public Entity<AntagSelectionComponent> ForceGetGameRuleEnt<T>(string id, string registerRule) where T : Component
+    {
+        var query = EntityQueryEnumerator<T, AntagSelectionComponent>();
+        while (query.MoveNext(out var uid, out _, out var comp))
+        {
+            return (uid, comp);
+        }
+
+        // Регистрируем правило в списке, без создания
+        if (!string.IsNullOrEmpty(registerRule))
+            GameTicker.RegisterGameRuleInList(registerRule);
+
+        // Создаем и запускаем только правило id
+        var ruleEnt = GameTicker.AddGameRule(id);
+        RemComp<LoadMapRuleComponent>(ruleEnt);
+        var antag = Comp<AntagSelectionComponent>(ruleEnt);
+        antag.AssignmentComplete = true; // don't do normal selection.
+        GameTicker.StartGameRule(ruleEnt);
+        return (ruleEnt, antag);
+    }
+    // Stories End
 
     /// <summary>
     /// Get all sessions that have been preselected for antag.

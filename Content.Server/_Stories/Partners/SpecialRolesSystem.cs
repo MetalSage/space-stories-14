@@ -18,6 +18,9 @@ using Robust.Shared.Prototypes;
 namespace Content.Server._Stories.Partners.Systems;
 public sealed class SpecialRolesSystem : EntitySystem
 {
+    private const string DefaultNinjaRule = "NinjaSpawn";
+    private const string DefaultInquisitorRule = "InquisitorSpawn";
+    private const string DefaultKyloRule = "KyloSpawn";
     private const string DefaultRevsRule = "Revolutionary";
     private const string DefaultThiefRule = "Thief";
     private const string DefaultTraitorRule = "Traitor";
@@ -163,6 +166,15 @@ public sealed class SpecialRolesSystem : EntitySystem
                 break;
             case DefaultThiefRule:
                 _antag.ForceMakeAntag<ThiefRuleComponent>(session, prototype.GameRule);
+                break;
+            case DefaultNinjaRule:
+                _antag.ForceMakeAntag<SpaceSpawnRuleComponent>(session, prototype.GameRule);
+                break;
+            case DefaultInquisitorRule:
+                _antag.ForceMakeAntag<InquisitorRuleComponent>(session, prototype.GameRule);
+                break;
+            case DefaultKyloRule:
+                _antag.ForceMakeAntag<InquisitorRuleComponent>(session, prototype.GameRule, DefaultInquisitorRule);
                 break;
             default:
                 _antag.ForceMakeAntag<RatKingComponent>(session, prototype.GameRule);
