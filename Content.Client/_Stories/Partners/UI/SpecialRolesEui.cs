@@ -67,11 +67,14 @@ public sealed class SpecialRolesEui : BaseEui
 
         if (earliestStart.HasValue)
         {
+            var timeSpanEarliestStart = TimeSpan.FromMinutes(earliestStart.Value) - SponsorInfo.TimeAdvantage;
+            timeSpanEarliestStart = timeSpanEarliestStart < TimeSpan.Zero ? TimeSpan.Zero : timeSpanEarliestStart;
+
             var currentTime = _gameTicker.RoundDuration();
 
-            var earliestStartString = Math.Round(currentTime.TotalMinutes) >= earliestStart
-                ? $"[color=green]{Math.Round(currentTime.TotalMinutes)} / {earliestStart}[/color]"
-                : $"[color=red]{Math.Round(currentTime.TotalMinutes)} / {earliestStart}[/color]";
+            var earliestStartString = currentTime >= timeSpanEarliestStart
+                ? $"[color=green]{currentTime.Minutes} / {timeSpanEarliestStart.Minutes}[/color]"
+                : $"[color=red]{currentTime.Minutes} / {timeSpanEarliestStart.Minutes}[/color]";
 
             msgs.Add(Loc.GetString("special-roles-status-start", ("earliest-start", earliestStartString)));
         }

@@ -108,7 +108,8 @@ public sealed class SpecialRolesSystem : EntitySystem
             return false;
         }
 
-        if (gameRuleProto.HasComponent<StationEventComponent>() && !_event.AvailableEvents().ContainsKey(gameRuleProto))
+        var sponsorTime = _gameTicker.RoundDuration() + SponsorInfo.TimeAdvantage;
+        if (gameRuleProto.HasComponent<StationEventComponent>() && !_event.AvailableEvents(currentTimeOverride: sponsorTime).ContainsKey(gameRuleProto))
         {
             reason = StatusLabel.NotInAvailableEvents;
             return false;
