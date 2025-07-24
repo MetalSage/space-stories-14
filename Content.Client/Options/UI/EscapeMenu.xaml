@@ -16,7 +16,7 @@
         <Button Access="Public" Name="DisconnectButton" Text="{Loc 'ui-escape-disconnect'}" />
         <Button Access="Public" Name="QuitButton" Text="{Loc 'ui-escape-quit'}" />
         <!-- SPACE STORIES - start -->
-        <cc:CommandButton Command="openspecialrolesui" Text="{Loc 'ui-escape-antagselect'}" StyleClasses="ButtonColorRed" />
+        <cc:CommandButton Command="openspecialrolesui" Text="{Loc 'ui-escape-antag-select'}" StyleClasses="ButtonColorRed" />
         <!-- SPACE STORIES - end-->
     </BoxContainer>
 </ui1:EscapeMenu>

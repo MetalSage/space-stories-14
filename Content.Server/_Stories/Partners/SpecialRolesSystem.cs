@@ -18,14 +18,6 @@ using Robust.Shared.Prototypes;
 namespace Content.Server._Stories.Partners.Systems;
 public sealed class SpecialRolesSystem : EntitySystem
 {
-    private const string DefaultNinjaRule = "NinjaSpawn";
-    private const string DefaultInquisitorRule = "InquisitorSpawn";
-    private const string DefaultKyloRule = "KyloSpawn";
-    private const string DefaultRevsRule = "Revolutionary";
-    private const string DefaultThiefRule = "Thief";
-    private const string DefaultTraitorRule = "Traitor";
-    private const string DefaultShadowlingRule = "Shadowling";
-    private const string GreenshiftGamePreset = "Greenshift";
     [Dependency] private readonly GameTicker _gameTicker = default!;
     [Dependency] private readonly MindSystem _mind = default!;
     [Dependency] private readonly SharedRoleSystem _role = default!;
@@ -34,6 +26,18 @@ public sealed class SpecialRolesSystem : EntitySystem
     [Dependency] private readonly EventManagerSystem _event = default!;
     [Dependency] private readonly IPrototypeManager _proto = default!;
     [Dependency] private readonly PartnersManager _partners = default!;
+
+    // Станционные роли
+    private const string DefaultRevsRule = "Revolutionary";
+    private const string DefaultThiefRule = "Thief";
+    private const string DefaultTraitorRule = "Traitor";
+    private const string DefaultShadowlingRule = "Shadowling";
+    // Призрачные роли
+    private const string DefaultNinjaRule = "NinjaSpawn";
+    private const string DefaultInquisitorRule = "InquisitorSpawn";
+    private const string DefaultKyloRule = "KyloSpawn";
+
+    private const string GreenshiftGamePreset = "Greenshift";
 
     public bool CanPick(ICommonSession session, ProtoId<SpecialRolePrototype> proto, out StatusLabel? reason)
     {
