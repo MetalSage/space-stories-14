@@ -100,8 +100,12 @@
     - ActionSpafEgg
   - type: Devourer
     devourAction: ActionSpafDevour
-    foodPreference: Humanoid
-    shouldStoreDevoured: true
+    foodPreferenceWhitelist:
+      components:
+      - HumanoidAppearance
+    stomachStorageWhitelist:
+      components:
+      - MobState
     chemical: Ichor
     healRate: 15.0
     whitelist:

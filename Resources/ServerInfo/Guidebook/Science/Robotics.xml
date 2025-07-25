@@ -1,6 +1,6 @@
 <Document>
-  # Робототехника
-  Сотрудники научного отдела имеют возможность создавать роботов различных типов под нужды станции. Для начала необходимо изучить технологию под названием [color=#a4885c]Робототехника[/color].
+  # Robotics
+  The science team has the ability to create several unique types of robots to suit the station's needs. In order to begin, you'll want to research the [color=#a4885c]Robotics[/color] technology.
 
   ## Фабрикатор экзокостюмов
 <Box>
@@ -28,7 +28,7 @@
 </Box>
   [color=#a4885c]Боты[/color] это простые маленькие автоматы, способные выполнять простые задачи, например, уборку. Они не требуют энергетических батарей, но довольно хрупки. Для их создания потребуются детали, которые можно изготовить в фабрикаторе экзокостюмов.
 
-  Чтобы создать бота, откройте [color=#a4885c]Меню строительства[/color] и перейдите в категорию "Утилиты" (или просто вбейте "bot" в поиске), и перед вами откроется список рецептов. Далее, убедитесь что детали, указанные в рецепте, имеются в наличии в руках или поблизости, и нажмите [color=#a4885c]Build[/color]. Через несколько секунд созданный вами кремниевый слуга появится у ваших ног!
+  To make a bot, open the [color=#a4885c]Construction Menu[/color] and go to the "Utilities" category (or just search "bot") and you'll have the whole list of recipes. In order to assemble the bot, you must have the parts outlined by the recipe close to you and click [color=#a4885c]Build[/color], after a few seconds your newly created silicon servant should appear at your feet!
 
   ## Мехи
 <Box>
@@ -47,7 +47,7 @@
 <GuideEntityEmbed Entity="RipleyPeripheralsElectronics" Caption="модуль управления периферией Рипли"/>
 </Box>
 
-  Так, например, для создания автономного погрузчика Рипли необходимы обе приведенные выше машинные платы, для других мехов они бесполезны.
+  For example, both of the circuit boards above are necessary to create a Ripley mech, and cannot be used to make any other mech.
 
   Создание меха начинается с печати в фабрикаторе его каркаса, и установки рук и ног. Вы можете [color=#a4885c]осмотреть[/color] его, чтобы понять, что делать дальше.
   - В полностью собранный каркас необходимо в определённой последовательности провести (поместить) кабеля, воспользоваться инструментами и установить уникальные машинные платы. Большинство мехов требуют двух или более уникальных машинных плат. Например, мех [color=#a4885c]Рипли[/color] требует плат [color=#a4885c]Центральный модуль управления Рипли[/color] и [color=#a4885c]модуль управления периферией Рипли[/color].

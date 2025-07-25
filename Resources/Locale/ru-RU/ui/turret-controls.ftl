@@ -5,7 +5,7 @@ turret-controls-window-armament-controls-label = Режим вооружения
 turret-controls-window-targeting-controls-label = Авторизованный персонал
 # Status reports  
 turret-controls-window-no-turrets = <! Нет подключённых устройств !>
-turret-controls-window-turret-status = » { $device } - Статус: { $status }
+turret-controls-window-turret-status = » { $device } — Статус: { $status }
 turret-controls-window-turret-disabled = ***НЕАКТИВНА***
 turret-controls-window-turret-retracted = НЕАКТИВНА
 turret-controls-window-turret-retracting = ДЕАКТИВАЦИЯ
