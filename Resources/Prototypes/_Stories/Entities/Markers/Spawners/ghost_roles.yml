@@ -7,9 +7,22 @@
   components:
   - type: SpawnPoint
   - type: GhostRole
-    name: Инквизитор
-    description: "Уничтожьте Стража Клинка и постарайтесь выжить. Используйте световой меч и свои способности."
-    rules: "Как антагонист, вы можете делать все необходимое для выполнения целей.\n • Вы полностью свободны в выполнении своих целей, но если вы будете ставить порчу игры экипажу выше своих целей, то это приведет к разговору с администрацией.\n • Вы в праве придумать себе дополнительные цели. В рамках разумного.\n • Вам запрещено устраивать массовые саботажи кроме как своими способностями и мечом.\n • Выпуск сингулярности, теслы, плазмафлуд и другие масштабные саботажи запрещены без исключений.\n"
+    name: ghost-role-information-inquisitor-name
+    description: ghost-role-information-inquisitor-description
+    rules: ghost-role-information-inquisitor-rules
+    requirements:
+    - !type:RoleTimeRequirement
+      role: JobHeadOfSecurity
+      time: 36000 # 10 hours
+    - !type:RoleTimeRequirement
+      role: JobCaptain
+      time: 36000 # 10 hours
+    - !type:RoleTimeRequirement
+      role: JobIAA
+      time: 36000 # 10 hours # ! Почему так чертовски много?
+    - !type:RoleTimeRequirement
+      role: JobDetective
+      time: 18000 # 5 hours
   - type: Sprite
     sprite: Markers/jobs.rsi
     layers:
