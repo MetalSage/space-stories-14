@@ -3,6 +3,7 @@
 - type: latheRecipePack
   id: ToolsStatic
   recipes:
+  - STColdWelding # Stories
   - Wirecutter
   - Screwdriver
   - Welder

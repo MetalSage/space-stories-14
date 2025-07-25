@@ -1,6 +1,7 @@
 - type: vendingMachineInventory
   id: YouToolInventory
   startingInventory:
+    STColdWelding: 3 # Stories
     CableApcStack: 5
     Crowbar: 5
     Welder: 2

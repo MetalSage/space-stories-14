@@ -1,0 +1,42 @@
+- type: entity
+  name: cold welding
+  parent: BaseItem
+  id: STColdWelding
+  description: "Thanks to special technology, it can both weld and cut through objects, serving as a welding equipment alternative. Does not heat the atmosphere or cause blinding. Powered by a foaming agent."
+  components:
+  - type: EmitSoundOnLand
+    sound:
+      path: /Audio/Items/welder_drop.ogg
+  - type: Sprite
+    sprite: _Stories/Objects/Tools/cold_welding.rsi
+    state: icon
+  - type: Item
+    size: Small
+    sprite: _Stories/Objects/Tools/cold_welding.rsi
+  - type: UseDelay
+  - type: RefillableSolution
+    solution: Welder
+  - type: SolutionContainerManager
+    solutions:
+      Welder:
+        reagents:
+          - ReagentId: FoamingAgent
+            Quantity: 100
+        maxVol: 100
+  - type: Tool
+    useSound:
+      collection: ColdWelding
+    qualities: Welding
+  - type: Welder
+    enabled: True
+    fuelReagent: FoamingAgent
+    fuelConsumption: 0
+    fuelLitCost: 0
+    tankSafe: true
+  - type: Appearance
+  - type: PhysicalComposition
+    materialComposition:
+      Steel: 500
+      Plastic: 250
+  - type: StaticPrice
+    price: 130
