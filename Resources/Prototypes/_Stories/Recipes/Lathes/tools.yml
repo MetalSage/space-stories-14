@@ -1,0 +1,9 @@
+# Recipes
+
+- type: latheRecipe
+  parent: BaseToolRecipe
+  id: STColdWelding
+  result: STColdWelding
+  materials:
+    Steel: 1000
+    Plastic: 500

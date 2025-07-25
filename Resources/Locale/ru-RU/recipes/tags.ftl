@@ -65,6 +65,7 @@ construction-graph-tag-wheat-bushel = мешок пшеницы
 construction-graph-tag-apron = фартук
 construction-graph-tag-utility-belt = пояс инструментов
 construction-graph-tag-corgi-hide = шкура корги
+construction-graph-tag-mop-basic = швабра
 soil-construction-graph-any-mushroom = любой гриб
 # toys
 construction-graph-tag-rubber-ducky = резиновая утка
