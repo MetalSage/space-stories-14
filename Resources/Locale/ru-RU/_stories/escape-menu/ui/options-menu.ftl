@@ -1,4 +1,3 @@
-ui-escape-antagselect = Выбор роли
 stories-ui-options-tts-label = TTS
 stories-ui-options-tts-enabled-client = Включить систему TTS
 stories-ui-options-tts-volume = Громкость TTS:
