@@ -9,25 +9,28 @@ namespace Content.Shared._Stories.Cards.Stack;
 [RegisterComponent, NetworkedComponent, AutoGenerateComponentState]
 public sealed partial class CardStackComponent : Component
 {
-    [DataField("content")]
+    [ViewVariables, DataField("content")]
     public List<EntProtoId> InitialContent = [];
 
-    [DataField, AutoNetworkedField]
-    public List<EntityUid> Cards = [];
+    [ViewVariables, AutoNetworkedField]
+    public List<EntityUid> CardOrder = new();
+
+    [ViewVariables(VVAccess.ReadWrite)]
+    public int MaxCards = 216;
 
     [ViewVariables]
-    public Container CardContainer = default!;
+    public Container CardContainer;
 
-    [DataField("addCardSound")]
-    public SoundSpecifier AddCard = new SoundCollectionSpecifier("STAddCard");
+    [DataField]
+    public SoundSpecifier AddCardSound = new SoundCollectionSpecifier("STAddCard");
 
-    [DataField("removeCardSound")]
-    public SoundSpecifier RemoveCard = new SoundCollectionSpecifier("STRemoveCard");
+    [DataField]
+    public SoundSpecifier RemoveCardSound = new SoundCollectionSpecifier("STRemoveCard");
 }
 
 [Serializable, NetSerializable]
 public enum CardStackVisuals : byte
 {
     CardsCount,
-    Shuffled
+    OrderEdited
 }
