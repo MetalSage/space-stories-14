@@ -25,6 +25,7 @@
     - id: SpiderSpawn
     - id: VentClog
     - id: STJobDistributionError # Stories
+    - id: RadiationOutburst # Stories
 
 - type: entityTable
   id: BasicAntagEventsTable
