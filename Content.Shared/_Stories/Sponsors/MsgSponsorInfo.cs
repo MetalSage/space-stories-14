@@ -10,6 +10,8 @@ namespace Content.Shared._Stories.Partners;
 [Serializable, NetSerializable]
 public sealed class SponsorInfo
 {
+    public static readonly TimeSpan TimeAdvantage = TimeSpan.FromMinutes(3);
+
     [JsonPropertyName("tier")]
     public int? Tier { get; set; }
 

@@ -62,6 +62,19 @@ public sealed partial class GameTicker
         _consoleHost.UnregisterCommand("listgamerules");
     }
 
+    // Stories Start
+    /// <summary>
+    /// Регистрирует правило в списке AllPreviousGameRules без его фактического создания или запуска.
+    /// </summary>
+    public void RegisterGameRuleInList(string ruleId)
+    {
+        var currentTime = RunLevel == GameRunLevel.PreRoundLobby ? TimeSpan.Zero : RoundDuration();
+        _allPreviousGameRules.Add((currentTime, ruleId));
+        _sawmill.Info($"Registered game rule {ruleId} in AllPreviousGameRules without starting.");
+        _adminLogger.Add(LogType.EventAnnounced, $"Registered game rule {ruleId} without starting.");
+    }
+    // Stories End
+
     /// <summary>
     /// Adds a game rule to the list, but does not
     /// start it yet, instead waiting until the rule is actually started by other code (usually roundstart)

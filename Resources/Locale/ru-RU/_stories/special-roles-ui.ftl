@@ -27,4 +27,4 @@ role-inquisitor = Инквизитор
 role-kylo = Инквизитор [Кайло Рен]
 role-dragon = Космический дракон
 role-terminator = Экстерминатор
-ui-escape-antagselect = Выбор роли
+ui-escape-antag-select = Выбор роли
