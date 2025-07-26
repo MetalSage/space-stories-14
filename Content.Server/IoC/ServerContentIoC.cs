@@ -1,3 +1,4 @@
+using Content.Server._Stories.ChatFilter;
 using Content.Server.Administration;
 using Content.Server.Administration.Logs;
 using Content.Server.Administration.Managers;
@@ -70,6 +71,7 @@ namespace Content.Server.IoC
             IoCManager.Register<JoinQueueManager>(); // Corvax-Queue
             IoCManager.Register<DiscordAuthManager>(); // Corvax-DiscordAuth
             IoCManager.Register<TTSManager>(); // Stories-TTS
+            IoCManager.Register<ChatFilterSystem>(); // Stories-ChatFilter
             IoCManager.Register<ServerInfoManager>();
             IoCManager.Register<PoissonDiskSampler>();
             IoCManager.Register<DiscordWebhook>();
