@@ -1,4 +1,5 @@
 using System.Linq;
+using System.Text;
 using Content.Server.Administration.Logs;
 using Content.Server.Chat.Systems;
 using Content.Shared.Database;
@@ -133,7 +134,7 @@ public sealed class ChatFilterSystem : EntitySystem
         { "пкм", "правая рука" }
     };
 
-    private static readonly List<string> BanPhrases = new()
+    private static readonly HashSet<string> BanPhrases = new()
     {
         "слава украине", "славаукраине", "слава россии", "славароссии",
         "пидр", "педр", "пидор", "пидар", "педар", "педик",
@@ -145,7 +146,7 @@ public sealed class ChatFilterSystem : EntitySystem
         "чурк", "чурок"
     };
 
-    private static readonly List<char> UnnecessaryChars = new()
+    private static readonly HashSet<char> UnnecessaryChars = new()
     {
         '+', '/', '*', '=',
         '&',
@@ -158,26 +159,46 @@ public sealed class ChatFilterSystem : EntitySystem
 
     private bool IsContainsBanWords(string message, out string matchedBanWord)
     {
+        matchedBanWord = string.Empty;
         if (string.IsNullOrEmpty(message))
-        {
-            matchedBanWord = string.Empty;
             return false;
+
+        var cleanSB = new StringBuilder(message.Length);
+        foreach (char ch in message)
+        {
+            if (char.IsLetter(ch))
+                cleanSB.Append(char.ToLowerInvariant(ch));
+            else if (ch == ' ')
+                cleanSB.Append(' ');
         }
 
-        var clearMessage = message
-            .Where(ch => char.IsLetter(ch) || ch == ' ')
-            .Select(ch => char.ToLower(ch))
-            .ToArray();
+        var cleanWords = cleanSB.ToString().Split().ToHashSet();
 
-        var splitClearMessage = new string(clearMessage).Split();
-
-        matchedBanWord = BanPhrases.FirstOrDefault(banPhrase =>
+        foreach (string banPhrase in BanPhrases)
         {
             var banWords = banPhrase.Split();
-            return banWords.All(banWord => splitClearMessage.Any(word => word.StartsWith(banWord)));
-        }) ?? string.Empty;
+            var foundBanWords = 0;
 
-        return !string.IsNullOrEmpty(matchedBanWord);
+            foreach (var banWord in banWords)
+            {
+                foreach (var word in cleanWords)
+                {
+                    if (word.StartsWith(banWord, StringComparison.OrdinalIgnoreCase))
+                    {
+                        foundBanWords++;
+                        break;
+                    }
+                }
+            }
+
+            if (foundBanWords >= banWords.Length)
+            {
+                matchedBanWord = banPhrase;
+                return true;
+            }
+        }
+
+        return false;
     }
 
     public string ReplaceWords(string message)
@@ -185,19 +206,16 @@ public sealed class ChatFilterSystem : EntitySystem
         if (string.IsNullOrEmpty(message))
             return message;
 
-        var clearMessage = new string(message
-            .Where(ch => !UnnecessaryChars.Contains(ch))
-            .ToArray());
+        var clearMessage = new string(message.Where(ch => !UnnecessaryChars.Contains(ch)).ToArray());
 
-        var whiteSpaceMessage = string.Join(" ", clearMessage
-            .Split(' ', StringSplitOptions.RemoveEmptyEntries));
+        var whiteSpaceMessage = string.Join(' ', clearMessage.Split(' ', StringSplitOptions.RemoveEmptyEntries));
 
         return string.Join(" ", whiteSpaceMessage
             .Split()
             .Select(currentWord =>
             {
-                var newWord = new string(currentWord.ToLower());
-                return SlangReplace.ContainsKey(newWord) ? SlangReplace[newWord] : currentWord;
+                var lowerWord = currentWord.ToLower();
+                return SlangReplace.GetValueOrDefault(lowerWord, currentWord);
             }));
     }
 
