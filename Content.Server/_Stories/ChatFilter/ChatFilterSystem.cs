@@ -219,22 +219,30 @@ public sealed class ChatFilterSystem : EntitySystem
             }));
     }
 
-    public void CatchBanword(EntityUid source, ref string message)
+    public void CatchBanWord(ref string message)
     {
-        if (IsContainsBanWords(message, out var banWord))
-        {
-            _adminLogger.Add(LogType.Action, LogImpact.High, $"{ToPrettyString(source):user} say ban word {banWord}");
-            message = "кхем-кхем...";
-        }
+        if (!IsContainsBanWords(message, out _))
+            return;
+
+        message = "кхем-кхем...";
     }
 
-    public void CatchBanword(EntityUid source, ref string message, ref InGameICChatType desiredType)
+    public void CatchBanWord(EntityUid source, ref string message)
     {
-        if (IsContainsBanWords(message, out var banWord))
-        {
-            _adminLogger.Add(LogType.Action, LogImpact.High, $"{ToPrettyString(source):user} say ban word {banWord}");
-            message = "кашляет";
-            desiredType = InGameICChatType.Emote;
-        }
+        if (!IsContainsBanWords(message, out var banWord))
+            return;
+
+        _adminLogger.Add(LogType.Action, LogImpact.High, $"{ToPrettyString(source):user} say ban word {banWord}");
+        message = "кхем-кхем...";
+    }
+
+    public void CatchBanWord(EntityUid source, ref string message, ref InGameICChatType desiredType)
+    {
+        if (!IsContainsBanWords(message, out var banWord))
+            return;
+
+        _adminLogger.Add(LogType.Action, LogImpact.High, $"{ToPrettyString(source):user} say ban word {banWord}");
+        message = "кашляет";
+        desiredType = InGameICChatType.Emote;
     }
 }

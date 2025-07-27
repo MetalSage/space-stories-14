@@ -182,7 +182,7 @@ public sealed partial class ChatSystem : SharedChatSystem
         bool ignoreActionBlocker = false
         )
     {
-        _chatFilterSystem.CatchBanword(source, ref message, ref desiredType); // Stories-ChatFilter
+        _chatFilterSystem.CatchBanWord(source, ref message, ref desiredType); // Stories-ChatFilter
 
         if (HasComp<GhostComponent>(source))
         {
@@ -285,7 +285,7 @@ public sealed partial class ChatSystem : SharedChatSystem
         ICommonSession? player = null
         )
     {
-        _chatFilterSystem.CatchBanword(source, ref message); // Stories-ChatFilter
+        _chatFilterSystem.CatchBanWord(source, ref message); // Stories-ChatFilter
 
         if (!CanSendInGame(message, shell, player))
             return;

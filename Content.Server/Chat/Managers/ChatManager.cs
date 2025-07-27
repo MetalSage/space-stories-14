@@ -266,7 +266,9 @@ internal sealed partial class ChatManager : IChatManager
     {
         // Stories-ChatFilter Start
         if (player.AttachedEntity is {} attachedEntity)
-            _chatFilterSystem.CatchBanword(attachedEntity, ref message);
+            _chatFilterSystem.CatchBanWord(attachedEntity, ref message);
+        else
+            _chatFilterSystem.CatchBanWord(ref message);
         // Stories-ChatFilter End
 
         if (_adminManager.IsAdmin(player))
