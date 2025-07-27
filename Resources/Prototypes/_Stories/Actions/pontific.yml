@@ -1,5 +1,5 @@
 ﻿- type: entity
-  parent: BaseToggleAction
+  parent: BaseAction
   id: STActioPontificToggleNightvision
   name: Ночное зрение
   description: Переключить своё ночное зрение.
@@ -13,7 +13,7 @@
     event: !type:ToggleNightvisionEvent
 
 - type: entity
-  parent: BaseToggleAction
+  parent: BaseAction
   id: STActionPontificPrayer
   name: Dark Prayer Service
   description: A ritual that summons dark forces into this world. Restores filth.
@@ -29,7 +29,7 @@
     event: !type:PontificPrayerEvent
 
 - type: entity
-  parent: BaseToggleAction
+  parent: BaseAction
   id: STActionPontificBloodyAltar
   name: Dark Altar
   description: Summons an altar from the darkness. Drag creatures onto it to turn them corrupted. Requires 150 Corruption.
@@ -48,7 +48,7 @@
         proto: STPontificAltar
 
 - type: entity
-  parent: BaseToggleAction
+  parent: BaseAction
   id: STActionPontificSpawnMonk
   name: Summon a monk
   description: Summons a cursed monk who is highly resistant to holy damage. Requires 50 Corruption.
@@ -67,7 +67,7 @@
         proto: STMobCursedMonk
 
 - type: entity
-  parent: BaseToggleAction
+  parent: BaseAction
   id: STActionPontificSpawnGuardian
   name: Summon a knight
   description: Summons a cursed knight. This is a heavily armored warrior, but slow. Requires 100 corruption.
@@ -86,7 +86,7 @@
         proto: STMobFallenGuard
 
 - type: entity
-  parent: BaseToggleAction
+  parent: BaseAction
   id: STActionPontificFelLightning
   name: Dark Lightning
   description: A powerful bolt of lightning filled with dark energy. Requires 50 Corruption.
@@ -109,7 +109,7 @@
     canTargetSelf: false
 
 - type: entity
-  parent: BaseToggleAction
+  parent: BaseAction
   id: STActionPontificFlameSwords
   name: Dark Flame
   description: Your swords will burn with fel flames, greatly increasing speed and damage. Requires 80 fel.
@@ -127,7 +127,7 @@
       event: !type:PontificFlameSwordsEvent
 
 - type: entity
-  parent: BaseToggleAction
+  parent: BaseAction
   id: STActionPontificKudzu
   name: Desecrated Lilies
   description: Creates corrupted lilies that spread and slowly fill the station. Requires 50 corruption.
