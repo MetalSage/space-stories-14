@@ -1,5 +1,6 @@
 <Document>
-  # Научный отдел
+# Science
+[color=#c96dbf]Science[/color], often called Research and Development, is a job consisting of generating research points to unlock new technologies and using said technologies to produce new items at lathes to help out the station.
 
   ## Персонал
   Персонал [color=#c96dbf]научного[/color] отдела состоит из научных ассистентов и учёных. [color=#c96dbf]Научным отделом[/color] руководит Научный Руководитель.
@@ -9,9 +10,7 @@
     <GuideEntityEmbed Entity="ToyFigurineResearchDirector" Caption="RD"/>
   </Box>
 
-  Научный отдел, часто именуемый "РнД", занимается заработком очков исследований, используемых для изучения новых технологий, которые в свою очередь позволяют создавать полезные для станции предметы на различных станках, принтерах, и фабрикаторах.
-
-  ## Технологии
+## Technologies
   <Box>
     <GuideEntityEmbed Entity="ComputerResearchAndDevelopment"/>
     <GuideEntityEmbed Entity="ResearchAndDevelopmentServer"/>
@@ -39,7 +38,7 @@
 
   Чтобы продвинуться дальше, вам нужно исследовать до [color=brown]75%[/color] текущего уровня, чтобы перейти на следующий. Таким образом, чтобы разблокировать исследования T2, вам нужно исследовать 75% исследований T1.
 
-  Теперь [color=green]уровень 3[/color] - вот где становится интересно. Если вы исследуете технологию Т3, вы [color=brown]блокируете[/color] технологии Т3 из других древ дисциплин. То есть, если только... вы не найдете какой-нибудь другой способ обойти это, возможно, вам стоит спросить вашего [color=purple]научного руководителя[/color].
+Now [color=green]Tier 3[/color] is where it gets interesting. If you research a T3 tech, you [color=brown]lock out[/color] T3 techs from other Discipline trees. That is, unless you can find some other way around it... you should probably ask your [color=purple]Research Director[/color].
 
   ## Фабрикаторы и станки
   <Box>

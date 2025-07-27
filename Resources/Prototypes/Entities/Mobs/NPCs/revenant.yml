@@ -10,8 +10,10 @@
   - type: Unholy
     resistanceCoefficient: 0.5
     ignoreProtectionImpulse: false
-  # Stories-Pontific-End
     detectable: true
+  # Stories-Pontific-End
+  - type: Emag
+    emagType: All
   - type: Input
     context: "ghost"
   - type: Spectral

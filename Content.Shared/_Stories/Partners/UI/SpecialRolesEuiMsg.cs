@@ -5,7 +5,16 @@ namespace Content.Shared._Stories.Partners.UI;
 public static class SpecialRolesEuiMsg
 {
     [Serializable, NetSerializable]
-    public sealed class SendRoleData(string role, bool pickable, int? occurrences, int? minimumPlayers, int? earliestStart, int? maxOccurrences, int? timeSinceLastEvent, int? reoccurrenceDelay, StatusLabel? reason) : EuiMessageBase
+    public sealed class SendRoleData(
+        string role,
+        bool pickable,
+        int? occurrences,
+        int? minimumPlayers,
+        int? earliestStart,
+        int? maxOccurrences,
+        int? timeSinceLastEvent,
+        int? reoccurrenceDelay,
+        StatusLabel? reason) : EuiMessageBase
     {
         public string Role = role;
         public bool Pickable = pickable;

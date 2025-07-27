@@ -9,8 +9,8 @@
       offState: off
       brokenState: broken
       normalState: normal-unshaded
-    - type: Advertise
-      pack: SecDrobeAds
+    - type: DatasetVocalizer
+      dataset: SecDrobeAds
     - type: Sprite
       sprite: _Stories/Structures/Machines/VendingMachines/spdrobe.rsi
       layers:
@@ -37,8 +37,8 @@
       normalState: normal-unshaded
       ejectState: eject-unshaded
       denyState: deny-unshaded
-    - type: Advertise
-      pack: SecTechAds
+    - type: DatasetVocalizer
+      dataset: SecTechAds
     - type: SpeakOnUIClosed
       pack: SecTechGoodbyes
     - type: Sprite
@@ -59,7 +59,7 @@
       color: "#78645c"
 
 - type: entity
-  abstract: true 
+  abstract: true
   parent: VendingMachine
   id: MusicalVendingMachineBase
   name: МузМат
@@ -71,8 +71,8 @@
       brokenState: broken
       normalState: normal-unshaded
       denyState: deny-unshaded
-    - type: Advertise
-      pack: SecTechAds
+    - type: DatasetVocalizer
+      dataset: SecTechAds
     - type: SpeakOnUIClosed
       pack: SecTechGoodbyes
     - type: Sprite
@@ -101,7 +101,7 @@
 - type: entity
   parent: MusicalVendingMachineBase
   id: MusicalVendingMachinePrison
-  suffix: Тюрьма 
+  suffix: Тюрьма
   components:
     - type: AccessReader
       access: [["Prison"]]
