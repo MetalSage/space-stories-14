@@ -1,10 +1,15 @@
+using System.Linq;
 using System.Text;
-using System.Text.RegularExpressions;
+using Content.Server.Administration.Logs;
+using Content.Server.Chat.Systems;
+using Content.Shared.Database;
 
-namespace Content.Server.Chat.Systems;
+namespace Content.Server._Stories.ChatFilter;
 
-public sealed partial class ChatSystem
+public sealed class ChatFilterSystem : EntitySystem
 {
+    [Dependency] private readonly IAdminLogManager _adminLogger = default!;
+
     private static readonly Dictionary<string, string> SlangReplace = new()
     {
         // Game
@@ -126,13 +131,12 @@ public sealed partial class ChatSystem
         { "фрикил", "плохо" },
         { "фрикилл", "плохо" },
         { "лкм", "левая рука" },
-        { "пкм", "правая рука" },
-        // BanWords
-        { "слава Украине", "кхе-кхе" }, { "славаУкраине", "кхе-кхе" }, { "слава России", "кхе-кхе" }, { "славаРоссии", "кхе-кхе" }
+        { "пкм", "правая рука" }
     };
 
-    private static readonly List<string> Banwords = new()
+    private static readonly HashSet<string> BanPhrases = new()
     {
+        "слава украине", "славаукраине", "слава россии", "славароссии",
         "пидр", "педр", "пидор", "пидар", "педар", "педик",
         "даун",
         "ватник",
@@ -142,49 +146,103 @@ public sealed partial class ChatSystem
         "чурк", "чурок"
     };
 
-    private bool IsContainsBanWords(string message)
+    private static readonly HashSet<char> UnnecessaryChars = new()
     {
+        '+', '/', '*', '=',
+        '&',
+        '\\',
+        '_',
+        '[', ']',
+        '{', '}',
+        '\"'
+    };
+
+    private bool IsContainsBanWords(string message, out string matchedBanWord)
+    {
+        matchedBanWord = string.Empty;
         if (string.IsNullOrEmpty(message))
             return false;
 
-        var words = message.Split(new[] { ' ', '\t', '\n', '\r' }, StringSplitOptions.RemoveEmptyEntries);
-        foreach (var word in words)
+        var cleanSB = new StringBuilder(message.Length);
+        foreach (char ch in message)
         {
-            foreach (var bannedWord in Banwords)
+            if (char.IsLetter(ch))
+                cleanSB.Append(char.ToLowerInvariant(ch));
+            else if (ch == ' ')
+                cleanSB.Append(' ');
+        }
+
+        var cleanWords = cleanSB.ToString().Split().ToHashSet();
+
+        foreach (string banPhrase in BanPhrases)
+        {
+            var banWords = banPhrase.Split();
+            var foundBanWords = 0;
+
+            foreach (var banWord in banWords)
             {
-                if (word.StartsWith(bannedWord, StringComparison.OrdinalIgnoreCase))
-                    return true;
+                foreach (var word in cleanWords)
+                {
+                    if (word.StartsWith(banWord, StringComparison.OrdinalIgnoreCase))
+                    {
+                        foundBanWords++;
+                        break;
+                    }
+                }
+            }
+
+            if (foundBanWords >= banWords.Length)
+            {
+                matchedBanWord = banPhrase;
+                return true;
             }
         }
 
         return false;
     }
 
-    private string ReplaceWords(string message)
+    public string ReplaceWords(string message)
     {
         if (string.IsNullOrEmpty(message))
             return message;
 
-        // Очистка от лишних знаков
-        message = (((Func<string>)(() =>
-        {
-            StringBuilder result = new StringBuilder();
-            foreach (char ch in message)
+        var clearMessage = new string(message.Where(ch => !UnnecessaryChars.Contains(ch)).ToArray());
+
+        var whiteSpaceMessage = string.Join(' ', clearMessage.Split(' ', StringSplitOptions.RemoveEmptyEntries));
+
+        return string.Join(" ", whiteSpaceMessage
+            .Split()
+            .Select(currentWord =>
             {
-                if (ch != '+' && ch != '/' && ch != '\\' && ch != '*')
-                    result.Append(ch);
-            }
-            return result.ToString();
-        }))());
-        if (message == "")
-            return message;
+                var lowerWord = currentWord.ToLower();
+                return SlangReplace.GetValueOrDefault(lowerWord, currentWord);
+            }));
+    }
 
-        // Поиск и замена сленга
-        foreach (var pair in SlangReplace)
-        {
-            message = Regex.Replace(message, $@"\b{Regex.Escape(pair.Key)}\b", pair.Value, RegexOptions.IgnoreCase);
-        }
+    public void CatchBanWord(ref string message)
+    {
+        if (!IsContainsBanWords(message, out _))
+            return;
 
-        return message;
+        message = "кхем-кхем...";
+    }
+
+    public void CatchBanWord(EntityUid source, ref string message)
+    {
+        if (!IsContainsBanWords(message, out var banWord))
+            return;
+
+        _adminLogger.Add(LogType.Action, LogImpact.High, $"{ToPrettyString(source):user} say ban word {banWord}");
+        message = "кхем-кхем...";
+    }
+
+    public void CatchBanWord(EntityUid source, ref string message, ref InGameICChatType desiredType)
+    {
+        if (!IsContainsBanWords(message, out var banWord))
+            return;
+
+        _adminLogger.Add(LogType.Action, LogImpact.High, $"{ToPrettyString(source):user} say ban word {banWord}");
+        message = "кашляет";
+        desiredType = InGameICChatType.Emote;
     }
 }
