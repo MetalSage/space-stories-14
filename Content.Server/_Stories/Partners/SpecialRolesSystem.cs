@@ -33,7 +33,6 @@ public sealed class SpecialRolesSystem : EntitySystem
     private const string DefaultTraitorRule = "Traitor";
     private const string DefaultShadowlingRule = "Shadowling";
     // Призрачные роли
-    private const string DefaultNinjaRule = "NinjaSpawn";
     private const string DefaultInquisitorRule = "InquisitorSpawn";
     private const string DefaultKyloRule = "KyloSpawn";
 
@@ -171,9 +170,6 @@ public sealed class SpecialRolesSystem : EntitySystem
                 break;
             case DefaultThiefRule:
                 _antag.ForceMakeAntag<ThiefRuleComponent>(session, prototype.GameRule);
-                break;
-            case DefaultNinjaRule:
-                _antag.ForceMakeAntag<SpaceSpawnRuleComponent>(session, prototype.GameRule);
                 break;
             case DefaultInquisitorRule:
                 _antag.ForceMakeAntag<InquisitorRuleComponent>(session, prototype.GameRule);
