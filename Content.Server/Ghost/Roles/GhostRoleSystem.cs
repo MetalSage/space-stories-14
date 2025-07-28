@@ -6,6 +6,7 @@ using Content.Server.Ghost.Roles.Events;
 using Content.Shared.Ghost.Roles.Raffles;
 using Content.Server.Ghost.Roles.UI;
 using Content.Server.Mind.Commands;
+using Content.Server.Players.JobWhitelist;
 using Content.Shared.Administration;
 using Content.Shared.CCVar;
 using Content.Shared.Database;
@@ -30,6 +31,7 @@ using Robust.Shared.Random;
 using Robust.Shared.Timing;
 using Robust.Shared.Utility;
 using Content.Server.Popups;
+using Content.Shared._Stories.Roles;
 using Content.Shared.Verbs;
 using Robust.Shared.Collections;
 using Content.Shared.Ghost.Roles.Components;
@@ -547,6 +549,11 @@ public sealed class GhostRoleSystem : EntitySystem
         var roles = new List<GhostRoleInfo>();
         var metaQuery = GetEntityQuery<MetaDataComponent>();
 
+        // Stories-JobWhitelistRequirement Start
+        var cfg = IoCManager.Resolve<IConfigurationManager>();
+        var jobWhitelistSystem = IoCManager.Resolve<JobWhitelistManager>();
+        // Stories-JobWhitelistRequirement End
+
         foreach (var (id, (uid, role)) in _ghostRoles)
         {
             if (metaQuery.GetComponent(uid).EntityPaused)
@@ -555,6 +562,25 @@ public sealed class GhostRoleSystem : EntitySystem
 
             var kind = GhostRoleKind.FirstComeFirstServe;
             GhostRoleRaffleComponent? raffle = null;
+
+            // Stories-JobWhitelistRequirement Start
+            bool isAccessible = true;
+            FormattedMessage? reason = null;
+            if (role.Requirements != null && cfg.GetCVar(CCVars.GameRoleWhitelist))
+            {
+                foreach (var req in role.Requirements)
+                {
+                    if (req is JobWhitelistRequirement whitelistReq
+                        && player is not null
+                        && !jobWhitelistSystem.IsWhitelisted(player.UserId, whitelistReq.Job))
+                    {
+                        isAccessible = false;
+                        reason = FormattedMessage.FromUnformatted(Loc.GetString("role-not-whitelisted"));
+                        break;
+                    }
+                }
+            }
+            // Stories-JobWhitelistRequirement End
 
             if (role.RaffleConfig is not null)
             {
@@ -584,7 +610,11 @@ public sealed class GhostRoleSystem : EntitySystem
                 Requirements = role.Requirements,
                 Kind = kind,
                 RafflePlayerCount = rafflePlayerCount,
-                RaffleEndTime = raffleEndTime
+                RaffleEndTime = raffleEndTime,
+                // Stories-JobWhitelistRequirement Start
+                IsAccessible = isAccessible,
+                Reason = reason
+                // Stories-JobWhitelistRequirement End
             });
         }
 

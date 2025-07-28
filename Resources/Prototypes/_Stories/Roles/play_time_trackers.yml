@@ -32,3 +32,8 @@
 
 - type: playTimeTracker
   id: JobSTPartyMaker
+
+# Ghost-roles
+
+- type: playTimeTracker
+  id: STInquisitor

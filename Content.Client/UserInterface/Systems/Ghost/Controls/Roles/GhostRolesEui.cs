@@ -5,6 +5,7 @@ using Content.Shared.Eui;
 using Content.Shared.Ghost.Roles;
 using JetBrains.Annotations;
 using Robust.Client.GameObjects;
+using Robust.Shared.Utility;
 
 namespace Content.Client.UserInterface.Systems.Ghost.Controls.Roles
 {
@@ -104,6 +105,15 @@ namespace Content.Client.UserInterface.Systems.Ghost.Controls.Roles
                     group.Key.Requirements,
                     null,
                     out var reason);
+
+                // Stories-JobWhitelistRequirement Start
+                foreach (var role in group)
+                {
+                    hasAccess = role.IsAccessible
+                                && requirementsManager.CheckRoleRequirements(group.Key.Requirements, null, out reason);
+                    reason = role.Reason ?? reason;
+                }
+                // Stories-JobWhitelistRequirement End
 
                 // Adding a new role
                 _window.AddEntry(name, description, hasAccess, reason, group, spriteSystem);

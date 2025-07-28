@@ -1,6 +1,7 @@
 using Content.Shared.Eui;
 using Content.Shared.Roles;
 using Robust.Shared.Serialization;
+using Robust.Shared.Utility;
 
 namespace Content.Shared.Ghost.Roles
 {
@@ -32,6 +33,11 @@ namespace Content.Shared.Ghost.Roles
         /// </summary>
         public TimeSpan RaffleEndTime { get; set; }
 
+        // Stories-JobWhitelistRequirement Start
+        public bool IsAccessible { get; set; }
+
+        public FormattedMessage? Reason { get; set; }
+        // Stories-JobWhitelistRequirement End
     }
 
     [NetSerializable, Serializable]

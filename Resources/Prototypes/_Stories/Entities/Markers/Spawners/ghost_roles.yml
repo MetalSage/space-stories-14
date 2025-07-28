@@ -11,6 +11,8 @@
     description: ghost-role-information-inquisitor-description
     rules: ghost-role-information-inquisitor-rules
     requirements:
+#    - !type:JobWhitelistRequirement
+#      job: Inquisitor
     - !type:RoleTimeRequirement
       role: JobHeadOfSecurity
       time: 36000 # 10 hours
