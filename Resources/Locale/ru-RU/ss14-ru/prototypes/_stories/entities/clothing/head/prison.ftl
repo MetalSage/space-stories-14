@@ -5,4 +5,4 @@ ent-PRISONClothingHeadHatSoft = кепка тюрьмы
 ent-PRISONClothingHeadHatUshanka = ушанка
     .desc = Идеально подходит для зимы в Сибири, da?
 ent-PRISONClothingHeadHatBeret = берет тюрьмы
-    .desc = Берет - любимый головной убор заключенного. Из него делаются бинты.
+    .desc = Берет — любимый головной убор заключенного. Из него делаются бинты.

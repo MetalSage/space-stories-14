@@ -42,8 +42,8 @@
   У вас также есть доступ к вашему собственному каналу [color=#1b67a5]Командования[/color], как и у каждого отдела. Однако, ваш канал особенно важен, так как люди, которые могут вас слышать, имеют в своих руках [color=#a4885c]целые отделы[/color].
   Используйте его для общения с другими главами и представляйте интересы своих сотрудников.
 
-  [color=#1b67a5]Капитан[/color] и [color=#9fed58]Глава персонала[/color] имеют доступ к ценному [color=#a4885c]ключу шифрования главного канала[/color], который позволяет им настроиться на каждый радиоканал на станции. Это чрезвычайно важно, так как вы сможете самостоятельно координировать работу отделов.
-  [color=#a4885c]Не упустите это жизненно важное преимущество![/color]
+The [color=#1b67a5]Captain[/color] and the [color=#9fed58]Head of Personnel[/color] get access to the lucrative [color=#a4885c]master encryption key[/color], letting them tune into every radio channel on the station. This is extremely valuable, as you can coordinate between departments yourself.
+[color=#a4885c]Don't waste this vital advantage![/color]
   <Box>
     <GuideEntityEmbed Entity="ClothingHeadsetCommand"/>
     <GuideEntityEmbed Entity="EncryptionKeyStationMaster"/>

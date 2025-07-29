@@ -20,6 +20,8 @@ public sealed class ParadoxCloneRuleSystem : GameRuleSystem<ParadoxCloneRuleComp
     [Dependency] private readonly IRobustRandom _random = default!;
     [Dependency] private readonly CloningSystem _cloning = default!;
     [Dependency] private readonly SuitSensorSystem _sensor = default!;
+    [Dependency] private readonly SharedForceUserSystem _forceUserSystem = default!; // Stories
+
 
     public override void Initialize()
     {
@@ -96,9 +98,11 @@ public sealed class ParadoxCloneRuleSystem : GameRuleSystem<ParadoxCloneRuleComp
         args.Entity = clone;
 
         // Stories-ForceUser-Target Start
-        if (TryComp<ForceUserComponent>(ent.Comp.OriginalBody.Value, out var forceUser) && forceUser != null)
+        if (TryComp<ForceUserComponent>(ent.Comp.OriginalBody.Value, out var forceUser))
         {
             AddComp<ForceComponent>(clone.Value);
+            AddComp<ForceUserComponent>(clone.Value);
+            _forceUserSystem.SetPreset(clone.Value, forceUser.Preset);
         }
         // Stories-ForceUser-Target End
     }

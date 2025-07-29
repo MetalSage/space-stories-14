@@ -21,7 +21,7 @@ job-name-hop = глава персонала
 job-name-captain = капитан
 job-name-serviceworker = сервисный работник
 job-name-centcomoff = представитель Центком
-job-name-cburn = агент карантинной службы Центком
+job-name-cburn = агент РХБЗЗ
 job-name-deathsquad = агент Центком
 job-name-reporter = репортёр
 job-name-musician = музыкант
@@ -49,6 +49,7 @@ job-name-ertjanitor = уборщик ОБР
 job-name-boxer = боксёр
 job-name-zookeeper = зоотехник
 job-name-visitor = посетитель
+job-name-cluwne = Клувень
 # unused jobs
 # these are required for the agent ID job icon tooltips
 # I am keeping them for roleplaying opportunities

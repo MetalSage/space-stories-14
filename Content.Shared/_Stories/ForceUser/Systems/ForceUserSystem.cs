@@ -71,4 +71,12 @@ public abstract partial class SharedForceUserSystem : EntitySystem
         _popup.PopupEntity(Loc.GetString("gun-disabled"), uid, uid);
         args.Cancel();
     }
+    public void SetPreset(EntityUid uid, string preset)
+    {
+        TryComp<ForceUserComponent>(uid, out var comp);
+        if (comp == null)
+            return;
+        comp.Preset = preset;
+        OnStart(uid, comp, new ComponentStartup());
+    }
 }

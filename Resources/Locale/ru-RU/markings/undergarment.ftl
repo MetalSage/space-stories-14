@@ -1,21 +1,34 @@
 marking-UndergarmentTopTanktop = Майка
-marking-UndergarmentTopBinder = Связующее
+marking-UndergarmentTopBinder = Биндер
 marking-UndergarmentTopBra = Классический бюстгальтер
 marking-UndergarmentTopSportsbra = Спортивный бюстгальтер
-
 marking-UndergarmentBottomBoxers = Боксеры
-marking-UndergarmentBottomBriefs = Шорты
-marking-UndergarmentBottomSatin = Сатин
-
+marking-UndergarmentBottomBriefs = Брифы
+marking-UndergarmentBottomSatin = Сатиновые
 marking-UndergarmentTopTanktopVox = Майка
-marking-UndergarmentTopBinderVox = Связующее
+marking-UndergarmentTopBinderVox = Биндер
 marking-UndergarmentTopBraVox = Классический бюстгальтер
 marking-UndergarmentTopSportsbraVox = Спортивный бюстгальтер
-
 marking-UndergarmentBottomBoxersVox = Боксеры
-marking-UndergarmentBottomBriefsVox = Шорты
-marking-UndergarmentBottomSatinVox = Сатин
-
+marking-UndergarmentBottomBriefsVox = Брифы
+marking-UndergarmentBottomSatinVox = Сатиновые
 marking-UndergarmentBottomBoxersReptilian = Боксеры
-marking-UndergarmentBottomBriefsReptilian = Шорты
-marking-UndergarmentBottomSatinReptilian = Сатин
+marking-UndergarmentBottomBriefsReptilian = Брифы
+marking-UndergarmentBottomSatinReptilian = Сатиновые
+marking-UndergarmentTopTanktop-tanktop = Майка
+marking-UndergarmentTopBinder-binder = Связующее
+marking-UndergarmentTopBra-classic = Классический бюстгальтер
+marking-UndergarmentTopSportsbra-sports = Спортивный бюстгальтер
+marking-UndergarmentBottomBoxers-boxers = Боксеры
+marking-UndergarmentBottomBriefs-briefs = Шорты
+marking-UndergarmentBottomSatin-satin = Сатин
+marking-UndergarmentTopTanktopVox-tanktop_vox = Майка
+marking-UndergarmentTopBinderVox-binder_vox = Связующее
+marking-UndergarmentTopBraVox-classic_vox = Классический бюстгальтер
+marking-UndergarmentTopSportsbraVox-sports_vox = Спортивный бюстгальтер
+marking-UndergarmentBottomBoxersVox-boxers_vox = Боксеры
+marking-UndergarmentBottomBriefsVox-briefs_vox = Шорты
+marking-UndergarmentBottomSatinVox-satin_vox = Сатин
+marking-UndergarmentBottomBoxersReptilian-boxers_reptilian = Боксеры
+marking-UndergarmentBottomBriefsReptilian-briefs_reptilian = Шорты
+marking-UndergarmentBottomSatinReptilian-satin_reptilian = Сатин

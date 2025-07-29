@@ -21,6 +21,7 @@
     - type: Tag
       tags:
         - ForceRecallEquipment
+        - WhitelistChameleon
     - type: Sprite
       sprite: _Stories/Clothing/Uniforms/Jumpsuit/guardian_nt.rsi
     - type: Clothing

@@ -1,12 +1,13 @@
 - type: entity
+  parent: BaseToggleAction
   id: TurnBioluminescenceAction
   name: Биолюминесценция
   description: Начать или прекратить светится
-  categories: [ HideSpawnMenu ]
   components:
-  - type: InstantAction
+  - type: Action
     useDelay: 5
     icon: { sprite: _Stories/Actions/bioluminescence.rsi, state: turn_on }
     itemIconStyle: NoItem
     priority: -11
+  - type: InstantAction
     event: !type:TurnBioluminescenceEvent {}

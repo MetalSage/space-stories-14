@@ -14,15 +14,10 @@
   Unlike other antagonists, [bold]staying out of trouble is almost a requirement for you[/bold] because of your implant.
   You can only run if [color=#cb0000]Security[/color] picks a fight with you, and because you work alone you don't have any friends to pull you out of danger.
 
-  Несмотря на то что вы не можете убивать экипаж владеющий желанной вам вещью, вам помогут: решительность, ловкость рук, несколько инструментов и [color=cyan]воровские перчатки.[/color]
+  But against all odds, you'll successfully swipe what you want using determination, sleight of hand, a few tools and your [color=cyan]light fingers.[/color]
 
-  Пара перчаток, которые у вас есть, дает вам большое преимущество: [bold]вы можете забирать вещи у людей так, что они этого даже не заметят.[/bold] Немного потренировавшись, вы сможете украсть у них бумажник и одновременно поддерживать беседу.
-
-  Они также изготовлены из лучших [bold]голографических хамелеон-волокон[/bold], которые вы могли когда-либо украсть, но хотя они могут выглядеть как изолированные перчатки, вам все равно нужно найти настоящую пару, чтобы не обжечь руки.
-
-  <Box>
-    <GuideEntityEmbed Entity="ClothingHandsChameleonThief" Caption="ваши воровские перчатки"/>
-  </Box>
+  Your years of experience have given you the ability to [bold]swiftly take things off another person's body without them even noticing.[/bold]
+  With a little practice, you can even steal their wallet and keep up a conversation at the same time.
 
   ## Tools of the Trade
   You've got two more aces up your stolen sleeves: your [color=cyan]beacon[/color] and your [color=cyan]satchel.[/color]
@@ -40,15 +35,15 @@
     <GuideEntityEmbed Entity="SatchelThief"/>
   </Box>
   <Box>
-    <GuideEntityEmbed Entity="StorageImplanter" Caption="Anatomy"/>
+    <GuideEntityEmbed Entity="Implanter" Caption="Anatomy"/>
     <GuideEntityEmbed Entity="C4" Caption="Breacher"/>
     <GuideEntityEmbed Entity="ChameleonProjector" Caption="Chameleon"/>
-    <GuideEntityEmbed Entity="EncryptionKeyStationMaster" Caption="Communicator"/>
+    <GuideEntityEmbed Entity="BaseUplinkRadio" Caption="Communicator"/>
   </Box>
   <Box>
-    <GuideEntityEmbed Entity="NitrousOxideTank" Caption="Набор сони"/>
-    <GuideEntityEmbed Entity="Emag" Caption="Набор контрабандиста"/>
-    <GuideEntityEmbed Entity="Telecrystal" Caption="Набор Синдиката"/>
+    <GuideEntityEmbed Entity="NitrousOxideTank" Caption="Sleeper"/>
+    <GuideEntityEmbed Entity="Fulton" Caption="Smuggler"/>
+    <GuideEntityEmbed Entity="Telecrystal" Caption="Syndie"/>
   </Box>
 
   ## Centerpiece of the Collection
@@ -63,10 +58,10 @@
   Things that you may desire include but are not limited to:
 
   <Box>
-   <GuideEntityEmbed Entity="ToyFigurineGreytider" Caption="Фигурки"/>
-   <GuideEntityEmbed Entity="PassengerIDCard" Caption="ID карты"/>
-   <GuideEntityEmbed Entity="ChemDispenser" Caption="Структуры"/>
-   <GuideEntityEmbed Entity="MobCorgiIan" Caption="Животные/Питомцы"/>
+    <GuideEntityEmbed Entity="ToyFigurineGreytider" Caption="Figurines"/>
+    <GuideEntityEmbed Entity="PassengerIDCard" Caption="ID cards"/>
+    <GuideEntityEmbed Entity="ChemDispenser" Caption="Structures"/>
+    <GuideEntityEmbed Entity="MobCorgiIan" Caption="Animals/Pets"/>
   </Box>
 
 </Document>

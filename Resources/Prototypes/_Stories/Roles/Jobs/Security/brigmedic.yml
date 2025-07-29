@@ -34,3 +34,11 @@
     eyes: ClothingEyesHudMedSec
     belt: ClothingBeltMedicalFilled
     outerClothing: ClothingOuterCoatAMG
+
+- type: chameleonOutfit
+  id: STBrigmedicChameleonOutfit
+  job: STBrigmedic
+  hasMindShield: true
+  equipment:
+    head: ClothingHeadHatBeretBrigmedic
+    mask: ClothingMaskBreathMedicalSecurity

@@ -121,13 +121,14 @@ barsign-prototype-name-spacebucks = Спейсбакс
 barsign-prototype-description-spacebucks = От них нельзя скрыться, даже в космосе, и даже после того, как некоторые стали называть их "срубли".
 
 ## Maltroach
+
 barsign-prototype-name-maltroach = Мольтаракан
 barsign-prototype-description-maltroach = Пищит!
 
 ## Whiskey Echoes
+
 barsign-prototype-name-whiskeyechoes = Вискей Эхо
 barsign-prototype-description-whiskeyechoes = Элитный бар для элитных сотрудников... подождите, это же станция Нанотрейзен. Почему этот знак есть в базе данных?
-
 
 ## EmpBarSign
 

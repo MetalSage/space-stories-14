@@ -6,6 +6,7 @@
   parent: BaseGameRule
   id: InquisitorSpawn
   components:
+  - type: InquisitorRule
   - type: StationEvent
     earliestStart: 35
     reoccurrenceDelay: 60
@@ -102,6 +103,7 @@
   parent: BaseGameRule
   id: KyloSpawn
   components:
+  - type: InquisitorRule
   - type: StationEvent
     earliestStart: 35
     reoccurrenceDelay: 60

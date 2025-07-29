@@ -38,3 +38,16 @@
     ears: ClothingHeadsetGuardianNtAlt
     gloves: ClothingHandsGlovesCombat
     eyes: ClothingEyesGlassesSecurity
+
+- type: chameleonOutfit
+  id: GuardianNtChameleonOutfit
+  job: GuardianNt
+  hasMindShield: true
+  equipment:
+    head: ClothingHeadHatExe
+    mask: ClothingMaskGasExe
+    neck: ClothingNeckMantleGuardianNt
+    outerClothing: ClothingOuterVestGuardianNt
+    jumpsuit: ClothingUniformJumpsuitGuardianNt
+    back: ClothingBackpackGuardianNt
+    shoes: ClothingShoesBootsJackGuardianNt

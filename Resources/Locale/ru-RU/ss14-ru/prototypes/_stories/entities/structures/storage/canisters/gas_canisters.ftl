@@ -1,0 +1,16 @@
+ent-STBZCanister = канистра для бизета
+    .desc = { ent-GasCanister.desc }
+ent-STHealiumCanister = канистра для хилиума
+    .desc = { ent-GasCanister.desc }
+ent-STNitrylCanister = канистра для нитрия
+    .desc = { ent-GasCanister.desc }
+ent-STPluoxiumCanister = канистра для плюоксия
+    .desc = { ent-GasCanister.desc }
+ent-STBZCanisterBroken = { ent-GasCanisterBrokenBase }
+    .desc = { ent-GasCanisterBrokenBase.desc }
+ent-STHealiumCanisterBroken = { ent-GasCanisterBrokenBase }
+    .desc = { ent-GasCanisterBrokenBase.desc }
+ent-STNitrylCanisterBroken = { ent-GasCanisterBrokenBase }
+    .desc = { ent-GasCanisterBrokenBase.desc }
+ent-STPluoxiumCanisterBroken = { ent-GasCanisterBrokenBase }
+    .desc = { ent-GasCanisterBrokenBase.desc }

@@ -1,9 +1,11 @@
 - type: entity
+  parent: BaseToggleAction
   id: ToggleNightvisionAction
   name: Ночное зрение
   description: Переключить своё ночное зрение.
   components:
-  - type: InstantAction
+  - type: Action
     useDelay: 5
     icon: { sprite: _Stories/Clothing/Eyes/Glasses/nvg.rsi, state: icon }
+  - type: InstantAction
     event: !type:ToggleNightvisionEvent

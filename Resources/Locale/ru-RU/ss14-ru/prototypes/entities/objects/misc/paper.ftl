@@ -1,3 +1,5 @@
+ent-BasePaper = { ent-BaseItem }
+    .desc = { ent-BaseItem.desc }
 ent-Paper = бумага
     .desc = Лист белой бумаги.
 ent-PaperScrap = обрывки бумаги

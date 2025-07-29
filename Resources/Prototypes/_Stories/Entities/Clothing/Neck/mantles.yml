@@ -21,6 +21,7 @@
   - type: Tag
     tags:
       - ForceRecallEquipment
+      - WhitelistChameleon
   - type: Sprite
     sprite: _Stories/Clothing/Neck/mantles/guardian_nt_mantle_shoulder.rsi
   - type: Clothing

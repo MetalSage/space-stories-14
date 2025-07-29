@@ -1,4 +1,4 @@
-# Poprietary License Agreement
+# Proprietary License Agreement
 
 This Proprietary License Agreement is entered into by and between Space Stories Team, the owner of the code, and any entity or individual desiring to use the Code ("Licensee").
 

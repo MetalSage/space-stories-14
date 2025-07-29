@@ -1,5 +1,7 @@
 # Errors
 loadout-group-species-restriction = Этот предмет недоступен для вашей текущей расы.
+# Stories Errors
+loadout-group-partner-tier-restriction = Этот предмет недоступен на вашем уровне подписки.
 # Miscellaneous
 loadout-group-trinkets = Безделушки
 loadout-group-glasses = Очки
@@ -50,6 +52,7 @@ loadout-group-chaplain-mask = Священник, маска
 loadout-group-chaplain-jumpsuit = Священник, комбинезон
 loadout-group-chaplain-outerclothing = Священник, верхняя одежда
 loadout-group-chaplain-neck = Священник, шея
+loadout-group-chaplain-bible = Святая Книга
 loadout-group-janitor-head = Уборщик, голова
 loadout-group-janitor-jumpsuit = Уборщик, комбинезон
 loadout-group-janitor-gloves = Уборщик, перчатки
@@ -161,9 +164,7 @@ loadout-group-paramedic-head = Парамедик, голова
 loadout-group-paramedic-jumpsuit = Парамедик, комбинезон
 loadout-group-paramedic-outerclothing = Парамедик, верхняя одежда
 loadout-group-paramedic-shoes = Парамедик, обувь
-
 loadout-group-medical-glasses = Медицинские очки
-
 # Wildcards
 loadout-group-reporter-jumpsuit = Репортёр, комбинезон
 loadout-group-psychologist-jumpsuit = Психолог, комбинезон

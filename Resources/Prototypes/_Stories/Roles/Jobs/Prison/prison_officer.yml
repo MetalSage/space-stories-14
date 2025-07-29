@@ -35,3 +35,12 @@
     id: PRISONPDAOfficer
     ears: PRISONClothingHeadset
     eyes: PRISONClothingEyesGlasses
+
+- type: chameleonOutfit
+  id: PRISONOfficerChameleonOutfit
+  job: PRISONOfficer
+  hasMindShield: true
+  equipment:
+    head: PRISONClothingHeadHatBeret
+    mask: ClothingMaskGasSecurity
+    neck: Dinkystar
