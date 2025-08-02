@@ -3,6 +3,7 @@
   abstract: true
   parent: [ SimpleSpaceMobBase, MobCombat ]
   components:
+  - type: Hands
   - type: Reactive
     groups:
       Flammable: [Touch]
