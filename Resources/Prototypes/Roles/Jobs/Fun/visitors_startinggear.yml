@@ -1017,6 +1017,8 @@
     outerClothing: ClothingOuterPlagueSuit
     pocket1: PlushieSharkGrey
     pocket2: FoodSnackEnergy
+  inhand:
+  - STChaplainCross # Stories-Pontific
 
 - type: startingGear
   id: VisitorChaplainAlt
@@ -1030,6 +1032,8 @@
     outerClothing: ClothingOuterNunRobe
     pocket1: PlushiePenguin
     pocket2: DrinkCoconutWaterCarton
+  inhand:
+  - STChaplainCross # Stories-Pontific
 
 - type: startingGear
   id: VisitorChef
