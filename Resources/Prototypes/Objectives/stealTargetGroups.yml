@@ -349,7 +349,7 @@
     sprite: Structures/Furniture/golden_toilet.rsi
     state: condisposal
     
-#stories start
+# stories start
 - type: stealTargetGroup
   id: Emitter
   name: steal-target-groups-emitter
@@ -370,7 +370,7 @@
   sprite:
     sprite: Structures/Power/Generation/Singularity/generator.rsi
     state: icon
-#stories end
+# stories end
 
 # Thief Animal
 
