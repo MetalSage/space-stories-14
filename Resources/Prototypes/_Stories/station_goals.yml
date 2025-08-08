@@ -62,3 +62,8 @@
   id: StationGoalShootingGallery
   text: station-goal-shooting-gallery
   onlineLess: 40 #Сложность 3
+  
+- type: stationGoal
+  id: StationGoalSatellite
+  text: station-goal-satellite
+  onlineLess: 10 #Сложность 1
