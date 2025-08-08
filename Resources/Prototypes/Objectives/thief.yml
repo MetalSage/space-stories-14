@@ -432,7 +432,7 @@
   id: EmitterStealObjective
   components:
   - type: NotJobRequirement
-    job: Scientist
+    job: Engineer
   - type: StealCondition
     stealGroup: Emitter
   - type: Objective
@@ -443,7 +443,7 @@
   id: TeslaGeneratorStealObjective
   components:
   - type: NotJobRequirement
-    job: Scientist
+    job: Engineer
   - type: StealCondition
     stealGroup: Tesla
   - type: Objective
@@ -454,7 +454,7 @@
   id: SingularityGeneratorStealObjective
   components:
   - type: NotJobRequirement
-    job: Scientist
+    job: Engineer
   - type: StealCondition
     stealGroup: Singularity
   - type: Objective
