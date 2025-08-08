@@ -524,7 +524,7 @@
     items:
     - MiningDrillDiamond
     - Shovel
-    - WeaponBorgPKA # stories
+    - STWeaponBorgProtoKineticAccelerator # stories
     - AdvancedMineralScannerUnpowered
     - OreBagOfHolding
   - type: BorgModuleIcon
