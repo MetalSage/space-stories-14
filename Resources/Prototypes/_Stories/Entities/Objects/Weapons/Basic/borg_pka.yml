@@ -1,0 +1,21 @@
+- type: entity
+  name: cyborg proto-kinetic accelerator 
+  id: STWeaponBorgProtoKineticAccelerator
+  parent: WeaponProtoKineticAcceleratorBase
+  description: A lightweight version of the protokinetic accelerator for cyborgs.
+  components:
+  - type: Sprite
+    sprite: Objects/Weapons/Guns/Basic/kinetic_accelerator.rsi
+    layers:
+    - state: icon
+    - state: animation-icon
+      visible: false
+      map: [ "empty-icon" ]
+  - type: Gun
+    minAngle: 1
+    maxAngle: 2
+  - type: GunWieldBonus
+    minAngle: 0
+    maxAngle: 0
+    angleDecay: 0
+    angleIncrease: 0
