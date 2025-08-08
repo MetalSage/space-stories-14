@@ -89,7 +89,7 @@
 - type: weightedRandom
   id: ThiefObjectiveGroupStructure
   weights:
-    NuclearBombStealObjective: 0,5
+    NuclearBombStealObjective: 0.5
     FaxMachineCaptainStealObjective: 1
     ChemDispenserStealObjective: 1
     XenoArtifactStealObjective: 1
