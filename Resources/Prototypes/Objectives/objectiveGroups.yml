@@ -99,6 +99,11 @@
     AltarNanotrasenStealObjective: 1
     PlantRDStealObjective: 1
     ToiletGoldenStealObjective: 1
+#stories start
+    SingularityGeneratorStealObjective: 1
+    EmitterStealObjective: 1
+    TeslaGeneratorStealObjective: 1
+#stories end
 
 - type: weightedRandom
   id: ThiefObjectiveGroupAnimal
