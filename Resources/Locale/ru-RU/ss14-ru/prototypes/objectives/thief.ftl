@@ -60,6 +60,14 @@ ent-FaxMachineCaptainStealObjective = { ent-BaseThiefStealStructureObjective }
     .desc = { ent-BaseThiefStealStructureObjective.desc }
 ent-ChemDispenserStealObjective = { ent-BaseThiefStealStructureObjective }
     .desc = { ent-BaseThiefStealStructureObjective.desc }
+#stories start
+ent-EmitterStealObjective = { ent-BaseThiefStealStructureObjective }
+    .desc = { ent-BaseThiefStealStructureObjective.desc }
+ent-TeslaGeneratorStealObjective = { ent-BaseThiefStealStructureObjective }
+    .desc = { ent-BaseThiefStealStructureObjective.desc }
+ent-SingularityGeneratorStealObjective = { ent-BaseThiefStealStructureObjective }
+    .desc = { ent-BaseThiefStealStructureObjective.desc }
+#stories end
 ent-XenoArtifactStealObjective = { ent-BaseThiefStealStructureObjective }
     .desc = { ent-BaseThiefStealStructureObjective.desc }
 ent-FreezerHeaterStealObjective = { ent-BaseThiefStealStructureObjective }

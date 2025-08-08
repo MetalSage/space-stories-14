@@ -103,3 +103,7 @@
       - On
       - Off
       - Toggle
+# stories start
+  - type: StealTarget
+    stealGroup: Emitter
+#stories end

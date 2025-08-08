@@ -50,6 +50,9 @@ steal-target-groups-freezer-heater = freezer or heater
 steal-target-groups-altar-nanotrasen = nanotrasen altar (any)
 
 steal-target-groups-nuclear-bomb = nuclear fission explosive
+steal-target-groups-emitter = emitter # stories 
+steal-target-groups-tesla-generator = tesla generator # stories 
+steal-target-groups-syngularity-generator = gravitational singularity generator # stories 
 steal-target-groups-fax-machine-captain = captain long range fax machine
 steal-target-groups-chem-dispenser = chemical dispenser
 steal-target-groups-xeno-artifact = alien artifact
