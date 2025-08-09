@@ -19,7 +19,7 @@
           reagent: STCorpium
           max: 58
       - !type:AdjustTemperature
-        amount: 6000
+        amount: 1200
         conditions:
         - !type:ReagentThreshold
           reagent: STCorpium
