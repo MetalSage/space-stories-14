@@ -25,6 +25,13 @@
   icon:
     sprite: /Textures/_Stories/Interface/Misc/job_icons.rsi
     state: GuardianNtSecurity
+    
+- type: jobIcon
+  parent: JobIcon
+  id: JobIconAdjutant
+  icon:
+    sprite: /Textures/_Stories/Interface/Misc/job_icons.rsi
+    state: Adjutant
 
 - type: jobIcon
   parent: JobIcon

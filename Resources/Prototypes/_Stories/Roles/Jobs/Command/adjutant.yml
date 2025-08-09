@@ -1,0 +1,25 @@
+- type: job
+  id: STAdjutant
+  name: адъютант
+  description: Помогай командованию станции в любых их вопросах.
+  playTimeTracker: JobAdjutant
+  requirements:
+    - !type:OverallPlaytimeRequirement
+      time: 72000 #20 hrs
+  startingGear: GuardianNtGear
+  icon: "JobIconAdjutant"
+  supervisors: job-supervisors-centcom
+  canBeAntag: false
+  accessGroups:
+  - External
+  special:
+  - !type:AddImplantSpecial
+    implants: [ MindShieldImplant ]
+
+- type: startingGear
+  id: GuardianNtGear
+  equipment:
+    id: GuardianNtPDA
+    ears: ClothingHeadsetGuardianNtAlt
+    gloves: ClothingHandsGlovesCombat
+    eyes: ClothingEyesGlassesSecurity

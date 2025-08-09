@@ -25,6 +25,26 @@
       heldPrefix: blue
     - type: PresetIdCard
       job: GuardianNt
+ 
+- type: entity
+  parent: IDCardStandard
+  id: AdjutantIDCard
+  name: ID карта адъютанта
+  description: Карта, необходимая для доступа в различные области станции.
+  components:
+    - type: Sprite
+      sprite: _Stories/Objects/Misc/id_cards.rsi
+      layers:
+        - state: silver
+        - state: idadjutant
+    - type: Item
+      heldPrefix: blue
+    - type: PresetIdCard
+      job: STAdjutant
+    - type: Clothing
+      slots:
+        - idcard
+      sprite: _Stories/Objects/Misc/id_cards.rsi
 
 - type: entity
   parent: IDCardStandard
