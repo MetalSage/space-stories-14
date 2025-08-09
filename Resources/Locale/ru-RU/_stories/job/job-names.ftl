@@ -4,6 +4,8 @@ JobIAA = агент внутренних дел
 JobPilot = пилот
 job-name-STBrigmedic = бригмедик
 STBrigmedic = бригмедик
+job-name-STAdjutant = адъютант
+STAdjutant = адъютант
 
 # Event-Restricted-Jobs
 

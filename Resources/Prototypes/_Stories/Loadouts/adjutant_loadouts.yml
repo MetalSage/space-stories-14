@@ -1,0 +1,48 @@
+- type: roleLoadout
+  id: JobSTAdjutant
+  groups:
+  - STAdjutantHead
+  - STAdjutantJumpsuit
+  - CommonBackpack
+  - Survival
+  - Trinkets
+  
+- type: loadoutGroup
+  id: STAdjutantHead
+  name: loadout-group-STAdjutantHead-head
+  loadouts:
+  - STAdjutantBeret
+  - STAdjutantHat
+  
+- type: loadoutGroup
+  id: STAdjutantJumpsuit
+  name: loadout-group-STAdjutantHead-jumpsuits
+  loadouts:
+  - STAdjutantJumpsuit
+  - STAdjutantJumpskirt
+
+# Берет командования
+- type: loadout
+  id: STAdjutantBeret
+  equipment:
+    head: ClothingHeadHatBeretCommand
+    
+# Фуражка командования
+- type: loadout
+  id: STAdjutantHat
+  equipment:
+    head: ClothingHeadHatCommandSoft
+    
+# Комбинезон командования
+- type: loadout
+  id: STAdjutantJumpsuit
+  equipment:
+    jumpsuit: ClothingUniformJumpsuitCommandGeneric
+
+# Юбка-комбинезон командования
+- type: loadout
+  id: STAdjutantJumpskirt
+  equipment:
+    jumpsuit: ClothingUniformJumpskirtCommandGeneric
+
+  

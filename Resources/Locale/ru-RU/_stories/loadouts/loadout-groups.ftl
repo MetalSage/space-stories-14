@@ -40,6 +40,11 @@ loadout-group-STBrigmedicHead-jumpsuits = Бригмедик, комбинезо
 loadout-group-STBrigmedicHead-backpack = Бригмедик, рюкзак
 loadout-group-STSurvivalBrigmedic = аварийный запас бригмедика
 
+# Адъютант
+
+loadout-group-STAdjutantHead-head = Адъютант, голова
+loadout-group-STAdjutantHead-jumpsuits = Адъютант, комбинезоны
+
 # Детектив
 
 loadout-group-detective-belt = Детектив, пояс
