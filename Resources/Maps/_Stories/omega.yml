@@ -1,11 +1,11 @@
 meta:
   format: 7
   category: Map
-  engineVersion: 260.2.0
+  engineVersion: 264.0.0
   forkId: ""
   forkVersion: ""
-  time: 07/11/2025 09:34:35
-  entityCount: 14221
+  time: 08/09/2025 14:29:04
+  entityCount: 14222
 maps:
 - 473
 grids:
@@ -29193,23 +29193,6 @@ entities:
     - type: Transform
       pos: -31.5,33.5
       parent: 4812
-- proto: CapacitorStockPart
-  entities:
-  - uid: 6210
-    components:
-    - type: Transform
-      pos: 7.701914,-18.299206
-      parent: 4812
-  - uid: 6211
-    components:
-    - type: Transform
-      pos: 7.451914,-18.299206
-      parent: 4812
-  - uid: 6212
-    components:
-    - type: Transform
-      pos: 7.5679626,-16.149172
-      parent: 4812
 - proto: CaptainIDCard
   entities:
   - uid: 2588
@@ -34542,14 +34525,7 @@ entities:
     - type: Transform
       pos: 35.488716,-30.534061
       parent: 4812
-- proto: ClothingNeckBling
-  entities:
-  - uid: 2717
-    components:
-    - type: Transform
-      pos: -5.415262,24.019829
-      parent: 4812
-- proto: ClothingNeckHeadphones
+- proto: ClothingMultipleHeadphones
   entities:
   - uid: 9196
     components:
@@ -34560,6 +34536,13 @@ entities:
     components:
     - type: Transform
       pos: -0.5106895,-15.532991
+      parent: 4812
+- proto: ClothingNeckBling
+  entities:
+  - uid: 2717
+    components:
+    - type: Transform
+      pos: -5.415262,24.019829
       parent: 4812
 - proto: ClothingNeckScarfStripedBlue
   entities:
@@ -65397,18 +65380,6 @@ entities:
     - type: Transform
       pos: -37.5,-28.5
       parent: 4812
-- proto: MatterBinStockPart
-  entities:
-  - uid: 6200
-    components:
-    - type: Transform
-      pos: 7.405039,-15.314831
-      parent: 4812
-  - uid: 6201
-    components:
-    - type: Transform
-      pos: 7.701914,-15.330456
-      parent: 4812
 - proto: MechEquipmentGrabberSmall
   entities:
   - uid: 3442
@@ -65509,6 +65480,16 @@ entities:
       parent: 4812
 - proto: MicroManipulatorStockPart
   entities:
+  - uid: 6200
+    components:
+    - type: Transform
+      pos: 7.405039,-15.314831
+      parent: 4812
+  - uid: 6201
+    components:
+    - type: Transform
+      pos: 7.701914,-15.330456
+      parent: 4812
   - uid: 6202
     components:
     - type: Transform
@@ -65523,6 +65504,21 @@ entities:
     components:
     - type: Transform
       pos: 7.811289,-15.783581
+      parent: 4812
+  - uid: 6210
+    components:
+    - type: Transform
+      pos: 7.701914,-18.299206
+      parent: 4812
+  - uid: 6211
+    components:
+    - type: Transform
+      pos: 7.451914,-18.299206
+      parent: 4812
+  - uid: 6212
+    components:
+    - type: Transform
+      pos: 7.5679626,-16.149172
       parent: 4812
 - proto: MicrophoneInstrument
   entities:
@@ -76732,6 +76728,13 @@ entities:
     components:
     - type: Transform
       pos: 24.5,-22.5
+      parent: 4812
+- proto: STSpawnPointAdjutant
+  entities:
+  - uid: 12989
+    components:
+    - type: Transform
+      pos: -2.5,33.5
       parent: 4812
 - proto: STSpawnPointIAA
   entities:

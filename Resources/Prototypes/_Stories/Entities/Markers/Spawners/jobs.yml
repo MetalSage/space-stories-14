@@ -38,3 +38,15 @@
     layers:
     - state: green
     - state: lawyer
+    
+- type: entity
+  id: STSpawnPointAdjutant
+  parent: SpawnPointJobBaseStories
+  name: adjutant
+  components:
+  - type: SpawnPoint
+    job_id: Adjutant
+  - type: Sprite
+    layers:
+    - state: green
+    - state: adjutant

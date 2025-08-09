@@ -16,6 +16,9 @@
     {
       "name": "lawyer"
     },
+	{
+      "name": "adjutant"
+    },
     {
       "name": "prisoner"
     },

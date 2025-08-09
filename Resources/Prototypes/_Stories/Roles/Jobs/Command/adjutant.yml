@@ -1,0 +1,28 @@
+- type: job
+  id: STAdjutant
+  name: job-name-STAdjutant
+  description: job-description-STAdjutant
+  playTimeTracker: STJobAdjutant
+  requirements:
+    - !type:OverallPlaytimeRequirement
+      time: 72000 #20 hrs
+  startingGear: STAdjutantGear
+  icon: "JobIconAdjutant"
+  supervisors: stories-job-supervisors-command
+  canBeAntag: false
+  access:
+  - Service
+  - Maintenance
+  - Command
+  special:
+  - !type:AddImplantSpecial
+    implants: [ MindShieldImplant ]
+
+- type: startingGear
+  id: STAdjutantGear
+  equipment:
+    id: AdjutantPDA
+    gloves: ClothingHandsGlovesHop
+    ears: ClothingHeadsetAdjutant
+    shoes: ClothingShoesBootsLaceup
+    belt: BoxFolderClipboard

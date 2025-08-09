@@ -46,6 +46,27 @@
     borderColor: "#6f6192"
   - type: Icon
     state: pda-lawyer
+ 
+- type: entity
+  parent: BasePDA
+  id: AdjutantPDA
+  name: КПК адъютанта
+  description: От него пахнет поручениями.
+  components:
+  - type: Sprite
+    sprite: _Stories/Objects/Devices/pda.rsi
+  - type: Pda
+    id: AdjutantIDCard
+  - type: Appearance
+    appearanceDataInit:
+      enum.PdaVisuals.PdaType:
+        !type:String
+        pda-adjutant
+  - type: PdaBorderColor
+    borderColor: "#6f6192"
+  - type: Icon
+    sprite: _Stories/Objects/Devices/pda.rsi
+    state: pda-adjutant
 
 - type: entity
   parent: BasePDA

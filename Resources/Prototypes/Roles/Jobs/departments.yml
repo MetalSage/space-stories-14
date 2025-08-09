@@ -60,6 +60,7 @@
   roles:
   - Captain
   - GuardianNt # Stories-Guardian
+  - STAdjutant # Stories-Adjutant
   - ChiefEngineer
   - ChiefMedicalOfficer
   - HeadOfPersonnel

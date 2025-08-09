@@ -1,11 +1,11 @@
 meta:
   format: 7
   category: Map
-  engineVersion: 260.2.0
+  engineVersion: 264.0.0
   forkId: ""
   forkVersion: ""
-  time: 07/11/2025 09:23:27
-  entityCount: 28408
+  time: 08/09/2025 14:18:40
+  entityCount: 28410
 maps:
 - 1
 grids:
@@ -14002,7 +14002,7 @@ entities:
       pos: 24.5,16.5
       parent: 2
     - type: Door
-      secondsUntilStateChange: -99161.6
+      secondsUntilStateChange: -99204.695
       state: Opening
     - type: DeviceLinkSource
       lastSignals:
@@ -15548,7 +15548,7 @@ entities:
       pos: 9.5,25.5
       parent: 2
     - type: Door
-      secondsUntilStateChange: -12418.095
+      secondsUntilStateChange: -12461.186
       state: Opening
     - type: DeviceLinkSource
       lastSignals:
@@ -61378,28 +61378,6 @@ entities:
     - type: Transform
       pos: -23.525152,40.482742
       parent: 2
-- proto: CapacitorStockPart
-  entities:
-  - uid: 9563
-    components:
-    - type: Transform
-      pos: -8.441639,-39.39827
-      parent: 2
-  - uid: 9564
-    components:
-    - type: Transform
-      pos: -8.183451,-39.306458
-      parent: 2
-  - uid: 9565
-    components:
-    - type: Transform
-      pos: 74.41276,-20.008142
-      parent: 2
-  - uid: 9566
-    components:
-    - type: Transform
-      pos: 74.631615,-20.414675
-      parent: 2
 - proto: CaptainIDCard
   entities:
   - uid: 9567
@@ -73247,14 +73225,7 @@ entities:
     - type: Transform
       pos: 51.5,-22.5
       parent: 2
-- proto: ClothingNeckBling
-  entities:
-  - uid: 11292
-    components:
-    - type: Transform
-      pos: -33.543434,3.8171167
-      parent: 2
-- proto: ClothingNeckHeadphones
+- proto: ClothingMultipleHeadphones
   entities:
   - uid: 11294
     components:
@@ -73270,6 +73241,13 @@ entities:
     components:
     - type: Transform
       pos: 24.471834,37.44375
+      parent: 2
+- proto: ClothingNeckBling
+  entities:
+  - uid: 11292
+    components:
+    - type: Transform
+      pos: -33.543434,3.8171167
       parent: 2
 - proto: ClothingNeckMantleRD
   entities:
@@ -88905,7 +88883,7 @@ entities:
       pos: 18.5,-13.5
       parent: 2
     - type: Door
-      secondsUntilStateChange: -6392.6035
+      secondsUntilStateChange: -6435.6943
       state: Closing
   - uid: 13780
     components:
@@ -88913,7 +88891,7 @@ entities:
       pos: 18.5,-14.5
       parent: 2
     - type: Door
-      secondsUntilStateChange: -6428.3037
+      secondsUntilStateChange: -6471.3945
       state: Closing
   - uid: 13781
     components:
@@ -89081,7 +89059,7 @@ entities:
       pos: -34.5,-14.5
       parent: 2
     - type: Door
-      secondsUntilStateChange: -93350.14
+      secondsUntilStateChange: -93393.234
       state: Closing
   - uid: 13808
     components:
@@ -90548,6 +90526,13 @@ entities:
       tags: []
     - type: RefillableSolution
       solution: food
+- proto: FoodGrape
+  entities:
+  - uid: 28410
+    components:
+    - type: Transform
+      pos: -1.5521151,-5.1003566
+      parent: 2
 - proto: FoodKebabSkewer
   entities:
   - uid: 14057
@@ -128879,6 +128864,8 @@ entities:
     components:
     - type: Transform
       parent: 7
+    - type: Physics
+      canCollide: False
   - uid: 11333
     components:
     - type: Transform
@@ -131591,13 +131578,6 @@ entities:
       rot: 3.141592653589793 rad
       pos: -30.638481,19.375069
       parent: 2
-- proto: MatterBinStockPart
-  entities:
-  - uid: 19773
-    components:
-    - type: Transform
-      pos: -10.435738,-39.009453
-      parent: 2
 - proto: MechEquipmentGrabberSmall
   entities:
   - uid: 19774
@@ -131776,6 +131756,31 @@ entities:
       parent: 2
 - proto: MicroManipulatorStockPart
   entities:
+  - uid: 9563
+    components:
+    - type: Transform
+      pos: -8.441639,-39.39827
+      parent: 2
+  - uid: 9564
+    components:
+    - type: Transform
+      pos: -8.183451,-39.306458
+      parent: 2
+  - uid: 9565
+    components:
+    - type: Transform
+      pos: 74.41276,-20.008142
+      parent: 2
+  - uid: 9566
+    components:
+    - type: Transform
+      pos: 74.631615,-20.414675
+      parent: 2
+  - uid: 19773
+    components:
+    - type: Transform
+      pos: -10.435738,-39.009453
+      parent: 2
   - uid: 19804
     components:
     - type: Transform
@@ -152899,6 +152904,13 @@ entities:
     components:
     - type: Transform
       pos: 62.5,-33.5
+      parent: 2
+- proto: STSpawnPointAdjutant
+  entities:
+  - uid: 28409
+    components:
+    - type: Transform
+      pos: 5.5,-7.5
       parent: 2
 - proto: STSpawnPointIAA
   entities:
