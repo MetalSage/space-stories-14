@@ -22,6 +22,7 @@
   id: STAdjutantGear
   equipment:
     id: AdjutantPDA
+    gloves: ClothingHandsGlovesHop
     ears: ClothingHeadsetAdjutant
     shoes: ClothingShoesBootsLaceup
     belt: BoxFolderClipboard

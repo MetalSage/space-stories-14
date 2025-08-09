@@ -1,11 +1,11 @@
 meta:
   format: 7
   category: Map
-  engineVersion: 260.2.0
+  engineVersion: 264.0.0
   forkId: ""
   forkVersion: ""
-  time: 07/11/2025 09:32:56
-  entityCount: 28756
+  time: 08/09/2025 14:28:14
+  entityCount: 28757
 maps:
 - 1
 grids:
@@ -12376,7 +12376,7 @@ entities:
       pos: 11.5,29.5
       parent: 2
     - type: Door
-      secondsUntilStateChange: -6516.7114
+      secondsUntilStateChange: -6532.7114
       state: Opening
     - type: DeviceLinkSource
       lastSignals:
@@ -68506,6 +68506,23 @@ entities:
     - type: Transform
       pos: 31.561605,-52.535595
       parent: 2
+- proto: ClothingMultipleHeadphones
+  entities:
+  - uid: 10746
+    components:
+    - type: Transform
+      pos: -17.377777,46.66897
+      parent: 2
+  - uid: 10747
+    components:
+    - type: Transform
+      pos: -17.490803,46.7393
+      parent: 2
+  - uid: 10748
+    components:
+    - type: Transform
+      pos: -42.440857,-53.459534
+      parent: 2
 - proto: ClothingNeckBling
   entities:
   - uid: 10739
@@ -68552,23 +68569,6 @@ entities:
     components:
     - type: Transform
       pos: -26.34226,41.685402
-      parent: 2
-- proto: ClothingNeckHeadphones
-  entities:
-  - uid: 10746
-    components:
-    - type: Transform
-      pos: -17.377777,46.66897
-      parent: 2
-  - uid: 10747
-    components:
-    - type: Transform
-      pos: -17.490803,46.7393
-      parent: 2
-  - uid: 10748
-    components:
-    - type: Transform
-      pos: -42.440857,-53.459534
       parent: 2
 - proto: ClothingNeckScarfStripedBlue
   entities:
@@ -84913,7 +84913,7 @@ entities:
       pos: 31.5,-33.5
       parent: 2
     - type: Door
-      secondsUntilStateChange: -37938.785
+      secondsUntilStateChange: -37954.785
       state: Closing
   - uid: 13230
     components:
@@ -132762,18 +132762,6 @@ entities:
     - type: Transform
       pos: -30.571024,-55.578983
       parent: 2
-- proto: MatterBinStockPart
-  entities:
-  - uid: 19812
-    components:
-    - type: Transform
-      pos: 0.44185066,-33.171204
-      parent: 2
-  - uid: 19813
-    components:
-    - type: Transform
-      pos: 0.31685066,-32.99933
-      parent: 2
 - proto: MechEquipmentGrabberSmall
   entities:
   - uid: 19814
@@ -132983,6 +132971,16 @@ entities:
       parent: 2
 - proto: MicroManipulatorStockPart
   entities:
+  - uid: 19812
+    components:
+    - type: Transform
+      pos: 0.44185066,-33.171204
+      parent: 2
+  - uid: 19813
+    components:
+    - type: Transform
+      pos: 0.31685066,-32.99933
+      parent: 2
   - uid: 19851
     components:
     - type: Transform
@@ -154076,6 +154074,13 @@ entities:
     components:
     - type: Transform
       pos: 20.5,-42.5
+      parent: 2
+- proto: STSpawnPointAdjutant
+  entities:
+  - uid: 28757
+    components:
+    - type: Transform
+      pos: -2.5,2.5
       parent: 2
 - proto: STSpawnPointIAA
   entities:
@@ -186206,7 +186211,7 @@ entities:
       pos: -28.5,-5.5
       parent: 2
     - type: Door
-      secondsUntilStateChange: -43650.695
+      secondsUntilStateChange: -43666.695
       state: Opening
   - uid: 28732
     components:

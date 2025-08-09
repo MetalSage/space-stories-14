@@ -1,11 +1,11 @@
 meta:
   format: 7
   category: Map
-  engineVersion: 260.2.0
-  forkId: stories
-  forkVersion: eb4e67cb9d087cf7785d0582957bfe24c830ba90
-  time: 07/11/2025 08:48:23
-  entityCount: 11764
+  engineVersion: 264.0.0
+  forkId: ""
+  forkVersion: ""
+  time: 08/09/2025 14:29:50
+  entityCount: 11765
 maps:
 - 727
 grids:
@@ -48870,7 +48870,7 @@ entities:
       pos: 12.5,-41.5
       parent: 31
     - type: Door
-      secondsUntilStateChange: -10134.392
+      secondsUntilStateChange: -10142.725
       state: Opening
   - uid: 9697
     components:
@@ -59350,6 +59350,13 @@ entities:
     components:
     - type: Transform
       pos: 44.5,23.5
+      parent: 31
+- proto: STSpawnPointAdjutant
+  entities:
+  - uid: 11765
+    components:
+    - type: Transform
+      pos: 3.5,29.5
       parent: 31
 - proto: STSpawnPointIAA
   entities:

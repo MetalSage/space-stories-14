@@ -1,11 +1,11 @@
 meta:
   format: 7
   category: Map
-  engineVersion: 260.2.0
+  engineVersion: 264.0.0
   forkId: ""
   forkVersion: ""
-  time: 07/11/2025 09:26:51
-  entityCount: 17584
+  time: 08/09/2025 14:23:17
+  entityCount: 17585
 maps:
 - 1
 grids:
@@ -14500,7 +14500,7 @@ entities:
       pos: 47.5,5.5
       parent: 2
     - type: Door
-      secondsUntilStateChange: -464428.78
+      secondsUntilStateChange: -464469.56
       state: Opening
     - type: DeviceLinkSource
       lastSignals:
@@ -41701,25 +41701,6 @@ entities:
     components:
     - type: Transform
       pos: -13.084935,-44.300785
-      parent: 2
-- proto: CapacitorStockPart
-  entities:
-  - uid: 5546
-    components:
-    - type: Transform
-      pos: -19.233772,25.963198
-      parent: 2
-  - uid: 5547
-    components:
-    - type: Transform
-      pos: 32.166813,-17.551153
-      parent: 2
-    - type: Stack
-      count: 2
-  - uid: 5548
-    components:
-    - type: Transform
-      pos: 27.703878,37.44894
       parent: 2
 - proto: CaptainIDCard
   entities:
@@ -86220,13 +86201,6 @@ entities:
     - type: Transform
       pos: 13.618376,-18.105558
       parent: 2
-- proto: MatterBinStockPart
-  entities:
-  - uid: 12065
-    components:
-    - type: Transform
-      pos: -13.066984,24.89437
-      parent: 2
 - proto: Mattress
   entities:
   - uid: 12066
@@ -86368,6 +86342,30 @@ entities:
     components:
     - type: Transform
       pos: 35.608074,7.556761
+      parent: 2
+- proto: MicroManipulatorStockPart
+  entities:
+  - uid: 5546
+    components:
+    - type: Transform
+      pos: -19.233772,25.963198
+      parent: 2
+  - uid: 5547
+    components:
+    - type: Transform
+      pos: 32.166813,-17.551153
+      parent: 2
+    - type: Stack
+      count: 2
+  - uid: 5548
+    components:
+    - type: Transform
+      pos: 27.703878,37.44894
+      parent: 2
+  - uid: 12065
+    components:
+    - type: Transform
+      pos: -13.066984,24.89437
       parent: 2
 - proto: MicrophoneInstrument
   entities:
@@ -98453,6 +98451,13 @@ entities:
     components:
     - type: Transform
       pos: -44.779472,-47.253086
+      parent: 2
+- proto: STSpawnPointAdjutant
+  entities:
+  - uid: 6884
+    components:
+    - type: Transform
+      pos: -30.5,-8.5
       parent: 2
 - proto: STSpawnPointIAA
   entities:

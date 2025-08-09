@@ -1,10 +1,10 @@
 meta:
   format: 7
   category: Map
-  engineVersion: 260.2.0
+  engineVersion: 264.0.0
   forkId: ""
   forkVersion: ""
-  time: 07/11/2025 09:18:22
+  time: 08/09/2025 14:17:15
   entityCount: 19583
 maps:
 - 1
@@ -10939,7 +10939,7 @@ entities:
       pos: -2.5,18.5
       parent: 2
     - type: Door
-      secondsUntilStateChange: -422493
+      secondsUntilStateChange: -422543.5
       state: Opening
     - type: DeviceLinkSource
       lastSignals:
@@ -11228,7 +11228,7 @@ entities:
       pos: 70.5,-0.5
       parent: 2
     - type: Door
-      secondsUntilStateChange: -252929.23
+      secondsUntilStateChange: -252979.73
       state: Opening
     - type: DeviceLinkSource
       lastSignals:
@@ -11663,7 +11663,7 @@ entities:
       pos: 30.5,-13.5
       parent: 2
     - type: Door
-      secondsUntilStateChange: -284995.88
+      secondsUntilStateChange: -285046.38
       state: Opening
     - type: DeviceLinkSource
       lastSignals:
@@ -11974,7 +11974,7 @@ entities:
       pos: 9.5,14.5
       parent: 2
     - type: Door
-      secondsUntilStateChange: -154420.86
+      secondsUntilStateChange: -154471.36
       state: Opening
     - type: DeviceLinkSource
       lastSignals:
@@ -12268,7 +12268,7 @@ entities:
       pos: 38.5,-9.5
       parent: 2
     - type: Door
-      secondsUntilStateChange: -260034.72
+      secondsUntilStateChange: -260085.22
       state: Opening
     - type: DeviceLinkSource
       lastSignals:
@@ -12279,7 +12279,7 @@ entities:
       pos: 43.5,-9.5
       parent: 2
     - type: Door
-      secondsUntilStateChange: -272804.75
+      secondsUntilStateChange: -272855.25
       state: Opening
     - type: DeviceLinkSource
       lastSignals:
@@ -12290,7 +12290,7 @@ entities:
       pos: 60.5,-12.5
       parent: 2
     - type: Door
-      secondsUntilStateChange: -12080.265
+      secondsUntilStateChange: -12130.765
       state: Opening
     - type: DeviceLinkSource
       lastSignals:
@@ -58747,7 +58747,7 @@ entities:
       deviceLists:
       - 35
     - type: Door
-      secondsUntilStateChange: -143466.33
+      secondsUntilStateChange: -143516.83
       state: Closing
     - type: Firelock
       emergencyCloseCooldown: 90307.2763613
@@ -60201,7 +60201,7 @@ entities:
       pos: 30.5,-6.5
       parent: 2
     - type: Door
-      secondsUntilStateChange: -121498.71
+      secondsUntilStateChange: -121549.21
       state: Closing
     - type: Firelock
       emergencyCloseCooldown: 12658.2540104
@@ -62193,13 +62193,6 @@ entities:
     - type: Physics
       canCollide: False
     - type: InsideEntityStorage
-- proto: FoodGrape
-  entities:
-  - uid: 9394
-    components:
-    - type: Transform
-      pos: 10.727119,17.704906
-      parent: 2
 - proto: FoodMealSashimi
   entities:
   - uid: 9395
@@ -105843,13 +105836,6 @@ entities:
       rot: 3.141592653589793 rad
       pos: 42.5,-48.5
       parent: 2
-- proto: SpawnHonkBot
-  entities:
-  - uid: 15738
-    components:
-    - type: Transform
-      pos: -44.5,-22.5
-      parent: 2
 - proto: SpawnMechRipley
   entities:
   - uid: 15739
@@ -105963,6 +105949,13 @@ entities:
     components:
     - type: Transform
       pos: -12.5,-22.5
+      parent: 2
+- proto: SpawnMobHonkBot
+  entities:
+  - uid: 15738
+    components:
+    - type: Transform
+      pos: -44.5,-22.5
       parent: 2
 - proto: SpawnMobLizard
   entities:
@@ -107409,6 +107402,13 @@ entities:
     components:
     - type: Transform
       pos: 43.221962,15.895788
+      parent: 2
+- proto: STSpawnPointAdjutant
+  entities:
+  - uid: 9394
+    components:
+    - type: Transform
+      pos: 2.5,19.5
       parent: 2
 - proto: STSpawnPointIAA
   entities:

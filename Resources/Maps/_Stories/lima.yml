@@ -1,10 +1,10 @@
 meta:
   format: 7
   category: Map
-  engineVersion: 260.2.0
+  engineVersion: 264.0.0
   forkId: ""
   forkVersion: ""
-  time: 07/11/2025 09:31:48
+  time: 08/09/2025 14:27:10
   entityCount: 28832
 maps:
 - 1
@@ -13159,7 +13159,7 @@ entities:
       pos: 5.5,-61.5
       parent: 2
     - type: Door
-      secondsUntilStateChange: -132192.83
+      secondsUntilStateChange: -132220.33
       state: Opening
     - type: DeviceLinkSource
       lastSignals:
@@ -13351,7 +13351,7 @@ entities:
       pos: 29.5,-79.5
       parent: 2
     - type: Door
-      secondsUntilStateChange: -170502.3
+      secondsUntilStateChange: -170529.8
       state: Opening
     - type: DeviceLinkSource
       lastSignals:
@@ -13383,7 +13383,7 @@ entities:
       pos: 16.5,-101.5
       parent: 2
     - type: Door
-      secondsUntilStateChange: -99244.37
+      secondsUntilStateChange: -99271.87
       state: Opening
     - type: DeviceLinkSource
       lastSignals:
@@ -15446,7 +15446,7 @@ entities:
       pos: 42.5,-69.5
       parent: 2
     - type: Door
-      secondsUntilStateChange: -170757.06
+      secondsUntilStateChange: -170784.56
       state: Opening
     - type: DeviceLinkSource
       lastSignals:
@@ -21806,13 +21806,6 @@ entities:
     components:
     - type: Transform
       pos: 16.496851,-92.61617
-      parent: 2
-- proto: BoxMagazineMagnumSubMachineGun
-  entities:
-  - uid: 1627
-    components:
-    - type: Transform
-      pos: -49.557587,-59.371994
       parent: 2
 - proto: BoxMagazinePistol
   entities:
@@ -70616,7 +70609,7 @@ entities:
     - type: Transform
       pos: -59.525005,-46.84718
       parent: 2
-- proto: ClothingNeckHeadphones
+- proto: ClothingMultipleHeadphones
   entities:
   - uid: 11177
     components:
@@ -151520,6 +151513,13 @@ entities:
     - type: Transform
       rot: 3.141592653589793 rad
       pos: 60.49778,-55.56317
+      parent: 2
+- proto: STSpawnPointAdjutant
+  entities:
+  - uid: 1627
+    components:
+    - type: Transform
+      pos: 35.5,-119.5
       parent: 2
 - proto: STSpawnPointIAA
   entities:

@@ -1,11 +1,11 @@
 meta:
   format: 7
   category: Map
-  engineVersion: 260.2.0
+  engineVersion: 264.0.0
   forkId: ""
   forkVersion: ""
-  time: 07/11/2025 09:16:17
-  entityCount: 25760
+  time: 08/09/2025 13:48:18
+  entityCount: 25761
 maps:
 - 1
 grids:
@@ -52094,34 +52094,6 @@ entities:
     - type: Transform
       pos: -12.431261,-20.388779
       parent: 2
-- proto: CapacitorStockPart
-  entities:
-  - uid: 7844
-    components:
-    - type: Transform
-      rot: 0.00019908661488443613 rad
-      pos: 18.263704,-44.683575
-      parent: 2
-  - uid: 7845
-    components:
-    - type: Transform
-      pos: -67.444885,9.609138
-      parent: 2
-  - uid: 7846
-    components:
-    - type: Transform
-      pos: -67.61676,9.687263
-      parent: 2
-  - uid: 7847
-    components:
-    - type: Transform
-      pos: 23.618336,21.636284
-      parent: 2
-  - uid: 7848
-    components:
-    - type: Transform
-      pos: 23.743336,21.526909
-      parent: 2
 - proto: CaptainIDCard
   entities:
   - uid: 7849
@@ -63567,14 +63539,7 @@ entities:
     - type: Transform
       pos: -41.75516,14.452198
       parent: 2
-- proto: ClothingNeckBling
-  entities:
-  - uid: 9750
-    components:
-    - type: Transform
-      pos: 5.9221196,-5.3832207
-      parent: 2
-- proto: ClothingNeckHeadphones
+- proto: ClothingMultipleHeadphones
   entities:
   - uid: 9751
     components:
@@ -63585,6 +63550,13 @@ entities:
     components:
     - type: Transform
       pos: -38.4609,19.6876
+      parent: 2
+- proto: ClothingNeckBling
+  entities:
+  - uid: 9750
+    components:
+    - type: Transform
+      pos: 5.9221196,-5.3832207
       parent: 2
 - proto: ClothingNeckMantleHOP
   entities:
@@ -114358,10 +114330,14 @@ entities:
     components:
     - type: Transform
       parent: 6
+    - type: Physics
+      canCollide: False
   - uid: 11
     components:
     - type: Transform
       parent: 10
+    - type: Physics
+      canCollide: False
   - uid: 17251
     components:
     - type: Transform
@@ -116050,18 +116026,6 @@ entities:
     - type: Transform
       pos: 51.428207,-36.33008
       parent: 2
-- proto: MatterBinStockPart
-  entities:
-  - uid: 17439
-    components:
-    - type: Transform
-      pos: -45.371063,-10.326076
-      parent: 2
-  - uid: 17440
-    components:
-    - type: Transform
-      pos: -45.51169,-10.154201
-      parent: 2
 - proto: MechEquipmentGrabberSmall
   entities:
   - uid: 17441
@@ -116251,6 +116215,42 @@ entities:
       parent: 2
 - proto: MicroManipulatorStockPart
   entities:
+  - uid: 7844
+    components:
+    - type: Transform
+      rot: 0.00019908661488443613 rad
+      pos: 18.263704,-44.683575
+      parent: 2
+  - uid: 7845
+    components:
+    - type: Transform
+      pos: -67.444885,9.609138
+      parent: 2
+  - uid: 7846
+    components:
+    - type: Transform
+      pos: -67.61676,9.687263
+      parent: 2
+  - uid: 7847
+    components:
+    - type: Transform
+      pos: 23.618336,21.636284
+      parent: 2
+  - uid: 7848
+    components:
+    - type: Transform
+      pos: 23.743336,21.526909
+      parent: 2
+  - uid: 17439
+    components:
+    - type: Transform
+      pos: -45.371063,-10.326076
+      parent: 2
+  - uid: 17440
+    components:
+    - type: Transform
+      pos: -45.51169,-10.154201
+      parent: 2
   - uid: 17473
     components:
     - type: Transform
@@ -137177,6 +137177,13 @@ entities:
     components:
     - type: Transform
       pos: -59.5,36.5
+      parent: 2
+- proto: STSpawnPointAdjutant
+  entities:
+  - uid: 25761
+    components:
+    - type: Transform
+      pos: 0.5,0.5
       parent: 2
 - proto: STSpawnPointIAA
   entities:
