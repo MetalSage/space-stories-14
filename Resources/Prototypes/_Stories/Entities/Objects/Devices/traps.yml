@@ -1,0 +1,57 @@
+- type: entity
+  name: trap
+  parent: BaseItem
+  id: STtrap
+  description: Usually, bears are caught on these. This one is probably not a bear.
+  components:
+    - type: Sprite
+      sprite: _Stories/Objects/Devices/traps.rsi
+      layers:
+        - state: trap
+          map: ["base"]
+    - type: StepTrigger
+      intersectRatio: 0.2
+      requiredTriggeredSpeed: 2
+    - type: Mousetrap
+    - type: TriggerOnStepTrigger
+    - type: DamageUserOnTrigger
+      damage:
+        types:
+          Slash: 35
+    - type: EmitSoundOnUse
+      sound: "/Audio/_Stories/Items/Traps/trap_armed.ogg"
+      handle: false
+    - type: EmitSoundOnTrigger
+      sound: "/Audio/_Stories/Items/Traps/trap_end.ogg"
+    - type: Item
+      sprite: _Stories/Objects/Devices/traps.rsi
+    - type: Appearance
+    - type: GenericVisualizer
+      visuals:
+        enum.MousetrapVisuals.Visual:
+          base:
+            Armed: { state: traparmed }
+            Unarmed: { state: trap }
+    - type: Physics
+      bodyType: Dynamic
+    - type: CollisionWake
+      enabled: false
+    - type: Fixtures
+      fixtures:
+        slips:
+          shape:
+            !type:PhysShapeAabb
+            bounds: "-0.3,-0.3,0.3,0.3"
+          hard: false
+          layer:
+            - LowImpassable
+        fix1:
+          shape:
+            !type:PhysShapeAabb
+            bounds: "-0.3,-0.3,0.3,0.3"
+          density: 30
+          mask:
+            - ItemMask
+    - type: Rotatable
+
+
