@@ -38,16 +38,14 @@ public abstract class SharedRevolutionarySystem : EntitySystem
         RemCompDeferred<MindShieldComponent>(uid);
     }
 
-    /// <summary>
-    /// When the mindshield is implanted in the rev it will popup saying they were deconverted
-    /// </summary>
-    private void RevMindShieldImplanted(EntityUid uid, RevolutionaryComponent comp, MindShieldImplantedEvent ev)
-    {
-        var stunTime = TimeSpan.FromSeconds(4);
-        var name = Identity.Entity(uid, EntityManager);
-        RemComp<RevolutionaryComponent>(uid);
-        _sharedStun.TryParalyze(uid, stunTime, true);
-        _popupSystem.PopupEntity(Loc.GetString("rev-break-control", ("name", name)), uid);
+        if (HasComp<RevolutionaryComponent>(uid))
+        {
+            var stunTime = TimeSpan.FromSeconds(4);
+            var name = Identity.Entity(uid, EntityManager);
+            RemComp<RevolutionaryComponent>(uid);
+            _sharedStun.TryUpdateParalyzeDuration(uid, stunTime);
+            _popupSystem.PopupEntity(Loc.GetString("rev-break-control", ("name", name)), uid);
+        }
     }
 
     /// <summary>
