@@ -38,7 +38,7 @@
     # stories start
   - type: MultiHandedItem
   - type: Item
-    sprite: Mobs/Pets/Smile/smile.rsi
+    sprite: _Stories/Mobs/Pets/puppyian.rsi
     size: Ginormous
   - type: HeldSpeedModifier
     walkModifier: 0.8
@@ -70,6 +70,15 @@
     layers:
     - map: ["enum.DamageStateVisualLayers.Base"]
       state: old_ian
+    # stories start
+  - type: MultiHandedItem
+  - type: Item
+    sprite: _Stories/Mobs/Pets/oldian.rsi
+    size: Ginormous
+  - type: HeldSpeedModifier
+    walkModifier: 0.7
+    sprintModifier: 0.7
+    # stories end
   - type: DamageStateVisuals
     states:
       Alive:
@@ -103,6 +112,15 @@
         Base: lisa_dead
       Dead:
         Base: lisa_dead
+    # stories start
+  - type: MultiHandedItem
+  - type: Item
+    sprite: _Stories/Mobs/Pets/lisa.rsi
+    size: Ginormous
+  - type: HeldSpeedModifier
+    walkModifier: 0.8
+    sprintModifier: 0.8
+    # stories end
   - type: Grammar
     attributes:
       proper: true
@@ -158,7 +176,7 @@
     # stories start
   - type: MultiHandedItem
   - type: Item
-    sprite: Mobs/Pets/Smile/smile.rsi
+    sprite: _Stories/Mobs/Pets/puppyian.rsi
     size: Huge
     # stories end
   - type: Butcherable # A puppy? You monster...
@@ -184,7 +202,7 @@
     # stories start
   - type: MultiHandedItem
   - type: Item
-    sprite: Mobs/Pets/Smile/smile.rsi
+    sprite: _Stories/Mobs/Pets/runtime.rsi
     size: Huge
     # stories end
   - type: Grammar
@@ -210,7 +228,7 @@
     # stories start
   - type: MultiHandedItem
   - type: Item
-    sprite: Mobs/Pets/Smile/smile.rsi
+    sprite: _Stories/Mobs/Pets/exception.rsi
     size: Huge
     # stories end
   - type: Grammar
@@ -244,7 +262,7 @@
     # stories start
   - type: MultiHandedItem
   - type: Item
-    sprite: Mobs/Pets/Smile/smile.rsi
+    sprite: _Stories/Mobs/Pets/floppa.rsi
     size: Ginormous
   - type: HeldSpeedModifier
     walkModifier: 0.6
@@ -273,7 +291,7 @@
     # stories start
   - type: MultiHandedItem
   - type: Item
-    sprite: Mobs/Pets/Smile/smile.rsi
+    sprite: _Stories/Mobs/Pets/bandito.rsi
     size: Huge
     # stories end
   - type: Tag
@@ -296,7 +314,7 @@
     # stories start
   - type: MultiHandedItem
   - type: Item
-    sprite: Mobs/Pets/Smile/smile.rsi
+    sprite: _Stories/Mobs/Pets/bingus.rsi
     size: Huge
     # stories end
   - type: Physics
@@ -361,7 +379,7 @@
     # stories start
   - type: MultiHandedItem
   - type: Item
-    sprite: Mobs/Pets/Smile/smile.rsi
+    sprite: _Stories/Mobs/Pets/mcgriff.rsi
     size: Ginormous
   - type: HeldSpeedModifier
     walkModifier: 0.9
@@ -451,7 +469,7 @@
     # stories start
   - type: MultiHandedItem
   - type: Item
-    sprite: Mobs/Pets/Smile/smile.rsi
+    sprite: _Stories/Mobs/Pets/paperwork.rsi
     size: Ginormous
   - type: HeldSpeedModifier
     walkModifier: 0.9
@@ -501,7 +519,7 @@
     # stories start
   - type: MultiHandedItem
   - type: Item
-    sprite: Mobs/Pets/Smile/smile.rsi
+    sprite: _Stories/Mobs/Pets/walter.rsi
     size: Ginormous
   - type: HeldSpeedModifier
     walkModifier: 0.8
@@ -562,7 +580,7 @@
     # stories start
   - type: MultiHandedItem
   - type: Item
-    sprite: Mobs/Pets/Smile/smile.rsi
+    sprite: _Stories/Mobs/Pets/morty.rsi
     size: Huge
     # stories end
   - type: Tag
@@ -587,7 +605,7 @@
     # stories start
   - type: MultiHandedItem
   - type: Item
-    sprite: Mobs/Pets/Smile/smile.rsi
+    sprite: _Stories/Mobs/Pets/morty.rsi
     size: Huge
     # stories end
   - type: DamageStateVisuals
@@ -636,7 +654,7 @@
     # stories start
   - type: MultiHandedItem
   - type: Item
-    sprite: Mobs/Pets/Smile/smile.rsi
+    sprite: _Stories/Mobs/Pets/morticia.rsi
     size: Ginormous
   - type: HeldSpeedModifier
     walkModifier: 0.9
@@ -667,7 +685,7 @@
     # stories start
   - type: MultiHandedItem
   - type: Item
-    sprite: Mobs/Pets/Smile/smile.rsi
+    sprite: _Stories/Mobs/Pets/alexander.rsi
     size: Ginormous
   - type: HeldSpeedModifier
     walkModifier: 0.7
@@ -708,7 +726,7 @@
     # stories start
   - type: MultiHandedItem
   - type: Item
-    sprite: Mobs/Pets/Smile/smile.rsi
+    sprite: _Stories/Mobs/Pets/renault.rsi
     size: Ginormous
   - type: HeldSpeedModifier
     walkModifier: 0.8
@@ -809,7 +827,7 @@
     # stories start
   - type: MultiHandedItem
   - type: Item
-    sprite: Mobs/Pets/Smile/smile.rsi
+    sprite: _Stories/Mobs/Pets/shiva.rsi
     size: Huge
     # stories end
   - type: Physics
@@ -872,7 +890,7 @@
     # stories start
   - type: MultiHandedItem
   - type: Item
-    sprite: Mobs/Pets/Smile/smile.rsi
+    sprite: _Stories/Mobs/Pets/willow.rsi
     size: Ginormous
   - type: HeldSpeedModifier
     walkModifier: 0.1
@@ -1028,7 +1046,7 @@
     # stories start
   - type: MultiHandedItem
   - type: Item
-    sprite: Mobs/Pets/Smile/smile.rsi
+    sprite: _Stories/Mobs/Pets/tropico.rsi
     size: Huge
     # stories end
   - type: Grammar
@@ -1047,11 +1065,6 @@
   components:
   - type: Vocalizer
     maxVocalizeInterval: 240 # polly is chattier
-    # stories start
-  - type: Item
-    sprite: Mobs/Pets/Smile/smile.rsi
-    size: Small
-    # stories end
   - type: RadioVocalizer
     radioAttemptChance: 0.8 # polly wants to share with the world
   - type: Grammar
