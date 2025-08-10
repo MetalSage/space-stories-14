@@ -21,7 +21,7 @@
     castShadows: false
     netsync: false
   - type: AccessReader
-    access: [["Engineering"]], ["PrisonEng"]] # [["Engineering"]] # Stories-Prison
+    access: [["Engineering"], ["PrisonEng"]] # [["Engineering"]] # Stories-Prison
   - type: Sprite
     drawdepth: WallMountedItems
     sprite: Structures/Power/apc.rsi

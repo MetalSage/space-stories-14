@@ -1,10 +1,8 @@
-// edited by Space Stories
-using Content.Shared.Ghost;
+using Content.Shared._Stories.Mindshield;
 using Content.Shared.IdentityManagement;
 using Content.Shared.Mindshield.Components;
 using Content.Shared.Popups;
 using Content.Shared.Revolutionary.Components;
-using Content.Shared._Stories.Mindshield;
 using Content.Shared.Stunnable;
 using Robust.Shared.GameStates;
 using Robust.Shared.Player;
@@ -21,22 +19,28 @@ public abstract class SharedRevolutionarySystem : EntitySystem
     {
         base.Initialize();
 
+        // SubscribeLocalEvent<MindShieldComponent, MapInitEvent>(MindShieldImplanted); // Stories
         SubscribeLocalEvent<RevolutionaryComponent, ComponentGetStateAttemptEvent>(OnRevCompGetStateAttempt);
         SubscribeLocalEvent<HeadRevolutionaryComponent, ComponentGetStateAttemptEvent>(OnRevCompGetStateAttempt);
         SubscribeLocalEvent<RevolutionaryComponent, ComponentStartup>(DirtyRevComps);
         SubscribeLocalEvent<HeadRevolutionaryComponent, ComponentStartup>(DirtyRevComps);
         SubscribeLocalEvent<ShowAntagIconsComponent, ComponentStartup>(DirtyRevComps);
+        // Stories Start
         SubscribeLocalEvent<HeadRevolutionaryComponent, MindShieldImplantedEvent>(HeadRevMindShieldImplanted);
         SubscribeLocalEvent<RevolutionaryComponent, MindShieldImplantedEvent>(RevMindShieldImplanted);
+        // Stories End
     }
 
     /// <summary>
-    /// When the mindshield is implanted in the head rev it will remove the mindshield component
+    /// When the mindshield is implanted in the rev it will popup saying they were deconverted. In Head Revs it will remove the mindshield component.
     /// </summary>
-    private void HeadRevMindShieldImplanted(EntityUid uid, HeadRevolutionaryComponent comp, MindShieldImplantedEvent ev)
+    private void MindShieldImplanted(EntityUid uid, MindShieldComponent comp, MapInitEvent init)
     {
-        RemCompDeferred<MindShieldComponent>(uid);
-    }
+        if (HasComp<HeadRevolutionaryComponent>(uid))
+        {
+            RemCompDeferred<MindShieldComponent>(uid);
+            return;
+        }
 
         if (HasComp<RevolutionaryComponent>(uid))
         {
@@ -47,6 +51,22 @@ public abstract class SharedRevolutionarySystem : EntitySystem
             _popupSystem.PopupEntity(Loc.GetString("rev-break-control", ("name", name)), uid);
         }
     }
+
+    // Stories Start
+    private void HeadRevMindShieldImplanted(EntityUid uid, HeadRevolutionaryComponent comp, MindShieldImplantedEvent ev)
+    {
+        RemCompDeferred<MindShieldComponent>(uid);
+    }
+
+    private void RevMindShieldImplanted(EntityUid uid, RevolutionaryComponent comp, MindShieldImplantedEvent ev)
+    {
+        var stunTime = TimeSpan.FromSeconds(4);
+        var name = Identity.Entity(uid, EntityManager);
+        RemComp<RevolutionaryComponent>(uid);
+        _sharedStun.TryAddParalyzeDuration(uid, stunTime);
+        _popupSystem.PopupEntity(Loc.GetString("rev-break-control", ("name", name)), uid);
+    }
+    // Stories End
 
     /// <summary>
     /// Determines if a HeadRev component should be sent to the client.
