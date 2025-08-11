@@ -1,0 +1,128 @@
+- type: entity
+  save: false
+  name: Urisst' Mzkobold
+  parent: BaseMobSpeciesOrganic
+  id: BaseMobKobold
+  abstract: true
+  components:
+  - type: HumanoidAppearance
+    species: Kobold
+    hideLayersOnEquip:
+    - Snout
+    - HeadTop
+    - HeadSide
+    undergarmentBottom: UndergarmentBottomBoxersReptilian
+  - type: MobThresholds
+    thresholds:
+      0: Alive
+      90: Critical
+      200: Dead
+  - type: Hunger
+  - type: Puller
+    needsHands: false
+  - type: Fixtures
+    fixtures: 
+      fix1:
+        shape:
+          !type:PhysShapeCircle
+          radius: 0.35
+        density: 120
+        restitution: 0.0
+        mask:
+        - MobMask
+        layer:
+        - MobLayer
+  - type: Thirst
+  - type: Icon
+    sprite: _Stories/Mobs/Kobold/parts.rsi
+    state: full
+  - type: Body
+    prototype: Kobold
+    requiredLegs: 2
+  - type: Butcherable
+    butcheringType: Spike
+    spawned:
+    - id: FoodMeatLizard
+      amount: 5
+  - type: LizardAccent
+  - type: Speech
+    speechSounds: Lizard
+    speechVerb: Reptilian
+    allowedEmotes: ['Thump']
+  - type: Sprite
+    noRot: true
+    drawdepth: Mobs
+    scale: 0.8, 0.7
+  - type: TypingIndicator
+    proto: lizard
+  - type: Vocal
+    sounds:
+      Male: MaleReptilian
+      Female: FemaleReptilian
+      Unsexed: MaleReptilian
+  - type: BodyEmotes
+    soundsId: ReptilianBodyEmotes
+  - type: Damageable
+    damageContainer: Biological
+    damageModifierSet: Scale
+  - type: MeleeWeapon
+    soundHit:
+      collection: AlienClaw
+    angle: 30
+    animation: WeaponArcClaw
+    damage:
+      types:
+        Slash: 5
+  - type: Temperature
+    heatDamageThreshold: 400
+    coldDamageThreshold: 285
+    currentTemperature: 310.15
+    specificHeat: 42
+    coldDamage:
+      types:
+        Cold : 0.1 #per second, scales with temperature & other constants
+    heatDamage:
+      types:
+        Heat : 1.5 #per second, scales with temperature & other constants
+  - type: TemperatureSpeed
+    thresholds:
+      301: 0.8
+      295: 0.6
+      285: 0.4
+  - type: Wagging
+  - type: Inventory
+    speciesId: kobold
+    femaleDisplacements:
+      jumpsuit:
+        sizeMaps:
+          32:
+            sprite: Mobs/Species/Human/displacement.rsi
+            state: jumpsuit-female
+  - type: NoSlip
+
+
+- type: entity
+  parent: BaseSpeciesDummy
+  id: MobKoboldDummy
+  categories: [ HideSpawnMenu ]
+  description: A dummy kobold meant to be used in character setup.
+  components:
+  - type: HumanoidAppearance
+    species: Kobold
+    hideLayersOnEquip:
+    - Snout
+    - HeadTop
+    - HeadSide
+    undergarmentBottom: UndergarmentBottomBoxersReptilian
+  - type: Sprite
+    scale: 0.8, 0.7
+  - type: Inventory
+    speciesId: kobold
+    femaleDisplacements:
+      jumpsuit:
+        sizeMaps:
+          32:
+            sprite: Mobs/Species/Human/displacement.rsi
+            state: jumpsuit-female
+
+#Weh
