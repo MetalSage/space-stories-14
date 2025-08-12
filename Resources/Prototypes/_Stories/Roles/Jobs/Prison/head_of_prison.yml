@@ -20,6 +20,8 @@
   - PrisonAllAccess
   access:
   - Command
+  - Armory
+  - Bar
   - Brig
   - Security
   - Maintenance
