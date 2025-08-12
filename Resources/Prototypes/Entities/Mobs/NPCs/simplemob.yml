@@ -32,6 +32,8 @@
     tags:
     - DoorBumpOpener
     - StunImmune
+  - type: Input # Stories-CrawlingFix
+    context: "common"
 
 - type: entity
   abstract: true

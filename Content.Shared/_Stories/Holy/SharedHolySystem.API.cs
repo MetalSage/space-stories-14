@@ -38,7 +38,7 @@ public abstract partial class SharedHolySystem : EntitySystem
 
         if (!target.Comp.IgnoreProtectionImpulse)
         {
-            _stun.TryKnockdown(target, holy.Comp.ProtectionKnockdownTime, true);
+            _stun.TryKnockdown(target.Owner, holy.Comp.ProtectionKnockdownTime, true);
             var fieldDir = _transformSystem.GetWorldPosition(holy);
             var playerDir = _transformSystem.GetWorldPosition(target);
             _throwing.TryThrow(target, (playerDir - fieldDir) * holy.Comp.ProtectionImpulseLengthModifier, holy.Comp.ProtectionImpulseSpeed);

@@ -169,8 +169,8 @@ namespace Content.Client.Options.UI.Tabs
             AddButton(EngineKeyFunctions.MoveDown);
             AddButton(EngineKeyFunctions.MoveRight);
             // Stories-Crawling-Start
-            AddCheckBox("ui-options-hotkey-auto-standing", _cfg.GetCVar(SCCVars.AutoStanding), AutoStanding);
-            AddButton(ContentKeyFunctions.ToggleStanding);
+            // AddCheckBox("ui-options-hotkey-auto-standing", _cfg.GetCVar(SCCVars.AutoStanding), AutoStanding);
+            // AddButton(ContentKeyFunctions.ToggleStanding);
             // Stories-Crawling-End
             AddButton(EngineKeyFunctions.Walk);
             AddCheckBox("ui-options-hotkey-toggle-walk", _cfg.GetCVar(CCVars.ToggleWalk), HandleToggleWalk);
