@@ -1,6 +1,7 @@
 using System.Globalization;
 using System.Linq;
 using System.Text;
+using Content.Server._Stories.ChatFilter;
 using Content.Server.Administration.Logs;
 using Content.Server.Administration.Managers;
 using Content.Server.Chat.Managers;
@@ -61,7 +62,10 @@ public sealed partial class ChatSystem : SharedChatSystem
     [Dependency] private readonly ReplacementAccentSystem _wordreplacement = default!;
     [Dependency] private readonly EntityWhitelistSystem _whitelistSystem = default!;
     [Dependency] private readonly ExamineSystemShared _examineSystem = default!;
-    [Dependency] private readonly DamageableSystem _damageable = default!; // Stories
+    // Stories Start
+    [Dependency] private readonly DamageableSystem _damageable = default!;
+    [Dependency] private readonly ChatFilterSystem _chatFilterSystem = default!;
+    // Stories End
 
     public const int VoiceRange = 10; // how far voice goes in world units
     public const int WhisperClearRange = 2; // how far whisper goes while still being understandable, in world units
@@ -177,13 +181,7 @@ public sealed partial class ChatSystem : SharedChatSystem
         bool ignoreActionBlocker = false
         )
     {
-        // Stories-ChatFilter start
-        if (IsContainsBanWords(message))
-        {
-            message = "кашляет";
-            desiredType = InGameICChatType.Emote;
-        }
-        // Stories-ChatFilter end
+        _chatFilterSystem.CatchBanWord(source, ref message, ref desiredType); // Stories-ChatFilter
 
         if (HasComp<GhostComponent>(source))
         {
@@ -286,6 +284,8 @@ public sealed partial class ChatSystem : SharedChatSystem
         ICommonSession? player = null
         )
     {
+        _chatFilterSystem.CatchBanWord(source, ref message); // Stories-ChatFilter
+
         if (!CanSendInGame(message, shell, player))
             return;
 
@@ -774,7 +774,7 @@ public sealed partial class ChatSystem : SharedChatSystem
     private string SanitizeInGameICMessage(EntityUid source, string message, out string? emoteStr, bool capitalize = true, bool punctuate = false, bool capitalizeTheWordI = true)
     {
         var newMessage = SanitizeMessageReplaceWords(message.Trim());
-        newMessage = ReplaceWords(newMessage); // Stories-ChatFilter
+        newMessage = _chatFilterSystem.ReplaceWords(newMessage); // Stories-ChatFilter
         GetRadioKeycodePrefix(source, newMessage, out newMessage, out var prefix);
 
         // Sanitize it first as it might change the word order

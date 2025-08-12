@@ -1,6 +1,7 @@
 using System.Diagnostics.CodeAnalysis;
 using System.Linq;
 using System.Runtime.InteropServices;
+using Content.Server._Stories.ChatFilter;
 using Content.Server.Administration.Logs;
 using Content.Server.Administration.Managers;
 using Content.Server.Administration.Systems;
@@ -47,6 +48,7 @@ internal sealed partial class ChatManager : IChatManager
     [Dependency] private readonly ISharedPlayerManager _player = default!;
     [Dependency] private readonly DiscordChatLink _discordLink = default!;
     [Dependency] private readonly PartnersManager _sponsors = default!; // Corvax-Sponsors
+    [Dependency] private readonly ChatFilterSystem _chatFilterSystem = default!; // Stories-ChatFilter
 
     /// <summary>
     /// The maximum length a player-sent message can be sent
@@ -262,6 +264,13 @@ internal sealed partial class ChatManager : IChatManager
 
     private void SendOOC(ICommonSession player, string message)
     {
+        // Stories-ChatFilter Start
+        if (player.AttachedEntity is {} attachedEntity)
+            _chatFilterSystem.CatchBanWord(attachedEntity, ref message);
+        else
+            _chatFilterSystem.CatchBanWord(ref message);
+        // Stories-ChatFilter End
+
         if (_adminManager.IsAdmin(player))
         {
             if (!_adminOocEnabled)
