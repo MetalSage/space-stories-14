@@ -1,0 +1,34 @@
+# Stories-Thief-Engineer-Target start
+- type: entity
+  parent: BaseThiefStealStructureObjective
+  id: EmitterStealObjective
+  components:
+  - type: NotJobRequirement
+    job: Engineer
+  - type: StealCondition
+    stealGroup: Emitter
+  - type: Objective
+    difficulty: 0.5
+    
+- type: entity
+  parent: BaseThiefStealStructureObjective
+  id: TeslaGeneratorStealObjective
+  components:
+  - type: NotJobRequirement
+    job: Engineer
+  - type: StealCondition
+    stealGroup: Tesla
+  - type: Objective
+    difficulty: 1
+    
+- type: entity
+  parent: BaseThiefStealStructureObjective
+  id: SingularityGeneratorStealObjective
+  components:
+  - type: NotJobRequirement
+    job: Engineer
+  - type: StealCondition
+    stealGroup: Singularity
+  - type: Objective
+    difficulty: 1
+# Stories-Thief-Engineer-Target end
