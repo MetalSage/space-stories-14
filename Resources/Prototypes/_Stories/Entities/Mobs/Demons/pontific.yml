@@ -1,7 +1,7 @@
 ﻿- type: entity
   name: Pontific
   id: STMobPontific
-  parent: STBaseUnholy
+  parent: STBaseUnholyPlayable
   description: A mysterious and sinister creature, its figure is distorted by ritual robes, covered with dark tattoos and mysterious symbols, radiating a sinister aura.
   components:
   - type: ComplexInteraction
@@ -15,14 +15,14 @@
     damageCap: 0
     damage:
       types:
-        Holy: -0.07 # 4 в минуту
+        Holy: -0.07
       groups:
-        Brute: -0.25 # 15 в минуту
-        Burn: -0.25 # 15 в минуту
-        Airloss: -0.25 # 15 в минуту
+        Brute: -0.25
+        Burn: -0.25
+        Airloss: -0.25
   - type: Force
   - type: ForceUser
-    shopAction: STActionPontificPrayer # FIXME: Затычка
+    shopAction: STActionPontificPrayer
     preset: STPontific
   - type: GenericVisualizer
     visuals:
@@ -61,7 +61,6 @@
       550: 0.7
   - type: Pontific
     actions:
-    # - STActionPontificPrayer FIXME: Перенесено в ForceUser как затычка
     - STActionPontificBloodyAltar
     - STActionPontificSpawnMonk
     - STActionPontificSpawnGuardian

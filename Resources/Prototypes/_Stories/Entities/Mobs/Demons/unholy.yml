@@ -1,8 +1,18 @@
 - type: entity
-  id: STBaseUnholy
+  id: STBaseUnholyPlayable
   abstract: true
-  parent: [ SimpleSpaceMobBase, MobCombat ]
+  parent:
+  - BaseSimpleMob
+  - MobAtmosExposed
+  - MobCombat
+  - MobBloodstream
+  - MobFlammable
   components:
+  - type: Body
+    prototype: Animal
+  - type: Climbing
+  - type: NameIdentifier
+    group: GenericNumber
   - type: Hands
   - type: Reactive
     groups:
@@ -74,27 +84,15 @@
       # types:
       #   Holy: -0.07 # 4 в минуту
       groups:
-        Brute: -0.25 # 15 в минуту
-        Burn: -0.25 # 15 в минуту
-        Airloss: -0.25 # 15 в минуту
+        Brute: -0.25
+        Burn: -0.25
+        Airloss: -0.25
   - type: DamageStateVisuals
     states:
       Alive:
         Base: base
       Dead:
         Base: dead
-  - type: NPCImprintingOnSpawnBehaviour
-    spawnFriendsSearchRadius: 300 # Слуги понтифика могут использовать алтарь Понтифика, чтобы создавать больше слуг.
-    follow: true
-    whitelist:
-      components:
-      - Pontific
-  - type: HTN
-    rootTask:
-      task: DragonCarpCompound
-  - type: NpcFactionMember
-    factions:
-    - STUnholy
   - type: MovementSpeedModifier
     baseWalkSpeed: 4
     baseSprintSpeed: 5
@@ -122,7 +120,7 @@
   - type: MobMover
   - type: TTS
     voice: gman
-  - type: Prying # Open door from xeno.yml.
+  - type: Prying
     pryPowered: true
     force: true
     speedModifier: 1.5
@@ -146,6 +144,24 @@
     - CannotSuicide
     - DoorBumpOpener
     - FootstepSound
+
+- type: entity
+  id: STBaseUnholy
+  abstract: true
+  parent: STBaseUnholyPlayable
+  components:
+  - type: NPCImprintingOnSpawnBehaviour
+    spawnFriendsSearchRadius: 300
+    follow: true
+    whitelist:
+      components:
+      - Pontific
+  - type: HTN
+    rootTask:
+      task: DragonCarpCompound
+  - type: NpcFactionMember
+    factions:
+    - STUnholy
 
 - type: entity
   name: dark knight
