@@ -233,7 +233,7 @@ public sealed partial class ShadowlingSystem
             return;
 
         _flash.Flash(args.Target, uid, null, TimeSpan.FromMilliseconds(15000), 0.8f, false); // FIXME: Hardcode
-        _stun.TryStun(args.Target, TimeSpan.FromSeconds(5), false); // FIXME: Hardcode
+        _stun.TryAddStunDuration(args.Target, TimeSpan.FromSeconds(5)); // FIXME: Hardcode
 
         args.Handled = true;
     }
@@ -258,7 +258,7 @@ public sealed partial class ShadowlingSystem
 
         ShadowSmoke(Transform(shadowlingUid.Value).Coordinates, 100, 15, 7); // FIXME: Hardcode
 
-        _stun.TryParalyze(shadowlingUid.Value, TimeSpan.FromSeconds(15), true); // FIXME: Hardcode
+        _stun.TryAddParalyzeDuration(shadowlingUid.Value, TimeSpan.FromSeconds(15)); // FIXME: Hardcode
 
         var doAfterArgs = new DoAfterArgs(EntityManager, shadowlingUid.Value, TimeSpan.FromSeconds(15f), new ShadowlingHatchDoAfterEvent(), shadowlingUid) // FIXME: Hardcode
         {
@@ -283,7 +283,7 @@ public sealed partial class ShadowlingSystem
             return;
 
         ShadowSmoke(Transform(uid).Coordinates, 100f, 5f, 7); // FIXME: Hardcode
-        _stun.TryParalyze(uid, TimeSpan.FromSeconds(5f), true); // FIXME: Hardcode
+        _stun.TryAddParalyzeDuration(uid, TimeSpan.FromSeconds(5f)); // FIXME: Hardcode
 
         var doAfter = new DoAfterArgs(EntityManager, uid, TimeSpan.FromSeconds(5f), new ShadowlingAscendanceDoAfterEvent(), uid) // FIXME: Hardcode
         {

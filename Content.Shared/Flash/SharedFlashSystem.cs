@@ -20,6 +20,7 @@ using Robust.Shared.Prototypes;
 using Robust.Shared.Random;
 using Robust.Shared.Timing;
 using System.Linq;
+using Content.Shared.Movement.Systems;
 using Content.Shared._Stories.Debuff;
 
 namespace Content.Shared.Flash;
@@ -34,6 +35,7 @@ public abstract class SharedFlashSystem : EntitySystem
     [Dependency] private readonly ExamineSystemShared _examine = default!;
     [Dependency] private readonly SharedPopupSystem _popup = default!;
     [Dependency] private readonly SharedStunSystem _stun = default!;
+    [Dependency] private readonly MovementModStatusSystem _movementMod = default!;
     [Dependency] private readonly TagSystem _tag = default!;
     [Dependency] private readonly StatusEffectsSystem _statusEffectsSystem = default!;
     [Dependency] private readonly IGameTiming _timing = default!;
@@ -158,7 +160,7 @@ public abstract class SharedFlashSystem : EntitySystem
 
         if (attempt.Cancelled)
             return;
-        
+
         // Stories-FlashDebuff Start
         TryComp<FlashDebuffComponent>(target, out var flashDebuffComponent);
         flashDuration *= flashDebuffComponent?.CoefficientDuration ?? 1;
@@ -169,9 +171,9 @@ public abstract class SharedFlashSystem : EntitySystem
             return;
 
         if (stunDuration != null)
-            _stun.TryParalyze(target, stunDuration.Value, true);
+            _stun.TryUpdateParalyzeDuration(target, stunDuration.Value);
         else
-            _stun.TrySlowdown(target, flashDuration, true, slowTo, slowTo);
+            _movementMod.TryUpdateMovementSpeedModDuration(target, MovementModStatusSystem.FlashSlowdown, flashDuration, slowTo);
 
         if (displayPopup && user != null && target != user && Exists(user.Value))
         {
@@ -262,7 +264,7 @@ public abstract class SharedFlashSystem : EntitySystem
     {
         if (TryComp<FlashDebuffComponent>(args.User, out var comp) && comp.BlockFlashImmunity) // Stories-FlashDebuff
             return;
-        
+
         if (ent.Comp.Enabled)
             args.Cancelled = true;
     }

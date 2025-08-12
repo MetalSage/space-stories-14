@@ -33,7 +33,7 @@ public abstract class SharedGarroteSystem : EntitySystem
 
         _damageable.TryChangeDamage(args.Target, comp.Damage, origin: args.User);
 
-        _stun.TryStun(args.Target.Value, comp.DurationStatusEffects, true);
+        _stun.TryAddStunDuration(args.Target.Value, comp.DurationStatusEffects);
         _statusEffect.TryAddStatusEffect<MutedComponent>(args.Target.Value, "Muted", comp.DurationStatusEffects, refresh: true);
         Dirty(args.Target.Value, statusEffectsComp);
 

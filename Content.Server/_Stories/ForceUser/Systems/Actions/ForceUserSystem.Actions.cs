@@ -88,7 +88,7 @@ public sealed partial class ForceUserSystem
             if (_force.TryRemoveVolume(ent, _random.Next(10, 30)))
                 _popup.PopupEntity("Устоял!", ent);
             else
-                _stun.TryParalyze(ent, TimeSpan.FromSeconds(args.StunTime), true);
+                _stun.TryAddParalyzeDuration(ent, TimeSpan.FromSeconds(args.StunTime));
         }
 
         args.Handled = true;
