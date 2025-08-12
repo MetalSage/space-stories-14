@@ -1,3 +1,5 @@
+using Content.Shared.Inventory;
+
 namespace Content.Shared.Interaction.Events;
 
 /// <summary>
@@ -6,8 +8,9 @@ namespace Content.Shared.Interaction.Events;
 /// <remarks>
 ///     This is currently used by the forensics and disease systems to perform on-contact interactions.
 /// </remarks>
-public sealed class ContactInteractionEvent : HandledEntityEventArgs
+public sealed class ContactInteractionEvent : HandledEntityEventArgs, IInventoryRelayEvent // Stories-Pontific
 {
+    public SlotFlags TargetSlots { get; } = SlotFlags.All; // Stories-Pontific
     public EntityUid Other;
 
     public ContactInteractionEvent(EntityUid other)

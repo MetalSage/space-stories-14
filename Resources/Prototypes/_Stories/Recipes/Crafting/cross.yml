@@ -1,0 +1,7 @@
+﻿- type: construction
+  id: STCross
+  graph: STChaplainCross
+  startNode: start
+  targetNode: cross
+  category: construction-category-misc
+  objectType: Item

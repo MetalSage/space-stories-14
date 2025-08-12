@@ -27,6 +27,12 @@
     - alertType: Rooted
     - alertType: Pacified
     - alertType: Stealthy
+    # Stories-Pontific-Start
+    - alertType: STPontificFel
+    - alertType: STPontificPrayer
+    - alertType: STPontificFlame
+    - alertType: STHoly
+    # Stories-Pontific-End
 
 - type: entity
   id: AlertSpriteView

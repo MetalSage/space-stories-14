@@ -178,6 +178,10 @@
   id: ERTChaplain
   parent: ERTLeader
   components:
+    # Stories-Pontific-Start
+    - type: Chaplain
+    - type: Holy
+    # Stories-Pontific-End
     - type: BibleUser
     - type: GhostRole
       name: ghost-role-information-ert-chaplain-name
@@ -221,6 +225,10 @@
     - type: Loadout
       prototypes: [ ERTChaplainGearEVA ]
       roleLoadout: [ RoleSurvivalEVA ]
+    # Stories-Pontific-Start
+    - type: Chaplain
+    - type: Holy
+    # Stories-Pontific-End
     - type: BibleUser
 
 ## ERT Janitor

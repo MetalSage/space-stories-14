@@ -1,0 +1,7 @@
+- type: alert
+  id: STHoly
+  icons:
+    - sprite: _Stories/Objects/Chapel/cross.rsi
+      state: icon
+  name: stories-alerts-holy-name
+  description: stories-alerts-holy-desc

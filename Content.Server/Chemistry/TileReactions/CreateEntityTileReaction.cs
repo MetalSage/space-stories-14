@@ -49,7 +49,7 @@ public sealed partial class CreateEntityTileReaction : ITileReaction
             var lookup = entityManager.System<EntityLookupSystem>();
 
             int acc = 0;
-            foreach (var ent in lookup.GetEntitiesInTile(tile, LookupFlags.Static))
+            foreach (var ent in lookup.GetEntitiesInRange(entityManager.System<TurfSystem>().GetTileCenter(tile), 0.1f, LookupFlags.All)) // Stories-Pontific | Shitcode-fix. Перезаписать, когда оффы починят.
             {
                 var whitelistSystem = entityManager.System<EntityWhitelistSystem>();
                 if (whitelistSystem.IsWhitelistPass(Whitelist, ent))

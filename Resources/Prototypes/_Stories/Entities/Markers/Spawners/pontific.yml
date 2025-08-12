@@ -1,0 +1,17 @@
+- type: entity
+  id: STSpawnPointPontific
+  categories: [ HideSpawnMenu, Spawner ]
+  parent: BaseAntagSpawner
+  name: pontific
+  components:
+  - type: GhostRole
+    name: stories-ghost-role-information-pontific-name
+    description: stories-ghost-role-information-pontific-description
+    mindRoles:
+    - MindRoleGhostRoleFreeAgent
+  - type: SpawnPoint
+  - type: Sprite
+    layers:
+    - state: green
+    - sprite: _Stories/Mobs/Demons/pontific.rsi
+      state: base

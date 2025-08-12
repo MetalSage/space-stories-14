@@ -1,0 +1,146 @@
+﻿- type: entity
+  parent: BaseAction
+  id: STActioPontificToggleNightvision
+  name: Ночное зрение
+  description: Переключить своё ночное зрение.
+  components:
+  - type: Action
+    useDelay: 5
+    icon:
+      sprite: _Stories/Actions/pontific.rsi
+      state: nightvision
+  - type: InstantAction
+    event: !type:ToggleNightvisionEvent
+
+- type: entity
+  parent: BaseAction
+  id: STActionPontificPrayer
+  name: Dark Prayer Service
+  description: A ritual that summons dark forces into this world. Restores filth.
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Action
+    icon:
+      sprite: _Stories/Actions/pontific.rsi
+      state: prayer
+    useDelay: 120
+    itemIconStyle: NoItem
+  - type: InstantAction
+    event: !type:PontificPrayerEvent
+
+- type: entity
+  parent: BaseAction
+  id: STActionPontificBloodyAltar
+  name: Dark Altar
+  description: Summons an altar from the darkness. Drag creatures onto it to turn them corrupted. Requires 150 Corruption.
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Action
+    icon:
+      sprite: _Stories/Actions/pontific.rsi
+      state: desecrated_statue
+    useDelay: 300
+    itemIconStyle: NoItem
+  - type: InstantAction
+    event: !type:InstantForceUserActionEvent
+      volume: 150
+      event: !type:CreateEntityEvent
+        proto: STPontificAltar
+
+- type: entity
+  parent: BaseAction
+  id: STActionPontificSpawnMonk
+  name: Summon a monk
+  description: Summons a cursed monk who is highly resistant to holy damage. Requires 50 Corruption.
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Action
+    icon:
+      sprite: _Stories/Actions/pontific.rsi
+      state: call_monk
+    useDelay: 240
+    itemIconStyle: NoItem
+  - type: InstantAction
+    event: !type:InstantForceUserActionEvent
+      volume: 50
+      event: !type:CreateEntityEvent
+        proto: STMobCursedMonk
+
+- type: entity
+  parent: BaseAction
+  id: STActionPontificSpawnGuardian
+  name: Summon a knight
+  description: Summons a cursed knight. This is a heavily armored warrior, but slow. Requires 100 corruption.
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Action
+    icon:
+      sprite: _Stories/Actions/pontific.rsi
+      state: call_guardian
+    useDelay: 240
+    itemIconStyle: NoItem
+  - type: InstantAction
+    event: !type:InstantForceUserActionEvent
+      volume: 100
+      event: !type:CreateEntityEvent
+        proto: STMobFallenGuard
+
+- type: entity
+  parent: BaseAction
+  id: STActionPontificFelLightning
+  name: Dark Lightning
+  description: A powerful bolt of lightning filled with dark energy. Requires 50 Corruption.
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Action
+    icon:
+      sprite: _Stories/Actions/pontific.rsi
+      state: fel_lightning
+    useDelay: 15
+    itemIconStyle: NoItem
+  - type: TargetAction
+    interactOnMiss: false
+    range: 6
+  - type: EntityTargetAction
+    event: !type:EntityTargetForceUserActionEvent
+      volume: 50
+      event: !type:LightningStrikeEvent
+        proto: LightningRevenant
+    canTargetSelf: false
+
+- type: entity
+  parent: BaseAction
+  id: STActionPontificFlameSwords
+  name: Dark Flame
+  description: Your swords will burn with fel flames, greatly increasing speed and damage. Requires 80 fel.
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Action
+    icon:
+      sprite: _Stories/Actions/pontific.rsi
+      state: flame_swords
+    useDelay: 60
+    itemIconStyle: NoItem
+  - type: InstantAction
+    event: !type:InstantForceUserActionEvent
+      volume: 80
+      event: !type:PontificFlameSwordsEvent
+
+- type: entity
+  parent: BaseAction
+  id: STActionPontificKudzu
+  name: Desecrated Lilies
+  description: Creates corrupted lilies that spread and slowly fill the station. Requires 50 corruption.
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Action
+    icon:
+      sprite: _Stories/Actions/pontific.rsi
+      state: kudzu
+    useDelay: 180
+    itemIconStyle: NoItem
+  - type: InstantAction
+    event: !type:InstantForceUserActionEvent
+      volume: 50
+      event: !type:CreateEntityEvent
+        proto: STPontificKudzu

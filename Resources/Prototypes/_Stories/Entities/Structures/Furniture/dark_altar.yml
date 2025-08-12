@@ -1,0 +1,54 @@
+﻿- type: entity
+  id: STPontificAltar
+  parent: AltarBase
+  name: altar of the Pontific
+  description: An ominous and ancient structure.
+  components:
+  - type: PolymorphClimbers
+    polymorph: STDesecrated
+    whitelist:
+      components:
+      - HumanoidAppearance
+    blacklist:
+      components:
+      - Pontific
+      - Unholy
+      - Holy
+  - type: Sprite
+    layers:
+      - sprite: _Stories/Structures/dark_altar.rsi
+        state: dark_altar
+  - type: Destructible
+    thresholds:
+      - trigger:
+          !type:DamageTrigger
+          damage: 600
+        behaviors:
+          - !type:DoActsBehavior
+            acts: [ "Destruction" ]
+      - trigger:
+          !type:DamageTrigger
+          damage: 300
+        behaviors:
+          - !type:SpawnEntitiesBehavior
+            spawn:
+              SheetSteel:
+                min: 5
+                max: 5
+          - !type:PlaySoundBehavior
+            sound:
+              collection: MetalBreak
+          - !type:DoActsBehavior
+            acts: [ "Destruction" ]
+  - type: PointLight
+    enabled: true
+    radius: 2
+    color: "#2c1b1b"
+  - type: TelecomExempt
+  - type: ActiveListener
+    range: 4
+  - type: RadioMicrophone
+    broadcastChannel: STUnholy
+    enabled: True
+    toggleOnInteract: false
+    unobstructedRequired: true

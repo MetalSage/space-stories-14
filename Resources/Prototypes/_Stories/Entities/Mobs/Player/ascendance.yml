@@ -7,6 +7,10 @@
   - MobPolymorphable
   description: Если вы его видите, то вам следует бежать
   components:
+  - type: Unholy # Чуть чуть нежить, но очень мощная
+    resistanceCoefficient: 0
+    ignoreProtectionImpulse: true
+    detectable: false
   - type: Shadowling
     actions:
       # ActionShadowlingHatch: 0

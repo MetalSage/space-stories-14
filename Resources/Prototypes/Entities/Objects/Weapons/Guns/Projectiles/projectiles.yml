@@ -988,6 +988,7 @@
         mask:
         - Impassable
         - BulletImpassable
+        - MachineMask # Stories-Pontific
   - type: Vapor
     active: true
     transferAmountPercentage: 1

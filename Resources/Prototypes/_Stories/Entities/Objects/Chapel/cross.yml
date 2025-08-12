@@ -1,0 +1,85 @@
+﻿- type: entity
+  parent: BaseItem
+  id: STBaseCross
+  abstract: true
+  components:
+  - type: GuideHelp
+    guides:
+    - STChaplain
+  - type: Damageable
+    damageContainer: Inorganic
+  - type: Blessable
+    timeModifier: 3
+  - type: Item
+    size: Tiny
+  - type: UseDelay
+    delays:
+      STHoly:
+        length: 3.0
+  - type: StatusEffects
+    allowed:
+    - STHoly
+
+- type: entity
+  name: cross
+  parent: STBaseCross
+  id: STChaplainCross
+  description: Used to protect against evil.
+  components:
+  - type: Appearance
+  - type: Reactive
+    groups:
+      Acidic: [Touch]
+      Flammable: [ Touch ]
+      Extinguish: [ Touch ]
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 15
+      behaviors:
+      - !type:SpawnEntitiesBehavior
+        spawn:
+            Ash:
+              min: 1
+              max: 1
+      - !type:DoActsBehavior
+        acts: [ "Destruction" ]
+  - type: Flammable
+    fireSpread: true
+    alwaysCombustible: true
+    damage:
+      types:
+        Heat: 1
+  - type: FireVisuals
+    sprite: Effects/fire.rsi
+    normalState: fire
+  - type: Damageable
+    damageModifierSet: Wood
+    damageContainer: Inorganic
+  - type: Clothing
+    quickEquip: true
+    sprite: _Stories/Objects/Chapel/cross.rsi
+    slots:
+    - neck
+  - type: Sprite
+    sprite: _Stories/Objects/Chapel/cross.rsi
+    state: icon
+  - type: Construction
+    graph: STChaplainCross
+    node: cross
+
+- type: entity
+  parent: STBaseCross
+  id: STSilverCross
+  name: silver cross
+  description: Silver 960 assay value.
+  components:
+  - type: Clothing
+    quickEquip: true
+    sprite: _Stories/Objects/Chapel/silvercross.rsi
+    slots:
+    - neck
+  - type: Sprite
+    sprite: _Stories/Objects/Chapel/silvercross.rsi
+    state: icon

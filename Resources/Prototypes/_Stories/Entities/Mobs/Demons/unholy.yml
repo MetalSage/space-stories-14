@@ -1,0 +1,319 @@
+- type: entity
+  id: STBaseUnholyPlayable
+  abstract: true
+  parent:
+  - BaseSimpleMob
+  - MobAtmosExposed
+  - MobCombat
+  - MobBloodstream
+  - MobFlammable
+  components:
+  - type: Body
+    prototype: Animal
+  - type: Climbing
+  - type: NameIdentifier
+    group: GenericNumber
+  - type: Hands
+  - type: Reactive
+    groups:
+      Flammable: [Touch]
+      Extinguish: [Touch]
+      Acidic: [Touch, Ingestion]
+    reactions:
+    - reagents: [ Holywater ]
+      methods: [ Touch ]
+      effects:
+      - !type:Revert
+        conditions:
+        - !type:MobStateCondition
+          mobstate: Dead
+  - type: Unholy
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTypeTrigger
+        damageType: Blunt
+        damage: 400
+      behaviors:
+      - !type:GibBehavior { }
+    - trigger:
+        !type:DamageTypeTrigger
+        damageType: Holy
+        damage: 500
+      behaviors:
+      - !type:SpawnEntitiesBehavior
+        spawnInContainer: true
+        spawn:
+          Ash:
+            min: 1
+            max: 1
+      - !type:BurnBodyBehavior { }
+      - !type:PlaySoundBehavior
+        sound:
+          collection: MeatLaserImpact
+    - trigger:
+        !type:DamageTypeTrigger
+        damageType: Heat
+        damage: 1500
+      behaviors:
+      - !type:SpawnEntitiesBehavior
+        spawnInContainer: true
+        spawn:
+          Ash:
+            min: 1
+            max: 1
+      - !type:BurnBodyBehavior { }
+      - !type:PlaySoundBehavior
+        sound:
+          collection: MeatLaserImpact
+  - type: Bloodstream
+    bloodMaxVolume: 25
+    bloodReagent: DemonsBlood
+    bloodlossDamage:
+      types:
+        Bloodloss: 0
+    bloodlossHealDamage:
+      types:
+        Bloodloss: -1
+  - type: PassiveDamage
+    allowedStates:
+    - Alive
+    - Dead
+    damageCap: 0
+    damage:
+      # types:
+      #   Holy: -0.07 # 4 в минуту
+      groups:
+        Brute: -0.25
+        Burn: -0.25
+        Airloss: -0.25
+  - type: DamageStateVisuals
+    states:
+      Alive:
+        Base: base
+      Dead:
+        Base: dead
+  - type: MovementSpeedModifier
+    baseWalkSpeed: 4
+    baseSprintSpeed: 5
+  - type: MobState
+    allowedStates:
+    - Alive
+    - Dead
+  - type: MobThresholds
+    allowRevives: true
+    thresholds:
+      0: Alive
+      75: Dead
+  - type: Stamina
+    critThreshold: 50
+  - type: MeleeWeapon
+    soundHit:
+      path: /Audio/Weapons/Xeno/alien_claw_flesh3.ogg
+    angle: 0
+    animation: WeaponArcClaw
+    damage:
+      types:
+        Slash: 12
+  - type: ZombieImmune
+  - type: InputMover
+  - type: MobMover
+  - type: TTS
+    voice: gman
+  - type: Prying
+    pryPowered: true
+    force: true
+    speedModifier: 1.5
+    useSound:
+      path: /Audio/Items/crowbar.ogg
+  - type: Puller
+    needsHands: false
+  - type: NoSlip
+  - type: IntrinsicRadioReceiver
+  - type: IntrinsicRadioTransmitter
+    channels:
+    - STUnholy
+  - type: ActiveRadio
+    channels:
+    - STUnholy
+  - type: Speech
+  - type: TypingIndicator
+    proto: guardian
+  - type: Tag
+    tags:
+    - CannotSuicide
+    - DoorBumpOpener
+    - FootstepSound
+
+- type: entity
+  id: STBaseUnholy
+  abstract: true
+  parent: STBaseUnholyPlayable
+  components:
+  - type: NPCImprintingOnSpawnBehaviour
+    spawnFriendsSearchRadius: 300
+    follow: true
+    whitelist:
+      components:
+      - Pontific
+  - type: HTN
+    rootTask:
+      task: DragonCarpCompound
+  - type: NpcFactionMember
+    factions:
+    - STUnholy
+
+- type: entity
+  name: dark knight
+  id: STMobFallenGuard
+  parent: STBaseUnholy
+  description: A grim and menacing figure. His armor is covered in scratches and rust, and there are traces of long-forgotten battles on it. In his gaze there is a cold determination and indifference to life, as if he had long ago lost all hope.
+  components:
+  - type: MovementSpeedModifier
+    baseWalkSpeed: 1
+    baseSprintSpeed: 1.5
+  - type: Sprite
+    drawdepth: Mobs
+    sprite: _Stories/Mobs/Demons/fallenguardian.rsi
+    layers:
+      - map: [ "enum.DamageStateVisualLayers.Base" ]
+        state: base
+  - type: MobThresholds
+    allowRevives: true
+    thresholds:
+      0: Alive
+      200: Dead
+  - type: MeleeWeapon
+    range: 2.0
+    hidden: true
+    angle: 0
+    soundHit:
+      collection: AlienClaw
+    animation: WeaponArcClaw
+    damage:
+      types:
+        Slash: 15
+      groups:
+        Brute: 15
+  - type: GhostRole
+    allowMovement: true
+    allowSpeech: true
+    makeSentient: true
+    name: stories-ghost-role-information-fallen-guard-name
+    description: stories-ghost-role-information-fallen-guard-description
+  - type: GhostTakeoverAvailable
+  - type: SlowOnDamage
+    speedModifierThresholds:
+      80: 0.9
+      140: 0.8
+  - type: Damageable
+    damageContainer: BiologicalMetaphysical
+    damageModifierSet: STFallenGuardModifierSet
+
+- type: damageModifierSet
+  id: STFallenGuardModifierSet
+  coefficients:
+    Blunt: 0.2
+    Slash: 0.2
+    Piercing: 0.2
+    Heat: 0.5
+    Cold: 0.5
+    Caustic: 0.9
+
+- type: entity
+  name: desecrated
+  id: STMobDesecrated
+  parent: STBaseUnholy
+  description: A broken shadow of his former self, his body is covered in scars, cracks and patches of dark flesh, as if he had been destroyed by inner darkness and alien forces. His eyes are empty and lifeless, filled with despair and madness, and his movements are clumsy and chaotic.
+  components:
+  - type: Sprite
+    drawdepth: Mobs
+    sprite: _Stories/Mobs/Demons/desecrated.rsi
+    layers:
+    - map: [ "enum.DamageStateVisualLayers.Base" ]
+      state: base
+  - type: MobThresholds
+    allowRevives: true
+    thresholds:
+      0: Alive
+      150: Dead
+  - type: GhostRole
+    allowMovement: true
+    allowSpeech: true
+    makeSentient: true
+    name: stories-ghost-role-information-desecrated-name
+    description: stories-ghost-role-information-desecrated-description
+  - type: GhostTakeoverAvailable
+  - type: SlowOnDamage
+    speedModifierThresholds:
+      70: 0.9
+      100: 0.8
+      120: 0.5
+  - type: Damageable
+    damageContainer: BiologicalMetaphysical
+    damageModifierSet: STDesecratedModifierSet
+
+- type: damageModifierSet
+  id: STDesecratedModifierSet
+  coefficients:
+    Blunt: 0.9
+    Slash: 0.9
+    Piercing: 0.9
+    Caustic: 0.9
+
+- type: entity
+  name: dark monk
+  id: STMobCursedMonk
+  parent: STBaseUnholy
+  description: A mysterious and sinister figure. His robes consist of torn, stained fabrics and ritual capes covered in mysterious symbols and blood stains. His face is hidden under a hood, and in his eyes there is a cold indifference and ancient wisdom, soaked in darkness.
+  components:
+  - type: Unholy
+    resistanceCoefficient: 0.1
+    ignoreProtectionImpulse: true
+  - type: PassiveDamage
+    allowedStates:
+    - Alive
+    - Critical
+    damageCap: 0
+    damage:
+      types:
+        Holy: -0.07 # 4 в минуту
+      groups:
+        Brute: -0.25 # 15 в минуту
+        Burn: -0.25 # 15 в минуту
+        Airloss: -0.25 # 15 в минуту
+  - type: Sprite
+    drawdepth: Mobs
+    sprite: _Stories/Mobs/Demons/cursedmonk.rsi
+    layers:
+      - map: ["enum.DamageStateVisualLayers.Base"]
+        state: base
+  - type: MobThresholds
+    allowRevives: true
+    thresholds:
+      0: Alive
+      200: Dead
+  - type: GhostRole
+    allowMovement: true
+    allowSpeech: true
+    makeSentient: true
+    name: stories-ghost-role-information-cursed-monk-name
+    description: stories-ghost-role-information-cursed-monk-description
+  - type: GhostTakeoverAvailable
+  - type: SlowOnDamage
+    speedModifierThresholds:
+      80: 0.9
+      120: 0.8
+      160: 0.5
+  - type: Damageable
+    damageContainer: BiologicalMetaphysical
+    damageModifierSet: STCursedmonkModifierSet
+
+- type: damageModifierSet
+  id: STCursedmonkModifierSet
+  coefficients:
+    Blunt: 0.9
+    Slash: 0.9
+    Piercing: 0.9
+    Caustic: 0.9
+    Holy: 0.1
