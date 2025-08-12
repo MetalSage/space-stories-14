@@ -35,8 +35,8 @@
     guides:
     - SingularityEngine
     - Power
-# stories start
+  # Stories-Thief-Engineer-Target start
   - type: StealTarget
     stealGroup: Singularity
-# stories end
+  # Stories-Thief-Engineer-Target end
 

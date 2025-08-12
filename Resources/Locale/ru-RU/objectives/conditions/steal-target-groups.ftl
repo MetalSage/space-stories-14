@@ -43,11 +43,11 @@ steal-target-groups-clothing-neck-clownmedal = медаль клоуна
 steal-target-groups-wanted-list-cartridge = картридж Список разыскиваемых
 # Thief structures
 steal-target-groups-teg = часть термоэлектрического генератора 
-# stories start
+# Stories-Thief-Engineer-Target start
 steal-target-groups-emitter = эмиттер
 steal-target-groups-tesla-generator = тесла генератор
 steal-target-groups-syngularity-generator = генератор гравитационной сингулярности 
-# stories end
+# Stories-Thief-Engineer-Target end
 steal-target-groups-freezer-heater = нагреватель или охладитель
 steal-target-groups-altar-nanotrasen = алтарь Nanotrasen (любой)
 steal-target-groups-nuclear-bomb = ядерная боеголовка

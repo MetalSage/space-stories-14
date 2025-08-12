@@ -426,7 +426,7 @@
   - type: Objective
     difficulty: 2
     
-# Stories start
+# Stories-Thief-Engineer-Target start
 - type: entity
   parent: BaseThiefStealStructureObjective
   id: EmitterStealObjective
@@ -459,7 +459,7 @@
     stealGroup: Singularity
   - type: Objective
     difficulty: 1
-#stories end
+# Stories-Thief-Engineer-Target end
 # Animal
 
 - type: entity
