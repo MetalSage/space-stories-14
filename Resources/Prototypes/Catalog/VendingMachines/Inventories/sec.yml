@@ -21,7 +21,6 @@
     RiotBulletShield: 2
     RadioHandheldSecurity: 5
     Bola: 6
-    STtrap: 2 #stories
   # security officers need to follow a diet regimen!
   contrabandInventory:
     WeaponMeleeNeedle: 2

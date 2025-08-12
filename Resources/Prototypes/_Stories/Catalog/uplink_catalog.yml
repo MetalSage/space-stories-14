@@ -11,6 +11,19 @@
     Telecrystal: 8
   categories:
   - UplinkWeaponry
+  
+- type: listing
+  id: STUplinkTrap
+  name: uplink-trap-name 
+  description: uplink-trap-desc
+  productEntity: STtrap
+  discountCategory: usualDiscounts
+  discountDownTo:
+    Telecrystal: 4
+  cost:
+    Telecrystal: 6
+  categories:
+  - UplinkWeaponry
 
 # Pointless  
 - type: listing

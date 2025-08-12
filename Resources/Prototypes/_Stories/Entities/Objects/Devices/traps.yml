@@ -17,7 +17,7 @@
     - type: DamageUserOnTrigger
       damage:
         types:
-          Slash: 20
+          Slash: 50
     - type: EmitSoundOnUse
       sound: "/Audio/_Stories/Items/Traps/trap_armed.ogg"
       handle: false
