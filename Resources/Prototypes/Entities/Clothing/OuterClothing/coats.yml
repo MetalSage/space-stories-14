@@ -408,6 +408,7 @@
     sprite: Clothing/OuterClothing/Coats/brigmedic.rsi
   - type: Clothing
     sprite: Clothing/OuterClothing/Coats/brigmedic.rsi
+  - type: AllowSuitStorage
   - type: Armor
     modifiers:
       coefficients:
