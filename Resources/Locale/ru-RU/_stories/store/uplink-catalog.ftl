@@ -1,6 +1,8 @@
 # Weapons
 uplink-garrote-name = Удавка
 uplink-garrote-desc = Излюбленный профессионалами инструмент для скрытых убийств. Позволяет взять стоящую к вам спиной жертву в мёртвую хватку, неминуемо убивая её.
+uplink-shocker-name = Шокер
+uplink-shocker-desc = Самоперезаряжающийся шокер малой мощности для обвездвиживания целей.
 # Pointless
 uplink-costume-tactical-maid-name = Набор горничной синдиката
 uplink-costume-tactical-maid-desc = Предполагается, что у лучших горничных должны быть дизайнерские костюмы.

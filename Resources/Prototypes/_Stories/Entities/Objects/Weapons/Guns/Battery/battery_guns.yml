@@ -1,0 +1,21 @@
+- type: entity
+  name: shocker
+  parent: WeaponTaser
+  id: STWeaponShocker
+  description: A single-shot, self-reloading, low-power stun gun designed to immobilize opponents.
+  components:
+  - type: ProjectileBatteryAmmoProvider
+    proto: BulletTaser
+    fireCost: 1000
+  - type: MagazineVisuals
+    magState: mag
+    steps: 2
+    zeroVisible: true
+  - type: BatterySelfRecharger
+    autoRecharge: true
+    autoRechargeRate: 125
+  - type: Sprite
+    sprite: _Stories/Objects/Weapons/Guns/Battery/shocker.rsi
+  - type: Item
+    sprite: _Stories/Objects/Weapons/Guns/Battery/shocker.rsi
+    heldPrefix: shocker

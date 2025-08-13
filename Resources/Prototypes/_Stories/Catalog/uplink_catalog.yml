@@ -11,6 +11,19 @@
     Telecrystal: 8
   categories:
   - UplinkWeaponry
+  
+- type: listing
+  id: STUplinkShocker
+  name: uplink-shocker-name 
+  description: uplink-shocker-desc
+  productEntity: STWeaponShocker
+  discountCategory: usualDiscounts
+  discountDownTo:
+    Telecrystal: 6
+  cost:
+    Telecrystal: 8
+  categories:
+  - UplinkWeaponry
 
 # Pointless  
 - type: listing
