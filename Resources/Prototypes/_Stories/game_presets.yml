@@ -21,6 +21,7 @@
   showInVote: true
   rules:
   - STPontific
+  - DummyNonAntagChance
   - SubGamemodesRule
   - BasicStationEventScheduler
   - MeteorSwarmScheduler
