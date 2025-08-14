@@ -20,6 +20,8 @@
         Brute: -0.25
         Burn: -0.25
         Airloss: -0.25
+  - type: Insulated
+  - type: Nightvision
   - type: Force
   - type: ForceUser
     shopAction: STActionPontificPrayer

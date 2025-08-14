@@ -202,6 +202,8 @@
     name: stories-ghost-role-information-fallen-guard-name
     description: stories-ghost-role-information-fallen-guard-description
   - type: GhostTakeoverAvailable
+  - type: Insulated
+  - type: Nightvision
   - type: SlowOnDamage
     speedModifierThresholds:
       80: 0.9
@@ -244,6 +246,8 @@
     name: stories-ghost-role-information-desecrated-name
     description: stories-ghost-role-information-desecrated-description
   - type: GhostTakeoverAvailable
+  - type: Insulated
+  - type: Nightvision
   - type: SlowOnDamage
     speedModifierThresholds:
       70: 0.9
@@ -300,6 +304,8 @@
     name: stories-ghost-role-information-cursed-monk-name
     description: stories-ghost-role-information-cursed-monk-description
   - type: GhostTakeoverAvailable
+  - type: Insulated
+  - type: Nightvision
   - type: SlowOnDamage
     speedModifierThresholds:
       80: 0.9
