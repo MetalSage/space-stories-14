@@ -1,0 +1,19 @@
+- type: entity
+  parent: BoxSurvival
+  id: STBoxSurvivalBeer
+  suffix: Standard Beer
+  components:
+  - type: StorageFill
+    contents:
+    - id: ClothingMaskBreath
+    - id: EmergencyOxygenTankFilled
+    - id: EmergencyMedipen
+    - id: Flare
+    - id: FoodSnackNutribrick
+    - id: DrinkBeerBottleFull
+  - type: Sprite
+    layers:
+    - state: internals
+    - state: emergencytank
+  - type: Label
+    currentLabel: reagent-name-beer

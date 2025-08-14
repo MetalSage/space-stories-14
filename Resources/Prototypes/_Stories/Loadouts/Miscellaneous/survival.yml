@@ -1,0 +1,15 @@
+- type: loadout
+  id: EmergencyOxygenBeer
+  effects:
+  - !type:GroupLoadoutEffect
+    proto: STOxygenBreatherWithBeer
+  storage:
+    back:
+    - STBoxSurvivalBeer
+
+- type: loadoutEffectGroup
+  id: STOxygenBreatherWithBeer
+  effects:
+  - !type:SpeciesLoadoutEffect
+    species:
+    - Dwarf
