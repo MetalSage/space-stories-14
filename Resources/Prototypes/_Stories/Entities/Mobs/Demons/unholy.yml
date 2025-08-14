@@ -232,6 +232,19 @@
     layers:
     - map: [ "enum.DamageStateVisualLayers.Base" ]
       state: base
+  - type: RechargeBasicEntityAmmo
+    rechargeCooldown: 0.75
+  - type: BasicEntityAmmoProvider
+    proto: BulletAcid
+    capacity: 1
+    count: 1
+  - type: Gun
+    fireRate: 0.75
+    useKey: false
+    selectedMode: FullAuto
+    availableModes:
+      - FullAuto
+    soundGunshot: /Audio/Weapons/Xeno/alien_spitacid.ogg
   - type: MobThresholds
     allowRevives: true
     thresholds:
