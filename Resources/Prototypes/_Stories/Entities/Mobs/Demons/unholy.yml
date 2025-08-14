@@ -182,7 +182,7 @@
     allowRevives: true
     thresholds:
       0: Alive
-      200: Dead
+      150: Dead
   - type: MeleeWeapon
     range: 2.0
     hidden: true
@@ -205,7 +205,7 @@
   - type: SlowOnDamage
     speedModifierThresholds:
       80: 0.9
-      140: 0.8
+      120: 0.8
   - type: Damageable
     damageContainer: BiologicalMetaphysical
     damageModifierSet: STFallenGuardModifierSet
@@ -236,7 +236,7 @@
     allowRevives: true
     thresholds:
       0: Alive
-      150: Dead
+      100: Dead
   - type: GhostRole
     allowMovement: true
     allowSpeech: true
@@ -247,8 +247,8 @@
   - type: SlowOnDamage
     speedModifierThresholds:
       70: 0.9
-      100: 0.8
-      120: 0.5
+      80: 0.8
+      90: 0.5
   - type: Damageable
     damageContainer: BiologicalMetaphysical
     damageModifierSet: STDesecratedModifierSet
@@ -292,7 +292,7 @@
     allowRevives: true
     thresholds:
       0: Alive
-      200: Dead
+      100: Dead
   - type: GhostRole
     allowMovement: true
     allowSpeech: true
@@ -302,9 +302,9 @@
   - type: GhostTakeoverAvailable
   - type: SlowOnDamage
     speedModifierThresholds:
-      80: 0.9
-      120: 0.8
-      160: 0.5
+      70: 0.9
+      80: 0.8
+      90: 0.5
   - type: Damageable
     damageContainer: BiologicalMetaphysical
     damageModifierSet: STCursedmonkModifierSet
