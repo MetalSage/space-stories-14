@@ -1,5 +1,5 @@
 - type: loadout
-  id: EmergencyOxygenBeer
+  id: STEmergencyOxygenBeer
   effects:
   - !type:GroupLoadoutEffect
     proto: STOxygenBreatherWithBeer
