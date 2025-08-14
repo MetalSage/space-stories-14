@@ -8,6 +8,10 @@
     snap:
       - Wall
   components:
+  - type: UseDelay
+    delays:
+      STHoly:
+        length: 0.1
   - type: Physics
     bodyType: Static
   - type: SpeedModifierContacts
