@@ -9,6 +9,12 @@
   components:
   - type: HumanoidAppearance
     species: Skeleton
+  # Stories-Pontific-Start
+  - type: Unholy
+    resistanceCoefficient: 1
+    ignoreProtectionImpulse: false
+    detectable: true
+  # Stories-Pontific-End
   - type: Icon
     sprite: Mobs/Species/Skeleton/parts.rsi
     state: full
