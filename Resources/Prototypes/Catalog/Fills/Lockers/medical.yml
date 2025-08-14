@@ -122,6 +122,7 @@
     - id: ClothingOuterHardsuitVoidParamed
     - id: ClothingOuterCoatParamedicWB
     - id: ClothingHeadHatParamedicsoft
+    - id: DefibrillatorCompact #Stories 
     - id: ClothingOuterWinterPara
     - id: ClothingUniformJumpsuitParamedic
     - id: ClothingUniformJumpskirtParamedic
