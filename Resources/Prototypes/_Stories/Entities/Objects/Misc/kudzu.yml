@@ -4,6 +4,8 @@
   name: desecrated lilies
   description: Sinister and eerie plants, slowly filling the corridors and halls of the station. Their long, broken stems are covered in dark, almost black skin, and their petals are pale, with blood-colored spots and mysterious symbols, as if carved or absorbed by dark energy.
   components:
+  - type: TimedDespawn
+    lifetime: 30
   - type: MeleeSound
     soundGroups:
       Brute:
