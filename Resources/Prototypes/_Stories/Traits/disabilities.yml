@@ -13,3 +13,7 @@
   - type: ActiveRadio
     channels:
     - STUnholy
+  - type: NpcFactionMember
+    factions:
+    - STUnholy
+    - NanoTrasen
