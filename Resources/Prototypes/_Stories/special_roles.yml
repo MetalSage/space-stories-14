@@ -12,6 +12,7 @@
   gameRulesBlacklist:
   - Revolutionary
   - Nukeops
+  - STPontific
   - Shadowling
 
 - type: specialRole
@@ -22,6 +23,7 @@
   - Revolutionary
   - Traitor
   - Nukeops
+  - STPontific
 
 - type: specialRole
   id: headrev
@@ -29,6 +31,7 @@
   gameRulesBlacklist:
   - Zombie
   - Nukeops
+  - STPontific
   - Shadowling
   - Traitor
 
@@ -50,6 +53,7 @@
   gameRule: LoneOpsSpawn
   gameRulesBlacklist:
   - Nukeops
+  - STPontific
   - InquisitorSpawn
   - KyloSpawn
   - LoneOpsSpawn
@@ -61,6 +65,7 @@
   gameRulesBlacklist:
   - DragonSpawn
   - Nukeops
+  - STPontific
   - Shadowling
   - InquisitorSpawn
   - KyloSpawn
@@ -73,6 +78,7 @@
   gameRulesBlacklist:
   - Revolutionary
   - Nukeops
+  - STPontific
   - Shadowling
   - Zombie
   - InquisitorSpawn
@@ -86,6 +92,7 @@
   gameRulesBlacklist:
   - Revolutionary
   - Nukeops
+  - STPontific
   - Shadowling
   - Zombie
   - InquisitorSpawn
