@@ -1,4 +1,3 @@
-# Stories-Thief-Engineer-Target start
 - type: entity
   parent: BaseThiefStealStructureObjective
   id: EmitterStealObjective
@@ -31,4 +30,3 @@
     stealGroup: Singularity
   - type: Objective
     difficulty: 1
-# Stories-Thief-Engineer-Target end
