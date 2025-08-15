@@ -35,6 +35,15 @@
         Base: ian_dead
       Dead:
         Base: ian_dead
+  # Stories-Pets-In-Hands Start
+  - type: MultiHandedItem
+  - type: Item
+    sprite: _Stories/Mobs/Pets/puppyian.rsi
+    size: Ginormous
+  - type: HeldSpeedModifier
+    walkModifier: 0.8
+    sprintModifier: 0.8
+  # Stories-Pets-In-Hands End
   - type: Grammar
     attributes:
       proper: true
@@ -61,6 +70,15 @@
     layers:
     - map: ["enum.DamageStateVisualLayers.Base"]
       state: old_ian
+  # Stories-Pets-In-Hands Start
+  - type: MultiHandedItem
+  - type: Item
+    sprite: _Stories/Mobs/Pets/oldian.rsi
+    size: Ginormous
+  - type: HeldSpeedModifier
+    walkModifier: 0.7
+    sprintModifier: 0.7
+  # Stories-Pets-In-Hands End
   - type: DamageStateVisuals
     states:
       Alive:
@@ -94,6 +112,15 @@
         Base: lisa_dead
       Dead:
         Base: lisa_dead
+  # Stories-Pets-In-Hands Start
+  - type: MultiHandedItem
+  - type: Item
+    sprite: _Stories/Mobs/Pets/lisa.rsi
+    size: Ginormous
+  - type: HeldSpeedModifier
+    walkModifier: 0.8
+    sprintModifier: 0.8
+  # Stories-Pets-In-Hands End
   - type: Grammar
     attributes:
       proper: true
@@ -146,6 +173,12 @@
     attributes:
       proper: true
       gender: male
+  # Stories-Pets-In-Hands Start
+  - type: MultiHandedItem
+  - type: Item
+    sprite: _Stories/Mobs/Pets/puppyian.rsi
+    size: Huge
+  # Stories-Pets-In-Hands End
   - type: Butcherable # A puppy? You monster...
     spawned:
     - id: FoodMeatCorgi
@@ -166,6 +199,12 @@
   - type: HTN
     rootTask:
       task: SimpleHostileCompound
+  # Stories-Pets-In-Hands Start
+  - type: MultiHandedItem
+  - type: Item
+    sprite: _Stories/Mobs/Pets/runtime.rsi
+    size: Huge
+  # Stories-Pets-In-Hands End
   - type: Grammar
     attributes:
       proper: true
@@ -186,6 +225,12 @@
   - type: NpcFactionMember
     factions:
       - PetsNT
+  # Stories-Pets-In-Hands Start
+  - type: MultiHandedItem
+  - type: Item
+    sprite: _Stories/Mobs/Pets/exception.rsi
+    size: Huge
+  # Stories-Pets-In-Hands End
   - type: Grammar
     attributes:
       proper: true
@@ -214,6 +259,15 @@
         - MobMask
         layer:
         - MobLayer
+  # Stories-Pets-In-Hands Start
+  - type: MultiHandedItem
+  - type: Item
+    sprite: _Stories/Mobs/Pets/floppa.rsi
+    size: Ginormous
+  - type: HeldSpeedModifier
+    walkModifier: 0.6
+    sprintModifier: 0.6
+  # Stories-Pets-In-Hands End
   - type: Grammar
     attributes:
       gender: male
@@ -234,6 +288,12 @@
     attributes:
       proper: true
       gender: male
+  # Stories-Pets-In-Hands Start
+  - type: MultiHandedItem
+  - type: Item
+    sprite: _Stories/Mobs/Pets/bandito.rsi
+    size: Huge
+  # Stories-Pets-In-Hands End
   - type: Tag
     tags:
     - CannotSuicide
@@ -251,6 +311,12 @@
     layers:
     - map: ["enum.DamageStateVisualLayers.Base"]
       state: bingus
+  # Stories-Pets-In-Hands Start
+  - type: MultiHandedItem
+  - type: Item
+    sprite: _Stories/Mobs/Pets/bingus.rsi
+    size: Huge
+  # Stories-Pets-In-Hands End
   - type: Physics
   - type: Fixtures
     fixtures:
@@ -310,6 +376,15 @@
       state: mcgriff
     - map: [ "head" ]
     - map: [ "eyes" ]
+  # Stories-Pets-In-Hands Start
+  - type: MultiHandedItem
+  - type: Item
+    sprite: _Stories/Mobs/Pets/mcgriff.rsi
+    size: Ginormous
+  - type: HeldSpeedModifier
+    walkModifier: 0.9
+    sprintModifier: 0.9
+  # Stories-Pets-In-Hands End
   - type: Physics
   - type: Fixtures
     fixtures:
@@ -391,6 +466,15 @@
         Base: paperwork_dead
       Dead:
         Base: paperwork_dead
+  # Stories-Pets-In-Hands Start
+  - type: MultiHandedItem
+  - type: Item
+    sprite: _Stories/Mobs/Pets/paperwork.rsi
+    size: Ginormous
+  - type: HeldSpeedModifier
+    walkModifier: 0.9
+    sprintModifier: 0.9
+  # Stories-Pets-In-Hands End
   - type: Butcherable
     spawned:
     - id: FoodMeat
@@ -432,6 +516,15 @@
   - type: Inventory
     speciesId: dog
     templateId: pet
+  # Stories-Pets-In-Hands Start
+  - type: MultiHandedItem
+  - type: Item
+    sprite: _Stories/Mobs/Pets/walter.rsi
+    size: Ginormous
+  - type: HeldSpeedModifier
+    walkModifier: 0.8
+    sprintModifier: 0.8
+  # Stories-Pets-In-Hands End
   - type: DamageStateVisuals
     states:
       Alive:
@@ -484,6 +577,12 @@
     attributes:
       proper: true
       gender: male
+  # Stories-Pets-In-Hands Start
+  - type: MultiHandedItem
+  - type: Item
+    sprite: _Stories/Mobs/Pets/morty.rsi
+    size: Huge
+  # Stories-Pets-In-Hands End
   - type: Tag
     tags:
     - CannotSuicide
@@ -503,6 +602,12 @@
     layers:
     - map: [ "enum.DamageStateVisualLayers.Base" ]
       state: possum_old
+  # Stories-Pets-In-Hands Start
+  - type: MultiHandedItem
+  - type: Item
+    sprite: _Stories/Mobs/Pets/morty.rsi
+    size: Huge
+  # Stories-Pets-In-Hands End
   - type: DamageStateVisuals
     states:
       Alive:
@@ -546,6 +651,15 @@
     interactSuccessSpawn: EffectHearts
     interactSuccessSound:
       path: /Audio/Animals/raccoon_chatter.ogg
+  # Stories-Pets-In-Hands Start
+  - type: MultiHandedItem
+  - type: Item
+    sprite: _Stories/Mobs/Pets/morticia.rsi
+    size: Ginormous
+  - type: HeldSpeedModifier
+    walkModifier: 0.9
+    sprintModifier: 0.9
+  # Stories-Pets-In-Hands End
   - type: Grammar
     attributes:
       proper: true
@@ -568,6 +682,15 @@
     interactSuccessSpawn: EffectHearts
     interactSuccessSound:
       path: /Audio/Animals/pig_oink.ogg
+  # Stories-Pets-In-Hands Start
+  - type: MultiHandedItem
+  - type: Item
+    sprite: _Stories/Mobs/Pets/alexander.rsi
+    size: Ginormous
+  - type: HeldSpeedModifier
+    walkModifier: 0.7
+    sprintModifier: 0.7
+  # Stories-Pets-In-Hands End
   - type: Grammar
     attributes:
       proper: true
@@ -600,6 +723,15 @@
     attributes:
       proper: true
       gender: female
+  # Stories-Pets-In-Hands Start
+  - type: MultiHandedItem
+  - type: Item
+    sprite: _Stories/Mobs/Pets/renault.rsi
+    size: Ginormous
+  - type: HeldSpeedModifier
+    walkModifier: 0.8
+    sprintModifier: 0.8
+  # Stories-Pets-In-Hands End
   - type: Tag
     tags:
     - CannotSuicide
@@ -692,6 +824,12 @@
   - type: HTN
     rootTask:
       task: SimpleHostileCompound
+  # Stories-Pets-In-Hands Start
+  - type: MultiHandedItem
+  - type: Item
+    sprite: _Stories/Mobs/Pets/shiva.rsi
+    size: Huge
+  # Stories-Pets-In-Hands End
   - type: Physics
   - type: DamageStateVisuals
     states:
@@ -749,6 +887,15 @@
     - CannotSuicide
     - DoorBumpOpener
     - FootstepSound
+  # Stories-Pets-In-Hands Start
+  - type: MultiHandedItem
+  - type: Item
+    sprite: _Stories/Mobs/Pets/willow.rsi
+    size: Ginormous
+  - type: HeldSpeedModifier
+    walkModifier: 0.1
+    sprintModifier: 0.1
+  # Stories-Pets-In-Hands End
   - type: GhostRole
     prob: 0.25
     name: ghost-role-information-willow-name
@@ -896,6 +1043,12 @@
     tags:
     - VimPilot
     - CannotSuicide
+  # Stories-Pets-In-Hands Start
+  - type: MultiHandedItem
+  - type: Item
+    sprite: _Stories/Mobs/Pets/tropico.rsi
+    size: Huge
+  # Stories-Pets-In-Hands End
   - type: Grammar
     attributes:
       proper: true
