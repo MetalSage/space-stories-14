@@ -9,3 +9,4 @@
   components:
   - type: Unholy
     detectable: false
+    ignoreProtectionImpulse: true
