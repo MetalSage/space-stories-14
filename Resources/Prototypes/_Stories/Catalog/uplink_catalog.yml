@@ -16,7 +16,7 @@
   id: STUplinkTrap
   name: uplink-trap-name 
   description: uplink-trap-desc
-  productEntity: STtrap
+  productEntity: STTrap
   discountCategory: usualDiscounts
   discountDownTo:
     Telecrystal: 4

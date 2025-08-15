@@ -1,7 +1,7 @@
 - type: entity
   name: trap
   parent: BaseItem
-  id: STtrap
+  id: STTrap
   description: Usually, bears are caught on these. This one is probably not a bear.
   components:
     - type: Sprite
