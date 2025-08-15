@@ -348,6 +348,29 @@
   sprite:
     sprite: Structures/Furniture/golden_toilet.rsi
     state: condisposal
+    
+# Stories-Thief-Engineer-Target start
+- type: stealTargetGroup
+  id: Emitter
+  name: stories-steal-target-groups-emitter
+  sprite:
+    sprite: Structures/Power/Generation/Singularity/emitter.rsi
+    state: emitter
+
+- type: stealTargetGroup
+  id: Tesla
+  name: stories-steal-target-groups-tesla-generator
+  sprite:
+    sprite: Structures/Power/Generation/Tesla/generator.rsi
+    state: icon
+
+- type: stealTargetGroup
+  id: Singularity
+  name: stories-steal-target-groups-syngularity-generator
+  sprite:
+    sprite: Structures/Power/Generation/Singularity/generator.rsi
+    state: icon
+# Stories-Thief-Engineer-Target end
 
 # Thief Animal
 

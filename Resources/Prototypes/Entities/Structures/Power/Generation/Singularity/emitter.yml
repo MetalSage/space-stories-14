@@ -103,3 +103,7 @@
       - On
       - Off
       - Toggle
+  # Stories-Thief-Engineer-Target start
+  - type: StealTarget
+    stealGroup: Emitter
+  # Stories-Thief-Engineer-Target end

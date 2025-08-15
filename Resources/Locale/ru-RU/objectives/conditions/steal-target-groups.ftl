@@ -42,7 +42,7 @@ steal-target-groups-clothing-neck-goldmedal = золотая медаль мас
 steal-target-groups-clothing-neck-clownmedal = медаль клоуна
 steal-target-groups-wanted-list-cartridge = картридж Список разыскиваемых
 # Thief structures
-steal-target-groups-teg = часть термоэлектрического генератора
+steal-target-groups-teg = часть термоэлектрического генератора 
 steal-target-groups-freezer-heater = нагреватель или охладитель
 steal-target-groups-altar-nanotrasen = алтарь Nanotrasen (любой)
 steal-target-groups-nuclear-bomb = ядерная боеголовка

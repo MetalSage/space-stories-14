@@ -29,4 +29,8 @@
     guides:
     - TeslaEngine
     - Power
+  # Stories-Thief-Engineer-Target start
+  - type: StealTarget
+    stealGroup: Tesla
+  # Stories-Thief-Engineer-Target end
 
