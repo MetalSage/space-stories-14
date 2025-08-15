@@ -1,11 +1,11 @@
 meta:
   format: 7
   category: Map
-  engineVersion: 260.2.0
-  forkId: stories
-  forkVersion: eb4e67cb9d087cf7785d0582957bfe24c830ba90
-  time: 07/11/2025 08:48:23
-  entityCount: 11764
+  engineVersion: 265.0.0
+  forkId: ""
+  forkVersion: ""
+  time: 08/14/2025 15:07:39
+  entityCount: 11767
 maps:
 - 727
 grids:
@@ -6809,7 +6809,7 @@ entities:
     - type: MetaData
       name: Secret Documents
     - type: Transform
-      pos: -1.5007826,16.646563
+      pos: -3.2298467,18.35452
       parent: 31
   - uid: 7133
     components:
@@ -26711,7 +26711,7 @@ entities:
   - uid: 1199
     components:
     - type: Transform
-      pos: -3.728004,16.448915
+      pos: -3.5345342,17.206083
       parent: 31
 - proto: CigPackMixed
   entities:
@@ -27221,7 +27221,7 @@ entities:
   - uid: 4197
     components:
     - type: Transform
-      pos: -3.60061,17.54974
+      pos: -3.4876592,16.596708
       parent: 31
 - proto: ClothingBeltMilitaryWebbing
   entities:
@@ -27539,7 +27539,7 @@ entities:
   - uid: 718
     components:
     - type: Transform
-      pos: -3.31936,17.67474
+      pos: -3.5814092,17.721708
       parent: 31
 - proto: ClothingNeckScarfStripedBlue
   entities:
@@ -32249,7 +32249,7 @@ entities:
   - uid: 9626
     components:
     - type: Transform
-      pos: -3.2734265,17.981327
+      pos: -3.3235967,17.838896
       parent: 31
 - proto: DrinkGlass
   entities:
@@ -48870,7 +48870,7 @@ entities:
       pos: 12.5,-41.5
       parent: 31
     - type: Door
-      secondsUntilStateChange: -10134.392
+      secondsUntilStateChange: -10321.836
       state: Opening
   - uid: 9697
     components:
@@ -49052,7 +49052,7 @@ entities:
   - uid: 1555
     components:
     - type: Transform
-      pos: -0.9189515,16.662592
+      pos: -0.5814092,16.409208
       parent: 31
 - proto: IngotSilver
   entities:
@@ -51136,7 +51136,7 @@ entities:
   - uid: 1216
     components:
     - type: Transform
-      pos: -1.53811,16.627865
+      pos: -0.6048467,16.690458
       parent: 31
 - proto: PlaqueAtmos
   entities:
@@ -56595,7 +56595,7 @@ entities:
   - uid: 8997
     components:
     - type: Transform
-      pos: -13.701841,18.488804
+      pos: -14.420447,18.413763
       parent: 31
 - proto: SheetSteel10
   entities:
@@ -57245,7 +57245,7 @@ entities:
   - uid: 1523
     components:
     - type: Transform
-      pos: -13.507725,17.439112
+      pos: -13.5,17.5
       parent: 31
 - proto: SignAtmos
   entities:
@@ -57368,7 +57368,7 @@ entities:
     components:
     - type: Transform
       rot: 1.5707963267948966 rad
-      pos: -21.482899,6.2720566
+      pos: -21.5,6.5
       parent: 31
   - uid: 1766
     components:
@@ -57380,7 +57380,7 @@ entities:
     components:
     - type: Transform
       rot: 3.141592653589793 rad
-      pos: 5.493867,-12.264781
+      pos: 5.5,-12.5
       parent: 31
 - proto: SignDirectionalChapel
   entities:
@@ -57394,7 +57394,7 @@ entities:
     components:
     - type: Transform
       rot: -1.5707963267948966 rad
-      pos: -26.499413,2.2858148
+      pos: -26.5,2.5
       parent: 31
 - proto: SignDirectionalCryo
   entities:
@@ -57423,7 +57423,7 @@ entities:
     components:
     - type: Transform
       rot: 1.5707963267948966 rad
-      pos: -26.497889,6.7333336
+      pos: -26.5,6.5
       parent: 31
 - proto: SignDirectionalEvac
   entities:
@@ -57437,7 +57437,7 @@ entities:
     components:
     - type: Transform
       rot: -1.5707963267948966 rad
-      pos: 1.494153,6.738206
+      pos: 1.5,6.5
       parent: 31
 - proto: SignDirectionalFood
   entities:
@@ -57453,14 +57453,14 @@ entities:
     components:
     - type: Transform
       rot: 1.5707963267948966 rad
-      pos: -26.495642,2.7233148
+      pos: -26.5,2.5
       parent: 31
 - proto: SignDirectionalJanitor
   entities:
   - uid: 120
     components:
     - type: Transform
-      pos: -22.49935,1.7157228
+      pos: -22.5,1.5
       parent: 31
 - proto: SignDirectionalMed
   entities:
@@ -57480,14 +57480,14 @@ entities:
     components:
     - type: Transform
       rot: 3.141592653589793 rad
-      pos: 0.5049188,-17.286484
+      pos: 0.5,-17.5
       parent: 31
 - proto: SignDirectionalSci
   entities:
   - uid: 1263
     components:
     - type: Transform
-      pos: 1.4985528,6.263013
+      pos: 1.5,6.5
       parent: 31
   - uid: 10552
     components:
@@ -57506,13 +57506,13 @@ entities:
     components:
     - type: Transform
       rot: 3.141592653589793 rad
-      pos: 5.493867,-12.749156
+      pos: 5.5,-12.5
       parent: 31
   - uid: 7795
     components:
     - type: Transform
       rot: 1.5707963267948966 rad
-      pos: -21.50213,6.729406
+      pos: -21.5,6.5
       parent: 31
   - uid: 10272
     components:
@@ -57524,7 +57524,7 @@ entities:
     components:
     - type: Transform
       rot: 3.141592653589793 rad
-      pos: 0.5049188,-17.71476
+      pos: 0.5,-17.5
       parent: 31
 - proto: SignDirectionalSupply
   entities:
@@ -57532,13 +57532,13 @@ entities:
     components:
     - type: Transform
       rot: 1.5707963267948966 rad
-      pos: 5.498553,6.247388
+      pos: 5.5,6.5
       parent: 31
   - uid: 8843
     components:
     - type: Transform
       rot: 1.5707963267948966 rad
-      pos: -26.497889,6.2645836
+      pos: -26.5,6.5
       parent: 31
 - proto: SignElectrical
   entities:
@@ -60594,11 +60594,6 @@ entities:
     - type: Transform
       pos: -19.5,-2.5
       parent: 31
-  - uid: 4190
-    components:
-    - type: Transform
-      pos: -1.5,16.5
-      parent: 31
   - uid: 4203
     components:
     - type: Transform
@@ -61280,11 +61275,6 @@ entities:
     components:
     - type: Transform
       pos: -14.5,16.5
-      parent: 31
-  - uid: 8798
-    components:
-    - type: Transform
-      pos: -13.5,18.5
       parent: 31
   - uid: 8799
     components:
@@ -71265,21 +71255,87 @@ entities:
     - type: Transform
       pos: 52.5,-27.5
       parent: 31
+    - type: DeviceNetwork
+      deviceLists:
+      - 11767
   - uid: 4629
     components:
     - type: Transform
       pos: 46.5,-27.5
       parent: 31
+    - type: DeviceNetwork
+      deviceLists:
+      - 11767
   - uid: 4630
     components:
     - type: Transform
       pos: 46.5,-21.5
       parent: 31
+    - type: DeviceNetwork
+      deviceLists:
+      - 11767
   - uid: 4631
     components:
     - type: Transform
       pos: 52.5,-21.5
       parent: 31
+    - type: DeviceNetwork
+      deviceLists:
+      - 11767
+- proto: WeaponEnergyTurretAIControlPanel
+  entities:
+  - uid: 11767
+    components:
+    - type: Transform
+      rot: 1.5707963267948966 rad
+      pos: 45.5,-23.5
+      parent: 31
+    - type: DeviceList
+      devices:
+      - 4630
+      - 4631
+      - 1736
+      - 4629
+- proto: WeaponEnergyTurretCommand
+  entities:
+  - uid: 4190
+    components:
+    - type: Transform
+      pos: -1.5,16.5
+      parent: 31
+    - type: DeviceNetwork
+      deviceLists:
+      - 11765
+- proto: WeaponEnergyTurretCommandControlPanel
+  entities:
+  - uid: 11765
+    components:
+    - type: Transform
+      pos: -0.5,19.5
+      parent: 31
+    - type: DeviceList
+      devices:
+      - 4190
+- proto: WeaponEnergyTurretSecurity
+  entities:
+  - uid: 8798
+    components:
+    - type: Transform
+      pos: -13.5,18.5
+      parent: 31
+    - type: DeviceNetwork
+      deviceLists:
+      - 11766
+- proto: WeaponEnergyTurretSecurityControlPanel
+  entities:
+  - uid: 11766
+    components:
+    - type: Transform
+      pos: -14.5,17.5
+      parent: 31
+    - type: DeviceList
+      devices:
+      - 8798
 - proto: WeaponPistolMk58
   entities:
   - uid: 4096
@@ -71297,12 +71353,12 @@ entities:
   - uid: 8072
     components:
     - type: Transform
-      pos: -13.420591,18.645054
+      pos: -11.420447,18.507513
       parent: 31
   - uid: 8996
     components:
     - type: Transform
-      pos: -13.373716,18.332554
+      pos: -11.467322,18.2497
       parent: 31
 - proto: WeaponSubMachineGunWt550
   entities:
