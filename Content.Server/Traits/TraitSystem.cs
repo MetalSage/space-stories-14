@@ -45,7 +45,7 @@ public sealed class TraitSystem : EntitySystem
                 continue;
 
             // Add all components required by the prototype
-            EntityManager.AddComponents(args.Mob, traitPrototype.Components, true); // Stories-Pontific
+            EntityManager.AddComponents(args.Mob, traitPrototype.Components, false);
 
             // Add item required by the trait
             if (traitPrototype.TraitGear == null)
