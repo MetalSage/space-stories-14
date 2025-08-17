@@ -9,10 +9,6 @@
   components:
   - type: Unholy
     detectable: false
-  - type: IntrinsicRadioReceiver
-  - type: ActiveRadio
-    channels:
-    - STUnholy
   - type: NpcFactionMember
     factions:
     - STUnholy
