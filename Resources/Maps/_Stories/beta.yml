@@ -1,11 +1,11 @@
 meta:
   format: 7
   category: Map
-  engineVersion: 260.2.0
+  engineVersion: 265.0.0
   forkId: ""
   forkVersion: ""
-  time: 07/11/2025 09:18:22
-  entityCount: 19583
+  time: 08/14/2025 14:36:47
+  entityCount: 19586
 maps:
 - 1
 grids:
@@ -10939,7 +10939,7 @@ entities:
       pos: -2.5,18.5
       parent: 2
     - type: Door
-      secondsUntilStateChange: -422493
+      secondsUntilStateChange: -422847.25
       state: Opening
     - type: DeviceLinkSource
       lastSignals:
@@ -11228,7 +11228,7 @@ entities:
       pos: 70.5,-0.5
       parent: 2
     - type: Door
-      secondsUntilStateChange: -252929.23
+      secondsUntilStateChange: -253283.47
       state: Opening
     - type: DeviceLinkSource
       lastSignals:
@@ -11663,7 +11663,7 @@ entities:
       pos: 30.5,-13.5
       parent: 2
     - type: Door
-      secondsUntilStateChange: -284995.88
+      secondsUntilStateChange: -285350.12
       state: Opening
     - type: DeviceLinkSource
       lastSignals:
@@ -11974,7 +11974,7 @@ entities:
       pos: 9.5,14.5
       parent: 2
     - type: Door
-      secondsUntilStateChange: -154420.86
+      secondsUntilStateChange: -154775.1
       state: Opening
     - type: DeviceLinkSource
       lastSignals:
@@ -12268,7 +12268,7 @@ entities:
       pos: 38.5,-9.5
       parent: 2
     - type: Door
-      secondsUntilStateChange: -260034.72
+      secondsUntilStateChange: -260388.95
       state: Opening
     - type: DeviceLinkSource
       lastSignals:
@@ -12279,7 +12279,7 @@ entities:
       pos: 43.5,-9.5
       parent: 2
     - type: Door
-      secondsUntilStateChange: -272804.75
+      secondsUntilStateChange: -273159
       state: Opening
     - type: DeviceLinkSource
       lastSignals:
@@ -12290,7 +12290,7 @@ entities:
       pos: 60.5,-12.5
       parent: 2
     - type: Door
-      secondsUntilStateChange: -12080.265
+      secondsUntilStateChange: -12434.504
       state: Opening
     - type: DeviceLinkSource
       lastSignals:
@@ -15368,13 +15368,6 @@ entities:
       desc: Viva la revolucion !
     - type: Transform
       pos: 71.5,-12.5
-      parent: 2
-- proto: BannerSecurity
-  entities:
-  - uid: 891
-    components:
-    - type: Transform
-      pos: 17.5,2.5
       parent: 2
 - proto: BannerYellow
   entities:
@@ -52692,15 +52685,15 @@ entities:
       parent: 2
 - proto: DeployableBarrier
   entities:
-  - uid: 7973
-    components:
-    - type: Transform
-      pos: 6.5,0.5
-      parent: 2
   - uid: 7974
     components:
     - type: Transform
       pos: 7.5,0.5
+      parent: 2
+  - uid: 13634
+    components:
+    - type: Transform
+      pos: 12.5,3.5
       parent: 2
 - proto: DiseaseDiagnoser
   entities:
@@ -58747,7 +58740,7 @@ entities:
       deviceLists:
       - 35
     - type: Door
-      secondsUntilStateChange: -143466.33
+      secondsUntilStateChange: -143820.56
       state: Closing
     - type: Firelock
       emergencyCloseCooldown: 90307.2763613
@@ -60201,7 +60194,7 @@ entities:
       pos: 30.5,-6.5
       parent: 2
     - type: Door
-      secondsUntilStateChange: -121498.71
+      secondsUntilStateChange: -121852.95
       state: Closing
     - type: Firelock
       emergencyCloseCooldown: 12658.2540104
@@ -93398,38 +93391,6 @@ entities:
     - type: Transform
       pos: -27.095505,-14.927309
       parent: 2
-  - uid: 13634
-    components:
-    - type: Transform
-      pos: -4.0813956,-46.525307
-      parent: 2
-    - type: Paper
-      stampState: paper_stamp-cmo
-      stampedBy:
-      - stampedColor: '#33CCFFFF'
-        stampedName: stamp-component-stamped-name-cmo
-      content: >+
-        [head=2]Памятка для эксплуатации Крио-капсул:[/head]
-
-
-        [head=3][bullet]Включить трубу ведущую К криокапсулам, не менять значение давления[/head]
-
-
-
-        [head=3][bullet]Включить охладитель на температуре ~100К (Кельвинов) [/head]
-
-
-
-        [head=3][bullet]Включить фильтр газа, настроить на Диокосид Углерода (Выдыхают люди) / Либо оксид азота (Выдыхают Слаймолюды) [/head]
-
-
-
-        [head=3][bullet]Включить трубу на ВЫХОД из криоксапсул, можно ставить максимальное значение.[/head]
-
-
-        [head=3][bullet]ВАЖНО: Пациенту нужно снять верхнюю одежду (куртки, тренчкоты, скафандры) что-бы охлаждение работало эффективно. После успешного лечения рекомендуется ЛИБО вколоть минимум 5u Лепоразина (Стабилизирует температуру тела), ЛИБО заставить пациента одеть тёплую одежду (менее эффективно) [/head]
-
-
   - uid: 13635
     components:
     - type: Transform
@@ -94156,11 +94117,6 @@ entities:
     components:
     - type: Transform
       pos: 13.5,3.5
-      parent: 2
-  - uid: 13748
-    components:
-    - type: Transform
-      pos: 12.5,3.5
       parent: 2
 - proto: PortableGeneratorJrPacman
   entities:
@@ -103925,13 +103881,13 @@ entities:
   - uid: 15415
     components:
     - type: Transform
-      pos: -5.486607,-7.7378654
+      pos: -5.5,-7.5
       parent: 2
   - uid: 15416
     components:
     - type: Transform
       rot: -1.5707963267948966 rad
-      pos: 8.553549,-41.548744
+      pos: 8.5,-41.5
       parent: 2
 - proto: SignDirectionalBridge
   entities:
@@ -103939,19 +103895,19 @@ entities:
     components:
     - type: Transform
       rot: 3.141592653589793 rad
-      pos: 28.514753,0.18398297
+      pos: 28.5,0.5
       parent: 2
   - uid: 15418
     components:
     - type: Transform
       rot: 3.141592653589793 rad
-      pos: -4.457356,-7.3717556
+      pos: -4.5,-7.5
       parent: 2
   - uid: 15419
     components:
     - type: Transform
       rot: -1.5707963267948966 rad
-      pos: 17.524336,7.3954525
+      pos: 17.5,7.5
       parent: 2
 - proto: SignDirectionalBrig
   entities:
@@ -103959,7 +103915,7 @@ entities:
     components:
     - type: Transform
       rot: -1.5707963267948966 rad
-      pos: 28.514753,0.61106634
+      pos: 28.5,0.5
       parent: 2
 - proto: SignDirectionalChemistry
   entities:
@@ -103967,7 +103923,7 @@ entities:
     components:
     - type: Transform
       rot: -1.5707963267948966 rad
-      pos: 0.4299745,-45.1493
+      pos: 0.5,-45.5
       parent: 2
 - proto: SignDirectionalCryo
   entities:
@@ -103975,7 +103931,7 @@ entities:
     components:
     - type: Transform
       rot: 1.5707963267948966 rad
-      pos: 18.512962,7.4110775
+      pos: 18.5,7.5
       parent: 2
   - uid: 15423
     components:
@@ -103987,36 +103943,36 @@ entities:
     components:
     - type: Transform
       rot: 1.5707963267948966 rad
-      pos: 28.493559,-45.42088
+      pos: 28.5,-45.5
       parent: 2
   - uid: 15425
     components:
     - type: Transform
-      pos: 28.504335,-5.0753055
+      pos: 28.5,-5.5
       parent: 2
   - uid: 15426
     components:
     - type: Transform
       rot: 1.5707963267948966 rad
-      pos: 10.525058,-41.579994
+      pos: 10.5,-41.5
       parent: 2
 - proto: SignDirectionalDorms
   entities:
   - uid: 15427
     components:
     - type: Transform
-      pos: 28.493559,-45.63963
+      pos: 28.5,-45.5
       parent: 2
   - uid: 15428
     components:
     - type: Transform
-      pos: 28.504335,-5.283639
+      pos: 28.5,-5.5
       parent: 2
   - uid: 15429
     components:
     - type: Transform
       rot: 1.5707963267948966 rad
-      pos: 10.525058,-41.767494
+      pos: 10.5,-41.5
       parent: 2
 - proto: SignDirectionalEng
   entities:
@@ -104024,19 +103980,19 @@ entities:
     components:
     - type: Transform
       rot: -1.5707963267948966 rad
-      pos: -4.4986844,7.7146063
+      pos: -4.5,7.5
       parent: 2
   - uid: 15431
     components:
     - type: Transform
       rot: 3.141592653589793 rad
-      pos: -4.491131,-2.7354255
+      pos: -4.5,-2.5
       parent: 2
   - uid: 15432
     components:
     - type: Transform
       rot: 3.141592653589793 rad
-      pos: 28.514753,0.40273297
+      pos: 28.5,0.5
       parent: 2
 - proto: SignDirectionalEscapePod
   entities:
@@ -104044,7 +104000,7 @@ entities:
     components:
     - type: Transform
       rot: 1.5707963267948966 rad
-      pos: 38.51555,-50.816547
+      pos: 38.5,-50.5
       parent: 2
 - proto: SignDirectionalEvac
   entities:
@@ -104052,78 +104008,78 @@ entities:
     components:
     - type: Transform
       rot: 1.5707963267948966 rad
-      pos: 18.512962,7.6194973
+      pos: 18.5,7.5
       parent: 2
   - uid: 15435
     components:
     - type: Transform
       rot: 1.5707963267948966 rad
-      pos: 32.508263,-4.4658723
+      pos: 32.5,-4.5
       parent: 2
   - uid: 15436
     components:
     - type: Transform
       rot: 1.5707963267948966 rad
-      pos: 7.496769,-45.52458
+      pos: 7.5,-45.5
       parent: 2
   - uid: 15437
     components:
     - type: Transform
       rot: 3.141592653589793 rad
-      pos: 28.496756,-45.197388
+      pos: 28.5,-45.5
       parent: 2
   - uid: 15438
     components:
     - type: Transform
       rot: 3.141592653589793 rad
-      pos: 32.519356,-30.274124
+      pos: 32.5,-30.5
       parent: 2
   - uid: 15439
     components:
     - type: Transform
       rot: 3.141592653589793 rad
-      pos: 32.56623,-16.688057
+      pos: 32.5,-16.5
       parent: 2
   - uid: 15440
     components:
     - type: Transform
       rot: 1.5707963267948966 rad
-      pos: 51.504875,-3.2887
+      pos: 51.5,-3.5
       parent: 2
   - uid: 15441
     components:
     - type: Transform
-      pos: -4.500903,-27.707796
+      pos: -4.5,-27.5
       parent: 2
   - uid: 15442
     components:
     - type: Transform
-      pos: -5.490258,-7.531706
+      pos: -5.5,-7.5
       parent: 2
   - uid: 15443
     components:
     - type: Transform
       rot: 3.141592653589793 rad
-      pos: -5.490258,-7.312956
+      pos: -5.5,-7.5
       parent: 2
   - uid: 15444
     components:
     - type: Transform
       rot: 1.5707963267948966 rad
-      pos: -4.4942183,7.2876954
+      pos: -4.5,7.5
       parent: 2
 - proto: SignDirectionalFood
   entities:
   - uid: 15445
     components:
     - type: Transform
-      pos: -4.457356,-7.5748806
+      pos: -4.5,-7.5
       parent: 2
   - uid: 15446
     components:
     - type: Transform
       rot: -1.5707963267948966 rad
-      pos: 8.553549,-41.15812
+      pos: 8.5,-41.5
       parent: 2
 - proto: SignDirectionalHop
   entities:
@@ -104155,27 +104111,27 @@ entities:
     components:
     - type: Transform
       rot: -1.5707963267948966 rad
-      pos: 17.512962,7.5985775
+      pos: 17.5,7.5
       parent: 2
 - proto: SignDirectionalHydro
   entities:
   - uid: 15452
     components:
     - type: Transform
-      pos: -4.457356,-7.7780056
+      pos: -4.5,-7.5
       parent: 2
   - uid: 15453
     components:
     - type: Transform
       rot: -1.5707963267948966 rad
-      pos: 8.553549,-41.34562
+      pos: 8.5,-41.5
       parent: 2
 - proto: SignDirectionalIcu
   entities:
   - uid: 15454
     components:
     - type: Transform
-      pos: 3.4942532,-57.16195
+      pos: 3.5,-57.5
       parent: 2
 - proto: SignDirectionalJanitor
   entities:
@@ -104183,7 +104139,7 @@ entities:
     components:
     - type: Transform
       rot: 1.5707963267948966 rad
-      pos: 32.508263,-4.2627473
+      pos: 32.5,-4.5
       parent: 2
 - proto: SignDirectionalLibrary
   entities:
@@ -104191,24 +104147,24 @@ entities:
     components:
     - type: Transform
       rot: -1.5707963267948966 rad
-      pos: 8.55287,-41.75187
+      pos: 8.5,-41.5
       parent: 2
 - proto: SignDirectionalMed
   entities:
   - uid: 15457
     components:
     - type: Transform
-      pos: 7.496845,-45.299557
+      pos: 7.5,-45.5
       parent: 2
   - uid: 15458
     components:
     - type: Transform
-      pos: 28.49392,-5.7107224
+      pos: 28.5,-5.5
       parent: 2
   - uid: 15459
     components:
     - type: Transform
-      pos: -4.457356,-7.1530056
+      pos: -4.5,-7.5
       parent: 2
 - proto: SignDirectionalSci
   entities:
@@ -104233,19 +104189,19 @@ entities:
     components:
     - type: Transform
       rot: 1.5707963267948966 rad
-      pos: 10.525058,-41.173744
+      pos: 10.5,-41.5
       parent: 2
   - uid: 15464
     components:
     - type: Transform
       rot: 3.141592653589793 rad
-      pos: 32.5002,-30.718037
+      pos: 32.5,-30.5
       parent: 2
   - uid: 15465
     components:
     - type: Transform
       rot: 1.5707963267948966 rad
-      pos: 32.547073,-16.23715
+      pos: 32.5,-16.5
       parent: 2
 - proto: SignDirectionalSupply
   entities:
@@ -104258,18 +104214,18 @@ entities:
   - uid: 15467
     components:
     - type: Transform
-      pos: 28.511974,0.834311
+      pos: 28.5,0.5
       parent: 2
   - uid: 15468
     components:
     - type: Transform
       rot: 1.5707963267948966 rad
-      pos: 10.525058,-41.37687
+      pos: 10.5,-41.5
       parent: 2
   - uid: 15469
     components:
     - type: Transform
-      pos: 32.547073,-16.4559
+      pos: 32.5,-16.5
       parent: 2
 - proto: SignDisposalSpace
   entities:
@@ -105843,13 +105799,6 @@ entities:
       rot: 3.141592653589793 rad
       pos: 42.5,-48.5
       parent: 2
-- proto: SpawnHonkBot
-  entities:
-  - uid: 15738
-    components:
-    - type: Transform
-      pos: -44.5,-22.5
-      parent: 2
 - proto: SpawnMechRipley
   entities:
   - uid: 15739
@@ -105963,6 +105912,13 @@ entities:
     components:
     - type: Transform
       pos: -12.5,-22.5
+      parent: 2
+- proto: SpawnMobHonkBot
+  entities:
+  - uid: 15738
+    components:
+    - type: Transform
+      pos: -44.5,-22.5
       parent: 2
 - proto: SpawnMobLizard
   entities:
@@ -126202,16 +126158,91 @@ entities:
     - type: Transform
       pos: 17.5,30.5
       parent: 2
+    - type: DeviceNetwork
+      deviceLists:
+      - 19586
   - uid: 19261
     components:
     - type: Transform
       pos: 20.5,36.5
       parent: 2
+    - type: DeviceNetwork
+      deviceLists:
+      - 19586
   - uid: 19262
     components:
     - type: Transform
       pos: 20.5,34.5
       parent: 2
+    - type: DeviceNetwork
+      deviceLists:
+      - 19586
+- proto: WeaponEnergyTurretAIControlPanel
+  entities:
+  - uid: 19586
+    components:
+    - type: Transform
+      pos: 18.5,40.5
+      parent: 2
+    - type: DeviceList
+      devices:
+      - 19260
+      - 19262
+      - 19261
+- proto: WeaponEnergyTurretCommand
+  entities:
+  - uid: 19584
+    components:
+    - type: Transform
+      rot: 3.141592653589793 rad
+      pos: -7.5,13.5
+      parent: 2
+    - type: DeviceNetwork
+      deviceLists:
+      - 19585
+- proto: WeaponEnergyTurretCommandControlPanel
+  entities:
+  - uid: 19585
+    components:
+    - type: Transform
+      rot: 1.5707963267948966 rad
+      pos: -11.5,13.5
+      parent: 2
+    - type: DeviceList
+      devices:
+      - 19584
+- proto: WeaponEnergyTurretSecurity
+  entities:
+  - uid: 891
+    components:
+    - type: Transform
+      rot: 3.141592653589793 rad
+      pos: 17.5,2.5
+      parent: 2
+    - type: DeviceNetwork
+      deviceLists:
+      - 13748
+  - uid: 7973
+    components:
+    - type: Transform
+      rot: 3.141592653589793 rad
+      pos: 6.5,0.5
+      parent: 2
+    - type: DeviceNetwork
+      deviceLists:
+      - 13748
+- proto: WeaponEnergyTurretSecurityControlPanel
+  entities:
+  - uid: 13748
+    components:
+    - type: Transform
+      rot: 3.141592653589793 rad
+      pos: 12.5,0.5
+      parent: 2
+    - type: DeviceList
+      devices:
+      - 7973
+      - 891
 - proto: WeaponImprovisedPneumaticCannon
   entities:
   - uid: 19263
