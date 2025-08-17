@@ -10,3 +10,7 @@
   - type: Unholy
     detectable: false
     ignoreProtectionImpulse: true
+  - type: NpcFactionMember
+    factions:
+    - STUnholy
+    - NanoTrasen
