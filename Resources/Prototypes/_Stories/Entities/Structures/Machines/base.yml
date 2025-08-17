@@ -2,7 +2,6 @@
   abstract: true
   id: STBaseMachineBeerUnprotected
   components:
-  # Stories-Beer-Emp
   - type: Reactive
     groups:
       Flammable: [Touch]
@@ -15,4 +14,3 @@
       - !type:EmpReactionEffect
         maxRange: 0.1
   - type: DisableOnEmp
-  # Stories-Beer-Emp
