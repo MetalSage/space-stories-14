@@ -1,0 +1,20 @@
+- type: entity
+  id: BulletLightRifleSilver
+  parent: BaseBullet
+  name: bullet (.20 rifle silver)
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Sprite
+    sprite: _Stories\Objects\Weapons\Guns\Projectiles\projectiles.rsi
+    layers:
+    - state: silver
+  - type: PointLight
+    enabled: true
+    color: white
+    radius: 2.0
+    energy: 0.75
+  - type: Projectile
+    damage:
+      types:
+        Blunt: 3
+        Holy: 20

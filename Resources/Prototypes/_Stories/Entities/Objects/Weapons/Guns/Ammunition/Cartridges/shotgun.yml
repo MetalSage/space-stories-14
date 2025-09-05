@@ -1,0 +1,14 @@
+- type: entity
+  id: ShellShotgunSilver
+  name: shell (.50 silver)
+  parent: [ BaseShellShotgun, BaseSecurityContraband ]
+  components:
+  - type: Sprite
+    layers:
+      - state: silver
+        map: [ "enum.AmmoVisualLayers.Base" ]
+  - type: CartridgeAmmo
+    proto: PelletShotgunSilver
+  - type: SpentAmmoVisuals
+    state: "silver"
+    
