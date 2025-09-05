@@ -1,0 +1,16 @@
+- type: entity
+  id: CartridgePistolSilver
+  name: cartridge (.35 auto silver)
+  description: Arguably the most popular caliber on the market, used by all manner of pistols and submachine guns. Silver ammunition inflicts irreparable damage on demonic minions, making it an ideal weapon against the undead.
+  parent: BaseCartridgePistol
+  components:
+  - type: CartridgeAmmo
+    proto: BulletPistolSilver
+  - type: Sprite
+    sprite: _Stories\Objects\Weapons\Guns\Ammunition\Casings\ammo-silver.rsi
+    layers:
+      - state: base
+        map: [ "enum.AmmoVisualLayers.Base" ]
+      - state: tip
+        map: [ "enum.AmmoVisualLayers.Tip" ]
+        color: "#585b70"
