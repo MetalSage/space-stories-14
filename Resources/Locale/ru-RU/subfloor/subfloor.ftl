@@ -1,2 +1,2 @@
-subfloor-anchor-failure = { CAPITALIZE(THE($entity)) } здесь нельзя закрепить!
-subfloor-unanchor-failure = { CAPITALIZE(THE($entity)) } здесь нельзя открепить!
+subfloor-anchor-failure = { CAPITALIZE($entity) } нельзя закрепить тут!
+subfloor-unanchor-failure = { CAPITALIZE($entity) } нельзя открепить тут!

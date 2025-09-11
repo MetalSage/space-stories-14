@@ -1,2 +1,2 @@
-ent-ActionToggleKnuckleDustersStun = Переключить парализующие кастеты
-    .desc = Включает или выключает встроенную дубинку-шокер.
+ent-ActionToggleKnuckleDustersStun = Переключить шок-кастеты
+    .desc = Переключить встроенную в кастеты дубинку-шокер.

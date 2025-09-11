@@ -1,2 +1,2 @@
-ent-PathfindPoint = точка поиска пути
+ent-PathfindPoint = pathfind точка
     .desc = { ent-MarkerBase.desc }

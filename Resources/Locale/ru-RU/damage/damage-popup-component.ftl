@@ -1,9 +1,9 @@
 -damage-popup-component-type =
     { $setting ->
-        [combined] Комбинированный
-        [total] Полный
+        [combined] Комбинированый
+        [total] Всего
         [delta] Дельта
         [hit] Удар
        *[other] Неизвестно
     }
-damage-popup-component-switched = Целевой количество для ввода: { -damage-popup-component-type(setting: $setting) }
+damage-popup-component-switched = Мишень установлена на тип: { -damage-popup-component-type(setting: $setting) }

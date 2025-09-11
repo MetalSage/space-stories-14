@@ -1,7 +1,7 @@
 # Used internally by the THE() function.
 zzzz-the =
     { PROPER($ent) ->
-       *[false] { $ent }
+       *[false] the { $ent }
         [true] { $ent }
     }
 # Used internally by the SUBJECT() function.

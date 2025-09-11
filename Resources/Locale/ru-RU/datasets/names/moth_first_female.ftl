@@ -23,7 +23,7 @@ names-moth-first-female-dataset-11 = Мима
 # Nephele
 names-moth-first-female-dataset-12 = Нефель
 # Dryocampa rubicunda
-names-moth-first-female-dataset-13 = Роузи
+names-moth-first-female-dataset-13 = Рози
 # Cosmosoma myrodora, "Scarlet-bodied wasp moth"
 names-moth-first-female-dataset-14 = Скарлет
 # Acherontia styx
@@ -32,7 +32,7 @@ names-moth-first-female-dataset-15 = Стикс
 ## Other languages
 
 # Galician "moth" (avelaíña)
-names-moth-first-female-dataset-16 = Авелиана
+names-moth-first-female-dataset-16 = Авелина
 # Italian "winter moth"
 names-moth-first-female-dataset-17 = Фалена
 # Greek "moon gift"
@@ -45,7 +45,7 @@ names-moth-first-female-dataset-20 = Полилла
 ## Myth and legend
 
 # Greek mythological figure
-names-moth-first-female-dataset-21 = Атея
+names-moth-first-female-dataset-21 = Алфея
 # Roman goddess of the dawn
 names-moth-first-female-dataset-22 = Аврора
 # Greek mythological figure
@@ -64,12 +64,12 @@ names-moth-first-female-dataset-29 = Беатрикс
 
 ## Common names, filler
 
-names-moth-first-female-dataset-30 = Дейзи
-names-moth-first-female-dataset-31 = Дейзи
+names-moth-first-female-dataset-30 = Дэйзи
+names-moth-first-female-dataset-31 = Доун
 names-moth-first-female-dataset-32 = Элизабет
 names-moth-first-female-dataset-33 = Люси
 names-moth-first-female-dataset-34 = Руби
 names-moth-first-female-dataset-35 = Сара
 names-moth-first-female-dataset-36 = Сьенна
-names-moth-first-female-dataset-37 = Уиллоу
+names-moth-first-female-dataset-37 = Уиллов
 names-moth-first-female-dataset-38 = Зои

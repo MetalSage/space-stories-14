@@ -1,2 +1,2 @@
-cmd-whisper-desc = Отправить сообщение в локальный чат как шёпот.
-cmd-whisper-help = Использование: whisper <текст>
+cmd-whisper-desc = Send chat messages to the local channel as a whisper.
+cmd-whisper-help = Usage: whisper <text>

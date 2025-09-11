@@ -1,1 +1,1 @@
-inspect-mind-verb-get-data-text = Просмотр Разума
+inspect-mind-verb-get-data-text = Изучить разум

@@ -1,10 +1,10 @@
-ent-BaseMappingAction = { "" }
-    .desc = { "" }
+ent-BaseMappingAction = { ent-BaseMentalAction }
+    .desc = { ent-BaseMentalAction.desc }
 ent-BaseMappingDecalAction = { ent-BaseMappingAction }
     .desc = { ent-BaseMappingAction.desc }
 ent-BaseMappingSpawnAction = { ent-BaseMappingAction }
     .desc = { ent-BaseMappingAction.desc }
-ent-ActionMappingEraser = Стереть Сущность
+ent-ActionMappingEraser = Стереть сущность
     .desc = { ent-BaseMappingAction.desc }
 ent-BaseMappingEntityAction = { ent-BaseMappingSpawnAction }
     .desc = { ent-BaseMappingSpawnAction.desc }

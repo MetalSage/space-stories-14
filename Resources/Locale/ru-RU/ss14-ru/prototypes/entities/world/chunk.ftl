@@ -1,4 +1,4 @@
-ent-WorldChunk = фрагмент мира
+ent-WorldChunk = world chunk
     .desc =
-        Пялиться это невежливо.
-        Также немного странно, что вы смотрите на абстрактное представление сетки реальности.
+        It's rude to stare.
+        It's also a bit odd you're looking at the abstract representation of the grid of reality.

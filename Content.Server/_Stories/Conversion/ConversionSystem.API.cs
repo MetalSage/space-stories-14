@@ -1,10 +1,11 @@
-using Content.Shared.Mind;
-using Content.Shared.Roles;
-using Content.Shared._Stories.Conversion;
-using Robust.Shared.Prototypes;
-using Content.Server.Radio.Components;
 using System.Diagnostics.CodeAnalysis;
 using System.Linq;
+using Content.Server.Radio.Components;
+using Content.Shared._Stories.Conversion;
+using Content.Shared.Mind;
+using Content.Shared.Roles;
+using Content.Shared.Roles.Components;
+using Robust.Shared.Prototypes;
 
 namespace Content.Server._Stories.Conversion;
 
@@ -27,7 +28,11 @@ public sealed partial class ConversionSystem
 
         return entities;
     }
-    public bool TryGetConversion(EntityUid uid, string id, [NotNullWhen(true)] out ConversionData? conversion, ConversionableComponent? component = null)
+
+    public bool TryGetConversion(EntityUid uid,
+        string id,
+        [NotNullWhen(true)] out ConversionData? conversion,
+        ConversionableComponent? component = null)
     {
         conversion = null;
 
@@ -36,7 +41,11 @@ public sealed partial class ConversionSystem
 
         return component.ActiveConversions.TryGetValue(id, out conversion);
     }
-    public bool TryRevert(EntityUid target, ProtoId<ConversionPrototype> prototype, EntityUid? performer = null, ConversionableComponent? component = null)
+
+    public bool TryRevert(EntityUid target,
+        ProtoId<ConversionPrototype> prototype,
+        EntityUid? performer = null,
+        ConversionableComponent? component = null)
     {
         if (!Resolve(target, ref component, false))
             return false;
@@ -50,7 +59,11 @@ public sealed partial class ConversionSystem
         DoRevert(target, proto, performer, component);
         return true;
     }
-    private void DoRevert(EntityUid target, ConversionPrototype proto, EntityUid? performer = null, ConversionableComponent? component = null)
+
+    private void DoRevert(EntityUid target,
+        ConversionPrototype proto,
+        EntityUid? performer = null,
+        ConversionableComponent? component = null)
     {
         if (!Resolve(target, ref component))
             return;
@@ -66,7 +79,10 @@ public sealed partial class ConversionSystem
         RaiseLocalEvent(target, (object)ev, true);
 
         if (proto.EndBriefing != null)
-            _antag.SendBriefing(target, Loc.GetString(proto.EndBriefing.Value.Text ?? ""), proto.EndBriefing.Value.Color, proto.EndBriefing.Value.Sound);
+            _antag.SendBriefing(target,
+                Loc.GetString(proto.EndBriefing.Value.Text ?? ""),
+                proto.EndBriefing.Value.Color,
+                proto.EndBriefing.Value.Sound);
 
         EntityManager.RemoveComponents(target, registry: proto.Components);
         MindRemoveRoles(mindId, proto.MindRoles);
@@ -82,7 +98,11 @@ public sealed partial class ConversionSystem
 
         Dirty(target, component);
     }
-    public bool TryConvert(EntityUid target, ProtoId<ConversionPrototype> prototype, EntityUid? performer = null, ConversionableComponent? component = null)
+
+    public bool TryConvert(EntityUid target,
+        ProtoId<ConversionPrototype> prototype,
+        EntityUid? performer = null,
+        ConversionableComponent? component = null)
     {
         if (!Resolve(target, ref component, false))
             return false;
@@ -96,7 +116,11 @@ public sealed partial class ConversionSystem
         DoConvert(target, proto, performer, component);
         return true;
     }
-    private void DoConvert(EntityUid target, ConversionPrototype proto, EntityUid? performer = null, ConversionableComponent? component = null)
+
+    private void DoConvert(EntityUid target,
+        ConversionPrototype proto,
+        EntityUid? performer = null,
+        ConversionableComponent? component = null)
     {
         if (!Resolve(target, ref component))
             return;
@@ -105,7 +129,10 @@ public sealed partial class ConversionSystem
             return;
 
         if (proto.Briefing != null)
-            _antag.SendBriefing(target, Loc.GetString(proto.Briefing.Value.Text ?? ""), proto.Briefing.Value.Color, proto.Briefing.Value.Sound);
+            _antag.SendBriefing(target,
+                Loc.GetString(proto.Briefing.Value.Text ?? ""),
+                proto.Briefing.Value.Color,
+                proto.Briefing.Value.Sound);
 
         EntityManager.AddComponents(target, registry: proto.Components);
         _role.MindAddRoles(mindId, proto.MindRoles);
@@ -131,6 +158,7 @@ public sealed partial class ConversionSystem
         RaiseLocalEvent(target, (object)ev, true);
         Dirty(target, component);
     }
+
     public void MindRemoveRoles(EntityUid mindId, List<EntProtoId>? roles, MindComponent? mind = null)
     {
         if (!Resolve(mindId, ref mind))
@@ -139,7 +167,9 @@ public sealed partial class ConversionSystem
         if (roles == null)
             return;
 
-        var rolesUid = mind.MindRoles.Where((role) => EntityPrototyped(role, roles)).ToList();
+        var rolesUid = mind.MindRoleContainer.ContainedEntities
+            .Where((role) => EntityPrototyped(role, roles))
+            .ToList();
 
         rolesUid.ForEach((mindRole) =>
         {
@@ -147,16 +177,13 @@ public sealed partial class ConversionSystem
 
             QueueDel(mindRole);
 
-            mind.MindRoles.Remove(mindRole);
-
             var message = new RoleRemovedEvent(mindId, mind, antagonist);
 
             if (mind.OwnedEntity != null)
                 RaiseLocalEvent(mind.OwnedEntity.Value, message, true);
         });
-
-        mind.MindRoles?.Clear();
     }
+
     public bool EntityPrototyped(EntityUid role, List<EntProtoId> roles)
     {
         var proto = MetaData(role).EntityPrototype;

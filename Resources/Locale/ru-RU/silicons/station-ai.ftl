@@ -1,8 +1,9 @@
 # General
-ai-wire-snipped = Был перерезан провод, координаты { $coords }.
-wire-name-ai-vision-light = ИИВ
-wire-name-ai-act-light = ИИС
+ai-wire-snipped = Один из ваших системных проводов был перерезан в { $source }.
+wire-name-ai-vision-light = ИИЗ
+wire-name-ai-act-light = ИИД
 station-ai-takeover = ИИ захват
+station-ai-eye-name = око ИИ — { $name }
 # Radial actions
 ai-open = Открыть действия
 ai-close = Закрыть действия
@@ -15,22 +16,22 @@ electrify-door-off = Отключить перегрузку
 toggle-light = Переключить свет
 ai-device-not-responding = Устройство не отвечает
 ai-consciousness-download-warning = Ваше сознание начали загружать.
-# UI  
+# UI
 station-ai-customization-menu = Настройка ИИ
 station-ai-customization-categories = Категории
-station-ai-customization-options = Опции (выберите одну)
-station-ai-customization-core = Отображение ИИ-ядра
-station-ai-customization-hologram = Голограммы
-# Customizations  
-station-ai-icon-ai = Призрак в машине
-station-ai-icon-angel = Хранитель
-station-ai-icon-bliss = Простые времена
-station-ai-icon-clown = Клоунский режим
-station-ai-icon-dorf = Приключение начинается
-station-ai-icon-heartline = Сердечная связь
-station-ai-icon-smiley = Всё с улыбкой
-station-ai-hologram-female = Женский облик
-station-ai-hologram-male = Мужской облик
-station-ai-hologram-face = Парящая голова
+station-ai-customization-options = Опции (выбрать одну)
+station-ai-customization-core = Дисплей ядра ИИ
+station-ai-customization-hologram = Голографический аватар
+# Customizations
+station-ai-icon-ai = Дух из машины
+station-ai-icon-angel = Ангел-хранитель
+station-ai-icon-bliss = Более простые времена
+station-ai-icon-clown = Клоуничаем
+station-ai-icon-dorf = Приключение ждёт
+station-ai-icon-heartline = Линия жизни
+station-ai-icon-smiley = Улыбка
+station-ai-hologram-female = Женский образ
+station-ai-hologram-male = Мужской образ
+station-ai-hologram-face = Бестелесная голова
 station-ai-hologram-cat = Форма кота
 station-ai-hologram-dog = Форма корги

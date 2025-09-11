@@ -24,4 +24,4 @@ ent-DrinkOatMilkCarton = овсяное молоко
 ent-DrinkJuiceLemonCarton = лимонный сок
     .desc = На первый глоток он кислит, а затем всё равно кислит.
 ent-DrinkJuicePineappleCarton = ананасовый сок
-    .desc = По вкусу напоминает тропический отдых вдали от космоса.
+    .desc = На вкус как отпуск в тропиках далеко от космоса.

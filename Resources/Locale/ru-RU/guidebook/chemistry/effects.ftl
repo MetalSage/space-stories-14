@@ -81,13 +81,13 @@ reagent-effect-guidebook-even-health-change =
     { $chance ->
         [1]
             { $healsordeals ->
-                [heals] Равномерно излечивает
+                [heals] Равномерно лечит
                 [deals] Равномерно наносит
                *[both] Равномерно изменяет здоровье на
             }
        *[other]
             { $healsordeals ->
-                [heals] равномерно излечивают
+                [heals] раномерно лечат
                 [deals] равномерно наносят
                *[both] равномерно изменяют здоровье на
             }
@@ -143,7 +143,7 @@ reagent-effect-guidebook-adjust-reagent-reagent =
                 [1] добавляют
                *[-1] удаляют
             }
-    } { NATURALFIXED($amount, 2) }ед. от { $reagent } { $deltasign ->
+    } { NATURALFIXED($amount, 2) } ед. от { $reagent } { $deltasign ->
         [1] к
        *[-1] из
     } раствора
@@ -242,9 +242,9 @@ reagent-effect-guidebook-electrocute =
     } употребившего в течении { NATURALFIXED($time, 3) }
 reagent-effect-guidebook-emote =
     { $chance ->
-        [1] Заставит
-       *[other] заставляет
-    } метаболизатора [bold][color=white]{ $emote }[/color][/bold]
+        [1] Вызывает
+       *[other] вызвать
+    }  у цели [bold][color=white]{ $emote }[/color][/bold]
 reagent-effect-guidebook-extinguish-reaction =
     { $chance ->
         [1] Гасит
@@ -349,17 +349,21 @@ reagent-effect-guidebook-area-reaction =
         [few] секунды
        *[other] секунд
     }
+reagent-effect-guidebook-artifact-unlock =
+    { $chance ->
+        [1] Помогает
+       *[other] помогают
+    } разблокировать инопланетный артефакт.
 reagent-effect-guidebook-add-to-solution-reaction =
     { $chance ->
         [1] Заставляет
        *[other] заставляют
     } химикаты, применённые к объекту, добавиться во внутренний контейнер для растворов этого объекта
-reagent-effect-guidebook-artifact-unlock =
-    { $chance ->
-        [1] Помогает
-       *[other] помогают
-    } разблокируйте инопланетный артефакт.
-reagent-effect-guidebook-artifact-durability-restore = Восстанавливает { $restored } прочности в активных узлах инопланетного артефакта.
+reagent-effect-guidebook-artifact-durability-restore =
+    Восстанавливает { $restored } { $restored ->
+        [1] прочность
+       *[other] прочности
+    } активного узла космического артефакта.
 reagent-effect-guidebook-plant-attribute =
     { $chance ->
         [1] Изменяет

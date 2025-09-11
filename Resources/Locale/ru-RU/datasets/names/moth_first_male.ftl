@@ -35,11 +35,11 @@ names-moth-first-male-dataset-14 = Скорос
 # Legendary king of the Britons who crafted wings and died in his attempt at flight
 names-moth-first-male-dataset-15 = Бладуд
 # Father of Icarus
-names-moth-first-male-dataset-16 = Дейдалус
+names-moth-first-male-dataset-16 = Дедал
 # Greek primordial deity of darkness
 names-moth-first-male-dataset-17 = Эребус
 # The classic
-names-moth-first-male-dataset-18 = Икарус
+names-moth-first-male-dataset-18 = Икар
 # Hindu figure, similar to Icarus
 names-moth-first-male-dataset-19 = Джатайу
 # Japanese reading of 夸父（こほ）
@@ -68,8 +68,8 @@ names-moth-first-male-dataset-32 = Тимоти
 ## Common names, filler
 
 names-moth-first-male-dataset-33 = Эшер
-names-moth-first-male-dataset-34 = Исаак
-names-moth-first-male-dataset-35 = Роман
+names-moth-first-male-dataset-34 = Роман
+names-moth-first-male-dataset-35 = Исаак
 names-moth-first-male-dataset-36 = Самюэл
 names-moth-first-male-dataset-37 = Себастиан
 names-moth-first-male-dataset-38 = Сайлас
