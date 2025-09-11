@@ -1,12 +1,12 @@
-ent-CrateEmptySpawner = спавнер пустых ящиков
+ent-CrateEmptySpawner = спавнер пустой ящик
     .desc = { ent-MarkerBase.desc }
-ent-CrateFilledSpawner = спавнер заполненных ящиков
+ent-CrateFilledSpawner = спавнер полный ящик
     .suffix = Низкая ценность
     .desc = { ent-MarkerBase.desc }
-ent-LootSpawnerRandomCrateEngineering = спавнер случайных инженерных ящиков
+ent-LootSpawnerRandomCrateEngineering = спавнер случайный инженерный ящик
     .desc = { ent-MarkerBase.desc }
-ent-LootSpawnerRandomCrateSecurity = спавнер случайных ящиков службы безопасности
+ent-LootSpawnerRandomCrateSecurity = спавнер случайный ящик службы безопасности
     .desc = { ent-MarkerBase.desc }
-ent-LootSpawnerRandomLockbox = спавнер случайных сейфов
+ent-LootSpawnerRandomLockbox = спавнер случайный ящик с замком
     .suffix = 90%
     .desc = { ent-MarkerBase.desc }

@@ -1,11 +1,11 @@
-cmd-addrole-desc = Добавляет роль в разум игрока.
-cmd-addrole-help = Использование: addrole <ID сессии> <роль>
-cmd-addrole-mind-not-found = Не удалось найти этот разум.
-cmd-addrole-role-not-found = Не удалось найти указанную роль.
-cmd-addrole-mind-already-has-role = У этого разума уже есть эта роль.
-cmd-listroles-desc = Выводит список всех доступных ролей.
-cmd-listroles-help = Использование: listroles
-cmd-rmrole-desc = Удаляет роль из разума игрока.
+cmd-addrole-desc = Adds a role to a player's mind.
+cmd-addrole-help = Usage: addrole <session ID> <role>
+cmd-addrole-mind-not-found = Can't find that mind.
+cmd-addrole-role-not-found = Can't find that role.
+cmd-addrole-mind-already-has-role = Mind already has that role.
+cmd-listroles-desc = List all available roles.
+cmd-listroles-help = Usage: listroles
+cmd-rmrole-desc = Removes a role from a player's mind.
 cmd-rmrole-help =
-    Использование: rmrole <ID сессии> <Тип роли>  
-    Тип роли — это фактическое имя типа C#.
+    Usage: rmrole <session ID> <Role Type>
+    The role type is the actual C# type name.

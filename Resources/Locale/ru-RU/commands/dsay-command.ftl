@@ -1,2 +1,2 @@
-cmd-dsay-desc = Отправляет сообщение в чат мёртвых от имени администратора.
-cmd-dsay-help = Использование: dsay <сообщение>
+cmd-dsay-desc = Sends a message to deadchat as an admin.
+cmd-dsay-help = Usage: dsay <message>

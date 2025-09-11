@@ -1,1 +1,1 @@
-cmd-showmeleespread-desc = Показывает текущую дистанцию и угол оружия для отладки.
+cmd-showmeleespread-desc = Shows the current weapon's range and arc for debugging.

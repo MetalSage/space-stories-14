@@ -15,7 +15,6 @@ ion-storm-x-and-y = { $x } И { $y }
 # thing is specified above it
 ion-storm-law-on-station = ОБНАРУЖЕНЫ { $joined } { $subjects } НА СТАНЦИИ
 ion-storm-law-call-shuttle = ШАТТЛ ДОЛЖЕН БЫТЬ ВЫЗВАН ИЗ-ЗА { $joined } { $subjects } НА СТАНЦИИ
-ion-storm-law-no-shuttle = ШАТТЛ НЕ МОЖЕТ БЫТЬ ВЫЗВАН ПО ПРИЧИНЕ ПРИСУТСТВИЯ { $joined } { $subjects } НА СТАНЦИИ
 ion-storm-law-crew-are = ВСЕ { $who } ТЕПЕРЬ { $joined } { $subjects }
 ion-storm-law-subjects-harmful = { $adjective } { $subjects } ПРИЧИНЯЮТ ВРЕД ЗДОРОВЬЮ ЭКИПАЖА
 ion-storm-law-must-harmful = ВСЕ КТО { $must } ПРИЧИНЯЮТ ВРЕД ЗДОРОВЬЮ ЭКИПАЖА
@@ -29,23 +28,23 @@ ion-storm-law-not-having-harmful = ОТСУТСТВИЕ { $adjective } { $thing 
 # thing is a concept or require
 ion-storm-law-requires =
     { $who } { $plural ->
-        [true] ТРЕБУЕТ
-       *[false] ТРЕБУЮТ
+        [true] ТРЕБУЮТ
+       *[false] ТРЕБУЕТ
     } { $thing }
 ion-storm-law-requires-subjects =
     { $who } { $plural ->
-        [true] ТРЕБУЕТ
-       *[false] ТРЕБУЮТ
+        [true] ТРЕБУЮТ
+       *[false] ТРЕБУЕТ
     } { $joined } { $subjects }
 ion-storm-law-allergic =
     { $who } { $plural ->
-        [true] ИМЕЕТ
-       *[false] ИМЕЮТ
+        [true] ИМЕЮТ
+       *[false] ИМЕЕТ
     } { $severity } АЛЛЕРГИЮ НА { $allergy }
 ion-storm-law-allergic-subjects =
     { $who } { $plural ->
-        [true] ИМЕЕТ
-       *[false] ИМЕЮТ
+        [true] ИМЕЮТ
+       *[false] ИМЕЕТ
     } { $severity } АЛЛЕРГИЮ НА { $adjective } { $subjects }
 ion-storm-law-feeling = { $who } { $feeling } { $concept }
 ion-storm-law-feeling-subjects = { $who } { $feeling } { $joined } { $subjects }

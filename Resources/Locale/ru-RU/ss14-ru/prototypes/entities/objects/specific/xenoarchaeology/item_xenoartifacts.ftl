@@ -1,10 +1,10 @@
-ent-BaseXenoArtifactItem = инопланетный артефакт
-    .desc = Странный артефакт из неведомых времен. Выглядит занимательно и идеально лежит в руке.
+ent-BaseXenoArtifactItem = артефакт
+    .desc = Странный артефакт неизвестных времён. Похоже, хороших времён. Идеально помещается в руку.
 ent-ComplexXenoArtifactItem = { ent-BaseXenoArtifactItem }
-    .suffix = Ручной
+    .suffix = Ручной-размер
     .desc = { ent-BaseXenoArtifactItem.desc }
 ent-ArtifactFragment = фрагмент артефакта
-    .desc = Отломанный кусок артефакта. Возможно, найдя ещё, вы сможете его починить.
+    .desc = Отломанный кусок артефакта. Возможно, вы смогли бы починить его, если бы у вас их было больше.
 ent-ArtifactFragment1 = { ent-ArtifactFragment }
     .suffix = Один
     .desc = { ent-ArtifactFragment.desc }

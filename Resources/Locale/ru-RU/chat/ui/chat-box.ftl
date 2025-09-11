@@ -29,14 +29,13 @@ hud-chatbox-channel-Server = Сервер
 hud-chatbox-channel-Visual = Визуальный
 hud-chatbox-channel-Damage = Повреждения
 hud-chatbox-channel-Unspecified = Неопределённый
-# Stories-Highlights (ленивый Метал...)
-hud-chatbox-highlights = Выделенные слова:
-hud-chatbox-highlights-button = Отправить
+hud-chatbox-highlights = Подсветка:
+hud-chatbox-highlights-button = Подтвердить
 hud-chatbox-highlights-tooltip =
-    Слова должны быть разделены переводом строки,
-    если они заключены в кавычки, они будут выделены
-    только если разделены пробелами или знаками препинания.
+    Каждое слово должно начинаться с новой строки.
+    Слова, взятые в кавычки ("..."), подсветятся только,
+    если отделены пробелами или знаками препинания.
 hud-chatbox-highlights-placeholder =
-    McHands
+    МакХэндс
     "Судья"
-    Медицинский
+    Медблок

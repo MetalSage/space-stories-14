@@ -1,2 +1,2 @@
-cmd-showradiation-desc = Переключить видимость лучей радиации, исходящих от источников радиации
-cmd-showradiation-help = Использование: showradiation
+cmd-showradiation-desc = Toggle visibility of radiation rays coming from rad sources
+cmd-showradiation-help = Usage: showradiation

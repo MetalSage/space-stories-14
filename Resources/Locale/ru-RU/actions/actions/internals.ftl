@@ -1,12 +1,14 @@
-action-name-internals-toggle-on = Включить Подачу Воздуха
-action-description-internals-toggle-on = Дышите из экипированного газового баллона. Также требуется надетая дыхательная маска.
-action-name-internals-toggle-off = Выключить Подачу Воздуха
-action-description-internals-toggle-off = Дышите из окружающей среды.
-internals-self-no-breath-tool = На вас не надета дыхательная маска
-internals-other-no-breath-tool = На { $ent } не надета дыхательная маска
-internals-self-no-tank = На вас не надет газовый баллон
-internals-other-no-tank = На { $ent } не надет газовый баллон
-action-name-internals-toggle = Переключить подачу воздуха
-action-description-internals-toggle = Дышите из экипированного газового баллона. Требуется надетая дыхательная маска.
-internals-no-breath-tool = Не экипирована дыхательная маска
-internals-no-tank = Не экипирован баллон для дыхания
+action-name-internals-toggle-on = Включить подачу воздуха
+action-description-internals-toggle-on = Дышите из экипированного газового баллона. Только сперва наденьте дыхательную маску.
+action-name-internals-toggle-off = Выключить подачу воздуха
+action-description-internals-toggle-off = Дышите окружающей средой.
+internals-self-no-breath-tool = Вы не надели дыхательный аппарат
+internals-other-no-breath-tool =
+    { $ent } не { GENDER($ent) ->
+        [male] надел
+        [female] надела
+        [epicene] надели
+       *[neuter] надело
+    } дыхательный аппарат
+internals-self-no-tank = У вас нет газового баллона
+internals-other-no-tank = У { $ent } нет газового баллона

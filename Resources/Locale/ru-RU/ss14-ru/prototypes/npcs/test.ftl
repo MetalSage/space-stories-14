@@ -1,3 +1,3 @@
-ent-MobPathfindDummy = манекен поиска пути
-    .suffix = НПС
+ent-MobPathfindDummy = Pathfind манекен
+    .suffix = ИИ
     .desc = { ent-MobXenoRouny.desc }

@@ -1,11 +1,11 @@
-ent-FoodBowlBase = { ent-FoodBase }
-    .desc = { ent-FoodBase.desc }
+ent-FoodBowlBase = { ent-FoodInjectableBase }
+    .desc = { ent-FoodInjectableBase.desc }
 ent-FoodSoupPea = гороховый суп
     .desc = Простой гороховый суп.
 ent-FoodSaladAesir = божественный салат
     .desc = Возможно, слишком невероятный для смертных, чтобы насладиться им в полной мере.
 ent-FoodSaladHerb = травяной салат
-    .desc = Вкусный салат с яблоками сверху.
+    .desc = Вкусный салат с яблоками на вершине.
 ent-FoodSaladValid = валид салат
     .desc = Это просто травяной салат с фрикадельками и ломтиками жареного картофеля. Ничего подозрительного.
 ent-FoodSaladColeslaw = коулсло

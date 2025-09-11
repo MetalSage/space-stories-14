@@ -42,12 +42,12 @@ artifact-trigger-hint-land = Активное замедление
 artifact-trigger-hint-examine = Внимательное изучение
 artifact-trigger-hint-medical = Терапевтические химикаты
 xenoarch-trigger-tip-music = Гармоничные звуковые вибрации
-xenoarch-trigger-tip-heat = Газ с высокой температурой
-xenoarch-trigger-tip-cold = Газ с низкой температурой
-xenoarch-trigger-tip-no-oxygen = Безкислородная среда
+xenoarch-trigger-tip-heat = Газ высокой температуры
+xenoarch-trigger-tip-cold = Газ низкой температуры
+xenoarch-trigger-tip-no-oxygen = Безкислородное окружение
 xenoarch-trigger-tip-water = Вода
-xenoarch-trigger-tip-co2 = Углекислый газ
-xenoarch-trigger-tip-plasma = Газообразная плазма
+xenoarch-trigger-tip-co2 = Диоксид углерода
+xenoarch-trigger-tip-plasma = Нетвёрдая плазма
 xenoarch-trigger-tip-tritium = Тритий
 xenoarch-trigger-tip-ammonia = Аммиак
 xenoarch-trigger-tip-n2o = Оксид азота
@@ -56,27 +56,21 @@ xenoarch-trigger-tip-radiation = Радиация
 xenoarch-trigger-tip-brute-damage = Физический урон
 xenoarch-trigger-tip-interaction = Физическое взаимодействие
 xenoarch-trigger-tip-wrenching = Затягивание
-xenoarch-trigger-tip-prying = Монтирование
+xenoarch-trigger-tip-prying = Вскрывание
 xenoarch-trigger-tip-screwing = Свинчивание
-xenoarch-trigger-tip-pulsing = Пульсация
+xenoarch-trigger-tip-pulsing = Пульсирование
 xenoarch-trigger-tip-pressure-low = Низкое давление
 xenoarch-trigger-tip-pressure-high = Высокое давление
-xenoarch-trigger-tip-examine = Тщательная проверка
-xenoarch-trigger-tip-timer = Регулярная самопроизвольная активация
+xenoarch-trigger-tip-examine = Внимательное изучение
+xenoarch-trigger-tip-timer = Регулярная само-активация
 xenoarch-trigger-tip-blood = Кровь
 xenoarch-trigger-tip-throw = Бросок
 xenoarch-trigger-tip-death = Смерть
 xenoarch-trigger-tip-magnet = Магнитные волны
-
-### Подсказки описания
-
-xenoarch-trigger-examine-wrenching = Есть свободный элемент, вращающийся вокруг.
-xenoarch-trigger-examine-prying = Панель поднимается с поверхности.
-xenoarch-trigger-examine-screwing = Есть выступающая секция с небольшим углублением.
-xenoarch-trigger-examine-pulsing = Открытый диод торчит из поверхности артефакта.
-xenoarch-trigger-examine-timer = На поверхности покрыты резьбой и царапинами... Вы едва можете разглядеть число: [italic]{ $time }[/italic]
-
-### Подсказки эффектов
-
+xenoarch-trigger-examine-wrenching = Вокруг него свободно крутится частичка.
+xenoarch-trigger-examine-prying = С его поверхности поднимается панель.
+xenoarch-trigger-examine-screwing = На нём имеется приподнятая часть с небольшой вставкой в ней.
+xenoarch-trigger-examine-pulsing = Из поверхности артефакта торчит открытый диод.
+xenoarch-trigger-examine-timer = Резьбы и царапины покрываю поверхность... Вы едва различаете число: [italic]{ $time }[/italic]
 xenoarch-effect-puddle = Производит лужу из следующих реагентов: { $reagent }
 xenoarch-effect-foam = Производит пену из следующих реагентов: { $reagent }

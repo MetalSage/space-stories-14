@@ -3,6 +3,6 @@ zombie-infection-greeting = Вы стали зомби. Ваша задача �
 zombie-generic = зомби
 zombie-name-prefix = Зомби { $baseName }
 zombie-role-desc = Зловещий мертвец.
-zombie-role-rules = Вы — [color={ role-type-team-antagonist-color }][bold]{ role-type-team-antagonist-name }[/bold][/color]. Ищите живых людей и кусайте их, чтобы заразить и превратить в зомби. Вместе с другими зомби и оставшимися первыми зараженными захватите станцию.
+zombie-role-rules = Вы — [color={ role-type-team-antagonist-color }][bold]{ role-type-team-antagonist-name }[/bold][/color]. Ищите и кусайте живых людей, чтобы заразить их и превратить в зомби. Работайте сообща с другими зомби, чтобы захватить станцию.
 zombie-permadeath = В этот раз вы мертвы по-настоящему.
-zombification-resistance-coefficient-value = - [color=violet]Заражение[/color] шанс уменьшен на [color=lightblue]{ $value }%[/color].
+zombification-resistance-coefficient-value = - Шанс [color=violet]заражения[/color] снижен на [color=lightblue]{ $value }%[/color].

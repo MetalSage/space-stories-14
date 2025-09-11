@@ -1,2 +1,2 @@
-cmd-toggledecals-desc = Переключает отображение декалей.
-cmd-toggledecals-help = Использование: toggledecals
+cmd-toggledecals-desc = Toggles decal overlay.
+cmd-toggledecals-help = Usage: toggledecals

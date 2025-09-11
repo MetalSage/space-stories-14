@@ -1,1 +1,1 @@
-construction-recipe-closet-freezer = шкаф-холодильник
+construction-recipe-closet-freezer = холодильник-шкаф
