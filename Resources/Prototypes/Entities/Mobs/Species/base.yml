@@ -81,6 +81,7 @@
     horizontalRotation: 90
   - type: HumanoidAppearance
     species: Human
+  - type: TypingIndicator
   - type: SlowOnDamage
     speedModifierThresholds:
       60: 0.7
@@ -119,10 +120,7 @@
       - !type:WashCreamPieReaction
   - type: StatusEffects
     allowed:
-    - Stutter
     - Electrocution
-    - Drunk
-    - SlurredSpeech
     - RatvarianLanguage
     - PressureImmunity
     - Muted
@@ -162,7 +160,7 @@
   - type: SleepEmitSound
   - type: SSDIndicator
   - type: StandingState
-    canCrawl: true # Stories-Crawling
+  - type: Crawler
   - type: Fingerprint
   - type: Dna
   - type: MindContainer

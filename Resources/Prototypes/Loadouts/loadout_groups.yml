@@ -38,6 +38,12 @@
   # - ClothingNeckAutismPin
   # - ClothingNeckGoldAutismPin
   # Stories-End
+  - OffsetCane
+  - OffsetCaneWood
+  - OffsetCaneClown
+  - OffsetCaneMime
+  - OffsetCaneNT
+  - Cane
   - TowelColorBlack
   - TowelColorDarkBlue
   - TowelColorDarkGreen
