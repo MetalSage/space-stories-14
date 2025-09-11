@@ -1,34 +1,12 @@
-using System.Linq;
-using System.Numerics;
-using System.Threading.Tasks;
-using Content.Server.Actions;
 using Content.Server.GameTicking;
 using Content.Server.Popups;
-using Content.Server.Station.Components;
 using Content.Server.Station.Systems;
 using Content.Shared._Stories.TargetingTeleporter;
 using Content.Shared.GameTicking;
-using Content.Shared.Ghost;
-using Content.Shared.Interaction;
-using Content.Shared.Movement.Pulling.Components;
-using Content.Shared.Movement.Pulling.Systems;
 using Content.Shared.Movement.Systems;
-using Content.Shared.Popups;
-using Content.Shared.Projectiles;
-using Content.Shared.Station;
-using Content.Shared.Teleportation.Components;
-using Content.Shared.Verbs;
 using Content.Shared.Whitelist;
 using Robust.Server.GameObjects;
-using Robust.Shared.Audio;
-using Robust.Shared.Audio.Systems;
-using Robust.Shared.Map;
-using Robust.Shared.Network;
-using Robust.Shared.Physics.Dynamics;
-using Robust.Shared.Physics.Events;
-using Robust.Shared.Player;
 using Robust.Shared.Random;
-using Robust.Shared.Utility;
 
 namespace Content.Server._Stories.TargetingTeleporter;
 
@@ -80,7 +58,6 @@ public sealed class TargetingTeleporterSystem : SharedTargetingTeleporterSystem
 
     private EntityUid? GetEyeSpawnPoint(Entity<TargetingTeleporterComponent> entity)
     {
-
         var stations = _station.GetStationsSet();
         var neededStations = new HashSet<EntityUid>();
 
@@ -96,7 +73,7 @@ public sealed class TargetingTeleporterSystem : SharedTargetingTeleporterSystem
         }
 
         var stationUid = _random.Pick(neededStations);
-        var grid = _station.GetLargestGrid(Comp<StationDataComponent>(stationUid));
+        var grid = _station.GetLargestGrid(stationUid);
 
         if (grid is { } gridUid)
             return gridUid;

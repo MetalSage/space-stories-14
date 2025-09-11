@@ -5,7 +5,6 @@ using Content.Shared.Chemistry;
 using Content.Shared.Chemistry.Hypospray.Events;
 using Content.Shared.Climbing.Events;
 using Content.Shared.Contraband;
-using Content.Shared._Stories.TTS;
 using Content.Shared.Damage;
 using Content.Shared.Damage.Events;
 using Content.Shared.Electrocution;
@@ -32,8 +31,6 @@ using Content.Shared.Verbs;
 using Content.Shared.Weapons.Ranged.Events;
 using Content.Shared.Wieldable;
 using Content.Shared.Zombies;
-using Content.Shared.Interaction.Events;
-using Robust.Shared.Physics.Events;
 
 namespace Content.Shared.Inventory;
 
@@ -63,14 +60,6 @@ public partial class InventorySystem
         SubscribeLocalEvent<InventoryComponent, BeforeEmoteEvent>(RelayInventoryEvent);
         SubscribeLocalEvent<InventoryComponent, StoodEvent>(RelayInventoryEvent);
         SubscribeLocalEvent<InventoryComponent, DownedEvent>(RelayInventoryEvent);
-
-        // Corvax-TTS
-        SubscribeLocalEvent<InventoryComponent, TransformSpeakerVoiceEvent>(RelayInventoryEvent);
-
-        // Stories-Pontific-Start
-        SubscribeLocalEvent<InventoryComponent, ContactInteractionEvent>(RelayInventoryEvent);
-        SubscribeLocalEvent<InventoryComponent, StartCollideEvent>(RelayStartCollideEvent);
-        // Stories-Pontific-End
 
         // by-ref events
         SubscribeLocalEvent<InventoryComponent, RefreshFrictionModifiersEvent>(RefRelayInventoryEvent);
@@ -111,22 +100,6 @@ public partial class InventorySystem
         SubscribeLocalEvent<InventoryComponent, GetVerbsEvent<InnateVerb>>(OnGetInnateVerbs);
 
     }
-
-    // Stories-Pontific-Start
-    public void RelayStartCollideEvent(Entity<InventoryComponent> inventory, ref StartCollideEvent args)
-    {
-        // this copies the by-ref event if it is a struct
-        var ev = new InventoryRelayedEvent<StartCollideEvent>(args);
-        var enumerator = new InventorySlotEnumerator(inventory, SlotFlags.All);
-        while (enumerator.NextItem(out var item))
-        {
-            RaiseLocalEvent(item, ev);
-        }
-
-        // and now we copy it back
-        args = ev.Args;
-    }
-    // Stories-Pontific-End
 
     protected void RefRelayInventoryEvent<T>(EntityUid uid, InventoryComponent component, ref T args) where T : IInventoryRelayEvent
     {

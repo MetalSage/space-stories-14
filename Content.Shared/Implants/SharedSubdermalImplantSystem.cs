@@ -13,14 +13,6 @@ public abstract partial class SharedSubdermalImplantSystem : EntitySystem
     [Dependency] private readonly SharedContainerSystem _container = default!;
     [Dependency] private readonly INetManager _net = default!;
     [Dependency] private readonly IGameTiming _timing = default!;
-    [Dependency] private readonly TagSystem _tag = default!;
-    [Dependency] private readonly SharedTransformSystem _transformSystem = default!;
-    [Dependency] private readonly SharedInteractionSystem _interaction = default!;
-
-    public const string BaseStorageId = "storagebase";
-
-    private static readonly ProtoId<TagPrototype> MicroBombTag = "MicroBomb";
-    private static readonly ProtoId<TagPrototype> MacroBombTag = "MacroBomb";
 
     public override void Initialize()
     {
@@ -30,10 +22,6 @@ public abstract partial class SharedSubdermalImplantSystem : EntitySystem
         SubscribeLocalEvent<SubdermalImplantComponent, EntGotInsertedIntoContainerMessage>(OnInsert);
         SubscribeLocalEvent<SubdermalImplantComponent, ContainerGettingRemovedAttemptEvent>(OnRemoveAttempt);
         SubscribeLocalEvent<SubdermalImplantComponent, EntGotRemovedFromContainerMessage>(OnRemove);
-
-        SubscribeLocalEvent<ImplantedComponent, MobStateChangedEvent>(RelayToImplantEvent);
-        SubscribeLocalEvent<ImplantedComponent, AfterInteractUsingEvent>(RelayToImplantInteractEvent);
-        SubscribeLocalEvent<ImplantedComponent, SuicideEvent>(RelayToImplantEvent);
     }
 
     private void OnInsert(Entity<SubdermalImplantComponent> ent, ref EntGotInsertedIntoContainerMessage args)
@@ -167,49 +155,7 @@ public abstract partial class SharedSubdermalImplantSystem : EntitySystem
         if (!Resolve(target, ref target.Comp, false))
             return;
 
-        var implantContainer = implanted.ImplantContainer;
-
-        _container.CleanContainer(implantContainer);
-    }
-
-    private void RelayToImplantInteractEvent(EntityUid uid, ImplantedComponent component, AfterInteractUsingEvent args)
-    {
-        if (args.Handled)
-            return;
-
-        if (!_container.TryGetContainer(uid, ImplanterComponent.ImplantSlotId, out var implantContainer))
-            return;
-
-        foreach (var implant in implantContainer.ContainedEntities)
-        {
-            args.Handled = _interaction.InteractDoAfter(args.User, args.Used, implant, args.ClickLocation, args.CanReach);
-        }
-    }
-
-    //Relays from the implanted to the implant
-    private void RelayToImplantEvent<T>(EntityUid uid, ImplantedComponent component, T args) where T : notnull
-    {
-        if (!_container.TryGetContainer(uid, ImplanterComponent.ImplantSlotId, out var implantContainer))
-            return;
-
-        var relayEv = new ImplantRelayEvent<T>(args);
-        foreach (var implant in implantContainer.ContainedEntities)
-        {
-            if (args is HandledEntityEventArgs { Handled : true })
-                return;
-
-            RaiseLocalEvent(implant, relayEv);
-        }
-    }
-}
-
-public sealed class ImplantRelayEvent<T> where T : notnull
-{
-    public readonly T Event;
-
-    public ImplantRelayEvent(T ev)
-    {
-        Event = ev;
+        _container.CleanContainer(target.Comp.ImplantContainer);
     }
 }
 

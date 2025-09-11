@@ -1,5 +1,4 @@
 using Content.Shared.Climbing.Events;
-using Content.Shared.DoAfter;
 using Content.Shared.Hands.Components;
 using Content.Shared.Inventory;
 using Content.Shared.Movement.Events;
@@ -9,7 +8,6 @@ using Content.Shared.Rotation;
 using Robust.Shared.Audio.Systems;
 using Robust.Shared.Physics;
 using Robust.Shared.Physics.Systems;
-using Robust.Shared.Serialization;
 
 namespace Content.Shared.Standing;
 
@@ -18,7 +16,6 @@ public sealed class StandingStateSystem : EntitySystem
     [Dependency] private readonly SharedAppearanceSystem _appearance = default!;
     [Dependency] private readonly SharedAudioSystem _audio = default!;
     [Dependency] private readonly SharedPhysicsSystem _physics = default!;
-    [Dependency] private readonly MovementSpeedModifierSystem _movementSpeedModifier = default!; // Stories-Crawling
 
     // If StandingCollisionLayer value is ever changed to more than one layer, the logic needs to be edited.
     public const int StandingCollisionLayer = (int) CollisionGroup.MidImpassable;
@@ -86,16 +83,6 @@ public sealed class StandingStateSystem : EntitySystem
         return !entity.Comp.Standing;
     }
 
-    // Stories-Crawling-Start
-    public bool CanCrawl(EntityUid uid, StandingStateComponent? standingState = null)
-    {
-        if (!Resolve(uid, ref standingState, false))
-            return false;
-
-        return standingState.CanCrawl;
-    }
-    // Stories-Crawling-End
-
     public bool Down(EntityUid uid,
         bool playSound = true,
         bool dropHeldItems = true,
@@ -111,12 +98,8 @@ public sealed class StandingStateSystem : EntitySystem
         // Optional component.
         Resolve(uid, ref appearance, ref hands, false);
 
-        // Stories-Crawling-Start
-        /*
         if (!standingState.Standing)
             return true;
-        */
-        // Stories-Crawling-Start
 
         // This is just to avoid most callers doing this manually saving boilerplate
         // 99% of the time you'll want to drop items but in some scenarios (e.g. buckling) you don't want to.
@@ -130,11 +113,6 @@ public sealed class StandingStateSystem : EntitySystem
 
         if (!force)
         {
-            // Stories-Crawling-Start
-            if (!standingState.Standing)
-                return true;
-            // Stories-Crawling-End
-
             var msg = new DownAttemptEvent();
             RaiseLocalEvent(uid, msg, false);
 
@@ -143,10 +121,8 @@ public sealed class StandingStateSystem : EntitySystem
         }
 
         standingState.Standing = false;
-        standingState.CanStandUp = true;
         Dirty(uid, standingState);
-        // RaiseLocalEvent(uid, new DownedEvent(), false); // Stories-Crawling
-        _movementSpeedModifier.RefreshMovementSpeedModifiers(uid); // Stories-Crawling
+        RaiseLocalEvent(uid, new DownedEvent(), false);
 
         // Seemed like the best place to put it
         _appearance.SetData(uid, RotationVisuals.RotationState, RotationState.Horizontal, appearance);
@@ -192,25 +168,14 @@ public sealed class StandingStateSystem : EntitySystem
         }
 
         standingState.Standing = true;
-        standingState.CanStandUp = true; // Stories-Crawling
         Dirty(uid, standingState);
         RaiseLocalEvent(uid, new StoodEvent(), false);
-        _movementSpeedModifier.RefreshMovementSpeedModifiers(uid); // Stories-Crawling
 
         _appearance.SetData(uid, RotationVisuals.RotationState, RotationState.Vertical, appearance);
 
         RevertLayers((uid, standingState));
 
-    return true;
-}
-
-    // Stories-Crawling-Start
-    private void OnStandDoAfterEvent(EntityUid uid, StandingStateComponent standing, ref FellDownEvent.StandDoAfterEvent ev)
-    {
-        if (ev.Cancelled)
-            return;
-
-        Stand(uid, standingState: standing);
+        return true;
     }
 
     // TODO: This should be moved to a PhysicsModifierSystem which raises events so multiple systems can modify fixtures at once
