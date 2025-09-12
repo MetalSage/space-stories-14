@@ -1,5 +1,5 @@
 - type: entity
-  id: BulletPistolSilver
+  id: STBulletPistolSilver
   parent: BaseBullet
   name: bullet (.35 auto silver)
   categories: [ HideSpawnMenu ]

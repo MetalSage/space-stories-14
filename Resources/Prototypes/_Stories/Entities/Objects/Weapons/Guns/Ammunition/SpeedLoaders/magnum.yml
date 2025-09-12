@@ -1,5 +1,5 @@
 - type: entity
-  id: SpeedLoaderMagnumSilver
+  id: STSpeedLoaderMagnumSilver
   name: "speed loader (.45 silver)"
   parent: BaseSpeedLoaderMagnum
   description: Designed to quickly refill an empty revolver, it fits up to six rounds. Intended to hold anti-demon silver ammunition.

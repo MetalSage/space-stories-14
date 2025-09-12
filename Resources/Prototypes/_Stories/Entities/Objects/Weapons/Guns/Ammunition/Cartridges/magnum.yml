@@ -1,5 +1,5 @@
 - type: entity
-  id: CartridgeMagnumSilver
+  id: STCartridgeMagnumSilver
   name: cartridge (.45 magnum silver)
   parent: BaseCartridgeMagnum
   description: Heavy magnum cartridge mostly used by revolvers. Silver ammunition inflicts irreparable damage on demonic minions, making it an ideal weapon against the undead.

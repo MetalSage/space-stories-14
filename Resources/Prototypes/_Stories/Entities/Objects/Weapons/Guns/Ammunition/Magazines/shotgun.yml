@@ -1,5 +1,5 @@
 - type: entity
-  id: MagazineShotgunSilver
+  id: STMagazineShotgunSilver
   name: ammo drum (.50 silver)
   parent: BaseMagazineShotgun
   components:

@@ -1,5 +1,5 @@
 - type: entity
-  id: CartridgeRifleSilver
+  id: STCartridgeRifleSilver
   name: cartridge (.20 rifle silver)
   parent: BaseCartridgeRifle
   components:

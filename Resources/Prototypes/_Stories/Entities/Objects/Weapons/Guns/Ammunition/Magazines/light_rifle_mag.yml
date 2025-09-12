@@ -1,5 +1,5 @@
 - type: entity
-  id: MagazineLightRifleSilver
+  id: STMagazineLightRifleSilver
   name: "magazine (.30 rifle silver)"
   parent: MagazineLightRifle
   description: Curved 30-round double stack magazine for combat rifles. Intended to hold anti-demon silver ammunition.

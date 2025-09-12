@@ -1,0 +1,21 @@
+- type: technology
+  id: STSilverMunitions
+  name: research-technology-silver-munitions
+  icon:
+    sprite: _Stories\Objects\Weapons\Guns\Ammunition\Boxes\pistol.rsi
+    state: base
+  discipline: Arsenal
+  tier: 1
+  cost: 10000
+  recipeUnlocks:
+  - STBoxShotgunSilver
+  - STMagazineRifleSilver
+  - STMagazinePistolSilver
+  - STMagazinePistolSubMachineGunSilver
+  - STMagazineLightRifleSilver
+  - STSpeedLoaderMagnumSilver
+  - STMagazineShotgunSilver
+  - STMagazineBoxPistolSilver
+  - STMagazineBoxMagnumSilver
+  - STMagazineBoxLightRifleSilver
+  - STMagazineBoxRifleSilver

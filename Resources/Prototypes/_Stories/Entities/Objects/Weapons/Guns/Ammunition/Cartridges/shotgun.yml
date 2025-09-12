@@ -1,9 +1,10 @@
 - type: entity
-  id: ShellShotgunSilver
+  id: STShellShotgunSilver
   name: shell (.50 silver)
   parent: [ BaseShellShotgun, BaseSecurityContraband ]
   components:
   - type: Sprite
+    sprite: _Stories\Objects\Weapons\Guns\Ammunition\Casings\shotgun_shell.rsi
     layers:
       - state: silver
         map: [ "enum.AmmoVisualLayers.Base" ]

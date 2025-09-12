@@ -1,5 +1,5 @@
 - type: entity
-  id: CartridgeLightRifleSilver
+  id: STCartridgeLightRifleSilver
   name: cartridge (.30 rifle silver)
   parent: BaseCartridgeLightRifle
   description: A classic intermediate cartridge used by many combat rifles and LMGs. Incendiary ammunition contains a self-igniting compound that sets the target ablaze.

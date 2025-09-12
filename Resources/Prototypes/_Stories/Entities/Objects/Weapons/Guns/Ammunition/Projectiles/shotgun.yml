@@ -1,5 +1,5 @@
 - type: entity
-  id: PelletShotgunSilver
+  id: STPelletShotgunSilver
   name: pellet (.50 silver)
   categories: [ HideSpawnMenu ]
   parent: BaseBullet

@@ -1,5 +1,5 @@
 - type: entity
-  id: CartridgePistolSilver
+  id: STCartridgePistolSilver
   name: cartridge (.35 auto silver)
   description: Arguably the most popular caliber on the market, used by all manner of pistols and submachine guns. Silver ammunition inflicts irreparable damage on demonic minions, making it an ideal weapon against the undead.
   parent: BaseCartridgePistol

@@ -1,5 +1,5 @@
 - type: entity
-  id: MagazineBoxPistolSilver
+  id: STMagazineBoxPistolSilver
   parent: BaseMagazineBoxPistol
   name: ammunition box (.35 auto silver)
   description: A cardboard box of .35 auto rounds. Intended to hold anti-demon silver ammunition.

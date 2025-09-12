@@ -1,5 +1,5 @@
 - type: entity
-  id: MagazineRifleSilver
+  id: STMagazineRifleSilver
   name: "magazine (.20 rifle silver)"
   parent: MagazineRifle
   components:

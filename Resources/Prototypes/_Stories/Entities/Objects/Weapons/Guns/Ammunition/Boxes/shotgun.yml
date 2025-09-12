@@ -1,7 +1,7 @@
 - type: entity
   name: ammunition box (.50 silver)
   parent: AmmoProviderShotgunShell
-  id: BoxShotgunSilver
+  id: STBoxShotgunSilver
   components:
   - type: BallisticAmmoProvider
     proto: ShellShotgunSilver

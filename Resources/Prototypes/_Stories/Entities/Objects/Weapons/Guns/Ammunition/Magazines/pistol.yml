@@ -1,5 +1,5 @@
 - type: entity
-  id: MagazinePistolSilver
+  id: STMagazinePistolSilver
   name: pistol magazine (.35 auto silver)
   parent: MagazinePistol
   description: 10-round single-stack magazine for pistols. Intended to hold anti-demon silver ammunition.
@@ -27,7 +27,7 @@
         color: "#585b70"
 
 - type: entity
-  id: MagazinePistolSubMachineGunSilver
+  id: STMagazinePistolSubMachineGunSilver
   name: SMG magazine (.35 silver)
   parent: BaseMagazinePistolSubMachineGun
   description: 30-round double-stack magazine for submachine guns. Intended to hold anti-demon silver ammunition.
