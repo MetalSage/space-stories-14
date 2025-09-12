@@ -124,6 +124,17 @@
   - MagazineShotgunIncendiary
   - SpeedLoaderMagnumIncendiary
   - SpeedLoaderMagnumUranium
+  - STBoxShotgunSilver
+  - STMagazineRifleSilver
+  - STMagazinePistolSilver
+  - STMagazinePistolSubMachineGunSilver
+  - STMagazineLightRifleSilver
+  - STSpeedLoaderMagnumSilver
+  - STMagazineShotgunSilver
+  - STMagazineBoxPistolSilver
+  - STMagazineBoxMagnumSilver
+  - STMagazineBoxLightRifleSilver
+  - STMagazineBoxRifleSilver
 
 - type: latheRecipePack
   id: SecurityWeapons

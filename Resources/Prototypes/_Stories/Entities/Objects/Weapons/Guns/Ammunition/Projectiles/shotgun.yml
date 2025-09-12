@@ -1,0 +1,22 @@
+- type: entity
+  id: STPelletShotgunSilver
+  name: pellet (.50 silver)
+  categories: [ HideSpawnMenu ]
+  parent: BaseBullet
+  components:
+  - type: Sprite
+    sprite: _Stories\Objects\Weapons\Guns\Projectiles\projectiles.rsi
+    layers:
+    - state: silver
+  - type: Projectile
+    damage:
+      types:
+        Blunt: 3
+        Holy: 50 
+  - type: IgnitionSource
+    ignited: true
+  - type: PointLight
+    enabled: true
+    color: white
+    radius: 2.0
+    energy: 0.75

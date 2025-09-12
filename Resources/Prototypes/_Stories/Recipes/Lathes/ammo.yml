@@ -1,0 +1,83 @@
+- type: latheRecipe
+  parent: BaseAmmoRecipe
+  id: STMagazineRifleSilver
+  result: STMagazineRifleSilver
+  materials:
+    Steel: 25
+    Silver: 450
+
+- type: latheRecipe
+  parent: BaseAmmoBoxRecipe
+  id: STMagazineBoxRifleSilver
+  result: STMagazineBoxRifleSilver
+  materials:
+    Silver: 750
+
+- type: latheRecipe
+  parent: BaseAmmoRecipe
+  id: STMagazineLightRifleSilver
+  result: STMagazineLightRifleSilver
+  materials:
+    Steel: 25
+    Silver: 540
+
+- type: latheRecipe
+  parent: BaseAmmoBoxRecipe
+  id: STMagazineBoxLightRifleSilver
+  result: STMagazineBoxLightRifleSilver
+  materials:
+    Silver: 900
+
+- type: latheRecipe
+  parent: BaseAmmoRecipe
+  id: STMagazinePistolSilver
+  result: STMagazinePistolSilver
+  materials:
+    Steel: 25
+    Silver: 120
+
+- type: latheRecipe
+  parent: BaseAmmoRecipe
+  id: STMagazinePistolSubMachineGunSilver
+  result: STMagazinePistolSubMachineGunSilver
+  materials:
+    Steel: 25
+    Silver: 275
+
+- type: latheRecipe
+  parent: BaseAmmoBoxRecipe
+  id: STMagazineBoxPistolSilver
+  result: STMagazineBoxPistolSilver
+  materials:
+    Silver: 600
+
+- type: latheRecipe
+  parent: BaseAmmoRecipe
+  id: STSpeedLoaderMagnumSilver
+  result: STSpeedLoaderMagnumSilver
+  materials:
+    Steel: 50
+    Silver: 150
+
+- type: latheRecipe
+  parent: BaseAmmoBoxRecipe
+  id: STMagazineBoxMagnumSilver
+  result: STMagazineBoxMagnumSilver
+  materials:
+    Silver: 240
+
+- type: latheRecipe
+  parent: BaseAmmoRecipe
+  id: STMagazineShotgunSilver
+  result: STMagazineShotgunSilver
+  materials:
+    Steel: 100
+    Silver: 190
+
+- type: latheRecipe
+  parent: BaseAmmoBoxRecipe
+  id: STBoxShotgunSilver
+  result: STBoxShotgunSilver
+  materials:
+    Steel: 80
+    Silver: 320
