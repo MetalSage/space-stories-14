@@ -17,6 +17,10 @@
     components:
     - type: BibleUser #Lets them heal with bibles
     # Stories-Pontific-Start
+    - type: UseDelay
+      delays:
+        STHoly:
+          length: 0.1
     - type: Chaplain
     - type: Holy
     # Stories-Pontific-End
