@@ -108,6 +108,7 @@
   hidden: true
   loadouts:
   - EmergencyNitrogen
+  - STEmergencyOxygenBeer # Stories-Beer-For-Dwarfs-In-Survival-Box
   - EmergencyOxygen
   - LoadoutSpeciesVoxNitrogen
 
