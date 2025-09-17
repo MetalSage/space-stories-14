@@ -1,0 +1,1 @@
+research-technology-silver-munitions = Технологии борьбы с нечистью

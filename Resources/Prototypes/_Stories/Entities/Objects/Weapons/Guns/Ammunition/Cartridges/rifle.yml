@@ -1,0 +1,15 @@
+- type: entity
+  id: STCartridgeRifleSilver
+  name: cartridge (.20 rifle silver)
+  parent: BaseCartridgeRifle
+  components:
+  - type: CartridgeAmmo
+    proto: BulletRifleSilver
+  - type: Sprite
+    sprite: _Stories\Objects\Weapons\Guns\Ammunition\Casings\ammo-silver.rsi
+    layers:
+      - state: base
+        map: [ "enum.AmmoVisualLayers.Base" ]
+      - state: tip
+        map: [ "enum.AmmoVisualLayers.Tip" ]
+        color: "#585b70"
