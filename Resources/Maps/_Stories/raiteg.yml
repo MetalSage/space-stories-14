@@ -4,7 +4,7 @@ meta:
   engineVersion: 264.0.0
   forkId: stories
   forkVersion: 3a36390e5245459503f8634f0ce290bfbb97ff0e
-  time: 09/21/2025 19:34:39
+  time: 09/21/2025 20:34:14
   entityCount: 15091
 maps:
 - 1
@@ -86,6 +86,7 @@ entities:
     - type: GridTree
     - type: Broadphase
     - type: OccluderTree
+    - type: FTLDestination
   - uid: 2
     components:
     - type: MetaData
@@ -93,6 +94,7 @@ entities:
     - type: Transform
       pos: -0.569444,-1.5399303
       parent: 1
+    - type: StationMember
     - type: MapGrid
       chunks:
         0,0:
@@ -47147,7 +47149,7 @@ entities:
       pos: -18.5,45.5
       parent: 2
     - type: Door
-      secondsUntilStateChange: -6789.3022
+      secondsUntilStateChange: -7070.823
       state: Closing
     - type: Firelock
       emergencyCloseCooldown: 11964.321371
@@ -82859,13 +82861,6 @@ entities:
     components:
     - type: Transform
       pos: 33.5,25.5
-      parent: 2
-- proto: SoapBorg
-  entities:
-  - uid: 11780
-    components:
-    - type: Transform
-      pos: -47.511486,19.48885
       parent: 2
 - proto: SodaDispenser
   entities:

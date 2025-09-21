@@ -5,7 +5,7 @@
   minPlayers: 0
   maxPlayers: 60
   stations:
-    Raiteg:
+    RaiTeg:
       stationProto: StandardNanotrasenStation
       components:
         - type: StationNameSetup
@@ -32,7 +32,7 @@
             ChiefEngineer: [ 1, 1 ]
             AtmosphericTechnician: [ 3, 3 ]
             StationEngineer: [ 4, 4 ]
-            TechnicalAssistant: [ 1, 2 ] ###
+            TechnicalAssistant: [ 1, 2 ]
             #medical
             ChiefMedicalOfficer: [ 1, 1 ]
             Chemist: [ 2, 2 ]
