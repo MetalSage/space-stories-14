@@ -128,6 +128,7 @@
   - STLightsaberGreen
   - STLightsaberYellow
   - STLightsaberPurple
+  - STLightsaberWhite
   # Stories-Partners-Start
   - LightsaberShort
   - LightsaberDouble
@@ -209,6 +210,13 @@
   equipment:
     pocket1: STLightsaberGreen
 
+# Белый меч
+
+- type: loadout
+  id: STLightsaberWhite
+  equipment:
+    pocket1: STLightsaberWhite
+
 # Жёлтый меч
 
 - type: loadout
@@ -228,6 +236,8 @@
     proto: STMasterGuardian
   equipment:
     pocket1: STLightsaberPurple
+
+
 
 # Накидка джедая
 
