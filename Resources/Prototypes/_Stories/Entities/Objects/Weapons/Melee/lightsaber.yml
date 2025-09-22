@@ -267,3 +267,16 @@
   - type: EnergySword
     colorOptions:
     - MediumOrchid
+
+# White
+
+- type: entity
+  name: white lightsaber
+  parent: Lightsaber
+  id: STLightsaberWhite
+  suffix: White
+  description: A special weapon designed for elegant combat as well as for ceremonies, its work is connected with the kyber crystal inside.
+  components:
+  - type: EnergySword
+    colorOptions:
+    - White
