@@ -2,7 +2,7 @@
   id: STSilverMunitions
   name: research-technology-silver-munitions
   icon:
-    sprite: _Stories\Objects\Weapons\Guns\Ammunition\Boxes\pistol.rsi
+    sprite: _Stories/Objects/Weapons/Guns/Ammunition/Boxes/pistol.rsi
     state: base
   discipline: Arsenal
   tier: 1

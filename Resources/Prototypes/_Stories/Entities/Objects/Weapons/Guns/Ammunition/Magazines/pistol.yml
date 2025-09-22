@@ -7,7 +7,7 @@
   - type: BallisticAmmoProvider
     proto: CartridgePistolSilver
   - type: Sprite
-    sprite: _Stories\Objects\Weapons\Guns\Ammunition\Magazines\pistol.rsi
+    sprite: _Stories/Objects/Weapons/Guns/Ammunition/Magazines/pistol.rsi
     layers:
     - state: base
       map: ["enum.GunVisualLayers.Base"]
@@ -40,7 +40,7 @@
     soundInsert:
       path: /Audio/Weapons/Guns/MagIn/bullet_insert.ogg
   - type: Sprite
-    sprite: _Stories\Objects\Weapons\Guns\Ammunition\Magazines\smg-mag.rsi
+    sprite: _Stories/Objects/Weapons/Guns/Ammunition/Magazines/smg-mag.rsi
     layers:
     - state: base
       map: ["enum.GunVisualLayers.Base"]

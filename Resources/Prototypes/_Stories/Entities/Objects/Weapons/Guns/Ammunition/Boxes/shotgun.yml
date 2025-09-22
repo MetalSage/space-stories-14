@@ -10,7 +10,7 @@
     steps: 5
     zeroVisible: false
   - type: Sprite
-    sprite: _Stories\Objects\Weapons\Guns\Ammunition\Boxes\shotgun.rsi
+    sprite: _Stories/Objects/Weapons/Guns/Ammunition/Boxes/shotgun.rsi
     layers:
     - state: base
       map: ["enum.GunVisualLayers.Base"]

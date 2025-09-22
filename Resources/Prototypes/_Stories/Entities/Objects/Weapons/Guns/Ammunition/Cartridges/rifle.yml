@@ -6,7 +6,7 @@
   - type: CartridgeAmmo
     proto: BulletRifleSilver
   - type: Sprite
-    sprite: _Stories\Objects\Weapons\Guns\Ammunition\Casings\ammo-silver.rsi
+    sprite: _Stories/Objects/Weapons/Guns/Ammunition/Casings/ammo-silver.rsi
     layers:
       - state: base
         map: [ "enum.AmmoVisualLayers.Base" ]

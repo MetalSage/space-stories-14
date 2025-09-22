@@ -6,7 +6,7 @@
   - type: BallisticAmmoProvider
     proto: ShellShotgunSilver
   - type: Sprite
-    sprite: _Stories\Objects\Weapons\Guns\Ammunition\Magazines\m12.rsi
+    sprite: _Stories/Objects/Weapons/Guns/Ammunition/Magazines/m12.rsi
     layers:
     - state: silver
       map: ["enum.GunVisualLayers.Base"]

@@ -5,7 +5,7 @@
   categories: [ HideSpawnMenu ]
   components:
   - type: Sprite
-    sprite: _Stories\Objects\Weapons\Guns\Projectiles\projectiles.rsi
+    sprite: _Stories/Objects/Weapons/Guns/Projectiles/projectiles.rsi
     layers:
     - state: silver
   - type: PointLight

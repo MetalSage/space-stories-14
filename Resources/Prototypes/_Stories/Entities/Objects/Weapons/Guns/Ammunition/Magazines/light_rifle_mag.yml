@@ -7,7 +7,7 @@
   - type: BallisticAmmoProvider
     proto: CartridgeLightRifleSilver
   - type: Sprite
-    sprite: _Stories\Objects\Weapons\Guns\Ammunition\Magazines\light_rifle_mag.rsi
+    sprite: _Stories/Objects/Weapons/Guns/Ammunition/Magazines/light_rifle_mag.rsi
     layers:
     - state: base
       map: ["enum.GunVisualLayers.Base"]

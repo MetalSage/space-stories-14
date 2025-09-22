@@ -4,7 +4,7 @@
   parent: [ BaseShellShotgun, BaseSecurityContraband ]
   components:
   - type: Sprite
-    sprite: _Stories\Objects\Weapons\Guns\Ammunition\Casings\shotgun_shell.rsi
+    sprite: _Stories/Objects/Weapons/Guns/Ammunition/Casings/shotgun_shell.rsi
     layers:
       - state: silver
         map: [ "enum.AmmoVisualLayers.Base" ]
