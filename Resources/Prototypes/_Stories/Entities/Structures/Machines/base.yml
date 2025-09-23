@@ -1,0 +1,16 @@
+- type: entity
+  abstract: true
+  id: STBaseMachineBeerUnprotected
+  components:
+  - type: Reactive
+    groups:
+      Flammable: [Touch]
+      Extinguish: [Touch]
+      Acidic: [Touch, Ingestion]
+    reactions:
+    - reagents: [ Beer ]
+      methods: [ Touch ]
+      effects:
+      - !type:EmpReactionEffect
+        maxRange: 0.1
+  - type: DisableOnEmp
