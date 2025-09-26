@@ -1,0 +1,26 @@
+- type: entity
+  parent: [WeldingMaskBase, BaseSyndicateContraband]
+  id: STFactoryClothingWorkerHeadHatWelding
+  name: factory worker welding mask
+  description: The welding mask of a factory worker, who recently lost his mind, appears as material evidence in 46 criminal cases.
+  components:
+  - type: Sprite
+    sprite: _Stories/Clothing/Head/Welding/fabricworker.rsi
+  - type: Clothing
+    sprite: _Stories/Clothing/Head/Welding/fabricworker.rsi
+  - type: Armor 
+    modifiers:
+      coefficients:
+        Blunt: 0.80
+        Slash: 0.80
+        Piercing: 0.80
+        Heat: 0.80
+        Radiation: 0.80
+        Caustic: 0.95
+  - type: ExplosionResistance
+    damageCoefficient: 0.75
+  - type: Tag
+    tags:
+    - HamsterWearable
+    - WhitelistChameleon
+    - WeldingMask
