@@ -791,6 +791,8 @@
     sprite: Clothing/Head/Hardsuits/ERThelmets/ertleader.rsi
   - type: PointLight
     color: "#addbff"
+    radius: 7
+    energy: 3
   - type: Armor
     modifiers:
       coefficients:
@@ -812,6 +814,8 @@
     sprite: Clothing/Head/Hardsuits/ERThelmets/ertchaplain.rsi
   - type: PointLight
     color: "#ffffff"
+    radius: 7
+    energy: 3
 
 #ERT Engineer Hardsuit
 - type: entity
@@ -826,6 +830,8 @@
     sprite: Clothing/Head/Hardsuits/ERThelmets/ertengineer.rsi
   - type: PointLight
     color: "#f4ffad"
+    radius: 7
+    energy: 3
   - type: FireProtection
     reduction: 0.2
   - type: Armor
@@ -849,6 +855,8 @@
     sprite: Clothing/Head/Hardsuits/ERThelmets/ertmedical.rsi
   - type: PointLight
     color: "#adffec"
+    radius: 7
+    energy: 3
 
 #ERT Security Hardsuit
 - type: entity
@@ -863,6 +871,8 @@
     sprite: Clothing/Head/Hardsuits/ERThelmets/ertsecurity.rsi
   - type: PointLight
     color: "#ffadc6"
+    radius: 7
+    energy: 3
   - type: Armor
     modifiers:
       coefficients:
@@ -884,6 +894,8 @@
     sprite: Clothing/Head/Hardsuits/ERThelmets/ertjanitor.rsi
   - type: PointLight
     color: "#cbadff"
+    radius: 7
+    energy: 3
 
 #CBURN Hardsuit
 - type: entity
@@ -944,6 +956,8 @@
     sprite: Clothing/Head/Hardsuits/deathsquad.rsi
   - type: PointLight # Corvax-Resprite
     color: white
+    radius: 7
+    energy: 3
   - type: PressureProtection
     highPressureMultiplier: 0.08
     lowPressureMultiplier: 1000
