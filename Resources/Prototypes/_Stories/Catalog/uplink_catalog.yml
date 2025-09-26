@@ -143,3 +143,16 @@
       whitelist:
         tags:
           - NukeOpsUplink
+
+- type: listing
+  id: STUplinkClothingFactoryWorkerHeadHatWelding
+  name: uplink-factory-worker-mask-name
+  description: uplink-factory-worker-mask-desc
+  productEntity: STFactoryClothingWorkerHeadHatWelding
+  discountCategory: usualDiscounts
+  discountDownTo:
+    Telecrystal: 2
+  cost:
+    Telecrystal: 3
+  categories:
+  - UplinkWearables
