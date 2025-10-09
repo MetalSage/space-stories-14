@@ -33,6 +33,12 @@
       head-vox:
       - state: equipped-head-light-vox
         shader: unshaded
+      head-vulpkanin:
+      - state: equipped-head-light-vulpkanin
+        shader: unshaded
+      head-reptilian:
+      - state: equipped-head-light-reptilian
+        shader: unshaded
       head-dog:
       - state: equipped-head-light-dog
         shader: unshaded
@@ -50,6 +56,14 @@
       head-vox:
       - state: equipped-head-vox
       - state: equipped-head-unshaded-vox
+        shader: unshaded
+      head-vulpkanin:
+      - state: equipped-head-vulpkanin
+      - state: equipped-head-unshaded-vulpkanin
+        shader: unshaded
+      head-reptilian:
+      - state: equipped-head-reptilian
+      - state: equipped-head-unshaded-reptilian
         shader: unshaded
       head-dog:
       - state: equipped-head-dog
@@ -104,6 +118,12 @@
       head-vox:
       - state: equipped-head-light-vox
         shader: unshaded
+      head-vulpkanin:
+      - state: equipped-head-light-vulpkanin
+        shader: unshaded
+      head-reptilian:
+      - state: equipped-head-light-reptilian
+        shader: unshaded
       head-dog:
       - state: equipped-head-light-dog
         shader: unshaded
@@ -116,6 +136,14 @@
       head-vox:
       - state: equipped-head-vox
       - state: equipped-head-unshaded-vox
+        shader: unshaded
+      head-vulpkanin:
+      - state: equipped-head-vulpkanin
+      - state: equipped-head-unshaded-vulpkanin
+        shader: unshaded
+      head-reptilian:
+      - state: equipped-head-reptilian
+      - state: equipped-head-unshaded-reptilian
         shader: unshaded
       head-dog:
       - state: equipped-head-dog
@@ -158,6 +186,12 @@
       head-vox:
       - state: equipped-head-light-vox
         shader: unshaded
+      head-vulpkanin:
+      - state: equipped-head-light-vulpkanin
+        shader: unshaded
+      head-reptilian:
+      - state: equipped-head-light-reptilian
+        shader: unshaded
       head-dog:
       - state: equipped-head-light-dog
         shader: unshaded
@@ -175,6 +209,14 @@
       head-vox:
       - state: equipped-head-vox
       - state: equipped-head-unshaded-vox
+        shader: unshaded
+      head-vulpkanin:
+      - state: equipped-head-vulpkanin
+      - state: equipped-head-unshaded-vulpkanin
+        shader: unshaded
+      head-reptilian:
+      - state: equipped-head-reptilian
+      - state: equipped-head-unshaded-reptilian
         shader: unshaded
       head-dog:
       - state: equipped-head-dog
@@ -243,6 +285,9 @@
       head-vox:
       - state: equipped-head-light-vox
         shader: unshaded
+      head-reptilian:
+      - state: equipped-head-reptilian
+        shader: unshaded
       head-dog:
       - state: equipped-head-light-dog
         shader: unshaded
@@ -255,6 +300,10 @@
       head-vox:
       - state: equipped-head-vox
       - state: equipped-head-unshaded-vox
+        shader: unshaded
+      head-reptilian:
+      - state: equipped-head-reptilian
+      - state: equipped-head-unshaded-reptilian
         shader: unshaded
       head-dog:
       - state: equipped-head-dog
@@ -418,6 +467,12 @@
       head-vox:
       - state: equipped-head-light-vox
         shader: unshaded
+      head-vulpkanin:
+      - state: equipped-head-light-vulpkanin
+        shader: unshaded
+      head-reptilian:
+      - state: equipped-head-light-reptilian
+        shader: unshaded
       head-dog:
       - state: equipped-head-light-dog
         shader: unshaded
@@ -430,6 +485,14 @@
       head-vox:
       - state: equipped-head-vox
       - state: equipped-head-unshaded-vox
+        shader: unshaded
+      head-vulpkanin:
+      - state: equipped-head-vulpkanin
+      - state: equipped-head-unshaded-vulpkanin
+        shader: unshaded
+      head-reptilian:
+      - state: equipped-head-reptilian
+      - state: equipped-head-unshaded-reptilian
         shader: unshaded
       head-dog:
       - state: equipped-head-dog
@@ -751,6 +814,9 @@
       head-vox:
       - state: equipped-HELMET-light-vox
         shader: unshaded
+      head-reptilian:
+      - state: equipped-HELMET-light-reptilian
+        shader: unshaded
   - type: Clothing
     sprite: Clothing/Head/Hardsuits/piratecaptainhelm.rsi
     clothingVisuals:
@@ -761,6 +827,10 @@
       head-vox:
       - state: equipped-HELMET-vox
       - state: equipped-HELMET-unshaded-vox
+        shader: unshaded
+      head-reptilian:
+      - state: equipped-HELMET-reptilian
+      - state: equipped-HELMET-unshaded-reptilian
         shader: unshaded
   - type: PointLight # Color matches visor colors, radius/energy same as mining hardsuit for the big captain.
     color: "#f3ea9c"
@@ -911,6 +981,10 @@
       head-vox:
       - state: equipped-head-vox
       - state: equipped-head-unshaded-vox
+        shader: unshaded
+      head-reptilian:
+      - state: equipped-head-reptilian
+      - state: equipped-head-unshaded-reptilian
         shader: unshaded
   - type: PointLight
     color: orange

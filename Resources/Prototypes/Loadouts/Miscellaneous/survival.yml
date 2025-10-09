@@ -18,10 +18,10 @@
     - Human
     - Moth
     - Reptilian
+    - Vulpkanin
     # Stories-Start
     - Kidan
     - Avali
-    - Vulpkanin
     - Felinid
     - Rodentia
     # Stories-End
@@ -82,6 +82,7 @@
     - Dwarf
     - Human
     - Reptilian
+    - Vulpkanin
 
 - type: loadoutEffectGroup
   id: OxygenBreatherMimeMoth
