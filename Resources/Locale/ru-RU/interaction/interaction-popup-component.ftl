@@ -1,4 +1,4 @@
-### Interaction Popup component
+﻿### Interaction Popup component
 
 
 ## Petting animals

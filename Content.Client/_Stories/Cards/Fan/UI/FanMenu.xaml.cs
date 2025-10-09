@@ -99,7 +99,7 @@ public sealed partial class FanMenu : RadialMenu
     }
 }
 
-public sealed class FanMenuButton : RadialMenuTextureButton
+public sealed class FanMenuButton : RadialMenuButton
 {
     private EntityUid _cardEntity;
 

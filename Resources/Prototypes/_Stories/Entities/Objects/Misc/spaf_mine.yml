@@ -14,8 +14,10 @@
     visuals:
       enum.ToggleableVisuals.Enabled:
         enum.ToggleableVisuals.Layer:
-          True: {state: spafmine}
-          False: {state: spafmine-inactive}
+          True:
+            state: spafmine
+          False:
+            state: spafmine-inactive
   - type: FlashOnTrigger
   - type: StealthOnMove
   - type: Stealth

@@ -27,17 +27,25 @@
     visuals:
       enum.StorageVisuals.Open:
         base:
-          True: { state: box-open }
-          False: { state: box }
+          True:
+            state: box-open
+          False:
+            state: box
         fax:
-          True: { visible: true }
-          False: { visible: false }
+          True:
+            visible: true
+          False:
+            visible: false
         multitool:
-          True: { visible: true }
-          False: { visible: false }
+          True:
+            visible: true
+          False:
+            visible: false
         paper:
-          True: { visible: true }
-          False: { visible: false }
+          True:
+            visible: true
+          False:
+            visible: false
   - type: Appearance
   - type: StorageFill
     contents:

@@ -6,6 +6,8 @@
   components:
   - type: Action
     useDelay: 5
-    icon: { sprite: _Stories/Actions/thermalVision.rsi, state: toggle }
+    icon:
+      sprite: _Stories/Actions/thermalVision.rsi
+      state: toggle
   - type: InstantAction
     event: !type:ToggleThermalVisionEvent

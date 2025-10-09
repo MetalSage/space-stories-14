@@ -6,7 +6,9 @@
   components:
   - type: Action
     useDelay: 15
-    icon: { sprite: _Stories/Actions/spaf.rsi, state: spaf_stealth }
+    icon:
+      sprite: _Stories/Actions/spaf.rsi
+      state: spaf_stealth
   - type: InstantAction
     event: !type:SpafStealthEvent
       cost: 30
@@ -20,7 +22,9 @@
   components:
   - type: Action
     useDelay: 1
-    icon: { sprite: _Stories/Actions/spaf.rsi, state: spaf_light }
+    icon:
+      sprite: _Stories/Actions/spaf.rsi
+      state: spaf_light
   - type: InstantAction
     event: !type:ToggleActionEvent
 
@@ -32,7 +36,9 @@
   components:
   - type: Action
     useDelay: 15
-    icon: { sprite: _Stories/Actions/spaf.rsi, state: spaf_lube }
+    icon:
+      sprite: _Stories/Actions/spaf.rsi
+      state: spaf_lube
   - type: InstantAction
     event: !type:SpafSpillSolutionEvent
       cost: 30
@@ -50,7 +56,9 @@
   components:
   - type: Action
     useDelay: 15
-    icon: { sprite: _Stories/Actions/spaf.rsi, state: spaf_mine }
+    icon:
+      sprite: _Stories/Actions/spaf.rsi
+      state: spaf_mine
   - type: InstantAction
     event: !type:SpafCreateEntityEvent
       cost: 40
@@ -64,7 +72,9 @@
   components:
   - type: Action
     useDelay: 1
-    icon: { sprite: _Stories/Actions/spaf.rsi, state: spaf_food } 
+    icon:
+      sprite: _Stories/Actions/spaf.rsi
+      state: spaf_food 
   - type: InstantAction
     event: !type:FoodPopupEvent
 
@@ -76,7 +86,9 @@
   components:
   - type: Action
     useDelay: 5
-    icon: { sprite: _Stories/Actions/spaf.rsi, state: spaf_glue }
+    icon:
+      sprite: _Stories/Actions/spaf.rsi
+      state: spaf_glue
   - type: InstantAction
     event: !type:SpafSpillSolutionEvent
       cost: 10
@@ -94,7 +106,9 @@
   components:
   - type: Action
     useDelay: 60
-    icon: { sprite: _Stories/Actions/spaf.rsi, state: spaf_egg }
+    icon:
+      sprite: _Stories/Actions/spaf.rsi
+      state: spaf_egg
   - type: InstantAction
     event: !type:SpafCreateEntityEvent
       cost: 150
@@ -108,7 +122,9 @@
   components:
   - type: Action
     useDelay: 60
-    icon: { sprite: _Stories/Actions/spaf.rsi, state: spaf_evol }
+    icon:
+      sprite: _Stories/Actions/spaf.rsi
+      state: spaf_evol
   - type: InstantAction
     event: !type:SpafPolymorphEvent
       cost: 100
@@ -121,8 +137,12 @@
   description: Съешьте свою жертву, чтобы насытиться.
   components:
   - type: Action
-    icon: { sprite: _Stories/Actions/spaf.rsi, state: spaf_devour }
-    iconOn: { sprite: _Stories/Actions/spaf.rsi, state: spaf_devour_on }
+    icon:
+      sprite: _Stories/Actions/spaf.rsi
+      state: spaf_devour
+    iconOn:
+      sprite: _Stories/Actions/spaf.rsi
+      state: spaf_devour_on
   - type: TargetAction
   - type: EntityTargetAction
     event: !type:DevourActionEvent
