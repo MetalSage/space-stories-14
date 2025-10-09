@@ -28,9 +28,15 @@
     visuals:
       enum.PontificVisuals.State:
         enum.DamageStateVisualLayers.Base:
-          Base: { state: base, sprite: _Stories/Mobs/Demons/pontific.rsi }
-          Flame: { state: pontific_flame, sprite: _Stories/Mobs/Demons/pontific.rsi }
-          Prayer: { state: pontific_prayer, sprite: _Stories/Mobs/Demons/pontific_prayer.rsi }
+          Base:
+            state: base
+            sprite: _Stories/Mobs/Demons/pontific.rsi
+          Flame:
+            state: pontific_flame
+            sprite: _Stories/Mobs/Demons/pontific.rsi
+          Prayer:
+            state: pontific_prayer
+            sprite: _Stories/Mobs/Demons/pontific_prayer.rsi
   - type: Sprite
     drawdepth: Mobs
     layers:

@@ -28,8 +28,10 @@
     visuals:
       enum.FoldedVisuals.State:
         foldedLayer:
-          True: { state: Clubs1 }
-          False: { state: Back }
+          True:
+            state: Clubs1
+          False:
+            state: Back
   - type: Card
     name: "трефы 1"
 
@@ -42,8 +44,10 @@
     visuals:
       enum.FoldedVisuals.State:
         foldedLayer:
-          True: { state: Clubs2 }
-          False: { state: Back }
+          True:
+            state: Clubs2
+          False:
+            state: Back
   - type: Card
     name: "трефы 2"
 
@@ -56,8 +60,10 @@
     visuals:
       enum.FoldedVisuals.State:
         foldedLayer:
-          True: { state: Clubs3 }
-          False: { state: Back }
+          True:
+            state: Clubs3
+          False:
+            state: Back
   - type: Card
     name: "трефы 3"
 
@@ -70,8 +76,10 @@
     visuals:
       enum.FoldedVisuals.State:
         foldedLayer:
-          True: { state: Clubs4 }
-          False: { state: Back }
+          True:
+            state: Clubs4
+          False:
+            state: Back
   - type: Card
     name: "трефы 4"
 
@@ -84,8 +92,10 @@
     visuals:
       enum.FoldedVisuals.State:
         foldedLayer:
-          True: { state: Clubs5 }
-          False: { state: Back }
+          True:
+            state: Clubs5
+          False:
+            state: Back
   - type: Card
     name: "трефы 5"
 
@@ -98,8 +108,10 @@
     visuals:
       enum.FoldedVisuals.State:
         foldedLayer:
-          True: { state: Clubs6 }
-          False: { state: Back }
+          True:
+            state: Clubs6
+          False:
+            state: Back
   - type: Card
     name: "трефы 6"
 
@@ -112,8 +124,10 @@
     visuals:
       enum.FoldedVisuals.State:
         foldedLayer:
-          True: { state: Clubs7 }
-          False: { state: Back }
+          True:
+            state: Clubs7
+          False:
+            state: Back
   - type: Card
     name: "трефы 7"
 
@@ -126,8 +140,10 @@
     visuals:
       enum.FoldedVisuals.State:
         foldedLayer:
-          True: { state: Clubs8 }
-          False: { state: Back }
+          True:
+            state: Clubs8
+          False:
+            state: Back
   - type: Card
     name: "трефы 8"
 
@@ -140,8 +156,10 @@
     visuals:
       enum.FoldedVisuals.State:
         foldedLayer:
-          True: { state: Clubs9 }
-          False: { state: Back }
+          True:
+            state: Clubs9
+          False:
+            state: Back
   - type: Card
     name: "трефы 9"
 
@@ -154,8 +172,10 @@
     visuals:
       enum.FoldedVisuals.State:
         foldedLayer:
-          True: { state: Clubs10 }
-          False: { state: Back }
+          True:
+            state: Clubs10
+          False:
+            state: Back
   - type: Card
     name: "трефы 10"
 
@@ -168,8 +188,10 @@
     visuals:
       enum.FoldedVisuals.State:
         foldedLayer:
-          True: { state: Clubs11 }
-          False: { state: Back }
+          True:
+            state: Clubs11
+          False:
+            state: Back
   - type: Card
     name: "трефы король"
 
@@ -182,8 +204,10 @@
     visuals:
       enum.FoldedVisuals.State:
         foldedLayer:
-          True: { state: Clubs12 }
-          False: { state: Back }
+          True:
+            state: Clubs12
+          False:
+            state: Back
   - type: Card
     name: "трефы дама"
 
@@ -196,8 +220,10 @@
     visuals:
       enum.FoldedVisuals.State:
         foldedLayer:
-          True: { state: Clubs13 }
-          False: { state: Back }
+          True:
+            state: Clubs13
+          False:
+            state: Back
   - type: Card
     name: "трефы валет"
 
@@ -211,8 +237,10 @@
     visuals:
       enum.FoldedVisuals.State:
         foldedLayer:
-          True: { state: Diamonds1 }
-          False: { state: Back }
+          True:
+            state: Diamonds1
+          False:
+            state: Back
   - type: Card
     name: "бубны туз"
 
@@ -225,8 +253,10 @@
     visuals:
       enum.FoldedVisuals.State:
         foldedLayer:
-          True: { state: Diamonds2 }
-          False: { state: Back }
+          True:
+            state: Diamonds2
+          False:
+            state: Back
   - type: Card
     name: "бубны 2"
 
@@ -239,8 +269,10 @@
     visuals:
       enum.FoldedVisuals.State:
         foldedLayer:
-          True: { state: Diamonds3 }
-          False: { state: Back }
+          True:
+            state: Diamonds3
+          False:
+            state: Back
   - type: Card
     name: "бубны 3"
 
@@ -253,8 +285,10 @@
     visuals:
       enum.FoldedVisuals.State:
         foldedLayer:
-          True: { state: Diamonds4 }
-          False: { state: Back }
+          True:
+            state: Diamonds4
+          False:
+            state: Back
   - type: Card
     name: "бубны 4"
 
@@ -267,8 +301,10 @@
     visuals:
       enum.FoldedVisuals.State:
         foldedLayer:
-          True: { state: Diamonds5 }
-          False: { state: Back }
+          True:
+            state: Diamonds5
+          False:
+            state: Back
   - type: Card
     name: "бубны 5"
 
@@ -281,8 +317,10 @@
     visuals:
       enum.FoldedVisuals.State:
         foldedLayer:
-          True: { state: Diamonds6 }
-          False: { state: Back }
+          True:
+            state: Diamonds6
+          False:
+            state: Back
   - type: Card
     name: "бубны 6"
 
@@ -295,8 +333,10 @@
     visuals:
       enum.FoldedVisuals.State:
         foldedLayer:
-          True: { state: Diamonds7 }
-          False: { state: Back }
+          True:
+            state: Diamonds7
+          False:
+            state: Back
   - type: Card
     name: "бубны 7"
 
@@ -309,8 +349,10 @@
     visuals:
       enum.FoldedVisuals.State:
         foldedLayer:
-          True: { state: Diamonds8 }
-          False: { state: Back }
+          True:
+            state: Diamonds8
+          False:
+            state: Back
   - type: Card
     name: "бубны 8"
 
@@ -323,8 +365,10 @@
     visuals:
       enum.FoldedVisuals.State:
         foldedLayer:
-          True: { state: Diamonds9 }
-          False: { state: Back }
+          True:
+            state: Diamonds9
+          False:
+            state: Back
   - type: Card
     name: "бубны 9"
 
@@ -337,8 +381,10 @@
     visuals:
       enum.FoldedVisuals.State:
         foldedLayer:
-          True: { state: Diamonds10 }
-          False: { state: Back }
+          True:
+            state: Diamonds10
+          False:
+            state: Back
   - type: Card
     name: "бубны 10"
 
@@ -351,8 +397,10 @@
     visuals:
       enum.FoldedVisuals.State:
         foldedLayer:
-          True: { state: Diamonds11 }
-          False: { state: Back }
+          True:
+            state: Diamonds11
+          False:
+            state: Back
   - type: Card
     name: "бубны король"
 
@@ -365,8 +413,10 @@
     visuals:
       enum.FoldedVisuals.State:
         foldedLayer:
-          True: { state: Diamonds12 }
-          False: { state: Back }
+          True:
+            state: Diamonds12
+          False:
+            state: Back
   - type: Card
     name: "бубны дама"
 
@@ -379,8 +429,10 @@
     visuals:
       enum.FoldedVisuals.State:
         foldedLayer:
-          True: { state: Diamonds13 }
-          False: { state: Back }
+          True:
+            state: Diamonds13
+          False:
+            state: Back
   - type: Card
     name: "бубны валет"
 
@@ -394,8 +446,10 @@
     visuals:
       enum.FoldedVisuals.State:
         foldedLayer:
-          True: { state: Hearts1 }
-          False: { state: Back }
+          True:
+            state: Hearts1
+          False:
+            state: Back
   - type: Card
     name: "червы туз"
 
@@ -408,8 +462,10 @@
     visuals:
       enum.FoldedVisuals.State:
         foldedLayer:
-          True: { state: Hearts2 }
-          False: { state: Back }
+          True:
+            state: Hearts2
+          False:
+            state: Back
   - type: Card
     name: "червы 2"
 
@@ -422,8 +478,10 @@
     visuals:
       enum.FoldedVisuals.State:
         foldedLayer:
-          True: { state: Hearts3 }
-          False: { state: Back }
+          True:
+            state: Hearts3
+          False:
+            state: Back
   - type: Card
     name: "червы 3"
 
@@ -436,8 +494,10 @@
     visuals:
       enum.FoldedVisuals.State:
         foldedLayer:
-          True: { state: Hearts4 }
-          False: { state: Back }
+          True:
+            state: Hearts4
+          False:
+            state: Back
   - type: Card
     name: "червы 4"
 
@@ -450,8 +510,10 @@
     visuals:
       enum.FoldedVisuals.State:
         foldedLayer:
-          True: { state: Hearts5 }
-          False: { state: Back }
+          True:
+            state: Hearts5
+          False:
+            state: Back
   - type: Card
     name: "червы 5"
 
@@ -464,8 +526,10 @@
     visuals:
       enum.FoldedVisuals.State:
         foldedLayer:
-          True: { state: Hearts6 }
-          False: { state: Back }
+          True:
+            state: Hearts6
+          False:
+            state: Back
   - type: Card
     name: "червы 6"
 
@@ -478,8 +542,10 @@
     visuals:
       enum.FoldedVisuals.State:
         foldedLayer:
-          True: { state: Hearts7 }
-          False: { state: Back }
+          True:
+            state: Hearts7
+          False:
+            state: Back
   - type: Card
     name: "червы 7"
 
@@ -492,8 +558,10 @@
     visuals:
       enum.FoldedVisuals.State:
         foldedLayer:
-          True: { state: Hearts8 }
-          False: { state: Back }
+          True:
+            state: Hearts8
+          False:
+            state: Back
   - type: Card
     name: "червы 8"
 
@@ -506,8 +574,10 @@
     visuals:
       enum.FoldedVisuals.State:
         foldedLayer:
-          True: { state: Hearts9 }
-          False: { state: Back }
+          True:
+            state: Hearts9
+          False:
+            state: Back
   - type: Card
     name: "червы 9"
 
@@ -520,8 +590,10 @@
     visuals:
       enum.FoldedVisuals.State:
         foldedLayer:
-          True: { state: Hearts10 }
-          False: { state: Back }
+          True:
+            state: Hearts10
+          False:
+            state: Back
   - type: Card
     name: "червы 10"
 
@@ -534,8 +606,10 @@
     visuals:
       enum.FoldedVisuals.State:
         foldedLayer:
-          True: { state: Hearts11 }
-          False: { state: Back }
+          True:
+            state: Hearts11
+          False:
+            state: Back
   - type: Card
     name: "червы король"
 
@@ -548,8 +622,10 @@
     visuals:
       enum.FoldedVisuals.State:
         foldedLayer:
-          True: { state: Hearts12 }
-          False: { state: Back }
+          True:
+            state: Hearts12
+          False:
+            state: Back
   - type: Card
     name: "червы дама"
 
@@ -562,8 +638,10 @@
     visuals:
       enum.FoldedVisuals.State:
         foldedLayer:
-          True: { state: Hearts13 }
-          False: { state: Back }
+          True:
+            state: Hearts13
+          False:
+            state: Back
   - type: Card
     name: "червы валет"
 
@@ -576,8 +654,10 @@
     visuals:
       enum.FoldedVisuals.State:
         foldedLayer:
-          True: { state: Hearts14 }
-          False: { state: Back }
+          True:
+            state: Hearts14
+          False:
+            state: Back
   - type: Card
     name: "червы джокер"
 
@@ -591,8 +671,10 @@
     visuals:
       enum.FoldedVisuals.State:
         foldedLayer:
-          True: { state: Spades1 }
-          False: { state: Back }
+          True:
+            state: Spades1
+          False:
+            state: Back
   - type: Card
     name: "пики туз"
 
@@ -605,8 +687,10 @@
     visuals:
       enum.FoldedVisuals.State:
         foldedLayer:
-          True: { state: Spades2 }
-          False: { state: Back }
+          True:
+            state: Spades2
+          False:
+            state: Back
   - type: Card
     name: "пики 2"
 
@@ -619,8 +703,10 @@
     visuals:
       enum.FoldedVisuals.State:
         foldedLayer:
-          True: { state: Spades3 }
-          False: { state: Back }
+          True:
+            state: Spades3
+          False:
+            state: Back
   - type: Card
     name: "пики 3"
 
@@ -633,8 +719,10 @@
     visuals:
       enum.FoldedVisuals.State:
         foldedLayer:
-          True: { state: Spades4 }
-          False: { state: Back }
+          True:
+            state: Spades4
+          False:
+            state: Back
   - type: Card
     name: "пики 4"
 
@@ -647,8 +735,10 @@
     visuals:
       enum.FoldedVisuals.State:
         foldedLayer:
-          True: { state: Spades5 }
-          False: { state: Back }
+          True:
+            state: Spades5
+          False:
+            state: Back
   - type: Card
     name: "пики 5"
 
@@ -661,8 +751,10 @@
     visuals:
       enum.FoldedVisuals.State:
         foldedLayer:
-          True: { state: Spades6 }
-          False: { state: Back }
+          True:
+            state: Spades6
+          False:
+            state: Back
   - type: Card
     name: "пики 6"
 
@@ -675,8 +767,10 @@
     visuals:
       enum.FoldedVisuals.State:
         foldedLayer:
-          True: { state: Spades7 }
-          False: { state: Back }
+          True:
+            state: Spades7
+          False:
+            state: Back
   - type: Card
     name: "пики 7"
 
@@ -689,8 +783,10 @@
     visuals:
       enum.FoldedVisuals.State:
         foldedLayer:
-          True: { state: Spades8 }
-          False: { state: Back }
+          True:
+            state: Spades8
+          False:
+            state: Back
   - type: Card
     name: "пики 8"
 
@@ -703,8 +799,10 @@
     visuals:
       enum.FoldedVisuals.State:
         foldedLayer:
-          True: { state: Spades9 }
-          False: { state: Back }
+          True:
+            state: Spades9
+          False:
+            state: Back
   - type: Card
     name: "пики 9"
 
@@ -717,8 +815,10 @@
     visuals:
       enum.FoldedVisuals.State:
         foldedLayer:
-          True: { state: Spades10 }
-          False: { state: Back }
+          True:
+            state: Spades10
+          False:
+            state: Back
   - type: Card
     name: "пики 10"
 
@@ -731,8 +831,10 @@
     visuals:
       enum.FoldedVisuals.State:
         foldedLayer:
-          True: { state: Spades11 }
-          False: { state: Back }
+          True:
+            state: Spades11
+          False:
+            state: Back
   - type: Card
     name: "пики король"
 
@@ -745,8 +847,10 @@
     visuals:
       enum.FoldedVisuals.State:
         foldedLayer:
-          True: { state: Spades12 }
-          False: { state: Back }
+          True:
+            state: Spades12
+          False:
+            state: Back
   - type: Card
     name: "пики дама"
 
@@ -759,8 +863,10 @@
     visuals:
       enum.FoldedVisuals.State:
         foldedLayer:
-          True: { state: Spades13 }
-          False: { state: Back }
+          True:
+            state: Spades13
+          False:
+            state: Back
   - type: Card
     name: "пики валет"
 
@@ -773,8 +879,10 @@
     visuals:
       enum.FoldedVisuals.State:
         foldedLayer:
-          True: { state: Spades14 }
-          False: { state: Back }
+          True:
+            state: Spades14
+          False:
+            state: Back
   - type: Card
     name: "пики джокер"
 
@@ -1057,12 +1165,16 @@
     visuals:
       enum.ItemCabinetVisuals.ContainsItem:
         enum.ItemCabinetVisuals.Layer:
-          True: { visible: true }
-          False: { visible: false }
+          True:
+            visible: true
+          False:
+            visible: false
       enum.OpenableVisuals.Opened:
         enum.OpenableVisuals.Layer:
-          True: { state: open_ussp }
-          False: { state: closed_ussp }
+          True:
+            state: open_ussp
+          False:
+            state: closed_ussp
   - type: Sprite
     sprite: _Stories/Objects/Fun/card.rsi
     layers:

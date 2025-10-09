@@ -14,7 +14,7 @@
   - type: InstantAction    
     event: !type:InstantForceUserActionEvent
       volume: 100
-      event: !type:CreateProtectiveBubbleEvent {}
+      event: !type:CreateProtectiveBubbleEvent
 
 - type: entity
   parent: BaseAction

@@ -13,7 +13,7 @@
       state: exit
     itemIconStyle: NoItem
   - type: InstantAction
-    event: !type:TargettingTeleporterSetExitPortalEvent {}
+    event: !type:TargettingTeleporterSetExitPortalEvent
 
 - type: entity
   parent: BaseToggleAction
@@ -30,4 +30,4 @@
       state: red
     itemIconStyle: NoItem
   - type: InstantAction
-    event: !type:TargettingTeleporterExitEvent {}
+    event: !type:TargettingTeleporterExitEvent

@@ -1,13 +1,17 @@
 - type: stack
   id: SheetPrinter
   name: stack-paper
-  icon: { sprite: Objects/Misc/bureaucracy.rsi, state: paper }
+  icon:
+    sprite: Objects/Misc/bureaucracy.rsi
+    state: paper
   spawn: SheetPrinter1
   maxCount: 30
 
 - type: stack
   id: InkPrinter
   name: stack-ink-printer
-  icon: { sprite: _Stories/Objects/Misc/bureaucracy.rsi, state: ink }
+  icon:
+    sprite: _Stories/Objects/Misc/bureaucracy.rsi
+    state: ink
   spawn: InkPrinter1
   maxCount: 30

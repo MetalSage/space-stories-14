@@ -13,7 +13,7 @@
   - 10    # n2o
   - 0     # frezon
   effects:
-  - !type:BZFormationReaction {}
+  - !type:BZFormationReaction
 
 - type: gasReaction
   id: STHealiumProduction
@@ -30,7 +30,7 @@
   - 5     # frezon
   - 5     # bz
   effects:
-  - !type:HealiumProductionReaction {}
+  - !type:HealiumProductionReaction
 
 - type: gasReaction
   id: STNitrylFormation
@@ -49,7 +49,7 @@
   - 5     # bz
   - 2     # healium
   effects:
-  - !type:NitrylFormationReaction {}
+  - !type:NitrylFormationReaction
 
 - type: gasReaction
   id: STPluoxiumFormation
@@ -66,4 +66,4 @@
   - 0     # n2o
   - 0     # frezon
   effects:
-  - !type:PluoxiumFormationReaction {}
+  - !type:PluoxiumFormationReaction

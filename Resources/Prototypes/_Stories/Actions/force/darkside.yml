@@ -50,7 +50,9 @@
   - type: Action
     useDelay: 5
     itemIconStyle: BigAction
-    icon: { sprite: _Stories/Actions/force.rsi, state: inquisitor }
+    icon:
+      sprite: _Stories/Actions/force.rsi
+      state: inquisitor
   - type: InstantAction
     event: !type:DoAfterUserEvent
       hidden: false
@@ -70,7 +72,9 @@
   components:
   - type: Action
     useDelay: 5
-    icon: { sprite: _Stories/Actions/force.rsi, state: stopbullets }
+    icon:
+      sprite: _Stories/Actions/force.rsi
+      state: stopbullets
     itemIconStyle: BigAction
   - type: InstantAction
     event: !type:InstantForceUserActionEvent
@@ -87,7 +91,9 @@
 #   components:
 #   - type: InstantAction
 #     useDelay: 180
-#     icon: { sprite: _Stories/Actions/force.rsi, state: stopbullets }
+#     icon:
+#       sprite: _Stories/Actions/force.rsi
+#       state: stopbullets
 #     event: !type:InstantForceUserActionEvent
 #       volume: 200
 #       event: !type:RejuvenateActionEvent
@@ -101,7 +107,9 @@
   - type: Action
     useDelay: 30
     itemIconStyle: BigAction    
-    icon: { sprite: _Stories/Actions/force.rsi, state: pulse }
+    icon:
+      sprite: _Stories/Actions/force.rsi
+      state: pulse
   - type: InstantAction
     event: !type:InstantForceUserActionEvent
       volume: 100
@@ -219,6 +227,8 @@
   description: Перестаньте бегать и сразитесь!
   components:
   - type: Action
-    icon: { sprite: _Stories/Actions/force.rsi, state: inquisitor }
+    icon:
+      sprite: _Stories/Actions/force.rsi
+      state: inquisitor
   - type: InstantAction
     event: !type:RevertPolymorphActionEvent

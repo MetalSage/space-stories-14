@@ -6,7 +6,9 @@
   categories: [ HideSpawnMenu ]
   components:
   - type: Action
-    icon: { sprite: _Stories/Actions/force.rsi, state: skill }
+    icon:
+      sprite: _Stories/Actions/force.rsi
+      state: skill
   - type: InstantAction
     event: !type:ForceShopActionEvent
 
@@ -24,7 +26,7 @@
       state: stopshield
     itemIconStyle: NoItem
   - type: InstantAction    
-    event: !type:StopProtectiveBubbleEvent {}
+    event: !type:StopProtectiveBubbleEvent
 
 - type: entity
   parent: BaseAction
@@ -35,12 +37,14 @@
   components:
   - type: Action
     useDelay: 3
-    icon: { sprite: _Stories/Actions/force.rsi, state: equip }
+    icon: 
+      sprite: _Stories/Actions/force.rsi
+      state: equip
     itemIconStyle: NoItem
   - type: InstantAction    
     event: !type:InstantForceUserActionEvent
       volume: 50
-      event: !type:RecallEquipmentsEvent {}
+      event: !type:RecallEquipmentsEvent
 
 - type: entity
   parent: BaseAction
@@ -51,7 +55,9 @@
   components:
   - type: Action
     useDelay: 5
-    icon: { sprite: _Stories/Actions/force.rsi, state: lookup }
+    icon: 
+      sprite: _Stories/Actions/force.rsi
+      state: lookup
     itemIconStyle: BigAction
   - type: InstantAction
     event: !type:InstantForceUserActionEvent
@@ -67,12 +73,14 @@
   components:
   - type: Action
     useDelay: 3
-    icon: { sprite: _Stories/Actions/force.rsi, state: sword }
+    icon: 
+      sprite: _Stories/Actions/force.rsi
+      state: sword
     itemIconStyle: NoItem
   - type: InstantAction    
     event: !type:InstantForceUserActionEvent
       volume: 25
-      event: !type:RecallLightsaberEvent {}
+      event: !type:RecallLightsaberEvent
 
 - type: entity
   parent: BaseAction
@@ -83,12 +91,14 @@
   components:
   - type: Action
     useDelay: 1
-    icon: _Stories/Actions/force.rsi/telekines.png
+    icon: 
+      sprite: _Stories/Actions/force.rsi
+      state: telekines
     itemIconStyle: NoItem
   - type: InstantAction    
     event: !type:InstantForceUserActionEvent
       volume: 5
-      event: !type:HandTetherGunEvent {}
+      event: !type:HandTetherGunEvent
 
 - type: entity
   parent: BaseAction
@@ -106,7 +116,7 @@
   - type: InstantAction    
     event: !type:InstantForceUserActionEvent
       volume: 25
-      event: !type:FlashAreaEvent {}
+      event: !type:FlashAreaEvent
 
 - type: entity
   parent: BaseAction

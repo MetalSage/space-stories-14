@@ -6,11 +6,13 @@
   categories: [ HideSpawnMenu ]
   components:
   - type: Action
-    icon: { sprite: _Stories/Actions/shadowling.rsi, state: hatch }
+    icon: 
+      sprite: _Stories/Actions/shadowling.rsi
+      state: hatch
     itemIconStyle: NoItem
     priority: -11
   - type: InstantAction
-    event: !type:ShadowlingHatchEvent {}
+    event: !type:ShadowlingHatchEvent
 
 - type: entity
   parent: BaseAction
@@ -20,7 +22,9 @@
   categories: [ HideSpawnMenu ]
   components:
   - type: Action
-    icon: { sprite: _Stories/Actions/shadowling.rsi, state: enthrall }
+    icon: 
+      sprite: _Stories/Actions/shadowling.rsi
+      state: enthrall
     itemIconStyle: NoItem
     priority: -11
   - type: TargetAction
@@ -31,7 +35,7 @@
       delay: 5
       breakOnDamage: true
       breakOnMove: true
-      event: !type:ShadowlingEnthrallEvent {}
+      event: !type:ShadowlingEnthrallEvent
 
 - type: entity
   parent: BaseAction
@@ -42,11 +46,13 @@
   components:
   - type: Action
     useDelay: 30
-    icon: { sprite: _Stories/Actions/shadowling.rsi, state: glare }
+    icon:
+      sprite: _Stories/Actions/shadowling.rsi
+      state: glare
     itemIconStyle: NoItem
     priority: -11
   - type: EntityTargetAction
-    event: !type:ShadowlingGlareEvent {}
+    event: !type:ShadowlingGlareEvent
   - type: TargetAction
     range: 10
 
@@ -59,11 +65,13 @@
   components:
   - type: Action
     useDelay: 10
-    icon: { sprite: _Stories/Actions/shadowling.rsi, state: veil }
+    icon:
+      sprite: _Stories/Actions/shadowling.rsi
+      state: veil
     itemIconStyle: NoItem
     priority: -11
   - type: InstantAction
-    event: !type:ShadowlingVeilEvent {}
+    event: !type:ShadowlingVeilEvent
 
 - type: entity
   parent: BaseAction
@@ -74,7 +82,9 @@
   components:
   - type: Action
     useDelay: 45
-    icon: { sprite: _Stories/Actions/shadowling.rsi, state: shadow_walk }
+    icon:
+      sprite: _Stories/Actions/shadowling.rsi
+      state: shadow_walk
     itemIconStyle: NoItem
     checkCanInteract: false
     priority: -11
@@ -91,7 +101,9 @@
   components:
   - type: Action
     useDelay: 90
-    icon: { sprite: _Stories/Actions/shadowling.rsi, state: icy_veins }
+    icon:
+      sprite: _Stories/Actions/shadowling.rsi
+      state: icy_veins
     itemIconStyle: NoItem
     priority: -11
   - type: EntityTargetAction
@@ -121,11 +133,13 @@
   components:
   - type: Action
     useDelay: 10
-    icon: { sprite: _Stories/Actions/shadowling.rsi, state: collective_mind }
+    icon:
+      sprite: _Stories/Actions/shadowling.rsi
+      state: collective_mind
     itemIconStyle: NoItem
     priority: -11
   - type: InstantAction
-    event: !type:ShadowlingCollectiveMindEvent {}
+    event: !type:ShadowlingCollectiveMindEvent
 
 - type: entity
   parent: BaseAction
@@ -136,11 +150,13 @@
   components:
   - type: Action
     useDelay: 120
-    icon: { sprite: _Stories/Actions/shadowling.rsi, state: rapid_re_hatch }
+    icon:
+      sprite: _Stories/Actions/shadowling.rsi
+      state: rapid_re_hatch
     itemIconStyle: NoItem
     priority: -11
   - type: InstantAction
-    event: !type:ShadowlingRapidReHatchEvent {}
+    event: !type:ShadowlingRapidReHatchEvent
 
 - type: entity
   parent: BaseAction
@@ -151,11 +167,13 @@
   components:
   - type: Action
     useDelay: 90
-    icon: { sprite: _Stories/Actions/shadowling.rsi, state: sonic_screech }
+    icon:
+      sprite: _Stories/Actions/shadowling.rsi
+      state: sonic_screech
     itemIconStyle: NoItem
     priority: -11
   - type: InstantAction
-    event: !type:ShadowlingSonicScreechEvent {}
+    event: !type:ShadowlingSonicScreechEvent
 
 - type: entity
   parent: BaseAction
@@ -166,11 +184,13 @@
   components:
   - type: Action
     useDelay: 60
-    icon: { sprite: _Stories/Actions/shadowling.rsi, state: blindness_smoke }
+    icon:
+      sprite: _Stories/Actions/shadowling.rsi
+      state: blindness_smoke
     itemIconStyle: NoItem
     priority: -11
   - type: InstantAction
-    event: !type:ShadowlingBlindnessSmokeEvent {}
+    event: !type:ShadowlingBlindnessSmokeEvent
 
 - type: entity
   parent: BaseAction
@@ -181,12 +201,14 @@
   components:
   - type: Action
     useDelay: 90
-    icon: { sprite: _Stories/Actions/shadowling.rsi, state: black_recuperation }
+    icon:
+      sprite: _Stories/Actions/shadowling.rsi
+      state: black_recuperation
     itemIconStyle: NoItem
     priority: -11
   - type: TargetAction
   - type: EntityTargetAction
-    event: !type:ShadowlingBlackRecuperationEvent {}
+    event: !type:ShadowlingBlackRecuperationEvent
 
 - type: entity
   parent: BaseAction
@@ -196,11 +218,13 @@
   categories: [ HideSpawnMenu ]
   components:
   - type: Action
-    icon: { sprite: _Stories/Actions/shadowling.rsi, state: ascendance }
+    icon:
+      sprite: _Stories/Actions/shadowling.rsi
+      state: ascendance
     itemIconStyle: NoItem
     priority: -11
   - type: InstantAction
-    event: !type:ShadowlingAscendanceEvent {}
+    event: !type:ShadowlingAscendanceEvent
 
 - type: entity
   parent: BaseAction
@@ -211,11 +235,13 @@
   components:
   - type: Action
     useDelay: 60
-    icon: { sprite: _Stories/Actions/shadowling.rsi, state: hypnosis }
+    icon:
+      sprite: _Stories/Actions/shadowling.rsi
+      state: hypnosis
     itemIconStyle: NoItem
     priority: -11
   - type: EntityTargetAction
-    event: !type:ShadowlingEnthrallEvent {}
+    event: !type:ShadowlingEnthrallEvent
   - type: TargetAction
     range: 10
 
@@ -228,11 +254,13 @@
   components:
   - type: Action
     useDelay: 15
-    icon: { sprite: _Stories/Actions/shadowling.rsi, state: annihilate }
+    icon:
+      sprite: _Stories/Actions/shadowling.rsi
+      state: annihilate
     itemIconStyle: NoItem
     priority: -11
   - type: EntityTargetAction
-    event: !type:ShadowlingAnnihilateEvent {}
+    event: !type:ShadowlingAnnihilateEvent
   - type: TargetAction
     range: 10
 
@@ -244,7 +272,9 @@
   categories: [ HideSpawnMenu ]
   components:
   - type: Action
-    icon: { sprite: _Stories/Actions/shadowling.rsi, state: plane_shift }
+    icon:
+      sprite: _Stories/Actions/shadowling.rsi
+      state: plane_shift
     itemIconStyle: NoItem
     priority: -11
     checkCanInteract: false
@@ -261,8 +291,10 @@
   components:
   - type: Action
     useDelay: 30
-    icon: { sprite: _Stories/Actions/shadowling.rsi, state: lightning_storm }
+    icon:
+      sprite: _Stories/Actions/shadowling.rsi
+      state: lightning_storm
     itemIconStyle: NoItem
     priority: -11
   - type: InstantAction
-    event: !type:ShadowlingLightningStormEvent {}
+    event: !type:ShadowlingLightningStormEvent

@@ -31,7 +31,7 @@
     - neck
   - type: ContainerContainer
     containers:
-      toggleable-clothing: !type:ContainerSlot {}
+      toggleable-clothing: !type:ContainerSlot
   - type: Sprite
     sprite: _Stories/Clothing/Neck/Cloaks/cloak_inquisitor.rsi
 
@@ -63,7 +63,7 @@
     - neck
   - type: ContainerContainer
     containers:
-      toggleable-clothing: !type:ContainerSlot {}
+      toggleable-clothing: !type:ContainerSlot
   - type: Sprite
     sprite: _Stories/Clothing/Neck/Cloaks/cloak_kylo.rsi
 
