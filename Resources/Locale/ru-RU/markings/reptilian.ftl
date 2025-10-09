@@ -1,4 +1,4 @@
-marking-LizardFrillsShort-frills_short = Рептилия, воротник (Короткий)
+﻿marking-LizardFrillsShort-frills_short = Рептилия, воротник (Короткий)
 marking-LizardFrillsShort = Рептилия, воротник (Короткий)
 marking-LizardFrillsSimple-frills_simple = Рептилия, воротник (Простой)
 marking-LizardFrillsSimple = Рептилия, воротник (Простой)
@@ -79,3 +79,7 @@ marking-LizardChestFin = Рептилия, плавник
 marking-LizardSnoutSplotch = Рептилия, морда лица (Пятно)
 marking-LizardSnoutSplotch-snout_splotch_primary = Морда
 marking-LizardSnoutSplotch-snout_splotch_secondary = Нос
+marking-LizardSnoutVisageSharp = Рептилия, маска (Заострённая)
+marking-LizardSnoutVisageSharp-visage_sharp = Рептилия, маска (Заострённая)
+marking-LizardSnoutVisageRound = Рептилия, маска (Круглая)
+marking-LizardSnoutVisageRound-visage_round = Рептилия, маска (Круглая)

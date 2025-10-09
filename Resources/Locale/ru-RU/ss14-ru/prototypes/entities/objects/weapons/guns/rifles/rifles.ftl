@@ -9,6 +9,11 @@ ent-WeaponRifleM90GrenadeLauncher = М-90gl
 ent-WeaponRifleLecter = Лектер
     .desc = Первоклассная армейская штурмовая винтовка. Использует патроны калибра .20 винтовочный.
     .suffix = Автомат
+ent-WeaponRifleLecterXL8 = XL8
+    .desc =
+        The Experimental Lecter 8
+        An unreasonably expensive military grade assault rifle with integrated optic. 
+        Uses .20 rifle ammo.
 ent-WeaponRifleEstoc = марксманская винтовка Эсток
     .desc = Марксманская винтовка, предпочитаемая для перестрелок на средних и дальних дистанциях. Использует патроны калибра .20 винтовочный.
 ent-WeaponRifleFoam = Астро-Ас Сила Пенопласта
