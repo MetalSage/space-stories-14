@@ -151,6 +151,7 @@ public sealed class JobRequirementsManager : ISharedPlaytimeManager
         if (!_cfg.GetCVar(CCVars.GameRoleTimers) ||
             sponsorData?.RoleTimeBypass == true)
         {
+            reason = null;
             return true;
         }
 
@@ -230,7 +231,7 @@ public sealed class JobRequirementsManager : ISharedPlaytimeManager
 
     public bool CheckWhitelist(AntagPrototype antag, [NotNullWhen(false)] out FormattedMessage? reason)
     {
-        reason = default;
+        reason = null;
 
         // TODO: Implement antag whitelisting.
 

@@ -1,11 +1,12 @@
 using System.Diagnostics.CodeAnalysis;
 using System.Linq;
-using Content.Server.Radio.Components;
 using Content.Shared._Stories.Conversion;
 using Content.Shared.Mind;
+using Content.Shared.Radio.Components;
 using Content.Shared.Roles;
 using Content.Shared.Roles.Components;
 using Robust.Shared.Prototypes;
+using Content.Shared.Radio;
 
 namespace Content.Server._Stories.Conversion;
 
@@ -89,9 +90,10 @@ public sealed partial class ConversionSystem
 
         if (proto.Channels.Count > 0)
         {
+            var channelProtoIds = proto.Channels.Select(id => new ProtoId<RadioChannelPrototype>(id));
             EnsureComp<IntrinsicRadioReceiverComponent>(target);
-            EnsureComp<IntrinsicRadioTransmitterComponent>(target).Channels.ExceptWith(proto.Channels);
-            EnsureComp<ActiveRadioComponent>(target).Channels.ExceptWith(proto.Channels);
+            EnsureComp<IntrinsicRadioTransmitterComponent>(target).Channels.ExceptWith(channelProtoIds);
+            EnsureComp<ActiveRadioComponent>(target).Channels.ExceptWith(channelProtoIds);
         }
 
         component.ActiveConversions.Remove(proto.ID);
@@ -139,9 +141,10 @@ public sealed partial class ConversionSystem
 
         if (proto.Channels.Count > 0)
         {
+            var channelProtoIds = proto.Channels.Select(id => new ProtoId<RadioChannelPrototype>(id));
             EnsureComp<IntrinsicRadioReceiverComponent>(target);
-            EnsureComp<IntrinsicRadioTransmitterComponent>(target).Channels.UnionWith(proto.Channels);
-            EnsureComp<ActiveRadioComponent>(target).Channels.UnionWith(proto.Channels);
+            EnsureComp<IntrinsicRadioTransmitterComponent>(target).Channels.UnionWith(channelProtoIds);
+            EnsureComp<ActiveRadioComponent>(target).Channels.UnionWith(channelProtoIds);
         }
 
         var conversion = new ConversionData()

@@ -203,8 +203,7 @@ public sealed class PlayTimeTrackingSystem : EntitySystem
     {
         _sponsors.TryGetInfo(player.UserId, out var sponsorData);
 
-        if (!_prototypes.TryIndex<JobPrototype>(role, out var job) ||
-            !_cfg.GetCVar(CCVars.GameRoleTimers) ||
+        if (!_cfg.GetCVar(CCVars.GameRoleTimers) ||
             sponsorData?.RoleTimeBypass == true)
             return true;
 
