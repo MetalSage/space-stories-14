@@ -143,3 +143,16 @@
       whitelist:
         tags:
           - NukeOpsUplink
+
+- type: listing
+  id: UplinkClothingHeadHelmetSwatSyndicate
+  name: uplink-clothing-head-helemet-swat-syndicat-name
+  description: uplink-clothing-head-helemet-swat-syndicat-desc
+  productEntity: ClothingHeadHelmetSwatSyndicate
+  discountCategory: rareDiscounts
+  discountDownTo:
+    Telecrystal: 1
+  cost:
+    Telecrystal: 2
+  categories:
+  - UplinkWearables
