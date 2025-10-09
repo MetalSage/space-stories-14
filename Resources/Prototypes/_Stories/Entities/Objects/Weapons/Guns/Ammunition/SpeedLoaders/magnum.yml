@@ -5,7 +5,7 @@
   description: Designed to quickly refill an empty revolver, it fits up to six rounds. Intended to hold anti-demon silver ammunition.
   components:
   - type: BallisticAmmoProvider
-    proto: CartridgeMagnumSilver
+    proto: STCartridgeMagnumSilver
   - type: Sprite
     sprite: _Stories/Objects/Weapons/Guns/Ammunition/SpeedLoaders/magnum_speed_loader.rsi
     layers:

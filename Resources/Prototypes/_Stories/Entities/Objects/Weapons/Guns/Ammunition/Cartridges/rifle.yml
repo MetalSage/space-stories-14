@@ -4,7 +4,7 @@
   parent: BaseCartridgeRifle
   components:
   - type: CartridgeAmmo
-    proto: BulletRifleSilver
+    proto: STBulletRifleSilver
   - type: Sprite
     sprite: _Stories/Objects/Weapons/Guns/Ammunition/Casings/ammo-silver.rsi
     layers:

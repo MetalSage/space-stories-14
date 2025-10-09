@@ -5,7 +5,7 @@
   description: A cardboard box of .45 magnum rounds. Intended to hold anti-demon silver ammunition.
   components:
   - type: BallisticAmmoProvider
-    proto: CartridgeMagnumSilver
+    proto: STCartridgeMagnumSilver
   - type: Sprite
     sprite: _Stories/Objects/Weapons/Guns/Ammunition/Boxes/magnum.rsi
     layers:

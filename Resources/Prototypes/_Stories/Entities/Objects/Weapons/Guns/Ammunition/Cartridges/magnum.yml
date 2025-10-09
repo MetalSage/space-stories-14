@@ -5,7 +5,7 @@
   description: Heavy magnum cartridge mostly used by revolvers. Silver ammunition inflicts irreparable damage on demonic minions, making it an ideal weapon against the undead.
   components:
   - type: CartridgeAmmo
-    proto: BulletMagnumSilver
+    proto: STBulletMagnumSilver
   - type: Sprite
     sprite: _Stories/Objects/Weapons/Guns/Ammunition/Casings/ammo-silver.rsi
     layers:

@@ -4,7 +4,7 @@
   parent: BaseMagazineShotgun
   components:
   - type: BallisticAmmoProvider
-    proto: ShellShotgunSilver
+    proto: STShellShotgunSilver
   - type: Sprite
     sprite: _Stories/Objects/Weapons/Guns/Ammunition/Magazines/m12.rsi
     layers:

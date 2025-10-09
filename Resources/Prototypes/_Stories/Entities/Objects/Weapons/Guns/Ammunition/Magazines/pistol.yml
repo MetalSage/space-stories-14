@@ -5,7 +5,7 @@
   description: 10-round single-stack magazine for pistols. Intended to hold anti-demon silver ammunition.
   components:
   - type: BallisticAmmoProvider
-    proto: CartridgePistolSilver
+    proto: STCartridgePistolSilver
   - type: Sprite
     sprite: _Stories/Objects/Weapons/Guns/Ammunition/Magazines/pistol.rsi
     layers:
@@ -33,7 +33,7 @@
   description: 30-round double-stack magazine for submachine guns. Intended to hold anti-demon silver ammunition.
   components:
   - type: BallisticAmmoProvider
-    proto: CartridgePistolSilver
+    proto: STCartridgePistolSilver
     whitelist:
       tags:
         - CartridgePistol

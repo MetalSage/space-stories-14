@@ -4,7 +4,7 @@
   name: ammunition box (.20 rifle silver)
   components:
   - type: BallisticAmmoProvider
-    proto: CartridgeRifleSilver
+    proto: STCartridgeRifleSilver
   - type: Sprite
     sprite: _Stories/Objects/Weapons/Guns/Ammunition/Boxes/rifle.rsi
     layers:

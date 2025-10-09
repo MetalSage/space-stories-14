@@ -9,7 +9,6 @@
       - state: silver
         map: [ "enum.AmmoVisualLayers.Base" ]
   - type: CartridgeAmmo
-    proto: PelletShotgunSilver
+    proto: STPelletShotgunSilver
   - type: SpentAmmoVisuals
     state: "silver"
-    

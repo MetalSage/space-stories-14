@@ -4,7 +4,7 @@
   parent: MagazineRifle
   components:
   - type: BallisticAmmoProvider
-    proto: CartridgeRifleSilver
+    proto: STCartridgeRifleSilver
   - type: Sprite
     sprite: _Stories/Objects/Weapons/Guns/Ammunition/Magazines/rifle_mag.rsi
     layers:

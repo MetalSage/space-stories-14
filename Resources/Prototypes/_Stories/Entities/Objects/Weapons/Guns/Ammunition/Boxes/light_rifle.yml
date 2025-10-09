@@ -5,7 +5,7 @@
   description: A cardboard box of .30 rifle rounds. Intended to hold anti-demon silver ammunition.
   components:
   - type: BallisticAmmoProvider
-    proto: CartridgeLightRifleSilver
+    proto: STCartridgeLightRifleSilver
   - type: Sprite
     sprite: _Stories/Objects/Weapons/Guns/Ammunition/Boxes/light_rifle.rsi
     layers:

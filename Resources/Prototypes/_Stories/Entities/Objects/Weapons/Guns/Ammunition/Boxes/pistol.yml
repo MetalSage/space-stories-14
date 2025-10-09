@@ -5,7 +5,7 @@
   description: A cardboard box of .35 auto rounds. Intended to hold anti-demon silver ammunition.
   components:
   - type: BallisticAmmoProvider
-    proto: CartridgePistolSilver
+    proto: STCartridgePistolSilver
   - type: Sprite
     sprite: _Stories/Objects/Weapons/Guns/Ammunition/Boxes/pistol.rsi
     layers:

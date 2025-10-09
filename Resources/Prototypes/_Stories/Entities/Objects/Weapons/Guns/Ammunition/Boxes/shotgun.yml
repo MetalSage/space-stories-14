@@ -4,7 +4,7 @@
   id: STBoxShotgunSilver
   components:
   - type: BallisticAmmoProvider
-    proto: ShellShotgunSilver
+    proto: STShellShotgunSilver
   - type: MagazineVisuals
     magState: mag-silver
     steps: 5
