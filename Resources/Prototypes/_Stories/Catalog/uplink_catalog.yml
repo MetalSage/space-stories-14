@@ -146,8 +146,8 @@
 
 - type: listing
   id: UplinkClothingHeadHelmetSwatSyndicate
-  name: uplink-clothing-head-helemet-swat-syndicat-name
-  description: uplink-clothing-head-helemet-swat-syndicat-desc
+  name: uplink-clothing-head-helmet-swat-syndicat-name
+  description: uplink-clothing-head-helmet-swat-syndicat-desc
   productEntity: ClothingHeadHelmetSwatSyndicate
   discountCategory: rareDiscounts
   discountDownTo:
