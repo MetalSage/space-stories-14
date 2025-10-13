@@ -1213,6 +1213,7 @@
   - RoboticistJumpskirt
   - SeniorResearcherJumpsuit
   - SeniorResearcherJumpskirt
+  - STScientistSweaterJumpsuit
 
 - type: loadoutGroup
   id: ScientistBackpack
