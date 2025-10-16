@@ -11,7 +11,7 @@
       sprite: _Stories/Clothing/Head/Hardsuits/medicsp.rsi
 
 - type: entity
-  parent: ClothingHeadHelmetHardsuitEngineering
+  parent: ClothingHeadHelmetHardsuitMedical
   id: PRISONClothingHeadHelmetHardsuitEngi
   categories: [ HideSpawnMenu ]
   name: шлем скафандра инженера тюрьмы
