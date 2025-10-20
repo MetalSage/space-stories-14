@@ -1,14 +1,12 @@
 - type: gameMap
   id: StoriesBox
-  mapName: '[КТ] Box Station'
+  mapName: 'Box Station'
   mapPath: /Maps/_Stories/box.yml
   minPlayers: 50
   stations:
     Boxstation:
       stationProto: StandardNanotrasenStation
       components:
-        - type: StationPrison
-          gameMap: StoriesPrison
         - type: StationNameSetup
           mapNameTemplate: '{0} Box Station {1}'
           nameGenerator:
