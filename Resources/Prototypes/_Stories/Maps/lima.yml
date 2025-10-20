@@ -1,14 +1,12 @@
 - type: gameMap
   id: StoriesLima
-  mapName: '[КТ] Lima Station'
+  mapName: 'Lima Station'
   mapPath: /Maps/_Stories/lima.yml
   minPlayers: 50
   stations:
     Lima:
       stationProto: StandardNanotrasenStation
       components:
-        - type: StationPrison
-          gameMap: StoriesPrison
         - type: StationNameSetup
           mapNameTemplate: '{0} Lima Station {1}'
           nameGenerator:
