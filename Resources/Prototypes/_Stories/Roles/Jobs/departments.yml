@@ -1,14 +1,14 @@
-# - type: department
-#   id: Prison
-#   name: department-Prison
-#   description: department-Cargo-description
-#   color: "#e99844"
-#   roles:
-#   - PRISONHeadOfPrison
-#   - PRISONEngineer
-#   - PRISONMedic
-#   - PRISONOfficer
-#   - PRISONPrisoner
+- type: department
+  id: Prison
+  name: department-Prison
+  description: department-Cargo-description
+  color: "#e99844"
+  roles:
+  - PRISONHeadOfPrison
+  - PRISONEngineer
+  - PRISONMedic
+  - PRISONOfficer
+  - PRISONPrisoner
 
 - type: department
   id: STJuridical
