@@ -7,7 +7,7 @@
   guides: [ Zombies ]
   requirements:
   - !type:OverallPlaytimeRequirement
-    time: 36000 # 10h Stories-RoleTime
+    time: 10h # Stories-RoleTime
 
 - type: antag
   id: Zombie
