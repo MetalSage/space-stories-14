@@ -80,7 +80,10 @@ namespace Content.Server.Entry
         [Dependency] private readonly ServerApi _serverApi = default!;
         [Dependency] private readonly ServerInfoManager _serverInfo = default!;
         [Dependency] private readonly ServerUpdateManager _updateManager = default!;
-
+        [Dependency] private readonly PartnersManager _sponsorsManager = default!; // Corvax-Sponsors
+        [Dependency] private readonly JoinQueueManager _queueManager = default!; // Corvax-Queue
+        [Dependency] private readonly DiscordAuthManager _discordAuthManager = default!; // Corvax-DiscordAuth
+        [Dependency] private readonly TTSManager _ttsManager = default!;  // Stories-TTS
         public override void PreInit()
         {
             ServerContentIoC.Register(Dependencies);
@@ -134,10 +137,10 @@ namespace Content.Server.Entry
             _watchlistWebhookManager.Initialize();
             _job.Initialize();
             _rateLimit.Initialize();
-            _discordauthmanager.Initialize(); // Corvax-DiscordAuth
-            _partnersmanager.Initialize(); // Corvax-Sponsors
-            _joinqueuemanager.Initialize(); // Corvax-Queue
-            _ttsmanager.Initialize(); // Stories-TTS
+            _discordAuthManager.Initialize(); // Corvax-DiscordAuth
+            _sponsorsManager.Initialize(); // Corvax-Sponsors
+            _queueManager.Initialize(); // Corvax-Queue
+            _ttsManager.Initialize(); // Stories-TTS
         }
 
         public override void PostInit()

@@ -34,7 +34,7 @@ public sealed partial class EmpActionEvent : InstantActionEvent
     /// How long it disables targets in seconds
     /// </summary>
     [DataField("disableDuration"), ViewVariables(VVAccess.ReadWrite)]
-    public float DisableDuration = 60f;
+    public TimeSpan DisableDuration = TimeSpan.FromSeconds(60);
 }
 public sealed partial class FreedomActionEvent : InstantActionEvent { }
 public sealed partial class RejuvenateActionEvent : InstantActionEvent { }
