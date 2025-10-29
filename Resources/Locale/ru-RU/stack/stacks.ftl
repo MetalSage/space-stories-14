@@ -1,4 +1,4 @@
-﻿stack-steel =
+stack-steel =
     { $amount ->
         [1] лист
         [few] листа
@@ -128,6 +128,11 @@ stack-hv-cable =
         [1] кабель
         [few] кабеля
        *[other] кабелей
+    }
+stack-explosive-cord =
+    { $amount ->
+        [1] взрывной кабель
+       *[other] взрывных кабелей
     }
 stack-wood-plank =
     { $amount ->
