@@ -83,6 +83,7 @@
   - ClothingUniformJumpskirtScientist
   - ClothingUniformJumpsuitSeniorResearcher
   - ClothingUniformJumpskirtSeniorResearcher
+  - STClothingUniformJumpsuitScientistSweaterRecipe
 
 - type: latheRecipePack
   id: ClothingSecurity
