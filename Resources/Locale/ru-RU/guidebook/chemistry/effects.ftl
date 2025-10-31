@@ -110,6 +110,47 @@ reagent-effect-guidebook-status-effect =
                *[other] удаляют
             } { NATURALFIXED($time, 3) } от { LOC($key) }
     }
+reagent-effect-guidebook-status-effect-delay =
+    { $type ->
+        [add]
+            { $chance ->
+                [1] Вызывает
+               *[other] вызывают
+            } { LOC($key) } минимум на { NATURALFIXED($time, 3) } { MANY("second", $time) }, эффект не накапливается
+       *[set]
+            { $chance ->
+                [1] Вызывает
+               *[other] вызывают
+            } { LOC($key) } минимум на { NATURALFIXED($time, 3) } { MANY("second", $time) }, эффект не накапливается
+        [remove]
+            { $chance ->
+                [1] Удаляет
+               *[other] удаляют
+            } { NATURALFIXED($time, 3) } { MANY("second", $time) } из { LOC($key) }
+    } после { NATURALFIXED($delay, 3) } секундной задержки
+reagent-effect-guidebook-knockdown =
+    { $type ->
+        [update]
+            { $chance ->
+                [1] Вызывает
+               *[other] вызывают
+            } { LOC($key) } минимум на { NATURALFIXED($time, 3) } { MANY("second", $time) }, эффект не накапливается
+        [add]
+            { $chance ->
+                [1] Вызывает
+               *[other] вызывают
+            } оглушает минимум на { NATURALFIXED($time, 3) } { MANY("second", $time) }, эффект не накапливается
+       *[set]
+            { $chance ->
+                [1] Вызывает
+               *[other] вызывают
+            } оглушает минимум на { NATURALFIXED($time, 3) } { MANY("second", $time) }, эффект не накапливается
+        [remove]
+            { $chance ->
+                [1] Удаляет
+               *[other] удаляют
+            } { NATURALFIXED($time, 3) } { MANY("second", $time) } оглушение
+    }
 reagent-effect-guidebook-set-solution-temperature-effect =
     { $chance ->
         [1] Устанавливает

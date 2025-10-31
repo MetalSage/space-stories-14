@@ -16,18 +16,8 @@
         {
             "name": "mw0"
         },
-        { 
-            "name": "mw_running_unlit",
-            "delays": [
-                [
-                    1.0,
-                    1.0,
-                    1.0,
-                    1.0,
-                    1.0,
-                    1.0
-                ]
-            ]
+        {
+            "name": "mw_running_unlit"
         },
         {
             "name": "mwb"
@@ -39,13 +29,15 @@
             "name": "mwbloody1"
         },
         {
-            "name": "mwo",
-            "delays": [
-                [
-                    0.1,
-                    0.1
-                ]
-            ]
+            "name": "mwo"
+        },
+        {
+            "name": "inhand-right",
+            "directions": 4
+        },
+        {
+            "name": "inhand-left",
+            "directions": 4
         }
       ]
     }

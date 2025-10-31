@@ -1,0 +1,9 @@
+ent-CableDetStack = explosive cord
+    .desc = Взрывной кабель чтобы уничтожить все на твоем пути.
+    .suffix = Полный
+ent-CableDetStack10 = { ent-CableDetStack }
+    .suffix = 10
+    .desc = { ent-CableDetStack.desc }
+ent-CableDetStack1 = { ent-CableDetStack }
+    .suffix = 1
+    .desc = { ent-CableDetStack.desc }

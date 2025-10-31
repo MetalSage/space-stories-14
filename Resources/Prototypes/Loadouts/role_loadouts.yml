@@ -62,6 +62,7 @@
   - BartenderJumpsuit
   - CommonBackpack
   - BartenderOuterClothing
+  - BartenderGoldenShaker
   - Glasses
   - Survival
   - Trinkets
@@ -190,6 +191,7 @@
 
 - type: roleLoadout
   id: JobMusician
+  canCustomizeName: true
   groups:
   - GroupTankHarness
   - MusicianJumpsuit
