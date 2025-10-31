@@ -29,7 +29,7 @@ public sealed partial class HolyComponent : Component
     public float ProtectionImpulseSpeed = 5f;
 
     [DataField]
-    public float ProtectionImpulseLengthModifier = 5f;
+    public float ProtectionImpulseLengthModifier = 2.5f;
 
     [DataField]
     public TimeSpan ProtectionKnockdownTime = TimeSpan.FromSeconds(3);
