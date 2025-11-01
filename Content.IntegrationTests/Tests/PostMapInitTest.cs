@@ -99,6 +99,7 @@ namespace Content.IntegrationTests.Tests
             "StoriesElkridge",
             "StoriesPrison",
             "StoriesSaltern",
+            "StoriesRaiTeg",
             // Stories-End
             "Dev",
             "TestTeg",

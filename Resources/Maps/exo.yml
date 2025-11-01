@@ -44498,13 +44498,6 @@ entities:
     - type: Transform
       pos: -38.53285,-69.49862
       parent: 2
-- proto: ClothingNeckCloakTrans
-  entities:
-  - uid: 17331
-    components:
-    - type: Transform
-      pos: 77.515434,-20.379131
-      parent: 2
 - proto: ClothingNeckScarfStripedBlack
   entities:
   - uid: 19011

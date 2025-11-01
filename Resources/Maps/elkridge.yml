@@ -53303,13 +53303,6 @@ entities:
       inSlot: neck
     - type: Physics
       canCollide: False
-- proto: ClothingNeckCloakTrans
-  entities:
-  - uid: 1602
-    components:
-    - type: Transform
-      pos: 58.570602,32.7099
-      parent: 2
 - proto: ClothingNeckScarfStripedBlack
   entities:
   - uid: 4040

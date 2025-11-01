@@ -2409,13 +2409,6 @@ entities:
     - type: Transform
       pos: -1.5,-16.5
       parent: 1
-- proto: ClosetJanitorBombFilled
-  entities:
-  - uid: 322
-    components:
-    - type: Transform
-      pos: 6.5,-12.5
-      parent: 1
 - proto: ComputerCloningConsole
   entities:
   - uid: 323

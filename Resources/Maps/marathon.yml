@@ -56346,13 +56346,6 @@ entities:
     - type: Transform
       pos: 7.503625,43.354942
       parent: 30
-- proto: ClothingNeckCloakTrans
-  entities:
-  - uid: 3344
-    components:
-    - type: Transform
-      pos: -56.501534,-67.426544
-      parent: 30
 - proto: ClothingNeckScarfStripedBlue
   entities:
   - uid: 15999
