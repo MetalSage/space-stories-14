@@ -61879,13 +61879,6 @@ entities:
     - type: Transform
       pos: 5.9221196,-5.3832207
       parent: 60
-- proto: ClothingNeckCloakTrans
-  entities:
-  - uid: 7082
-    components:
-    - type: Transform
-      pos: -40.498245,-36.02266
-      parent: 60
 - proto: ClothingNeckMantleHOP
   entities:
   - uid: 5207

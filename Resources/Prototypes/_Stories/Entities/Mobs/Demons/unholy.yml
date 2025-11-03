@@ -106,7 +106,8 @@
       0: Alive
       75: Dead
   - type: Stamina
-    critThreshold: 50
+    animationThreshold: 50
+    critThreshold: 75
   - type: MeleeWeapon
     soundHit:
       path: /Audio/Weapons/Xeno/alien_claw_flesh3.ogg

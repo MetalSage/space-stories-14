@@ -68739,13 +68739,6 @@ entities:
     - type: Transform
       pos: 50.483807,-55.407658
       parent: 2
-- proto: ClothingNeckCloakTrans
-  entities:
-  - uid: 7432
-    components:
-    - type: Transform
-      pos: 41.510986,-27.452278
-      parent: 2
 - proto: ClothingNeckMantle
   entities:
   - uid: 3505

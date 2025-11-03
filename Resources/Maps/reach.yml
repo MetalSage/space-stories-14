@@ -6610,13 +6610,6 @@ entities:
     - type: Transform
       pos: 1.6413194,11.748624
       parent: 2
-- proto: ClothingNeckCloakTrans
-  entities:
-  - uid: 907
-    components:
-    - type: Transform
-      pos: 3.506415,3.5395489
-      parent: 2
 - proto: ClothingNeckLGBTPin
   entities:
   - uid: 908

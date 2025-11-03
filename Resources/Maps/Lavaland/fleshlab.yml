@@ -425,14 +425,6 @@ entities:
       rot: 3.141592653589793 rad
       pos: -6.285738,12.272611
       parent: 1
-- proto: BorgModuleAdvancedTreatment
-  entities:
-  - uid: 344
-    components:
-    - type: Transform
-      rot: -1.5707963267948966 rad
-      pos: -1.5982378,12.553861
-      parent: 1
 - proto: BorgModuleArtifact
   entities:
   - uid: 312
@@ -1871,13 +1863,6 @@ entities:
     components:
     - type: Transform
       pos: -16.426855,-2.121459
-      parent: 1
-- proto: HonkerChassis
-  entities:
-  - uid: 331
-    components:
-    - type: Transform
-      pos: -2.5,10.5
       parent: 1
 - proto: LightHeadBorg
   entities:

@@ -177705,8 +177705,6 @@ entities:
       pos: -52.5,-62.5
       parent: 2
     - type: DeviceNetwork
-      configurators:
-      - invalid
       deviceLists:
       - 998
   - uid: 11222
@@ -177716,8 +177714,6 @@ entities:
       pos: -47.5,-62.5
       parent: 2
     - type: DeviceNetwork
-      configurators:
-      - invalid
       deviceLists:
       - 998
 - proto: WeaponEnergyTurretSecurityControlPanel
