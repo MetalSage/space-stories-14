@@ -20,8 +20,8 @@
       collection: trashBagRustle
     whitelist:
       tags:
-        - Cartridge
         - Trash
+#        - Cartridge # Stories
   - type: UseDelay
     delay: 0.5
   - type: Tag
