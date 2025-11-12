@@ -168,63 +168,37 @@
   color: "#12ca21"
   metabolisms:
     Gas:
+      metabolismRate: 1.0
       effects:
       - !type:HealthChange
         conditions:
         - !type:ReagentThreshold
           reagent: STNitryl
-          min: 0.3
+          min: 65
         ignoreResistances: true
         damage:
           types:
-            Poison: 0.15
-      - !type:HealthChange
-        conditions:
-        - !type:ReagentThreshold
-          reagent: STNitryl
-          min: 2
-        scaleByQuantity: true
-        ignoreResistances: true
-        damage:
-          types:
-            Poison: 3
+            Poison: 30
       - !type:MovespeedModifier
-        conditions:
-        - !type:ReagentThreshold
-          reagent: STNitryl
-          min: 1
-        walkSpeedModifier: 1.2
-        sprintSpeedModifier: 1.2
+        walkSpeedModifier: 1.35
+        sprintSpeedModifier: 1.35
+        statusLifetime: 7 
       - !type:GenericStatusEffect
-        conditions:
-        - !type:ReagentThreshold
-          reagent: STNitryl
-          min: 1
         key: ForcedSleep
         component: ForcedSleeping
-        time: 2
+        time: 10
         type: Remove
       - !type:GenericStatusEffect
-        conditions:
-        - !type:ReagentThreshold
-          reagent: STNitryl
-          min: 1
-        key: Stun
-        time: 2
-        type: Remove
+        key: Adrenaline
+        component: IgnoreSlowOnDamage
+        type: Add
+        time: 10
       - !type:GenericStatusEffect
-        conditions:
-        - !type:ReagentThreshold
-          reagent: STNitryl
-          min: 1
-        key: KnockedDown
-        time: 2
-        type: Remove
+        key: StaminaModifier
+        component: StaminaModifier
+        time: 10
+        type: Add
       - !type:GenericStatusEffect
-        conditions:
-        - !type:ReagentThreshold
-          reagent: STNitryl
-          min: 1
         key: Drowsiness
         time: 10
         type: Remove
