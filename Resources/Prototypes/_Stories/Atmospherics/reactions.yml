@@ -38,7 +38,7 @@
   minimumTemperature: 873.149 # 600 Celsius
   minimumRequirements:
   - 0     # oxygen
-  - 10     # nitrogen
+  - 10    # nitrogen
   - 0     # carbon dioxide
   - 0     # plasma
   - 0     # tritium
