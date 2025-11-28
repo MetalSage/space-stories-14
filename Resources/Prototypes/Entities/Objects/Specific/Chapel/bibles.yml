@@ -13,7 +13,7 @@
     delay: 10.0
     delays:
       STHoly:
-        length: 0
+        length: 0.1
   # Stories-Pontific-End
   - type: Bible
     damage:
