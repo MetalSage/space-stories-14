@@ -36,7 +36,7 @@ entities:
   - uid: 1
     components:
     - type: MetaData
-      name: Шаттл ПЦК OSD-377
+      name: Шаттл ПЦК OSD-373
     - type: Transform
       pos: -1.84375,1.78125
       parent: invalid

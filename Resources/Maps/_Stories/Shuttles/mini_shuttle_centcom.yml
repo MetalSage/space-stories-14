@@ -30,7 +30,7 @@ entities:
   - uid: 1
     components:
     - type: MetaData
-      name: NT-CentCom 1984
+      name: NT-CentComm 1984
     - type: Transform
       pos: -0.6171875,-0.62890625
       parent: invalid
