@@ -78834,12 +78834,19 @@ entities:
     - type: Transform
       pos: 20.5,-16.5
       parent: 2
-- proto: SpawnPointERTLeader
+- proto: SpawnPointSTJudge
   entities:
   - uid: 11259
     components:
     - type: Transform
       pos: 13.5,-38.5
+      parent: 2
+- proto: SpawnPointSTProsecutor
+  entities:
+  - uid: 14452
+    components:
+    - type: Transform
+      pos: 10.5,-37.5
       parent: 2
 - proto: SpawnPointGuardianNt
   entities:

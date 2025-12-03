@@ -99193,12 +99193,19 @@ entities:
     - type: Transform
       pos: 4.5,-26.5
       parent: 2
-- proto: SpawnPointERTLeader
+- proto: SpawnPointSTJudge
   entities:
   - uid: 17590
     components:
     - type: Transform
       pos: -33.5,-35.5
+      parent: 2
+- proto: SpawnPointSTProsecutor
+  entities:
+  - uid: 17593
+    components:
+    - type: Transform
+      pos: -34.5,-41.5
       parent: 2
 - proto: SpawnPointGuardianNt
   entities:

@@ -56477,12 +56477,19 @@ entities:
     - type: Transform
       pos: -53.5,16.5
       parent: 1
-- proto: SpawnPointERTLeader
+- proto: SpawnPointSTJudge
   entities:
   - uid: 9769
     components:
     - type: Transform
       pos: -45.5,-47.5
+      parent: 1
+- proto: SpawnPointSTProsecutor
+  entities:
+  - uid: 9796
+    components:
+    - type: Transform
+      pos: -42.5,-48.5
       parent: 1
 - proto: SpawnPointGuardianNt
   entities:
