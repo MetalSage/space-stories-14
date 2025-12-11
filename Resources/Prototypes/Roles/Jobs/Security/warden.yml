@@ -6,7 +6,10 @@
   requirements:
     - !type:RoleTimeRequirement
       role: JobSecurityOfficer
-      time: 108000 #50 hrs # Corvax-RoleTime
+      time: 5h
+    - !type:DepartmentTimeRequirement
+      department: Security
+      time: 50h
   weight: 5
   startingGear: WardenGear
   icon: "JobIconWarden"
@@ -17,10 +20,11 @@
   - Brig
   - Armory
   - Maintenance
-  - Service
   - External
   - Detective
   - Cryogenics
+  - GenpopEnter
+  - GenpopLeave
   special:
   - !type:AddImplantSpecial
     implants: [ MindShieldImplant ]

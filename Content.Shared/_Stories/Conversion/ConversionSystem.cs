@@ -35,7 +35,7 @@ public abstract class SharedConversionSystem : EntitySystem
         if (_entityWhitelist.IsWhitelistFail(proto.Whitelist, target))
             return false;
 
-        if (_entityWhitelist.IsBlacklistPass(proto.Blacklist, target))
+        if (_entityWhitelist.IsWhitelistPass(proto.Blacklist, target))
             return false;
 
         if (!component.AllowedConversions.Contains(proto.ID))

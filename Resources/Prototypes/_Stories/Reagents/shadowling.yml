@@ -16,5 +16,5 @@
             Airloss: -6
             Brute: -6
         conditions:
-        - !type:OrganType
-          type: Shadowling
+        - !type:MetabolizerTypeCondition
+          type: [ Shadowling ]

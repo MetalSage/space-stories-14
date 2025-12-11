@@ -44,7 +44,7 @@ public sealed partial class ForceUserSystem
         var target = args.Target.Value;
         var user = args.User;
 
-        var dmg = _damageable.TryChangeDamage(target, args.Damage, true);
+        _damageable.TryChangeDamage(target, args.Damage, out var dmg, true);
 
         if (dmg == null)
             return;
@@ -53,11 +53,26 @@ public sealed partial class ForceUserSystem
 
         foreach (var group in args.HealGroups)
         {
-            _damageable.TryChangeDamage(user, new DamageSpecifier(_proto.Index<DamageGroupPrototype>(group), dmg.GetTotal() * -2), true);
+            var groupProto = _proto.Index<DamageGroupPrototype>(group);
+            var spec = new DamageSpecifier();
+            foreach (var type in groupProto.DamageTypes)
+            {
+                spec.DamageDict.TryAdd(type, dmg.GetTotal() * -2 / groupProto.DamageTypes.Count);
+            }
+            
+            _damageable.TryChangeDamage(user, spec, true);
         }
 
         if (_mobState.IsDead(target))
-            _damageable.TryChangeDamage(target, new DamageSpecifier(_proto.Index<DamageGroupPrototype>("Genetic"), 10), true);
+        {
+            var geneticGroup = _proto.Index<DamageGroupPrototype>("Genetic");
+            var geneticSpec = new DamageSpecifier();
+            foreach(var type in geneticGroup.DamageTypes)
+            {
+                geneticSpec.DamageDict.TryAdd(type, 10 / geneticGroup.DamageTypes.Count);
+            }
+            _damageable.TryChangeDamage(target, geneticSpec, true);
+        }
         else args.Repeat = true;
 
         args.Handled = true;

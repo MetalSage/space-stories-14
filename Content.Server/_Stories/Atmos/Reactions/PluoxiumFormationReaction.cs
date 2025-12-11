@@ -34,7 +34,7 @@ public sealed partial class PluoxiumFormationReaction : IGasReactionEffect
         mixture.AdjustMoles(Gas.Oxygen, -oxygenRemoved);
         mixture.AdjustMoles(Gas.CarbonDioxide, -co2Removed);
         mixture.AdjustMoles(Gas.Tritium, -tritRemoved);
-        mixture.AdjustMoles(Gas.Pluoxium, pluoxiumFormed);
+        mixture.AdjustMoles(Gas.STPluoxium, pluoxiumFormed);
 
         var energyReleased = pluoxiumFormed * Atmospherics.PluoxiumProductionEnergy;
         var heatCap = atmosphereSystem.GetHeatCapacity(mixture, true);

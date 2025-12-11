@@ -1,4 +1,4 @@
-ent-BaseWeaponRifle = BaseWeaponRifle
+﻿ent-BaseWeaponRifle = BaseWeaponRifle
     .desc = Дерзай — налетай, целься и стреляй.
 ent-WeaponRifleAk = АКМС
     .desc = Несколько побитая боевая винтовка, конструкция которой берёт своё начало на старой Земле. Популярна среди преступников, ополченцев и террористов благодаря своей известной надёжности и простой конструкции. Использует патроны калибра .30 винтовочный.
@@ -11,9 +11,9 @@ ent-WeaponRifleLecter = Лектер
     .suffix = Автомат
 ent-WeaponRifleLecterXL8 = XL8
     .desc =
-        The Experimental Lecter 8
-        An unreasonably expensive military grade assault rifle with integrated optic. 
-        Uses .20 rifle ammo.
+        Экспериментальный лектер 8
+        Необоснованно дорогая штурмовая винтовка военного образца со встроенным оптическим прицелом.
+        Использует патроны калибра .20 винтовочный.
 ent-WeaponRifleEstoc = марксманская винтовка Эсток
     .desc = Марксманская винтовка, предпочитаемая для перестрелок на средних и дальних дистанциях. Использует патроны калибра .20 винтовочный.
 ent-WeaponRifleFoam = Астро-Ас Сила Пенопласта

@@ -15,13 +15,13 @@
         reagent: STCorpium
         amount: 1.1
         conditions:
-        - !type:ReagentThreshold
+        - !type:ReagentCondition
           reagent: STCorpium
           max: 58
       - !type:AdjustTemperature
         amount: 1200
         conditions:
-        - !type:ReagentThreshold
+        - !type:ReagentCondition
           reagent: STCorpium
           min: 31
       - !type:PopupMessage
@@ -30,7 +30,7 @@
         messages: [ "stories-corpium-effect-feel-bad" ]
         probability: 0.1
         conditions:
-        - !type:ReagentThreshold
+        - !type:ReagentCondition
           reagent: STCorpium
           min: 31
           max: 46
@@ -39,7 +39,7 @@
         showInChat: true
         probability: 0.1
         conditions:
-        - !type:ReagentThreshold
+        - !type:ReagentCondition
           reagent: STCorpium
           min: 31
       - !type:PopupMessage
@@ -48,7 +48,7 @@
         messages: [ "stories-corpium-effect-feel-very-bad" ]
         probability: 0.1
         conditions:
-        - !type:ReagentThreshold
+        - !type:ReagentCondition
           reagent: STCorpium
           min: 46
           max: 58
@@ -56,13 +56,13 @@
         reagent: STCorpium
         amount: 2.1
         conditions:
-        - !type:ReagentThreshold
+        - !type:ReagentCondition
           reagent: STCorpium
           min: 58
       - !type:Electrocute
         electrocuteDamageScale: 0
         conditions:
-        - !type:ReagentThreshold
+        - !type:ReagentCondition
           reagent: STCorpium
           min: 58
           max: 60.5
@@ -71,27 +71,30 @@
         showInChat: true
         probability: 0.9
         conditions:
-        - !type:ReagentThreshold
+        - !type:ReagentCondition
           reagent: STCorpium
           min: 58
-      - !type:Paralyze
+      # Paralyze заменен на GenericStatusEffect, так как отдельного эффекта Paralyze больше нет (или он не найден)
+      - !type:GenericStatusEffect
         conditions:
-        - !type:ReagentThreshold
+        - !type:ReagentCondition
           reagent: STCorpium
           min: 60.5
+        key: Stun # Используем Stun как аналог паралича, так как время не указано, это может быть проблемой, но статус эффект требует ключа. В оригинале Paralyze скорее всего добавлял время.
+        time: 5 # Добавил примерное время, так как GenericStatusEffect требует времени или типа. В оригинале Paralyze скорее всего работал каждый тик метаболизма.
+        type: Add
       - !type:HealthChange
         damage:
           groups:
             Airloss: 200
         conditions:
-        - !type:ReagentThreshold
+        - !type:ReagentCondition
           reagent: STCorpium
           min: 61
-      - !type:CreateEntityReactionEffect
+      - !type:SpawnEntity
         entity: STMobCorpium
-        number: 3
         conditions:
-        - !type:ReagentThreshold
+        - !type:ReagentCondition
           reagent: STCorpium
           min: 61
       - !type:PopupMessage
@@ -100,7 +103,7 @@
         messages: [ "stories-corpium-effect-spawn-entities" ]
         probability: 1.0
         conditions:
-        - !type:ReagentThreshold
+        - !type:ReagentCondition
           reagent: STCorpium
           min: 61
 
@@ -121,7 +124,7 @@
         reagent: STAntiCorpium
         amount: 2
         conditions:
-        - !type:ReagentThreshold
+        - !type:ReagentCondition
           reagent: STAntiCorpium
           max: 50
       - !type:AdjustReagent

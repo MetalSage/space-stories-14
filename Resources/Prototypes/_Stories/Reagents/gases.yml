@@ -10,23 +10,23 @@
       effects:
       - !type:Emote
         conditions:
-        - !type:ReagentThreshold
+        - !type:ReagentCondition
           reagent: STBZ
           min: 0.2
-        - !type:OrganType
-          type: Slime
-          shouldHave: false
+        - !type:MetabolizerTypeCondition
+          type: [ Slime ]
+          inverted: true
         emote: Cough
         showInChat: true
         probability: 0.1
       - !type:HealthChange
         conditions:
-        - !type:ReagentThreshold
+        - !type:ReagentCondition
           reagent: STBZ
           min: 0.5
-        - !type:OrganType
-          type: Slime
-          shouldHave: false
+        - !type:MetabolizerTypeCondition
+          type: [ Slime ]
+          inverted: true
         scaleByQuantity: true
         ignoreResistances: true
         damage:
@@ -35,12 +35,12 @@
             Poison: 2.5
       - !type:GenericStatusEffect
         conditions:
-        - !type:ReagentThreshold
+        - !type:ReagentCondition
           reagent: STBZ
           min: 1
-        - !type:OrganType
-          type: Slime
-          shouldHave: false
+        - !type:MetabolizerTypeCondition
+          type: [ Slime ]
+          inverted: true
         key: SeeingRainbows
         component: SeeingRainbows
         type: Add
@@ -48,56 +48,51 @@
         refresh: false
       - !type:Emote
         conditions:
-        - !type:ReagentThreshold
+        - !type:ReagentCondition
           reagent: STBZ
           min: 0.2
-        - !type:OrganType
-          type: Slime
-          shouldHave: true
+        - !type:MetabolizerTypeCondition
+          type: [ Slime ]
         emote: Laugh
         showInChat: true
         probability: 0.1
       - !type:Emote
         conditions:
-        - !type:ReagentThreshold
+        - !type:ReagentCondition
           reagent: STBZ
           min: 0.2
-        - !type:OrganType
-          type: Slime
-          shouldHave: true
+        - !type:MetabolizerTypeCondition
+          type: [ Slime ]
         emote: Scream
         showInChat: true
         probability: 0.01
       - !type:PopupMessage
         conditions:
-        - !type:ReagentThreshold
+        - !type:ReagentCondition
           reagent: STBZ
           min: 0.5
-        - !type:OrganType
-          type: Slime
-          shouldHave: true
+        - !type:MetabolizerTypeCondition
+          type: [ Slime ]
         type: Local
         visualType: Medium
         messages: [ "effect-sleepy" ]
         probability: 0.1
-      - !type:MovespeedModifier
+      - !type:MovementSpeedModifier
         conditions:
-        - !type:ReagentThreshold
+        - !type:ReagentCondition
           reagent: STBZ
           min: 1
-        - !type:OrganType
-          type: Slime
-          shouldHave: true
+        - !type:MetabolizerTypeCondition
+          type: [ Slime ]
         walkSpeedModifier: 0.65
         sprintSpeedModifier: 0.65
       - !type:GenericStatusEffect
         conditions:
-        - !type:ReagentThreshold
+        - !type:ReagentCondition
           reagent: STBZ
           min: 1
-        - !type:OrganType
-          type: Slime
-          shouldHave: true
+        - !type:MetabolizerTypeCondition
+          type: [ Slime ]
         key: ForcedSleep
         component: ForcedSleeping
         time: 10
@@ -115,7 +110,7 @@
       effects:
       - !type:HealthChange
         conditions:
-        - !type:ReagentThreshold
+        - !type:ReagentCondition
           reagent: STHealium
           min: 0.3
         scaleByQuantity: true
@@ -125,33 +120,33 @@
             Brute: -0.3
             Burn: -0.3
             Toxin: -0.3
-      - !type:ModifyBleedAmount
+      - !type:ModifyBleed # Исправлено имя эффекта
         amount: -0.15
       - !type:PopupMessage
         conditions:
-        - !type:ReagentThreshold
+        - !type:ReagentCondition
           reagent: STHealium
           min: 0.3
-        - !type:ReagentThreshold
+        - !type:ReagentCondition
           reagent: STNitryl
           max: 0.3
         type: Local
         visualType: Medium
         messages: [ "effect-sleepy" ]
         probability: 0.1
-      - !type:MovespeedModifier
+      - !type:MovementSpeedModifier
         conditions:
-        - !type:ReagentThreshold
+        - !type:ReagentCondition
           reagent: STHealium
           min: 1
         walkSpeedModifier: 0.65
         sprintSpeedModifier: 0.65
       - !type:GenericStatusEffect
         conditions:
-        - !type:ReagentThreshold
+        - !type:ReagentCondition
           reagent: STHealium
           min: 1.8
-        - !type:ReagentThreshold
+        - !type:ReagentCondition
           reagent: STNitryl
           max: 0.5
         key: ForcedSleep
@@ -171,7 +166,7 @@
       effects:
       - !type:HealthChange
         conditions:
-        - !type:ReagentThreshold
+        - !type:ReagentCondition
           reagent: STNitryl
           min: 0.3
         ignoreResistances: true
@@ -180,7 +175,7 @@
             Poison: 0.15
       - !type:HealthChange
         conditions:
-        - !type:ReagentThreshold
+        - !type:ReagentCondition
           reagent: STNitryl
           min: 2
         scaleByQuantity: true
@@ -188,16 +183,16 @@
         damage:
           types:
             Poison: 3
-      - !type:MovespeedModifier
+      - !type:MovementSpeedModifier
         conditions:
-        - !type:ReagentThreshold
+        - !type:ReagentCondition
           reagent: STNitryl
           min: 1
         walkSpeedModifier: 1.2
         sprintSpeedModifier: 1.2
       - !type:GenericStatusEffect
         conditions:
-        - !type:ReagentThreshold
+        - !type:ReagentCondition
           reagent: STNitryl
           min: 1
         key: ForcedSleep
@@ -206,7 +201,7 @@
         type: Remove
       - !type:GenericStatusEffect
         conditions:
-        - !type:ReagentThreshold
+        - !type:ReagentCondition
           reagent: STNitryl
           min: 1
         key: Stun
@@ -214,7 +209,7 @@
         type: Remove
       - !type:GenericStatusEffect
         conditions:
-        - !type:ReagentThreshold
+        - !type:ReagentCondition
           reagent: STNitryl
           min: 1
         key: KnockedDown
@@ -222,7 +217,7 @@
         type: Remove
       - !type:GenericStatusEffect
         conditions:
-        - !type:ReagentThreshold
+        - !type:ReagentCondition
           reagent: STNitryl
           min: 1
         key: Drowsiness
@@ -241,28 +236,28 @@
       effects:
       - !type:Oxygenate
         conditions:
-        - !type:OrganType
-          type: Human
+        - !type:MetabolizerTypeCondition
+          type: [ Human ]
         factor: 5
       - !type:Oxygenate
         conditions:
-        - !type:OrganType
-          type: Animal
+        - !type:MetabolizerTypeCondition
+          type: [ Animal ]
         factor: 5
       - !type:Oxygenate
         conditions:
-        - !type:OrganType
-          type: Rat
+        - !type:MetabolizerTypeCondition
+          type: [ Rat ]
         factor: 5
       - !type:Oxygenate
         conditions:
-        - !type:OrganType
-          type: Plant
+        - !type:MetabolizerTypeCondition
+          type: [ Plant ]
         factor: 5
       - !type:HealthChange #stronger than oxygen, thus even more toxic for vox
         conditions:
-        - !type:OrganType
-          type: Vox
+        - !type:MetabolizerTypeCondition
+          type: [ Vox ]
         scaleByQuantity: true
         ignoreResistances: true
         damage:
@@ -272,9 +267,10 @@
       - !type:AdjustAlert
         alertType: Toxins
         conditions:
-          - !type:ReagentThreshold
+          - !type:ReagentCondition
+            reagent: STPluoxium # Добавлено, так как поле reagent теперь обязательно
             min: 0.5
-          - !type:OrganType
-            type: Vox
+          - !type:MetabolizerTypeCondition
+            type: [ Vox ]
         clear: true
         time: 5

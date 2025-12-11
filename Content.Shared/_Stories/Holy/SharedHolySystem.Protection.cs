@@ -1,6 +1,7 @@
 using Content.Shared.Actions;
 using Content.Shared.Damage;
 using Content.Shared.Damage.Prototypes;
+using Content.Shared.Damage.Systems;
 using Content.Shared.DoAfter;
 using Content.Shared.Examine;
 using Content.Shared.Hands;
@@ -158,5 +159,4 @@ public abstract partial class SharedHolySystem
     {
         OnDamageModify(entity, ref args.Args);
     }
-
 }

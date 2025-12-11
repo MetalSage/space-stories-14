@@ -1,22 +1,20 @@
 using Content.Shared._Stories.Holy;
 using Content.Shared.EntityEffects;
-using JetBrains.Annotations;
-using Robust.Shared.Prototypes;
+using Robust.Shared.GameObjects;
+using Robust.Shared.IoC;
 
 namespace Content.Shared.EntityEffects.Effects
 {
-    [UsedImplicitly]
     public sealed partial class BlessReaction : EntityEffect
     {
         [DataField]
         public TimeSpan Time = TimeSpan.FromSeconds(10);
 
-        protected override string? ReagentEffectGuidebookText(IPrototypeManager prototype, IEntitySystemManager entSys) => ""; // TODO
-
-        public override void Effect(EntityEffectBaseArgs args)
+        public override void RaiseEvent(EntityUid target, IEntityEffectRaiser raiser, float scale, EntityUid? solutionEntity)
         {
-            var saintedSystem = args.EntityManager.System<SharedHolySystem>();
-            saintedSystem.TryBless(args.TargetEntity, Time, false);
+            var entManager = IoCManager.Resolve<IEntityManager>();
+            var holySystem = entManager.System<SharedHolySystem>();
+            holySystem.TryBless(target, Time, false);
         }
     }
 }
