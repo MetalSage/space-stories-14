@@ -11,6 +11,7 @@ using Content.Server.Lightning;
 using Content.Shared.Mobs.Systems;
 using Robust.Shared.Containers;
 using Content.Shared.Damage;
+using Content.Shared.Damage.Systems;
 using Content.Shared.Stunnable;
 using Content.Shared.Standing;
 using Content.Shared.StatusEffect;

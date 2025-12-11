@@ -24,10 +24,10 @@ public sealed partial class SpafSystem : SharedSpafSystem
 
         SubscribeLocalEvent<SpafComponent, SpafPolymorphEvent>(OnPolymorph);
 
-        SubscribeLocalEvent<FoodComponent, LandEvent>(OnFoodLand);
+        SubscribeLocalEvent<EdibleComponent, LandEvent>(OnFoodLand);
     }
 
-    private void OnFoodLand(EntityUid uid, FoodComponent component, ref LandEvent args)
+    private void OnFoodLand(EntityUid uid, EdibleComponent component, ref LandEvent args)
     {
         var ents = _lookup.GetEntitiesInRange<SpafComponent>(Transform(uid).Coordinates, PacifiedRange);
 

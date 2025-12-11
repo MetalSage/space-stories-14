@@ -25,10 +25,10 @@ namespace Content.Shared.Atmos.Piping.Unary.Components
             Gas.NitrousOxide,
             Gas.Frezon,
             // Stories-Gas start
-            Gas.BZ,
-            Gas.Healium,
-            Gas.Nitryl,
-            Gas.Pluoxium,
+            Gas.STBZ,
+            Gas.STHealium,
+            Gas.STNitryl,
+            Gas.STPluoxium,
             // Stories-Gas end
         };
 

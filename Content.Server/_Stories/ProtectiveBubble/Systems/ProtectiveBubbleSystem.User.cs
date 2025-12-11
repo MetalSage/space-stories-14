@@ -12,6 +12,7 @@ using Robust.Shared.Serialization.Manager;
 using Content.Shared._Stories.Force;
 using Content.Shared.Rounding;
 using Content.Shared.Damage;
+using Content.Shared.Damage.Components;
 
 namespace Content.Server._Stories.ForceUser.ProtectiveBubble.Systems;
 
@@ -29,16 +30,28 @@ public sealed partial class ProtectiveBubbleSystem
         var query = EntityQueryEnumerator<ProtectiveBubbleUserComponent, ForceUserComponent>();
         while (query.MoveNext(out var uid, out var bubbleUser, out var forceUser))
         {
-            if (bubbleUser == null)
+            if (bubbleUser == null || bubbleUser.ProtectiveBubble == null)
                 return;
+            
             if (_force.TryRemoveVolume(uid, frameTime * bubbleUser.VolumeCost))
-                _damageable.TryChangeDamage(bubbleUser.ProtectiveBubble, bubbleUser.Regeneration * frameTime, true);
+            {
+                if (TryComp<DamageableComponent>(bubbleUser.ProtectiveBubble.Value, out var damageable))
+                {
+                    _damageable.TryChangeDamage((bubbleUser.ProtectiveBubble.Value, damageable), bubbleUser.Regeneration * frameTime, true);
+                }
+            }
         }
     }
     private void OnAttack(EntityUid uid, ProtectiveBubbleUserComponent component, AttackedEvent args)
     {
+        if (component.ProtectiveBubble == null) return;
+
         args.BonusDamage = _meleeWeapon.GetDamage(args.Used, args.User) * -1;
-        _damageable.TryChangeDamage(component.ProtectiveBubble, _meleeWeapon.GetDamage(args.Used, args.User), true);
+
+        if (TryComp<DamageableComponent>(component.ProtectiveBubble.Value, out var damageable))
+        {
+            _damageable.TryChangeDamage((component.ProtectiveBubble.Value, damageable), _meleeWeapon.GetDamage(args.Used, args.User), true);
+        }
     }
     private void OnInit(EntityUid uid, ProtectiveBubbleUserComponent component, ComponentInit args)
     {
@@ -52,6 +65,7 @@ public sealed partial class ProtectiveBubbleSystem
     }
     private void OnStopProtectiveBubble(EntityUid uid, ProtectiveBubbleUserComponent comp, StopProtectiveBubbleEvent args)
     {
-        Del(comp.ProtectiveBubble);
+        if (comp.ProtectiveBubble != null)
+            Del(comp.ProtectiveBubble.Value);
     }
 }

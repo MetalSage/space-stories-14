@@ -8,6 +8,7 @@ using Content.Shared.Weapons.Ranged.Events;
 using Robust.Shared.Physics.Events;
 using Content.Shared.Interaction.Events;
 using Content.Shared.Damage;
+using Content.Shared.Damage.Systems;
 using Content.Shared.Wieldable;
 
 namespace Content.Shared.Hands.EntitySystems;
@@ -23,7 +24,7 @@ public abstract partial class SharedHandsSystem
         // Stories-Pontific-Start
         SubscribeLocalEvent<HandsComponent, ContactInteractionEvent>(RelayEvent);
         SubscribeLocalEvent<HandsComponent, StartCollideEvent>(RefRelayEvent);
-        SubscribeLocalEvent<HandsComponent, DamageModifyEvent>(RelayEvent);
+        SubscribeLocalEvent<HandsComponent, DamageModifyEvent>(RelayEvent<DamageModifyEvent>);
         // Stories-Pontific-End
 
         // By-ref events.

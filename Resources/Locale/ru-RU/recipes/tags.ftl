@@ -1,4 +1,4 @@
-﻿# clown
+# clown
 construction-graph-tag-banana-peel = банановая кожура
 construction-graph-tag-clown-suit = клоунский костюм
 construction-graph-tag-clown-shoes = клоунские туфли
@@ -8,6 +8,7 @@ construction-graph-tag-clown-bike-horn = клаксон
 construction-graph-tag-clowne-horn = сломанный клаксон
 construction-graph-tag-happy-honk-meal = обед Хэппи Хонк
 construction-graph-tag-woeful-cluwne-meal = обед Жалкий Клувень
+construction-graph-tag-boxhug = коробка обнимашек
 # mime
 construction-graph-tag-suspenders = подтяжки
 construction-graph-tag-mime-meal = обед Хэппи Хонк мимское издание
@@ -69,7 +70,7 @@ construction-graph-tag-mop-basic = швабра
 construction-graph-tag-rubber-ducky = резиновая уточка
 construction-graph-tag-ghost = плюшевый призрак
 construction-graph-tag-ectoplasm = эктоплазма
-construction-graph-tag-lizard-plushie = плюшевая ящерица
+construction-graph-tag-lizard-plushie = плюшевый унатх
 # carpet
 construction-graph-tag-black-carpet = чёрный ковёр
 construction-graph-tag-blue-carpet = синий ковёр

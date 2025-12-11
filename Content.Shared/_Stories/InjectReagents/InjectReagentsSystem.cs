@@ -43,7 +43,7 @@ public sealed partial class InjectReagentsSystem : EntitySystem
             if (_whitelist.IsWhitelistFail(args.Whitelist, entity))
                 continue;
 
-            if (_whitelist.IsBlacklistPass(args.Blacklist, entity))
+            if (_whitelist.IsWhitelistPass(args.Blacklist, entity))
                 continue;
 
             if (!_solutions.TryGetSolution((entity, component), args.SolutionTarget, out var solution))

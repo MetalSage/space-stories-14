@@ -224,6 +224,8 @@ public sealed class DamageModifyEvent(DamageSpecifier damage, EntityUid? origin 
 
     public readonly DamageSpecifier OriginalDamage = damage;
     public DamageSpecifier Damage = damage;
+
+    public readonly EntityUid? Origin = origin; 
 }
 
 public sealed class DamageChangedEvent : EntityEventArgs

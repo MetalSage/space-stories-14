@@ -178,10 +178,10 @@ namespace Content.Shared.Atmos
             [Gas.Tritium] = Loc.GetString("gas-tritium-abbreviation"),
             [Gas.WaterVapor] = Loc.GetString("gas-water-vapor-abbreviation"),
             // Stories-Gas start
-            [Gas.BZ] = Loc.GetString("gas-bz-abbreviation"),
-            [Gas.Healium] = Loc.GetString("gas-healium-abbreviation"),
-            [Gas.Nitryl] = Loc.GetString("gas-nitryl-abbreviation"),
-            [Gas.Pluoxium] = Loc.GetString("gas-pluoxium-abbreviation"),
+            [Gas.STBZ] = Loc.GetString("gas-bz-abbreviation"),
+            [Gas.STHealium] = Loc.GetString("gas-healium-abbreviation"),
+            [Gas.STNitryl] = Loc.GetString("gas-nitryl-abbreviation"),
+            [Gas.STPluoxium] = Loc.GetString("gas-pluoxium-abbreviation"),
             // Stories-Gas end
         };
 
@@ -415,10 +415,10 @@ namespace Content.Shared.Atmos
         NitrousOxide = 7,
         Frezon = 8,
         // Stories-Gas start
-        BZ = 9,
-        Healium = 10,
-        Nitryl = 11,
-        Pluoxium = 12,
+        STBZ = 9,
+        STHealium = 10,
+        STNitryl = 11,
+        STPluoxium = 12,
         // Stories-Gas end
     }
 }

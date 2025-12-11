@@ -3,15 +3,8 @@
   priority: 2
   maximumTemperature: 313.149 # Atmospherics.FireMinimumTemperatureToExist - 60
   minimumRequirements:
-  - 0     # oxygen
-  - 0     # nitrogen
-  - 0     # carbon dioxide
-  - 10    # plasma
-  - 0     # tritium
-  - 0     # vapor
-  - 0     # miasma
-  - 10    # n2o
-  - 0     # frezon
+    Plasma: 10
+    Nitrogen: 10
   effects:
   - !type:BZFormationReaction
 
@@ -19,16 +12,8 @@
   id: STHealiumProduction
   priority: 2
   minimumRequirements:
-  - 0     # oxygen
-  - 0     # nitrogen
-  - 0     # carbon dioxide
-  - 0     # plasma
-  - 0     # tritium
-  - 0     # vapor
-  - 0     # miasma
-  - 0     # n2o
-  - 5     # frezon
-  - 5     # bz
+    Frezon: 5
+    STBZ: 5
   effects:
   - !type:HealiumProductionReaction
 
@@ -37,17 +22,9 @@
   priority: 2
   minimumTemperature: 873.149 # 600 Celsius
   minimumRequirements:
-  - 0     # oxygen
-  - 10     # nitrogen
-  - 0     # carbon dioxide
-  - 0     # plasma
-  - 0     # tritium
-  - 0     # vapor
-  - 0     # miasma
-  - 0     # n2o
-  - 0     # frezon
-  - 5     # bz
-  - 2     # healium
+    Nitrogen: 10
+    STBZ: 5
+    STHealium: 2
   effects:
   - !type:NitrylFormationReaction
 
@@ -56,14 +33,8 @@
   priority: 2
   maximumTemperature: 273.149
   minimumRequirements:
-  - 100   # oxygen
-  - 0     # nitrogen
-  - 50    # carbon dioxide
-  - 0     # plasma
-  - 1     # tritium
-  - 0     # vapor
-  - 0     # miasma
-  - 0     # n2o
-  - 0     # frezon
+    Oxygen: 100
+    CarbonDioxide: 50
+    Tritium: 1
   effects:
   - !type:PluoxiumFormationReaction

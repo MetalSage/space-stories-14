@@ -1,4 +1,5 @@
 using Content.Shared.Damage;
+using Content.Shared.Damage.Systems;
 using Content.Shared.Hands;
 using Content.Shared.Popups;
 using Robust.Shared.Audio.Systems;
@@ -73,5 +74,3 @@ public sealed partial class BlockMeleeAttackSystem : EntitySystem
         if (component.User != null) RemComp<BlockMeleeAttackUserComponent>(component.User.Value);
     }
 }
-
-
