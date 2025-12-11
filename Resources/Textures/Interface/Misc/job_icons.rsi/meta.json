@@ -85,7 +85,7 @@
         {
             "name": "Geneticist"
         },
-		{
+        {
             "name": "HeadOfPersonnel"
         },
         {
@@ -113,40 +113,7 @@
             "name": "MedicalIntern"
         },
         {
-            "name": "TechnicalAssistant"
-        },
-        {
-            "name": "ServiceWorker"
-        },
-        {
-            "name": "SecurityCadet"
-        },
-        {
-            "name": "IAA"
-        },
-        {
-            "name": "Zombie"
-        },
-        {
-            "name": "Zookeeper"
-        },
-        {
-            "name": "SeniorEngineer"
-        },
-        {
-            "name": "SeniorResearcher"
-        },
-        {
-            "name": "SeniorPhysician"
-        },
-        {
-            "name": "SeniorOfficer"
-        },
-        {
-            "name": "Revolutionary"
-        },
-        {
-            "name": "HeadRevolutionary"
+            "name": "Mime"
         },
         {
             "name": "MindShield",

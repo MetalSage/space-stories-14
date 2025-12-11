@@ -80,6 +80,10 @@ namespace Content.Server.Entry
         [Dependency] private readonly ServerApi _serverApi = default!;
         [Dependency] private readonly ServerInfoManager _serverInfo = default!;
         [Dependency] private readonly ServerUpdateManager _updateManager = default!;
+        [Dependency] private readonly DiscordAuthManager _discordAuthManager = default!; // Corvax-DiscordAuth
+        [Dependency] private readonly PartnersManager _partnersManager = default!; // Corvax-Sponsors
+        [Dependency] private readonly JoinQueueManager _joinQueueManager = default!; // Corvax-Queue
+        [Dependency] private readonly TTSManager _TTSManager = default!; // Stories-TTS
 
         public override void PreInit()
         {
@@ -169,6 +173,10 @@ namespace Content.Server.Entry
             _connection.PostInit();
             _multiServerKick.Initialize();
             _cvarCtrl.Initialize();
+            _discordAuthManager.Initialize();
+            _partnersManager.Initialize();
+            _joinQueueManager.Initialize();
+            _TTSManager.Initialize();
         }
 
         public override void Update(ModUpdateLevel level, FrameEventArgs frameEventArgs)

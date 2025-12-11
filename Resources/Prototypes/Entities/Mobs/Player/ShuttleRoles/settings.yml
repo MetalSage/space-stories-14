@@ -397,7 +397,6 @@
   parent: VisitorCivilian
   components:
     # Stories-Pontific-Start
-    - type: Chaplain
     - type: Holy
     # Stories-Pontific-End
     - type: BibleUser

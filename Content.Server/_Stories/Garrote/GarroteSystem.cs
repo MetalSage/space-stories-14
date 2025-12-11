@@ -3,6 +3,7 @@ using Content.Server.Chat.Systems;
 using Content.Server.Popups;
 using Content.Shared.ActionBlocker;
 using Content.Shared.Body.Components;
+using Content.Shared.Chat;
 using Content.Shared.Damage;
 using Content.Shared.DoAfter;
 using Content.Shared.Interaction;

@@ -135,7 +135,7 @@ public sealed partial class ForceUserSystem
     private void OnEmp(EmpActionEvent args)
     {
         if (args.Handled) return;
-        _emp.EmpPulse(_transform.GetMapCoordinates(args.Performer), args.Range, args.EnergyConsumption, args.DisableDuration);
+        _emp.EmpPulse(_transform.GetMapCoordinates(args.Performer), args.Range, args.EnergyConsumption, TimeSpan.FromSeconds(args.DisableDuration));
         args.Handled = true;
     }
 }

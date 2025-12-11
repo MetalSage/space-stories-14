@@ -4,6 +4,7 @@ using Content.Server.Chat.Systems;
 using Content.Shared._Stories.SCCVars;
 using Content.Shared._Stories.TTS;
 using Content.Shared.GameTicking;
+using Content.Shared.Chat;
 using Robust.Shared.Configuration;
 using Robust.Shared.Player;
 using Robust.Shared.Prototypes;

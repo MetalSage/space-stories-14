@@ -28,6 +28,7 @@ public sealed class DamageOtherOnHitSystem : SharedDamageOtherOnHitSystem
         base.Initialize();
 
         SubscribeLocalEvent<DamageOtherOnHitComponent, ThrowDoHitEvent>(OnDoHit);
+        SubscribeLocalEvent<ItemToggleDamageOtherOnHitComponent, ItemToggledEvent>(OnItemToggle);
     }
 
     private void OnDoHit(EntityUid uid, DamageOtherOnHitComponent component, ThrowDoHitEvent args)
@@ -52,30 +53,34 @@ public sealed class DamageOtherOnHitSystem : SharedDamageOtherOnHitSystem
             var direction = body.LinearVelocity.Normalized();
             _sharedCameraRecoil.KickCamera(args.Target, direction);
         }
+    }
 
-        private void OnItemToggle(EntityUid uid, ItemToggleDamageOtherOnHitComponent itemToggleMelee, ItemToggledEvent args) // Stories
+    private void OnItemToggle(EntityUid uid, ItemToggleDamageOtherOnHitComponent itemToggleMelee, ItemToggledEvent args)
+    {
+        if (!TryComp(uid, out DamageOtherOnHitComponent? meleeWeapon))
+            return;
+
+        TryComp(uid, out DamageContactsComponent? contactsComp);
+
+        if (args.Activated)
         {
-            if (!TryComp(uid, out DamageOtherOnHitComponent? meleeWeapon))
-                return;
-
-            if (args.Activated)
+            if (itemToggleMelee.ActivatedDamage != null)
             {
-                if (itemToggleMelee.ActivatedDamage != null)
-                {
-                    //Setting deactivated damage to the weapon's regular value before changing it.
-                    itemToggleMelee.DeactivatedDamage ??= meleeWeapon.Damage;
-                    meleeWeapon.Damage = itemToggleMelee.ActivatedDamage;
-                }
-
-                meleeWeapon.HitSound = itemToggleMelee.ActivatedSoundOnHit;
+                //Setting deactivated damage to the weapon's regular value before changing it.
+                itemToggleMelee.DeactivatedDamage ??= meleeWeapon.Damage;
+                meleeWeapon.Damage = itemToggleMelee.ActivatedDamage;
             }
-            else
-            {
-                if (itemToggleMelee.DeactivatedDamage != null)
-                    meleeWeapon.Damage = itemToggleMelee.DeactivatedDamage;
 
-                meleeWeapon.HitSound = itemToggleMelee.DeactivatedSoundOnHit;
-            }
+            if (contactsComp != null)
+                contactsComp.HitSound = itemToggleMelee.ActivatedSoundOnHit;
+        }
+        else
+        {
+            if (itemToggleMelee.DeactivatedDamage != null)
+                meleeWeapon.Damage = itemToggleMelee.DeactivatedDamage;
+
+            if (contactsComp != null)
+                contactsComp.HitSound = itemToggleMelee.DeactivatedSoundOnHit;
         }
     }
 }
