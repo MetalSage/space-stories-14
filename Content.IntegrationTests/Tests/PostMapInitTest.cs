@@ -98,6 +98,8 @@ namespace Content.IntegrationTests.Tests
             "StoriesElkridge",
             "StoriesPrison",
             "StoriesSaltern",
+            "StoriesEdem",
+            "StoriesHelios",
             // Stories-End
             "Dev",
             "TestTeg",
