@@ -3,3 +3,10 @@
   parent: BaseCommandHatRecipe
   id: ClothingHeadHatCapHoS
   result: ClothingHeadHatCapHoS
+
+# Jumpsuits
+
+- type: latheRecipe
+  parent: BaseJumpsuitRecipe
+  id: STClothingUniformJumpsuitScientistSweaterRecipe
+  result: STClothingUniformJumpsuitScientistSweater
