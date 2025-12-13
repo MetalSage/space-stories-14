@@ -99011,14 +99011,14 @@ entities:
     - type: Transform
       pos: 115.5,193.5
       parent: 2
-- proto: SpawnPointSTJudge
+- proto: SpawnPointJudge
   entities:
   - uid: 17700
     components:
     - type: Transform
       pos: 114.5,167.5
       parent: 2
-- proto: SpawnPointSTProsecutor
+- proto: SpawnPointProsecutor
   entities:
   - uid: 17583
     components:

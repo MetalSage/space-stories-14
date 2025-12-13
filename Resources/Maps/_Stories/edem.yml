@@ -56477,14 +56477,14 @@ entities:
     - type: Transform
       pos: -53.5,16.5
       parent: 1
-- proto: SpawnPointSTJudge
+- proto: SpawnPointJudge
   entities:
   - uid: 9769
     components:
     - type: Transform
       pos: -45.5,-47.5
       parent: 1
-- proto: SpawnPointSTProsecutor
+- proto: SpawnPointProsecutor
   entities:
   - uid: 9796
     components:

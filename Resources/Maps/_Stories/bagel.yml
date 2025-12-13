@@ -136879,14 +136879,14 @@ entities:
     - type: Transform
       pos: -26.5,-29.5
       parent: 60
-- proto: SpawnPointSTJudge
+- proto: SpawnPointJudge
   entities:
   - uid: 17154
     components:
     - type: Transform
       pos: -51.5,-16.5
       parent: 60
-- proto: SpawnPointSTProsecutor
+- proto: SpawnPointProsecutor
   entities:
   - uid: 19091
     components:

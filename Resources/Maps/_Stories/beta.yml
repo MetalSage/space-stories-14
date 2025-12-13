@@ -108061,14 +108061,14 @@ entities:
     - type: Transform
       pos: 15.5,-22.5
       parent: 2
-- proto: SpawnPointSTJudge
+- proto: SpawnPointJudge
   entities:
   - uid: 19218
     components:
     - type: Transform
       pos: 41.5,11.5
       parent: 2
-- proto: SpawnPointSTProsecutor
+- proto: SpawnPointProsecutor
   entities:
   - uid: 13481
     components:

@@ -78834,14 +78834,14 @@ entities:
     - type: Transform
       pos: 20.5,-16.5
       parent: 2
-- proto: SpawnPointSTJudge
+- proto: SpawnPointJudge
   entities:
   - uid: 11259
     components:
     - type: Transform
       pos: 13.5,-38.5
       parent: 2
-- proto: SpawnPointSTProsecutor
+- proto: SpawnPointProsecutor
   entities:
   - uid: 14452
     components:
