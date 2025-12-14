@@ -14,7 +14,7 @@
           !type:NanotrasenNameGenerator
           prefixCreator: 'GD'
       - type: StationEmergencyShuttle
-        emergencyShuttlePath: /Maps/_Stories/Shuttles/emergency_corvaxdelta.yml
+        emergencyShuttlePath: /Maps/Shuttles/emergency_lox.yml
       - type: StationJobs
         availableJobs:
           CargoTechnician: [ 3, 3 ]
@@ -60,3 +60,5 @@
           #stories content
           GuardianNt: [ 1, 1 ]
           STBrigmedic: [ 1, 1 ]
+          Prosecutor: [ 1, 1 ]
+          Judge: [ 1, 1 ]

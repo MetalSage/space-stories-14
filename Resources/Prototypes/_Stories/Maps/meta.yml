@@ -47,7 +47,7 @@
             SecurityOfficer: [ 5, 7 ]
             Detective: [ 1, 1 ]
             SecurityCadet: [ 3, 6 ]
-            Lawyer: [ 1, 1 ]
+            Lawyer: [ 2, 2 ]
             #supply
             Quartermaster: [ 1, 1 ]
             SalvageSpecialist: [ 3, 3 ]
@@ -64,3 +64,5 @@
             GuardianNt: [ 1, 1 ]
             IAA: [ 1, 1 ]
             STBrigmedic: [ 1, 1 ]
+            Prosecutor: [ 1, 1 ]
+            Judge: [ 1, 1 ]
