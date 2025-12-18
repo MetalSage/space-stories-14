@@ -1,0 +1,9 @@
+﻿- type: entity
+  id: FlashBorg
+  parent: Flash
+  name: вспышка
+  description: Простая вспышка боргов.
+  components:
+  - type: LimitedCharges
+    maxCharges: 1000
+    charges: 1000

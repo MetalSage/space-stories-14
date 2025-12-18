@@ -28,6 +28,8 @@
   - SpeedLoaderMagnumPractice
   - MagazinePistolSubMachineGunPractice
   - WeaponFlareGunSecurity
+  - BorgModuleAdvancedSecurity
+  - BorgModuleSecurity
 
 # Shared between secfab and emagged autolathe
 - type: latheRecipePack

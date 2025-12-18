@@ -4,7 +4,7 @@
   name: лазер Боргов.
   description: Лазер, удобный.
   components:
-  - type: BatterySelfRecharger
+  - type: PredictedBatterySelfRecharger
     autoRecharge: true
     autoRechargeRate: 10
 
@@ -14,6 +14,7 @@
   name: станнер
   description: Простая станнер боргов.
   components:
-  - type: BatterySelfRecharger
+  - type: PredictedBatterySelfRecharger
     autoRecharge: true
-    autoRechargeRate: 4
+    autoRechargeRate: 6
+

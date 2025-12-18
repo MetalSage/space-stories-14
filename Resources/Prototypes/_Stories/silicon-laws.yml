@@ -1,0 +1,28 @@
+﻿- type: siliconLaw
+  id: SecurityDep1
+  order: 1
+  lawString: security-dep-1
+
+- type: siliconLaw
+  id: SecurityDep2
+  order: 2
+  lawString: security-dep-2
+
+- type: siliconLaw
+  id: SecurityDep3
+  order: 3
+  lawString: security-dep-3
+
+- type: siliconLaw
+  id: SecurityDep4
+  order: 4
+  lawString: security-dep-4
+
+- type: siliconLawset
+  id: SecurityDep
+  laws:
+  - SecurityDep1
+  - SecurityDep2
+  - SecurityDep3
+  - SecurityDep4
+  obeysTo: security-dep-name

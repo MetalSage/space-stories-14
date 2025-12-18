@@ -1,0 +1,48 @@
+- type: entity
+  id: BaseBorgSecurity
+  parent: [BaseBorgChassis, BaseBorgTransponder]
+  abstract: true
+  components:
+  - type: RandomMetadata
+    nameSegments:
+    - NamesBorg
+  - type: NpcFactionMember
+    factions:
+    - NanoTrasen
+  - type: ShowJobIcons
+  - type: ShowContrabandDetails
+  - type: ShowCriminalRecordIcons
+  - type: ShowMindShieldIcons
+  - type: FlashImmunity
+  - type: BorgChassis
+    maxModules: 4
+    moduleWhitelist:
+      tags:
+      - BorgModuleGeneric
+      - BorgModuleSecurity
+    hasMindState: security_e
+    noMindState: security_e_r
+  - type: SiliconLawProvider
+    laws: SecurityDep
+  - type: ActiveRadio
+    channels:
+    - Binary
+    - Common
+    - Science
+    - Security
+  - type: IntrinsicRadioTransmitter
+    channels:
+    - Binary
+    - Common
+    - Science
+    - Security
+  - type: Access
+    groups:
+    - AllAccess
+    tags:
+    - Borg
+  - type: AccessReader
+    access: [["Command"], ["Research"]]
+  - type: InteractionPopup
+    interactSuccessSound:
+      path: /Audio/Ambience/Objects/periodic_beep.ogg

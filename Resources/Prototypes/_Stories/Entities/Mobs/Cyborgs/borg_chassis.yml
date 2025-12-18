@@ -1,0 +1,8 @@
+- type: entity
+  id: BorgChassisSecurity
+  parent: BorgChassisSelectable
+  name: generic cyborg
+  suffix: type security
+  components:
+  - type: BorgSwitchableType
+    selectedBorgType: security
