@@ -1,0 +1,19 @@
+- type: entity
+  parent: WeaponLaserGun
+  id: WeaponBorgLaserGun
+  name: лазер Боргов.
+  description: Лазер, удобный.
+  components:
+  - type: BatterySelfRecharger
+    autoRecharge: true
+    autoRechargeRate: 10
+
+- type: entity
+  id: WeaponDisablerBorg
+  parent: WeaponDisabler
+  name: станнер
+  description: Простая станнер боргов.
+  components:
+  - type: BatterySelfRecharger
+    autoRecharge: true
+    autoRechargeRate: 4
