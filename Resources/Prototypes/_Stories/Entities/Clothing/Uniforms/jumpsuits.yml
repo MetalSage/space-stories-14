@@ -104,3 +104,71 @@
     sprite: _Stories/Clothing/Uniforms/Jumpsuit/Scientist_Sweater.rsi
   - type: Clothing
     sprite: _Stories/Clothing/Uniforms/Jumpsuit/Scientist_Sweater.rsi
+
+# Musician
+- type: entity
+  parent: ClothingUniformBase
+  id: STClothingUniformJumpsuitMusicianWhite
+  name: белый костюм музыканта
+  description: Белоснежный цвет костюма заставит вас светится в фото вспышках.
+  components:
+  - type: Sprite
+    sprite: _Stories/Clothing/Uniforms/Jumpsuit/musician_white.rsi
+  - type: Clothing
+    sprite: _Stories/Clothing/Uniforms/Jumpsuit/musician_white.rsi
+
+- type: entity
+  parent: ClothingUniformBase
+  id: STClothingUniformJumpsuitMusicianBlack
+  name: черный костюм музыканта
+  description: Бессмертная классика, актуален для любого малость известного поп-музыканта.
+  components:
+  - type: Sprite
+    sprite: _Stories/Clothing/Uniforms/Jumpsuit/musician_black.rsi
+  - type: Clothing
+    sprite: _Stories/Clothing/Uniforms/Jumpsuit/musician_black.rsi
+
+- type: entity
+  parent: ClothingUniformBase
+  id: STClothingUniformJumpsuitMusicianWaistcoatBeige
+  name: бежевый костюм музыканта
+  description: Классика, для любителей повседневного стиля.
+  components:
+  - type: Sprite
+    sprite: _Stories/Clothing/Uniforms/Jumpsuit/musician_waistcoat_white-beige.rsi
+  - type: Clothing
+    sprite: _Stories/Clothing/Uniforms/Jumpsuit/musician_waistcoat_white-beige.rsi
+
+# Librarian
+- type: entity
+  parent: ClothingUniformBase
+  id: STClothingUniformJumpsuitLibrarianBrown
+  name: коричневый костюм библиотекаря
+  description: Идеальный вариант для библиотекаря, чтобы слиться со старыми книгами, ветхими шкафами и лежащей повсюду пылью.
+  components:
+  - type: Sprite
+    sprite: _Stories/Clothing/Uniforms/Jumpsuit/librarian_brown.rsi
+  - type: Clothing
+    sprite: _Stories/Clothing/Uniforms/Jumpsuit/librarian_brown.rsi
+
+- type: entity
+  parent: ClothingUniformBase
+  id: STClothingUniformJumpsuitLibrarianGreen
+  name: зеленый костюм библиотекаря
+  description: Жалкая попытка привлечь внимание к своей работе.
+  components:
+  - type: Sprite
+    sprite: _Stories/Clothing/Uniforms/Jumpsuit/librarian_shirt-green.rsi
+  - type: Clothing
+    sprite: _Stories/Clothing/Uniforms/Jumpsuit/librarian_shirt-green.rsi
+
+- type: entity
+  parent: ClothingUniformBase
+  id: STClothingUniformJumpsuitLibrarianGrey
+  name: серый костюм библиотекаря
+  description: Истинный городской камуфляж.
+  components:
+  - type: Sprite
+    sprite: _Stories/Clothing/Uniforms/Jumpsuit/librarian_suit-grey.rsi
+  - type: Clothing
+    sprite: _Stories/Clothing/Uniforms/Jumpsuit/librarian_suit-grey.rsi

@@ -10,3 +10,33 @@
   parent: BaseJumpsuitRecipe
   id: STClothingUniformJumpsuitScientistSweaterRecipe
   result: STClothingUniformJumpsuitScientistSweater
+
+- type: latheRecipe
+  parent: BaseJumpsuitRecipe
+  id: STClothingUniformJumpsuitMusicianWhiteRecipe
+  result: STClothingUniformJumpsuitMusicianWhite
+
+- type: latheRecipe
+  parent: BaseJumpsuitRecipe
+  id: STClothingUniformJumpsuitMusicianBlackRecipe
+  result: STClothingUniformJumpsuitMusicianBlack
+
+- type: latheRecipe
+  parent: BaseJumpsuitRecipe
+  id: STClothingUniformJumpsuitMusicianWaistcoatBeigeRecipe
+  result: STClothingUniformJumpsuitMusicianWaistcoatBeige
+
+- type: latheRecipe
+  parent: BaseJumpsuitRecipe
+  id: STClothingUniformJumpsuitLibrarianBrownRecipe
+  result: STClothingUniformJumpsuitLibrarianBrown
+
+- type: latheRecipe
+  parent: BaseJumpsuitRecipe
+  id: STClothingUniformJumpsuitLibrarianGreenRecipe
+  result: STClothingUniformJumpsuitLibrarianGreen
+
+- type: latheRecipe
+  parent: BaseJumpsuitRecipe
+  id: STClothingUniformJumpsuitLibrarianGreyRecipe
+  result: STClothingUniformJumpsuitLibrarianGrey

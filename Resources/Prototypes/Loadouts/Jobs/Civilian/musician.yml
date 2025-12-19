@@ -9,6 +9,22 @@
   equipment:
     jumpsuit: ClothingUniformJumpskirtMusician
 
+# Stories
+- type: loadout
+  id: STJumpsuitMusicianWhite
+  equipment:
+    jumpsuit: STClothingUniformJumpsuitMusicianWhite
+
+- type: loadout
+  id: STJumpsuitMusicianBlack
+  equipment:
+    jumpsuit: STClothingUniformJumpsuitMusicianBlack
+
+- type: loadout
+  id: STMusicianWaistcoatBeige
+  equipment:
+    jumpsuit: STClothingUniformJumpsuitMusicianWaistcoatBeige
+
 # Outerclothing
 - type: loadout
   id: MusicianWintercoat

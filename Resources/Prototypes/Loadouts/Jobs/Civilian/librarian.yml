@@ -18,3 +18,20 @@
   id: CuratorJumpskirt
   equipment:
     jumpsuit: ClothingUniformJumpskirtCurator
+
+# Stories
+
+- type: loadout
+  id: STJumpsuitLibrarianBrown
+  equipment:
+    jumpsuit: STClothingUniformJumpsuitLibrarianBrown
+
+- type: loadout
+  id: STJumpsuitLibrarianGreen
+  equipment:
+    jumpsuit: STClothingUniformJumpsuitLibrarianGreen
+
+- type: loadout
+  id: STJumpsuitLibrarianGrey
+  equipment:
+    jumpsuit: STClothingUniformJumpsuitLibrarianGrey
