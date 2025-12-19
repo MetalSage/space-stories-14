@@ -1,6 +1,7 @@
 using Content.Shared.StatusEffect;
 using Content.Shared.Actions;
 using Content.Shared.Damage;
+using Content.Shared.Damage.Systems;
 using Content.Shared._Stories.Force;
 using Content.Server.Weapons.Melee;
 using Content.Shared.Alert;

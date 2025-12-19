@@ -180,7 +180,6 @@
   parent: ERTLeader
   components:
     # Stories-Pontific-Start
-    - type: Chaplain
     - type: Holy
     # Stories-Pontific-End
     - type: BibleUser
@@ -227,7 +226,6 @@
       prototypes: [ ERTChaplainGearEVA ]
       roleLoadout: [ RoleSurvivalEVA ]
     # Stories-Pontific-Start
-    - type: Chaplain
     - type: Holy
     # Stories-Pontific-End
     - type: BibleUser

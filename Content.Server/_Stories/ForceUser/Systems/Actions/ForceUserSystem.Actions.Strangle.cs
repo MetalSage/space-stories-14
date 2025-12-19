@@ -58,7 +58,8 @@ public sealed partial class ForceUserSystem
             EnsureComp<LiftingUpComponent>(uid);
             EnsureComp<MutedComponent>(uid);
 
-            var dmg = _damageable.TryChangeDamage(uid, args.Damage, true);
+            _damageable.TryChangeDamage(uid, args.Damage, out var dmg, true);
+            
             if (!_mobState.IsAlive(uid) || dmg != null && !_force.TryRemoveVolume(args.User, dmg.GetTotal().Float()))
             {
                 Stop(uid);

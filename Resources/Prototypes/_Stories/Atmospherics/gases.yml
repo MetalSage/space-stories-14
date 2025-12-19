@@ -1,5 +1,5 @@
 - type: gas
-  id: 9
+  id: STBZ
   name: stories-gases-bz
   specificHeat: 20
   heatCapacityRatio: 1.4
@@ -9,7 +9,7 @@
   pricePerMole: 0.15
 
 - type: gas
-  id: 10
+  id: STHealium
   name: stories-gases-healium
   specificHeat: 20
   heatCapacityRatio: 1.4
@@ -21,7 +21,7 @@
   pricePerMole: 1.2
 
 - type: gas
-  id: 11
+  id: STNitryl
   name: stories-gases-nitryl
   specificHeat: 20
   heatCapacityRatio: 1.4
@@ -31,7 +31,7 @@
   pricePerMole: 2.5
 
 - type: gas
-  id: 12
+  id: STPluoxium
   name: stories-gases-pluoxium
   specificHeat: 20
   heatCapacityRatio: 1.4

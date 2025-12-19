@@ -14,6 +14,7 @@ using Content.Server._Stories.Conversion;
 using Content.Server._Stories.Photosensitivity;
 using Content.Server.Stunnable;
 using Content.Shared.Damage;
+using Content.Shared.Damage.Systems;
 using Content.Shared.Light.EntitySystems;
 using Content.Shared.Mobs.Systems;
 using Content.Shared._Stories.Shadowling;

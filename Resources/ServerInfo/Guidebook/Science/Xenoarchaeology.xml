@@ -1,38 +1,51 @@
 <Document>
-  # Ксеноархеология
-  Ксеноархеология - это подразделение научного отдела, занимающееся исследованиями и экспериментами над инопланетными артефактами.
+  # Xenoarchaeology
 
-By researching the unique things each artifact can do, you gain Research Points, increase the artifact's sale value, and potentially discover a useful ability or two that can help your department or the whole station!
+  Xenoarchaeology is a branch of Science focused on researching alien [bold]artifacts[/bold].
 
-## Artifact Nodes
-<Box>
-<GuideEntityEmbed Entity="ComplexXenoArtifact" Caption=""/>
-<GuideEntityEmbed Entity="ComplexXenoArtifactItem" Caption=""/>
-</Box>
-Artifacts consist of a randomly-generated tree of nodes. These nodes have a "[color=#a4885c]depth[/color]", representing how dangerous the node is, and the number of other nodes connected to it, called "[color=#a4885c]edges[/color]",
+  Unlocking their secrets grants research points and reveals strange, potentially useful, or dangerous effects.
 
-Artifacts always start at depth zero, the root of the tree. Travelling the tree to find as many nodes as possible is the main goal of the scientists working on them. Knowledge is extracted from nodes to gain Research Points and increase the artifact's sale value.
+  At round start, Science usually has one or two artifacts in the lab. More can be:
+  - Ordered from [color=orange]Cargo[/color]
+  - Found by [color=orange]Salvage[/color]
+  - Assembled from [bold]fragments[/bold]
+  - Appear during certain station events
 
-  Каждый узел состоит из двух основных компонентов: [color=#a4885c]стимула[/color] и [color=#a4885c]реакции[/color]. Стимул - это внешнее поведение, которое вызывает реакцию. У одних реакций эффект мгновенный, а другие могут вызывать постоянные изменения. Срабатывание реакции вызывает перемещение артефакта к одному из соединённых узлов.
-
-  Опираясь на эти базовые принципы, вы можете понять, как связаны между собой различные узлы артефакта и как можно перемещаться между ними, многократно активируя узлы.
-
-  Хотя неподготовленному наблюдателю все может показаться хаотичным, опытный ученый может научиться понимать внутреннюю структуру любого артефакта.
-
-  ## Анализатор артефактов и аналитическая консоль
+  ## Artifacts
   <Box>
-    <GuideEntityEmbed Entity="MachineArtifactAnalyzer"/>
-    <GuideEntityEmbed Entity="ComputerAnalysisConsole"/>
+    <GuideEntityEmbed Entity="ComplexXenoArtifact" Caption=""/>
+    <GuideEntityEmbed Entity="ComplexXenoArtifactItem" Caption=""/>
   </Box>
-  Главными инструментами, которым вы будете пользоваться занимаясь ксеноархеологией, являются [color=#a4885c]анализатор артефактов[/color] и [color=#a4885c]аналитическая консоль[/color]. С их помощью можно создавать отчеты, содержащие ценную информацию об артефактах.
 
-  Чтобы всё настроить, достаточно связать их с конфигуратора сетей, положить артефакт на анализатор, и нажать кнопку [color=#a4885c]Сканировать[/color].
+  Artifacts contain [bold]nodes[/bold] arranged in [bold]layers[/bold].
+  - Unlocking a node unlocks connected nodes on upper layers.
+  - Each node has [bold]triggers[/bold], actions that must be performed near the artifact to unlock a node.
+  - When a node is unlocked, its [bold]effect[/bold] will trigger, and the node becomes [bold][color=plum]Active[/color][/bold].
+  - Each node has [bold]durability[/bold]: the number of times it can be manually activated after being unlocked.
+  - Higher nodes are harder to reach but give more [bold]research points[/bold].
+  - Unlocking all nodes provides no special bonus, but every node yields research points.
 
-  При помощи консоли вы можете извлекать очки исследований из артефактов используя кнопку [color=#a4885c]Извлечь О.И.[/color]. Количество получаемых вами очков зависит от того, сколько новых узлов артефакта было активировано, с момента последнего извлечения. Вы можете извлекать по несколько раз, нет причин не делать этого!!!
+  ## Equipment
+  <Box>
+    <GuideEntityEmbed Entity="MachineArtifactAnalyzer" Caption="Analyzer"/>
+    <GuideEntityEmbed Entity="ComputerAnalysisConsole" Caption="Analysis Console"/>
+    <GuideEntityEmbed Entity="NodeScanner" Caption="Node Scanner"/>
+  </Box>
+  - [bold]Artifact Analyzer:[/bold] Stationary device that scans artifacts, sending data to the Console.
+  - [bold][textlink="Analysis Console:" link="AnalysisConsole"][/bold] Stationary device that is used to display the node tree. Must be linked to an Analyzer with a multitool.
+  - [bold]Node Scanner:[/bold] Small hand-held device that can show the ID of the node currently being activated and whether the artifact is ready to trigger, letting scientist have minimal required knowledge for operating inside chamber near artifact and far without direct access to console.
 
-  ## Сборка артефактов
-  <GuideEntityEmbed Entity="ArtifactFragment" Caption="фрагмент артефакта"/>
-
-  Есть возможность получить несколько фрагментов артефактов и собрать их в рабочий артефакт. Их можно попросить у утилизаторов, которые обычно находят их во время добычи на астероидах или во время экспедиций.
-
+  <Box>
+    <GuideEntityEmbed Entity="CrateArtifactContainer" Caption="Artifact Container"/>
+    <GuideEntityEmbed Entity="HandheldArtifactContainer" Caption="Handheld Container"/>
+  </Box>
+  - [bold]Artifact Containers:[/bold] Safely store and transports artifacts and prevent nodes from triggering.
+  <Box>
+    <GuideEntityEmbed Entity="MachineArtifactCrusher" Caption="Crusher"/>
+  </Box>
+  - [bold]Artifact Crusher:[/bold] Crushes artifacts into fragments. Four fragments can be rebuilt into a new artifact.
+  <Box>
+    <GuideEntityEmbed Entity="ArtifactFragment" Caption="Artifact Fragment"/>
+  </Box>
+  - [bold]Artifact Fragment:[/bold] Pieces of destroyed artifacts. Four fragments can be rebuilt into a new artifact using the craft menu.
 </Document>
