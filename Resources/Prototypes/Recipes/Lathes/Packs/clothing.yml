@@ -83,6 +83,7 @@
   - ClothingUniformJumpskirtScientist
   - ClothingUniformJumpsuitSeniorResearcher
   - ClothingUniformJumpskirtSeniorResearcher
+# Stories
   - STClothingUniformJumpsuitScientistSweaterRecipe
 
 - type: latheRecipePack
@@ -140,6 +141,13 @@
   - ClothingUniformJumpsuitMime
   - ClothingUniformJumpskirtMime
   - ClothingUniformJumpsuitMusician
+# Stories
+  - STClothingUniformJumpsuitMusicianBlackRecipe
+  - STClothingUniformJumpsuitMusicianWhiteRecipe
+  - STClothingUniformJumpsuitMusicianWaistcoatBeigeRecipe
+  - STClothingUniformJumpsuitLibrarianBrownRecipe
+  - STClothingUniformJumpsuitLibrarianGreenRecipe
+  - STClothingUniformJumpsuitLibrarianGreyRecipe
 
 - type: latheRecipePack
   id: WinterCoats

@@ -462,7 +462,11 @@
   - LibrarianJumpskirt
   - CuratorJumpsuit
   - CuratorJumpskirt
-
+# Stories-start
+  - STJumpsuitLibrarianBrown
+  - STJumpsuitLibrarianGreen
+  - STJumpsuitLibrarianGrey
+# Stories-end
 - type: loadoutGroup
   id: LibrarianJobTrinkets
   name: loadout-group-jobtrinkets
@@ -848,7 +852,11 @@
   loadouts:
   - MusicianJumpsuit
   - MusicianJumpskirt
-
+# Stories-start
+  - STJumpsuitMusicianWhite
+  - STJumpsuitMusicianBlack
+  - STMusicianWaistcoatBeige
+# Stories-end
 - type: loadoutGroup
   id: MusicianOuterClothing
   name: loadout-group-musician-outerclothing
@@ -1369,7 +1377,7 @@
   - RoboticistJumpskirt
   - SeniorResearcherJumpsuit
   - SeniorResearcherJumpskirt
-  - STScientistSweaterJumpsuit
+  - STScientistSweaterJumpsuit #Stories
 
 - type: loadoutGroup
   id: ScientistBackpack

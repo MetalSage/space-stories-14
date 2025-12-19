@@ -14,7 +14,12 @@
     ClothingUniformJumpskirtLibrarian: 3
     ClothingShoesBootsLaceup: 2
     ClothingHeadsetService: 2
-    BoxPrinter: 1 # Stories
+# Stories-start
+    STClothingUniformJumpsuitLibrarianBrown: 3
+    STClothingUniformJumpsuitLibrarianGreen: 3
+    STClothingUniformJumpsuitLibrarianGrey: 3
+    BoxPrinter: 1
+# Stories-end
   contrabandInventory:
     ToyFigurineLibrarian: 1
 
