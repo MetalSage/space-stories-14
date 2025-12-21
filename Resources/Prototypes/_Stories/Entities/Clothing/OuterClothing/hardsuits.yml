@@ -54,14 +54,14 @@
 
 - type: entity
   parent: [ClothingOuterHardsuitBase, BaseCommandContraband]
-  id: ClothingOuterHardsuitGuardianNT
+  id: ClothingOuterHardsuitGuardianNt
   name: скафандр стража клинка
   description: Специальный скафандр защитника командования. Это подвижная версия скафандра службы безопасности.
   components:
   - type: Sprite
-    sprite: _Stories/Clothing/OuterClothing/Hardsuits/guardianNT.rsi
+    sprite: _Stories/Clothing/OuterClothing/Hardsuits/guardian_nt.rsi
   - type: Clothing
-    sprite: _Stories/Clothing/OuterClothing/Hardsuits/guardianNT.rsi
+    sprite: _Stories/Clothing/OuterClothing/Hardsuits/guardian_nt.rsi
   - type: PressureProtection
     highPressureMultiplier: 0.03
     lowPressureMultiplier: 1000
@@ -76,7 +76,7 @@
     sprintModifier: 0.95
   - type: HeldSpeedModifier
   - type: ToggleableClothing
-    clothingPrototype: ClothingHeadHelmetHardsuitGuardianNT
+    clothingPrototype: ClothingHeadHelmetHardsuitGuardianNt
   - type: Tag
     tags:
     - Hardsuit

@@ -50,14 +50,14 @@
 
 - type: entity 
   parent: [ ClothingHeadHardsuitBase, ClothingHeadSuitWithLightBase ]
-  id: ClothingHeadHelmetHardsuitGuardianNT
+  id: ClothingHeadHelmetHardsuitGuardianNt
   name: шлем скафандра стража клинка
   description: Лёгкий шлем скафандра стража клинка. Защищает и от тарантулов, и от слаймов.
   components:
   - type: Sprite
-    sprite: _Stories/Clothing/Head/Hardsuits/guardianNT.rsi
+    sprite: _Stories/Clothing/Head/Hardsuits/guardian_nt.rsi
   - type: Clothing
-    sprite: _Stories/Clothing/Head/Hardsuits/guardianNT.rsi
+    sprite: _Stories/Clothing/Head/Hardsuits/guardian_nt.rsi
   - type: Armor
     modifiers:
       coefficients:

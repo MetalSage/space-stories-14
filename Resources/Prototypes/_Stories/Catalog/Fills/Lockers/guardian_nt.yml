@@ -1,4 +1,4 @@
-- type: entity 
+- type: entity
   id: LockerGuardianNtFilled
   suffix: Filled
   parent: LockerGuardianNt
@@ -11,6 +11,6 @@
       - id: ClothingEyesGlassesSecurity
       - id: ClothingBeltSecurityFilled
       - id: ClothingOuterVestGuardianNt
-      - id: ClothingOuterHardsuitGuardianNT
+      - id: ClothingOuterHardsuitGuardianNt
       - id: NitrogenTankFilled
       - id: OxygenTankFilled
