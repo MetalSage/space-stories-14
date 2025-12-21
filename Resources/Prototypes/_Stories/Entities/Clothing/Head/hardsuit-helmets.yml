@@ -45,3 +45,31 @@
       sprite: _Stories/Clothing/Head/Hardsuits/hospsp.rsi
     - type: Clothing
       sprite: _Stories/Clothing/Head/Hardsuits/hospsp.rsi
+
+#шлем скафандра стража клинка
+
+- type: entity 
+  parent: [ ClothingHeadHardsuitBase, ClothingHeadSuitWithLightBase ]
+  id: ClothingHeadHelmetHardsuitGuardianNT
+  name: шлем скафандра стража клинка
+  description: Лёгкий шлем скафандра стража клинка. Защищает и от тарантулов, и от слаймов.
+  components:
+  - type: Sprite
+    sprite: _Stories/Clothing/Head/Hardsuits/guardianNT.rsi
+  - type: Clothing
+    sprite: _Stories/Clothing/Head/Hardsuits/guardianNT.rsi
+  - type: Armor
+    modifiers:
+      coefficients:
+        Blunt: 0.95
+        Slash: 0.95
+        Piercing: 0.95
+        Heat: 0.95
+        Radiation: 0.95
+        Caustic: 0.95
+  - type: PressureProtection
+    highPressureMultiplier: 0.6
+    lowPressureMultiplier: 1000
+  - type: Tag
+    tags:
+    - WhitelistChameleon
