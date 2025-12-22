@@ -4,7 +4,7 @@ meta:
   engineVersion: 268.0.0
   forkId: ""
   forkVersion: ""
-  time: 12/22/2025 19:05:25
+  time: 12/22/2025 19:22:58
   entityCount: 17703
 maps:
 - 1
@@ -119,7 +119,7 @@ entities:
     - type: MetaData
       name: Roof
     - type: Transform
-      pos: -93.26878,-352.44806
+      pos: -85.32788,-171.15189
       parent: 1
     - type: MapGrid
       chunks:
