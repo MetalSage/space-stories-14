@@ -1,0 +1,72 @@
+- type: roleLoadout
+  id: JobJudge
+  groups:
+  - JudgeJumpsuit
+  - JudgeGloves
+  - JudgeShoes
+  - GroupTankHarness
+  - JudgeOuterClothing
+  - CommonBackpack
+  - Survival
+  - Trinkets
+  - GroupSpeciesBreathTool
+
+- type: loadoutGroup
+  id: JudgeJumpsuit
+  name: loadout-group-judge-jumpsuit
+  loadouts:
+  - IAAJumpsuitBlue
+  - IAAJumpskirtBlue
+  - IAAJumpsuitPurple
+  - IAAJumpskirtPurple
+  - IAAJumpsuitRed
+  - IAAJumpskirtRed
+  - IAAJumpsuitBlack
+  - IAAJumpskirtBlack
+  - IAAJumpsuitGood
+  - IAAJumpskirtGood
+
+# Перчатки
+- type: loadoutGroup
+  id: JudgeGloves
+  name: loadout-group-judge-gloves
+  minLimit: 0
+  loadouts:
+  - IAAGlovesWhite
+  - IAAGlovesGray
+  - IAAGlovesBlack
+  - IAAGlovesRed
+  - IAAGlovesBlue
+
+# Обувь
+- type: loadoutGroup
+  id: JudgeShoes
+  name: loadout-group-judge-shoes
+  loadouts:
+  - BlackShoes
+  - WhiteShoes
+  - IAAShoesLaceup
+
+# Мантии
+- type: loadoutGroup
+  id: JudgeOuterClothing
+  name: loadout-group-judge-outerclothing
+  loadouts:
+  - JudgeOuterClothingRobesJudgeRed
+  - JudgeOuterClothingRobesJudge
+  - JudgeOuterClothingRobesJudgeWorn
+
+- type: loadout
+  id: JudgeOuterClothingRobesJudgeRed
+  equipment:
+    outerClothing: ClothingOuterRobesJudgeRed
+
+- type: loadout
+  id: JudgeOuterClothingRobesJudgeWorn
+  equipment:
+    outerClothing: ClothingOuterRobesJudgeWorn
+
+- type: loadout
+  id: JudgeOuterClothingRobesJudge
+  equipment:
+    outerClothing: ClothingOuterRobesJudge

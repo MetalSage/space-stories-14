@@ -1,0 +1,57 @@
+- type: job
+  id: Judge
+  name: job-name-judge
+  description: job-description-judge
+  playTimeTracker: JobJudge
+  requirements:
+  - !type:DepartmentTimeRequirement
+    department: Security
+    time: 10h
+  - !type:DepartmentTimeRequirement
+    department: Command
+    time: 35h
+  - !type:RoleTimeRequirement
+    role: JobCaptain
+    time: 15h
+  - !type:RoleTimeRequirement
+    role: JobHeadOfSecurity
+    time: 5h
+  - !type:RoleTimeRequirement
+    role: JobIAA
+    time: 30h
+  startingGear: JudgeGear
+  icon: "JobIconJudge"
+  supervisors: job-supervisors-centcom
+  canBeAntag: false
+  access:
+  - Service
+  - Brig
+  - Maintenance
+  - Command
+  - External
+  - Lawyer
+  special:
+  - !type:AddImplantSpecial
+    implants: [ MindShieldImplant ]
+
+- type: startingGear
+  id: JudgeGear
+  equipment:
+    id: JudgePDA
+    eyes: ClothingEyesGlassesSunglasses
+    ears: ClothingHeadsetJudge
+  storage:
+    back:
+    - RubberStampJudge
+
+- type: chameleonOutfit
+  id: JudgeChameleonOutfit
+  job: Judge
+  hasMindShield: true
+  equipment:
+    head: ClothingHeadHatBowlerHat
+    eyes: ClothingEyesGlassesCheapSunglasses
+    mask: ClothingMaskBreath
+    neck: ClothingNeckLawyerbadge
+    outerClothing: ClothingOuterWinterColorBlack
+    gloves: ClothingHandsGlovesColorBlack
