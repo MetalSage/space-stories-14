@@ -93,3 +93,25 @@
       sprite: _Stories/Clothing/Uniforms/Jumpsuit/detective.rsi
     - type: Clothing
       sprite: _Stories/Clothing/Uniforms/Jumpsuit/detective.rsi
+
+- type: entity
+  parent: ClothingUniformBase
+  id: ClothingUniformJumpsuitProsecutorBlue
+  name: синий костюм обвинителя
+  description: Строгий костюм, достойный высших чинов NanoTrasen.
+  components:
+  - type: Sprite
+    sprite: _Stories/Clothing/Uniforms/Jumpsuit/prosecutorblue.rsi
+  - type: Clothing
+    sprite: _Stories/Clothing/Uniforms/Jumpsuit/prosecutorblue.rsi
+
+- type: entity
+  parent: ClothingUniformBase
+  id: ClothingUniformJumpsuitProsecutorBlack
+  name: черный костюм обвинителя
+  description: Строгий костюм, достойный высших чинов NanoTrasen.
+  components:
+  - type: Sprite
+    sprite: _Stories/Clothing/Uniforms/Jumpsuit/prosecutorblack.rsi
+  - type: Clothing
+    sprite: _Stories/Clothing/Uniforms/Jumpsuit/prosecutorblack.rsi

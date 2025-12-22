@@ -34,6 +34,10 @@
       map: ["variant-service"]
     - state: variant-command
       map: ["variant-command"]
+    # Stories start
+    - state: variant-court
+      map: ["variant-court"]
+    # Stories end
     - state: variant-multiple
       map: ["variant-multiple"]
     - state: telecom-open
@@ -83,6 +87,12 @@
         whitelist:
           tags:
           - EncryptionCommand
+      # Stories start
+      variant-court:
+        whitelist:
+          tags:
+          - EncryptionJuridical
+      # Stories end
       variant-multiple:
         whitelist:
           components:
@@ -125,6 +135,11 @@
         variant-command:
           True: { shader: unshaded }
           False: { shader: shaded }
+        # Stories start
+        variant-court:
+          True: { shader: unshaded }
+          False: { shader: shaded }
+        # Stories end
         variant-default:
           True: { shader: unshaded }
           False: { shader: shaded }
@@ -201,7 +216,8 @@
       - EncryptionKeySecurity
       - EncryptionKeyService
       - EncryptionKeyCommand
-      - PRISONEncryptionKey
+      - PRISONEncryptionKey # Stories
+      - EncryptionKeyJuridical # Stories
 
 - type: entity
   parent: TelecomServer
@@ -282,3 +298,15 @@
     containers:
       key_slots:
       - EncryptionKeyCommand
+
+# Stories
+
+- type: entity
+  parent: TelecomServer
+  id: TelecomServerFilledJuridical
+  suffix: Juridical
+  components:
+  - type: ContainerFill
+    containers:
+      key_slots:
+      - EncryptionKeyJuridical

@@ -9,6 +9,7 @@
         - Common
         - Command
         - Security
+        - Juridical
       defaultChannel: Command
     - type: Sprite
       sprite: _Stories/Objects/Devices/encryption_keys.rsi
@@ -31,3 +32,41 @@
       layers:
         - state: crypt_prison
         - state: prison_label
+
+- type: entity
+  parent: EncryptionKey
+  id: EncryptionKeyJudge
+  name: ключ шифрования суда
+  description: Ключ шифрования, используемый самой педантичной персоной на станции.
+  components:
+  - type: EncryptionKey
+    channels:
+    - Common
+    - Command
+    - Security
+    - Juridical
+    defaultChannel: Command
+  - type: Sprite
+    sprite: _Stories/Objects/Devices/encryption_keys.rsi
+    layers:
+    - state: crypt_prison
+    - state: court_label
+
+- type: entity
+  parent: EncryptionKey
+  id: EncryptionKeyJuridical
+  name: ключ шифрования юридического департамента
+  description: Ключ шифрования, используемый самой педантичной персоной на станции.
+  components:
+  - type: EncryptionKey
+    channels:
+    - Juridical
+    defaultChannel: Juridical
+  - type: Sprite
+    sprite: _Stories/Objects/Devices/encryption_keys.rsi
+    layers:
+    - state: crypt_silver
+    - state: court_label
+  - type: Tag
+    tags:
+    - EncryptionJuridical

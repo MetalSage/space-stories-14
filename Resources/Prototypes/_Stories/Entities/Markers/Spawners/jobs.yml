@@ -25,7 +25,7 @@
     - state: green
     - state: guardiannt
 
-# Civilian
+# Juridical
 
 - type: entity
   id: STSpawnPointIAA
@@ -38,3 +38,27 @@
     layers:
     - state: green
     - state: lawyer
+
+- type: entity
+  id: SpawnPointJudge
+  parent: SpawnPointJobBaseStories
+  name: judge
+  components:
+  - type: SpawnPoint
+    job_id: Judge
+  - type: Sprite
+    layers:
+    - state: green
+    - state: guardiannt
+
+- type: entity
+  id: SpawnPointProsecutor
+  parent: SpawnPointJobBaseStories
+  name: prosecutor
+  components:
+  - type: SpawnPoint
+    job_id: Prosecutor
+  - type: Sprite
+    layers:
+    - state: green
+    - state: guardiannt

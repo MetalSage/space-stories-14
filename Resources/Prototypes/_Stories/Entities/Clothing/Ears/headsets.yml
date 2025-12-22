@@ -10,3 +10,29 @@
           - EncryptionKeyIAA
     - type: Sprite
       sprite: Clothing/Ears/Headsets/servicesecurity.rsi
+
+- type: entity
+  parent: ClothingHeadset
+  id: ClothingHeadsetJudge
+  name: гарнитура cудьи
+  description: Гарнитура - она точно поможет вам предать огласке приговор.
+  components:
+  - type: ContainerFill
+    containers:
+      key_slots:
+      - EncryptionKeyJudge
+  - type: Sprite
+    sprite: _Stories/Clothing/Ears/Headsets/judge.rsi
+
+- type: entity
+  parent: ClothingHeadset
+  id: ClothingHeadsetJuridical
+  name: гарнитура юридического департамента
+  description: Гарнитура, чтобы все вас точно услышали.
+  components:
+  - type: ContainerFill
+    containers:
+      key_slots:
+      - EncryptionKeyJuridical
+  - type: Sprite
+    sprite: _Stories/Clothing/Ears/Headsets/juridical.rsi
