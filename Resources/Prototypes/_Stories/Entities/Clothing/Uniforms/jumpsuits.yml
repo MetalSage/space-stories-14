@@ -96,6 +96,18 @@
 
 - type: entity
   parent: ClothingUniformBase
+  id: STClothingUniformJumpsuitScientistSweater
+  name: scientist's sweater jumpsuit
+  description: Super-fashionable sweater and glasses plus seven, Young master of integrated circuits, The postgraduate from our department boldly declares to everyone “A sexy body is a solid body!”
+  components:
+  - type: Sprite
+    sprite: _Stories/Clothing/Uniforms/Jumpsuit/Scientist_Sweater.rsi
+  - type: Clothing
+    sprite: _Stories/Clothing/Uniforms/Jumpsuit/Scientist_Sweater.rsi
+
+
+- type: entity
+  parent: ClothingUniformBase
   id: ClothingUniformJumpsuitProsecutorBlue
   name: синий костюм обвинителя
   description: Строгий костюм, достойный высших чинов NanoTrasen.
