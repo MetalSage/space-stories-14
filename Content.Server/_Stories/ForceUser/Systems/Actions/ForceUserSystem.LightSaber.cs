@@ -4,6 +4,7 @@ using Content.Shared.Item;
 using Content.Shared.Weapons.Misc;
 using Content.Shared._Stories.Force.Lightsaber;
 using Content.Shared.Damage;
+using Content.Shared.Damage.Systems;
 using Robust.Shared.Random;
 using Content.Shared.Item.ItemToggle.Components;
 

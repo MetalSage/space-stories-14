@@ -11,16 +11,7 @@
     gasMixture:
       volume: 1000
       moles:
-      - 0 # oxygen
-      - 0 # nitrogen
-      - 0 # CO2
-      - 0 # Plasma
-      - 0 # Tritium
-      - 0 #  Water vapor
-      - 0 # Miasma
-      - 0 # N2O
-      - 0 # Frezon
-      - 1871.71051 # BZ
+        STBZ: 1871.71051
       temperature: 293.15
   - type: Destructible
     thresholds:
@@ -61,17 +52,7 @@
     gasMixture:
       volume: 1000
       moles:
-      - 0 # oxygen
-      - 0 # nitrogen
-      - 0 # CO2
-      - 0 # Plasma
-      - 0 # Tritium
-      - 0 #  Water vapor
-      - 0 # Miasma
-      - 0 # N2O
-      - 0 # Frezon
-      - 0 # BZ
-      - 1871.71051 # Healium
+        STHealium: 1871.71051
       temperature: 293.15
   - type: Destructible
     thresholds:
@@ -112,18 +93,7 @@
     gasMixture:
       volume: 1000
       moles:
-      - 0 # oxygen
-      - 0 # nitrogen
-      - 0 # CO2
-      - 0 # Plasma
-      - 0 # Tritium
-      - 0 #  Water vapor
-      - 0 # Miasma
-      - 0 # N2O
-      - 0 # Frezon
-      - 0 # BZ
-      - 0 # Healium
-      - 1871.71051 # Nitryl
+        STNitryl: 1871.71051
       temperature: 293.15
   - type: Destructible
     thresholds:
@@ -164,19 +134,7 @@
     gasMixture:
       volume: 1000
       moles:
-      - 0 # oxygen
-      - 0 # nitrogen
-      - 0 # CO2
-      - 0 # Plasma
-      - 0 # Tritium
-      - 0 #  Water vapor
-      - 0 # Miasma
-      - 0 # N2O
-      - 0 # Frezon
-      - 0 # BZ
-      - 0 # Healium
-      - 0 # Nitryl
-      - 1871.71051 #Pluoxium
+        STPluoxium: 1871.71051
       temperature: 293.15
   - type: Destructible
     thresholds:

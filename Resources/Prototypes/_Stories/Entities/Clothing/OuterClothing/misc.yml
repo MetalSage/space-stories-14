@@ -1,0 +1,21 @@
+- type: entity
+  parent: ClothingOuterBase
+  id: ClothingOuterRobesJudgeRed
+  name: красная судейская мантия
+  description: Эта красная мантия внушает авторитет.
+  components:
+  - type: Sprite
+    sprite: _Stories/Clothing/OuterClothing/Misc/judge_red.rsi
+  - type: Clothing
+    sprite: _Stories/Clothing/OuterClothing/Misc/judge_red.rsi
+
+- type: entity
+  parent: ClothingOuterBase
+  id: ClothingOuterRobesJudgeWorn
+  name: поношеная судейская мантия
+  description: Эта мантия внушает авторитет.
+  components:
+  - type: Sprite
+    sprite: _Stories/Clothing/OuterClothing/Misc/judge.rsi
+  - type: Clothing
+    sprite: _Stories/Clothing/OuterClothing/Misc/judge.rsi

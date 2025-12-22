@@ -1,0 +1,66 @@
+- type: roleLoadout
+  id: JobProsecutor
+  groups:
+  - ProsecutorJumpsuit
+  - ProsecutorGloves
+  - ProsecutorShoes
+  - GroupTankHarness
+  - CommonBackpack
+  - Survival
+  - Trinkets
+  - GroupSpeciesBreathTool
+
+- type: loadoutGroup
+  id: ProsecutorJumpsuit
+  name: loadout-group-prosecutor-jumpsuit
+  loadouts:
+  - ProsecutorJumpsuitBlue
+  - ProsecutorJumpsuitBlack
+  - ProsecutorJumpskirtBlack
+  - ProsecutorJumpskirtBlue
+
+# Cиний костюм обвинителя
+- type: loadout
+  id: ProsecutorJumpsuitBlue
+  equipment:
+    jumpsuit: ClothingUniformJumpsuitProsecutorBlue
+
+# Черный костюм обвинителя
+- type: loadout
+  id: ProsecutorJumpsuitBlack
+  equipment:
+    jumpsuit: ClothingUniformJumpsuitProsecutorBlack
+
+# Черная юбка-комбинезон обвинителя
+- type: loadout
+  id: ProsecutorJumpskirtBlack
+  equipment:
+    jumpsuit: ClothingUniformJumpskirtProsecutorBlack
+
+# Синяя юбка-комбинезон обвинителя
+- type: loadout
+  id: ProsecutorJumpskirtBlue
+  equipment:
+    jumpsuit: ClothingUniformJumpskirtProsecutorBlue
+
+# Перчатки
+- type: loadoutGroup
+  id: ProsecutorGloves
+  name: loadout-group-prosecutor-gloves
+  minLimit: 0
+  loadouts:
+  - IAAGlovesWhite
+  - IAAGlovesGray
+  - IAAGlovesBlack
+  - IAAGlovesRed
+  - IAAGlovesBlue
+
+# Обувь
+- type: loadoutGroup
+  id: ProsecutorShoes
+  name: loadout-group-prosecutor-shoes
+  loadouts:
+  - BlackShoes
+  - WhiteShoes
+  - IAAShoesLaceup
+

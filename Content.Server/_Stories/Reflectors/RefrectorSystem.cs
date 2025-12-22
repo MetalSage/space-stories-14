@@ -51,7 +51,7 @@ public sealed class ReflectorSystem : EntitySystem
         if (!TryComp<ReflectiveComponent>(projectile, out var reflective) ||
             reflective.Reflective == 0x0 ||
             !TryComp<GunComponent>(user, out var gunComponent) ||
-            _whitelistSystem.IsBlacklistPass(component.Blacklist, projectile) ||
+            _whitelistSystem.IsWhitelistPass(component.Blacklist, projectile) ||
             _whitelistSystem.IsWhitelistFail(component.Whitelist, projectile))
         {
             return false;

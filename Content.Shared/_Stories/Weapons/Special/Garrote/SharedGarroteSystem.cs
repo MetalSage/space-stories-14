@@ -1,4 +1,5 @@
 using Content.Shared.Damage;
+using Content.Shared.Damage.Systems;
 using Content.Shared.Mobs;
 using Content.Shared.Mobs.Components;
 using Content.Shared.Speech.Muting;
@@ -31,7 +32,7 @@ public abstract class SharedGarroteSystem : EntitySystem
         if (args.Cancelled || mobState.CurrentState != MobState.Alive)
             return;
 
-        _damageable.TryChangeDamage(args.Target, comp.Damage, origin: args.User);
+        _damageable.TryChangeDamage(args.Target.Value, comp.Damage, origin: args.User);
 
         _stun.TryAddStunDuration(args.Target.Value, comp.DurationStatusEffects);
         _statusEffect.TryAddStatusEffect<MutedComponent>(args.Target.Value, "Muted", comp.DurationStatusEffects, refresh: true);

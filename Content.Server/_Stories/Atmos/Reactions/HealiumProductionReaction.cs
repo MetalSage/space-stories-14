@@ -13,7 +13,7 @@ public sealed partial class HealiumProductionReaction : IGasReactionEffect
 {
     public ReactionResult React(GasMixture mixture, IGasMixtureHolder? holder, AtmosphereSystem atmosphereSystem, float heatScale)
     {
-        var initBZ = mixture.GetMoles(Gas.BZ);
+        var initBZ = mixture.GetMoles(Gas.STBZ);
         var initFrezon = mixture.GetMoles(Gas.Frezon);
 
         var rate = mixture.Temperature / Atmospherics.T20C;
@@ -26,9 +26,9 @@ public sealed partial class HealiumProductionReaction : IGasReactionEffect
         if (bZRemoved > initBZ || frezonRemoved > initFrezon || mixture.Temperature > Atmospherics.T20C)
             return ReactionResult.NoReaction;
 
-        mixture.AdjustMoles(Gas.BZ, -bZRemoved);
+        mixture.AdjustMoles(Gas.STBZ, -bZRemoved);
         mixture.AdjustMoles(Gas.Frezon, -frezonRemoved);
-        mixture.AdjustMoles(Gas.Healium, healiumProduced);
+        mixture.AdjustMoles(Gas.STHealium, healiumProduced);
 
         var energyReleased = healiumProduced * Atmospherics.HealiumProductionEnergy;
         var heatCap = atmosphereSystem.GetHeatCapacity(mixture, true);

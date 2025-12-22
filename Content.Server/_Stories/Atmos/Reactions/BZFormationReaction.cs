@@ -32,7 +32,7 @@ public sealed partial class BZFormationReaction : IGasReactionEffect
 
         mixture.AdjustMoles(Gas.NitrousOxide, -n2oRemoved);
         mixture.AdjustMoles(Gas.Plasma, -plasmaRemoved);
-        mixture.AdjustMoles(Gas.BZ, bzFormed);
+        mixture.AdjustMoles(Gas.STBZ, bzFormed);
 
         var energyReleased = bzFormed * Atmospherics.BZFormationEnergy;
         var heatCap = atmosphereSystem.GetHeatCapacity(mixture, true);

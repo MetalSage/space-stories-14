@@ -26,3 +26,31 @@
     - type: Sprite
       sprite: Objects/Misc/bureaucracy.rsi
       state: stamp-hosp
+
+- type: entity
+  name: печать cудьи
+  parent: RubberStampBase
+  id: RubberStampJudge
+  suffix: DO NOT MAP
+  components:
+  - type: Stamp
+    stampedName: stamp-component-stamped-name-prosecutor
+    stampedColor: "#773e24"
+    stampState: "paper_stamp-ok"
+  - type: Sprite
+    sprite: _Stories/Objects/Misc/bureaucracy.rsi
+    state: stamp-judge
+
+- type: entity
+  name: печать судебного обвинителя
+  parent: RubberStampBase
+  id: RubberStamProsecutor
+  suffix: DO NOT MAP
+  components:
+  - type: Stamp
+    stampedName: stamp-component-stamped-name-judge
+    stampedColor: "#115188"
+    stampState: "paper_stamp-ok"
+  - type: Sprite
+    sprite: _Stories/Objects/Misc/bureaucracy.rsi
+    state: stamp-prosecutor

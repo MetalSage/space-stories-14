@@ -49,6 +49,49 @@
 
 - type: entity
   parent: BasePDA
+  id: JudgePDA
+  name: КПК судьи
+  description: Справедливость и прибыль - лучшие друзья.
+  components:
+  - type: Sprite
+    sprite: _Stories/Objects/Devices/pda.rsi
+  - type: Pda
+    id: JudgeIDCard
+  - type: Appearance
+    appearanceDataInit:
+      enum.PdaVisuals.PdaType:
+        !type:String
+        pda-judge
+  - type: PdaBorderColor
+    borderColor: "#a36042"
+    accentVColor: "#dfdfdf"
+  - type: Icon
+    sprite: _Stories/Objects/Devices/pda.rsi
+    state: pda-judge
+
+- type: entity
+  parent: BasePDA
+  id: ProsecutorPDA
+  name: КПК прокурора
+  description: Справедливость и прибыль - лучшие друзья.
+  components:
+  - type: Sprite
+    sprite: _Stories/Objects/Devices/pda.rsi
+  - type: Pda
+    id: ProsecutorIDCard
+  - type: Appearance
+    appearanceDataInit:
+      enum.PdaVisuals.PdaType:
+        !type:String
+        pda-prosecutor
+  - type: PdaBorderColor
+    borderColor: "#1284ca"
+  - type: Icon
+    sprite: _Stories/Objects/Devices/pda.rsi
+    state: pda-prosecutor
+
+- type: entity
+  parent: BasePDA
   id: PRISONPDAHeadOfPrison
   name: КПК начальника тюрьмы
   description: Этот КПК - ваш путь к свободе.

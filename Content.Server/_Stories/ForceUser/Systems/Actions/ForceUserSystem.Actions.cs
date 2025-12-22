@@ -9,6 +9,7 @@ using Content.Shared.Mobs;
 using Content.Shared._Stories.Empire.Components;
 using Content.Server._Stories.ForceUser.ProtectiveBubble.Components;
 using Content.Shared.Store.Components;
+using System.Linq;
 
 namespace Content.Server._Stories.ForceUser;
 public sealed partial class ForceUserSystem
@@ -129,13 +130,16 @@ public sealed partial class ForceUserSystem
     private void OnFreedom(FreedomActionEvent args)
     {
         if (!TryComp<CuffableComponent>(args.Performer, out var cuffs) || cuffs.Container.ContainedEntities.Count < 1) return;
-        _cuffable.Uncuff(args.Performer, cuffs.LastAddedCuffs, cuffs.LastAddedCuffs);
+
+        var lastCuffs = cuffs.Container.ContainedEntities.Last();
+        _cuffable.Uncuff(args.Performer, args.Performer, lastCuffs);
+        
         args.Handled = true;
     }
     private void OnEmp(EmpActionEvent args)
     {
         if (args.Handled) return;
-        _emp.EmpPulse(_transform.GetMapCoordinates(args.Performer), args.Range, args.EnergyConsumption, args.DisableDuration);
+        _emp.EmpPulse(_transform.GetMapCoordinates(args.Performer), args.Range, args.EnergyConsumption, TimeSpan.FromSeconds(args.DisableDuration));
         args.Handled = true;
     }
 }

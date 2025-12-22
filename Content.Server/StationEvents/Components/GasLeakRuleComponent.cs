@@ -15,10 +15,10 @@ public sealed partial class GasLeakRuleComponent : Component
         Gas.Frezon,
         Gas.WaterVapor, // the fog
         // Stories-Gas start
-        Gas.BZ,
-        Gas.Healium,
-        Gas.Nitryl,
-        Gas.Pluoxium,
+        Gas.STBZ,
+        Gas.STHealium,
+        Gas.STNitryl,
+        Gas.STPluoxium,
         // Stories-Gas end
     };
 

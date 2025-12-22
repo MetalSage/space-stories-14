@@ -66,7 +66,7 @@ public sealed class TargetingTeleporterSystem : SharedTargetingTeleporterSystem
             if (_entityWhitelist.IsWhitelistFail(entity.Comp.StationWhitelist, station))
                 continue;
 
-            if (_entityWhitelist.IsBlacklistPass(entity.Comp.StationBlacklist, station))
+            if (_entityWhitelist.IsWhitelistPass(entity.Comp.StationBlacklist, station))
                 continue;
 
             neededStations.Add(station);

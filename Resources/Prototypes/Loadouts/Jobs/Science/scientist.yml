@@ -6,7 +6,7 @@
     requirement:
       !type:DepartmentTimeRequirement
       department: Science
-      time: 216000 #60 hrs
+      time: 60h
 
 # Head
 - type: startingGear
@@ -74,6 +74,11 @@
     proto: SeniorResearcher
   equipment:
     jumpsuit: ClothingUniformJumpskirtSeniorResearcher
+
+- type: loadout
+  id: STScientistSweaterJumpsuit
+  equipment:
+    jumpsuit: STClothingUniformJumpsuitScientistSweater
 
 # Back
 - type: loadout

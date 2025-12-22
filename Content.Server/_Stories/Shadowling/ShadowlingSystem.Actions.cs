@@ -122,7 +122,7 @@ public sealed partial class ShadowlingSystem
 
             if (HasComp<BorgChassisComponent>(target))
             {
-                _emp.DoEmpEffects(target, 50_000, 15); // FIXME: Hardcode
+                _emp.DoEmpEffects(target, 50_000, TimeSpan.FromSeconds(15)); // FIXME: Hardcode
                 _popup.PopupEntity("Волна визга выводит вашу электронику из строя", target, target); // FIXME: Hardcode
             }
             else
@@ -161,7 +161,7 @@ public sealed partial class ShadowlingSystem
             _lightning.ShootLightning(_random.Pick(targets), target);
         }
 
-        _emp.EmpPulse(_xform.GetMapCoordinates(uid), 12, 10000, 30);  // FIXME: Hardcode
+        _emp.EmpPulse(_xform.GetMapCoordinates(uid), 12, 10000, TimeSpan.FromSeconds(30));  // FIXME: Hardcode
 
         args.Handled = true;
     }

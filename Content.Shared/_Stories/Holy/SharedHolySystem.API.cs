@@ -34,7 +34,7 @@ public abstract partial class SharedHolySystem : EntitySystem
         if (holy.Comp.ProtectionSound is { } sound)
             _audio.PlayPvs(sound, holy);
 
-        _damageable.TryChangeDamage(target, holy.Comp.ProtectionDamage * target.Comp.ResistanceCoefficient);
+        _damageable.TryChangeDamage(target.Owner, holy.Comp.ProtectionDamage * target.Comp.ResistanceCoefficient);
 
         if (!target.Comp.IgnoreProtectionImpulse)
         {
