@@ -41,5 +41,5 @@
   id: Juridical
   name: chat-radio-juridical
   keycode: 'ю'
-  frequency: 21629
-  color: "#A0522D"
+  frequency: 98329
+  color: "#008080"
