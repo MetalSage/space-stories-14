@@ -9,7 +9,7 @@
       time: 18000 # 5 hours
   startingGear: PRISONOfficerGear
   icon: "JobIconSpacePrisonOfficer"
-  supervisors: начальник тюрьмы
+  supervisors: job-supervisors-headofprison
   canBeAntag: false
   access:
   - Prisoner

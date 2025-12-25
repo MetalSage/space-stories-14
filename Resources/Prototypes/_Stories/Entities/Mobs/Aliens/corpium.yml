@@ -24,7 +24,6 @@
       settings: short
   - type: GhostTakeoverAvailable
   - type: Bloodstream
-    chemicalSolutionName: corpiumChemicals
   - type: StatusIcon
     bounds: -0.5,-0.5,0.5,0.5
   - type: Corpium

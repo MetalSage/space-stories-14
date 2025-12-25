@@ -327,6 +327,7 @@
     - id: WeaponTaser
     - id: WantedListCartridge
     - id: DrinkHosFlask
+    - id: ClothingHeadHatCapHoS # Stories
 
 # Hardsuit table, used for suit storage as well
 - type: entityTable
