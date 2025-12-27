@@ -8,6 +8,8 @@
   - MobBloodstream
   - MobFlammable
   components:
+  - type: Nightvision
+  - type: Insulated
   - type: Body
     prototype: Animal
   - type: Climbing
