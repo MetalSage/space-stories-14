@@ -91,7 +91,7 @@
       variant-court:
         whitelist:
           tags:
-          - EncryptionJuridical
+          - STEncryptionJuridical
       # Stories end
       variant-multiple:
         whitelist:
@@ -217,7 +217,7 @@
       - EncryptionKeyService
       - EncryptionKeyCommand
       - PRISONEncryptionKey # Stories
-      - EncryptionKeyJuridical # Stories
+      - STEncryptionKeyJuridical # Stories
 
 - type: entity
   parent: TelecomServer
@@ -303,10 +303,10 @@
 
 - type: entity
   parent: TelecomServer
-  id: TelecomServerFilledJuridical
+  id: STTelecomServerFilledJuridical
   suffix: Juridical
   components:
   - type: ContainerFill
     containers:
       key_slots:
-      - EncryptionKeyJuridical
+      - STEncryptionKeyJuridical

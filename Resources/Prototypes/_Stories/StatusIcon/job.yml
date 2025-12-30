@@ -49,14 +49,14 @@
 
 - type: jobIcon
   parent: JobIcon
-  id: JobIconJudge
+  id: STJobIconJudge
   icon:
     sprite: /Textures/_Stories/Interface/Misc/job_icons.rsi
     state: Judge
 
 - type: jobIcon
   parent: JobIcon
-  id: JobIconProsecutor
+  id: STJobIconProsecutor
   icon:
     sprite: /Textures/_Stories/Interface/Misc/job_icons.rsi
     state: Prosecutor

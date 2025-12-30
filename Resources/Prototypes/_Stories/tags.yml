@@ -17,4 +17,4 @@
   id: STHolyFloor
 
 - type: Tag
-  id: EncryptionJuridical # ItemMapper: TelecomServer
+  id: STEncryptionJuridical # ItemMapper: TelecomServer

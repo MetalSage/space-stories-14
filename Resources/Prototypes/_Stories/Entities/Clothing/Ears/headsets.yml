@@ -13,26 +13,26 @@
 
 - type: entity
   parent: ClothingHeadset
-  id: ClothingHeadsetJudge
-  name: гарнитура cудьи
-  description: Гарнитура - она точно поможет вам предать огласке приговор.
+  id: STClothingHeadsetJudge
+  name: judge headset
+  description: The headset will definitely help you make the verdict public.
   components:
   - type: ContainerFill
     containers:
       key_slots:
-      - EncryptionKeyJudge
+      - STEncryptionKeyJudge
   - type: Sprite
     sprite: _Stories/Clothing/Ears/Headsets/judge.rsi
 
 - type: entity
   parent: ClothingHeadset
-  id: ClothingHeadsetJuridical
-  name: гарнитура юридического департамента
-  description: Гарнитура, чтобы все вас точно услышали.
+  id: STClothingHeadsetJuridical
+  name: juridical headset
+  description: A headset to make sure everyone hears you.
   components:
   - type: ContainerFill
     containers:
       key_slots:
-      - EncryptionKeyJuridical
+      - STEncryptionKeyJuridical
   - type: Sprite
     sprite: _Stories/Clothing/Ears/Headsets/juridical.rsi

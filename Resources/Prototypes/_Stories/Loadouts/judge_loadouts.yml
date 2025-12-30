@@ -1,19 +1,20 @@
 - type: roleLoadout
-  id: JobJudge
+  id: STJobJudge
   groups:
-  - JudgeJumpsuit
-  - JudgeGloves
-  - JudgeShoes
+  - STJudgeJumpsuit
+  - STJudgeGloves
+  - STJudgeShoes
+  - STJudgeHead
   - GroupTankHarness
-  - JudgeOuterClothing
+  - STJudgeOuterClothing
   - CommonBackpack
   - Survival
   - Trinkets
   - GroupSpeciesBreathTool
 
 - type: loadoutGroup
-  id: JudgeJumpsuit
-  name: loadout-group-judge-jumpsuit
+  id: STJudgeJumpsuit
+  name: stories-loadout-group-judge-jumpsuit
   loadouts:
   - IAAJumpsuitBlue
   - IAAJumpskirtBlue
@@ -28,8 +29,8 @@
 
 # Перчатки
 - type: loadoutGroup
-  id: JudgeGloves
-  name: loadout-group-judge-gloves
+  id: STJudgeGloves
+  name: stories-loadout-group-judge-gloves
   minLimit: 0
   loadouts:
   - IAAGlovesWhite
@@ -40,8 +41,8 @@
 
 # Обувь
 - type: loadoutGroup
-  id: JudgeShoes
-  name: loadout-group-judge-shoes
+  id: STJudgeShoes
+  name: stories-loadout-group-judge-shoes
   loadouts:
   - BlackShoes
   - WhiteShoes
@@ -49,24 +50,35 @@
 
 # Мантии
 - type: loadoutGroup
-  id: JudgeOuterClothing
-  name: loadout-group-judge-outerclothing
+  id: STJudgeOuterClothing
+  name: stories-loadout-group-judge-outerclothing
   loadouts:
-  - JudgeOuterClothingRobesJudgeRed
-  - JudgeOuterClothingRobesJudge
-  - JudgeOuterClothingRobesJudgeWorn
+  - STJudgeOuterClothingRobesJudgeRed
+  - STJudgeOuterClothingRobes
+  - STJudgeOuterClothingRobesJudgeWorn
 
 - type: loadout
-  id: JudgeOuterClothingRobesJudgeRed
+  id: STJudgeOuterClothingRobesJudgeRed
   equipment:
     outerClothing: ClothingOuterRobesJudgeRed
 
 - type: loadout
-  id: JudgeOuterClothingRobesJudgeWorn
+  id: STJudgeOuterClothingRobesJudgeWorn
   equipment:
     outerClothing: ClothingOuterRobesJudgeWorn
 
 - type: loadout
-  id: JudgeOuterClothingRobesJudge
+  id: STJudgeOuterClothingRobes
   equipment:
     outerClothing: ClothingOuterRobesJudge
+
+- type: loadoutGroup
+  id: STJudgeHead
+  name: stories-loadout-group-judge-head
+  loadouts:
+  - STJudgeHeadPwig
+
+- type: loadout
+  id: STJudgeHeadPwig
+  equipment:
+    head: ClothingHeadHatPwig

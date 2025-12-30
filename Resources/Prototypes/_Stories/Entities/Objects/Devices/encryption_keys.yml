@@ -9,7 +9,7 @@
         - Common
         - Command
         - Security
-        - Juridical
+        - STJuridical
       defaultChannel: Command
     - type: Sprite
       sprite: _Stories/Objects/Devices/encryption_keys.rsi
@@ -35,16 +35,16 @@
 
 - type: entity
   parent: EncryptionKey
-  id: EncryptionKeyJudge
-  name: ключ шифрования суда
-  description: Ключ шифрования, используемый самой педантичной персоной на станции.
+  id: STEncryptionKeyJudge
+  name: judge encryption key
+  description: The encryption key used by the judge.
   components:
   - type: EncryptionKey
     channels:
     - Common
     - Command
     - Security
-    - Juridical
+    - STJuridical
     defaultChannel: Command
   - type: Sprite
     sprite: _Stories/Objects/Devices/encryption_keys.rsi
@@ -54,14 +54,14 @@
 
 - type: entity
   parent: EncryptionKey
-  id: EncryptionKeyJuridical
-  name: ключ шифрования юридического департамента
-  description: Ключ шифрования, используемый самой педантичной персоной на станции.
+  id: STEncryptionKeyJuridical
+  name: juridical encryption key
+  description: Encryption key used by the legal department.
   components:
   - type: EncryptionKey
     channels:
-    - Juridical
-    defaultChannel: Juridical
+    - STJuridical
+    defaultChannel: STJuridical
   - type: Sprite
     sprite: _Stories/Objects/Devices/encryption_keys.rsi
     layers:
@@ -69,4 +69,4 @@
     - state: court_label
   - type: Tag
     tags:
-    - EncryptionJuridical
+    - STEncryptionJuridical

@@ -12,9 +12,9 @@
 
 - type: entity
   parent: IDCardStandard
-  id: JudgeIDCard
-  name: ID карта судьи
-  description: Карта, необходимая для доступа в различные области станции.
+  id: STJudgeIDCard
+  name: judge's ID card
+  description: A card required to access various areas of the station.
   components:
   - type: Sprite
     layers:
@@ -22,13 +22,13 @@
     - state: idjudge
       sprite: _Stories/Objects/Misc/id_cards.rsi
   - type: PresetIdCard
-    job: Judge
+    job: STJudge
 
 - type: entity
   parent: IDCardStandard
-  id: ProsecutorIDCard
-  name: ID карта прокурора
-  description: Карта, необходимая для доступа в различные области станции.
+  id: STProsecutorIDCard
+  name: prosecutor ID card
+  description: A card required to access various areas of the station.
   components:
   - type: Sprite
     layers:
@@ -36,7 +36,7 @@
     - state: idprosecutor
       sprite: _Stories/Objects/Misc/id_cards.rsi
   - type: PresetIdCard
-    job: Prosecutor
+    job: STProsecutor
 
 - type: entity
   parent: IDCardStandard

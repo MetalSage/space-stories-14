@@ -1,9 +1,9 @@
 - type: roleLoadout
-  id: JobProsecutor
+  id: STJobProsecutor
   groups:
-  - ProsecutorJumpsuit
-  - ProsecutorGloves
-  - ProsecutorShoes
+  - STProsecutorJumpsuit
+  - STProsecutorGloves
+  - STProsecutorShoes
   - GroupTankHarness
   - CommonBackpack
   - Survival
@@ -11,42 +11,42 @@
   - GroupSpeciesBreathTool
 
 - type: loadoutGroup
-  id: ProsecutorJumpsuit
-  name: loadout-group-prosecutor-jumpsuit
+  id: STProsecutorJumpsuit
+  name: stories-loadout-group-prosecutor-jumpsuit
   loadouts:
-  - ProsecutorJumpsuitBlue
-  - ProsecutorJumpsuitBlack
-  - ProsecutorJumpskirtBlack
-  - ProsecutorJumpskirtBlue
+  - STProsecutorJumpsuitBlue
+  - STProsecutorJumpsuitBlack
+  - STProsecutorJumpskirtBlack
+  - STProsecutorJumpskirtBlue
 
 # Cиний костюм обвинителя
 - type: loadout
-  id: ProsecutorJumpsuitBlue
+  id: STProsecutorJumpsuitBlue
   equipment:
-    jumpsuit: ClothingUniformJumpsuitProsecutorBlue
+    jumpsuit: STClothingUniformJumpsuitProsecutorBlue
 
 # Черный костюм обвинителя
 - type: loadout
-  id: ProsecutorJumpsuitBlack
+  id: STProsecutorJumpsuitBlack
   equipment:
-    jumpsuit: ClothingUniformJumpsuitProsecutorBlack
+    jumpsuit: STClothingUniformJumpsuitProsecutorBlack
 
 # Черная юбка-комбинезон обвинителя
 - type: loadout
-  id: ProsecutorJumpskirtBlack
+  id: STProsecutorJumpskirtBlack
   equipment:
-    jumpsuit: ClothingUniformJumpskirtProsecutorBlack
+    jumpsuit: STClothingUniformJumpskirtProsecutorBlack
 
 # Синяя юбка-комбинезон обвинителя
 - type: loadout
-  id: ProsecutorJumpskirtBlue
+  id: STProsecutorJumpskirtBlue
   equipment:
-    jumpsuit: ClothingUniformJumpskirtProsecutorBlue
+    jumpsuit: STClothingUniformJumpskirtProsecutorBlue
 
 # Перчатки
 - type: loadoutGroup
-  id: ProsecutorGloves
-  name: loadout-group-prosecutor-gloves
+  id: STProsecutorGloves
+  name: stories-loadout-group-prosecutor-gloves
   minLimit: 0
   loadouts:
   - IAAGlovesWhite
@@ -57,8 +57,8 @@
 
 # Обувь
 - type: loadoutGroup
-  id: ProsecutorShoes
-  name: loadout-group-prosecutor-shoes
+  id: STProsecutorShoes
+  name: stories-loadout-group-prosecutor-shoes
   loadouts:
   - BlackShoes
   - WhiteShoes

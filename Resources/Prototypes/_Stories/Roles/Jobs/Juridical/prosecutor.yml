@@ -1,8 +1,8 @@
 - type: job
-  id: Prosecutor
-  name: job-name-prosecutor
-  description: job-description-prosecutor
-  playTimeTracker: JobProsecutor
+  id: STProsecutor
+  name: stories-job-name-prosecutor
+  description: stories-job-description-prosecutor
+  playTimeTracker: STJobProsecutor
   requirements:
   - !type:DepartmentTimeRequirement
     department: Security
@@ -16,8 +16,8 @@
   - !type:RoleTimeRequirement
     role: JobIAA
     time: 20h
-  startingGear: ProsecutorGear
-  icon: "JobIconProsecutor"
+  startingGear: STProsecutorGear
+  icon: "STJobIconProsecutor"
   supervisors: job-supervisors-centcom
   canBeAntag: false
   access:
@@ -32,18 +32,18 @@
     implants: [ MindShieldImplant ]
 
 - type: startingGear
-  id: ProsecutorGear
+  id: STProsecutorGear
   equipment:
-    id: ProsecutorPDA
+    id: STProsecutorPDA
     eyes: ClothingEyesGlassesSunglasses
-    ears: ClothingHeadsetJuridical
+    ears: STClothingHeadsetJuridical
   storage:
     back:
-    - RubberStamProsecutor
+    - STRubberStamProsecutor
 
 - type: chameleonOutfit
-  id: ProsecutorChameleonOutfit
-  job: JobProsecutor
+  id: STProsecutorChameleonOutfit
+  job: STProsecutor
   hasMindShield: true
   equipment:
     head: ClothingHeadHatBowlerHat

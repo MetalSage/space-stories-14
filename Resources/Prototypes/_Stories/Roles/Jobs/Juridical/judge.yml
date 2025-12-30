@@ -1,8 +1,8 @@
 - type: job
-  id: Judge
-  name: job-name-judge
-  description: job-description-judge
-  playTimeTracker: JobJudge
+  id: STJudge
+  name: stories-job-name-judge
+  description: stories-job-description-judge
+  playTimeTracker: STJobJudge
   requirements:
   - !type:DepartmentTimeRequirement
     department: Security
@@ -19,8 +19,8 @@
   - !type:RoleTimeRequirement
     role: JobIAA
     time: 30h
-  startingGear: JudgeGear
-  icon: "JobIconJudge"
+  startingGear: STJudgeGear
+  icon: "STJobIconJudge"
   supervisors: job-supervisors-centcom
   canBeAntag: false
   access:
@@ -35,18 +35,18 @@
     implants: [ MindShieldImplant ]
 
 - type: startingGear
-  id: JudgeGear
+  id: STJudgeGear
   equipment:
-    id: JudgePDA
+    id: STJudgePDA
     eyes: ClothingEyesGlassesSunglasses
-    ears: ClothingHeadsetJudge
+    ears: STClothingHeadsetJudge
   storage:
     back:
-    - RubberStampJudge
+    - STRubberStampJudge
 
 - type: chameleonOutfit
-  id: JudgeChameleonOutfit
-  job: Judge
+  id: STJudgeChameleonOutfit
+  job: STJudge
   hasMindShield: true
   equipment:
     head: ClothingHeadHatBowlerHat

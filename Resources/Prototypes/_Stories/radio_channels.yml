@@ -38,8 +38,8 @@
   longRange: true
 
 - type: radioChannel
-  id: Juridical
-  name: chat-radio-juridical
+  id: STJuridical
+  name: stories-chat-radio-juridical
   keycode: 'ю'
   frequency: 98329
   color: "#008080"

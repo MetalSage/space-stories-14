@@ -49,14 +49,14 @@
 
 - type: entity
   parent: BasePDA
-  id: JudgePDA
-  name: КПК судьи
-  description: Справедливость и прибыль - лучшие друзья.
+  id: STJudgePDA
+  name: judge PDA
+  description: Justice and profit are best friends.
   components:
   - type: Sprite
     sprite: _Stories/Objects/Devices/pda.rsi
   - type: Pda
-    id: JudgeIDCard
+    id: STJudgeIDCard
   - type: Appearance
     appearanceDataInit:
       enum.PdaVisuals.PdaType:
@@ -71,14 +71,14 @@
 
 - type: entity
   parent: BasePDA
-  id: ProsecutorPDA
-  name: КПК прокурора
-  description: Справедливость и прибыль - лучшие друзья.
+  id: STProsecutorPDA
+  name: rosecutor PDA
+  description: Justice and profit are best friends.
   components:
   - type: Sprite
     sprite: _Stories/Objects/Devices/pda.rsi
   - type: Pda
-    id: ProsecutorIDCard
+    id: STProsecutorIDCard
   - type: Appearance
     appearanceDataInit:
       enum.PdaVisuals.PdaType:
