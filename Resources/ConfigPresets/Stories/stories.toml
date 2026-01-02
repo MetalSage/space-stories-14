@@ -66,7 +66,7 @@ enabled = true
 rules_file = "StoriesRuleset"
 
 [movement]
-mob_pushing = true
+mob_pushing = false
 
 [shuttle]
 auto_call_time = 0
