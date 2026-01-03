@@ -40812,7 +40812,7 @@ entities:
       parent: 6306
     - type: Physics
       canCollide: False
-- proto: EncryptionKeyJuridical
+- proto: STEncryptionKeyJuridical
   entities:
   - uid: 14453
     components:
@@ -81689,7 +81689,7 @@ entities:
           showEnts: False
           occludes: True
           ents: []
-- proto: TelecomServerFilledJuridical
+- proto: STTelecomServerFilledJuridical
   entities:
   - uid: 14454
     components:

@@ -1,6 +1,6 @@
 - type: entity
   parent: ClothingOuterBase
-  id: ClothingOuterRobesJudgeRed
+  id: STClothingOuterRobesJudgeRed
   name: red judge's robe
   description: This red robe inspires authority.
   components:
@@ -11,7 +11,7 @@
 
 - type: entity
   parent: ClothingOuterBase
-  id: ClothingOuterRobesJudgeWorn
+  id: STClothingOuterRobesJudgeWorn
   name: worn judge's robe
   description: This red robe inspires authority.
   components:

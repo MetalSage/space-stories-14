@@ -70837,7 +70837,7 @@ entities:
     - type: Transform
       pos: 9.2764225,13.685002
       parent: 60
-- proto: EncryptionKeyJuridical
+- proto: STEncryptionKeyJuridical
   entities:
   - uid: 19092
     components:
@@ -140811,7 +140811,7 @@ entities:
     - type: Transform
       pos: 24.5,2.5
       parent: 60
-- proto: TelecomServerFilledJuridical
+- proto: STTelecomServerFilledJuridical
   entities:
   - uid: 13264
     components:

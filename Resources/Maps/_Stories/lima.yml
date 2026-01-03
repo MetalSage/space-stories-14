@@ -85305,7 +85305,7 @@ entities:
       rot: 1.5707963267948966 rad
       pos: -68.5,-89.5
       parent: 2
-- proto: EncryptionKeyJuridical
+- proto: STEncryptionKeyJuridical
   entities:
   - uid: 28842
     components:
@@ -157574,7 +157574,7 @@ entities:
     - type: Transform
       pos: 68.5,-120.5
       parent: 2
-- proto: TelecomServerFilledJuridical
+- proto: STTelecomServerFilledJuridical
   entities:
   - uid: 28843
     components:

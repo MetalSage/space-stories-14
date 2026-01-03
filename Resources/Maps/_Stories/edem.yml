@@ -32811,7 +32811,7 @@ entities:
       parent: 8416
     - type: Physics
       canCollide: False
-- proto: EncryptionKeyJuridical
+- proto: STEncryptionKeyJuridical
   entities:
   - uid: 9798
     components:
@@ -59587,7 +59587,7 @@ entities:
     - type: Transform
       pos: 11.5,-18.5
       parent: 1
-- proto: TelecomServerFilledJuridical
+- proto: STTelecomServerFilledJuridical
   entities:
   - uid: 9797
     components:

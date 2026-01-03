@@ -1,5 +1,5 @@
 - type: roleLoadout
-  id: STJobJudge
+  id: JobSTJudge
   groups:
   - STJudgeJumpsuit
   - STJudgeGloves
@@ -60,12 +60,12 @@
 - type: loadout
   id: STJudgeOuterClothingRobesJudgeRed
   equipment:
-    outerClothing: ClothingOuterRobesJudgeRed
+    outerClothing: STClothingOuterRobesJudgeRed
 
 - type: loadout
   id: STJudgeOuterClothingRobesJudgeWorn
   equipment:
-    outerClothing: ClothingOuterRobesJudgeWorn
+    outerClothing: STClothingOuterRobesJudgeWorn
 
 - type: loadout
   id: STJudgeOuterClothingRobes

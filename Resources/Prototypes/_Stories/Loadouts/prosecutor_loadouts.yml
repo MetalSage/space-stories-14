@@ -1,5 +1,5 @@
 - type: roleLoadout
-  id: STJobProsecutor
+  id: JobSTProsecutor
   groups:
   - STProsecutorJumpsuit
   - STProsecutorGloves

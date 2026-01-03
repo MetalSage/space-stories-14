@@ -33049,7 +33049,7 @@ entities:
     - type: Transform
       pos: 48.936653,-5.4514256
       parent: 31
-- proto: EncryptionKeyJuridical
+- proto: STEncryptionKeyJuridical
   entities:
   - uid: 2142
     components:
@@ -63133,7 +63133,7 @@ entities:
     - type: Transform
       pos: 49.546635,-5.3898478
       parent: 31
-- proto: TelecomServerFilledJuridical
+- proto: STTelecomServerFilledJuridical
   entities:
   - uid: 934
     components:

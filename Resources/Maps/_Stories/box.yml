@@ -86539,7 +86539,7 @@ entities:
       parent: 27348
     - type: Physics
       canCollide: False
-- proto: EncryptionKeyJuridical
+- proto: STEncryptionKeyJuridical
   entities:
   - uid: 20597
     components:
@@ -160184,7 +160184,7 @@ entities:
           showEnts: False
           occludes: True
           ents: []
-- proto: TelecomServerFilledJuridical
+- proto: STTelecomServerFilledJuridical
   entities:
   - uid: 20596
     components:
