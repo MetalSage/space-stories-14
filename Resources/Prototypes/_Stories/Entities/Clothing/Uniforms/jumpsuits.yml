@@ -108,9 +108,9 @@
 
 - type: entity
   parent: ClothingUniformBase
-  id: ClothingUniformJumpsuitProsecutorBlue
-  name: синий костюм обвинителя
-  description: Строгий костюм, достойный высших чинов NanoTrasen.
+  id: STClothingUniformJumpsuitProsecutorBlue
+  name: blue prosecutor's jumpsuit
+  description: A strict suit worthy of the highest ranks of NanoTrasen.
   components:
   - type: Sprite
     sprite: _Stories/Clothing/Uniforms/Jumpsuit/prosecutorblue.rsi
@@ -119,9 +119,9 @@
 
 - type: entity
   parent: ClothingUniformBase
-  id: ClothingUniformJumpsuitProsecutorBlack
-  name: черный костюм обвинителя
-  description: Строгий костюм, достойный высших чинов NanoTrasen.
+  id: STClothingUniformJumpsuitProsecutorBlack
+  name: black prosecutor's jumpsuit
+  description: A strict suit worthy of the highest ranks of NanoTrasen.
   components:
   - type: Sprite
     sprite: _Stories/Clothing/Uniforms/Jumpsuit/prosecutorblack.rsi

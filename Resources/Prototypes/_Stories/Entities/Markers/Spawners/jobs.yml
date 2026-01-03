@@ -45,7 +45,7 @@
   name: judge
   components:
   - type: SpawnPoint
-    job_id: Judge
+    job_id: STJudge
   - type: Sprite
     layers:
     - state: green
@@ -57,7 +57,7 @@
   name: prosecutor
   components:
   - type: SpawnPoint
-    job_id: Prosecutor
+    job_id: STProsecutor
   - type: Sprite
     layers:
     - state: green

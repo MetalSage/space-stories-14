@@ -18,5 +18,5 @@
   roles:
   - IAA
   - Lawyer
-  - Prosecutor
-  - Judge
+  - STProsecutor
+  - STJudge

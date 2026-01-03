@@ -23,10 +23,10 @@
   id: STJobBrigmedic
 
 - type: playTimeTracker
-  id: JobProsecutor
+  id: STJobProsecutor
 
 - type: playTimeTracker
-  id: JobJudge
+  id: STJobJudge
 
 # Event-Restricted-Jobs
 

@@ -50,13 +50,14 @@ stories-loadout-group-passenger-storage = Ассистент, хранилища
 
 # Обвинитель
 
-loadout-group-prosecutor-jumpsuit = Обвинитель, комбинезон
-loadout-group-prosecutor-gloves = Обвинитель, перчатки
-loadout-group-prosecutor-shoes = Обвинитель, обувь
+stories-loadout-group-prosecutor-jumpsuit = Обвинитель, комбинезон
+stories-loadout-group-prosecutor-gloves = Обвинитель, перчатки
+stories-loadout-group-prosecutor-shoes = Обвинитель, обувь
 
 # Cудья
 
-loadout-group-judge-jumpsuit = Судья, комбинезон
-loadout-group-judge-gloves = Судья, перчатки
-loadout-group-judge-shoes = Судья, обувь
-loadout-group-judge-outerclothing = Судья, мантии
+stories-loadout-group-judge-jumpsuit = Судья, комбинезон
+stories-loadout-group-judge-gloves = Судья, перчатки
+stories-loadout-group-judge-shoes = Судья, обувь
+stories-loadout-group-judge-outerclothing = Судья, мантии
+stories-loadout-group-judge-head = Судья, парик

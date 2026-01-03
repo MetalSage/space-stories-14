@@ -1,8 +1,8 @@
 - type: entity
   parent: [ClothingUniformSkirtBase, BaseCommandContraband]
-  id: ClothingUniformJumpskirtProsecutorBlue
-  name: синяя юбка-комбинезон обвинителя
-  description: Тот, кто носит это, олицетворяет занятость.
+  id: STClothingUniformJumpskirtProsecutorBlue
+  name: blue prosecutor's jumpskirt
+  description: The one who wears this represents busyness.
   components:
   - type: Sprite
     sprite: _Stories/Clothing/Uniforms/Jumpskirt/prosecutorblue.rsi
@@ -11,9 +11,9 @@
 
 - type: entity
   parent: [ClothingUniformSkirtBase, BaseCommandContraband]
-  id: ClothingUniformJumpskirtProsecutorBlack
-  name: черная юбка-комбинезон обвинителя
-  description: Строгий костюм, достойный высших чинов NanoTrasen.
+  id: STClothingUniformJumpskirtProsecutorBlack
+  name: black prosecutor's jumpskirt
+  description: A strict suit worthy of the highest ranks of NanoTrasen.
   components:
   - type: Sprite
     sprite: _Stories/Clothing/Uniforms/Jumpskirt/prosecutorblack.rsi
