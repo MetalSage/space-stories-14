@@ -7,3 +7,25 @@
   materials:
     Steel: 1000
     Plastic: 500
+
+- type: latheRecipe
+  id: NVD
+  result: ClothingEyesNightvision
+  completetime: 60
+  materials:
+    Steel: 1000
+    Plastic: 400
+    Silver: 300
+    Gold: 50
+    Uranium: 300
+
+- type: latheRecipe
+  id: Thermal
+  result: ClothingEyesThermalVisionMonocular
+  completetime: 60
+  materials:
+    Steel: 1000
+    Plastic: 400
+    Silver: 200
+    Gold: 100
+    Diamond: 200

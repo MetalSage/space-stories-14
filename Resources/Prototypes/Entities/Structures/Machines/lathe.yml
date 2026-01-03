@@ -207,6 +207,9 @@
     - Janitor
     - Instruments
     - Equipment
+    # Storis-Edit
+    - STVision
+    # Storis-End
   - type: EmagLatheRecipes
     emagDynamicPacks:
     - SecurityAmmo
