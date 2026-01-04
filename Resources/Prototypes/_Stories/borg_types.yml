@@ -23,10 +23,10 @@
 
   # Visual
   inventoryTemplateId: borgShort
-  spriteBodyState: engineer
-  spriteHasMindState: engineer_e
-  spriteNoMindState: engineer_e_r
-  spriteToggleLightState: engineer_l
+  spriteBodyState: security
+  spriteHasMindState: security_e
+  spriteNoMindState: security_l
+  spriteToggleLightState: security_l
 
   # Pet
   petSuccessString: petting-success-security-cyborg

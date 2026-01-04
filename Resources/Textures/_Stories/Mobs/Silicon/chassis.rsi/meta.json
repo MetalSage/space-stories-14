@@ -1,0 +1,31 @@
+{
+  "version": 1,
+  "license": "CC-BY-SA-3.0 & Собственная лицензия. Копирование, модификация и использование вне проекта Space Stories полностью запрещено без предварительного согласия текущего владельца проекта.",
+  "copyright": "Taken from vgstation13 at commit https://github.com/vgstation-coders/vgstation13/blob/HEAD/icons/mob/robots.dmi for ss14. security states & security derelicts made by itak_privet_chat (discord)",
+  "size": {
+    "x": 32,
+    "y": 32
+  },
+  "states": [
+    {
+      "name": "security",
+      "directions": 4
+    },
+    {
+      "name": "sec",
+      "directions": 4
+    },
+    {
+      "name": "sec_l",
+      "directions": 4
+    },
+    {
+      "name": "security_derelict",
+      "directions": 4
+    },
+    {
+      "name": "sec_derelict",
+      "directions": 4
+    }
+  ]
+}
