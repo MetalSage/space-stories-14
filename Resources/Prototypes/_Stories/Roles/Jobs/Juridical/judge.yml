@@ -24,7 +24,6 @@
   supervisors: job-supervisors-centcom
   canBeAntag: false
   access:
-  - Service
   - Brig
   - Maintenance
   - Command
