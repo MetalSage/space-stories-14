@@ -1,5 +1,5 @@
 - type: entity #Раскидать в папки оригинала прототипа
-  id: StunbatonBorg
+  id: STStunbatonBorg
   parent: Stunbaton
   name: дубинка
   description: Простая дубинка боргов.

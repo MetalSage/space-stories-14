@@ -1,5 +1,5 @@
 - type: entity
-  id: BaseBorgSecurity
+  id: STBaseBorgSecurity
   parent: [BaseBorgChassis, BaseBorgTransponder]
   abstract: true
   components:
@@ -13,17 +13,16 @@
   - type: ShowContrabandDetails
   - type: ShowCriminalRecordIcons
   - type: ShowMindShieldIcons
-  - type: FlashImmunity
   - type: BorgChassis
     maxModules: 4
     moduleWhitelist:
       tags:
       - BorgModuleGeneric
-      - BorgModuleSecurity
+      - STBorgModuleSecurity
     hasMindState: security_e
     noMindState: security_e_r
   - type: SiliconLawProvider
-    laws: SecurityDep
+    laws: Corporate
   - type: ActiveRadio
     channels:
     - Binary

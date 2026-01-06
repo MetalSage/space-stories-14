@@ -1,11 +1,11 @@
 ﻿- type: entity
-  id: BaseBorgModuleSecurity
+  id: STBaseBorgModuleSecurity
   parent: BaseBorgModule
   abstract: true
   components:
   - type: Tag
     tags:
-    - BorgModuleSecurity
+    - STBorgModuleSecurity
   - type: Item
     inhandVisuals:
       left:
@@ -27,13 +27,13 @@
 
 - type: entity
   parent: [ BaseBorgModuleSecurity, BaseSecurityContraband, BaseProviderBorgModule ]
-  id: SecurityModuleBase
+  id: STSecurityModuleBase
   name: Базовый набор снаряжения боргов СБ
   description: Помогает перемещаться в космосе, удобно.
   components:
   - type: Tag
     tags:
-    - BorgModuleSecurity
+    - STBorgModuleSecurity
   - type: Sprite
     layers:
     - state: generic
@@ -41,10 +41,10 @@
   - type: ItemBorgModule
     hands:
     - item: SecurityWhistle
-    - item: StunbatonBorg
-    - item: WeaponDisablerBorg
-    - item: FlashBorg
-    - item: BorgHoloprojectorSecurity
+    - item: STStunbatonBorg
+    - item: STWeaponDisablerBorg
+    - item: STFlashBorg
+    - item: STBorgHoloprojectorSecurity
     - item:
       hand:
         emptyRepresentative: Handcuffs
@@ -57,7 +57,7 @@
 
 - type: entity
   parent: [ BaseBorgModuleSecurity, BaseSecurityContraband, BaseProviderBorgModule ]
-  id: BorgLaserGunModule
+  id: STBorgLaserGunModule
   name: Модуль вооружения боргов Службы Безопасности
   description: Поможет вам осободить мир от преступников...
   components:
@@ -67,7 +67,7 @@
     - state: icon-syndicate
   - type: ItemBorgModule
     hands:
-    - item: WeaponBorgLaserGun
+    - item: STWeaponBorgLaserGun
     - item: CombatKnife
   - type: BorgModuleIcon
     icon: { sprite: Interface/Actions/actions_borg.rsi, state: syndicate-weapon-module }

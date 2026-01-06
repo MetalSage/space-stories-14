@@ -1,5 +1,5 @@
 ﻿- type: entity
-  id: FlashBorg
+  id: STFlashBorg
   parent: Flash
   name: вспышка
   description: Простая вспышка боргов.

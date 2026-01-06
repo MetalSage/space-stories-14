@@ -1,5 +1,5 @@
 - type: entity
-  id: BorgChassisSecurity
+  id: STBorgChassisSecurity
   parent: BorgChassisSelectable
   name: generic cyborg
   suffix: type security

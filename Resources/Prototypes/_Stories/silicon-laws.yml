@@ -1,28 +1,28 @@
 ﻿- type: siliconLaw
-  id: SecurityDep1
+  id: STSecurityDep1
   order: 1
-  lawString: security-dep-1
+  lawString: stories-security-dep-1
 
 - type: siliconLaw
-  id: SecurityDep2
+  id: STSecurityDep2
   order: 2
-  lawString: security-dep-2
+  lawString: stories-security-dep-2
 
 - type: siliconLaw
-  id: SecurityDep3
+  id: STSecurityDep3
   order: 3
-  lawString: security-dep-3
+  lawString: stories-security-dep-3
 
 - type: siliconLaw
-  id: SecurityDep4
+  id: STSecurityDep
   order: 4
-  lawString: security-dep-4
+  lawString: stories-security-dep-4
 
 - type: siliconLawset
-  id: SecurityDep
+  id: STSecurityDep
   laws:
-  - SecurityDep1
-  - SecurityDep2
-  - SecurityDep3
-  - SecurityDep4
-  obeysTo: security-dep-name
+  - STSecurityDep1
+  - STSecurityDep2
+  - STSecurityDep3
+  - STSecurityDep4
+  obeysTo: stories-security-dep-name

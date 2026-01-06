@@ -1,6 +1,6 @@
 - type: entity
   parent: HoloprojectorSecurity
-  id: BorgHoloprojectorSecurity
+  id: STBorgHoloprojectorSecurity
   name: Галопроектор боргов
   description: Галопроектор Службы Безопасности для боргов, ну хоть что-то.
   components:

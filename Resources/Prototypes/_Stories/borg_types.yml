@@ -1,21 +1,21 @@
 # Security borg
 - type: borgType
-  id: security
+  id: STsecurity
 
   # Description
-  dummyPrototype: BorgChassisSecurity
+  dummyPrototype: STBorgChassisSecurity
 
   # Functional
   extraModuleCount: 4
   moduleWhitelist:
     tags:
-    - BorgModuleGeneric
-    - BorgModuleSecurity
+    - STBorgModuleGeneric
+    - STBorgModuleSecurity
 
   defaultModules:
   - BorgModuleTool
-  - BorgLaserGunModule
-  - SecurityModuleBase
+  - STBorgLaserGunModule
+  - STSecurityModuleBase
 
   radioChannels:
   - Security
@@ -29,5 +29,5 @@
   spriteToggleLightState: security_l
 
   # Pet
-  petSuccessString: petting-success-security-cyborg
-  petFailureString: petting-failure-security-cyborg
+  petSuccessString: stories-petting-success-security-cyborg
+  petFailureString: stories-petting-failure-security-cyborg
