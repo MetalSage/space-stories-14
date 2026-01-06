@@ -7,5 +7,3 @@ ent-STSpawnPointIAA = агент внутрених дел
     .desc = { ent-SpawnPointJobBaseStories.desc }
 ent-SpawnPointJudge = судья
     .desc = { ent-SpawnPointJobBaseStories.desc }
-ent-SpawnPointProsecutor = Судебный обвинитель
-    .desc = { ent-SpawnPointJobBaseStories.desc }

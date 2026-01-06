@@ -71,27 +71,6 @@
 
 - type: entity
   parent: BasePDA
-  id: STProsecutorPDA
-  name: rosecutor PDA
-  description: Justice and profit are best friends.
-  components:
-  - type: Sprite
-    sprite: _Stories/Objects/Devices/pda.rsi
-  - type: Pda
-    id: STProsecutorIDCard
-  - type: Appearance
-    appearanceDataInit:
-      enum.PdaVisuals.PdaType:
-        !type:String
-        pda-prosecutor
-  - type: PdaBorderColor
-    borderColor: "#1284ca"
-  - type: Icon
-    sprite: _Stories/Objects/Devices/pda.rsi
-    state: pda-prosecutor
-
-- type: entity
-  parent: BasePDA
   id: PRISONPDAHeadOfPrison
   name: КПК начальника тюрьмы
   description: Этот КПК - ваш путь к свободе.

@@ -153346,13 +153346,6 @@ entities:
     - type: Transform
       pos: -42.5,3.5
       parent: 8364
-- proto: SpawnPointProsecutor
-  entities:
-  - uid: 20595
-    components:
-    - type: Transform
-      pos: -10.5,19.5
-      parent: 8364
 - proto: SpawnPointPsychologist
   entities:
   - uid: 11556

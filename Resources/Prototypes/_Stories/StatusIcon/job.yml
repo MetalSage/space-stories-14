@@ -54,13 +54,6 @@
     sprite: /Textures/_Stories/Interface/Misc/job_icons.rsi
     state: Judge
 
-- type: jobIcon
-  parent: JobIcon
-  id: STJobIconProsecutor
-  icon:
-    sprite: /Textures/_Stories/Interface/Misc/job_icons.rsi
-    state: Prosecutor
-
 # Event-Restricted-Jobs
 
 - type: jobIcon

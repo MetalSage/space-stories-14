@@ -40,17 +40,3 @@
   - type: Sprite
     sprite: _Stories/Objects/Misc/bureaucracy.rsi
     state: stamp-judge
-
-- type: entity
-  name: prosecutor's rubber stamp
-  parent: RubberStampBase
-  id: STRubberStamProsecutor
-  suffix: DO NOT MAP
-  components:
-  - type: Stamp
-    stampedName: stories-stamp-component-stamped-name-judge
-    stampedColor: "#115188"
-    stampState: "paper_stamp-ok"
-  - type: Sprite
-    sprite: _Stories/Objects/Misc/bureaucracy.rsi
-    state: stamp-prosecutor

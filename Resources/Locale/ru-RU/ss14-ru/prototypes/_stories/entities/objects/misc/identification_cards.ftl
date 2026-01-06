@@ -18,8 +18,6 @@ ent-STCommandMaidIDCard = ID карта горничной командован�
     .desc = { ent-IDCardStandard.desc }
 ent-STPartyMakerIDCard = ID карта партимейкера
     .desc = { ent-IDCardStandard.desc }
-ent-STProsecutorIDCard = ID карта судебного обвинителя
-    .desc = { ent-IDCardStandard.desc }
 ent-STJudgeIDCard = ID карта судьи
     .desc = { ent-IDCardStandard.desc }
 

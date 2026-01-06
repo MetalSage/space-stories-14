@@ -98507,13 +98507,6 @@ entities:
     - type: Transform
       pos: 112.5,181.5
       parent: 2
-- proto: SpawnPointProsecutor
-  entities:
-  - uid: 17583
-    components:
-    - type: Transform
-      pos: 104.5,163.5
-      parent: 2
 - proto: SpawnPointPsychologist
   entities:
   - uid: 14170

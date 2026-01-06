@@ -48,12 +48,6 @@ loadout-group-detective-belt = Детектив, пояс
 
 stories-loadout-group-passenger-storage = Ассистент, хранилища
 
-# Обвинитель
-
-stories-loadout-group-prosecutor-jumpsuit = Обвинитель, комбинезон
-stories-loadout-group-prosecutor-gloves = Обвинитель, перчатки
-stories-loadout-group-prosecutor-shoes = Обвинитель, обувь
-
 # Cудья
 
 stories-loadout-group-judge-jumpsuit = Судья, комбинезон

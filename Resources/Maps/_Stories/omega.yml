@@ -77915,13 +77915,6 @@ entities:
     - type: Transform
       pos: -20.5,10.5
       parent: 2
-- proto: SpawnPointProsecutor
-  entities:
-  - uid: 14452
-    components:
-    - type: Transform
-      pos: 10.5,-37.5
-      parent: 2
 - proto: SpawnPointQuartermaster
   entities:
   - uid: 11622

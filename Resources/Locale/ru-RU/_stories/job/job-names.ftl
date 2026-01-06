@@ -4,7 +4,6 @@ JobIAA = агент внутренних дел
 JobPilot = пилот
 job-name-STBrigmedic = бригмедик
 STBrigmedic = бригмедик
-stories-job-name-prosecutor = прокурор
 stories-job-name-judge = судья
 
 # Event-Restricted-Jobs

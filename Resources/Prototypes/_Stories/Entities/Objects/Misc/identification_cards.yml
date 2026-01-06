@@ -26,20 +26,6 @@
 
 - type: entity
   parent: IDCardStandard
-  id: STProsecutorIDCard
-  name: prosecutor ID card
-  description: A card required to access various areas of the station.
-  components:
-  - type: Sprite
-    layers:
-    - state: silver
-    - state: idprosecutor
-      sprite: _Stories/Objects/Misc/id_cards.rsi
-  - type: PresetIdCard
-    job: STProsecutor
-
-- type: entity
-  parent: IDCardStandard
   id: GuardianNtIDCard
   name: ID карта стража клинка
   description: Карта, необходимая для доступа в различные области станции.

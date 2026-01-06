@@ -60159,13 +60159,6 @@ entities:
     - type: Transform
       pos: -22.5,-5.5
       parent: 31
-- proto: SpawnPointProsecutor
-  entities:
-  - uid: 11839
-    components:
-    - type: Transform
-      pos: -1.5,-11.5
-      parent: 31
 - proto: SpawnPointQuartermaster
   entities:
   - uid: 6852

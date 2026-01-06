@@ -107303,13 +107303,6 @@ entities:
     - type: Transform
       pos: 2.5,-27.5
       parent: 2
-- proto: SpawnPointProsecutor
-  entities:
-  - uid: 13481
-    components:
-    - type: Transform
-      pos: 37.5,2.5
-      parent: 2
 - proto: SpawnPointPsychologist
   entities:
   - uid: 15828
