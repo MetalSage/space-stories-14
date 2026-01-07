@@ -1,6 +1,6 @@
 - type: entity
-  parent: STWeaponLaserGun
-  id: WeaponBorgLaserGun
+  parent: WeaponLaserGun
+  id: STWeaponBorgLaserGun
   name: лазер Боргов.
   description: Лазер, удобный.
   components:

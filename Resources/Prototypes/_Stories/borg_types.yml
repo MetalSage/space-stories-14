@@ -9,7 +9,7 @@
   extraModuleCount: 4
   moduleWhitelist:
     tags:
-    - STBorgModuleGeneric
+    - BorgModuleGeneric
     - STBorgModuleSecurity
 
   defaultModules:

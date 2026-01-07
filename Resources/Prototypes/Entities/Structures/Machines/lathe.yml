@@ -387,7 +387,6 @@
     - SecurityAmmoStatic
     - SecurityWeaponsStatic
     dynamicPacks:
-    - Stunbaton
     - SalvageSecurityBoards
     - SalvageSecurityWeapons
     - SecurityEquipment

@@ -1,4 +1,5 @@
-﻿- type: siliconLaw
+﻿#Stories Borg Security
+- type: siliconLaw
   id: STSecurityDep1
   order: 1
   lawString: stories-security-dep-1
@@ -14,15 +15,16 @@
   lawString: stories-security-dep-3
 
 - type: siliconLaw
-  id: STSecurityDep
+  id: STSecurityDep4
   order: 4
   lawString: stories-security-dep-4
 
 - type: siliconLawset
   id: STSecurityDep
+  name: stories-security-dep-name
   laws:
   - STSecurityDep1
   - STSecurityDep2
   - STSecurityDep3
   - STSecurityDep4
-  obeysTo: stories-security-dep-name
+  obeysTo: laws-owner-station

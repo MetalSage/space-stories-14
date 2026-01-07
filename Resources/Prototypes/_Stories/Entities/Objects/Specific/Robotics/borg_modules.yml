@@ -26,18 +26,18 @@
         color: "#282828"
 
 - type: entity
-  parent: [ BaseBorgModuleSecurity, BaseSecurityContraband, BaseProviderBorgModule ]
+  parent: [ STBaseBorgModuleSecurity, BaseSecurityContraband, BaseProviderBorgModule ]
   id: STSecurityModuleBase
   name: Базовый набор снаряжения боргов СБ
-  description: Помогает перемещаться в космосе, удобно.
+  description: Полезный набор инструментов борга Службы Безопасности.
   components:
   - type: Tag
     tags:
     - STBorgModuleSecurity
   - type: Sprite
     layers:
-    - state: generic
-    - state: icon-tools
+    - state: security
+    - state: icon-xenoborg-hypo
   - type: ItemBorgModule
     hands:
     - item: SecurityWhistle
@@ -53,21 +53,21 @@
           tags:
           - Handcuffs
   - type: BorgModuleIcon
-    icon: { sprite: Interface/Actions/actions_borg.rsi, state: tool-module }
+    icon: { sprite: _Stories/Interface/Actions/actions_borg.rsi, state: stunbaton-on }
 
 - type: entity
-  parent: [ BaseBorgModuleSecurity, BaseSecurityContraband, BaseProviderBorgModule ]
+  parent: [ STBaseBorgModuleSecurity, BaseSecurityContraband, BaseProviderBorgModule ]
   id: STBorgLaserGunModule
   name: Модуль вооружения боргов Службы Безопасности
   description: Поможет вам осободить мир от преступников...
   components:
   - type: Sprite
     layers:
-    - state: syndicate
-    - state: icon-syndicate
+    - state: security
+    - state: icon-xenoborg-laser2
   - type: ItemBorgModule
     hands:
     - item: STWeaponBorgLaserGun
     - item: CombatKnife
   - type: BorgModuleIcon
-    icon: { sprite: Interface/Actions/actions_borg.rsi, state: syndicate-weapon-module }
+    icon: { sprite: _Stories/Interface/Actions/actions_borg.rsi, state: pulse-pistol-action }

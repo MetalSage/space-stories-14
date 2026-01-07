@@ -22,7 +22,7 @@
     hasMindState: security_e
     noMindState: security_e_r
   - type: SiliconLawProvider
-    laws: Corporate
+    laws: STSecurity
   - type: ActiveRadio
     channels:
     - Binary
@@ -45,3 +45,5 @@
   - type: InteractionPopup
     interactSuccessSound:
       path: /Audio/Ambience/Objects/periodic_beep.ogg
+
+
