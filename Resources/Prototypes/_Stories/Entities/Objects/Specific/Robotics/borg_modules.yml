@@ -28,8 +28,8 @@
 - type: entity
   parent: [ STBaseBorgModuleSecurity, BaseSecurityContraband, BaseProviderBorgModule ]
   id: STSecurityModuleBase
-  name: Базовый набор снаряжения боргов СБ
-  description: Полезный набор инструментов борга Службы Безопасности.
+  name: a basic set of Borg Security Service equipment
+  description: A useful set of Borg Security tools.
   components:
   - type: Tag
     tags:
@@ -58,8 +58,8 @@
 - type: entity
   parent: [ STBaseBorgModuleSecurity, BaseSecurityContraband, BaseProviderBorgModule ]
   id: STBorgLaserGunModule
-  name: Модуль вооружения боргов Службы Безопасности
-  description: Поможет вам осободить мир от преступников...
+  name: borg Security Service Armament Module
+  description: It will help you free the world from criminals...
   components:
   - type: Sprite
     layers:

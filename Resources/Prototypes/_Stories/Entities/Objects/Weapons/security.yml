@@ -1,8 +1,8 @@
 - type: entity #Раскидать в папки оригинала прототипа
   id: STStunbatonBorg
   parent: Stunbaton
-  name: дубинка
-  description: Простая дубинка боргов.
+  name: stunbaton
+  description: A simple Borg baton.
   components:
   - type: PredictedBatterySelfRecharger
     autoRecharge: true

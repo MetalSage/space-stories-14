@@ -1,8 +1,8 @@
 - type: entity
   parent: WeaponLaserGun
   id: STWeaponBorgLaserGun
-  name: лазер Боргов.
-  description: Лазер, удобный.
+  name: borg laser.
+  description: Laser, comfortable.
   components:
   - type: PredictedBatterySelfRecharger
     autoRecharge: true
@@ -11,8 +11,8 @@
 - type: entity
   id: STWeaponDisablerBorg
   parent: WeaponDisabler
-  name: станнер
-  description: Простая станнер боргов.
+  name: disabler
+  description: A simple Borg disabler.
   components:
   - type: PredictedBatterySelfRecharger
     autoRecharge: true
