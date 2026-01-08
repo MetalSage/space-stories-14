@@ -9,7 +9,7 @@
     Plastic: 500
 
 - type: latheRecipe
-  id: NVD
+  id: STNightVisionDevice
   result: ClothingEyesNightvision
   completetime: 60
   materials:

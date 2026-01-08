@@ -14,13 +14,13 @@
 
 - type: technology
   id: STVision
-  name: research-technology-Vision
+  name: stories-research-technology-Vision
   icon:
-    sprite: _Stories/Clothing/Eyes/Glasses/termalhud.rsi
+    sprite: Clothing/Eyes/Glasses/thermal.rsi
     state: icon
   discipline: Industrial
   tier: 2
   cost: 15000
   recipeUnlocks:
   - Thermal
-  - NVD
+  - STNightVisionDevice
