@@ -10,3 +10,8 @@
   parent: BaseJumpsuitRecipe
   id: STClothingUniformJumpsuitScientistSweaterRecipe
   result: STClothingUniformJumpsuitScientistSweater
+
+- type: latheRecipe
+  parent: BaseJumpsuitRecipe
+  id: JumpsuitDetectiveSpecialGrey
+  result: ClothingUniformJumpsuitDetectiveSpecialGrey

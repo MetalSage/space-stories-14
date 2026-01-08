@@ -117,6 +117,7 @@
   - ClothingHeadHatWarden
   - ClothingUniformJumpsuitWarden
   - ClothingUniformJumpskirtWarden
+  - JumpsuitDetectiveSpecialGrey # Stories-Drip
 
 - type: latheRecipePack
   id: ClothingService
