@@ -60047,7 +60047,7 @@ entities:
     - type: Transform
       pos: -18.5,-11.5
       parent: 31
-- proto: SpawnPointJudge
+- proto: SpawnPointSTJudge
   entities:
   - uid: 11836
     components:

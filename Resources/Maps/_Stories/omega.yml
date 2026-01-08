@@ -77773,7 +77773,7 @@ entities:
     - type: Transform
       pos: -21.5,-8.5
       parent: 2
-- proto: SpawnPointJudge
+- proto: SpawnPointSTJudge
   entities:
   - uid: 11259
     components:
