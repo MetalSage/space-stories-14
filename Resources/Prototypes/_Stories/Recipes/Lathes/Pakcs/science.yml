@@ -1,5 +1,5 @@
 - type: latheRecipePack
   id: STVision
   recipes:
-  - Thermal
-  - NVD
+  - STThermal
+  - STNightVisionDevice
