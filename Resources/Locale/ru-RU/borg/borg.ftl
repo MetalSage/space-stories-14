@@ -34,7 +34,7 @@ borg-type-generic-transponder = обычный киборг
 borg-type-engineering-name = Инженер
 borg-type-engineering-desc = Помогайте команде инженеров в строительстве станции, ликвидации повреждений или исправлении проблем с электричеством и атмосферой.
 borg-type-engineering-transponder = киборг-инженер
-#Stories brog
+#Stories borg
 borg-type-STsecurity-name = Безопасности
 borg-type-STsecurity-desc = Защищайте станцию от врагов внешний и внутренних. Проводите задержание и служите во благо NanoTrasen.
 borg-type-STsecurity-transponder = киборг-службы-безопасности
