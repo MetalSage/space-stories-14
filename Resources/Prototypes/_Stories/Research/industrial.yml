@@ -19,8 +19,8 @@
     sprite: _Stories/Clothing/Eyes/Glasses/termalhud.rsi
     state: icon
   discipline: Industrial
-  tier: 2
+  tier: 3
   cost: 15000
   recipeUnlocks:
-  - Thermal
+  - STThermal
   - NVD

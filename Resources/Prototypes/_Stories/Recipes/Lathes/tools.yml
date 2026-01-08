@@ -20,7 +20,7 @@
     Uranium: 300
 
 - type: latheRecipe
-  id: Thermal
+  id: STThermal
   result: ClothingEyesThermalVisionMonocular
   completetime: 60
   materials:
