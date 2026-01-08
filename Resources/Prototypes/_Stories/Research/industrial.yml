@@ -22,5 +22,5 @@
   tier: 2
   cost: 15000
   recipeUnlocks:
-  - Thermal
+  - STThermal
   - STNightVisionDevice
