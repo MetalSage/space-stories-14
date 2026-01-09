@@ -10,9 +10,6 @@
     factions:
     - NanoTrasen
   - type: ShowJobIcons
-  - type: ShowContrabandDetails
-  - type: ShowCriminalRecordIcons
-  - type: ShowMindShieldIcons
   - type: BorgChassis
     maxModules: 4
     moduleWhitelist:
@@ -21,8 +18,6 @@
       - STBorgModuleSecurity
     hasMindState: security_e
     noMindState: security_e_r
-  - type: SiliconLawProvider
-    laws: STSecurity
   - type: ActiveRadio
     channels:
     - Binary

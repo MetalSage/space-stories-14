@@ -1,30 +1,30 @@
 ﻿#Stories Borg Security
+
 - type: siliconLaw
-  id: STSecurityDep1
+  id: Sec1
   order: 1
   lawString: stories-security-dep-1
 
 - type: siliconLaw
-  id: STSecurityDep2
+  id: Sec2
   order: 2
   lawString: stories-security-dep-2
 
 - type: siliconLaw
-  id: STSecurityDep3
+  id: Sec3
   order: 3
   lawString: stories-security-dep-3
 
 - type: siliconLaw
-  id: STSecurityDep4
+  id: Sec4
   order: 4
   lawString: stories-security-dep-4
 
 - type: siliconLawset
-  id: STSecurityDep
-  name: stories-security-dep-name
+  id: STSecurityLawset
   laws:
-  - STSecurityDep1
-  - STSecurityDep2
-  - STSecurityDep3
-  - STSecurityDep4
+  - STSec1
+  - STSec2
+  - STSec3
+  - STSec4
   obeysTo: laws-owner-station

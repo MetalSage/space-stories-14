@@ -585,37 +585,6 @@
   - MothershipCore5
   obeysTo: laws-owner-xenoborgs
 
-#Stories Borg Security
-- type: siliconLaw
-  id: STSecurity1
-  order: 1
-  lawString: stories-security-dep-1
-
-- type: siliconLaw
-  id: STSecurity2
-  order: 2
-  lawString: stories-security-dep-2
-
-- type: siliconLaw
-  id: STSecurity3
-  order: 3
-  lawString: stories-security-dep-3
-
-- type: siliconLaw
-  id: STSecurity4
-  order: 4
-  lawString: stories-security-dep-4
-
-- type: siliconLawset
-  id: STSecurity
-  name: stories-security-dep-name
-  laws:
-  - STSecurity1
-  - STSecurity2
-  - STSecurity3
-  - STSecurity4
-  obeysTo: laws-owner-station
-
 # ion storm random lawsets
 - type: weightedRandom
   id: IonStormLawsets

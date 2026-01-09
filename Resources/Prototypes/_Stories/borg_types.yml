@@ -31,3 +31,12 @@
   # Pet
   petSuccessString: stories-petting-success-security-cyborg
   petFailureString: stories-petting-failure-security-cyborg
+
+  # Add new components to borg
+  addComponents:
+  - type: SiliconLawProvider
+    laws: STSecurityLawset
+  - type: FlashImmunity
+  - type: ShowCriminalRecordIcons
+  - type: ShowMindShieldIcons
+  - type: ShowContrabandDetails
