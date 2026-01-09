@@ -585,6 +585,7 @@
   - MothershipCore5
   obeysTo: laws-owner-xenoborgs
 
+
 # ion storm random lawsets
 - type: weightedRandom
   id: IonStormLawsets
