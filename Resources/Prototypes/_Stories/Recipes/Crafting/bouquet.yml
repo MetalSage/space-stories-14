@@ -1,0 +1,6 @@
+- type: construction
+  id: STFlowerBouquetCraft
+  graph: STFlowerBouquetGraph
+  startNode: start
+  targetNode: bouquet
+  objectType: Item

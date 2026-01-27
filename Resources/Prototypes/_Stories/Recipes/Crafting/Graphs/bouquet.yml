@@ -1,0 +1,27 @@
+- type: constructionGraph
+  id: STFlowerBouquetGraph
+  start: start
+  graph:
+    - node: start
+      edges:
+        - to: bouquet
+          steps:
+            - tag: Flower
+              name: construction-graph-tag-flower
+              icon:
+                sprite: Objects/Specific/Hydroponics/poppy.rsi
+                state: produce
+            - tag: Flower
+              name: construction-graph-tag-flower
+              icon:
+                sprite: Objects/Specific/Hydroponics/poppy.rsi
+                state: produce
+            - tag: Flower
+              name: construction-graph-tag-flower
+              icon:
+                sprite: Objects/Specific/Hydroponics/poppy.rsi
+                state: produce
+              doAfter: 1
+    - node: bouquet
+      entity: STFlowerBouquet
+
