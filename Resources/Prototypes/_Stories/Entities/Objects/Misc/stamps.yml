@@ -26,3 +26,17 @@
     - type: Sprite
       sprite: Objects/Misc/bureaucracy.rsi
       state: stamp-hosp
+
+- type: entity
+  name: judge's rubber stamp
+  parent: RubberStampBase
+  id: STRubberStampJudge
+  suffix: DO NOT MAP
+  components:
+  - type: Stamp
+    stampedName: stories-stamp-component-stamped-name-prosecutor
+    stampedColor: "#773e24"
+    stampState: "paper_stamp-ok"
+  - type: Sprite
+    sprite: _Stories/Objects/Misc/bureaucracy.rsi
+    state: stamp-judge

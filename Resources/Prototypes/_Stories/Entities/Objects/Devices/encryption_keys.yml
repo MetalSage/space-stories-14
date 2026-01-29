@@ -9,6 +9,7 @@
         - Common
         - Command
         - Security
+        - STJuridical
       defaultChannel: Command
     - type: Sprite
       sprite: _Stories/Objects/Devices/encryption_keys.rsi
@@ -31,3 +32,41 @@
       layers:
         - state: crypt_prison
         - state: prison_label
+
+- type: entity
+  parent: EncryptionKey
+  id: STEncryptionKeyJudge
+  name: judge encryption key
+  description: The encryption key used by the judge.
+  components:
+  - type: EncryptionKey
+    channels:
+    - Common
+    - Command
+    - Security
+    - STJuridical
+    defaultChannel: Command
+  - type: Sprite
+    sprite: _Stories/Objects/Devices/encryption_keys.rsi
+    layers:
+    - state: crypt_prison
+    - state: court_label
+
+- type: entity
+  parent: EncryptionKey
+  id: STEncryptionKeyJuridical
+  name: juridical encryption key
+  description: Encryption key used by the legal department.
+  components:
+  - type: EncryptionKey
+    channels:
+    - STJuridical
+    defaultChannel: STJuridical
+  - type: Sprite
+    sprite: _Stories/Objects/Devices/encryption_keys.rsi
+    layers:
+    - state: crypt_silver
+    - state: court_label
+  - type: Tag
+    tags:
+    - STEncryptionJuridical

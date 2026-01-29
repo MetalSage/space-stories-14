@@ -4,3 +4,6 @@ ent-RubberStampIAA = Печать агента внутренних дел
 ent-PRISONRubberStamp = печать начальника тюрьмы
     .desc = Печать из резины, для проставления печатей на важных документах.
     .suffix = DO NOT MAP
+ent-STRubberStampJudge = печать cудьи
+    .desc = Печать из резины, для проставления печатей на важных документах.
+    .suffix = DO NOT MAP

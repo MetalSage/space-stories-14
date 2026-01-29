@@ -10,3 +10,29 @@
           - EncryptionKeyIAA
     - type: Sprite
       sprite: Clothing/Ears/Headsets/servicesecurity.rsi
+
+- type: entity
+  parent: ClothingHeadset
+  id: STClothingHeadsetJudge
+  name: judge headset
+  description: The headset will definitely help you make the verdict public.
+  components:
+  - type: ContainerFill
+    containers:
+      key_slots:
+      - STEncryptionKeyJudge
+  - type: Sprite
+    sprite: _Stories/Clothing/Ears/Headsets/judge.rsi
+
+- type: entity
+  parent: ClothingHeadset
+  id: STClothingHeadsetJuridical
+  name: juridical headset
+  description: A headset to make sure everyone hears you.
+  components:
+  - type: ContainerFill
+    containers:
+      key_slots:
+      - STEncryptionKeyJuridical
+  - type: Sprite
+    sprite: _Stories/Clothing/Ears/Headsets/juridical.rsi

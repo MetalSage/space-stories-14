@@ -5,3 +5,5 @@ ent-SpawnPointGuardianNt = страж клинка
     .desc = { ent-SpawnPointJobBaseStories.desc }
 ent-STSpawnPointIAA = агент внутрених дел
     .desc = { ent-SpawnPointJobBaseStories.desc }
+ent-STSpawnPointJudge = судья
+    .desc = { ent-SpawnPointJobBaseStories.desc }

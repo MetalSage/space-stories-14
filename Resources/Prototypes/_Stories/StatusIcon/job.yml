@@ -47,6 +47,13 @@
     sprite: /Textures/_Stories/Interface/Misc/job_icons.rsi
     state: IAA
 
+- type: jobIcon
+  parent: JobIcon
+  id: STJobIconJudge
+  icon:
+    sprite: /Textures/_Stories/Interface/Misc/job_icons.rsi
+    state: Judge
+
 # Event-Restricted-Jobs
 
 - type: jobIcon
