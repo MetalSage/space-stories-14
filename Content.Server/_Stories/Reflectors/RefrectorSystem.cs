@@ -8,8 +8,10 @@ using Content.Shared.Whitelist;
 using Content.Shared.Weapons.Ranged.Components;
 using Robust.Shared.Map;
 using Robust.Shared.Network;
+using Content.Shared.Weapons.Ranged;
 
 namespace Content.Server._Stories.Reflectors;
+
 public sealed class ReflectorSystem : EntitySystem
 {
     [Dependency] private readonly EntityWhitelistSystem _whitelistSystem = default!;
@@ -36,6 +38,7 @@ public sealed class ReflectorSystem : EntitySystem
         if (TryReflectProjectile(uid, component, args.ProjUid , collisionDirection))
             args.Cancelled = true;
     }
+
     private Direction CalculateCollisionDirection(EntityUid uid, EntityUid projectile)
     {
         var projWorldPos = _transform.GetWorldPosition(projectile);
@@ -43,7 +46,6 @@ public sealed class ReflectorSystem : EntitySystem
         var localCollisionPoint = Vector2.Transform(projWorldPos, uidWorldMatrix);
 
         return localCollisionPoint.ToAngle().GetCardinalDir();
-
     }
 
     private bool TryReflectProjectile(EntityUid user, ReflectorComponent component , EntityUid projectile, Direction collisionDirection)
@@ -57,6 +59,9 @@ public sealed class ReflectorSystem : EntitySystem
             return false;
         }
 
+        if (!TryComp<AmmoComponent>(projectile, out var ammoComp))
+            return false;
+
         var targetOffset = ReflectBasedOnType(component, collisionDirection);
         if (!targetOffset.HasValue)
             return false;
@@ -66,7 +71,13 @@ public sealed class ReflectorSystem : EntitySystem
 
         _transform.SetLocalPosition(projectile, xform.LocalPosition + xform.LocalRotation.RotateVec(targetOffset.Value));
 
-        _gun.Shoot(user, gunComponent, projectile, xform.Coordinates, targetPos, out _);
+        var gunEnt = new Entity<GunComponent>(user, gunComponent);
+        var ammoList = new List<(EntityUid? Entity, IShootable Shootable)>
+        {
+            (projectile, ammoComp)
+        };
+
+        _gun.Shoot(gunEnt, ammoList, xform.Coordinates, targetPos, out _);
 
         if (_netManager.IsServer)
             _popup.PopupEntity(Loc.GetString("reflect-shot"), user);
@@ -85,6 +96,7 @@ public sealed class ReflectorSystem : EntitySystem
             _ => throw new ArgumentOutOfRangeException(nameof(collisionDirection)),
         };
     }
+
     private Vector2? ReflectBasedOnType(ReflectorComponent component, Direction collisionDirection)
     {
         return component.State switch
