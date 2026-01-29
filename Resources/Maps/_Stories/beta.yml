@@ -107138,7 +107138,7 @@ entities:
     - type: Transform
       pos: 37.5,-5.5
       parent: 2
-- proto: SpawnPointSTJudge
+- proto: STSpawnPointJudge
   entities:
   - uid: 19218
     components:

@@ -153552,7 +153552,7 @@ entities:
     - type: Transform
       pos: -24.5,27.5
       parent: 2
-- proto: SpawnPointSTJudge
+- proto: STSpawnPointJudge
   entities:
   - uid: 28784
     components:

@@ -40,7 +40,7 @@
     - state: lawyer
 
 - type: entity
-  id: SpawnPointSTJudge
+  id: STSpawnPointJudge
   parent: SpawnPointJobBaseStories
   name: judge
   components:
