@@ -1,4 +1,4 @@
-﻿# Имена
+# Имена
 chat-emote-name-scream = Кричать
 chat-emote-name-laugh = Смеяться
 chat-emote-name-honk = Хонк

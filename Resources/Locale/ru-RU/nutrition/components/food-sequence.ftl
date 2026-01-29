@@ -1,4 +1,4 @@
-﻿food-sequence-no-space = Вы не можете положить больше!
+food-sequence-no-space = Вы не можете положить больше!
 
 # GENERAL
 

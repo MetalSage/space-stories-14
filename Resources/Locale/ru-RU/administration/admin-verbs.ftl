@@ -42,7 +42,7 @@ admin-verbs-locate-cargo-shuttle = Найти грузовой шаттл
 admin-verbs-halt-movement = Остановить движение
 admin-verbs-unpause-map = Снять карту с паузы
 admin-verbs-pause-map = Поставить карту на паузу
-admin-verbs-snap-joints = Удалить джоинты
+admin-verbs-snap-joints = Удалить шарниры
 admin-verbs-make-minigun = Сделать миниганом
 admin-verbs-set-bullet-amount = Установить кол-во патронов
 # Toggles verbs

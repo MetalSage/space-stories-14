@@ -1,4 +1,4 @@
-﻿tiles-space = космос
+tiles-space = космос
 tiles-plating = покрытие
 tiles-lattice = решётка
 tiles-lattice-train = решётка поезда

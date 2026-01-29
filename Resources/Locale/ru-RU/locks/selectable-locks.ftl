@@ -1,4 +1,4 @@
-﻿selectable-lock-verb-category-name = Заблокировать
+selectable-lock-verb-category-name = Заблокировать
 selectable-lock-no-lock-verb = Без замка
 selectable-lock-no-lock-popup = { CAPITALIZE($target) } без замка.
 selectable-lock-voice-verb = Голосовой замок

@@ -5,6 +5,7 @@ using Content.Shared.Chemistry.Components;
 using Content.Shared.Chemistry.Reagent;
 using Content.Shared.Damage.Components;
 using Content.Shared.DoAfter;
+using Content.Shared.Gibbing;
 using Content.Shared.Light.Components;
 using Content.Shared.Mobs;
 using Content.Shared.Mobs.Components;
@@ -21,8 +22,11 @@ using Robust.Shared.Prototypes;
 using Robust.Shared.Random;
 
 namespace Content.Server._Stories.Shadowling;
+
 public sealed partial class ShadowlingSystem
 {
+    [Dependency] private readonly GibbingSystem _gib = default!;
+
     [ValidatePrototypeId<PolymorphPrototype>]
     public const string ShadowlingPolymorph = "Shadowling";
 
@@ -37,6 +41,7 @@ public sealed partial class ShadowlingSystem
 
     [ValidatePrototypeId<ConversionPrototype>]
     public const string ShadowlingThrallConversion = "ShadowlingThrall";
+
     public void InitializeActions()
     {
         SubscribeLocalEvent<ShadowlingComponent, ComponentInit>(OnInit);
@@ -104,7 +109,7 @@ public sealed partial class ShadowlingSystem
         if (args.Handled)
             return;
 
-        _body.GibBody(args.Target, false, splatModifier: 10); // FIXME: Hardcode
+        _gib.Gib(args.Target); 
 
         args.Handled = true;
     }

@@ -5,7 +5,6 @@ using Content.Shared.Projectiles;
 using Content.Shared.Damage;
 using Content.Shared.Damage.Systems;
 using Content.Shared.Rounding;
-using SixLabors.ImageSharp.Processing;
 using Content.Shared.Alert;
 
 namespace Content.Server._Stories.ForceUser.ProtectiveBubble.Systems;
