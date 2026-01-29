@@ -1,4 +1,4 @@
-﻿ent-BasePDA = КПК
+ent-BasePDA = КПК
     .desc = Ассистент по персональным данным.
 ent-BaseWidePDA = { ent-BasePDA }
     .desc = { ent-BasePDA.desc }

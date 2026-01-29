@@ -1,4 +1,4 @@
-﻿stack-steel =
+stack-steel =
     { $amount ->
         [1] лист
         [few] листа

@@ -79,7 +79,7 @@ entity-condition-guidebook-breathing =
         [true] дышит нормально
        *[false] задыхается
     }
-entity-effect-condition-guidebook-internals =
+entity-condition-guidebook-internals =
     цель { $usingInternals ->
         [true] использует дыхательную маску
        *[false] дышит атмосферным газом

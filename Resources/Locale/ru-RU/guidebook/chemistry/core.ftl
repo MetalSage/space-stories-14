@@ -2,9 +2,9 @@ guidebook-reagent-effect-description =
     { $chance ->
         [1] { $effect }
        *[other] Имеет { NATURALPERCENT($chance, 2) } шанс { $effect }
-    }{$quantity ->
-        [0] {""}
-        *[other] , если имеется как минимум {$quantity} ед. {$reagent}
+    }{ $quantity ->
+        [0] { "" }
+       *[other] , если имеется как минимум { $quantity } ед. { $reagent }
     }{ $conditionCount ->
         [0] .
        *[other] , пока { $conditions }.

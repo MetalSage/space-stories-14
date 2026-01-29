@@ -1,4 +1,4 @@
-﻿ent-BasePlushie = { ent-BaseItem }
+ent-BasePlushie = { ent-BaseItem }
     .desc = { ent-BaseItem.desc }
 ent-PlushieThrongler = плюшевый Нагибатор
     .desc = Мягкая игрушка, напоминающая грузчикам о том, чего они больше не могут иметь.
