@@ -52,6 +52,7 @@
   - type: Climbing
   - type: NameIdentifier
     group: GenericNumber
+  - type: MobCollision # Stories-Collision
 
 - type: entity
   parent: BaseMobArgocyte

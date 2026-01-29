@@ -49,7 +49,7 @@
   parent: BaseControllable
   id: BaseMob
   components:
-  - type: MobCollision
+  # - type: MobCollision # Stories-Collision
   - type: Physics
     bodyType: KinematicController
   - type: InputMover

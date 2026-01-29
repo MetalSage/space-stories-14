@@ -40,6 +40,7 @@
   - type: ZombieImmune
   - type: ProtectedFromStepTriggers
   - type: StunVisuals
+  - type: MobCollision # Stories-Collision
 
 - type: entity
   abstract: true

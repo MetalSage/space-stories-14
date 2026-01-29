@@ -27,6 +27,7 @@
   - type: Tag
     tags:
     - DoorBumpOpener
+  - type: MobCollision # Stories-Collision
 
 - type: entity
   id: MobGoliath

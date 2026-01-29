@@ -63,6 +63,7 @@
         Slash: 6
   - type: ReplacementAccent
     accent: genericAggressive
+  - type: MobCollision # Stories-Collision
 
 - type: entity
   parent: BaseMobFlesh

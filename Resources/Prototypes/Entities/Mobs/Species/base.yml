@@ -212,6 +212,7 @@
     - FootstepSound
     - DoorBumpOpener
     - AnomalyHost
+  - type: MobCollision # Stories-Collision
 
 - type: entity
   save: false

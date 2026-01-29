@@ -52,6 +52,7 @@
   - type: ProtectedFromStepTriggers
   - type: NoSlip
   - type: Insulated
+  - type: MobCollision # Stories-Collision
 
 # Used for bots
 - type: entity
