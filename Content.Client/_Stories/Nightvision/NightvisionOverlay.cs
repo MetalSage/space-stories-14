@@ -1,20 +1,18 @@
+using Content.Shared._Stories.Nightvision;
 using Robust.Client.Graphics;
 using Robust.Client.Player;
 using Robust.Shared.Enums;
 using Robust.Shared.Prototypes;
-using Content.Shared._Stories.Nightvision;
 
 namespace Content.Client._Stories.Nightvision;
+
 public sealed class NightvisionOverlay : Overlay
 {
-    [Dependency] private readonly IPrototypeManager _prototypeManager = default!;
-    [Dependency] private readonly IPlayerManager _playerManager = default!;
     [Dependency] private readonly IEntityManager _entityManager = default!;
     [Dependency] private readonly ILightManager _lightManager = default!;
-
-    public override bool RequestScreenTexture => true;
-    public override OverlaySpace Space => OverlaySpace.WorldSpace;
     private readonly ShaderInstance _nightvisionShader;
+    [Dependency] private readonly IPlayerManager _playerManager = default!;
+    [Dependency] private readonly IPrototypeManager _prototypeManager = default!;
     private NightvisionComponent _nightvisionComponent = default!;
 
     public NightvisionOverlay()
@@ -22,6 +20,10 @@ public sealed class NightvisionOverlay : Overlay
         IoCManager.InjectDependencies(this);
         _nightvisionShader = _prototypeManager.Index<ShaderPrototype>("Nightvision").InstanceUnique();
     }
+
+    public override bool RequestScreenTexture => true;
+    public override OverlaySpace Space => OverlaySpace.WorldSpace;
+
     protected override bool BeforeDraw(in OverlayDrawArgs args)
     {
         if (!_entityManager.TryGetComponent(_playerManager.LocalSession?.AttachedEntity, out EyeComponent? eyeComp))

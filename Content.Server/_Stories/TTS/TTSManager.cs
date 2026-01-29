@@ -1,16 +1,18 @@
 using System.Collections.Concurrent;
+using System.Collections.Specialized;
 using System.Linq;
 using System.Net;
 using System.Net.Http;
+using System.Net.Http.Headers;
+using System.Security.Cryptography;
 using System.Text;
 using System.Text.Json.Serialization;
 using System.Threading;
 using System.Threading.Tasks;
+using System.Web;
 using Content.Shared._Stories.SCCVars;
 using Prometheus;
 using Robust.Shared.Configuration;
-using System.Collections.Specialized;
-using System.Web;
 
 namespace Content.Server._Stories.TTS;
 
@@ -19,9 +21,9 @@ public sealed class TTSManager
     private static readonly Histogram RequestTimings = Metrics.CreateHistogram(
         "tts_req_timings",
         "Timings of TTS API requests",
-        new HistogramConfiguration()
+        new HistogramConfiguration
         {
-            LabelNames = new[] {"type"},
+            LabelNames = new[] { "type" },
             Buckets = Histogram.ExponentialBuckets(.1, 1.5, 10),
         });
 
@@ -33,35 +35,39 @@ public sealed class TTSManager
         "tts_reused_count",
         "Amount of reused TTS audio from cache.");
 
+    private readonly ConcurrentDictionary<string, byte[]> _cache = new();
+    private readonly List<string> _cacheKeysSeq = new();
+
     [Dependency] private readonly IConfigurationManager _cfg = default!;
 
     private readonly HttpClient _httpClient = new();
 
-    private ISawmill _sawmill = default!;
-    private readonly ConcurrentDictionary<string, byte[]> _cache = new();
-    private readonly List<string> _cacheKeysSeq = new();
-
     private readonly ConcurrentDictionary<string, Task<byte[]?>> _pendingRequests = new();
+    private string _apiToken = string.Empty;
+    private string _apiUrl = string.Empty;
 
     private int _maxCachedCount = 200;
-    private string _apiUrl = string.Empty;
-    private string _apiToken = string.Empty;
+
+    private ISawmill _sawmill = default!;
 
     public void Initialize()
     {
         _sawmill = Logger.GetSawmill("tts");
-        _cfg.OnValueChanged(SCCVars.TTSMaxCache, val =>
-        {
-            _maxCachedCount = val;
-            ResetCache();
-        }, true);
+        _cfg.OnValueChanged(SCCVars.TTSMaxCache,
+            val =>
+            {
+                _maxCachedCount = val;
+                ResetCache();
+            },
+            true);
         _cfg.OnValueChanged(SCCVars.TTSApiUrl, v => _apiUrl = v, true);
-        _cfg.OnValueChanged(SCCVars.TTSApiToken, v =>
-        {
-            _httpClient.DefaultRequestHeaders.Authorization = new System.Net.Http.Headers.AuthenticationHeaderValue("Bearer", v);
-            _apiToken = v;
-        },
-        true);
+        _cfg.OnValueChanged(SCCVars.TTSApiToken,
+            v =>
+            {
+                _httpClient.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", v);
+                _apiToken = v;
+            },
+            true);
     }
 
     /// <summary>
@@ -82,7 +88,7 @@ public sealed class TTSManager
             return Task.FromResult<byte[]?>(data);
         }
 
-        return _pendingRequests.GetOrAdd(cacheKey, (key) => GenerateAndCacheAudio(speaker, text, key));
+        return _pendingRequests.GetOrAdd(cacheKey, key => GenerateAndCacheAudio(speaker, text, key));
     }
 
     private async Task<byte[]?> GenerateAndCacheAudio(string speaker, string text, string cacheKey)
@@ -95,10 +101,12 @@ public sealed class TTSManager
             var timeout = _cfg.GetCVar(SCCVars.TTSApiTimeout);
             using var cts = new CancellationTokenSource(TimeSpan.FromSeconds(timeout));
 
-            var requestUrl = $"{_apiUrl}" + ToQueryString(new NameValueCollection() {
+            var requestUrl = $"{_apiUrl}" + ToQueryString(new NameValueCollection
+            {
                 { "speaker", speaker },
                 { "text", text },
-                { "ext", "ogg" }});
+                { "ext", "ogg" },
+            });
 
             var response = await _httpClient.GetAsync(requestUrl, cts.Token);
             if (!response.IsSuccessStatusCode)
@@ -128,7 +136,8 @@ public sealed class TTSManager
             }
 
 
-            _sawmill.Debug($"Generated new audio for '{text}' speech by '{speaker}' speaker ({soundData.Length} bytes)");
+            _sawmill.Debug(
+                $"Generated new audio for '{text}' speech by '{speaker}' speaker ({soundData.Length} bytes)");
             RequestTimings.WithLabels("Success").Observe((DateTime.UtcNow - reqTime).TotalSeconds);
 
             return soundData;
@@ -157,7 +166,7 @@ public sealed class TTSManager
             from key in nvc.AllKeys
             from value in nvc.GetValues(key) ?? Array.Empty<string>()
             select $"{key}={HttpUtility.UrlEncode(value)}"
-            ).ToArray();
+        ).ToArray();
 
         return "?" + string.Join("&", array);
     }
@@ -165,14 +174,17 @@ public sealed class TTSManager
     public void ResetCache()
     {
         _cache.Clear();
-        lock (_cacheKeysSeq) _cacheKeysSeq.Clear();
+        lock (_cacheKeysSeq)
+        {
+            _cacheKeysSeq.Clear();
+        }
     }
 
     private string GenerateCacheKey(string speaker, string text)
     {
         var key = $"{speaker}/{text}";
-        byte[] keyData = Encoding.UTF8.GetBytes(key);
-        var sha256 = System.Security.Cryptography.SHA256.Create();
+        var keyData = Encoding.UTF8.GetBytes(key);
+        var sha256 = SHA256.Create();
         var bytes = sha256.ComputeHash(keyData);
         return Convert.ToHexString(bytes);
     }
@@ -182,6 +194,7 @@ public sealed class TTSManager
         public GenerateVoiceRequest()
         {
         }
+
         [JsonPropertyName("speaker")]
         public string Speaker { get; set; } = "";
 

@@ -17,10 +17,8 @@ public sealed class JoinQueueManager
     private void OnQueueUpdate(MsgQueueUpdate msg)
     {
         if (_stateManager.CurrentState is not QueueState)
-        {
             _stateManager.RequestStateChange<QueueState>();
-        }
 
-        ((QueueState) _stateManager.CurrentState).OnQueueUpdate(msg);
+        ((QueueState)_stateManager.CurrentState).OnQueueUpdate(msg);
     }
 }

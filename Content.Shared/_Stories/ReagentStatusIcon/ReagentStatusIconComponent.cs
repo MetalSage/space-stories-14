@@ -6,17 +6,17 @@ using Robust.Shared.Prototypes;
 
 namespace Content.Shared._Stories.ReagentStatusIcon;
 
-[RegisterComponent, NetworkedComponent]
+[RegisterComponent] [NetworkedComponent]
 public sealed partial class ReagentStatusIconComponent : Component
 {
     [DataField]
     public List<MobState> AllowedStates = new();
 
     [DataField]
-    public string Solution = "chemicals";
+    public ReagentId Reagent;
 
     [DataField]
-    public ReagentId Reagent;
+    public string Solution = "chemicals";
 
     [DataField]
     public ProtoId<ReagentIconPrototype> StatusIcon;

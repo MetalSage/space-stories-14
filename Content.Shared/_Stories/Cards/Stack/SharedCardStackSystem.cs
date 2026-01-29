@@ -1,28 +1,29 @@
+using System.Linq;
+using Content.Shared._Stories.Cards.Card;
+using Content.Shared._Stories.Cards.Deck;
+using Content.Shared._Stories.Cards.Fan;
+using Content.Shared.Examine;
+using Content.Shared.Foldable;
+using Content.Shared.Hands.EntitySystems;
+using Content.Shared.Interaction;
+using Content.Shared.Popups;
+using Content.Shared.Verbs;
 using Robust.Shared.Audio.Systems;
 using Robust.Shared.Containers;
 using Robust.Shared.Map;
-using Content.Shared.Examine;
-using Content.Shared.Verbs;
-using Content.Shared.Popups;
-using Content.Shared.Interaction;
-using Content.Shared.Hands.EntitySystems;
-using Content.Shared.Foldable;
-using System.Linq;
-
-using Content.Shared._Stories.Cards.Deck;
-using Content.Shared._Stories.Cards.Fan;
-using Content.Shared._Stories.Cards.Card;
 
 namespace Content.Shared._Stories.Cards.Stack;
+
 public abstract class SharedCardStackSystem : EntitySystem
 {
-    [Dependency] private readonly SharedPopupSystem _popup = default!;
     [Dependency] private readonly SharedAppearanceSystem _appearance = default!;
-    [Dependency] private readonly SharedHandsSystem _handsSystem = default!;
-    [Dependency] private readonly SharedContainerSystem _containerSystem = default!;
-    [Dependency] private readonly SharedTransformSystem _transformSystem = default!;
-    [Dependency] private readonly FoldableSystem _foldableSystem = default!;
     [Dependency] private readonly SharedAudioSystem _audio = default!;
+    [Dependency] private readonly SharedContainerSystem _containerSystem = default!;
+    [Dependency] private readonly FoldableSystem _foldableSystem = default!;
+    [Dependency] private readonly SharedHandsSystem _handsSystem = default!;
+    [Dependency] private readonly SharedPopupSystem _popup = default!;
+    [Dependency] private readonly SharedTransformSystem _transformSystem = default!;
+
     public override void Initialize()
     {
         base.Initialize();
@@ -42,7 +43,8 @@ public abstract class SharedCardStackSystem : EntitySystem
     {
         if (!args.IsInDetailsRange)
             return;
-        args.PushMarkup(Loc.GetString("card-count-total", ("cardsTotal", component.CardContainer.ContainedEntities.Count)));
+        args.PushMarkup(Loc.GetString("card-count-total",
+            ("cardsTotal", component.CardContainer.ContainedEntities.Count)));
     }
 
     private void OnGetAlternativeVerb(EntityUid uid, CardStackComponent component, GetVerbsEvent<AlternativeVerb> args)
@@ -50,7 +52,7 @@ public abstract class SharedCardStackSystem : EntitySystem
         if (!args.CanAccess || !args.CanInteract || args.Hands == null)
             return;
 
-        args.Verbs.Add(new AlternativeVerb()
+        args.Verbs.Add(new AlternativeVerb
         {
             Text = Loc.GetString("card-shuffle"),
             Act = () =>
@@ -62,15 +64,15 @@ public abstract class SharedCardStackSystem : EntitySystem
                 else if (TryComp<CardDeckComponent>(uid, out var deckComp))
                     _audio.PlayLocal(deckComp.ShuffleSound, uid, args.User);
             },
-            Priority = 2
+            Priority = 2,
         });
-        args.Verbs.Add(new AlternativeVerb()
+        args.Verbs.Add(new AlternativeVerb
         {
             Text = Loc.GetString("card-split"),
             Act = () => Split(uid, component, args.User),
-            Priority = 1
+            Priority = 1,
         });
-        args.Verbs.Add(new()
+        args.Verbs.Add(new AlternativeVerb
         {
             Text = Loc.GetString("card-flip-all"),
             Act = () =>
@@ -82,10 +84,11 @@ public abstract class SharedCardStackSystem : EntitySystem
                     _foldableSystem.TryToggleFold(card, foldable);
                     SetFoldVisuals(uid, foldable);
                 }
+
                 _popup.PopupClient(Loc.GetString("card-flip-success"), args.User);
             },
         });
-        args.Verbs.Add(new()
+        args.Verbs.Add(new AlternativeVerb
         {
             Text = Loc.GetString("card-flip-face"),
             Act = () =>
@@ -97,11 +100,12 @@ public abstract class SharedCardStackSystem : EntitySystem
                     _foldableSystem.SetFolded(card, foldable, true);
                     SetFoldVisuals(card, foldable);
                 }
+
                 _popup.PopupClient(Loc.GetString("card-flip-success"), args.User);
             },
-            Category = VerbCategory.Flip
+            Category = VerbCategory.Flip,
         });
-        args.Verbs.Add(new()
+        args.Verbs.Add(new AlternativeVerb
         {
             Text = Loc.GetString("card-flip-back"),
             Act = () =>
@@ -113,9 +117,10 @@ public abstract class SharedCardStackSystem : EntitySystem
                     _foldableSystem.SetFolded(card, foldable, false);
                     SetFoldVisuals(card, foldable);
                 }
+
                 _popup.PopupClient(Loc.GetString("card-flip-success"), args.User);
             },
-            Category = VerbCategory.Flip
+            Category = VerbCategory.Flip,
         });
     }
 
@@ -140,6 +145,7 @@ public abstract class SharedCardStackSystem : EntitySystem
             CombineStacks(uid, args.Used);
             _audio.PlayLocal(comp.AddCardSound, uid, args.User);
         }
+
         var list = comp.CardContainer.ContainedEntities.ToList();
         SetActualCardsOrder(uid, comp, list);
     }
@@ -191,12 +197,15 @@ public abstract class SharedCardStackSystem : EntitySystem
         if (TryComp<CardStackComponent>(entityCreated, out var stackComponent))
         {
             foreach (var card in cardsToMove)
+            {
                 _containerSystem.Insert(card, stackComponent.CardContainer);
+            }
 
             _popup.PopupClient(Loc.GetString("card-split-take", ("cardsSplit", splitCount)), user);
             _handsSystem.TryPickup(user, entityCreated);
             _audio.PlayLocal(component.AddCardSound, uid, user);
         }
+
         Dirty(uid, component);
     }
 
@@ -206,9 +215,15 @@ public abstract class SharedCardStackSystem : EntitySystem
         comp.CardOrder.AddRange(list);
 
         foreach (var card in comp.CardContainer.ContainedEntities.ToList())
+        {
             _containerSystem.Remove(card, comp.CardContainer);
+        }
+
         foreach (var card in list)
+        {
             _containerSystem.Insert(card, comp.CardContainer);
+        }
+
         _appearance.SetData(uid, CardStackVisuals.OrderEdited, true);
     }
 
@@ -222,6 +237,7 @@ public abstract class SharedCardStackSystem : EntitySystem
         {
             _containerSystem.Insert(card, stackComp.CardContainer);
         }
+
         PredictedDel(used);
 
         _appearance.SetData(uid, CardStackVisuals.CardsCount, stackComp.CardContainer.ContainedEntities.Count);

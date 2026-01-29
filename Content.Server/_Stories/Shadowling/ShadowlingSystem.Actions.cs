@@ -1,23 +1,17 @@
-using Content.Server.Administration.Logs.Converters;
-using Content.Server.Light.Components;
 using Content.Server.Lightning.Components;
+using Content.Shared._Stories.Conversion;
+using Content.Shared._Stories.Shadowling;
 using Content.Shared.Chemistry.Components;
 using Content.Shared.Chemistry.Reagent;
-using Content.Shared.Damage.Components;
 using Content.Shared.DoAfter;
 using Content.Shared.Gibbing;
 using Content.Shared.Light.Components;
-using Content.Shared.Mobs;
 using Content.Shared.Mobs.Components;
 using Content.Shared.Polymorph;
 using Content.Shared.Rejuvenate;
 using Content.Shared.Silicons.Borgs.Components;
-using Content.Shared._Stories.Conversion;
-using Content.Shared._Stories.Shadowling;
 using Robust.Server.GameObjects;
-using Robust.Shared.Audio;
 using Robust.Shared.Map;
-using Robust.Shared.Player;
 using Robust.Shared.Prototypes;
 using Robust.Shared.Random;
 
@@ -25,8 +19,6 @@ namespace Content.Server._Stories.Shadowling;
 
 public sealed partial class ShadowlingSystem
 {
-    [Dependency] private readonly GibbingSystem _gib = default!;
-
     [ValidatePrototypeId<PolymorphPrototype>]
     public const string ShadowlingPolymorph = "Shadowling";
 
@@ -41,6 +33,8 @@ public sealed partial class ShadowlingSystem
 
     [ValidatePrototypeId<ConversionPrototype>]
     public const string ShadowlingThrallConversion = "ShadowlingThrall";
+
+    [Dependency] private readonly GibbingSystem _gib = default!;
 
     public void InitializeActions()
     {
@@ -63,10 +57,12 @@ public sealed partial class ShadowlingSystem
 
         SubscribeLocalEvent<ShadowlingComponent, ShadowlingEnthrallEvent>(OnEnthrallEvent);
     }
+
     private void OnInit(EntityUid uid, ShadowlingComponent component, ComponentInit args)
     {
         RefreshActions(uid, component);
     }
+
     public float RefreshActions(EntityUid uid, ShadowlingComponent? component = null)
     {
         if (!Resolve(uid, ref component))
@@ -76,8 +72,10 @@ public sealed partial class ShadowlingSystem
         var aliveThrallsAmount = 0;
 
         foreach (var thrall in thralls)
+        {
             if (_mobState.IsAlive(thrall))
                 aliveThrallsAmount++;
+        }
 
         foreach (var (action, thrallsAmount) in component.Actions)
         {
@@ -87,7 +85,8 @@ public sealed partial class ShadowlingSystem
                 if (actionId != null)
                     component.GrantedActions.Add(action, actionId.Value);
             }
-            else if (aliveThrallsAmount < thrallsAmount && component.GrantedActions.TryGetValue(action, out var actionId))
+            else if (aliveThrallsAmount < thrallsAmount &&
+                     component.GrantedActions.TryGetValue(action, out var actionId))
             {
                 _actions.RemoveAction(uid, actionId);
                 component.GrantedActions.Remove(action);
@@ -96,6 +95,7 @@ public sealed partial class ShadowlingSystem
 
         return aliveThrallsAmount;
     }
+
     public void ShadowSmoke(EntityCoordinates coords, float amount = 100f, float duration = 15f, int spreadAmount = 7)
     {
         var solution = new Solution(ShadowlingSmokeReagent, amount);
@@ -103,22 +103,25 @@ public sealed partial class ShadowlingSystem
         var smokeEnt = Spawn(SmokePrototype, coords);
         _smoke.StartSmoke(smokeEnt, solution, duration, spreadAmount);
     }
+
     // Actions
     private void OnAnnihilateEvent(EntityUid uid, ShadowlingComponent component, ShadowlingAnnihilateEvent args)
     {
         if (args.Handled)
             return;
 
-        _gib.Gib(args.Target); 
+        _gib.Gib(args.Target);
 
         args.Handled = true;
     }
+
     private void OnSonicScreechEvent(EntityUid uid, ShadowlingComponent component, ShadowlingSonicScreechEvent args)
     {
         if (args.Handled)
             return;
 
-        var targets = _entityLookup.GetEntitiesInRange<MobStateComponent>(Transform(uid).Coordinates, 15f); // FIXME: Hardcode
+        var targets =
+            _entityLookup.GetEntitiesInRange<MobStateComponent>(Transform(uid).Coordinates, 15f); // FIXME: Hardcode
 
         foreach (var (target, mobState) in targets)
         {
@@ -139,6 +142,7 @@ public sealed partial class ShadowlingSystem
 
         args.Handled = true;
     }
+
     private void OnLightningStormEvent(EntityUid uid, ShadowlingComponent component, ShadowlingLightningStormEvent args)
     {
         if (args.Handled)
@@ -146,7 +150,9 @@ public sealed partial class ShadowlingSystem
 
         HashSet<EntityUid> targets = new();
 
-        foreach (var (ent, comp) in _entityLookup.GetEntitiesInRange<LightningTargetComponent>(Transform(uid).Coordinates, 10f))
+        foreach (var (ent, comp) in _entityLookup.GetEntitiesInRange<LightningTargetComponent>(
+                     Transform(uid).Coordinates,
+                     10f))
         {
             if (HasComp<ShadowlingComponent>(ent) || HasComp<ShadowlingThrallComponent>(ent))
                 continue;
@@ -166,16 +172,18 @@ public sealed partial class ShadowlingSystem
             _lightning.ShootLightning(_random.Pick(targets), target);
         }
 
-        _emp.EmpPulse(_xform.GetMapCoordinates(uid), 12, 10000, TimeSpan.FromSeconds(30));  // FIXME: Hardcode
+        _emp.EmpPulse(_xform.GetMapCoordinates(uid), 12, 10000, TimeSpan.FromSeconds(30)); // FIXME: Hardcode
 
         args.Handled = true;
     }
+
     private void OnVeilEvent(EntityUid uid, ShadowlingComponent component, ShadowlingVeilEvent args)
     {
         if (args.Handled)
             return;
 
-        foreach (var (ent, _) in _entityLookup.GetEntitiesInRange<PointLightComponent>(_xform.GetMapCoordinates(uid), 10f)) // FIXME: Hardcode
+        foreach (var (ent, _) in _entityLookup.GetEntitiesInRange<PointLightComponent>(_xform.GetMapCoordinates(uid),
+                     10f)) // FIXME: Hardcode
         {
             if (HasComp<PoweredLightComponent>(ent))
                 _poweredLight.TryDestroyBulb(ent);
@@ -187,6 +195,7 @@ public sealed partial class ShadowlingSystem
 
         args.Handled = true;
     }
+
     private void OnRapidReHatchEvent(EntityUid uid, ShadowlingComponent component, ShadowlingRapidReHatchEvent args)
     {
         if (args.Handled)
@@ -197,7 +206,10 @@ public sealed partial class ShadowlingSystem
 
         args.Handled = true;
     }
-    private void OnBlackRecuperationEvent(EntityUid uid, ShadowlingComponent component, ShadowlingBlackRecuperationEvent args)
+
+    private void OnBlackRecuperationEvent(EntityUid uid,
+        ShadowlingComponent component,
+        ShadowlingBlackRecuperationEvent args)
     {
         if (args.Handled)
             return;
@@ -207,22 +219,27 @@ public sealed partial class ShadowlingSystem
             _popup.PopupCursor("Он не является траллом!", uid); // FIXME: Hardcode
             return;
         }
-        else if (HasComp<ShadowlingComponent>(args.Target))
+
+        if (HasComp<ShadowlingComponent>(args.Target))
         {
             _popup.PopupCursor("Вы не можете вылечить его!", uid); // FIXME: Hardcode
             return;
         }
-        else if (_mobState.IsAlive(args.Target))
+
+        if (_mobState.IsAlive(args.Target))
         {
             _popup.PopupCursor("Выбранный раб уже живой.", uid); // FIXME: Hardcode
             return;
         }
 
-        _popup.PopupEntity("Ваши раны покрываются тенью и затягиваются...", args.Target, args.Target); // FIXME: Hardcode
+        _popup.PopupEntity("Ваши раны покрываются тенью и затягиваются...",
+            args.Target,
+            args.Target); // FIXME: Hardcode
         RaiseLocalEvent(args.Target, new RejuvenateEvent());
 
         args.Handled = true;
     }
+
     private void OnCollectiveEvent(EntityUid uid, ShadowlingComponent component, ShadowlingCollectiveMindEvent args)
     {
         if (args.Handled)
@@ -232,6 +249,7 @@ public sealed partial class ShadowlingSystem
 
         args.Handled = true;
     }
+
     private void OnGlareEvent(EntityUid uid, ShadowlingComponent component, ShadowlingGlareEvent args)
     {
         if (args.Handled)
@@ -242,11 +260,12 @@ public sealed partial class ShadowlingSystem
 
         args.Handled = true;
     }
+
     private void OnBlindnessSmokeEvent(EntityUid uid, ShadowlingComponent component, ShadowlingBlindnessSmokeEvent args)
     {
         if (args.Handled)
             return;
-        ShadowSmoke(Transform(uid).Coordinates, 100, 30, 7); // FIXME: Hardcode
+        ShadowSmoke(Transform(uid).Coordinates, 100, 30); // FIXME: Hardcode
         args.Handled = true;
     }
 
@@ -261,18 +280,23 @@ public sealed partial class ShadowlingSystem
         if (shadowlingUid == null)
             return;
 
-        ShadowSmoke(Transform(shadowlingUid.Value).Coordinates, 100, 15, 7); // FIXME: Hardcode
+        ShadowSmoke(Transform(shadowlingUid.Value).Coordinates); // FIXME: Hardcode
 
         _stun.TryAddParalyzeDuration(shadowlingUid.Value, TimeSpan.FromSeconds(15)); // FIXME: Hardcode
 
-        var doAfterArgs = new DoAfterArgs(EntityManager, shadowlingUid.Value, TimeSpan.FromSeconds(15f), new ShadowlingHatchDoAfterEvent(), shadowlingUid) // FIXME: Hardcode
-        {
-            RequireCanInteract = false,
-        };
+        var doAfterArgs = new DoAfterArgs(EntityManager,
+                shadowlingUid.Value,
+                TimeSpan.FromSeconds(15f),
+                new ShadowlingHatchDoAfterEvent(),
+                shadowlingUid) // FIXME: Hardcode
+            {
+                RequireCanInteract = false,
+            };
 
         _doAfter.TryStartDoAfter(doAfterArgs);
         args.Handled = true;
     }
+
     private void OnHatchDoAfter(EntityUid uid, ShadowlingComponent component, ShadowlingHatchDoAfterEvent args)
     {
         if (args.Cancelled || args.Handled)
@@ -281,25 +305,34 @@ public sealed partial class ShadowlingSystem
         _standing.Stand(uid);
         args.Handled = true;
     }
+
     // Ascendance
     private void OnAscendance(EntityUid uid, ShadowlingComponent component, ShadowlingAscendanceEvent args)
     {
         if (args.Handled)
             return;
 
-        ShadowSmoke(Transform(uid).Coordinates, 100f, 5f, 7); // FIXME: Hardcode
+        ShadowSmoke(Transform(uid).Coordinates, 100f, 5f); // FIXME: Hardcode
         _stun.TryAddParalyzeDuration(uid, TimeSpan.FromSeconds(5f)); // FIXME: Hardcode
 
-        var doAfter = new DoAfterArgs(EntityManager, uid, TimeSpan.FromSeconds(5f), new ShadowlingAscendanceDoAfterEvent(), uid) // FIXME: Hardcode
-        {
-            RequireCanInteract = false,
-        };
+        var doAfter =
+            new DoAfterArgs(EntityManager,
+                    uid,
+                    TimeSpan.FromSeconds(5f),
+                    new ShadowlingAscendanceDoAfterEvent(),
+                    uid) // FIXME: Hardcode
+                {
+                    RequireCanInteract = false,
+                };
 
         _doAfter.TryStartDoAfter(doAfter);
 
         args.Handled = true;
     }
-    private void OnAscendanceDoAfter(EntityUid uid, ShadowlingComponent component, ShadowlingAscendanceDoAfterEvent args)
+
+    private void OnAscendanceDoAfter(EntityUid uid,
+        ShadowlingComponent component,
+        ShadowlingAscendanceDoAfterEvent args)
     {
         if (args.Cancelled || args.Handled)
             return;
@@ -310,13 +343,14 @@ public sealed partial class ShadowlingSystem
         if (ascendance == null)
             return;
 
-        RaiseLocalEvent(new ShadowlingWorldAscendanceEvent()
+        RaiseLocalEvent(new ShadowlingWorldAscendanceEvent
         {
             EntityUid = ascendance.Value,
         });
 
         args.Handled = true;
     }
+
     // Enthrall
     private void OnEnthrallEvent(EntityUid uid, ShadowlingComponent component, ShadowlingEnthrallEvent args)
     {

@@ -10,11 +10,12 @@ namespace Content.Server._Stories.Partners.Commands;
 public sealed class PickAntagCommand : IConsoleCommand
 {
     [Dependency] private readonly IEntityManager _entityManager = default!;
-    [Dependency] private readonly IPrototypeManager _proto = default!;
     [Dependency] private readonly PartnersManager _partners = default!;
+    [Dependency] private readonly IPrototypeManager _proto = default!;
     public string Command => "pickspecialrole";
     public string Description => "Выдает роль.";
     public string Help => "Usage: pickspecialrole dragon";
+
     public async void Execute(IConsoleShell shell, string argStr, string[] args)
     {
         if (args.Length < 1)
@@ -38,6 +39,7 @@ public sealed class PickAntagCommand : IConsoleCommand
             shell.WriteError(reason?.ToString() ?? "Success?");
             return;
         }
+
         var data = await _partners.LoadSponsorInfo(player.UserId);
 
         if (data == null || data.Tokens <= 0)

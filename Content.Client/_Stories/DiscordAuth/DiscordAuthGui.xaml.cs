@@ -9,8 +9,8 @@ namespace Content.Client._Stories.DiscordAuth;
 [GenerateTypedNameReferences]
 public sealed partial class DiscordAuthGui : Control
 {
-    [Dependency] private readonly DiscordAuthManager _discordAuthManager = default!;
     [Dependency] private readonly IClientConsoleHost _consoleHost = default!;
+    [Dependency] private readonly DiscordAuthManager _discordAuthManager = default!;
 
     public DiscordAuthGui()
     {
@@ -18,18 +18,16 @@ public sealed partial class DiscordAuthGui : Control
         IoCManager.InjectDependencies(this);
         LayoutContainer.SetAnchorPreset(this, LayoutContainer.LayoutPreset.Wide);
 
-        QuitButton.OnPressed += (_) =>
+        QuitButton.OnPressed += _ =>
         {
             _consoleHost.ExecuteCommand("quit");
         };
 
         UrlEdit.Text = _discordAuthManager.AuthUrl;
-        OpenUrlButton.OnPressed += (_) =>
+        OpenUrlButton.OnPressed += _ =>
         {
             if (_discordAuthManager.AuthUrl != string.Empty)
-            {
                 IoCManager.Resolve<IUriOpener>().OpenUri(_discordAuthManager.AuthUrl);
-            }
         };
     }
 }

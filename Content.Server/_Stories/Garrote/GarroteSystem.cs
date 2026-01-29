@@ -1,10 +1,10 @@
 using Content.Server.Body.Components;
 using Content.Server.Chat.Systems;
 using Content.Server.Popups;
+using Content.Shared._Stories.Weapons.Special.Garrote;
 using Content.Shared.ActionBlocker;
 using Content.Shared.Body.Components;
 using Content.Shared.Chat;
-using Content.Shared.Damage;
 using Content.Shared.Damage.Components;
 using Content.Shared.DoAfter;
 using Content.Shared.Interaction;
@@ -13,7 +13,6 @@ using Content.Shared.Mobs.Components;
 using Content.Shared.Popups;
 using Content.Shared.Wieldable.Components;
 using Robust.Shared.Player;
-using Content.Shared._Stories.Weapons.Special.Garrote;
 
 namespace Content.Server._Stories.Garrote;
 
@@ -36,10 +35,10 @@ public sealed class GarroteSystem : SharedGarroteSystem
         if (args.Target == null || args.User == args.Target)
             return;
 
-        if(!IsСanStrangled(uid, args.Target, args.User))
+        if (!IsСanStrangled(uid, args.Target, args.User))
             return;
 
-        if(!CanUseGarrote(comp, args))
+        if (!CanUseGarrote(comp, args))
             return;
 
         UseGarrote(uid, comp, args);
@@ -84,7 +83,8 @@ public sealed class GarroteSystem : SharedGarroteSystem
             return false;
         }
 
-        if (comp.CheckDirection && GetEntityDirection(userTransform) != GetEntityDirection(targetTransform) && _actionBlocker.CanInteract(args.Target.Value, null))
+        if (comp.CheckDirection && GetEntityDirection(userTransform) != GetEntityDirection(targetTransform) &&
+            _actionBlocker.CanInteract(args.Target.Value, null))
         {
             var message = Loc.GetString("garrote-component-must-be-behind", ("target", args.Target));
             _popupSystem.PopupEntity(message, args.Target.Value, args.User);
@@ -102,15 +102,25 @@ public sealed class GarroteSystem : SharedGarroteSystem
         var messageTarget = Loc.GetString("garrote-component-started-target", ("user", args.User));
         _popupSystem.PopupEntity(messageTarget, args.User, args.Target.Value, PopupType.LargeCaution);
 
-        var messageOthers = Loc.GetString("garrote-component-started-others", ("user", args.User), ("target", args.Target));
-        _popupSystem.PopupEntity(messageOthers, args.User, Filter.PvsExcept(args.Target.Value), true, PopupType.MediumCaution);
+        var messageOthers =
+            Loc.GetString("garrote-component-started-others", ("user", args.User), ("target", args.Target));
+        _popupSystem.PopupEntity(messageOthers,
+            args.User,
+            Filter.PvsExcept(args.Target.Value),
+            true,
+            PopupType.MediumCaution);
 
-        _doAfter.TryStartDoAfter(new DoAfterArgs(EntityManager, args.User, comp.DoAfterTime, new GarroteDoAfterEvent(), uid, target: args.Target)
+        _doAfter.TryStartDoAfter(new DoAfterArgs(EntityManager,
+            args.User,
+            comp.DoAfterTime,
+            new GarroteDoAfterEvent(),
+            uid,
+            args.Target)
         {
             BreakOnMove = true,
             BreakOnDamage = true,
             NeedHand = true,
-            DuplicateCondition = DuplicateConditions.SameTool
+            DuplicateCondition = DuplicateConditions.SameTool,
         });
 
         _chatSystem.TryEmoteWithChat(args.Target.Value, "Cough", ChatTransmitRange.HideChat, ignoreActionBlocker: true);

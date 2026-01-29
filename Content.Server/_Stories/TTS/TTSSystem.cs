@@ -1,24 +1,24 @@
 using System.Diagnostics.CodeAnalysis;
 using System.Threading.Tasks;
 using Content.Server.Chat.Systems;
+using Content.Server.Radio.EntitySystems;
 using Content.Shared._Stories.SCCVars;
 using Content.Shared._Stories.TTS;
-using Content.Shared.GameTicking;
 using Content.Shared.Chat;
+using Content.Shared.GameTicking;
 using Robust.Shared.Configuration;
 using Robust.Shared.Player;
 using Robust.Shared.Prototypes;
 using Robust.Shared.Random;
-using Content.Server.Radio.EntitySystems;
 
 namespace Content.Server._Stories.TTS;
 
 // ReSharper disable once InconsistentNaming
 public sealed partial class TTSSystem : EntitySystem
 {
+    private const int MaxMessageChars = 100 * 2; // same as SingleBubbleCharLimit * 2
     [Dependency] private readonly IConfigurationManager _cfg = default!;
     [Dependency] private readonly IPrototypeManager _prototypeManager = default!;
-    [Dependency] private readonly TTSManager _ttsManager = default!;
     [Dependency] private readonly IRobustRandom _rng = default!;
 
     private readonly List<string> _sampleText =
@@ -35,18 +35,18 @@ public sealed partial class TTSSystem : EntitySystem
             "Здесь есть доктор? Человек умирает от отравленного пончика! Нужна помощь!",
             "Вам нужно согласие и печать квартирмейстера, если вы хотите сделать заказ на партию дробовиков.",
             "Возле эвакуационного шаттла разгерметизация! Инженеры, нам срочно нужна ваша помощь!",
-            "Бармен, налей мне самого крепкого вина, которое есть в твоих запасах!"
+            "Бармен, налей мне самого крепкого вина, которое есть в твоих запасах!",
         };
 
-    private const int MaxMessageChars = 100 * 2; // same as SingleBubbleCharLimit * 2
-    private bool _isEnabled = false;
+    [Dependency] private readonly TTSManager _ttsManager = default!;
+    private bool _isEnabled;
 
     public override void Initialize()
     {
         _cfg.OnValueChanged(SCCVars.TTSEnabled, v => _isEnabled = v, true);
 
         SubscribeLocalEvent<TransformSpeechEvent>(OnTransformSpeech);
-        SubscribeLocalEvent<TTSComponent, EntitySpokeEvent>(OnEntitySpoke, before: new []{ typeof(HeadsetSystem) });
+        SubscribeLocalEvent<TTSComponent, EntitySpokeEvent>(OnEntitySpoke, new[] { typeof(HeadsetSystem) });
         SubscribeLocalEvent<RoundRestartCleanupEvent>(OnRoundRestartCleanup);
 
         SubscribeNetworkEvent<RequestPreviewTTSEvent>(OnRequestPreviewTTS);
@@ -74,9 +74,7 @@ public sealed partial class TTSSystem : EntitySystem
     private bool GetVoicePrototype(string voiceId, [NotNullWhen(true)] out TTSVoicePrototype? voicePrototype)
     {
         if (!_prototypeManager.TryIndex(voiceId, out voicePrototype))
-        {
             return _prototypeManager.TryIndex("father_grigori", out voicePrototype);
-        }
 
         return true;
     }
@@ -155,7 +153,8 @@ public sealed partial class TTSSystem : EntitySystem
             return null;
 
         var textSanitized = Sanitize(text);
-        if (textSanitized == "") return null;
+        if (textSanitized == "")
+            return null;
         if (char.IsLetter(textSanitized[^1]))
             textSanitized += ".";
 

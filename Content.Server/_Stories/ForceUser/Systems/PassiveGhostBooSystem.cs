@@ -2,9 +2,11 @@ using Content.Server._Stories.ForceUser.Components;
 using Content.Server.Ghost;
 
 namespace Content.Server._Stories.ForceUser.Systems;
+
 public sealed class PassiveGhostBooSystem : EntitySystem
 {
     [Dependency] private readonly EntityLookupSystem _lookup = default!;
+
     public override void Update(float frameTime)
     {
         base.Update(frameTime);
@@ -23,6 +25,7 @@ public sealed class PassiveGhostBooSystem : EntitySystem
             }
         }
     }
+
     public void Boo(EntityUid uid, float range, float maxTargets)
     {
         var entities = _lookup.GetEntitiesInRange(uid, range);

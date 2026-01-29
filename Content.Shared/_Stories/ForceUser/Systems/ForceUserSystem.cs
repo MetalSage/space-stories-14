@@ -1,27 +1,29 @@
-using Content.Shared.Actions;
-using Content.Shared.Popups;
-using Content.Shared.Weapons.Ranged.Events;
-using Robust.Shared.Prototypes;
-using Content.Shared.Alert;
-using Robust.Shared.Serialization.Manager;
 using Content.Shared._Stories.Force;
-using Content.Shared.Rounding;
+using Content.Shared.Actions;
+using Content.Shared.Alert;
 using Content.Shared.DoAfter;
 using Content.Shared.Mobs.Systems;
+using Content.Shared.Popups;
+using Content.Shared.Rounding;
+using Content.Shared.Weapons.Ranged.Events;
+using Robust.Shared.Prototypes;
+using Robust.Shared.Serialization.Manager;
 
 namespace Content.Shared._Stories.ForceUser;
+
 public abstract partial class SharedForceUserSystem : EntitySystem
 {
-    [Dependency] private readonly SharedPopupSystem _popup = default!;
-    [Dependency] private readonly ForceSystem _force = default!;
     [Dependency] private readonly SharedActionsSystem _actions = default!;
-    [Dependency] private readonly IPrototypeManager _proto = default!;
-    [Dependency] private readonly IComponentFactory _compFact = default!;
-    [Dependency] private readonly ISerializationManager _seriMan = default!;
     [Dependency] private readonly AlertsSystem _alerts = default!;
+    [Dependency] private readonly IComponentFactory _compFact = default!;
     [Dependency] private readonly SharedDoAfterSystem _doAfter = default!;
+    [Dependency] private readonly ForceSystem _force = default!;
     [Dependency] private readonly MobStateSystem _mobState = default!;
+    [Dependency] private readonly SharedPopupSystem _popup = default!;
+    [Dependency] private readonly IPrototypeManager _proto = default!;
+    [Dependency] private readonly ISerializationManager _seriMan = default!;
     private ISawmill _sawmill = default!;
+
     public override void Initialize()
     {
         base.Initialize();
@@ -34,10 +36,11 @@ public abstract partial class SharedForceUserSystem : EntitySystem
         InitializeActions();
         InitializeLightsaber();
     }
+
     private void OnVolume(EntityUid uid, ForceUserComponent component, VolumeChangedEvent args)
     {
         var severity = ContentHelpers.RoundToLevels(MathF.Max(0f, args.NewVolume.Float()), args.MaxVolume.Float(), 20);
-        _alerts.ShowAlert(uid, component.AlertType(), (short) severity);
+        _alerts.ShowAlert(uid, component.AlertType(), (short)severity);
     }
 
     private void OnStart(EntityUid uid, ForceUserComponent component, ComponentStartup args)
@@ -57,20 +60,24 @@ public abstract partial class SharedForceUserSystem : EntitySystem
         EntityManager.RemoveComponents(uid, proto.ToRemove);
         EntityManager.AddComponents(uid, proto.ToAdd);
     }
+
     private void OnInit(EntityUid uid, ForceUserComponent component, ComponentInit args)
     {
         _popup.PopupEntity(Loc.GetString("force-init-message", ("name", component.Name())), uid, uid);
         _actions.AddAction(uid, ref component.ShopActionEntity, component.ShopAction);
     }
+
     private void OnShutdown(EntityUid uid, ForceUserComponent component, ComponentShutdown args)
     {
         Del(component.ShopActionEntity);
     }
+
     private void OnShotAttempted(EntityUid uid, ForceUserComponent comp, ref ShotAttemptedEvent args)
     {
         _popup.PopupEntity(Loc.GetString("gun-disabled"), uid, uid);
         args.Cancel();
     }
+
     public void SetPreset(EntityUid uid, string preset)
     {
         TryComp<ForceUserComponent>(uid, out var comp);

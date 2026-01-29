@@ -5,23 +5,23 @@ namespace Content.Shared._Stories.Partners;
 [Prototype("specialRole")]
 public sealed partial class SpecialRolePrototype : IPrototype
 {
-    [ViewVariables][IdDataField] public string ID { get; private set; } = default!;
-
-    [DataField("state")]
-    public PlayerState State = PlayerState.CrewMember;
+    [DataField("gameRule")]
+    public EntProtoId GameRule;
 
     [DataField("gameRulesBlacklist")]
     public HashSet<string> GameRulesBlacklist = [];
 
-    [DataField("gameRule")]
-    public EntProtoId GameRule = default!;
+    [DataField("state")]
+    public PlayerState State = PlayerState.CrewMember;
+
+    [ViewVariables] [IdDataField] public string ID { get; private set; } = default!;
 }
 
 public enum PlayerState
 {
     Ghost,
     CrewMember,
-    None
+    None,
 }
 
 public enum StatusLabel
