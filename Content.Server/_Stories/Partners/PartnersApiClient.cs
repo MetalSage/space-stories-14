@@ -12,7 +12,6 @@ namespace Content.Server._Stories.Partners;
 public interface IPartnersApiClient
 {
     Task<SponsorInfo?> GetSponsorInfoAsync(NetUserId userId);
-    Task<bool> DeductTokenAsync(NetUserId userId);
     void Initialize();
 }
 
@@ -63,30 +62,6 @@ public sealed class PartnersApiClient : IPartnersApiClient
             _sawmill.Error(
                 $"Ошибка десериализации JSON при получении информации о спонсоре для {userId}. URL: {_apiUrl}/{userId}, Ошибка: {e.Message}");
             return null;
-        }
-    }
-
-    public async Task<bool> DeductTokenAsync(NetUserId userId)
-    {
-        if (string.IsNullOrEmpty(_apiUrl))
-            return false;
-
-        try
-        {
-            var response = await _httpClient.PostAsync($"{_apiUrl}/{userId.ToString()}/deduct-token",
-                JsonContent.Create(new { }));
-            if (response.IsSuccessStatusCode)
-                return true;
-            var responseContent = await response.Content.ReadAsStringAsync();
-            _sawmill.Warning(
-                $"Ошибка при списании токена для {userId}. Статус код: {response.StatusCode}, URL: {_apiUrl}/{userId}/deduct-token, Ответ API: {responseContent}");
-            return false;
-        }
-        catch (HttpRequestException e)
-        {
-            _sawmill.Error(
-                $"Ошибка HTTP при запросе на списание токена для {userId}. URL: {_apiUrl}/{userId}/deduct-token, Ошибка: {e.Message}");
-            return false;
         }
     }
 }

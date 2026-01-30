@@ -30,11 +30,14 @@ public sealed class SponsorInfo
     [JsonPropertyName("ghost_skin")]
     public string GhostSkin { get; set; } = "MobObserver";
 
-    [JsonPropertyName("allowed_antags")]
-    public string[] AllowedAntags { get; set; } = Array.Empty<string>();
+    [JsonPropertyName("stationRolePriority")]
+    public float StationRolePriority { get; set; } = 1.0f;
 
-    [JsonPropertyName("tokens")]
-    public int Tokens { get; set; } = 0;
+    [JsonPropertyName("antagRolePriority")]
+    public float AntagRolePriority { get; set; } = 1.0f;
+
+    [JsonPropertyName("ghostRolePriority")]
+    public float GhostRolePriority { get; set; } = 1.0f;
 }
 
 /// <summary>
