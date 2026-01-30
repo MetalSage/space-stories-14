@@ -17,7 +17,6 @@
           emergencyShuttlePath: /Maps/_Stories/Shuttles/emergency_corvaxdelta.yml
         - type: StationJobs
           availableJobs:
-            Boxer: [ 2, 2 ]
             # Pilot: [ 1, 1 ]
             CargoTechnician: [ 4, 4 ]
             Passenger: [ -1, -1 ]
@@ -27,7 +26,6 @@
             Clown: [ 1, 1 ]
             Janitor: [ 1, 2 ]
             Mime: [ 1, 1 ]
-            Zookeeper: [ 1, 1 ]
             Captain: [ 1, 1 ]
             Lawyer: [ 2, 2 ]
             HeadOfPersonnel: [ 1, 1 ]

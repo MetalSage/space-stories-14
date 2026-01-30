@@ -57,7 +57,7 @@
         stunTime: 3
         decay: 6
         cooldown: 1
-        critThreshold: 400
+        baseCritThreshold: 400
       - type: Puller
         needsHands: false
       - type: UserInterface
@@ -154,7 +154,7 @@
         stunTime: 3
         decay: 6
         cooldown: 1
-        critThreshold: 400
+        baseCritThreshold: 400
       - type: Puller
         needsHands: false
       - type: UserInterface

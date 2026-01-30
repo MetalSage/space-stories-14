@@ -71,7 +71,6 @@
     containers:
       storagebase: !type:AllSelector
         children:
-        - id: ClothingHeadHatCapHoS # Stories
         - id: ClothingHeadHatBeretHoS
         - id: ClothingHeadHatHoshat
         - id: ClothingMaskNeckGaiter

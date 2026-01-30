@@ -60,7 +60,6 @@
           reagent: STCorpium
           min: 58
       - !type:Electrocute
-        electrocuteDamageScale: 0
         conditions:
         - !type:ReagentCondition
           reagent: STCorpium

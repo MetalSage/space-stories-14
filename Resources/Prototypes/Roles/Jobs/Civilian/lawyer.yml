@@ -8,7 +8,7 @@
       time: 2.5h
   startingGear: LawyerGear
   icon: "JobIconLawyer"
-  supervisors: job-supervisors-IAA #Stories
+  supervisors: stories-job-supervisors-iaa #Stories
   access:
   - Service
   - Lawyer
