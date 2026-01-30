@@ -29,6 +29,15 @@ public sealed class SponsorInfo
 
     [JsonPropertyName("ghost_skin")]
     public string GhostSkin { get; set; } = "MobObserver";
+
+    [JsonPropertyName("stationRolePriority")]
+    public float StationRolePriority { get; set; } = 1.0f;
+
+    [JsonPropertyName("antagRolePriority")]
+    public float AntagRolePriority { get; set; } = 1.0f;
+
+    [JsonPropertyName("ghostRolePriority")]
+    public float GhostRolePriority { get; set; } = 1.0f;
 }
 
 /// <summary>
