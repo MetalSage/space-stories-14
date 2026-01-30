@@ -29,12 +29,6 @@ public sealed class SponsorInfo
 
     [JsonPropertyName("ghost_skin")]
     public string GhostSkin { get; set; } = "MobObserver";
-
-    [JsonPropertyName("allowed_antags")]
-    public string[] AllowedAntags { get; set; } = Array.Empty<string>();
-
-    [JsonPropertyName("tokens")]
-    public int Tokens { get; set; } = 0;
 }
 
 /// <summary>

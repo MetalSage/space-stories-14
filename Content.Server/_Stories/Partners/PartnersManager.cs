@@ -64,22 +64,4 @@ public sealed class PartnersManager
 
         return sponsorInfo;
     }
-
-    public async Task<bool> DeductToken(NetUserId userId)
-    {
-        var result = await _apiClient.DeductTokenAsync(userId);
-        if (result)
-        {
-            _sawmill.Debug($"Токен успешно списан для пользователя {userId}.");
-            if (_cachedSponsors.TryGetValue(userId, out var sponsor))
-                sponsor.Tokens--;
-            else
-                _sawmill.Warning(
-                    $"Не удалось найти SponsorInfo в кэше для пользователя {userId} при списании токена, кэш не обновлен.");
-        }
-        else
-            _sawmill.Warning($"Не удалось списать токен для пользователя {userId} через API.");
-
-        return result;
-    }
 }
