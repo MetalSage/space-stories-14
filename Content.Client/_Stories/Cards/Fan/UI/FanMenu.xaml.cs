@@ -1,20 +1,20 @@
+using System.Numerics;
+using Content.Client.UserInterface.Controls;
+using Content.Shared._Stories.Cards.Card;
+using Content.Shared._Stories.Cards.Stack;
+using Content.Shared.Foldable;
 using Robust.Client.GameObjects;
 using Robust.Client.UserInterface.Controls;
 using Robust.Client.UserInterface.XAML;
-using Content.Client.UserInterface.Controls;
-using Content.Shared.Foldable;
-using System.Numerics;
-using Content.Shared._Stories.Cards.Card;
-using Content.Shared._Stories.Cards.Stack;
 
 namespace Content.Client._Stories.Cards.Fan.UI;
 
-public sealed partial class FanMenu : RadialMenu
+public sealed class FanMenu : RadialMenu
 {
+    private readonly FanMenuBoundUserInterface? _boundUI;
     [Dependency] private readonly EntityManager _entManager = default!;
-    private EntityUid _owner;
-    private EntityUid _user;
-    private FanMenuBoundUserInterface? _boundUI;
+    private readonly EntityUid _owner;
+    private readonly EntityUid _user;
     public Action<NetEntity, NetEntity>? OnCardSelectedMessageAction;
 
     public FanMenu(EntityUid uid, FanMenuBoundUserInterface boundUI, EntityUid user)
@@ -40,7 +40,7 @@ public sealed partial class FanMenu : RadialMenu
             var cardName = foldable.IsFolded ? cardComp.Name : cardMeta.EntityName;
             var cardLayer = cardSprite.LayerGetState(1);
 
-            var button = new FanMenuButton()
+            var button = new FanMenuButton
             {
                 StyleClasses = { "RadialMenuButton" },
                 SetSize = new Vector2(64f, 64f),
@@ -57,7 +57,7 @@ public sealed partial class FanMenu : RadialMenu
 
             if (cardLayer != null)
             {
-                var tex = new TextureRect()
+                var tex = new TextureRect
                 {
                     VerticalAlignment = VAlignment.Center,
                     HorizontalAlignment = HAlignment.Center,
@@ -66,6 +66,7 @@ public sealed partial class FanMenu : RadialMenu
                 };
                 button.AddChild(tex);
             }
+
             button.SetCard(card);
             main.AddChild(button);
 

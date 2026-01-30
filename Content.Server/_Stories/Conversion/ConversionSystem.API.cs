@@ -2,11 +2,11 @@ using System.Diagnostics.CodeAnalysis;
 using System.Linq;
 using Content.Shared._Stories.Conversion;
 using Content.Shared.Mind;
+using Content.Shared.Radio;
 using Content.Shared.Radio.Components;
 using Content.Shared.Roles;
 using Content.Shared.Roles.Components;
 using Robust.Shared.Prototypes;
-using Content.Shared.Radio;
 
 namespace Content.Server._Stories.Conversion;
 
@@ -80,12 +80,14 @@ public sealed partial class ConversionSystem
         RaiseLocalEvent(target, (object)ev, true);
 
         if (proto.EndBriefing != null)
+        {
             _antag.SendBriefing(target,
                 Loc.GetString(proto.EndBriefing.Value.Text ?? ""),
                 proto.EndBriefing.Value.Color,
                 proto.EndBriefing.Value.Sound);
+        }
 
-        EntityManager.RemoveComponents(target, registry: proto.Components);
+        EntityManager.RemoveComponents(target, proto.Components);
         MindRemoveRoles(mindId, proto.MindRoles);
 
         if (proto.Channels.Count > 0)
@@ -131,12 +133,14 @@ public sealed partial class ConversionSystem
             return;
 
         if (proto.Briefing != null)
+        {
             _antag.SendBriefing(target,
                 Loc.GetString(proto.Briefing.Value.Text ?? ""),
                 proto.Briefing.Value.Color,
                 proto.Briefing.Value.Sound);
+        }
 
-        EntityManager.AddComponents(target, registry: proto.Components);
+        EntityManager.AddComponents(target, proto.Components);
         _role.MindAddRoles(mindId, proto.MindRoles);
 
         if (proto.Channels.Count > 0)
@@ -147,7 +151,7 @@ public sealed partial class ConversionSystem
             EnsureComp<ActiveRadioComponent>(target).Channels.UnionWith(channelProtoIds);
         }
 
-        var conversion = new ConversionData()
+        var conversion = new ConversionData
         {
             Owner = GetNetEntity(performer),
             Prototype = proto.ID,
@@ -171,10 +175,10 @@ public sealed partial class ConversionSystem
             return;
 
         var rolesUid = mind.MindRoleContainer.ContainedEntities
-            .Where((role) => EntityPrototyped(role, roles))
+            .Where(role => EntityPrototyped(role, roles))
             .ToList();
 
-        rolesUid.ForEach((mindRole) =>
+        rolesUid.ForEach(mindRole =>
         {
             var antagonist = Comp<MindRoleComponent>(mindRole).Antag;
 

@@ -1,20 +1,20 @@
+using Content.Server._Stories.Partners.Systems;
 using Content.Server.EUI;
 using Content.Server.StationEvents;
 using Content.Server.StationEvents.Components;
-using Content.Server._Stories.Partners.Systems;
-using Content.Shared.Eui;
 using Content.Shared._Stories.Partners;
 using Content.Shared._Stories.Partners.UI;
+using Content.Shared.Eui;
 using Robust.Shared.Prototypes;
 
 namespace Content.Server._Stories.Partners.UI;
 
 public sealed class SpecialRolesEui : BaseEui
 {
-    [Dependency] private readonly IPrototypeManager _prototype = default!;
-    [Dependency] private readonly IComponentFactory _factory = default!;
-    private readonly SpecialRolesSystem _specialRoles;
     private readonly EventManagerSystem _event;
+    [Dependency] private readonly IComponentFactory _factory = default!;
+    [Dependency] private readonly IPrototypeManager _prototype = default!;
+    private readonly SpecialRolesSystem _specialRoles;
 
     public SpecialRolesEui()
     {
@@ -42,9 +42,9 @@ public sealed class SpecialRolesEui : BaseEui
         int? reoccurrenceDelay = null;
 
         if (
-        _prototype.TryIndex<SpecialRolePrototype>(role, out var prototype) &&
-        _prototype.TryIndex(prototype.GameRule, out var gameRulePrototype) &&
-        gameRulePrototype.TryGetComponent<StationEventComponent>(out var comp, _factory)
+            _prototype.TryIndex<SpecialRolePrototype>(role, out var prototype) &&
+            _prototype.TryIndex(prototype.GameRule, out var gameRulePrototype) &&
+            gameRulePrototype.TryGetComponent<StationEventComponent>(out var comp, _factory)
         )
         {
             minPlayers = comp.MinimumPlayers;
@@ -66,6 +66,6 @@ public sealed class SpecialRolesEui : BaseEui
             timeSinceLastEvent,
             reoccurrenceDelay,
             reason
-            ));
+        ));
     }
 }

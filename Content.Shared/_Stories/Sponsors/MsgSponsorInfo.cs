@@ -7,7 +7,7 @@ using Robust.Shared.Utility;
 
 namespace Content.Shared._Stories.Partners;
 
-[Serializable, NetSerializable]
+[Serializable] [NetSerializable]
 public sealed class SponsorInfo
 {
     public static readonly TimeSpan TimeAdvantage = TimeSpan.FromMinutes(3);
@@ -37,21 +37,20 @@ public sealed class SponsorInfo
     public int Tokens { get; set; } = 0;
 }
 
-
 /// <summary>
 /// Server sends sponsoring info to client on connect only if user is sponsor
 /// </summary>
 public sealed class MsgSponsorInfo : NetMessage
 {
-    public override MsgGroups MsgGroup => MsgGroups.Command;
-
     public SponsorInfo? Info;
+    public override MsgGroups MsgGroup => MsgGroups.Command;
 
     public override void ReadFromBuffer(NetIncomingMessage buffer, IRobustSerializer serializer)
     {
         var isSponsor = buffer.ReadBoolean();
         buffer.ReadPadBits();
-        if (!isSponsor) return;
+        if (!isSponsor)
+            return;
         var length = buffer.ReadVariableInt32();
         using var stream = new MemoryStream(length);
         buffer.ReadAlignedMemory(stream, length);
@@ -62,10 +61,11 @@ public sealed class MsgSponsorInfo : NetMessage
     {
         buffer.Write(Info != null);
         buffer.WritePadBits();
-        if (Info == null) return;
+        if (Info == null)
+            return;
         var stream = new MemoryStream();
         serializer.SerializeDirect(stream, Info);
-        buffer.WriteVariableInt32((int) stream.Length);
+        buffer.WriteVariableInt32((int)stream.Length);
         buffer.Write(stream.AsSpan());
     }
 }

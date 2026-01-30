@@ -5,14 +5,14 @@ using Robust.Shared.Network;
 
 namespace Content.Server._Stories.Partners;
 
-public sealed partial class PartnersManager
+public sealed class PartnersManager
 {
-    [Dependency] private readonly IServerNetManager _netMgr = default!;
     [Dependency] private readonly IPartnersApiClient _apiClient = default!;
 
-    private ISawmill _sawmill = default!;
-
     private readonly Dictionary<NetUserId, SponsorInfo> _cachedSponsors = new();
+    [Dependency] private readonly IServerNetManager _netMgr = default!;
+
+    private ISawmill _sawmill = default!;
 
     public void Initialize()
     {
@@ -47,7 +47,7 @@ public sealed partial class PartnersManager
     private void OnConnected(object? sender, NetChannelArgs e)
     {
         var info = _cachedSponsors.TryGetValue(e.Channel.UserId, out var sponsor) ? sponsor : null;
-        var msg = new MsgSponsorInfo() { Info = info };
+        var msg = new MsgSponsorInfo { Info = info };
         _netMgr.ServerSendMessage(msg, e.Channel);
     }
 
@@ -74,12 +74,12 @@ public sealed partial class PartnersManager
             if (_cachedSponsors.TryGetValue(userId, out var sponsor))
                 sponsor.Tokens--;
             else
-                _sawmill.Warning($"Не удалось найти SponsorInfo в кэше для пользователя {userId} при списании токена, кэш не обновлен.");
+                _sawmill.Warning(
+                    $"Не удалось найти SponsorInfo в кэше для пользователя {userId} при списании токена, кэш не обновлен.");
         }
         else
-        {
             _sawmill.Warning($"Не удалось списать токен для пользователя {userId} через API.");
-        }
+
         return result;
     }
 }

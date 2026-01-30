@@ -1,16 +1,10 @@
 using Content.Shared._Stories.ForceUser.Actions.Events;
-using Robust.Shared.Map;
-using System.Numerics;
-using Content.Shared.DoAfter;
-using Content.Shared.Standing;
-using Content.Shared.Gravity;
-using Content.Server.Speech.Muting;
-using Content.Shared.Damage.Prototypes;
-using Content.Shared.Movement.Components;
 using Content.Shared.Damage;
-using Robust.Shared.Random;
+using Content.Shared.Damage.Prototypes;
+using Content.Shared.DoAfter;
 
 namespace Content.Server._Stories.ForceUser;
+
 public sealed partial class ForceUserSystem
 {
     public void InitializeSteal()
@@ -18,17 +12,23 @@ public sealed partial class ForceUserSystem
         SubscribeLocalEvent<StealLifeTargetEvent>(OnSteal);
         SubscribeLocalEvent<LifeStolenEvent>(OnStolen);
     }
+
     private void OnSteal(StealLifeTargetEvent args)
     {
         if (args.Handled)
             return;
 
-        var doAfterEventArgs = new DoAfterArgs(EntityManager, args.Performer, seconds: args.DoAfterTime, new LifeStolenEvent(), args.Target, args.Target)
+        var doAfterEventArgs = new DoAfterArgs(EntityManager,
+            args.Performer,
+            args.DoAfterTime,
+            new LifeStolenEvent(),
+            args.Target,
+            args.Target)
         {
             BreakOnMove = true,
             BreakOnDamage = true,
             Broadcast = true,
-            NeedHand = true
+            NeedHand = true,
         };
 
         if (!_doAfterSystem.TryStartDoAfter(doAfterEventArgs))
@@ -36,6 +36,7 @@ public sealed partial class ForceUserSystem
 
         args.Handled = true;
     }
+
     private void OnStolen(LifeStolenEvent args)
     {
         if (args.Handled || args.Target == null || args.Cancelled || _mobState.IsDead(args.Target.Value))
@@ -59,7 +60,7 @@ public sealed partial class ForceUserSystem
             {
                 spec.DamageDict.TryAdd(type, dmg.GetTotal() * -2 / groupProto.DamageTypes.Count);
             }
-            
+
             _damageable.TryChangeDamage(user, spec, true);
         }
 
@@ -67,13 +68,15 @@ public sealed partial class ForceUserSystem
         {
             var geneticGroup = _proto.Index<DamageGroupPrototype>("Genetic");
             var geneticSpec = new DamageSpecifier();
-            foreach(var type in geneticGroup.DamageTypes)
+            foreach (var type in geneticGroup.DamageTypes)
             {
                 geneticSpec.DamageDict.TryAdd(type, 10 / geneticGroup.DamageTypes.Count);
             }
+
             _damageable.TryChangeDamage(target, geneticSpec, true);
         }
-        else args.Repeat = true;
+        else
+            args.Repeat = true;
 
         args.Handled = true;
     }

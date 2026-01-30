@@ -10,9 +10,6 @@ namespace Content.Shared._Stories.TTS;
 // ReSharper disable once InconsistentNaming
 public sealed partial class TTSVoicePrototype : IPrototype
 {
-    [IdDataField]
-    public string ID { get; private set; } = default!;
-
     [DataField("name")]
     public string Name { get; private set; } = string.Empty;
 
@@ -20,7 +17,7 @@ public sealed partial class TTSVoicePrototype : IPrototype
     public string Description { get; private set; } = string.Empty;
 
     [DataField("sex", required: true)]
-    public Sex Sex { get; private set; } = default!;
+    public Sex Sex { get; private set; }
 
     [ViewVariables(VVAccess.ReadWrite)]
     [DataField("speaker", required: true)]
@@ -33,5 +30,8 @@ public sealed partial class TTSVoicePrototype : IPrototype
     public bool RoundStart { get; private set; } = true;
 
     [DataField("sponsorOnly")]
-    public bool SponsorOnly { get; private set; } = false;
+    public bool SponsorOnly { get; private set; }
+
+    [IdDataField]
+    public string ID { get; private set; } = default!;
 }

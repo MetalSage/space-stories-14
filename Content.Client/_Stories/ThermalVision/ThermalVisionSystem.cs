@@ -52,7 +52,7 @@ public sealed class ThermalVisionSystem : SharedThermalVisionSystem
     {
         _overlay.RemoveOverlay(new ThermalVisionOverlay());
 
-        if(isInnate)
+        if (isInnate)
         {
             _light.DrawShadows = true;
             _light.DrawLighting = true;
@@ -63,7 +63,7 @@ public sealed class ThermalVisionSystem : SharedThermalVisionSystem
     {
         _overlay.AddOverlay(new ThermalVisionOverlay());
 
-        if(isInnate)
+        if (isInnate)
         {
             _light.DrawShadows = false;
             _light.DrawLighting = false;
