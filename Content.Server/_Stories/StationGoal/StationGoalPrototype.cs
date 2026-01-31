@@ -1,14 +1,16 @@
 using Robust.Shared.Prototypes;
 
-namespace Content.Server._Stories.StationGoal
+namespace Content.Server._Stories.StationGoal;
+
+[Serializable] [Prototype("stationGoal")]
+public sealed partial class StationGoalPrototype : IPrototype
 {
-    [Serializable, Prototype("stationGoal")]
-    public sealed class StationGoalPrototype : IPrototype
-    {
-        [IdDataField] public string ID { get; } = default!;
+    [DataField("text")]
+    public string Text { get; private set; } = string.Empty;
 
-        [DataField("text")] public string Text { get; set; } = string.Empty;
+    [DataField("onlineLess")]
+    public int? OnlineLess { get; private set; }
 
-        [DataField("onlineLess")] public int? OnlineLess { get; set; }
-    }
+    [IdDataField]
+    public string ID { get; private set; } = default!;
 }

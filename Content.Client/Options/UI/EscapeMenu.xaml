@@ -2,7 +2,6 @@
                 xmlns:changelog="clr-namespace:Content.Client.Changelog"
                 xmlns:ui="clr-namespace:Content.Client.Voting.UI"
                 xmlns:ui1="clr-namespace:Content.Client.Options.UI"
-                xmlns:customControls="clr-namespace:Content.Client.Administration.UI.CustomControls"
                 Title="{Loc 'ui-escape-title'}"
                 Resizable="False">
 
@@ -18,6 +17,5 @@
         <PanelContainer StyleClasses="LowDivider" Margin="0 2.5 0 2.5" />
         <Button Access="Public" Name="DisconnectButton" Text="{Loc 'ui-escape-disconnect'}" />
         <Button Access="Public" Name="QuitButton" Text="{Loc 'ui-escape-quit'}" StyleClasses="ButtonColorRed" />
-        <customControls:CommandButton Command="openspecialrolesui" Text="{Loc 'ui-escape-antag-select'}" StyleClasses="ButtonColorRed" /> <!-- Stories -->
     </BoxContainer>
 </ui1:EscapeMenu>

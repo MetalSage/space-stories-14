@@ -1,18 +1,15 @@
-using Robust.Shared.Physics.Events;
 using Content.Server._Stories.ForceUser.ProtectiveBubble.Components;
-using Content.Server.Administration.Commands;
-using Content.Shared.Projectiles;
-using Content.Shared.Damage;
 using Content.Shared.Damage.Systems;
+using Content.Shared.Projectiles;
 using Content.Shared.Rounding;
-using SixLabors.ImageSharp.Processing;
-using Content.Shared.Alert;
+using Robust.Shared.Physics.Events;
 
 namespace Content.Server._Stories.ForceUser.ProtectiveBubble.Systems;
 
 public sealed partial class ProtectiveBubbleSystem
 {
     public const float MaxBubbleDamage = 100f; // TODO: Добавить возможность менять
+
     public void InitializeBubble()
     {
         SubscribeLocalEvent<ProtectiveBubbleComponent, EndCollideEvent>(OnEntityExit);
@@ -21,6 +18,7 @@ public sealed partial class ProtectiveBubbleSystem
         SubscribeLocalEvent<ProtectiveBubbleComponent, PreventCollideEvent>(OnCollide);
         SubscribeLocalEvent<ProtectiveBubbleComponent, DamageChangedEvent>(OnDamage);
     }
+
     public void UpdateBubble(float frameTime)
     {
         var query = EntityQueryEnumerator<ProtectiveBubbleComponent>();
@@ -35,13 +33,17 @@ public sealed partial class ProtectiveBubbleSystem
             }
         }
     }
+
     private void OnDamage(EntityUid uid, ProtectiveBubbleComponent component, DamageChangedEvent args)
     {
         if (args.DamageDelta == null || component.User == null)
             return;
-        var severity = ContentHelpers.RoundToLevels(MathF.Max(0f, args.Damageable.Damage.GetTotal().Float()), MaxBubbleDamage, 20);
-        _alerts.ShowAlert(component.User.Value, "ProjectiveBubble", (short) severity);
+        var severity = ContentHelpers.RoundToLevels(MathF.Max(0f, args.Damageable.Damage.GetTotal().Float()),
+            MaxBubbleDamage,
+            20);
+        _alerts.ShowAlert(component.User.Value, "ProjectiveBubble", (short)severity);
     }
+
     public void StartBubbleWithUser(string proto, EntityUid user)
     {
         var bubble = Spawn(proto, Transform(user).Coordinates);
@@ -58,21 +60,26 @@ public sealed partial class ProtectiveBubbleSystem
         comp1.ProtectiveBubble = bubble;
         AddComp(user, comp1);
     }
+
     private void OnCollide(EntityUid uid, ProtectiveBubbleComponent component, ref PreventCollideEvent args)
     {
-        if (TryComp<ProjectileComponent>(args.OtherEntity, out var bullet) && bullet.Shooter == component.User && component.User != null)
+        if (TryComp<ProjectileComponent>(args.OtherEntity, out var bullet) && bullet.Shooter == component.User &&
+            component.User != null)
             args.Cancelled = true;
     }
+
     private void OnEntityExit(EntityUid uid, ProtectiveBubbleComponent component, ref EndCollideEvent args)
     {
         if (!HasComp<ProjectileComponent>(args.OtherEntity))
             StopProtect(args.OtherEntity, component);
     }
+
     private void OnEntityEnter(EntityUid uid, ProtectiveBubbleComponent component, ref StartCollideEvent args)
     {
         if (!HasComp<ProjectileComponent>(args.OtherEntity))
             StartProtect(args.OtherEntity, uid, component);
     }
+
     private void OnShutdown(EntityUid uid, ProtectiveBubbleComponent component, ComponentShutdown args)
     {
         foreach (var ent in component.ProtectedEntities)
@@ -83,6 +90,7 @@ public sealed partial class ProtectiveBubbleSystem
         if (component.User != null)
             RemComp<ProtectiveBubbleUserComponent>(component.User.Value);
     }
+
     private void StartProtect(EntityUid uid, EntityUid bubble, ProtectiveBubbleComponent component)
     {
         if (IsProtected(uid))
@@ -93,6 +101,7 @@ public sealed partial class ProtectiveBubbleSystem
         component.ProtectedEntities.Add(uid);
         AddComp(uid, comp);
     }
+
     private void StopProtect(EntityUid uid, ProtectiveBubbleComponent component)
     {
         if (!IsProtected(uid))
@@ -100,6 +109,7 @@ public sealed partial class ProtectiveBubbleSystem
         component.ProtectedEntities.Remove(uid);
         RemComp<ProtectedByProtectiveBubbleComponent>(uid);
     }
+
     public bool IsProtected(EntityUid uid)
     {
         return HasComp<ProtectedByProtectiveBubbleComponent>(uid);

@@ -12,13 +12,13 @@ namespace Content.Server._Stories.TargetingTeleporter;
 
 public sealed class TargetingTeleporterSystem : SharedTargetingTeleporterSystem
 {
-    [Dependency] private readonly IRobustRandom _random = default!;
+    [Dependency] private readonly EntityWhitelistSystem _entityWhitelist = default!;
+    [Dependency] private readonly GameTicker _gameTicker = default!;
     [Dependency] private readonly SharedMoverController _mover = default!;
     [Dependency] private readonly PopupSystem _popup = default!;
+    [Dependency] private readonly IRobustRandom _random = default!;
     [Dependency] private readonly StationSystem _station = default!;
-    [Dependency] private readonly EntityWhitelistSystem _entityWhitelist = default!;
     [Dependency] private readonly TransformSystem _xform = default!;
-    [Dependency] private readonly GameTicker _gameTicker = default!;
 
     public override void Initialize()
     {
@@ -77,7 +77,6 @@ public sealed class TargetingTeleporterSystem : SharedTargetingTeleporterSystem
 
         if (grid is { } gridUid)
             return gridUid;
-        else
-            return null;
+        return null;
     }
 }

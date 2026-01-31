@@ -6,12 +6,16 @@ using JetBrains.Annotations;
 namespace Content.Server.Atmos.Reactions;
 
 /// <summary>
-///     Produces Healium by mixing BZ and Frezon at temperatures between 23K and 293K. Efficiency increases in colder temperatures.  
+/// Produces Healium by mixing BZ and Frezon at temperatures between 23K and 293K. Efficiency increases in colder
+/// temperatures.
 /// </summary>
 [UsedImplicitly]
 public sealed partial class HealiumProductionReaction : IGasReactionEffect
 {
-    public ReactionResult React(GasMixture mixture, IGasMixtureHolder? holder, AtmosphereSystem atmosphereSystem, float heatScale)
+    public ReactionResult React(GasMixture mixture,
+        IGasMixtureHolder? holder,
+        AtmosphereSystem atmosphereSystem,
+        float heatScale)
     {
         var initBZ = mixture.GetMoles(Gas.STBZ);
         var initFrezon = mixture.GetMoles(Gas.Frezon);
@@ -33,7 +37,8 @@ public sealed partial class HealiumProductionReaction : IGasReactionEffect
         var energyReleased = healiumProduced * Atmospherics.HealiumProductionEnergy;
         var heatCap = atmosphereSystem.GetHeatCapacity(mixture, true);
         if (heatCap > Atmospherics.MinimumHeatCapacity)
-            mixture.Temperature = Math.Max((mixture.Temperature * heatCap + energyReleased) / heatCap, Atmospherics.TCMB);
+            mixture.Temperature =
+                Math.Max((mixture.Temperature * heatCap + energyReleased) / heatCap, Atmospherics.TCMB);
 
         return ReactionResult.Reacting;
     }

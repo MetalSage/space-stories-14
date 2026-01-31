@@ -1,4 +1,4 @@
-﻿ent-FloorTileItemBase = { ent-BaseItem }
+ent-FloorTileItemBase = { ent-BaseItem }
     .desc = Может послужить неплохим метательным оружием.
 ent-FloorTileItemSteel = стальная плитка
     .desc = { ent-FloorTileItemBase.desc }
@@ -42,7 +42,7 @@ ent-FloorTileItemSteelPavementVertical = стальная вертикальна
     .desc = { ent-FloorTileItemSteel.desc }
 ent-FloorTileItemWood = деревянный пол
     .desc = { ent-FloorTileItemBase.desc }
-ent-FloorTileItemWhiteOffset = cмещённая белая стальная плитка
+ent-FloorTileItemWhiteOffset = смещённая белая стальная плитка
     .desc = { ent-FloorTileItemWhite.desc }
 ent-FloorTileItemWhiteDiagonalMini = белая стальная диагональная мини плитка
     .desc = { ent-FloorTileItemWhite.desc }

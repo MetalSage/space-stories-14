@@ -1,31 +1,30 @@
+using Content.Server.Chat.Managers;
 using Content.Server.Objectives.Components;
 using Content.Server.Shuttles.Systems;
-using Content.Shared.Mind;
-using Content.Shared.Objectives.Components;
-using Content.Shared.Roles.Jobs;
-using Robust.Shared.Configuration;
-using Content.Server.Chat.Managers;
-using Robust.Shared.Random;
-using Content.Shared.Popups;
 using Content.Server.Store.Systems;
 using Content.Shared.FixedPoint;
+using Content.Shared.Mind;
+using Content.Shared.Objectives.Components;
+using Content.Shared.Popups;
+using Content.Shared.Roles.Jobs;
+using Robust.Shared.Configuration;
+using Robust.Shared.Random;
 
 namespace Content.Server.Objectives.Systems;
 
 public sealed class PickRandomJobPersonSystem : EntitySystem
 {
-    [Dependency] private readonly EmergencyShuttleSystem _emergencyShuttle = default!;
+    private const float UdateDelay = 10f;
+    [Dependency] private readonly IChatManager _chatManager = default!;
     [Dependency] private readonly IConfigurationManager _config = default!;
-    [Dependency] private readonly IRobustRandom _random = default!;
-    [Dependency] private readonly SharedPopupSystem _popup = default!;
-    [Dependency] private readonly StoreSystem _store = default!;
+    [Dependency] private readonly EmergencyShuttleSystem _emergencyShuttle = default!;
     [Dependency] private readonly SharedJobSystem _job = default!;
     [Dependency] private readonly SharedMindSystem _mind = default!;
+    [Dependency] private readonly SharedPopupSystem _popup = default!;
+    [Dependency] private readonly IRobustRandom _random = default!;
+    [Dependency] private readonly StoreSystem _store = default!;
     [Dependency] private readonly TargetObjectiveSystem _target = default!;
-    [Dependency] private readonly IChatManager _chatManager = default!;
-
-    private const float UdateDelay = 10f;
-    private float _updateTime = 0;
+    private float _updateTime;
 
     public override void Initialize()
     {
@@ -46,7 +45,7 @@ public sealed class PickRandomJobPersonSystem : EntitySystem
         var query = EntityQueryEnumerator<PickRandomJobPersonComponent>();
         while (query.MoveNext(out var uid, out var comp))
         {
-            if (comp.Handled == false && TryComp<MindComponent>(comp.MindId, out var mind))
+            if (!comp.Handled && TryComp<MindComponent>(comp.MindId, out var mind))
             {
                 var ev = new ObjectiveAssignedEvent(comp.MindId, mind);
                 RaiseLocalEvent(uid, ref ev);
@@ -88,8 +87,11 @@ public sealed class PickRandomJobPersonSystem : EntitySystem
 
         if (comp.JobID == "GuardianNt" && targetUid != null) // FIXME: SHITCODED
         {
-            _store.TryAddCurrency(new Dictionary<string, FixedPoint2> { {"SkillPoint", 10} }, targetUid.Value);
-            _popup.PopupEntity("Вы чувствуете зло и оно нацелено на вас... Проверьте магазин навыков.", targetUid.Value, targetUid.Value, PopupType.LargeCaution);
+            _store.TryAddCurrency(new Dictionary<string, FixedPoint2> { { "SkillPoint", 10 } }, targetUid.Value);
+            _popup.PopupEntity("Вы чувствуете зло и оно нацелено на вас... Проверьте магазин навыков.",
+                targetUid.Value,
+                targetUid.Value,
+                PopupType.LargeCaution);
         }
 
         comp.Handled = true;

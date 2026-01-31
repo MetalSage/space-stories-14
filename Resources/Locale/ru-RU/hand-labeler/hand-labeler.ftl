@@ -1,4 +1,4 @@
-﻿hand-labeler-ui-header = Ручной этикетировщик
+hand-labeler-ui-header = Ручной этикетировщик
 # The content of the label in the UI above the text entry input.
 hand-labeler-current-text-label = Этикетка:
 # The text on the button in the UI to reset the text entry input to the content it had when the UI was opened

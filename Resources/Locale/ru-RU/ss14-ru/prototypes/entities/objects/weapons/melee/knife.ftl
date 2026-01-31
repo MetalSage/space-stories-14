@@ -1,4 +1,4 @@
-﻿ent-BaseKnife = { ent-BaseItem }
+ent-BaseKnife = { ent-BaseItem }
     .desc = { ent-BaseItem.desc }
 ent-Shiv = заточка
     .desc = Грубое оружие, сделанное из куска ткани и осколка стекла.

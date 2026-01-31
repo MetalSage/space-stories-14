@@ -8,11 +8,14 @@ public partial class VoiceMaskSystem
 {
     private void InitializeTTS()
     {
-        SubscribeLocalEvent<VoiceMaskComponent, InventoryRelayedEvent<TransformSpeakerVoiceEvent>>(OnSpeakerVoiceTransform);
+        SubscribeLocalEvent<VoiceMaskComponent, InventoryRelayedEvent<TransformSpeakerVoiceEvent>>(
+            OnSpeakerVoiceTransform);
         SubscribeLocalEvent<VoiceMaskComponent, VoiceMaskChangeVoiceMessage>(OnChangeVoice);
     }
 
-    private void OnSpeakerVoiceTransform(EntityUid uid, VoiceMaskComponent component, InventoryRelayedEvent<TransformSpeakerVoiceEvent> args)
+    private void OnSpeakerVoiceTransform(EntityUid uid,
+        VoiceMaskComponent component,
+        InventoryRelayedEvent<TransformSpeakerVoiceEvent> args)
     {
         args.Args.VoiceId = component.VoiceId;
     }

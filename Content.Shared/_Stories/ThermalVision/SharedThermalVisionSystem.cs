@@ -5,6 +5,7 @@ namespace Content.Shared._Stories.ThermalVision;
 public abstract class SharedThermalVisionSystem : EntitySystem
 {
     [Dependency] private readonly IGameTiming _timing = default!;
+
     public override void Initialize()
     {
         base.Initialize();
@@ -39,6 +40,7 @@ public abstract class SharedThermalVisionSystem : EntitySystem
     protected virtual void ThermalVisionRemoved(Entity<ThermalVisionComponent> ent)
     {
     }
+
     private void OnToggle(EntityUid uid, ThermalVisionComponent component, ToggleThermalVisionEvent args)
     {
         if (!_timing.IsFirstTimePredicted)

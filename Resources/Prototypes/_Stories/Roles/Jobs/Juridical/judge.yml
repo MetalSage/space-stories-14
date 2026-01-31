@@ -1,0 +1,56 @@
+- type: job
+  id: STJudge
+  name: stories-job-name-judge
+  description: stories-job-description-judge
+  playTimeTracker: STJobJudge
+  requirements:
+  - !type:DepartmentTimeRequirement
+    department: Security
+    time: 10h
+  - !type:DepartmentTimeRequirement
+    department: Command
+    time: 35h
+  - !type:RoleTimeRequirement
+    role: JobCaptain
+    time: 15h
+  - !type:RoleTimeRequirement
+    role: JobHeadOfSecurity
+    time: 5h
+  - !type:RoleTimeRequirement
+    role: JobIAA
+    time: 30h
+  startingGear: STJudgeGear
+  icon: "STJobIconJudge"
+  supervisors: job-supervisors-centcom
+  canBeAntag: false
+  access:
+  - Brig
+  - Maintenance
+  - Command
+  - External
+  - Lawyer
+  special:
+  - !type:AddImplantSpecial
+    implants: [ MindShieldImplant ]
+
+- type: startingGear
+  id: STJudgeGear
+  equipment:
+    id: STJudgePDA
+    eyes: ClothingEyesGlassesSunglasses
+    ears: STClothingHeadsetJudge
+  storage:
+    back:
+    - STRubberStampJudge
+
+- type: chameleonOutfit
+  id: STJudgeChameleonOutfit
+  job: STJudge
+  hasMindShield: true
+  equipment:
+    head: ClothingHeadHatBowlerHat
+    eyes: ClothingEyesGlassesCheapSunglasses
+    mask: ClothingMaskBreath
+    neck: ClothingNeckLawyerbadge
+    outerClothing: ClothingOuterWinterColorBlack
+    gloves: ClothingHandsGlovesColorBlack

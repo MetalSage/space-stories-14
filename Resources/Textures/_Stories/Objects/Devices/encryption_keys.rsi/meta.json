@@ -1,7 +1,7 @@
 {
   "version": 1,
   "license": "CC-BY-SA-3.0",
-  "copyright": "Created by DSC@300074782328750080 for Space Station 14.",
+  "copyright": "Created by DSC@300074782328750080 for Space Station 14, court-label by itak_privet_chat (discord)",
   "size": {
     "x": 32,
     "y": 32
@@ -18,6 +18,9 @@
     },
     {
       "name": "nano_label"
+    },
+    {
+      "name": "court_label"
     }
   ]
 }

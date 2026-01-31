@@ -27,8 +27,10 @@ public sealed partial class PontificSystem
     {
         _movementSpeed.RefreshMovementSpeedModifiers(entity);
         if (HasComp<AppearanceComponent>(entity))
+        {
             if (_appearance.TryGetData(entity, PontificVisuals.State, out var data) && data is PontificState.Flame)
                 _appearance.SetData(entity, PontificVisuals.State, PontificState.Base);
+        }
     }
 
     private void OnSpeedRefresh(Entity<PontificFlameComponent> entity, ref RefreshMovementSpeedModifiersEvent args)

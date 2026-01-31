@@ -83,6 +83,7 @@
   - ClothingUniformJumpskirtScientist
   - ClothingUniformJumpsuitSeniorResearcher
   - ClothingUniformJumpskirtSeniorResearcher
+  - STClothingUniformJumpsuitScientistSweaterRecipe
 
 - type: latheRecipePack
   id: ClothingSecurity
@@ -116,6 +117,7 @@
   - ClothingHeadHatWarden
   - ClothingUniformJumpsuitWarden
   - ClothingUniformJumpskirtWarden
+  - JumpsuitDetectiveSpecialGrey # Stories-Drip
 
 - type: latheRecipePack
   id: ClothingService

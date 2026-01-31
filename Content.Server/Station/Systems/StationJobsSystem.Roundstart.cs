@@ -247,8 +247,47 @@ public sealed partial class StationJobsSystem
                             if (!jobPlayerOptions.ContainsKey(job))
                                 continue;
 
-                            // Picking players it finds that have the job set.
-                            var player = _random.Pick(jobPlayerOptions[job]);
+                            // Stories-Sponsors-Start
+                            var playerCandidates = jobPlayerOptions[job].ToList();
+                            if (playerCandidates.Count == 0)
+                                continue;
+
+                            NetUserId player;
+                            if (playerCandidates.Count == 1)
+                            {
+                                player = playerCandidates[0];
+                            }
+                            else
+                            {
+                                var totalWeight = 0f;
+                                var weights = new float[playerCandidates.Count];
+
+                                for (var i = 0; i < playerCandidates.Count; i++)
+                                {
+                                    var playerWeight = 1.0f;
+                                    if (_partners.TryGetInfo(playerCandidates[i], out var info))
+                                    {
+                                        playerWeight = info.StationRolePriority;
+                                    }
+                                    weights[i] = playerWeight;
+                                    totalWeight += playerWeight;
+                                }
+
+                                var r = _random.NextFloat() * totalWeight;
+                                player = playerCandidates[^1];
+
+                                for (var i = 0; i < playerCandidates.Count; i++)
+                                {
+                                    r -= weights[i];
+                                    if (r <= 0)
+                                    {
+                                        player = playerCandidates[i];
+                                        break;
+                                    }
+                                }
+                            }
+                            // Stories-Sponsors-End
+
                             AssignPlayer(player, job, station);
                             stationShares[station]--;
 

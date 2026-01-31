@@ -1,4 +1,4 @@
-﻿# Verbs
+# Verbs
 arcade-villain-verbs-fight-1 = Аннигилируй
 arcade-villain-verbs-fight-2 = Победи
 arcade-villain-verbs-fight-3 = Уничтожь

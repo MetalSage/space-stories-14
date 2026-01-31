@@ -52,7 +52,7 @@
       - !type:GibBehavior
         recursive: false
   - type: Stamina
-    critThreshold: 15
+    baseCritThreshold: 15
     animationThreshold: 5
   - type: MovementAlwaysTouching
   - type: DamageStateVisuals
@@ -66,7 +66,10 @@
     - id: FoodMeatXeno
       amount: 1
   - type: Bloodstream
-    bloodMaxVolume: 50
+    bloodReferenceSolution:
+      reagents:
+      - ReagentId: Blood
+        Quantity: 50
   - type: CombatMode
   - type: MeleeWeapon
     soundHit:
@@ -89,10 +92,6 @@
   - type: Speech
     speechVerb: SmallMob
   - type: NonSpreaderZombie
-  # Stories-Start
-  - type: MobCollision
-    fixtureId: empty
-  # Stories-End
 
 - type: entity
   id: MobTickSalvage

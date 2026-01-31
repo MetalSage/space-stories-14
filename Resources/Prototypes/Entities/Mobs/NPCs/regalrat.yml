@@ -128,8 +128,6 @@
       gender: male
   - type: Sharp
   # Stories-Start
-  - type: MobCollision
-    fixtureId: empty
   - type: TTS
     voice: twitch
   # Stories-End
@@ -210,10 +208,6 @@
     - map: [ "enum.DamageStateVisualLayers.BaseUnshaded"]
       state: eyes
       shader: unshaded
-  # Stories-Start
-  - type: MobCollision
-    fixtureId: empty
-  # Stories-End
 
   - type: SpriteMovement
     movementLayers:
@@ -251,7 +245,7 @@
       - !type:GibBehavior
         recursive: false
   - type: Stamina
-    critThreshold: 60
+    baseCritThreshold: 60
   - type: MeleeWeapon
     soundHit:
         path: /Audio/Weapons/bladeslice.ogg

@@ -1,21 +1,20 @@
-using Robust.Shared.Audio.Systems;
-using Robust.Shared.Containers;
-using Content.Shared.Hands.EntitySystems;
-using Content.Shared.Interaction;
-using Content.Shared.Tag;
-
 using Content.Shared._Stories.Cards.Card;
 using Content.Shared._Stories.Cards.Fan;
 using Content.Shared._Stories.Cards.Stack;
+using Content.Shared.Hands.EntitySystems;
+using Content.Shared.Interaction;
+using Content.Shared.Tag;
+using Robust.Shared.Audio.Systems;
+using Robust.Shared.Containers;
 
 namespace Content.Server._Stories.Cards.Card;
 
 public sealed class CardSystem : EntitySystem
 {
-    [Dependency] private readonly TagSystem _tagSystem = default!;
-    [Dependency] private readonly SharedHandsSystem _handsSystem = default!;
     [Dependency] private readonly SharedAudioSystem _audio = default!;
     [Dependency] private readonly SharedContainerSystem _containerSystem = default!;
+    [Dependency] private readonly SharedHandsSystem _handsSystem = default!;
+    [Dependency] private readonly TagSystem _tagSystem = default!;
 
     public override void Initialize()
     {
@@ -24,10 +23,12 @@ public sealed class CardSystem : EntitySystem
         SubscribeLocalEvent<CardComponent, ActivateInWorldEvent>(OnActivateInWorld);
         SubscribeLocalEvent<CardComponent, InteractUsingEvent>(OnInteractUsing);
     }
+
     private void OnActivateInWorld(EntityUid uid, CardComponent comp, ActivateInWorldEvent args)
     {
         CreateDeck(args.User, args.Target, comp);
     }
+
     private void OnInteractUsing(EntityUid uid, CardComponent comp, InteractUsingEvent args)
     {
         CreateFan(args.User, args.Target, comp);
@@ -37,7 +38,7 @@ public sealed class CardSystem : EntitySystem
     {
         var usedEntity = _handsSystem.GetActiveItem(user);
         if (usedEntity == target || usedEntity == null
-            || !TryComp<CardComponent>(usedEntity, out _))
+                                 || !TryComp<CardComponent>(usedEntity, out _))
             return;
 
         var spawnPos = Transform(user).Coordinates;
@@ -54,6 +55,7 @@ public sealed class CardSystem : EntitySystem
         _audio.PlayLocal(fanComp.AddCardSound, usedEntity.Value, user);
         Dirty(entityCreated, stackComp);
     }
+
     private void CreateDeck(EntityUid user, EntityUid target, CardComponent? component = null)
     {
         var usedEntity = _handsSystem.GetActiveItem(user);

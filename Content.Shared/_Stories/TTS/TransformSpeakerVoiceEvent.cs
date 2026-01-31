@@ -4,7 +4,6 @@ namespace Content.Shared._Stories.TTS;
 
 public sealed class TransformSpeakerVoiceEvent : EntityEventArgs, IInventoryRelayEvent
 {
-    public SlotFlags TargetSlots => SlotFlags.MASK;
     public EntityUid Sender;
     public string VoiceId;
 
@@ -14,4 +13,5 @@ public sealed class TransformSpeakerVoiceEvent : EntityEventArgs, IInventoryRela
         VoiceId = voiceId;
     }
 
+    public SlotFlags TargetSlots => SlotFlags.MASK;
 }

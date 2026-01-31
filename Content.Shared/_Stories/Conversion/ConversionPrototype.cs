@@ -10,29 +10,33 @@ namespace Content.Shared._Stories.Conversion;
 [Prototype("conversion")]
 public sealed partial class ConversionPrototype : IPrototype
 {
-    [ViewVariables][IdDataField] public string ID { get; private set; } = default!;
+    [ViewVariables] [IdDataField] public string ID { get; private set; } = default!;
 
     #region Other
 
     [DataField("statusIcon", customTypeSerializer: typeof(PrototypeIdSerializer<FactionIconPrototype>))]
-    public string? StatusIcon = null;
+    public string? StatusIcon;
 
     [DataField("channels")]
     public HashSet<string> Channels = new();
 
     [DataField]
-    public float? Duration = null;
+    public float? Duration;
+
     #endregion
 
     #region Briefing
+
     [DataField]
     public ConversionBriefingData? Briefing;
 
     [DataField]
     public ConversionBriefingData? EndBriefing;
+
     #endregion
 
     #region Whitelist
+
     [DataField]
     public HashSet<MobState>? AllowedMobStates = [MobState.Alive];
 
@@ -41,14 +45,17 @@ public sealed partial class ConversionPrototype : IPrototype
 
     [DataField]
     public EntityWhitelist? Blacklist;
+
     #endregion
 
     #region Components
+
     [DataField]
     public ComponentRegistry Components = new();
 
     [DataField]
     public List<EntProtoId>? MindRoles;
+
     #endregion
 }
 

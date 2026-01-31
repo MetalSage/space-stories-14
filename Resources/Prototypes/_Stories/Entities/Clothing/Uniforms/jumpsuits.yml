@@ -93,3 +93,37 @@
       sprite: _Stories/Clothing/Uniforms/Jumpsuit/detective.rsi
     - type: Clothing
       sprite: _Stories/Clothing/Uniforms/Jumpsuit/detective.rsi
+
+- type: entity
+  parent: ClothingUniformBase
+  id: STClothingUniformJumpsuitScientistSweater
+  name: scientist's sweater jumpsuit
+  description: Super-fashionable sweater and glasses plus seven, Young master of integrated circuits, The postgraduate from our department boldly declares to everyone “A sexy body is a solid body!”
+  components:
+  - type: Sprite
+    sprite: _Stories/Clothing/Uniforms/Jumpsuit/Scientist_Sweater.rsi
+  - type: Clothing
+    sprite: _Stories/Clothing/Uniforms/Jumpsuit/Scientist_Sweater.rsi
+
+
+- type: entity
+  parent: ClothingUniformBase
+  id: STClothingUniformJumpsuitProsecutorBlue
+  name: blue prosecutor's jumpsuit
+  description: A strict suit worthy of the highest ranks of NanoTrasen.
+  components:
+  - type: Sprite
+    sprite: _Stories/Clothing/Uniforms/Jumpsuit/prosecutorblue.rsi
+  - type: Clothing
+    sprite: _Stories/Clothing/Uniforms/Jumpsuit/prosecutorblue.rsi
+
+- type: entity
+  parent: ClothingUniformBase
+  id: STClothingUniformJumpsuitProsecutorBlack
+  name: black prosecutor's jumpsuit
+  description: A strict suit worthy of the highest ranks of NanoTrasen.
+  components:
+  - type: Sprite
+    sprite: _Stories/Clothing/Uniforms/Jumpsuit/prosecutorblack.rsi
+  - type: Clothing
+    sprite: _Stories/Clothing/Uniforms/Jumpsuit/prosecutorblack.rsi

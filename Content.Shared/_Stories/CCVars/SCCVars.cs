@@ -3,16 +3,13 @@
 namespace Content.Shared._Stories.SCCVars;
 
 /// <summary>
-///     Stories modules console variables
+/// Stories modules console variables
 /// </summary>
 [CVarDefs]
 // ReSharper disable once InconsistentNaming
 public sealed class SCCVars
 {
-    /**
-     * TTS (Text-To-Speech)
-     */
-
+    /// TTS (Text-To-Speech)
     /// <summary>
     /// URL of the TTS server API.
     /// </summary>
@@ -74,7 +71,8 @@ public sealed class SCCVars
         CVarDef.Create("scc.tts.ffmpeg_path", "", CVar.SERVERONLY);
 
     public static readonly CVarDef<string> TTSFfmpegArguments =
-        CVarDef.Create("scc.tts.ffmpeg_arguments", "-i pipe:0 -f ogg -v quiet -filter_complex \"[0:a]highpass=f=1000,lowpass=f=500[filtered];[filtered]acrusher=level_in=1:level_out=1:bits=4:mix=0.5:mode=log[crushed];[crushed]loudnorm=I=-12:LRA=7\" pipe:1",
+        CVarDef.Create("scc.tts.ffmpeg_arguments",
+            "-i pipe:0 -f ogg -v quiet -filter_complex \"[0:a]highpass=f=1000,lowpass=f=500[filtered];[filtered]acrusher=level_in=1:level_out=1:bits=4:mix=0.5:mode=log[crushed];[crushed]loudnorm=I=-12:LRA=7\" pipe:1",
             CVar.SERVERONLY);
 
     /*
@@ -82,7 +80,7 @@ public sealed class SCCVars
      */
 
     /// <summary>
-    ///     URL of the sponsors server API.
+    /// URL of the sponsors server API.
     /// </summary>
     public static readonly CVarDef<string> SponsorsApiUrl =
         CVarDef.Create("sponsor.api_url", "", CVar.SERVERONLY);
@@ -92,7 +90,8 @@ public sealed class SCCVars
      */
 
     /// <summary>
-    ///     Controls if the connections queue is enabled. If enabled stop kicking new players after `SoftMaxPlayers` cap and instead add them to queue.
+    /// Controls if the connections queue is enabled. If enabled stop kicking new players after `SoftMaxPlayers` cap and
+    /// instead add them to queue.
     /// </summary>
     public static readonly CVarDef<bool>
         QueueEnabled = CVarDef.Create("queue.enabled", false, CVar.SERVERONLY);
@@ -102,25 +101,25 @@ public sealed class SCCVars
      */
 
     /// <summary>
-    ///     Enabled Discord linking, show linking button and modal window
+    /// Enabled Discord linking, show linking button and modal window
     /// </summary>
     public static readonly CVarDef<bool> DiscordAuthEnabled =
         CVarDef.Create("discord_auth.enabled", false, CVar.SERVERONLY);
 
     /// <summary>
-    ///     URL of the Discord auth server API
+    /// URL of the Discord auth server API
     /// </summary>
     public static readonly CVarDef<string> DiscordAuthApiUrl =
         CVarDef.Create("discord_auth.api_url", "", CVar.SERVERONLY);
 
     /// <summary>
-    ///     Secret key of the Discord auth server API
+    /// Secret key of the Discord auth server API
     /// </summary>
     public static readonly CVarDef<string> DiscordAuthApiKey =
         CVarDef.Create("discord_auth.api_key", "", CVar.SERVERONLY | CVar.CONFIDENTIAL);
 
     /// <summary>
-    ///     Getting up a character after falling
+    /// Getting up a character after falling
     /// </summary>
     public static readonly CVarDef<bool> AutoStanding =
         CVarDef.Create("control.auto_standing", false, CVar.CLIENT | CVar.ARCHIVE | CVar.REPLICATED);

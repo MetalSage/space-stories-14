@@ -1,26 +1,28 @@
-using Content.Shared.Mind;
+using Content.Server.Administration.Logs;
 using Content.Server.Antag;
 using Content.Server.Roles;
 using Content.Shared._Stories.Conversion;
-using Robust.Shared.Timing;
-using Content.Server.Administration.Logs;
+using Content.Shared.Mind;
 using Robust.Shared.Prototypes;
+using Robust.Shared.Timing;
 
 namespace Content.Server._Stories.Conversion;
 
 public sealed partial class ConversionSystem : SharedConversionSystem
 {
+    [Dependency] private readonly IAdminLogManager _adminLogger = default!;
+    [Dependency] private readonly AntagSelectionSystem _antag = default!;
     [Dependency] private readonly SharedMindSystem _mind = default!;
+    [Dependency] private readonly IPrototypeManager _prototype = default!;
     [Dependency] private readonly RoleSystem _role = default!;
     [Dependency] private readonly IGameTiming _timing = default!;
-    [Dependency] private readonly AntagSelectionSystem _antag = default!;
-    [Dependency] private readonly IAdminLogManager _adminLogger = default!;
-    [Dependency] private readonly IPrototypeManager _prototype = default!;
+
     public override void Initialize()
     {
         base.Initialize();
         InitializeMindShield();
     }
+
     public override void Update(float frameTime)
     {
         base.Update(frameTime);

@@ -67,8 +67,10 @@
         sound:
           collection: MeatLaserImpact
   - type: Bloodstream
-    bloodMaxVolume: 25
-    bloodReagent: DemonsBlood
+    bloodReferenceSolution:
+      reagents:
+      - ReagentId: DemonsBlood
+        Quantity: 25
     bloodlossDamage:
       types:
         Bloodloss: 0
@@ -107,7 +109,7 @@
       75: Dead
   - type: Stamina
     animationThreshold: 50
-    critThreshold: 75
+    baseCritThreshold: 75
   - type: MeleeWeapon
     soundHit:
       path: /Audio/Weapons/Xeno/alien_claw_flesh3.ogg

@@ -18,3 +18,6 @@
 
 - type: Tag
   id: STBorgModuleSecurity
+
+- type: Tag
+  id: STEncryptionJuridical
