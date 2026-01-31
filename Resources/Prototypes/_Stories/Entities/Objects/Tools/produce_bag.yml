@@ -1,6 +1,7 @@
 - type: entity
   name: produce bag
   parent: PlantBag
+  id: STProduceBag
   description: A bag for botanists to easily carry their huge harvests.
   components:
   - type: Sprite
