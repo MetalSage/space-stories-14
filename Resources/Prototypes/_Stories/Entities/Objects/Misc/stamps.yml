@@ -34,9 +34,9 @@
   suffix: DO NOT MAP
   components:
   - type: Stamp
-    stampedName: stories-stamp-component-stamped-name-prosecutor
+    stampedName: stories-stamp-component-stamped-name-judge
     stampedColor: "#773e24"
-    stampState: "paper_stamp-ok"
+    stampState: "paper_stamp-qm"
   - type: Sprite
     sprite: _Stories/Objects/Misc/bureaucracy.rsi
     state: stamp-judge
