@@ -1,7 +1,7 @@
 - type: entity
   name: produce bag
   parent: PlantBag
-  description:  A bag for botanists to easily carry their huge harvests.
+  description: A bag for botanists to easily carry their huge harvests.
   components:
   - type: Sprite
     sprite: _Stories/Objects/Specific/Hydroponics/Equipment/produce_bag.rsi
