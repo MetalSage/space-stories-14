@@ -1,4 +1,4 @@
-﻿marking-TattooVoxNightlingHead-tattoo_nightling_head = Вокс, Голова, Татуировка (Найтлинг)
+marking-TattooVoxNightlingHead-tattoo_nightling_head = Вокс, Голова, Татуировка (Найтлинг)
 marking-TattooVoxNightlingHead = Вокс, Голова, Татуировка (Найтлинг)
 marking-TattooVoxArrowHead-tattoo_arrow_head = Вокс, Голова, Татуировка (Стрелка)
 marking-TattooVoxArrowHead = Вокс, Голова, Татуировка (Стрелка)

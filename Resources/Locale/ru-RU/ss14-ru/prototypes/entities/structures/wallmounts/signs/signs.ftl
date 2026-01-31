@@ -1,4 +1,4 @@
-﻿ent-PaintingMonkey = картина обезьяны
+ent-PaintingMonkey = картина обезьяны
     .desc = Отвергни эволюцию, стань манки.
 ent-BaseSignDirectional = { ent-BaseSign }
     .desc = { ent-BaseSign.desc }

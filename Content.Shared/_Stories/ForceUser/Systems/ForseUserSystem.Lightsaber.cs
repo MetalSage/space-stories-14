@@ -1,18 +1,10 @@
-using Content.Shared.Actions;
-using Content.Shared.Popups;
-using Content.Shared.Weapons.Melee.Events;
-using Content.Shared.Weapons.Ranged.Events;
-using Content.Shared.Hands.EntitySystems;
 using Content.Shared._Stories.Force.Lightsaber;
-using Robust.Shared.Physics.Events;
-using Content.Shared.Weapons.Misc;
-using Robust.Shared.Prototypes;
-using Robust.Shared.Serialization.Manager;
 using Content.Shared._Stories.ForceUser.Actions.Events;
-using Content.Shared._Stories.Force;
+using Content.Shared.DoAfter;
 using Content.Shared.Verbs;
 
 namespace Content.Shared._Stories.ForceUser;
+
 public abstract partial class SharedForceUserSystem
 {
     private void InitializeLightsaber()
@@ -33,12 +25,17 @@ public abstract partial class SharedForceUserSystem
 
         if (component.LightsaberOwner == null)
         {
-            args.Verbs.Add(new InteractionVerb()
+            args.Verbs.Add(new InteractionVerb
             {
                 Text = Loc.GetString("lightsaber-tie"),
                 Act = () =>
                 {
-                    var doAfterEventArgs = new Shared.DoAfter.DoAfterArgs(EntityManager, args.User, TimeSpan.FromSeconds(10f), new LightsaberConnectedEvent(), uid, uid)
+                    var doAfterEventArgs = new DoAfterArgs(EntityManager,
+                        args.User,
+                        TimeSpan.FromSeconds(10f),
+                        new LightsaberConnectedEvent(),
+                        uid,
+                        uid)
                     {
                         BreakOnMove = true,
                         BreakOnDamage = true,
@@ -46,17 +43,22 @@ public abstract partial class SharedForceUserSystem
                     };
 
                     _doAfter.TryStartDoAfter(doAfterEventArgs);
-                }
+                },
             });
         }
         else if (component.LightsaberOwner == args.User)
         {
-            args.Verbs.Add(new InteractionVerb()
+            args.Verbs.Add(new InteractionVerb
             {
                 Text = Loc.GetString("lightsaber-untie"),
                 Act = () =>
                 {
-                    var doAfterEventArgs = new Shared.DoAfter.DoAfterArgs(EntityManager, args.User, TimeSpan.FromSeconds(10f), new LightsaberDetachedEvent(), uid, uid)
+                    var doAfterEventArgs = new DoAfterArgs(EntityManager,
+                        args.User,
+                        TimeSpan.FromSeconds(10f),
+                        new LightsaberDetachedEvent(),
+                        uid,
+                        uid)
                     {
                         BreakOnMove = true,
                         BreakOnDamage = true,
@@ -64,17 +66,22 @@ public abstract partial class SharedForceUserSystem
                     };
 
                     _doAfter.TryStartDoAfter(doAfterEventArgs);
-                }
+                },
             });
         }
         else if (component.LightsaberOwner is { } owner && _mobState.IsAlive(owner))
         {
-            args.Verbs.Add(new InteractionVerb()
+            args.Verbs.Add(new InteractionVerb
             {
                 Text = Loc.GetString("lightsaber-break"),
                 Act = () =>
                 {
-                    var doAfterEventArgs = new Shared.DoAfter.DoAfterArgs(EntityManager, args.User, TimeSpan.FromSeconds(10f), new LightsaberHackedEvent(), uid, uid)
+                    var doAfterEventArgs = new DoAfterArgs(EntityManager,
+                        args.User,
+                        TimeSpan.FromSeconds(10f),
+                        new LightsaberHackedEvent(),
+                        uid,
+                        uid)
                     {
                         BreakOnMove = true,
                         BreakOnDamage = true,
@@ -82,7 +89,7 @@ public abstract partial class SharedForceUserSystem
                     };
 
                     _doAfter.TryStartDoAfter(doAfterEventArgs);
-                }
+                },
             });
         }
     }
@@ -118,7 +125,10 @@ public abstract partial class SharedForceUserSystem
         args.Handled = true;
     }
 
-    protected void BindLightsaber(EntityUid uid, EntityUid lightsaber, ForceUserComponent? forceUserComponent = null, LightsaberComponent? lightsaberComponent = null)
+    protected void BindLightsaber(EntityUid uid,
+        EntityUid lightsaber,
+        ForceUserComponent? forceUserComponent = null,
+        LightsaberComponent? lightsaberComponent = null)
     {
         if (!Resolve(uid, ref forceUserComponent))
             return;
@@ -153,5 +163,4 @@ public abstract partial class SharedForceUserSystem
         forceUserComponent.Lightsaber = null;
         lightsaberComponent.LightsaberOwner = null;
     }
-
 }

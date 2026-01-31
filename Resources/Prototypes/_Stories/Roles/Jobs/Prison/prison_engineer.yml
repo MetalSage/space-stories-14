@@ -12,7 +12,7 @@
       time: 18000 # 5 hours
   startingGear: PRISONEngineerGear
   icon: "JobIconSpacePrisonEngineer"
-  supervisors: начальник тюрьмы
+  supervisors: stories-job-supervisors-headofprison
   canBeAntag: false
   access:
   - Prisoner

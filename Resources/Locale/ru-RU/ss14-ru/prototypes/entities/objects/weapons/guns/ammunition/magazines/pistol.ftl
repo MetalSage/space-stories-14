@@ -8,6 +8,7 @@ ent-MagazinePistolSubMachineGunTopMounted = магазин WT550 (.35 авто, 
     .desc = { ent-BaseItem.desc }
 ent-MagazinePistolSubMachineGunTopMountedEmpty = магазин WT550 (.35 авто, любые, надствольный)
     .desc = { ent-MagazinePistolSubMachineGunTopMounted.desc }
+    .suffix = empty
 ent-MagazinePistol = пистолетный магазин (.35 авто)
     .desc = { ent-BaseMagazinePistol.desc }
 ent-MagazinePistolEmpty = пистолетный магазин (.35 авто любые)

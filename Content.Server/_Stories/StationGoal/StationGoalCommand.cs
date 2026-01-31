@@ -4,51 +4,47 @@ using Content.Shared.Administration;
 using Robust.Shared.Console;
 using Robust.Shared.Prototypes;
 
-namespace Content.Server._Stories.StationGoal
+namespace Content.Server._Stories.StationGoal;
+
+[AdminCommand(AdminFlags.Fun)]
+public sealed partial class StationGoalCommand : IConsoleCommand
 {
-    [AdminCommand(AdminFlags.Fun)]
-    public sealed class StationGoalCommand : IConsoleCommand
+    public string Command => "sendstationgoal";
+    public string Description => Loc.GetString("send-station-goal-command-description");
+    public string Help => Loc.GetString("send-station-goal-command-help-text", ("command", Command));
+
+    public void Execute(IConsoleShell shell, string argStr, string[] args)
     {
-        public string Command => "sendstationgoal";
-        public string Description => Loc.GetString("send-station-goal-command-description");
-        public string Help => Loc.GetString("send-station-goal-command-help-text", ("command", Command));
-
-        public void Execute(IConsoleShell shell, string argStr, string[] args)
+        if (args.Length != 1)
         {
-            if (args.Length != 1)
-            {
-                shell.WriteError(Loc.GetString("shell-need-exactly-one-argument"));
-                return;
-            }
-
-            var protoId = args[0];
-            var prototypeManager = IoCManager.Resolve<IPrototypeManager>();
-            if (!prototypeManager.TryIndex<StationGoalPrototype>(protoId, out var proto))
-            {
-                shell.WriteError($"No station goal found with ID {protoId}!");
-                return;
-            }
-
-            var stationGoalPaper = IoCManager.Resolve<IEntityManager>().System<StationGoalPaperSystem>();
-            if (!stationGoalPaper.TrySendStationGoal(proto))
-            {
-                shell.WriteError("Station goal was not sent");
-                return;
-            }
+            shell.WriteError(Loc.GetString("shell-need-exactly-one-argument"));
+            return;
         }
 
-        public CompletionResult GetCompletion(IConsoleShell shell, string[] args)
+        var protoId = args[0];
+        var prototypeManager = IoCManager.Resolve<IPrototypeManager>();
+        if (!prototypeManager.TryIndex<StationGoalPrototype>(protoId, out var proto))
         {
-            if (args.Length == 1)
-            {
-                var options = IoCManager.Resolve<IPrototypeManager>()
-                    .EnumeratePrototypes<StationGoalPrototype>()
-                    .Select(p => new CompletionOption(p.ID));
-
-                return CompletionResult.FromHintOptions(options, Loc.GetString("send-station-goal-command-arg-id"));
-            }
-
-            return CompletionResult.Empty;
+            shell.WriteError($"No station goal found with ID {protoId}!");
+            return;
         }
+
+        var stationGoalPaper = IoCManager.Resolve<IEntityManager>().System<StationGoalPaperSystem>();
+        if (!stationGoalPaper.TrySendStationGoal(proto))
+            shell.WriteError("Station goal was not sent");
+    }
+
+    public CompletionResult GetCompletion(IConsoleShell shell, string[] args)
+    {
+        if (args.Length == 1)
+        {
+            var options = IoCManager.Resolve<IPrototypeManager>()
+                .EnumeratePrototypes<StationGoalPrototype>()
+                .Select(p => new CompletionOption(p.ID));
+
+            return CompletionResult.FromHintOptions(options, Loc.GetString("send-station-goal-command-arg-id"));
+        }
+
+        return CompletionResult.Empty;
     }
 }

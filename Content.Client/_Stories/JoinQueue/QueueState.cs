@@ -1,7 +1,6 @@
 ﻿using Content.Shared._Stories.JoinQueue;
 using Robust.Client.Audio;
 using Robust.Client.Console;
-using Robust.Client.GameObjects;
 using Robust.Client.State;
 using Robust.Client.UserInterface;
 using Robust.Shared.Player;
@@ -10,10 +9,9 @@ namespace Content.Client._Stories.JoinQueue;
 
 public sealed class QueueState : State
 {
-    [Dependency] private readonly IUserInterfaceManager _userInterfaceManager = default!;
-    [Dependency] private readonly IClientConsoleHost _consoleHost = default!;
-
     private const string JoinSoundPath = "/Audio/Effects/voteding.ogg";
+    [Dependency] private readonly IClientConsoleHost _consoleHost = default!;
+    [Dependency] private readonly IUserInterfaceManager _userInterfaceManager = default!;
 
     private QueueGui? _gui;
 
@@ -36,9 +34,7 @@ public sealed class QueueState : State
     private void Ding()
     {
         if (IoCManager.Resolve<IEntityManager>().TrySystem<AudioSystem>(out var audio))
-        {
             audio.PlayGlobal(JoinSoundPath, Filter.Local(), false);
-        }
     }
 
     public void OnQueueUpdate(MsgQueueUpdate msg)

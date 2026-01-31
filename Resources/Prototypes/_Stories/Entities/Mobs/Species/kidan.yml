@@ -23,7 +23,10 @@
     - id: FoodMeat
       amount: 5
   - type: Bloodstream
-    bloodReagent: InsectBlood # Логично.
+    bloodReferenceSolution:
+      reagents:
+      - ReagentId: InsectBlood
+        Quantity: 300
   - type: DamageVisuals
     damageOverlayGroups:
       Brute:
@@ -61,10 +64,11 @@
     color: "#556b2f"
     enabled: false
   - type: Temperature
-    heatDamageThreshold: 400
-    coldDamageThreshold: 285
     currentTemperature: 310.15
     specificHeat: 42
+  - type: TemperatureDamage
+    heatDamageThreshold: 400
+    coldDamageThreshold: 285
     coldDamage:
       types:
         Cold : 0.1 #per second, scales with temperature & other constants

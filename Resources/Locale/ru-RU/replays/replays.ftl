@@ -40,3 +40,4 @@ cmd-replay-spectate-help = replay_spectate [сущность (опциональ
 cmd-replay-spectate-desc = Прикрепляет или открепляет локального игрока к заданному uid сущности.
 cmd-replay-spectate-hint = Опциональный EntityUid
 cmd-replay-toggleui-desc = Переключение пользовательского интерфейса управления воспроизведением.
+cmd-replay-toggle-screenshot-mode-desc = Переключает режим скриншотов в реплеях, скрывая поле ввода чата и настраивая видимость интерфейса управления для создания чистых кадров.

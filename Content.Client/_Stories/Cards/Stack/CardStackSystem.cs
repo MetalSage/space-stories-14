@@ -1,18 +1,20 @@
-using Robust.Shared.Containers;
-using Robust.Client.GameObjects;
-using Content.Shared.Foldable;
 using System.Linq;
 using System.Numerics;
-
 using Content.Shared._Stories.Cards.Deck;
 using Content.Shared._Stories.Cards.Fan;
 using Content.Shared._Stories.Cards.Stack;
+using Content.Shared.Foldable;
+using Robust.Client.GameObjects;
+using Robust.Client.Graphics;
+using Robust.Shared.Containers;
 
 namespace Content.Client._Stories.Cards.Stack;
+
 public sealed class CardStackSystem : SharedCardStackSystem
 {
     [Dependency] private readonly SharedAppearanceSystem _appearance = default!;
     [Dependency] private readonly SharedContainerSystem _containerSystem = default!;
+
     public override void Initialize()
     {
         base.Initialize();
@@ -28,9 +30,14 @@ public sealed class CardStackSystem : SharedCardStackSystem
         if (_appearance.TryGetData<bool>(uid, CardStackVisuals.OrderEdited, out var shuffled) && shuffled)
         {
             foreach (var card in comp.CardContainer.ContainedEntities.ToList())
+            {
                 _containerSystem.Remove(card, comp.CardContainer);
+            }
+
             foreach (var card in comp.CardOrder)
+            {
                 _containerSystem.Insert(card, comp.CardContainer);
+            }
 
             _appearance.SetData(uid, CardStackVisuals.OrderEdited, false);
         }
@@ -46,9 +53,11 @@ public sealed class CardStackSystem : SharedCardStackSystem
         if (!TryComp<CardStackComponent>(uid, out var cardStack))
             return;
         while (sprite.AllLayers.Count() > 1)
+        {
             sprite.RemoveLayer(1);
+        }
 
-        var processedLayers = new HashSet<Robust.Client.Graphics.RSI.StateId>();
+        var processedLayers = new HashSet<RSI.StateId>();
         var layerIndex = 1;
 
         foreach (var card in cardStack.CardContainer.ContainedEntities)
@@ -75,9 +84,11 @@ public sealed class CardStackSystem : SharedCardStackSystem
         if (!TryComp<CardStackComponent>(uid, out var cardStack))
             return;
         while (sprite.AllLayers.Count() > 1)
+        {
             sprite.RemoveLayer(1);
+        }
 
-        var processedLayers = new HashSet<Robust.Client.Graphics.RSI.StateId>();
+        var processedLayers = new HashSet<RSI.StateId>();
         var layerIndex = 1;
 
         var totalCards = Math.Min(comp.MaxCards, cardStack.CardContainer.ContainedEntities.Count);
@@ -104,7 +115,7 @@ public sealed class CardStackSystem : SharedCardStackSystem
             var normX = comp.Radius * MathF.Sin(curAngle * MathF.PI / 180);
             var normY = comp.Radius * MathF.Cos(curAngle * MathF.PI / 180);
 
-            if (TryComp<CardFanComponent>(uid, out var _))
+            if (TryComp<CardFanComponent>(uid, out _))
             {
                 sprite.LayerSetRotation(layer, Angle.FromDegrees(curAngle + 180));
                 sprite.LayerSetOffset(layer, new Vector2(normX, normY));

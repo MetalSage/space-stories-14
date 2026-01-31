@@ -1,0 +1,21 @@
+- type: entity
+  parent: [ClothingUniformSkirtBase, BaseCommandContraband]
+  id: STClothingUniformJumpskirtProsecutorBlue
+  name: blue prosecutor's jumpskirt
+  description: The one who wears this represents busyness.
+  components:
+  - type: Sprite
+    sprite: _Stories/Clothing/Uniforms/Jumpskirt/prosecutorblue.rsi
+  - type: Clothing
+    sprite: _Stories/Clothing/Uniforms/Jumpskirt/prosecutorblue.rsi
+
+- type: entity
+  parent: [ClothingUniformSkirtBase, BaseCommandContraband]
+  id: STClothingUniformJumpskirtProsecutorBlack
+  name: black prosecutor's jumpskirt
+  description: A strict suit worthy of the highest ranks of NanoTrasen.
+  components:
+  - type: Sprite
+    sprite: _Stories/Clothing/Uniforms/Jumpskirt/prosecutorblack.rsi
+  - type: Clothing
+    sprite: _Stories/Clothing/Uniforms/Jumpskirt/prosecutorblack.rsi

@@ -18,11 +18,10 @@
   - type: ReplacementAccent
     accent: xeno
   - type: Bloodstream
-    bloodReagents:
+    bloodReferenceSolution:
       reagents:
       - ReagentId: FerrochromicAcid
-        Quantity: 1
-    bloodMaxVolume: 75 #we don't want the map to become pools of blood
+        Quantity: 75 #we don't want the map to become pools of blood
     bloodlossDamage:
       types:
         Bloodloss:
@@ -53,6 +52,7 @@
   - type: Climbing
   - type: NameIdentifier
     group: GenericNumber
+  - type: MobCollision # Stories-Collision
 
 - type: entity
   parent: BaseMobArgocyte

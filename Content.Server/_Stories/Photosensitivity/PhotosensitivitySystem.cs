@@ -1,29 +1,27 @@
 using System.Numerics;
 using Content.Server.Popups;
-using Content.Shared.Damage;
 using Content.Shared.Damage.Systems;
+using Content.Shared.Maps;
 using Robust.Server.GameObjects;
 using Robust.Shared.Map;
 using Robust.Shared.Map.Components;
 using Robust.Shared.Utility;
-using Content.Shared.Maps;
 
 namespace Content.Server._Stories.Photosensitivity;
 
-public sealed partial class PhotosensitivitySystem : EntitySystem
+public sealed class PhotosensitivitySystem : EntitySystem
 {
-    [Dependency] private readonly EntityLookupSystem _entityLookup = default!;
-    [Dependency] private readonly TransformSystem _transform = default!;
-    [Dependency] private readonly IMapManager _mapManager = default!;
-    [Dependency] private readonly MapSystem _mapSystem = default!;
-    [Dependency] private readonly DamageableSystem _damageable = default!;
-    [Dependency] private readonly PopupSystem _popup = default!;
-    [Dependency] private readonly TurfSystem _turf = default!;
-    
     private const float UpdateTimer = 2f;
-    private float _timer;
     public const float MaxIllumination = 10f;
     public const float MinIllumination = 0f;
+    [Dependency] private readonly DamageableSystem _damageable = default!;
+    [Dependency] private readonly EntityLookupSystem _entityLookup = default!;
+    [Dependency] private readonly IMapManager _mapManager = default!;
+    [Dependency] private readonly MapSystem _mapSystem = default!;
+    [Dependency] private readonly PopupSystem _popup = default!;
+    [Dependency] private readonly TransformSystem _transform = default!;
+    [Dependency] private readonly TurfSystem _turf = default!;
+    private float _timer;
 
     // FIXME: Shitcode + Hardcode
     public override void Update(float frameTime)
@@ -68,9 +66,7 @@ public sealed partial class PhotosensitivitySystem : EntitySystem
                 _popup.PopupEntity("Свет выжигает вас!", uid, uid);
             }
             else if (illumination < 1)
-            {
                 _damageable.TryChangeDamage(uid, comp.DarknessHealing, true, false);
-            }
         }
     }
 
@@ -80,7 +76,8 @@ public sealed partial class PhotosensitivitySystem : EntitySystem
     {
         var destTrs = Transform(uid);
 
-        var lightPoints = _entityLookup.GetEntitiesInRange<PointLightComponent>(_transform.GetMapCoordinates(destTrs), 20f);
+        var lightPoints =
+            _entityLookup.GetEntitiesInRange<PointLightComponent>(_transform.GetMapCoordinates(destTrs), 20f);
         var destination = _transform.GetWorldPosition(destTrs);
 
         var illumination = 0f;
@@ -109,21 +106,21 @@ public sealed partial class PhotosensitivitySystem : EntitySystem
             {
                 var gridTrs = Transform(grid);
 
-                Vector2 srcLocal = sourceTrs.ParentUid == grid.Owner
+                var srcLocal = sourceTrs.ParentUid == grid.Owner
                     ? sourceTrs.LocalPosition
                     : Vector2.Transform(source, gridTrs.InvLocalMatrix);
 
-                Vector2 dstLocal = destTrs.ParentUid == grid.Owner
+                var dstLocal = destTrs.ParentUid == grid.Owner
                     ? destTrs.LocalPosition
                     : Vector2.Transform(destination, gridTrs.InvLocalMatrix);
 
                 Vector2i sourceGrid = new(
-                    (int) Math.Floor(srcLocal.X / grid.Comp.TileSize),
-                    (int) Math.Floor(srcLocal.Y / grid.Comp.TileSize));
+                    (int)Math.Floor(srcLocal.X / grid.Comp.TileSize),
+                    (int)Math.Floor(srcLocal.Y / grid.Comp.TileSize));
 
                 Vector2i destGrid = new(
-                    (int) Math.Floor(dstLocal.X / grid.Comp.TileSize),
-                    (int) Math.Floor(dstLocal.Y / grid.Comp.TileSize));
+                    (int)Math.Floor(dstLocal.X / grid.Comp.TileSize),
+                    (int)Math.Floor(dstLocal.Y / grid.Comp.TileSize));
 
                 var line = new GridLineEnumerator(sourceGrid, destGrid);
 
@@ -137,11 +134,14 @@ public sealed partial class PhotosensitivitySystem : EntitySystem
                             break;
                         }
                     }
-                    if (lightDirInterrupted) break;
+
+                    if (lightDirInterrupted)
+                        break;
                 }
             }
 
-            if (lightDirInterrupted) continue;
+            if (lightDirInterrupted)
+                continue;
 
             if (lightPoint.Comp.MaskPath is { } maskPath && maskPath.EndsWith("cone.png"))
             {

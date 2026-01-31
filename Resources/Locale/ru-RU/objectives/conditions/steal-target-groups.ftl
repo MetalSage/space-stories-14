@@ -1,4 +1,4 @@
-﻿# Traitor single items
+# Traitor single items
 steal-target-groups-hypospray = гипоспрей
 steal-target-groups-handheld-crew-monitor = ручной монитор экипажа
 steal-target-groups-clothing-outer-hardsuit-rd = экспериментальный исследовательский скафандр
@@ -61,6 +61,6 @@ steal-target-groups-animal-ian = Иан
 steal-target-groups-animal-mc-griff = МакГрифф
 steal-target-groups-animal-walter = Уолтер
 steal-target-groups-animal-morty = Морти
-steal-target-groups-animal-renault = Алиса
+steal-target-groups-animal-renault = Рено
 steal-target-groups-animal-shiva = Шива
 steal-target-groups-animal-tropico = Тропико

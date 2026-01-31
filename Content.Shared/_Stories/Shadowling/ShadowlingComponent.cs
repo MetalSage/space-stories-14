@@ -1,27 +1,23 @@
-using Robust.Shared.GameStates;
-using Content.Shared.Damage;
-using Robust.Shared.Audio;
-using Robust.Shared.Serialization.TypeSerializers.Implementations.Custom;
 using Content.Shared.Actions;
-using Robust.Shared.Serialization;
 using Content.Shared.DoAfter;
 using Content.Shared.StatusIcon;
-using Robust.Shared.Serialization.TypeSerializers.Implementations.Custom.Prototype;
+using Robust.Shared.GameStates;
 using Robust.Shared.Prototypes;
+using Robust.Shared.Serialization;
 
 namespace Content.Shared._Stories.Shadowling;
 
-[RegisterComponent, NetworkedComponent]
+[RegisterComponent] [NetworkedComponent]
 public sealed partial class ShadowlingComponent : Component
 {
-    [DataField]
-    public ProtoId<FactionIconPrototype> StatusIcon = "ShadowlingFaction";
-
     [DataField]
     public Dictionary<string, int> Actions = new();
 
     [DataField]
     public Dictionary<string, EntityUid> GrantedActions = new();
+
+    [DataField]
+    public ProtoId<FactionIconPrototype> StatusIcon = "ShadowlingFaction";
 }
 
 //
@@ -78,12 +74,12 @@ public sealed partial class ShadowlingAscendanceEvent : InstantActionEvent
 //
 // Do Afters
 //
-[Serializable, NetSerializable]
+[Serializable] [NetSerializable]
 public sealed partial class ShadowlingHatchDoAfterEvent : SimpleDoAfterEvent
 {
 }
 
-[Serializable, NetSerializable]
+[Serializable] [NetSerializable]
 public sealed partial class ShadowlingAscendanceDoAfterEvent : SimpleDoAfterEvent
 {
 }
@@ -92,7 +88,7 @@ public sealed partial class ShadowlingAscendanceDoAfterEvent : SimpleDoAfterEven
 // Gamerule
 //
 
-public sealed partial class ShadowlingWorldAscendanceEvent : EntityEventArgs
+public sealed class ShadowlingWorldAscendanceEvent : EntityEventArgs
 {
     public EntityUid EntityUid;
 }

@@ -1,9 +1,4 @@
-using Content.Shared.Damage;
 using Robust.Shared.Audio;
-using Robust.Shared.GameStates;
-using Robust.Shared.Physics.Collision.Shapes;
-using Robust.Shared.Prototypes;
-using Robust.Shared.Serialization.TypeSerializers.Implementations.Custom.Prototype;
 
 namespace Content.Server._Stories.BlockMeleeAttack;
 
@@ -13,17 +8,8 @@ namespace Content.Server._Stories.BlockMeleeAttack;
 [RegisterComponent]
 public sealed partial class BlockMeleeAttackComponent : Component
 {
-    [DataField("enabled"), ViewVariables(VVAccess.ReadWrite), AutoNetworkedField]
-    public bool Enabled = true;
-
-    [DataField("blockProb"), ViewVariables(VVAccess.ReadWrite), AutoNetworkedField]
+    [DataField("blockProb")] [ViewVariables(VVAccess.ReadWrite)] [AutoNetworkedField]
     public float BlockProb = 0.5f;
-
-    /// <summary>
-    /// The entity that's blocking
-    /// </summary>
-    [ViewVariables, AutoNetworkedField]
-    public EntityUid? User;
 
     /// <summary>
     /// The sound to be played when you get hit while actively blocking
@@ -31,6 +17,15 @@ public sealed partial class BlockMeleeAttackComponent : Component
     [DataField("blockSound")]
     public SoundSpecifier BlockSound = new SoundPathSpecifier("/Audio/Weapons/block_metal1.ogg")
     {
-        Params = AudioParams.Default.WithVariation(0.2f)
+        Params = AudioParams.Default.WithVariation(0.2f),
     };
+
+    [DataField("enabled")] [ViewVariables(VVAccess.ReadWrite)] [AutoNetworkedField]
+    public bool Enabled = true;
+
+    /// <summary>
+    /// The entity that's blocking
+    /// </summary>
+    [ViewVariables] [AutoNetworkedField]
+    public EntityUid? User;
 }

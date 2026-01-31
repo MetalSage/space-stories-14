@@ -1,4 +1,3 @@
-using Content.Shared.Damage;
 using Content.Shared.Damage.Systems;
 using Content.Shared.Mobs;
 using Content.Shared.Mobs.Components;
@@ -35,29 +34,29 @@ public abstract class SharedGarroteSystem : EntitySystem
         _damageable.TryChangeDamage(args.Target.Value, comp.Damage, origin: args.User);
 
         _stun.TryAddStunDuration(args.Target.Value, comp.DurationStatusEffects);
-        _statusEffect.TryAddStatusEffect<MutedComponent>(args.Target.Value, "Muted", comp.DurationStatusEffects, refresh: true);
+        _statusEffect.TryAddStatusEffect<MutedComponent>(args.Target.Value, "Muted", comp.DurationStatusEffects, true);
         Dirty(args.Target.Value, statusEffectsComp);
 
         args.Repeat = true;
     }
 
     /// <summary>
-    ///     Checking whether the distance from the user to the target is set correctly.
+    /// Checking whether the distance from the user to the target is set correctly.
     /// </summary>
     /// <remarks>
-    ///     Does not check for the presence of TransformComponent.
+    /// Does not check for the presence of TransformComponent.
     /// </remarks>
     public bool IsRightTargetDistance(TransformComponent user, TransformComponent target, float maxUseDistance)
     {
         var userPosition = _transformSystem.GetWorldPositionRotation(user).WorldPosition;
         var targetPosition = _transformSystem.GetWorldPositionRotation(target).WorldPosition;
 
-        return (Math.Abs(userPosition.X - targetPosition.X) <= maxUseDistance
-            && Math.Abs(userPosition.Y - targetPosition.Y) <= maxUseDistance);
+        return Math.Abs(userPosition.X - targetPosition.X) <= maxUseDistance
+               && Math.Abs(userPosition.Y - targetPosition.Y) <= maxUseDistance;
     }
 
     /// <remarks>
-    ///     Does not check for the presence of TransformComponent.
+    /// Does not check for the presence of TransformComponent.
     /// </remarks>
     public Direction GetEntityDirection(TransformComponent entityTransform)
     {
@@ -74,7 +73,7 @@ public abstract class SharedGarroteSystem : EntitySystem
             > 43.5d and < 136.5d => Direction.East,
             >= 136.5d and <= 223.5d => Direction.North,
             > 223.5d and < 316.5d => Direction.West,
-            _ => Direction.South
+            _ => Direction.South,
         };
     }
 }

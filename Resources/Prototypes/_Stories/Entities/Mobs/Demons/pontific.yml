@@ -81,7 +81,7 @@
     damageModifierSet: STPontificModifierSet
   - type: Stamina
     animationThreshold: 50
-    critThreshold: 100
+    baseCritThreshold: 100
 
 - type: damageModifierSet
   id: STPontificModifierSet

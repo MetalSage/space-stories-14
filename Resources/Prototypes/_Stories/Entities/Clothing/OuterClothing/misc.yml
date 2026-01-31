@@ -1,0 +1,21 @@
+- type: entity
+  parent: ClothingOuterBase
+  id: STClothingOuterRobesJudgeRed
+  name: red judge's robe
+  description: This red robe inspires authority.
+  components:
+  - type: Sprite
+    sprite: _Stories/Clothing/OuterClothing/Misc/judge_red.rsi
+  - type: Clothing
+    sprite: _Stories/Clothing/OuterClothing/Misc/judge_red.rsi
+
+- type: entity
+  parent: ClothingOuterBase
+  id: STClothingOuterRobesJudgeWorn
+  name: worn judge's robe
+  description: This red robe inspires authority.
+  components:
+  - type: Sprite
+    sprite: _Stories/Clothing/OuterClothing/Misc/judge.rsi
+  - type: Clothing
+    sprite: _Stories/Clothing/OuterClothing/Misc/judge.rsi

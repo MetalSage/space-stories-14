@@ -1,7 +1,6 @@
 using Content.Shared.Actions;
-using Content.Shared.Mobs.Systems;
-using Content.Shared.StatusEffect;
 using Content.Shared.Movement.Systems;
+using Content.Shared.StatusEffect;
 using Robust.Shared.Audio.Systems;
 
 namespace Content.Shared._Stories.Pontific;
@@ -14,10 +13,11 @@ public sealed partial class PontificSystem : EntitySystem
     [ValidatePrototypeId<StatusEffectPrototype>]
     private const string PontificPrayerStatusEffect = "STPontificPrayer";
 
-    [Dependency] private readonly MovementSpeedModifierSystem _movementSpeed = default!;
+    [Dependency] private readonly SharedActionsSystem _action = default!;
     [Dependency] private readonly SharedAppearanceSystem _appearance = default!;
     [Dependency] private readonly SharedAudioSystem _audio = default!;
-    [Dependency] private readonly SharedActionsSystem _action = default!;
+
+    [Dependency] private readonly MovementSpeedModifierSystem _movementSpeed = default!;
     [Dependency] private readonly StatusEffectsSystem _statusEffects = default!;
 
     public override void Initialize()
@@ -60,7 +60,10 @@ public sealed partial class PontificSystem : EntitySystem
         if (HasComp<PontificFlameComponent>(entity))
             return;
 
-        if (_statusEffects.TryAddStatusEffect<PontificFlameComponent>(entity, PontificFlameStatusEffect, args.Duration, true))
+        if (_statusEffects.TryAddStatusEffect<PontificFlameComponent>(entity,
+                PontificFlameStatusEffect,
+                args.Duration,
+                true))
         {
             EnsureComp<PontificFlameComponent>(entity).DamageMultiplier = args.DamageMultiplier;
             EnsureComp<PontificFlameComponent>(entity).SpeedMultiplier = args.SpeedMultiplier;
@@ -77,7 +80,10 @@ public sealed partial class PontificSystem : EntitySystem
         if (HasComp<PontificFlameComponent>(entity))
             return;
 
-        if (_statusEffects.TryAddStatusEffect<PontificPrayerComponent>(entity, PontificPrayerStatusEffect, args.Duration, true))
+        if (_statusEffects.TryAddStatusEffect<PontificPrayerComponent>(entity,
+                PontificPrayerStatusEffect,
+                args.Duration,
+                true))
         {
             if (args.PrayerSound is { } sound)
                 _audio.PlayPvs(sound, entity);

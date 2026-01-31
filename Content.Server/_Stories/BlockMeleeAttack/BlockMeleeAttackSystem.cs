@@ -1,21 +1,20 @@
-using Content.Shared.Damage;
 using Content.Shared.Damage.Systems;
 using Content.Shared.Hands;
+using Content.Shared.Item.ItemToggle.Components;
 using Content.Shared.Popups;
 using Robust.Shared.Audio.Systems;
 using Robust.Shared.Random;
 using Robust.Shared.Timing;
-using Content.Shared.Item.ItemToggle.Components;
 
 namespace Content.Server._Stories.BlockMeleeAttack;
 
-public sealed partial class BlockMeleeAttackSystem : EntitySystem
+public sealed class BlockMeleeAttackSystem : EntitySystem
 {
-    [Dependency] private readonly DamageableSystem _damageable = default!;
     [Dependency] private readonly SharedAudioSystem _audio = default!;
+    [Dependency] private readonly DamageableSystem _damageable = default!;
     [Dependency] private readonly IGameTiming _gameTiming = default!;
-    [Dependency] private readonly IRobustRandom _random = default!;
     [Dependency] private readonly SharedPopupSystem _popup = default!;
+    [Dependency] private readonly IRobustRandom _random = default!;
 
     public override void Initialize()
     {
@@ -25,19 +24,26 @@ public sealed partial class BlockMeleeAttackSystem : EntitySystem
         SubscribeLocalEvent<BlockMeleeAttackComponent, GotUnequippedHandEvent>(OnReflectHandUnequipped);
         SubscribeLocalEvent<BlockMeleeAttackComponent, DamageModifyEvent>(OnDamage);
     }
+
     private void OnDamage(EntityUid uid, BlockMeleeAttackComponent component, DamageModifyEvent args)
     {
-        if (args.Origin == null) return;
-        if (!component.Enabled) return;
-        if (args.Damage.GetTotal() <= 0) return;
-        if (args.Origin == uid) return;
+        if (args.Origin == null)
+            return;
+        if (!component.Enabled)
+            return;
+        if (args.Damage.GetTotal() <= 0)
+            return;
+        if (args.Origin == uid)
+            return;
 
-        if (!_random.Prob(component.BlockProb)) return;
+        if (!_random.Prob(component.BlockProb))
+            return;
 
         args.Damage *= 0;
         _popup.PopupEntity(Loc.GetString("Заблокировано!"), uid);
         _audio.PlayPvs(component.BlockSound, uid);
     }
+
     private void ToggleReflect(EntityUid uid, BlockMeleeAttackComponent comp, ItemToggledEvent args)
     {
         comp.Enabled = args.Activated;
@@ -47,12 +53,17 @@ public sealed partial class BlockMeleeAttackSystem : EntitySystem
     {
         if (TryComp<BlockMeleeAttackComponent>(component.BlockingItem, out var blocking))
         {
-            if (args.Origin == null) return;
-            if (!blocking.Enabled) return;
-            if (args.Damage.GetTotal() <= 0) return;
-            if (args.Origin == uid || args.Origin == component.BlockingItem) return;
+            if (args.Origin == null)
+                return;
+            if (!blocking.Enabled)
+                return;
+            if (args.Damage.GetTotal() <= 0)
+                return;
+            if (args.Origin == uid || args.Origin == component.BlockingItem)
+                return;
 
-            if (!_random.Prob(blocking.BlockProb)) return;
+            if (!_random.Prob(blocking.BlockProb))
+                return;
 
             args.Damage *= 0;
             _popup.PopupEntity(Loc.GetString("Заблокировано!"), component.BlockingItem.Value);
@@ -69,8 +80,11 @@ public sealed partial class BlockMeleeAttackSystem : EntitySystem
         EnsureComp<BlockMeleeAttackUserComponent>(args.User).BlockingItem = uid;
     }
 
-    private void OnReflectHandUnequipped(EntityUid uid, BlockMeleeAttackComponent component, GotUnequippedHandEvent args)
+    private void OnReflectHandUnequipped(EntityUid uid,
+        BlockMeleeAttackComponent component,
+        GotUnequippedHandEvent args)
     {
-        if (component.User != null) RemComp<BlockMeleeAttackUserComponent>(component.User.Value);
+        if (component.User != null)
+            RemComp<BlockMeleeAttackUserComponent>(component.User.Value);
     }
 }

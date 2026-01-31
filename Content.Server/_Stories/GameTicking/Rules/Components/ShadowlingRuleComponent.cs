@@ -2,12 +2,9 @@ using Robust.Shared.Audio;
 
 namespace Content.Server._Stories.GameTicking.Rules.Components;
 
-[RegisterComponent, Access(typeof(ShadowlingRuleSystem))]
+[RegisterComponent] [Access(typeof(ShadowlingRuleSystem))]
 public sealed partial class ShadowlingRuleComponent : Component
 {
-    [DataField]
-    public ShadowlingWinType WinType = ShadowlingWinType.Lost;
-
     [DataField]
     public LocId AscendanceAnnouncement = "shadowling-ascendance-announcement";
 
@@ -19,20 +16,25 @@ public sealed partial class ShadowlingRuleComponent : Component
 
     [DataField]
     public TimeSpan RoundEndTime = TimeSpan.FromMinutes(4);
+
+    [DataField]
+    public ShadowlingWinType WinType = ShadowlingWinType.Lost;
 }
 
 public enum ShadowlingWinType : byte
 {
     /// <summary>
-    ///     Тенеморфы превознились.
+    /// Тенеморфы превознились.
     /// </summary>
     Won,
+
     /// <summary>
-    ///     Тенеморфы выжили.
+    /// Тенеморфы выжили.
     /// </summary>
     Stalemate,
+
     /// <summary>
-    ///     Все тенеморфы мертвы.
+    /// Все тенеморфы мертвы.
     /// </summary>
-    Lost
+    Lost,
 }

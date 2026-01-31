@@ -10,47 +10,50 @@ namespace Content.Shared._Stories.Spaf;
 
 public interface ISpafAction
 {
-    [DataField("cost")]
-    public float HungerCost { get; set; }
+    [DataField("cost")] float HungerCost { get; set; }
 }
 
 public sealed partial class SpafCreateEntityEvent : InstantActionEvent, ISpafAction
 {
-    [DataField("cost")]
-    public float HungerCost { get; set; } = 20f;
-
     [DataField("proto", required: true, customTypeSerializer: typeof(PrototypeIdSerializer<EntityPrototype>))]
     public string Prototype;
+
+    [DataField("cost")]
+    public float HungerCost { get; set; } = 20f;
 }
 
 public sealed partial class SpafSpillSolutionEvent : InstantActionEvent, ISpafAction
 {
-    [DataField("cost")]
-    public float HungerCost { get; set; } = 10f;
-
     [DataField("solution")]
     public Solution Solution { get; set; } = new();
+
+    [DataField("cost")]
+    public float HungerCost { get; set; } = 10f;
 }
 
 public sealed partial class SpafPolymorphEvent : InstantActionEvent, ISpafAction
 {
-    [DataField("cost")]
-    public float HungerCost { get; set; } = 70f;
-
     [DataField]
     public ProtoId<PolymorphPrototype> ProtoId;
+
+    [DataField("cost")]
+    public float HungerCost { get; set; } = 70f;
 }
 
 public sealed partial class SpafStealthEvent : InstantActionEvent, ISpafAction
 {
-    [DataField("cost")]
-    public float HungerCost { get; set; } = 15f;
-
     [DataField]
     public float Seconds { get; set; } = 5f;
+
+    [DataField("cost")]
+    public float HungerCost { get; set; } = 15f;
 }
 
-[Serializable, NetSerializable]
-public sealed partial class SpafStealthDoAfterEvent : SimpleDoAfterEvent { }
+[Serializable] [NetSerializable]
+public sealed partial class SpafStealthDoAfterEvent : SimpleDoAfterEvent
+{
+}
 
-public sealed partial class FoodPopupEvent : InstantActionEvent { }
+public sealed partial class FoodPopupEvent : InstantActionEvent
+{
+}

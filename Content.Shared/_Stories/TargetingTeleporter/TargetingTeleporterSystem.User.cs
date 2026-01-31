@@ -1,29 +1,4 @@
-using System.Linq;
-using Content.Shared.Actions;
-using Content.Shared.Administration.Logs;
-using Content.Shared.DoAfter;
-using Content.Shared.Ghost;
-using Content.Shared.Interaction;
 using Content.Shared.Movement.Components;
-using Content.Shared.Movement.Pulling.Components;
-using Content.Shared.Movement.Pulling.Systems;
-using Content.Shared.Movement.Systems;
-using Content.Shared.Popups;
-using Content.Shared.Projectiles;
-using Content.Shared.Station;
-using Content.Shared.Teleportation.Components;
-using Content.Shared.Teleportation.Systems;
-using Content.Shared.Verbs;
-using Robust.Shared.Audio;
-using Robust.Shared.Audio.Systems;
-using Robust.Shared.Map;
-using Robust.Shared.Network;
-using Robust.Shared.Physics.Dynamics;
-using Robust.Shared.Physics.Events;
-using Robust.Shared.Player;
-using Robust.Shared.Random;
-using Robust.Shared.Serialization;
-using Robust.Shared.Utility;
 
 namespace Content.Shared._Stories.TargetingTeleporter;
 
@@ -52,7 +27,6 @@ public abstract partial class SharedTargetingTeleporterSystem
                 mover.RelativeRotation = 0f;
                 mover.TargetRelativeRotation = 0f;
             }
-
         }
     }
 
@@ -68,7 +42,8 @@ public abstract partial class SharedTargetingTeleporterSystem
         _actions.RemoveAction(entity.Owner, entity.Comp.ExitActionEntity);
     }
 
-    private void OnSetExit(Entity<TargetingTeleporterUserComponent> entity, ref TargettingTeleporterSetExitPortalEvent args)
+    private void OnSetExit(Entity<TargetingTeleporterUserComponent> entity,
+        ref TargettingTeleporterSetExitPortalEvent args)
     {
         if (_net.IsClient)
             return;
@@ -76,7 +51,8 @@ public abstract partial class SharedTargetingTeleporterSystem
         if (args.Handled)
             return;
 
-        if (entity.Comp.Teleporter is { } teleporter && entity.Comp.Eye is { } eye && TryComp<TargetingTeleporterComponent>(teleporter, out var comp))
+        if (entity.Comp.Teleporter is { } teleporter && entity.Comp.Eye is { } eye &&
+            TryComp<TargetingTeleporterComponent>(teleporter, out var comp))
         {
             SpawnExitPortal((teleporter, comp), Transform(eye).Coordinates);
 
@@ -84,13 +60,10 @@ public abstract partial class SharedTargetingTeleporterSystem
             _mover.ResetCamera(entity);
 
             if (TryComp(entity, out EyeComponent? eyeComp))
-            {
                 _eye.SetDrawFov(entity, true, eyeComp);
-            }
 
             RemComp<TargetingTeleporterUserComponent>(entity);
             RemComp<TargetingTeleporterComponent>(teleporter);
-
         }
 
         args.Handled = true;
@@ -110,14 +83,11 @@ public abstract partial class SharedTargetingTeleporterSystem
             _mover.ResetCamera(entity);
 
             if (TryComp(entity, out EyeComponent? eyeComp))
-            {
                 _eye.SetDrawFov(entity, true, eyeComp);
-            }
 
             RemComp<TargetingTeleporterUserComponent>(entity);
         }
 
         args.Handled = true;
     }
-
 }

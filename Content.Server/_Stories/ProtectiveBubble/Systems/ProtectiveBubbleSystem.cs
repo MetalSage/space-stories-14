@@ -1,23 +1,24 @@
-using Content.Shared.StatusEffect;
-using Content.Shared.Actions;
-using Content.Shared.Damage;
-using Content.Shared.Damage.Systems;
-using Content.Shared._Stories.Force;
 using Content.Server.Weapons.Melee;
+using Content.Shared._Stories.Force;
+using Content.Shared.Actions;
 using Content.Shared.Alert;
+using Content.Shared.Damage.Systems;
+using Content.Shared.StatusEffect;
+
 namespace Content.Server._Stories.ForceUser.ProtectiveBubble.Systems;
 
 public sealed partial class ProtectiveBubbleSystem : EntitySystem
 {
-    [Dependency] private readonly StatusEffectsSystem _statusEffect = default!;
     [Dependency] private readonly SharedActionsSystem _actions = default!;
-    [Dependency] private readonly SharedTransformSystem _xform = default!;
+    [Dependency] private readonly AlertsSystem _alerts = default!;
     [Dependency] private readonly DamageableSystem _damageable = default!;
-    [Dependency] private readonly MeleeWeaponSystem _meleeWeapon = default!;
+    [Dependency] private readonly EntityManager _entityManager = default!;
     [Dependency] private readonly IComponentFactory _factory = default!;
     [Dependency] private readonly ForceSystem _force = default!;
-    [Dependency] private readonly AlertsSystem _alerts = default!;
-    [Dependency] private readonly EntityManager _entityManager = default!;
+    [Dependency] private readonly MeleeWeaponSystem _meleeWeapon = default!;
+    [Dependency] private readonly StatusEffectsSystem _statusEffect = default!;
+    [Dependency] private readonly SharedTransformSystem _xform = default!;
+
     public override void Initialize()
     {
         base.Initialize();
@@ -25,6 +26,7 @@ public sealed partial class ProtectiveBubbleSystem : EntitySystem
         InitializeUser();
         InitializeBubble();
     }
+
     public override void Update(float frameTime)
     {
         base.Update(frameTime);

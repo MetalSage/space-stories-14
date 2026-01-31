@@ -10,18 +10,21 @@ public sealed class JobDistributionErrorRule : StationEventSystem<JobDistributio
 {
     [Dependency] private readonly StationJobsSystem _stationJobs = default!;
 
-    protected override void Started(EntityUid uid, JobDistributionErrorRuleComponent component, GameRuleComponent gameRule, GameRuleStartedEvent args)
+    protected override void Started(EntityUid uid,
+        JobDistributionErrorRuleComponent component,
+        GameRuleComponent gameRule,
+        GameRuleStartedEvent args)
     {
         base.Started(uid, component, gameRule, args);
 
         if (!TryGetRandomStation(out var chosenStation, HasComp<StationJobsComponent>))
             return;
 
-        int jobsAdded = RobustRandom.Next(component.MinJobs, component.MaxJobs);
+        var jobsAdded = RobustRandom.Next(component.MinJobs, component.MaxJobs);
 
-        for (int i = 0; i < jobsAdded; i++)
+        for (var i = 0; i < jobsAdded; i++)
         {
-            int slotsAdded = RobustRandom.Next(component.MinAmount, component.MaxAmount);
+            var slotsAdded = RobustRandom.Next(component.MinAmount, component.MaxAmount);
             var chosenJob = RobustRandom.PickAndTake(component.Jobs);
 
             _stationJobs.TryAdjustJobSlot(chosenStation.Value, chosenJob, slotsAdded, true, true);

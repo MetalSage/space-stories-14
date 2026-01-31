@@ -1,5 +1,3 @@
-using Robust.Shared.Physics;
-
 namespace Content.Server._Stories.BlockMeleeAttack;
 
 [RegisterComponent]

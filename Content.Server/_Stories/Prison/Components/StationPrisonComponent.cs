@@ -1,4 +1,4 @@
-using Content.Server.Maps;
+using Content.Shared.Maps;
 using Robust.Shared.Prototypes;
 
 namespace Content.Server._Stories.Prison;

@@ -1,5 +1,6 @@
 ### Interaction Popup component
 
+
 ## Petting animals
 
 petting-success-generic = Вы гладите { $target } по голове.
@@ -10,7 +11,7 @@ petting-success-carp = Вы гладите { $target } по { POSS-ADJ($target) 
 petting-success-cat = Вы гладите { $target } по { POSS-ADJ($target) } маленькой пушистой голове.
 petting-success-corrupted-corgi = В порыве самонадеянности, вы гладите { $target } по { POSS-ADJ($target) } маленькой проклятой голове.
 petting-success-crab = Вы гладите { $target } по { POSS-ADJ($target) } маленькой гладкой голове.
-petting-success-dehydrated-carp = Вы гладите { $target } по { POSS-ADJ($target) } маленькой сухой голове. Похоже, вы теперь { DAT-OBJ($target) } нравитесь !
+petting-success-dehydrated-carp = Вы гладите { $target } по { POSS-ADJ($target) } маленькой сухой голове. Похоже, вы теперь { DAT-OBJ($target) } нравитесь!
 petting-success-dog = Вы гладите { $target } по { POSS-ADJ($target) } мягкой пушистой голове.
 petting-success-frog = Вы гладите { $target } по { POSS-ADJ($target) } маленькой скользкой голове.
 petting-success-goat = Вы гладите { $target } по { POSS-ADJ($target) } рогатой пушистой голове.

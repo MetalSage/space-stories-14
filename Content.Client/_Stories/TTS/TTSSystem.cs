@@ -15,23 +15,22 @@ namespace Content.Client._Stories.TTS;
 /// </summary>
 public sealed class TTSSystem : EntitySystem
 {
-    [Dependency] private readonly IConfigurationManager _cfg = default!;
-    [Dependency] private readonly IResourceManager _res = default!;
-    [Dependency] private readonly AudioSystem _audio = default!;
-
-    private ISawmill _sawmill = default!;
-    private MemoryContentRoot? _contentRoot;
-    private static readonly ResPath Prefix = ResPath.Root / "TTS";
-
     private const float WhisperFade = 4f;
     public const int VoiceRange = 10;
     public const int WhisperClearRange = 2;
     public const int WhisperMuffledRange = 5;
 
     private const float MinimalVolume = -10f;
-
-    private int _fileIdx = 0;
+    private static readonly ResPath Prefix = ResPath.Root / "TTS";
+    [Dependency] private readonly AudioSystem _audio = default!;
+    [Dependency] private readonly IConfigurationManager _cfg = default!;
     private readonly HashSet<NetEntity> _mutedPlayers = new();
+    [Dependency] private readonly IResourceManager _res = default!;
+    private MemoryContentRoot? _contentRoot;
+
+    private int _fileIdx;
+
+    private ISawmill _sawmill = default!;
 
     public override void Initialize()
     {
@@ -93,30 +92,23 @@ public sealed class TTSSystem : EntitySystem
 
         float volumeCVar;
         if (ev.SourceUid == null)
-        {
             volumeCVar = _cfg.GetCVar(SCCVars.TTSVolumeRadio);
-        }
         else if (TryGetEntity(ev.SourceUid.Value, out var source) && source.HasValue)
-        {
             volumeCVar = _cfg.GetCVar(SCCVars.TTSVolume);
-        }
         else
-        {
             volumeCVar = _cfg.GetCVar(SCCVars.TTSVolume);
-        }
 
         var audioParams = AudioParams.Default
             .WithVolume(AdjustVolume(ev.IsWhisper, volumeCVar))
             .WithMaxDistance(AdjustDistance(ev.IsWhisper));
 
         if (ev.SourceUid != null && TryGetEntity(ev.SourceUid.Value, out var sourceUid))
-        {
-            _audio.PlayEntity(audioResource.AudioStream, sourceUid.Value, new ResolvedPathSpecifier(filePath), audioParams);
-        }
+            _audio.PlayEntity(audioResource.AudioStream,
+                sourceUid.Value,
+                new ResolvedPathSpecifier(filePath),
+                audioParams);
         else
-        {
             _audio.PlayGlobal(audioResource.AudioStream, new ResolvedPathSpecifier(filePath), audioParams);
-        }
 
         _contentRoot.RemoveFile(filePath);
     }
@@ -126,9 +118,7 @@ public sealed class TTSSystem : EntitySystem
         var volume = MinimalVolume + SharedAudioSystem.GainToVolume(volumeCVar);
 
         if (isWhisper)
-        {
             volume -= SharedAudioSystem.GainToVolume(WhisperFade);
-        }
 
         return volume;
     }

@@ -45,7 +45,7 @@
           - ShuttleDestinationCoordinates
   - type: PowerCellDraw
     drawRate: 0
-    useRate: 20
+    useCharge: 20
   - type: ActivatableUIRequiresPowerCell
   - type: StaticPrice
     price: 500

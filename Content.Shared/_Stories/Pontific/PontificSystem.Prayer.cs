@@ -1,5 +1,5 @@
-using Content.Shared.Speech.Muting;
 using Content.Shared._Stories.Force;
+using Content.Shared.Speech.Muting;
 using Content.Shared.Stunnable;
 
 namespace Content.Shared._Stories.Pontific;
@@ -27,8 +27,10 @@ public sealed partial class PontificSystem
     private void OnPrayerShutdown(Entity<PontificPrayerComponent> entity, ref ComponentShutdown args)
     {
         if (HasComp<AppearanceComponent>(entity))
+        {
             if (_appearance.TryGetData(entity, PontificVisuals.State, out var data) && data is PontificState.Prayer)
                 _appearance.SetData(entity, PontificVisuals.State, PontificState.Base);
+        }
 
         EnsureComp<ForceComponent>(entity).PassiveVolume = 0.01f;
 
