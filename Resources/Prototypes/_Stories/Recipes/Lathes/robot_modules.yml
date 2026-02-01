@@ -1,0 +1,21 @@
+﻿#Модуль вооружения боргов Службы Безопасности
+- type: latheRecipe
+  parent: BaseWeaponRecipePractice
+  id: STBorgModuleAdvancedSecurity
+  result: STBorgLaserGunModule
+  materials:
+    Steel: 500
+    Glass: 500
+    Plastic: 250
+    Silver: 100
+    Uranium: 250
+
+#Базовый набор снаряжения боргов СБ
+- type: latheRecipe
+  parent: BaseWeaponRecipePractice
+  id: STBorgModuleSecurity
+  result: STSecurityModuleBase
+  materials:
+    Steel: 700
+    Glass: 500
+    Plastic: 400

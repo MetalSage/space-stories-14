@@ -1,0 +1,20 @@
+- type: entity
+  parent: WeaponLaserGun
+  id: STWeaponBorgLaserGun
+  name: borg laser.
+  description: Laser, comfortable.
+  components:
+  - type: PredictedBatterySelfRecharger
+    autoRecharge: true
+    autoRechargeRate: 10
+
+- type: entity
+  id: STWeaponDisablerBorg
+  parent: WeaponDisabler
+  name: disabler
+  description: A simple Borg disabler.
+  components:
+  - type: PredictedBatterySelfRecharger
+    autoRecharge: true
+    autoRechargeRate: 6
+

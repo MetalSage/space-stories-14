@@ -1,0 +1,9 @@
+- type: entity #Раскидать в папки оригинала прототипа
+  id: STStunbatonBorg
+  parent: Stunbaton
+  name: stunbaton
+  description: A simple Borg baton.
+  components:
+  - type: PredictedBatterySelfRecharger
+    autoRecharge: true
+    autoRechargeRate: 100

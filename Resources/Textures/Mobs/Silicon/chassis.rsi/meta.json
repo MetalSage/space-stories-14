@@ -344,6 +344,30 @@
             "directions": 4
         },
         {
+            "name": "security",
+            "directions": 4
+        },
+        {
+            "name": "security-derelict",
+            "directions": 4
+        },
+        {
+            "name": "security_e",
+            "directions": 4
+        },
+        {
+            "name": "security-derelict_e",
+            "directions": 4
+        },
+        {
+            "name": "security-derelict_l",
+            "directions": 4
+        },
+        {
+            "name": "security_l",
+            "directions": 4
+        },
+        {
             "name": "peace",
             "directions": 4
         },

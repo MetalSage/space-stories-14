@@ -1,0 +1,9 @@
+﻿- type: entity
+  id: STFlashBorg
+  parent: Flash
+  name: flash
+  description: A simple Borg outbreak.
+  components:
+  - type: LimitedCharges
+    maxCharges: 1000
+    charges: 1000
