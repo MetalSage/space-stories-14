@@ -1,13 +1,13 @@
 health-examinable-carbon-none = Видимые повреждения тела отсутствуют.
-health-examinable-carbon-Slash-8 = [color=yellow]У { CONJUGATE-BE($target) } неглубокий порез.[/color]
-health-examinable-carbon-Slash-15 = [color=yellow]У { CONJUGATE-BE($target) } несколько маленьких порезов.[/color]
-health-examinable-carbon-Slash-30 = [color=orange]У { CONJUGATE-BE($target) } несколько значительных порезов.[/color]
+health-examinable-carbon-Slash-8 = [color=yellow]У { GENITIVE($target) } неглубокий порез.[/color]
+health-examinable-carbon-Slash-15 = [color=yellow]У { GENITIVE($target) } несколько маленьких порезов.[/color]
+health-examinable-carbon-Slash-30 = [color=orange]У { GENITIVE($target) } несколько значительных порезов.[/color]
 health-examinable-carbon-Slash-50 = [color=red]{ CAPITALIZE(POSS-ADJ($target)) } тело покрыто глубокими порезами.[/color]
 health-examinable-carbon-Slash-75 = [color=red]{ CAPITALIZE(POSS-ADJ($target)) } тело покрыто глубокими рваными ранами.[/color]
 health-examinable-carbon-Slash-100 = [color=red]{ CAPITALIZE(POSS-ADJ($target)) } тело выглядит окровавленным и израненным.[/color]
 health-examinable-carbon-Slash-200 = [color=crimson]{ CAPITALIZE(POSS-ADJ($target)) } тело полностью разорвано на куски![/color]
-health-examinable-carbon-Blunt-8 = [color=yellow]У { CONJUGATE-BE($target) } лёгкий ушиб.[/color]
-health-examinable-carbon-Blunt-15 = [color=yellow]У { CONJUGATE-BE($target) } несколько ушибов.[/color]
+health-examinable-carbon-Blunt-8 = [color=yellow]У { GENITIVE($target) } лёгкий ушиб.[/color]
+health-examinable-carbon-Blunt-15 = [color=yellow]У { GENITIVE($target) } несколько ушибов.[/color]
 health-examinable-carbon-Blunt-30 = [color=orange]{ CAPITALIZE(SUBJECT($target)) } { GENDER($target) ->
         [male] избит
         [female] избита
@@ -23,18 +23,18 @@ health-examinable-carbon-Blunt-50 = [color=red]{ CAPITALIZE(SUBJECT($target)) } 
 health-examinable-carbon-Blunt-75 = [color=red]{ CAPITALIZE(POSS-ADJ($target)) } тело покрыто серьёзными тупыми травмами.[/color]
 health-examinable-carbon-Blunt-100 = [color=red]{ CAPITALIZE(POSS-ADJ($target)) } тело обезображено и сильно избито.[/color]
 health-examinable-carbon-Blunt-200 = [color=crimson]{ CAPITALIZE(POSS-ADJ($target)) } тело разбито в лепёшку![/color]
-health-examinable-carbon-Piercing-8 = [color=yellow]У { CONJUGATE-BE($target) } небольшая колотая рана.[/color]
-health-examinable-carbon-Piercing-15 = [color=yellow]У { CONJUGATE-BE($target) } несколько колотых ран.[/color]
-health-examinable-carbon-Piercing-30 = [color=orange]У { CONJUGATE-BE($target) } множественные глубокие колотые раны.[/color]
+health-examinable-carbon-Piercing-8 = [color=yellow]У { GENITIVE($target) } небольшая колотая рана.[/color]
+health-examinable-carbon-Piercing-15 = [color=yellow]У { GENITIVE($target) } несколько колотых ран.[/color]
+health-examinable-carbon-Piercing-30 = [color=orange]У { GENITIVE($target) } множественные глубокие колотые раны.[/color]
 health-examinable-carbon-Piercing-50 = [color=red]{ CAPITALIZE(POSS-ADJ($target)) } тело покрыто серьёзными глубокими проколами.[/color]
 health-examinable-carbon-Piercing-75 = [color=red]{ CAPITALIZE(POSS-ADJ($target)) } тело покрыто обширными глубокими разрывами тканей.[/color]
 health-examinable-carbon-Piercing-100 = [color=red]{ CAPITALIZE(POSS-ADJ($target)) } тело полностью покрыто огромными, зияющими дырами.[/color]
 health-examinable-carbon-Piercing-200 = [color=crimson]{ CAPITALIZE(POSS-ADJ($target)) } тело выглядит разорванным![/color]
 health-examinable-carbon-Asphyxiation-30 = [color=lightblue]{ CAPITALIZE(POSS-ADJ($target)) } губы синеют.[/color]
 health-examinable-carbon-Asphyxiation-75 = [color=lightblue]{ CAPITALIZE(POSS-ADJ($target)) } лицо синеет.[/color]
-health-examinable-carbon-Heat-8 = [color=orange]У { CONJUGATE-BE($target) } поверхностный ожог.[/color]
-health-examinable-carbon-Heat-15 = [color=orange]У { CONJUGATE-BE($target) } несколько ожогов первой степени.[/color]
-health-examinable-carbon-Heat-30 = [color=orange]У { CONJUGATE-BE($target) } несколько ожогов второй степени.[/color]
+health-examinable-carbon-Heat-8 = [color=orange]У { GENITIVE($target) } поверхностный ожог.[/color]
+health-examinable-carbon-Heat-15 = [color=orange]У { GENITIVE($target) } несколько ожогов первой степени.[/color]
+health-examinable-carbon-Heat-30 = [color=orange]У { GENITIVE($target) } несколько ожогов второй степени.[/color]
 health-examinable-carbon-Heat-50 = [color=orange]{ CAPITALIZE(SUBJECT($target)) } { GENDER($target) ->
         [male] покрыт
         [female] покрыта
