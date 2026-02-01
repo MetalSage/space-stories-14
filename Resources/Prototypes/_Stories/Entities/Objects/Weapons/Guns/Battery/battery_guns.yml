@@ -4,7 +4,7 @@
   name: borg laser.
   description: Laser, comfortable.
   components:
-  - type: PredictedBatterySelfRecharger
+  - type: BatterySelfRecharger
     autoRecharge: true
     autoRechargeRate: 10
 
@@ -14,7 +14,7 @@
   name: disabler
   description: A simple Borg disabler.
   components:
-  - type: PredictedBatterySelfRecharger
+  - type: BatterySelfRecharger
     autoRecharge: true
     autoRechargeRate: 6
 

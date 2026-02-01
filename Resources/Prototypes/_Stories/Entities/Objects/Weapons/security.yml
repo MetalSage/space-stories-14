@@ -4,6 +4,6 @@
   name: stunbaton
   description: A simple Borg baton.
   components:
-  - type: PredictedBatterySelfRecharger
+  - type: BatterySelfRecharger
     autoRecharge: true
     autoRechargeRate: 100
