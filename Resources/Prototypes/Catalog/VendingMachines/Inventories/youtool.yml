@@ -19,3 +19,20 @@
   contrabandInventory:
     Multitool: 1
     ClothingHandsGlovesColorYellow: 1
+  prices: # Stories-Economy
+    STColdWelding: 30
+    CableApcStack: 20
+    Crowbar: 40
+    Welder: 60
+    Wirecutter: 40
+    Wrench: 40
+    Screwdriver: 40
+    trayScanner: 50
+    NetworkConfigurator: 80
+    GasAnalyzer: 80
+    FlashlightLantern: 25
+    ClothingHandsGlovesColorYellowBudget: 80
+    SprayPainter: 40
+    SprayPainterAmmo: 20
+    Multitool: 80
+    ClothingHandsGlovesColorYellow: 180

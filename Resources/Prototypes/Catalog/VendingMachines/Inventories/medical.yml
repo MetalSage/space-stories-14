@@ -12,6 +12,17 @@
   contrabandInventory:
     PillCanisterRandom: 1
     PowerCellSmall: 2
+  prices: # Stories-Economy
+    HandheldHealthAnalyzer: 60
+    Gauze: 10
+    Brutepack: 25
+    Ointment: 25
+    Bloodpack: 30
+    ChemistryBottleEpinephrine: 40
+    Syringe: 5
+    PillCanisterTricordrazine: 30
+    PillCanisterRandom: 50
+    PowerCellSmall: 25
 
 - type: vendingMachineInventory
   id: NanoMedCivilianWallInventory
@@ -28,6 +39,18 @@
   contrabandInventory:
     PillCanisterRandom: 1
     PowerCellSmall: 2
+  prices: # Stories-Economy
+    HandheldHealthAnalyzer: 60
+    AloeCream: 20
+    Gauze: 10
+    Brutepack: 25
+    Ointment: 25
+    Bloodpack: 30
+    ChemistryBottleEpinephrine: 40
+    Syringe: 5
+    PillCanisterTricordrazine: 30
+    PillCanisterRandom: 50
+    PowerCellSmall: 25
 
 - type: vendingMachineInventory
   id: NanoMedPlusInventory
@@ -54,6 +77,28 @@
     PillCanisterRandom: 3
     PillSpaceDrugs: 3
     FoodApple: 1
+  prices: # Stories-Economy
+    HandheldHealthAnalyzer: 60
+    Gauze: 10
+    Brutepack: 25
+    Ointment: 25
+    Bloodpack: 30
+    Tourniquet: 40
+    ChemistryBottleEpinephrine: 40
+    ChemistryBottleBicaridine: 40
+    Syringe: 5
+    JetInjector: 50
+    BoxBottle: 10
+    PillCanisterTricordrazine: 30
+    PillCanisterIron: 20
+    PillCanisterCopper: 20
+    PillCanisterPotassiumIodide: 25
+    SyringeIpecac: 20
+    ClothingEyesHudMedical: 100
+    ClothingEyesEyepatchHudMedical: 100
+    PillCanisterRandom: 50
+    PillSpaceDrugs: 80
+    FoodApple: 5
 
 - type: vendingMachineInventory
   id: NanoMedCivilianInventory
@@ -76,3 +121,21 @@
     PillCanisterRandom: 1
     PillSpaceDrugs: 3
     FoodApple: 1
+  prices: # Stories-Economy
+    HandheldHealthAnalyzer: 60
+    AloeCream: 20
+    Gauze: 10
+    Brutepack: 25
+    Ointment: 25
+    Bloodpack: 30
+    Tourniquet: 40
+    ChemistryBottleEpinephrine: 40
+    Syringe: 5
+    BoxBottle: 10
+    PillCanisterTricordrazine: 30
+    PillCanisterIron: 20
+    PillCanisterCopper: 20
+    PillCanisterPotassiumIodide: 25
+    PillCanisterRandom: 50
+    PillSpaceDrugs: 80
+    FoodApple: 5

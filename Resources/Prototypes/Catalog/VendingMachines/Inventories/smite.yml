@@ -11,3 +11,12 @@
     DrinkChangelingStingCan: 2
   emaggedInventory:
     DrinkNukieCan: 2
+  prices: # Stories-Economy
+    DrinkLemonLimeCan: 15
+    DrinkLemonLimeCranberryCan: 15
+    DrinkColaCan: 15
+    DrinkSolDryCan: 15
+    DrinkStarkistCan: 15
+    ToyHammer: 50
+    DrinkChangelingStingCan: 80
+    DrinkNukieCan: 100

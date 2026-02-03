@@ -84,6 +84,7 @@
       - NotekeeperCartridge
       - NanoTaskCartridge
       - NewsReaderCartridge
+      - STBankCartridge # Stories-Economy
     cartridgeSlot:
       priority: -1
       name: device-pda-slot-component-slot-name-cartridge
@@ -92,6 +93,7 @@
       whitelist:
         components:
           - Cartridge
+  - type: PdaBankAccountUI # Stories-Economy
   - type: ActivatableUI
     key: enum.PdaUiKey.Key
     singleUser: true

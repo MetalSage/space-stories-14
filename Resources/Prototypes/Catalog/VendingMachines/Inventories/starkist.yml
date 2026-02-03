@@ -14,3 +14,15 @@
     DrinkChangelingStingCan: 2
   emaggedInventory:
     DrinkNukieCan: 2
+  prices: # Stories-Economy
+    DrinkStarkistCan: 15
+    DrinkGrapeCan: 15
+    DrinkRootBeerCan: 15
+    DrinkIcedTeaCan: 15
+    DrinkSolDryCan: 15
+    DrinkLemonLimeCan: 15
+    DrinkLemonLimeCranberryCan: 15
+    DrinkFourteenLokoCan: 20
+    FoodBurgerCarp: 30
+    DrinkChangelingStingCan: 80
+    DrinkNukieCan: 100

@@ -12,3 +12,14 @@
     WeaponProtoKineticAccelerator: 4
   contrabandInventory:
     PlushieCarp: 1
+  prices: # Stories-Economy
+    Crowbar: 40
+    Pickaxe: 60
+    OreBag: 40
+    Flare: 15
+    FlashlightLantern: 25
+    HandheldGPSBasic: 50
+    RadioHandheld: 40
+    WeaponGrapplingGun: 100
+    WeaponProtoKineticAccelerator: 150
+    PlushieCarp: 80

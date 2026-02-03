@@ -3,6 +3,9 @@
   startingInventory:
     OxygenTankFilled: 10
     NitrogenTankFilled: 10
+  prices: # Stories-Economy
+    OxygenTankFilled: 40
+    NitrogenTankFilled: 40
 
 - type: vendingMachineInventory
   id: TankDispenserEngineeringInventory
@@ -10,3 +13,7 @@
     PlasmaTankFilled: 10
     NitrogenTankFilled: 10
     OxygenTankFilled: 10
+  prices: # Stories-Economy
+    PlasmaTankFilled: 60
+    NitrogenTankFilled: 40
+    OxygenTankFilled: 40

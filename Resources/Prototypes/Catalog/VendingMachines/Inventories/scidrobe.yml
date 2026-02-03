@@ -18,3 +18,20 @@
     ClothingShoesBootsWinterSci: 2
   contrabandInventory:
     ToyFigurineResearchDirector: 1  
+  prices: # Stories-Economy
+    ClothingBackpackScience: 40
+    ClothingBackpackSatchelScience: 40
+    ClothingBackpackDuffelScience: 40
+    ClothingUniformJumpsuitScientist: 40
+    ClothingUniformJumpskirtScientist: 40
+    ClothingUniformJumpsuitScientistFormal: 45
+    STClothingUniformJumpsuitScientistSweater: 45
+    ClothingOuterCoatRnd: 40
+    ClothingShoesColorWhite: 25
+    ClothingNeckTieSci: 25
+    ClothingHeadsetScience: 50
+    ClothingMaskGas: 80
+    ClothingOuterWinterSci: 80
+    ClothingNeckScarfStripedPurple: 20
+    ClothingShoesBootsWinterSci: 60
+    ToyFigurineResearchDirector: 150

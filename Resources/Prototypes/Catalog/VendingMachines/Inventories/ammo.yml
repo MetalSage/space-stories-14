@@ -18,3 +18,16 @@
 
     BoxLethalshot: 6
     BoxShotgunPractice: 3
+  prices: # Stories-Economy
+    MagazineBoxCaselessRifle: 150
+    MagazineBoxCaselessRiflePractice: 30
+    MagazineBoxLightRifleBig: 150
+    MagazineBoxLightRiflePractice: 30
+    MagazineBoxMagnum: 160
+    MagazineBoxMagnumPractice: 30
+    MagazineBoxPistol: 120
+    MagazineBoxPistolPractice: 25
+    MagazineBoxRifle: 160
+    MagazineBoxRiflePractice: 30
+    BoxLethalshot: 140
+    BoxShotgunPractice: 25

@@ -10,3 +10,12 @@
   contrabandInventory:
     FoodSnackSwirlLollipop: 2
     FoodSnackSyndi: 3
+  prices: # Stories-Economy
+    FoodSnackRaisins: 10
+    FoodSnackChocolate: 15
+    FoodSnackCnDs: 15
+    FoodSnackPistachios: 15
+    FoodSnackSus: 15
+    FoodSnackSemki: 10
+    FoodSnackSwirlLollipop: 15
+    FoodSnackSyndi: 25
