@@ -6,7 +6,7 @@
   components:
   - type: SolutionContainerManager
     solutions:
-      beaker:
+      drink:
         maxVol: 300
   - type: Sprite
     sprite: _Stories/Objects/Specific/Chemistry/big_jug.rsi
