@@ -62,8 +62,8 @@ public sealed class BankCartridgeSystem : EntitySystem
 
     private void UpdateUi(EntityUid cartridgeUid, EntityUid loaderUid)
     {
-        var accNum = "----";
-        var ownerName = "N/A";
+        var accNum = Loc.GetString("bank-ui-no-account-number");
+        var ownerName = Loc.GetString("bank-ui-no-name");
         var balance = 0;
         var isLinked = false;
         var notifications = false;
@@ -81,13 +81,13 @@ public sealed class BankCartridgeSystem : EntitySystem
                     isLinked = true;
                 }
                 else
-                    ownerName = "Account Error";
+                    ownerName = Loc.GetString("bank-ui-account-error");
             }
             else
-                ownerName = "No Account";
+                ownerName = Loc.GetString("bank-ui-no-account");
         }
         else
-            ownerName = "Insert ID";
+            ownerName = Loc.GetString("bank-ui-insert-id");
 
         if (isLinked && !string.IsNullOrEmpty(accNum))
         {

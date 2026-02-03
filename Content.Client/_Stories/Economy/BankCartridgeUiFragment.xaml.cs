@@ -47,7 +47,7 @@ public sealed partial class BankCartridgeUiFragment : BoxContainer
         Balance.Text = $"{state.Balance} кр.";
         AccountNumber.Text = state.AccountNumber;
 
-        var cardInserted = state.OwnerName != Loc.GetString("bank-ui-insert-id-label");
+        var cardInserted = state.OwnerName != Loc.GetString("bank-ui-insert-id");
 
         LinkButton.Disabled = !cardInserted || state.IsIdLinked;
         UnlinkButton.Disabled = !state.IsIdLinked;

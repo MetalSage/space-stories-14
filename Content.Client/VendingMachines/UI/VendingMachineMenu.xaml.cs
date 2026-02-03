@@ -149,7 +149,7 @@ namespace Content.Client.VendingMachines.UI
             }
             else
             {
-                BalanceLabel.Text = Loc.GetString("vending-machine-ui-balance", ("balance", "---"));
+                BalanceLabel.Text = Loc.GetString("vending-machine-ui-balance", ("balance", Loc.GetString("vending-machine-ui-no-balance")));
             }
         }
     }

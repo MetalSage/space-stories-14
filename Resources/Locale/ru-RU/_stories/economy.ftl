@@ -29,6 +29,7 @@ atm-msg-withdraw-success = Снято { $amount } кр.
 atm-msg-deposit-success = Внесено { $amount } кр.
 
 vending-machine-ui-balance = Баланс: { $balance } кр.
+vending-machine-ui-no-balance = ---
 vending-machine-ui-price = Цена
 vending-machine-ui-amount = Количество
 vending-machine-ui-dispense = Выдать
@@ -50,6 +51,11 @@ bank-ui-link-btn = Привязать ID
 bank-ui-unlink-btn = Отвязать ID
 bank-ui-notifications-enable = Включить уведомления
 bank-ui-notifications-disable = Отключить уведомления
+bank-ui-no-account-number = ----
+bank-ui-no-name = N/A
+bank-ui-account-error = Ошибка
+bank-ui-no-account = Нет счета
+bank-ui-insert-id = Вставьте ID
 
 bank-app-transfer-success = Перевод выполнен успешно.
 bank-app-transfer-fail = Ошибка перевода. Проверьте баланс и номер счета.
