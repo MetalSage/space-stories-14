@@ -1,42 +1,29 @@
-# Security borg
 - type: borgType
   id: STsecurity
-
-  # Description
   dummyPrototype: STBorgChassisSecurity
-
-  # Functional
   extraModuleCount: 4
   moduleWhitelist:
     tags:
-    - BorgModuleGeneric
-    - STBorgModuleSecurity
-
+      - BorgModuleGeneric
+      - STBorgModuleSecurity
   defaultModules:
-  - BorgModuleTool
-  - STBorgLaserGunModule
-  - STSecurityModuleBase
-
+    - BorgModuleTool
+    - STBorgLaserGunModule
+    - STSecurityModuleBase
   radioChannels:
-  - Security
-  - Science
-
-  # Visual
+    - Security
+    - Science
   inventoryTemplateId: borgShort
   spriteBodyState: security
   spriteHasMindState: security_e
   spriteNoMindState: security_l
   spriteToggleLightState: security_l
-
-  # Pet
   petSuccessString: stories-petting-success-security-cyborg
   petFailureString: stories-petting-failure-security-cyborg
-
-  # Add new components to borg
   addComponents:
-  - type: SiliconLawProvider
-    laws: STSecurityLawset
-  - type: FlashImmunity
-  - type: ShowCriminalRecordIcons
-  - type: ShowMindShieldIcons
-  - type: ShowContrabandDetails
+    - type: SiliconLawProvider
+      laws: STSecurityLawset
+    - type: FlashImmunity
+    - type: ShowCriminalRecordIcons
+    - type: ShowMindShieldIcons
+    - type: ShowContrabandDetails

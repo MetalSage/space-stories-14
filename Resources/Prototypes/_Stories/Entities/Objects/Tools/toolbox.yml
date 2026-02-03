@@ -1,0 +1,11 @@
+- type: entity
+  name: ancient toolbox
+  parent: ToolboxBase
+  id: STToolboxAncient
+  description: A toolbox covered with cobwebs and dust.
+  components:
+  - type: Sprite
+    sprite: _Stories/Objects/Tools/Toolboxes/toolbox_ancient.rsi
+    state: icon
+  - type: Item
+    sprite: _Stories/Objects/Tools/Toolboxes/toolbox_ancient.rsi

@@ -1,4 +1,4 @@
-﻿ent-STWeaponDisablerBorg = станнер
+﻿ent-STWeaponDisablerBorg = станнер борга
     .desc = Оружие для самозащиты, которое изнуряет органические цели, пока они не свалятся с ног.
-ent-STWeaponBorgLaserGun = лазерный пистолет боргов
+ent-STWeaponBorgLaserGun = лазерный пистолет борга
     .desc = Оружие, использующее свет, усиленный излучением радиации.

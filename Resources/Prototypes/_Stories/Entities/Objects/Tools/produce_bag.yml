@@ -1,0 +1,18 @@
+- type: entity
+  name: produce bag
+  id: STProduceBag
+  parent: PlantBag
+  description: A bag for botanists to easily carry their huge harvests.
+  components:
+  - type: Sprite
+    sprite: _Stories/Objects/Specific/Hydroponics/Equipment/produce_bag.rsi
+    state: icon
+  - type: Storage
+    grid:
+    - 0,0,7,4
+    maxItemSize: Small
+    quickInsert: true
+    areaInsert: true
+    whitelist:
+      components:
+        - Produce

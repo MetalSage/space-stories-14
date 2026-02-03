@@ -22,7 +22,8 @@
   - type: Physics
     bodyType: KinematicController
   - type: RandomArtifactSprite
-    maxSprite: 36
+#    maxSprite: 37
+    maxSprite: 42 #stories
   - type: RandomSprite
     available:
     - enum.ArtifactsVisualLayers.UnlockingEffect:
