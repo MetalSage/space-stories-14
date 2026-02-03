@@ -1,6 +1,7 @@
 ﻿- type: entity
   id: STBaseBorgModuleSecurity
   parent: BaseBorgModule
+  name: a basic set of Borg Security Service
   abstract: true
   components:
   - type: Tag
