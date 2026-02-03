@@ -580,7 +580,7 @@
   description: A jumpsuit made of strong material, providing robust protection.
   components:
   - type: Sprite
-    sprite: Clothing/Uniforms/Jumpsuit/security.rsi
+    sprite: _Stories/Clothing/Uniforms/Jumpsuit/security.rsi
   - type: Item
     inhandVisuals:
       left:
