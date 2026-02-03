@@ -1,8 +1,8 @@
 - type: entity
-  name: сумка для плодов
+  name: produce bag
   id: STProduceBag
   parent: PlantBag
-  description: Сумка для ботаников, чтобы легко переносить свои огромные урожаи.
+  description: A bag for botanists to easily carry their huge harvests.
   components:
   - type: Sprite
     sprite: _Stories/Objects/Specific/Hydroponics/Equipment/produce_bag.rsi
