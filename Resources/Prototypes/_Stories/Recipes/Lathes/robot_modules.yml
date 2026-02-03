@@ -1,5 +1,4 @@
-﻿#Модуль вооружения боргов Службы Безопасности
-- type: latheRecipe
+﻿- type: latheRecipe
   parent: BaseWeaponRecipePractice
   id: STBorgModuleAdvancedSecurity
   result: STBorgLaserGunModule
@@ -10,7 +9,6 @@
     Silver: 100
     Uranium: 250
 
-#Базовый набор снаряжения боргов СБ
 - type: latheRecipe
   parent: BaseWeaponRecipePractice
   id: STBorgModuleSecurity

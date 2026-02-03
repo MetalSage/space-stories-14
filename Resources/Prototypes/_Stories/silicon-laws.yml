@@ -1,6 +1,4 @@
-﻿#Stories Borg Security
-
-- type: siliconLaw
+﻿- type: siliconLaw
   id: STSec1
   order: 1
   lawString: stories-security-dep-1
