@@ -1,11 +1,11 @@
 meta:
   format: 7
   category: Map
-  engineVersion: 268.0.0
+  engineVersion: 270.1.0
   forkId: ""
   forkVersion: ""
-  time: 12/22/2025 19:03:20
-  entityCount: 17594
+  time: 02/04/2026 20:50:54
+  entityCount: 17597
 maps:
 - 1
 grids:
@@ -14635,7 +14635,7 @@ entities:
       pos: 47.5,5.5
       parent: 2
     - type: Door
-      secondsUntilStateChange: -466114.6
+      secondsUntilStateChange: -466327.53
       state: Opening
     - type: DeviceLinkSource
       lastSignals:
@@ -18501,28 +18501,6 @@ entities:
       parent: 2
     - type: Fixtures
       fixtures: {}
-- proto: BaseChemistryEmptyVial
-  entities:
-  - uid: 896
-    components:
-    - type: Transform
-      pos: 19.960098,21.84556
-      parent: 2
-  - uid: 897
-    components:
-    - type: Transform
-      pos: 20.116348,21.62681
-      parent: 2
-  - uid: 898
-    components:
-    - type: Transform
-      pos: 24.581747,10.684262
-      parent: 2
-  - uid: 899
-    components:
-    - type: Transform
-      pos: 27.824532,35.632626
-      parent: 2
 - proto: BaseComputerAiAccess
   entities:
   - uid: 900
@@ -46546,12 +46524,6 @@ entities:
       rot: 1.5707963267948966 rad
       pos: 5.5,28.5
       parent: 2
-  - uid: 6377
-    components:
-    - type: Transform
-      rot: -1.5707963267948966 rad
-      pos: -5.5,47.5
-      parent: 2
   - uid: 6378
     components:
     - type: Transform
@@ -47527,6 +47499,28 @@ entities:
     components:
     - type: Transform
       pos: 26.385427,37.27761
+      parent: 2
+- proto: ChemistryEmptyVial
+  entities:
+  - uid: 896
+    components:
+    - type: Transform
+      pos: 19.960098,21.84556
+      parent: 2
+  - uid: 897
+    components:
+    - type: Transform
+      pos: 20.116348,21.62681
+      parent: 2
+  - uid: 898
+    components:
+    - type: Transform
+      pos: 24.581747,10.684262
+      parent: 2
+  - uid: 899
+    components:
+    - type: Transform
+      pos: 27.824532,35.632626
       parent: 2
 - proto: ChemistryHotplate
   entities:
@@ -48600,8 +48594,8 @@ entities:
     - type: Transform
       parent: 17499
     - type: Clothing
-      inSlotFlag: EYES
       inSlot: eyes
+      inSlotFlag: EYES
     - type: Physics
       canCollide: False
 - proto: ClothingHandsGlovesBoxingBlue
@@ -48785,8 +48779,8 @@ entities:
     - type: Transform
       parent: 17499
     - type: Clothing
-      inSlotFlag: HEAD
       inSlot: head
+      inSlotFlag: HEAD
     - type: Physics
       canCollide: False
 - proto: ClothingHeadHatSyndieMAA
@@ -49022,8 +49016,8 @@ entities:
     - type: Transform
       parent: 17499
     - type: Clothing
-      inSlotFlag: OUTERCLOTHING
       inSlot: outerClothing
+      inSlotFlag: OUTERCLOTHING
     - type: Physics
       canCollide: False
 - proto: ClothingOuterWinterColorBlack
@@ -57037,14 +57031,6 @@ entities:
     components:
     - type: Transform
       pos: 45.29731,-16.793638
-      parent: 2
-- proto: STEncryptionKeyJuridical
-  entities:
-  - uid: 17594
-    components:
-    - type: Transform
-      rot: 3.141592653589793 rad
-      pos: -35.176014,-33.539196
       parent: 2
 - proto: Envelope
   entities:
@@ -88283,11 +88269,6 @@ entities:
     - type: Transform
       pos: -22.5,1.5
       parent: 2
-  - uid: 12306
-    components:
-    - type: Transform
-      pos: -12.5,2.5
-      parent: 2
   - uid: 12307
     components:
     - type: Transform
@@ -88870,11 +88851,6 @@ entities:
       rot: 3.141592653589793 rad
       pos: -21.5,28.5
       parent: 2
-  - uid: 12410
-    components:
-    - type: Transform
-      pos: 9.5,17.5
-      parent: 2
   - uid: 12411
     components:
     - type: Transform
@@ -89033,6 +89009,11 @@ entities:
     - type: Transform
       rot: 1.5707963267948966 rad
       pos: -43.5,15.5
+      parent: 2
+  - uid: 17595
+    components:
+    - type: Transform
+      pos: 12.5,17.5
       parent: 2
 - proto: PoweredLEDSmallLight
   entities:
@@ -98170,7 +98151,7 @@ entities:
     - type: Transform
       pos: 28.5,-30.5
       parent: 2
-- proto: SpacemenFigureSpawner
+- proto: SpacemenFigurineSpawner90
   entities:
   - uid: 13888
     components:
@@ -98595,13 +98576,6 @@ entities:
     components:
     - type: Transform
       pos: -4.5,6.5
-      parent: 2
-- proto: STSpawnPointJudge
-  entities:
-  - uid: 17590
-    components:
-    - type: Transform
-      pos: -33.5,-35.5
       parent: 2
 - proto: SpawnPointLawyer
   entities:
@@ -99494,6 +99468,50 @@ entities:
       parent: 2
     - type: Fixtures
       fixtures: {}
+- proto: STATM
+  entities:
+  - uid: 6377
+    components:
+    - type: Transform
+      pos: 16.5,-4.5
+      parent: 2
+    - type: Fixtures
+      fixtures: {}
+  - uid: 12306
+    components:
+    - type: Transform
+      pos: -12.5,3.5
+      parent: 2
+    - type: Fixtures
+      fixtures: {}
+  - uid: 12410
+    components:
+    - type: Transform
+      pos: 9.5,18.5
+      parent: 2
+    - type: Fixtures
+      fixtures: {}
+  - uid: 17593
+    components:
+    - type: Transform
+      pos: -5.5,48.5
+      parent: 2
+    - type: Fixtures
+      fixtures: {}
+  - uid: 17596
+    components:
+    - type: Transform
+      pos: -21.5,-36.5
+      parent: 2
+    - type: Fixtures
+      fixtures: {}
+  - uid: 17597
+    components:
+    - type: Transform
+      pos: -45.5,-28.5
+      parent: 2
+    - type: Fixtures
+      fixtures: {}
 - proto: SteelBench
   entities:
   - uid: 14098
@@ -99507,6 +99525,14 @@ entities:
     - type: Transform
       rot: -1.5707963267948966 rad
       pos: 28.5,-12.5
+      parent: 2
+- proto: STEncryptionKeyJuridical
+  entities:
+  - uid: 17594
+    components:
+    - type: Transform
+      rot: 3.141592653589793 rad
+      pos: -35.176014,-33.539196
       parent: 2
 - proto: STFaxMachineCaptains
   entities:
@@ -99703,6 +99729,20 @@ entities:
     components:
     - type: Transform
       pos: -18.5,-42.5
+      parent: 2
+- proto: STSpawnPointJudge
+  entities:
+  - uid: 17590
+    components:
+    - type: Transform
+      pos: -33.5,-35.5
+      parent: 2
+- proto: STTelecomServerFilledJuridical
+  entities:
+  - uid: 12714
+    components:
+    - type: Transform
+      pos: 27.5,-3.5
       parent: 2
 - proto: SubstationBasic
   entities:
@@ -103629,13 +103669,6 @@ entities:
     components:
     - type: Transform
       pos: 29.5,-1.5
-      parent: 2
-- proto: STTelecomServerFilledJuridical
-  entities:
-  - uid: 12714
-    components:
-    - type: Transform
-      pos: 27.5,-3.5
       parent: 2
 - proto: TelecomServerFilledMedical
   entities:
