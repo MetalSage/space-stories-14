@@ -66,6 +66,7 @@
   parent: ClothingOuterStorageBase
   id: STClothingOuterCoatSas
   name: sas coat
+  description: A specialized winter coat designed for.
   components:
   - type: Sprite
     sprite: _Stories/Clothing/OuterClothing/Coats/sas.rsi

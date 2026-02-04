@@ -110,6 +110,7 @@
   parent: ClothingNeckBase
   id: STClothingNeckCloakFlame
   name: flame cloak
+  description: A cloak whose edges are engulfed in eternal ghostly flames. It radiates a subtle warmth even in the coldest vacuum.
   components:
   - type: Sprite
     sprite: _Stories/Clothing/Neck/Cloaks/flame.rsi
@@ -118,6 +119,7 @@
   parent: ClothingNeckBase
   id: STClothingNeckCloakNightStars
   name: night stars cloak
+  description: The fabric of this cloak resembles the bottomless night sky, studded with myriads of distant and cold stars.
   components:
   - type: Sprite
     sprite: _Stories/Clothing/Neck/Cloaks/nightstars.rsi
@@ -126,6 +128,7 @@
   parent: ClothingNeckBase
   id: STClothingNeckCloakShadowGod
   name: shadow god cloak
+  description: A majestic garment woven from primordial darkness. It seems that the very shadow of this cloak lives its own frightening life.
   components:
   - type: Sprite
     sprite: _Stories/Clothing/Neck/Cloaks/shadowgod.rsi
@@ -134,6 +137,7 @@
   parent: ClothingNeckBase
   id: STClothingNeckCloakShadow
   name: shadow mantle
+  description: A thick mantle that seems to absorb the surrounding light, turning the silhouette of its owner into a barely discernible dark spot.
   components:
   - type: Sprite
     sprite: _Stories/Clothing/Neck/Cloaks/shadowmantle.rsi
