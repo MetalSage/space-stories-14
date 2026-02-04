@@ -69,24 +69,29 @@
   - ToySword
   # Stories-End
   # Stories-Partners-Start
-  - StoriesFlippoEngravedLighter
-  - WristwatchSilver
-  - StoriesWristwatchGold
-  - ClothingNeckCloakCollector
-  - ClothingNeckCloakAnomalist
-  - ClothingNeckCloakSnake
-  - ToyFigurineColossus
-  - ToyFigurineAshDragon
-  - ToyFigurineBubblegum
-  - ClothingNeckElectrospheres
-  - ToyFigurineShadowling
-  - ToyFigurineAscendedShadowling
-  - ToyFigurineInquisitor
-  - ToyFigurineGuardianNt
   - ToyFigurineMSP
   - ToyFigurineOSP
   - ToyFigurineESP
   - ToyFigurineHOSP
+  - WristwatchSilver
+  - ClothingNeckCloakCollector
+  - ClothingNeckCloakAnomalist
+  - ClothingNeckElectrospheres
+  - ToyFigurineShadowling
+  - ToyFigurineAscendedShadowling
+  - ToyFigurineGuardianNt
+  - StoriesFlippoEngravedLighter
+  - StoriesWristwatchGold
+  - ClothingNeckCloakSnake
+  - ToyFigurineColossus
+  - ToyFigurineAshDragon
+  - ToyFigurineBubblegum
+  - ToyFigurineInquisitor
+  - STClothingOuterCoatSas
+  - STClothingNeckCloakFlame
+  - STClothingNeckCloakShadowGod
+  - STClothingNeckCloakShadow
+  - STClothingNeckCloakNightStars
   # Stories-Partners-End
 
 - type: loadoutGroup

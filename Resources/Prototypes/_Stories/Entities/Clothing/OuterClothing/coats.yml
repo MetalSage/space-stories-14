@@ -61,3 +61,13 @@
     - id: FlippoEngravedLighter
   - type: ExplosionResistance
     damageCoefficient: 1 #its a coat. it doesnt do shit
+
+- type: entity
+  parent: ClothingOuterStorageBase
+  id: STClothingOuterCoatSas
+  name: sas coat
+  components:
+  - type: Sprite
+    sprite: _Stories/Clothing/OuterClothing/Coats/sas.rsi
+  - type: Clothing
+    sprite: _Stories/Clothing/OuterClothing/Coats/sas.rsi

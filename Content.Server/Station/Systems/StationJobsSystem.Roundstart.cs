@@ -265,7 +265,7 @@ public sealed partial class StationJobsSystem
                                 for (var i = 0; i < playerCandidates.Count; i++)
                                 {
                                     var playerWeight = 1.0f;
-                                    if (_partners.TryGetInfo(playerCandidates[i], out var info))
+                                    if (_sponsorsManager.TryGetInfo(playerCandidates[i], out var info))
                                     {
                                         playerWeight = info.StationRolePriority;
                                     }
