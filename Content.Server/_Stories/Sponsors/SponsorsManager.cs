@@ -1,13 +1,13 @@
 ﻿using System.Diagnostics.CodeAnalysis;
 using System.Threading.Tasks;
-using Content.Shared._Stories.Partners;
+using Content.Shared._Stories.Sponsors;
 using Robust.Shared.Network;
 
-namespace Content.Server._Stories.Partners;
+namespace Content.Server._Stories.Sponsors;
 
-public sealed class PartnersManager
+public sealed class SponsorsManager
 {
-    [Dependency] private readonly IPartnersApiClient _apiClient = default!;
+    [Dependency] private readonly ISponsorsApiClient _apiClient = default!;
 
     private readonly Dictionary<NetUserId, SponsorInfo> _cachedSponsors = new();
     [Dependency] private readonly IServerNetManager _netMgr = default!;
@@ -35,7 +35,7 @@ public sealed class PartnersManager
     private async Task OnConnecting(NetConnectingArgs e)
     {
         var info = await LoadSponsorInfo(e.UserId);
-        if (info?.Tier == null)
+        if (info == null)
         {
             _cachedSponsors.Remove(e.UserId);
             return;

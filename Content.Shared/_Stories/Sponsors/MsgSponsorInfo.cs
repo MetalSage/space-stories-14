@@ -5,7 +5,7 @@ using Robust.Shared.Network;
 using Robust.Shared.Serialization;
 using Robust.Shared.Utility;
 
-namespace Content.Shared._Stories.Partners;
+namespace Content.Shared._Stories.Sponsors;
 
 [Serializable] [NetSerializable]
 public sealed class SponsorInfo
@@ -23,6 +23,9 @@ public sealed class SponsorInfo
 
     [JsonPropertyName("allowedMarkings")] // TODO: Rename API field in separate PR as breaking change!
     public string[] AllowedMarkings { get; set; } = Array.Empty<string>();
+
+    [JsonPropertyName("allowedLoadouts")]
+    public string[] AllowedLoadouts { get; set; } = Array.Empty<string>();
 
     [JsonPropertyName("roleTimeBypass")]
     public bool RoleTimeBypass { get; set; } = false;

@@ -7,7 +7,7 @@ using Content.Server.Chat.Managers;
 using Content.Server.Connection;
 using Content.Server._Stories.DiscordAuth;
 using Content.Server._Stories.JoinQueue;
-using Content.Server._Stories.Partners;
+using Content.Server._Stories.Sponsors;
 using Content.Server._Stories.TTS;
 using Content.Server.Database;
 using Content.Server.Discord.DiscordLink;
@@ -81,7 +81,7 @@ namespace Content.Server.Entry
         [Dependency] private readonly ServerInfoManager _serverInfo = default!;
         [Dependency] private readonly ServerUpdateManager _updateManager = default!;
         [Dependency] private readonly DiscordAuthManager _discordAuthManager = default!; // Corvax-DiscordAuth
-        [Dependency] private readonly PartnersManager _partnersManager = default!; // Corvax-Sponsors
+        [Dependency] private readonly SponsorsManager _sponsorsManager = default!; // Corvax-Sponsors
         [Dependency] private readonly JoinQueueManager _joinQueueManager = default!; // Corvax-Queue
         [Dependency] private readonly TTSManager _TTSManager = default!; // Stories-TTS
 
@@ -174,7 +174,7 @@ namespace Content.Server.Entry
             _multiServerKick.Initialize();
             _cvarCtrl.Initialize();
             _discordAuthManager.Initialize();
-            _partnersManager.Initialize();
+            _sponsorsManager.Initialize();
             _joinQueueManager.Initialize();
             _TTSManager.Initialize();
         }

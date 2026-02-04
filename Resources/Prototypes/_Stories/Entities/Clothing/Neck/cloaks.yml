@@ -105,3 +105,35 @@
   components:
   - type: Sprite
     sprite: _Stories/Clothing/Neck/Cloaks/cloak_collector.rsi
+
+- type: entity
+  parent: ClothingNeckBase
+  id: STClothingNeckCloakFlame
+  name: flame cloak
+  components:
+  - type: Sprite
+    sprite: _Stories/Clothing/Neck/Cloaks/flame.rsi
+
+- type: entity
+  parent: ClothingNeckBase
+  id: STClothingNeckCloakNightStars
+  name: night stars cloak
+  components:
+  - type: Sprite
+    sprite: _Stories/Clothing/Neck/Cloaks/nightstars.rsi
+
+- type: entity
+  parent: ClothingNeckBase
+  id: STClothingNeckCloakShadowGod
+  name: shadow god cloak
+  components:
+  - type: Sprite
+    sprite: _Stories/Clothing/Neck/Cloaks/shadowgod.rsi
+
+- type: entity
+  parent: ClothingNeckBase
+  id: STClothingNeckCloakShadow
+  name: shadow mantle
+  components:
+  - type: Sprite
+    sprite: _Stories/Clothing/Neck/Cloaks/shadowmantle.rsi

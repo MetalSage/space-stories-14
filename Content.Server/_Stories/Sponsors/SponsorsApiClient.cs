@@ -2,20 +2,20 @@ using System.Net.Http;
 using System.Net.Http.Json;
 using System.Text.Json;
 using System.Threading.Tasks;
-using Content.Shared._Stories.Partners;
+using Content.Shared._Stories.Sponsors;
 using Content.Shared._Stories.SCCVars;
 using Robust.Shared.Configuration;
 using Robust.Shared.Network;
 
-namespace Content.Server._Stories.Partners;
+namespace Content.Server._Stories.Sponsors;
 
-public interface IPartnersApiClient
+public interface ISponsorsApiClient
 {
     Task<SponsorInfo?> GetSponsorInfoAsync(NetUserId userId);
     void Initialize();
 }
 
-public sealed class PartnersApiClient : IPartnersApiClient
+public sealed class SponsorsApiClient : ISponsorsApiClient
 {
     [Dependency] private readonly IConfigurationManager _cfg = default!;
 

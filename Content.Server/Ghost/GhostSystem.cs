@@ -1,6 +1,6 @@
 using System.Linq;
 using System.Numerics;
-using Content.Server._Stories.Partners;
+using Content.Server._Stories.Sponsors;
 using Content.Server.Database;
 using Content.Server.Administration.Logs;
 using Content.Server.Chat.Managers;
@@ -47,7 +47,7 @@ namespace Content.Server.Ghost
     {
         [Dependency] private readonly SharedActionsSystem _actions = default!;
         [Dependency] private readonly IAdminLogManager _adminLog = default!;
-        [Dependency] private readonly PartnersManager _partners = default!;
+        [Dependency] private readonly SponsorsManager _sponsorsManager = default!;
         [Dependency] private readonly SharedEyeSystem _eye = default!;
         [Dependency] private readonly FollowerSystem _followerSystem = default!;
         [Dependency] private readonly IGameTiming _gameTiming = default!;
@@ -483,7 +483,7 @@ namespace Content.Server.Ghost
 
             var proto = GameTicker.ObserverPrototypeName; // STORIES - start
 
-            if (mind.Comp.UserId != null && _partners.TryGetInfo(mind.Comp.UserId.Value, out var sponsorInfo))
+            if (mind.Comp.UserId != null && _sponsorsManager.TryGetInfo(mind.Comp.UserId.Value, out var sponsorInfo))
                 proto = sponsorInfo.GhostSkin;
 
             var ghost = SpawnAtPosition(proto, spawnPosition.Value); // STORIES - end
