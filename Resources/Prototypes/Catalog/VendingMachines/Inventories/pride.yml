@@ -43,3 +43,45 @@
   contrabandInventory:
     ClothingNeckScarfStripedLesbianLong: 2
     ClothingUniformJumpskirtColorRainbow: 2
+  prices: # Stories-Economy
+    ClothingNeckLGBTPin: 10
+    ClothingNeckAllyPin: 10
+    ClothingNeckAromanticPin: 10
+    ClothingNeckAsexualPin: 10
+    ClothingNeckAroacePin: 10
+    ClothingNeckBisexualPin: 10
+    ClothingNeckGayPin: 10
+    ClothingNeckIntersexPin: 10
+    ClothingNeckLesbianPin: 10
+    ClothingNeckNonBinaryPin: 10
+    ClothingNeckPansexualPin: 10
+    ClothingNeckPluralPin: 10
+    ClothingNeckOmnisexualPin: 10
+    ClothingNeckGenderqueerPin: 10
+    ClothingNeckGenderfluidPin: 10
+    ClothingNeckTransPin: 10
+    ClothingNeckAutismPin: 10
+    ClothingNeckGoldAutismPin: 25
+    PlushieSharkBlue: 50
+    PlushieSharkPink: 50
+    PlushieSharkGrey: 50
+    ClothingNeckScarfStripedAce: 20
+    ClothingNeckScarfStripedAro: 20
+    ClothingNeckScarfStripedAroace: 20
+    ClothingNeckScarfStripedBiSexual: 20
+    ClothingNeckScarfStripedGay: 20
+    ClothingNeckScarfStripedInter: 20
+    ClothingNeckScarfStripedLesbian: 20
+    ClothingNeckScarfStripedPan: 20
+    ClothingNeckScarfStripedNonBinary: 20
+    ClothingNeckScarfStripedRainbow: 20
+    ClothingNeckScarfStripedTrans: 20
+    ClothingHeadHatXmasCrown: 20
+    BedsheetRainbow: 40
+    ClothingMultipleHeadphones: 30
+    ClothingHeadHatFlowerWreath: 25
+    ClothingUniformColorRainbow: 40
+    ClothingUnderSocksCoder: 15
+    ClothingUnderSocksBee: 15
+    ClothingNeckScarfStripedLesbianLong: 25
+    ClothingUniformJumpskirtColorRainbow: 40

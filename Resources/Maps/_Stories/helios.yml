@@ -1,11 +1,11 @@
 meta:
   format: 7
   category: Map
-  engineVersion: 268.0.0
+  engineVersion: 270.1.0
   forkId: ""
   forkVersion: ""
-  time: 12/22/2025 19:22:58
-  entityCount: 17703
+  time: 02/04/2026 21:01:48
+  entityCount: 17707
 maps:
 - 1
 grids:
@@ -329,7 +329,7 @@ entities:
           version: 7
         5,7:
           ind: 5,7
-          tiles: AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIwAAAAAAAIIAAAAAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAAAAAIIAAAAAAAAjAAAAAAAAggAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAACCAAAAAAAAAgAAAAAAAAIAAAAAAAACAAAAAAAAAgAAAAAAAAIAAAAAAACCAAAAAAAAAQAAAAAAAIIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAjAAAAAAAAggAAAAAAAIIAAAAAAACCAAAAAAAAggAAAAAAAIIAAAAAAACCAAAAAAAAggAAAAAAACMAAAAAAACCAAAAAAAAggAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQwAAAAAAAEMAAAAAAABDAAAAAAAAQwAAAAAAAEMAAAAAAABDAAAAAAAAQwAAAAAAAEMAAAAAAABDAAAAAAAAQwAAAAAAAIIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACUAAAAAAAAlAAAAAAAAJQAAAAAAACUAAAAAAAAlAAAAAAAAJQAAAAAAACUAAAAAAAAlAAAAAAAAIwAAAAAAAEgAAAAAAACCAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAQAAAAAAACIAAAAAAAABAAAAAAAAAQAAAAAAAAEAAAAAAAABAAAAAAAAAQAAAAAAACIAAAAAAABIAAAAAAAAggAAAAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAASQAAAAAAAAEAAAAAAAA5AAAAAAAAAQAAAAAAAEkAAAAAAABJAAAAAAAASQAAAAAAAAEAAAAAAAA5AAAAAAAASAAAAAAAAIIAAAAAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==
+          tiles: AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIwAAAAAAAIIAAAAAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAAAAAIIAAAAAAAAjAAAAAAAAggAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAACCAAAAAAAAAgAAAAAAAAIAAAAAAAACAAAAAAAAAgAAAAAAAAIAAAAAAACCAAAAAAAAAQAAAAAAAIIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAjAAAAAAAAggAAAAAAAIIAAAAAAACCAAAAAAAAggAAAAAAAIIAAAAAAACCAAAAAAAAggAAAAAAACMAAAAAAACCAAAAAAAAggAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQwAAAAAAAEMAAAAAAABDAAAAAAAAQwAAAAAAAEMAAAAAAABDAAAAAAAAQwAAAAAAAEMAAAAAAABDAAAAAAAAQwAAAAAAAIIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACUAAAAAAAAlAAAAAAAAJQAAAAAAACUAAAAAAAAlAAAAAAAAJQAAAAAAACUAAAAAAAAlAAAAAAAAIwAAAAAAAEgAAAAAAACCAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAQAAAAAAACIAAAAAAAABAAAAAAAAAQAAAAAAAAEAAAAAAAABAAAAAAAAAQAAAAAAACIAAAAAAABIAAAAAAAAggAAAAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAASQAAAAAAAAEAAAAAAACCAAAAAAAAAQAAAAAAAEkAAAAAAABJAAAAAAAASQAAAAAAAAEAAAAAAAA5AAAAAAAASAAAAAAAAIIAAAAAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==
           version: 7
         4,7:
           ind: 4,7
@@ -1023,7 +1023,6 @@ entities:
             color: '#FFFFFFFF'
             id: BrickTileSteelBox
           decals:
-            2876: 82,127
             2877: 88,127
         - node:
             color: '#FFFFFFFF'
@@ -45375,8 +45374,8 @@ entities:
     - type: Transform
       parent: 744
     - type: Clothing
-      inSlotFlag: HEAD
       inSlot: head
+      inSlotFlag: HEAD
     - type: Physics
       canCollide: False
     missingComponents:
@@ -45539,8 +45538,8 @@ entities:
     - type: Transform
       parent: 744
     - type: Clothing
-      inSlotFlag: OUTERCLOTHING
       inSlot: outerClothing
+      inSlotFlag: OUTERCLOTHING
     - type: Physics
       canCollide: False
     missingComponents:
@@ -53356,11 +53355,6 @@ entities:
     - type: Transform
       pos: 47.5,174.5
       parent: 2
-  - uid: 7884
-    components:
-    - type: Transform
-      pos: 54.5,171.5
-      parent: 2
   - uid: 7885
     components:
     - type: Transform
@@ -53677,6 +53671,11 @@ entities:
       rot: -1.5707963267948966 rad
       pos: 116.5,193.5
       parent: 2
+  - uid: 17707
+    components:
+    - type: Transform
+      pos: 52.5,171.5
+      parent: 2
 - proto: EmergencyOxygenTank
   entities:
   - uid: 7940
@@ -53763,14 +53762,6 @@ entities:
     components:
     - type: Transform
       pos: 28.311867,177.6174
-      parent: 2
-- proto: STEncryptionKeyJuridical
-  entities:
-  - uid: 17703
-    components:
-    - type: Transform
-      rot: 3.141592653589793 rad
-      pos: 114.77903,166.30031
       parent: 2
 - proto: EncryptionKeySyndie
   entities:
@@ -85567,17 +85558,6 @@ entities:
       currentLabel: Отбытие
     - type: NameModifier
       baseName: голопад
-  - uid: 12151
-    components:
-    - type: MetaData
-      name: голопад (Отбытие)
-    - type: Transform
-      pos: 82.5,127.5
-      parent: 2
-    - type: Label
-      currentLabel: Отбытие
-    - type: NameModifier
-      baseName: голопад
 - proto: HolopadGeneralLounge
   entities:
   - uid: 12152
@@ -89242,6 +89222,28 @@ entities:
     components:
     - type: Transform
       pos: 139.55226,185.45804
+      parent: 2
+- proto: PlushieSpawner50
+  entities:
+  - uid: 14881
+    components:
+    - type: Transform
+      pos: 144.5,154.5
+      parent: 2
+  - uid: 14882
+    components:
+    - type: Transform
+      pos: 144.5,153.5
+      parent: 2
+  - uid: 14883
+    components:
+    - type: Transform
+      pos: 101.5,180.5
+      parent: 2
+  - uid: 14884
+    components:
+    - type: Transform
+      pos: 68.5,139.5
       parent: 2
 - proto: PonderingOrb
   entities:
@@ -98252,13 +98254,6 @@ entities:
     - type: Transform
       pos: 99.5,173.5
       parent: 2
-- proto: SpawnPointBoxer
-  entities:
-  - uid: 14132
-    components:
-    - type: Transform
-      pos: 121.5,171.5
-      parent: 2
 - proto: SpawnPointBrigmedic
   entities:
   - uid: 14133
@@ -98386,13 +98381,6 @@ entities:
     components:
     - type: Transform
       pos: 122.5,185.5
-      parent: 2
-- proto: STSpawnPointJudge
-  entities:
-  - uid: 17700
-    components:
-    - type: Transform
-      pos: 114.5,167.5
       parent: 2
 - proto: SpawnPointLawyer
   entities:
@@ -98678,13 +98666,6 @@ entities:
     - type: Transform
       pos: 72.5,143.5
       parent: 2
-- proto: SpawnPointZookeeper
-  entities:
-  - uid: 14197
-    components:
-    - type: Transform
-      pos: 88.5,151.5
-      parent: 2
 - proto: SpawnSpaceKoi
   entities:
   - uid: 14198
@@ -98911,6 +98892,59 @@ entities:
       parent: 2
     - type: Fixtures
       fixtures: {}
+- proto: STATM
+  entities:
+  - uid: 7884
+    components:
+    - type: Transform
+      pos: 90.5,179.5
+      parent: 2
+    - type: Fixtures
+      fixtures: {}
+  - uid: 12151
+    components:
+    - type: Transform
+      pos: 54.5,172.5
+      parent: 2
+    - type: Fixtures
+      fixtures: {}
+  - uid: 14197
+    components:
+    - type: Transform
+      pos: 41.5,179.5
+      parent: 2
+    - type: Fixtures
+      fixtures: {}
+  - uid: 17583
+    components:
+    - type: Transform
+      rot: -1.5707963267948966 rad
+      pos: 89.5,159.5
+      parent: 2
+    - type: Fixtures
+      fixtures: {}
+  - uid: 17704
+    components:
+    - type: Transform
+      pos: 82.5,127.5
+      parent: 2
+    - type: Fixtures
+      fixtures: {}
+  - uid: 17705
+    components:
+    - type: Transform
+      pos: 62.5,138.5
+      parent: 2
+    - type: Fixtures
+      fixtures: {}
+  - uid: 17706
+    components:
+    - type: Transform
+      rot: -1.5707963267948966 rad
+      pos: 129.5,162.5
+      parent: 2
+    - type: Fixtures
+      fixtures: {}
 - proto: STCardDeckBoxFilledUSSP
   entities:
   - uid: 14232
@@ -98980,6 +99014,14 @@ entities:
     components:
     - type: Transform
       pos: 21.5,187.5
+      parent: 2
+- proto: STEncryptionKeyJuridical
+  entities:
+  - uid: 17703
+    components:
+    - type: Transform
+      rot: 3.141592653589793 rad
+      pos: 114.77903,166.30031
       parent: 2
 - proto: STFaxMachineCaptains
   entities:
@@ -99157,6 +99199,20 @@ entities:
     components:
     - type: Transform
       pos: 118.5,164.5
+      parent: 2
+- proto: STSpawnPointJudge
+  entities:
+  - uid: 17700
+    components:
+    - type: Transform
+      pos: 114.5,167.5
+      parent: 2
+- proto: STTelecomServerFilledJuridical
+  entities:
+  - uid: 17702
+    components:
+    - type: Transform
+      pos: 27.5,174.5
       parent: 2
 - proto: Stunprod
   entities:
@@ -102439,13 +102495,6 @@ entities:
     - type: Transform
       pos: 32.5,173.5
       parent: 2
-- proto: STTelecomServerFilledJuridical
-  entities:
-  - uid: 17702
-    components:
-    - type: Transform
-      pos: 27.5,174.5
-      parent: 2
 - proto: TelecomServerFilledMedical
   entities:
   - uid: 14820
@@ -102854,28 +102903,6 @@ entities:
     - type: Transform
       rot: -6.283185307179586 rad
       pos: 26.429977,152.60928
-      parent: 2
-- proto: ToySpawner
-  entities:
-  - uid: 14881
-    components:
-    - type: Transform
-      pos: 144.5,154.5
-      parent: 2
-  - uid: 14882
-    components:
-    - type: Transform
-      pos: 144.5,153.5
-      parent: 2
-  - uid: 14883
-    components:
-    - type: Transform
-      pos: 101.5,180.5
-      parent: 2
-  - uid: 14884
-    components:
-    - type: Transform
-      pos: 68.5,139.5
       parent: 2
 - proto: ToySword
   entities:
@@ -112165,6 +112192,11 @@ entities:
       parent: 2
 - proto: WallSolid
   entities:
+  - uid: 14132
+    components:
+    - type: Transform
+      pos: 82.5,127.5
+      parent: 2
   - uid: 16584
     components:
     - type: Transform

@@ -9,3 +9,11 @@
   contrabandInventory:
     DrinkTeapot: 2
     DrinkNothing: 2
+  prices: # Stories-Economy
+    DrinkHotCoffee: 15
+    DrinkCafeLatte: 20
+    DrinkTeacup: 15
+    DrinkGreenTea: 15
+    DrinkHotCoco: 20
+    DrinkTeapot: 40
+    DrinkNothing: 50

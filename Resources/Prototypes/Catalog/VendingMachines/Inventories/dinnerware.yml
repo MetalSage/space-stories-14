@@ -31,3 +31,33 @@
     CandyBowl: 1
     BarSpoon: 2
     DrinkShaker: 2
+  prices: # Stories-Economy
+    ButchCleaver: 70
+    KitchenKnife: 30
+    RollingPin: 30
+    Spoon: 5
+    Fork: 5
+    PairedChopsticks: 5
+    FoodBowlBig: 10
+    FoodPlate: 10
+    FoodPlateSmall: 10
+    FoodPlateTin: 10
+    FoodPlateMuffinTin: 15
+    FoodKebabSkewer: 5
+    DrinkGlass: 10
+    Beaker: 15
+    LargeBeaker: 20
+    Pitcher: 25
+    DrinkMug: 15
+    DrinkMugBlack: 15
+    DrinkMugBlue: 15
+    DrinkMugGreen: 15
+    DrinkMugHeart: 20
+    DrinkMugMetal: 20
+    DrinkMugMoebius: 30
+    DrinkMugOne: 25
+    DrinkMugRainbow: 25
+    DrinkMugRed: 15
+    CandyBowl: 30
+    BarSpoon: 10
+    DrinkShaker: 25

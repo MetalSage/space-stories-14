@@ -21,3 +21,23 @@
   contrabandInventory:
     ToyFigurineCaptain: 1
     ToyFigurineHeadOfPersonnel: 1
+  prices: # Stories-Economy
+    ClothingShoesBootsLaceup: 60
+    ClothingShoesBootsJack: 80
+    ClothingHandsGlovesCombat: 80
+    ClothingEyesGlassesSunglasses: 40
+    ClothingUniformJumpsuitCentcomOfficer: 100
+    ClothingUniformJumpsuitCentcomOfficial: 120
+    ClothingUniformJumpsuitCentcomAgent: 150
+    ClothingUniformJumpsuitCentcomFormal: 200
+    ClothingUniformJumpskirtCentcomFormalDress: 200
+    ClothingHeadHatCentcom: 60
+    ClothingHeadHatCentcomcap: 80
+    ClothingMaskGasCentcom: 100
+    ClothingHeadsetCentCom: 100
+    ClothingOuterWinterCentcom: 150
+    ClothingOuterCoatExpensive: 300
+    ClothingNeckScarfStripedCentcom: 50
+    ClothingNeckCloakCentcom: 200
+    ToyFigurineCaptain: 250
+    ToyFigurineHeadOfPersonnel: 200

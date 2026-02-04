@@ -20,3 +20,22 @@
     ToyFigurineCargoTech: 1
     ToyFigurineSalvage: 1
     ToyFigurineQuartermaster: 1
+  prices: # Stories-Economy
+    ClothingBackpackCargo: 40
+    ClothingBackpackSatchelCargo: 40
+    ClothingBackpackDuffelCargo: 40
+    ClothingUniformJumpsuitCargo: 40
+    ClothingUniformJumpskirtCargo: 40
+    ClothingShoesColorBlack: 25
+    ClothingHandsGlovesFingerless: 20
+    ClothingHeadHatCargosoft: 25
+    ClothingHeadBandBrown: 15
+    ClothingHeadsetCargo: 50
+    ClothingOuterWinterCargo: 80
+    ClothingOuterWinterMiner: 100
+    ClothingNeckScarfStripedBrown: 20
+    ClothingShoesBootsWinterCargo: 60
+    MailBag: 30
+    ToyFigurineCargoTech: 100
+    ToyFigurineSalvage: 100
+    ToyFigurineQuartermaster: 150

@@ -27,3 +27,27 @@
     FoodDonutHomer: 12
     FoodBoxDonut: 2
     #box evidence
+  prices: # Stories-Economy
+    SecurityWhistle: 10
+    Handcuffs: 50
+    GrenadeFlashBang: 100
+    TearGasGrenade: 100
+    ClusterBangFull: 250
+    GrenadeStinger: 120
+    Flash: 60
+    Tourniquet: 40
+    FlashlightSeclite: 30
+    ClothingEyesGlassesSunglasses: 35
+    ClothingEyesHudSecurity: 120
+    ClothingEyesEyepatchHudSecurity: 120
+    ClothingBeltSecurityWebbing: 50
+    CombatKnife: 100
+    Zipties: 40
+    RiotShield: 150
+    RiotLaserShield: 180
+    RiotBulletShield: 180
+    RadioHandheldSecurity: 40
+    Bola: 60
+    WeaponMeleeNeedle: 80
+    FoodDonutHomer: 15
+    FoodBoxDonut: 50

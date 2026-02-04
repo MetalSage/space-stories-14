@@ -10,3 +10,11 @@
     HappyHonkCluwne: 1
   emaggedInventory:
     HappyHonkNukie: 1
+  prices: # Stories-Economy
+    HappyHonk: 40
+    HappyHonkMime: 40
+    ToyFigurineClown: 100
+    ToyFigurineMime: 100
+    ToyFigurineNukie: 150
+    HappyHonkCluwne: 120
+    HappyHonkNukie: 150

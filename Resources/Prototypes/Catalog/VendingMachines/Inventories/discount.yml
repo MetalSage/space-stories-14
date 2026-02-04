@@ -12,3 +12,14 @@
   contrabandInventory:
     FoodSnackDanDanNoodles: 3
     FoodBakedBunHoney: 3
+  prices: # Stories-Economy
+    FoodSnackCheesie: 10
+    FoodSnackChips: 10
+    FoodSnackBoritos: 10
+    DrinkEnergyDrinkCan: 15
+    FoodSnackPopcorn: 10
+    FoodSnackEnergy: 10
+    CigPackMixed: 15
+    DiscountDanLighter: 5
+    FoodSnackDanDanNoodles: 15
+    FoodBakedBunHoney: 15

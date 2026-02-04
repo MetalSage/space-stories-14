@@ -24,3 +24,24 @@
     ChemistryBottleUnstableMutagen: 1
     Joint: 1
     ChemistryBottleLeft4Zed: 1
+  prices: # Stories-Economy
+    HydroponicsToolSpade: 40
+    HydroponicsToolMiniHoe: 40
+    HydroponicsToolClippers: 40
+    HydroponicsToolScythe: 40
+    HydroponicsToolHatchet: 50
+    Dropper: 15
+    PlantBag: 30
+    STProduceBag: 30
+    PlantBGoneSpray: 25
+    WeedSpray: 25
+    PestSpray: 25
+    Syringe: 5
+    ChemistryBottleRobustHarvest: 40
+    ChemistryBottleEZNutrient: 30
+    Bucket: 20
+    BoxMouthSwab: 15
+    BoxAgrichem: 50
+    ChemistryBottleUnstableMutagen: 120
+    Joint: 40
+    ChemistryBottleLeft4Zed: 100

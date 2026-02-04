@@ -20,3 +20,22 @@
   contrabandInventory:
     BalloonNT: 2
     LuxuryPen: 1
+  prices: # Stories-Economy
+    PassengerPDA: 30
+    ClearPDA: 30
+    PassengerIDCard: 15
+    ClothingHeadsetGrey: 40
+    RubberStampApproved: 50
+    RubberStampDenied: 50
+    BoxFolderPlasticClipboardEmpty: 10
+    Paper: 2
+    Envelope: 2
+    HandLabeler: 30
+    EncryptionKeyCargo: 60
+    EncryptionKeyEngineering: 60
+    EncryptionKeyMedical: 60
+    EncryptionKeyScience: 60
+    EncryptionKeySecurity: 150
+    EncryptionKeyService: 40
+    BalloonNT: 20
+    LuxuryPen: 150

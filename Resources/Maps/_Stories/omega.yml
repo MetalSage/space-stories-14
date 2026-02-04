@@ -1,11 +1,11 @@
 meta:
   format: 7
   category: Map
-  engineVersion: 268.0.0
+  engineVersion: 270.1.0
   forkId: ""
   forkVersion: ""
-  time: 12/22/2025 19:13:51
-  entityCount: 14454
+  time: 02/04/2026 21:13:34
+  entityCount: 14459
 maps:
 - 1
 grids:
@@ -40812,14 +40812,6 @@ entities:
       parent: 6306
     - type: Physics
       canCollide: False
-- proto: STEncryptionKeyJuridical
-  entities:
-  - uid: 14453
-    components:
-    - type: Transform
-      rot: 3.141592653589793 rad
-      pos: 12.729749,-38.147446
-      parent: 2
 - proto: EncryptionKeyMedicalScience
   entities:
   - uid: 6309
@@ -41039,28 +41031,6 @@ entities:
       parent: 2
     - type: FaxMachine
       name: Мостик
-- proto: FigureSpawner
-  entities:
-  - uid: 6338
-    components:
-    - type: Transform
-      pos: -27.5,-15.5
-      parent: 2
-  - uid: 6339
-    components:
-    - type: Transform
-      pos: -28.5,-15.5
-      parent: 2
-  - uid: 6340
-    components:
-    - type: Transform
-      pos: -28.5,-14.5
-      parent: 2
-  - uid: 6341
-    components:
-    - type: Transform
-      pos: -27.5,-14.5
-      parent: 2
 - proto: filingCabinet
   entities:
   - uid: 6342
@@ -63900,8 +63870,6 @@ entities:
     - type: Transform
       pos: -39.497536,-35.530823
       parent: 2
-- proto: HandheldHealthAnalyzerEmpty
-  entities:
   - uid: 9503
     components:
     - type: Transform
@@ -66280,6 +66248,28 @@ entities:
     - type: Transform
       pos: 19.5,21.5
       parent: 2
+- proto: MechFigurineSpawner50
+  entities:
+  - uid: 6338
+    components:
+    - type: Transform
+      pos: -27.5,-15.5
+      parent: 2
+  - uid: 6339
+    components:
+    - type: Transform
+      pos: -28.5,-15.5
+      parent: 2
+  - uid: 6340
+    components:
+    - type: Transform
+      pos: -28.5,-14.5
+      parent: 2
+  - uid: 6341
+    components:
+    - type: Transform
+      pos: -27.5,-14.5
+      parent: 2
 - proto: MedicalBed
   entities:
   - uid: 9797
@@ -66767,15 +66757,6 @@ entities:
     components:
     - type: Transform
       pos: 4.5,9.5
-      parent: 2
-    - type: Fixtures
-      fixtures: {}
-- proto: PaintingNightHawks
-  entities:
-  - uid: 9868
-    components:
-    - type: Transform
-      pos: 1.5,4.5
       parent: 2
     - type: Fixtures
       fixtures: {}
@@ -67461,6 +67442,13 @@ entities:
     components:
     - type: Transform
       pos: -29.518469,34.407963
+      parent: 2
+- proto: PlushieSpawner50
+  entities:
+  - uid: 12209
+    components:
+    - type: Transform
+      pos: -10.5,11.5
       parent: 2
 - proto: PortableFlasher
   entities:
@@ -76230,17 +76218,17 @@ entities:
       parent: 2
     - type: Fixtures
       fixtures: {}
-  - uid: 11353
-    components:
-    - type: Transform
-      pos: -19.5,3.5
-      parent: 2
-    - type: Fixtures
-      fixtures: {}
   - uid: 11354
     components:
     - type: Transform
       pos: -46.5,1.5
+      parent: 2
+    - type: Fixtures
+      fixtures: {}
+  - uid: 14459
+    components:
+    - type: Transform
+      pos: -19.5,4.5
       parent: 2
     - type: Fixtures
       fixtures: {}
@@ -77773,13 +77761,6 @@ entities:
     - type: Transform
       pos: -21.5,-8.5
       parent: 2
-- proto: STSpawnPointJudge
-  entities:
-  - uid: 11259
-    components:
-    - type: Transform
-      pos: 13.5,-38.5
-      parent: 2
 - proto: SpawnPointLatejoin
   entities:
   - uid: 11599
@@ -78166,6 +78147,66 @@ entities:
       parent: 2
     - type: Fixtures
       fixtures: {}
+- proto: STATM
+  entities:
+  - uid: 9868
+    components:
+    - type: Transform
+      pos: 1.5,4.5
+      parent: 2
+    - type: Fixtures
+      fixtures: {}
+  - uid: 11353
+    components:
+    - type: Transform
+      pos: -19.5,3.5
+      parent: 2
+    - type: Fixtures
+      fixtures: {}
+  - uid: 14452
+    components:
+    - type: Transform
+      pos: -3.5,-30.5
+      parent: 2
+    - type: Fixtures
+      fixtures: {}
+  - uid: 14455
+    components:
+    - type: Transform
+      pos: -15.5,-10.5
+      parent: 2
+    - type: Fixtures
+      fixtures: {}
+  - uid: 14456
+    components:
+    - type: Transform
+      pos: -20.5,21.5
+      parent: 2
+    - type: Fixtures
+      fixtures: {}
+  - uid: 14457
+    components:
+    - type: Transform
+      rot: 1.5707963267948966 rad
+      pos: 10.5,15.5
+      parent: 2
+    - type: Fixtures
+      fixtures: {}
+  - uid: 14458
+    components:
+    - type: Transform
+      pos: 33.5,-0.5
+      parent: 2
+    - type: Fixtures
+      fixtures: {}
+- proto: STEncryptionKeyJuridical
+  entities:
+  - uid: 14453
+    components:
+    - type: Transform
+      rot: 3.141592653589793 rad
+      pos: 12.729749,-38.147446
+      parent: 2
 - proto: STFaxMachineCaptains
   entities:
   - uid: 11661
@@ -78363,6 +78404,20 @@ entities:
     components:
     - type: Transform
       pos: -17.5,15.5
+      parent: 2
+- proto: STSpawnPointJudge
+  entities:
+  - uid: 11259
+    components:
+    - type: Transform
+      pos: 13.5,-38.5
+      parent: 2
+- proto: STTelecomServerFilledJuridical
+  entities:
+  - uid: 14454
+    components:
+    - type: Transform
+      pos: 12.5,-41.5
       parent: 2
 - proto: SubstationBasic
   entities:
@@ -81682,13 +81737,6 @@ entities:
           showEnts: False
           occludes: True
           ents: []
-- proto: STTelecomServerFilledJuridical
-  entities:
-  - uid: 14454
-    components:
-    - type: Transform
-      pos: 12.5,-41.5
-      parent: 2
 - proto: TintedWindow
   entities:
   - uid: 12171
@@ -81906,13 +81954,6 @@ entities:
     components:
     - type: Transform
       pos: -26.669348,34.58727
-      parent: 2
-- proto: ToySpawner
-  entities:
-  - uid: 12209
-    components:
-    - type: Transform
-      pos: -10.5,11.5
       parent: 2
 - proto: TrashBag
   entities:
@@ -91977,7 +92018,7 @@ entities:
       lastSignals:
         DoorStatus: True
     - type: Door
-      secondsUntilStateChange: -3311.5508
+      secondsUntilStateChange: -3425.8323
       state: Opening
     - type: Airlock
       autoClose: False

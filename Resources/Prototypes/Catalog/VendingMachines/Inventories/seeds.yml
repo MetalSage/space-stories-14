@@ -42,3 +42,44 @@
     TobaccoSeeds: 2
     FoodSnackSemki: 2
     FlyAmanitaSeeds: 1
+  prices: # Stories-Economy
+    AloeSeeds: 10
+    AmbrosiaVulgarisSeeds: 15
+    AppleSeeds: 10
+    BananaSeeds: 10
+    BerrySeeds: 10
+    CarrotSeeds: 10
+    CabbageSeeds: 10
+    ChanterelleSeeds: 10
+    CherrySeeds: 10
+    ChiliSeeds: 10
+    CocoaSeeds: 15
+    CornSeeds: 10
+    CottonSeeds: 10
+    EggplantSeeds: 10
+    GalaxythistleSeeds: 15
+    GarlicSeeds: 10
+    GrapeSeeds: 10
+    LemonSeeds: 10
+    LimeSeeds: 10
+    PineappleSeeds: 10
+    LingzhiSeeds: 15
+    OatSeeds: 10
+    OnionSeeds: 10
+    OnionRedSeeds: 10
+    OrangeSeeds: 10
+    PeaSeeds: 10
+    PoppySeeds: 15
+    PotatoSeeds: 10
+    PumpkinSeeds: 10
+    RiceSeeds: 10
+    SoybeanSeeds: 10
+    SugarcaneSeeds: 10
+    TeaPlantSeeds: 10
+    TomatoSeeds: 10
+    TowercapSeeds: 15
+    WheatSeeds: 10
+    WatermelonSeeds: 10
+    TobaccoSeeds: 20
+    FoodSnackSemki: 10
+    FlyAmanitaSeeds: 25

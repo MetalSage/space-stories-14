@@ -22,3 +22,24 @@
     Basketball: 1
     FoodSnackBoritos: 3
     DrinkSpaceMountainWindCan: 3
+  prices: # Stories-Economy
+    DiceBag: 15
+    Paper: 2
+    d6Dice: 5
+    ChessBoard: 30
+    STCardDeckBoxFilled: 25
+    STCardDeckBoxFilledUSSP: 25
+    BackgammonBoard: 30
+    ParchisBoard: 30
+    CheckerBoard: 30
+    ShipBattlemap: 20
+    SnowBattlemap: 20
+    SandBattlemap: 20
+    MoonBattlemap: 20
+    GrassBattlemap: 20
+    PaperCNCSheet: 10
+    MysteryFigureBox: 40
+    BooksBag: 40
+    Basketball: 40
+    FoodSnackBoritos: 15
+    DrinkSpaceMountainWindCan: 15

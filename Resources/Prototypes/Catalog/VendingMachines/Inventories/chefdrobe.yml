@@ -14,3 +14,16 @@
     ClothingBeltChef: 2
   contrabandInventory:
     ToyFigurineChef: 1
+  prices: # Stories-Economy
+    ClothingHeadsetService: 50
+    ClothingOuterApronChef: 25
+    ClothingOuterWinterChef: 80
+    ClothingOuterJacketChef: 40
+    ClothingUniformJumpsuitChef: 40
+    ClothingMaskItalianMoustache: 15
+    ClothingUniformJumpskirtChef: 40
+    ClothingHeadHatChef: 25
+    ClothingShoesColorBlack: 25
+    ClothingShoesChef: 35
+    ClothingBeltChef: 30
+    ToyFigurineChef: 100
