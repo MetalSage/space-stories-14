@@ -32,8 +32,6 @@
     - DoorBumpOpener
     - StunImmune
   - type: Blindable
-  - type: Input # Stories-CrawlingFix
-    context: "common"
 
 - type: entity
   abstract: true
