@@ -118,6 +118,8 @@
         reagents:
         - ReagentId: Laughter
           Quantity: 300
+  - type: MobCollision # Stories-Collision
+
 - type: entity
   name: behonker
   parent: BaseMobBehonker
@@ -132,7 +134,6 @@
       releasedGas: 3
       releaseOnMaxSeverity: true
       spawnRadius: 0
-  - type: MobCollision # Stories-Collision
 
 - type: entity
   name: behonker
