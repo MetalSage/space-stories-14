@@ -29,12 +29,20 @@ public sealed class BankSystem : EntitySystem
     private void OnPlayerSpawn(PlayerSpawnCompleteEvent args)
     {
         var entity = args.Mob;
-        var station = _station.GetOwningStation(entity);
 
-        if (station == null)
+        EntityUid? station = args.Station;
+
+        if (station == EntityUid.Invalid)
+        {
+            station = _station.GetOwningStation(entity);
+        }
+
+        if (station == null || station == EntityUid.Invalid)
             return;
 
-        var bank = EnsureComp<StationBankComponent>(station.Value);
+        var stationUid = station.Value;
+
+        var bank = EnsureComp<StationBankComponent>(stationUid);
         var balance = _random.Next(
             args.JobId != null && _prototypeManager.TryIndex<JobPrototype>(args.JobId, out var jobProto)
                 ? jobProto.MinBankBalance
@@ -66,7 +74,7 @@ public sealed class BankSystem : EntitySystem
             var mindBank = EnsureComp<MindBankAccountComponent>(mindContainer.Mind.Value);
             mindBank.AccountNumber = accountNumber;
             mindBank.Pin = pin;
-            mindBank.BankStation = station.Value;
+            mindBank.BankStation = stationUid;
 
             var invSystem = EntityManager.System<ServerInventorySystem>();
             if (invSystem.TryGetSlotEntity(entity, "id", out var idEntity))

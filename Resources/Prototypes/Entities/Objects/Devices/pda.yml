@@ -156,6 +156,7 @@
     - NotekeeperCartridge
     - NanoTaskCartridge
     - NewsReaderCartridge
+    - STBankCartridge # Stories-Economy
     - WantedListCartridge
 
 - type: entity
@@ -170,6 +171,7 @@
       - NotekeeperCartridge
       - NanoTaskCartridge
       - NewsReaderCartridge
+      - STBankCartridge # Stories-Economy
       - MedTekCartridge
 
 - type: entity
@@ -482,6 +484,7 @@
     - NotekeeperCartridge
     - NanoTaskCartridge
     - NewsReaderCartridge
+    - STBankCartridge # Stories-Economy
     - AstroNavCartridge
 
 - type: entity
@@ -527,6 +530,7 @@
       - NotekeeperCartridge
       - NanoTaskCartridge
       - NewsReaderCartridge
+      - STBankCartridge # Stories-Economy
       - AstroNavCartridge
 
 - type: entity
@@ -876,6 +880,7 @@
     - NotekeeperCartridge
     - NanoTaskCartridge
     - NewsReaderCartridge
+    - STBankCartridge # Stories-Economy
     - WantedListCartridge
     - LogProbeCartridge
 
@@ -946,6 +951,7 @@
       - NotekeeperCartridge
       - NanoTaskCartridge
       - NewsReaderCartridge
+      - STBankCartridge # Stories-Economy
       - MedTekCartridge
       - WantedListCartridge
       - LogProbeCartridge
@@ -972,6 +978,7 @@
       - NotekeeperCartridge
       - NanoTaskCartridge
       - NewsReaderCartridge
+      - STBankCartridge # Stories-Economy
       - LogProbeCartridge
       - WantedListCartridge
       - MedTekCartridge
@@ -1176,6 +1183,7 @@
       - NotekeeperCartridge
       - NanoTaskCartridge
       - NewsReaderCartridge
+      - STBankCartridge # Stories-Economy
       - MedTekCartridge
       - WantedListCartridge
       - LogProbeCartridge
@@ -1349,6 +1357,7 @@
     - NotekeeperCartridge
     - NanoTaskCartridge
     - NewsReaderCartridge
+    - STBankCartridge # Stories-Economy
     - WantedListCartridge
     - LogProbeCartridge
 
@@ -1377,6 +1386,7 @@
     - NotekeeperCartridge
     - NanoTaskCartridge
     - NewsReaderCartridge
+    - STBankCartridge # Stories-Economy
     - WantedListCartridge
     - MedTekCartridge
 
