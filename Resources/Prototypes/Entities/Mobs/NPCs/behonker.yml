@@ -118,7 +118,7 @@
         reagents:
         - ReagentId: Laughter
           Quantity: 300
-  - type: MobCollision # Stories-Collision
+    - type: MobCollision # Stories-Collision
 
 - type: entity
   name: behonker
