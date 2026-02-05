@@ -132,6 +132,7 @@
       releasedGas: 3
       releaseOnMaxSeverity: true
       spawnRadius: 0
+  - type: MobCollision # Stories-Collision
 
 - type: entity
   name: behonker

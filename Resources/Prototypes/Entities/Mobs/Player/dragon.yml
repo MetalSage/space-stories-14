@@ -173,6 +173,7 @@
   - type: Nightvision # Stories - start
   - type: TTS
     voice: ranrak # Stories - end
+  - type: MobCollision # Stories-Collision
 
 - type: entity
   parent: BaseMobDragon

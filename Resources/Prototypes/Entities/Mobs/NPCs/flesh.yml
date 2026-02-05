@@ -267,6 +267,7 @@
   - type: ReplacementAccent
     accent: genericAggressive
   - type: SalvageMobRestrictions
+  - type: MobCollision # Stories-Collision
 
 - type: entity
   parent: BaseMobFleshSalvage

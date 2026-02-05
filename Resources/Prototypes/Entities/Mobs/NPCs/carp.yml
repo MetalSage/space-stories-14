@@ -87,6 +87,7 @@
       interactFailureSound:
         path: /Audio/Effects/bite.ogg
     - type: Nightvision # Stories
+  - type: MobCollision # Stories-Collision
 
 - type: entity
   parent: BaseMobCarp
