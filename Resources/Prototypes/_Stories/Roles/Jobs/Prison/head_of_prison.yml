@@ -29,6 +29,8 @@
   special:
   - !type:AddImplantSpecial
     implants: [ MindShieldImplant ]
+  minBankBalance: 300
+  maxBankBalance: 350
 
 - type: startingGear
   id: PRISONHeadOfPrisonGear

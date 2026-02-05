@@ -16,6 +16,8 @@
   - !type:AddComponentSpecial
     components:
     - type: Prisoner
+  minBankBalance: 0
+  maxBankBalance: 0
 
 - type: startingGear
   id: PRISONPrisoner

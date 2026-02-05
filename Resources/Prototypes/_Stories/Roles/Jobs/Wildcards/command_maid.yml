@@ -20,6 +20,8 @@
   - !type:GiveItemOnHolidaySpecial
     holiday: GarbageDay
     prototype: WeaponRevolverInspector
+  minBankBalance: 50
+  maxBankBalance: 100
 
 - type: startingGear
   id: STCommandMaidGear

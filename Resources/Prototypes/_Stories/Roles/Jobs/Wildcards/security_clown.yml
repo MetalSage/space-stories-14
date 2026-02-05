@@ -37,6 +37,8 @@
       interval: 10
   - !type:AddImplantSpecial
     implants: [ SadTromboneImplant, MindShieldImplant ]
+  minBankBalance: 50
+  maxBankBalance: 100
 
 - type: startingGear
   id: STSecurityClownGear
