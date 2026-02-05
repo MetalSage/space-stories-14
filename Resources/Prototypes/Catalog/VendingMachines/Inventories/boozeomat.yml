@@ -73,7 +73,7 @@
     DrinkMilkCarton: 20
     DrinkCreamCarton: 20
     DrinkGinBottleFull: 40
-    DrinkGildlagerBottleFull: 80
+    DrinkGildlagerBottleFull: 60
     DrinkGrenadineBottleFull: 25
     DrinkJuiceLimeCarton: 20
     DrinkJuiceLemonCarton: 20
@@ -94,7 +94,7 @@
     DrinkVodkaBottleFull: 35
     DrinkWhiskeyBottleFull: 50
     DrinkWineBottleFull: 50
-    DrinkChampagneBottleFull: 120
+    DrinkChampagneBottleFull: 80
     DrinkSakeBottleFull: 45
     DrinkBeerCan: 15
     DrinkWineCan: 15

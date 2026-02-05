@@ -22,3 +22,24 @@
   emaggedInventory:
     ClothingNeckScarfStripedSyndieGreen: 3
     ClothingNeckScarfStripedSyndieRed: 3
+  prices: # Stories-Economy
+    ClothingNeckScarfStripedRed: 20
+    ClothingNeckScarfStripedGreen: 20
+    ClothingNeckScarfStripedBlue: 20
+    ClothingNeckScarfStripedBlack: 20
+    ClothingNeckScarfStripedBrown: 20
+    ClothingNeckScarfStripedLightBlue: 20
+    ClothingNeckScarfStripedOrange: 20
+    ClothingNeckScarfStripedPurple: 20
+    ClothingOuterCoatTrench: 60
+    ClothingOuterWinterCoat: 40
+    ClothingShoesBootsWinter: 20
+    ClothingOuterFlannelRed: 30
+    ClothingOuterFlannelBlue: 30
+    ClothingOuterFlannelGreen: 30
+    ClothingOuterCoatBomber: 40
+    ClothingHeadHatCanadaBeanie: 20
+    ClothingHeadHatSantahat: 25
+    ClothingHeadHatXmasCrown: 15
+    ClothingNeckScarfStripedSyndieGreen: 30
+    ClothingNeckScarfStripedSyndieRed: 30

@@ -31,11 +31,11 @@
     Paper: 2
     Envelope: 2
     HandLabeler: 30
-    EncryptionKeyCargo: 60
-    EncryptionKeyEngineering: 60
-    EncryptionKeyMedical: 60
-    EncryptionKeyScience: 60
-    EncryptionKeySecurity: 150
+    EncryptionKeyCargo: 40
+    EncryptionKeyEngineering: 40
+    EncryptionKeyMedical: 40
+    EncryptionKeyScience: 40
+    EncryptionKeySecurity: 50
     EncryptionKeyService: 40
     BalloonNT: 20
     LuxuryPen: 150

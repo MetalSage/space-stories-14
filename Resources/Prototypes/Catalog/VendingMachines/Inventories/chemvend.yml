@@ -29,27 +29,27 @@
     ChemistryBottleToxin: 1
   prices: # Stories-Economy
     Jug: 10
-    BigJug: 20
-    JugAluminium: 30
-    JugCarbon: 30
-    JugChlorine: 35
-    JugCopper: 30
-    JugEthanol: 40
-    JugFluorine: 40
-    JugHydrogen: 30
-    JugIodine: 35
-    JugIron: 30
-    JugLithium: 40
-    JugMercury: 50
+    BigJug: 30
+    JugAluminium: 20
+    JugCarbon: 20
+    JugChlorine: 25
+    JugCopper: 15
+    JugEthanol: 30
+    JugFluorine: 30
+    JugHydrogen: 20
+    JugIodine: 25
+    JugIron: 15
+    JugLithium: 30
+    JugMercury: 35
     JugNitrogen: 25
     JugOxygen: 25
-    JugPhosphorus: 40
-    JugPotassium: 35
-    JugRadium: 80
-    JugSilicon: 30
-    JugSodium: 35
-    JugSugar: 20
-    JugSulfur: 30
+    JugPhosphorus: 30
+    JugPotassium: 25
+    JugRadium: 45
+    JugSilicon: 20
+    JugSodium: 25
+    JugSugar: 15
+    JugSulfur: 20
     DrinkLithiumFlask: 100
     StrangePill: 60
     ChemistryBottleToxin: 120

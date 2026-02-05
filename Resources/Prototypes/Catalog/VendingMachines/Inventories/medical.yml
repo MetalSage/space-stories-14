@@ -15,12 +15,12 @@
   prices: # Stories-Economy
     HandheldHealthAnalyzer: 60
     Gauze: 10
-    Brutepack: 25
-    Ointment: 25
-    Bloodpack: 30
-    ChemistryBottleEpinephrine: 40
+    Brutepack: 20
+    Ointment: 20
+    Bloodpack: 20
+    ChemistryBottleEpinephrine: 30
     Syringe: 5
-    PillCanisterTricordrazine: 30
+    PillCanisterTricordrazine: 20
     PillCanisterRandom: 50
     PowerCellSmall: 25
 
@@ -41,14 +41,14 @@
     PowerCellSmall: 2
   prices: # Stories-Economy
     HandheldHealthAnalyzer: 60
-    AloeCream: 20
+    AloeCream: 15
     Gauze: 10
-    Brutepack: 25
-    Ointment: 25
-    Bloodpack: 30
-    ChemistryBottleEpinephrine: 40
+    Brutepack: 20
+    Ointment: 20
+    Bloodpack: 20
+    ChemistryBottleEpinephrine: 30
     Syringe: 5
-    PillCanisterTricordrazine: 30
+    PillCanisterTricordrazine: 20
     PillCanisterRandom: 50
     PowerCellSmall: 25
 
@@ -80,20 +80,20 @@
   prices: # Stories-Economy
     HandheldHealthAnalyzer: 60
     Gauze: 10
-    Brutepack: 25
-    Ointment: 25
-    Bloodpack: 30
-    Tourniquet: 40
-    ChemistryBottleEpinephrine: 40
-    ChemistryBottleBicaridine: 40
+    Brutepack: 20
+    Ointment: 20
+    Bloodpack: 20
+    Tourniquet: 30
+    ChemistryBottleEpinephrine: 30
+    ChemistryBottleBicaridine: 30
     Syringe: 5
     JetInjector: 50
     BoxBottle: 10
     PillCanisterTricordrazine: 30
-    PillCanisterIron: 20
-    PillCanisterCopper: 20
-    PillCanisterPotassiumIodide: 25
-    SyringeIpecac: 20
+    PillCanisterIron: 10
+    PillCanisterCopper: 10
+    PillCanisterPotassiumIodide: 15
+    SyringeIpecac: 15 
     ClothingEyesHudMedical: 100
     ClothingEyesEyepatchHudMedical: 100
     PillCanisterRandom: 50
@@ -125,17 +125,17 @@
     HandheldHealthAnalyzer: 60
     AloeCream: 20
     Gauze: 10
-    Brutepack: 25
-    Ointment: 25
-    Bloodpack: 30
-    Tourniquet: 40
-    ChemistryBottleEpinephrine: 40
+    Brutepack: 20
+    Ointment: 20
+    Bloodpack: 20
+    Tourniquet: 30
+    ChemistryBottleEpinephrine: 30
     Syringe: 5
     BoxBottle: 10
     PillCanisterTricordrazine: 30
-    PillCanisterIron: 20
-    PillCanisterCopper: 20
-    PillCanisterPotassiumIodide: 25
+    PillCanisterIron: 10
+    PillCanisterCopper: 10
+    PillCanisterPotassiumIodide: 15
     PillCanisterRandom: 50
     PillSpaceDrugs: 80
     FoodApple: 5

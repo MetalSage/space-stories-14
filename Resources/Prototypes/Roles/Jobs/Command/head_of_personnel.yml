@@ -57,6 +57,10 @@
   - !type:AddComponentSpecial
     components:
       - type: CommandStaff
+  # Stories-Economy-Start
+  minBankBalance: 300
+  maxBankBalance: 350
+  # Stories-Economy-End
 
 - type: startingGear
   id: HoPGear

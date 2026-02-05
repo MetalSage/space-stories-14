@@ -29,25 +29,25 @@
     #box evidence
   prices: # Stories-Economy
     SecurityWhistle: 10
-    Handcuffs: 50
-    GrenadeFlashBang: 100
-    TearGasGrenade: 100
-    ClusterBangFull: 250
-    GrenadeStinger: 120
-    Flash: 60
-    Tourniquet: 40
-    FlashlightSeclite: 30
+    Handcuffs: 20
+    GrenadeFlashBang: 50
+    TearGasGrenade: 50
+    ClusterBangFull: 125
+    GrenadeStinger: 60
+    Flash: 30
+    Tourniquet: 30
+    FlashlightSeclite: 40
     ClothingEyesGlassesSunglasses: 35
     ClothingEyesHudSecurity: 120
     ClothingEyesEyepatchHudSecurity: 120
-    ClothingBeltSecurityWebbing: 50
-    CombatKnife: 100
-    Zipties: 40
-    RiotShield: 150
-    RiotLaserShield: 180
-    RiotBulletShield: 180
+    ClothingBeltSecurityWebbing: 60
+    CombatKnife: 80
+    Zipties: 10
+    RiotShield: 100
+    RiotLaserShield: 120
+    RiotBulletShield: 120
     RadioHandheldSecurity: 40
-    Bola: 60
+    Bola: 40
     WeaponMeleeNeedle: 80
     FoodDonutHomer: 15
     FoodBoxDonut: 50
