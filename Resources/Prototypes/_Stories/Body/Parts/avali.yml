@@ -1,12 +1,18 @@
 #Limbs that spawn when gibbed should get descriptions.
+
 - type: entity
   id: PartAvali
   parent: [BaseItem, BasePart]
   name: "avali body part"
   abstract: true
   components:
-  - type: Damageable
-    damageContainer: Biological
+  - type: Extractable
+    juiceSolution:
+      reagents:
+      - ReagentId: Fat
+        Quantity: 3
+      - ReagentId: Blood
+        Quantity: 10
 
 - type: entity
   id: TorsoAvali
@@ -14,12 +20,15 @@
   parent: [PartAvali, BaseTorso]
   components:
   - type: Sprite
-    netsync: false
     sprite: _Stories/Mobs/Avali/parts.rsi
     state: "torso_m"
-  - type: Icon
-    sprite: _Stories/Mobs/Avali/parts.rsi
-    state: "torso_m"
+  - type: Extractable
+    juiceSolution:
+      reagents:
+      - ReagentId: Fat
+        Quantity: 10
+      - ReagentId: Blood
+        Quantity: 20
 
 - type: entity
   id: HeadAvali
@@ -27,14 +36,15 @@
   parent: [PartAvali, BaseHead]
   components:
   - type: Sprite
-    netsync: false
     sprite: _Stories/Mobs/Avali/parts.rsi
     state: "head_m"
-  - type: Icon
-    sprite: _Stories/Mobs/Avali/parts.rsi
-    state: "head_m"
-  - type: InputMover
-  - type: GhostOnMove
+  - type: Extractable
+    juiceSolution:
+      reagents:
+      - ReagentId: Fat
+        Quantity: 5
+      - ReagentId: Blood
+        Quantity: 10
 
 - type: entity
   id: LeftArmAvali
@@ -42,10 +52,6 @@
   parent: [PartAvali, BaseLeftArm]
   components:
   - type: Sprite
-    netsync: false
-    sprite: _Stories/Mobs/Avali/parts.rsi
-    state: "l_arm"
-  - type: Icon
     sprite: _Stories/Mobs/Avali/parts.rsi
     state: "l_arm"
 
@@ -55,10 +61,6 @@
   parent: [PartAvali, BaseRightArm]
   components:
   - type: Sprite
-    netsync: false
-    sprite: _Stories/Mobs/Avali/parts.rsi
-    state: "r_arm"
-  - type: Icon
     sprite: _Stories/Mobs/Avali/parts.rsi
     state: "r_arm"
 
@@ -68,10 +70,6 @@
   parent: [PartAvali, BaseLeftHand]
   components:
   - type: Sprite
-    netsync: false
-    sprite: _Stories/Mobs/Avali/parts.rsi
-    state: "l_hand"
-  - type: Icon
     sprite: _Stories/Mobs/Avali/parts.rsi
     state: "l_hand"
 
@@ -81,10 +79,6 @@
   parent: [PartAvali, BaseRightHand]
   components:
   - type: Sprite
-    netsync: false
-    sprite: _Stories/Mobs/Avali/parts.rsi
-    state: "r_hand"
-  - type: Icon
     sprite: _Stories/Mobs/Avali/parts.rsi
     state: "r_hand"
 
@@ -94,10 +88,6 @@
   parent: [PartAvali, BaseLeftLeg]
   components:
   - type: Sprite
-    netsync: false
-    sprite: _Stories/Mobs/Avali/parts.rsi
-    state: "l_leg"
-  - type: Icon
     sprite: _Stories/Mobs/Avali/parts.rsi
     state: "l_leg"
 
@@ -107,10 +97,6 @@
   parent: [PartAvali, BaseRightLeg]
   components:
   - type: Sprite
-    netsync: false
-    sprite: _Stories/Mobs/Avali/parts.rsi
-    state: "r_leg"
-  - type: Icon
     sprite: _Stories/Mobs/Avali/parts.rsi
     state: "r_leg"
 
@@ -120,10 +106,6 @@
   parent: [PartAvali, BaseLeftFoot]
   components:
   - type: Sprite
-    netsync: false
-    sprite: _Stories/Mobs/Avali/parts.rsi
-    state: "l_foot"
-  - type: Icon
     sprite: _Stories/Mobs/Avali/parts.rsi
     state: "l_foot"
 
@@ -133,9 +115,5 @@
   parent: [PartAvali, BaseRightFoot]
   components:
   - type: Sprite
-    netsync: false
-    sprite: _Stories/Mobs/Avali/parts.rsi
-    state: "r_foot"
-  - type: Icon
     sprite: _Stories/Mobs/Avali/parts.rsi
     state: "r_foot"

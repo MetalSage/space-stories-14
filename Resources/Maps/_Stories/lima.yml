@@ -21862,7 +21862,7 @@ entities:
     - type: Transform
       pos: -13.51333,-41.320316
       parent: 2
-- proto: BigJug
+- proto: STBigJug
   entities:
   - uid: 1505
     components:

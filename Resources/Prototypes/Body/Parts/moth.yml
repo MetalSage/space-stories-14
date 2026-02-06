@@ -30,7 +30,6 @@
       - ReagentId: Blood
         Quantity: 20
 
-
 - type: entity
   id: HeadMoth
   name: "moth head"
