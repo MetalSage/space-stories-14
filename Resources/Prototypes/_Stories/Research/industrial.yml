@@ -11,3 +11,16 @@
   - ReflectorBoxMachineCircuitboard
   - ReflectorCornerMachineCircuitboard
   - ReflectorCornerTsideMachineCircuitboard
+
+- type: technology
+  id: STVision
+  name: stories-research-technology-Vision
+  icon:
+    sprite: Clothing/Eyes/Glasses/thermal.rsi
+    state: icon
+  discipline: Industrial
+  tier: 2
+  cost: 15000
+  recipeUnlocks:
+  - STThermal
+  - STNightVisionDevice
