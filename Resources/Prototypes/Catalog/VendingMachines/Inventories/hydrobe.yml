@@ -14,4 +14,16 @@
     ClothingOuterWinterHydro: 2
   contrabandInventory:
     ToyFigurineBotanist: 1
-
+  prices: # Stories-Economy
+    ClothingBackpackHydroponics: 40
+    ClothingBackpackSatchelHydroponics: 40
+    ClothingBackpackDuffelHydroponics: 40
+    ClothingOuterApronBotanist: 25
+    ClothingUniformOveralls: 35
+    ClothingUniformJumpsuitHydroponics: 40
+    ClothingUniformJumpskirtHydroponics: 40
+    ClothingNeckScarfStripedGreen: 20
+    ClothingHeadBandBotany: 15
+    ClothingHeadsetService: 50
+    ClothingOuterWinterHydro: 80
+    ToyFigurineBotanist: 100

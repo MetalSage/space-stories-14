@@ -1,11 +1,11 @@
 meta:
   format: 7
   category: Map
-  engineVersion: 268.0.0
+  engineVersion: 270.1.0
   forkId: ""
   forkVersion: ""
-  time: 12/22/2025 19:12:53
-  entityCount: 28789
+  time: 02/04/2026 21:11:27
+  entityCount: 28796
 maps:
 - 1
 grids:
@@ -12647,7 +12647,7 @@ entities:
       pos: 11.5,29.5
       parent: 2
     - type: Door
-      secondsUntilStateChange: -16926.416
+      secondsUntilStateChange: -17105.307
       state: Opening
     - type: DeviceLinkSource
       lastSignals:
@@ -14718,7 +14718,7 @@ entities:
       pos: 46.5,29.5
       parent: 2
     - type: Door
-      secondsUntilStateChange: -5013.644
+      secondsUntilStateChange: -5192.5347
       state: Opening
     - type: DeviceLinkSource
       lastSignals:
@@ -81976,14 +81976,6 @@ entities:
       parent: 12962
     - type: Physics
       canCollide: False
-- proto: STEncryptionKeyJuridical
-  entities:
-  - uid: 28754
-    components:
-    - type: Transform
-      rot: 3.141592653589793 rad
-      pos: 12.105267,20.61864
-      parent: 2
 - proto: EncryptionKeyMedical
   entities:
   - uid: 12965
@@ -82425,18 +82417,6 @@ entities:
       parent: 2
     - type: FaxMachine
       name: Страж Клинка
-- proto: FigureSpawner
-  entities:
-  - uid: 13037
-    components:
-    - type: Transform
-      pos: -31.5,-17.5
-      parent: 2
-  - uid: 13038
-    components:
-    - type: Transform
-      pos: -32.5,-16.5
-      parent: 2
 - proto: filingCabinet
   entities:
   - uid: 13040
@@ -84828,7 +84808,7 @@ entities:
       pos: 31.5,-33.5
       parent: 2
     - type: Door
-      secondsUntilStateChange: -48348.492
+      secondsUntilStateChange: -48527.383
       state: Closing
   - uid: 13230
     components:
@@ -129164,8 +129144,6 @@ entities:
     - type: Transform
       pos: -16.529926,-33.314503
       parent: 2
-- proto: HandheldHealthAnalyzerUnpowered
-  entities:
   - uid: 19345
     components:
     - type: Transform
@@ -132732,6 +132710,18 @@ entities:
     - type: Transform
       pos: -38.566277,6.576433
       parent: 2
+- proto: MechFigurineSpawner50
+  entities:
+  - uid: 13037
+    components:
+    - type: Transform
+      pos: -31.5,-17.5
+      parent: 2
+  - uid: 13038
+    components:
+    - type: Transform
+      pos: -32.5,-16.5
+      parent: 2
 - proto: MedicalBed
   entities:
   - uid: 19815
@@ -135859,6 +135849,18 @@ entities:
     components:
     - type: Transform
       pos: -28.406824,-54.505074
+      parent: 2
+- proto: PlushieSpawner50
+  entities:
+  - uid: 24162
+    components:
+    - type: Transform
+      pos: 36.5,-2.5
+      parent: 2
+  - uid: 24164
+    components:
+    - type: Transform
+      pos: -35.5,-10.5
       parent: 2
 - proto: PlushieXeno
   entities:
@@ -153078,7 +153080,7 @@ entities:
     - type: Transform
       pos: -17.5,-56.5
       parent: 2
-- proto: SpacemenFigureSpawner
+- proto: SpacemenFigurineSpawner90
   entities:
   - uid: 22807
     components:
@@ -153551,13 +153553,6 @@ entities:
     components:
     - type: Transform
       pos: -24.5,27.5
-      parent: 2
-- proto: STSpawnPointJudge
-  entities:
-  - uid: 28784
-    components:
-    - type: Transform
-      pos: 12.5,21.5
       parent: 2
 - proto: SpawnPointLatejoin
   entities:
@@ -154338,6 +154333,64 @@ entities:
       parent: 2
     - type: Fixtures
       fixtures: {}
+- proto: STATM
+  entities:
+  - uid: 28753
+    components:
+    - type: Transform
+      pos: 7.5,-6.5
+      parent: 2
+    - type: Fixtures
+      fixtures: {}
+  - uid: 28790
+    components:
+    - type: Transform
+      pos: -41.5,1.5
+      parent: 2
+    - type: Fixtures
+      fixtures: {}
+  - uid: 28791
+    components:
+    - type: Transform
+      pos: -14.5,26.5
+      parent: 2
+    - type: Fixtures
+      fixtures: {}
+  - uid: 28792
+    components:
+    - type: Transform
+      pos: 19.5,20.5
+      parent: 2
+    - type: Fixtures
+      fixtures: {}
+  - uid: 28793
+    components:
+    - type: Transform
+      pos: 46.5,5.5
+      parent: 2
+    - type: Fixtures
+      fixtures: {}
+  - uid: 28794
+    components:
+    - type: Transform
+      pos: 22.5,5.5
+      parent: 2
+    - type: Fixtures
+      fixtures: {}
+  - uid: 28795
+    components:
+    - type: Transform
+      pos: -8.5,-60.5
+      parent: 2
+    - type: Fixtures
+      fixtures: {}
+  - uid: 28796
+    components:
+    - type: Transform
+      pos: -15.5,-17.5
+      parent: 2
+    - type: Fixtures
+      fixtures: {}
 - proto: SteelBench
   entities:
   - uid: 23015
@@ -154375,6 +154428,14 @@ entities:
     - type: Transform
       rot: -1.5707963267948966 rad
       pos: 2.5,-50.5
+      parent: 2
+- proto: STEncryptionKeyJuridical
+  entities:
+  - uid: 28754
+    components:
+    - type: Transform
+      rot: 3.141592653589793 rad
+      pos: 12.105267,20.61864
       parent: 2
 - proto: STFaxMachineCaptains
   entities:
@@ -154940,6 +155001,20 @@ entities:
     components:
     - type: Transform
       pos: 26.5,32.5
+      parent: 2
+- proto: STSpawnPointJudge
+  entities:
+  - uid: 28784
+    components:
+    - type: Transform
+      pos: 12.5,21.5
+      parent: 2
+- proto: STTelecomServerFilledJuridical
+  entities:
+  - uid: 28755
+    components:
+    - type: Transform
+      pos: 102.5,-13.5
       parent: 2
 - proto: SubstationBasic
   entities:
@@ -161743,13 +161818,6 @@ entities:
     - type: Transform
       pos: 100.5,9.5
       parent: 2
-- proto: STTelecomServerFilledJuridical
-  entities:
-  - uid: 28755
-    components:
-    - type: Transform
-      pos: 102.5,-13.5
-      parent: 2
 - proto: TeslaCoil
   entities:
   - uid: 24077
@@ -162345,18 +162413,6 @@ entities:
     components:
     - type: Transform
       pos: 6.5,2.5
-      parent: 2
-- proto: ToySpawner
-  entities:
-  - uid: 24162
-    components:
-    - type: Transform
-      pos: 36.5,-2.5
-      parent: 2
-  - uid: 24164
-    components:
-    - type: Transform
-      pos: -35.5,-10.5
       parent: 2
 - proto: TrashBag
   entities:
@@ -186713,7 +186769,7 @@ entities:
       pos: -28.5,-5.5
       parent: 2
     - type: Door
-      secondsUntilStateChange: -54060.402
+      secondsUntilStateChange: -54239.293
       state: Opening
   - uid: 28732
     components:

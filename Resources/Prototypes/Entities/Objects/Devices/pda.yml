@@ -84,6 +84,7 @@
       - NotekeeperCartridge
       - NanoTaskCartridge
       - NewsReaderCartridge
+      - STBankCartridge # Stories-Economy
     cartridgeSlot:
       priority: -1
       name: device-pda-slot-component-slot-name-cartridge
@@ -92,6 +93,7 @@
       whitelist:
         components:
           - Cartridge
+  - type: PdaBankAccountUI # Stories-Economy
   - type: ActivatableUI
     key: enum.PdaUiKey.Key
     singleUser: true
@@ -154,6 +156,7 @@
     - NotekeeperCartridge
     - NanoTaskCartridge
     - NewsReaderCartridge
+    - STBankCartridge # Stories-Economy
     - WantedListCartridge
 
 - type: entity
@@ -168,6 +171,7 @@
       - NotekeeperCartridge
       - NanoTaskCartridge
       - NewsReaderCartridge
+      - STBankCartridge # Stories-Economy
       - MedTekCartridge
 
 - type: entity
@@ -480,6 +484,7 @@
     - NotekeeperCartridge
     - NanoTaskCartridge
     - NewsReaderCartridge
+    - STBankCartridge # Stories-Economy
     - AstroNavCartridge
 
 - type: entity
@@ -525,6 +530,7 @@
       - NotekeeperCartridge
       - NanoTaskCartridge
       - NewsReaderCartridge
+      - STBankCartridge # Stories-Economy
       - AstroNavCartridge
 
 - type: entity
@@ -874,6 +880,7 @@
     - NotekeeperCartridge
     - NanoTaskCartridge
     - NewsReaderCartridge
+    - STBankCartridge # Stories-Economy
     - WantedListCartridge
     - LogProbeCartridge
 
@@ -944,6 +951,7 @@
       - NotekeeperCartridge
       - NanoTaskCartridge
       - NewsReaderCartridge
+      - STBankCartridge # Stories-Economy
       - MedTekCartridge
       - WantedListCartridge
       - LogProbeCartridge
@@ -970,6 +978,7 @@
       - NotekeeperCartridge
       - NanoTaskCartridge
       - NewsReaderCartridge
+      - STBankCartridge # Stories-Economy
       - LogProbeCartridge
       - WantedListCartridge
       - MedTekCartridge
@@ -1174,6 +1183,7 @@
       - NotekeeperCartridge
       - NanoTaskCartridge
       - NewsReaderCartridge
+      - STBankCartridge # Stories-Economy
       - MedTekCartridge
       - WantedListCartridge
       - LogProbeCartridge
@@ -1347,6 +1357,7 @@
     - NotekeeperCartridge
     - NanoTaskCartridge
     - NewsReaderCartridge
+    - STBankCartridge # Stories-Economy
     - WantedListCartridge
     - LogProbeCartridge
 
@@ -1375,6 +1386,7 @@
     - NotekeeperCartridge
     - NanoTaskCartridge
     - NewsReaderCartridge
+    - STBankCartridge # Stories-Economy
     - WantedListCartridge
     - MedTekCartridge
 

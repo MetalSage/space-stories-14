@@ -1,5 +1,5 @@
 using System.Linq;
-using Content.Client._Stories.Partners;
+using Content.Client._Stories.Sponsors;
 using Content.Shared.Humanoid;
 using Content.Shared.Humanoid.Markings;
 using Content.Shared.Humanoid.Prototypes;
@@ -20,7 +20,7 @@ public sealed partial class MarkingPicker : Control
 {
     [Dependency] private readonly MarkingManager _markingManager = default!;
     [Dependency] private readonly IPrototypeManager _prototypeManager = default!;
-    [Dependency] private readonly PartnersManager _partnersManager = default!; // Corvax-Sponsors
+    [Dependency] private readonly SponsorsManager _sponsorsManager = default!; // Corvax-Sponsors
     [Dependency] private readonly IEntityManager _entityManager = default!;
 
     private readonly SpriteSystem _sprite;
@@ -236,7 +236,7 @@ public sealed partial class MarkingPicker : Control
             if (marking.SponsorOnly)
             {
                 item.Disabled = true;
-                if (_partnersManager.TryGetInfo(out var sponsor))
+                if (_sponsorsManager.TryGetInfo(out var sponsor))
                 {
                     item.Disabled = !sponsor.AllowedMarkings.Contains(marking.ID);
                 }

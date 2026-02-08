@@ -19,3 +19,21 @@
   contrabandInventory:
     ToyFigurineEngineer: 1
     ToyFigurineChiefEngineer: 1
+  prices: # Stories-Economy
+    ClothingBackpackDuffelEngineering: 40
+    ClothingBackpackSatchelEngineering: 40
+    ClothingBackpackEngineering: 40
+    ClothingUniformJumpsuitEngineering: 40
+    ClothingUniformJumpskirtEngineering: 40
+    ClothingUniformJumpsuitEngineeringHazard: 45
+    ClothingShoesColorBlack: 25
+    ClothingOuterVestHazard: 40
+    ClothingShoesBootsWork: 50
+    ClothingHeadHatHardhatYellow: 40
+    ClothingHeadHatHardhatOrange: 40
+    ClothingHeadsetEngineering: 50
+    ClothingOuterWinterEngi: 80
+    ClothingNeckScarfStripedOrange: 20
+    ClothingShoesBootsWinterEngi: 60
+    ToyFigurineEngineer: 100
+    ToyFigurineChiefEngineer: 150

@@ -153,6 +153,14 @@ namespace Content.Shared.Roles
         /// </summary>
         [DataField]
         public List<ProtoId<GuideEntryPrototype>>? Guides;
+
+        // Stories-Economy-Start
+        [DataField]
+        public int MinBankBalance { get; private set; } = 150;
+
+        [DataField]
+        public int MaxBankBalance { get; private set; } = 200;
+        // Stories-Economy-End
     }
 
     /// <summary>

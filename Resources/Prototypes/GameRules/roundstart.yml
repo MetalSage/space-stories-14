@@ -231,7 +231,7 @@
     definitions:
     - prefRoles: [ Traitor ]
       max: 8
-      playerRatio: 15
+      playerRatio: 10
       blacklist:
         components:
         - AntagImmune
@@ -524,10 +524,10 @@
   parent: BaseGameRule
   components:
   - type: BasicStationEventScheduler
-    minimumTimeUntilFirstEvent: 1800 # 30 mins
+    minimumTimeUntilFirstEvent: 1200 # 20 mins
     minMaxEventTiming:
-      min: 1200 # 20 mins
-      max: 3600 # 60 mins
+      min: 600 # 10 mins
+      max: 1800 # 30 mins
     scheduledGameRules: !type:NestedSelector
       tableId: UnknownShuttlesFriendlyTable
 
@@ -539,15 +539,12 @@
   - type: RoundstartStationVariationRule
     rules:
     - id: BasicPoweredLightVariationPass
-      prob: 0.50
     - id: BasicTrashVariationPass
-      prob: 0.50
     - id: SolidWallRustingVariationPass
-      prob: 0.50
     - id: ReinforcedWallRustingVariationPass
     - id: CutWireVariationPass
     - id: BasicPuddleMessVariationPass
-      prob: 0.50
+      prob: 0.99
       orGroup: puddleMess
     - id: BloodbathPuddleMessVariationPass
       prob: 0.01

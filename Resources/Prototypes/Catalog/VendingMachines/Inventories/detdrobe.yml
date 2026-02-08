@@ -18,3 +18,20 @@
     ClothingUniformJumpsuitDetectiveSpecialGrey: 2 # Stories-Drip
   contrabandInventory:
     ToyFigurineDetective: 1
+  prices: # Stories-Economy
+    ClothingUniformJumpsuitDetective: 50
+    ClothingUniformJumpskirtDetective: 50
+    ClothingShoesColorBrown: 35
+    ClothingOuterCoatDetectiveLoadoutGrey: 70
+    ClothingOuterCoatDetectiveLoadout: 70
+    ClothingHeadHatFedoraBrown: 40
+    ClothingUniformJumpsuitDetectiveGrey: 50
+    ClothingUniformJumpskirtDetectiveGrey: 50
+    ClothingOuterVestDetective: 60
+    ClothingNeckTieDet: 25
+    ClothingHeadHatFedoraGrey: 40
+    ClothingHandsGlovesColorBlack: 25
+    ClothingHandsGlovesLatex: 20
+    ClothingHeadsetSecurity: 60
+    ClothingUniformJumpsuitDetectiveSpecialGrey: 60
+    ToyFigurineDetective: 100

@@ -1,0 +1,16 @@
+- type: entity
+  parent: BasePDACartridge
+  id: STBankCartridge
+  name: bank cartridge
+  description: A program for managing your bank account.
+  components:
+  - type: Sprite
+    state: cart-nav
+  - type: Cartridge
+    programName: bank-program-name
+    icon:
+      sprite: _Stories/Interface/Misc/program_icons.rsi
+      state: nt_bank
+  - type: UIFragment
+    ui: !type:BankCartridgeUi
+  - type: BankCartridge

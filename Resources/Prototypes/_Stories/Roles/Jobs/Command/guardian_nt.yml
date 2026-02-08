@@ -30,6 +30,8 @@
     - type: Force
     - type: ForceUser
       preset: Guardian
+  minBankBalance: 250
+  maxBankBalance: 300
 
 - type: startingGear
   id: GuardianNtGear

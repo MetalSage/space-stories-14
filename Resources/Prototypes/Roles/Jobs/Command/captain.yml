@@ -33,6 +33,10 @@
   - !type:AddComponentSpecial
     components:
       - type: CommandStaff
+  # Stories-Economy-Start
+  minBankBalance: 400
+  maxBankBalance: 450
+  # Stories-Economy-End
 
 - type: startingGear
   id: CaptainGear

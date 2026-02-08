@@ -1,11 +1,11 @@
 meta:
   format: 7
   category: Map
-  engineVersion: 268.0.0
+  engineVersion: 270.1.0
   forkId: ""
   forkVersion: ""
-  time: 12/22/2025 19:14:36
-  entityCount: 11826
+  time: 02/04/2026 21:48:30
+  entityCount: 11831
 maps:
 - 727
 grids:
@@ -27614,8 +27614,8 @@ entities:
     - type: Transform
       parent: 11818
     - type: Clothing
-      inSlotFlag: EYES
       inSlot: eyes
+      inSlotFlag: EYES
     - type: Physics
       canCollide: False
 - proto: ClothingEyesHudDiagnostic
@@ -27772,8 +27772,8 @@ entities:
     - type: Transform
       parent: 11818
     - type: Clothing
-      inSlotFlag: HEAD
       inSlot: head
+      inSlotFlag: HEAD
     - type: Physics
       canCollide: False
 - proto: ClothingHeadHatUshanka
@@ -27997,8 +27997,8 @@ entities:
     - type: Transform
       parent: 11818
     - type: Clothing
-      inSlotFlag: OUTERCLOTHING
       inSlot: outerClothing
+      inSlotFlag: OUTERCLOTHING
     - type: Physics
       canCollide: False
 - proto: ClothingOuterSanta
@@ -33048,14 +33048,6 @@ entities:
     components:
     - type: Transform
       pos: 48.936653,-5.4514256
-      parent: 31
-- proto: STEncryptionKeyJuridical
-  entities:
-  - uid: 2142
-    components:
-    - type: Transform
-      rot: 3.141592653589793 rad
-      pos: -9.044214,-9.64193
       parent: 31
 - proto: EncryptionKeyMedical
   entities:
@@ -46019,7 +46011,14 @@ entities:
     - type: Transform
       pos: 12.447606,-4.278471
       parent: 31
-- proto: GlowstickBase
+- proto: GlowstickBlue
+  entities:
+  - uid: 10987
+    components:
+    - type: Transform
+      pos: 52.729786,-1.2094907
+      parent: 31
+- proto: GlowstickGreen
   entities:
   - uid: 8848
     components:
@@ -46038,13 +46037,6 @@ entities:
     - type: Transform
       rot: 1.5707963267948966 rad
       pos: 27.826128,15.662895
-      parent: 31
-- proto: GlowstickBlue
-  entities:
-  - uid: 10987
-    components:
-    - type: Transform
-      pos: 52.729786,-1.2094907
       parent: 31
 - proto: GravityGenerator
   entities:
@@ -48932,7 +48924,7 @@ entities:
       rot: -1.5707963267948966 rad
       pos: 21.750116,-4.5862775
       parent: 31
-- proto: HandheldHealthAnalyzerUnpowered
+- proto: HandheldHealthAnalyzer
   entities:
   - uid: 10030
     components:
@@ -49496,7 +49488,7 @@ entities:
       pos: 12.5,-41.5
       parent: 31
     - type: Door
-      secondsUntilStateChange: -12044.481
+      secondsUntilStateChange: -12177.008
       state: Opening
   - uid: 9697
     components:
@@ -52111,6 +52103,23 @@ entities:
     - type: Transform
       pos: -35.523197,-23.564377
       parent: 31
+- proto: PlushieSpawner50
+  entities:
+  - uid: 148
+    components:
+    - type: Transform
+      pos: -30.5,-2.5
+      parent: 31
+  - uid: 521
+    components:
+    - type: Transform
+      pos: -31.5,16.5
+      parent: 31
+  - uid: 7790
+    components:
+    - type: Transform
+      pos: -30.5,13.5
+      parent: 31
 - proto: PonderingOrb
   entities:
   - uid: 7097
@@ -52607,11 +52616,6 @@ entities:
     - type: ContainerContainer
       containers:
         stash: !type:ContainerSlot {}
-  - uid: 1068
-    components:
-    - type: Transform
-      pos: 5.5,16.5
-      parent: 31
   - uid: 2712
     components:
     - type: Transform
@@ -59755,7 +59759,7 @@ entities:
     - type: Transform
       pos: -6.962518,29.44575
       parent: 31
-- proto: SpacemenFigureSpawner
+- proto: SpacemenFigurineSpawner90
   entities:
   - uid: 10822
     components:
@@ -60046,13 +60050,6 @@ entities:
     components:
     - type: Transform
       pos: -18.5,-11.5
-      parent: 31
-- proto: STSpawnPointJudge
-  entities:
-  - uid: 11836
-    components:
-    - type: Transform
-      pos: -8.5,-10.5
       parent: 31
 - proto: SpawnPointLatejoin
   entities:
@@ -60403,6 +60400,60 @@ entities:
       parent: 4668
     - type: Physics
       canCollide: False
+- proto: STATM
+  entities:
+  - uid: 1068
+    components:
+    - type: Transform
+      rot: -1.5707963267948966 rad
+      pos: 6.5,16.5
+      parent: 31
+    - type: Fixtures
+      fixtures: {}
+  - uid: 4910
+    components:
+    - type: Transform
+      rot: 1.5707963267948966 rad
+      pos: -8.5,-2.5
+      parent: 31
+    - type: Fixtures
+      fixtures: {}
+  - uid: 7261
+    components:
+    - type: Transform
+      pos: -11.5,-13.5
+      parent: 31
+    - type: Fixtures
+      fixtures: {}
+  - uid: 7262
+    components:
+    - type: Transform
+      pos: -21.5,-3.5
+      parent: 31
+    - type: Fixtures
+      fixtures: {}
+  - uid: 9712
+    components:
+    - type: Transform
+      pos: -31.5,6.5
+      parent: 31
+    - type: Fixtures
+      fixtures: {}
+  - uid: 10539
+    components:
+    - type: Transform
+      pos: -39.5,-8.5
+      parent: 31
+    - type: Fixtures
+      fixtures: {}
+  - uid: 11267
+    components:
+    - type: Transform
+      rot: 3.141592653589793 rad
+      pos: 15.5,2.5
+      parent: 31
+    - type: Fixtures
+      fixtures: {}
 - proto: STCommandMaidIDCard
   entities:
   - uid: 11598
@@ -60410,6 +60461,14 @@ entities:
     - type: Transform
       rot: -1.5707963267948966 rad
       pos: 10.860228,23.404898
+      parent: 31
+- proto: STEncryptionKeyJuridical
+  entities:
+  - uid: 2142
+    components:
+    - type: Transform
+      rot: 3.141592653589793 rad
+      pos: -9.044214,-9.64193
       parent: 31
 - proto: STFaxMachineCaptains
   entities:
@@ -60581,6 +60640,20 @@ entities:
     components:
     - type: Transform
       pos: 4.5,-33.5
+      parent: 31
+- proto: STSpawnPointJudge
+  entities:
+  - uid: 11836
+    components:
+    - type: Transform
+      pos: -8.5,-10.5
+      parent: 31
+- proto: STTelecomServerFilledJuridical
+  entities:
+  - uid: 934
+    components:
+    - type: Transform
+      pos: 56.5,-9.5
       parent: 31
 - proto: SubstationBasic
   entities:
@@ -63126,13 +63199,6 @@ entities:
     - type: Transform
       pos: 49.546635,-5.3898478
       parent: 31
-- proto: STTelecomServerFilledJuridical
-  entities:
-  - uid: 934
-    components:
-    - type: Transform
-      pos: 56.5,-9.5
-      parent: 31
 - proto: TeslaGroundingRod
   entities:
   - uid: 3405
@@ -63283,23 +63349,6 @@ entities:
     components:
     - type: Transform
       pos: 12.492016,27.532398
-      parent: 31
-- proto: ToySpawner
-  entities:
-  - uid: 148
-    components:
-    - type: Transform
-      pos: -30.5,-2.5
-      parent: 31
-  - uid: 521
-    components:
-    - type: Transform
-      pos: -31.5,16.5
-      parent: 31
-  - uid: 7790
-    components:
-    - type: Transform
-      pos: -30.5,13.5
       parent: 31
 - proto: TrainingBomb
   entities:

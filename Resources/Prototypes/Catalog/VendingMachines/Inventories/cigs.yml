@@ -18,3 +18,20 @@
     GroundTobacco: 3
     CigarGold: 2
     Igniter: 1
+  prices: # Stories-Economy
+    CigPackGreen: 20
+    CigPackRed: 20
+    CigPackBlue: 20
+    CigPackBlack: 25
+    CigPackMixed: 25
+    CigarCase: 80
+    SmokingPipeFilledTobacco: 45
+    Vape: 60
+    Matchbox: 5
+    PackPaperRollingFilters: 10
+    CheapLighter: 5
+    Lighter: 15
+    FlippoLighter: 35
+    GroundTobacco: 20
+    CigarGold: 100
+    Igniter: 30

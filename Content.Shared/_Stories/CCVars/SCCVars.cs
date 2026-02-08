@@ -123,4 +123,15 @@ public sealed class SCCVars
     /// </summary>
     public static readonly CVarDef<bool> AutoStanding =
         CVarDef.Create("control.auto_standing", false, CVar.CLIENT | CVar.ARCHIVE | CVar.REPLICATED);
+
+
+    /*
+     * Economy
+     */
+
+    public static readonly CVarDef<float> EconomySalaryFrequency =
+        CVarDef.Create("economy.salary_frequency", 15f, CVar.SERVERONLY | CVar.ARCHIVE);
+
+    public static readonly CVarDef<float> EconomySalaryPercentage =
+        CVarDef.Create("economy.salary_percentage", 0.5f, CVar.SERVERONLY | CVar.ARCHIVE);
 }

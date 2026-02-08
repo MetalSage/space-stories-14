@@ -2,7 +2,7 @@
   id: ChemVendInventory
   startingInventory:
     Jug: 4
-    BigJug: 4 # Stories
+    STBigJug: 4 # Stories
     JugAluminium: 2
     JugCarbon: 4
     JugChlorine: 1
@@ -27,12 +27,38 @@
     DrinkLithiumFlask: 1
     StrangePill: 3
     ChemistryBottleToxin: 1
+  prices: # Stories-Economy
+    Jug: 10
+    STBigJug: 30
+    JugAluminium: 20
+    JugCarbon: 20
+    JugChlorine: 25
+    JugCopper: 15
+    JugEthanol: 30
+    JugFluorine: 30
+    JugHydrogen: 20
+    JugIodine: 25
+    JugIron: 15
+    JugLithium: 30
+    JugMercury: 35
+    JugNitrogen: 25
+    JugOxygen: 25
+    JugPhosphorus: 30
+    JugPotassium: 25
+    JugRadium: 45
+    JugSilicon: 20
+    JugSodium: 25
+    JugSugar: 15
+    JugSulfur: 20
+    DrinkLithiumFlask: 100
+    StrangePill: 60
+    ChemistryBottleToxin: 120
 
 - type: vendingMachineInventory
   id: ChemVendInventorySyndicate
   startingInventory:
     Jug: 4
-    BigJugSyndie: 4 # Stories
+    STBigJugSyndie: 4 # Stories
     JugAluminium: 2
     JugCarbon: 4
     JugChlorine: 1
@@ -62,4 +88,3 @@
     ChemistryBottleMuteToxin: 3
     ChemistryBottleLead: 2
     ChemistryBottleToxin: 1
-

@@ -15,7 +15,7 @@ using Content.Shared.Players;
 using Content.Shared.Players.PlayTimeTracking;
 using Content.Shared.Preferences;
 using Content.Shared.Roles;
-using Content.Server._Stories.Partners;
+using Content.Server._Stories.Sponsors;
 using Robust.Server.GameObjects;
 using Robust.Server.Player;
 using Robust.Shared.Configuration;
@@ -34,7 +34,7 @@ public sealed class PlayTimeTrackingSystem : EntitySystem
     [Dependency] private readonly IAdminManager _adminManager = default!;
     [Dependency] private readonly IAfkManager _afk = default!;
     [Dependency] private readonly IConfigurationManager _cfg = default!;
-    [Dependency] private readonly PartnersManager _sponsors = default!;
+    [Dependency] private readonly SponsorsManager _sponsorsManager = default!;
     [Dependency] private readonly IPlayerManager _playerManager = default!;
     [Dependency] private readonly IServerPreferencesManager _preferencesManager = default!;
     [Dependency] private readonly IPrototypeManager _prototypes = default!;
@@ -203,7 +203,7 @@ public sealed class PlayTimeTrackingSystem : EntitySystem
     /// <returns>Returns true if all requirements were met or there were no requirements.</returns>
     public bool IsAllowed(ICommonSession player, List<ProtoId<JobPrototype>>? jobs)
     {
-        _sponsors.TryGetInfo(player.UserId, out var sponsorData);
+        _sponsorsManager.TryGetInfo(player.UserId, out var sponsorData);
 
         if (!_cfg.GetCVar(CCVars.GameRoleTimers) ||
             sponsorData?.RoleTimeBypass == true)
@@ -299,7 +299,7 @@ public sealed class PlayTimeTrackingSystem : EntitySystem
 
     public HashSet<ProtoId<JobPrototype>> GetDisallowedJobs(ICommonSession player)
     {
-        _sponsors.TryGetInfo(player.UserId, out var sponsorData);
+        _sponsorsManager.TryGetInfo(player.UserId, out var sponsorData);
 
         var roles = new HashSet<ProtoId<JobPrototype>>();
         if (!_cfg.GetCVar(CCVars.GameRoleTimers) ||
@@ -323,7 +323,7 @@ public sealed class PlayTimeTrackingSystem : EntitySystem
 
     public void RemoveDisallowedJobs(NetUserId userId, List<ProtoId<JobPrototype>> jobs)
     {
-        _sponsors.TryGetInfo(userId, out var sponsorData);
+        _sponsorsManager.TryGetInfo(userId, out var sponsorData);
 
         if (!_cfg.GetCVar(CCVars.GameRoleTimers) ||
             sponsorData?.RoleTimeBypass == true)

@@ -1,5 +1,5 @@
 using System.Linq;
-using Content.Server._Stories.Partners;
+using Content.Server._Stories.Sponsors;
 using Content.Server.Administration.Managers;
 using Content.Server.Antag.Components;
 using Content.Server.Chat.Managers;
@@ -56,7 +56,7 @@ public sealed partial class AntagSelectionSystem : GameRuleSystem<AntagSelection
     [Dependency] private readonly EntityWhitelistSystem _whitelist = default!;
     [Dependency] private readonly ISharedAdminLogManager _adminLogger = default!;
     [Dependency] private readonly ArrivalsSystem _arrivals = default!;
-    [Dependency] private readonly PartnersManager _partners = default!; // Stories-Sponsors
+    [Dependency] private readonly SponsorsManager _sponsorsManager = default!; // Stories-Sponsors
 
     // arbitrary random number to give late joining some mild interest.
     public const float LateJoinRandomChance = 0.5f;
@@ -303,7 +303,7 @@ public sealed partial class AntagSelectionSystem : GameRuleSystem<AntagSelection
             var session = (ICommonSession?)null;
             if (picking)
             {
-                if (!playerPool.TryPickAndTake(RobustRandom, out session, s => _partners.TryGetInfo(s.UserId, out var info) ? info.AntagRolePriority : 1f) && noSpawner) // Stories-Sponsors
+                if (!playerPool.TryPickAndTake(RobustRandom, out session, s => _sponsorsManager.TryGetInfo(s.UserId, out var info) ? info.AntagRolePriority : 1f) && noSpawner) // Stories-Sponsors
                 {
                     Log.Warning($"Couldn't pick a player for {ToPrettyString(ent):rule}, no longer choosing antags for this definition");
                     break;

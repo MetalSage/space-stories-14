@@ -6,3 +6,8 @@
     DrinkSodaWaterBottleFull: 2
     DrinkColaCan: 10
     ClothingHeadHatUshanka: 2
+  prices: # Stories-Economy
+    DrinkSodaWaterCan: 10
+    DrinkSodaWaterBottleFull: 20
+    DrinkColaCan: 15
+    ClothingHeadHatUshanka: 60

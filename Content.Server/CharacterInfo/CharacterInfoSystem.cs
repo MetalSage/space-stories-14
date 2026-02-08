@@ -1,4 +1,5 @@
-﻿using Content.Server.Mind;
+﻿using Content.Server._Stories.Economy.Components;
+using Content.Server.Mind;
 using Content.Server.Roles;
 using Content.Server.Roles.Jobs;
 using Content.Shared.CharacterInfo;
@@ -54,6 +55,20 @@ public sealed class CharacterInfoSystem : EntitySystem
 
             // Get briefing
             briefing = _roles.MindGetBriefing(mindId);
+
+            // Stories-Economy-Start
+            if (TryComp<MindBankAccountComponent>(mindId, out var bankInfo))
+            {
+                var bankMsg = Loc.GetString("character-info-bank-briefing", 
+                    ("account", bankInfo.AccountNumber), 
+                    ("pin", bankInfo.Pin));
+
+                if (string.IsNullOrEmpty(briefing))
+                    briefing = bankMsg;
+                else
+                    briefing += "\n\n" + bankMsg;
+            }
+            // Stories-Economy-End
         }
 
         RaiseNetworkEvent(new CharacterInfoEvent(GetNetEntity(entity), jobTitle, objectives, briefing), args.SenderSession);

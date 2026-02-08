@@ -19,29 +19,23 @@
   name: loadout-group-Guardian-head
   minLimit: 0
   loadouts:
-  # Stories-Partners-Start
   - ClothingHeadHatExe
-  # Stories-Partners-End
 
 - type: loadoutGroup
   id: GuardianNtMask
   name: loadout-group-Guardian-mask
   minLimit: 0
   loadouts:
-  # Stories-Partners-Start
   - ClothingMaskGasExe
-  # Stories-Partners-End
 
 - type: loadoutGroup
   id: GuardianNtShoes
   name: loadout-group-Guardian-shoes
   loadouts:
   - ClothingShoesBootsJackGuardianNt
-  # Stories-Partners-Start
   - ClothingShoesBootsJackGuardian
   - ClothingShoesBootsJackGuardianNomad
   - ClothingShoesBootsExe
-  # Stories-Partners-End
 
 - type: loadoutGroup
   id: GuardianNtBelt
@@ -56,11 +50,9 @@
   name: loadout-group-Guardian-neck
   minLimit: 0
   loadouts:
-  # Stories-Partners-Start
   - ClothingNeckMantleGuardianNt
-  # Stories-Partners-End
-  - ClothingNeckCloakExe
   - ClothingNeckMantleGuardianNomad
+  - ClothingNeckCloakExe
 
 - type: loadoutGroup
   id: GuardianNtJumpsuit
@@ -68,11 +60,9 @@
   minLimit: 1
   loadouts:
   - ClothingUniformJumpsuitGuardianNt
-  # Stories-Partners-Start
   - ClothingUniformJumpsuitGuardian
   - ClothingUniformJumpsuitGuardianNomad
   - ClothingUniformJumpsuitExe
-  # Stories-Partners-End
 
 - type: loadoutGroup
   id: GuardianNtBackpack
@@ -80,33 +70,26 @@
   loadouts:
   - ClothingBackpackGuardianNt
   - ClothingBackpackSatchelGuardianNt
-  # Stories-Partners-Start
-  # Adidos
   - ClothingBackpackHandbagAdidos
   - ClothingBackpackAdidos
   - ClothingBackpackDuffelAdidos
   - ClothingBackpackSatchelAdidos
-  # Bluesky
   - ClothingBackpackHandbagBluesky
   - ClothingBackpackBluesky
   - ClothingBackpackDuffelBluesky
   - ClothingBackpackSatchelBluesky
-  # Eight
   - ClothingBackpackHandbagEight
   - ClothingBackpackEight
   - ClothingBackpackDuffelEight
   - ClothingBackpackSatchelEight
-  # Gachi
   - ClothingBackpackHandbagGachi
   - ClothingBackpackGachi
   - ClothingBackpackDuffelGachi
   - ClothingBackpackSatchelGachi
-  # Rl
   - ClothingBackpackHandbagRl
   - ClothingBackpackRl
   - ClothingBackpackDuffelRl
   - ClothingBackpackSatchelRl
-  # Stories-Partners-End
 
 - type: loadoutGroup
   id: GuardianNtOuterClothing
@@ -114,10 +97,8 @@
   minLimit: 0
   loadouts:
   - ClothingOuterVestGuardianNt
-  # Stories-Partners-Start
   - ClothingOuterCoatGuardian
   - ClothingOuterVestArmorExe
-  # Stories-Partners-End
 
 - type: loadoutGroup
   id: GuardianNtLightsaber
@@ -129,274 +110,236 @@
   - STLightsaberYellow
   - STLightsaberPurple
   - STLightsaberWhite
-  # Stories-Partners-Start
-  - LightsaberShort
   - LightsaberDouble
+  - LightsaberShort
   - LightsaberCrossguard
   - LightsaberRapier
-  # Stories-Partners-End
 
 # Маска хранителя
-
 - type: loadout
   id: ClothingMaskGasExe
-  effects:
-  - !type:GroupLoadoutEffect
-    proto: PartnerMinTier4
   equipment:
     mask: ClothingMaskGasExe
+  effects:
+  - !type:SponsorLoadoutEffect
+    id: ClothingMaskGasExe
 
 # Шляпа хранителя
-
 - type: loadout
   id: ClothingHeadHatExe
-  effects:
-  - !type:GroupLoadoutEffect
-    proto: PartnerMinTier4
   equipment:
     head: ClothingHeadHatExe
+  effects:
+  - !type:SponsorLoadoutEffect
+    id: ClothingHeadHatExe
 
 # Рапира
-
 - type: loadout
   id: LightsaberRapier
-  effects:
-  - !type:GroupLoadoutEffect
-    proto: PartnerMinTier4
   equipment:
     pocket1: LightsaberRapier
+  effects:
+  - !type:SponsorLoadoutEffect
+    id: LightsaberRapier
 
 # Двухклинковый меч
-
 - type: loadout
   id: LightsaberDouble
-  effects:
-  - !type:GroupLoadoutEffect
-    proto: PartnerMinTier1
   equipment:
     pocket1: LightsaberDouble
+  effects:
+  - !type:SponsorLoadoutEffect
+    id: LightsaberDouble
 
 # Меч с боковыми лезвиями
-
 - type: loadout
   id: LightsaberCrossguard
-  effects:
-  - !type:GroupLoadoutEffect
-    proto: PartnerMinTier4
   equipment:
     pocket1: LightsaberCrossguard
+  effects:
+  - !type:SponsorLoadoutEffect
+    id: LightsaberCrossguard
 
 # Короткий меч
-
 - type: loadout
   id: LightsaberShort
-  effects:
-  - !type:GroupLoadoutEffect
-    proto: PartnerMinTier3
   equipment:
     pocket1: LightsaberShort
+  effects:
+  - !type:SponsorLoadoutEffect
+    id: LightsaberShort
 
+# -- Стандартные мечи (без эффектов, если они не были выделены в группах) --
 # Синий меч
-
 - type: loadout
   id: STLightsaberBlue
   equipment:
     pocket1: STLightsaberBlue
 
 # Зелёный меч
-
 - type: loadout
   id: STLightsaberGreen
   equipment:
     pocket1: STLightsaberGreen
 
 # Белый меч
-
 - type: loadout
   id: STLightsaberWhite
   equipment:
     pocket1: STLightsaberWhite
 
 # Жёлтый меч
-
 - type: loadout
   id: STLightsaberYellow
-  effects:
-  - !type:GroupLoadoutEffect
-    proto: STBeginnerGuardian
   equipment:
     pocket1: STLightsaberYellow
 
 # Фиолетовый меч
-
 - type: loadout
   id: STLightsaberPurple
-  effects:
-  - !type:GroupLoadoutEffect
-    proto: STMasterGuardian
   equipment:
     pocket1: STLightsaberPurple
 
-
-
 # Накидка джедая
-
 - type: loadout
   id: ClothingOuterCoatGuardian
-  effects:
-  - !type:GroupLoadoutEffect
-    proto: PartnerMinTier1
   equipment:
     outerClothing: ClothingOuterCoatGuardian
+  effects:
+  - !type:SponsorLoadoutEffect
+    id: ClothingOuterCoatGuardian
 
 # Бронежилет хранителя
-
 - type: loadout
   id: ClothingOuterVestArmorExe
-  effects:
-  - !type:GroupLoadoutEffect
-    proto: PartnerMinTier4
   equipment:
     outerClothing: ClothingOuterVestArmorExe
+  effects:
+  - !type:SponsorLoadoutEffect
+    id: ClothingOuterVestArmorExe
 
 # Бронежилет стража
-
 - type: loadout
   id: ClothingOuterVestGuardianNt
   equipment:
     outerClothing: ClothingOuterVestGuardianNt
 
-# Рюкзак стража
-
+# Рюкзак стража (стандартный, без эффекта)
 - type: loadout
   id: ClothingBackpackGuardianNt
   equipment:
     back: ClothingBackpackGuardianNt
 
-# Рюкзак стража
-
+# Рюкзак стража (стандартный, без эффекта)
 - type: loadout
   id: ClothingBackpackSatchelGuardianNt
   equipment:
     back: ClothingBackpackSatchelGuardianNt
 
 # Роба джедая
-
 - type: loadout
   id: ClothingUniformJumpsuitGuardian
-  effects:
-  - !type:GroupLoadoutEffect
-    proto: PartnerMinTier1
   equipment:
     jumpsuit: ClothingUniformJumpsuitGuardian
+  effects:
+  - !type:SponsorLoadoutEffect
+    id: ClothingUniformJumpsuitGuardian
 
 # Комбинезон хранителя
-
 - type: loadout
   id: ClothingUniformJumpsuitExe
-  effects:
-  - !type:GroupLoadoutEffect
-    proto: PartnerMinTier4
   equipment:
     jumpsuit: ClothingUniformJumpsuitExe
+  effects:
+  - !type:SponsorLoadoutEffect
+    id: ClothingUniformJumpsuitExe
 
 # Комбинезон путника
-
 - type: loadout
   id: ClothingUniformJumpsuitGuardianNomad
-  effects:
-  - !type:GroupLoadoutEffect
-    proto: PartnerMinTier3
   equipment:
     jumpsuit: ClothingUniformJumpsuitGuardianNomad
+  effects:
+  - !type:SponsorLoadoutEffect
+    id: ClothingUniformJumpsuitGuardianNomad
 
-# Униформа стража
-
+# Униформа стража (стандартная)
 - type: loadout
   id: ClothingUniformJumpsuitGuardianNt
   equipment:
     jumpsuit: ClothingUniformJumpsuitGuardianNt
 
 # Плащ хранителя
-
 - type: loadout
   id: ClothingNeckCloakExe
-  effects:
-  - !type:GroupLoadoutEffect
-    proto: PartnerMinTier4
   equipment:
     neck: ClothingNeckCloakExe
+  effects:
+  - !type:SponsorLoadoutEffect
+    id: ClothingNeckCloakExe
 
-# Мантия стража
-
+# Мантия стража (была выделена тегами Start/End в группе)
 - type: loadout
   id: ClothingNeckMantleGuardianNt
   equipment:
     neck: ClothingNeckMantleGuardianNt
 
 # Мантия путника
-
 - type: loadout
   id: ClothingNeckMantleGuardianNomad
-  effects:
-  - !type:GroupLoadoutEffect
-    proto: PartnerMinTier3
   equipment:
     neck: ClothingNeckMantleGuardianNomad
+  effects:
+  - !type:SponsorLoadoutEffect
+    id: ClothingNeckMantleGuardianNomad
 
-# Ботинки стража
-
+# Ботинки стража (стандартные)
 - type: loadout
   id: ClothingShoesBootsJackGuardianNt
   equipment:
     shoes: ClothingShoesBootsJackGuardianNt
 
 # Ботинки путника
-
 - type: loadout
   id: ClothingShoesBootsJackGuardianNomad
-  effects:
-  - !type:GroupLoadoutEffect
-    proto: PartnerMinTier3
   equipment:
     shoes: ClothingShoesBootsJackGuardianNomad
+  effects:
+  - !type:SponsorLoadoutEffect
+    id: ClothingShoesBootsJackGuardianNomad
 
 # Ботинки хранителя
-
 - type: loadout
   id: ClothingShoesBootsExe
-  effects:
-  - !type:GroupLoadoutEffect
-    proto: PartnerMinTier4
   equipment:
     shoes: ClothingShoesBootsExe
+  effects:
+  - !type:SponsorLoadoutEffect
+    id: ClothingShoesBootsExe
 
 # Ботинки джедая
-
 - type: loadout
   id: ClothingShoesBootsJackGuardian
-  effects:
-  - !type:GroupLoadoutEffect
-    proto: PartnerMinTier1
   equipment:
     shoes: ClothingShoesBootsJackGuardian
+  effects:
+  - !type:SponsorLoadoutEffect
+    id: ClothingShoesBootsJackGuardian
 
 # Пояс джедая
-
 - type: loadout
   id: ClothingBeltGuardian
-  effects:
-  - !type:GroupLoadoutEffect
-    proto: PartnerMinTier1
   equipment:
     belt: ClothingBeltGuardian
+  effects:
+  - !type:SponsorLoadoutEffect
+    id: ClothingBeltGuardian
 
 # Пояс хранителя
-
 - type: loadout
   id: ClothingBeltSheathExe
-  effects:
-  - !type:GroupLoadoutEffect
-    proto: PartnerMinTier4
   equipment:
     belt: ClothingBeltSheathExe
+  effects:
+  - !type:SponsorLoadoutEffect
+    id: ClothingBeltSheathExe

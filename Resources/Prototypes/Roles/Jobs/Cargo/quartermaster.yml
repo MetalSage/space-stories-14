@@ -33,6 +33,10 @@
   - !type:AddComponentSpecial
     components:
       - type: CommandStaff
+  # Stories-Economy-Start
+  minBankBalance: 250
+  maxBankBalance: 300
+  # Stories-Economy-End
 
 - type: startingGear
   id: QuartermasterGear

@@ -15,3 +15,16 @@
   emaggedInventory:
     ClothingUniformJumpskirtJanimaid: 2
     ClothingUniformJumpskirtJanimaidmini: 1
+  prices: # Stories-Economy
+    ClothingUniformJumpsuitJanitor: 40
+    ClothingUniformJumpskirtJanitor: 40
+    ClothingHandsGlovesJanitor: 25
+    ClothingShoesColorBlack: 25
+    ClothingHeadHatPurplesoft: 20
+    ClothingBeltJanitor: 30
+    ClothingHeadsetService: 50
+    ClothingOuterWinterJani: 80
+    ClothingNeckScarfStripedPurple: 20
+    ToyFigurineJanitor: 100
+    ClothingUniformJumpskirtJanimaid: 60
+    ClothingUniformJumpskirtJanimaidmini: 60

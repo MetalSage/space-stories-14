@@ -10,3 +10,13 @@
     ClothingBackpackVirology: 2
     ClothingBackpackSatchelVirology: 2
     ClothingBackpackDuffelVirology: 2
+  prices: # Stories-Economy
+    ClothingUniformJumpsuitVirology: 40
+    ClothingUniformJumpskirtVirology: 40
+    ClothingShoesColorWhite: 25
+    ClothingOuterCoatLabViro: 40
+    ClothingOuterWinterViro: 80
+    ClothingMaskSterile: 20
+    ClothingBackpackVirology: 40
+    ClothingBackpackSatchelVirology: 40
+    ClothingBackpackDuffelVirology: 40

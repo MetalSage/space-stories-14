@@ -19,3 +19,21 @@
     ClothingEyesGlassesSunglasses: 2
   contrabandInventory:
     ToyFigurineBartender: 1
+  prices: # Stories-Economy
+    ClothingHeadHatBowlerHat: 30
+    ClothingHeadHatTophat: 35
+    ClothingEyesHudBeer: 60
+    ClothingEyesEyepatchHudBeer: 60
+    ClothingHeadsetService: 50
+    ClothingOuterApronBar: 25
+    ClothingOuterWinterBar: 80
+    ClothingUniformJumpsuitJacketMonkey: 45
+    ClothingUniformJumpsuitBartender: 40
+    ClothingUniformJumpskirtBartender: 40
+    ClothingUniformJumpsuitBartenderPurple: 45
+    ClothingShoesColorBlack: 25
+    ClothingOuterArmorBasicSlim: 120
+    ClothingOuterVest: 40
+    ClothingBeltBandolier: 40
+    ClothingEyesGlassesSunglasses: 35
+    ToyFigurineBartender: 100

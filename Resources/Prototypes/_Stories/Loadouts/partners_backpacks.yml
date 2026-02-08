@@ -3,195 +3,187 @@
   minLimit: 0
   name: loadout-group-sponsor-Backpack
   loadouts:
-  # Помогите!
-  - ClothingBackpackHandbagAdidos
-  - ClothingBackpackHandbagBluesky
-  - ClothingBackpackHandbagEight
-  - ClothingBackpackHandbagGachi
-  - ClothingBackpackHandbagRl
-  # Меня
   - ClothingBackpackAdidos
-  - ClothingBackpackBluesky
-  - ClothingBackpackEight
-  - ClothingBackpackGachi
-  - ClothingBackpackRl
-  # заставляют
-  - ClothingBackpackDuffelAdidos
-  - ClothingBackpackDuffelBluesky
-  - ClothingBackpackDuffelEight
-  - ClothingBackpackDuffelGachi
-  - ClothingBackpackDuffelRl
-  # делать это!
+  - ClothingBackpackHandbagAdidos
   - ClothingBackpackSatchelAdidos
+  - ClothingBackpackDuffelAdidos
+  - ClothingBackpackBluesky
+  - ClothingBackpackHandbagBluesky
   - ClothingBackpackSatchelBluesky
+  - ClothingBackpackDuffelBluesky
+  - ClothingBackpackEight
+  - ClothingBackpackHandbagEight
   - ClothingBackpackSatchelEight
+  - ClothingBackpackDuffelEight
+  - ClothingBackpackGachi
+  - ClothingBackpackHandbagGachi
   - ClothingBackpackSatchelGachi
+  - ClothingBackpackDuffelGachi
+  - ClothingBackpackRl
+  - ClothingBackpackHandbagRl
   - ClothingBackpackSatchelRl
+  - ClothingBackpackDuffelRl
 
-# Пояс сумки
-
+# Поясные сумки
 - type: loadout
   id: ClothingBackpackHandbagAdidos
-  effects:
-  - !type:GroupLoadoutEffect
-    proto: PartnerMinTier3
   equipment:
     back: ClothingBackpackHandbagAdidos
+  effects:
+  - !type:SponsorLoadoutEffect
+    id: ClothingBackpackHandbagAdidos
 
 - type: loadout
   id: ClothingBackpackHandbagBluesky
-  effects:
-  - !type:GroupLoadoutEffect
-    proto: PartnerMinTier2
   equipment:
     back: ClothingBackpackHandbagBluesky
+  effects:
+  - !type:SponsorLoadoutEffect
+    id: ClothingBackpackHandbagBluesky
 
 - type: loadout
   id: ClothingBackpackHandbagEight
-  effects:
-  - !type:GroupLoadoutEffect
-    proto: PartnerMinTier1
   equipment:
     back: ClothingBackpackHandbagEight
+  effects:
+  - !type:SponsorLoadoutEffect
+    id: ClothingBackpackHandbagEight
 
 - type: loadout
   id: ClothingBackpackHandbagGachi
-  effects:
-  - !type:GroupLoadoutEffect
-    proto: PartnerMinTier5
   equipment:
     back: ClothingBackpackHandbagGachi
+  effects:
+  - !type:SponsorLoadoutEffect
+    id: ClothingBackpackHandbagGachi
 
 - type: loadout
   id: ClothingBackpackHandbagRl
-  effects:
-  - !type:GroupLoadoutEffect
-    proto: PartnerMinTier4
   equipment:
     back: ClothingBackpackHandbagRl
-
-# Cумки
-
-- type: loadout
-  id: ClothingBackpackSatchelAdidos
   effects:
-  - !type:GroupLoadoutEffect
-    proto: PartnerMinTier3
-  equipment:
-    back: ClothingBackpackSatchelAdidos
-
-- type: loadout
-  id: ClothingBackpackSatchelBluesky
-  effects:
-  - !type:GroupLoadoutEffect
-    proto: PartnerMinTier2
-  equipment:
-    back: ClothingBackpackSatchelBluesky
-
-- type: loadout
-  id: ClothingBackpackSatchelEight
-  effects:
-  - !type:GroupLoadoutEffect
-    proto: PartnerMinTier1
-  equipment:
-    back: ClothingBackpackSatchelEight
-
-- type: loadout
-  id: ClothingBackpackSatchelGachi
-  effects:
-  - !type:GroupLoadoutEffect
-    proto: PartnerMinTier5
-  equipment:
-    back: ClothingBackpackSatchelGachi
-
-- type: loadout
-  id: ClothingBackpackSatchelRl
-  effects:
-  - !type:GroupLoadoutEffect
-    proto: PartnerMinTier4
-  equipment:
-    back: ClothingBackpackSatchelRl
-
-# Вещмешки
-
-- type: loadout
-  id: ClothingBackpackDuffelAdidos
-  effects:
-  - !type:GroupLoadoutEffect
-    proto: PartnerMinTier3
-  equipment:
-    back: ClothingBackpackDuffelAdidos
-
-- type: loadout
-  id: ClothingBackpackDuffelBluesky
-  effects:
-  - !type:GroupLoadoutEffect
-    proto: PartnerMinTier2
-  equipment:
-    back: ClothingBackpackDuffelBluesky
-
-- type: loadout
-  id: ClothingBackpackDuffelEight
-  effects:
-  - !type:GroupLoadoutEffect
-    proto: PartnerMinTier1
-  equipment:
-    back: ClothingBackpackDuffelEight
-
-- type: loadout
-  id: ClothingBackpackDuffelGachi
-  effects:
-  - !type:GroupLoadoutEffect
-    proto: PartnerMinTier5
-  equipment:
-    back: ClothingBackpackDuffelGachi
-
-- type: loadout
-  id: ClothingBackpackDuffelRl
-  effects:
-  - !type:GroupLoadoutEffect
-    proto: PartnerMinTier4
-  equipment:
-    back: ClothingBackpackDuffelRl
+  - !type:SponsorLoadoutEffect
+    id: ClothingBackpackHandbagRl
 
 # Рюкзаки
-
 - type: loadout
   id: ClothingBackpackAdidos
-  effects:
-  - !type:GroupLoadoutEffect
-    proto: PartnerMinTier3
   equipment:
     back: ClothingBackpackAdidos
+  effects:
+  - !type:SponsorLoadoutEffect
+    id: ClothingBackpackAdidos
 
 - type: loadout
   id: ClothingBackpackBluesky
-  effects:
-  - !type:GroupLoadoutEffect
-    proto: PartnerMinTier2
   equipment:
     back: ClothingBackpackBluesky
+  effects:
+  - !type:SponsorLoadoutEffect
+    id: ClothingBackpackBluesky
 
 - type: loadout
   id: ClothingBackpackEight
-  effects:
-  - !type:GroupLoadoutEffect
-    proto: PartnerMinTier1
   equipment:
     back: ClothingBackpackEight
+  effects:
+  - !type:SponsorLoadoutEffect
+    id: ClothingBackpackEight
 
 - type: loadout
   id: ClothingBackpackGachi
-  effects:
-  - !type:GroupLoadoutEffect
-    proto: PartnerMinTier5
   equipment:
     back: ClothingBackpackGachi
+  effects:
+  - !type:SponsorLoadoutEffect
+    id: ClothingBackpackGachi
 
 - type: loadout
   id: ClothingBackpackRl
-  effects:
-  - !type:GroupLoadoutEffect
-    proto: PartnerMinTier4
   equipment:
     back: ClothingBackpackRl
+  effects:
+  - !type:SponsorLoadoutEffect
+    id: ClothingBackpackRl
+
+# Сумки
+- type: loadout
+  id: ClothingBackpackSatchelAdidos
+  equipment:
+    back: ClothingBackpackSatchelAdidos
+  effects:
+  - !type:SponsorLoadoutEffect
+    id: ClothingBackpackSatchelAdidos
+
+- type: loadout
+  id: ClothingBackpackSatchelBluesky
+  equipment:
+    back: ClothingBackpackSatchelBluesky
+  effects:
+  - !type:SponsorLoadoutEffect
+    id: ClothingBackpackSatchelBluesky
+
+- type: loadout
+  id: ClothingBackpackSatchelEight
+  equipment:
+    back: ClothingBackpackSatchelEight
+  effects:
+  - !type:SponsorLoadoutEffect
+    id: ClothingBackpackSatchelEight
+
+- type: loadout
+  id: ClothingBackpackSatchelGachi
+  equipment:
+    back: ClothingBackpackSatchelGachi
+  effects:
+  - !type:SponsorLoadoutEffect
+    id: ClothingBackpackSatchelGachi
+
+- type: loadout
+  id: ClothingBackpackSatchelRl
+  equipment:
+    back: ClothingBackpackSatchelRl
+  effects:
+  - !type:SponsorLoadoutEffect
+    id: ClothingBackpackSatchelRl
+
+# Вещмешки
+- type: loadout
+  id: ClothingBackpackDuffelAdidos
+  equipment:
+    back: ClothingBackpackDuffelAdidos
+  effects:
+  - !type:SponsorLoadoutEffect
+    id: ClothingBackpackDuffelAdidos
+
+- type: loadout
+  id: ClothingBackpackDuffelBluesky
+  equipment:
+    back: ClothingBackpackDuffelBluesky
+  effects:
+  - !type:SponsorLoadoutEffect
+    id: ClothingBackpackDuffelBluesky
+
+- type: loadout
+  id: ClothingBackpackDuffelEight
+  equipment:
+    back: ClothingBackpackDuffelEight
+  effects:
+  - !type:SponsorLoadoutEffect
+    id: ClothingBackpackDuffelEight
+
+- type: loadout
+  id: ClothingBackpackDuffelGachi
+  equipment:
+    back: ClothingBackpackDuffelGachi
+  effects:
+  - !type:SponsorLoadoutEffect
+    id: ClothingBackpackDuffelGachi
+
+- type: loadout
+  id: ClothingBackpackDuffelRl
+  equipment:
+    back: ClothingBackpackDuffelRl
+  effects:
+  - !type:SponsorLoadoutEffect
+    id: ClothingBackpackDuffelRl

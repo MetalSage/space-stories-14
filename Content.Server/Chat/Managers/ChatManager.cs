@@ -5,7 +5,7 @@ using Content.Server.Administration.Logs;
 using Content.Server.Administration.Managers;
 using Content.Server.Administration.Systems;
 using Content.Server.Discord.DiscordLink;
-using Content.Server._Stories.Partners;
+using Content.Server._Stories.Sponsors;
 using Content.Server.Players.RateLimiting;
 using Content.Server.Preferences.Managers;
 using Content.Shared.Administration;
@@ -46,7 +46,7 @@ internal sealed partial class ChatManager : IChatManager
     [Dependency] private readonly PlayerRateLimitManager _rateLimitManager = default!;
     [Dependency] private readonly ISharedPlayerManager _player = default!;
     [Dependency] private readonly DiscordChatLink _discordLink = default!;
-    [Dependency] private readonly PartnersManager _sponsors = default!; // Corvax-Sponsors
+    [Dependency] private readonly SponsorsManager _sponsorsManager = default!; // Corvax-Sponsors
     [Dependency] private readonly ILogManager _logManager = default!;
 
     private ISawmill _sawmill = default!;
@@ -298,7 +298,7 @@ internal sealed partial class ChatManager : IChatManager
         }
 
         // Corvax-Sponsors-Start
-        if (_sponsors.TryGetInfo(player.UserId, out var info) && info.OOCColor != null)
+        if (_sponsorsManager.TryGetInfo(player.UserId, out var info) && info.OOCColor != null)
         {
             wrappedMessage = Loc.GetString("chat-manager-send-ooc-patron-wrap-message", ("patronColor", info.OOCColor), ("playerName", player.Name), ("message", FormattedMessage.EscapeText(message)));
         }

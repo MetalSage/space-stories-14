@@ -11,17 +11,41 @@
 # Stories-Start
 
 # Remove LGBT-Pin
-ClothingNeckGoldAutismPin: null
+ClothingNeckLGBTPin: null
+ClothingNeckAllyPin: null
 ClothingNeckAromanticPin: null
-ClothingNeckNonBinaryPin: null
-ClothingNeckPansexualPin: null
+ClothingNeckAsexualPin: null
+ClothingNeckAroacePin: null
 ClothingNeckBisexualPin: null
+ClothingNeckGayPin: null
 ClothingNeckIntersexPin: null
 ClothingNeckLesbianPin: null
-ClothingNeckAsexualPin: null
-ClothingNeckAutismPin: null
+ClothingNeckNonBinaryPin: null
+ClothingNeckPansexualPin: null
+ClothingNeckPluralPin: null
+ClothingNeckOmnisexualPin: null
+ClothingNeckGenderqueerPin: null
+ClothingNeckGenderfluidPin: null
 ClothingNeckTransPin: null
-ClothingNeckLGBTPin: null
+ClothingNeckAutismPin: null
+ClothingNeckGoldAutismPin: null
+
+# Remove LGBT-Neck
+ClothingNeckScarfStripedAce: null
+ClothingNeckScarfStripedAro: null
+ClothingNeckScarfStripedAroace: null
+ClothingNeckScarfStripedBiSexual: null
+ClothingNeckScarfStripedGay: null
+ClothingNeckScarfStripedInter: null
+ClothingNeckScarfStripedLesbian: null
+ClothingNeckScarfStripedPan: null
+ClothingNeckScarfStripedNonBinary: null
+ClothingNeckScarfStripedRainbow: null
+ClothingNeckScarfStripedTrans: null
+
+# Remove LGBT-Socks
+ClothingUnderSocksCoder: null
+ClothingUnderSocksBee: null
 
 # Remove LGBT-Flag
 LGBTQHandyFlag: null
@@ -34,6 +58,9 @@ ClothingNeckCloakGay: null
 
 # Remove LGBT-Backpack
 ClothingBackpackDebug3: null
+
+# Remove LGBT-VendingMachinePride
+VendingMachinePride: null
 
 # Stories-End
 

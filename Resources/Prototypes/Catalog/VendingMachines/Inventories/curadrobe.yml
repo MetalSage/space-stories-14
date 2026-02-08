@@ -17,4 +17,19 @@
     BoxPrinter: 1 # Stories
   contrabandInventory:
     ToyFigurineLibrarian: 1
-
+  prices: # Stories-Economy
+    BooksBag: 40
+    BriefcaseBrown: 50
+    HandLabeler: 30
+    Cane: 40
+    ClothingEyesGlasses: 30
+    ClothingEyesGlassesJamjar: 35
+    ClothingNeckScarfStripedGreen: 20
+    ClothingUniformJumpsuitCurator: 40
+    ClothingUniformJumpskirtCurator: 40
+    ClothingUniformJumpsuitLibrarian: 40
+    ClothingUniformJumpskirtLibrarian: 40
+    ClothingShoesBootsLaceup: 60
+    ClothingHeadsetService: 50
+    BoxPrinter: 150
+    ToyFigurineLibrarian: 100

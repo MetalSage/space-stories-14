@@ -24,6 +24,8 @@
   special:
   - !type:AddImplantSpecial
     implants: [ MindShieldImplant ]
+  minBankBalance: 250
+  maxBankBalance: 300
 
 - type: startingGear
   id: IAAGear

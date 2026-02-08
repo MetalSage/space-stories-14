@@ -123,15 +123,7 @@ public abstract partial class SharedVendingMachineSystem : EntitySystem
                     TryUpdateVisualState((uid, comp));
                 }
             }
-
-            if (comp.DispenseOnHitCoolingDown)
-            {
-                if (curTime > comp.DispenseOnHitEnd)
-                {
-                    comp.DispenseOnHitEnd = null;
-                    Dirty(uid, comp);
-                }
-            }
+            // Stories-Economy
         }
     }
 
@@ -220,19 +212,15 @@ public abstract partial class SharedVendingMachineSystem : EntitySystem
 
         var entry = GetEntry(uid, itemId, type, vendComponent);
 
-        if (string.IsNullOrEmpty(entry?.ID))
+        // Stories-Economy-Start
+        if (string.IsNullOrEmpty(entry?.ID) || entry.Amount <= 0)
         {
-            Popup.PopupClient(Loc.GetString("vending-machine-component-try-eject-invalid-item"), uid);
-            Deny((uid, vendComponent));
+            Deny((uid, vendComponent), user);
             return;
         }
 
-        if (entry.Amount <= 0)
-        {
-            Popup.PopupClient(Loc.GetString("vending-machine-component-try-eject-out-of-stock"), uid);
-            Deny((uid, vendComponent));
-            return;
-        }
+        Audio.PlayPvs(vendComponent.SoundVend, uid);
+        // Stories-Economy-End
 
         // Start Ejecting, and prevent users from ordering while anim playing
         vendComponent.EjectEnd = Timing.CurTime + vendComponent.EjectDelay;
@@ -246,7 +234,7 @@ public abstract partial class SharedVendingMachineSystem : EntitySystem
         Dirty(uid, vendComponent);
         UpdateUI((uid, vendComponent));
         TryUpdateVisualState((uid, vendComponent));
-        Audio.PlayPredicted(vendComponent.SoundVend, uid, user);
+        // Stories-Economy
     }
 
     public void Deny(Entity<VendingMachineComponent?> entity, EntityUid? user = null)
@@ -258,7 +246,7 @@ public abstract partial class SharedVendingMachineSystem : EntitySystem
             return;
 
         entity.Comp.DenyEnd = Timing.CurTime + entity.Comp.DenyDelay;
-        Audio.PlayPredicted(entity.Comp.SoundDeny, entity.Owner, user, AudioParams.Default.WithVolume(-2f));
+        Audio.PlayPvs(entity.Comp.SoundDeny, entity.Owner, AudioParams.Default.WithVolume(-2f)); // Stories-Economy
         TryUpdateVisualState(entity);
         Dirty(entity);
     }
@@ -309,7 +297,7 @@ public abstract partial class SharedVendingMachineSystem : EntitySystem
     /// <param name="type">The type of inventory the item is from</param>
     /// <param name="itemId">The prototype ID of the item</param>
     /// <param name="component"></param>
-    public void AuthorizedVend(EntityUid uid, EntityUid sender, InventoryType type, string itemId, VendingMachineComponent component)
+    public virtual void AuthorizedVend(EntityUid uid, EntityUid sender, InventoryType type, string itemId, VendingMachineComponent component) // Stories-Economy
     {
         if (IsAuthorized(uid, sender, component))
         {

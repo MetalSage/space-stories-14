@@ -7,7 +7,7 @@ using Content.Server.Chat.Managers;
 using Content.Server.Connection;
 using Content.Server._Stories.DiscordAuth;
 using Content.Server._Stories.JoinQueue;
-using Content.Server._Stories.Partners;
+using Content.Server._Stories.Sponsors;
 using Content.Server._Stories.TTS;
 using Content.Server.Database;
 using Content.Server.Discord;
@@ -47,7 +47,7 @@ internal static class ServerContentIoC
         deps.Register<IChatSanitizationManager, ChatSanitizationManager>();
         deps.Register<IServerPreferencesManager, ServerPreferencesManager>();
         deps.Register<IServerDbManager, ServerDbManager>();
-        deps.Register<IPartnersApiClient, PartnersApiClient>(); // Corvax-Sponsors
+        deps.Register<ISponsorsApiClient, SponsorsApiClient>(); // Corvax-Sponsors
         deps.Register<RecipeManager, RecipeManager>();
         deps.Register<INodeGroupFactory, NodeGroupFactory>();
         deps.Register<IConnectionManager, ConnectionManager>();
@@ -68,7 +68,7 @@ internal static class ServerContentIoC
         deps.Register<IAdminLogManager, AdminLogManager>();
         deps.Register<PlayTimeTrackingManager>();
         deps.Register<UserDbDataManager>();
-        deps.Register<PartnersManager>(); // Corvax-Sponsors
+        deps.Register<SponsorsManager>(); // Corvax-Sponsors
         deps.Register<JoinQueueManager>(); // Corvax-Queue
         deps.Register<DiscordAuthManager>(); // Corvax-DiscordAuth
         deps.Register<TTSManager>(); // Stories-TTS

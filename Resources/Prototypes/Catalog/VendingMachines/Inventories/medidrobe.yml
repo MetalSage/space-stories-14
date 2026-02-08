@@ -28,3 +28,30 @@
     ToyFigurineMedicalDoctor: 1
     ToyFigurineParamedic: 1
     ToyFigurineChiefMedicalOfficer: 1
+  prices: # Stories-Economy
+    ClothingBackpackDuffelMedical: 40
+    ClothingBackpackMedical: 40
+    ClothingBackpackSatchelMedical: 40
+    ClothingUniformJumpsuitMedicalDoctor: 40
+    ClothingUniformJumpskirtMedicalDoctor: 40
+    ClothingBeltMedical: 35
+    ClothingHeadHatBeretMedic: 25
+    ClothingHeadNurseHat: 25
+    ClothingOuterCoatLab: 40
+    ClothingShoesColorWhite: 25
+    ClothingHandsGlovesLatex: 20
+    ClothingHandsGlovesNitrile: 30
+    ClothingHeadsetMedical: 50
+    ClothingOuterWinterMed: 80
+    ClothingOuterHospitalGown: 15
+    UniformScrubsColorGreen: 30
+    UniformScrubsColorBlue: 30
+    UniformScrubsColorPurple: 30
+    ClothingHeadHatSurgcapGreen: 15
+    ClothingHeadHatSurgcapBlue: 15
+    ClothingHeadHatSurgcapPurple: 15
+    ClothingShoesBootsWinterMed: 60
+    ClothingUniformJumpskirtOfLife: 120
+    ToyFigurineMedicalDoctor: 100
+    ToyFigurineParamedic: 100
+    ToyFigurineChiefMedicalOfficer: 150

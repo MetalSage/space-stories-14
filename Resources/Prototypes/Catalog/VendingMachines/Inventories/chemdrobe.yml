@@ -17,3 +17,19 @@
     ClothingEyesGlassesChemical: 2
   contrabandInventory:
     ToyFigurineChemist: 1
+  prices: # Stories-Economy
+    ClothingUniformJumpsuitChemistry: 40
+    ClothingUniformJumpskirtChemistry: 40
+    ClothingOuterCoatLabChem: 40
+    ClothingShoesColorWhite: 25
+    ClothingBackpackChemistry: 40
+    ClothingBackpackSatchelChemistry: 40
+    ClothingBackpackDuffelChemistry: 40
+    ChemBag: 45
+    HandLabeler: 30
+    ClothingBeltMedical: 35
+    ClothingHandsGlovesLatex: 20
+    ClothingHeadsetMedical: 50
+    ClothingOuterWinterChem: 80
+    ClothingEyesGlassesChemical: 30
+    ToyFigurineChemist: 100
