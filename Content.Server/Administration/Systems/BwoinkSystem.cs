@@ -5,12 +5,15 @@ using System.Text.Json;
 using System.Text.Json.Nodes;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
+using Content.Server._Stories.Sponsors;
 using Content.Server.Administration.Managers;
 using Content.Server.Afk;
 using Content.Server.Database;
 using Content.Server.Discord;
 using Content.Server.GameTicking;
 using Content.Server.Players.RateLimiting;
+using Content.Server.Preferences.Managers;
+using Content.Shared._Stories.Sponsors;
 using Content.Shared.Administration;
 using Content.Shared.CCVar;
 using Content.Shared.GameTicking;
@@ -43,6 +46,10 @@ namespace Content.Server.Administration.Systems
         [Dependency] private readonly IAfkManager _afkManager = default!;
         [Dependency] private readonly IServerDbManager _dbManager = default!;
         [Dependency] private readonly PlayerRateLimitManager _rateLimit = default!;
+        // Stories-Start
+        [Dependency] private readonly ISharedSponsorsManager _sponsors = default!;
+        [Dependency] private readonly IServerPreferencesManager _preferencesManager = default!;
+        // Stories-End
 
         [GeneratedRegex(@"^https://discord\.com/api/webhooks/(\d+)/((?!.*/).*)$")]
         private static partial Regex DiscordRegex();
@@ -110,7 +117,7 @@ namespace Content.Server.Administration.Systems
             SubscribeNetworkEvent<BwoinkClientTypingUpdated>(OnClientTypingUpdated);
             SubscribeLocalEvent<RoundRestartCleanupEvent>(_ => _activeConversations.Clear());
 
-        	_rateLimit.Register(
+            _rateLimit.Register(
                 RateLimitKey,
                 new RateLimitRegistration(CCVars.AhelpRateLimitPeriod,
                     CCVars.AhelpRateLimitCount,
@@ -654,27 +661,47 @@ namespace Content.Server.Administration.Systems
 
             string bwoinkText;
             string adminPrefix = "";
+            // Stories-Start
+            string sponsorPrefix = "";
 
-            //Getting an administrator position
             if (_config.GetCVar(CCVars.AhelpAdminPrefix) && senderAdmin is not null && senderAdmin.Title is not null)
             {
-                adminPrefix = $"[bold]\\[{senderAdmin.Title}\\][/bold] ";
+                var prefs = _preferencesManager.GetPreferences(senderSession.UserId);
+                var adminColor = prefs.AdminOOCColor.ToHex();
+                adminPrefix = $"[color={adminColor}][bold]\\[{senderAdmin.Title}\\][/bold][/color] ";
             }
 
-            if (senderAdmin is not null &&
-                senderAdmin.Flags ==
-                AdminFlags.Adminhelp) // Mentor. Not full admin. That's why it's colored differently.
+            if (_sponsors.TryGetInfo(senderSession.UserId, out var sponsorInfo) && !string.IsNullOrEmpty(sponsorInfo.TierName))
             {
-                bwoinkText = $"[color=purple]{adminPrefix}{senderSession.Name}[/color]";
+                var sponsorColor = sponsorInfo.OOCColor ?? "#ffffff";
+                sponsorPrefix = $"[color={sponsorColor}][bold]\\[{sponsorInfo.TierName}\\][/bold][/color] ";
             }
-            else if (senderAdmin is not null && senderAdmin.HasFlag(AdminFlags.Adminhelp))
+            string? nameColorHex = null;
+            if (senderAdmin is not null)
             {
-                bwoinkText = $"[color=red]{adminPrefix}{senderSession.Name}[/color]";
+                var prefs = _preferencesManager.GetPreferences(senderSession.UserId);
+                nameColorHex = prefs.AdminOOCColor.ToHex();
             }
-            else
+            else if (sponsorInfo?.OOCColor is not null)
             {
-                bwoinkText = $"{senderSession.Name}";
+                nameColorHex = sponsorInfo.OOCColor;
             }
+
+            var finalName = senderSession.Name;
+            if (nameColorHex is null)
+            {
+                if (senderAdmin is not null && senderAdmin.Flags == AdminFlags.Adminhelp)
+                    nameColorHex = "purple";
+                else if (senderAdmin is not null)
+                    nameColorHex = "red";
+            }
+
+            var coloredName = nameColorHex is not null
+                ? $"[color={nameColorHex}]{finalName}[/color]"
+                : finalName;
+
+            bwoinkText = $"{adminPrefix}{sponsorPrefix}{coloredName}";
+            // Stories-End
 
             bwoinkText = $"{(message.AdminOnly ? Loc.GetString("bwoink-message-admin-only") : !message.PlaySound ? Loc.GetString("bwoink-message-silent") : "")} {bwoinkText}: {escapedText}";
 
