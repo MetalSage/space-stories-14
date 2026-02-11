@@ -6,7 +6,7 @@ using Robust.Shared.Serialization;
 
 namespace Content.Shared._Stories.Cards.Stack;
 
-[RegisterComponent] [NetworkedComponent] [AutoGenerateComponentState]
+[RegisterComponent, NetworkedComponent, AutoGenerateComponentState]
 public sealed partial class CardStackComponent : Component
 {
     [DataField]
@@ -14,9 +14,6 @@ public sealed partial class CardStackComponent : Component
 
     [ViewVariables]
     public Container CardContainer;
-
-    [ViewVariables] [AutoNetworkedField]
-    public List<EntityUid> CardOrder = new();
 
     [ViewVariables] [DataField("content")]
     public List<EntProtoId> InitialContent = [];
@@ -26,11 +23,20 @@ public sealed partial class CardStackComponent : Component
 
     [DataField]
     public SoundSpecifier RemoveCardSound = new SoundCollectionSpecifier("STRemoveCard");
+
+    [ViewVariables(VVAccess.ReadWrite), DataField("flipCount"), AutoNetworkedField]
+    public int FlipCount = 0;
 }
 
-[Serializable] [NetSerializable]
-public enum CardStackVisuals : byte
+[NetSerializable, Serializable]
+public enum CardStackVisual : byte
 {
-    CardsCount,
-    OrderEdited,
+    State,
+}
+
+[NetSerializable, Serializable]
+public sealed class CardStackShuffledEvent(NetEntity entity, List<NetEntity>? cards) : EntityEventArgs
+{
+    public NetEntity Entity = entity;
+    public List<NetEntity>? Cards = cards;
 }

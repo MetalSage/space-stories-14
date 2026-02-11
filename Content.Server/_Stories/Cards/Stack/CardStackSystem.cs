@@ -25,8 +25,6 @@ public sealed class CardStackSystem : SharedCardStackSystem
             var ent = Spawn(card, coordinates);
             _containerSystem.Insert(ent, comp.CardContainer);
         }
-
-        _appearance.SetData(uid, CardStackVisuals.CardsCount, comp.CardContainer.ContainedEntities.Count);
     }
 
     protected override void ShuffleCards(EntityUid uid, CardStackComponent component)
@@ -34,8 +32,10 @@ public sealed class CardStackSystem : SharedCardStackSystem
         var list = component.CardContainer.ContainedEntities.ToList();
         _robustRandom.Shuffle(list);
 
-        SetActualCardsOrder(uid, component, list);
+        CardStackRebuild(list, component);
 
+        var ev = new CardStackShuffledEvent(GetNetEntity(uid), GetNetEntityList(list));
+        RaiseNetworkEvent(ev);
         Dirty(uid, component);
     }
 }

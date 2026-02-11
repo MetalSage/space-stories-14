@@ -1,5 +1,5 @@
 card-count-total = Всего карт в колоде: { $cardsTotal }.
-card-name = Это { $cardName }.
+card-name = Это [color=blue]{ $cardName }[/color].
 card-split-take = Взято { $cardsSplit } карт!
 card-split = Разделить пополам
 card-shuffle = Перетасовать

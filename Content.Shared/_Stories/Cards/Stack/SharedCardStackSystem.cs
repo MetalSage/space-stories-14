@@ -34,6 +34,18 @@ public abstract class SharedCardStackSystem : EntitySystem
         SubscribeLocalEvent<CardStackComponent, ExaminedEvent>(OnStackExamined);
     }
 
+    protected void CardStackRebuild(List<EntityUid> list, CardStackComponent component)
+    {
+        foreach (var card in list)
+        {
+            _containerSystem.Remove(card, component.CardContainer, force: true);
+        }
+        foreach (var card in list)
+        {
+            _containerSystem.Insert(card, component.CardContainer, force: true);
+        }
+    }
+
     private void OnComponentInit(EntityUid uid, CardStackComponent component, ComponentInit args)
     {
         component.CardContainer = _containerSystem.EnsureContainer<Container>(uid, "card-stack-container");
@@ -82,9 +94,7 @@ public abstract class SharedCardStackSystem : EntitySystem
                     if (!TryComp<FoldableComponent>(card, out var foldable))
                         return;
                     _foldableSystem.TryToggleFold(card, foldable);
-                    SetFoldVisuals(uid, foldable);
                 }
-
                 _popup.PopupClient(Loc.GetString("card-flip-success"), args.User);
             },
         });
@@ -98,9 +108,7 @@ public abstract class SharedCardStackSystem : EntitySystem
                     if (!TryComp<FoldableComponent>(card, out var foldable))
                         return;
                     _foldableSystem.SetFolded(card, foldable, true);
-                    SetFoldVisuals(card, foldable);
                 }
-
                 _popup.PopupClient(Loc.GetString("card-flip-success"), args.User);
             },
             Category = VerbCategory.Flip,
@@ -115,48 +123,55 @@ public abstract class SharedCardStackSystem : EntitySystem
                     if (!TryComp<FoldableComponent>(card, out var foldable))
                         return;
                     _foldableSystem.SetFolded(card, foldable, false);
-                    SetFoldVisuals(card, foldable);
-                }
 
+                }
                 _popup.PopupClient(Loc.GetString("card-flip-success"), args.User);
             },
             Category = VerbCategory.Flip,
         });
     }
 
+    protected virtual void ShuffleCards(EntityUid uid, CardStackComponent component) {}
+
     private void OnInteractUsing(EntityUid uid, CardStackComponent comp, InteractUsingEvent args)
     {
-        if (TryComp<CardComponent>(args.Used, out _))
-        {
-            if (comp.CardContainer.ContainedEntities.Count > comp.MaxCards
-                || !TryComp(args.Used, out CardComponent? _))
-                return;
-            _containerSystem.Insert(args.Used, comp.CardContainer);
+        if (args.Handled)
+            return;
+        if (comp.CardContainer.ContainedEntities.Count > comp.MaxCards)
+            return;
 
-            if (TryComp<CardFanComponent>(uid, out var fanComp))
-                _audio.PlayLocal(fanComp.AddCardSound, uid, args.User);
-            else
-                _audio.PlayLocal(comp.AddCardSound, uid, args.User);
-        }
-        else if (TryComp<CardStackComponent>(args.Used, out _))
+        if (HasComp<CardComponent>(args.Used))
         {
-            if (TryComp<CardDeckComponent>(args.Used, out _) && TryComp<CardFanComponent>(args.Target, out _))
+            if (_containerSystem.Insert(args.Used, comp.CardContainer))
+            {
+                var sound = TryComp<CardFanComponent>(uid, out var fanComp) ? fanComp.AddCardSound : comp.AddCardSound;
+                _audio.PlayPredicted(sound, uid, args.User);
+            }
+        }
+        else if (HasComp<CardStackComponent>(args.Used))
+        {
+            if (HasComp<CardDeckComponent>(args.Used) && HasComp<CardFanComponent>(args.Target))
                 return;
             CombineStacks(uid, args.Used);
-            _audio.PlayLocal(comp.AddCardSound, uid, args.User);
+            _audio.PlayPredicted(comp.AddCardSound, uid, args.User);
         }
 
-        var list = comp.CardContainer.ContainedEntities.ToList();
-        SetActualCardsOrder(uid, comp, list);
+        _appearance.SetData(uid, CardStackVisual.State, comp.CardContainer.ContainedEntities.Count);
+        args.Handled = true;
     }
 
     private void OnActivateInWorldEvent(EntityUid uid, CardStackComponent comp, ActivateInWorldEvent args)
     {
-        var card = comp.CardContainer.ContainedEntities.ToList().Last();
-        RemoveCard(uid, card, comp);
-        _handsSystem.TryPickupAnyHand(args.User, card);
+        if (args.Handled)
+            return;
+        var card = comp.CardContainer.ContainedEntities.Last();
 
-        _audio.PlayLocal(comp.RemoveCardSound, uid, args.User);
+        _audio.PlayPredicted(comp.RemoveCardSound, uid, args.User);
+
+        RemoveCard(uid, card, comp);
+        _appearance.SetData(uid, CardStackVisual.State, comp.CardContainer.ContainedEntities.Count);
+        _handsSystem.TryPickupAnyHand(args.User, card);
+        args.Handled = true;
     }
 
     public void RemoveCard(EntityUid uid, EntityUid card, CardStackComponent comp)
@@ -164,13 +179,8 @@ public abstract class SharedCardStackSystem : EntitySystem
         _containerSystem.Remove(card, comp.CardContainer);
 
         if (comp.CardContainer.ContainedEntities.Count == 0)
-            PredictedDel(uid);
-
-        var list = comp.CardContainer.ContainedEntities.ToList();
-        SetActualCardsOrder(uid, comp, list);
+            PredictedQueueDel(uid);
     }
-
-    protected virtual void ShuffleCards(EntityUid uid, CardStackComponent component) { }
 
     private void Split(EntityUid uid, CardStackComponent component, EntityUid user)
     {
@@ -209,24 +219,6 @@ public abstract class SharedCardStackSystem : EntitySystem
         Dirty(uid, component);
     }
 
-    public void SetActualCardsOrder(EntityUid uid, CardStackComponent comp, List<EntityUid> list)
-    {
-        comp.CardOrder.Clear();
-        comp.CardOrder.AddRange(list);
-
-        foreach (var card in comp.CardContainer.ContainedEntities.ToList())
-        {
-            _containerSystem.Remove(card, comp.CardContainer);
-        }
-
-        foreach (var card in list)
-        {
-            _containerSystem.Insert(card, comp.CardContainer);
-        }
-
-        _appearance.SetData(uid, CardStackVisuals.OrderEdited, true);
-    }
-
     private void CombineStacks(EntityUid uid, EntityUid used)
     {
         if (!TryComp<CardStackComponent>(uid, out var stackComp)
@@ -238,14 +230,7 @@ public abstract class SharedCardStackSystem : EntitySystem
             _containerSystem.Insert(card, stackComp.CardContainer);
         }
 
-        PredictedDel(used);
-
-        _appearance.SetData(uid, CardStackVisuals.CardsCount, stackComp.CardContainer.ContainedEntities.Count);
+        PredictedQueueDel(used);
     }
 
-    private void SetFoldVisuals(EntityUid uid, FoldableComponent foldable)
-    {
-        var folded = foldable.IsFolded;
-        _appearance.SetData(uid, FoldableSystem.FoldedVisuals.State, folded);
-    }
 }
