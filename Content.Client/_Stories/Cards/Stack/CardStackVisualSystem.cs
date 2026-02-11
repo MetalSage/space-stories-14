@@ -6,16 +6,12 @@ using Content.Shared._Stories.Cards.Fan;
 using Content.Shared._Stories.Cards.Stack;
 using Content.Shared.Foldable;
 using Robust.Client.GameObjects;
-using Robust.Client.Graphics;
 using Robust.Shared.Containers;
-using Robust.Shared.Timing;
 
 namespace Content.Client._Stories.Cards.Stack;
 
 public sealed class CardStackVisualSystem : VisualizerSystem<CardStackComponent>
 {
-    [Dependency] private readonly IGameTiming _gameTiming = default!;
-    [Dependency] private readonly SharedAppearanceSystem _appearance = default!;
     [Dependency] private readonly SharedContainerSystem _containerSystem = default!;
     [Dependency] private readonly SpriteSystem _spriteSystem = default!;
 
@@ -43,17 +39,16 @@ public sealed class CardStackVisualSystem : VisualizerSystem<CardStackComponent>
             return;
         _spriteSystem.LayerSetVisible(uid, 0, false);
 
-        if (TryComp<CardStackComponent>(uid, out var stackComp) && stackComp.CardContainer.ContainedEntities.Count > 0)
-            UpdateDeckStackVisuals(uid, stackComp, sprite, cards);
+        if (TryComp<CardDeckComponent>(uid, out var cardDeck))
+            UpdateDeckStackVisuals(uid, cardDeck, sprite, cards);
         else if (TryComp<CardFanComponent>(uid, out var fanComp))
-            UpdateFanStackVisuals(uid, fanComp, sprite);
+            UpdateFanStackVisuals(uid, fanComp, sprite, cards);
     }
 
 
-    private void UpdateDeckStackVisuals(EntityUid uid, CardStackComponent cardStack, SpriteComponent sprite, List<EntityUid>? cards = null)
+    private void UpdateDeckStackVisuals(EntityUid uid, CardDeckComponent comp, SpriteComponent sprite, List<EntityUid>? cards = null)
     {
-        Log.Info("sss");
-        if (!TryComp<CardDeckComponent>(uid, out var comp))
+        if (!TryComp<CardStackComponent>(uid, out var cardStack))
             return;
         while (sprite.AllLayers.Count() > 1)
         {
@@ -65,8 +60,7 @@ public sealed class CardStackVisualSystem : VisualizerSystem<CardStackComponent>
         var layerIndex = 1;
         foreach (var card in cardsList)
         {
-            if (!TryComp<SpriteComponent>(card, out var cardSprite) ||
-                !TryComp<FoldableComponent>(card, out var foldable))
+            if (!TryComp<FoldableComponent>(card, out var foldable))
                 continue;
 
             var cardLayer = foldable.IsFolded ? _spriteSystem.LayerGetRsiState(card, 1) : _spriteSystem.LayerGetRsiState(card, 0);
@@ -82,50 +76,48 @@ public sealed class CardStackVisualSystem : VisualizerSystem<CardStackComponent>
         }
     }
 
-    private void UpdateFanStackVisuals(EntityUid uid, CardFanComponent comp, SpriteComponent sprite)
+    private void UpdateFanStackVisuals(EntityUid uid, CardFanComponent comp, SpriteComponent sprite, List<EntityUid>? cards = null)
     {
         if (!TryComp<CardStackComponent>(uid, out var cardStack))
             return;
         while (sprite.AllLayers.Count() > 1)
         {
-            sprite.RemoveLayer(1);
+            _spriteSystem.RemoveLayer(uid, 1);
         }
 
-        var processedLayers = new HashSet<RSI.StateId>();
-        var layerIndex = 1;
-
         var totalCards = Math.Min(comp.MaxCards, cardStack.CardContainer.ContainedEntities.Count);
+        var cardsList = cards is { Count: > 0 } ? cards : cardStack.CardContainer.ContainedEntities.Take(totalCards);
 
-        foreach (var card in cardStack.CardContainer.ContainedEntities.Take(totalCards))
+        var layerIndex = 1;
+        foreach (var card in cardsList)
         {
-            if (!TryComp<SpriteComponent>(card, out var cardSprite) ||
-                !TryComp<FoldableComponent>(card, out var foldable))
-                return;
+            if (!TryComp<FoldableComponent>(card, out var foldable))
+                continue;
 
-            var cardLayer = foldable.IsFolded ? cardSprite.LayerGetState(1) : cardSprite.LayerGetState(0);
-            processedLayers.Add(cardLayer);
-            var layer = sprite.AddLayer(cardLayer);
+            var cardLayer = foldable.IsFolded ? _spriteSystem.LayerGetRsiState(card, 1) : _spriteSystem.LayerGetRsiState(card, 0);
+            var layer = _spriteSystem.AddBlankLayer((uid, sprite), layerIndex);
+            _spriteSystem.LayerSetRsiState((uid, sprite), layerIndex, cardLayer);
 
             var cardIndex = layerIndex - 1;
-            var totalProgress = (float)cardIndex / (totalCards - 1);
+            float totalProgress;
+            if (totalCards <= 1)
+            {
+                totalProgress = 0.5f;
+            }
+            else
+            {
+                totalProgress = (float)cardIndex / (totalCards - 1);
+            }
 
             var curAngle = MathHelper.Lerp(comp.StartAngle, comp.EndAngle, totalProgress);
-            if (totalCards == 1)
-                curAngle = (comp.StartAngle + comp.EndAngle) / 2;
-            else
-                curAngle = MathHelper.Lerp(comp.StartAngle, comp.EndAngle, totalProgress);
-
             var normX = comp.Radius * MathF.Sin(curAngle * MathF.PI / 180);
             var normY = comp.Radius * MathF.Cos(curAngle * MathF.PI / 180);
 
-            if (TryComp<CardFanComponent>(uid, out _))
-            {
-                sprite.LayerSetRotation(layer, Angle.FromDegrees(curAngle + 180));
-                sprite.LayerSetOffset(layer, new Vector2(normX, normY));
-                sprite.LayerSetScale(layer, new Vector2(1.0f, 1.0f));
-                sprite.LayerSetVisible(layer, true);
-                layerIndex++;
-            }
+            _spriteSystem.LayerSetRotation(layer, Angle.FromDegrees(curAngle + 180));
+            _spriteSystem.LayerSetOffset(layer, new Vector2(normX, normY));
+            _spriteSystem.LayerSetScale(layer, new Vector2(1.0f, 1.0f));
+            _spriteSystem.LayerSetVisible(layer, true);
+            layerIndex++;
         }
     }
 }

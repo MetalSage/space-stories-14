@@ -6,17 +6,17 @@ namespace Content.Shared._Stories.Cards.Deck;
 [RegisterComponent]
 public sealed partial class CardDeckComponent : Component
 {
-    [DataField] [ViewVariables(VVAccess.ReadWrite)]
+    [DataField]
     public int MaxCards = 5;
 
-    [DataField] [ViewVariables(VVAccess.ReadWrite)]
+    [DataField]
     public float Offset = 0.02f;
 
-    [DataField("shuffleSound")]
+    [DataField]
     public SoundSpecifier ShuffleSound = new SoundCollectionSpecifier("STShuffleDeck");
 }
 
-[Serializable] [NetSerializable]
+[Serializable, NetSerializable]
 public enum CardDeckVisuals : byte
 {
     InBox,

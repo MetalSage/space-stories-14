@@ -15,7 +15,7 @@ public sealed partial class CardStackComponent : Component
     [ViewVariables]
     public Container CardContainer;
 
-    [ViewVariables] [DataField("content")]
+    [ViewVariables, DataField("content")]
     public List<EntProtoId> InitialContent = [];
 
     [ViewVariables(VVAccess.ReadWrite)]
@@ -25,7 +25,7 @@ public sealed partial class CardStackComponent : Component
     public SoundSpecifier RemoveCardSound = new SoundCollectionSpecifier("STRemoveCard");
 
     [ViewVariables(VVAccess.ReadWrite), DataField("flipCount"), AutoNetworkedField]
-    public int FlipCount = 0;
+    public int FlipCount;
 }
 
 [NetSerializable, Serializable]

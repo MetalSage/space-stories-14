@@ -9,6 +9,7 @@ namespace Content.Client._Stories.Cards.Deck;
 public sealed class CardDeckSystem : EntitySystem
 {
     [Dependency] private readonly SharedAppearanceSystem _appearance = default!;
+    [Dependency] private readonly SpriteSystem _spriteSystem = default!;
 
     public override void Initialize()
     {
@@ -22,22 +23,18 @@ public sealed class CardDeckSystem : EntitySystem
         if (!_appearance.TryGetData<bool>(uid, ItemCabinetVisuals.ContainsItem, out var value))
             return;
 
-        if (value)
-            _appearance.SetData(uid, CardDeckVisuals.InBox, true);
-        else
-            _appearance.SetData(uid, CardDeckVisuals.InBox, false);
+        _appearance.SetData(uid, CardDeckVisuals.InBox, value);
     }
 
     private void OnAppearanceBoxChanged(EntityUid uid, CardDeckBoxComponent comp, ref AppearanceChangeEvent args)
     {
-        if (!TryComp<SpriteComponent>(uid, out var sprite)
-            || !_appearance.TryGetData<bool>(uid, ItemCabinetVisuals.ContainsItem, out var containsItem)
-            || !_appearance.TryGetData<bool>(uid, OpenableVisuals.Opened, out var opened))
+        if (!_appearance.TryGetData<bool>(uid, ItemCabinetVisuals.ContainsItem, out var containsItem) ||
+            !_appearance.TryGetData<bool>(uid, OpenableVisuals.Opened, out var opened))
             return;
 
         if (containsItem && opened)
-            sprite.LayerSetVisible(1, true);
+            _spriteSystem.LayerSetVisible(uid, 1, true);
         else
-            sprite.LayerSetVisible(1, false);
+            _spriteSystem.LayerSetVisible(uid, 1, false);
     }
 }
