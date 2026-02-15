@@ -3,12 +3,14 @@ using Content.Shared._Stories.Cards.Stack;
 using Content.Shared.Examine;
 using Content.Shared.Foldable;
 using Content.Shared.Hands.EntitySystems;
+using Robust.Shared.Audio.Systems;
 
 namespace Content.Shared._Stories.Cards.Card;
 
 public sealed class SharedCardSystem : EntitySystem
 {
     [Dependency] private readonly SharedAppearanceSystem _appearance = default!;
+    [Dependency] private readonly SharedAudioSystem _audio = default!;
     [Dependency] private readonly SharedCardStackSystem _cardStack = default!;
     [Dependency] private readonly SharedHandsSystem _handsSystem = default!;
 
@@ -30,13 +32,16 @@ public sealed class SharedCardSystem : EntitySystem
 
     private void OnCardSelected(EntityUid uid, CardFanComponent component, CardSelectedMessage message)
     {
-        if (!TryComp<CardStackComponent>(uid, out var stackComp)
-            || !TryGetEntity(message.CardEntity, out var cardEntity)
-            || !TryGetEntity(message.User, out var user))
+        if (!TryComp<CardStackComponent>(uid, out var stackComp) ||
+            !TryGetEntity(message.CardEntity, out var cardEntity) ||
+            !TryGetEntity(message.User, out var user))
             return;
+
         _cardStack.RemoveCard(uid, cardEntity.Value, stackComp);
         _handsSystem.TryPickupAnyHand(user.Value, cardEntity.Value);
 
+        _appearance.SetData(uid, CardStackVisual.State, stackComp.CardContainer.ContainedEntities.Count);
+        _audio.PlayPredicted(stackComp.RemoveCardSound, uid, user);
         Dirty(uid, stackComp);
     }
 }

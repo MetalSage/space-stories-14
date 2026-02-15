@@ -8,10 +8,10 @@ namespace Content.Client._Stories.Cards.Fan.UI;
 public sealed class FanMenuBoundUserInterface : BoundUserInterface
 {
     [Dependency] private readonly IClyde _displayManager = default!;
-    [Dependency] private readonly IEntityManager _entityManager = default!;
     [Dependency] private readonly IInputManager _inputManager = default!;
-    private readonly EntityUid _owner;
     [Dependency] private readonly IPlayerManager _playerManager = default!;
+
+    private readonly EntityUid _owner;
     private FanMenu? _menu;
 
     public FanMenuBoundUserInterface(EntityUid owner, Enum uiKey) : base(owner, uiKey)
@@ -37,11 +37,11 @@ public sealed class FanMenuBoundUserInterface : BoundUserInterface
         base.Dispose(disposing);
         if (!disposing)
             return;
-        _menu?.Dispose();
+        _menu?.Close();
     }
 
     public void OnCardSelected(NetEntity cardEntity, NetEntity user)
     {
-        SendMessage(new CardSelectedMessage(cardEntity, user));
+        SendPredictedMessage(new CardSelectedMessage(cardEntity, user));
     }
 }

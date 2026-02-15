@@ -11,25 +11,36 @@ namespace Content.Client._Stories.Cards.Fan.UI;
 
 public sealed class FanMenu : RadialMenu
 {
-    private readonly FanMenuBoundUserInterface? _boundUI;
     [Dependency] private readonly EntityManager _entManager = default!;
+    private readonly SpriteSystem _spriteSystem;
+
+    private readonly FanMenuBoundUserInterface? _boundUI;
+
+    private Action<NetEntity, NetEntity>? OnCardSelectedMessageAction;
+
     private readonly EntityUid _owner;
     private readonly EntityUid _user;
-    public Action<NetEntity, NetEntity>? OnCardSelectedMessageAction;
 
     public FanMenu(EntityUid uid, FanMenuBoundUserInterface boundUI, EntityUid user)
     {
         IoCManager.InjectDependencies(this);
         RobustXamlLoader.Load(this);
+        _spriteSystem = _entManager.System<SpriteSystem>();
         _owner = uid;
         _boundUI = boundUI;
         _user = user;
 
-        var main = FindControl<RadialContainer>("Main");
-        main.RemoveAllChildren();
+        Populate();
+        OnCardSelectedMessageAction += _boundUI.OnCardSelected;
+    }
 
+    private void Populate()
+    {
         if (!_entManager.TryGetComponent<CardStackComponent>(_owner, out var stackComp))
             return;
+
+        var main = FindControl<RadialContainer>("Main");
+        main.RemoveAllChildren();
 
         foreach (var card in stackComp.CardContainer.ContainedEntities)
         {
@@ -38,9 +49,9 @@ public sealed class FanMenu : RadialMenu
                 continue;
 
             var cardName = foldable.IsFolded ? cardComp.Name : cardMeta.EntityName;
-            var cardLayer = cardSprite.LayerGetState(1);
+            var cardLayer = _spriteSystem.LayerGetRsiState(card, 1);
 
-            var button = new FanMenuButton
+            var button = new RadialMenuButton
             {
                 StyleClasses = { "RadialMenuButton" },
                 SetSize = new Vector2(64f, 64f),
@@ -67,7 +78,6 @@ public sealed class FanMenu : RadialMenu
                 button.AddChild(tex);
             }
 
-            button.SetCard(card);
             main.AddChild(button);
 
             button.OnPressed += _ =>
@@ -76,10 +86,6 @@ public sealed class FanMenu : RadialMenu
                 Close();
             };
         }
-
-        if (_boundUI == null)
-            return;
-        OnCardSelectedMessageAction += _boundUI.OnCardSelected;
     }
 
     private bool TryGetCardComponents(EntityUid card,
@@ -97,15 +103,5 @@ public sealed class FanMenu : RadialMenu
                _entManager.TryGetComponent(card, out cardSprite) &&
                _entManager.TryGetComponent(card, out foldable) &&
                _entManager.TryGetComponent(card, out cardMeta);
-    }
-}
-
-public sealed class FanMenuButton : RadialMenuButton
-{
-    private EntityUid _cardEntity;
-
-    public void SetCard(EntityUid cardEntity)
-    {
-        _cardEntity = cardEntity;
     }
 }
