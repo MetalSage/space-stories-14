@@ -51279,15 +51279,6 @@ entities:
     - type: Transform
       pos: 6.5,-49.5
       parent: 1
-- proto: PlushieSlime
-  entities:
-  - uid: 4888
-    components:
-    - type: MetaData
-      name: Pogovor
-    - type: Transform
-      pos: -37.5833,-3.5080693
-      parent: 1
 - proto: PlushieSpawner50
   entities:
   - uid: 7437
