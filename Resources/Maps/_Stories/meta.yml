@@ -2,10 +2,10 @@ meta:
   format: 7
   category: Map
   engineVersion: 270.1.0
-  forkId: ""
-  forkVersion: ""
-  time: 02/04/2026 21:11:27
-  entityCount: 28796
+  forkId: stories
+  forkVersion: 50264fb77fa42730a6e99986613ced92729377eb
+  time: 02/07/2026 18:07:08
+  entityCount: 28799
 maps:
 - 1
 grids:
@@ -12647,7 +12647,7 @@ entities:
       pos: 11.5,29.5
       parent: 2
     - type: Door
-      secondsUntilStateChange: -17105.307
+      secondsUntilStateChange: -17161.807
       state: Opening
     - type: DeviceLinkSource
       lastSignals:
@@ -14718,7 +14718,7 @@ entities:
       pos: 46.5,29.5
       parent: 2
     - type: Door
-      secondsUntilStateChange: -5192.5347
+      secondsUntilStateChange: -5249.0347
       state: Opening
     - type: DeviceLinkSource
       lastSignals:
@@ -17822,16 +17822,6 @@ entities:
       parent: 2
     - type: Fixtures
       fixtures: {}
-  - uid: 899
-    components:
-    - type: MetaData
-      name: Telecomms APC
-    - type: Transform
-      rot: 3.141592653589793 rad
-      pos: 104.5,-14.5
-      parent: 2
-    - type: Fixtures
-      fixtures: {}
   - uid: 900
     components:
     - type: MetaData
@@ -17911,6 +17901,24 @@ entities:
     - type: Transform
       rot: 1.5707963267948966 rad
       pos: -12.5,14.5
+      parent: 2
+    - type: Fixtures
+      fixtures: {}
+- proto: APCHyperCapacity
+  entities:
+  - uid: 28797
+    components:
+    - type: Transform
+      rot: 1.5707963267948966 rad
+      pos: 100.5,-12.5
+      parent: 2
+    - type: Fixtures
+      fixtures: {}
+  - uid: 28798
+    components:
+    - type: Transform
+      rot: -1.5707963267948966 rad
+      pos: 108.5,-12.5
       parent: 2
     - type: Fixtures
       fixtures: {}
@@ -40032,11 +40040,6 @@ entities:
     - type: Transform
       pos: 104.5,-6.5
       parent: 2
-  - uid: 5257
-    components:
-    - type: Transform
-      pos: 104.5,-14.5
-      parent: 2
   - uid: 5258
     components:
     - type: Transform
@@ -40797,11 +40800,6 @@ entities:
     - type: Transform
       pos: 105.5,-12.5
       parent: 2
-  - uid: 5410
-    components:
-    - type: Transform
-      pos: 104.5,-12.5
-      parent: 2
   - uid: 5411
     components:
     - type: Transform
@@ -40841,21 +40839,6 @@ entities:
     components:
     - type: Transform
       pos: 104.5,-11.5
-      parent: 2
-  - uid: 5419
-    components:
-    - type: Transform
-      pos: 104.5,-10.5
-      parent: 2
-  - uid: 5420
-    components:
-    - type: Transform
-      pos: 104.5,-9.5
-      parent: 2
-  - uid: 5421
-    components:
-    - type: Transform
-      pos: 104.5,-8.5
       parent: 2
   - uid: 5422
     components:
@@ -42032,6 +42015,16 @@ entities:
     - type: Transform
       pos: 8.5,19.5
       parent: 2
+  - uid: 10813
+    components:
+    - type: Transform
+      pos: 108.5,-12.5
+      parent: 2
+  - uid: 10814
+    components:
+    - type: Transform
+      pos: 100.5,-12.5
+      parent: 2
   - uid: 12829
     components:
     - type: Transform
@@ -42156,6 +42149,11 @@ entities:
     components:
     - type: Transform
       pos: 31.5,28.5
+      parent: 2
+  - uid: 28799
+    components:
+    - type: Transform
+      pos: 104.5,-5.5
       parent: 2
 - proto: CableApcStack
   entities:
@@ -50580,10 +50578,40 @@ entities:
       parent: 2
 - proto: CableMV
   entities:
+  - uid: 899
+    components:
+    - type: Transform
+      pos: 100.5,-12.5
+      parent: 2
   - uid: 2033
     components:
     - type: Transform
       pos: 31.5,31.5
+      parent: 2
+  - uid: 5257
+    components:
+    - type: Transform
+      pos: 103.5,-12.5
+      parent: 2
+  - uid: 5410
+    components:
+    - type: Transform
+      pos: 101.5,-12.5
+      parent: 2
+  - uid: 5419
+    components:
+    - type: Transform
+      pos: 105.5,-12.5
+      parent: 2
+  - uid: 5420
+    components:
+    - type: Transform
+      pos: 106.5,-12.5
+      parent: 2
+  - uid: 5421
+    components:
+    - type: Transform
+      pos: 108.5,-12.5
       parent: 2
   - uid: 7340
     components:
@@ -52848,7 +52876,7 @@ entities:
   - uid: 7793
     components:
     - type: Transform
-      pos: 104.5,-13.5
+      pos: 107.5,-12.5
       parent: 2
   - uid: 7794
     components:
@@ -56303,7 +56331,7 @@ entities:
   - uid: 8488
     components:
     - type: Transform
-      pos: 104.5,-14.5
+      pos: 102.5,-12.5
       parent: 2
   - uid: 8489
     components:
@@ -69002,20 +69030,6 @@ entities:
     components:
     - type: Transform
       pos: -21.437214,36.348232
-      parent: 2
-- proto: ClothingUnderSocksBee
-  entities:
-  - uid: 10813
-    components:
-    - type: Transform
-      pos: 34.582787,51.583603
-      parent: 2
-- proto: ClothingUnderSocksCoder
-  entities:
-  - uid: 10814
-    components:
-    - type: Transform
-      pos: 58.519066,38.228786
       parent: 2
 - proto: ClothingUniformJumpskirtBlackElegantDress
   entities:
@@ -84808,7 +84822,7 @@ entities:
       pos: 31.5,-33.5
       parent: 2
     - type: Door
-      secondsUntilStateChange: -48527.383
+      secondsUntilStateChange: -48583.883
       state: Closing
   - uid: 13230
     components:
@@ -186769,7 +186783,7 @@ entities:
       pos: -28.5,-5.5
       parent: 2
     - type: Door
-      secondsUntilStateChange: -54239.293
+      secondsUntilStateChange: -54295.793
       state: Opening
   - uid: 28732
     components:
