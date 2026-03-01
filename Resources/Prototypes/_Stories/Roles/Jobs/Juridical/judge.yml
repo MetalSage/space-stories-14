@@ -38,7 +38,7 @@
   equipment:
     id: STJudgePDA
     eyes: ClothingEyesGlassesSunglasses
-    ears: STClothingHeadsetJudge
+    ears: ClothingHeadsetIAA
   storage:
     back:
     - STRubberStampJudge
