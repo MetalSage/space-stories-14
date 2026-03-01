@@ -2,10 +2,10 @@ meta:
   format: 7
   category: Map
   engineVersion: 270.1.0
-  forkId: ""
-  forkVersion: ""
-  time: 02/04/2026 20:29:45
-  entityCount: 19585
+  forkId: stories
+  forkVersion: 50264fb77fa42730a6e99986613ced92729377eb
+  time: 02/07/2026 17:31:29
+  entityCount: 19586
 maps:
 - 1
 grids:
@@ -11164,7 +11164,7 @@ entities:
       pos: -2.5,18.5
       parent: 2
     - type: Door
-      secondsUntilStateChange: -427142.1
+      secondsUntilStateChange: -427232.9
       state: Opening
     - type: DeviceLinkSource
       lastSignals:
@@ -11453,7 +11453,7 @@ entities:
       pos: 70.5,-0.5
       parent: 2
     - type: Door
-      secondsUntilStateChange: -257578.34
+      secondsUntilStateChange: -257669.14
       state: Opening
     - type: DeviceLinkSource
       lastSignals:
@@ -11873,7 +11873,7 @@ entities:
       pos: 31.5,11.5
       parent: 2
     - type: Door
-      secondsUntilStateChange: -2777.1794
+      secondsUntilStateChange: -2867.9773
       state: Opening
     - type: DeviceLinkSource
       lastSignals:
@@ -11897,7 +11897,7 @@ entities:
       pos: 30.5,-13.5
       parent: 2
     - type: Door
-      secondsUntilStateChange: -289644.97
+      secondsUntilStateChange: -289735.78
       state: Opening
     - type: DeviceLinkSource
       lastSignals:
@@ -12207,7 +12207,7 @@ entities:
       pos: 9.5,14.5
       parent: 2
     - type: Door
-      secondsUntilStateChange: -159069.97
+      secondsUntilStateChange: -159160.77
       state: Opening
     - type: DeviceLinkSource
       lastSignals:
@@ -12507,7 +12507,7 @@ entities:
       pos: 38.5,-9.5
       parent: 2
     - type: Door
-      secondsUntilStateChange: -264683.8
+      secondsUntilStateChange: -264774.62
       state: Opening
     - type: DeviceLinkSource
       lastSignals:
@@ -12518,7 +12518,7 @@ entities:
       pos: 43.5,-9.5
       parent: 2
     - type: Door
-      secondsUntilStateChange: -277453.84
+      secondsUntilStateChange: -277544.66
       state: Opening
     - type: DeviceLinkSource
       lastSignals:
@@ -12529,7 +12529,7 @@ entities:
       pos: 60.5,-12.5
       parent: 2
     - type: Door
-      secondsUntilStateChange: -16729.365
+      secondsUntilStateChange: -16820.164
       state: Opening
     - type: DeviceLinkSource
       lastSignals:
@@ -14916,6 +14916,13 @@ entities:
     - type: Transform
       rot: -1.5707963267948966 rad
       pos: 23.5,28.5
+      parent: 2
+    - type: Fixtures
+      fixtures: {}
+  - uid: 1397
+    components:
+    - type: Transform
+      pos: 15.5,33.5
       parent: 2
     - type: Fixtures
       fixtures: {}
@@ -18516,21 +18523,6 @@ entities:
     - type: Transform
       pos: 22.5,29.5
       parent: 2
-  - uid: 1380
-    components:
-    - type: Transform
-      pos: 18.5,29.5
-      parent: 2
-  - uid: 1381
-    components:
-    - type: Transform
-      pos: 18.5,30.5
-      parent: 2
-  - uid: 1382
-    components:
-    - type: Transform
-      pos: 18.5,31.5
-      parent: 2
   - uid: 1383
     components:
     - type: Transform
@@ -18590,21 +18582,6 @@ entities:
     components:
     - type: Transform
       pos: 22.5,35.5
-      parent: 2
-  - uid: 1395
-    components:
-    - type: Transform
-      pos: 17.5,31.5
-      parent: 2
-  - uid: 1396
-    components:
-    - type: Transform
-      pos: 16.5,31.5
-      parent: 2
-  - uid: 1397
-    components:
-    - type: Transform
-      pos: 15.5,31.5
       parent: 2
   - uid: 1398
     components:
@@ -30276,6 +30253,11 @@ entities:
     - type: Transform
       pos: 34.5,7.5
       parent: 2
+  - uid: 19511
+    components:
+    - type: Transform
+      pos: 15.5,33.5
+      parent: 2
 - proto: CableApcStack
   entities:
   - uid: 3729
@@ -36240,6 +36222,31 @@ entities:
     components:
     - type: Transform
       pos: 44.5,-1.5
+      parent: 2
+  - uid: 1380
+    components:
+    - type: Transform
+      pos: 17.5,31.5
+      parent: 2
+  - uid: 1381
+    components:
+    - type: Transform
+      pos: 16.5,31.5
+      parent: 2
+  - uid: 1382
+    components:
+    - type: Transform
+      pos: 15.5,32.5
+      parent: 2
+  - uid: 1395
+    components:
+    - type: Transform
+      pos: 15.5,31.5
+      parent: 2
+  - uid: 1396
+    components:
+    - type: Transform
+      pos: 15.5,33.5
       parent: 2
   - uid: 1579
     components:
@@ -58922,7 +58929,7 @@ entities:
       deviceLists:
       - 35
     - type: Door
-      secondsUntilStateChange: -148115.44
+      secondsUntilStateChange: -148206.23
       state: Closing
     - type: Firelock
       emergencyCloseCooldown: 90307.2763613
@@ -60334,7 +60341,7 @@ entities:
       pos: 30.5,-6.5
       parent: 2
     - type: Door
-      secondsUntilStateChange: -126147.82
+      secondsUntilStateChange: -126238.62
       state: Closing
     - type: Firelock
       emergencyCloseCooldown: 12658.2540104
