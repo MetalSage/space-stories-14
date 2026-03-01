@@ -134,4 +134,27 @@ public sealed class SCCVars
 
     public static readonly CVarDef<float> EconomySalaryPercentage =
         CVarDef.Create("economy.salary_percentage", 0.5f, CVar.SERVERONLY | CVar.ARCHIVE);
+
+    
+    /*
+     * NoEorgPopup
+     */
+
+    /// <summary>
+    /// Whether the no EORG popup is enabled.
+    /// </summary>
+    public static readonly CVarDef<bool> RoundEndNoEorgPopup =
+        CVarDef.Create("game.round_end_eorg_popup_enabled", true, CVar.SERVER | CVar.REPLICATED);
+
+    /// <summary>
+    /// Skip the no EORG popup.
+    /// </summary>
+    public static readonly CVarDef<bool> SkipRoundEndNoEorgPopup =
+        CVarDef.Create("game.skip_round_end_eorg_popup", false, CVar.CLIENTONLY | CVar.ARCHIVE);
+
+    /// <summary>
+    /// How long to display the EORG popup for.
+    /// </summary>
+    public static readonly CVarDef<float> RoundEndNoEorgPopupTime =
+        CVarDef.Create("game.round_end_eorg_popup_time", 5f, CVar.SERVER | CVar.REPLICATED);
 }
