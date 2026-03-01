@@ -1,4 +1,4 @@
-ent-ClothingHeadsetIAA = гарнитура АВД
+ent-ClothingHeadsetIAA = гарнитура внутренних дел
     .desc = Гарнитура, чтобы агент внутренних дел услышал последние слова капитана.
-ent-STClothingHeadsetJuridical = гарнитура юридического отдела
+ent-STClothingHeadsetJuridical = гарнитура юридического департамента
     .desc = Гарнитура, чтобы вас все слышали.
