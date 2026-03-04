@@ -1,13 +1,12 @@
 meta:
   format: 7
-  category: Map
+  category: Grid
   engineVersion: 270.1.0
   forkId: stories
   forkVersion: 50264fb77fa42730a6e99986613ced92729377eb
   time: 02/08/2026 20:34:02
   entityCount: 11688
-maps:
-- 286
+maps: []
 grids:
 - 1
 orphans: []
