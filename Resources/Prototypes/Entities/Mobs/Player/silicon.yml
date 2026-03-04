@@ -73,6 +73,7 @@
   - type: TTS # Stories-TTS
     voice: glados
   - type: ShowJobIcons
+  - type: ShowCrewIcons
   - type: DamagedSiliconAccent
     startPowerCorruptionAtCharIdx: 4
     maxPowerCorruptionAtCharIdx: 20
@@ -98,6 +99,7 @@
       enum.SiliconLawsUiKey.Key:
         type: SiliconLawBoundUserInterface
   - type: ShowJobIcons
+  - type: ShowCrewIcons
 
 # Ai
 - type: entity
@@ -638,6 +640,7 @@
       borg_brain:
       - PositronicBrain
       borg_module:
+      - BorgModulePrying
       - BorgModuleTool
       - BorgModuleFireExtinguisher
       - BorgModuleConstruction
@@ -676,6 +679,7 @@
       borg_brain:
         - PositronicBrain
       borg_module:
+        - BorgModulePrying
         - BorgModuleTool
         - BorgModuleFireExtinguisher
   - type: ItemSlots
@@ -711,6 +715,7 @@
       borg_brain:
       - PositronicBrain
       borg_module:
+      - BorgModulePrying
       - BorgModuleTool
       - BorgModuleFireExtinguisher
       - BorgModuleCleaning
@@ -748,6 +753,7 @@
       borg_brain:
       - PositronicBrain
       borg_module:
+      - BorgModulePrying
       - BorgModuleTool
       - BorgModuleFireExtinguisher
       - BorgModuleChemical
@@ -786,6 +792,7 @@
       borg_brain:
       - PositronicBrain
       borg_module:
+      - BorgModulePrying
       - BorgModuleTool #No fire extinguisher, traversal is better
       - BorgModuleMining
       - BorgModuleTraversal
