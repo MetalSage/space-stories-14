@@ -154,3 +154,4 @@
     - type: FaxMachine
       name: "Центральное командование"
       notifyAdmins: true
+      receiveStationGoal: true # Corvax-StationGoal
