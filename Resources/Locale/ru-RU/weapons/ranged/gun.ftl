@@ -1,3 +1,4 @@
+
 gun-selected-mode-examine = Выбран режим огня [color={ $color }]{ $mode }[/color].
 gun-fire-rate-examine = Скорострельность [color={ $color }]{ $fireRate }[/color] в секунду.
 gun-selector-verb = Изменить на { $mode }
@@ -7,10 +8,12 @@ gun-set-fire-mode-examine = Выбран режим [color=yellow]{ $mode }[/col
 gun-set-fire-mode-popup = Изменено на { $mode }
 gun-magazine-whitelist-fail = Это не помещается в оружие!
 gun-magazine-fired-empty = Нет патронов!
+
 # SelectiveFire
 gun-SemiAuto = полуавто
 gun-Burst = очередь
 gun-FullAuto = авто
+
 # BallisticAmmoProvider
 gun-ballistic-cycle = Перезарядка
 gun-ballistic-cycled = Перезаряжено
@@ -18,9 +21,11 @@ gun-ballistic-cycled-empty = Разряжено
 gun-ballistic-transfer-invalid = { CAPITALIZE($ammoEntity) } нельзя поместить в { $targetEntity }!
 gun-ballistic-transfer-empty = В { CAPITALIZE($entity) } пусто.
 gun-ballistic-transfer-target-full = { CAPITALIZE($entity) } уже полностью заряжен.
+
 # CartridgeAmmo
 gun-cartridge-spent = Он [color=red]израсходован[/color].
 gun-cartridge-unspent = Он [color=lime]не израсходован[/color].
+
 # BatteryAmmoProvider
 gun-battery-examine =
     Заряда хватит на [color={ $color }]{ $count }[/color] { $count ->
@@ -28,6 +33,7 @@ gun-battery-examine =
         [few] выстрела
        *[other] выстрелов
     }.
+
 # CartridgeAmmoProvider
 gun-chamber-bolt-ammo = Затвор не закрыт
 gun-chamber-bolt = Затвор [color={ $color }]{ $bolt }[/color].
@@ -38,6 +44,7 @@ gun-chamber-bolt-open = Открыть затвор
 gun-chamber-bolt-closed-state = открыт
 gun-chamber-bolt-open-state = закрыт
 gun-chamber-rack = Передёрнуть затвор
+
 # MagazineAmmoProvider
 gun-magazine-examine =
     Тут [color={ $color }]{ $count }[/color] { $count ->
@@ -45,6 +52,7 @@ gun-magazine-examine =
         [few] штуки
        *[other] штук
     }.
+
 # RevolverAmmoProvider
 gun-revolver-empty = Разрядить револьвер
 gun-revolver-full = Револьвер полностью заряжен
@@ -52,6 +60,7 @@ gun-revolver-insert = Заряжен
 gun-revolver-spin = Вращать барабан
 gun-revolver-spun = Барабан вращается
 gun-speedloader-empty = Спидлоадер пуст
+
 # GunSpreadModifier
 examine-gun-spread-modifier-reduction = Разброс снижен на [color=yellow]{ $percentage }%[/color].
 examine-gun-spread-modifier-increase = Разброс повышен на [color=yellow]{ $percentage }%[/color].

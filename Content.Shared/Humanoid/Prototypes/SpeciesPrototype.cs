@@ -75,6 +75,14 @@ public sealed partial class SpeciesPrototype : IPrototype
     [DataField]
     public ProtoId<LocalizedDatasetPrototype> LastNames { get; private set; } = "NamesLast";
 
+    // Stories-LastnameGender-Start
+    [DataField]
+    public ProtoId<LocalizedDatasetPrototype> MaleLastNames { get; private set; } = "NamesHumanLastMale";
+
+    [DataField]
+    public ProtoId<LocalizedDatasetPrototype> FemaleLastNames { get; private set; } = "NamesHumanLastFemale";
+    // Stories-LastnameGender-End
+
     [DataField]
     public SpeciesNaming Naming { get; private set; } = SpeciesNaming.FirstLast;
 
