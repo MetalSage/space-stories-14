@@ -1,3 +1,4 @@
+using System.Linq;
 using System.Text;
 using System.Text.RegularExpressions;
 
@@ -132,6 +133,11 @@ public sealed partial class ChatSystem
         { "славаРоссии", "кхе-кхе" },
     };
 
+    private static readonly List<(Regex Regex, string Replacement)> CompiledSlangReplace = SlangReplace
+        .Select(x => (new Regex($@"\b{Regex.Escape(x.Key)}\b", RegexOptions.IgnoreCase | RegexOptions.Compiled),
+            x.Value))
+        .ToList();
+
     private static readonly List<string> Banwords = new()
     {
         "пидр", "педр", "пидор", "пидар", "педар", "педик",
@@ -182,9 +188,9 @@ public sealed partial class ChatSystem
             return message;
 
         // Поиск и замена сленга
-        foreach (var pair in SlangReplace)
+        foreach (var pair in CompiledSlangReplace)
         {
-            message = Regex.Replace(message, $@"\b{Regex.Escape(pair.Key)}\b", pair.Value, RegexOptions.IgnoreCase);
+            message = pair.Regex.Replace(message, pair.Replacement);
         }
 
         return message;

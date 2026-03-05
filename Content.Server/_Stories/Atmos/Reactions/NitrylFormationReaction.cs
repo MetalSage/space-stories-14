@@ -39,8 +39,10 @@ public sealed partial class NitrylFormationReaction : IGasReactionEffect
         var energyConsumed = nitrylFormed * Atmospherics.NitrylProductionEnergy;
         var heatCap = atmosphereSystem.GetHeatCapacity(mixture, true);
         if (heatCap > Atmospherics.MinimumHeatCapacity)
+        {
             mixture.Temperature =
                 Math.Max((mixture.Temperature * heatCap + energyConsumed) / heatCap, Atmospherics.TCMB);
+        }
 
         return ReactionResult.Reacting;
     }

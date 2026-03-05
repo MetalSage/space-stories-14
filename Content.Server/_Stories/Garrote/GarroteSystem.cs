@@ -3,7 +3,7 @@ using Content.Server.Chat.Systems;
 using Content.Server.Popups;
 using Content.Shared._Stories.Weapons.Special.Garrote;
 using Content.Shared.ActionBlocker;
-using Content.Shared.Body.Components;
+using Content.Shared.Body;
 using Content.Shared.Chat;
 using Content.Shared.Damage.Components;
 using Content.Shared.DoAfter;

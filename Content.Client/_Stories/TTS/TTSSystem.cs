@@ -103,10 +103,12 @@ public sealed class TTSSystem : EntitySystem
             .WithMaxDistance(AdjustDistance(ev.IsWhisper));
 
         if (ev.SourceUid != null && TryGetEntity(ev.SourceUid.Value, out var sourceUid))
+        {
             _audio.PlayEntity(audioResource.AudioStream,
                 sourceUid.Value,
                 new ResolvedPathSpecifier(filePath),
                 audioParams);
+        }
         else
             _audio.PlayGlobal(audioResource.AudioStream, new ResolvedPathSpecifier(filePath), audioParams);
 

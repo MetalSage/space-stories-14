@@ -1,11 +1,11 @@
 using Content.Shared._Stories.Cards.Stack;
-using Robust.Shared.Timing;
 
 namespace Content.Client._Stories.Cards.Stack;
 
 public sealed class CardStackSystem : SharedCardStackSystem
 {
     [Dependency] private readonly CardStackVisualSystem _cardStackVisual = default!;
+
     public override void Initialize()
     {
         base.Initialize();

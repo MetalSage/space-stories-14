@@ -1,12 +1,10 @@
 using System.Diagnostics.CodeAnalysis;
 using System.Numerics;
-using Robust.Client.UserInterface.RichText;
+using Content.Client.Paper.UI;
 using Robust.Client.UserInterface;
 using Robust.Client.UserInterface.Controls;
+using Robust.Client.UserInterface.RichText;
 using Robust.Shared.Utility;
-using Robust.Shared.IoC;
-using Content.Client.Paper.UI;
-using Robust.Client.Graphics;
 
 namespace Content.Client.UserInterface.RichText;
 
@@ -15,13 +13,72 @@ namespace Content.Client.UserInterface.RichText;
 /// </summary>
 public sealed class SignatureTagHandler : IMarkupTagHandler
 {
-    public string Name => "signature";
-    private static int _signatureCounter = 0;
-    
+    private static int _signatureCounter;
+
+    public SignatureTagHandler()
+    {
+        IoCManager.InjectDependencies(this);
+    }
+
     /// <summary>
     /// Font line height set by PaperWindow to ensure buttons match text height
     /// </summary>
     public static float FontLineHeight { get; set; } = 16.0f; // Default fallback
+
+    public string Name => "signature";
+
+    public void PushDrawContext(MarkupNode node, MarkupDrawingContext context) { }
+    public void PopDrawContext(MarkupNode node, MarkupDrawingContext context) { }
+
+    public string TextBefore(MarkupNode node)
+    {
+        return "";
+    }
+
+    public string TextAfter(MarkupNode node)
+    {
+        return "";
+    }
+
+    /// <summary>
+    /// Creates a clickable signature button to replace the [signature] tag.
+    /// </summary>
+    public bool TryCreateControl(MarkupNode node, [NotNullWhen(true)] out Control? control)
+    {
+        var btn = new Button
+        {
+            Text = Loc.GetString("paper-signature-sign-button"),
+            MinSize = new Vector2(96, FontLineHeight + 4),
+            MaxSize = new Vector2(96, FontLineHeight + 4),
+            Margin = new Thickness(1, 2, 1, 2),
+            StyleClasses = { "ButtonSquare" },
+            TextAlign = Label.AlignMode.Center,
+        };
+
+        var signatureIndex = GetSignatureIndex(node);
+        btn.Name = $"signature_{signatureIndex}";
+
+        btn.OnPressed += _ =>
+        {
+            // Find the PaperWindow parent
+            var parent = btn.Parent;
+            while (parent != null && parent is not PaperWindow)
+            {
+                parent = parent.Parent;
+            }
+
+            if (parent is PaperWindow paperWindow)
+            {
+                // Count buttons to determine which [signature] tag this represents
+                var buttonIndex = CountSignatureButtonsBefore(btn);
+                // Send signature request to server instead of handling client-side
+                paperWindow.SendSignatureRequest(buttonIndex);
+            }
+        };
+
+        control = btn;
+        return true;
+    }
 
     private static int GetSignatureIndex(MarkupNode node)
     {
@@ -46,7 +103,9 @@ public sealed class SignatureTagHandler : IMarkupTagHandler
 
         // Find the root container
         while (root.Parent != null)
+        {
             root = root.Parent;
+        }
 
         // Count signature buttons in document order
         var found = false;
@@ -56,7 +115,8 @@ public sealed class SignatureTagHandler : IMarkupTagHandler
 
     private static void CountSignatureButtonsRecursive(Control control, Control target, ref int count, ref bool found)
     {
-        if (found) return;
+        if (found)
+            return;
 
         if (control is Button btn && btn.Text == Loc.GetString("paper-signature-sign-button"))
         {
@@ -65,62 +125,13 @@ public sealed class SignatureTagHandler : IMarkupTagHandler
                 found = true;
                 return;
             }
+
             count++;
         }
 
-        foreach (Control child in control.Children)
+        foreach (var child in control.Children)
         {
             CountSignatureButtonsRecursive(child, target, ref count, ref found);
         }
     }
-
-    public SignatureTagHandler()
-    {
-        IoCManager.InjectDependencies(this);
-    }
-
-    public void PushDrawContext(MarkupNode node, MarkupDrawingContext context) { }
-    public void PopDrawContext(MarkupNode node, MarkupDrawingContext context) { }
-    public string TextBefore(MarkupNode node) => "";
-    public string TextAfter(MarkupNode node) => "";
-
-    /// <summary>
-    /// Creates a clickable signature button to replace the [signature] tag.
-    /// </summary>
-    public bool TryCreateControl(MarkupNode node, [NotNullWhen(true)] out Control? control)
-    {
-        var btn = new Button
-        {
-            Text = Loc.GetString("paper-signature-sign-button"),
-            MinSize = new Vector2(96, FontLineHeight + 4),
-            MaxSize = new Vector2(96, FontLineHeight + 4),
-            Margin = new Thickness(1, 2, 1, 2),
-            StyleClasses = { "ButtonSquare" },
-            TextAlign = Label.AlignMode.Center
-        };
-
-        var signatureIndex = GetSignatureIndex(node);
-        btn.Name = $"signature_{signatureIndex}";
-
-        btn.OnPressed += _ =>
-        {
-            // Find the PaperWindow parent
-            var parent = btn.Parent;
-            while (parent != null && parent is not PaperWindow)
-                parent = parent.Parent;
-
-            if (parent is PaperWindow paperWindow)
-            {
-                // Count buttons to determine which [signature] tag this represents
-                var buttonIndex = CountSignatureButtonsBefore(btn);
-                // Send signature request to server instead of handling client-side
-                paperWindow.SendSignatureRequest(buttonIndex);
-            }
-        };
-
-        control = btn;
-        return true;
-    }
-
-
 }

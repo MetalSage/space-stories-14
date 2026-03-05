@@ -1,11 +1,8 @@
 using Content.Server.GameTicking;
-using Content.Server.Popups;
 using Content.Server.Station.Systems;
 using Content.Shared._Stories.TargetingTeleporter;
 using Content.Shared.GameTicking;
-using Content.Shared.Movement.Systems;
 using Content.Shared.Whitelist;
-using Robust.Server.GameObjects;
 using Robust.Shared.Random;
 
 namespace Content.Server._Stories.TargetingTeleporter;
@@ -14,11 +11,8 @@ public sealed class TargetingTeleporterSystem : SharedTargetingTeleporterSystem
 {
     [Dependency] private readonly EntityWhitelistSystem _entityWhitelist = default!;
     [Dependency] private readonly GameTicker _gameTicker = default!;
-    [Dependency] private readonly SharedMoverController _mover = default!;
-    [Dependency] private readonly PopupSystem _popup = default!;
     [Dependency] private readonly IRobustRandom _random = default!;
     [Dependency] private readonly StationSystem _station = default!;
-    [Dependency] private readonly TransformSystem _xform = default!;
 
     public override void Initialize()
     {

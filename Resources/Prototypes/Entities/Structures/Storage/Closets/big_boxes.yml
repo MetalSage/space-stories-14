@@ -70,8 +70,8 @@
     - type: Stealth
       hadOutline: true
     - type: StealthOnMove
-      passiveVisibilityRate: -1 # -0.37 # Stories-Rebalance
-      movementVisibilityRate: 0 # 0.20 # Stories-Rebalance
+      passiveVisibilityRate: -1 # very useful for going around the station concealed, if you start jitterstrafing you get seen
+      movementVisibilityRate: 0.20
     # Stories-Destruction-Start
     - type: Destructible
       thresholds:

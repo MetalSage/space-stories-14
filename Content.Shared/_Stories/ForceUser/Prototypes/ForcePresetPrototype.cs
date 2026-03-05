@@ -2,7 +2,7 @@ using Robust.Shared.Prototypes;
 
 namespace Content.Shared._Stories.ForceUser;
 
-[Prototype("forcePreset")] [DataDefinition]
+[Prototype] [DataDefinition]
 public sealed partial class ForcePresetPrototype : IPrototype
 {
     // Эту нужно чтобы добавить магазин.

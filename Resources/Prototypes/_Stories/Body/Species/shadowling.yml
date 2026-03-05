@@ -1,0 +1,467 @@
+- type: entity
+  save: false
+  name: Urist' McShadowling
+  parent:
+  - BaseSpeciesMobOrganic
+  id: MobShadowling
+  components:
+  - type: Cuffer
+    timeModifier: 2
+  - type: ZombieImmune
+  - type: ThermalVision
+    innate: true
+  - type: ComplexInteraction
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTypeTrigger
+        damageType: Heat
+        damage: 480
+      behaviors:
+      - !type:SpawnEntitiesBehavior
+        spawnInContainer: true
+        spawn:
+          Ash:
+            min: 1
+            max: 1
+      - !type:BurnBodyBehavior
+      - !type:PlaySoundBehavior
+        sound:
+          collection: MeatLaserImpact
+  - type: Prying
+    pryPowered: true
+    force: true
+    useSound:
+      path: /Audio/Items/crowbar.ogg
+  - type: Shadowling
+    actions:
+      # ActionShadowlingHatch: 0
+      ActionShadowlingShadowWalk: 0
+      ActionShadowlingGlare: 0
+      ActionShadowlingVeil: 0
+      ActionShadowlingIcyVeins: 0
+      ActionShadowlingCollectiveMind: 0
+      ActionShadowlingRapidReHatch: 0
+      ActionShadowlingEnthrall: 0
+      ActionShadowlingBlindnessSmoke: 5
+      ActionShadowlingSonicScreech: 3
+      ActionShadowlingBlackRecuperation: 9
+      ActionShadowlingAscendance: 15
+  - type: Photosensitivity
+  - type: NoSlip
+  - type: MovementAlwaysTouching
+  - type: Insulated
+  - type: CombatMode
+  - type: InputMover
+  - type: MobMover
+  - type: Hands
+  - type: StatusEffects
+    allowed:
+    - Stun
+    - KnockedDown
+    - SlowedDown
+    - Stutter
+    - SeeingRainbows
+    - Electrocution
+    - Drunk
+    - SlurredSpeech
+    - RatvarianLanguage
+    - PressureImmunity
+    - Muted
+    - ForcedSleep
+    - TemporaryBlindness
+    - Pacified
+    - StaminaModifier
+    - Flashed
+  - type: Temperature
+    currentTemperature: 310.15
+    specificHeat: 42
+  - type: TemperatureDamage
+    heatDamageThreshold: 360
+    coldDamageThreshold: 0
+    coldDamage:
+      types:
+        Cold: 0.1
+    heatDamage:
+      types:
+        Heat: 0.1
+  - type: ThermalRegulator
+    metabolismHeat: 800
+    radiatedHeat: 100
+    implicitHeatRegulation: 500
+    sweatHeatRegulation: 2000
+    shiveringHeatRegulation: 2000
+    normalBodyTemperature: 310.15
+    thermalRegulationTemperatureThreshold: 25
+  - type: TypingIndicator
+    proto: holo
+  - type: MobState
+    allowedStates:
+    - Alive
+    - Critical
+    - Dead
+  - type: MobThresholds
+    thresholds:
+      0: Alive
+      60: Critical
+      120: Dead
+  - type: Blindable
+  - type: RotationVisuals
+    defaultRotation: 90
+    horizontalRotation: 90
+  - type: StandingState
+    canCrawl: true
+  - type: FireVisuals
+    alternateState: Standing
+  - type: Sprite
+    drawdepth: Mobs
+    sprite: _Stories/Mobs/Demons/shadowling.rsi
+    layers:
+    - state: shadowling
+    - state: shadowling_overlay
+      shader: unshaded
+  - type: Body
+    prototype: Shadowling
+    requiredLegs: 2
+  - type: IntrinsicRadioReceiver
+  - type: IntrinsicRadioTransmitter
+    channels:
+    - ShadowlingMind
+  - type: ActiveRadio
+    channels:
+    - ShadowlingMind
+  - type: Damageable
+    damageContainer: Biological
+    damageModifierSet: Shadowling
+  - type: MeleeWeapon
+    soundHit:
+      collection: Punch
+    angle: 30
+    animation: WeaponArcFist
+    attackRate: 1
+    damage:
+      types:
+        Blunt: 10
+  - type: MovementSpeedModifier
+    baseWalkSpeed : 2.7
+    baseSprintSpeed : 4.5
+  - type: Perishable
+  - type: ContentEye
+    maxZoom: 1.2, 1.2
+  - type: Puller
+  - type: Tag
+    tags:
+    - DoorBumpOpener
+  - type: Unholy
+    resistanceCoefficient: 0
+    ignoreProtectionImpulse: true
+    detectable: false
+  - type: NameIdentifier
+    group: GenericNumber
+  - type: InteractionPopup
+    successChance: 1
+    interactSuccessString: hugging-success-generic
+    interactSuccessSound: /Audio/Effects/thudswoosh.ogg
+    messagePerceivedByOthers: hugging-success-generic-others
+  - type: MindContainer
+  - type: Input
+    context: "human"
+  - type: Alerts
+  - type: Eye
+  - type: CameraRecoil
+  - type: Examiner
+  - type: CanHostGuardian
+  - type: NpcFactionMember
+    factions:
+      - SimpleHostile
+  - type: TTS
+    voice: illidan
+
+- type: entity
+  parent: OrganBase
+  id: OrganShadowling
+  name: часть тела тенеморфа
+  abstract: true
+  suffix: Shadowling
+  components:
+  - type: Extractable
+    juiceSolution:
+      reagents:
+      - ReagentId: Fat
+        Quantity: 3
+      - ReagentId: Blood
+        Quantity: 10
+
+- type: entity
+  parent: OrganShadowling
+  id: OrganShadowlingExternal
+  abstract: true
+  components:
+  - type: Sprite
+    sprite: _Stories/Mobs/Species/Shadowling/parts.rsi
+  - type: VisualOrgan
+    data:
+      sprite: _Stories/Mobs/Species/Shadowling/parts.rsi
+  - type: VisualOrganMarkings
+    markingData:
+      group: Human
+
+- type: entity
+  id: OrganShadowlingTorso
+  name: туловище тенеморфа
+  parent: [ OrganBaseTorsoSexed, OrganBaseTorso, OrganShadowlingExternal ]
+  components:
+  - type: Extractable
+    juiceSolution:
+      reagents:
+      - ReagentId: Fat
+        Quantity: 10
+      - ReagentId: Blood
+        Quantity: 20
+
+- type: entity
+  id: OrganShadowlingHead
+  name: голова тенеморфа
+  parent: [ OrganBaseHeadSexed, OrganBaseHead, OrganShadowlingExternal ]
+  components:
+  - type: Extractable
+    juiceSolution:
+      reagents:
+      - ReagentId: Fat
+        Quantity: 5
+      - ReagentId: Blood
+        Quantity: 10
+
+- type: entity
+  id: OrganShadowlingArmLeft
+  name: левая рука тенеморфа
+  parent: [ OrganBaseArmLeft, OrganShadowlingExternal ]
+
+- type: entity
+  id: OrganShadowlingArmRight
+  name: правая рука тенеморфа
+  parent: [ OrganBaseArmRight, OrganShadowlingExternal ]
+
+- type: entity
+  id: OrganShadowlingHandLeft
+  name: левая кисть тенеморфа
+  parent: [ OrganBaseHandLeft, OrganShadowlingExternal ]
+
+- type: entity
+  id: OrganShadowlingHandRight
+  name: правая кисть тенеморфа
+  parent: [ OrganBaseHandRight, OrganShadowlingExternal ]
+
+- type: entity
+  id: OrganShadowlingLegLeft
+  name: левая нога тенеморфа
+  parent: [ OrganBaseLegLeft, OrganShadowlingExternal ]
+
+- type: entity
+  id: OrganShadowlingLegRight
+  name: правая нога тенеморфа
+  parent: [ OrganBaseLegRight, OrganShadowlingExternal ]
+
+- type: entity
+  id: OrganShadowlingFootLeft
+  name: левая стопа тенеморфа
+  parent: [ OrganBaseFootLeft, OrganShadowlingExternal ]
+
+- type: entity
+  id: OrganShadowlingFootRight
+  name: правая стопа тенеморфа
+  parent: [ OrganBaseFootRight, OrganShadowlingExternal ]
+
+- type: entity
+  id: BaseShadowlingOrgan
+  parent: BaseItem
+  abstract: true
+  components:
+  - type: Sprite
+    sprite: Mobs/Species/Human/organs.rsi
+  - type: Organ
+  - type: Edible
+  - type: Extractable
+    grindableSolutionName: organ
+  - type: SolutionContainerManager
+    solutions:
+      organ:
+        reagents:
+        - ReagentId: Toxin
+          Quantity: 10
+      food:
+        maxVol: 5
+        reagents:
+        - ReagentId: Toxin
+          Quantity: 5
+  - type: FlavorProfile
+    flavors:
+      - people
+  - type: Tag
+    tags:
+      - Meat
+
+- type: entity
+  id: OrganShadowlingBrain
+  parent: BaseShadowlingOrgan
+  name: brain
+  description: "The source of incredible, unending intelligence. Honk."
+  components:
+  - type: Sprite
+    state: brain
+  - type: Organ
+  - type: Input
+    context: "ghost"
+  - type: Brain
+  - type: InputMover
+  - type: Examiner
+  - type: BlockMovement
+  - type: BadFood
+  - type: Tag
+    tags:
+      - Meat
+
+- type: entity
+  id: OrganShadowlingEyes
+  parent: BaseShadowlingOrgan
+  name: eyes
+  description: "I see you!"
+  components:
+  - type: Sprite
+    layers:
+      - state: eyeball-l
+      - state: eyeball-r
+
+- type: entity
+  id: OrganShadowlingTongue
+  parent: BaseShadowlingOrgan
+  name: tongue
+  description: "A fleshy muscle mostly used for lying."
+  components:
+  - type: Sprite
+    state: tongue
+
+- type: entity
+  id: OrganShadowlingAppendix
+  parent: BaseShadowlingOrgan
+  name: appendix
+  components:
+  - type: Sprite
+    layers:
+    - state: appendix
+    - state: appendix-inflamed
+      visible: false
+
+- type: entity
+  id: OrganShadowlingEars
+  parent: BaseShadowlingOrgan
+  name: ears
+  description: "There are three parts to the ear. Inner, middle and outer. Only one of these parts should normally be visible."
+  components:
+  - type: Sprite
+    state: ears
+
+- type: entity
+  id: OrganShadowlingLungs
+  parent: BaseShadowlingOrgan
+  name: lungs
+  description: "Filters oxygen from an atmosphere, which is then sent into the bloodstream to be used as an electron carrier."
+  components:
+  - type: Sprite
+    layers:
+      - state: lung-l
+      - state: lung-r
+  - type: Lung
+  - type: Metabolizer
+    removeEmpty: true
+    solutionOnBody: false
+    solution: "Lung"
+    metabolizerTypes: [ Shadowling ]
+    groups:
+    - id: Gas
+      rateModifier: 100.0
+  - type: SolutionContainerManager
+    solutions:
+      organ:
+        reagents:
+        - ReagentId: Toxin
+          Quantity: 10
+      Lung:
+        maxVol: 100.0
+        canReact: false
+      food:
+        maxVol: 5
+        reagents:
+        - ReagentId: Toxin
+          Quantity: 5
+
+- type: entity
+  id: OrganShadowlingHeart
+  parent: BaseShadowlingOrgan
+  name: heart
+  description: "I feel bad for the heartless bastard who lost this."
+  components:
+  - type: Sprite
+    state: heart-on
+  - type: Metabolizer
+    maxReagents: 2
+    metabolizerTypes: [ Shadowling ]
+    groups:
+    - id: Medicine
+    - id: Poison
+    - id: Narcotic
+
+- type: entity
+  id: OrganShadowlingStomach
+  parent: BaseShadowlingOrgan
+  name: stomach
+  description: "Gross. This is hard to stomach."
+  components:
+  - type: Sprite
+    state: stomach
+  - type: SolutionContainerManager
+    solutions:
+      stomach:
+        maxVol: 50
+      food:
+        maxVol: 5
+        reagents:
+        - ReagentId: UncookedAnimalProteins
+          Quantity: 5
+  - type: Stomach
+  - type: Metabolizer
+    maxReagents: 3
+    metabolizerTypes: [ Shadowling ]
+    groups:
+    - id: Food
+    - id: Drink
+
+- type: entity
+  id: OrganShadowlingLiver
+  parent: BaseShadowlingOrgan
+  name: liver
+  description: "Pairing suggestion: chianti and fava beans."
+  components:
+  - type: Sprite
+    state: liver
+  - type: Metabolizer
+    maxReagents: 1
+    metabolizerTypes: [ Shadowling ]
+    groups:
+    - id: Alcohol
+      rateModifier: 0.1
+
+- type: entity
+  id: OrganShadowlingKidneys
+  parent: BaseShadowlingOrgan
+  name: kidneys
+  description: "Filters toxins from the bloodstream."
+  components:
+  - type: Sprite
+    layers:
+      - state: kidney-l
+      - state: kidney-r
+  - type: Metabolizer
+    maxReagents: 5
+    metabolizerTypes: [ Shadowling ]
+    removeEmpty: true

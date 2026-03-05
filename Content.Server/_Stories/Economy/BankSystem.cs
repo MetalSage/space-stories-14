@@ -33,9 +33,7 @@ public sealed class BankSystem : EntitySystem
         EntityUid? station = args.Station;
 
         if (station == EntityUid.Invalid)
-        {
             station = _station.GetOwningStation(entity);
-        }
 
         if (station == null || station == EntityUid.Invalid)
             return;

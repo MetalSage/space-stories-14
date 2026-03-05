@@ -2,11 +2,14 @@ using Content.Shared._Stories.ForceUser.Actions.Events;
 using Content.Shared.Damage;
 using Content.Shared.Damage.Prototypes;
 using Content.Shared.DoAfter;
+using Robust.Shared.Prototypes;
 
 namespace Content.Server._Stories.ForceUser;
 
 public sealed partial class ForceUserSystem
 {
+    private static readonly ProtoId<DamageGroupPrototype> GeneticDamageGroup = "Genetic";
+
     public void InitializeSteal()
     {
         SubscribeLocalEvent<StealLifeTargetEvent>(OnSteal);
@@ -66,7 +69,7 @@ public sealed partial class ForceUserSystem
 
         if (_mobState.IsDead(target))
         {
-            var geneticGroup = _proto.Index<DamageGroupPrototype>("Genetic");
+            var geneticGroup = _proto.Index<DamageGroupPrototype>(GeneticDamageGroup);
             var geneticSpec = new DamageSpecifier();
             foreach (var type in geneticGroup.DamageTypes)
             {

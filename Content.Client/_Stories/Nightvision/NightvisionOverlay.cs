@@ -8,6 +8,8 @@ namespace Content.Client._Stories.Nightvision;
 
 public sealed class NightvisionOverlay : Overlay
 {
+    private static readonly ProtoId<ShaderPrototype> NightvisionShader = "Nightvision";
+
     [Dependency] private readonly IEntityManager _entityManager = default!;
     [Dependency] private readonly ILightManager _lightManager = default!;
     private readonly ShaderInstance _nightvisionShader;
@@ -18,7 +20,7 @@ public sealed class NightvisionOverlay : Overlay
     public NightvisionOverlay()
     {
         IoCManager.InjectDependencies(this);
-        _nightvisionShader = _prototypeManager.Index<ShaderPrototype>("Nightvision").InstanceUnique();
+        _nightvisionShader = _prototypeManager.Index(NightvisionShader).InstanceUnique();
     }
 
     public override bool RequestScreenTexture => true;

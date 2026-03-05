@@ -8,7 +8,7 @@
     polymorph: STDesecrated
     whitelist:
       components:
-      - HumanoidAppearance
+      - HumanoidProfile
     blacklist:
       components:
       - Pontific

@@ -7,7 +7,6 @@ using Content.Shared.Popups;
 using Content.Shared.Rounding;
 using Content.Shared.Weapons.Ranged.Events;
 using Robust.Shared.Prototypes;
-using Robust.Shared.Serialization.Manager;
 
 namespace Content.Shared._Stories.ForceUser;
 
@@ -15,13 +14,11 @@ public abstract partial class SharedForceUserSystem : EntitySystem
 {
     [Dependency] private readonly SharedActionsSystem _actions = default!;
     [Dependency] private readonly AlertsSystem _alerts = default!;
-    [Dependency] private readonly IComponentFactory _compFact = default!;
     [Dependency] private readonly SharedDoAfterSystem _doAfter = default!;
     [Dependency] private readonly ForceSystem _force = default!;
     [Dependency] private readonly MobStateSystem _mobState = default!;
     [Dependency] private readonly SharedPopupSystem _popup = default!;
     [Dependency] private readonly IPrototypeManager _proto = default!;
-    [Dependency] private readonly ISerializationManager _seriMan = default!;
     private ISawmill _sawmill = default!;
 
     public override void Initialize()

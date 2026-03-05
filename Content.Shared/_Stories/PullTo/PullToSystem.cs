@@ -15,7 +15,6 @@ public sealed class PullToSystem : EntitySystem
     [Dependency] private readonly InventorySystem _inventory = default!;
     [Dependency] private readonly SharedPhysicsSystem _physics = default!;
     [Dependency] private readonly ThrowingSystem _throwing = default!;
-    [Dependency] private readonly SharedTransformSystem _xform = default!;
 
     public override void Initialize()
     {
@@ -101,8 +100,8 @@ public sealed class PullToSystem : EntitySystem
 
         while (children.MoveNext(out var child))
         {
-            if (TryComp<TransformComponent>(child, out var childXform) &&
-                TryComp<PhysicsComponent>(child, out var childPhysics))
+            var childXform = Transform(child);
+            if (TryComp<PhysicsComponent>(child, out var childPhysics))
                 RecursivelyUpdatePhysics(child, childXform, childPhysics);
         }
     }

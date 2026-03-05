@@ -1,11 +1,10 @@
-using System.Numerics;
 using System.Diagnostics.CodeAnalysis;
-using Robust.Client.UserInterface.RichText;
-using Robust.Client.UserInterface.Controls;
-using Robust.Client.UserInterface;
-using Robust.Shared.Utility;
+using System.Numerics;
 using Content.Client.Paper.UI;
-using Robust.Client.Graphics;
+using Robust.Client.UserInterface;
+using Robust.Client.UserInterface.Controls;
+using Robust.Client.UserInterface.RichText;
+using Robust.Shared.Utility;
 
 namespace Content.Client.UserInterface.RichText;
 
@@ -14,21 +13,73 @@ namespace Content.Client.UserInterface.RichText;
 /// </summary>
 public sealed class FormTagHandler : IMarkupTagHandler
 {
+    private static int _formCounter;
+    private static readonly Dictionary<string, int> _formPositions = new();
+    private static string _lastText = "";
+
+    /// <summary>
+    /// Font line height set by PaperWindow to ensure buttons match text height
+    /// </summary>
+    public static float FontLineHeight { get; set; } = 16.0f; // Default fallback
+
     public string Name => "form";
+
+    public void PushDrawContext(MarkupNode node, MarkupDrawingContext context) { }
+    public void PopDrawContext(MarkupNode node, MarkupDrawingContext context) { }
+
+    public string TextBefore(MarkupNode node)
+    {
+        return "";
+    }
+
+    public string TextAfter(MarkupNode node)
+    {
+        return "";
+    }
+
+    /// <summary>
+    /// Creates a clickable button to replace the [form] tag.
+    /// </summary>
+    public bool TryCreateControl(MarkupNode node, [NotNullWhen(true)] out Control? control)
+    {
+        var btn = new Button
+        {
+            Text = Loc.GetString("paper-form-fill-button"),
+            MinSize = new Vector2(96, FontLineHeight + 2),
+            MaxSize = new Vector2(96, FontLineHeight + 2),
+            Margin = new Thickness(1, 0, 1, 0),
+            StyleClasses = { "ButtonSquare" },
+            TextAlign = Label.AlignMode.Center,
+        };
+
+        var formIndex = GetFormIndex(node);
+        btn.Name = $"form_{formIndex}";
+
+        btn.OnPressed += _ =>
+        {
+            // Find the PaperWindow parent
+            var parent = btn.Parent;
+            while (parent != null && parent is not PaperWindow)
+            {
+                parent = parent.Parent;
+            }
+
+            if (parent is PaperWindow paperWindow)
+            {
+                // Count buttons to determine which [form] tag this represents
+                var buttonIndex = CountFormButtonsBefore(btn);
+                paperWindow.OpenFormDialog(buttonIndex);
+            }
+        };
+
+        control = btn;
+        return true;
+    }
 
     public bool CanHandle(MarkupNode node)
     {
         return node.Name == "form" || node.Value.StringValue?.StartsWith("__FORM_") == true;
     }
-
-    private static int _formCounter = 0;
-    private static readonly Dictionary<string, int> _formPositions = new();
-    private static string _lastText = "";
-    
-    /// <summary>
-    /// Font line height set by PaperWindow to ensure buttons match text height
-    /// </summary>
-    public static float FontLineHeight { get; set; } = 16.0f; // Default fallback
 
     private static int GetFormIndex(MarkupNode node)
     {
@@ -53,7 +104,9 @@ public sealed class FormTagHandler : IMarkupTagHandler
 
         // Find the root container
         while (root.Parent != null)
+        {
             root = root.Parent;
+        }
 
         // Count form buttons in document order
         var found = false;
@@ -63,7 +116,8 @@ public sealed class FormTagHandler : IMarkupTagHandler
 
     private static void CountFormButtonsRecursive(Control control, Control target, ref int count, ref bool found)
     {
-        if (found) return;
+        if (found)
+            return;
 
         if (control is Button btn && btn.Text == Loc.GetString("paper-form-fill-button"))
         {
@@ -72,10 +126,11 @@ public sealed class FormTagHandler : IMarkupTagHandler
                 found = true;
                 return;
             }
+
             count++;
         }
 
-        foreach (Control child in control.Children)
+        foreach (var child in control.Children)
         {
             CountFormButtonsRecursive(child, target, ref count, ref found);
         }
@@ -98,47 +153,5 @@ public sealed class FormTagHandler : IMarkupTagHandler
                 pos += 6;
             }
         }
-    }
-
-    public void PushDrawContext(MarkupNode node, MarkupDrawingContext context) { }
-    public void PopDrawContext(MarkupNode node, MarkupDrawingContext context) { }
-    public string TextBefore(MarkupNode node) => "";
-    public string TextAfter(MarkupNode node) => "";
-
-    /// <summary>
-    /// Creates a clickable button to replace the [form] tag.
-    /// </summary>
-    public bool TryCreateControl(MarkupNode node, [NotNullWhen(true)] out Control? control)
-    {
-        var btn = new Button
-        {
-            Text = Loc.GetString("paper-form-fill-button"),
-            MinSize = new Vector2(96, FontLineHeight + 2),
-            MaxSize = new Vector2(96, FontLineHeight + 2),
-            Margin = new Thickness(1, 0, 1, 0),
-            StyleClasses = { "ButtonSquare" },
-            TextAlign = Label.AlignMode.Center
-        };
-
-        var formIndex = GetFormIndex(node);
-        btn.Name = $"form_{formIndex}";
-
-        btn.OnPressed += _ =>
-        {
-            // Find the PaperWindow parent
-            var parent = btn.Parent;
-            while (parent != null && parent is not PaperWindow)
-                parent = parent.Parent;
-
-            if (parent is PaperWindow paperWindow)
-            {
-                // Count buttons to determine which [form] tag this represents
-                var buttonIndex = CountFormButtonsBefore(btn);
-                paperWindow.OpenFormDialog(buttonIndex);
-            }
-        };
-
-        control = btn;
-        return true;
     }
 }

@@ -22,6 +22,7 @@ color-white = белый
 color-gray = серый
 color-black = чёрный
 color-unknown = неизвестный цвет, вы не должны это видеть
+
 color-pink-color-red = розовато-красный
 color-red-color-orange = красновато-оранжевый
 color-orange-color-yellow = оранжевато-жёлтый

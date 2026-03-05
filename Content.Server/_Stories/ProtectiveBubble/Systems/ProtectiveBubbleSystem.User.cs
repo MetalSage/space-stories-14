@@ -27,9 +27,11 @@ public sealed partial class ProtectiveBubbleSystem
             if (_force.TryRemoveVolume(uid, frameTime * bubbleUser.VolumeCost))
             {
                 if (TryComp<DamageableComponent>(bubbleUser.ProtectiveBubble.Value, out var damageable))
+                {
                     _damageable.TryChangeDamage((bubbleUser.ProtectiveBubble.Value, damageable),
                         bubbleUser.Regeneration * frameTime,
                         true);
+                }
             }
         }
     }
@@ -42,9 +44,11 @@ public sealed partial class ProtectiveBubbleSystem
         args.BonusDamage = _meleeWeapon.GetDamage(args.Used, args.User) * -1;
 
         if (TryComp<DamageableComponent>(component.ProtectiveBubble.Value, out var damageable))
+        {
             _damageable.TryChangeDamage((component.ProtectiveBubble.Value, damageable),
                 _meleeWeapon.GetDamage(args.Used, args.User),
                 true);
+        }
     }
 
     private void OnInit(EntityUid uid, ProtectiveBubbleUserComponent component, ComponentInit args)

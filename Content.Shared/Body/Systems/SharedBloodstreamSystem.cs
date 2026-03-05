@@ -133,18 +133,18 @@ public abstract class SharedBloodstreamSystem : EntitySystem
         if (args.Cancelled)
             return;
 
-        foreach (var effect in args.Reaction.Effects)
-        {
-            switch (effect)
-            {
-                // Stories-Corpium-Start
-                // case CreateEntityReactionEffect: // Prevent entities from spawning in the bloodstream
-                // case AreaReactionEffect: // No spontaneous smoke or foam leaking out of blood vessels.
-                //     args.Cancelled = true;
-                //     return;
-                // Stories-Corpium-End
-            }
-        }
+        // foreach (var effect in args.Reaction.Effects)
+        // {
+        //     switch (effect)
+        //     {
+        //         // Stories-Corpium-Start
+        //         // case CreateEntityReactionEffect: // Prevent entities from spawning in the bloodstream
+        //         // case AreaReactionEffect: // No spontaneous smoke or foam leaking out of blood vessels.
+        //         //     args.Cancelled = true;
+        //         //     return;
+        //         // Stories-Corpium-End
+        //     }
+        // }
 
         // The area-reaction effect canceling is part of avoiding smoke-fork-bombs (create two smoke bombs, that when
         // ingested by mobs create more smoke). This also used to act as a rapid chemical-purge, because all the
@@ -197,16 +197,13 @@ public abstract class SharedBloodstreamSystem : EntitySystem
         var totalFloat = total.Float();
         TryModifyBleedAmount(ent.AsNullable(), totalFloat);
 
-        /// Critical hit. Causes target to lose blood, using the bleed rate modifier of the weapon, currently divided by 5
-        /// The crit chance is currently the bleed rate modifier divided by 25.
-        /// Higher damage weapons have a higher chance to crit!
+        // Critical hit. Causes target to lose blood, using the bleed rate modifier of the weapon, currently divided by 5
+        // The crit chance is currently the bleed rate modifier divided by 25.
+        // Higher damage weapons have a higher chance to crit!
 
-        // TODO: Replace with RandomPredicted once the engine PR is merged
         // Use both the receiver and the damage causing entity for the seed so that we have different results for multiple attacks in the same tick
-        var seed = SharedRandomExtensions.HashCodeCombine((int)_timing.CurTick.Value, GetNetEntity(ent).Id, GetNetEntity(args.Origin)?.Id ?? 0 );
-        var rand = new System.Random(seed);
         var prob = Math.Clamp(totalFloat / 25, 0, 1);
-        if (totalFloat > 0 && rand.Prob(prob))
+        if (totalFloat > 0 && SharedRandomExtensions.PredictedProb(_timing, prob, GetNetEntity(ent), GetNetEntity(args.Origin)))
         {
             TryBleedOut(ent.AsNullable(), total / 5);
             _audio.PlayPredicted(ent.Comp.InstantBloodSound, ent, args.Origin);

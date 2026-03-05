@@ -1,4 +1,3 @@
-#TODO перевод
 command-help-usage = Usage:
 command-help-invertible = The behaviour of this command can be inverted using the "not" prefix.
 command-description-tpto = Teleport the given entities to some target entity.
@@ -234,6 +233,7 @@ command-description-cmd-info =
     Returns a CommandSpec for the given command.
     On its own, this means it'll print the command's help message.
 command-description-comp-rm = Removes the given component from the entity.
+
 command-description-overlay-toggle = Toggle an overlay on or off
 command-description-overlay-add = Add an overlay (if it does not already exist)
 command-description-overlay-remove = Remove an overlay

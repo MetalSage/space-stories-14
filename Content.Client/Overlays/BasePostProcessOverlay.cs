@@ -14,6 +14,8 @@ namespace Content.Client.Overlays;
 // Ideally, for performance reasons, post processing designed to be present at all times, such as additive light blending or tonemapping, should be done as part of a single shader pass.
 public sealed class BasePostProcessOverlay : Overlay
 {
+    private static readonly ProtoId<ShaderPrototype> BasePostProcessShaderId = "BasePostProcess";
+
     [Dependency] private readonly IConfigurationManager _configManager = default!;
     [Dependency] private readonly IEntityManager _entityManager = default!;
     [Dependency] private readonly ILightManager _lightManager = default!;
@@ -27,7 +29,7 @@ public sealed class BasePostProcessOverlay : Overlay
     public BasePostProcessOverlay()
     {
         IoCManager.InjectDependencies(this);
-        _basePostProcessShader = _prototypeManager.Index<ShaderPrototype>("BasePostProcess").InstanceUnique();
+        _basePostProcessShader = _prototypeManager.Index(BasePostProcessShaderId).InstanceUnique();
     }
 
     protected override bool BeforeDraw(in OverlayDrawArgs args)

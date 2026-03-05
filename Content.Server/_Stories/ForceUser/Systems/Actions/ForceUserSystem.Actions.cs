@@ -5,6 +5,7 @@ using Content.Shared._Stories.ForceUser.Actions.Events;
 using Content.Shared.Cuffs.Components;
 using Content.Shared.Mindshield.Components;
 using Content.Shared.Physics;
+using Content.Shared.Rejuvenate;
 using Content.Shared.Store.Components;
 using Robust.Shared.Physics.Components;
 
@@ -55,7 +56,7 @@ public sealed partial class ForceUserSystem
     {
         if (args.Handled)
             return;
-        _statusEffect.TryAddStatusEffect(uid, "FrozeBullets", TimeSpan.FromSeconds(args.Seconds), true, "FrozeBullets");
+        _statusEffect.TryAddStatusEffectDuration(uid, "FrozeBullets", TimeSpan.FromSeconds(args.Seconds));
         args.Handled = true;
     }
 
@@ -70,7 +71,7 @@ public sealed partial class ForceUserSystem
     {
         if (args.Handled)
             return;
-        _rejuvenate.PerformRejuvenate(args.Performer);
+        RaiseLocalEvent(args.Performer, new RejuvenateEvent());
         args.Handled = true;
     }
 

@@ -27,7 +27,6 @@ public sealed partial class BankHackRuleComponent : Component
 public sealed class BankingErrorRule : StationEventSystem<BankingErrorRuleComponent>
 {
     [Dependency] private readonly EconomySystem _economy = default!;
-    [Dependency] private readonly SharedMindSystem _mind = default!;
 
     protected override void Started(EntityUid uid,
         BankingErrorRuleComponent component,

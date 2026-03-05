@@ -9,9 +9,9 @@ public sealed class FanMenuBoundUserInterface : BoundUserInterface
 {
     [Dependency] private readonly IClyde _displayManager = default!;
     [Dependency] private readonly IInputManager _inputManager = default!;
-    [Dependency] private readonly IPlayerManager _playerManager = default!;
 
     private readonly EntityUid _owner;
+    [Dependency] private readonly IPlayerManager _playerManager = default!;
     private FanMenu? _menu;
 
     public FanMenuBoundUserInterface(EntityUid owner, Enum uiKey) : base(owner, uiKey)

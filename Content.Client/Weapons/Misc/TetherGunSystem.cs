@@ -17,7 +17,6 @@ public sealed class TetherGunSystem : SharedTetherGunSystem
     [Dependency] private readonly IOverlayManager _overlay = default!;
     [Dependency] private readonly IPlayerManager _player = default!;
     [Dependency] private readonly MapSystem _mapSystem = default!;
-    [Dependency] private readonly SpriteSystem _sprite = default!;
 
     public override void Initialize()
     {

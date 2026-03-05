@@ -36,9 +36,8 @@ public sealed partial class ForceUserSystem
             !_container.TryRemoveFromContainer(comp.Lightsaber.Value))
             return;
 
-        if (TryComp<TetheredComponent>(comp.Lightsaber.Value, out var tetheredComponent))
-            _tetherGunSystem.StopTether(tetheredComponent.Tetherer,
-                EnsureComp<TetherGunComponent>(tetheredComponent.Tetherer));
+        if (HasComp<TetheredComponent>(comp.Lightsaber.Value))
+            _tetherGunSystem.StopTether(comp.Lightsaber.Value);
 
         _pullTo.TryPullTo(comp.Lightsaber.Value, uid, duration: 10f);
 

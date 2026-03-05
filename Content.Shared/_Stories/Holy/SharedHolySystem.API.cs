@@ -56,7 +56,7 @@ public abstract partial class SharedHolySystem : EntitySystem
         if (!TryComp<BlessableComponent>(uid, out var blessable))
             return false;
 
-        if (!_statusEffects.CanApplyEffect(uid, HolyStatusEffect))
+        if (!_statusEffects.CanAddStatusEffect(uid, HolyStatusEffect))
             return false;
 
         // TODO: BlessAttemptEvent
@@ -73,6 +73,9 @@ public abstract partial class SharedHolySystem : EntitySystem
         if (!TryComp<BlessableComponent>(uid, out var blessable))
             return false;
 
+        if (!_statusEffects.CanAddStatusEffect(uid, HolyStatusEffect))
+            return false;
+
         // TODO: BlessAttemptEvent
 
         Bless((uid, blessable));
@@ -81,17 +84,28 @@ public abstract partial class SharedHolySystem : EntitySystem
 
     private void Bless(Entity<BlessableComponent> entity, TimeSpan time, bool refresh = true)
     {
-        // TODO: BlessedEvent
-        _statusEffects.TryAddStatusEffect<HolyComponent>(entity,
-            HolyStatusEffect,
-            time * entity.Comp.TimeModifier,
-            refresh);
+        var duration = time * entity.Comp.TimeModifier;
+        if (refresh)
+            _statusEffects.TrySetStatusEffectDuration(entity.Owner, HolyStatusEffect, duration);
+        else
+            _statusEffects.TryAddStatusEffectDuration(entity.Owner, HolyStatusEffect, duration);
+
+        if (!HasComp<HolyComponent>(entity))
+        {
+            EnsureComp<HolyComponent>(entity);
+            EnsureComp<TemporaryHolyComponent>(entity);
+        }
     }
 
     private void Bless(Entity<BlessableComponent> entity)
     {
-        // TODO: BlessedEvent
-        EnsureComp<HolyComponent>(entity);
+        _statusEffects.TrySetStatusEffectDuration(entity.Owner, HolyStatusEffect);
+
+        if (!HasComp<HolyComponent>(entity))
+        {
+            EnsureComp<HolyComponent>(entity);
+            EnsureComp<TemporaryHolyComponent>(entity);
+        }
     }
 
     public bool IsUnholy(EntityUid uid)

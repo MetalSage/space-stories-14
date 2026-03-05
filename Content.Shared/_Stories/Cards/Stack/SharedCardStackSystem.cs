@@ -10,6 +10,7 @@ using Content.Shared.Popups;
 using Content.Shared.Verbs;
 using Robust.Shared.Audio.Systems;
 using Robust.Shared.Containers;
+
 namespace Content.Shared._Stories.Cards.Stack;
 
 public abstract class SharedCardStackSystem : EntitySystem
@@ -17,9 +18,9 @@ public abstract class SharedCardStackSystem : EntitySystem
     [Dependency] private readonly SharedAppearanceSystem _appearance = default!;
     [Dependency] private readonly SharedAudioSystem _audio = default!;
     [Dependency] private readonly SharedContainerSystem _containerSystem = default!;
-    [Dependency] private readonly SharedPopupSystem _popup = default!;
-    [Dependency] private readonly SharedHandsSystem _handsSystem = default!;
     [Dependency] private readonly FoldableSystem _foldableSystem = default!;
+    [Dependency] private readonly SharedHandsSystem _handsSystem = default!;
+    [Dependency] private readonly SharedPopupSystem _popup = default!;
 
     public override void Initialize()
     {
@@ -112,8 +113,8 @@ public abstract class SharedCardStackSystem : EntitySystem
         });
     }
 
-    protected virtual void ShuffleCards(EntityUid uid, CardStackComponent component) {}
-    protected virtual void Split(EntityUid uid, CardStackComponent component, EntityUid user) {}
+    protected virtual void ShuffleCards(EntityUid uid, CardStackComponent component) { }
+    protected virtual void Split(EntityUid uid, CardStackComponent component, EntityUid user) { }
 
     private void OnInteractUsing(EntityUid uid, CardStackComponent comp, InteractUsingEvent args)
     {
@@ -185,6 +186,7 @@ public abstract class SharedCardStackSystem : EntitySystem
         {
             _containerSystem.Remove(card, component.CardContainer, force: true);
         }
+
         foreach (var card in list)
         {
             _containerSystem.Insert(card, component.CardContainer, force: true);
