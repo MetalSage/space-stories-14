@@ -2,11 +2,15 @@ using Content.Shared._Stories.ForceUser;
 using Content.Shared._Stories.ForceUser.Actions.Events;
 using Content.Shared._Stories.PullTo;
 using Content.Shared.Inventory.Events;
+using Content.Shared.Tag;
+using Robust.Shared.Prototypes;
 
 namespace Content.Server._Stories.ForceUser;
 
 public sealed partial class ForceUserSystem
 {
+    private static readonly ProtoId<TagPrototype> ForceRecallEquipmentTag = "ForceRecallEquipment";
+
     public void InitializeRecallEquipment()
     {
         SubscribeLocalEvent<ForceUserComponent, RecallEquipmentsEvent>(OnRecallEquipment);
@@ -16,7 +20,7 @@ public sealed partial class ForceUserSystem
 
     private void OnEquipped(EntityUid uid, ForceUserComponent comp, DidEquipEvent args)
     {
-        if (!_tagSystem.HasTag(args.Equipment, "ForceRecallEquipment"))
+        if (!_tagSystem.HasTag(args.Equipment, ForceRecallEquipmentTag))
             return;
 
         comp.Equipments ??= new Dictionary<string, EntityUid>();
@@ -26,7 +30,7 @@ public sealed partial class ForceUserSystem
 
     private void OnTimeOutEquipment(PulledToTimeOutEvent args)
     {
-        if (args.Handled || !_tagSystem.HasTag(args.EntityUid, "ForceRecallEquipment") ||
+        if (args.Handled || !_tagSystem.HasTag(args.EntityUid, ForceRecallEquipmentTag) ||
             args.Component.PulledTo == null)
             return;
 

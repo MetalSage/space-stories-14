@@ -16,7 +16,7 @@ public sealed partial class CardDeckComponent : Component
     public SoundSpecifier ShuffleSound = new SoundCollectionSpecifier("STShuffleDeck");
 }
 
-[Serializable, NetSerializable]
+[Serializable] [NetSerializable]
 public enum CardDeckVisuals : byte
 {
     InBox,

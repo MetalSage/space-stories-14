@@ -49,7 +49,9 @@ public sealed class CardSystem : EntitySystem
 
         _handsSystem.TryPickupAnyHand(user, entityCreated);
 
-        var addCardSound = TryComp<CardFanComponent>(entityCreated, out var fanComp) ? fanComp.AddCardSound : stackComp.AddCardSound;
+        var addCardSound = TryComp<CardFanComponent>(entityCreated, out var fanComp)
+            ? fanComp.AddCardSound
+            : stackComp.AddCardSound;
         _audio.PlayPvs(addCardSound, usedEntity.Value);
         Dirty(entityCreated, stackComp);
     }

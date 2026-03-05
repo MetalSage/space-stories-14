@@ -7,7 +7,7 @@ using Robust.Shared.Serialization.TypeSerializers.Implementations.Custom.Prototy
 
 namespace Content.Shared._Stories.Conversion;
 
-[Prototype("conversion")]
+[Prototype]
 public sealed partial class ConversionPrototype : IPrototype
 {
     [ViewVariables] [IdDataField] public string ID { get; private set; } = default!;

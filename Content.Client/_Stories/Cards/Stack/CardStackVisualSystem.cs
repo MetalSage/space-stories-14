@@ -46,7 +46,10 @@ public sealed class CardStackVisualSystem : VisualizerSystem<CardStackComponent>
     }
 
 
-    private void UpdateDeckStackVisuals(EntityUid uid, CardDeckComponent comp, SpriteComponent sprite, List<EntityUid>? cards = null)
+    private void UpdateDeckStackVisuals(EntityUid uid,
+        CardDeckComponent comp,
+        SpriteComponent sprite,
+        List<EntityUid>? cards = null)
     {
         if (!TryComp<CardStackComponent>(uid, out var cardStack))
             return;
@@ -63,7 +66,9 @@ public sealed class CardStackVisualSystem : VisualizerSystem<CardStackComponent>
             if (!TryComp<FoldableComponent>(card, out var foldable))
                 continue;
 
-            var cardLayer = foldable.IsFolded ? _spriteSystem.LayerGetRsiState(card, 1) : _spriteSystem.LayerGetRsiState(card, 0);
+            var cardLayer = foldable.IsFolded
+                ? _spriteSystem.LayerGetRsiState(card, 1)
+                : _spriteSystem.LayerGetRsiState(card, 0);
             var layer = _spriteSystem.AddBlankLayer((uid, sprite), layerIndex);
             _spriteSystem.LayerSetRsiState((uid, sprite), layerIndex, cardLayer);
 
@@ -76,7 +81,10 @@ public sealed class CardStackVisualSystem : VisualizerSystem<CardStackComponent>
         }
     }
 
-    private void UpdateFanStackVisuals(EntityUid uid, CardFanComponent comp, SpriteComponent sprite, List<EntityUid>? cards = null)
+    private void UpdateFanStackVisuals(EntityUid uid,
+        CardFanComponent comp,
+        SpriteComponent sprite,
+        List<EntityUid>? cards = null)
     {
         if (!TryComp<CardStackComponent>(uid, out var cardStack))
             return;
@@ -94,20 +102,18 @@ public sealed class CardStackVisualSystem : VisualizerSystem<CardStackComponent>
             if (!TryComp<FoldableComponent>(card, out var foldable))
                 continue;
 
-            var cardLayer = foldable.IsFolded ? _spriteSystem.LayerGetRsiState(card, 1) : _spriteSystem.LayerGetRsiState(card, 0);
+            var cardLayer = foldable.IsFolded
+                ? _spriteSystem.LayerGetRsiState(card, 1)
+                : _spriteSystem.LayerGetRsiState(card, 0);
             var layer = _spriteSystem.AddBlankLayer((uid, sprite), layerIndex);
             _spriteSystem.LayerSetRsiState((uid, sprite), layerIndex, cardLayer);
 
             var cardIndex = layerIndex - 1;
             float totalProgress;
             if (totalCards <= 1)
-            {
                 totalProgress = 0.5f;
-            }
             else
-            {
                 totalProgress = (float)cardIndex / (totalCards - 1);
-            }
 
             var curAngle = MathHelper.Lerp(comp.StartAngle, comp.EndAngle, totalProgress);
             var normX = comp.Radius * MathF.Sin(curAngle * MathF.PI / 180);

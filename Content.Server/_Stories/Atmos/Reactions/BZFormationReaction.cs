@@ -41,8 +41,10 @@ public sealed partial class BZFormationReaction : IGasReactionEffect
         var energyReleased = bzFormed * Atmospherics.BZFormationEnergy;
         var heatCap = atmosphereSystem.GetHeatCapacity(mixture, true);
         if (heatCap > Atmospherics.MinimumHeatCapacity)
+        {
             mixture.Temperature =
                 Math.Max((mixture.Temperature * heatCap + energyReleased) / heatCap, Atmospherics.TCMB);
+        }
 
         return ReactionResult.Reacting;
     }

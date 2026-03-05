@@ -42,8 +42,10 @@ public sealed partial class PluoxiumFormationReaction : IGasReactionEffect
         var energyReleased = pluoxiumFormed * Atmospherics.PluoxiumProductionEnergy;
         var heatCap = atmosphereSystem.GetHeatCapacity(mixture, true);
         if (heatCap > Atmospherics.MinimumHeatCapacity)
+        {
             mixture.Temperature =
                 Math.Max((mixture.Temperature * heatCap + energyReleased) / heatCap, Atmospherics.TCMB);
+        }
 
         return ReactionResult.Reacting;
     }

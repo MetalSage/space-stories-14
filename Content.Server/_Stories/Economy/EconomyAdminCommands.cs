@@ -62,8 +62,11 @@ public sealed class GetBalanceCommand : LocalizedCommands
     public override CompletionResult GetCompletion(IConsoleShell shell, string[] args)
     {
         if (args.Length == 1)
+        {
             return CompletionResult.FromHintOptions(CompletionHelper.SessionNames(players: _playerManager),
                 Loc.GetString("cmd-econ-arg-player"));
+        }
+
         return CompletionResult.Empty;
     }
 }
@@ -136,8 +139,11 @@ public sealed class SetBalanceCommand : LocalizedCommands
     public override CompletionResult GetCompletion(IConsoleShell shell, string[] args)
     {
         if (args.Length == 1)
+        {
             return CompletionResult.FromHintOptions(CompletionHelper.SessionNames(players: _playerManager),
                 Loc.GetString("cmd-econ-arg-player"));
+        }
+
         if (args.Length == 2)
             return CompletionResult.FromHint(Loc.GetString("cmd-econ-arg-amount"));
         return CompletionResult.Empty;
@@ -209,8 +215,11 @@ public sealed class AddBalanceCommand : LocalizedCommands
     public override CompletionResult GetCompletion(IConsoleShell shell, string[] args)
     {
         if (args.Length == 1)
+        {
             return CompletionResult.FromHintOptions(CompletionHelper.SessionNames(players: _playerManager),
                 Loc.GetString("cmd-econ-arg-player"));
+        }
+
         if (args.Length == 2)
             return CompletionResult.FromHint(Loc.GetString("cmd-econ-arg-amount-delta"));
         return CompletionResult.Empty;

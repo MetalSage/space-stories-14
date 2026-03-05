@@ -2,7 +2,6 @@ using System.Linq;
 using Content.Shared.Actions;
 using Content.Shared.Actions.Components;
 using Content.Shared.Body;
-using Content.Shared.Body.Components;
 
 namespace Content.Shared._Stories.Bioluminescence;
 
@@ -23,13 +22,13 @@ public sealed class BioluminescenceSystem : EntitySystem
     {
         if (!TryComp<ActionsComponent>(uid, out var action))
             return;
-        
+
         SharedPointLightComponent? light = null;
         if (!_light.ResolveLight(uid, ref light))
             return;
 
         EntityUid? act = null;
-        _actions.AddAction(uid, ref act, "TurnBioluminescenceAction", uid, action);
+        _actions.AddAction(uid, ref act, component.Action, uid, action);
     }
 
     private void TurnBioluminescence(EntityUid uid, BioluminescenceComponent component, TurnBioluminescenceEvent args)

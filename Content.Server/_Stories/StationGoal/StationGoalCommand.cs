@@ -7,7 +7,7 @@ using Robust.Shared.Prototypes;
 namespace Content.Server._Stories.StationGoal;
 
 [AdminCommand(AdminFlags.Fun)]
-public sealed partial class StationGoalCommand : IConsoleCommand
+public sealed class StationGoalCommand : IConsoleCommand
 {
     public string Command => "sendstationgoal";
     public string Description => Loc.GetString("send-station-goal-command-description");

@@ -133,18 +133,18 @@ public abstract class SharedBloodstreamSystem : EntitySystem
         if (args.Cancelled)
             return;
 
-        foreach (var effect in args.Reaction.Effects)
-        {
-            switch (effect)
-            {
-                // Stories-Corpium-Start
-                // case CreateEntityReactionEffect: // Prevent entities from spawning in the bloodstream
-                // case AreaReactionEffect: // No spontaneous smoke or foam leaking out of blood vessels.
-                //     args.Cancelled = true;
-                //     return;
-                // Stories-Corpium-End
-            }
-        }
+        // foreach (var effect in args.Reaction.Effects)
+        // {
+        //     switch (effect)
+        //     {
+        //         // Stories-Corpium-Start
+        //         // case CreateEntityReactionEffect: // Prevent entities from spawning in the bloodstream
+        //         // case AreaReactionEffect: // No spontaneous smoke or foam leaking out of blood vessels.
+        //         //     args.Cancelled = true;
+        //         //     return;
+        //         // Stories-Corpium-End
+        //     }
+        // }
 
         // The area-reaction effect canceling is part of avoiding smoke-fork-bombs (create two smoke bombs, that when
         // ingested by mobs create more smoke). This also used to act as a rapid chemical-purge, because all the

@@ -1,4 +1,3 @@
-using Content.Server.Administration.Logs;
 using Content.Server.Antag;
 using Content.Server.Roles;
 using Content.Shared._Stories.Conversion;
@@ -10,7 +9,6 @@ namespace Content.Server._Stories.Conversion;
 
 public sealed partial class ConversionSystem : SharedConversionSystem
 {
-    [Dependency] private readonly IAdminLogManager _adminLogger = default!;
     [Dependency] private readonly AntagSelectionSystem _antag = default!;
     [Dependency] private readonly SharedMindSystem _mind = default!;
     [Dependency] private readonly IPrototypeManager _prototype = default!;

@@ -1,4 +1,5 @@
 using Content.Shared.Actions;
+using Robust.Shared.Prototypes;
 
 namespace Content.Shared._Stories.Bioluminescence;
 
@@ -6,7 +7,7 @@ namespace Content.Shared._Stories.Bioluminescence;
 public sealed partial class BioluminescenceComponent : Component
 {
     [ViewVariables(VVAccess.ReadWrite)] [DataField("action")]
-    public string Action = "TurnBioluminescenceAction";
+    public EntProtoId Action = "TurnBioluminescenceAction";
 }
 
 public sealed partial class TurnBioluminescenceEvent : InstantActionEvent

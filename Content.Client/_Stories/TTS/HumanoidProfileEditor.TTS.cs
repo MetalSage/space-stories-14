@@ -1,7 +1,6 @@
 ﻿using System.Linq;
 using Content.Client._Stories.TTS;
 using Content.Shared._Stories.TTS;
-using Content.Shared.Preferences;
 using Content.Shared.Humanoid;
 
 namespace Content.Client.Lobby.UI;
@@ -64,9 +63,9 @@ public sealed partial class HumanoidProfileEditor
 
     private void SetVoice(string voiceId)
     {
-        if (Profile is null) 
+        if (Profile is null)
             return;
-        
+
         Profile = Profile.WithVoice(voiceId);
         IsDirty = true;
     }

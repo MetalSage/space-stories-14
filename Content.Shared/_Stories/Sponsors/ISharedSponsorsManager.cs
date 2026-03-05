@@ -1,5 +1,4 @@
 using System.Diagnostics.CodeAnalysis;
-using Robust.Shared.GameObjects;
 using Robust.Shared.Network;
 
 namespace Content.Shared._Stories.Sponsors;

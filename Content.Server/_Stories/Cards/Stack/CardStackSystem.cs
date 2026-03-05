@@ -1,12 +1,10 @@
 using System.Linq;
 using Content.Server.Hands.Systems;
-using Content.Server.Mind;
 using Content.Server.Popups;
 using Content.Shared._Stories.Cards.Stack;
 using Robust.Server.Audio;
 using Robust.Server.Containers;
 using Robust.Server.GameObjects;
-using Robust.Server.Player;
 using Robust.Shared.Map;
 using Robust.Shared.Random;
 
@@ -15,12 +13,12 @@ namespace Content.Server._Stories.Cards.Stack;
 public sealed class CardStackSystem : SharedCardStackSystem
 {
     [Dependency] private readonly AppearanceSystem _appearance = default!;
+    [Dependency] private readonly AudioSystem _audio = default!;
     [Dependency] private readonly ContainerSystem _containerSystem = default!;
-    [Dependency] private readonly IRobustRandom _robustRandom = default!;
-    [Dependency] private readonly SharedTransformSystem _transform = default!;
     [Dependency] private readonly HandsSystem _handsSystem = default!;
     [Dependency] private readonly PopupSystem _popup = default!;
-    [Dependency] private readonly AudioSystem _audio = default!;
+    [Dependency] private readonly IRobustRandom _robustRandom = default!;
+    [Dependency] private readonly SharedTransformSystem _transform = default!;
 
     public override void Initialize()
     {
@@ -63,6 +61,7 @@ public sealed class CardStackSystem : SharedCardStackSystem
             RemoveCard(uid, card, component);
             _transform.SetCoordinates(card, EntityCoordinates.Invalid);
         }
+
         _appearance.SetData(uid, CardStackVisual.State, component.CardContainer.ContainedEntities.Count);
 
         var spawnPos = Transform(user).Coordinates;

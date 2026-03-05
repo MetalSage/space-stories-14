@@ -17,6 +17,9 @@ namespace Content.Server._Stories.TTS;
 public sealed partial class TTSSystem : EntitySystem
 {
     private const int MaxMessageChars = 100 * 2; // same as SingleBubbleCharLimit * 2
+
+    private static readonly ProtoId<TTSVoicePrototype> FatherGrigoriId = "father_grigori";
+
     [Dependency] private readonly IConfigurationManager _cfg = default!;
     [Dependency] private readonly IPrototypeManager _prototypeManager = default!;
     [Dependency] private readonly IRobustRandom _rng = default!;
@@ -74,7 +77,7 @@ public sealed partial class TTSSystem : EntitySystem
     private bool GetVoicePrototype(string voiceId, [NotNullWhen(true)] out TTSVoicePrototype? voicePrototype)
     {
         if (!_prototypeManager.TryIndex(voiceId, out voicePrototype))
-            return _prototypeManager.TryIndex("father_grigori", out voicePrototype);
+            return _prototypeManager.TryIndex(FatherGrigoriId, out voicePrototype);
 
         return true;
     }

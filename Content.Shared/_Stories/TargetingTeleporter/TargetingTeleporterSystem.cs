@@ -1,36 +1,26 @@
 using System.Numerics;
 using Content.Shared.Actions;
-using Content.Shared.Administration.Logs;
-using Content.Shared.DoAfter;
 using Content.Shared.Interaction;
-using Content.Shared.Mind;
 using Content.Shared.Movement.Systems;
 using Content.Shared.Popups;
-using Content.Shared.Station;
 using Content.Shared.Teleportation.Components;
 using Content.Shared.Teleportation.Systems;
 using Robust.Shared.Audio.Systems;
 using Robust.Shared.Map;
 using Robust.Shared.Network;
-using Robust.Shared.Random;
 
 namespace Content.Shared._Stories.TargetingTeleporter;
 
 public abstract partial class SharedTargetingTeleporterSystem : EntitySystem
 {
     [Dependency] private readonly SharedActionsSystem _actions = default!;
-    [Dependency] private readonly ISharedAdminLogManager _adminLogger = default!;
     [Dependency] private readonly SharedAudioSystem _audio = default!;
     [Dependency] private readonly IComponentFactory _componentFactory = default!;
-    [Dependency] private readonly SharedDoAfterSystem _doafter = default!;
     [Dependency] private readonly SharedEyeSystem _eye = default!;
     [Dependency] private readonly LinkedEntitySystem _link = default!;
-    [Dependency] private readonly SharedMindSystem _mind = default!;
     [Dependency] private readonly SharedMoverController _mover = default!;
     [Dependency] private readonly INetManager _net = default!;
     [Dependency] private readonly SharedPopupSystem _popup = default!;
-    [Dependency] private readonly IRobustRandom _random = default!;
-    [Dependency] private readonly SharedStationSystem _station = default!;
     [Dependency] private readonly SharedTransformSystem _xform = default!;
 
     public override void Initialize()

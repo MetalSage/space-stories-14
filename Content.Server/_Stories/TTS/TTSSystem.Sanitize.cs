@@ -7,6 +7,18 @@ namespace Content.Server._Stories.TTS;
 // ReSharper disable once InconsistentNaming
 public sealed partial class TTSSystem
 {
+    private static readonly Regex SanitizePunctuationRegex =
+        new(@"[^a-zA-Zа-яА-ЯёЁ0-9,\-+?!. ]", RegexOptions.Compiled);
+
+    private static readonly Regex LatRegex = new(@"[a-zA-Z]",
+        RegexOptions.Multiline | RegexOptions.IgnoreCase | RegexOptions.Compiled);
+
+    private static readonly Regex WordRegex = new(@"(?<![a-zA-Zа-яёА-ЯЁ])[a-zA-Zа-яёА-ЯЁ]+?(?![a-zA-Zа-яёА-ЯЁ])",
+        RegexOptions.Multiline | RegexOptions.IgnoreCase | RegexOptions.Compiled);
+
+    private static readonly Regex NumberCommaRegex = new(@"(?<=[1-90])(\.|,)(?=[1-90])", RegexOptions.Compiled);
+    private static readonly Regex DigitsRegex = new(@"\d+", RegexOptions.Compiled);
+
     private static readonly IReadOnlyDictionary<string, string> WordReplacement =
         new Dictionary<string, string>
         {
@@ -149,14 +161,11 @@ public sealed partial class TTSSystem
     private string Sanitize(string text)
     {
         text = text.Trim();
-        text = Regex.Replace(text, @"[^a-zA-Zа-яА-ЯёЁ0-9,\-+?!. ]", "");
-        text = Regex.Replace(text, @"[a-zA-Z]", ReplaceLat2Cyr, RegexOptions.Multiline | RegexOptions.IgnoreCase);
-        text = Regex.Replace(text,
-            @"(?<![a-zA-Zа-яёА-ЯЁ])[a-zA-Zа-яёА-ЯЁ]+?(?![a-zA-Zа-яёА-ЯЁ])",
-            ReplaceMatchedWord,
-            RegexOptions.Multiline | RegexOptions.IgnoreCase);
-        text = Regex.Replace(text, @"(?<=[1-90])(\.|,)(?=[1-90])", " целых ");
-        text = Regex.Replace(text, @"\d+", ReplaceWord2Num);
+        text = SanitizePunctuationRegex.Replace(text, "");
+        text = LatRegex.Replace(text, ReplaceLat2Cyr);
+        text = WordRegex.Replace(text, ReplaceMatchedWord);
+        text = NumberCommaRegex.Replace(text, " целых ");
+        text = DigitsRegex.Replace(text, ReplaceWord2Num);
         text = text.Trim();
         return text;
     }

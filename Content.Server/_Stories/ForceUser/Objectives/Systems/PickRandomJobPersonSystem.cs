@@ -1,13 +1,10 @@
-using Content.Server.Chat.Managers;
 using Content.Server.Objectives.Components;
-using Content.Server.Shuttles.Systems;
 using Content.Server.Store.Systems;
 using Content.Shared.FixedPoint;
 using Content.Shared.Mind;
 using Content.Shared.Objectives.Components;
 using Content.Shared.Popups;
 using Content.Shared.Roles.Jobs;
-using Robust.Shared.Configuration;
 using Robust.Shared.Random;
 
 namespace Content.Server.Objectives.Systems;
@@ -15,9 +12,6 @@ namespace Content.Server.Objectives.Systems;
 public sealed class PickRandomJobPersonSystem : EntitySystem
 {
     private const float UdateDelay = 10f;
-    [Dependency] private readonly IChatManager _chatManager = default!;
-    [Dependency] private readonly IConfigurationManager _config = default!;
-    [Dependency] private readonly EmergencyShuttleSystem _emergencyShuttle = default!;
     [Dependency] private readonly SharedJobSystem _job = default!;
     [Dependency] private readonly SharedMindSystem _mind = default!;
     [Dependency] private readonly SharedPopupSystem _popup = default!;

@@ -2,30 +2,20 @@ using System.Linq;
 using Content.Server._Stories.Conversion;
 using Content.Server._Stories.GameTicking.Rules.Components;
 using Content.Server._Stories.Shadowling;
-using Content.Server.Administration.Logs;
 using Content.Server.Antag;
 using Content.Server.Chat.Systems;
-using Content.Server.EUI;
 using Content.Server.GameTicking;
 using Content.Server.GameTicking.Rules;
-using Content.Server.Mind;
-using Content.Server.Nuke;
-using Content.Server.Popups;
-using Content.Server.Roles;
 using Content.Server.RoundEnd;
-using Content.Server.Station.Systems;
 using Content.Shared._Stories.Conversion;
 using Content.Shared._Stories.Shadowling;
 using Content.Shared.GameTicking.Components;
 using Content.Shared.Mobs;
 using Content.Shared.Mobs.Components;
 using Content.Shared.Mobs.Systems;
-using Content.Shared.NPC.Systems;
-using Content.Shared.Stunnable;
 using Robust.Server.Audio;
 using Robust.Shared.Player;
 using Robust.Shared.Random;
-using Robust.Shared.Timing;
 
 namespace Content.Server._Stories.GameTicking.Rules;
 
@@ -39,24 +29,14 @@ public sealed class ShadowlingRuleSystem : GameRuleSystem<ShadowlingRuleComponen
     /// </summary>
     public const float ShadowlingThrallProbOfLost = 0.5f;
 
-    [Dependency] private readonly IAdminLogManager _adminLogManager = default!;
     [Dependency] private readonly AntagSelectionSystem _antag = default!;
     [Dependency] private readonly AudioSystem _audio = default!;
     [Dependency] private readonly ChatSystem _chat = default!;
     [Dependency] private readonly ConversionSystem _conversion = default!;
-    [Dependency] private readonly EuiManager _euiMan = default!;
-    [Dependency] private readonly MindSystem _mind = default!;
     [Dependency] private readonly MobStateSystem _mobState = default!;
-    [Dependency] private readonly NpcFactionSystem _npcFaction = default!;
-    [Dependency] private readonly NukeSystem _nuke = default!;
-    [Dependency] private readonly PopupSystem _popup = default!;
     [Dependency] private readonly IRobustRandom _random = default!;
-    [Dependency] private readonly RoleSystem _role = default!;
     [Dependency] private readonly RoundEndSystem _roundEnd = default!;
     [Dependency] private readonly ShadowlingSystem _shadowling = default!;
-    [Dependency] private readonly StationSystem _stationSystem = default!;
-    [Dependency] private readonly SharedStunSystem _stun = default!;
-    [Dependency] private readonly IGameTiming _timing = default!;
 
     public override void Initialize()
     {
@@ -73,8 +53,6 @@ public sealed class ShadowlingRuleSystem : GameRuleSystem<ShadowlingRuleComponen
         var query = QueryActiveRules();
         while (query.MoveNext(out var ruleUid, out _, out _, out _))
         {
-            // FIXME: Плохой код.
-
             HashSet<EntityUid> shadowlings = new();
             var shadowlingsQuery = AllEntityQuery<ShadowlingComponent, MobStateComponent>();
             while (shadowlingsQuery.MoveNext(out var shadowlingUid, out _, out var mobState))

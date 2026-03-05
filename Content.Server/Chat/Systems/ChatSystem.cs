@@ -46,6 +46,8 @@ namespace Content.Server.Chat.Systems;
 /// </summary>
 public sealed partial class ChatSystem : SharedChatSystem
 {
+    private static readonly ProtoId<DamageTypePrototype> AsphyxiationType = "Asphyxiation";
+
     [Dependency] private readonly IReplayRecordingManager _replay = default!;
     [Dependency] private readonly IConfigurationManager _configurationManager = default!;
     [Dependency] private readonly IChatManager _chatManager = default!;
@@ -536,7 +538,7 @@ public sealed partial class ChatSystem : SharedChatSystem
         _replay.RecordServerMessage(new ChatMessage(ChatChannel.Whisper, message, wrappedMessage, GetNetEntity(source), null, MessageRangeHideChatForReplay(range)));
 
         // Stories-Crit-Speech-Start
-        if (_mobStateSystem.IsCritical(source) && _prototypeManager.TryIndex<DamageTypePrototype>("Asphyxiation", out var asphyxiation))
+        if (_mobStateSystem.IsCritical(source) && _prototypeManager.TryIndex(AsphyxiationType, out var asphyxiation))
             _damageable.TryChangeDamage(source, new(asphyxiation, 100), true, false);
         // Stories-Crit-Speech-End
 
