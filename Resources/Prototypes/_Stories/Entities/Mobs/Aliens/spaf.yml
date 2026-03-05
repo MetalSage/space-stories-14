@@ -103,7 +103,7 @@
     devourAction: ActionSpafDevour
     foodPreferenceWhitelist:
       components:
-      - HumanoidAppearance
+      - HumanoidProfile
     stomachStorageWhitelist:
       components:
       - MobState

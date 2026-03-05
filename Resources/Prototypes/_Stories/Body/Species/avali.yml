@@ -1,0 +1,225 @@
+- type: markingsGroup
+  parent: Undergarments
+  id: Avali
+  onlyGroupWhitelisted: true
+  limits:
+    enum.HumanoidVisualLayers.Hair:
+      limit: 1
+      required: false
+    enum.HumanoidVisualLayers.FacialHair:
+      limit: 0
+      required: false
+    enum.HumanoidVisualLayers.Tail:
+      limit: 1
+      required: true
+      default: [ AvaliTailBase ]
+    enum.HumanoidVisualLayers.Chest:
+      limit: 1
+      required: false
+    enum.HumanoidVisualLayers.HeadTop:
+      limit: 1
+      required: false
+    enum.HumanoidVisualLayers.HeadSide:
+      limit: 1
+      required: true
+      default: [ AvaliEarsBase ]
+    enum.HumanoidVisualLayers.LArm:
+      limit: 1
+      required: false
+    enum.HumanoidVisualLayers.RArm:
+      limit: 1
+      required: false
+    enum.HumanoidVisualLayers.LHand:
+      limit: 1
+      required: false
+    enum.HumanoidVisualLayers.RHand:
+      limit: 1
+      required: false
+    enum.HumanoidVisualLayers.LLeg:
+      limit: 1
+      required: false
+    enum.HumanoidVisualLayers.RLeg:
+      limit: 1
+      required: false
+    enum.HumanoidVisualLayers.LFoot:
+      limit: 1
+      required: false
+    enum.HumanoidVisualLayers.RFoot:
+      limit: 1
+      required: false
+
+- type: entity
+  parent: BaseSpeciesAppearance
+  id: AppearanceAvali
+  name: avali appearance
+  components:
+  - type: InitialBody
+    organs:
+      Torso: OrganAvaliTorso
+      Head: OrganAvaliHead
+      ArmLeft: OrganAvaliArmLeft
+      ArmRight: OrganAvaliArmRight
+      HandRight: OrganAvaliHandRight
+      HandLeft: OrganAvaliHandLeft
+      LegLeft: OrganAvaliLegLeft
+      LegRight: OrganAvaliLegRight
+      FootLeft: OrganAvaliFootLeft
+      FootRight: OrganAvaliFootRight
+      Brain: OrganHumanBrain
+      Eyes: OrganAvaliEyes
+      Tongue: OrganHumanTongue
+      Appendix: OrganHumanAppendix
+      Ears: OrganHumanEars
+      Lungs: OrganHumanLungs
+      Heart: OrganAnimalHeart
+      Stomach: OrganReptilianStomach
+      Liver: OrganAnimalLiver
+      Kidneys: OrganHumanKidneys
+  - type: HumanoidProfile
+    species: Avali
+
+- type: entity
+  save: false
+  parent:
+  - AppearanceMoth
+  - BaseSpeciesMobOrganic
+  id: MobAvali
+  name: Urist C.M McRaptor
+  components:
+  - type: MovementAlwaysTouching
+  - type: CanMoveInAir
+  - type: MovementSpeedModifier
+    weightlessModifier: 0.6
+  - type: HumanoidProfile
+    species: Avali
+    hideLayersOnEquip:
+    - HeadTop
+    - HeadSide
+  - type: Body
+    prototype: Avali
+  - type: Hunger
+  - type: Thirst
+  - type: Sprite
+    drawdepth: Mobs
+  - type: Vocal
+    sounds:
+      Male: MaleAvali
+      Unsexed: MaleAvali
+      Female: FemaleAvali
+  - type: Speech
+    speechVerb: Parrot
+    speechSounds: MaleAvali
+  - type: DamageVisuals
+    damageOverlayGroups:
+      Brute:
+        sprite: Mobs/Effects/brute_damage.rsi
+        color: "#7a8bf2"
+  - type: MeleeWeapon
+    soundHit:
+      path: /Audio/Weapons/pierce.ogg
+    animation: WeaponArcClaw
+  - type: Inventory
+    speciesId: avali
+
+- type: entity
+  parent: OrganBase
+  id: OrganAvali
+  abstract: true
+  suffix: Avali
+  components:
+  - type: Extractable
+    juiceSolution:
+      reagents:
+      - ReagentId: Fat
+        Quantity: 3
+      - ReagentId: Blood
+        Quantity: 10
+
+- type: entity
+  parent: OrganAvali
+  id: OrganAvaliExternal
+  abstract: true
+  components:
+  - type: Sprite
+    sprite: _Stories/Mobs/Avali/parts.rsi
+  - type: VisualOrgan
+    data:
+      sprite: _Stories/Mobs/Avali/parts.rsi
+  - type: VisualOrganMarkings
+    markingData:
+      group: Avali
+
+- type: entity
+  id: OrganAvaliTorso
+  parent: [ OrganBaseTorsoSexed, OrganBaseTorso, OrganAvaliExternal ]
+  name: "avali torso"
+  components:
+  - type: Extractable
+    juiceSolution:
+      reagents:
+      - ReagentId: Fat
+        Quantity: 10
+      - ReagentId: Blood
+        Quantity: 20
+
+- type: entity
+  id: OrganAvaliHead
+  parent: [ OrganBaseHeadSexed, OrganBaseHead, OrganAvaliExternal ]
+  name: "avali head"
+  components:
+  - type: Extractable
+    juiceSolution:
+      reagents:
+      - ReagentId: Fat
+        Quantity: 5
+      - ReagentId: Blood
+        Quantity: 10
+
+- type: entity
+  id: OrganAvaliArmLeft
+  name: "left avali arm"
+  parent: [ OrganBaseArmLeft, OrganAvaliExternal ]
+
+- type: entity
+  id: OrganAvaliArmRight
+  name: "right avali arm"
+  parent: [ OrganBaseArmRight, OrganAvaliExternal ]
+
+- type: entity
+  id: OrganAvaliHandLeft
+  name: "left avali hand"
+  parent: [ OrganBaseHandLeft, OrganAvaliExternal ]
+
+- type: entity
+  id: OrganAvaliHandRight
+  name: "right avali hand"
+  parent: [ OrganBaseHandRight, OrganAvaliExternal ]
+
+- type: entity
+  id: OrganAvaliLegLeft
+  name: "left avali leg"
+  parent: [ OrganBaseLegLeft, OrganAvaliExternal ]
+
+- type: entity
+  id: OrganAvaliLegRight
+  name: "right avali leg"
+  parent: [ OrganBaseLegRight, OrganAvaliExternal ]
+
+- type: entity
+  id: OrganAvaliFootLeft
+  name: "left avali foot"
+  parent: [ OrganBaseFootLeft, OrganAvaliExternal ]
+
+- type: entity
+  id: OrganAvaliFootRight
+  name: "right avali foot"
+  parent: [ OrganBaseFootRight, OrganAvaliExternal ]
+
+- type: entity
+  id: OrganAvaliEyes
+  parent: [ OrganBaseEyes, OrganHumanInternal, OrganAvaliExternal ]
+  components:
+  - type: VisualOrgan
+    data:
+      sprite: _Stories/Mobs/Avali/parts.rsi
+      state: eyes

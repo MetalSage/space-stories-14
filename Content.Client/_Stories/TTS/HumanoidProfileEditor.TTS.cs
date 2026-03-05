@@ -2,6 +2,7 @@
 using Content.Client._Stories.TTS;
 using Content.Shared._Stories.TTS;
 using Content.Shared.Preferences;
+using Content.Shared.Humanoid;
 
 namespace Content.Client.Lobby.UI;
 
@@ -37,7 +38,7 @@ public sealed partial class HumanoidProfileEditor
         for (var i = 0; i < _voiceList.Count; i++)
         {
             var voice = _voiceList[i];
-            if (!HumanoidCharacterProfile.CanHaveVoice(voice, Profile.Sex))
+            if (!CanHaveVoice(voice, Profile.Sex))
                 continue;
 
             var name = Loc.GetString(voice.Name);
@@ -59,5 +60,19 @@ public sealed partial class HumanoidProfileEditor
             return;
 
         _entManager.System<TTSSystem>().RequestPreviewTTS(Profile.Voice);
+    }
+
+    private void SetVoice(string voiceId)
+    {
+        if (Profile is null) 
+            return;
+        
+        Profile = Profile.WithVoice(voiceId);
+        IsDirty = true;
+    }
+
+    private bool CanHaveVoice(TTSVoicePrototype voice, Sex sex)
+    {
+        return voice.Sex == sex || voice.Sex == Sex.Unsexed;
     }
 }

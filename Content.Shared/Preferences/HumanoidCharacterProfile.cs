@@ -1,6 +1,7 @@
 using System.IO;
 using System.Linq;
 using System.Text.RegularExpressions;
+using Content.Shared._Stories.TTS;
 using Content.Shared.CCVar;
 using Content.Shared.GameTicking;
 using Content.Shared.Humanoid;
@@ -31,7 +32,7 @@ namespace Content.Shared.Preferences
     public sealed partial class HumanoidCharacterProfile
     {
         public static readonly ProtoId<SpeciesPrototype> DefaultSpecies = "Human";
-        private static readonly Regex RestrictedNameRegex = new(@"[^A-Za-z0-9 '\-]");
+        private static readonly Regex RestrictedNameRegex = new(@"[^А-Яа-яёЁ0-9 '\-]");
         private static readonly Regex ICNameCaseRegex = new(@"^(?<word>\w)|\b(?<word>\w)(?=\w*$)");
 
         /// <summary>
@@ -88,6 +89,11 @@ namespace Content.Shared.Preferences
 
         [DataField]
         public Gender Gender { get; private set; } = Gender.Male;
+
+        // Stories-TTS-Start
+        [DataField]
+        public string Voice { get; set; } = "father_grigori";
+        // Stories-TTS-End
 
         /// <summary>
         /// Stores markings, eye colors, etc for the profile.
@@ -183,13 +189,13 @@ namespace Content.Shared.Preferences
                 new HashSet<ProtoId<TraitPrototype>>(other.TraitPreferences),
                 new Dictionary<string, RoleLoadout>(other.Loadouts))
         {
+            Voice = other.Voice; // Stories-TTS
         }
 
         /// <summary>
         ///     Get the default humanoid character profile, using internal constant values.
         ///     Defaults to <see cref="DefaultSpecies"/> for the species.
         /// </summary>
-        /// <returns></returns>
         public HumanoidCharacterProfile()
         {
         }
@@ -257,6 +263,16 @@ namespace Content.Shared.Preferences
 
             var name = GetName(species, gender);
 
+            // Stories-TTS-Start
+            var voice = "father_grigori";
+            var validVoices = prototypeManager.EnumeratePrototypes<TTSVoicePrototype>()
+                .Where(v => v.RoundStart && (v.Sex == sex || v.Sex == Sex.Unsexed))
+                .ToList();
+            
+            if (validVoices.Count > 0)
+                voice = random.Pick(validVoices).ID;
+            // Stories-TTS-End
+
             return new HumanoidCharacterProfile()
             {
                 Name = name,
@@ -265,6 +281,7 @@ namespace Content.Shared.Preferences
                 Gender = gender,
                 Species = species,
                 Appearance = HumanoidCharacterAppearance.Random(species, sex),
+                Voice = voice, // Stories-TTS
             };
         }
 
@@ -298,6 +315,12 @@ namespace Content.Shared.Preferences
             return new(this) { Species = species };
         }
 
+        // Stories-TTS-Start
+        public HumanoidCharacterProfile WithVoice(string voice)
+        {
+            return new(this) { Voice = voice };
+        }
+        // Stories-TTS-End
 
         public HumanoidCharacterProfile WithCharacterAppearance(HumanoidCharacterAppearance appearance)
         {
@@ -474,6 +497,7 @@ namespace Content.Shared.Preferences
             if (!_traitPreferences.SequenceEqual(other._traitPreferences)) return false;
             if (!Loadouts.SequenceEqual(other.Loadouts)) return false;
             if (FlavorText != other.FlavorText) return false;
+            if (Voice != other.Voice) return false; // Stories-TTS
             return Appearance.Equals(other.Appearance);
         }
 
@@ -600,6 +624,18 @@ namespace Content.Shared.Preferences
             var traits = TraitPreferences
                          .Where(prototypeManager.HasIndex)
                          .ToList();
+
+            // Stories-TTS-Start
+            if (!prototypeManager.TryIndex<TTSVoicePrototype>(Voice, out var voiceProto) ||
+                (voiceProto.Sex != sex && voiceProto.Sex != Sex.Unsexed))
+            {
+                var validVoices = prototypeManager.EnumeratePrototypes<TTSVoicePrototype>()
+                    .Where(v => v.RoundStart && (v.Sex == sex || v.Sex == Sex.Unsexed))
+                    .ToList();
+                var random = IoCManager.Resolve<IRobustRandom>();
+                Voice = validVoices.Count > 0 ? random.Pick(validVoices).ID : "father_grigori";
+            }
+            // Stories-TTS-End
 
             Name = name;
             FlavorText = flavortext;
@@ -729,6 +765,7 @@ namespace Content.Shared.Preferences
             hashCode.Add(Appearance);
             hashCode.Add((int)SpawnPriority);
             hashCode.Add((int)PreferenceUnavailable);
+            hashCode.Add(Voice); // Stories-TTS
             return hashCode.ToHashCode();
         }
 

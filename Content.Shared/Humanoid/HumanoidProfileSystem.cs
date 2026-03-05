@@ -1,3 +1,4 @@
+using Content.Shared._Stories.TTS;
 using Content.Shared.Examine;
 using Content.Shared.Humanoid.Prototypes;
 using Content.Shared.IdentityManagement;
@@ -37,6 +38,12 @@ public sealed class HumanoidProfileSystem : EntitySystem
         {
             _grammar.SetGender((ent, grammar), profile.Gender);
         }
+
+        // Stoires-TTS-Start
+        var tts = EnsureComp<TTSComponent>(ent.Owner);
+        tts.VoicePrototypeId = profile.Voice;
+        Dirty(ent.Owner, tts);
+        // Stoires-TTS-End
     }
 
     private void OnExamined(Entity<HumanoidProfileComponent> ent, ref ExaminedEvent args)

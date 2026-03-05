@@ -18,7 +18,6 @@ public sealed class ShadowlingSystem : EntitySystem
 
         SubscribeLocalEvent<ShadowlingComponent, GetStatusIconsEvent>(OnGetStatusIconsEvent);
 
-        // TODO: Использовать события ConvertedEvent, RevertedEvent. Сейчас они только на сервере.
         SubscribeLocalEvent<ShadowlingThrallComponent, ComponentInit>(OnConverted);
         SubscribeLocalEvent<ShadowlingThrallComponent, ComponentShutdown>(OnReverted);
     }
@@ -30,20 +29,24 @@ public sealed class ShadowlingSystem : EntitySystem
 
     private void OnConverted(EntityUid uid, ShadowlingThrallComponent component, ComponentInit args)
     {
-        if (!HasComp<HumanoidAppearanceComponent>(uid))
+        if (!HasComp<HumanoidProfileComponent>(uid))
             return;
 
-        var sprite = Comp<SpriteComponent>(uid);
+        if (!TryComp<SpriteComponent>(uid, out var sprite))
+            return;
+
         sprite.LayerSetShader(sprite.LayerMapReserveBlank(HumanoidVisualLayers.Eyes),
             _prototype.Index(_unshadedShaderProtoId).Instance());
     }
 
     private void OnReverted(EntityUid uid, ShadowlingThrallComponent component, ComponentShutdown args)
     {
-        if (!HasComp<HumanoidAppearanceComponent>(uid))
+        if (!HasComp<HumanoidProfileComponent>(uid))
             return;
 
-        var sprite = Comp<SpriteComponent>(uid);
+        if (!TryComp<SpriteComponent>(uid, out var sprite))
+            return;
+
         sprite.LayerSetShader(sprite.LayerMapReserveBlank(HumanoidVisualLayers.Eyes), (ShaderInstance?)null);
     }
 }

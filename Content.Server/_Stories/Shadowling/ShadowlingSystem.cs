@@ -1,3 +1,4 @@
+using System.Linq;
 using Content.Server._Stories.Conversion;
 using Content.Server._Stories.Photosensitivity;
 using Content.Server.Actions;
@@ -16,9 +17,9 @@ using Content.Server.RoundEnd;
 using Content.Server.Stunnable;
 using Content.Shared._Stories.Conversion;
 using Content.Shared._Stories.Shadowling;
+using Content.Shared.Body;
 using Content.Shared.Chemistry.EntitySystems;
 using Content.Shared.Damage.Systems;
-using Content.Shared.Humanoid;
 using Content.Shared.Light.EntitySystems;
 using Content.Shared.Mobs.Systems;
 using Content.Shared.Standing;
@@ -59,6 +60,7 @@ public sealed partial class ShadowlingSystem : EntitySystem
     [Dependency] private readonly StandingStateSystem _standing = default!;
     [Dependency] private readonly StunSystem _stun = default!;
     [Dependency] private readonly UnpoweredFlashlightSystem _unpoweredFlashlight = default!;
+    [Dependency] private readonly SharedVisualBodySystem _visualBody = default!;
     [Dependency] private readonly TransformSystem _xform = default!;
 
     public override void Initialize()
@@ -83,11 +85,18 @@ public sealed partial class ShadowlingSystem : EntitySystem
         if (args.Handled)
             return;
 
-        if (TryComp<HumanoidAppearanceComponent>(uid, out var appearance))
+        if (TryComp<VisualBodyComponent>(uid, out var visualBody) &&
+            _visualBody.TryGatherMarkingsData((uid, visualBody), null, out var profiles, out _, out _))
         {
-            comp.OldEyeColor = appearance.EyeColor;
-            appearance.EyeColor = comp.EyeColor;
-            Dirty(uid, appearance);
+            var firstProfile = profiles.Values.FirstOrDefault();
+            comp.OldEyeColor = firstProfile.EyeColor;
+
+            foreach (var (category, profile) in profiles)
+            {
+                profiles[category] = profile with { EyeColor = comp.EyeColor };
+            }
+
+            _visualBody.ApplyProfiles(uid, profiles);
         }
 
         if (args.Data.Owner != null)
@@ -101,10 +110,15 @@ public sealed partial class ShadowlingSystem : EntitySystem
         if (args.Handled)
             return;
 
-        if (TryComp<HumanoidAppearanceComponent>(uid, out var appearance))
+        if (TryComp<VisualBodyComponent>(uid, out var visualBody) &&
+            _visualBody.TryGatherMarkingsData((uid, visualBody), null, out var profiles, out _, out _))
         {
-            appearance.EyeColor = comp.OldEyeColor;
-            Dirty(uid, appearance);
+            foreach (var (category, profile) in profiles)
+            {
+                profiles[category] = profile with { EyeColor = comp.OldEyeColor };
+            }
+
+            _visualBody.ApplyProfiles(uid, profiles);
         }
 
         if (args.Data.Owner != null)

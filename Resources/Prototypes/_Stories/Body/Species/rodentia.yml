@@ -1,0 +1,253 @@
+- type: markingsGroup
+  parent: Undergarments
+  id: Rodentia
+  onlyGroupWhitelisted: true
+  limits:
+    enum.HumanoidVisualLayers.Hair:
+      limit: 1
+      required: false
+    enum.HumanoidVisualLayers.FacialHair:
+      limit: 1
+      required: false
+    enum.HumanoidVisualLayers.Tail:
+      limit: 1
+      required: true
+      default: [ RodentiaTailDefault ]
+    enum.HumanoidVisualLayers.Chest:
+      limit: 2
+      required: false
+    enum.HumanoidVisualLayers.Snout:
+      limit: 1
+      required: false
+    enum.HumanoidVisualLayers.HeadTop:
+      limit: 1
+      required: true
+      default: [ RodentiaHeadTopEarDefault ]
+    enum.HumanoidVisualLayers.HeadSide:
+      limit: 1
+      required: false
+    enum.HumanoidVisualLayers.LArm:
+      limit: 1
+      required: false
+    enum.HumanoidVisualLayers.RArm:
+      limit: 1
+      required: false
+    enum.HumanoidVisualLayers.LHand:
+      limit: 1
+      required: false
+    enum.HumanoidVisualLayers.RHand:
+      limit: 1
+      required: false
+    enum.HumanoidVisualLayers.LLeg:
+      limit: 1
+      required: false
+    enum.HumanoidVisualLayers.RLeg:
+      limit: 1
+      required: false
+    enum.HumanoidVisualLayers.LFoot:
+      limit: 1
+      required: false
+    enum.HumanoidVisualLayers.RFoot:
+      limit: 1
+      required: false
+
+- type: entity
+  parent: BaseSpeciesAppearance
+  id: AppearanceRodentia
+  name: rodentia appearance
+  components:
+  - type: InitialBody
+    organs:
+      Torso: OrganRodentiaTorso
+      Head: OrganRodentiaHead
+      ArmLeft: OrganRodentiaArmLeft
+      ArmRight: OrganRodentiaArmRight
+      HandRight: OrganRodentiaHandRight
+      HandLeft: OrganRodentiaHandLeft
+      LegLeft: OrganRodentiaLegLeft
+      LegRight: OrganRodentiaLegRight
+      FootLeft: OrganRodentiaFootLeft
+      FootRight: OrganRodentiaFootRight
+      Brain: OrganHumanBrain
+      Eyes: OrganHumanEyes
+      Tongue: OrganHumanTongue
+      Appendix: OrganHumanAppendix
+      Ears: OrganHumanEars
+      Lungs: OrganHumanLungs
+      Heart: OrganAnimalHeart
+      Stomach: OrganReptilianStomach
+      Liver: OrganAnimalLiver
+      Kidneys: OrganHumanKidneys
+  - type: HumanoidProfile
+    species: Rodentia
+
+- type: entity
+  save: false
+  parent:
+  - AppearanceRodentia
+  - BaseSpeciesMobOrganic
+  id: MobRodentia
+  name: Urist McRat
+  components:
+  - type: MobThresholds
+    thresholds:
+      0: Alive
+      80: Critical
+      180: Dead
+  - type: SlowOnDamage
+    speedModifierThresholds:
+      60: 0.9
+      80: 0.7
+  - type: StandingState
+    crawlingSpeedModifier: 0.5
+  - type: HumanoidProfile
+    species: Rodentia
+    hideLayersOnEquip:
+    - Hair
+    - HeadTop
+    - HeadSide
+    - Snout
+  - type: Body
+    prototype: Rodentia
+  - type: Hunger
+  - type: Thirst
+  - type: Icon
+    sprite: _Stories/Mobs/Rodentia/parts.rsi
+    state: full
+  - type: Speech
+    speechVerb: Rodentia
+    speechSounds: Squeak
+    allowedEmotes: ['Squeak']
+  - type: Sprite
+    netsync: false
+    noRot: true
+    drawdepth: Mobs
+    layers:
+      - map: [ "enum.HumanoidVisualLayers.Chest" ]
+      - map: [ "enum.HumanoidVisualLayers.Head" ]
+      - map: [ "enum.HumanoidVisualLayers.Snout" ]
+      - map: [ "enum.HumanoidVisualLayers.Eyes" ]
+      - map: [ "enum.HumanoidVisualLayers.RArm" ]
+      - map: [ "enum.HumanoidVisualLayers.LArm" ]
+      - map: [ "enum.HumanoidVisualLayers.RLeg" ]
+      - map: [ "enum.HumanoidVisualLayers.LLeg" ]
+      - map: [ "enum.HumanoidVisualLayers.UndergarmentBottom" ]
+      - map: [ "enum.HumanoidVisualLayers.UndergarmentTop" ]
+      - map: [ "jumpsuit" ]
+      - map: [ "enum.HumanoidVisualLayers.LHand" ]
+      - map: [ "enum.HumanoidVisualLayers.RHand" ]
+      - map: [ "enum.HumanoidVisualLayers.LFoot" ]
+      - map: [ "enum.HumanoidVisualLayers.RFoot" ]
+      - map: [ "enum.HumanoidVisualLayers.Handcuffs" ]
+        color: "#ffffff"
+        sprite: Objects/Misc/handcuffs.rsi
+        state: body-overlay-2
+        visible: false
+      - map: [ "id" ]
+      - map: [ "gloves" ]
+      - map: [ "shoes" ]
+      - map: [ "ears" ]
+      - map: [ "outerClothing" ]
+      - map: [ "eyes" ]
+      - map: [ "belt" ]
+      - map: [ "neck" ]
+      - map: [ "back" ]
+      - map: [ "enum.HumanoidVisualLayers.FacialHair" ]
+      - map: [ "enum.HumanoidVisualLayers.Hair" ]
+      - map: [ "enum.HumanoidVisualLayers.HeadSide" ]
+      - map: [ "enum.HumanoidVisualLayers.HeadTop" ]
+      - map: [ "enum.HumanoidVisualLayers.Tail" ]
+      - map: [ "mask" ]
+      - map: [ "head" ]
+      - map: [ "pocket1" ]
+      - map: [ "pocket2" ]
+  - type: MeleeWeapon
+    soundHit:
+      path: /Audio/Weapons/pierce.ogg
+    animation: WeaponArcClaw
+  - type: Vocal
+    sounds:
+      Male: MaleRodentia
+      Female: FemaleRodentia
+      Unsexed: MaleRodentia
+  - type: Inventory
+    speciesId: rodentia
+
+- type: entity
+  parent: OrganBase
+  id: OrganRodentia
+  name: часть тела родентии
+  abstract: true
+  suffix: Rodentia
+  components:
+  - type: Extractable
+    juiceSolution:
+      reagents:
+      - ReagentId: Fat
+        Quantity: 3
+      - ReagentId: Blood
+        Quantity: 10
+
+- type: entity
+  parent: OrganRodentia
+  id: OrganRodentiaExternal
+  abstract: true
+  components:
+  - type: Sprite
+    sprite: _Stories/Mobs/Rodentia/parts.rsi
+  - type: VisualOrgan
+    data:
+      sprite: _Stories/Mobs/Rodentia/parts.rsi
+  - type: VisualOrganMarkings
+    markingData:
+      group: Rodentia
+
+- type: entity
+  id: OrganRodentiaTorso
+  name: торс родентии
+  parent: [ OrganBaseTorsoSexed, OrganBaseTorso, OrganRodentiaExternal ]
+
+- type: entity
+  id: OrganRodentiaHead
+  name: голова родентии
+  parent: [ OrganBaseHeadSexed, OrganBaseHead, OrganRodentiaExternal ]
+
+- type: entity
+  id: OrganRodentiaArmLeft
+  name: левая рука родентии
+  parent: [ OrganBaseArmLeft, OrganRodentiaExternal ]
+
+- type: entity
+  id: OrganRodentiaArmRight
+  name: правая рука родентии
+  parent: [ OrganBaseArmRight, OrganRodentiaExternal ]
+
+- type: entity
+  id: OrganRodentiaHandLeft
+  name: левая кисть родентии
+  parent: [ OrganBaseHandLeft, OrganRodentiaExternal ]
+
+- type: entity
+  id: OrganRodentiaHandRight
+  name: правая кисть родентии
+  parent: [ OrganBaseHandRight, OrganRodentiaExternal ]
+
+- type: entity
+  id: OrganRodentiaLegLeft
+  name: левая нога родентии
+  parent: [ OrganBaseLegLeft, OrganRodentiaExternal ]
+
+- type: entity
+  id: OrganRodentiaLegRight
+  name: правая нога родентии
+  parent: [ OrganBaseLegRight, OrganRodentiaExternal ]
+
+- type: entity
+  id: OrganRodentiaFootLeft
+  name: левая стопа родентии
+  parent: [ OrganBaseFootLeft, OrganRodentiaExternal ]
+
+- type: entity
+  id: OrganRodentiaFootRight
+  name: правая стопа родентии
+  parent: [ OrganBaseFootRight, OrganRodentiaExternal ]

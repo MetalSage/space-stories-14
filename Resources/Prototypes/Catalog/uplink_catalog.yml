@@ -1119,44 +1119,44 @@
   categories:
   - UplinkExplosives
 
-- type: listing
-  id: UplinkSyndimovCircuitKit
-  name: uplink-syndimov-law-name
-  description: uplink-syndimov-law-desc
-  icon: { sprite: /Textures/Objects/Storage/boxicons.rsi, state: syndicate_circuit }
-  productEntity: SyndimovCircuitKit
-  discountCategory: usualDiscounts
-  discountDownTo:
-    Telecrystal: 6
-  cost:
-    Telecrystal: 8
-  categories:
-  - UplinkDisruption
-  conditions:
-  - !type:StoreWhitelistCondition
-     blacklist:
-       tags:
-       - NukeOpsUplink
-
-- type: listing
-  id: UplinkAntimovCircuitBoard
-  name: uplink-antimov-law-name
-  description: uplink-antimov-law-desc
-  productEntity: AntimovCircuitBoard
-  discountCategory: rareDiscounts
-  discountDownTo:
-    Telecrystal: 20
-  cost:
-    Telecrystal: 24
-  categories:
-  - UplinkDisruption
-  conditions:
-  - !type:StoreWhitelistCondition
-    whitelist:
-      tags:
-      - NukeOpsUplink
-
 # Stories-Start
+#- type: listing
+#  id: UplinkSyndimovCircuitKit
+#  name: uplink-syndimov-law-name
+#  description: uplink-syndimov-law-desc
+#  icon: { sprite: /Textures/Objects/Storage/boxicons.rsi, state: syndicate_circuit }
+#  productEntity: SyndimovCircuitKit
+#  discountCategory: usualDiscounts
+#  discountDownTo:
+#    Telecrystal: 6
+#  cost:
+#    Telecrystal: 8
+#  categories:
+#  - UplinkDisruption
+#  conditions:
+#  - !type:StoreWhitelistCondition
+#     blacklist:
+#       tags:
+#       - NukeOpsUplink
+#
+#- type: listing
+#  id: UplinkAntimovCircuitBoard
+#  name: uplink-antimov-law-name
+#  description: uplink-antimov-law-desc
+#  productEntity: AntimovCircuitBoard
+#  discountCategory: rareDiscounts
+#  discountDownTo:
+#    Telecrystal: 20
+#  cost:
+#    Telecrystal: 24
+#  categories:
+#  - UplinkDisruption
+#  conditions:
+#  - !type:StoreWhitelistCondition
+#    whitelist:
+#      tags:
+#      - NukeOpsUplink
+#
 #- type: listing
 #  id: UplinkSurplusBundle
 #  name: uplink-surplus-bundle-name
@@ -1175,6 +1175,7 @@
 #    blacklist:
 #      components:
 #      - SurplusBundle
+# Stories-End
 
 - type: listing
   id: UplinkStarterKit
@@ -1195,27 +1196,29 @@
         components:
         - SurplusBundle
 
-- type: listing
-  id: UplinkSingarityBeacon
-  name: uplink-singularity-beacon-name
-  description: uplink-singularity-beacon-desc
-  productEntity: SingularityBeacon
-  discountCategory: usualDiscounts
-  discountDownTo:
-    Telecrystal: 4
-  cost:
-    Telecrystal: 12
-  categories:
-    - UplinkDisruption
-  conditions:
-  - !type:StoreWhitelistCondition
-    whitelist:
-      tags:
-      - NukeOpsUplink
-  - !type:BuyerWhitelistCondition
-    blacklist:
-      components:
-      - SurplusBundle
+# Stories-Start
+#- type: listing
+#  id: UplinkSingarityBeacon
+#  name: uplink-singularity-beacon-name
+#  description: uplink-singularity-beacon-desc
+#  productEntity: SingularityBeacon
+#  discountCategory: usualDiscounts
+#  discountDownTo:
+#    Telecrystal: 4
+#  cost:
+#    Telecrystal: 12
+#  categories:
+#    - UplinkDisruption
+#  conditions:
+#  - !type:StoreWhitelistCondition
+#    whitelist:
+#      tags:
+#      - NukeOpsUplink
+#  - !type:BuyerWhitelistCondition
+#    blacklist:
+#      components:
+#      - SurplusBundle
+# Stories-End
 
 - type: listing
   id: UplinkCameraBug

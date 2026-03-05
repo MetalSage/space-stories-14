@@ -43,3 +43,11 @@
   keycode: 'ю'
   frequency: 98329
   color: "#008080"
+
+- type: radioChannel
+  id: Chitine
+  name: chat-radio-chitine
+  frequency: 98766
+  keycode: 'х'
+  color: "#556b2f"
+  longRange: true

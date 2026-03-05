@@ -108,6 +108,8 @@ namespace Content.Client.Lobby.UI
 
             Markings.SetModel(_markingsModel);
 
+            InitializeVoice(); // Stoires-TTS
+
             ImportButton.OnPressed += args =>
             {
                 ImportProfile();
@@ -376,6 +378,7 @@ namespace Content.Client.Lobby.UI
             UpdateEyePickers();
             UpdateSaveButton();
             UpdateMarkings();
+            UpdateTTSVoicesControls(); // Stoires-TTS
 
             RefreshAntags();
             RefreshJobs();

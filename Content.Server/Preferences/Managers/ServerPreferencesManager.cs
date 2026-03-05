@@ -186,7 +186,13 @@ namespace Content.Server.Preferences.Managers
                 antags.ToHashSet(),
                 traits.ToHashSet(),
                 loadouts
-            );
+            )
+            // Stoires-TTS-Start
+            {
+                Voice = profile.GetType().GetProperty("Voice")?.GetValue(profile) as string ?? "father_grigori"
+            }
+            // Stoires-TTS-End
+            ;
         }
 
         private async void HandleSelectCharacterMessage(MsgSelectCharacter message)

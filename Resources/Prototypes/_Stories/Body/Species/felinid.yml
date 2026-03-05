@@ -1,0 +1,107 @@
+- type: markingsGroup
+  parent: Undergarments
+  id: Felinid
+  limits:
+    enum.HumanoidVisualLayers.Hair:
+      limit: 1
+      required: false
+    enum.HumanoidVisualLayers.FacialHair:
+      limit: 1
+      required: false
+    enum.HumanoidVisualLayers.Tail:
+      limit: 1
+      required: true
+      default: [ FelinidTailBasic ]
+    enum.HumanoidVisualLayers.Chest:
+      limit: 1
+      required: false
+    enum.HumanoidVisualLayers.HeadTop:
+      limit: 1
+      required: true
+      default: [ FelinidEarsBasic ]
+    enum.HumanoidVisualLayers.LArm:
+      limit: 1
+      required: false
+    enum.HumanoidVisualLayers.RArm:
+      limit: 1
+      required: false
+    enum.HumanoidVisualLayers.LHand:
+      limit: 1
+      required: false
+    enum.HumanoidVisualLayers.RHand:
+      limit: 1
+      required: false
+    enum.HumanoidVisualLayers.LLeg:
+      limit: 1
+      required: false
+    enum.HumanoidVisualLayers.RLeg:
+      limit: 1
+      required: false
+    enum.HumanoidVisualLayers.LFoot:
+      limit: 1
+      required: false
+    enum.HumanoidVisualLayers.RFoot:
+      limit: 1
+      required: false
+
+- type: entity
+  parent: BaseSpeciesAppearance
+  id: AppearanceFelinid
+  name: felinid appearance
+  components:
+  - type: InitialBody
+    organs:
+      Torso: OrganHumanTorso
+      Head: OrganHumanHead
+      ArmLeft: OrganHumanArmLeft
+      ArmRight: OrganHumanArmRight
+      HandRight: OrganHumanHandRight
+      HandLeft: OrganHumanHandLeft
+      LegLeft: OrganHumanLegLeft
+      LegRight: OrganHumanLegRight
+      FootLeft: OrganHumanFootLeft
+      FootRight: OrganHumanFootRight
+      Brain: OrganHumanBrain
+      Eyes: OrganHumanEyes
+      Tongue: OrganHumanTongue
+      Appendix: OrganHumanAppendix
+      Ears: OrganHumanEars
+      Lungs: OrganHumanLungs
+      Heart: OrganAnimalHeart
+      Stomach: OrganReptilianStomach
+      Liver: OrganAnimalLiver
+      Kidneys: OrganHumanKidneys
+  - type: HumanoidProfile
+    species: Felinid
+  - type: VisualBody
+    group: Felinid
+
+- type: entity
+  save: false
+  parent:
+  - AppearanceHuman
+  - BaseSpeciesMobOrganic
+  id: MobFelinid
+  name: Urist McFelinid
+  components:
+  - type: FootstepModifier
+    footstepSoundCollection: null
+  - type: FlashDebuff
+  - type: HumanoidProfile
+    species: Felinid
+    hideLayersOnEquip:
+    - Hair
+    - HeadTop
+  - type: Body
+    prototype: Felinid
+  - type: Hunger
+  - type: Thirst
+  - type: Sprite
+    drawdepth: Mobs
+  - type: Vocal
+    sounds:
+      Male: MaleFelinid
+      Unsexed: MaleFelinid
+      Female: FemaleFelinid
+  - type: Speech
+    allowedEmotes: ['Hiss', 'Meow', 'Mew', 'Growl', 'Purr']
