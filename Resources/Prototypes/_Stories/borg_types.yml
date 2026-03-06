@@ -1,0 +1,29 @@
+- type: borgType
+  id: STsecurity
+  dummyPrototype: STBorgChassisSecurity
+  extraModuleCount: 4
+  moduleWhitelist:
+    tags:
+      - BorgModuleGeneric
+      - STBorgModuleSecurity
+  defaultModules:
+    - BorgModuleTool
+    - STBorgLaserGunModule
+    - STSecurityModuleBase
+  radioChannels:
+    - Security
+    - Science
+  inventoryTemplateId: borgShort
+  spriteBodyState: security
+  spriteHasMindState: security_e
+  spriteNoMindState: security_l
+  spriteToggleLightState: security_l
+  petSuccessString: stories-petting-success-security-cyborg
+  petFailureString: stories-petting-failure-security-cyborg
+  addComponents:
+    - type: SiliconLawProvider
+      laws: STSecurityLawset
+    - type: FlashImmunity
+    - type: ShowCriminalRecordIcons
+    - type: ShowMindShieldIcons
+    - type: ShowContrabandDetails

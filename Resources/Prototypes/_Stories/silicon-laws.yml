@@ -1,0 +1,28 @@
+﻿- type: siliconLaw
+  id: STSec1
+  order: 1
+  lawString: stories-security-dep-1
+
+- type: siliconLaw
+  id: STSec2
+  order: 2
+  lawString: stories-security-dep-2
+
+- type: siliconLaw
+  id: STSec3
+  order: 3
+  lawString: stories-security-dep-3
+
+- type: siliconLaw
+  id: STSec4
+  order: 4
+  lawString: stories-security-dep-4
+
+- type: siliconLawset
+  id: STSecurityLawset
+  laws:
+  - STSec1
+  - STSec2
+  - STSec3
+  - STSec4
+  obeysTo: laws-owner-station
