@@ -162,7 +162,6 @@
     Respiration:
       effects:
       - !type:MovementSpeedModifier
-        conditions:
         walkSpeedModifier: 1.35
         sprintSpeedModifier: 1.35
         time: 0.07
@@ -175,12 +174,10 @@
           types:
             Poison: 0.25
       - !type:GenericStatusEffect
-        conditions:
         key: ForcedSleep
         type: Remove
         time: 0.07
       - !type:GenericStatusEffect
-        conditions:
         key: Adrenaline
         component: IgnoreSlowOnDamage
         type: Add
