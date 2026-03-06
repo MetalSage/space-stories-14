@@ -72,6 +72,6 @@ public sealed partial class HumanoidProfileEditor
 
     private bool CanHaveVoice(TTSVoicePrototype voice, Sex sex)
     {
-        return voice.Sex == sex || voice.Sex == Sex.Unsexed;
+        return sex == Sex.Unsexed || voice.Sex == sex || voice.Sex == Sex.Unsexed;
     }
 }

@@ -7,14 +7,15 @@
 [admin]
 deadmin_on_join = true
 new_player_threshold = 600
-role_ban_default_severity = "high"
-department_ban_default_severity = "high"
-server_ban_default_severity = "high"
-server_ban_hwid_ban_default = false
 
 [ahelp]
 admin_prefix = true
 admin_prefix_webhook = true
+
+[atmos]
+monstermos_rip_tiles = true
+grid_impulse = true
+max_process_time = 1
 
 [auth]
 mode = 1
@@ -29,7 +30,6 @@ rate_limit_announce_admins_delay = 10
 max_message_length = 500
 
 [game]
-contraband_examine = false
 round_restart_time = 120
 lobbyduration = 210
 map_pool = "StoriesDefaultMapPool"

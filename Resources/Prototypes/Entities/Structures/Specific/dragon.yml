@@ -18,6 +18,7 @@
       state: icon
       color: "#569fff"
       shader: unshaded
+    noRot: true # Stories-Fix
   - type: InteractionOutline
   - type: Clickable
   - type: PointLight

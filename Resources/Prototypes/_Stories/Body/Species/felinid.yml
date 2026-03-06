@@ -79,7 +79,7 @@
 - type: entity
   save: false
   parent:
-  - AppearanceHuman
+  - AppearanceFelinid
   - BaseSpeciesMobOrganic
   id: MobFelinid
   name: Urist McFelinid

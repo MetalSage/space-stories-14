@@ -81,7 +81,7 @@
 - type: entity
   save: false
   parent:
-  - AppearanceMoth
+  - AppearanceAvali
   - BaseSpeciesMobOrganic
   id: MobAvali
   name: Urist C.M McRaptor
