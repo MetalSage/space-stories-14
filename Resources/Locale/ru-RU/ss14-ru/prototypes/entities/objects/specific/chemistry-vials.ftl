@@ -1,5 +1,11 @@
 ent-BaseChemistryEmptyVial = пробирка
     .desc = Маленькая пробирка.
+ent-ChemistryEmptyVialSmall = маленькая пробирка
+    .suffix = Пустой
+    .desc = Пробирка меньшего размера.
+ent-ChemistryEmptyVial = { ent-BaseChemistryEmptyVial }
+    .suffix = Пустой
+    .desc = { ent-BaseChemistryEmptyVial.desc }
 ent-VestineChemistryVial = { ent-BaseChemistryEmptyVial }
     .suffix = Вестин
     .desc = { ent-BaseChemistryEmptyVial.desc }
