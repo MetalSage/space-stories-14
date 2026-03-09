@@ -51,16 +51,16 @@
   components:
   - type: InitialBody
     organs:
-      Torso: OrganHumanTorso
-      Head: OrganHumanHead
-      ArmLeft: OrganHumanArmLeft
-      ArmRight: OrganHumanArmRight
-      HandRight: OrganHumanHandRight
-      HandLeft: OrganHumanHandLeft
-      LegLeft: OrganHumanLegLeft
-      LegRight: OrganHumanLegRight
-      FootLeft: OrganHumanFootLeft
-      FootRight: OrganHumanFootRight
+      Torso: OrganFelinidTorso
+      Head: OrganFelinidHead
+      ArmLeft: OrganFelinidArmLeft
+      ArmRight: OrganFelinidArmRight
+      HandRight: OrganFelinidHandRight
+      HandLeft: OrganFelinidHandLeft
+      LegLeft: OrganFelinidLegLeft
+      LegRight: OrganFelinidLegRight
+      FootLeft: OrganFelinidFootLeft
+      FootRight: OrganFelinidFootRight
       Brain: OrganHumanBrain
       Eyes: OrganHumanEyes
       Tongue: OrganHumanTongue
@@ -73,8 +73,6 @@
       Kidneys: OrganHumanKidneys
   - type: HumanoidProfile
     species: Felinid
-  - type: VisualBody
-    group: Felinid
 
 - type: entity
   save: false
@@ -105,3 +103,86 @@
       Female: FemaleFelinid
   - type: Speech
     allowedEmotes: ['Hiss', 'Meow', 'Mew', 'Growl', 'Purr']
+
+- type: entity
+  parent: OrganBase
+  id: OrganFelinid
+  abstract: true
+  suffix: Felinid
+  components:
+  - type: Extractable
+    juiceSolution:
+      reagents:
+      - ReagentId: Fat
+        Quantity: 3
+      - ReagentId: Blood
+        Quantity: 10
+
+- type: entity
+  parent: OrganFelinid
+  id: OrganFelinidExternal
+  abstract: true
+  components:
+  - type: Sprite
+    sprite: Mobs/Species/Human/parts.rsi
+  - type: VisualOrgan
+    data:
+      sprite: Mobs/Species/Human/parts.rsi
+  - type: VisualOrganMarkings
+    markingData:
+      group: Felinid
+
+- type: entity
+  id: OrganFelinidTorso
+  name: торс фелинида
+  parent: [ OrganBaseTorsoSexed, OrganBaseTorso, OrganFelinidExternal ]
+
+- type: entity
+  id: OrganFelinidHead
+  name: голова фелинида
+  parent: [ OrganBaseHeadSexed, OrganBaseHead, OrganFelinidExternal ]
+  components:
+  - type: VisualOrganMarkings
+    hideableLayers:
+    - enum.HumanoidVisualLayers.Hair
+    - enum.HumanoidVisualLayers.Snout
+
+- type: entity
+  id: OrganFelinidArmLeft
+  name: левая рука фелинида
+  parent: [ OrganBaseArmLeft, OrganFelinidExternal ]
+
+- type: entity
+  id: OrganFelinidArmRight
+  name: правая рука фелинида
+  parent: [ OrganBaseArmRight, OrganFelinidExternal ]
+
+- type: entity
+  id: OrganFelinidHandLeft
+  name: левая кисть фелинида
+  parent: [ OrganBaseHandLeft, OrganFelinidExternal ]
+
+- type: entity
+  id: OrganFelinidHandRight
+  name: правая кисть фелинида
+  parent: [ OrganBaseHandRight, OrganFelinidExternal ]
+
+- type: entity
+  id: OrganFelinidLegLeft
+  name: левая нога фелинида
+  parent: [ OrganBaseLegLeft, OrganFelinidExternal ]
+
+- type: entity
+  id: OrganFelinidLegRight
+  name: правая нога фелинида
+  parent: [ OrganBaseLegRight, OrganFelinidExternal ]
+
+- type: entity
+  id: OrganFelinidFootLeft
+  name: левая стопа фелинида
+  parent: [ OrganBaseFootLeft, OrganFelinidExternal ]
+
+- type: entity
+  id: OrganFelinidFootRight
+  name: правая стопа фелинида
+  parent: [ OrganBaseFootRight, OrganFelinidExternal ]

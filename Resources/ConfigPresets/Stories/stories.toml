@@ -14,7 +14,6 @@ admin_prefix_webhook = true
 
 [atmos]
 monstermos_rip_tiles = true
-grid_impulse = true
 max_process_time = 1
 
 [auth]

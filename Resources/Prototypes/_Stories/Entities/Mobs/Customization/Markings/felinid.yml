@@ -2,6 +2,13 @@
   id: FelinidEarsBasic
   bodyPart: HeadTop
   groupWhitelist: [Felinid]
+  coloring:
+    default:
+      type:
+        !type:CategoryColoring
+          category: Hair
+      fallbackTypes:
+        - !type:SkinColoring
   sprites:
   - sprite: _Stories/Mobs/Felinids/felinid_ears.rsi
     state: basic_outer
@@ -12,6 +19,13 @@
   id: FelinidEarsCurled
   bodyPart: HeadTop
   groupWhitelist: [Felinid]
+  coloring:
+    default:
+      type:
+        !type:CategoryColoring
+          category: Hair
+      fallbackTypes:
+        - !type:SkinColoring
   sprites:
   - sprite: _Stories/Mobs/Felinids/felinid_ears.rsi
     state: curled_outer
@@ -22,6 +36,13 @@
   id: FelinidEarsDroopy
   bodyPart: HeadTop
   groupWhitelist: [Felinid]
+  coloring:
+    default:
+      type:
+        !type:CategoryColoring
+          category: Hair
+      fallbackTypes:
+        - !type:SkinColoring
   sprites:
   - sprite: _Stories/Mobs/Felinids/felinid_ears.rsi
     state: droopy_outer
@@ -32,6 +53,13 @@
   id: FelinidEarsFuzzy
   bodyPart: HeadTop
   groupWhitelist: [Felinid]
+  coloring:
+    default:
+      type:
+        !type:CategoryColoring
+          category: Hair
+      fallbackTypes:
+        - !type:SkinColoring
   sprites:
   - sprite: _Stories/Mobs/Felinids/felinid_ears.rsi
     state: basic_outer
@@ -42,6 +70,13 @@
   id: FelinidEarsStubby
   bodyPart: HeadTop
   groupWhitelist: [Felinid]
+  coloring:
+    default:
+      type:
+        !type:CategoryColoring
+          category: Hair
+      fallbackTypes:
+        - !type:SkinColoring
   sprites:
   - sprite: _Stories/Mobs/Felinids/felinid_ears.rsi
     state: stubby_outer
@@ -52,6 +87,13 @@
   id: FelinidEarsTall
   bodyPart: HeadTop
   groupWhitelist: [Felinid]
+  coloring:
+    default:
+      type:
+        !type:CategoryColoring
+          category: Hair
+      fallbackTypes:
+        - !type:SkinColoring
   sprites:
   - sprite: _Stories/Mobs/Felinids/felinid_ears.rsi
     state: tall_outer
@@ -64,6 +106,13 @@
   id: FelinidEarsTorn
   bodyPart: HeadTop
   groupWhitelist: [Felinid]
+  coloring:
+    default:
+      type:
+        !type:CategoryColoring
+          category: Hair
+      fallbackTypes:
+        - !type:SkinColoring
   sprites:
   - sprite: _Stories/Mobs/Felinids/felinid_ears.rsi
     state: torn_outer
@@ -74,6 +123,13 @@
   id: FelinidEarsWide
   bodyPart: HeadTop
   groupWhitelist: [Felinid]
+  coloring:
+    default:
+      type:
+        !type:CategoryColoring
+          category: Hair
+      fallbackTypes:
+        - !type:SkinColoring
   sprites:
   - sprite: _Stories/Mobs/Felinids/felinid_ears.rsi
     state: wide_outer
@@ -86,6 +142,13 @@
   id: FelinidTailBasic
   bodyPart: Tail
   groupWhitelist: [Felinid]
+  coloring:
+    default:
+      type:
+        !type:CategoryColoring
+          category: Hair
+      fallbackTypes:
+        - !type:SkinColoring
   sprites:
   - sprite: _Stories/Mobs/Felinids/felinid_tails.rsi
     state: basic_tail_tip
@@ -98,6 +161,18 @@
   id: FelinidTailBasicWithBow
   bodyPart: Tail
   groupWhitelist: [Felinid]
+  coloring:
+    default:
+      type:
+        !type:CategoryColoring
+          category: Hair
+      fallbackTypes:
+        - !type:SkinColoring
+    layers:
+      basic_bow:
+        type:
+          !type:SimpleColoring
+            color: "#FFFFFF"
   sprites:
   - sprite: _Stories/Mobs/Felinids/felinid_tails.rsi
     state: basic_tail_tip
@@ -112,6 +187,18 @@
   id: FelinidTailBasicWithBell
   bodyPart: Tail
   groupWhitelist: [Felinid]
+  coloring:
+    default:
+      type:
+        !type:CategoryColoring
+          category: Hair
+      fallbackTypes:
+        - !type:SkinColoring
+    layers:
+      basic_bell:
+        type:
+          !type:SimpleColoring
+            color: "#FFFFFF"
   sprites:
   - sprite: _Stories/Mobs/Felinids/felinid_tails.rsi
     state: basic_tail_tip
@@ -126,6 +213,22 @@
   id: FelinidTailBasicWithBowAndBell
   bodyPart: Tail
   groupWhitelist: [Felinid]
+  coloring:
+    default:
+      type:
+        !type:CategoryColoring
+          category: Hair
+      fallbackTypes:
+        - !type:SkinColoring
+    layers:
+      basic_bow:
+        type:
+          !type:SimpleColoring
+            color: "#FFFFFF"
+      basic_bell:
+        type:
+          !type:SimpleColoring
+            color: "#FFFFFF"
   sprites:
   - sprite: _Stories/Mobs/Felinids/felinid_tails.rsi
     state: basic_tail_tip
@@ -142,6 +245,13 @@
   id: FelinidTiger
   bodyPart: Tail
   groupWhitelist: [Felinid]
+  coloring:
+    default:
+      type:
+        !type:CategoryColoring
+          category: Hair
+      fallbackTypes:
+        - !type:SkinColoring
   sprites:
     - sprite: _Stories/Mobs/Felinids/tiger_tail.rsi
       state: m_tail_tiger_primary
