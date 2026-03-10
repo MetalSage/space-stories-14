@@ -20,6 +20,8 @@ public sealed class CardStackSystem : SharedCardStackSystem
     [Dependency] private readonly IRobustRandom _robustRandom = default!;
     [Dependency] private readonly SharedTransformSystem _transform = default!;
 
+    private const string SplitCardToSpawnEntity = "STCardDeck";
+
     public override void Initialize()
     {
         base.Initialize();
@@ -65,10 +67,7 @@ public sealed class CardStackSystem : SharedCardStackSystem
         _appearance.SetData(uid, CardStackVisual.State, component.CardContainer.ContainedEntities.Count);
 
         var spawnPos = Transform(user).Coordinates;
-        var protoId = MetaData(uid).EntityPrototype?.ID;
-        if (protoId == null)
-            return;
-        var entityCreated = Spawn(protoId, spawnPos);
+        var entityCreated = Spawn(SplitCardToSpawnEntity, spawnPos);
 
         if (TryComp<CardStackComponent>(entityCreated, out var stackComponent))
         {
