@@ -297,7 +297,7 @@ namespace Content.Shared.Atmos
         /// <summary>
         ///     The amount of energy 1 mole of BZ forming from N2O and plasma releases.
         /// </summary>
-        public const float BZFormationEnergy = 80e3f;
+        public const float BZFormationEnergy = 10e3f;
 
         /// <summary>
         ///     Some number taken from the air to keep BZ from instantly converting everything.

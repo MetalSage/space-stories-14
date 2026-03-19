@@ -6,7 +6,7 @@
   molarMass: 10
   color: 9370db
   reagent: STBZ
-  pricePerMole: 0.15
+  pricePerMole: 1
 
 - type: gas
   id: STHealium
@@ -18,7 +18,7 @@
   gasOverlayState: healium
   color: 8b0000
   reagent: STHealium
-  pricePerMole: 1.2
+  pricePerMole: 8
 
 - type: gas
   id: STNitryl
@@ -28,7 +28,7 @@
   molarMass: 10
   color: 12ca21
   reagent: STNitryl
-  pricePerMole: 2.5
+  pricePerMole: 6
 
 - type: gas
   id: STPluoxium
@@ -38,4 +38,4 @@
   molarMass: 10
   color: 3434aa
   reagent: STPluoxium
-  pricePerMole: 0.6
+  pricePerMole: 3
