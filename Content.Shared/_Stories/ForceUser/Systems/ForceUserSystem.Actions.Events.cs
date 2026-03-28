@@ -1,6 +1,7 @@
 using Content.Shared.Actions;
 using Content.Shared.Chemistry.Components;
 using Content.Shared.Damage;
+using Content.Shared.Damage.Prototypes;
 using Content.Shared.DoAfter;
 using Content.Shared.FixedPoint;
 using Content.Shared.Polymorph;
@@ -188,7 +189,7 @@ public sealed partial class StrangledEvent : SimpleDoAfterEvent
     [ViewVariables]
     public DamageSpecifier Damage = new()
     {
-        DamageDict = new Dictionary<string, FixedPoint2>
+        DamageDict = new Dictionary<ProtoId<DamageTypePrototype>, FixedPoint2>
         {
             { "Asphyxiation", 7.5f },
         },
@@ -215,7 +216,7 @@ public sealed partial class LifeStolenEvent : SimpleDoAfterEvent
     [ViewVariables]
     public DamageSpecifier Damage = new()
     {
-        DamageDict = new Dictionary<string, FixedPoint2>
+        DamageDict = new Dictionary<ProtoId<DamageTypePrototype>, FixedPoint2>
         {
             { "Cold", 7.5f },
         },

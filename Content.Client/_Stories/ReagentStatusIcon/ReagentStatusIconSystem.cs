@@ -39,8 +39,11 @@ public sealed class ReagentStatusIconSystem : EntitySystem
                 return;
         }
 
-        if (_solution.TryGetSolution(uid, component.Solution, out var solution) &&
-            solution.Value.Comp.Solution.ContainsReagent(component.Reagent))
-            args.StatusIcons.Add(_prototype.Index(component.StatusIcon));
+        if (_solution.TryGetSolution(uid, component.Solution, out var solution))
+        {
+            var sol = solution.Value.Comp.Solution;
+            if (sol.ContainsReagent(component.Reagent))
+                args.StatusIcons.Add(_prototype.Index(component.StatusIcon));
+        }
     }
 }
