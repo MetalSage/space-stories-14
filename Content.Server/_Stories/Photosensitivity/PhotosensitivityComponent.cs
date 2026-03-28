@@ -1,5 +1,7 @@
 using Content.Shared.Damage;
+using Content.Shared.Damage.Prototypes;
 using Content.Shared.FixedPoint;
+using Robust.Shared.Prototypes;
 
 namespace Content.Server._Stories.Photosensitivity;
 
@@ -9,7 +11,7 @@ public sealed partial class PhotosensitivityComponent : Component
     [ViewVariables(VVAccess.ReadWrite)] [DataField("damage")]
     public DamageSpecifier Damage = new()
     {
-        DamageDict = new Dictionary<string, FixedPoint2>
+        DamageDict = new Dictionary<ProtoId<DamageTypePrototype>, FixedPoint2>
         {
             { "Heat", 1 },
         },
@@ -19,7 +21,7 @@ public sealed partial class PhotosensitivityComponent : Component
     [ViewVariables(VVAccess.ReadWrite)] [DataField("damageInSpace")]
     public DamageSpecifier DamageInSpace = new()
     {
-        DamageDict = new Dictionary<string, FixedPoint2>
+        DamageDict = new Dictionary<ProtoId<DamageTypePrototype>, FixedPoint2>
         {
             { "Heat", 5 },
         },
@@ -28,7 +30,7 @@ public sealed partial class PhotosensitivityComponent : Component
     [DataField("darknessHealing")]
     public DamageSpecifier DarknessHealing = new()
     {
-        DamageDict = new Dictionary<string, FixedPoint2>
+        DamageDict = new Dictionary<ProtoId<DamageTypePrototype>, FixedPoint2>
         {
             { "Blunt", -5 },
             { "Slash", -5 },
