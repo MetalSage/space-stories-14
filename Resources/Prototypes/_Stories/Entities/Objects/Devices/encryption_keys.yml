@@ -1,8 +1,8 @@
 - type: entity
   parent: EncryptionKey
   id: EncryptionKeyIAA
-  name: ключ шифрования АВД
-  description: Ключ шифрования, используемый самой педантичной персоной на станции.
+  name: internal Affairs encryption key
+  description: The encryption key used by the most meticulous person on the station.
   components:
     - type: EncryptionKey
       channels:
@@ -32,25 +32,6 @@
       layers:
         - state: crypt_prison
         - state: prison_label
-
-- type: entity
-  parent: EncryptionKey
-  id: STEncryptionKeyJudge
-  name: judge encryption key
-  description: The encryption key used by the judge.
-  components:
-  - type: EncryptionKey
-    channels:
-    - Common
-    - Command
-    - Security
-    - STJuridical
-    defaultChannel: Command
-  - type: Sprite
-    sprite: _Stories/Objects/Devices/encryption_keys.rsi
-    layers:
-    - state: crypt_prison
-    - state: court_label
 
 - type: entity
   parent: EncryptionKey

@@ -72,7 +72,7 @@ public sealed partial class InjectReagentsEvent : InstantActionEvent
 
     [ViewVariables(VVAccess.ReadWrite)]
     [DataField("solutionTarget")]
-    public string SolutionTarget { get; set; } = "chemicals";
+    public string SolutionTarget { get; set; } = "bloodstream";
 }
 
 public sealed partial class InjectReagentsToTargetEvent : EntityTargetActionEvent
@@ -83,7 +83,7 @@ public sealed partial class InjectReagentsToTargetEvent : EntityTargetActionEven
 
     [ViewVariables(VVAccess.ReadWrite)]
     [DataField("solutionTarget")]
-    public string SolutionTarget { get; set; } = "chemicals";
+    public string SolutionTarget { get; set; } = "bloodstream";
 }
 
 public sealed partial class InjectReagentsInRangeEvent : EntityTargetActionEvent

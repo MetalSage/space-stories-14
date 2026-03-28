@@ -1,8 +1,8 @@
 - type: entity
   parent: ClothingHeadset
   id: ClothingHeadsetIAA
-  name: гарнитура АВД
-  description: Гарнитура, чтобы агент внутренних дел услышал последние слова капитана.
+  name: interior affairs headset
+  description: A headset so that the internal affairs agent could hear the captain's last words.
   components:
     - type: ContainerFill
       containers:
@@ -10,19 +10,6 @@
           - EncryptionKeyIAA
     - type: Sprite
       sprite: Clothing/Ears/Headsets/servicesecurity.rsi
-
-- type: entity
-  parent: ClothingHeadset
-  id: STClothingHeadsetJudge
-  name: judge headset
-  description: The headset will definitely help you make the verdict public.
-  components:
-  - type: ContainerFill
-    containers:
-      key_slots:
-      - STEncryptionKeyJudge
-  - type: Sprite
-    sprite: _Stories/Clothing/Ears/Headsets/judge.rsi
 
 - type: entity
   parent: ClothingHeadset
@@ -34,5 +21,7 @@
     containers:
       key_slots:
       - STEncryptionKeyJuridical
+      - EncryptionKeySecurity
+      - EncryptionKeyCommon
   - type: Sprite
     sprite: _Stories/Clothing/Ears/Headsets/juridical.rsi

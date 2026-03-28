@@ -137,3 +137,6 @@ ent-CBURNIDcard = ID-карта РХБЗЗ
 ent-UniversalIDCard = универсальная ID-карта
     .desc = ID-карта, которая позволит вам осуществить свои самые сокровенные желания.
     .suffix = Админ
+ent-NinjaIDCard = ID-карта ниндзя
+    .desc = { ent-IDCardStandard.desc }
+    .suffix = Ниндзя
