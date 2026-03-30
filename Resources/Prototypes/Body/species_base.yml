@@ -136,6 +136,8 @@
         type: HumanoidMarkingModifierBoundUserInterface
       enum.StrippingUiKey.Key:
         type: StrippableBoundUserInterface
+      enum.StoreUiKey.Key: # Stories-Guardian
+        type: StoreBoundUserInterface
   - type: Puller
   - type: Speech
     speechSounds: Alto
