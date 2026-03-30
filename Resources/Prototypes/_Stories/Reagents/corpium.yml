@@ -8,7 +8,7 @@
   worksOnTheDead: false
   physicalDesc: reagent-physical-desc-ferrous
   metabolisms:
-    Poison:
+    Bloodstream:
       metabolismRate: 1.0
       effects:
       - !type:AdjustReagent
@@ -73,19 +73,18 @@
         - !type:ReagentCondition
           reagent: STCorpium
           min: 58
-      # Paralyze заменен на GenericStatusEffect, так как отдельного эффекта Paralyze больше нет (или он не найден)
       - !type:GenericStatusEffect
         conditions:
         - !type:ReagentCondition
           reagent: STCorpium
           min: 60.5
-        key: Stun # Используем Stun как аналог паралича, так как время не указано, это может быть проблемой, но статус эффект требует ключа. В оригинале Paralyze скорее всего добавлял время.
-        time: 5 # Добавил примерное время, так как GenericStatusEffect требует времени или типа. В оригинале Paralyze скорее всего работал каждый тик метаболизма.
+        key: Stun
+        time: 5
         type: Add
       - !type:HealthChange
         damage:
-          groups:
-            Airloss: 200
+          types:
+            Asphyxiation: 200
         conditions:
         - !type:ReagentCondition
           reagent: STCorpium
@@ -116,7 +115,7 @@
   physicalDesc: reagent-physical-desc-ferrous
   worksOnTheDead: true
   metabolisms:
-    Poison:
+    Bloodstream:
       metabolismRate: 1
       effects:
       - !type:AdjustReagent

@@ -109,10 +109,10 @@
       - !type:HealthChange
         ignoreResistances: true
         damage:
-          groups:
-            Brute: -0.5
-            Burn: -0.5
-            Toxin: -0.5
+          types:
+            Blunt: -0.5
+            Heat: -0.5
+            Poison: -0.5
       - !type:ModifyBleed
         amount: -0.15
       - !type:ModifyStatusEffect
@@ -204,15 +204,14 @@
         - !type:MetabolizerTypeCondition
           type: [ Plant ]
         factor: 5
-      - !type:HealthChange #stronger than oxygen, thus even more toxic for vox
+      - !type:HealthChange
         conditions:
         - !type:MetabolizerTypeCondition
           type: [ Vox ]
         ignoreResistances: true
         damage:
           types:
-            Poison:
-              12
+            Poison: 12
       - !type:AdjustAlert
         alertType: Toxins
         conditions:

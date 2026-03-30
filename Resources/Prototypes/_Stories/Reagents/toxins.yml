@@ -6,20 +6,20 @@
   physicalDesc: reagent-physical-desc-nondescript
   color: "#EBFF8E"
   metabolisms:
-    Poison:
+    Bloodstream:
       effects:
       - !type:MovementSpeedModifier
         conditions:
         - !type:ReagentCondition
           reagent: IceOil
-          min: 3 # your legs stop working when above 3
+          min: 3
         walkSpeedModifier: 0.00
         sprintSpeedModifier: 0.00
       - !type:MovementSpeedModifier
         conditions:
         - !type:ReagentCondition
           reagent: IceOil
-          max: 3 # your legs stop working when above 3
+          max: 3
         walkSpeedModifier: 0.6
         sprintSpeedModifier: 0.6
       - !type:HealthChange

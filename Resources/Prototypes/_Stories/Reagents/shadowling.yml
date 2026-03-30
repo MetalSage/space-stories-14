@@ -6,15 +6,14 @@
   physicalDesc: reagent-physical-desc-nondescript
   color: "#212529"
   metabolisms:
-    Medicine:
+    Bloodstream:
       effects:
-      - !type:HealthChange
+      - !type:EvenHealthChange
         damage:
-          groups:
-            Burn: -6
-            Toxin: -6
-            Airloss: -6
-            Brute: -6
+          Burn: -6
+          Toxin: -6
+          Airloss: -6
+          Brute: -6
         conditions:
         - !type:MetabolizerTypeCondition
           type: [ Shadowling ]
