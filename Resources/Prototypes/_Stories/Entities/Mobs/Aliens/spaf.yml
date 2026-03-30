@@ -129,6 +129,8 @@
     name: ghost-role-information-spaf-name
     description: ghost-role-information-spaf-description
     rules: ghost-role-information-spaf-rules
+    mindRoles:
+    - MindRoleGhostRoleTeamAntagonist
     raffle:
       settings: default
   - type: GhostTakeoverAvailable

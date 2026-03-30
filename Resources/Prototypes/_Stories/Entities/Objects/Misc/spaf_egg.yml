@@ -39,5 +39,7 @@
     name: ghost-role-information-spafegg-name
     description: ghost-role-information-spafegg-description
     rules: ghost-role-information-spaf-rules
+    mindRoles:
+    - MindRoleGhostRoleTeamAntagonistFlock
     raffle:
       settings: default

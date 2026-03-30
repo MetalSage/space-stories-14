@@ -6,7 +6,7 @@
   categories: [ HideSpawnMenu ]
   components:
   - type: Action
-    icon: 
+    icon:
       sprite: _Stories/Actions/shadowling.rsi
       state: hatch
     itemIconStyle: NoItem
@@ -22,7 +22,7 @@
   categories: [ HideSpawnMenu ]
   components:
   - type: Action
-    icon: 
+    icon:
       sprite: _Stories/Actions/shadowling.rsi
       state: enthrall
     itemIconStyle: NoItem
@@ -31,7 +31,6 @@
   - type: EntityTargetAction
     event: !type:DoAfterTargetEvent
       hidden: false
-      needHand: true
       delay: 5
       breakOnDamage: true
       breakOnMove: true
@@ -123,7 +122,7 @@
         - ShadowlingThrall
   - type: TargetAction
     range: 7.5
-    
+
 - type: entity
   parent: BaseAction
   id: ActionShadowlingCollectiveMind
