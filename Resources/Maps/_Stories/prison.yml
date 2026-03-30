@@ -99,7 +99,6 @@ entities:
     - type: MetaData
       name: NTTG Космическая Тюрьма
     - type: Transform
-      pos: -18.008732,-4.3629217
       parent: 1
     - type: MapGrid
       chunks:
@@ -18525,20 +18524,6 @@ entities:
     - type: Transform
       pos: 9.410674,-57.38227
       parent: 2
-- proto: ClothingHandsGlovesBoxingRigged
-  entities:
-  - uid: 2051
-    components:
-    - type: Transform
-      pos: 19.223078,-57.3639
-      parent: 2
-    - type: MeleeWeapon
-      attackRate: 1
-  - uid: 2052
-    components:
-    - type: Transform
-      pos: 4.331504,-61.475296
-      parent: 2
 - proto: ClothingHandsGlovesJanitor
   entities:
   - uid: 2053
@@ -35197,14 +35182,6 @@ entities:
     components:
     - type: Transform
       pos: 8.508704,-45.42871
-      parent: 2
-- proto: LeftArmArachnid
-  entities:
-  - uid: 4394
-    components:
-    - type: Transform
-      rot: -1.5707963267948966 rad
-      pos: 7.7883053,-68.560425
       parent: 2
 - proto: LegionnaireBonfire
   entities:

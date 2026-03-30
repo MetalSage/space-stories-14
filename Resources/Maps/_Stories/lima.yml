@@ -111,7 +111,6 @@ entities:
     - type: MetaData
       name: Lima
     - type: Transform
-      pos: -2.5644722,0.55457246
       parent: 1
     - type: MapGrid
       chunks:
@@ -71352,13 +71351,6 @@ entities:
           priority: 0
           component: Armor
         title: null
-- proto: ClothingHandsGlovesBoxingRigged
-  entities:
-  - uid: 11134
-    components:
-    - type: Transform
-      pos: 42.552654,-56.519287
-      parent: 2
 - proto: ClothingHandsGlovesColorPurple
   entities:
   - uid: 11135
@@ -158023,22 +158015,6 @@ entities:
     - type: Transform
       pos: 44.39879,-75.24402
       parent: 2
-- proto: TowelColorGold
-  entities:
-  - uid: 24294
-    components:
-    - type: Transform
-      parent: 24293
-    - type: Physics
-      canCollide: False
-    - type: InsideEntityStorage
-  - uid: 24299
-    components:
-    - type: Transform
-      parent: 24298
-    - type: Physics
-      canCollide: False
-    - type: InsideEntityStorage
 - proto: TowelColorSyndicate
   entities:
   - uid: 24303
@@ -178825,7 +178801,6 @@ entities:
           showEnts: False
           occludes: True
           ents:
-          - 24294
           - 24295
           - 24296
           - 24297
@@ -178844,7 +178819,6 @@ entities:
           showEnts: False
           occludes: True
           ents:
-          - 24299
           - 24300
           - 24301
           - 24302

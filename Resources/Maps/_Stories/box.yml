@@ -73558,20 +73558,6 @@ entities:
     - type: Transform
       pos: 54.483116,-49.66147
       parent: 8364
-- proto: ClothingUnderSocksBee
-  entities:
-  - uid: 5179
-    components:
-    - type: Transform
-      pos: 75.39761,12.476688
-      parent: 8364
-- proto: ClothingUnderSocksCoder
-  entities:
-  - uid: 5119
-    components:
-    - type: Transform
-      pos: -38.47627,-56.748375
-      parent: 8364
   - uid: 27044
     components:
     - type: Transform

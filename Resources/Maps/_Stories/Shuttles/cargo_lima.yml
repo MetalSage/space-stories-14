@@ -28,7 +28,6 @@ entities:
     - type: MetaData
       name: Cargo shuttle
     - type: Transform
-      pos: -0.45833334,-0.4375
     - type: MapGrid
       chunks:
         0,0:

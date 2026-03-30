@@ -112717,33 +112717,12 @@ entities:
     - type: Transform
       pos: 17.5,-40.5
       parent: 2
-- proto: TowelColorBlack
-  entities:
-  - uid: 16658
-    components:
-    - type: Transform
-      pos: 7.5,-25.5
-      parent: 2
 - proto: TowelColorCentcom
   entities:
   - uid: 16659
     components:
     - type: Transform
       pos: 14.691896,17.657856
-      parent: 2
-- proto: TowelColorGray
-  entities:
-  - uid: 16660
-    components:
-    - type: Transform
-      pos: -7.835621,-29.518784
-      parent: 2
-- proto: TowelColorMime
-  entities:
-  - uid: 16661
-    components:
-    - type: Transform
-      pos: -12.478592,-31.428982
       parent: 2
 - proto: TowelColorNT
   entities:

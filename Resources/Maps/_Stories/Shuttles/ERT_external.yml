@@ -41,8 +41,6 @@ entities:
     - type: MetaData
       name: ERT External NT658
     - type: Transform
-      pos: -0.453125,0.046875
-      parent: invalid
     - type: MapGrid
       chunks:
         0,0:
@@ -6846,8 +6844,6 @@ entities:
       pos: 0.5,-16.5
       parent: 1
     - type: DeviceNetwork
-      configurators:
-      - invalid
       deviceLists:
       - 330
   - uid: 284
@@ -6857,8 +6853,6 @@ entities:
       pos: 1.5,-8.5
       parent: 1
     - type: DeviceNetwork
-      configurators:
-      - invalid
       deviceLists:
       - 330
   - uid: 299
@@ -6868,8 +6862,6 @@ entities:
       pos: -1.5,-1.5
       parent: 1
     - type: DeviceNetwork
-      configurators:
-      - invalid
       deviceLists:
       - 330
   - uid: 660
@@ -6879,8 +6871,6 @@ entities:
       pos: -1.5,-10.5
       parent: 1
     - type: DeviceNetwork
-      configurators:
-      - invalid
       deviceLists:
       - 330
   - uid: 661
@@ -6894,8 +6884,6 @@ entities:
       - - StationAi
       - - Command
     - type: DeviceNetwork
-      configurators:
-      - invalid
       deviceLists:
       - 330
   - uid: 663
@@ -6905,8 +6893,6 @@ entities:
       pos: 4.5,-1.5
       parent: 1
     - type: DeviceNetwork
-      configurators:
-      - invalid
       deviceLists:
       - 330
   - uid: 664
@@ -6916,8 +6902,6 @@ entities:
       pos: 1.5,-24.5
       parent: 1
     - type: DeviceNetwork
-      configurators:
-      - invalid
       deviceLists:
       - 330
   - uid: 665
@@ -6927,8 +6911,6 @@ entities:
       pos: 5.5,-18.5
       parent: 1
     - type: DeviceNetwork
-      configurators:
-      - invalid
       deviceLists:
       - 330
 - proto: WeaponEnergyTurretCommandControlPanel

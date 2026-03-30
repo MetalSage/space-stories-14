@@ -35005,13 +35005,6 @@ entities:
     - type: Transform
       pos: -9.419544,-48.840183
       parent: 2
-- proto: ClothingUnderSocksCoder
-  entities:
-  - uid: 5367
-    components:
-    - type: Transform
-      pos: 14.5012665,-31.61288
-      parent: 2
 - proto: ClothingUniformColorRainbow
   entities:
   - uid: 5368
@@ -81921,13 +81914,6 @@ entities:
     components:
     - type: Transform
       pos: 16.414852,-23.288176
-      parent: 2
-- proto: TorsoHuman
-  entities:
-  - uid: 12204
-    components:
-    - type: Transform
-      pos: -53.589386,-16.742252
       parent: 2
 - proto: ToyIan
   entities:

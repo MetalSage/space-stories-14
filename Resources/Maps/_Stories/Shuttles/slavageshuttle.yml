@@ -27,8 +27,6 @@ entities:
     - type: MetaData
       name: SlavageShuttle
     - type: Transform
-      pos: -0.375,-0.953125
-      parent: invalid
     - type: MapGrid
       chunks:
         0,0:

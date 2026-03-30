@@ -110,7 +110,6 @@ entities:
     - type: MetaData
       name: Центральное Командование
     - type: Transform
-      parent: invalid
     - type: MapGrid
       chunks:
         0,0:

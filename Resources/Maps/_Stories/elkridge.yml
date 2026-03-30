@@ -49068,18 +49068,6 @@ entities:
     - type: Transform
       pos: 12.630562,19.620356
       parent: 2
-- proto: ClothingUnderSocksCoder
-  entities:
-  - uid: 6823
-    components:
-    - type: Transform
-      pos: 40.664803,-6.613131
-      parent: 2
-  - uid: 6824
-    components:
-    - type: Transform
-      pos: 58.633102,32.1474
-      parent: 2
 - proto: ClothingUniformJumpskirtJanimaid
   entities:
   - uid: 6825
@@ -104595,13 +104583,6 @@ entities:
     components:
     - type: Transform
       pos: -9.5,-46.5
-      parent: 2
-- proto: VendingMachinePride
-  entities:
-  - uid: 14775
-    components:
-    - type: Transform
-      pos: -23.5,-17.5
       parent: 2
 - proto: VendingMachineRoboDrobe
   entities:

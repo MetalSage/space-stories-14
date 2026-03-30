@@ -103392,13 +103392,6 @@ entities:
     - type: Transform
       pos: 90.5,174.5
       parent: 2
-- proto: VendingMachinePride
-  entities:
-  - uid: 14935
-    components:
-    - type: Transform
-      pos: 44.5,172.5
-      parent: 2
 - proto: VendingMachineRestockBooze
   entities:
   - uid: 14936

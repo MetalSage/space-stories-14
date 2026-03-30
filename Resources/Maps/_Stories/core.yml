@@ -62095,18 +62095,6 @@ entities:
     - type: Transform
       pos: 65.71732,-54.803154
       parent: 2
-- proto: ClothingUnderSocksCoder
-  entities:
-  - uid: 8964
-    components:
-    - type: Transform
-      pos: -29.479565,-9.341941
-      parent: 2
-  - uid: 8965
-    components:
-    - type: Transform
-      pos: 26.983047,-46.429325
-      parent: 2
 - proto: ClothingUniformJumpskirtDetectiveGrey
   entities:
   - uid: 8966
@@ -122485,28 +122473,6 @@ entities:
     - type: Transform
       pos: -37.5,13.5
       parent: 2
-- proto: SpawnPointBoxer
-  entities:
-  - uid: 17905
-    components:
-    - type: Transform
-      pos: -32.5,-33.5
-      parent: 2
-  - uid: 17906
-    components:
-    - type: Transform
-      pos: -33.5,-33.5
-      parent: 2
-  - uid: 17907
-    components:
-    - type: Transform
-      pos: -35.5,-27.5
-      parent: 2
-  - uid: 17908
-    components:
-    - type: Transform
-      pos: -32.5,-30.5
-      parent: 2
 - proto: SpawnPointBrigmedic
   entities:
   - uid: 17909
@@ -147931,71 +147897,6 @@ entities:
       parent: 22488
     - type: WarpPoint
       location: Unknown shuttle
-- proto: WarpPointBombing
-  entities:
-  - uid: 22133
-    components:
-    - type: Transform
-      pos: -18.5,1.5
-      parent: 2
-    - type: WarpPoint
-      location: Bar
-  - uid: 22134
-    components:
-    - type: Transform
-      pos: -2.5,24.5
-      parent: 2
-    - type: WarpPoint
-      location: Security
-  - uid: 22135
-    components:
-    - type: Transform
-      pos: -1.5,47.5
-      parent: 2
-    - type: WarpPoint
-      location: Perma
-  - uid: 22136
-    components:
-    - type: Transform
-      pos: 27.5,20.5
-      parent: 2
-    - type: WarpPoint
-      location: Cargo
-  - uid: 22137
-    components:
-    - type: Transform
-      pos: 44.5,8.5
-      parent: 2
-    - type: WarpPoint
-      location: Medical
-  - uid: 22138
-    components:
-    - type: Transform
-      pos: -1.5,-22.5
-      parent: 2
-    - type: WarpPoint
-      location: Engineering
-  - uid: 22139
-    components:
-    - type: Transform
-      pos: 40.5,-35.5
-      parent: 2
-    - type: WarpPoint
-      location: Bridge
-  - uid: 22140
-    components:
-    - type: Transform
-      pos: -32.5,-13.5
-      parent: 2
-    - type: WarpPoint
-      location: Dorms
-  - uid: 22141
-    components:
-    - type: Transform
-      pos: -48.5,1.5
-      parent: 2
-    - type: WarpPoint
-      location: Evacuation
 - proto: WaterCooler
   entities:
   - uid: 22142

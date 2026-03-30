@@ -28208,13 +28208,6 @@ entities:
     - type: Transform
       pos: -5.414235,-29.644104
       parent: 31
-- proto: ClothingUnderSocksCoder
-  entities:
-  - uid: 8146
-    components:
-    - type: Transform
-      pos: 60.474884,-1.2823541
-      parent: 31
 - proto: ClothingUniformColorRainbow
   entities:
   - uid: 8410

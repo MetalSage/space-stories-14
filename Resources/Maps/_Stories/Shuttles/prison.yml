@@ -38,8 +38,6 @@ entities:
     - type: MetaData
       name: Тюремный шаттл "Greg"
     - type: Transform
-      pos: -6.0178375,-20.768047
-      parent: invalid
     - type: MapGrid
       chunks:
         0,0:

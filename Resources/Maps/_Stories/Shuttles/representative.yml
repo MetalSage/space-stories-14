@@ -38,8 +38,6 @@ entities:
     - type: MetaData
       name: Шаттл ПЦК OSD-373
     - type: Transform
-      pos: -1.84375,1.78125
-      parent: invalid
     - type: MapGrid
       chunks:
         0,0:
@@ -570,8 +568,6 @@ entities:
       pos: 1.5,-13.5
       parent: 1
     - type: DeviceNetwork
-      configurators:
-      - invalid
       deviceLists:
       - 488
   - uid: 499
@@ -2290,8 +2286,6 @@ entities:
       pos: -0.5,-13.5
       parent: 1
     - type: DeviceNetwork
-      configurators:
-      - invalid
       deviceLists:
       - 488
     - type: AtmosPipeColor
@@ -2352,8 +2346,6 @@ entities:
       pos: 1.5,-15.5
       parent: 1
     - type: DeviceNetwork
-      configurators:
-      - invalid
       deviceLists:
       - 488
     - type: AtmosPipeLayers

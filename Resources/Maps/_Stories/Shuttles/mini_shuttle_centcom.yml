@@ -32,8 +32,6 @@ entities:
     - type: MetaData
       name: NT-CentComm 1984
     - type: Transform
-      pos: -0.6171875,-0.62890625
-      parent: invalid
     - type: MapGrid
       chunks:
         0,0:

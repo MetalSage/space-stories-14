@@ -28,7 +28,6 @@ entities:
     - type: MetaData
       name: TIE-Fighter
     - type: Transform
-      pos: -2.265625,2.765625
     - type: Tag
       tags:
       - STEmpire
