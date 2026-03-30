@@ -6,7 +6,10 @@ using Content.Shared._Stories.SCCVars;
 using Content.Shared._Stories.TTS;
 using Content.Shared.Chat;
 using Content.Shared.GameTicking;
+using Content.Shared.Inventory;
+using Content.Shared.Implants;
 using Robust.Shared.Configuration;
+using Robust.Shared.Containers;
 using Robust.Shared.Player;
 using Robust.Shared.Prototypes;
 using Robust.Shared.Random;
@@ -23,6 +26,8 @@ public sealed partial class TTSSystem : EntitySystem
     [Dependency] private readonly IConfigurationManager _cfg = default!;
     [Dependency] private readonly IPrototypeManager _prototypeManager = default!;
     [Dependency] private readonly IRobustRandom _rng = default!;
+    [Dependency] private readonly InventorySystem _inventory = default!;
+    [Dependency] private readonly SharedContainerSystem _container = default!;
 
     private readonly List<string> _sampleText =
         new()
@@ -93,6 +98,19 @@ public sealed partial class TTSSystem : EntitySystem
 
         var voiceEv = new TransformSpeakerVoiceEvent(uid, voiceId);
         RaiseLocalEvent(uid, voiceEv);
+
+        if (TryComp<InventoryComponent>(uid, out var inventory))
+            _inventory.RelayEvent((uid, inventory), ref voiceEv);
+
+        if (_container.TryGetContainer(uid, "implant", out var implantContainer))
+        {
+            var relayEv = new ImplantRelayEvent<TransformSpeakerVoiceEvent>(voiceEv, uid);
+            foreach (var implant in implantContainer.ContainedEntities)
+            {
+                RaiseLocalEvent(implant, relayEv);
+            }
+        }
+
         voiceId = voiceEv.VoiceId;
 
         if (!GetVoicePrototype(voiceId, out var protoVoice))
@@ -167,17 +185,5 @@ public sealed partial class TTSSystem : EntitySystem
         var textSsml = ToSsmlText(textSanitized, ssmlTraits);
 
         return await _ttsManager.ConvertTextToSpeech(speaker, textSsml);
-    }
-}
-
-public sealed class TransformSpeakerVoiceEvent : EntityEventArgs
-{
-    public EntityUid Sender;
-    public string VoiceId;
-
-    public TransformSpeakerVoiceEvent(EntityUid sender, string voiceId)
-    {
-        Sender = sender;
-        VoiceId = voiceId;
     }
 }

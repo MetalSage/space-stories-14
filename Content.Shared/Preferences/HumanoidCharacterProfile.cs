@@ -266,9 +266,9 @@ namespace Content.Shared.Preferences
             // Stories-TTS-Start
             var voice = "father_grigori";
             var validVoices = prototypeManager.EnumeratePrototypes<TTSVoicePrototype>()
-                .Where(v => v.RoundStart && (v.Sex == sex || v.Sex == Sex.Unsexed))
+                .Where(v => v.RoundStart && (sex == Sex.Unsexed || v.Sex == sex || v.Sex == Sex.Unsexed))
                 .ToList();
-            
+
             if (validVoices.Count > 0)
                 voice = random.Pick(validVoices).ID;
             // Stories-TTS-End
@@ -394,7 +394,7 @@ namespace Content.Shared.Preferences
         {
             return new(this)
             {
-                _antagPreferences = new (antagPreferences),
+                _antagPreferences = new(antagPreferences),
             };
         }
 
@@ -627,10 +627,10 @@ namespace Content.Shared.Preferences
 
             // Stories-TTS-Start
             if (!prototypeManager.TryIndex<TTSVoicePrototype>(Voice, out var voiceProto) ||
-                (voiceProto.Sex != sex && voiceProto.Sex != Sex.Unsexed))
+                (sex != Sex.Unsexed && voiceProto.Sex != sex && voiceProto.Sex != Sex.Unsexed))
             {
                 var validVoices = prototypeManager.EnumeratePrototypes<TTSVoicePrototype>()
-                    .Where(v => v.RoundStart && (v.Sex == sex || v.Sex == Sex.Unsexed))
+                    .Where(v => v.RoundStart && (sex == Sex.Unsexed || v.Sex == sex || v.Sex == Sex.Unsexed))
                     .ToList();
                 var random = IoCManager.Resolve<IRobustRandom>();
                 Voice = validVoices.Count > 0 ? random.Pick(validVoices).ID : "father_grigori";

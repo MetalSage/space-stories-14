@@ -1,4 +1,5 @@
 ﻿using Content.Shared._Stories.TTS;
+using Content.Shared.Implants;
 using Content.Shared.Inventory;
 using Content.Shared.VoiceMask;
 
@@ -10,6 +11,8 @@ public partial class VoiceMaskSystem
     {
         SubscribeLocalEvent<VoiceMaskComponent, InventoryRelayedEvent<TransformSpeakerVoiceEvent>>(
             OnSpeakerVoiceTransform);
+        SubscribeLocalEvent<VoiceMaskComponent, ImplantRelayEvent<TransformSpeakerVoiceEvent>>(
+            OnSpeakerVoiceTransformImplant);
         SubscribeLocalEvent<VoiceMaskComponent, VoiceMaskChangeVoiceMessage>(OnChangeVoice);
     }
 
@@ -17,7 +20,16 @@ public partial class VoiceMaskSystem
         VoiceMaskComponent component,
         InventoryRelayedEvent<TransformSpeakerVoiceEvent> args)
     {
-        args.Args.VoiceId = component.VoiceId;
+        if (component.Active)
+            args.Args.VoiceId = component.VoiceId;
+    }
+
+    private void OnSpeakerVoiceTransformImplant(EntityUid uid,
+        VoiceMaskComponent component,
+        ImplantRelayEvent<TransformSpeakerVoiceEvent> args)
+    {
+        if (component.Active)
+            args.Event.VoiceId = component.VoiceId;
     }
 
     private void OnChangeVoice(Entity<VoiceMaskComponent> entity, ref VoiceMaskChangeVoiceMessage msg)
