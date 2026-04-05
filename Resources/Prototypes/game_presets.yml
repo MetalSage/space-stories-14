@@ -40,7 +40,7 @@
     - Zombie
     - Wizard
     - Xenoborgs
-    - Shadowling # Stories
+    - STShadowling # Stories
     - KesslerSyndromeScheduler
     - RampingStationEventScheduler
     - SpaceTrafficControlEventScheduler
@@ -63,7 +63,7 @@
     - Zombie
     - Wizard
     - Xenoborgs
-    - Shadowling # Stories
+    - STShadowling # Stories
     - BasicStationEventScheduler
     - KesslerSyndromeScheduler
     - MeteorSwarmMildScheduler

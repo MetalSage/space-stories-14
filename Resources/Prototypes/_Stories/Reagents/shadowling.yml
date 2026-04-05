@@ -1,19 +1,54 @@
 - type: reagent
-  id: ShadowlingSmokeReagent
-  name: reagent-name-shadowlingsmoke
+  id: STShadowlingSmokeReagent
+  name: stories-reagent-name-shadowlingsmoke
   group: Medicine
-  desc: reagent-desc-shadowlingsmoke
+  desc: stories-reagent-desc-shadowlingsmoke
   physicalDesc: reagent-physical-desc-nondescript
   color: "#212529"
   metabolisms:
     Bloodstream:
       effects:
-      - !type:EvenHealthChange
+      - !type:HealthChange
         damage:
-          Burn: -6
-          Toxin: -6
-          Airloss: -6
-          Brute: -6
+          groups:
+            Burn: -6
+            Toxin: -6
+            Airloss: -6
+            Brute: -6
         conditions:
         - !type:MetabolizerTypeCondition
-          type: [ Shadowling ]
+          type: [STShadowling]
+
+- type: reagent
+  id: STIceOil
+  name: stories-reagent-name-iceoil
+  group: Toxins
+  desc: stories-reagent-desc-iceoil
+  physicalDesc: reagent-physical-desc-nondescript
+  color: "#EBFF8E"
+  metabolisms:
+    Bloodstream:
+      effects:
+      - !type:MovementSpeedModifier
+        conditions:
+        - !type:ReagentCondition
+          reagent: STIceOil
+          min: 3
+        walkSpeedModifier: 0.00
+        sprintSpeedModifier: 0.00
+      - !type:MovementSpeedModifier
+        conditions:
+        - !type:ReagentCondition
+          reagent: STIceOil
+          max: 3
+        walkSpeedModifier: 0.6
+        sprintSpeedModifier: 0.6
+      - !type:HealthChange
+        damage:
+          types:
+            Cold: 2.8
+      - !type:AdjustTemperature
+        conditions:
+        - !type:TemperatureCondition
+          min: 243.15
+        amount: -20000

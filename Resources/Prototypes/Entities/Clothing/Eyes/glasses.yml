@@ -275,7 +275,10 @@
   name: ninja visor
   description: An advanced visor protecting a ninja's eyes from flashing lights.
   components:
-  - type: NightvisionClothing # Space Stories
+  - type: VisionProvider
+    shader: Nightvision
+    ambientColor: "#55ff5510"
+    toggleAction: STActionToggleVision
   - type: Sprite
     sprite: Clothing/Eyes/Glasses/ninjavisor.rsi
   - type: Clothing

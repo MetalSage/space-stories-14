@@ -1,5 +1,5 @@
 - type: factionIcon
-  id: ShadowlingFaction
+  id: STShadowlingFaction
   priority: 11
   showTo:
     components:
@@ -11,7 +11,7 @@
     state: Shadowlings
 
 - type: factionIcon
-  id: ShadowlingThrallFaction
+  id: STShadowlingThrallFaction
   priority: 11
   showTo:
     components:

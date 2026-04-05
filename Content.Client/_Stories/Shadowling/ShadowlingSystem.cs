@@ -1,8 +1,10 @@
 using Content.Shared._Stories.Shadowling;
 using Content.Shared.Humanoid;
+using Content.Shared.StatusIcon;
 using Content.Shared.StatusIcon.Components;
+using Content.Shared.Ghost;
 using Robust.Client.GameObjects;
-using Robust.Client.Graphics;
+using Robust.Client.Player;
 using Robust.Shared.Prototypes;
 
 namespace Content.Client._Stories.Shadowling;
@@ -10,43 +12,71 @@ namespace Content.Client._Stories.Shadowling;
 public sealed class ShadowlingSystem : EntitySystem
 {
     [Dependency] private readonly IPrototypeManager _prototype = default!;
-    private readonly ProtoId<ShaderPrototype> _unshadedShaderProtoId = "unshaded";
+    [Dependency] private readonly SpriteSystem _spriteSystem = default!;
+    [Dependency] private readonly IPlayerManager _player = default!;
+    [Dependency] private readonly SharedAppearanceSystem _appearance = default!;
 
     public override void Initialize()
     {
         base.Initialize();
 
         SubscribeLocalEvent<ShadowlingComponent, GetStatusIconsEvent>(OnGetStatusIconsEvent);
+        SubscribeLocalEvent<ShadowWalkingComponent, ComponentStartup>(OnShadowWalkStartup);
+        SubscribeLocalEvent<ShadowWalkingComponent, ComponentShutdown>(OnShadowWalkShutdown);
 
-        SubscribeLocalEvent<ShadowlingThrallComponent, ComponentInit>(OnConverted);
-        SubscribeLocalEvent<ShadowlingThrallComponent, ComponentShutdown>(OnReverted);
+        SubscribeLocalEvent<ShadowlingThrallComponent, AppearanceChangeEvent>(OnAppearanceChange);
+    }
+
+    private void OnAppearanceChange(EntityUid uid, ShadowlingThrallComponent component, ref AppearanceChangeEvent args)
+    {
+        if (args.Sprite == null)
+            return;
+
+        if (!_appearance.TryGetData<bool>(uid, ShadowlingThrallVisuals.IsThrall, out var isThrall))
+            return;
+
+        if (!_spriteSystem.LayerMapTryGet(uid, HumanoidVisualLayers.Eyes, out var eyeLayer, false))
+            return;
+
+        if (isThrall)
+        {
+            args.Sprite.LayerSetShader(eyeLayer, "unshaded");
+        }
+        else
+        {
+            args.Sprite.LayerSetShader(eyeLayer, "shaded");
+        }
     }
 
     private void OnGetStatusIconsEvent(EntityUid uid, ShadowlingComponent component, ref GetStatusIconsEvent args)
     {
-        args.StatusIcons.Add(_prototype.Index(component.StatusIcon));
+        var local = _player.LocalSession?.AttachedEntity;
+        if (local == null)
+            return;
+
+        if (!HasComp<GhostComponent>(local.Value) && !HasComp<ShadowlingComponent>(local.Value) && !HasComp<ShadowlingThrallComponent>(local.Value))
+            return;
+
+        args.StatusIcons.Add(_prototype.Index<FactionIconPrototype>(component.StatusIcon));
     }
 
-    private void OnConverted(EntityUid uid, ShadowlingThrallComponent component, ComponentInit args)
+    private void OnShadowWalkStartup(EntityUid uid, ShadowWalkingComponent component, ref ComponentStartup args)
     {
-        if (!HasComp<HumanoidProfileComponent>(uid))
-            return;
-
-        if (!TryComp<SpriteComponent>(uid, out var sprite))
-            return;
-
-        sprite.LayerSetShader(sprite.LayerMapReserveBlank(HumanoidVisualLayers.Eyes),
-            _prototype.Index(_unshadedShaderProtoId).Instance());
+        if (TryComp<SpriteComponent>(uid, out var sprite))
+        {
+            sprite.Color = sprite.Color.WithAlpha(0.3f);
+            component.OriginalDrawDepth = sprite.DrawDepth;
+            sprite.DrawDepth = (int)Content.Shared.DrawDepth.DrawDepth.Ghosts;
+        }
     }
 
-    private void OnReverted(EntityUid uid, ShadowlingThrallComponent component, ComponentShutdown args)
+    private void OnShadowWalkShutdown(EntityUid uid, ShadowWalkingComponent component, ref ComponentShutdown args)
     {
-        if (!HasComp<HumanoidProfileComponent>(uid))
-            return;
-
-        if (!TryComp<SpriteComponent>(uid, out var sprite))
-            return;
-
-        sprite.LayerSetShader(sprite.LayerMapReserveBlank(HumanoidVisualLayers.Eyes), (ShaderInstance?)null);
+        if (TryComp<SpriteComponent>(uid, out var sprite))
+        {
+            sprite.Color = sprite.Color.WithAlpha(1f);
+            if (component.OriginalDrawDepth != 0)
+                sprite.DrawDepth = component.OriginalDrawDepth;
+        }
     }
 }

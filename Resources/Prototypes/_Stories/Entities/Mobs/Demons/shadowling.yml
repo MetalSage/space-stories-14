@@ -1,0 +1,343 @@
+- type: entity
+  id: STMobShadowling
+  parent:
+  - BaseMob
+  - MobCombat
+  - MobDamageable
+  name: shadowling
+  description: A terrifying creature born of darkness.
+  components:
+  - type: CombatMode
+    canDisarm: true
+    baseDisarmFailChance: 0.25
+  - type: StatusIcon
+  - type: Body
+    prototype: Human
+  - type: Unrevivable
+  - type: RotationVisuals
+    defaultRotation: 90
+    horizontalRotation: 90
+  - type: Stamina
+    animationThreshold: 150
+    baseCritThreshold: 300
+  - type: Hands
+    hands:
+      hand_right:
+        location: Right
+      hand_left:
+        location: Left
+    sortedHands:
+    - hand_right
+    - hand_left
+  - type: Stripping
+  - type: UserInterface
+    interfaces:
+      enum.StrippingUiKey.Key:
+        type: StrippableBoundUserInterface
+  - type: MobCollision
+  - type: PressureImmunity
+  - type: Cuffer
+  - type: ZombieImmune
+  - type: VisionProvider
+    isActive: true
+    thermalVision: true
+    ambientColor: "#FFFFFF10"
+    priority: 10
+    toggleAction: STShadowlingActionToggleVision
+  - type: ComplexInteraction
+  - type: Puller
+  - type: Destructible
+    thresholds:
+    - trigger: !type:DamageTypeTrigger
+        damageType: Heat
+        damage: 400
+      behaviors:
+      - !type:SpawnEntitiesBehavior
+        spawnInContainer: true
+        spawn:
+          Ash:
+            min: 1
+            max: 1
+      - !type:BurnBodyBehavior
+      - !type:PlaySoundBehavior
+        sound:
+          collection: MeatLaserImpact
+  - type: Prying
+    speedModifier: 5
+    pryPowered: true
+    force: true
+    useSound:
+      path: /Audio/Items/crowbar.ogg
+  - type: Shadowling
+    maxThrallsBeforeHatch: null
+    flashFreezeDamage:
+      types:
+        Cold: 15
+    glacialBlastDamage:
+      types:
+        Cold: 80
+    drainLifeDamage:
+      types:
+        Asphyxiation: 25
+    drainLifeHeal:
+      groups:
+        Brute: -10
+        Burn: -10
+        Airloss: -10
+        Toxin: -10
+    ascendanceKillDamage:
+      types:
+        Bloodloss: 1000
+    actionRequirements:
+      STActionShadowlingEnthrall: 0
+      STActionShadowlingShadowWalk: 0
+      STActionShadowlingGlare: 0
+      STActionShadowlingVeil: 0
+      STActionShadowlingFlashFreeze: 0
+      STActionShadowlingCollectiveMind: 0
+      STActionShadowlingBlindnessSmoke: 3
+      STActionShadowlingDrainLife: 5
+      STActionShadowlingSonicScreech: 7
+      STActionShadowlingBlackRecuperation: 10
+      STActionShadowlingAscendance: 15
+  - type: Photosensitivity
+  - type: NoSlip
+  - type: MovementAlwaysTouching
+  - type: Insulated
+  - type: InputMover
+  - type: MobMover
+  - type: StatusEffects
+    allowed:
+    - Stun
+    - KnockedDown
+    - SlowedDown
+    - Stutter
+    - SeeingRainbows
+    - Electrocution
+    - Drunk
+    - SlurredSpeech
+    - RatvarianLanguage
+    - PressureImmunity
+    - Muted
+    - ForcedSleep
+    - TemporaryBlindness
+    - Pacified
+    - StaminaModifier
+    - Flashed
+  - type: TypingIndicator
+    proto: holo
+  - type: MobState
+    allowedStates:
+    - Alive
+    - Critical
+    - Dead
+  - type: MobThresholds
+    thresholds:
+      0: Alive
+      150: Critical
+      300: Dead
+  - type: Blindable
+  - type: StandingState
+    canCrawl: true
+  - type: FireVisuals
+    alternateState: Standing
+  - type: Sprite
+    drawdepth: Mobs
+    sprite: _Stories/Mobs/Demons/shadowling.rsi
+    layers:
+    - state: shadowling
+    - state: shadowling_overlay
+      shader: unshaded
+  - type: Physics
+    bodyType: KinematicController
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape: !type:PhysShapeCircle
+          radius: 0.35
+        density: 185
+        mask:
+          - MobMask
+        layer:
+          - MobLayer
+  - type: IntrinsicRadioReceiver
+  - type: IntrinsicRadioTransmitter
+    channels:
+      - STShadowlingMind
+  - type: ActiveRadio
+    channels:
+    - STShadowlingMind
+  - type: Damageable
+    damageContainer: Biological
+    damageModifierSet: STShadowling
+  - type: MeleeWeapon
+    altDisarm: true
+    soundHit:
+      collection: Punch
+    angle: 30
+    animation: WeaponArcFist
+    attackRate: 1
+    damage:
+      types:
+        Slash: 15
+  - type: MovementSpeedModifier
+    baseWalkSpeed: 4.5
+    baseSprintSpeed: 6.0
+  - type: Tag
+    tags:
+    - DoorBumpOpener
+  - type: Unholy
+    resistanceCoefficient: 0
+    ignoreProtectionImpulse: true
+    detectable: false
+  - type: NameIdentifier
+    group: GenericNumber
+  - type: MindContainer
+  - type: Input
+    context: "human"
+  - type: Alerts
+  - type: Eye
+  - type: CameraRecoil
+  - type: Examiner
+  - type: CanHostGuardian
+  - type: NpcFactionMember
+    factions:
+    - SimpleHostile
+  - type: TTS
+    voice: illidan
+  - type: Clickable
+  - type: InteractionOutline
+  - type: DoAfter
+
+- type: entity
+  id: STMobAscendance
+  name: ascendant shadowling
+  parent:
+  - BaseMob
+  - MobCombat
+  - MobDamageable
+  description: A large, floating eldritch horror. It has pulsing markings all about its body and large horns. It seems to be floating without any form of support.
+  components:
+  - type: CombatMode
+    canDisarm: true
+  - type: StatusIcon
+  - type: AnnounceOnSpawn
+    message: stories-shadowling-ascendance-shout
+    sender: narsie-has-risen-sender
+    sound:
+      path: /Audio/_Stories/Misc/veryfar_noise.ogg
+    color: red
+  - type: Prying
+    speedModifier: 100
+    pryPowered: true
+    force: true
+    useSound:
+      path: /Audio/Items/crowbar.ogg
+  - type: Body
+    prototype: Human
+  - type: Hands
+    hands:
+      hand_right:
+        location: Right
+      hand_left:
+        location: Left
+    sortedHands:
+    - hand_right
+    - hand_left
+  - type: Stripping
+  - type: UserInterface
+    interfaces:
+      enum.StrippingUiKey.Key:
+        type: StrippableBoundUserInterface
+  - type: MobCollision
+  - type: PressureImmunity
+  - type: MeleeWeapon
+    soundHit:
+      collection: Punch
+    angle: 30
+    animation: WeaponArcFist
+    attackRate: 1
+    damage:
+      types:
+        Slash: 35
+  - type: ZombieImmune
+  - type: VisionProvider
+    drawFov: false
+    thermalVision: true
+    ambientColor: "#FF000033"
+    thermalAmbientColor: "#FF0000FF"
+    priority: 10
+    toggleAction: STShadowlingActionToggleVision
+  - type: MobState
+    allowedStates:
+    - Alive
+    - Critical
+    - Dead
+  - type: MobThresholds
+    thresholds:
+      0: Alive
+      100000: Dead
+  - type: Destructible
+    thresholds: []
+  - type: Damageable
+    damageContainer: Biological
+    damageModifierSet: STShadowling
+  - type: IntrinsicRadioReceiver
+  - type: IntrinsicRadioTransmitter
+    channels:
+    - STShadowlingMind
+  - type: ActiveRadio
+    channels:
+    - STShadowlingMind
+  - type: Shadowling
+    maxThrallsBeforeHatch: null
+    actionRequirements:
+      STActionShadowlingAnnihilate: 0
+      STActionShadowlingPlaneShift: 0
+      STActionShadowlingGlacialBlast: 0
+      STActionShadowlingAscendantBroadcast: 0
+  - type: MindContainer
+  - type: InputMover
+  - type: MobMover
+  - type: Input
+    context: "ghost"
+  - type: MovementSpeedModifier
+    baseWalkSpeed: 5
+    baseSprintSpeed: 10
+  - type: Sprite
+    noRot: true
+    drawdepth: Mobs
+    sprite: _Stories/Mobs/Demons/shadowling.rsi
+    layers:
+    - state: shadowling_ascended
+    - state: shadowling_ascended_overlay
+      shader: unshaded
+  - type: Clickable
+  - type: InteractionOutline
+  - type: Physics
+    bodyType: KinematicController
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape: !type:PhysShapeCircle
+          radius: 0.45
+        density: 80
+        mask:
+        - GhostImpassable
+        - MobMask
+        layer:
+        - MobLayer
+  - type: MovementIgnoreGravity
+  - type: Examiner
+  - type: NoSlip
+  - type: Actions
+  - type: TTS
+    voice: illidan
+  - type: Eye
+    drawFov: false
+    visMask:
+    - Normal
+    - Ghost
+  - type: Alerts
+  - type: Speech
+    speechVerb: Ghost

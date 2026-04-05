@@ -1,5 +1,5 @@
 - type: npcFaction
-  id: Shadowling
+  id: STShadowling
   hostile:
   - NanoTrasen
   - Syndicate
@@ -28,4 +28,4 @@
   id: STHoly
   hostile:
   - STUnholy
-  - Shadowling
+  - STShadowling

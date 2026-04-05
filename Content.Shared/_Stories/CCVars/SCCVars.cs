@@ -157,4 +157,15 @@ public sealed class SCCVars
     /// </summary>
     public static readonly CVarDef<float> RoundEndNoEorgPopupTime =
         CVarDef.Create("game.round_end_eorg_popup_time", 5f, CVar.SERVER | CVar.REPLICATED);
+
+
+    /*
+     * Shadowling
+     */
+
+    /// <summary>
+    /// Bypass mind requirement for shadowling enthrall.
+    /// </summary>
+    public static readonly CVarDef<bool> EnthrallWithoutMind =
+        CVarDef.Create("stories.enthrall_without_mind", false, CVar.SERVERONLY);
 }

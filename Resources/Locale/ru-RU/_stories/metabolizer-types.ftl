@@ -1,2 +1,2 @@
-metabolizer-type-kidan = Кидан
-metabolizer-type-shadowling = Тенеморф
+stories-metabolizer-type-kidan = Кидан
+stories-metabolizer-type-shadowling = Тенеморф

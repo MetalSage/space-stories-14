@@ -1,111 +1,161 @@
 using System.Linq;
 using Content.Server._Stories.Conversion;
-using Content.Server.Actions;
-using Content.Server.DoAfter;
-using Content.Server.Emp;
-using Content.Server.Flash;
-using Content.Server.Fluids.EntitySystems;
-using Content.Server.Light.EntitySystems;
-using Content.Server.Lightning;
-using Content.Server.Polymorph.Systems;
-using Content.Server.Popups;
-using Content.Server.Stunnable;
 using Content.Shared._Stories.Conversion;
+using Content.Shared._Stories.Mindshield;
 using Content.Shared._Stories.Shadowling;
+using Content.Shared._Stories.Vision.Components;
+using Content.Shared._Stories.Vision.Systems;
+using Content.Shared.Actions;
 using Content.Shared.Body;
-using Content.Shared.Damage.Systems;
-using Content.Shared.Light.EntitySystems;
+using Content.Shared.Mindshield.Components;
+using Content.Shared.Mobs;
 using Content.Shared.Mobs.Systems;
-using Content.Shared.Standing;
-using Content.Shared.Weapons.Ranged.Events;
-using Robust.Shared.Random;
 
 namespace Content.Server._Stories.Shadowling;
 
 public sealed partial class ShadowlingSystem : EntitySystem
 {
-    [Dependency] private readonly ActionsSystem _actions = default!;
+    [Dependency] private readonly SharedActionsSystem _actions = default!;
     [Dependency] private readonly ConversionSystem _conversion = default!;
-    [Dependency] private readonly DoAfterSystem _doAfter = default!;
-    [Dependency] private readonly EmpSystem _emp = default!;
-    [Dependency] private readonly EntityLookupSystem _entityLookup = default!;
-    [Dependency] private readonly FlashSystem _flash = default!;
-    [Dependency] private readonly HandheldLightSystem _handheldLight = default!;
-    [Dependency] private readonly LightningSystem _lightning = default!;
     [Dependency] private readonly MobStateSystem _mobState = default!;
-    [Dependency] private readonly PolymorphSystem _polymorph = default!;
-    [Dependency] private readonly PopupSystem _popup = default!;
-    [Dependency] private readonly PoweredLightSystem _poweredLight = default!;
-    [Dependency] private readonly IRobustRandom _random = default!;
-    [Dependency] private readonly SmokeSystem _smoke = default!;
-    [Dependency] private readonly SharedStaminaSystem _stamina = default!;
-    [Dependency] private readonly StandingStateSystem _standing = default!;
-    [Dependency] private readonly StunSystem _stun = default!;
-    [Dependency] private readonly UnpoweredFlashlightSystem _unpoweredFlashlight = default!;
+    [Dependency] private readonly SharedVisionSystem _vision = default!;
+    [Dependency] private readonly SharedAppearanceSystem _appearance = default!;
     [Dependency] private readonly SharedVisualBodySystem _visualBody = default!;
-    [Dependency] private readonly SharedTransformSystem _xform = default!;
 
     public override void Initialize()
     {
         base.Initialize();
-        InitializeMindShield();
-        InitializeActions();
 
-        SubscribeLocalEvent<ShadowlingComponent, ShotAttemptedEvent>(OnShotAttempted);
+        SubscribeLocalEvent<ShadowlingComponent, ComponentInit>(OnInit);
+        SubscribeLocalEvent<ShadowlingComponent, MobStateChangedEvent>(OnMobStateChanged);
+        SubscribeLocalEvent<ShadowlingComponent, MindShieldImplantedEvent>(OnMindShieldImplanted);
+
         SubscribeLocalEvent<ShadowlingThrallComponent, ConvertedEvent>(OnThrallConverted);
         SubscribeLocalEvent<ShadowlingThrallComponent, RevertedEvent>(OnThrallReverted);
+        SubscribeLocalEvent<ShadowlingThrallComponent, MobStateChangedEvent>(OnThrallMobStateChanged);
     }
 
-    private void OnShotAttempted(EntityUid uid, ShadowlingComponent comp, ref ShotAttemptedEvent args)
+    private void OnInit(EntityUid uid, ShadowlingComponent component, ComponentInit args)
     {
-        _popup.PopupEntity(Loc.GetString("gun-disabled"), uid, uid);
-        args.Cancel();
+        RefreshActions(uid, component);
+
+        if (!HasComp<VisionProviderComponent>(uid))
+        {
+            var vision = EnsureComp<VisionProviderComponent>(uid);
+            vision.IsActive = true;
+            vision.ThermalVision = true;
+            vision.AmbientColor = Color.FromHex("#FFFFFF10");
+            vision.Priority = 10;
+            vision.ToggleAction = "STShadowlingActionToggleVision";
+
+            if (vision.ToggleAction != null)
+                _actions.AddAction(uid, ref vision.ToggleActionEntity, vision.ToggleAction.Value, uid);
+
+            Dirty(uid, vision);
+            _vision.UpdateVision(uid);
+        }
     }
 
-    private void OnThrallConverted(EntityUid uid, ShadowlingThrallComponent comp, ConvertedEvent args)
+    private void OnMobStateChanged(EntityUid uid, ShadowlingComponent component, MobStateChangedEvent args)
+    {
+        if (args.NewMobState != MobState.Dead)
+            return;
+
+        var thralls = _conversion.GetEntitiesConvertedBy(uid, component.ShadowlingThrallConversion).ToList();
+        foreach (var thrall in thralls)
+        {
+            _conversion.TryRevert(thrall, component.ShadowlingThrallConversion);
+        }
+    }
+
+    private void OnMindShieldImplanted(EntityUid uid, ShadowlingComponent component, MindShieldImplantedEvent args)
+    {
+        RemCompDeferred<MindShieldComponent>(uid);
+    }
+
+    private void OnThrallConverted(EntityUid uid, ShadowlingThrallComponent component, ConvertedEvent args)
     {
         if (args.Handled)
             return;
 
-        if (TryComp<VisualBodyComponent>(uid, out var visualBody) &&
-            _visualBody.TryGatherMarkingsData((uid, visualBody), null, out var profiles, out _, out _))
+        _appearance.SetData(uid, ShadowlingThrallVisuals.IsThrall, true);
+
+        if (_visualBody.TryGatherMarkingsData(uid, null, out var profiles, out _, out _) && profiles.Count > 0)
         {
-            var firstProfile = profiles.Values.FirstOrDefault();
-            comp.OldEyeColor = firstProfile.EyeColor;
+            component.OldEyeColor = profiles.Values.First().EyeColor;
 
-            foreach (var (category, profile) in profiles)
-            {
-                profiles[category] = profile with { EyeColor = comp.EyeColor };
-            }
+            var newProfiles = profiles.ToDictionary(
+                pair => pair.Key,
+                pair => pair.Value with { EyeColor = component.EyeColor });
 
-            _visualBody.ApplyProfiles(uid, profiles);
+            _visualBody.ApplyProfiles(uid, newProfiles);
+            Dirty(uid, component);
         }
 
-        if (args.Data.Owner != null)
-            RefreshActions(GetEntity(args.Data.Owner.Value));
-
+        RefreshAllShadowlings();
         args.Handled = true;
     }
 
-    private void OnThrallReverted(EntityUid uid, ShadowlingThrallComponent comp, RevertedEvent args)
+    private void OnThrallReverted(EntityUid uid, ShadowlingThrallComponent component, RevertedEvent args)
     {
         if (args.Handled)
             return;
 
-        if (TryComp<VisualBodyComponent>(uid, out var visualBody) &&
-            _visualBody.TryGatherMarkingsData((uid, visualBody), null, out var profiles, out _, out _))
-        {
-            foreach (var (category, profile) in profiles)
-            {
-                profiles[category] = profile with { EyeColor = comp.OldEyeColor };
-            }
+        _appearance.SetData(uid, ShadowlingThrallVisuals.IsThrall, false);
 
-            _visualBody.ApplyProfiles(uid, profiles);
+        if (_visualBody.TryGatherMarkingsData(uid, null, out var profiles, out _, out _) && profiles.Count > 0)
+        {
+            var newProfiles = profiles.ToDictionary(
+                pair => pair.Key,
+                pair => pair.Value with { EyeColor = component.OldEyeColor });
+
+            _visualBody.ApplyProfiles(uid, newProfiles);
         }
 
-        if (args.Data.Owner != null)
-            RefreshActions(GetEntity(args.Data.Owner.Value));
-
+        RefreshAllShadowlings();
         args.Handled = true;
+    }
+
+    private void OnThrallMobStateChanged(EntityUid uid, ShadowlingThrallComponent component, MobStateChangedEvent args)
+    {
+        RefreshAllShadowlings();
+    }
+
+    private void RefreshAllShadowlings()
+    {
+        var query = EntityQueryEnumerator<ShadowlingComponent>();
+        while (query.MoveNext(out var uid, out var comp))
+        {
+            RefreshActions(uid, comp);
+        }
+    }
+
+    public int RefreshActions(EntityUid uid, ShadowlingComponent component)
+    {
+        var aliveThrallsAmount = 0;
+        var thrallsQuery = EntityQueryEnumerator<ShadowlingThrallComponent>();
+        while (thrallsQuery.MoveNext(out var thrallUid, out _))
+        {
+            if (_mobState.IsAlive(thrallUid))
+                aliveThrallsAmount++;
+        }
+
+        foreach (var (action, requiredAmount) in component.ActionRequirements)
+        {
+            if (aliveThrallsAmount >= requiredAmount && !component.GrantedActions.ContainsKey(action))
+            {
+                var actionId = _actions.AddAction(uid, action);
+                if (actionId != null)
+                    component.GrantedActions[action] = actionId.Value;
+            }
+            else if (aliveThrallsAmount < requiredAmount && component.GrantedActions.TryGetValue(action, out var actionId))
+            {
+                _actions.RemoveAction(uid, actionId);
+                component.GrantedActions.Remove(action);
+            }
+        }
+
+        Dirty(uid, component);
+        return aliveThrallsAmount;
     }
 }

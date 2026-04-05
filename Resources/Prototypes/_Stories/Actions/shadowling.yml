@@ -1,9 +1,9 @@
 - type: entity
   parent: BaseAction
-  id: ActionShadowlingHatch
-  name: Раскрыться
-  description: На удивление, раскрывает вас, делая тенеморфом.
-  categories: [ HideSpawnMenu ]
+  id: STActionShadowlingHatch
+  name: Hatch
+  description: Yields your flesh to reveal your true form. Removes all equipment.
+  categories: [HideSpawnMenu]
   components:
   - type: Action
     icon:
@@ -16,32 +16,29 @@
 
 - type: entity
   parent: BaseAction
-  id: ActionShadowlingEnthrall
-  name: Порабощение
-  description: Делает выбранного члена экипажа без импланта защиты разума вашим покорным рабом.
-  categories: [ HideSpawnMenu ]
+  id: STActionShadowlingEnthrall
+  name: Enthrall
+  description: Allows you to enslave a conscious, non-braindead, non-catatonic human to your will.
+  categories: [HideSpawnMenu]
   components:
   - type: Action
+    useDelay: 60
     icon:
       sprite: _Stories/Actions/shadowling.rsi
       state: enthrall
     itemIconStyle: NoItem
     priority: -11
-  - type: TargetAction
   - type: EntityTargetAction
-    event: !type:DoAfterTargetEvent
-      hidden: false
-      delay: 5
-      breakOnDamage: true
-      breakOnMove: true
-      event: !type:ShadowlingEnthrallEvent
+    event: !type:ShadowlingEnthrallEvent
+  - type: TargetAction
+    range: 1
 
 - type: entity
   parent: BaseAction
-  id: ActionShadowlingGlare
-  name: Блик
-  description: Блик — базовый прием для оглушения целей.
-  categories: [ HideSpawnMenu ]
+  id: STActionShadowlingGlare
+  name: Glare
+  description: Stuns and mutes a target for a decent duration.
+  categories: [HideSpawnMenu]
   components:
   - type: Action
     useDelay: 30
@@ -57,13 +54,13 @@
 
 - type: entity
   parent: BaseAction
-  id: ActionShadowlingVeil
-  name: Пелена
-  description: Отключает свет вокруг вас (фонарики, лампы)
-  categories: [ HideSpawnMenu ]
+  id: STActionShadowlingVeil
+  name: Veil
+  description: Extinguishes most nearby light sources.
+  categories: [HideSpawnMenu]
   components:
   - type: Action
-    useDelay: 10
+    useDelay: 15
     icon:
       sprite: _Stories/Actions/shadowling.rsi
       state: veil
@@ -74,13 +71,13 @@
 
 - type: entity
   parent: BaseAction
-  id: ActionShadowlingShadowWalk
-  name: Теневой шаг
-  description: Шаг тени позволяет тенеморфу быстро перейти в астрал, чтобы спастись от неприятеля.
-  categories: [ HideSpawnMenu ]
+  id: STActionShadowlingShadowWalk
+  name: Shadow Walk
+  description: Phases you into the space between worlds for a short time, allowing movement through walls and invisibility.
+  categories: [HideSpawnMenu]
   components:
   - type: Action
-    useDelay: 45
+    useDelay: 60
     icon:
       sprite: _Stories/Actions/shadowling.rsi
       state: shadow_walk
@@ -88,50 +85,34 @@
     checkCanInteract: false
     priority: -11
   - type: InstantAction
-    event: !type:PolymorphActionEvent
-      protoId: ShadowlingGhost
+    event: !type:ShadowlingShadowWalkEvent
 
 - type: entity
   parent: BaseAction
-  id: ActionShadowlingIcyVeins
-  name: Стынущие жилы
-  description: При активации мгновенно вводит всем не тенеморфам в радиусе вашего прямого зрения приличное количества ледяного масла, и оглушает их на короткий период.
-  categories: [ HideSpawnMenu ]
+  id: STActionShadowlingFlashFreeze
+  name: Flash Freeze
+  description: Instantly freezes the blood of nearby people, stunning them and causing burn damage.
+  categories: [HideSpawnMenu]
   components:
   - type: Action
-    useDelay: 90
+    useDelay: 120
     icon:
       sprite: _Stories/Actions/shadowling.rsi
       state: icy_veins
     itemIconStyle: NoItem
     priority: -11
-  - type: EntityTargetAction
-    event: !type:InjectReagentsInRangeEvent
-      injectToPerformer: false
-      solutionTarget: chemicals
-      solution:
-        reagents:
-        - ReagentId: IceOil
-          Quantity: 4
-      whitelist:
-        components:
-        - Body
-      blacklist:
-        components:
-        - Shadowling
-        - ShadowlingThrall
-  - type: TargetAction
-    range: 7.5
+  - type: InstantAction
+    event: !type:ShadowlingFlashFreezeEvent
 
 - type: entity
   parent: BaseAction
-  id: ActionShadowlingCollectiveMind
-  name: Разум улья
-  description: После короткого каста, вы увидите текущее количество рабов, и если их будет достаточно, вам откроется новая способность
-  categories: [ HideSpawnMenu ]
+  id: STActionShadowlingCollectiveMind
+  name: Collective Hivemind
+  description: Gathers the power of all of your thralls and compares it to what is needed for ascendance. Also gains you new abilities.
+  categories: [HideSpawnMenu]
   components:
   - type: Action
-    useDelay: 10
+    useDelay: 15
     icon:
       sprite: _Stories/Actions/shadowling.rsi
       state: collective_mind
@@ -142,33 +123,33 @@
 
 - type: entity
   parent: BaseAction
-  id: ActionShadowlingRapidReHatch
-  name: Быстрое перераскрытие
-  description: Позволяет тенеморфу обновить свой генетический материал, чтобы устранить повреждения и генетические дефекты
-  categories: [ HideSpawnMenu ]
+  id: STActionShadowlingDrainLife
+  name: Drain Life
+  description: Damages nearby humans, draining their life and healing your own wounds.
+  categories: [HideSpawnMenu]
   components:
   - type: Action
-    useDelay: 120
+    useDelay: 30
     icon:
       sprite: _Stories/Actions/shadowling.rsi
-      state: rapid_re_hatch
+      state: drain_life
     itemIconStyle: NoItem
     priority: -11
   - type: InstantAction
-    event: !type:ShadowlingRapidReHatchEvent
+    event: !type:ShadowlingDrainLifeEvent
 
 - type: entity
   parent: BaseAction
-  id: ActionShadowlingSonicScreech
-  name: Волна визга
-  description: Временно делает гуманоидов глухими, оглушает и наносит урон боргам, выбивает окна, действует по области
-  categories: [ HideSpawnMenu ]
+  id: STActionShadowlingSonicScreech
+  name: Sonic Screech
+  description: Deafens, stuns, and confuses nearby people. Also shatters windows.
+  categories: [HideSpawnMenu]
   components:
   - type: Action
-    useDelay: 90
+    useDelay: 60
     icon:
       sprite: _Stories/Actions/shadowling.rsi
-      state: sonic_screech
+      state: screech
     itemIconStyle: NoItem
     priority: -11
   - type: InstantAction
@@ -176,16 +157,16 @@
 
 - type: entity
   parent: BaseAction
-  id: ActionShadowlingBlindnessSmoke
-  name: Слепящий дым
-  description: Испуская облако чёрного дыма, тенеморфы могут дизориентировать преследователей
-  categories: [ HideSpawnMenu ]
+  id: STActionShadowlingBlindnessSmoke
+  name: Blindness Smoke
+  description: Spews a cloud of smoke which will blind enemies.
+  categories: [HideSpawnMenu]
   components:
   - type: Action
     useDelay: 60
     icon:
       sprite: _Stories/Actions/shadowling.rsi
-      state: blindness_smoke
+      state: black_smoke
     itemIconStyle: NoItem
     priority: -11
   - type: InstantAction
@@ -193,33 +174,33 @@
 
 - type: entity
   parent: BaseAction
-  id: ActionShadowlingBlackRecuperation
-  name: Чёрная медицина
-  description: Воскрешает выбранного раба, или превращает живого раба в низшего тенеморфа
-  categories: [ HideSpawnMenu ]
+  id: STActionShadowlingBlackRecuperation
+  name: Black Recuperation
+  description: Brings a dead thrall back to life.
+  categories: [HideSpawnMenu]
   components:
   - type: Action
-    useDelay: 90
+    useDelay: 300
     icon:
       sprite: _Stories/Actions/shadowling.rsi
-      state: black_recuperation
+      state: revive_thrall
     itemIconStyle: NoItem
     priority: -11
-  - type: TargetAction
   - type: EntityTargetAction
     event: !type:ShadowlingBlackRecuperationEvent
+  - type: TargetAction
 
 - type: entity
   parent: BaseAction
-  id: ActionShadowlingAscendance
-  name: Превознесение
-  description: Стань сродни богом, поработи всё живое
-  categories: [ HideSpawnMenu ]
+  id: STActionShadowlingAscendance
+  name: Ascendance
+  description: Rend apart the final barriers to godhood. Will kill all of your thralls.
+  categories: [HideSpawnMenu]
   components:
   - type: Action
     icon:
       sprite: _Stories/Actions/shadowling.rsi
-      state: ascendance
+      state: ascend
     itemIconStyle: NoItem
     priority: -11
   - type: InstantAction
@@ -227,32 +208,13 @@
 
 - type: entity
   parent: BaseAction
-  id: ActionShadowlingHypnosis
-  name: Гипноз
-  description: Делает выбранного члена экипажа без импланта защиты разума вашим покорным рабом.
-  categories: [ HideSpawnMenu ]
+  id: STActionShadowlingAnnihilate
+  name: Annihilate
+  description: Gibs a human after a short time.
+  categories: [HideSpawnMenu]
   components:
   - type: Action
-    useDelay: 60
-    icon:
-      sprite: _Stories/Actions/shadowling.rsi
-      state: hypnosis
-    itemIconStyle: NoItem
-    priority: -11
-  - type: EntityTargetAction
-    event: !type:ShadowlingEnthrallEvent
-  - type: TargetAction
-    range: 10
-
-- type: entity
-  parent: BaseAction
-  id: ActionShadowlingAnnihilate
-  name: Аннигиляция
-  description: Заставьте кого-то разорваться на мелкие части силой мысли
-  categories: [ HideSpawnMenu ]
-  components:
-  - type: Action
-    useDelay: 15
+    useDelay: 10
     icon:
       sprite: _Stories/Actions/shadowling.rsi
       state: annihilate
@@ -261,32 +223,51 @@
   - type: EntityTargetAction
     event: !type:ShadowlingAnnihilateEvent
   - type: TargetAction
-    range: 10
+    range: 7
 
 - type: entity
   parent: BaseAction
-  id: ActionShadowlingPlaneShift
-  name: Смещение
-  description: Продвинутая версия Шага тени, позволяющая Превознёсшимся перемещаться в астрал когда угодно и на сколько угодно
-  categories: [ HideSpawnMenu ]
+  id: STActionShadowlingHypnosis
+  name: Hypnosis
+  description: Instantly enthralls a human.
+  categories: [HideSpawnMenu]
   components:
   - type: Action
+    useDelay: 30
     icon:
       sprite: _Stories/Actions/shadowling.rsi
-      state: plane_shift
+      state: enthrall
+    itemIconStyle: NoItem
+    priority: -11
+  - type: EntityTargetAction
+    event: !type:ShadowlingHypnosisEvent
+  - type: TargetAction
+    range: 7
+
+- type: entity
+  parent: BaseAction
+  id: STActionShadowlingPlaneShift
+  name: Phase Shift
+  description: Phases you into the space between worlds at will, allowing you to move through walls and become invisible.
+  categories: [HideSpawnMenu]
+  components:
+  - type: Action
+    useDelay: 2
+    icon:
+      sprite: _Stories/Actions/shadowling.rsi
+      state: shadow_walk
     itemIconStyle: NoItem
     priority: -11
     checkCanInteract: false
   - type: InstantAction
-    event: !type:PolymorphActionEvent
-      protoId: AscendanceGhost
+    event: !type:ShadowlingPlaneShiftEvent
 
 - type: entity
   parent: BaseAction
-  id: ActionShadowlingLightningStorm
-  name: Грозовой шторм
-  description: Превознёсшиеся могут генерировать энергетический шар, а затем выпускать его, оглушая всех в определенном от себя радиусе.
-  categories: [ HideSpawnMenu ]
+  id: STActionShadowlingGlacialBlast
+  name: Glacial Blast
+  description: Extremely empowered version of Flash Freeze.
+  categories: [HideSpawnMenu]
   components:
   - type: Action
     useDelay: 30
@@ -296,4 +277,37 @@
     itemIconStyle: NoItem
     priority: -11
   - type: InstantAction
-    event: !type:ShadowlingLightningStormEvent
+    event: !type:ShadowlingGlacialBlastEvent
+
+- type: entity
+  parent: BaseAction
+  id: STActionShadowlingAscendantBroadcast
+  name: Ascendant Broadcast
+  description: Toggles whether your regular speech echoes telepathically across the entire station.
+  categories: [HideSpawnMenu]
+  components:
+  - type: Action
+    useDelay: 2
+    icon:
+      sprite: _Stories/Actions/shadowling.rsi
+      state: transmit
+    itemIconStyle: NoItem
+    priority: -11
+    checkCanInteract: false
+  - type: InstantAction
+    event: !type:ToggleAscendantBroadcastEvent
+
+- type: entity
+  id: STShadowlingActionToggleVision
+  name: Toggle Vision
+  description: Toggles the special vision mode.
+  parent: BaseAction
+  components:
+  - type: Action
+    useDelay: 1
+    icon:
+      sprite: _Stories/Actions/shadowling.rsi
+      state: darksight
+    itemIconStyle: NoItem
+  - type: InstantAction
+    event: !type:ToggleVisionActionEvent

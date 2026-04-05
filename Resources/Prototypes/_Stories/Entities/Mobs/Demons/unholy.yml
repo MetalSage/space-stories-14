@@ -8,20 +8,23 @@
   - MobBloodstream
   - MobFlammable
   components:
+  - type: VisionProvider
+    isActive: true
+    ambientColor: "#7A298A50"
+    toggleAction: STActionPontificToggleNightvision
   - type: Body
     prototype: Animal
   - type: Climbing
   - type: NameIdentifier
     group: GenericNumber
-  - type: Hands
   - type: Reactive
     groups:
       Flammable: [Touch]
       Extinguish: [Touch]
       Acidic: [Touch, Ingestion]
     reactions:
-    - reagents: [ Holywater ]
-      methods: [ Touch ]
+    - reagents: [Holywater]
+      methods: [Touch]
       effects:
       - !type:Revert
         conditions:
@@ -30,14 +33,12 @@
   - type: Unholy
   - type: Destructible
     thresholds:
-    - trigger:
-        !type:DamageTypeTrigger
+    - trigger: !type:DamageTypeTrigger
         damageType: Blunt
         damage: 400
       behaviors:
       - !type:GibBehavior
-    - trigger:
-        !type:DamageTypeTrigger
+    - trigger: !type:DamageTypeTrigger
         damageType: Holy
         damage: 500
       behaviors:
@@ -51,8 +52,7 @@
       - !type:PlaySoundBehavior
         sound:
           collection: MeatLaserImpact
-    - trigger:
-        !type:DamageTypeTrigger
+    - trigger: !type:DamageTypeTrigger
         damageType: Heat
         damage: 1500
       behaviors:
@@ -179,8 +179,8 @@
     drawdepth: Mobs
     sprite: _Stories/Mobs/Demons/fallenguardian.rsi
     layers:
-      - map: [ "enum.DamageStateVisualLayers.Base" ]
-        state: base
+    - map: ["enum.DamageStateVisualLayers.Base"]
+      state: base
   - type: MobThresholds
     allowRevives: true
     thresholds:
@@ -233,7 +233,7 @@
     drawdepth: Mobs
     sprite: _Stories/Mobs/Demons/desecrated.rsi
     layers:
-    - map: [ "enum.DamageStateVisualLayers.Base" ]
+    - map: ["enum.DamageStateVisualLayers.Base"]
       state: base
   - type: MobThresholds
     allowRevives: true

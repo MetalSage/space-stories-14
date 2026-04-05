@@ -10,7 +10,6 @@ using Robust.Shared.Prototypes;
 
 namespace Content.Server._Stories.Conversion;
 
-// TODO: Move to shared
 public sealed partial class ConversionSystem
 {
     public HashSet<EntityUid> GetEntitiesConvertedBy(EntityUid? uid, ProtoId<ConversionPrototype> prototype)
@@ -22,7 +21,7 @@ public sealed partial class ConversionSystem
         {
             foreach (var conversion in comp.ActiveConversions)
             {
-                if (conversion.Key == prototype.Id && GetEntity(conversion.Value.Owner) == uid)
+                if (conversion.Key == prototype.Id && conversion.Value.Owner != null && GetEntity(conversion.Value.Owner.Value) == uid)
                     entities.Add(entity);
             }
         }
@@ -37,7 +36,7 @@ public sealed partial class ConversionSystem
     {
         conversion = null;
 
-        if (!Resolve(uid, ref component))
+        if (!Resolve(uid, ref component, false))
             return false;
 
         return component.ActiveConversions.TryGetValue(id, out conversion);
@@ -48,9 +47,6 @@ public sealed partial class ConversionSystem
         EntityUid? performer = null,
         ConversionableComponent? component = null)
     {
-        if (!Resolve(target, ref component, false))
-            return false;
-
         if (!_prototype.TryIndex(prototype, out var proto))
             return false;
 
@@ -66,20 +62,18 @@ public sealed partial class ConversionSystem
         EntityUid? performer = null,
         ConversionableComponent? component = null)
     {
-        if (!Resolve(target, ref component))
+        if (!Resolve(target, ref component, false))
             return;
 
         if (!component.ActiveConversions.TryGetValue(proto.ID, out var data))
             return;
 
-        if (!_mind.TryGetMind(target, out var mindId, out var mind))
-            return;
-
-        // До удаления компонентов, чтобы эти компоненты могли его обработать.
         var ev = new RevertedEvent(target, performer, data);
         RaiseLocalEvent(target, (object)ev, true);
 
-        if (proto.EndBriefing != null)
+        _mind.TryGetMind(target, out var mindId, out var mind);
+
+        if (proto.EndBriefing != null && mindId != default)
         {
             _antag.SendBriefing(target,
                 Loc.GetString(proto.EndBriefing.Value.Text ?? ""),
@@ -88,7 +82,9 @@ public sealed partial class ConversionSystem
         }
 
         EntityManager.RemoveComponents(target, proto.Components);
-        MindRemoveRoles(mindId, proto.MindRoles);
+
+        if (mindId != default)
+            MindRemoveRoles(mindId, proto.MindRoles);
 
         if (proto.Channels.Count > 0)
         {
@@ -108,9 +104,6 @@ public sealed partial class ConversionSystem
         EntityUid? performer = null,
         ConversionableComponent? component = null)
     {
-        if (!Resolve(target, ref component, false))
-            return false;
-
         if (!_prototype.TryIndex(prototype, out var proto))
             return false;
 
@@ -126,13 +119,11 @@ public sealed partial class ConversionSystem
         EntityUid? performer = null,
         ConversionableComponent? component = null)
     {
-        if (!Resolve(target, ref component))
-            return;
+        component ??= EnsureComp<ConversionableComponent>(target);
 
-        if (!_mind.TryGetMind(target, out var mindId, out var mind))
-            return;
+        _mind.TryGetMind(target, out var mindId, out var mind);
 
-        if (proto.Briefing != null)
+        if (proto.Briefing != null && mindId != default)
         {
             _antag.SendBriefing(target,
                 Loc.GetString(proto.Briefing.Value.Text ?? ""),
@@ -141,7 +132,14 @@ public sealed partial class ConversionSystem
         }
 
         EntityManager.AddComponents(target, proto.Components);
-        _role.MindAddRoles(mindId, proto.MindRoles);
+
+        if (proto.MindRoles != null && mindId != default)
+        {
+            foreach (var role in proto.MindRoles)
+            {
+                _role.MindAddRole(mindId, role);
+            }
+        }
 
         if (proto.Channels.Count > 0)
         {

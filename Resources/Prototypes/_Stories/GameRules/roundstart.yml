@@ -1,5 +1,5 @@
 - type: entity
-  id: Shadowling
+  id: STShadowling
   parent: BaseGameRule
   components:
   - type: GameRule
@@ -7,27 +7,27 @@
   - type: ShadowlingRule
   - type: AntagSelection
     definitions:
-    - prefRoles: [ Shadowling ]
+    - prefRoles: [STShadowling]
       max: 2
       playerRatio: 30
       blacklist:
         components:
         - Holy
       briefing:
-        text: shadowling-role-greeting
+        text: stories-shadowling-role-greeting
         color: DarkRed
         sound: "/Audio/Ambience/Antag/ling_alert.ogg"
       components:
       - type: IntrinsicRadioReceiver
       - type: IntrinsicRadioTransmitter
         channels:
-        - ShadowlingMind
+        - STShadowlingMind
       - type: ActiveRadio
         channels:
-        - ShadowlingMind
+        - STShadowlingMind
       - type: Shadowling
         actions:
-          ActionShadowlingHatch: 0
+          STActionShadowlingHatch: 0
       mindRoles:
       - MindRoleShadowling
 
@@ -46,7 +46,7 @@
     selectionTime: PrePlayerSpawn
     agentName: stories-pontific-round-end-agent-name
     definitions:
-    - prefRoles: [ STPontific ]
+    - prefRoles: [STPontific]
       spawnerPrototype: STSpawnPointPontific
       mindRoles:
       - STMindRolePontific

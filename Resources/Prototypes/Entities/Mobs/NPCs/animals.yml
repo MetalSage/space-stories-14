@@ -2596,6 +2596,9 @@
         Heat: -0.03
         Cold: -0.03
         Shock: -0.03
+  - type: VisionProvider # Stories-Vision
+    isActive: true
+    ambientColor: "#FFFFFF10"
 
 - type: entity
   parent: MobSpiderBase

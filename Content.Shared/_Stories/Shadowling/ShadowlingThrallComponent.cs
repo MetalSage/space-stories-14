@@ -2,12 +2,12 @@ using Robust.Shared.GameStates;
 
 namespace Content.Shared._Stories.Shadowling;
 
-[RegisterComponent] [NetworkedComponent]
+[RegisterComponent, NetworkedComponent, AutoGenerateComponentState(true)]
 public sealed partial class ShadowlingThrallComponent : Component
 {
-    [DataField]
+    [DataField, AutoNetworkedField]
     public Color EyeColor = Color.Red;
 
-    [DataField]
+    [DataField, AutoNetworkedField]
     public Color OldEyeColor = Color.Black;
 }
