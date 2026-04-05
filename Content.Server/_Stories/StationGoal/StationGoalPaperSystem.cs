@@ -36,6 +36,9 @@ public sealed class StationGoalPaperSystem : EntitySystem
 
         availableGoals.RemoveAll(IsNotEnoughPlayers);
 
+        if (availableGoals.Count == 0)
+            return;
+
         var goal = _random.Pick(availableGoals);
         TrySendStationGoal(goal);
     }
@@ -51,9 +54,9 @@ public sealed class StationGoalPaperSystem : EntitySystem
 
     public bool TrySendStationGoal(StationGoalPrototype goal)
     {
-        var faxes = EntityManager.EntityQuery<FaxMachineComponent>();
         var wasSent = false;
-        foreach (var fax in faxes)
+        var query = EntityQueryEnumerator<FaxMachineComponent>();
+        while (query.MoveNext(out var uid, out var fax))
         {
             if (!fax.ReceiveStationGoal)
                 continue;
@@ -72,7 +75,7 @@ public sealed class StationGoalPaperSystem : EntitySystem
                         StampedColor = Color.FromHex("#006600"),
                     },
                 });
-            _faxSystem.Receive(fax.Owner, printout, null, fax);
+            _faxSystem.Receive(uid, printout, null, fax);
 
             wasSent = true;
         }
