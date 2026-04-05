@@ -255,19 +255,11 @@
   id: OrganKidanLegLeft
   name: левая нога кидана
   parent: [ OrganBaseLegLeft, OrganKidanExternal ]
-  components:
-  - type: MovementBodyPart
-    walkSpeed : 2.7
-    sprintSpeed : 4.5
 
 - type: entity
   id: OrganKidanLegRight
   name: правая нога кидана
   parent: [ OrganBaseLegRight, OrganKidanExternal ]
-  components:
-  - type: MovementBodyPart
-    walkSpeed : 2.7
-    sprintSpeed : 4.5
 
 - type: entity
   id: OrganKidanFootLeft
