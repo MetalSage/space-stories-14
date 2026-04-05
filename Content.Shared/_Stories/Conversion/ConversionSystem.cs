@@ -13,7 +13,7 @@ public abstract class SharedConversionSystem : EntitySystem
         ProtoId<ConversionPrototype> prototype,
         ConversionableComponent? component = null)
     {
-        if (!Resolve(uid, ref component))
+        if (!Resolve(uid, ref component, false))
             return false;
 
         var proto = _prototype.Index(prototype);
@@ -26,12 +26,6 @@ public abstract class SharedConversionSystem : EntitySystem
         EntityUid? performer = null,
         ConversionableComponent? component = null)
     {
-        if (!Resolve(target, ref component))
-            return false;
-
-        if (IsConverted(target, prototype))
-            return false;
-
         var proto = _prototype.Index(prototype);
 
         if (TryComp<MobStateComponent>(target, out var mobState) &&
@@ -45,8 +39,14 @@ public abstract class SharedConversionSystem : EntitySystem
         if (_entityWhitelist.IsWhitelistPass(proto.Blacklist, target))
             return false;
 
-        if (!component.AllowedConversions.Contains(proto.ID))
-            return false;
+        if (Resolve(target, ref component, false))
+        {
+            if (component.ActiveConversions.ContainsKey(proto.ID))
+                return false;
+
+            if (component.AllowedConversions.Count > 0 && !component.AllowedConversions.Contains(proto.ID))
+                return false;
+        }
 
         var ev = new ConvertAttemptEvent(target, performer, proto);
         RaiseLocalEvent(target, (object)ev);
@@ -59,10 +59,10 @@ public abstract class SharedConversionSystem : EntitySystem
         EntityUid? performer = null,
         ConversionableComponent? component = null)
     {
-        if (!Resolve(target, ref component))
+        if (!Resolve(target, ref component, false))
             return false;
 
-        if (!IsConverted(target, prototype))
+        if (!IsConverted(target, prototype, component))
             return false;
 
         var proto = _prototype.Index(prototype);

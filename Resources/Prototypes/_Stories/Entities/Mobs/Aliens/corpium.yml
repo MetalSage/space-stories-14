@@ -36,7 +36,8 @@
     reagent:
       ReagentId: STCorpium
     statusIcon: STCorpiumReady
-  - type: Nightvision
+  - type: VisionProvider
+    ambientColor: "#8A782940"
   - type: Vocal
     sounds:
       Unsexed: STCorpium
@@ -69,5 +70,5 @@
     transferAmount: 1
   - type: Tag
     tags:
-      - CannotSuicide
-      - FootstepSound
+    - CannotSuicide
+    - FootstepSound

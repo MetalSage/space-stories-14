@@ -1,30 +1,30 @@
 - type: radioChannel
   id: Prison
   name: chat-radio-prison
-  keycode: 'з'
+  keycode: "з"
   frequency: 1102
   color: "#e99844"
 
 - type: radioChannel
   id: Empire
   name: chat-radio-empire
-  keycode: 'г' # Stories-Localization
+  keycode: "г" # Stories-Localization
   frequency: 1984
   color: "#1b67a5"
   longRange: true
 
 - type: radioChannel
-  id: ShadowlingMind
-  name: chat-radio-shadowling
+  id: STShadowlingMind
+  name: stories-chat-radio-shadowling
   frequency: 98767
-  keycode: 'ш'
+  keycode: "ш"
   color: "#8b0000"
   longRange: true
 
 - type: radioChannel
   id: SpafMind
   name: chat-radio-spaf-mind
-  keycode: 'щ'
+  keycode: "щ"
   frequency: 9361
   color: "#00FF00"
   longRange: true
@@ -33,14 +33,14 @@
   id: STUnholy
   name: stories-chat-radio-unholy
   frequency: 98783
-  keycode: 'я'
+  keycode: "я"
   color: "#7d52a8"
   longRange: true
 
 - type: radioChannel
   id: STJuridical
   name: stories-chat-radio-juridical
-  keycode: 'ю'
+  keycode: "ю"
   frequency: 98329
   color: "#008080"
 
@@ -48,6 +48,6 @@
   id: Chitine
   name: chat-radio-chitine
   frequency: 98766
-  keycode: 'х'
+  keycode: "х"
   color: "#556b2f"
   longRange: true

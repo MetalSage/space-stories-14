@@ -1,8 +1,8 @@
 ent-BaseFigurineStories = фигурка
     .desc = Небольшая миниатюра.
-ent-ToyFigurineShadowling = фигурка тенеморфа
+ent-STToyFigurineShadowling = фигурка тенеморфа
     .desc = Темновато.
-ent-ToyFigurineAscendedShadowling = фигурка вознесенного тенеморфа
+ent-STToyFigurineAscendedShadowling = фигурка вознесенного тенеморфа
     .desc = Кто такой смелый?
 ent-ToyFigurineInquisitor = фигурка инквизитора
     .desc = Я пришел за тобой!

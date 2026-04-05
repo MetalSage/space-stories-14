@@ -1,4 +1,5 @@
 using Content.Shared.Actions;
+using Content.Shared.Actions.Components;
 using Content.Shared.Chemistry.Components;
 using Content.Shared.Chemistry.Components.SolutionManager;
 using Content.Shared.Chemistry.EntitySystems;
@@ -14,12 +15,12 @@ public sealed class InjectReagentsSystem : EntitySystem
 
     public override void Initialize()
     {
-        SubscribeLocalEvent<InjectReagentsEvent>(OnInjectReagentsEvent);
-        SubscribeLocalEvent<InjectReagentsToTargetEvent>(OnIjectReagentsToTargetEvent);
-        SubscribeLocalEvent<InjectReagentsInRangeEvent>(OnInjectReagentsInRangeEvent);
+        SubscribeLocalEvent<ActionsComponent, InjectReagentsEvent>(OnInjectReagentsEvent);
+        SubscribeLocalEvent<ActionsComponent, InjectReagentsToTargetEvent>(OnIjectReagentsToTargetEvent);
+        SubscribeLocalEvent<ActionsComponent, InjectReagentsInRangeEvent>(OnInjectReagentsInRangeEvent);
     }
 
-    private void OnInjectReagentsEvent(InjectReagentsEvent args)
+    private void OnInjectReagentsEvent(EntityUid uid, ActionsComponent comp, InjectReagentsEvent args)
     {
         if (args.Handled || !_solutions.TryGetSolution(args.Performer, args.SolutionTarget, out var solution))
             return;
@@ -27,7 +28,7 @@ public sealed class InjectReagentsSystem : EntitySystem
         args.Handled = true;
     }
 
-    private void OnIjectReagentsToTargetEvent(InjectReagentsToTargetEvent args)
+    private void OnIjectReagentsToTargetEvent(EntityUid uid, ActionsComponent comp, InjectReagentsToTargetEvent args)
     {
         if (args.Handled || !_solutions.TryGetSolution(args.Target, args.SolutionTarget, out var solution))
             return;
@@ -35,7 +36,7 @@ public sealed class InjectReagentsSystem : EntitySystem
         args.Handled = true;
     }
 
-    private void OnInjectReagentsInRangeEvent(InjectReagentsInRangeEvent args)
+    private void OnInjectReagentsInRangeEvent(EntityUid uid, ActionsComponent comp, InjectReagentsInRangeEvent args)
     {
         if (args.Handled)
             return;
@@ -86,7 +87,7 @@ public sealed partial class InjectReagentsToTargetEvent : EntityTargetActionEven
     public string SolutionTarget { get; set; } = "bloodstream";
 }
 
-public sealed partial class InjectReagentsInRangeEvent : EntityTargetActionEvent
+public sealed partial class InjectReagentsInRangeEvent : InstantActionEvent
 {
     [DataField]
     public bool InjectToPerformer { get; set; }

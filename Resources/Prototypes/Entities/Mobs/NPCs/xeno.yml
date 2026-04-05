@@ -122,6 +122,9 @@
   - type: Speech
     speechVerb: LargeMob
   - type: MobCollision # Stories-Collision
+  - type: VisionProvider # Stories-Vision
+    isActive: true
+    ambientColor: "#FFFFFF10"
 
 - type: entity
   name: praetorian

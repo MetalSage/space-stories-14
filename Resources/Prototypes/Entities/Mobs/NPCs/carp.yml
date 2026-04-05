@@ -86,7 +86,9 @@
       interactFailureString: petting-failure-carp
       interactFailureSound:
         path: /Audio/Effects/bite.ogg
-    - type: Nightvision # Stories
+    - type: VisionProvider # Stories-Vision
+      isActive: true
+      ambientColor: "#FFFFFF10"
     - type: MobCollision # Stories-Collision
 
 - type: entity

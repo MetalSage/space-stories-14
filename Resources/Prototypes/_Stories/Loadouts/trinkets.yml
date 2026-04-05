@@ -100,23 +100,23 @@
 
 # Тенеморф
 - type: loadout
-  id: ToyFigurineShadowling
+  id: STToyFigurineShadowling
   storage:
     back:
-    - ToyFigurineShadowling
+    - STToyFigurineShadowling
   effects:
   - !type:SponsorLoadoutEffect
-    id: ToyFigurineShadowling
+    id: STToyFigurineShadowling
 
 # Вознесенный тенеморф
 - type: loadout
-  id: ToyFigurineAscendedShadowling
+  id: STToyFigurineAscendedShadowling
   storage:
     back:
-    - ToyFigurineAscendedShadowling
+    - STToyFigurineAscendedShadowling
   effects:
   - !type:SponsorLoadoutEffect
-    id: ToyFigurineAscendedShadowling
+    id: STToyFigurineAscendedShadowling
 
 # Ситх
 - type: loadout

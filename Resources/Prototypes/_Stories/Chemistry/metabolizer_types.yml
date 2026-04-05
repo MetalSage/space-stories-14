@@ -1,7 +1,7 @@
 - type: metabolizerType
-  id: Shadowling
-  name: metabolizer-type-shadowling
+  id: STShadowling
+  name: stories-metabolizer-type-shadowling
 
 - type: metabolizerType
-  id: Kidan
-  name: metabolizer-type-kidan
+  id: STKidan
+  name: stories-metabolizer-type-kidan

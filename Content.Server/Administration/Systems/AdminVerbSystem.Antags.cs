@@ -229,15 +229,15 @@ public sealed partial class AdminVerbSystem
 
         Verb shadowling = new()
         {
-            Text = Loc.GetString("admin-verb-text-make-shadowling"),
+            Text = Loc.GetString("stories-admin-verb-make-shadowling"),
             Category = VerbCategory.Antag,
             Icon = new SpriteSpecifier.Rsi(new ResPath("_Stories/Mobs/Demons/shadowling.rsi"), "shadowling"),
             Act = () =>
             {
-                _antag.ForceMakeAntag<ShadowlingRuleComponent>(targetPlayer, "Shadowling");
+                _antag.ForceMakeAntag<ShadowlingRuleComponent>(targetPlayer, "STShadowling");
             },
             Impact = LogImpact.High,
-            Message = Loc.GetString("admin-verb-make-shadowling"),
+            Message = Loc.GetString("stories-admin-verb-make-shadowling"),
         };
         args.Verbs.Add(shadowling);
     }
