@@ -8,7 +8,7 @@ job-name-captain = капитан
 job-name-cargotech = грузчик
 job-name-cburn = агент карантинной службы Центком
 job-name-ce = старший инженер
-job-name-centcommoff = CentComm Official
+job-name-centcommoff = представитель Центрального Командования
 job-name-chef = шеф-повар
 job-name-chaplain = священник
 job-name-chemist = химик
@@ -53,22 +53,22 @@ job-name-warden = смотритель
 # these are required for the agent ID job icon tooltips
 # I am keeping them for roleplaying opportunities
 job-name-geneticist = генетик
-job-name-boxer = Boxer
+job-name-boxer = боксёр
 job-name-no-id = нет ID
 job-name-prisoner = заключённый
 job-name-roboticist = робототехник
 job-name-unknown = неизвестно
 job-name-virologist = вирусолог
-job-name-zookeeper = Zookeeper
+job-name-zookeeper = зоотехник
 
 # antagonist jobs
-job-name-ninja = Ninja
+job-name-ninja = ниндзя
 job-name-syndicate = синдикат
-job-name-syndicate-commander = Syndicate Commander
-job-name-syndicate-corpsman = Syndicate Corpsman
-job-name-syndicate-operative = Syndicate Operative
-job-name-pirate = Pirate
-job-name-wizard = Wizard
+job-name-syndicate-commander = командир оперативников
+job-name-syndicate-corpsman = медик оперативников
+job-name-syndicate-operative = ядерный оперативник
+job-name-pirate = пират
+job-name-wizard = волшебник
 job-name-zombie = зомби
 
 # Job titles

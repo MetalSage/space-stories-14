@@ -16,7 +16,7 @@ station-beacon-armory = Оружейная
 station-beacon-perma-brig = Пермабриг
 station-beacon-detective = Детектив
 station-beacon-courtroom = Зал суда
-station-beacon-law = Офис Адвоката
+station-beacon-law = Офис АВД
 station-beacon-security-checkpoint = КПП СБ
 
 station-beacon-medical = Медицинский отдел

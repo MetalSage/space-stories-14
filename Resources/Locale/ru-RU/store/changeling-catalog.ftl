@@ -1,2 +1,2 @@
-changeling-arm-blade-name = Выдвижная рука-клинок
-changeling-arm-blade-desc = Превратите свою руку в ужасающий клинок из плоти. Можно переключать.
+changeling-arm-blade-name = Retractable Arm Blade
+changeling-arm-blade-desc = Transform your arm into a terrifying flesh blade. Can be toggled.

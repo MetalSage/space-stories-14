@@ -12,8 +12,7 @@ admin-verbs-unfreeze = Разморозить
 admin-verbs-camera = Открыть камеру
 admin-verbs-camera-description = Открыть окно камеры, следящее за выбранной сущностью.
 admin-verbs-erase = Стереть
-admin-verbs-erase-description =
-    Удаляет игрока из раунда и манифеста членов экипажа, а также удаляет все его сообщения в чате.
+admin-verbs-erase-description = Удаляет игрока из раунда и манифеста членов экипажа, а также удаляет все его сообщения в чате.
     Их вещи упадут на землю.
     Игроки увидят всплывающее окно, указывающее им играть как будто исчезнувшего никогда не существовало.
 toolshed-verb-mark = Отметить
@@ -45,7 +44,7 @@ admin-verbs-locate-cargo-shuttle = Найти грузовой шаттл
 admin-verbs-halt-movement = Остановить движение
 admin-verbs-unpause-map = Снять карту с паузы
 admin-verbs-pause-map = Поставить карту на паузу
-admin-verbs-snap-joints = Удалить шарниры
+admin-verbs-snap-joints = Удалить джоинты
 admin-verbs-make-minigun = Сделать миниганом
 admin-verbs-set-bullet-amount = Установить кол-во патронов
 

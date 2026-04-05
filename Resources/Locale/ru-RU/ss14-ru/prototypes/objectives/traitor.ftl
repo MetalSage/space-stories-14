@@ -4,7 +4,7 @@ ent-BaseTraitorSocialObjective = { ent-BaseTraitorObjective }
     .desc = { ent-BaseTraitorObjective.desc }
 ent-BaseTraitorStealObjective = { ent-BaseTraitorObjective }
     .desc = { ent-BaseTraitorObjective.desc }
-ent-EscapeShuttleObjective = Улететь на Центком живым и свободным на эвакуационном шаттле.
+ent-EscapeShuttleObjective = Улететь на Центком живым и свободным.
     .desc = Один из наших агентов под прикрытием допросит вас по прибытии. Не дайте себя арестовать.
 ent-DieObjective = Умереть славной смертью.
     .desc = Умрите.
@@ -46,5 +46,7 @@ ent-CaptainJetpackStealObjective = { ent-BaseCaptainObjective }
     .desc = { ent-BaseCaptainObjective.desc }
 ent-CaptainGunStealObjective = { ent-BaseCaptainObjective }
     .desc = { ent-BaseCaptainObjective.desc }
-ent-NukeDiskStealObjective = { ent-BaseCaptainObjective }
-    .desc = { ent-BaseCaptainObjective.desc }
+
+# ent-NukeDiskStealObjective = { ent-BaseCaptainObjective }
+#     .desc = { ent-BaseCaptainObjective.desc }
+

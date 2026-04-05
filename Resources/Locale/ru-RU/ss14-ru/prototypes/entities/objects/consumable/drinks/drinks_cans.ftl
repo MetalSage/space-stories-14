@@ -1,12 +1,12 @@
-ent-DrinkCanBaseFull = { ent-BaseItem }
-    .desc = { ent-BaseItem.desc }
+ent-DrinkCanBaseFull = { ent-DrinkBase }
+    .desc = { ent-DrinkBaseMaterialMetal.desc }
     .suffix = Полный
 ent-DrinkColaCan = баночка Спейс Кола
     .desc = Сладкий газированный безалкогольный напиток.
     .suffix = { ent-DrinkCanBaseFull.suffix }
 ent-DrinkColaCanEmpty = { ent-DrinkColaCan }
-    .suffix = Пустой
     .desc = { ent-DrinkColaCan.desc }
+    .suffix = Пустой
 ent-DrinkIcedTeaCan = баночка холодного чая
     .desc = Освежающая баночка холодного чая.
     .suffix = { ent-DrinkCanBaseFull.suffix }

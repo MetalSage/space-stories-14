@@ -50,3 +50,5 @@ ent-BaseJanitorContraband = { ent-BaseRestrictedContraband }
     .desc = { ent-BaseRestrictedContraband.desc }
 ent-BaseGrandTheftContraband = { "" }
     .desc = { "" }
+ent-BaseSecurityBartenderZookeeperContraband = { ent-BaseRestrictedContraband }
+    .desc = { ent-BaseRestrictedContraband.desc }

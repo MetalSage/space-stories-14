@@ -156,4 +156,4 @@ construction-graph-tag-spationaut-hardsuit = лёгкий скафандр ут�
 construction-graph-tag-backpack = рюкзак
 
 # chemistry
-construction-graph-tag-centrifuge-compatible = центробежный контейнер
+construction-graph-tag-centrifuge-compatible = пробирка

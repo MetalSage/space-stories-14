@@ -1,12 +1,12 @@
 cmd-whitelistadd-desc = Добавить игрока в белый список сервера.
-cmd-whitelistadd-help = Использование: whitelistadd <username или User ID>
+cmd-whitelistadd-help = Использование: whitelistadd <username или  User ID>
 cmd-whitelistadd-existing = { $username } уже находится в белом списке!
 cmd-whitelistadd-added = { $username } добавлен в белый список
 cmd-whitelistadd-not-found = Не удалось найти игрока '{ $username }'
 cmd-whitelistadd-arg-player = [player]
 
-cmd-whitelistremove-desc = Удалить игрока из белого списка сервера.
-cmd-whitelistremove-help = Использование: whitelistremove <username или User ID>
+cmd-whitelistremove-desc = Удалить игрока с белого списка сервера.
+cmd-whitelistremove-help = Использование: whitelistremove <username или  User ID>
 cmd-whitelistremove-existing = { $username } не находится в белом списке!
 cmd-whitelistremove-removed = { $username } удалён из белого списка
 cmd-whitelistremove-not-found = Не удалось найти игрока '{ $username }'
@@ -24,13 +24,12 @@ ban-banned-3 = Попытки обойти этот бан, например, п
 
 soft-player-cap-full = Сервер заполнен!
 panic-bunker-account-denied = Этот сервер находится в режиме "Бункер", часто используемом в качестве меры предосторожности против рейдов. Новые подключения от аккаунтов, не соответствующих определённым требованиям, временно не принимаются. Повторите попытку позже
-panic-bunker-account-denied-reason = Этот сервер находится в режиме "Бункер", часто используемом в качестве меры предосторожности против рейдов. Новые подключения от аккаунтов, не соответствующих определённым требованиям, временно не принимаются. Повторите попытку позже. Причина: "{ $reason }"
+panic-bunker-account-denied-reason = Этот сервер находится в режиме "Бункер", часто используемом в качестве меры предосторожности против рейдов. Новые подключения от аккаунтов, не соответствующих определённым требованиям, временно не принимаются. Повторите попытку позже Причина: "{ $reason }"
 panic-bunker-account-reason-account = Ваш аккаунт Space Station 14 слишком новый. Он должен быть старше { $minutes } минут
-panic-bunker-account-reason-overall =
-    Наигранное Вами время на сервере должно быть больше { $minutes } { $minutes ->
-        [one] минуты
-       *[other] минут
-    }.
+panic-bunker-account-reason-overall = Наигранное Вами время на сервере должно быть больше { $minutes } { $minutes ->
+    [one] минуты
+    *[other] минут
+}.
 
 whitelist-playtime = У вас недостаточно игрового времени, чтобы присоединиться к этому серверу. Вам нужно как минимум { $minutes } минут игрового времени, чтобы присоединиться к этому серверу.
 whitelist-player-count = Этот сервер в данный момент не принимает игроков. Пожалуйста, повторите попытку позже.
@@ -57,11 +56,10 @@ cmd-blacklistremove-arg-player = [player]
 baby-jail-account-denied = Этот сервер — сервер для новичков, предназначенный для новых игроков и тех, кто хочет им помочь. Новые подключения слишком старых или не внесённых в белый список аккаунтов не принимаются. Загляните на другие серверы и посмотрите все, что может предложить Space Station 14. Веселитесь!
 baby-jail-account-denied-reason = Этот сервер — сервер для новичков, предназначенный для новых игроков и тех, кто хочет им помочь. Новые подключения слишком старых или не внесённых в белый список аккаунтов не принимаются. Загляните на другие серверы и посмотрите все, что может предложить Space Station 14. Веселитесь! Причина: "{ $reason }"
 baby-jail-account-reason-account = Ваш аккаунт Space Station 14 слишком старый. Он должен быть моложе { $minutes } минут
-baby-jail-account-reason-overall =
-    Наигранное Вами время на сервере должно быть больше { $minutes } { $minutes ->
-        [one] минуты
-       *[other] минут
-    }.
+baby-jail-account-reason-overall = Наигранное Вами время на сервере должно быть больше { $minutes } { $minutes ->
+    [one] минуты
+    *[other] минут
+}.
 
 generic-misconfigured = Сервер неправильно настроен и не принимает игроков. Пожалуйста, свяжитесь с владельцем сервера и повторите попытку позже.
 

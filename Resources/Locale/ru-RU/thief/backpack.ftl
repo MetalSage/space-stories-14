@@ -5,7 +5,7 @@ thief-backpack-window-description =
     Выберите { $maxCount } { $maxCount ->
         [1] набор
         [few] разных набора
-       *[other] разных наборов
+        *[other] разных наборов
     } из списка.
 
 thief-backpack-window-selected = Выбрано наборов: ({ $selectedCount }/{ $maxCount })
@@ -19,8 +19,8 @@ thief-backpack-button-deselect = Выбрано [X]
 thief-backpack-category-chameleon-name = Набор хамелеона
 thief-backpack-category-chameleon-description =
     Вы — никто и кто угодно, вы — мастер маскировки.
-    В комплект входят: комплект хамелеон-одежды,
-    маскировочный проектор и ID карта агента.
+    В комплект входят: комплект хамелеон-одежды с ID картой агента,
+    маскировочный проектор и имплант "Фальшивый щит разума"
     Маскируйтесь под кого угодно и под что угодно.
 
 thief-backpack-category-tools-name = Набор вломщика
@@ -56,7 +56,7 @@ thief-backpack-category-communicator-description =
     Богатство — это власть, а секреты — это богатство.
     Используйте своё красноречие и богатство, чтобы покорить станцию.
     В комплект входят: мастер-ключ шифрования от всех каналов станции, ручка CyberSun,
-    имплантер голосовой маски, а также 20 тысяч космокредитов в чемоданчике.
+    голосовая маска-хамелеон, а также 20 тысяч космокредитов в чемоданчике.
 
 thief-backpack-category-smuggler-name = Набор контрабандиста
 thief-backpack-category-smuggler-description =

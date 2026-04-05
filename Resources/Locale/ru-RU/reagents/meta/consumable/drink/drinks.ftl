@@ -20,7 +20,7 @@ reagent-name-green-tea = зелёный чай
 reagent-desc-green-tea = Вкусный зелёный чай.
 
 reagent-name-grenadine = сироп гренадин
-reagent-desc-grenadine = Не с вишнёвым вкусом!
+reagent-desc-grenadine = Не с вишневым вкусом!
 
 reagent-name-iced-coffee = айс-кофе
 reagent-desc-iced-coffee = Кофе со льдом, бодрящий и прохладный.
