@@ -6,8 +6,6 @@ namespace Content.Shared._Stories.Shadowling;
 
 public sealed class SharedShadowlingSystem : EntitySystem
 {
-    [Dependency] private readonly SharedPopupSystem _popup = default!;
-
     public override void Initialize()
     {
         base.Initialize();

@@ -57,6 +57,7 @@ namespace Content.Server._Stories.Shadowling;
 public sealed class ShadowlingActionSystem : EntitySystem
 {
     private static readonly EntProtoId MutedStatusEffect = "Muted";
+    private static readonly ProtoId<TagPrototype> WindowTag = "Window";
 
     [Dependency] private readonly IConfigurationManager _cfg = default!;
     [Dependency] private readonly ConversionSystem _conversion = default!;
@@ -384,7 +385,7 @@ public sealed class ShadowlingActionSystem : EntitySystem
             {
                 _emp.DoEmpEffects(target, 50000, TimeSpan.FromSeconds(6));
             }
-            else if (_tag.HasTag(target, "Window"))
+            else if (_tag.HasTag(target, WindowTag))
             {
                 _damageable.TryChangeDamage(target, component.SonicScreechWindowDamage, true);
             }
@@ -701,6 +702,7 @@ public sealed class ShadowlingActionSystem : EntitySystem
 
         if (component.RequireHumanoid && !HasComp<HumanoidProfileComponent>(args.Target))
         {
+            _popup.PopupEntity(Loc.GetString("stories-shadowling-action-fail-not-humanoid"), uid, uid);
             return;
         }
 
@@ -798,6 +800,7 @@ public sealed class ShadowlingActionSystem : EntitySystem
 
         if (component.RequireHumanoid && !HasComp<HumanoidProfileComponent>(args.Target))
         {
+            _popup.PopupEntity(Loc.GetString("stories-shadowling-action-fail-not-humanoid"), uid, uid);
             return;
         }
 

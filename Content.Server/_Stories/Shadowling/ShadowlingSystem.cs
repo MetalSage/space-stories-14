@@ -9,11 +9,7 @@ using Content.Shared.Actions;
 using Content.Shared.Body;
 using Content.Shared.Mindshield.Components;
 using Content.Shared.Mobs;
-using Content.Shared.Mobs.Components;
 using Content.Shared.Mobs.Systems;
-using Content.Shared.Popups;
-using Robust.Shared.GameObjects;
-using Robust.Shared.Prototypes;
 
 namespace Content.Server._Stories.Shadowling;
 
@@ -22,7 +18,6 @@ public sealed partial class ShadowlingSystem : EntitySystem
     [Dependency] private readonly SharedActionsSystem _actions = default!;
     [Dependency] private readonly ConversionSystem _conversion = default!;
     [Dependency] private readonly MobStateSystem _mobState = default!;
-    [Dependency] private readonly SharedPopupSystem _popup = default!;
     [Dependency] private readonly SharedVisionSystem _vision = default!;
     [Dependency] private readonly SharedAppearanceSystem _appearance = default!;
     [Dependency] private readonly SharedVisualBodySystem _visualBody = default!;
@@ -85,11 +80,9 @@ public sealed partial class ShadowlingSystem : EntitySystem
 
         _appearance.SetData(uid, ShadowlingThrallVisuals.IsThrall, true);
 
-        if (_visualBody.TryGatherMarkingsData(uid, null, out var profiles, out _, out _))
+        if (_visualBody.TryGatherMarkingsData(uid, null, out var profiles, out _, out _) && profiles.Count > 0)
         {
-            var firstProfile = profiles.Values.FirstOrDefault();
-            if (firstProfile != null)
-                component.OldEyeColor = firstProfile.EyeColor;
+            component.OldEyeColor = profiles.Values.First().EyeColor;
 
             var newProfiles = profiles.ToDictionary(
                 pair => pair.Key,
@@ -110,7 +103,7 @@ public sealed partial class ShadowlingSystem : EntitySystem
 
         _appearance.SetData(uid, ShadowlingThrallVisuals.IsThrall, false);
 
-        if (_visualBody.TryGatherMarkingsData(uid, null, out var profiles, out _, out _))
+        if (_visualBody.TryGatherMarkingsData(uid, null, out var profiles, out _, out _) && profiles.Count > 0)
         {
             var newProfiles = profiles.ToDictionary(
                 pair => pair.Key,
