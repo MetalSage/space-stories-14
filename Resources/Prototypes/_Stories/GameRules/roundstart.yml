@@ -29,7 +29,7 @@
         actions:
           STActionShadowlingHatch: 0
       mindRoles:
-      - MindRoleShadowling
+      - STMindRoleShadowling
 
 - type: entity
   parent: BaseGameRule
