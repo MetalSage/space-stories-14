@@ -702,7 +702,6 @@ public sealed class ShadowlingActionSystem : EntitySystem
 
         if (component.RequireHumanoid && !HasComp<HumanoidProfileComponent>(args.Target))
         {
-            _popup.PopupEntity(Loc.GetString("stories-shadowling-action-fail-not-humanoid"), uid, uid);
             return;
         }
 
@@ -800,7 +799,6 @@ public sealed class ShadowlingActionSystem : EntitySystem
 
         if (component.RequireHumanoid && !HasComp<HumanoidProfileComponent>(args.Target))
         {
-            _popup.PopupEntity(Loc.GetString("stories-shadowling-action-fail-not-humanoid"), uid, uid);
             return;
         }
 
