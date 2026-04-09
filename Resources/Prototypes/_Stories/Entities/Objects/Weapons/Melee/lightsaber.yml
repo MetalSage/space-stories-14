@@ -102,12 +102,6 @@
 # Случайный цвет
 
 - type: entity
-  name: lightsaber
-  parent: STBaseLightsaber
-  id: STLightsaber
-  suffix: Random color
-
-- type: entity
   name: short lightsaber
   parent: STBaseLightsaber
   id: STLightsaberShort
