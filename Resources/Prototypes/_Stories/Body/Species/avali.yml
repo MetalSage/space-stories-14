@@ -47,6 +47,13 @@
     enum.HumanoidVisualLayers.RFoot:
       limit: 1
       required: false
+  appearances:
+    enum.HumanoidVisualLayers.HeadSide:
+      layerAlpha: 0.72
+      matchSkin: true
+    enum.HumanoidVisualLayers.Tail:
+      layerAlpha: 0.72
+      matchSkin: true
 
 - type: entity
   parent: BaseSpeciesAppearance
@@ -79,7 +86,6 @@
     species: Avali
 
 - type: entity
-  save: false
   parent:
   - AppearanceAvali
   - BaseSpeciesMobOrganic
@@ -90,13 +96,6 @@
   - type: CanMoveInAir
   - type: MovementSpeedModifier
     weightlessModifier: 0.6
-  - type: HumanoidProfile
-    species: Avali
-    hideLayersOnEquip:
-    - HeadTop
-    - HeadSide
-  - type: Body
-    prototype: Avali
   - type: Hunger
   - type: Thirst
   - type: Sprite
@@ -126,14 +125,6 @@
   id: OrganAvali
   abstract: true
   suffix: Avali
-  components:
-  - type: Extractable
-    juiceSolution:
-      reagents:
-      - ReagentId: Fat
-        Quantity: 3
-      - ReagentId: Blood
-        Quantity: 10
 
 - type: entity
   parent: OrganAvali
@@ -152,67 +143,41 @@
 - type: entity
   id: OrganAvaliTorso
   parent: [ OrganBaseTorsoSexed, OrganBaseTorso, OrganAvaliExternal ]
-  name: "avali torso"
-  components:
-  - type: Extractable
-    juiceSolution:
-      reagents:
-      - ReagentId: Fat
-        Quantity: 10
-      - ReagentId: Blood
-        Quantity: 20
 
 - type: entity
   id: OrganAvaliHead
   parent: [ OrganBaseHeadSexed, OrganBaseHead, OrganAvaliExternal ]
-  name: "avali head"
-  components:
-  - type: Extractable
-    juiceSolution:
-      reagents:
-      - ReagentId: Fat
-        Quantity: 5
-      - ReagentId: Blood
-        Quantity: 10
 
 - type: entity
   id: OrganAvaliArmLeft
-  name: "left avali arm"
   parent: [ OrganBaseArmLeft, OrganAvaliExternal ]
 
 - type: entity
   id: OrganAvaliArmRight
-  name: "right avali arm"
   parent: [ OrganBaseArmRight, OrganAvaliExternal ]
 
 - type: entity
   id: OrganAvaliHandLeft
-  name: "left avali hand"
   parent: [ OrganBaseHandLeft, OrganAvaliExternal ]
 
 - type: entity
   id: OrganAvaliHandRight
-  name: "right avali hand"
   parent: [ OrganBaseHandRight, OrganAvaliExternal ]
 
 - type: entity
   id: OrganAvaliLegLeft
-  name: "left avali leg"
   parent: [ OrganBaseLegLeft, OrganAvaliExternal ]
 
 - type: entity
   id: OrganAvaliLegRight
-  name: "right avali leg"
   parent: [ OrganBaseLegRight, OrganAvaliExternal ]
 
 - type: entity
   id: OrganAvaliFootLeft
-  name: "left avali foot"
   parent: [ OrganBaseFootLeft, OrganAvaliExternal ]
 
 - type: entity
   id: OrganAvaliFootRight
-  name: "right avali foot"
   parent: [ OrganBaseFootRight, OrganAvaliExternal ]
 
 - type: entity
