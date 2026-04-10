@@ -272,4 +272,4 @@
   components:
   - type: Metabolizer
     maxReagents: 1
-    UpdateIntervalMultiplier: 0.5
+    updateInterval: 0.5
