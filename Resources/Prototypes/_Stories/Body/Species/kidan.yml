@@ -61,31 +61,25 @@
       Appendix: OrganHumanAppendix
       Ears: OrganHumanEars
       Lungs: OrganHumanLungs
-      Heart: OrganKidanHeart
+      Heart: OrganAnimalHeart
       Stomach: OrganKidanStomach
       Liver: OrganKidanLiver
-      Kidneys: OrganKidanKidneys
+      Kidneys: OrganAnimalKidneys
   - type: HumanoidProfile
     species: Kidan
 
 - type: entity
-  save: false
   parent:
   - AppearanceKidan
   - BaseSpeciesMobOrganic
   id: MobKidan
-  name: Урист МакКидан (Уриззт МакХэндзз)
+  name: Urist McKidan
   components:
-  - type: HumanoidProfile
-    species: Kidan
   - type: Hunger
   - type: Thirst
   - type: Icon
     sprite: _Stories/Mobs/Species/Kidan/parts.rsi
     state: full
-  - type: Body
-    prototype: Kidan
-    requiredLegs: 2
   - type: Speech
     allowedEmotes: ['Grumble', 'Moan', 'WigglesAntennae', 'WavesAntennaeSharply']
   - type: Butcherable
@@ -179,7 +173,6 @@
 - type: entity
   parent: OrganBase
   id: OrganKidan
-  name: часть тела кидана
   abstract: true
   suffix: Kidan
   components:
@@ -207,68 +200,42 @@
 
 - type: entity
   id: OrganKidanTorso
-  name: торс кидана
   parent: [ OrganBaseTorsoSexed, OrganBaseTorso, OrganKidanExternal ]
-  components:
-  - type: Extractable
-    juiceSolution:
-      reagents:
-      - ReagentId: Fat
-        Quantity: 10
-      - ReagentId: Blood
-        Quantity: 20
 
 - type: entity
   id: OrganKidanHead
-  name: голова кидана
   parent: [ OrganBaseHeadSexed, OrganBaseHead, OrganKidanExternal ]
-  components:
-  - type: Extractable
-    juiceSolution:
-      reagents:
-      - ReagentId: Fat
-        Quantity: 5
-      - ReagentId: Blood
-        Quantity: 10
 
 - type: entity
   id: OrganKidanArmLeft
-  name: левая рука кидана
   parent: [ OrganBaseArmLeft, OrganKidanExternal ]
 
 - type: entity
   id: OrganKidanArmRight
-  name: правая рука кидана
   parent: [ OrganBaseArmRight, OrganKidanExternal ]
 
 - type: entity
   id: OrganKidanHandLeft
-  name: левая кисть кидана
   parent: [ OrganBaseHandLeft, OrganKidanExternal ]
 
 - type: entity
   id: OrganKidanHandRight
-  name: правая кисть кидана
   parent: [ OrganBaseHandRight, OrganKidanExternal ]
 
 - type: entity
   id: OrganKidanLegLeft
-  name: левая нога кидана
   parent: [ OrganBaseLegLeft, OrganKidanExternal ]
 
 - type: entity
   id: OrganKidanLegRight
-  name: правая нога кидана
   parent: [ OrganBaseLegRight, OrganKidanExternal ]
 
 - type: entity
   id: OrganKidanFootLeft
-  name: левая стопа кидана
   parent: [ OrganBaseFootLeft, OrganKidanExternal ]
 
 - type: entity
   id: OrganKidanFootRight
-  name: правая стопа кидана
   parent: [ OrganBaseFootRight, OrganKidanExternal ]
 
 - type: entity
@@ -283,10 +250,8 @@
 - type: entity
   id: OrganKidanStomach
   parent: OrganAnimalStomach
-  name: желудок
   categories: [ HideSpawnMenu ]
   components:
-  - type: Organ
   - type: SolutionContainerManager
     solutions:
       stomach:
@@ -299,51 +264,12 @@
       - Pill
       - Crayon
       - FoodSnack
-  - type: Metabolizer
-    maxReagents: 3
-    metabolizerTypes: [ Kidan ]
-    groups:
-    - id: Food
-    - id: Drink
 
 - type: entity
   id: OrganKidanLiver
   parent: OrganAnimalLiver
-  name: печень
   categories: [ HideSpawnMenu ]
   components:
-  - type: Organ
   - type: Metabolizer
     maxReagents: 1
-    metabolizerTypes: [ Kidan ]
-    groups:
-    - id: Alcohol
-      rateModifier: 0.5
-
-- type: entity
-  id: OrganKidanHeart
-  parent: OrganAnimalHeart
-  name: сердце
-  categories: [ HideSpawnMenu ]
-  components:
-  - type: Organ
-  - type: Metabolizer
-    maxReagents: 2
-    metabolizerTypes: [ Kidan ]
-    groups:
-    - id: Medicine
-    - id: Poison
-      rateModifier: 1.7
-    - id: Narcotic
-
-- type: entity
-  id: OrganKidanKidneys
-  parent: OrganAnimalKidneys
-  name: почки
-  categories: [ HideSpawnMenu ]
-  components:
-  - type: Organ
-  - type: Metabolizer
-    maxReagents: 5
-    metabolizerTypes: [ Kidan ]
-    removeEmpty: true
+    UpdateIntervalMultiplier: 0.5
