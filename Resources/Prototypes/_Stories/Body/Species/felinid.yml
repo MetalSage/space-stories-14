@@ -75,7 +75,6 @@
     species: Felinid
 
 - type: entity
-  save: false
   parent:
   - AppearanceFelinid
   - BaseSpeciesMobOrganic
@@ -85,13 +84,6 @@
   - type: FootstepModifier
     footstepSoundCollection: null
   - type: FlashDebuff
-  - type: HumanoidProfile
-    species: Felinid
-    hideLayersOnEquip:
-    - Hair
-    - HeadTop
-  - type: Body
-    prototype: Felinid
   - type: Hunger
   - type: Thirst
   - type: Sprite
@@ -109,14 +101,6 @@
   id: OrganFelinid
   abstract: true
   suffix: Felinid
-  components:
-  - type: Extractable
-    juiceSolution:
-      reagents:
-      - ReagentId: Fat
-        Quantity: 3
-      - ReagentId: Blood
-        Quantity: 10
 
 - type: entity
   parent: OrganFelinid
@@ -134,12 +118,10 @@
 
 - type: entity
   id: OrganFelinidTorso
-  name: торс фелинида
   parent: [ OrganBaseTorsoSexed, OrganBaseTorso, OrganFelinidExternal ]
 
 - type: entity
   id: OrganFelinidHead
-  name: голова фелинида
   parent: [ OrganBaseHeadSexed, OrganBaseHead, OrganFelinidExternal ]
   components:
   - type: VisualOrganMarkings
@@ -149,40 +131,32 @@
 
 - type: entity
   id: OrganFelinidArmLeft
-  name: левая рука фелинида
   parent: [ OrganBaseArmLeft, OrganFelinidExternal ]
 
 - type: entity
   id: OrganFelinidArmRight
-  name: правая рука фелинида
   parent: [ OrganBaseArmRight, OrganFelinidExternal ]
 
 - type: entity
   id: OrganFelinidHandLeft
-  name: левая кисть фелинида
   parent: [ OrganBaseHandLeft, OrganFelinidExternal ]
 
 - type: entity
   id: OrganFelinidHandRight
-  name: правая кисть фелинида
   parent: [ OrganBaseHandRight, OrganFelinidExternal ]
 
 - type: entity
   id: OrganFelinidLegLeft
-  name: левая нога фелинида
   parent: [ OrganBaseLegLeft, OrganFelinidExternal ]
 
 - type: entity
   id: OrganFelinidLegRight
-  name: правая нога фелинида
   parent: [ OrganBaseLegRight, OrganFelinidExternal ]
 
 - type: entity
   id: OrganFelinidFootLeft
-  name: левая стопа фелинида
   parent: [ OrganBaseFootLeft, OrganFelinidExternal ]
 
 - type: entity
   id: OrganFelinidFootRight
-  name: правая стопа фелинида
   parent: [ OrganBaseFootRight, OrganFelinidExternal ]
