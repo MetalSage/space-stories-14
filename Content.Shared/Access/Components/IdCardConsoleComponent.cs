@@ -73,13 +73,7 @@ public sealed partial class IdCardConsoleComponent : Component
         "Salvage",
         "Security",
         "Service",
-        "Theatre",
-        "HeadOfPrison",// Stories
-        "PrisonBrig",// Stories
-        "Prison",// Stories
-        "PrisonMed",// Stories
-        "PrisonEng",// Stories
-        "Prisoner",// Stories
+        "Theatre"
     };
 
     [Serializable, NetSerializable]
