@@ -10,11 +10,17 @@
       effects:
       - !type:HealthChange
         damage:
-          groups:
-            Burn: -6
-            Toxin: -6
-            Airloss: -6
-            Brute: -6
+          types:
+            Blunt: -2
+            Slash: -2
+            Piercing: -2
+            Heat: -2
+            Shock: -2
+            Cold: -2
+            Asphyxiation: -3
+            Bloodloss: -3
+            Poison: -3
+            Radiation: -3
         conditions:
         - !type:MetabolizerTypeCondition
           type: [STShadowling]

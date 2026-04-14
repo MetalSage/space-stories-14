@@ -9,10 +9,8 @@
   components:
   - type: CombatMode
     canDisarm: true
-    baseDisarmFailChance: 0.25
+    disarmFailChance: 0.25
   - type: StatusIcon
-  - type: Body
-    prototype: Human
   - type: Unrevivable
   - type: RotationVisuals
     defaultRotation: 90
@@ -80,11 +78,17 @@
       types:
         Asphyxiation: 25
     drainLifeHeal:
-      groups:
-        Brute: -10
-        Burn: -10
-        Airloss: -10
-        Toxin: -10
+      types:
+        Blunt: -0.03
+        Slash: -0.03
+        Piercing: -0.03
+        Heat: -0.03
+        Shock: -0.03
+        Cold: -0.03
+        Asphyxiation: -0.05
+        Bloodloss: -0.05
+        Poison: -0.5
+        Radiation: -0.05
     ascendanceKillDamage:
       types:
         Bloodloss: 1000
@@ -233,8 +237,6 @@
     force: true
     useSound:
       path: /Audio/Items/crowbar.ogg
-  - type: Body
-    prototype: Human
   - type: Hands
     hands:
       hand_right:

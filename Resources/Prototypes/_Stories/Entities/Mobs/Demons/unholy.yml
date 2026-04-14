@@ -12,8 +12,6 @@
     isActive: true
     ambientColor: "#7A298A50"
     toggleAction: STActionPontificToggleNightvision
-  - type: Body
-    prototype: Animal
   - type: Climbing
   - type: NameIdentifier
     group: GenericNumber
@@ -81,14 +79,16 @@
     allowedStates:
     - Alive
     - Dead
-    damageCap: 0
     damage:
-      # types:
-      #   Holy: -0.07 # 4 в минуту
-      groups:
-        Brute: -0.25
-        Burn: -0.25
-        Airloss: -0.25
+      types:
+        Blunt: -0.08
+        Slash: -0.08
+        Piercing: -0.08
+        Heat: -0.08
+        Shock: -0.08
+        Cold: -0.08
+        Asphyxiation: -0.12
+        Bloodloss: -0.12
   - type: DamageStateVisuals
     states:
       Alive:
@@ -196,8 +196,7 @@
     damage:
       types:
         Slash: 15
-      groups:
-        Brute: 15
+        Blunt: 15
   - type: GhostRole
     allowMovement: true
     allowSpeech: true
@@ -277,14 +276,17 @@
     allowedStates:
     - Alive
     - Critical
-    damageCap: 0
     damage:
       types:
         Holy: -0.07 # 4 в минуту
-      groups:
-        Brute: -0.25 # 15 в минуту
-        Burn: -0.25 # 15 в минуту
-        Airloss: -0.25 # 15 в минуту
+        Blunt: -0.08
+        Slash: -0.08
+        Piercing: -0.08
+        Heat: -0.08
+        Shock: -0.08
+        Cold: -0.08
+        Asphyxiation: -0.12
+        Bloodloss: -0.12
   - type: Sprite
     drawdepth: Mobs
     sprite: _Stories/Mobs/Demons/cursedmonk.rsi
