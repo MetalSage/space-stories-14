@@ -183,7 +183,7 @@
 
 - type: entity
   id: OrganRodentiaStomach
-  parent:  [ OrganReptilianStomach, OrganRodentiaExternal ]
+  parent: OrganReptilianStomach
   categories: [ HideSpawnMenu ]
   components:
   - type: Stomach
