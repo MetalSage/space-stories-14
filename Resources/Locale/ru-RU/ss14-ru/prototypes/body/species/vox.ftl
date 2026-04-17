@@ -1,6 +1,6 @@
 ent-AppearanceVox = внешность вокса
     .desc = { ent-BaseSpeciesAppearance.desc }
-ent-MobVox = Уристистист МакВокс
+ent-MobVox = уристистист МакВокс
     .desc = { ent-AppearanceVox.desc }
 ent-OrganVox = { ent-OrganBase }
     .desc = { ent-OrganBase.desc }

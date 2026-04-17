@@ -1,10 +1,15 @@
 ent-PRISONSpawnPointPrisoner = заключенный космической тюрьмы
     .desc = { ent-SpawnPointJobBaseStories.desc }
+    .suffix = { ent-SpawnPointJobBase.suffix }
 ent-PRISONSpawnPointHeadOfPrison = начальник космической тюрьмы
     .desc = { ent-SpawnPointJobBaseStories.desc }
+    .suffix = { ent-SpawnPointJobBase.suffix }
 ent-PRISONSpawnPointOfficer = офицер космической тюрьмы
     .desc = { ent-SpawnPointJobBaseStories.desc }
+    .suffix = { ent-SpawnPointJobBase.suffix }
 ent-PRISONSpawnPointEngineer = инженер космической тюрьмы
     .desc = { ent-SpawnPointJobBaseStories.desc }
+    .suffix = { ent-SpawnPointJobBase.suffix }
 ent-PRISONSpawnPointMedic = медик космической тюрьмы
     .desc = { ent-SpawnPointJobBaseStories.desc }
+    .suffix = { ent-SpawnPointJobBase.suffix }

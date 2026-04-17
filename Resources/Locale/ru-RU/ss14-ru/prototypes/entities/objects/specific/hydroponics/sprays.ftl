@@ -1,4 +1,4 @@
-ent-PlantBGoneSpray = Plant-B-Gone
+ent-PlantBGoneSpray = plant-B-Gone
     .desc = Уничтожает надоедливые сорняки!
     .suffix = Заполненный
 ent-WeedSpray = спрей от сорняков

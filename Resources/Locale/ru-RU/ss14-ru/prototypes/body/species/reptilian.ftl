@@ -1,10 +1,10 @@
 ent-AppearanceReptilian = внешность унатха
     .desc = { ent-BaseSpeciesAppearance.desc }
-ent-MobReptilian = Урист МакХэндс Унатх
+ent-MobReptilian = урист МакХэндс Унатх
     .desc = { ent-AppearanceReptilian.desc }
 ent-OrganReptilian = { ent-OrganBase }
     .desc = { ent-OrganBase.desc }
-    .suffix = унатха
+    .suffix = Унатх
 ent-OrganReptilianMetabolizer = { "" }
     .desc = { "" }
 ent-OrganReptilianInternal = { ent-OrganReptilian }

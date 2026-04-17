@@ -1,10 +1,10 @@
 ent-AppearanceSlimePerson = внешность слаймолюда
     .desc = { ent-BaseSpeciesAppearance.desc }
-ent-MobSlimePerson = Урист МакСлайм
+ent-MobSlimePerson = урист МакСлайм
     .desc = { ent-AppearanceSlimePerson.desc }
 ent-OrganSlimePerson = { ent-OrganBase }
     .desc = { ent-OrganBase.desc }
-    .suffix = слаймолюд
+    .suffix = Слаймолюд
 ent-OrganSlimePersonMetabolizer = { "" }
     .desc = { "" }
 ent-OrganSlimePersonInternal = { ent-OrganSlimePerson }

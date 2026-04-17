@@ -1,6 +1,6 @@
 ent-AppearanceArachnid = внешность арахнида
     .desc = { ent-BaseSpeciesAppearance.desc }
-ent-MobArachnid = Урист МакВеб
+ent-MobArachnid = урист МакВеб
     .desc = { ent-AppearanceArachnid.desc }
 ent-OrganArachnid = { ent-OrganBase }
     .desc = { ent-OrganBase.desc }

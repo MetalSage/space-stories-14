@@ -1,12 +1,12 @@
 ent-PRISONLockableButtonPrisonBrig = кнопка с замком
     .desc = Эта кнопка что-то активирует.
-    .suffix = PrisonBrig
+    .suffix = Бриг Тюрьмы
 ent-PRISONLockableButtonHeadOfPrison = кнопка с замком
     .desc = Эта кнопка что-то активирует.
-    .suffix = HeadOfPrison
+    .suffix = Глава Тюрьмы
 ent-PRISONLockableButtonPrisonMed = кнопка с замком
     .desc = Эта кнопка что-то активирует.
-    .suffix = PrisonMed
+    .suffix = Мед Тюрьмы
 ent-PRISONLockableButtonPrisonEng = кнопка с замком
     .desc = Эта кнопка что-то активирует.
-    .suffix = PrisonEng
+    .suffix = Инж Тюрьмы

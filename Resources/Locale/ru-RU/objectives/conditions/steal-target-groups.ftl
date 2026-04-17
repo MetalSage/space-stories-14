@@ -30,10 +30,10 @@ steal-target-groups-huds = HUD
 # Thief single item
 steal-target-groups-forensic-scanner = криминалистический сканер
 steal-target-groups-flippo-engraved-lighter = гравированная зажигалка флиппо детектива
-steal-target-groups-ammo-tech-fab-circuitboard = машинная плата ТехФаба патронов
+steal-target-groups-ammo-tech-fab-circuitboard = машинная плата техФаба патронов
 steal-target-groups-clothing-head-hat-warden = фуражка смотрителя
 steal-target-groups-clothing-outer-hardsuit-void-paramed = пустотный скафандр парамедика
-steal-target-groups-medical-tech-fab-circuitboard = машинная плата медицинского ТехФаба
+steal-target-groups-medical-tech-fab-circuitboard = машинная плата медицинского техФаба
 steal-target-groups-clothing-headset-alt-medical = полноразмерная гарнитура главного врача
 steal-target-groups-research-and-development-server-machine-circuitboard = машинная плата сервера РнД
 steal-target-groups-fire-axe = пожарный топор

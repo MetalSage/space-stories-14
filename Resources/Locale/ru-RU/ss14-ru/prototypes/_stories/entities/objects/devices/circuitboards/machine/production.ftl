@@ -1,8 +1,12 @@
 ent-PrinterDocMachineCircuitboard = бумажный принтер (машинная плата)
     .desc = Печатна плата для бумажного принтера.
-ent-ReflectorBoxMachineCircuitboard = Отражатель, тип "Коробка"
+    .suffix = { ent-BaseMachineCircuitboard.suffix }
+ent-ReflectorBoxMachineCircuitboard = отражатель, тип "Коробка"
     .desc = Машинная плата отражателя, тип "Коробка"
-ent-ReflectorCornerMachineCircuitboard = Отражатель, тип "Угловой"
+    .suffix = { ent-BaseMachineCircuitboard.suffix }
+ent-ReflectorCornerMachineCircuitboard = отражатель, тип "Угловой"
     .desc = Машинная плата отражателя, тип "Угловой"
-ent-ReflectorCornerTsideMachineCircuitboard = Отражатель, тип "Двойной-Угловой"
+    .suffix = { ent-BaseMachineCircuitboard.suffix }
+ent-ReflectorCornerTsideMachineCircuitboard = отражатель, тип "Двойной-Угловой"
     .desc = Машинная плата отражателя, тип "Двойной-Угловой"
+    .suffix = { ent-BaseMachineCircuitboard.suffix }

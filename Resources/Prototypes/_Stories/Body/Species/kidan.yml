@@ -284,7 +284,6 @@
   id: OrganKidanStomach
   parent: OrganAnimalStomach
   name: желудок
-  categories: [ HideSpawnMenu ]
   components:
   - type: Organ
   - type: SolutionContainerManager
@@ -310,7 +309,6 @@
   id: OrganKidanLiver
   parent: OrganAnimalLiver
   name: печень
-  categories: [ HideSpawnMenu ]
   components:
   - type: Organ
   - type: Metabolizer
@@ -324,7 +322,6 @@
   id: OrganKidanHeart
   parent: OrganAnimalHeart
   name: сердце
-  categories: [ HideSpawnMenu ]
   components:
   - type: Organ
   - type: Metabolizer
@@ -340,7 +337,6 @@
   id: OrganKidanKidneys
   parent: OrganAnimalKidneys
   name: почки
-  categories: [ HideSpawnMenu ]
   components:
   - type: Organ
   - type: Metabolizer

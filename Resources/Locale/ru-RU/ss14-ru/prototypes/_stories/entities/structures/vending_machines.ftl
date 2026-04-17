@@ -1,10 +1,10 @@
-ent-PRISONVendingMachineDrobe = Шкаф персонала тюрьмы
+ent-PRISONVendingMachineDrobe = шкаф персонала тюрьмы
     .desc = Торговый автомат для одежды, связанной с заключенными и побегами!
-ent-PRISONVendingMachine = Автомат персонала тюрьмы
+ent-PRISONVendingMachine = автомат персонала тюрьмы
     .desc = Торговый автомат с экпипировкой персонала тюрьмы. На табличке написано "ТОЛЬКО ДЛЯ ПЕРСОНАЛА ТЮРЬМЫ".
-ent-MusicalVendingMachineBase = МузМат
+ent-MusicalVendingMachineBase = музМат
     .desc = Торговый автомат с музыкальными инструментами.
-ent-MusicalVendingMachine = МузМат
+ent-MusicalVendingMachine = музМат
     .desc = Торговый автомат с музыкальными инструментами".
     .suffix = Станция
 ent-MusicalVendingMachinePrison = { ent-MusicalVendingMachineBase }
