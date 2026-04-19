@@ -1,4 +1,4 @@
-ent-RandomHumanoidSpawnerDeathSquad = агент Эскадрона смерти
+ent-RandomHumanoidSpawnerDeathSquad = Агент Эскадрона смерти
     .desc = { "" }
     .suffix = Роль ОБР, Эскадрон смерти
 
@@ -75,19 +75,19 @@ ent-RandomHumanoidSpawnerERTMedicalArmed = ОБР медик
     .desc = Вооружен лектером, 4 запасных магазина разного типа.
 
 # CBURN
-ent-RandomHumanoidSpawnerCBURNUnit = агент РХБЗЗ
+ent-RandomHumanoidSpawnerCBURNUnit = Агент РХБЗЗ
     .desc = { "" }
     .suffix = Роль ОБР
     .desc = { "" }
 
 # misc
-ent-RandomHumanoidSpawnerCentcomOfficial = представитель Центком
+ent-RandomHumanoidSpawnerCentcomOfficial = Представитель Центком
     .desc = { "" }
-ent-RandomHumanoidSpawnerSyndicateAgent = агент Синдиката
+ent-RandomHumanoidSpawnerSyndicateAgent = Агент Синдиката
     .desc = { "" }
-ent-RandomHumanoidSpawnerNukeOp = ядерный оперативник
+ent-RandomHumanoidSpawnerNukeOp = Ядерный оперативник
     .desc = { "" }
-ent-RandomHumanoidSpawnerCluwne = клувень
+ent-RandomHumanoidSpawnerCluwne = Клувень
     .desc = { "" }
     .suffix = Спавнит клувеня
 ent-RandomHumanoidSpawnerERTLeaderEVALecter = { ent-RandomHumanoidSpawnerERTLeaderEVA }

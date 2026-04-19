@@ -1,6 +1,6 @@
 ent-AppearanceVulpkanin = внешность вульпканина
     .desc = { ent-BaseSpeciesAppearance.desc }
-ent-MobVulpkanin = урист МакВульп
+ent-MobVulpkanin = Урист МакВульп
     .desc = { ent-AppearanceVulpkanin.desc }
 ent-OrganVulpkanin = { ent-OrganBase }
     .desc = { ent-OrganBase.desc }

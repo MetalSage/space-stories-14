@@ -1,6 +1,6 @@
 ent-AppearanceMoth = внешность ниана
     .desc = { ent-BaseSpeciesAppearance.desc }
-ent-MobMoth = урист МакФлафф
+ent-MobMoth = Урист МакФлафф
     .desc = { ent-AppearanceMoth.desc }
 ent-OrganMoth = { ent-OrganBase }
     .desc = { ent-OrganBase.desc }

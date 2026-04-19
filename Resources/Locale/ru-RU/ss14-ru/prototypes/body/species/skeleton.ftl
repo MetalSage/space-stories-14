@@ -1,6 +1,6 @@
 ent-AppearanceSkeletonPerson = внешность скелеточела
     .desc = { ent-BaseSpeciesAppearance.desc }
-ent-MobSkeletonPerson = урист МакСкелли
+ent-MobSkeletonPerson = Урист МакСкелли
     .desc = { ent-AppearanceSkeletonPerson.desc }
 ent-OrganSkeletonPerson = { ent-OrganBase }
     .desc = { ent-OrganBase.desc }

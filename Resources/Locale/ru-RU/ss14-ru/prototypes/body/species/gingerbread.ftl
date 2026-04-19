@@ -1,6 +1,6 @@
 ent-AppearanceGingerbread = внешность пряничного человека
     .desc = { ent-BaseSpeciesAppearance.desc }
-ent-MobGingerbread = урист МакПеченька
+ent-MobGingerbread = Урист МакПеченька
     .desc = { ent-AppearanceGingerbread.desc }
 ent-OrganGingerbread = { ent-OrganBase }
     .desc = { ent-OrganBase.desc }

@@ -1,6 +1,6 @@
 ent-AppearanceDiona = внешность дионы
     .desc = { ent-BaseSpeciesAppearance.desc }
-ent-MobDiona = урист МакДиона
+ent-MobDiona = Урист МакДиона
     .desc = { ent-AppearanceDiona.desc }
 ent-OrganDiona = { ent-OrganBase }
     .desc = { ent-OrganBase.desc }
