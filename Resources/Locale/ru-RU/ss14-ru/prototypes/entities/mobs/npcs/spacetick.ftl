@@ -3,4 +3,4 @@ ent-MobTick = космический клещ
     .suffix = { ent-SimpleSpaceMobBase.suffix }
 ent-MobTickSalvage = { ent-MobTick }
     .desc = { ent-MobTick.desc }
-    .suffix = Salvage Ruleset
+    .suffix = Подземелье
