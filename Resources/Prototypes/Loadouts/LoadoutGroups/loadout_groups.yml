@@ -71,6 +71,7 @@
   - ToyFigurineBubblegum
   - ToyFigurineInquisitor
   - STClothingOuterCoatSas
+  - STClothingOuterCoatSlayer # Stories-Sponsors
   - STClothingNeckCloakFlame
   - STClothingNeckCloakShadowGod
   - STClothingNeckCloakShadow
@@ -137,6 +138,8 @@
   loadouts:
   - CaptainHead
   - CaptainCap
+  - STClothingHeadHatCapcapGeneral # Stories-Sponsors
+  - STClothingHeadHatCapcapGeneralCMO # Stories-Sponsors
 
 - type: loadoutGroup
   id: CaptainJumpsuit
@@ -155,6 +158,7 @@
   - CaptainCloak
   - CaptainCloakFormal
   - CaptainMantle
+  - STClothingNeckMantleCapGeneral # Stories-Sponsors
 
 - type: loadoutGroup
   id: CaptainBackpack
@@ -197,6 +201,7 @@
   loadouts:
   - CaptainOuterClothing
   - CaptainWintercoat
+  - STClothingOuterWinterCapGeneral # Stories-Sponsors
 
 #- type: loadoutGroup
 #  id: CaptainJobTrinkets
@@ -899,6 +904,7 @@
   loadouts:
   - QuartermasterCloak
   - QuartermasterMantle
+  - STClothingNeckCloakQmGold # Stories-Sponsors
 
 - type: loadoutGroup
   id: QuartermasterOuterClothing
@@ -1493,6 +1499,7 @@
   loadouts:
   - WardenCoat
   - WardenArmoredWinterCoat
+  - STClothingOuterCoatWardenBlue # Stories-Sponsors
 
 - type: loadoutGroup
   id: WardenJobTrinkets

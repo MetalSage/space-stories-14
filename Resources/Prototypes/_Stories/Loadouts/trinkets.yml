@@ -188,6 +188,15 @@
     id: STClothingOuterCoatSas
 
 - type: loadout
+  id: STClothingOuterCoatSlayer
+  storage:
+    back:
+    - STClothingOuterCoatSlayer
+  effects:
+  - !type:SponsorLoadoutEffect
+    id: STClothingOuterCoatSlayer
+
+- type: loadout
   id: STClothingNeckCloakFlame
   storage:
     back:

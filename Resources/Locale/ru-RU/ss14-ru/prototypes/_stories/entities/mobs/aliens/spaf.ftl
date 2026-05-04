@@ -1,8 +1,9 @@
 ent-BaseMobSpaf = { ent-SimpleSpaceMobBase }
     .desc = { ent-SimpleSpaceMobBase.desc }
+    .suffix = { ent-SimpleSpaceMobBase.suffix }
 ent-MobSpaf = S.P.A.F.
     .desc = Ужасное на вид создание... Брр.. Пожалуй, от него стоит убегать.
-    .suffix = ИИ
+    .suffix = { ent-BaseMobSpaf.suffix }
 ent-MobMiniSpaf = маленький радужный слизняк
     .desc = На вид очень милый и безобидный! Скорее всего, он сбежал из РНД.
-    .suffix = ИИ
+    .suffix = { ent-BaseMobSpaf.suffix }

@@ -18,3 +18,7 @@ ent-STClothingNeckCloakShadowGod = плащ бога теней
     .desc = Величественное одеяние, сотканное из первозданной тьмы. Кажется, что сама тень этого плаща живет своей собственной пугающей жизнью.
 ent-STClothingNeckCloakShadow = теневая мантия
     .desc = Плотная мантия, которая, кажется, поглощает окружающий свет, превращая силуэт своего владельца в едва различимое темное пятно.
+ent-STClothingNeckMantleCapGeneral = { ent-ClothingNeckMantleCap }
+    .desc = { ent-ClothingNeckMantleCap.desc }
+ent-STClothingNeckCloakQmGold = { ent-ClothingNeckCloakQm }
+    .desc = { ent-ClothingNeckCloakQm.desc }

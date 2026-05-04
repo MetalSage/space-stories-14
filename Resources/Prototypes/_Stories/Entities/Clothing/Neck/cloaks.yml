@@ -141,3 +141,19 @@
   components:
   - type: Sprite
     sprite: _Stories/Clothing/Neck/Cloaks/shadowmantle.rsi
+
+- type: entity
+  parent: ClothingNeckMantleCap
+  id: STClothingNeckMantleCapGeneral
+  components:
+  - type: Sprite
+    sprite: _Stories/Clothing/Neck/mantles/general_mantle.rsi
+  - type: Clothing
+    sprite: _Stories/Clothing/Neck/mantles/general_mantle.rsi
+
+- type: entity
+  parent: ClothingNeckCloakQm
+  id: STClothingNeckCloakQmGold
+  components:
+  - type: Sprite
+    sprite: _Stories/Clothing/Neck/Cloaks/golden_qm.rsi
