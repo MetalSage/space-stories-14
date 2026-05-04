@@ -24,3 +24,21 @@
     sprite: _Stories/Clothing/Head/Hats/hoshat.rsi
   - type: Clothing
     sprite: _Stories/Clothing/Head/Hats/hoshat.rsi
+
+- type: entity
+  parent: ClothingHeadHatCapcap
+  id: STClothingHeadHatCapcapGeneral
+  components:
+  - type: Sprite
+    sprite: _Stories/Clothing/Head/Hats/generalcapcap.rsi
+  - type: Clothing
+    sprite: _Stories/Clothing/Head/Hats/generalcapcap.rsi
+
+- type: entity
+  parent: ClothingHeadHatCapcap
+  id: STClothingHeadHatCapcapGeneralCMO
+  components:
+  - type: Sprite
+    sprite: _Stories/Clothing/Head/Hats/old_beret_cmo.rsi
+  - type: Clothing
+    sprite: _Stories/Clothing/Head/Hats/old_beret_cmo.rsi

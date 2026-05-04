@@ -1,0 +1,8 @@
+- type: loadout
+  id: STClothingNeckCloakQmGold
+  storage:
+    back:
+    - STClothingNeckCloakQmGold
+  effects:
+  - !type:SponsorLoadoutEffect
+    id: STClothingNeckCloakQmGold

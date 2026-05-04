@@ -1,0 +1,7 @@
+- type: loadout
+  id: STClothingOuterCoatWardenBlue
+  equipment:
+    outerClothing: STClothingOuterCoatWardenBlue
+  effects:
+  - !type:SponsorLoadoutEffect
+    id: STClothingOuterCoatWardenBlue

@@ -63,7 +63,7 @@
     damageCoefficient: 1 #its a coat. it doesnt do shit
 
 - type: entity
-  parent: ClothingOuterStorageBase
+  parent: ClothingOuterWinterCoat
   id: STClothingOuterCoatSas
   name: sas coat
   description: A specialized winter coat designed for.
@@ -72,3 +72,21 @@
     sprite: _Stories/Clothing/OuterClothing/Coats/sas.rsi
   - type: Clothing
     sprite: _Stories/Clothing/OuterClothing/Coats/sas.rsi
+
+- type: entity
+  parent: ClothingOuterCoatWarden
+  id: STClothingOuterCoatWardenBlue
+  components:
+  - type: Sprite
+    sprite: _Stories/Clothing/OuterClothing/Coats/warden_blue.rsi
+  - type: Clothing
+    sprite: _Stories/Clothing/OuterClothing/Coats/warden_blue.rsi
+
+- type: entity
+  parent: ClothingOuterWinterCoat
+  id: STClothingOuterCoatSlayer
+  components:
+  - type: Sprite
+    sprite: _Stories/Clothing/OuterClothing/Coats/slayer.rsi
+  - type: Clothing
+    sprite: _Stories/Clothing/OuterClothing/Coats/slayer.rsi
