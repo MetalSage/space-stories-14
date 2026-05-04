@@ -3,6 +3,7 @@ using Content.Server.Store.Systems;
 using Content.Shared.FixedPoint;
 using Content.Shared.Mind;
 using Content.Shared.Objectives.Components;
+using Content.Shared.Objectives.Systems;
 using Content.Shared.Popups;
 using Content.Shared.Roles.Jobs;
 using Robust.Shared.Random;
@@ -18,6 +19,8 @@ public sealed class PickRandomJobPersonSystem : EntitySystem
     [Dependency] private readonly IRobustRandom _random = default!;
     [Dependency] private readonly StoreSystem _store = default!;
     [Dependency] private readonly TargetObjectiveSystem _target = default!;
+    [Dependency] private readonly TargetSystem _targetSys = default!;
+
     private float _updateTime;
 
     public override void Initialize()
@@ -60,7 +63,7 @@ public sealed class PickRandomJobPersonSystem : EntitySystem
             return;
 
         // no other humans to kill
-        var allHumans = _mind.GetAliveHumans(args.MindId);
+        var allHumans = _targetSys.GetAliveHumans(args.MindId);
         if (allHumans.Count == 0)
             return;
 
@@ -75,7 +78,7 @@ public sealed class PickRandomJobPersonSystem : EntitySystem
             allHeads = allHumans; // fallback to non-head target
 
         var targetMindUid = _random.Pick(allHeads);
-        var targetUid = EnsureComp<MindComponent>(targetMindUid).CurrentEntity;
+        var targetUid = EnsureComp<MindComponent>(targetMindUid).OwnedEntity;
 
         _target.SetTarget(uid, targetMindUid, target);
 
