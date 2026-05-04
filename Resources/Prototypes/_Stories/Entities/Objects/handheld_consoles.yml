@@ -21,8 +21,6 @@
     interfaces:
       enum.ShuttleConsoleUiKey.Key:
         type: ShuttleConsoleBoundUserInterface
-  - type: WorldLoader
-    radius: 256
   - type: RadarConsole
     maxRange: 256
   - type: ContainerContainer
