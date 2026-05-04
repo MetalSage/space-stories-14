@@ -21,9 +21,9 @@ public sealed partial class ForceUserSystem
 
     private void OnEquipped(EntityUid uid, LightsaberComponent comp, GotEquippedEvent args)
     {
-        if (!TryComp<ForceUserComponent>(args.Equipee, out var force) || force.Lightsaber != null)
+        if (!TryComp<ForceUserComponent>(args.EquipTarget, out var force) || force.Lightsaber != null)
             return;
-        BindLightsaber(args.Equipee, uid, force);
+        BindLightsaber(args.EquipTarget, uid, force);
     }
 
     private void OnDamage(EntityUid uid, LightsaberComponent component, DamageChangedEvent args)

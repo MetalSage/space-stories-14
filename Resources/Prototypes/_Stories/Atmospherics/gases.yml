@@ -1,41 +1,46 @@
 - type: gas
   id: STBZ
   name: stories-gases-bz
+  abbreviation: stories-gases-bz-abbreviation
   specificHeat: 20
   heatCapacityRatio: 1.4
   molarMass: 10
-  color: 9370db
+  color: '#9370db'
   reagent: STBZ
   pricePerMole: 1
 
 - type: gas
   id: STHealium
   name: stories-gases-healium
+  abbreviation: stories-gases-healium-abbreviation
   specificHeat: 20
   heatCapacityRatio: 1.4
   molarMass: 10
-  gasOverlaySprite: /Textures/_Stories/Effects/atmospherics.rsi
-  gasOverlayState: healium
-  color: 8b0000
+  gasOverlaySprite:
+    sprite: /Textures/_Stories/Effects/atmospherics.rsi
+    state: healium
+  color: '#8b0000'
   reagent: STHealium
   pricePerMole: 8
 
 - type: gas
   id: STNitryl
   name: stories-gases-nitryl
+  abbreviation: stories-gases-nitryl-abbreviation
   specificHeat: 20
   heatCapacityRatio: 1.4
   molarMass: 10
-  color: 12ca21
+  color: '#12ca21'
   reagent: STNitryl
   pricePerMole: 6
 
 - type: gas
   id: STPluoxium
   name: stories-gases-pluoxium
+  abbreviation: stories-gases-pluoxium-abbreviation
   specificHeat: 20
   heatCapacityRatio: 1.4
   molarMass: 10
-  color: 3434aa
+  color: '#3434aa'
   reagent: STPluoxium
   pricePerMole: 3
