@@ -33,7 +33,7 @@ public sealed class PaperSystem : EntitySystem
     [Dependency] private readonly MetaDataSystem _metaSystem = default!;
     [Dependency] private readonly SharedAudioSystem _audio = default!;
 
-    [Dependency] private readonly EntityQuery<PaperComponent> _paperQuery = default!;
+    private EntityQuery<PaperComponent> _paperQuery;
 
     private static readonly ProtoId<TagPrototype> WriteIgnoreStampsTag = "WriteIgnoreStamps";
     private static readonly ProtoId<TagPrototype> WriteTag = "Write";

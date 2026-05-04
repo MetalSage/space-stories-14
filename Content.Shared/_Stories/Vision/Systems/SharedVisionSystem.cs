@@ -69,22 +69,22 @@ public abstract class SharedVisionSystem : EntitySystem
     private void OnEquipped(EntityUid uid, VisionProviderComponent comp, GotEquippedEvent args)
     {
         if (comp.ToggleAction != null)
-            _actions.AddAction(args.Equipee, ref comp.ToggleActionEntity, comp.ToggleAction, uid);
+            _actions.AddAction(args.EquipTarget, ref comp.ToggleActionEntity, comp.ToggleAction, uid);
         if (comp.ToggleAlert != null)
-            _alerts.ShowAlert(args.Equipee, comp.ToggleAlert.Value);
+            _alerts.ShowAlert(args.EquipTarget, comp.ToggleAlert.Value);
 
-        UpdateVision(args.Equipee);
+        UpdateVision(args.EquipTarget);
     }
 
     private void OnUnequipped(EntityUid uid, VisionProviderComponent comp, GotUnequippedEvent args)
     {
-        _actions.RemoveProvidedActions(args.Equipee, uid);
+        _actions.RemoveProvidedActions(args.EquipTarget, uid);
         comp.ToggleActionEntity = null;
 
         if (comp.ToggleAlert != null)
-            _alerts.ClearAlert(args.Equipee, comp.ToggleAlert.Value);
+            _alerts.ClearAlert(args.EquipTarget, comp.ToggleAlert.Value);
 
-        UpdateVision(args.Equipee);
+        UpdateVision(args.EquipTarget);
     }
 
     private void OnRelayedRefresh(EntityUid uid, VisionProviderComponent comp, ref InventoryRelayedEvent<RefreshVisionEvent> args)

@@ -23,7 +23,7 @@ public sealed class ClothingWhitelistSystem : EntitySystem
 
     private void OnEquipped(EntityUid uid, ClothingWhitelistComponent comp, GotEquippedEvent args)
     {
-        if (!TryComp<NpcFactionMemberComponent>(args.Equipee, out var npc))
+        if (!TryComp<NpcFactionMemberComponent>(args.EquipTarget, out var npc))
             return;
 
         var fs = npc.Factions;
@@ -32,8 +32,8 @@ public sealed class ClothingWhitelistSystem : EntitySystem
             return;
 
         _popupSystem.PopupEntity(Loc.GetString("Ошибка доступа! Активация протоколов защиты.."),
-            args.Equipee,
-            args.Equipee,
+            args.EquipTarget,
+            args.EquipTarget,
             PopupType.LargeCaution);
 
         var timer = EnsureComp<TimerTriggerComponent>(uid);
@@ -48,7 +48,7 @@ public sealed class ClothingWhitelistSystem : EntitySystem
 
         timer.BeepSound = comp.BeepSound;
 
-        _trigger.ActivateTimerTrigger(uid, args.Equipee);
+        _trigger.ActivateTimerTrigger(uid, args.EquipTarget);
     }
 
     private void OnUnequipped(EntityUid uid, ClothingWhitelistComponent comp, GotUnequippedEvent args)
