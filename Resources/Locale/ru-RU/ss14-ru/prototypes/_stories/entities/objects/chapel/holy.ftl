@@ -1,0 +1,2 @@
+ent-STBaseHolyItem = { "" }
+    .desc = { "" }

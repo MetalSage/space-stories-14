@@ -6,3 +6,7 @@ ent-ClothingOuterCoatDetectiveGrey = серый тренч детектива
     .desc = Мультифункциональный тренчкот XVIII века. Носящий его — серьёзный тип.
 ent-STClothingOuterCoatSas = пальто саса
     .desc = Специализированное зимнее пальто.
+ent-STClothingOuterCoatWardenBlue = { ent-ClothingOuterCoatWarden }
+    .desc = { ent-ClothingOuterCoatWarden.desc }
+ent-STClothingOuterCoatSlayer = { ent-ClothingOuterWinterCoat }
+    .desc = { ent-ClothingOuterWinterCoat.desc }

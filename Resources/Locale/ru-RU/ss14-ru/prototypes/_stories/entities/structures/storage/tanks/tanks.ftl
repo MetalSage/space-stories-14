@@ -1,6 +1,6 @@
-ent-KvassTank = резервуар кваса
-    .suffix = Пустой
+ent-KvassTank = { ent-StorageTank }
     .desc = { ent-StorageTank.desc }
+    .suffix = Пустой
 ent-KvassTankFull = { ent-KvassTank }
-    .suffix = Полный
     .desc = { ent-KvassTank.desc }
+    .suffix = Полный

@@ -1,5 +1,7 @@
 ent-IAAIDCard = ID карта агента внутренних дел
     .desc = { ent-PRISONIDCardHeadOfPrison.desc }
+ent-STJudgeIDCard = ID карта судьи
+    .desc = A card required to access various areas of the station.
 ent-GuardianNtIDCard = ID карта стража клинка
     .desc = Карта, необходимая для доступа в различные области станции.
 ent-PRISONIDCardHeadOfPrison = ID карта начальника тюрьмы
@@ -12,12 +14,12 @@ ent-PRISONIDCardMedic = ID карта врача тюрьмы
     .desc = Карта, необходимая для доступа в различные области станции.
 ent-PRISONIDCardPrisoner = ID карта заключенного тюрьмы
     .desc = Карта, необходимая для доступа в различные области станции.
+ent-BrigmedicIDCard = ID-карта бригмедика
+    .desc = { ent-IDCardStandard.desc }
 ent-STSecurityClownIDCard = ID карта клоуна СБ
     .desc = { ent-IDCardStandard.desc }
 ent-STCommandMaidIDCard = ID карта горничной командования
     .desc = { ent-IDCardStandard.desc }
 ent-STPartyMakerIDCard = ID карта партимейкера
-    .desc = { ent-IDCardStandard.desc }
-ent-STJudgeIDCard = ID карта судьи
     .desc = { ent-IDCardStandard.desc }
 
