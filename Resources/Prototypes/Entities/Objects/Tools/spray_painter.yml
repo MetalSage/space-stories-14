@@ -15,7 +15,7 @@
     interfaces:
       enum.SprayPainterUiKey.Key:
         type: SprayPainterBoundUserInterface
-  - type: SprayPainter
+  - type: SprayPainter # Stories-Color-Set
     colorPalette:
       ярко-красный: '#ff4c5b'
       красный (азот/плазма): '#FF0000'
