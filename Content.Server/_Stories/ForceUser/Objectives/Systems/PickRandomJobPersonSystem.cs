@@ -14,7 +14,6 @@ public sealed class PickRandomJobPersonSystem : EntitySystem
 {
     private const float UdateDelay = 10f;
     [Dependency] private readonly SharedJobSystem _job = default!;
-    [Dependency] private readonly SharedMindSystem _mind = default!;
     [Dependency] private readonly SharedPopupSystem _popup = default!;
     [Dependency] private readonly IRobustRandom _random = default!;
     [Dependency] private readonly StoreSystem _store = default!;

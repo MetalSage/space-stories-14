@@ -23,10 +23,6 @@ using Robust.Shared.Audio;
 using Robust.Shared.Audio.Systems;
 using Robust.Shared.Prototypes;
 using Robust.Shared.Timing;
-using System.Linq;
-using Content.Shared.Movement.Systems;
-using Content.Shared.Random.Helpers;
-using Content.Shared.Clothing.Components;
 using Content.Shared._Stories.Debuff;
 
 namespace Content.Shared.Flash;
