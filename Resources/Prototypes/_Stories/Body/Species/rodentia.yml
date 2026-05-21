@@ -75,7 +75,7 @@
       Ears: OrganHumanEars
       Lungs: OrganHumanLungs
       Heart: OrganAnimalHeart
-      Stomach: OrganReptilianStomach
+      Stomach: OrganRodentiaStomach
       Liver: OrganAnimalLiver
       Kidneys: OrganHumanKidneys
   - type: HumanoidProfile
@@ -100,15 +100,6 @@
       80: 0.7
   - type: StandingState
     crawlingSpeedModifier: 0.5
-  - type: HumanoidProfile
-    species: Rodentia
-    hideLayersOnEquip:
-    - Hair
-    - HeadTop
-    - HeadSide
-    - Snout
-  - type: Body
-    prototype: Rodentia
   - type: Hunger
   - type: Thirst
   - type: Icon
@@ -118,49 +109,6 @@
     speechVerb: Rodentia
     speechSounds: Squeak
     allowedEmotes: ['Squeak']
-  - type: Sprite
-    netsync: false
-    noRot: true
-    drawdepth: Mobs
-    layers:
-      - map: [ "enum.HumanoidVisualLayers.Chest" ]
-      - map: [ "enum.HumanoidVisualLayers.Head" ]
-      - map: [ "enum.HumanoidVisualLayers.Snout" ]
-      - map: [ "enum.HumanoidVisualLayers.Eyes" ]
-      - map: [ "enum.HumanoidVisualLayers.RArm" ]
-      - map: [ "enum.HumanoidVisualLayers.LArm" ]
-      - map: [ "enum.HumanoidVisualLayers.RLeg" ]
-      - map: [ "enum.HumanoidVisualLayers.LLeg" ]
-      - map: [ "enum.HumanoidVisualLayers.UndergarmentBottom" ]
-      - map: [ "enum.HumanoidVisualLayers.UndergarmentTop" ]
-      - map: [ "jumpsuit" ]
-      - map: [ "enum.HumanoidVisualLayers.LHand" ]
-      - map: [ "enum.HumanoidVisualLayers.RHand" ]
-      - map: [ "enum.HumanoidVisualLayers.LFoot" ]
-      - map: [ "enum.HumanoidVisualLayers.RFoot" ]
-      - map: [ "enum.HumanoidVisualLayers.Handcuffs" ]
-        color: "#ffffff"
-        sprite: Objects/Misc/handcuffs.rsi
-        state: body-overlay-2
-        visible: false
-      - map: [ "id" ]
-      - map: [ "gloves" ]
-      - map: [ "shoes" ]
-      - map: [ "ears" ]
-      - map: [ "outerClothing" ]
-      - map: [ "eyes" ]
-      - map: [ "belt" ]
-      - map: [ "neck" ]
-      - map: [ "back" ]
-      - map: [ "enum.HumanoidVisualLayers.FacialHair" ]
-      - map: [ "enum.HumanoidVisualLayers.Hair" ]
-      - map: [ "enum.HumanoidVisualLayers.HeadSide" ]
-      - map: [ "enum.HumanoidVisualLayers.HeadTop" ]
-      - map: [ "enum.HumanoidVisualLayers.Tail" ]
-      - map: [ "mask" ]
-      - map: [ "head" ]
-      - map: [ "pocket1" ]
-      - map: [ "pocket2" ]
   - type: MeleeWeapon
     soundHit:
       path: /Audio/Weapons/pierce.ogg
@@ -176,17 +124,8 @@
 - type: entity
   parent: OrganBase
   id: OrganRodentia
-  name: часть тела родентии
   abstract: true
   suffix: Rodentia
-  components:
-  - type: Extractable
-    juiceSolution:
-      reagents:
-      - ReagentId: Fat
-        Quantity: 3
-      - ReagentId: Blood
-        Quantity: 10
 
 - type: entity
   parent: OrganRodentia
@@ -204,50 +143,53 @@
 
 - type: entity
   id: OrganRodentiaTorso
-  name: торс родентии
   parent: [ OrganBaseTorsoSexed, OrganBaseTorso, OrganRodentiaExternal ]
 
 - type: entity
   id: OrganRodentiaHead
-  name: голова родентии
   parent: [ OrganBaseHeadSexed, OrganBaseHead, OrganRodentiaExternal ]
 
 - type: entity
   id: OrganRodentiaArmLeft
-  name: левая рука родентии
   parent: [ OrganBaseArmLeft, OrganRodentiaExternal ]
 
 - type: entity
   id: OrganRodentiaArmRight
-  name: правая рука родентии
   parent: [ OrganBaseArmRight, OrganRodentiaExternal ]
 
 - type: entity
   id: OrganRodentiaHandLeft
-  name: левая кисть родентии
   parent: [ OrganBaseHandLeft, OrganRodentiaExternal ]
 
 - type: entity
   id: OrganRodentiaHandRight
-  name: правая кисть родентии
   parent: [ OrganBaseHandRight, OrganRodentiaExternal ]
 
 - type: entity
   id: OrganRodentiaLegLeft
-  name: левая нога родентии
   parent: [ OrganBaseLegLeft, OrganRodentiaExternal ]
 
 - type: entity
   id: OrganRodentiaLegRight
-  name: правая нога родентии
   parent: [ OrganBaseLegRight, OrganRodentiaExternal ]
 
 - type: entity
   id: OrganRodentiaFootLeft
-  name: левая стопа родентии
   parent: [ OrganBaseFootLeft, OrganRodentiaExternal ]
 
 - type: entity
   id: OrganRodentiaFootRight
-  name: правая стопа родентии
   parent: [ OrganBaseFootRight, OrganRodentiaExternal ]
+
+- type: entity
+  id: OrganRodentiaStomach
+  parent: OrganReptilianStomach
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Stomach
+    specialDigestible:
+      tags:
+      - Pill
+      - Crayon
+      - FoodSnack
+    isSpecialDigestibleExclusive: false

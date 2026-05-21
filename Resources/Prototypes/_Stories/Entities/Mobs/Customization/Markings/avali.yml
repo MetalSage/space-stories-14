@@ -85,8 +85,7 @@
 - type: marking
   id: AvaliEarsBase
   bodyPart: HeadSide
-  followSkinColor: true
-  forcedColoring: true
+  forcedColoring: true  
   groupWhitelist: [Avali]
   sprites:
   - sprite: _Stories/Mobs/Avali/avali_parts.rsi
@@ -97,8 +96,7 @@
 - type: marking
   id: AvaliTailBase
   bodyPart: Tail
-  followSkinColor: true
-  forcedColoring: true
+  forcedColoring: true  
   groupWhitelist: [Avali]
   sprites:
   - sprite: _Stories/Mobs/Avali/avali_parts.rsi

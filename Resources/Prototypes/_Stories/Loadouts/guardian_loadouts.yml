@@ -110,10 +110,10 @@
   - STLightsaberYellow
   - STLightsaberPurple
   - STLightsaberWhite
-  - LightsaberDouble
-  - LightsaberShort
-  - LightsaberCrossguard
-  - LightsaberRapier
+  - STLightsaberDouble
+  - STLightsaberShort
+  - STLightsaberCrossguard
+  - STLightsaberRapier
 
 # Маска хранителя
 - type: loadout
@@ -135,36 +135,36 @@
 
 # Рапира
 - type: loadout
-  id: LightsaberRapier
+  id: STLightsaberRapier
   equipment:
-    pocket1: LightsaberRapier
+    pocket1: STLightsaberRapier
   effects:
   - !type:SponsorLoadoutEffect
     id: LightsaberRapier
 
 # Двухклинковый меч
 - type: loadout
-  id: LightsaberDouble
+  id: STLightsaberDouble
   equipment:
-    pocket1: LightsaberDouble
+    pocket1: STLightsaberDouble
   effects:
   - !type:SponsorLoadoutEffect
     id: LightsaberDouble
 
 # Меч с боковыми лезвиями
 - type: loadout
-  id: LightsaberCrossguard
+  id: STLightsaberCrossguard
   equipment:
-    pocket1: LightsaberCrossguard
+    pocket1: STLightsaberCrossguard
   effects:
   - !type:SponsorLoadoutEffect
     id: LightsaberCrossguard
 
 # Короткий меч
 - type: loadout
-  id: LightsaberShort
+  id: STLightsaberShort
   equipment:
-    pocket1: LightsaberShort
+    pocket1: STLightsaberShort
   effects:
   - !type:SponsorLoadoutEffect
     id: LightsaberShort

@@ -12,14 +12,20 @@
     allowedStates:
     - Alive
     - Critical
-    damageCap: 0
     damage:
       types:
         Holy: -0.07
-      groups:
-        Brute: -0.25
-        Burn: -0.25
-        Airloss: -0.25
+        # Brute
+        Blunt: -0.08
+        Slash: -0.08
+        Piercing: -0.08
+        # Burn
+        Heat: -0.08
+        Shock: -0.08
+        Cold: -0.08
+        # Airloss
+        Asphyxiation: -0.12
+        Bloodloss: -0.12
   - type: Force
   - type: ForceUser
     shopAction: STActionPontificPrayer
@@ -58,8 +64,7 @@
     damage:
       types:
         Slash: 15
-      groups:
-        Brute: 15
+        Blunt: 15
   - type: SlowOnDamage
     speedModifierThresholds:
       450: 0.9
