@@ -20,6 +20,7 @@
   - RandomPrice
   - TemperatureDamage
   - TemperatureSpeed
+  - TTS # Stories-TTS
   # traits
   # - LegsParalyzed (you get healed)
   - Unholy # Stories-Pontific
