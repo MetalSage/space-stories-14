@@ -83,6 +83,12 @@
     - Human
     - Reptilian
     - Vulpkanin
+    # Stories-Start
+    - Kidan
+    - Avali
+    - Felinid
+    - Rodentia
+    # Stories-End
 
 - type: loadoutEffectGroup
   id: OxygenBreatherMimeMoth
