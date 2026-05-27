@@ -102847,13 +102847,6 @@ entities:
     - type: Transform
       pos: 36.426113,147.6699
       parent: 2
-- proto: ToyFigurineShadowling
-  entities:
-  - uid: 14874
-    components:
-    - type: Transform
-      pos: 145.50677,153.50085
-      parent: 2
 - proto: ToyFigurineSlime
   entities:
   - uid: 14875
