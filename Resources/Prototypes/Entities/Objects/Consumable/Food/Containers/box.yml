@@ -693,7 +693,7 @@
     - id: GoldenBikeHorn
       weight: 0.1
     - !type:NestedSelector
-    - id: ToySniper
+    - id: STToySniper # Stories Content
       tableId: AllFigurineMechsTable
       weight: 6
 
