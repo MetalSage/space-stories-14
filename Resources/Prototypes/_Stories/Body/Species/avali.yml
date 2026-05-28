@@ -49,10 +49,8 @@
       required: false
   appearances:
     enum.HumanoidVisualLayers.HeadSide:
-      layerAlpha: 0.72
       matchSkin: true
     enum.HumanoidVisualLayers.Tail:
-      layerAlpha: 0.72
       matchSkin: true
 
 - type: entity
