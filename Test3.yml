@@ -1,0 +1,334 @@
+- type: entity
+  id: DefibrillatorCompact1
+  parent: [ BaseDefibrillator, PowerCellSlotMediumItem ]
+  name: Дефибриллятор наёмника
+  description: Профессиональный дефибриллятор наёмника.
+  components:
+  - type: Sprite
+    sprite: Objects/Specific/Medical/defibsmall.rsi
+    layers:
+      - state: icon
+      - state: screen
+        map: [ "enum.ToggleableVisuals.Layer" ]
+        visible: false
+        shader: unshaded
+      - state: ready
+        map: ["enum.PowerDeviceVisualLayers.Powered"]
+        shader: unshaded
+  - type: Item
+    size: Normal
+  - type: ToggleCellDraw
+  - type: PowerCellDraw
+  - type: MeleeWeapon
+    damage:
+      types:
+        Blunt: 4
+  - type: ItemToggleMeleeWeapon
+    activatedSoundOnHit:
+      path: /Audio/Items/Defib/defib_zap.ogg
+      params:
+        variation: 0.250
+    activatedSoundOnHitNoDamage:
+      path: /Audio/Items/Defib/defib_zap.ogg
+      params:
+        variation: 0.250
+        volume: -10
+    activatedDamage:
+      types:
+        Blunt: 5
+        Shock: 10
+    useCharge: 100
+  - type: Defibrillator
+    zapHeal:
+      types:
+        Asphyxiation: -40
+    doAfterDuration: 6
+  - type: DoAfter
+  - type: UseDelay
+
+- type: entity
+  parent: [ ClothingEyesBase, ClothingEyesHudSecurity ]
+  id: ClothingEyesGlassesMercenary1
+  name: Модифицированные очки наёмника
+  description: Очки, созданные для введения боя, для защиты глаз от ярких ослепляющих вспышек.
+  components:
+  - type: Sprite
+    sprite: Clothing/Eyes/Glasses/mercglasses.rsi
+  - type: Clothing
+    sprite: Clothing/Eyes/Glasses/mercglasses.rsi
+  - type: FlashImmunity
+  - type: EyeProtection
+    protectionTime: 5
+  - type: IdentityBlocker
+    coverage: EYES
+  - type: EntityTableContainerFill
+    containers:
+      storagebase:
+        id: ClothingEyesHudSecurity
+        amount: 4
+
+- type: entity
+  parent: [ BaseMajorContraband, ClothingOuterVestWeb, ClothingOuterHardsuitBase1 ] #web vest so it should have some pockets for ammo
+  id: ClothingOuterVestWebMerc1
+  name: Укреплённый тактический жилет наёмника
+  description: Высококачественный бронежилет из прочного синтетического материала. Он удивительно гибкий но тяжелый.
+  components:
+  - type: Sprite
+    sprite: Clothing/OuterClothing/Vests/mercwebvest.rsi
+  - type: Clothing
+    sprite: Clothing/OuterClothing/Vests/mercwebvest.rsi
+  - type: Armor
+    modifiers:
+      coefficients:
+        Blunt: 0.4
+        Slash: 0.4
+        Piercing: 0.4
+  - type: ExplosionResistance
+    damageCoefficient: 0.8
+  - type: ClothingSpeedModifier
+    walkModifier: 0.65
+    sprintModifier: 0.65
+  - type: PressureProtection
+    highPressureMultiplier: 0.45
+    lowPressureMultiplier: 1000
+  - type: ToggleableClothing
+    clothingPrototype: ClothingHeadHelmetMerc1
+
+- type: entity
+  parent: [ ClothingHeadHelmetArmoredBase, BaseMajorContraband ]
+  id: ClothingHeadHelmetMerc1
+  name: Шлем наёмника
+  description: Боевой шлем наёмников, защищающий от разгерметизаций.
+  components:
+  - type: Sprite
+    sprite: Clothing/Head/Helmets/merc_helmet.rsi
+  - type: Clothing
+    sprite: Clothing/Head/Helmets/merc_helmet.rsi
+  - type: HideLayerClothing
+    layers:
+      Hair: HEAD
+  - type: PressureProtection
+    highPressureMultiplier: 0.45
+    lowPressureMultiplier: 1000
+
+- type: entity
+  parent: [ BaseMajorContraband, ClothingOuterVestWeb, ClothingOuterHardsuitBase2 ] #web vest so it should have some pockets for ammo
+  id: ClothingOuterVestWebMerc2
+  name: Модифицированный тактический жилет наёмника
+  description: Высококачественный бронежилет из прочного синтетического материала. Он удивительно гибкий и лёгкий.
+  components:
+  - type: Sprite
+    sprite: Clothing/OuterClothing/Vests/mercwebvest.rsi
+  - type: Clothing
+    sprite: Clothing/OuterClothing/Vests/mercwebvest.rsi
+  - type: Armor
+    modifiers:
+      coefficients:
+        Blunt: 0.7
+        Slash: 0.7
+        Piercing: 0.7
+  - type: ExplosionResistance
+    damageCoefficient: 0.5
+  - type: PressureProtection
+    highPressureMultiplier: 0.45
+    lowPressureMultiplier: 1000
+  - type: ToggleableClothing
+    clothingPrototype: ClothingHeadHelmetMerc1
+
+- type: entity
+  parent: [ BaseMajorContraband, ClothingOuterVestWeb, ClothingOuterHardsuitBase2 ] #web vest so it should have some pockets for ammo
+  id: ClothingOuterVestWebMerc3
+  name: Элитный тактический жилет наёмников
+  description: Высококачественный бронежилет из прочного синтетического материала. Он удивительно гибкий и лёгкий.
+  components:
+  - type: Sprite
+    sprite: Clothing/OuterClothing/Vests/mercwebvest.rsi
+  - type: Clothing
+    sprite: Clothing/OuterClothing/Vests/mercwebvest.rsi
+  - type: Armor
+    modifiers:
+      coefficients:
+        Blunt: 0.6
+        Slash: 0.6
+        Piercing: 0.6
+  - type: ExplosionResistance
+    damageCoefficient: 0.7
+  - type: PressureProtection
+    highPressureMultiplier: 0.45
+    lowPressureMultiplier: 1000
+  - type: ToggleableClothing
+    clothingPrototype: ClothingHeadHatBeretMerc1
+
+- type: entity
+  parent: [ BaseMajorContraband, ClothingOuterVestWeb, ClothingOuterHardsuitBase2 ] #web vest so it should have some pockets for ammo
+  id: ClothingOuterVestWebMerc4
+  name: Лёгкий тактический жилет наёмников
+  description: Высококачественный бронежилет из прочного синтетического материала. Он удивительно гибкий и лёгкий.
+  components:
+  - type: Sprite
+    sprite: Clothing/OuterClothing/Vests/mercwebvest.rsi
+  - type: Clothing
+    sprite: Clothing/OuterClothing/Vests/mercwebvest.rsi
+  - type: Armor
+    modifiers:
+      coefficients:
+        Blunt: 0.85
+        Slash: 0.85
+        Piercing: 0.85
+  - type: ExplosionResistance
+    damageCoefficient: 0.7
+  - type: ClothingSpeedModifier
+    walkModifier: 1.1
+    sprintModifier: 1.1
+  - type: PressureProtection
+    highPressureMultiplier: 0.45
+    lowPressureMultiplier: 1000
+  - type: ToggleableClothing
+    clothingPrototype: ClothingHeadHelmetMerc1
+
+- type: entity
+  abstract: true
+  parent: [ClothingOuterBase, GeigerCounterClothing, AllowSuitStorageClothing]
+  id: ClothingOuterHardsuitBase1
+  name: base hardsuit
+  components:
+  - type: PressureProtection
+    highPressureMultiplier: 0.3
+    lowPressureMultiplier: 1000
+  - type: TemperatureProtection
+    heatingCoefficient: 0.01
+    coolingCoefficient: 0.01
+  - type: ClothingSpeedModifier
+    walkModifier: 0.65
+    sprintModifier: 0.65
+  - type: HeldSpeedModifier
+  - type: Item
+    size: Ginormous
+  - type: ToggleableClothing
+    slot: head
+  - type: ContainerContainer
+    containers:
+      toggleable-clothing: !type:ContainerSlot {}
+  - type: GroupExamine
+  - type: Tag
+    tags:
+    - Hardsuit
+    - WhitelistChameleon
+  - type: ProtectedFromStepTriggers
+    slots: WITHOUT_POCKET
+  - type: DamageOnInteractProtection
+    damageProtection:
+      flatReductions:
+        Heat: 10 # the average lightbulb only does around four damage!
+    slots: OUTERCLOTHING
+  - type: HideLayerClothing
+    slots:
+    - Tail
+
+- type: entity
+  abstract: true
+  parent: [ClothingOuterBase, GeigerCounterClothing, AllowSuitStorageClothing]
+  id: ClothingOuterHardsuitBase2
+  name: base hardsuit
+  components:
+# SlotBlocker blocked until UI change
+#  - type: SlotBlock
+#    slots: [innerclothing, feet]
+  - type: PressureProtection
+    highPressureMultiplier: 0.3
+    lowPressureMultiplier: 1000
+  - type: TemperatureProtection
+    heatingCoefficient: 0.01
+    coolingCoefficient: 0.01
+  - type: Item
+    size: Ginormous
+  - type: ToggleableClothing
+    slot: head
+  - type: ContainerContainer
+    containers:
+      toggleable-clothing: !type:ContainerSlot {}
+  - type: GroupExamine
+  - type: Tag
+    tags:
+    - Hardsuit
+    - WhitelistChameleon
+  - type: ProtectedFromStepTriggers
+    slots: WITHOUT_POCKET
+  - type: DamageOnInteractProtection
+    damageProtection:
+      flatReductions:
+        Heat: 10 # the average lightbulb only does around four damage!
+    slots: OUTERCLOTHING
+  - type: HideLayerClothing
+    slots:
+    - Tail
+
+- type: entity
+  parent: [ ClothingHeadBase ]
+  id: ClothingHeadHatBeretMerc1
+  name: Берет наёмника
+  description: Оливковый берет со значком, изображающим шакала на скале.
+  components:
+  - type: Sprite
+    sprite: Clothing/Head/Hats/beret_merc.rsi
+  - type: Clothing
+    sprite: Clothing/Head/Hats/beret_merc.rsi
+  - type: Tag
+    tags:
+    - PetWearable
+    - CorgiWearable
+  - type: PressureProtection
+    highPressureMultiplier: 0.45
+    lowPressureMultiplier: 1000
+
+- type: entity
+  parent: BaseItem
+  id: SecretInformation
+  name: Секретная папка NanoTrasen
+  components:
+  - type: Sprite
+    sprite: Objects/Misc/folders.rsi
+    layers:
+    - state: folder-colormap
+      color: "#1dff00"
+    - state: folder-base
+    - state: folder-stamp-inverse
+      color: "#cc2323"
+  - type: PhysicalComposition
+    materialComposition:
+      Paper: 50
+  - type: Appearance
+
+- type: entity
+  name: Пинпоинтер наёмников
+  description: Устройство, отслеживающее секретную папку NanoTrasen.
+  id: PinpointerUniversal1
+  parent: PinpointerBase
+  components:
+  - type: Sprite
+    layers:
+    - state: pinpointer-way
+      map: ["enum.PinpointerLayers.Base"]
+    - state: pinonnull
+      map: ["enum.PinpointerLayers.Screen"]
+      shader: unshaded
+      visible: false
+  - type: Item
+    inhandVisuals:
+      left:
+      - state: inhand-left-base
+        color: "#606060"
+      - state: inhand-left-stripe
+        color: "#606060"
+      - state: inhand-left-top
+      right:
+      - state: inhand-right-base
+        color: "#606060"
+      - state: inhand-right-stripe
+        color: "#606060"
+      - state: inhand-right-top
+  - type: Icon
+    state: pinpointer-way
+  - type: Pinpointer
+    updateTargetName: true
+    canRetarget: true
