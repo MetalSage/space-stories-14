@@ -39205,7 +39205,7 @@ entities:
       parent: 8665
     - type: Physics
       canCollide: False
-- proto: PRISONComputerShuttlePrison
+- proto: PRISONComputerShuttle
   entities:
   - uid: 5196
     components:
