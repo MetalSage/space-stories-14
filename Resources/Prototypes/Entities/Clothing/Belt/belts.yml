@@ -111,6 +111,14 @@
     sprite: Clothing/Belt/holster.rsi
   - type: Clothing
     sprite: Clothing/Belt/holster.rsi
+# Stories - start
+    slots: [belt, neck]
+    clothingVisuals:
+      neck:
+      - state: equipped-BELT
+      belt:
+      - state: equipped-BELT
+# Stories - end
   - type: Storage
     grid:
     - 0,0,3,1
@@ -125,6 +133,14 @@
     sprite: Clothing/Belt/syndieholster.rsi
   - type: Clothing
     sprite: Clothing/Belt/syndieholster.rsi
+# Stories - start
+    slots: [belt, neck]
+    clothingVisuals:
+      neck:
+      - state: equipped-BELT
+      belt:
+      - state: equipped-BELT
+# Stories - end
   - type: Storage
     maxItemSize: Huge
     grid:
