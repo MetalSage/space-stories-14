@@ -10,7 +10,7 @@
         path:
           "/Audio/Weapons/slash.ogg"
   - type: Sprite
-    drawdepth: Overdoors
+    drawdepth: SmallMobs
     sprite: _Stories/Objects/Misc/pontific_kudzu.rsi
     state: kudzu_11
   - type: KudzuVisuals

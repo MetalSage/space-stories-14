@@ -99,6 +99,8 @@ public sealed partial class PontificSystem : EntitySystem
             if (args.PrayerSound is { } sound)
                 _audio.PlayPvs(sound, entity);
 
+            EnsureComp<PontificPrayerComponent>(entity);
+
             args.Handled = true;
         }
     }

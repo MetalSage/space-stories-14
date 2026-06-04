@@ -10,7 +10,7 @@
   components:
   - type: VisionProvider
     isActive: true
-    ambientColor: "#7A298A50"
+    ambientColor: "#7A298A90"
     toggleAction: STActionPontificToggleNightvision
   - type: Climbing
   - type: NameIdentifier
@@ -114,10 +114,13 @@
     soundHit:
       path: /Audio/Weapons/Xeno/alien_claw_flesh3.ogg
     angle: 0
-    animation: WeaponArcClaw
+    animation: WeaponArcThrust
+    wideAnimation: WeaponArcThrust
     damage:
       types:
         Slash: 12
+  - type: Hands
+  - type: ProtectedFromStepTriggers
   - type: ZombieImmune
   - type: InputMover
   - type: MobMover
@@ -192,7 +195,8 @@
     angle: 0
     soundHit:
       collection: AlienClaw
-    animation: WeaponArcClaw
+    animation: WeaponArcThrust
+    wideAnimation: WeaponArcThrust
     damage:
       types:
         Slash: 15

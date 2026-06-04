@@ -1,0 +1,35 @@
+- type: entity
+  parent: MobStatusEffectDebuff
+  id: STPontificPrayer
+  components:
+  - type: StatusEffectAlert
+    alert: STPontificPrayer
+  - type: StatusEffect
+    whitelist:
+      components:
+      - Pontific
+
+- type: entity
+  parent: MobStatusEffectDebuff
+  id: STPontificFlame
+  components:
+  - type: StatusEffectAlert
+    alert: STPontificFlame
+  - type: StatusEffect
+    whitelist:
+      components:
+      - Pontific
+
+- type: statusEffect
+  id: FrozeBullets
+
+- type: entity
+  parent: StatusEffectBase
+  id: STPontificFlame
+  components:
+  - type: StatusEffectAlert
+    alert: STHoly
+  - type: StatusEffect
+    whitelist:
+      components:
+      - Blessable
