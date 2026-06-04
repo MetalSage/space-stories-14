@@ -197,6 +197,11 @@
       - !type:Oxygenate
         conditions:
         - !type:MetabolizerTypeCondition
+          type: [ Arachnid ]
+        factor: 5
+      - !type:Oxygenate
+        conditions:
+        - !type:MetabolizerTypeCondition
           type: [ Rat ]
         factor: 5
       - !type:Oxygenate
