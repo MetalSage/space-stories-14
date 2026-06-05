@@ -16,7 +16,7 @@
   - CentralCommand
   special:
   - !type:AddImplantSpecial
-    implants: [ MindShieldImplant, DeathRattleImplantCentcomm, AdrenocorImplant ] # Stories - AdrenocorImplant
+    implants: [ MindShieldImplant, DeathRattleImplantCentcomm, STAdrenocorImplant ] # Stories - STAdrenocorImplant
 
 - type: startingGear
   parent: ERTLeaderGearEVA
@@ -122,7 +122,7 @@
     - type: Holy
     # Stories-Pontific-End
   - !type:AddImplantSpecial
-    implants: [ MindShieldImplant, DeathRattleImplantCentcomm, AdrenocorImplant ] # Stories - AdrenocorImplant
+    implants: [ MindShieldImplant, DeathRattleImplantCentcomm, STAdrenocorImplant ] # Stories - STAdrenocorImplant
 
 - type: startingGear
   parent: ERTChaplainGearEVA
@@ -197,7 +197,7 @@
   - CentralCommand
   special:
   - !type:AddImplantSpecial
-    implants: [ MindShieldImplant, DeathRattleImplantCentcomm, AdrenocorImplant ] # Stories - AdrenocorImplant
+    implants: [ MindShieldImplant, DeathRattleImplantCentcomm, STAdrenocorImplant ] # Stories - STAdrenocorImplant
 
 - type: startingGear
   parent: ERTEngineerGearEVA
@@ -292,7 +292,7 @@
   - CentralCommand
   special:
   - !type:AddImplantSpecial
-    implants: [ MindShieldImplant, DeathRattleImplantCentcomm, AdrenocorImplant ] # Stories - AdrenocorImplant
+    implants: [ MindShieldImplant, DeathRattleImplantCentcomm, STAdrenocorImplant ] # Stories - STAdrenocorImplant
 
 - type: startingGear
   parent: ERTSecurityGearEVA
@@ -480,7 +480,7 @@
   - CentralCommand
   special:
   - !type:AddImplantSpecial
-    implants: [ MindShieldImplant, DeathRattleImplantCentcomm, AdrenocorImplant ] # Stories - AdrenocorImplant
+    implants: [ MindShieldImplant, DeathRattleImplantCentcomm, STAdrenocorImplant ] # Stories - STAdrenocorImplant
 
 - type: startingGear
   parent: ERTMedicalGearEVA
@@ -581,7 +581,7 @@
   - CentralCommand
   special:
   - !type:AddImplantSpecial
-    implants: [ MindShieldImplant, DeathRattleImplantCentcomm, AdrenocorImplant ] # Stories - AdrenocorImplant
+    implants: [ MindShieldImplant, DeathRattleImplantCentcomm, STAdrenocorImplant ] # Stories - STAdrenocorImplant
 
 - type: startingGear
   parent: ERTJanitorGearEVA

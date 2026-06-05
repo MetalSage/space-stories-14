@@ -146,11 +146,11 @@
 
 #Implants
 - type: listing
-  id: UplinkAfterburnerImplanter
+  id: STUplinkAfterburnerImplanter
   name: uplink-afterburner-implanter-name
   description: uplink-afterburner-implanter-desc
   icon: { sprite: /Textures/Objects/Specific/Medical/medipen.rsi, state: stimpen }
-  productEntity: AfterburnerImplanter
+  productEntity: STAfterburnerImplanter
   discountCategory: veryRareDiscounts
   discountDownTo:
     Telecrystal: 6
@@ -165,11 +165,11 @@
       - NukeOpsUplink
 
 - type: listing
-  id: UplinkAfterburnerImplanterOps
+  id: STUplinkAfterburnerImplanterOps
   name: uplink-afterburner-implanter-name
   description: uplink-afterburner-implanter-desc
   icon: { sprite: /Textures/Objects/Specific/Medical/medipen.rsi, state: stimpen }
-  productEntity: AfterburnerImplanter
+  productEntity: STAfterburnerImplanter
   cost:
     Telecrystal: 12
   categories:

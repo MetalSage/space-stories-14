@@ -1,6 +1,6 @@
 - type: entity
   parent: BaseImplantAction
-  id: ActionActivateAfterburnerImplant
+  id: STActionActivateAfterburnerImplant
   name: Activate afterburner implant
   description: Injects a limited dose of stimulants into the body.
   components:
@@ -14,7 +14,7 @@
 
 - type: entity
   parent: BaseImplantAction
-  id: ActionActivateAdrenocorImplant
+  id: STActionActivateAdrenocorImplant
   name: Activate adrenocor implant
   description: Injects a solution of combat stimulants and medical drugs into the body.
   components:

@@ -2,13 +2,13 @@
 
 - type: entity
   parent: BaseSubdermalImplant
-  id: AfterburnerImplant
+  id: STAfterburnerImplant
   name: afterburner implant
   description: Injects a limited dose of stimulants into the body.
   categories: [ HideSpawnMenu ]
   components:
   - type: SubdermalImplant
-    implantAction: ActionActivateAfterburnerImplant
+    implantAction: STActionActivateAfterburnerImplant
   - type: TriggerOnActivateImplant
   - type: AddSolutionOnTrigger
     addedSolution:
@@ -23,13 +23,13 @@
 
 - type: entity
   parent: BaseSubdermalImplant
-  id: AdrenocorImplant
+  id: STAdrenocorImplant
   name: adrenocor implant
   description: Injects a solution of combat stimulants and medical drugs into the body.
   categories: [ HideSpawnMenu ]
   components:
   - type: SubdermalImplant
-    implantAction: ActionActivateAdrenocorImplant
+    implantAction: STActionActivateAdrenocorImplant
   - type: TriggerOnActivateImplant
   - type: AddSolutionOnTrigger
     addedSolution:

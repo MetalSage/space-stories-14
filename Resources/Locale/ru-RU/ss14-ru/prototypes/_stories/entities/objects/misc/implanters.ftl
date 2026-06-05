@@ -1,4 +1,4 @@
-ent-AfterburnerImplanter = имплантер "Форсаж"
+ent-STAfterburnerImplanter = имплантер "Форсаж"
     .desc = { ent-BaseImplantOnlyImplanterSyndi.desc }
-ent-AdrenocorImplanter = имплантер "Адренокор"
+ent-STAdrenocorImplanter = имплантер "Адренокор"
     .desc = { ent-BaseImplantOnlyImplanter.desc }

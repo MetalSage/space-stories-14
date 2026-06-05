@@ -49,8 +49,8 @@
     - ChameleonControllerImplant
     - VoiceMaskImplant
 # Stories - start
-    - AfterburnerImplant
-    - AdrenocorImplant
+    - STAfterburnerImplant
+    - STAdrenocorImplant
 # Stories - end
     deimplantFailureDamage:
       types:
