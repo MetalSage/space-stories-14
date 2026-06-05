@@ -6,6 +6,7 @@
     mode: SnapgridCenter
   components:
   - type: DragonRift
+# Stories - start
   - type: TimedSpawner
     prototypes:
     - MobShark
@@ -14,6 +15,7 @@
     intervalSeconds: 43
     minimumEntitiesSpawned: 1
     maximumEntitiesSpawned: 1
+# Stories - end
   - type: Transform
     anchored: true
   - type: Physics
