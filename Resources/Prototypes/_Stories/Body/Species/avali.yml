@@ -47,6 +47,11 @@
     enum.HumanoidVisualLayers.RFoot:
       limit: 1
       required: false
+  appearances:
+    enum.HumanoidVisualLayers.HeadSide:
+      matchSkin: true
+    enum.HumanoidVisualLayers.Tail:
+      matchSkin: true
 
 - type: entity
   parent: BaseSpeciesAppearance
