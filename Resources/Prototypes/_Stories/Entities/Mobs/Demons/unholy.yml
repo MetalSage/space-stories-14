@@ -111,6 +111,7 @@
     animationThreshold: 50
     baseCritThreshold: 75
   - type: MeleeWeapon
+    altDisarm: false
     soundHit:
       path: /Audio/Weapons/Xeno/alien_claw_flesh3.ogg
     angle: 0
