@@ -48,6 +48,8 @@
     - RadioImplant
     - ChameleonControllerImplant
     - VoiceMaskImplant
+    - AfterburnerImplant
+    - AdrenocorImplant
     deimplantFailureDamage:
       types:
         Cellular: 50

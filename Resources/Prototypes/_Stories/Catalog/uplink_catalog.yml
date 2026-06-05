@@ -143,3 +143,39 @@
       whitelist:
         tags:
           - NukeOpsUplink
+
+#Implants
+- type: listing
+  id: UplinkAfterburnerImplanter
+  name: uplink-afterburner-implanter-name
+  description: uplink-afterburner-implanter-desc
+  icon: { sprite: /Textures/Objects/Specific/Medical/medipen.rsi, state: stimpen }
+  productEntity: AfterburnerImplanter
+  discountCategory: veryRareDiscounts
+  discountDownTo:
+    Telecrystal: 6
+  cost:
+    Telecrystal: 8
+  categories:
+    - UplinkImplants
+  conditions:
+  - !type:StoreWhitelistCondition
+    blacklist:
+      tags:
+      - NukeOpsUplink
+
+- type: listing
+  id: UplinkAfterburnerImplanterOps
+  name: uplink-afterburner-implanter-name
+  description: uplink-afterburner-implanter-desc
+  icon: { sprite: /Textures/Objects/Specific/Medical/medipen.rsi, state: stimpen }
+  productEntity: AfterburnerImplanter
+  cost:
+    Telecrystal: 12
+  categories:
+    - UplinkImplants
+  conditions:
+  - !type:StoreWhitelistCondition
+    whitelist:
+      tags:
+      - NukeOpsUplink

@@ -15,7 +15,7 @@
   - CentralCommand
   special:
   - !type:AddImplantSpecial
-    implants: [ MindShieldImplant, DeathRattleImplantCentcomm ]
+    implants: [ MindShieldImplant, DeathRattleImplantCentcomm, AdrenocorImplant ] # Stories - AdrenocorImplant
 
 - type: startingGear
   id: DeathSquadGear
