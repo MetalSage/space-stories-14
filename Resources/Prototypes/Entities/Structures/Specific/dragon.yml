@@ -6,6 +6,14 @@
     mode: SnapgridCenter
   components:
   - type: DragonRift
+  - type: TimedSpawner
+    prototypes:
+    - MobShark
+    - MobCarpHolo
+    chance: 0.8
+    intervalSeconds: 43
+    minimumEntitiesSpawned: 1
+    maximumEntitiesSpawned: 1
   - type: Transform
     anchored: true
   - type: Physics
