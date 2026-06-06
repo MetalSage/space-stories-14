@@ -48,10 +48,10 @@
     - RadioImplant
     - ChameleonControllerImplant
     - VoiceMaskImplant
-# Stories - start
+    # Stories-Implants
     - STAfterburnerImplant
     - STAdrenocorImplant
-# Stories - end
+    # Stories-Implants
     deimplantFailureDamage:
       types:
         Cellular: 50
