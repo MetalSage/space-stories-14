@@ -278,11 +278,12 @@
   - !type:ListingLimitedStockCondition
     stock: 1
 
+# Stories-WizardHardsuit-Start
 - type: listing
-  id: SpellbookHardsuitWizard
-  name: spellbook-suit-wizard-name
-  description: spellbook-suit-wizard-description
-  productEntity: CratePermaHardsuitWizard
+  id: STSpellbookHardsuitWizard
+  name: stories-spellbook-suit-wizard-name
+  description: stories-spellbook-suit-wizard-description
+  productEntity: STCratePermaHardsuitWizard
   cost:
     WizCoin: 3
   categories:
@@ -290,6 +291,7 @@
   conditions:
   - !type:ListingLimitedStockCondition
     stock: 1
+# Stories-WizardHardsuit-End
 
 # Event
 - type: listing
