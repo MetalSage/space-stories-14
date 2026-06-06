@@ -61,6 +61,7 @@
     soundHit:
       collection: AlienClaw
     animation: WeaponArcThrust
+    wideAnimation: WeaponArcThrust
     damage:
       types:
         Slash: 15

@@ -8,6 +8,7 @@
   - type: GuideHelp
     guides:
     - STChaplain
+  - type: StatusEffectContainer
   - type: Holy
   - type: UseDelay
     delay: 10.0
