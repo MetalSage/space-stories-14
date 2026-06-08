@@ -86,8 +86,14 @@
     damageContainer: BiologicalMetaphysical
     damageModifierSet: STPontificModifierSet
   - type: Stamina
-    animationThreshold: 50
-    baseCritThreshold: 100
+    animationThreshold: 100
+    baseCritThreshold: 200
+  - type: Tag
+    tags:
+    - CannotSuicide
+    - DoorBumpOpener
+    - FootstepSound
+    - StunImmune
 
 - type: damageModifierSet
   id: STPontificModifierSet
