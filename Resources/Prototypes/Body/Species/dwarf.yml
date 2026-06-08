@@ -64,7 +64,7 @@
       Female: FemaleDwarf
       Unsexed: UnisexDwarf
   - type: ReplacementAccent
-    accent: scottish
+    accent: dwarf # Stories-Accent
   - type: Speech
     speechSounds: Bass
 
