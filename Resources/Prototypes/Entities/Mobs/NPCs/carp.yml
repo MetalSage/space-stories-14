@@ -143,6 +143,33 @@
     - type: TypingIndicator
       proto: robot
 
+# Stories - start
+- type: entity
+  id: STMobCarpHoloDragon
+  suffix: DragonBrood
+  parent: MobCarpHolo
+  components:
+    - type: GhostRole
+      allowMovement: true
+      allowSpeech: true
+      makeSentient: true
+      name: stories-ghost-role-information-sentient-holo-carp-name
+      description: ghost-role-information-sentient-carp-description
+      rules: ghost-role-information-space-dragon-summoned-carp-rules
+      mindRoles:
+      - MindRoleGhostRoleTeamAntagonistFlock
+    - type: GhostTakeoverAvailable
+    - type: HTN
+      rootTask:
+        task: DragonCarpCompound
+    - type: Flammable
+      damage:
+       types: {}
+    - type: Temperature
+    - type: TemperatureDamage
+      heatDamageThreshold: 1200
+#Stories - end
+
 - type: entity
   parent: MobCarp
   id: MobCarpRainbow
@@ -191,6 +218,7 @@
     - type: Temperature
     - type: TemperatureDamage
       heatDamageThreshold: 1200
+
 - type: entity
   id: MobCarpDungeon
   parent: MobCarp
@@ -265,3 +293,30 @@
   suffix: "Salvage Ruleset"
   components:
     - type: SalvageMobRestrictions
+
+# Stories - start
+- type: entity
+  id: STMobSharkDragon
+  suffix: DragonBrood
+  parent: MobShark
+  components:
+    - type: GhostRole
+      allowMovement: true
+      allowSpeech: true
+      makeSentient: true
+      name: stories-ghost-role-information-sentient-shark-name
+      description: ghost-role-information-sentient-carp-description
+      rules: ghost-role-information-space-dragon-summoned-carp-rules
+      mindRoles:
+      - MindRoleGhostRoleTeamAntagonistFlock
+    - type: GhostTakeoverAvailable
+    - type: HTN
+      rootTask:
+        task: DragonCarpCompound
+    - type: Flammable
+      damage:
+       types: {}
+    - type: Temperature
+    - type: TemperatureDamage
+      heatDamageThreshold: 1200
+#Stories - end

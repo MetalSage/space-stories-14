@@ -6,16 +6,18 @@
     mode: SnapgridCenter
   components:
   - type: DragonRift
-# Stories - start
-  - type: TimedSpawner
-    prototypes:
-    - MobShark
-    - MobCarpHolo
-    chance: 0.8
-    intervalSeconds: 43
-    minimumEntitiesSpawned: 1
-    maximumEntitiesSpawned: 1
-# Stories - end
+    # Stories - start
+    spawnCooldown: 25
+    spawnTable: !type:GroupSelector
+      children:
+      - id: MobCarpDragon
+        weight: 2
+      - id: STMobSharkDragon
+        weight: 1
+      - id: STMobCarpHoloDragon
+        weight: 1
+    offset: 0
+    # Stories - end
   - type: Transform
     anchored: true
   - type: Physics
