@@ -1,0 +1,7 @@
+- type: alert
+  id: STForcedSleeping
+  icons:
+    - sprite: /Textures/Clothing/Head/Hats/pyjamasyndicatered.rsi
+      state: icon
+  name: stories-alerts-forced-sleeping-name
+  description: stories-alerts-forced-sleeping-desc
