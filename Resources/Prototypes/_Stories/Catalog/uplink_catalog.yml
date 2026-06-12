@@ -12,6 +12,36 @@
   categories:
   - UplinkWeaponry
 
+- type: listing
+  id: STUplinkRapier
+  name: stories-uplink-rapier-name
+  description: stories-uplink-rapier-desc
+  icon: { sprite: _Stories/Objects/Weapons/Melee/syndie_rapier.rsi, state: icon }
+  productEntity: STClothingBeltSheathSyndieFilled
+  discountCategory: rareDiscounts
+  discountDownTo:
+    Telecrystal: 6
+  cost:
+    Telecrystal: 8
+  categories:
+  - UplinkWeaponry
+
+- type: listing
+  id: STUplinkRapierOps
+  name: stories-uplink-rapier-name
+  description: stories-uplink-rapier-desc
+  icon: { sprite: _Stories/Objects/Weapons/Melee/syndie_rapier.rsi, state: icon }
+  productEntity: STClothingBeltSheathSyndieFilled
+  cost:
+    Telecrystal: 8
+  categories:
+  - UplinkWeaponry
+  conditions:
+  - !type:StoreWhitelistCondition
+    whitelist:
+      tags:
+      - NukeOpsUplink
+
 # Pointless  
 - type: listing
   id: UplinkRichard

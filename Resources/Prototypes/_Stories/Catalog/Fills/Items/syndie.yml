@@ -1,0 +1,9 @@
+- type: entity
+  id: STClothingBeltSheathSyndieFilled
+  parent: STClothingBeltSheathSyndie
+  suffix: Filled
+  components:
+  - type: ContainerFill
+    containers:
+      item:
+      - STSyndieRapier
