@@ -1,4 +1,5 @@
 # Spells
+
 spellbook-fireball-name = Огненный шар
 spellbook-fireball-desc = Пусть большинство членов экипажа взорвутся от ярости, когда увидят летящий в них огненный шар!
 
@@ -70,8 +71,8 @@ spellbook-hammer-singularity-description = Вы когда-нибудь заду
 spellbook-staff-animation-name = Посох оживления
 spellbook-staff-animation-description = Оживите неодушевлённые предметы!
 
-spellbook-suit-wizard-name = Скафандр волшебника
-spellbook-suit-wizard-description = В комплекте идут аварийные баллоны кислорода и азота!
+stories-spellbook-suit-wizard-name = Скафандр волшебника
+stories-spellbook-suit-wizard-description = В комплекте идут аварийные баллоны кислорода и азота!
 
 # Events
 

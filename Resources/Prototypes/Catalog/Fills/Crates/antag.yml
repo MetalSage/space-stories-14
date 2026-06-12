@@ -36,9 +36,9 @@
 
 - type: entity
   parent: CrateGenericSteel
-  id: CratePermaHardsuitWizard
+  id: STCratePermaHardsuitWizard
   name: the box with the wizard's spacesuit
-  description:
+  description: A box containing the wizard's spacesuit.
   suffix: Wizard
   components:
   - type: EntityTableContainerFill
