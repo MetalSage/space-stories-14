@@ -81,6 +81,14 @@
   - ShuttleGunFriendshipCircuitboard
   - ShuttleGunPerforatorCircuitboard
   - ShuttleGunSvalinnMachineGunCircuitboard
+  # Stories - start
+  - WeaponEnergyTurretAIMachineCircuitboard
+  - WeaponEnergyTurretCommandMachineCircuitboard
+  - WeaponEnergyTurretSecurityMachineCircuitboard
+  - WeaponEnergyTurretAIControlPanelElectronics
+  - WeaponEnergyTurretCommandControlPanelElectronics
+  - WeaponEnergyTurretSecurityControlPanelElectronics
+  # Stories - end
 
 - type: latheRecipePack
   parent:

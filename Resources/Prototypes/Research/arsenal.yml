@@ -247,3 +247,24 @@
   - ShuttleGunDusterCircuitboard
   technologyPrerequisites:
   - BasicShuttleArmament
+
+# Stories - start
+- type: technology
+  id: EnergyTurrets
+  name: stories-research-technology-energy-turrets
+  icon:
+    sprite: Objects/Weapons/Guns/Turrets/sentry_turret.rsi
+    state: cover_closed
+  discipline: Arsenal
+  tier: 3
+  cost: 15000
+  recipeUnlocks:
+  - WeaponEnergyTurretAIMachineCircuitboard
+  - WeaponEnergyTurretCommandMachineCircuitboard
+  - WeaponEnergyTurretSecurityMachineCircuitboard
+  - WeaponEnergyTurretAIControlPanelElectronics
+  - WeaponEnergyTurretCommandControlPanelElectronics
+  - WeaponEnergyTurretSecurityControlPanelElectronics
+  technologyPrerequisites:
+  - ConcentratedLaserWeaponry
+# Stories - end
