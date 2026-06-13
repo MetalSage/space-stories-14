@@ -26,11 +26,20 @@ using Content.Shared.Zombies;
 using Robust.Shared.Prototypes;
 using Robust.Shared.Random;
 using Robust.Shared.Timing;
+// Stories-Start
+using Content.Shared.Damage;
+using Content.Shared.Damage.Components;
+using Content.Shared.StatusEffectNew;
+// Stories-End
 
 namespace Content.Server.Zombies
 {
     public sealed partial class ZombieSystem : SharedZombieSystem
     {
+        // Stories-Start
+        private static readonly EntProtoId ForcedSleepingStatusEffect = "StatusEffectForcedSleeping";
+        // Stories-End
+
         [Dependency] private readonly IGameTiming _timing = default!;
         [Dependency] private readonly IPrototypeManager _protoManager = default!;
         [Dependency] private readonly IRobustRandom _random = default!;
@@ -43,6 +52,11 @@ namespace Content.Server.Zombies
         [Dependency] private readonly MobStateSystem _mobState = default!;
         [Dependency] private readonly SharedPopupSystem _popup = default!;
         [Dependency] private readonly SharedRoleSystem _role = default!;
+        // Stories-Start
+        [Dependency] private readonly EntityLookupSystem _lookup = default!;
+        [Dependency] private readonly SharedTransformSystem _transform = default!;
+        [Dependency] private readonly StatusEffectsSystem _statusEffects = default!;
+        // Stories-End
 
         public readonly ProtoId<NpcFactionPrototype> Faction = "Zombie";
 
@@ -78,6 +92,11 @@ namespace Content.Server.Zombies
             SubscribeLocalEvent<IncurableZombieComponent, MapInitEvent>(OnPendingMapInit);
 
             SubscribeLocalEvent<ZombifyOnDeathComponent, MobStateChangedEvent>(OnDamageChanged);
+
+            // Stories-Start
+            SubscribeLocalEvent<ZombieComponent, ZombieLookUpActionEvent>(OnLookUp);
+            SubscribeLocalEvent<ZombieComponent, ZombieRegenerativeSleepEvent>(OnSleep);
+            // Stories-End
         }
 
         private void OnBeforeRemoveAnomalyOnDeath(Entity<PendingZombieComponent> ent, ref BeforeRemoveAnomalyOnDeathEvent args)
@@ -320,5 +339,58 @@ namespace Content.Server.Zombies
         {
             _role.MindRemoveRole<ZombieRoleComponent>((args.Mind.Owner,  args.Mind.Comp));
         }
+
+        // Stories-Start
+        private void OnLookUp(EntityUid uid, ZombieComponent component, ZombieLookUpActionEvent args)
+        {
+            var allMobs  = _lookup.GetEntitiesInRange<MobThresholdsComponent>(_transform.GetMapCoordinates(uid), args.Range);
+            int mobsCount = allMobs.Count;
+
+            var allZombieMobs  = _lookup.GetEntitiesInRange<ZombieComponent>(_transform.GetMapCoordinates(uid), args.Range);
+            int zombieMobsCount = allZombieMobs.Count;
+    
+            int notZombieMobsCount = mobsCount - zombieMobsCount;
+
+            if (notZombieMobsCount == 0)
+                _popup.PopupEntity(Loc.GetString("stories-no-not-zombie-mobs"), uid, uid);
+            else if (notZombieMobsCount == 1)
+                _popup.PopupEntity(Loc.GetString("stories-one-not-zombie-mob"), uid, uid);
+            else if (notZombieMobsCount >= 2 && notZombieMobsCount <= 5)
+                _popup.PopupEntity(Loc.GetString("stories-some-not-zombie-mobs"), uid, uid);
+            else if (notZombieMobsCount >= 6)
+                _popup.PopupEntity(Loc.GetString("stories-many-not-zombie-mobs"), uid, uid);
+            else
+                _popup.PopupEntity(Loc.GetString("stories-invalid-count-not-zombie-mobs"), uid, uid);
+
+            args.Handled = true;
+        }
+
+        private void OnSleep(EntityUid uid, ZombieComponent component, ZombieRegenerativeSleepEvent args)
+        {
+            TryComp<PassiveDamageComponent>(uid, out var oldComp);
+            var oldHeal = oldComp?.Damage;
+
+            EnsureComp<PassiveDamageComponent>(uid).Damage = new()
+            {
+                DamageDict = args.PassiveHeal,
+            };
+
+            _statusEffects.TrySetStatusEffectDuration(uid, ForcedSleepingStatusEffect, args.Duration);
+
+            Timer.Spawn(args.Duration, () =>
+            {
+                if (Exists(uid))
+                {
+                    if (oldHeal != null)
+                        EnsureComp<PassiveDamageComponent>(uid).Damage = oldHeal;
+                    else
+                        RemComp<PassiveDamageComponent>(uid);
+                }
+            });
+
+            args.Handled = true;
+        }
+        // TODO: переделать ZombieRegenerativeSleepEvent в обобщённой форме и вынести от сюда, использовать можно для регенеративного транса стража клинка
+        // Stories-End
     }
 }

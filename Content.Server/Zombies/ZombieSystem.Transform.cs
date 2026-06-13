@@ -46,6 +46,12 @@ using Content.Shared.NPC.Prototypes;
 using Content.Shared.Roles;
 using Content.Shared.Temperature.Components;
 using Robust.Shared.Utility;
+// Stories-Start
+using Content.Server.Actions;
+using Content.Shared.Actions.Components;
+using Content.Server.Guardian;
+using Content.Shared.Movement.Components;
+// Stories-End
 
 namespace Content.Server.Zombies;
 
@@ -80,6 +86,11 @@ public sealed partial class ZombieSystem
     private static readonly string MindRoleZombie = "MindRoleZombie";
     private static readonly List<ProtoId<AntagPrototype>> BannableZombiePrototypes = ["Zombie"];
     internal static readonly HashSet<HumanoidVisualLayers> AdditionalZombieLayers = [HumanoidVisualLayers.Tail, HumanoidVisualLayers.HeadSide, HumanoidVisualLayers.HeadTop, HumanoidVisualLayers.Snout];
+    // Stories-Start
+    private static readonly EntProtoId ZombieGravityJumpAction = "STActionZombieGravityJump";
+    private static readonly EntProtoId ZombieLookUpAction = "STActionZombieLookUp";
+    private static readonly EntProtoId ZombieRegenerativeSleepAction = "STActionZombieRegenerativeSleep";
+    // Stories-End
 
     /// <summary>
     /// Handles an entity turning into a zombie when they die or go into crit
@@ -342,5 +353,23 @@ public sealed partial class ZombieSystem
         // Also prevents them from becoming a Survivor. They're undead.
         _tag.AddTag(target, InvalidForGlobalSpawnSpellTag);
         _tag.AddTag(target, CannotSuicideTag);
+
+        // Stories-Start
+        if (HasComp<CanHostGuardianComponent>(target) && TryComp(target, out ActionsComponent? actionsComp)) // CanHostGuardianComponent is present on MobMonkey, MobKobold, STMobShadowling and BaseSpeciesMob (playable races)
+        {
+            if (!HasComp<JumpAbilityComponent>(target))
+            {
+                var jumpComp = AddComp<JumpAbilityComponent>(target);
+                jumpComp.Action = ZombieGravityJumpAction;
+                _actions.RemoveAction(target, jumpComp.ActionEntity);
+                jumpComp.ActionEntity = _actions.AddAction(target, jumpComp.Action);
+                jumpComp.CanCollide = true;
+                jumpComp.JumpDistance = 2;
+                Dirty(target, jumpComp);
+            }
+            _actions.AddAction(target, ZombieLookUpAction);
+            _actions.AddAction(target, ZombieRegenerativeSleepAction);
+        }
+        // Stories-End
     }
 }

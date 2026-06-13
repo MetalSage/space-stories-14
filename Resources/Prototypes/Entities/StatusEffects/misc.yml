@@ -52,6 +52,10 @@
   - type: ForcedSleepingStatusEffect
   - type: StunnedStatusEffect
   - type: KnockdownStatusEffect
+  # Stories - start
+  - type: StatusEffectAlert
+    alert: STForcedSleeping
+  # Stories - end
 
 # This creature is asleep because it's disconnected from the game.
 - type: entity
