@@ -9,16 +9,18 @@ using Content.Server.Polymorph.Systems;
 using Content.Server.Stunnable;
 using Content.Server.Temperature.Systems;
 using Content.Shared._Stories.Conversion;
-using Content.Shared._Stories.Shadowling;
 using Content.Shared._Stories.SCCVars;
+using Content.Shared._Stories.Shadowling;
 using Content.Shared._Stories.Vision.Events;
 using Content.Shared._Stories.Vision.Systems;
+using Content.Shared.Actions;
+using Content.Shared.Body;
 using Content.Shared.Chat;
 using Content.Shared.Damage.Systems;
 using Content.Shared.DoAfter;
-using Content.Shared.Eye;
 using Content.Shared.Gibbing;
 using Content.Shared.Humanoid;
+using Content.Shared.Interaction.Events;
 using Content.Shared.Light.Components;
 using Content.Shared.Light.EntitySystems;
 using Content.Shared.Mind;
@@ -27,26 +29,20 @@ using Content.Shared.Mobs.Components;
 using Content.Shared.Mobs.Systems;
 using Content.Shared.Movement.Components;
 using Content.Shared.Movement.Systems;
-using Content.Shared.Physics;
 using Content.Shared.Popups;
 using Content.Shared.Silicons.Borgs.Components;
+using Content.Shared.Speech.Muting;
 using Content.Shared.Standing;
-using Content.Shared.StatusEffectNew;
+using Content.Shared.StatusEffect;
 using Content.Shared.Stunnable;
 using Content.Shared.Tag;
-using Content.Shared.Interaction.Events;
-using Content.Shared.Actions;
-using Content.Shared.Body;
-using Content.Shared.Temperature;
 using Content.Shared.Temperature.Components;
 using Robust.Server.GameObjects;
 using Robust.Server.Player;
 using Robust.Shared.Audio.Systems;
 using Robust.Shared.Configuration;
-using Robust.Shared.GameObjects;
 using Robust.Shared.Map;
 using Robust.Shared.Physics;
-using Robust.Shared.Physics.Components;
 using Robust.Shared.Physics.Systems;
 using Robust.Shared.Player;
 using Robust.Shared.Prototypes;
@@ -56,7 +52,7 @@ namespace Content.Server._Stories.Shadowling;
 
 public sealed partial class ShadowlingActionSystem : EntitySystem
 {
-    private static readonly EntProtoId MutedStatusEffect = "Muted";
+    private static readonly string MutedStatusEffect = "Muted";
     private static readonly ProtoId<TagPrototype> WindowTag = "Window";
 
     [Dependency] private IConfigurationManager _cfg = default!;
@@ -564,7 +560,7 @@ public sealed partial class ShadowlingActionSystem : EntitySystem
 
         _flash.Flash(args.Target, uid, null, component.GlareFlashDuration, 0.8f, false);
         _stun.TryAddStunDuration(args.Target, component.GlareStunDuration);
-        _status.TryAddStatusEffectDuration(args.Target, MutedStatusEffect, component.GlareStunDuration);
+        _status.TryAddStatusEffect<MutedComponent>(args.Target, MutedStatusEffect, component.GlareStunDuration, true);
 
         args.Handled = true;
     }

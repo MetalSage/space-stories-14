@@ -113,7 +113,6 @@
       Female: FemaleKidan
       Unsexed: UnsexedKidan
   - type: Damageable
-    damageContainer: Biological
     damageModifierSet: Kidan
   - type: Bioluminescence
   - type: MeleeWeapon

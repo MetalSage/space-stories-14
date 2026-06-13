@@ -48,7 +48,6 @@
     reflects:
       - Energy
   - type: Damageable
-    damageContainer: Inorganic
   - type: Fixtures
     fixtures:
       fix1:

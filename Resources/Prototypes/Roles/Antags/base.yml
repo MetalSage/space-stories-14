@@ -28,6 +28,10 @@
   - ResearchDirector
   - ChiefEngineer
   - Quartermaster
+  # Stories-Roles-Start
+  - STJudge
+  - IAA
+  # Stories-Roles-End
 
 # Borgs
 - type: antagSpecifier
@@ -61,10 +65,15 @@
   - Detective
   - SecurityOfficer
   - SecurityCadet
+  # Stories-Roles-Start
+  - STBrigmedic
+  - STSecurityClown
+  - GuardianNt
+  # Stories-Roles-End
 
 - type: antagSpecifier
   abstract: true
-  parent: [ CommandBlacklistedAntag, SecurityBlacklistedAntag ]
+  parent: [ CommandBlacklistedAntag, SecurityBlacklistedAntag, STSpacePrisonBlacklistedAntag ] # Stories-SpacePrison
   id: MindshieldRestrictedAntag
 
 - type: antagSpecifier

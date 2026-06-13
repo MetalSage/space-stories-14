@@ -1,15 +1,15 @@
 using Content.Shared.Damage.Systems;
 using Content.Shared.Mobs;
 using Content.Shared.Mobs.Components;
-using Content.Shared.StatusEffectNew;
+using Content.Shared.Speech.Muting;
+using Content.Shared.StatusEffect;
 using Content.Shared.Stunnable;
-using Robust.Shared.Prototypes;
 
 namespace Content.Shared._Stories.Weapons.Special.Garrote;
 
 public abstract partial class SharedGarroteSystem : EntitySystem
 {
-    private static readonly EntProtoId MutedStatusEffect = "Muted";
+    private static readonly string MutedStatusEffect = "Muted";
 
     [Dependency] private DamageableSystem _damageable = default!;
     [Dependency] private StatusEffectsSystem _statusEffect = default!;
@@ -34,7 +34,7 @@ public abstract partial class SharedGarroteSystem : EntitySystem
         _damageable.TryChangeDamage(args.Target.Value, comp.Damage, origin: args.User);
 
         _stun.TryAddStunDuration(args.Target.Value, comp.DurationStatusEffects);
-        _statusEffect.TrySetStatusEffectDuration(args.Target.Value, MutedStatusEffect, comp.DurationStatusEffects);
+        _statusEffect.TryAddStatusEffect<MutedComponent>(args.Target.Value, MutedStatusEffect, comp.DurationStatusEffects, true);
 
         args.Repeat = true;
     }

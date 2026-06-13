@@ -172,7 +172,6 @@
     channels:
     - STShadowlingMind
   - type: Damageable
-    damageContainer: Biological
     damageModifierSet: STShadowling
   - type: MeleeWeapon
     altDisarm: true
@@ -282,7 +281,6 @@
   - type: Destructible
     thresholds: []
   - type: Damageable
-    damageContainer: Biological
     damageModifierSet: STShadowling
   - type: IntrinsicRadioReceiver
   - type: IntrinsicRadioTransmitter

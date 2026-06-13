@@ -1,4 +1,4 @@
-﻿- type: entity
+- type: entity
   parent: BaseItem
   id: STBaseCross
   abstract: true
@@ -10,7 +10,6 @@
     groups:
       Extinguish: [ Touch ] # Need for bless reaction
   - type: Damageable
-    damageContainer: Inorganic
   - type: Blessable
     timeModifier: 3
   - type: Item
@@ -59,7 +58,6 @@
     normalState: fire
   - type: Damageable
     damageModifierSet: Wood
-    damageContainer: Inorganic
   - type: Clothing
     quickEquip: true
     sprite: _Stories/Objects/Chapel/cross.rsi

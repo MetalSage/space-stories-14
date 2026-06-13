@@ -33,8 +33,6 @@
     channels:
     - STShadowlingMind
   - type: Shadowling
-    actions:
-      STActionShadowlingHatch: 0
   mindRoles:
   - STMindRoleShadowling
 
