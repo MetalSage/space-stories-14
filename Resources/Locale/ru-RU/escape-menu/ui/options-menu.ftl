@@ -366,6 +366,7 @@ ui-options-accessability-header-content = Содержимое
 ui-options-enable-color-name = Цветные имена персонажей
 ui-options-colorblind-friendly = Режим для дальтоников
 ui-options-reduced-motion = Снижение интенсивности визуальных эффектов
+ui-options-disable-ai-static = Disable the static effect on the AI camera overlay
 ui-options-screen-shake-intensity = Интенсивность дрожания экрана
 
 ui-options-chat-window-opacity = Непрозрачность окна чата
@@ -394,7 +395,7 @@ ui-options-admin-player-tab-color-setting = Настройки цветов
 ui-options-admin-player-tab-color-setting-off = Я ненавижу цвета
 ui-options-admin-player-tab-color-setting-character = Раскрашивать имена антагонистов
 ui-options-admin-player-tab-color-setting-roletype = Раскрашивать все типы ролей
-ui-options-admin-player-tab-color-setting-both =  Раскрашивать и то, и другое
+ui-options-admin-player-tab-color-setting-both = Раскрашивать и то, и другое
 
 ui-options-admin-overlay-title = Админ оверлей
 
@@ -413,3 +414,6 @@ ui-options-admin-enable-overlay-starting-job = Показать начальну
 ui-options-admin-overlay-merge-distance = Дистанция слияния стека
 ui-options-admin-overlay-ghost-fade-distance = Дистанция исчезновения оверлея от мыши
 ui-options-admin-overlay-ghost-hide-distance = Дистанция скрытия оверлея от мыши
+
+ui-options-admin-strip-overlay-title = Strip Overlay
+ui-options-admin-strip-overlay-setting = Show strip overlay by default

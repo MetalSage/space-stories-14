@@ -22,3 +22,7 @@ strip-all-verb-get-data-text = Снять всё
 
 strippable-bound-user-interface-stripping-menu-title = Инвентарь { $ownerName }
 strippable-bound-user-interface-stripping-menu-ensnare-button = Ограничители ног
+strippable-bound-user-interface-stripping-menu-admin-button = Toggle Admin View
+strippable-bound-user-interface-stripping-menu-admin-button-tooltip = Toggles the admin overlay.
+    Padlock -> Contraband
+    "C" -> Chameleon
