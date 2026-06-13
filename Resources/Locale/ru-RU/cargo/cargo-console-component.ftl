@@ -54,7 +54,7 @@ cargo-console-fund-transfer-broadcast = [bold]{ $name } перевёл { $amount
 cargo-console-fund-transfer-user-unknown = Неизвестно
 
 cargo-console-paper-reason-default = Отсутствует
-cargo-console-paper-approver-default = Самостоятельно
+cargo-console-paper-approver-default = Неизвестный
 cargo-console-paper-print-name = Заказ #{ $orderNumber }
 cargo-console-paper-print-text = Заказ #{ $orderNumber }
     Товар: { $itemName }

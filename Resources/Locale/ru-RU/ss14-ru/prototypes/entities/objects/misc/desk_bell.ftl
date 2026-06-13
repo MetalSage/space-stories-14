@@ -1,8 +1,8 @@
-ent-EmptyDeskBell = unfinished desk bell
-    .desc = An empty bell missing its noise maker.
+ent-EmptyDeskBell = недоделанный настольный звонок
+    .desc = Звонок, у которого отсутствует колокольчик.
 ent-DeskBell = настольный звонок
     .desc = Краеугольный камень любой работы по обслуживанию клиентов. Вы испытываете непреодолимое желание позвонить в него.
-ent-DeskBuzzer = desk buzzer
-    .desc = An advanced customer service tool. You feel an unending urge to buzz it.
-ent-DeskHorn = desk horn
-    .desc = The cornerstone of any clown business. You feel an unending urge to honk it.
+ent-DeskBuzzer = настольный гудок
+    .desc = Усовершенствованный инструмент для обслуживания клиентов. Вы испытываете непреодолимое желание нажать на него.
+ent-DeskHorn = настольный клаксон
+    .desc = Краеугольный камень любого клоунского бизнеса. Вы испытываете непреодолимое желание посигналить им.

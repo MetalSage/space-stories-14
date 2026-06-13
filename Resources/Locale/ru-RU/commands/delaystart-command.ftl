@@ -1,8 +1,7 @@
-cmd-delaystart-desc = Delays the round start.
-cmd-delaystart-help = Usage: delaystart [seconds]
-    If no arguments are passed, the round will be paused or resumed accordingly.
+cmd-delaystart-desc = Регулирует таймер начала раунда (принимает положительные и отрицательные целые числа). Приостанавливает/возобновляет обратный отсчет, если аргумент не указан.
+cmd-delaystart-help = Пример: delaystart [секунды]
 
-delaystart-preround-only = This can only be executed while the game is in the pre-round lobby.
-delaystart-paused = Paused the countdown.
-delaystart-resumed = Resumed the countdown.
-delaystart-invalid-seconds = { $seconds } isn't a valid amount of seconds.
+delaystart-preround-only = Это можно выполнить только в том случае, если игра находится в лобби перед началом раунда.
+delaystart-paused = Обратный отсчет приостановлен.
+delaystart-resumed = Обратный отсчет возобновлен.
+delaystart-invalid-seconds = { $seconds } является недопустимым количеством секунд.

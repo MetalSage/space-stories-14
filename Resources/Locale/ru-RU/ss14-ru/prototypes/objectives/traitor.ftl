@@ -55,4 +55,4 @@ ent-SupercritAnomaliesObjective = { ent-BaseTraitorObjective }
 ent-HijackTradeStationObjective = Взломайте автоматизированную торговую станцию
     .desc = Вашему аплинку разрешен один маяк взлома. Разместите его на автоматизированной торговой станции и защищайте его, пока он взламывает торговую станцию.
 ent-MailFraudObjective = { ent-BaseTraitorObjective }
-    .desc = Мы заинтересованы в корреспонденции Nanotrasen. Открыватель писем не входит в комплект.
+    .desc = Нас интересует корреспонденция Nanotrasen. Инструмент для вскрытия писем не прилагается.
