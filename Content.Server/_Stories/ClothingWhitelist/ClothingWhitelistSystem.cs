@@ -7,10 +7,10 @@ using Content.Shared.Trigger.Systems;
 
 namespace Content.Server._Stories.ClothingWhitelist;
 
-public sealed class ClothingWhitelistSystem : EntitySystem
+public sealed partial class ClothingWhitelistSystem : EntitySystem
 {
-    [Dependency] private readonly SharedPopupSystem _popupSystem = default!;
-    [Dependency] private readonly TriggerSystem _trigger = default!;
+    [Dependency] private SharedPopupSystem _popupSystem = default!;
+    [Dependency] private TriggerSystem _trigger = default!;
 
     public override void Initialize()
     {

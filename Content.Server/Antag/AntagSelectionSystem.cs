@@ -72,7 +72,7 @@ public sealed partial class AntagSelectionSystem : GameRuleSystem<AntagSelection
     [Dependency] private PlayTimeTrackingSystem _playTime = default!;
     [Dependency] private RoleSystem _role = default!;
     [Dependency] private TransformSystem _transform = default!;
-    [Dependency] private readonly SponsorsManager _sponsorsManager = default!; // Stories-Sponsors
+    [Dependency] private SponsorsManager _sponsorsManager = default!; // Stories-Sponsors
 
     // arbitrary random number to give late joining some mild interest.
     public const float LateJoinRandomChance = 0.5f;
@@ -314,7 +314,7 @@ public sealed partial class AntagSelectionSystem : GameRuleSystem<AntagSelection
         }
     }
 
-    private AntagCount[]  GetAntags(Entity<AntagSelectionComponent> gameRule,
+    private AntagCount[] GetAntags(Entity<AntagSelectionComponent> gameRule,
         int playerCount)
     {
         var runningCount = 0;
@@ -661,7 +661,7 @@ public sealed partial class AntagSelectionSystem : GameRuleSystem<AntagSelection
     private bool TryGetAntagEntity(Entity<AntagSelectionComponent> gameRule,
         AntagSpecifierPrototype prototype,
         ICommonSession player,
-        [NotNullWhen(true)]out EntityUid? antagEnt)
+        [NotNullWhen(true)] out EntityUid? antagEnt)
     {
         antagEnt = GetAntagEntity(gameRule, prototype, player);
         return antagEnt != null;
@@ -692,7 +692,7 @@ public sealed partial class AntagSelectionSystem : GameRuleSystem<AntagSelection
 
         if (player.AttachedEntity is not { } uid)
         {
-            Log.Error($"Tried to make {player.UserId} into an antagonist at Map: { coordinates.Value.MapId } ({ coordinates.Value.X }, { coordinates.Value.Y }) but was unable to find an entity for them. Gamerule {ToPrettyString(gameRule)}. Antag {prototype.ID}");
+            Log.Error($"Tried to make {player.UserId} into an antagonist at Map: {coordinates.Value.MapId} ({coordinates.Value.X}, {coordinates.Value.Y}) but was unable to find an entity for them. Gamerule {ToPrettyString(gameRule)}. Antag {prototype.ID}");
             return null;
         }
 
@@ -710,7 +710,7 @@ public sealed partial class AntagSelectionSystem : GameRuleSystem<AntagSelection
         AntagSpecifierPrototype prototype,
         ICommonSession player,
         MapCoordinates coordinates,
-        [NotNullWhen(true)]out EntityUid? uid)
+        [NotNullWhen(true)] out EntityUid? uid)
     {
         var ev = new AntagSelectEntityEvent(gameRule, prototype, coordinates, player);
         RaiseLocalEvent(gameRule, ref ev, true);

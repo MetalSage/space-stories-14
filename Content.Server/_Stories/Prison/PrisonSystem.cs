@@ -14,7 +14,7 @@ using Robust.Shared.Prototypes;
 
 namespace Content.Server._Stories.Prison;
 
-public sealed class PrisonSystem : EntitySystem
+public sealed partial class PrisonSystem : EntitySystem
 {
     /// <summary>
     /// Процент сбежавших зеков для их полной победы.
@@ -23,16 +23,16 @@ public sealed class PrisonSystem : EntitySystem
 
     private static readonly EntProtoId PacifiedKey = "Pacified";
 
-    [Dependency] private readonly GameTicker _gameTicker = default!;
-    [Dependency] private readonly SharedMapSystem _map = default!;
-    [Dependency] private readonly IMapManager _mapManager = default!;
-    [Dependency] private readonly MindSystem _mind = default!;
-    [Dependency] private readonly MobStateSystem _mobState = default!;
-    [Dependency] private readonly IPlayerManager _player = default!;
+    [Dependency] private GameTicker _gameTicker = default!;
+    [Dependency] private SharedMapSystem _map = default!;
+    [Dependency] private IMapManager _mapManager = default!;
+    [Dependency] private MindSystem _mind = default!;
+    [Dependency] private MobStateSystem _mobState = default!;
+    [Dependency] private IPlayerManager _player = default!;
     private readonly ProtoId<JobPrototype> _prisonerJobId = "PRISONPrisoner";
-    [Dependency] private readonly IPrototypeManager _prototypeManager = default!;
-    [Dependency] private readonly StationSystem _station = default!;
-    [Dependency] private readonly StatusEffectsSystem _statusEffects = default!;
+    [Dependency] private IPrototypeManager _prototypeManager = default!;
+    [Dependency] private StationSystem _station = default!;
+    [Dependency] private StatusEffectsSystem _statusEffects = default!;
 
     private ISawmill _sawmill = default!;
 

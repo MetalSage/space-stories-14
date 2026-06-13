@@ -12,15 +12,15 @@ namespace Content.Client.Overlays;
 
 // This overlay serves as the foundational post processing overlay.
 // Ideally, for performance reasons, post processing designed to be present at all times, such as additive light blending or tonemapping, should be done as part of a single shader pass.
-public sealed class BasePostProcessOverlay : Overlay
+public sealed partial class BasePostProcessOverlay : Overlay
 {
     private static readonly ProtoId<ShaderPrototype> BasePostProcessShaderId = "BasePostProcess";
 
-    [Dependency] private readonly IConfigurationManager _configManager = default!;
-    [Dependency] private readonly IEntityManager _entityManager = default!;
-    [Dependency] private readonly ILightManager _lightManager = default!;
-    [Dependency] private readonly IPlayerManager _playerManager = default!;
-    [Dependency] private readonly IPrototypeManager _prototypeManager = default!;
+    [Dependency] private IConfigurationManager _configManager = default!;
+    [Dependency] private IEntityManager _entityManager = default!;
+    [Dependency] private ILightManager _lightManager = default!;
+    [Dependency] private IPlayerManager _playerManager = default!;
+    [Dependency] private IPrototypeManager _prototypeManager = default!;
 
     public override bool RequestScreenTexture => true;
     public override OverlaySpace Space => OverlaySpace.WorldSpace;

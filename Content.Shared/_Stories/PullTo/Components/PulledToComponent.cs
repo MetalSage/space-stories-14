@@ -1,13 +1,15 @@
 namespace Content.Shared._Stories.PullTo;
 
-[RegisterComponent] [AutoGenerateComponentState]
+[RegisterComponent, AutoGenerateComponentState]
 [Access(typeof(PullToSystem))]
 public sealed partial class PulledToComponent : Component
 {
-    [DataField("slot")] [ViewVariables(VVAccess.ReadWrite)]
+    [DataField("slot")]
+    [ViewVariables(VVAccess.ReadWrite)]
     public string Slot = "none";
 
-    [DataField("pulledTo")] [AutoNetworkedField]
+    [DataField("pulledTo")]
+    [AutoNetworkedField]
     public EntityUid? PulledTo { get; set; }
 
     [DataField("strength")]
@@ -21,7 +23,8 @@ public sealed partial class PulledToComponent : Component
 
     public float ActiveInterval { get; set; } = 0f;
 
-    [DataField("onEnter")] [ViewVariables(VVAccess.ReadWrite)]
+    [DataField("onEnter")]
+    [ViewVariables(VVAccess.ReadWrite)]
     public PulledToOnEnter OnEnter { get; set; } = PulledToOnEnter.None;
 }
 

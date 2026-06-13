@@ -7,14 +7,14 @@ using Robust.Shared.Prototypes;
 
 namespace Content.Shared._Stories.Weapons.Special.Garrote;
 
-public abstract class SharedGarroteSystem : EntitySystem
+public abstract partial class SharedGarroteSystem : EntitySystem
 {
     private static readonly EntProtoId MutedStatusEffect = "Muted";
 
-    [Dependency] private readonly DamageableSystem _damageable = default!;
-    [Dependency] private readonly StatusEffectsSystem _statusEffect = default!;
-    [Dependency] private readonly SharedStunSystem _stun = default!;
-    [Dependency] protected readonly SharedTransformSystem _transformSystem = default!;
+    [Dependency] private DamageableSystem _damageable = default!;
+    [Dependency] private StatusEffectsSystem _statusEffect = default!;
+    [Dependency] private SharedStunSystem _stun = default!;
+    [Dependency] protected SharedTransformSystem _transformSystem = default!;
 
     public override void Initialize()
     {

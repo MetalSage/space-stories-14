@@ -3,13 +3,13 @@ using Robust.Shared.Serialization;
 
 namespace Content.Shared._Stories.Economy;
 
-[Serializable] [NetSerializable]
+[Serializable, NetSerializable]
 public enum BankUiKey
 {
     Key,
 }
 
-[Serializable] [NetSerializable]
+[Serializable, NetSerializable]
 public sealed class BankCartridgeUiState : BoundUserInterfaceState
 {
     public string AccountNumber;
@@ -32,7 +32,7 @@ public sealed class BankCartridgeUiState : BoundUserInterfaceState
     }
 }
 
-[Serializable] [NetSerializable]
+[Serializable, NetSerializable]
 public sealed class BankTransferMessage : CartridgeMessageEvent
 {
     public int Amount;
@@ -45,17 +45,17 @@ public sealed class BankTransferMessage : CartridgeMessageEvent
     }
 }
 
-[Serializable] [NetSerializable]
+[Serializable, NetSerializable]
 public sealed class BankLinkIdMessage : CartridgeMessageEvent
 {
 }
 
-[Serializable] [NetSerializable]
+[Serializable, NetSerializable]
 public sealed class BankUnlinkIdMessage : CartridgeMessageEvent
 {
 }
 
-[Serializable] [NetSerializable]
+[Serializable, NetSerializable]
 public sealed class BankToggleNotificationsMessage : CartridgeMessageEvent
 {
 }

@@ -10,16 +10,16 @@ using Robust.Shared.Timing;
 
 namespace Content.Server._Stories.Economy;
 
-public sealed class SalarySystem : EntitySystem
+public sealed partial class SalarySystem : EntitySystem
 {
-    [Dependency] private readonly BankSystem _bank = default!;
-    [Dependency] private readonly IConfigurationManager _cfg = default!;
-    [Dependency] private readonly EconomySystem _economy = default!;
-    [Dependency] private readonly IPrototypeManager _prototypeManager = default!;
-    [Dependency] private readonly IRobustRandom _random = default!;
-    [Dependency] private readonly SharedRoleSystem _roleSystem = default!;
-    [Dependency] private readonly StationSystem _station = default!;
-    [Dependency] private readonly IGameTiming _timing = default!;
+    [Dependency] private BankSystem _bank = default!;
+    [Dependency] private IConfigurationManager _cfg = default!;
+    [Dependency] private EconomySystem _economy = default!;
+    [Dependency] private IPrototypeManager _prototypeManager = default!;
+    [Dependency] private IRobustRandom _random = default!;
+    [Dependency] private SharedRoleSystem _roleSystem = default!;
+    [Dependency] private StationSystem _station = default!;
+    [Dependency] private IGameTiming _timing = default!;
 
     private TimeSpan _nextPayday;
 

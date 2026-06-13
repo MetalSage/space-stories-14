@@ -32,10 +32,6 @@ using Robust.Shared.Utility;
 using Content.Shared.Tag;
 using static Content.Client.Inventory.ClientInventorySystem;
 using static Robust.Client.UserInterface.Control;
-using JetBrains.Annotations;
-using System.Linq;
-using System.Numerics;
-using Robust.Shared.Prototypes;
 
 namespace Content.Client.Inventory
 {

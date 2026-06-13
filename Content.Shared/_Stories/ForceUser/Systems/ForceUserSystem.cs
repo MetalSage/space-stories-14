@@ -12,13 +12,13 @@ namespace Content.Shared._Stories.ForceUser;
 
 public abstract partial class SharedForceUserSystem : EntitySystem
 {
-    [Dependency] private readonly SharedActionsSystem _actions = default!;
-    [Dependency] private readonly AlertsSystem _alerts = default!;
-    [Dependency] private readonly SharedDoAfterSystem _doAfter = default!;
-    [Dependency] private readonly ForceSystem _force = default!;
-    [Dependency] private readonly MobStateSystem _mobState = default!;
-    [Dependency] private readonly SharedPopupSystem _popup = default!;
-    [Dependency] private readonly IPrototypeManager _proto = default!;
+    [Dependency] private SharedActionsSystem _actions = default!;
+    [Dependency] private AlertsSystem _alerts = default!;
+    [Dependency] private SharedDoAfterSystem _doAfter = default!;
+    [Dependency] private ForceSystem _force = default!;
+    [Dependency] private MobStateSystem _mobState = default!;
+    [Dependency] private SharedPopupSystem _popup = default!;
+    [Dependency] private IPrototypeManager _proto = default!;
     private ISawmill _sawmill = default!;
 
     public override void Initialize()

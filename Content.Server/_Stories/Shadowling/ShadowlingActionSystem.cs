@@ -54,44 +54,44 @@ using Robust.Shared.Timing;
 
 namespace Content.Server._Stories.Shadowling;
 
-public sealed class ShadowlingActionSystem : EntitySystem
+public sealed partial class ShadowlingActionSystem : EntitySystem
 {
     private static readonly EntProtoId MutedStatusEffect = "Muted";
     private static readonly ProtoId<TagPrototype> WindowTag = "Window";
 
-    [Dependency] private readonly IConfigurationManager _cfg = default!;
-    [Dependency] private readonly ConversionSystem _conversion = default!;
-    [Dependency] private readonly SharedDoAfterSystem _doAfter = default!;
-    [Dependency] private readonly EmpSystem _emp = default!;
-    [Dependency] private readonly EntityLookupSystem _entityLookup = default!;
-    [Dependency] private readonly FlashSystem _flash = default!;
-    [Dependency] private readonly GibbingSystem _gib = default!;
-    [Dependency] private readonly HandheldLightSystem _handheldLight = default!;
-    [Dependency] private readonly SharedMindSystem _mind = default!;
-    [Dependency] private readonly MobStateSystem _mobState = default!;
-    [Dependency] private readonly PolymorphSystem _polymorph = default!;
-    [Dependency] private readonly IPlayerManager _player = default!;
-    [Dependency] private readonly SharedPopupSystem _popup = default!;
-    [Dependency] private readonly PoweredLightSystem _poweredLight = default!;
-    [Dependency] private readonly SmokeSystem _smoke = default!;
-    [Dependency] private readonly StandingStateSystem _standing = default!;
-    [Dependency] private readonly StunSystem _stun = default!;
-    [Dependency] private readonly SharedTransformSystem _transform = default!;
-    [Dependency] private readonly UnpoweredFlashlightSystem _unpoweredFlashlight = default!;
-    [Dependency] private readonly ShadowlingSystem _shadowling = default!;
-    [Dependency] private readonly DamageableSystem _damageable = default!;
-    [Dependency] private readonly TemperatureSystem _temperature = default!;
-    [Dependency] private readonly ChatSystem _chat = default!;
-    [Dependency] private readonly IGameTiming _timing = default!;
-    [Dependency] private readonly SharedPhysicsSystem _physics = default!;
-    [Dependency] private readonly StatusEffectsSystem _status = default!;
-    [Dependency] private readonly SharedAudioSystem _audio = default!;
-    [Dependency] private readonly MovementSpeedModifierSystem _movement = default!;
-    [Dependency] private readonly TagSystem _tag = default!;
-    [Dependency] private readonly VisibilitySystem _visibility = default!;
-    [Dependency] private readonly SharedEyeSystem _eye = default!;
-    [Dependency] private readonly SharedActionsSystem _actions = default!;
-    [Dependency] private readonly SharedVisionSystem _vision = default!;
+    [Dependency] private IConfigurationManager _cfg = default!;
+    [Dependency] private ConversionSystem _conversion = default!;
+    [Dependency] private SharedDoAfterSystem _doAfter = default!;
+    [Dependency] private EmpSystem _emp = default!;
+    [Dependency] private EntityLookupSystem _entityLookup = default!;
+    [Dependency] private FlashSystem _flash = default!;
+    [Dependency] private GibbingSystem _gib = default!;
+    [Dependency] private HandheldLightSystem _handheldLight = default!;
+    [Dependency] private SharedMindSystem _mind = default!;
+    [Dependency] private MobStateSystem _mobState = default!;
+    [Dependency] private PolymorphSystem _polymorph = default!;
+    [Dependency] private IPlayerManager _player = default!;
+    [Dependency] private SharedPopupSystem _popup = default!;
+    [Dependency] private PoweredLightSystem _poweredLight = default!;
+    [Dependency] private SmokeSystem _smoke = default!;
+    [Dependency] private StandingStateSystem _standing = default!;
+    [Dependency] private StunSystem _stun = default!;
+    [Dependency] private SharedTransformSystem _transform = default!;
+    [Dependency] private UnpoweredFlashlightSystem _unpoweredFlashlight = default!;
+    [Dependency] private ShadowlingSystem _shadowling = default!;
+    [Dependency] private DamageableSystem _damageable = default!;
+    [Dependency] private TemperatureSystem _temperature = default!;
+    [Dependency] private ChatSystem _chat = default!;
+    [Dependency] private IGameTiming _timing = default!;
+    [Dependency] private SharedPhysicsSystem _physics = default!;
+    [Dependency] private StatusEffectsSystem _status = default!;
+    [Dependency] private SharedAudioSystem _audio = default!;
+    [Dependency] private MovementSpeedModifierSystem _movement = default!;
+    [Dependency] private TagSystem _tag = default!;
+    [Dependency] private VisibilitySystem _visibility = default!;
+    [Dependency] private SharedEyeSystem _eye = default!;
+    [Dependency] private SharedActionsSystem _actions = default!;
+    [Dependency] private SharedVisionSystem _vision = default!;
 
     public override void Initialize()
     {

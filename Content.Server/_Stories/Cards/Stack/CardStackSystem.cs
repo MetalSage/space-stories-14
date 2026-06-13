@@ -10,15 +10,15 @@ using Robust.Shared.Random;
 
 namespace Content.Server._Stories.Cards.Stack;
 
-public sealed class CardStackSystem : SharedCardStackSystem
+public sealed partial class CardStackSystem : SharedCardStackSystem
 {
-    [Dependency] private readonly AppearanceSystem _appearance = default!;
-    [Dependency] private readonly AudioSystem _audio = default!;
-    [Dependency] private readonly ContainerSystem _containerSystem = default!;
-    [Dependency] private readonly HandsSystem _handsSystem = default!;
-    [Dependency] private readonly PopupSystem _popup = default!;
-    [Dependency] private readonly IRobustRandom _robustRandom = default!;
-    [Dependency] private readonly SharedTransformSystem _transform = default!;
+    [Dependency] private AppearanceSystem _appearance = default!;
+    [Dependency] private AudioSystem _audio = default!;
+    [Dependency] private ContainerSystem _containerSystem = default!;
+    [Dependency] private HandsSystem _handsSystem = default!;
+    [Dependency] private PopupSystem _popup = default!;
+    [Dependency] private IRobustRandom _robustRandom = default!;
+    [Dependency] private SharedTransformSystem _transform = default!;
 
     private const string SplitCardToSpawnEntity = "STCardDeck";
 

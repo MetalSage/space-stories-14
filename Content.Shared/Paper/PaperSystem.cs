@@ -33,7 +33,7 @@ public sealed partial class PaperSystem : EntitySystem
     [Dependency] private MetaDataSystem _metaSystem = default!;
     [Dependency] private SharedAudioSystem _audio = default!;
 
-    [Dependency] private EntityQuery<PaperComponent> _paperQuery = default!;
+    private EntityQuery<PaperComponent> _paperQuery = default!;
 
     private static readonly ProtoId<TagPrototype> WriteIgnoreStampsTag = "WriteIgnoreStamps";
     private static readonly ProtoId<TagPrototype> WriteTag = "Write";
@@ -257,14 +257,14 @@ public sealed partial class PaperSystem : EntitySystem
         if (!entity.Comp.StampedBy.Contains(stampInfo))
         {
             entity.Comp.StampedBy.Add(stampInfo);
-            
+
             // Clean unfilled form and signature tags when stamping to finalize the document
             var cleanedContent = CleanUnfilledTags(entity.Comp.Content);
             if (cleanedContent != entity.Comp.Content)
             {
                 SetContent(entity, cleanedContent);
             }
-            
+
             Dirty(entity);
             if (entity.Comp.StampState == null && TryComp<AppearanceComponent>(entity, out var appearance))
             {
@@ -341,7 +341,7 @@ public sealed partial class PaperSystem : EntitySystem
     {
         var name = string.Empty;
         var role = string.Empty;
-        
+
         // Get the identity entity (ID card, etc.)
         var identityEntity = player;
         if (TryComp<IdentityComponent>(player, out var identity) &&
@@ -349,10 +349,10 @@ public sealed partial class PaperSystem : EntitySystem
         {
             identityEntity = idEntity;
         }
-        
+
         // Get name from identity or fallback to entity name
         name = MetaData(identityEntity).EntityName;
-        
+
         // Get role from mind system
         if (TryComp<MindContainerComponent>(player, out var mindContainer) &&
             mindContainer.Mind is { } mindId &&
@@ -366,13 +366,13 @@ public sealed partial class PaperSystem : EntitySystem
                 role = Loc.GetString(roleInfo[0].Name);
             }
         }
-        
+
         // Format: "Name, Role" or fallback
         if (!string.IsNullOrEmpty(name) && !string.IsNullOrEmpty(role))
         {
             return $"{name}, {role}";
         }
-        
+
         return name;
     }
 

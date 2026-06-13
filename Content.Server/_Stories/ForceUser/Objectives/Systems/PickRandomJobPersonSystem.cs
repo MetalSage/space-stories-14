@@ -10,15 +10,15 @@ using Robust.Shared.Random;
 
 namespace Content.Server.Objectives.Systems;
 
-public sealed class PickRandomJobPersonSystem : EntitySystem
+public sealed partial class PickRandomJobPersonSystem : EntitySystem
 {
     private const float UdateDelay = 10f;
-    [Dependency] private readonly SharedJobSystem _job = default!;
-    [Dependency] private readonly SharedPopupSystem _popup = default!;
-    [Dependency] private readonly IRobustRandom _random = default!;
-    [Dependency] private readonly StoreSystem _store = default!;
-    [Dependency] private readonly TargetObjectiveSystem _target = default!;
-    [Dependency] private readonly TargetSystem _targetSys = default!;
+    [Dependency] private SharedJobSystem _job = default!;
+    [Dependency] private SharedPopupSystem _popup = default!;
+    [Dependency] private IRobustRandom _random = default!;
+    [Dependency] private StoreSystem _store = default!;
+    [Dependency] private TargetObjectiveSystem _target = default!;
+    [Dependency] private TargetSystem _targetSys = default!;
 
     private float _updateTime;
 

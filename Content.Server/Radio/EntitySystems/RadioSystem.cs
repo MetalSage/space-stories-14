@@ -36,9 +36,9 @@ public sealed partial class RadioSystem : EntitySystem
     [Dependency] private EntityQuery<TelecomExemptComponent> _exemptQuery = default!;
 
     // Stories-TTS Start
-    [Dependency] private readonly TTSSystem _tts = default!;
-    [Dependency] private readonly TtsAudioProcessingSystem _ttsProcessing = default!;
-    [Dependency] private readonly IConfigurationManager _cfg = default!;
+    [Dependency] private TTSSystem _tts = default!;
+    [Dependency] private TtsAudioProcessingSystem _ttsProcessing = default!;
+    [Dependency] private IConfigurationManager _cfg = default!;
     // Stories-TTS End
 
     // set used to prevent radio feedback loops.
@@ -209,7 +209,7 @@ public sealed partial class RadioSystem : EntitySystem
             foreach (var uid in recipientUids)
             {
                 var parent = Transform(uid).ParentUid;
-                var target = actorQuery.HasComponent(uid) ? uid : (actorQuery.HasComponent(parent) ? parent : (EntityUid?) null);
+                var target = actorQuery.HasComponent(uid) ? uid : (actorQuery.HasComponent(parent) ? parent : (EntityUid?)null);
 
                 if (target.HasValue && actorQuery.TryGetComponent(target.Value, out var actor))
                 {

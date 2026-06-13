@@ -9,10 +9,10 @@ using Robust.Client.UserInterface.XAML;
 
 namespace Content.Client._Stories.Cards.Fan.UI;
 
-public sealed class FanMenu : RadialMenu
+public sealed partial class FanMenu : RadialMenu
 {
     private readonly FanMenuBoundUserInterface? _boundUI;
-    [Dependency] private readonly EntityManager _entManager = default!;
+    [Dependency] private EntityManager _entManager = default!;
 
     private readonly EntityUid _owner;
     private readonly SpriteSystem _spriteSystem;

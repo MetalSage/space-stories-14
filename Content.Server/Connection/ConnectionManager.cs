@@ -66,7 +66,7 @@ namespace Content.Server.Connection
         [Dependency] private IHttpClientHolder _http = default!;
         [Dependency] private IAdminManager _adminManager = default!;
         [Dependency] private IEntityManager _entityManager = default!;
-        [Dependency] private readonly SponsorsManager _sponsorsManager = default!; // Corvax-Sponsors
+        [Dependency] private SponsorsManager _sponsorsManager = default!; // Corvax-Sponsors
 
         private GameTicker? _ticker;
 
@@ -308,12 +308,12 @@ namespace Content.Server.Connection
             // Corvax-Queue-Start
             var isQueueEnabled = _cfg.GetCVar(SCCVars.QueueEnabled);
             if (_plyMgr.PlayerCount >= _cfg.GetCVar(CCVars.SoftMaxPlayers) && !isPrivileged && !isQueueEnabled && !wasInGame)
-            // Corvax-Queue-End
+                // Corvax-Queue-End
 
-            if (!_cfg.GetCVar(CCVars.AdminsCountForMaxPlayers))
-            {
-                softPlayerCount -= _adminManager.ActiveAdmins.Count();
-            }
+                if (!_cfg.GetCVar(CCVars.AdminsCountForMaxPlayers))
+                {
+                    softPlayerCount -= _adminManager.ActiveAdmins.Count();
+                }
 
             if ((softPlayerCount >= _cfg.GetCVar(CCVars.SoftMaxPlayers) && !adminBypass) && !wasInGame)
             {
