@@ -48,6 +48,8 @@ using Content.Shared.Temperature.Components;
 using Robust.Shared.Utility;
 // Stories-Start
 using Content.Server.Actions;
+using Content.Shared.Actions.Components;
+using Content.Server.Guardian;
 using Content.Shared.Movement.Components;
 // Stories-End
 
@@ -353,17 +355,21 @@ public sealed partial class ZombieSystem
         _tag.AddTag(target, CannotSuicideTag);
 
         // Stories-Start
-        if (!HasComp<JumpAbilityComponent>(target))
+        if (HasComp<CanHostGuardianComponent>(target) && TryComp(target, out ActionsComponent? actionsComp)) // CanHostGuardianComponent is present on MobMonkey, MobKobold, STMobShadowling and BaseSpeciesMob (playable races)
         {
-            var jump = AddComp<JumpAbilityComponent>(target);
-            jump.Action = ZombieGravityJumpAction;
-            jump.CanCollide = true;
-            jump.JumpDistance = 2;
-            Dirty(target, jump);
+            if (!HasComp<JumpAbilityComponent>(target))
+            {
+                var jumpComp = AddComp<JumpAbilityComponent>(target);
+                jumpComp.Action = ZombieGravityJumpAction;
+                _actions.RemoveAction(target, jumpComp.ActionEntity);
+                jumpComp.ActionEntity = _actions.AddAction(target, jumpComp.Action);
+                jumpComp.CanCollide = true;
+                jumpComp.JumpDistance = 2;
+                Dirty(target, jumpComp);
+            }
+            _actions.AddAction(target, ZombieLookUpAction);
+            _actions.AddAction(target, ZombieRegenerativeSleepAction);
         }
-
-        _actions.AddAction(target, ZombieLookUpAction);
-        _actions.AddAction(target, ZombieRegenerativeSleepAction);
         // Stories-End
     }
 }
