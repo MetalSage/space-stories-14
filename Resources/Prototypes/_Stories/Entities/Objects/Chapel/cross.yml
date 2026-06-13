@@ -10,6 +10,7 @@
     groups:
       Extinguish: [ Touch ] # Need for bless reaction
   - type: Damageable
+  - type: Injurable
   - type: Blessable
     timeModifier: 3
   - type: Item
@@ -58,6 +59,7 @@
     normalState: fire
   - type: Damageable
     damageModifierSet: Wood
+  - type: Injurable
   - type: Clothing
     quickEquip: true
     sprite: _Stories/Objects/Chapel/cross.rsi

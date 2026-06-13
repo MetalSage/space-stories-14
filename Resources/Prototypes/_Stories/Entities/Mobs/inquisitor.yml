@@ -28,6 +28,7 @@
   - type: InteractionOutline
   - type: MovementIgnoreGravity
   - type: Damageable
+  - type: Injurable
   - type: Examiner
   - type: NoSlip
   - type: Actions

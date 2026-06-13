@@ -85,7 +85,6 @@
   - type: Damageable
     damageModifierSet: STPontificModifierSet
   - type: Stamina
-    animationThreshold: 100
     baseCritThreshold: 200
   - type: Tag
     tags:

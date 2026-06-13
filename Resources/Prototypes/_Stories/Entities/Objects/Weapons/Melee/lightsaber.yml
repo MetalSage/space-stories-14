@@ -48,6 +48,7 @@
     reflects:
       - Energy
   - type: Damageable
+  - type: Injurable
   - type: Fixtures
     fixtures:
       fix1:

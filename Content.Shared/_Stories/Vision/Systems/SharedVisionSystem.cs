@@ -170,6 +170,9 @@ public abstract partial class SharedVisionSystem : EntitySystem
 
     public void UpdateVision(EntityUid user)
     {
+        if (TerminatingOrDeleted(user))
+            return;
+
         var ev = new RefreshVisionEvent();
 
         if (TryComp<VisionProviderComponent>(user, out var innateProvider))

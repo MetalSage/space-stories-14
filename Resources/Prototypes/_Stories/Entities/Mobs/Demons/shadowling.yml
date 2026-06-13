@@ -16,7 +16,6 @@
     defaultRotation: 90
     horizontalRotation: 90
   - type: Stamina
-    animationThreshold: 150
     baseCritThreshold: 300
   - type: Hands
     hands:
