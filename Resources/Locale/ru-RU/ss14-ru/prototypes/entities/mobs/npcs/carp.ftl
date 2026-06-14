@@ -10,6 +10,11 @@ ent-MobCarpMagic = мэджикарп
 ent-MobCarpHolo = голокарп
     .desc = Карп из голографической энергии. К сожалению для вас, он вполне реален.
     .suffix = { ent-BaseMobCarp.suffix }
+# Stories - start
+ent-STMobCarpHoloDragon = { ent-MobCarpHolo }
+    .desc = { ent-MobCarpHolo.desc }
+    .suffix = { ent-MobCarpDragon.suffix }
+# Stories - end
 ent-MobCarpRainbow = радужный карп
     .desc = Ух ты, какая блестящая рыбка!
     .suffix = { ent-MobCarp.suffix }
@@ -28,3 +33,8 @@ ent-MobShark = карпоакула
 ent-MobSharkSalvage = { ent-MobShark }
     .desc = { ent-MobShark.desc }
     .suffix = Подземелье
+# Stories - start
+ent-STMobSharkDragon = { ent-MobShark }
+    .desc = { ent-MobShark.desc }
+    .suffix = { ent-MobCarpDragon.suffix }
+# Stories - end

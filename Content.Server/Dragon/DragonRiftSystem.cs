@@ -13,6 +13,9 @@ using Content.Shared.Damage.Components;
 using Robust.Shared.Audio.Systems;
 using Robust.Shared.GameStates;
 using Robust.Shared.Utility;
+// Stories - start
+using Content.Shared.EntityTable;
+// Stories - end
 
 namespace Content.Server.Dragon;
 
@@ -27,6 +30,9 @@ public sealed partial class DragonRiftSystem : EntitySystem
     [Dependency] private NavMapSystem _navMap = default!;
     [Dependency] private NPCSystem _npc = default!;
     [Dependency] private SharedAudioSystem _audio = default!;
+    // Stories - start
+    [Dependency] private EntityTableSystem _entityTable = default!;
+    // Stories - end
 
     public override void Initialize()
     {
@@ -88,18 +94,36 @@ public sealed partial class DragonRiftSystem : EntitySystem
             if (comp.SpawnAccumulator > comp.SpawnCooldown)
             {
                 comp.SpawnAccumulator -= comp.SpawnCooldown;
-                var ent = Spawn(comp.SpawnPrototype, xform.Coordinates);
-
-                // Update their look to match the leader.
-                if (TryComp<RandomSpriteComponent>(comp.Dragon, out var randomSprite))
+            // Stories - start
+            //    var ent = Spawn(comp.SpawnPrototype, xform.Coordinates);
+            //
+            //    // Update their look to match the leader.
+            //    if (TryComp<RandomSpriteComponent>(comp.Dragon, out var randomSprite))
+            //    {
+            //        var spawnedSprite = EnsureComp<RandomSpriteComponent>(ent);
+            //        _serManager.CopyTo(randomSprite, ref spawnedSprite, notNullableOverride: true);
+            //        Dirty(ent, spawnedSprite);
+            //    }
+            //
+            //    if (comp.Dragon != null)
+            //        _npc.SetBlackboard(ent, NPCBlackboard.FollowTarget, new EntityCoordinates(comp.Dragon.Value, Vector2.Zero));
+                var spawns = _entityTable.GetSpawns(comp.SpawnTable);
+                foreach (var proto in spawns)
                 {
-                    var spawnedSprite = EnsureComp<RandomSpriteComponent>(ent);
-                    _serManager.CopyTo(randomSprite, ref spawnedSprite, notNullableOverride: true);
-                    Dirty(ent, spawnedSprite);
-                }
+                    var ent = Spawn(proto, xform.Coordinates);
 
-                if (comp.Dragon != null)
-                    _npc.SetBlackboard(ent, NPCBlackboard.FollowTarget, new EntityCoordinates(comp.Dragon.Value, Vector2.Zero));
+                    // Update their look to match the leader.
+                    if (TryComp<RandomSpriteComponent>(comp.Dragon, out var randomSprite) && HasComp<RandomSpriteComponent>(ent) == true)
+                    {
+                        var spawnedSprite = EnsureComp<RandomSpriteComponent>(ent);
+                        _serManager.CopyTo(randomSprite, ref spawnedSprite, notNullableOverride: true);
+                        Dirty(ent, spawnedSprite);
+                    }
+
+                    if (comp.Dragon != null)
+                        _npc.SetBlackboard(ent, NPCBlackboard.FollowTarget, new EntityCoordinates(comp.Dragon.Value, Vector2.Zero));
+                }
+            // Stories - end
             }
         }
     }
