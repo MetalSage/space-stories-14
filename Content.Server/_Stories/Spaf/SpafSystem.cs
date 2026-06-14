@@ -8,15 +8,15 @@ using Robust.Shared.Prototypes;
 
 namespace Content.Server._Stories.Spaf;
 
-public sealed class SpafSystem : SharedSpafSystem
+public sealed partial class SpafSystem : SharedSpafSystem
 {
     private const string PacifiedKey = "Pacified";
     private const float PacifiedTime = 3f;
     private const float PacifiedRange = 5f;
-    [Dependency] private readonly EntityLookupSystem _lookup = default!;
-    [Dependency] private readonly PolymorphSystem _polymorph = default!;
-    [Dependency] private readonly IPrototypeManager _prototype = default!;
-    [Dependency] private readonly StatusEffectsSystem _statusEffects = default!;
+    [Dependency] private EntityLookupSystem _lookup = default!;
+    [Dependency] private PolymorphSystem _polymorph = default!;
+    [Dependency] private IPrototypeManager _prototype = default!;
+    [Dependency] private StatusEffectsSystem _statusEffects = default!;
 
     public override void Initialize()
     {

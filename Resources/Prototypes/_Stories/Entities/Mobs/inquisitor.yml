@@ -28,7 +28,7 @@
   - type: InteractionOutline
   - type: MovementIgnoreGravity
   - type: Damageable
-    damageContainer: Biological
+  - type: Injurable
   - type: Examiner
   - type: NoSlip
   - type: Actions

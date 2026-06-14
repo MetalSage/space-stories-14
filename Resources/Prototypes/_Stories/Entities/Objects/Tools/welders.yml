@@ -16,13 +16,13 @@
   - type: UseDelay
   - type: RefillableSolution
     solution: Welder
-  - type: SolutionContainerManager
-    solutions:
-      Welder:
-        reagents:
-          - ReagentId: FoamingAgent
-            Quantity: 100
-        maxVol: 100
+  - type: Solution
+    id: Welder
+    solution:
+      maxVol: 100
+      reagents:
+        - ReagentId: FoamingAgent
+          Quantity: 100
   - type: Tool
     useSound:
       collection: ColdWelding

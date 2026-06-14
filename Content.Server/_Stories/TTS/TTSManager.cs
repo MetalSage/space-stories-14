@@ -16,7 +16,7 @@ using Robust.Shared.Configuration;
 
 namespace Content.Server._Stories.TTS;
 
-public sealed class TTSManager
+public sealed partial class TTSManager
 {
     private static readonly Histogram RequestTimings = Metrics.CreateHistogram(
         "tts_req_timings",
@@ -38,7 +38,7 @@ public sealed class TTSManager
     private readonly ConcurrentDictionary<string, byte[]> _cache = new();
     private readonly List<string> _cacheKeysSeq = new();
 
-    [Dependency] private readonly IConfigurationManager _cfg = default!;
+    [Dependency] private IConfigurationManager _cfg = default!;
 
     private readonly HttpClient _httpClient = new();
 

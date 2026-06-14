@@ -1,4 +1,4 @@
-﻿- type: entity
+- type: entity
   parent: BaseItem
   id: STBaseCross
   abstract: true
@@ -6,8 +6,11 @@
   - type: GuideHelp
     guides:
     - STChaplain
+  - type: Reactive
+    groups:
+      Extinguish: [ Touch ] # Need for bless reaction
   - type: Damageable
-    damageContainer: Inorganic
+  - type: Injurable
   - type: Blessable
     timeModifier: 3
   - type: Item
@@ -56,7 +59,7 @@
     normalState: fire
   - type: Damageable
     damageModifierSet: Wood
-    damageContainer: Inorganic
+  - type: Injurable
   - type: Clothing
     quickEquip: true
     sprite: _Stories/Objects/Chapel/cross.rsi
@@ -83,3 +86,5 @@
   - type: Sprite
     sprite: _Stories/Objects/Chapel/silvercross.rsi
     state: icon
+  - type: Blessable
+    timeModifier: 12 # Extinguish and Acidic reaction groups dublicate bless reaction, here timeModifier quadrupled to double the effect

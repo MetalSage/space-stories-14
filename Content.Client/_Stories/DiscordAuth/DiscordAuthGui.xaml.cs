@@ -9,8 +9,8 @@ namespace Content.Client._Stories.DiscordAuth;
 [GenerateTypedNameReferences]
 public sealed partial class DiscordAuthGui : Control
 {
-    [Dependency] private readonly IClientConsoleHost _consoleHost = default!;
-    [Dependency] private readonly DiscordAuthManager _discordAuthManager = default!;
+    [Dependency] private IClientConsoleHost _consoleHost = default!;
+    [Dependency] private DiscordAuthManager _discordAuthManager = default!;
 
     public DiscordAuthGui()
     {

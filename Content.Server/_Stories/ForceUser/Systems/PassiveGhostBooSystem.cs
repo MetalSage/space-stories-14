@@ -3,9 +3,9 @@ using Content.Server.Ghost;
 
 namespace Content.Server._Stories.ForceUser.Systems;
 
-public sealed class PassiveGhostBooSystem : EntitySystem
+public sealed partial class PassiveGhostBooSystem : EntitySystem
 {
-    [Dependency] private readonly EntityLookupSystem _lookup = default!;
+    [Dependency] private EntityLookupSystem _lookup = default!;
 
     public override void Update(float frameTime)
     {

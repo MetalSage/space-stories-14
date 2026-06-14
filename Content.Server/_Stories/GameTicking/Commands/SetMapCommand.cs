@@ -12,11 +12,11 @@ using Robust.Shared.Prototypes;
 namespace Content.Server._Stories.GameTicking.Commands;
 
 [AdminCommand(AdminFlags.Round)]
-internal sealed class SetMapCommand : IConsoleCommand
+internal sealed partial class SetMapCommand : IConsoleCommand
 {
-    [Dependency] private readonly IConfigurationManager _configurationManager = default!;
-    [Dependency] private readonly IEntityManager _entityManager = default!;
-    [Dependency] private readonly IGameMapManager _gameMapManager = default!;
+    [Dependency] private IConfigurationManager _configurationManager = default!;
+    [Dependency] private IEntityManager _entityManager = default!;
+    [Dependency] private IGameMapManager _gameMapManager = default!;
 
     public string Command => "setmap";
     public string Description => Loc.GetString("setmap-command-description");

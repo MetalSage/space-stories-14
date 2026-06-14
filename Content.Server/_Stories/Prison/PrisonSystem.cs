@@ -2,37 +2,38 @@ using Content.Server.GameTicking;
 using Content.Server.Mind;
 using Content.Server.Station.Components;
 using Content.Server.Station.Systems;
+using Content.Shared.CombatMode.Pacification;
 using Content.Shared.Mobs.Components;
 using Content.Shared.Mobs.Systems;
 using Content.Shared.Roles;
 using Content.Shared.Roles.Components;
 using Content.Shared.Station.Components;
-using Content.Shared.StatusEffectNew;
+using Content.Shared.StatusEffect;
 using Robust.Server.Player;
 using Robust.Shared.Map;
 using Robust.Shared.Prototypes;
 
 namespace Content.Server._Stories.Prison;
 
-public sealed class PrisonSystem : EntitySystem
+public sealed partial class PrisonSystem : EntitySystem
 {
     /// <summary>
     /// Процент сбежавших зеков для их полной победы.
     /// </summary>
     private const float EscapedPrisonersPercent = 0.5f;
 
-    private static readonly EntProtoId PacifiedKey = "Pacified";
+    private static readonly string PacifiedKey = "Pacified";
 
-    [Dependency] private readonly GameTicker _gameTicker = default!;
-    [Dependency] private readonly SharedMapSystem _map = default!;
-    [Dependency] private readonly IMapManager _mapManager = default!;
-    [Dependency] private readonly MindSystem _mind = default!;
-    [Dependency] private readonly MobStateSystem _mobState = default!;
-    [Dependency] private readonly IPlayerManager _player = default!;
+    [Dependency] private GameTicker _gameTicker = default!;
+    [Dependency] private SharedMapSystem _map = default!;
+    [Dependency] private IMapManager _mapManager = default!;
+    [Dependency] private MindSystem _mind = default!;
+    [Dependency] private MobStateSystem _mobState = default!;
+    [Dependency] private IPlayerManager _player = default!;
     private readonly ProtoId<JobPrototype> _prisonerJobId = "PRISONPrisoner";
-    [Dependency] private readonly IPrototypeManager _prototypeManager = default!;
-    [Dependency] private readonly StationSystem _station = default!;
-    [Dependency] private readonly StatusEffectsSystem _statusEffects = default!;
+    [Dependency] private IPrototypeManager _prototypeManager = default!;
+    [Dependency] private StationSystem _station = default!;
+    [Dependency] private StatusEffectsSystem _statusEffects = default!;
 
     private ISawmill _sawmill = default!;
 
@@ -47,9 +48,9 @@ public sealed class PrisonSystem : EntitySystem
     private void OnPrisonerInit(EntityUid uid, PrisonerComponent component, ComponentInit args)
     {
         // Rooooooooooooooooooooundstart пацифизм на время, чтобы не было РДМ побегов за 5 секунд.
-        _statusEffects.TryAddStatusEffectDuration(uid,
+        _statusEffects.TryAddStatusEffect<PacifiedComponent>(uid,
             PacifiedKey,
-            TimeSpan.FromSeconds(component.PacifiedTime));
+            TimeSpan.FromSeconds(component.PacifiedTime), true);
     }
 
     private void OnRoundEndText(RoundEndTextAppendEvent args)

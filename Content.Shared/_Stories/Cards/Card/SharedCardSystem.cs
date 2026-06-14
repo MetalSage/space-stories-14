@@ -7,12 +7,12 @@ using Robust.Shared.Audio.Systems;
 
 namespace Content.Shared._Stories.Cards.Card;
 
-public sealed class SharedCardSystem : EntitySystem
+public sealed partial class SharedCardSystem : EntitySystem
 {
-    [Dependency] private readonly SharedAppearanceSystem _appearance = default!;
-    [Dependency] private readonly SharedAudioSystem _audio = default!;
-    [Dependency] private readonly SharedCardStackSystem _cardStack = default!;
-    [Dependency] private readonly SharedHandsSystem _handsSystem = default!;
+    [Dependency] private SharedAppearanceSystem _appearance = default!;
+    [Dependency] private SharedAudioSystem _audio = default!;
+    [Dependency] private SharedCardStackSystem _cardStack = default!;
+    [Dependency] private SharedHandsSystem _handsSystem = default!;
 
     public override void Initialize()
     {

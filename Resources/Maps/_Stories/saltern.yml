@@ -6512,17 +6512,6 @@ entities:
     - type: Transform
       pos: 7.7243433,-13.122412
       parent: 31
-    - type: SolutionContainerManager
-      solutions:
-        beaker:
-          temperature: 293.15
-          canReact: True
-          maxVol: 50
-          name: null
-          reagents:
-          - data: null
-            ReagentId: Leporazine
-            Quantity: 40
 - proto: Bed
   entities:
   - uid: 4
@@ -53265,7 +53254,6 @@ entities:
       parent: 31
     - type: ApcPowerReceiver
       powerLoad: 0
-    - type: Timer
   - uid: 1324
     components:
     - type: Transform

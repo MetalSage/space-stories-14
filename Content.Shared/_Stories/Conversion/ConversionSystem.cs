@@ -4,10 +4,10 @@ using Robust.Shared.Prototypes;
 
 namespace Content.Shared._Stories.Conversion;
 
-public abstract class SharedConversionSystem : EntitySystem
+public abstract partial class SharedConversionSystem : EntitySystem
 {
-    [Dependency] private readonly EntityWhitelistSystem _entityWhitelist = default!;
-    [Dependency] private readonly IPrototypeManager _prototype = default!;
+    [Dependency] private EntityWhitelistSystem _entityWhitelist = default!;
+    [Dependency] private IPrototypeManager _prototype = default!;
 
     public bool IsConverted(EntityUid uid,
         ProtoId<ConversionPrototype> prototype,

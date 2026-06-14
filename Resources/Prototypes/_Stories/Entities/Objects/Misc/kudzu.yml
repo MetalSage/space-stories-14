@@ -1,4 +1,4 @@
-﻿- type: entity
+- type: entity
   id: STPontificKudzu
   parent: BaseKudzu
   name: desecrated lilies
@@ -10,7 +10,7 @@
         path:
           "/Audio/Weapons/slash.ogg"
   - type: Sprite
-    drawdepth: Overdoors
+    drawdepth: SmallMobs
     sprite: _Stories/Objects/Misc/pontific_kudzu.rsi
     state: kudzu_11
   - type: KudzuVisuals
@@ -26,6 +26,7 @@
         layer:
         - MidImpassable
   - type: Damageable
+  - type: Injurable
   - type: Destructible
     thresholds:
     - trigger:

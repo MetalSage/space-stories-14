@@ -5,9 +5,9 @@ using Robust.Shared.Serialization;
 
 namespace Content.Shared._Stories.DoAfter;
 
-public sealed class SharedDoAfterTargetSystem : EntitySystem
+public sealed partial class SharedDoAfterTargetSystem : EntitySystem
 {
-    [Dependency] private readonly SharedDoAfterSystem _doAfterSystem = default!;
+    [Dependency] private SharedDoAfterSystem _doAfterSystem = default!;
 
     public override void Initialize()
     {
@@ -115,7 +115,7 @@ public sealed class SharedDoAfterTargetSystem : EntitySystem
     }
 }
 
-[Serializable] [NetSerializable]
+[Serializable, NetSerializable]
 public sealed partial class InstantActionDoAfterEvent : SimpleDoAfterEvent
 {
     [DataField("event")]
@@ -123,7 +123,7 @@ public sealed partial class InstantActionDoAfterEvent : SimpleDoAfterEvent
     public InstantActionEvent? Event;
 }
 
-[Serializable] [NetSerializable]
+[Serializable, NetSerializable]
 public sealed partial class EntityTargetActionDoAfterEvent : SimpleDoAfterEvent
 {
     [DataField("event")]
