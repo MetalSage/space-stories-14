@@ -105,6 +105,26 @@
   result: ShuttleGunDusterCircuitboard
   completetime: 12
 
+# Stories - start
+- type: latheRecipe
+  parent: [ BaseGoldCircuitboardRecipe, BaseMachineRecipeCategory ]
+  id: WeaponEnergyTurretAIMachineCircuitboard
+  result: WeaponEnergyTurretAIMachineCircuitboard
+  completetime: 10
+
+- type: latheRecipe
+  parent: [ BaseGoldCircuitboardRecipe, BaseMachineRecipeCategory ]
+  id: WeaponEnergyTurretCommandMachineCircuitboard
+  result: WeaponEnergyTurretCommandMachineCircuitboard
+  completetime: 10
+
+- type: latheRecipe
+  parent: [ BaseGoldCircuitboardRecipe, BaseMachineRecipeCategory ]
+  id: WeaponEnergyTurretSecurityMachineCircuitboard
+  result: WeaponEnergyTurretSecurityMachineCircuitboard
+  completetime: 10
+# Stories - end
+
 ## Circuit imprinter
 
 ## Engineering

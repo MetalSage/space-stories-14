@@ -115,3 +115,26 @@
   parent: HamtrCentralElectronics
   id: HamtrPeripheralsElectronics
   result: HamtrPeripheralsElectronics
+
+# Stories - start
+## Non-circuit imprinter (no second category)
+
+# Security techfab
+- type: latheRecipe
+  parent: [ BaseSilverCircuitboardRecipe, BaseCircuitryRecipeCategory ]
+  id: WeaponEnergyTurretAIControlPanelElectronics
+  result: WeaponEnergyTurretAIControlPanelElectronics
+  completetime: 6
+
+- type: latheRecipe
+  parent: [ BaseSilverCircuitboardRecipe, BaseCircuitryRecipeCategory ]
+  id: WeaponEnergyTurretCommandControlPanelElectronics
+  result: WeaponEnergyTurretCommandControlPanelElectronics
+  completetime: 6
+
+- type: latheRecipe
+  parent: [ BaseSilverCircuitboardRecipe, BaseCircuitryRecipeCategory ]
+  id: WeaponEnergyTurretSecurityControlPanelElectronics
+  result: WeaponEnergyTurretSecurityControlPanelElectronics
+  completetime: 6
+# Stories - end

@@ -40,6 +40,7 @@ research-technology-basic-shuttle-armament = Базовое корабельно
 research-technology-advanced-shuttle-weapon = Продвинутое корабельное оружие
 research-technology-thermal-weaponry = Термальное вооружение
 research-technology-dual-wielding-technology = Технология двойного оперирования
+stories-research-technology-energy-turrets = Автономные системы безопасности
 
 research-technology-basic-robotics = Основы робототехники
 research-technology-basic-anomalous-research = Основы исследования аномалий

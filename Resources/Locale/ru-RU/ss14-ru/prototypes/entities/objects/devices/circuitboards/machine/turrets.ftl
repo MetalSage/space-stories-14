@@ -1,12 +1,12 @@
 ent-WeaponEnergyTurretStationMachineCircuitboardBase = охранная турель (машинная плата)
     .desc = Печатная плата для охранной турели.
     .suffix = { ent-BaseMachineCircuitboard.suffix }
-ent-WeaponEnergyTurretAIMachineCircuitboard = { ent-WeaponEnergyTurretStationMachineCircuitboardBase }
+ent-WeaponEnergyTurretAIMachineCircuitboard = охранная турель (машинная плата, ИИ)
     .desc = { ent-WeaponEnergyTurretStationMachineCircuitboardBase.desc }
     .suffix = ИИ, Синтетики
-ent-WeaponEnergyTurretSecurityMachineCircuitboard = { ent-WeaponEnergyTurretStationMachineCircuitboardBase }
+ent-WeaponEnergyTurretSecurityMachineCircuitboard = охранная турель (машинная плата, СБ)
     .desc = { ent-WeaponEnergyTurretStationMachineCircuitboardBase.desc }
     .suffix = Служба безопасности
-ent-WeaponEnergyTurretCommandMachineCircuitboard = { ent-WeaponEnergyTurretStationMachineCircuitboardBase }
+ent-WeaponEnergyTurretCommandMachineCircuitboard = охранная турель (машинная плата, КОМ)
     .desc = { ent-WeaponEnergyTurretStationMachineCircuitboardBase.desc }
     .suffix = Командование
