@@ -19,7 +19,6 @@
   startingGear: GuardianNtGear
   icon: "JobIconGuardianNt"
   supervisors: job-supervisors-centcom
-  canBeAntag: false
   accessGroups:
   - AllAccess
   special:

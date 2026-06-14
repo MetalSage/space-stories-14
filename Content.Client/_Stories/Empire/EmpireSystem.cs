@@ -5,9 +5,9 @@ using Robust.Shared.Prototypes;
 
 namespace Content.Client._Stories.Empire;
 
-public sealed class EmpireSystem : SharedStatusIconSystem
+public sealed partial class EmpireSystem : SharedStatusIconSystem
 {
-    [Dependency] private readonly IPrototypeManager _prototype = default!;
+    [Dependency] private IPrototypeManager _prototype = default!;
 
     public override void Initialize()
     {

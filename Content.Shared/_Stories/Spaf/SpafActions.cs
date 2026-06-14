@@ -49,7 +49,7 @@ public sealed partial class SpafStealthEvent : InstantActionEvent, ISpafAction
     public float HungerCost { get; set; } = 15f;
 }
 
-[Serializable] [NetSerializable]
+[Serializable, NetSerializable]
 public sealed partial class SpafStealthDoAfterEvent : SimpleDoAfterEvent
 {
 }

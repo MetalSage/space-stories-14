@@ -2,7 +2,7 @@
   id: STBZ
   name: stories-gases-bz
   abbreviation: stories-gases-bz-abbreviation
-  specificHeat: 20
+  molarHeatCapacity: 20
   heatCapacityRatio: 1.4
   molarMass: 10
   color: '#9370db'
@@ -13,7 +13,7 @@
   id: STHealium
   name: stories-gases-healium
   abbreviation: stories-gases-healium-abbreviation
-  specificHeat: 20
+  molarHeatCapacity: 20
   heatCapacityRatio: 1.4
   molarMass: 10
   gasOverlaySprite:
@@ -27,7 +27,7 @@
   id: STNitryl
   name: stories-gases-nitryl
   abbreviation: stories-gases-nitryl-abbreviation
-  specificHeat: 20
+  molarHeatCapacity: 20
   heatCapacityRatio: 1.4
   molarMass: 10
   color: '#12ca21'
@@ -38,7 +38,7 @@
   id: STPluoxium
   name: stories-gases-pluoxium
   abbreviation: stories-gases-pluoxium-abbreviation
-  specificHeat: 20
+  molarHeatCapacity: 20
   heatCapacityRatio: 1.4
   molarMass: 10
   color: '#3434aa'

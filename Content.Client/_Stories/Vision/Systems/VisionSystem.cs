@@ -7,11 +7,11 @@ using Robust.Shared.Player;
 
 namespace Content.Client._Stories.Vision.Systems;
 
-public sealed class VisionSystem : SharedVisionSystem
+public sealed partial class VisionSystem : SharedVisionSystem
 {
-    [Dependency] private readonly ILightManager _lightManager = default!;
-    [Dependency] private readonly IOverlayManager _overlayManager = default!;
-    [Dependency] private readonly IPlayerManager _playerManager = default!;
+    [Dependency] private ILightManager _lightManager = default!;
+    [Dependency] private IOverlayManager _overlayManager = default!;
+    [Dependency] private IPlayerManager _playerManager = default!;
 
     public override void Initialize()
     {

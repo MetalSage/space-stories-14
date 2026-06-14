@@ -7,13 +7,13 @@ using Robust.Shared.Random;
 
 namespace Content.Server._Stories.ForceUser.Systems;
 
-public sealed class FrozeBulletsSystem : EntitySystem
+public sealed partial class FrozeBulletsSystem : EntitySystem
 {
-    [Dependency] private readonly EntityLookupSystem _lookup = default!;
-    [Dependency] private readonly SharedPopupSystem _popup = default!;
-    [Dependency] private readonly IRobustRandom _random = default!;
-    [Dependency] private readonly TriggerSystem _trigger = default!;
-    [Dependency] private readonly SharedTransformSystem _xform = default!;
+    [Dependency] private EntityLookupSystem _lookup = default!;
+    [Dependency] private SharedPopupSystem _popup = default!;
+    [Dependency] private IRobustRandom _random = default!;
+    [Dependency] private TriggerSystem _trigger = default!;
+    [Dependency] private SharedTransformSystem _xform = default!;
 
     public override void Update(float frameTime)
     {

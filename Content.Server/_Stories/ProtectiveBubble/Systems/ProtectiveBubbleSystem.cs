@@ -3,21 +3,21 @@ using Content.Shared._Stories.Force;
 using Content.Shared.Actions;
 using Content.Shared.Alert;
 using Content.Shared.Damage.Systems;
-using Content.Shared.StatusEffectNew;
+using Content.Shared.StatusEffect;
 
 namespace Content.Server._Stories.ForceUser.ProtectiveBubble.Systems;
 
 public sealed partial class ProtectiveBubbleSystem : EntitySystem
 {
-    [Dependency] private readonly SharedActionsSystem _actions = default!;
-    [Dependency] private readonly AlertsSystem _alerts = default!;
-    [Dependency] private readonly DamageableSystem _damageable = default!;
-    [Dependency] private readonly EntityManager _entityManager = default!;
-    [Dependency] private readonly IComponentFactory _factory = default!;
-    [Dependency] private readonly ForceSystem _force = default!;
-    [Dependency] private readonly MeleeWeaponSystem _meleeWeapon = default!;
-    [Dependency] private readonly StatusEffectsSystem _statusEffect = default!;
-    [Dependency] private readonly SharedTransformSystem _xform = default!;
+    [Dependency] private SharedActionsSystem _actions = default!;
+    [Dependency] private AlertsSystem _alerts = default!;
+    [Dependency] private DamageableSystem _damageable = default!;
+    [Dependency] private EntityManager _entityManager = default!;
+    [Dependency] private IComponentFactory _factory = default!;
+    [Dependency] private ForceSystem _force = default!;
+    [Dependency] private MeleeWeaponSystem _meleeWeapon = default!;
+    [Dependency] private StatusEffectsSystem _statusEffect = default!;
+    [Dependency] private SharedTransformSystem _xform = default!;
 
     public override void Initialize()
     {

@@ -6,7 +6,7 @@ using Robust.Shared.Prototypes;
 
 namespace Content.Shared._Stories.ReagentStatusIcon;
 
-[RegisterComponent] [NetworkedComponent]
+[RegisterComponent, NetworkedComponent]
 public sealed partial class ReagentStatusIconComponent : Component
 {
     [DataField]

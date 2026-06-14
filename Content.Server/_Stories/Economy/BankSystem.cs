@@ -14,11 +14,11 @@ using Robust.Shared.Random;
 
 namespace Content.Server._Stories.Economy;
 
-public sealed class BankSystem : EntitySystem
+public sealed partial class BankSystem : EntitySystem
 {
-    [Dependency] private readonly IPrototypeManager _prototypeManager = default!;
-    [Dependency] private readonly IRobustRandom _random = default!;
-    [Dependency] private readonly StationSystem _station = default!;
+    [Dependency] private IPrototypeManager _prototypeManager = default!;
+    [Dependency] private IRobustRandom _random = default!;
+    [Dependency] private StationSystem _station = default!;
 
     public override void Initialize()
     {

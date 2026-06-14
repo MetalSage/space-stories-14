@@ -14,19 +14,19 @@ using Robust.Shared.Utility;
 
 namespace Content.Server._Stories.Photosensitivity;
 
-public sealed class PhotosensitivitySystem : EntitySystem
+public sealed partial class PhotosensitivitySystem : EntitySystem
 {
     private const float UpdateTimer = 2f;
     public const float MaxIllumination = 10f;
     public const float MinIllumination = 0f;
 
-    [Dependency] private readonly DamageableSystem _damageable = default!;
-    [Dependency] private readonly EntityLookupSystem _entityLookup = default!;
-    [Dependency] private readonly IMapManager _mapManager = default!;
-    [Dependency] private readonly MapSystem _mapSystem = default!;
-    [Dependency] private readonly TransformSystem _transform = default!;
-    [Dependency] private readonly TurfSystem _turf = default!;
-    [Dependency] private readonly SharedAudioSystem _audio = default!;
+    [Dependency] private DamageableSystem _damageable = default!;
+    [Dependency] private EntityLookupSystem _entityLookup = default!;
+    [Dependency] private IMapManager _mapManager = default!;
+    [Dependency] private MapSystem _mapSystem = default!;
+    [Dependency] private TransformSystem _transform = default!;
+    [Dependency] private TurfSystem _turf = default!;
+    [Dependency] private SharedAudioSystem _audio = default!;
 
     private float _timer;
 

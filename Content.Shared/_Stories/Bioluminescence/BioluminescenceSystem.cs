@@ -5,11 +5,11 @@ using Content.Shared.Body;
 
 namespace Content.Shared._Stories.Bioluminescence;
 
-public sealed class BioluminescenceSystem : EntitySystem
+public sealed partial class BioluminescenceSystem : EntitySystem
 {
-    [Dependency] private readonly SharedActionsSystem _actions = default!;
-    [Dependency] private readonly SharedPointLightSystem _light = default!;
-    [Dependency] private readonly SharedVisualBodySystem _visualBody = default!;
+    [Dependency] private SharedActionsSystem _actions = default!;
+    [Dependency] private SharedPointLightSystem _light = default!;
+    [Dependency] private SharedVisualBodySystem _visualBody = default!;
 
     public override void Initialize()
     {

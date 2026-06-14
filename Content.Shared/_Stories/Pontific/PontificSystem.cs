@@ -11,12 +11,12 @@ public sealed partial class PontificSystem : EntitySystem
     private static readonly EntProtoId PontificFlameStatusEffect = "STPontificFlame";
     private static readonly EntProtoId PontificPrayerStatusEffect = "STPontificPrayer";
 
-    [Dependency] private readonly SharedActionsSystem _action = default!;
-    [Dependency] private readonly SharedAppearanceSystem _appearance = default!;
-    [Dependency] private readonly SharedAudioSystem _audio = default!;
+    [Dependency] private SharedActionsSystem _action = default!;
+    [Dependency] private SharedAppearanceSystem _appearance = default!;
+    [Dependency] private SharedAudioSystem _audio = default!;
 
-    [Dependency] private readonly MovementSpeedModifierSystem _movementSpeed = default!;
-    [Dependency] private readonly StatusEffectsSystem _statusEffects = default!;
+    [Dependency] private MovementSpeedModifierSystem _movementSpeed = default!;
+    [Dependency] private StatusEffectsSystem _statusEffects = default!;
 
     public override void Initialize()
     {
@@ -98,6 +98,8 @@ public sealed partial class PontificSystem : EntitySystem
         {
             if (args.PrayerSound is { } sound)
                 _audio.PlayPvs(sound, entity);
+
+            EnsureComp<PontificPrayerComponent>(entity);
 
             args.Handled = true;
         }

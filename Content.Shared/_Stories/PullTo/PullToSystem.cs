@@ -8,13 +8,13 @@ using Robust.Shared.Physics.Systems;
 
 namespace Content.Shared._Stories.PullTo;
 
-public sealed class PullToSystem : EntitySystem
+public sealed partial class PullToSystem : EntitySystem
 {
-    [Dependency] private readonly IComponentFactory _factory = default!;
-    [Dependency] private readonly SharedHandsSystem _hands = default!;
-    [Dependency] private readonly InventorySystem _inventory = default!;
-    [Dependency] private readonly SharedPhysicsSystem _physics = default!;
-    [Dependency] private readonly ThrowingSystem _throwing = default!;
+    [Dependency] private IComponentFactory _factory = default!;
+    [Dependency] private SharedHandsSystem _hands = default!;
+    [Dependency] private InventorySystem _inventory = default!;
+    [Dependency] private SharedPhysicsSystem _physics = default!;
+    [Dependency] private ThrowingSystem _throwing = default!;
 
     public override void Initialize()
     {

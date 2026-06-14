@@ -2,7 +2,8 @@ using Robust.Shared.GameStates;
 
 namespace Content.Shared._Stories.Spaf;
 
-[RegisterComponent] [NetworkedComponent] [Access(typeof(SharedSpafSystem))]
+[RegisterComponent, NetworkedComponent]
+[Access(typeof(SharedSpafSystem))]
 public sealed partial class SpafComponent : Component
 {
     // TODO: Add spaf status icon

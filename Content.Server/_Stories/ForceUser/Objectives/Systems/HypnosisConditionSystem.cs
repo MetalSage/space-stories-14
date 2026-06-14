@@ -5,9 +5,9 @@ using Content.Shared.Objectives.Components;
 
 namespace Content.Server.Objectives.Systems;
 
-public sealed class HypnosisConditionSystem : EntitySystem
+public sealed partial class HypnosisConditionSystem : EntitySystem
 {
-    [Dependency] private readonly NumberObjectiveSystem _number = default!;
+    [Dependency] private NumberObjectiveSystem _number = default!;
 
     public override void Initialize()
     {

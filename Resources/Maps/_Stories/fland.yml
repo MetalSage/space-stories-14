@@ -170290,160 +170290,118 @@ entities:
     - type: Transform
       pos: -3.5,15.5
       parent: 2
-    - type: ApcPowerReceiver
-      powerLoad: 0
   - uid: 25845
     components:
     - type: Transform
       rot: 1.5707963267948966 rad
       pos: -8.5,15.5
       parent: 2
-    - type: ApcPowerReceiver
-      powerLoad: 0
   - uid: 25846
     components:
     - type: Transform
       rot: -1.5707963267948966 rad
       pos: -10.5,17.5
       parent: 2
-    - type: ApcPowerReceiver
-      powerLoad: 0
   - uid: 25847
     components:
     - type: Transform
       pos: -13.5,26.5
       parent: 2
-    - type: ApcPowerReceiver
-      powerLoad: 0
   - uid: 25848
     components:
     - type: Transform
       pos: -19.5,26.5
       parent: 2
-    - type: ApcPowerReceiver
-      powerLoad: 0
   - uid: 25849
     components:
     - type: Transform
       rot: 1.5707963267948966 rad
       pos: -20.5,18.5
       parent: 2
-    - type: ApcPowerReceiver
-      powerLoad: 0
   - uid: 25850
     components:
     - type: Transform
       pos: -12.5,22.5
       parent: 2
-    - type: ApcPowerReceiver
-      powerLoad: 0
   - uid: 25851
     components:
     - type: Transform
       pos: -19.5,22.5
       parent: 2
-    - type: ApcPowerReceiver
-      powerLoad: 0
   - uid: 25852
     components:
     - type: Transform
       rot: 3.141592653589793 rad
       pos: -6.5,17.5
       parent: 2
-    - type: ApcPowerReceiver
-      powerLoad: 0
   - uid: 25853
     components:
     - type: Transform
       pos: -7.5,24.5
       parent: 2
-    - type: ApcPowerReceiver
-      powerLoad: 0
   - uid: 25854
     components:
     - type: Transform
       rot: 1.5707963267948966 rad
       pos: -10.5,28.5
       parent: 2
-    - type: ApcPowerReceiver
-      powerLoad: 0
   - uid: 25855
     components:
     - type: Transform
       pos: -6.5,32.5
       parent: 2
-    - type: ApcPowerReceiver
-      powerLoad: 0
   - uid: 25856
     components:
     - type: Transform
       rot: 3.141592653589793 rad
       pos: -12.5,32.5
       parent: 2
-    - type: ApcPowerReceiver
-      powerLoad: 0
   - uid: 25857
     components:
     - type: Transform
       pos: -4.5,42.5
       parent: 2
-    - type: ApcPowerReceiver
-      powerLoad: 0
   - uid: 25858
     components:
     - type: Transform
       rot: -1.5707963267948966 rad
       pos: -8.5,37.5
       parent: 2
-    - type: ApcPowerReceiver
-      powerLoad: 0
   - uid: 25859
     components:
     - type: Transform
       rot: 1.5707963267948966 rad
       pos: -6.5,37.5
       parent: 2
-    - type: ApcPowerReceiver
-      powerLoad: 0
   - uid: 25860
     components:
     - type: Transform
       pos: -9.5,42.5
       parent: 2
-    - type: ApcPowerReceiver
-      powerLoad: 0
   - uid: 25861
     components:
     - type: Transform
       rot: 3.141592653589793 rad
       pos: -6.5,34.5
       parent: 2
-    - type: ApcPowerReceiver
-      powerLoad: 0
   - uid: 25862
     components:
     - type: Transform
       rot: 1.5707963267948966 rad
       pos: -7.5,6.5
       parent: 2
-    - type: ApcPowerReceiver
-      powerLoad: 0
   - uid: 25863
     components:
     - type: Transform
       rot: -1.5707963267948966 rad
       pos: 1.5,-2.5
       parent: 2
-    - type: ApcPowerReceiver
-      powerLoad: 0
   - uid: 25864
     components:
     - type: Transform
       rot: 1.5707963267948966 rad
       pos: -2.5,1.5
       parent: 2
-    - type: ApcPowerReceiver
-      powerLoad: 0
   - uid: 25865
     components:
     - type: Transform
@@ -170455,55 +170413,41 @@ entities:
       rot: -1.5707963267948966 rad
       pos: 6.5,5.5
       parent: 2
-    - type: ApcPowerReceiver
-      powerLoad: 0
   - uid: 25867
     components:
     - type: Transform
       rot: 1.5707963267948966 rad
       pos: -11.5,1.5
       parent: 2
-    - type: ApcPowerReceiver
-      powerLoad: 0
   - uid: 25868
     components:
     - type: Transform
       rot: -1.5707963267948966 rad
       pos: -17.5,-10.5
       parent: 2
-    - type: ApcPowerReceiver
-      powerLoad: 0
   - uid: 25869
     components:
     - type: Transform
       pos: -8.5,-3.5
       parent: 2
-    - type: ApcPowerReceiver
-      powerLoad: 0
   - uid: 25870
     components:
     - type: Transform
       rot: 3.141592653589793 rad
       pos: -13.5,-6.5
       parent: 2
-    - type: ApcPowerReceiver
-      powerLoad: 0
   - uid: 25871
     components:
     - type: Transform
       rot: 1.5707963267948966 rad
       pos: -19.5,-1.5
       parent: 2
-    - type: ApcPowerReceiver
-      powerLoad: 0
   - uid: 25872
     components:
     - type: Transform
       rot: -1.5707963267948966 rad
       pos: -13.5,-1.5
       parent: 2
-    - type: ApcPowerReceiver
-      powerLoad: 0
   - uid: 25873
     components:
     - type: Transform
@@ -170520,16 +170464,12 @@ entities:
     - type: Transform
       pos: -36.5,50.5
       parent: 2
-    - type: ApcPowerReceiver
-      powerLoad: 0
   - uid: 25876
     components:
     - type: Transform
       rot: 1.5707963267948966 rad
       pos: -37.5,44.5
       parent: 2
-    - type: ApcPowerReceiver
-      powerLoad: 0
   - uid: 25877
     components:
     - type: Transform
@@ -170566,39 +170506,29 @@ entities:
       rot: 3.141592653589793 rad
       pos: -34.5,25.5
       parent: 2
-    - type: ApcPowerReceiver
-      powerLoad: 0
   - uid: 25883
     components:
     - type: Transform
       rot: -1.5707963267948966 rad
       pos: -7.5,50.5
       parent: 2
-    - type: ApcPowerReceiver
-      powerLoad: 0
   - uid: 25884
     components:
     - type: Transform
       rot: 1.5707963267948966 rad
       pos: -10.5,50.5
       parent: 2
-    - type: ApcPowerReceiver
-      powerLoad: 0
   - uid: 25885
     components:
     - type: Transform
       pos: -26.5,50.5
       parent: 2
-    - type: ApcPowerReceiver
-      powerLoad: 0
   - uid: 25886
     components:
     - type: Transform
       rot: 1.5707963267948966 rad
       pos: -37.5,57.5
       parent: 2
-    - type: ApcPowerReceiver
-      powerLoad: 0
   - uid: 25887
     components:
     - type: Transform
@@ -170611,156 +170541,116 @@ entities:
       rot: -1.5707963267948966 rad
       pos: -24.5,53.5
       parent: 2
-    - type: ApcPowerReceiver
-      powerLoad: 0
   - uid: 25889
     components:
     - type: Transform
       rot: -1.5707963267948966 rad
       pos: -24.5,57.5
       parent: 2
-    - type: ApcPowerReceiver
-      powerLoad: 0
   - uid: 25890
     components:
     - type: Transform
       rot: 3.141592653589793 rad
       pos: -19.5,48.5
       parent: 2
-    - type: ApcPowerReceiver
-      powerLoad: 0
   - uid: 25891
     components:
     - type: Transform
       rot: -1.5707963267948966 rad
       pos: -15.5,52.5
       parent: 2
-    - type: ApcPowerReceiver
-      powerLoad: 0
   - uid: 25892
     components:
     - type: Transform
       rot: 3.141592653589793 rad
       pos: -11.5,54.5
       parent: 2
-    - type: ApcPowerReceiver
-      powerLoad: 0
   - uid: 25893
     components:
     - type: Transform
       rot: 1.5707963267948966 rad
       pos: -17.5,61.5
       parent: 2
-    - type: ApcPowerReceiver
-      powerLoad: 0
   - uid: 25894
     components:
     - type: Transform
       rot: -1.5707963267948966 rad
       pos: -7.5,61.5
       parent: 2
-    - type: ApcPowerReceiver
-      powerLoad: 0
   - uid: 25895
     components:
     - type: Transform
       pos: -10.5,66.5
       parent: 2
-    - type: ApcPowerReceiver
-      powerLoad: 0
   - uid: 25896
     components:
     - type: Transform
       pos: -14.5,66.5
       parent: 2
-    - type: ApcPowerReceiver
-      powerLoad: 0
   - uid: 25897
     components:
     - type: Transform
       rot: -1.5707963267948966 rad
       pos: -7.5,72.5
       parent: 2
-    - type: ApcPowerReceiver
-      powerLoad: 0
   - uid: 25898
     components:
     - type: Transform
       rot: 1.5707963267948966 rad
       pos: -13.5,69.5
       parent: 2
-    - type: ApcPowerReceiver
-      powerLoad: 0
   - uid: 25899
     components:
     - type: Transform
       rot: 1.5707963267948966 rad
       pos: -33.5,45.5
       parent: 2
-    - type: ApcPowerReceiver
-      powerLoad: 0
   - uid: 25900
     components:
     - type: Transform
       rot: -1.5707963267948966 rad
       pos: -30.5,52.5
       parent: 2
-    - type: ApcPowerReceiver
-      powerLoad: 0
   - uid: 25901
     components:
     - type: Transform
       pos: -12.5,46.5
       parent: 2
-    - type: ApcPowerReceiver
-      powerLoad: 0
   - uid: 25902
     components:
     - type: Transform
       rot: -1.5707963267948966 rad
       pos: 0.5,10.5
       parent: 2
-    - type: ApcPowerReceiver
-      powerLoad: 0
   - uid: 25903
     components:
     - type: Transform
       rot: -1.5707963267948966 rad
       pos: 0.5,20.5
       parent: 2
-    - type: ApcPowerReceiver
-      powerLoad: 0
   - uid: 25904
     components:
     - type: Transform
       rot: -1.5707963267948966 rad
       pos: 1.5,16.5
       parent: 2
-    - type: ApcPowerReceiver
-      powerLoad: 0
   - uid: 25905
     components:
     - type: Transform
       rot: 1.5707963267948966 rad
       pos: -1.5,28.5
       parent: 2
-    - type: ApcPowerReceiver
-      powerLoad: 0
   - uid: 25906
     components:
     - type: Transform
       pos: 3.5,30.5
       parent: 2
-    - type: ApcPowerReceiver
-      powerLoad: 0
   - uid: 25907
     components:
     - type: Transform
       rot: 3.141592653589793 rad
       pos: 3.5,21.5
       parent: 2
-    - type: ApcPowerReceiver
-      powerLoad: 0
   - uid: 25908
     components:
     - type: Transform
@@ -170777,238 +170667,176 @@ entities:
       rot: -1.5707963267948966 rad
       pos: 39.5,13.5
       parent: 2
-    - type: ApcPowerReceiver
-      powerLoad: 0
   - uid: 25911
     components:
     - type: Transform
       rot: 1.5707963267948966 rad
       pos: 33.5,10.5
       parent: 2
-    - type: ApcPowerReceiver
-      powerLoad: 0
   - uid: 25912
     components:
     - type: Transform
       rot: 1.5707963267948966 rad
       pos: 33.5,13.5
       parent: 2
-    - type: ApcPowerReceiver
-      powerLoad: 0
   - uid: 25913
     components:
     - type: Transform
       rot: 3.141592653589793 rad
       pos: 19.5,1.5
       parent: 2
-    - type: ApcPowerReceiver
-      powerLoad: 0
   - uid: 25914
     components:
     - type: Transform
       rot: -1.5707963267948966 rad
       pos: 25.5,2.5
       parent: 2
-    - type: ApcPowerReceiver
-      powerLoad: 0
   - uid: 25915
     components:
     - type: Transform
       pos: 20.5,7.5
       parent: 2
-    - type: ApcPowerReceiver
-      powerLoad: 0
   - uid: 25916
     components:
     - type: Transform
       pos: 26.5,7.5
       parent: 2
-    - type: ApcPowerReceiver
-      powerLoad: 0
   - uid: 25917
     components:
     - type: Transform
       pos: 32.5,7.5
       parent: 2
-    - type: ApcPowerReceiver
-      powerLoad: 0
   - uid: 25918
     components:
     - type: Transform
       rot: 3.141592653589793 rad
       pos: 31.5,9.5
       parent: 2
-    - type: ApcPowerReceiver
-      powerLoad: 0
   - uid: 25919
     components:
     - type: Transform
       rot: 1.5707963267948966 rad
       pos: 27.5,12.5
       parent: 2
-    - type: ApcPowerReceiver
-      powerLoad: 0
   - uid: 25920
     components:
     - type: Transform
       rot: -1.5707963267948966 rad
       pos: 25.5,12.5
       parent: 2
-    - type: ApcPowerReceiver
-      powerLoad: 0
   - uid: 25921
     components:
     - type: Transform
       pos: 38.5,30.5
       parent: 2
-    - type: ApcPowerReceiver
-      powerLoad: 0
   - uid: 25922
     components:
     - type: Transform
       pos: 34.5,30.5
       parent: 2
-    - type: ApcPowerReceiver
-      powerLoad: 0
   - uid: 25923
     components:
     - type: Transform
       pos: 30.5,30.5
       parent: 2
-    - type: ApcPowerReceiver
-      powerLoad: 0
   - uid: 25924
     components:
     - type: Transform
       rot: -1.5707963267948966 rad
       pos: 28.5,30.5
       parent: 2
-    - type: ApcPowerReceiver
-      powerLoad: 0
   - uid: 25925
     components:
     - type: Transform
       rot: 1.5707963267948966 rad
       pos: 23.5,29.5
       parent: 2
-    - type: ApcPowerReceiver
-      powerLoad: 0
   - uid: 25926
     components:
     - type: Transform
       rot: 3.141592653589793 rad
       pos: 19.5,25.5
       parent: 2
-    - type: ApcPowerReceiver
-      powerLoad: 0
   - uid: 25927
     components:
     - type: Transform
       rot: 1.5707963267948966 rad
       pos: 23.5,23.5
       parent: 2
-    - type: ApcPowerReceiver
-      powerLoad: 0
   - uid: 25928
     components:
     - type: Transform
       rot: 3.141592653589793 rad
       pos: 31.5,16.5
       parent: 2
-    - type: ApcPowerReceiver
-      powerLoad: 0
   - uid: 25929
     components:
     - type: Transform
       pos: 28.5,26.5
       parent: 2
-    - type: ApcPowerReceiver
-      powerLoad: 0
   - uid: 25930
     components:
     - type: Transform
       rot: -1.5707963267948966 rad
       pos: 33.5,21.5
       parent: 2
-    - type: ApcPowerReceiver
-      powerLoad: 0
   - uid: 25931
     components:
     - type: Transform
       pos: 77.5,40.5
       parent: 2
-    - type: ApcPowerReceiver
-      powerLoad: 0
   - uid: 25932
     components:
     - type: Transform
       rot: 1.5707963267948966 rad
       pos: 41.5,24.5
       parent: 2
-    - type: ApcPowerReceiver
-      powerLoad: 0
   - uid: 25933
     components:
     - type: Transform
       rot: 1.5707963267948966 rad
       pos: 41.5,20.5
       parent: 2
-    - type: ApcPowerReceiver
-      powerLoad: 0
   - uid: 25934
     components:
     - type: Transform
       rot: -1.5707963267948966 rad
       pos: 51.5,19.5
       parent: 2
-    - type: ApcPowerReceiver
-      powerLoad: 0
   - uid: 25935
     components:
     - type: Transform
       rot: 1.5707963267948966 rad
       pos: 54.5,19.5
       parent: 2
-    - type: ApcPowerReceiver
-      powerLoad: 0
   - uid: 25936
     components:
     - type: Transform
       rot: 1.5707963267948966 rad
       pos: 54.5,25.5
       parent: 2
-    - type: ApcPowerReceiver
-      powerLoad: 0
   - uid: 25937
     components:
     - type: Transform
       pos: 50.5,25.5
       parent: 2
-    - type: ApcPowerReceiver
-      powerLoad: 0
   - uid: 25938
     components:
     - type: Transform
       rot: 1.5707963267948966 rad
       pos: 53.5,7.5
       parent: 2
-    - type: ApcPowerReceiver
-      powerLoad: 0
   - uid: 25939
     components:
     - type: Transform
       pos: 36.5,22.5
       parent: 2
-    - type: ApcPowerReceiver
-      powerLoad: 0
   - uid: 25940
     components:
     - type: Transform
       rot: 3.141592653589793 rad
       pos: 37.5,16.5
       parent: 2
-    - type: ApcPowerReceiver
-      powerLoad: 0
   - uid: 25941
     components:
     - type: Transform
@@ -171026,16 +170854,12 @@ entities:
     - type: Transform
       pos: 10.5,5.5
       parent: 2
-    - type: ApcPowerReceiver
-      powerLoad: 0
   - uid: 25944
     components:
     - type: Transform
       rot: 3.141592653589793 rad
       pos: 10.5,-2.5
       parent: 2
-    - type: ApcPowerReceiver
-      powerLoad: 0
   - uid: 25945
     components:
     - type: Transform
@@ -171048,220 +170872,162 @@ entities:
       rot: 3.141592653589793 rad
       pos: 22.5,-2.5
       parent: 2
-    - type: ApcPowerReceiver
-      powerLoad: 0
   - uid: 25947
     components:
     - type: Transform
       pos: 19.5,15.5
       parent: 2
-    - type: ApcPowerReceiver
-      powerLoad: 0
   - uid: 25948
     components:
     - type: Transform
       rot: 1.5707963267948966 rad
       pos: 14.5,12.5
       parent: 2
-    - type: ApcPowerReceiver
-      powerLoad: 0
   - uid: 25949
     components:
     - type: Transform
       rot: -1.5707963267948966 rad
       pos: 10.5,-34.5
       parent: 2
-    - type: ApcPowerReceiver
-      powerLoad: 0
   - uid: 25950
     components:
     - type: Transform
       rot: 1.5707963267948966 rad
       pos: 5.5,-31.5
       parent: 2
-    - type: ApcPowerReceiver
-      powerLoad: 0
   - uid: 25951
     components:
     - type: Transform
       rot: 3.141592653589793 rad
       pos: 19.5,-32.5
       parent: 2
-    - type: ApcPowerReceiver
-      powerLoad: 0
   - uid: 25952
     components:
     - type: Transform
       pos: 14.5,-29.5
       parent: 2
-    - type: ApcPowerReceiver
-      powerLoad: 0
   - uid: 25953
     components:
     - type: Transform
       pos: 19.5,-24.5
       parent: 2
-    - type: ApcPowerReceiver
-      powerLoad: 0
   - uid: 25954
     components:
     - type: Transform
       rot: 3.141592653589793 rad
       pos: -2.5,-21.5
       parent: 2
-    - type: ApcPowerReceiver
-      powerLoad: 0
   - uid: 25955
     components:
     - type: Transform
       pos: 5.5,-20.5
       parent: 2
-    - type: ApcPowerReceiver
-      powerLoad: 0
   - uid: 25956
     components:
     - type: Transform
       pos: 14.5,-19.5
       parent: 2
-    - type: ApcPowerReceiver
-      powerLoad: 0
   - uid: 25957
     components:
     - type: Transform
       rot: 3.141592653589793 rad
       pos: 4.5,-18.5
       parent: 2
-    - type: ApcPowerReceiver
-      powerLoad: 0
   - uid: 25958
     components:
     - type: Transform
       rot: 1.5707963267948966 rad
       pos: 3.5,-9.5
       parent: 2
-    - type: ApcPowerReceiver
-      powerLoad: 0
   - uid: 25959
     components:
     - type: Transform
       rot: -1.5707963267948966 rad
       pos: 9.5,-13.5
       parent: 2
-    - type: ApcPowerReceiver
-      powerLoad: 0
   - uid: 25960
     components:
     - type: Transform
       rot: 3.141592653589793 rad
       pos: 11.5,-27.5
       parent: 2
-    - type: ApcPowerReceiver
-      powerLoad: 0
   - uid: 25961
     components:
     - type: Transform
       rot: -1.5707963267948966 rad
       pos: 3.5,-27.5
       parent: 2
-    - type: ApcPowerReceiver
-      powerLoad: 0
   - uid: 25962
     components:
     - type: Transform
       pos: -1.5,-23.5
       parent: 2
-    - type: ApcPowerReceiver
-      powerLoad: 0
   - uid: 25963
     components:
     - type: Transform
       pos: -4.5,-23.5
       parent: 2
-    - type: ApcPowerReceiver
-      powerLoad: 0
   - uid: 25964
     components:
     - type: Transform
       rot: -1.5707963267948966 rad
       pos: 13.5,-10.5
       parent: 2
-    - type: ApcPowerReceiver
-      powerLoad: 0
   - uid: 25965
     components:
     - type: Transform
       rot: 1.5707963267948966 rad
       pos: 15.5,-13.5
       parent: 2
-    - type: ApcPowerReceiver
-      powerLoad: 0
   - uid: 25966
     components:
     - type: Transform
       pos: 20.5,-8.5
       parent: 2
-    - type: ApcPowerReceiver
-      powerLoad: 0
   - uid: 25967
     components:
     - type: Transform
       rot: 1.5707963267948966 rad
       pos: -43.5,-50.5
       parent: 2
-    - type: ApcPowerReceiver
-      powerLoad: 0
   - uid: 25968
     components:
     - type: Transform
       pos: -36.5,-46.5
       parent: 2
-    - type: ApcPowerReceiver
-      powerLoad: 0
   - uid: 25969
     components:
     - type: Transform
       pos: -35.5,-59.5
       parent: 2
-    - type: ApcPowerReceiver
-      powerLoad: 0
   - uid: 25970
     components:
     - type: Transform
       pos: -43.5,-57.5
       parent: 2
-    - type: ApcPowerReceiver
-      powerLoad: 0
   - uid: 25971
     components:
     - type: Transform
       rot: 1.5707963267948966 rad
       pos: -36.5,-43.5
       parent: 2
-    - type: ApcPowerReceiver
-      powerLoad: 0
   - uid: 25972
     components:
     - type: Transform
       pos: -30.5,-39.5
       parent: 2
-    - type: ApcPowerReceiver
-      powerLoad: 0
   - uid: 25973
     components:
     - type: Transform
       rot: 1.5707963267948966 rad
       pos: -40.5,-38.5
       parent: 2
-    - type: ApcPowerReceiver
-      powerLoad: 0
   - uid: 25974
     components:
     - type: Transform
       rot: 1.5707963267948966 rad
       pos: -40.5,-30.5
       parent: 2
-    - type: ApcPowerReceiver
-      powerLoad: 0
   - uid: 25975
     components:
     - type: Transform
@@ -171430,193 +171196,143 @@ entities:
       rot: -1.5707963267948966 rad
       pos: -25.5,-8.5
       parent: 2
-    - type: ApcPowerReceiver
-      powerLoad: 0
   - uid: 26005
     components:
     - type: Transform
       rot: -1.5707963267948966 rad
       pos: -25.5,-22.5
       parent: 2
-    - type: ApcPowerReceiver
-      powerLoad: 0
   - uid: 26006
     components:
     - type: Transform
       pos: -40.5,-24.5
       parent: 2
-    - type: ApcPowerReceiver
-      powerLoad: 0
   - uid: 26007
     components:
     - type: Transform
       pos: -37.5,-4.5
       parent: 2
-    - type: ApcPowerReceiver
-      powerLoad: 0
   - uid: 26008
     components:
     - type: Transform
       pos: -30.5,-4.5
       parent: 2
-    - type: ApcPowerReceiver
-      powerLoad: 0
   - uid: 26009
     components:
     - type: Transform
       rot: 3.141592653589793 rad
       pos: -35.5,-26.5
       parent: 2
-    - type: ApcPowerReceiver
-      powerLoad: 0
   - uid: 26010
     components:
     - type: Transform
       rot: 3.141592653589793 rad
       pos: -29.5,-26.5
       parent: 2
-    - type: ApcPowerReceiver
-      powerLoad: 0
   - uid: 26011
     components:
     - type: Transform
       rot: 1.5707963267948966 rad
       pos: -23.5,-21.5
       parent: 2
-    - type: ApcPowerReceiver
-      powerLoad: 0
   - uid: 26012
     components:
     - type: Transform
       rot: 1.5707963267948966 rad
       pos: -23.5,-9.5
       parent: 2
-    - type: ApcPowerReceiver
-      powerLoad: 0
   - uid: 26013
     components:
     - type: Transform
       rot: 3.141592653589793 rad
       pos: -19.5,-26.5
       parent: 2
-    - type: ApcPowerReceiver
-      powerLoad: 0
   - uid: 26014
     components:
     - type: Transform
       rot: 3.141592653589793 rad
       pos: -13.5,-26.5
       parent: 2
-    - type: ApcPowerReceiver
-      powerLoad: 0
   - uid: 26015
     components:
     - type: Transform
       rot: -1.5707963267948966 rad
       pos: -38.5,-35.5
       parent: 2
-    - type: ApcPowerReceiver
-      powerLoad: 0
   - uid: 26016
     components:
     - type: Transform
       rot: -1.5707963267948966 rad
       pos: 43.5,-21.5
       parent: 2
-    - type: ApcPowerReceiver
-      powerLoad: 0
   - uid: 26017
     components:
     - type: Transform
       pos: 46.5,-21.5
       parent: 2
-    - type: ApcPowerReceiver
-      powerLoad: 0
   - uid: 26018
     components:
     - type: Transform
       pos: 34.5,-14.5
       parent: 2
-    - type: ApcPowerReceiver
-      powerLoad: 0
   - uid: 26019
     components:
     - type: Transform
       pos: 28.5,-15.5
       parent: 2
-    - type: ApcPowerReceiver
-      powerLoad: 0
   - uid: 26020
     components:
     - type: Transform
       rot: -1.5707963267948966 rad
       pos: 25.5,-13.5
       parent: 2
-    - type: ApcPowerReceiver
-      powerLoad: 0
   - uid: 26021
     components:
     - type: Transform
       rot: -1.5707963267948966 rad
       pos: 25.5,-6.5
       parent: 2
-    - type: ApcPowerReceiver
-      powerLoad: 0
   - uid: 26022
     components:
     - type: Transform
       rot: 3.141592653589793 rad
       pos: 30.5,-2.5
       parent: 2
-    - type: ApcPowerReceiver
-      powerLoad: 0
   - uid: 26023
     components:
     - type: Transform
       rot: 3.141592653589793 rad
       pos: 37.5,-2.5
       parent: 2
-    - type: ApcPowerReceiver
-      powerLoad: 0
   - uid: 26024
     components:
     - type: Transform
       rot: 3.141592653589793 rad
       pos: 40.5,-17.5
       parent: 2
-    - type: ApcPowerReceiver
-      powerLoad: 0
   - uid: 26025
     components:
     - type: Transform
       pos: 48.5,-14.5
       parent: 2
-    - type: ApcPowerReceiver
-      powerLoad: 0
   - uid: 26026
     components:
     - type: Transform
       rot: -1.5707963267948966 rad
       pos: 53.5,-24.5
       parent: 2
-    - type: ApcPowerReceiver
-      powerLoad: 0
   - uid: 26027
     components:
     - type: Transform
       rot: 3.141592653589793 rad
       pos: 46.5,-27.5
       parent: 2
-    - type: ApcPowerReceiver
-      powerLoad: 0
   - uid: 26028
     components:
     - type: Transform
       rot: 3.141592653589793 rad
       pos: 40.5,-27.5
       parent: 2
-    - type: ApcPowerReceiver
-      powerLoad: 0
   - uid: 26029
     components:
     - type: Transform
@@ -171629,527 +171345,386 @@ entities:
       rot: 3.141592653589793 rad
       pos: 19.5,36.5
       parent: 2
-    - type: ApcPowerReceiver
-      powerLoad: 0
   - uid: 26031
     components:
     - type: Transform
       rot: -1.5707963267948966 rad
       pos: 25.5,40.5
       parent: 2
-    - type: ApcPowerReceiver
-      powerLoad: 0
   - uid: 26032
     components:
     - type: Transform
       rot: 1.5707963267948966 rad
       pos: 10.5,37.5
       parent: 2
-    - type: ApcPowerReceiver
-      powerLoad: 0
   - uid: 26033
     components:
     - type: Transform
       pos: 13.5,41.5
       parent: 2
-    - type: ApcPowerReceiver
-      powerLoad: 0
   - uid: 26034
     components:
     - type: Transform
       rot: 3.141592653589793 rad
       pos: 16.5,40.5
       parent: 2
-    - type: ApcPowerReceiver
-      powerLoad: 0
   - uid: 26035
     components:
     - type: Transform
       pos: 25.5,45.5
       parent: 2
-    - type: ApcPowerReceiver
-      powerLoad: 0
   - uid: 26036
     components:
     - type: Transform
       pos: 6.5,45.5
       parent: 2
-    - type: ApcPowerReceiver
-      powerLoad: 0
   - uid: 26037
     components:
     - type: Transform
       rot: 3.141592653589793 rad
       pos: 29.5,48.5
       parent: 2
-    - type: ApcPowerReceiver
-      powerLoad: 0
   - uid: 26038
     components:
     - type: Transform
       pos: 14.5,51.5
       parent: 2
-    - type: ApcPowerReceiver
-      powerLoad: 0
   - uid: 26039
     components:
     - type: Transform
       rot: -1.5707963267948966 rad
       pos: 0.5,48.5
       parent: 2
-    - type: ApcPowerReceiver
-      powerLoad: 0
   - uid: 26040
     components:
     - type: Transform
       pos: 23.5,55.5
       parent: 2
-    - type: ApcPowerReceiver
-      powerLoad: 0
   - uid: 26041
     components:
     - type: Transform
       pos: 25.5,51.5
       parent: 2
-    - type: ApcPowerReceiver
-      powerLoad: 0
   - uid: 26042
     components:
     - type: Transform
       rot: 1.5707963267948966 rad
       pos: 17.5,51.5
       parent: 2
-    - type: ApcPowerReceiver
-      powerLoad: 0
   - uid: 26043
     components:
     - type: Transform
       pos: 7.5,59.5
       parent: 2
-    - type: ApcPowerReceiver
-      powerLoad: 0
   - uid: 26044
     components:
     - type: Transform
       rot: -1.5707963267948966 rad
       pos: 0.5,58.5
       parent: 2
-    - type: ApcPowerReceiver
-      powerLoad: 0
   - uid: 26045
     components:
     - type: Transform
       rot: 1.5707963267948966 rad
       pos: 2.5,58.5
       parent: 2
-    - type: ApcPowerReceiver
-      powerLoad: 0
   - uid: 26046
     components:
     - type: Transform
       pos: -0.5,64.5
       parent: 2
-    - type: ApcPowerReceiver
-      powerLoad: 0
   - uid: 26047
     components:
     - type: Transform
       pos: 3.5,63.5
       parent: 2
-    - type: ApcPowerReceiver
-      powerLoad: 0
   - uid: 26048
     components:
     - type: Transform
       pos: 6.5,56.5
       parent: 2
-    - type: ApcPowerReceiver
-      powerLoad: 0
   - uid: 26049
     components:
     - type: Transform
       rot: 3.141592653589793 rad
       pos: 11.5,53.5
       parent: 2
-    - type: ApcPowerReceiver
-      powerLoad: 0
   - uid: 26050
     components:
     - type: Transform
       rot: 1.5707963267948966 rad
       pos: 13.5,54.5
       parent: 2
-    - type: ApcPowerReceiver
-      powerLoad: 0
   - uid: 26051
     components:
     - type: Transform
       rot: 1.5707963267948966 rad
       pos: 13.5,58.5
       parent: 2
-    - type: ApcPowerReceiver
-      powerLoad: 0
   - uid: 26052
     components:
     - type: Transform
       pos: 10.5,63.5
       parent: 2
-    - type: ApcPowerReceiver
-      powerLoad: 0
   - uid: 26053
     components:
     - type: Transform
       rot: -1.5707963267948966 rad
       pos: 19.5,61.5
       parent: 2
-    - type: ApcPowerReceiver
-      powerLoad: 0
   - uid: 26054
     components:
     - type: Transform
       pos: 2.5,-3.5
       parent: 2
-    - type: ApcPowerReceiver
-      powerLoad: 0
   - uid: 26055
     components:
     - type: Transform
       pos: 18.5,-4.5
       parent: 2
-    - type: ApcPowerReceiver
-      powerLoad: 0
   - uid: 26056
     components:
     - type: Transform
       pos: 5.5,6.5
       parent: 2
-    - type: ApcPowerReceiver
-      powerLoad: 0
   - uid: 26057
     components:
     - type: Transform
       rot: 3.141592653589793 rad
       pos: -8.5,-10.5
       parent: 2
-    - type: ApcPowerReceiver
-      powerLoad: 0
   - uid: 26058
     components:
     - type: Transform
       rot: -1.5707963267948966 rad
       pos: -27.5,42.5
       parent: 2
-    - type: ApcPowerReceiver
-      powerLoad: 0
   - uid: 26059
     components:
     - type: Transform
       rot: 3.141592653589793 rad
       pos: 4.5,65.5
       parent: 2
-    - type: ApcPowerReceiver
-      powerLoad: 0
   - uid: 26060
     components:
     - type: Transform
       pos: 6.5,72.5
       parent: 2
-    - type: ApcPowerReceiver
-      powerLoad: 0
   - uid: 26061
     components:
     - type: Transform
       rot: -1.5707963267948966 rad
       pos: 15.5,66.5
       parent: 2
-    - type: ApcPowerReceiver
-      powerLoad: 0
   - uid: 26062
     components:
     - type: Transform
       pos: 19.5,68.5
       parent: 2
-    - type: ApcPowerReceiver
-      powerLoad: 0
   - uid: 26063
     components:
     - type: Transform
       rot: 3.141592653589793 rad
       pos: 23.5,57.5
       parent: 2
-    - type: ApcPowerReceiver
-      powerLoad: 0
   - uid: 26064
     components:
     - type: Transform
       pos: 26.5,60.5
       parent: 2
-    - type: ApcPowerReceiver
-      powerLoad: 0
   - uid: 26065
     components:
     - type: Transform
       rot: -1.5707963267948966 rad
       pos: 0.5,36.5
       parent: 2
-    - type: ApcPowerReceiver
-      powerLoad: 0
   - uid: 26066
     components:
     - type: Transform
       rot: -1.5707963267948966 rad
       pos: 0.5,42.5
       parent: 2
-    - type: ApcPowerReceiver
-      powerLoad: 0
   - uid: 26067
     components:
     - type: Transform
       pos: -2.5,46.5
       parent: 2
-    - type: ApcPowerReceiver
-      powerLoad: 0
   - uid: 26068
     components:
     - type: Transform
       rot: -1.5707963267948966 rad
       pos: -2.5,53.5
       parent: 2
-    - type: ApcPowerReceiver
-      powerLoad: 0
   - uid: 26069
     components:
     - type: Transform
       rot: -1.5707963267948966 rad
       pos: -3.5,60.5
       parent: 2
-    - type: ApcPowerReceiver
-      powerLoad: 0
   - uid: 26070
     components:
     - type: Transform
       rot: -1.5707963267948966 rad
       pos: -3.5,65.5
       parent: 2
-    - type: ApcPowerReceiver
-      powerLoad: 0
   - uid: 26071
     components:
     - type: Transform
       rot: -1.5707963267948966 rad
       pos: 36.5,49.5
       parent: 2
-    - type: ApcPowerReceiver
-      powerLoad: 0
   - uid: 26072
     components:
     - type: Transform
       rot: 1.5707963267948966 rad
       pos: 32.5,49.5
       parent: 2
-    - type: ApcPowerReceiver
-      powerLoad: 0
   - uid: 26073
     components:
     - type: Transform
       rot: 1.5707963267948966 rad
       pos: 32.5,44.5
       parent: 2
-    - type: ApcPowerReceiver
-      powerLoad: 0
   - uid: 26074
     components:
     - type: Transform
       rot: 3.141592653589793 rad
       pos: 29.5,39.5
       parent: 2
-    - type: ApcPowerReceiver
-      powerLoad: 0
   - uid: 26075
     components:
     - type: Transform
       pos: 28.5,-46.5
       parent: 2
-    - type: ApcPowerReceiver
-      powerLoad: 0
   - uid: 26076
     components:
     - type: Transform
       pos: 27.5,-55.5
       parent: 2
-    - type: ApcPowerReceiver
-      powerLoad: 0
   - uid: 26077
     components:
     - type: Transform
       pos: 52.5,-41.5
       parent: 2
-    - type: ApcPowerReceiver
-      powerLoad: 0
   - uid: 26078
     components:
     - type: Transform
       rot: 1.5707963267948966 rad
       pos: 47.5,-39.5
       parent: 2
-    - type: ApcPowerReceiver
-      powerLoad: 0
   - uid: 26079
     components:
     - type: Transform
       rot: 1.5707963267948966 rad
       pos: 50.5,-18.5
       parent: 2
-    - type: ApcPowerReceiver
-      powerLoad: 0
   - uid: 26080
     components:
     - type: Transform
       rot: -1.5707963267948966 rad
       pos: 56.5,-17.5
       parent: 2
-    - type: ApcPowerReceiver
-      powerLoad: 0
   - uid: 26081
     components:
     - type: Transform
       rot: 1.5707963267948966 rad
       pos: 51.5,-30.5
       parent: 2
-    - type: ApcPowerReceiver
-      powerLoad: 0
   - uid: 26082
     components:
     - type: Transform
       pos: 57.5,-26.5
       parent: 2
-    - type: ApcPowerReceiver
-      powerLoad: 0
   - uid: 26083
     components:
     - type: Transform
       pos: 61.5,-26.5
       parent: 2
-    - type: ApcPowerReceiver
-      powerLoad: 0
   - uid: 26084
     components:
     - type: Transform
       rot: 1.5707963267948966 rad
       pos: 51.5,-34.5
       parent: 2
-    - type: ApcPowerReceiver
-      powerLoad: 0
   - uid: 26085
     components:
     - type: Transform
       rot: 3.141592653589793 rad
       pos: 61.5,-33.5
       parent: 2
-    - type: ApcPowerReceiver
-      powerLoad: 0
   - uid: 26086
     components:
     - type: Transform
       pos: 30.5,-33.5
       parent: 2
-    - type: ApcPowerReceiver
-      powerLoad: 0
   - uid: 26087
     components:
     - type: Transform
       pos: 35.5,-33.5
       parent: 2
-    - type: ApcPowerReceiver
-      powerLoad: 0
   - uid: 26088
     components:
     - type: Transform
       pos: 33.5,-37.5
       parent: 2
-    - type: ApcPowerReceiver
-      powerLoad: 0
   - uid: 26089
     components:
     - type: Transform
       rot: 3.141592653589793 rad
       pos: 43.5,-39.5
       parent: 2
-    - type: ApcPowerReceiver
-      powerLoad: 0
   - uid: 26090
     components:
     - type: Transform
       rot: -1.5707963267948966 rad
       pos: 45.5,-32.5
       parent: 2
-    - type: ApcPowerReceiver
-      powerLoad: 0
-    - type: Timer
   - uid: 26091
     components:
     - type: Transform
       rot: 1.5707963267948966 rad
       pos: 47.5,-32.5
       parent: 2
-    - type: ApcPowerReceiver
-      powerLoad: 0
-    - type: Timer
   - uid: 26092
     components:
     - type: Transform
       rot: -1.5707963267948966 rad
       pos: 39.5,-36.5
       parent: 2
-    - type: ApcPowerReceiver
-      powerLoad: 0
-    - type: Timer
   - uid: 26093
     components:
     - type: Transform
       rot: -1.5707963267948966 rad
       pos: 39.5,-31.5
       parent: 2
-    - type: ApcPowerReceiver
-      powerLoad: 0
   - uid: 26094
     components:
     - type: Transform
       rot: -1.5707963267948966 rad
       pos: 35.5,-26.5
       parent: 2
-    - type: ApcPowerReceiver
-      powerLoad: 0
   - uid: 26095
     components:
     - type: Transform
       rot: -1.5707963267948966 rad
       pos: 30.5,-24.5
       parent: 2
-    - type: ApcPowerReceiver
-      powerLoad: 0
   - uid: 26096
     components:
     - type: Transform
       pos: 29.5,-19.5
       parent: 2
-    - type: ApcPowerReceiver
-      powerLoad: 0
   - uid: 26097
     components:
     - type: Transform
       pos: 39.5,-19.5
       parent: 2
-    - type: ApcPowerReceiver
-      powerLoad: 0
   - uid: 26098
     components:
     - type: Transform
       rot: 1.5707963267948966 rad
       pos: 32.5,-23.5
       parent: 2
-    - type: ApcPowerReceiver
-      powerLoad: 0
   - uid: 26099
     components:
     - type: Transform
@@ -172174,71 +171749,53 @@ entities:
       rot: 1.5707963267948966 rad
       pos: 67.5,-15.5
       parent: 2
-    - type: ApcPowerReceiver
-      powerLoad: 0
   - uid: 26103
     components:
     - type: Transform
       rot: -1.5707963267948966 rad
       pos: 65.5,-15.5
       parent: 2
-    - type: ApcPowerReceiver
-      powerLoad: 0
   - uid: 26104
     components:
     - type: Transform
       rot: 3.141592653589793 rad
       pos: 66.5,-21.5
       parent: 2
-    - type: ApcPowerReceiver
-      powerLoad: 0
   - uid: 26105
     components:
     - type: Transform
       pos: 73.5,-18.5
       parent: 2
-    - type: ApcPowerReceiver
-      powerLoad: 0
   - uid: 26106
     components:
     - type: Transform
       rot: 3.141592653589793 rad
       pos: 60.5,-12.5
       parent: 2
-    - type: ApcPowerReceiver
-      powerLoad: 0
   - uid: 26107
     components:
     - type: Transform
       rot: -1.5707963267948966 rad
       pos: 43.5,-6.5
       parent: 2
-    - type: ApcPowerReceiver
-      powerLoad: 0
   - uid: 26108
     components:
     - type: Transform
       rot: 3.141592653589793 rad
       pos: 44.5,-2.5
       parent: 2
-    - type: ApcPowerReceiver
-      powerLoad: 0
   - uid: 26109
     components:
     - type: Transform
       rot: -1.5707963267948966 rad
       pos: 56.5,3.5
       parent: 2
-    - type: ApcPowerReceiver
-      powerLoad: 0
   - uid: 26110
     components:
     - type: Transform
       rot: 1.5707963267948966 rad
       pos: 54.5,-5.5
       parent: 2
-    - type: ApcPowerReceiver
-      powerLoad: 0
   - uid: 26111
     components:
     - type: Transform
@@ -172251,889 +171808,657 @@ entities:
       rot: 1.5707963267948966 rad
       pos: 67.5,-25.5
       parent: 2
-    - type: ApcPowerReceiver
-      powerLoad: 0
   - uid: 26113
     components:
     - type: Transform
       rot: 3.141592653589793 rad
       pos: 75.5,-26.5
       parent: 2
-    - type: ApcPowerReceiver
-      powerLoad: 0
   - uid: 26114
     components:
     - type: Transform
       rot: 1.5707963267948966 rad
       pos: 75.5,-19.5
       parent: 2
-    - type: ApcPowerReceiver
-      powerLoad: 0
   - uid: 26115
     components:
     - type: Transform
       rot: -1.5707963267948966 rad
       pos: 81.5,-19.5
       parent: 2
-    - type: ApcPowerReceiver
-      powerLoad: 0
   - uid: 26116
     components:
     - type: Transform
       rot: 3.141592653589793 rad
       pos: 86.5,-43.5
       parent: 2
-    - type: ApcPowerReceiver
-      powerLoad: 0
   - uid: 26117
     components:
     - type: Transform
       rot: -1.5707963267948966 rad
       pos: 72.5,-32.5
       parent: 2
-    - type: ApcPowerReceiver
-      powerLoad: 0
   - uid: 26118
     components:
     - type: Transform
       rot: 1.5707963267948966 rad
       pos: 79.5,-32.5
       parent: 2
-    - type: ApcPowerReceiver
-      powerLoad: 0
   - uid: 26119
     components:
     - type: Transform
       rot: 1.5707963267948966 rad
       pos: 67.5,-31.5
       parent: 2
-    - type: ApcPowerReceiver
-      powerLoad: 0
   - uid: 26120
     components:
     - type: Transform
       rot: -1.5707963267948966 rad
       pos: 89.5,-24.5
       parent: 2
-    - type: ApcPowerReceiver
-      powerLoad: 0
   - uid: 26121
     components:
     - type: Transform
       pos: 95.5,-29.5
       parent: 2
-    - type: ApcPowerReceiver
-      powerLoad: 0
   - uid: 26122
     components:
     - type: Transform
       pos: 86.5,-18.5
       parent: 2
-    - type: ApcPowerReceiver
-      powerLoad: 0
   - uid: 26123
     components:
     - type: Transform
       pos: 72.5,-8.5
       parent: 2
-    - type: ApcPowerReceiver
-      powerLoad: 0
   - uid: 26124
     components:
     - type: Transform
       pos: 74.5,-12.5
       parent: 2
-    - type: ApcPowerReceiver
-      powerLoad: 0
   - uid: 26125
     components:
     - type: Transform
       rot: 3.141592653589793 rad
       pos: 78.5,-16.5
       parent: 2
-    - type: ApcPowerReceiver
-      powerLoad: 0
   - uid: 26126
     components:
     - type: Transform
       pos: 83.5,-10.5
       parent: 2
-    - type: ApcPowerReceiver
-      powerLoad: 0
   - uid: 26127
     components:
     - type: Transform
       pos: 86.5,3.5
       parent: 2
-    - type: ApcPowerReceiver
-      powerLoad: 0
   - uid: 26128
     components:
     - type: Transform
       rot: 3.141592653589793 rad
       pos: 82.5,-0.5
       parent: 2
-    - type: ApcPowerReceiver
-      powerLoad: 0
   - uid: 26129
     components:
     - type: Transform
       pos: 78.5,1.5
       parent: 2
-    - type: ApcPowerReceiver
-      powerLoad: 0
   - uid: 26130
     components:
     - type: Transform
       rot: 3.141592653589793 rad
       pos: 72.5,-6.5
       parent: 2
-    - type: ApcPowerReceiver
-      powerLoad: 0
   - uid: 26131
     components:
     - type: Transform
       rot: 1.5707963267948966 rad
       pos: 70.5,-0.5
       parent: 2
-    - type: ApcPowerReceiver
-      powerLoad: 0
   - uid: 26132
     components:
     - type: Transform
       rot: 3.141592653589793 rad
       pos: 82.5,-8.5
       parent: 2
-    - type: ApcPowerReceiver
-      powerLoad: 0
   - uid: 26133
     components:
     - type: Transform
       pos: 78.5,-2.5
       parent: 2
-    - type: ApcPowerReceiver
-      powerLoad: 0
   - uid: 26134
     components:
     - type: Transform
       rot: -1.5707963267948966 rad
       pos: 69.5,-11.5
       parent: 2
-    - type: ApcPowerReceiver
-      powerLoad: 0
   - uid: 26135
     components:
     - type: Transform
       rot: 1.5707963267948966 rad
       pos: 63.5,-8.5
       parent: 2
-    - type: ApcPowerReceiver
-      powerLoad: 0
   - uid: 26136
     components:
     - type: Transform
       pos: 60.5,2.5
       parent: 2
-    - type: ApcPowerReceiver
-      powerLoad: 0
   - uid: 26137
     components:
     - type: Transform
       rot: -1.5707963267948966 rad
       pos: 62.5,-4.5
       parent: 2
-    - type: ApcPowerReceiver
-      powerLoad: 0
   - uid: 26138
     components:
     - type: Transform
       rot: 1.5707963267948966 rad
       pos: 58.5,-1.5
       parent: 2
-    - type: ApcPowerReceiver
-      powerLoad: 0
   - uid: 26139
     components:
     - type: Transform
       rot: -1.5707963267948966 rad
       pos: 122.5,-24.5
       parent: 2
-    - type: ApcPowerReceiver
-      powerLoad: 0
   - uid: 26140
     components:
     - type: Transform
       rot: 1.5707963267948966 rad
       pos: 113.5,-24.5
       parent: 2
-    - type: ApcPowerReceiver
-      powerLoad: 0
   - uid: 26141
     components:
     - type: Transform
       rot: -1.5707963267948966 rad
       pos: 74.5,42.5
       parent: 2
-    - type: ApcPowerReceiver
-      powerLoad: 0
   - uid: 26142
     components:
     - type: Transform
       rot: 1.5707963267948966 rad
       pos: 83.5,7.5
       parent: 2
-    - type: ApcPowerReceiver
-      powerLoad: 0
   - uid: 26143
     components:
     - type: Transform
       rot: -1.5707963267948966 rad
       pos: 91.5,7.5
       parent: 2
-    - type: ApcPowerReceiver
-      powerLoad: 0
   - uid: 26144
     components:
     - type: Transform
       pos: 92.5,3.5
       parent: 2
-    - type: ApcPowerReceiver
-      powerLoad: 0
   - uid: 26145
     components:
     - type: Transform
       pos: 92.5,-10.5
       parent: 2
-    - type: ApcPowerReceiver
-      powerLoad: 0
   - uid: 26146
     components:
     - type: Transform
       pos: 100.5,-33.5
       parent: 2
-    - type: ApcPowerReceiver
-      powerLoad: 0
   - uid: 26147
     components:
     - type: Transform
       rot: 3.141592653589793 rad
       pos: 99.5,-39.5
       parent: 2
-    - type: ApcPowerReceiver
-      powerLoad: 0
   - uid: 26148
     components:
     - type: Transform
       rot: -1.5707963267948966 rad
       pos: 89.5,-32.5
       parent: 2
-    - type: ApcPowerReceiver
-      powerLoad: 0
   - uid: 26149
     components:
     - type: Transform
       rot: 3.141592653589793 rad
       pos: 81.5,-38.5
       parent: 2
-    - type: ApcPowerReceiver
-      powerLoad: 0
   - uid: 26150
     components:
     - type: Transform
       pos: 75.5,-28.5
       parent: 2
-    - type: ApcPowerReceiver
-      powerLoad: 0
   - uid: 26151
     components:
     - type: Transform
       pos: 82.5,-26.5
       parent: 2
-    - type: ApcPowerReceiver
-      powerLoad: 0
   - uid: 26152
     components:
     - type: Transform
       rot: 3.141592653589793 rad
       pos: 53.5,-2.5
       parent: 2
-    - type: ApcPowerReceiver
-      powerLoad: 0
   - uid: 26153
     components:
     - type: Transform
       pos: 53.5,-9.5
       parent: 2
-    - type: ApcPowerReceiver
-      powerLoad: 0
   - uid: 26154
     components:
     - type: Transform
       pos: 44.5,-9.5
       parent: 2
-    - type: ApcPowerReceiver
-      powerLoad: 0
   - uid: 26155
     components:
     - type: Transform
       rot: -1.5707963267948966 rad
       pos: 56.5,13.5
       parent: 2
-    - type: ApcPowerReceiver
-      powerLoad: 0
   - uid: 26156
     components:
     - type: Transform
       rot: -1.5707963267948966 rad
       pos: 56.5,26.5
       parent: 2
-    - type: ApcPowerReceiver
-      powerLoad: 0
   - uid: 26157
     components:
     - type: Transform
       rot: -1.5707963267948966 rad
       pos: 56.5,34.5
       parent: 2
-    - type: ApcPowerReceiver
-      powerLoad: 0
   - uid: 26158
     components:
     - type: Transform
       pos: 19.5,34.5
       parent: 2
-    - type: ApcPowerReceiver
-      powerLoad: 0
   - uid: 26159
     components:
     - type: Transform
       pos: 9.5,34.5
       parent: 2
-    - type: ApcPowerReceiver
-      powerLoad: 0
   - uid: 26160
     components:
     - type: Transform
       pos: 2.5,34.5
       parent: 2
-    - type: ApcPowerReceiver
-      powerLoad: 0
   - uid: 26161
     components:
     - type: Transform
       pos: 78.5,16.5
       parent: 2
-    - type: ApcPowerReceiver
-      powerLoad: 0
   - uid: 26162
     components:
     - type: Transform
       pos: 86.5,16.5
       parent: 2
-    - type: ApcPowerReceiver
-      powerLoad: 0
   - uid: 26163
     components:
     - type: Transform
       rot: 3.141592653589793 rad
       pos: 60.5,8.5
       parent: 2
-    - type: ApcPowerReceiver
-      powerLoad: 0
   - uid: 26164
     components:
     - type: Transform
       rot: 3.141592653589793 rad
       pos: 59.5,5.5
       parent: 2
-    - type: ApcPowerReceiver
-      powerLoad: 0
   - uid: 26165
     components:
     - type: Transform
       pos: 69.5,16.5
       parent: 2
-    - type: ApcPowerReceiver
-      powerLoad: 0
   - uid: 26166
     components:
     - type: Transform
       rot: -1.5707963267948966 rad
       pos: 74.5,10.5
       parent: 2
-    - type: ApcPowerReceiver
-      powerLoad: 0
   - uid: 26167
     components:
     - type: Transform
       rot: 3.141592653589793 rad
       pos: 67.5,6.5
       parent: 2
-    - type: ApcPowerReceiver
-      powerLoad: 0
   - uid: 26168
     components:
     - type: Transform
       rot: 1.5707963267948966 rad
       pos: 64.5,13.5
       parent: 2
-    - type: ApcPowerReceiver
-      powerLoad: 0
   - uid: 26169
     components:
     - type: Transform
       pos: 94.5,16.5
       parent: 2
-    - type: ApcPowerReceiver
-      powerLoad: 0
   - uid: 26170
     components:
     - type: Transform
       rot: 3.141592653589793 rad
       pos: 91.5,12.5
       parent: 2
-    - type: ApcPowerReceiver
-      powerLoad: 0
   - uid: 26171
     components:
     - type: Transform
       pos: 39.5,34.5
       parent: 2
-    - type: ApcPowerReceiver
-      powerLoad: 0
   - uid: 26172
     components:
     - type: Transform
       pos: 48.5,34.5
       parent: 2
-    - type: ApcPowerReceiver
-      powerLoad: 0
   - uid: 26173
     components:
     - type: Transform
       rot: 3.141592653589793 rad
       pos: 98.5,18.5
       parent: 2
-    - type: ApcPowerReceiver
-      powerLoad: 0
   - uid: 26174
     components:
     - type: Transform
       rot: 1.5707963267948966 rad
       pos: 81.5,20.5
       parent: 2
-    - type: ApcPowerReceiver
-      powerLoad: 0
   - uid: 26175
     components:
     - type: Transform
       rot: -1.5707963267948966 rad
       pos: 83.5,23.5
       parent: 2
-    - type: ApcPowerReceiver
-      powerLoad: 0
   - uid: 26176
     components:
     - type: Transform
       rot: 3.141592653589793 rad
       pos: 64.5,26.5
       parent: 2
-    - type: ApcPowerReceiver
-      powerLoad: 0
   - uid: 26181
     components:
     - type: Transform
       rot: 1.5707963267948966 rad
       pos: 74.5,32.5
       parent: 2
-    - type: ApcPowerReceiver
-      powerLoad: 0
   - uid: 26182
     components:
     - type: Transform
       rot: -1.5707963267948966 rad
       pos: 79.5,34.5
       parent: 2
-    - type: ApcPowerReceiver
-      powerLoad: 0
   - uid: 26183
     components:
     - type: Transform
       rot: 3.141592653589793 rad
       pos: 88.5,38.5
       parent: 2
-    - type: ApcPowerReceiver
-      powerLoad: 0
   - uid: 26184
     components:
     - type: Transform
       rot: 3.141592653589793 rad
       pos: 94.5,38.5
       parent: 2
-    - type: ApcPowerReceiver
-      powerLoad: 0
   - uid: 26185
     components:
     - type: Transform
       rot: 3.141592653589793 rad
       pos: 100.5,38.5
       parent: 2
-    - type: ApcPowerReceiver
-      powerLoad: 0
   - uid: 26186
     components:
     - type: Transform
       pos: 99.5,52.5
       parent: 2
-    - type: ApcPowerReceiver
-      powerLoad: 0
   - uid: 26187
     components:
     - type: Transform
       rot: 3.141592653589793 rad
       pos: 99.5,46.5
       parent: 2
-    - type: ApcPowerReceiver
-      powerLoad: 0
   - uid: 26188
     components:
     - type: Transform
       rot: 1.5707963267948966 rad
       pos: 95.5,47.5
       parent: 2
-    - type: ApcPowerReceiver
-      powerLoad: 0
   - uid: 26189
     components:
     - type: Transform
       rot: 1.5707963267948966 rad
       pos: 95.5,51.5
       parent: 2
-    - type: ApcPowerReceiver
-      powerLoad: 0
   - uid: 26190
     components:
     - type: Transform
       pos: 108.5,52.5
       parent: 2
-    - type: ApcPowerReceiver
-      powerLoad: 0
   - uid: 26191
     components:
     - type: Transform
       rot: 3.141592653589793 rad
       pos: 108.5,46.5
       parent: 2
-    - type: ApcPowerReceiver
-      powerLoad: 0
   - uid: 26192
     components:
     - type: Transform
       pos: 108.5,56.5
       parent: 2
-    - type: ApcPowerReceiver
-      powerLoad: 0
   - uid: 26193
     components:
     - type: Transform
       pos: 101.5,56.5
       parent: 2
-    - type: ApcPowerReceiver
-      powerLoad: 0
   - uid: 26194
     components:
     - type: Transform
       pos: 122.5,54.5
       parent: 2
-    - type: ApcPowerReceiver
-      powerLoad: 0
   - uid: 26195
     components:
     - type: Transform
       rot: 3.141592653589793 rad
       pos: 122.5,44.5
       parent: 2
-    - type: ApcPowerReceiver
-      powerLoad: 0
   - uid: 26196
     components:
     - type: Transform
       rot: -1.5707963267948966 rad
       pos: 128.5,49.5
       parent: 2
-    - type: ApcPowerReceiver
-      powerLoad: 0
   - uid: 26197
     components:
     - type: Transform
       rot: -1.5707963267948966 rad
       pos: 83.5,46.5
       parent: 2
-    - type: ApcPowerReceiver
-      powerLoad: 0
   - uid: 26198
     components:
     - type: Transform
       rot: 3.141592653589793 rad
       pos: 77.5,42.5
       parent: 2
-    - type: ApcPowerReceiver
-      powerLoad: 0
   - uid: 26199
     components:
     - type: Transform
       rot: 1.5707963267948966 rad
       pos: 67.5,59.5
       parent: 2
-    - type: ApcPowerReceiver
-      powerLoad: 0
   - uid: 26200
     components:
     - type: Transform
       rot: -1.5707963267948966 rad
       pos: 73.5,59.5
       parent: 2
-    - type: ApcPowerReceiver
-      powerLoad: 0
   - uid: 26201
     components:
     - type: Transform
       rot: 3.141592653589793 rad
       pos: 77.5,55.5
       parent: 2
-    - type: ApcPowerReceiver
-      powerLoad: 0
   - uid: 26202
     components:
     - type: Transform
       rot: 3.141592653589793 rad
       pos: 83.5,55.5
       parent: 2
-    - type: ApcPowerReceiver
-      powerLoad: 0
   - uid: 26203
     components:
     - type: Transform
       rot: -1.5707963267948966 rad
       pos: 74.5,47.5
       parent: 2
-    - type: ApcPowerReceiver
-      powerLoad: 0
   - uid: 26204
     components:
     - type: Transform
       rot: 1.5707963267948966 rad
       pos: 67.5,47.5
       parent: 2
-    - type: ApcPowerReceiver
-      powerLoad: 0
   - uid: 26205
     components:
     - type: Transform
       rot: 1.5707963267948966 rad
       pos: 67.5,53.5
       parent: 2
-    - type: ApcPowerReceiver
-      powerLoad: 0
   - uid: 26206
     components:
     - type: Transform
       rot: -1.5707963267948966 rad
       pos: 74.5,53.5
       parent: 2
-    - type: ApcPowerReceiver
-      powerLoad: 0
   - uid: 26207
     components:
     - type: Transform
       pos: 68.5,42.5
       parent: 2
-    - type: ApcPowerReceiver
-      powerLoad: 0
   - uid: 26208
     components:
     - type: Transform
       pos: 65.5,42.5
       parent: 2
-    - type: ApcPowerReceiver
-      powerLoad: 0
   - uid: 26209
     components:
     - type: Transform
       pos: 57.5,42.5
       parent: 2
-    - type: ApcPowerReceiver
-      powerLoad: 0
   - uid: 26210
     components:
     - type: Transform
       rot: 1.5707963267948966 rad
       pos: 54.5,38.5
       parent: 2
-    - type: ApcPowerReceiver
-      powerLoad: 0
   - uid: 26211
     components:
     - type: Transform
       pos: 62.5,48.5
       parent: 2
-    - type: ApcPowerReceiver
-      powerLoad: 0
   - uid: 26212
     components:
     - type: Transform
       rot: 1.5707963267948966 rad
       pos: 58.5,58.5
       parent: 2
-    - type: ApcPowerReceiver
-      powerLoad: 0
   - uid: 26213
     components:
     - type: Transform
       rot: -1.5707963267948966 rad
       pos: 65.5,59.5
       parent: 2
-    - type: ApcPowerReceiver
-      powerLoad: 0
   - uid: 26214
     components:
     - type: Transform
       rot: 3.141592653589793 rad
       pos: 62.5,53.5
       parent: 2
-    - type: ApcPowerReceiver
-      powerLoad: 0
   - uid: 26215
     components:
     - type: Transform
       rot: 1.5707963267948966 rad
       pos: 27.5,-11.5
       parent: 2
-    - type: ApcPowerReceiver
-      powerLoad: 0
   - uid: 26216
     components:
     - type: Transform
       pos: 103.5,44.5
       parent: 2
-    - type: ApcPowerReceiver
-      powerLoad: 0
   - uid: 26217
     components:
     - type: Transform
       pos: 108.5,44.5
       parent: 2
-    - type: ApcPowerReceiver
-      powerLoad: 0
   - uid: 26218
     components:
     - type: Transform
       pos: 112.5,44.5
       parent: 2
-    - type: ApcPowerReceiver
-      powerLoad: 0
   - uid: 26219
     components:
     - type: Transform
       rot: -1.5707963267948966 rad
       pos: 35.5,36.5
       parent: 2
-    - type: ApcPowerReceiver
-      powerLoad: 0
   - uid: 26220
     components:
     - type: Transform
       pos: 60.5,40.5
       parent: 2
-    - type: ApcPowerReceiver
-      powerLoad: 0
   - uid: 26221
     components:
     - type: Transform
       rot: -1.5707963267948966 rad
       pos: 58.5,-55.5
       parent: 2
-    - type: ApcPowerReceiver
-      powerLoad: 0
   - uid: 26222
     components:
     - type: Transform
       rot: -1.5707963267948966 rad
       pos: 83.5,35.5
       parent: 2
-    - type: ApcPowerReceiver
-      powerLoad: 0
   - uid: 26223
     components:
     - type: Transform
       rot: -1.5707963267948966 rad
       pos: 83.5,29.5
       parent: 2
-    - type: ApcPowerReceiver
-      powerLoad: 0
   - uid: 26224
     components:
     - type: Transform
       rot: 1.5707963267948966 rad
       pos: 47.5,43.5
       parent: 2
-    - type: ApcPowerReceiver
-      powerLoad: 0
   - uid: 26225
     components:
     - type: Transform
       rot: 1.5707963267948966 rad
       pos: 47.5,39.5
       parent: 2
-    - type: ApcPowerReceiver
-      powerLoad: 0
   - uid: 26226
     components:
     - type: Transform
       rot: 3.141592653589793 rad
       pos: 51.5,36.5
       parent: 2
-    - type: ApcPowerReceiver
-      powerLoad: 0
   - uid: 26227
     components:
     - type: Transform
       rot: 1.5707963267948966 rad
       pos: 93.5,-7.5
       parent: 2
-    - type: ApcPowerReceiver
-      powerLoad: 0
   - uid: 26228
     components:
     - type: Transform
       rot: 1.5707963267948966 rad
       pos: 93.5,-3.5
       parent: 2
-    - type: ApcPowerReceiver
-      powerLoad: 0
   - uid: 26229
     components:
     - type: Transform
       pos: 89.5,56.5
       parent: 2
-    - type: ApcPowerReceiver
-      powerLoad: 0
   - uid: 26230
     components:
     - type: Transform
       rot: 1.5707963267948966 rad
       pos: 90.5,65.5
       parent: 2
-    - type: ApcPowerReceiver
-      powerLoad: 0
   - uid: 26231
     components:
     - type: Transform
       rot: 1.5707963267948966 rad
       pos: 27.5,42.5
       parent: 2
-    - type: ApcPowerReceiver
-      powerLoad: 0
   - uid: 26232
     components:
     - type: Transform
@@ -173190,8 +172515,6 @@ entities:
       rot: 1.5707963267948966 rad
       pos: 130.5,-2.5
       parent: 2
-    - type: ApcPowerReceiver
-      powerLoad: 0
   - uid: 26238
     components:
     - type: Transform
@@ -173228,24 +172551,18 @@ entities:
     - type: Transform
       pos: -43.5,-5.5
       parent: 2
-    - type: ApcPowerReceiver
-      powerLoad: 0
   - uid: 26244
     components:
     - type: Transform
       rot: 3.141592653589793 rad
       pos: -41.5,-22.5
       parent: 2
-    - type: ApcPowerReceiver
-      powerLoad: 0
   - uid: 26245
     components:
     - type: Transform
       rot: 1.5707963267948966 rad
       pos: 43.5,55.5
       parent: 2
-    - type: ApcPowerReceiver
-      powerLoad: 0
 - proto: PoweredlightSodium
   entities:
   - uid: 26246
@@ -173254,39 +172571,29 @@ entities:
       rot: 1.5707963267948966 rad
       pos: 100.5,-1.5
       parent: 2
-    - type: ApcPowerReceiver
-      powerLoad: 0
   - uid: 26247
     components:
     - type: Transform
       rot: 1.5707963267948966 rad
       pos: 100.5,-9.5
       parent: 2
-    - type: ApcPowerReceiver
-      powerLoad: 0
   - uid: 26248
     components:
     - type: Transform
       rot: -1.5707963267948966 rad
       pos: 116.5,-1.5
       parent: 2
-    - type: ApcPowerReceiver
-      powerLoad: 0
   - uid: 26249
     components:
     - type: Transform
       rot: -1.5707963267948966 rad
       pos: 116.5,-9.5
       parent: 2
-    - type: ApcPowerReceiver
-      powerLoad: 0
   - uid: 26250
     components:
     - type: Transform
       pos: -24.5,10.5
       parent: 2
-    - type: ApcPowerReceiver
-      powerLoad: 0
 - proto: PoweredSmallLight
   entities:
   - uid: 26251
@@ -173295,374 +172602,278 @@ entities:
       rot: -1.5707963267948966 rad
       pos: -3.5,11.5
       parent: 2
-    - type: ApcPowerReceiver
-      powerLoad: 0
   - uid: 26252
     components:
     - type: Transform
       rot: 1.5707963267948966 rad
       pos: -8.5,9.5
       parent: 2
-    - type: ApcPowerReceiver
-      powerLoad: 0
   - uid: 26253
     components:
     - type: Transform
       rot: 3.141592653589793 rad
       pos: -11.5,8.5
       parent: 2
-    - type: ApcPowerReceiver
-      powerLoad: 0
   - uid: 26254
     components:
     - type: Transform
       rot: -1.5707963267948966 rad
       pos: -16.5,12.5
       parent: 2
-    - type: ApcPowerReceiver
-      powerLoad: 0
   - uid: 26255
     components:
     - type: Transform
       rot: 1.5707963267948966 rad
       pos: -19.5,10.5
       parent: 2
-    - type: ApcPowerReceiver
-      powerLoad: 0
   - uid: 26256
     components:
     - type: Transform
       rot: 1.5707963267948966 rad
       pos: -22.5,16.5
       parent: 2
-    - type: ApcPowerReceiver
-      powerLoad: 0
   - uid: 26257
     components:
     - type: Transform
       rot: 1.5707963267948966 rad
       pos: -6.5,26.5
       parent: 2
-    - type: ApcPowerReceiver
-      powerLoad: 0
   - uid: 26258
     components:
     - type: Transform
       rot: -1.5707963267948966 rad
       pos: -3.5,29.5
       parent: 2
-    - type: ApcPowerReceiver
-      powerLoad: 0
   - uid: 26259
     components:
     - type: Transform
       rot: 3.141592653589793 rad
       pos: -12.5,28.5
       parent: 2
-    - type: ApcPowerReceiver
-      powerLoad: 0
   - uid: 26260
     components:
     - type: Transform
       pos: -17.5,30.5
       parent: 2
-    - type: ApcPowerReceiver
-      powerLoad: 0
   - uid: 26261
     components:
     - type: Transform
       rot: 1.5707963267948966 rad
       pos: -16.5,34.5
       parent: 2
-    - type: ApcPowerReceiver
-      powerLoad: 0
   - uid: 26262
     components:
     - type: Transform
       rot: 3.141592653589793 rad
       pos: -14.5,37.5
       parent: 2
-    - type: ApcPowerReceiver
-      powerLoad: 0
   - uid: 26263
     components:
     - type: Transform
       pos: -15.5,42.5
       parent: 2
-    - type: ApcPowerReceiver
-      powerLoad: 0
   - uid: 26264
     components:
     - type: Transform
       pos: 4.5,13.5
       parent: 2
-    - type: ApcPowerReceiver
-      powerLoad: 0
   - uid: 26265
     components:
     - type: Transform
       rot: 3.141592653589793 rad
       pos: 2.5,8.5
       parent: 2
-    - type: ApcPowerReceiver
-      powerLoad: 0
   - uid: 26266
     components:
     - type: Transform
       rot: -1.5707963267948966 rad
       pos: -9.5,4.5
       parent: 2
-    - type: ApcPowerReceiver
-      powerLoad: 0
   - uid: 26267
     components:
     - type: Transform
       rot: 1.5707963267948966 rad
       pos: -25.5,41.5
       parent: 2
-    - type: ApcPowerReceiver
-      powerLoad: 0
   - uid: 26268
     components:
     - type: Transform
       rot: 3.141592653589793 rad
       pos: -23.5,37.5
       parent: 2
-    - type: ApcPowerReceiver
-      powerLoad: 0
   - uid: 26269
     components:
     - type: Transform
       rot: 3.141592653589793 rad
       pos: -40.5,32.5
       parent: 2
-    - type: ApcPowerReceiver
-      powerLoad: 0
   - uid: 26270
     components:
     - type: Transform
       pos: -40.5,34.5
       parent: 2
-    - type: ApcPowerReceiver
-      powerLoad: 0
   - uid: 26271
     components:
     - type: Transform
       pos: -40.5,43.5
       parent: 2
-    - type: ApcPowerReceiver
-      powerLoad: 0
   - uid: 26272
     components:
     - type: Transform
       rot: 3.141592653589793 rad
       pos: -40.5,40.5
       parent: 2
-    - type: ApcPowerReceiver
-      powerLoad: 0
   - uid: 26273
     components:
     - type: Transform
       rot: -1.5707963267948966 rad
       pos: -37.5,23.5
       parent: 2
-    - type: ApcPowerReceiver
-      powerLoad: 0
   - uid: 26274
     components:
     - type: Transform
       rot: -1.5707963267948966 rad
       pos: -35.5,23.5
       parent: 2
-    - type: ApcPowerReceiver
-      powerLoad: 0
   - uid: 26275
     components:
     - type: Transform
       rot: 1.5707963267948966 rad
       pos: -33.5,22.5
       parent: 2
-    - type: ApcPowerReceiver
-      powerLoad: 0
   - uid: 26276
     components:
     - type: Transform
       rot: -1.5707963267948966 rad
       pos: -36.5,28.5
       parent: 2
-    - type: ApcPowerReceiver
-      powerLoad: 0
   - uid: 26277
     components:
     - type: Transform
       rot: -1.5707963267948966 rad
       pos: -26.5,22.5
       parent: 2
-    - type: ApcPowerReceiver
-      powerLoad: 0
   - uid: 26278
     components:
     - type: Transform
       rot: -1.5707963267948966 rad
       pos: -29.5,22.5
       parent: 2
-    - type: ApcPowerReceiver
-      powerLoad: 0
   - uid: 26279
     components:
     - type: Transform
       pos: -26.5,28.5
       parent: 2
-    - type: ApcPowerReceiver
-      powerLoad: 0
   - uid: 26280
     components:
     - type: Transform
       rot: -1.5707963267948966 rad
       pos: -22.5,31.5
       parent: 2
-    - type: ApcPowerReceiver
-      powerLoad: 0
   - uid: 26281
     components:
     - type: Transform
       pos: -19.5,62.5
       parent: 2
-    - type: ApcPowerReceiver
-      powerLoad: 0
   - uid: 26282
     components:
     - type: Transform
       rot: 3.141592653589793 rad
       pos: -19.5,60.5
       parent: 2
-    - type: ApcPowerReceiver
-      powerLoad: 0
   - uid: 26283
     components:
     - type: Transform
       pos: -13.5,52.5
       parent: 2
-    - type: ApcPowerReceiver
-      powerLoad: 0
   - uid: 26284
     components:
     - type: Transform
       rot: 3.141592653589793 rad
       pos: -13.5,48.5
       parent: 2
-    - type: ApcPowerReceiver
-      powerLoad: 0
   - uid: 26285
     components:
     - type: Transform
       rot: 1.5707963267948966 rad
       pos: -22.5,49.5
       parent: 2
-    - type: ApcPowerReceiver
-      powerLoad: 0
   - uid: 26286
     components:
     - type: Transform
       rot: -1.5707963267948966 rad
       pos: -15.5,56.5
       parent: 2
-    - type: ApcPowerReceiver
-      powerLoad: 0
   - uid: 26287
     components:
     - type: Transform
       rot: 1.5707963267948966 rad
       pos: -22.5,57.5
       parent: 2
-    - type: ApcPowerReceiver
-      powerLoad: 0
   - uid: 26288
     components:
     - type: Transform
       pos: -24.5,62.5
       parent: 2
-    - type: ApcPowerReceiver
-      powerLoad: 0
   - uid: 26289
     components:
     - type: Transform
       rot: -1.5707963267948966 rad
       pos: -19.5,69.5
       parent: 2
-    - type: ApcPowerReceiver
-      powerLoad: 0
   - uid: 26290
     components:
     - type: Transform
       rot: 1.5707963267948966 rad
       pos: -22.5,69.5
       parent: 2
-    - type: ApcPowerReceiver
-      powerLoad: 0
   - uid: 26291
     components:
     - type: Transform
       rot: 1.5707963267948966 rad
       pos: -19.5,74.5
       parent: 2
-    - type: ApcPowerReceiver
-      powerLoad: 0
   - uid: 26292
     components:
     - type: Transform
       rot: -1.5707963267948966 rad
       pos: -13.5,74.5
       parent: 2
-    - type: ApcPowerReceiver
-      powerLoad: 0
   - uid: 26293
     components:
     - type: Transform
       rot: 3.141592653589793 rad
       pos: -29.5,72.5
       parent: 2
-    - type: ApcPowerReceiver
-      powerLoad: 0
   - uid: 26294
     components:
     - type: Transform
       rot: 3.141592653589793 rad
       pos: -38.5,66.5
       parent: 2
-    - type: ApcPowerReceiver
-      powerLoad: 0
   - uid: 26295
     components:
     - type: Transform
       pos: -21.5,76.5
       parent: 2
-    - type: ApcPowerReceiver
-      powerLoad: 0
   - uid: 26296
     components:
     - type: Transform
       rot: -1.5707963267948966 rad
       pos: -3.5,74.5
       parent: 2
-    - type: ApcPowerReceiver
-      powerLoad: 0
   - uid: 26297
     components:
     - type: Transform
       rot: -1.5707963267948966 rad
       pos: -3.5,70.5
       parent: 2
-    - type: ApcPowerReceiver
-      powerLoad: 0
   - uid: 26298
     components:
     - type: Transform
       rot: -1.5707963267948966 rad
       pos: 6.5,24.5
       parent: 2
-    - type: ApcPowerReceiver
-      powerLoad: 0
   - uid: 26299
     components:
     - type: Transform
@@ -173699,31 +172910,23 @@ entities:
       rot: 1.5707963267948966 rad
       pos: 17.5,18.5
       parent: 2
-    - type: ApcPowerReceiver
-      powerLoad: 0
   - uid: 26305
     components:
     - type: Transform
       rot: 3.141592653589793 rad
       pos: 21.5,21.5
       parent: 2
-    - type: ApcPowerReceiver
-      powerLoad: 0
   - uid: 26306
     components:
     - type: Transform
       pos: 16.5,23.5
       parent: 2
-    - type: ApcPowerReceiver
-      powerLoad: 0
   - uid: 26307
     components:
     - type: Transform
       rot: -1.5707963267948966 rad
       pos: 35.5,25.5
       parent: 2
-    - type: ApcPowerReceiver
-      powerLoad: 0
   - uid: 26308
     components:
     - type: Transform
@@ -173748,54 +172951,40 @@ entities:
       rot: 1.5707963267948966 rad
       pos: 41.5,28.5
       parent: 2
-    - type: ApcPowerReceiver
-      powerLoad: 0
   - uid: 26312
     components:
     - type: Transform
       rot: 1.5707963267948966 rad
       pos: 48.5,29.5
       parent: 2
-    - type: ApcPowerReceiver
-      powerLoad: 0
   - uid: 26313
     components:
     - type: Transform
       pos: 45.5,29.5
       parent: 2
-    - type: ApcPowerReceiver
-      powerLoad: 0
   - uid: 26314
     components:
     - type: Transform
       rot: 1.5707963267948966 rad
       pos: 49.5,5.5
       parent: 2
-    - type: ApcPowerReceiver
-      powerLoad: 0
   - uid: 26315
     components:
     - type: Transform
       rot: 1.5707963267948966 rad
       pos: 37.5,25.5
       parent: 2
-    - type: ApcPowerReceiver
-      powerLoad: 0
   - uid: 26316
     components:
     - type: Transform
       pos: 13.5,0.5
       parent: 2
-    - type: ApcPowerReceiver
-      powerLoad: 0
   - uid: 26317
     components:
     - type: Transform
       rot: 3.141592653589793 rad
       pos: 13.5,2.5
       parent: 2
-    - type: ApcPowerReceiver
-      powerLoad: 0
   - uid: 26318
     components:
     - type: Transform
@@ -173808,132 +172997,98 @@ entities:
       rot: 1.5707963267948966 rad
       pos: 20.5,39.5
       parent: 2
-    - type: ApcPowerReceiver
-      powerLoad: 0
   - uid: 26320
     components:
     - type: Transform
       rot: 3.141592653589793 rad
       pos: 2.5,-35.5
       parent: 2
-    - type: ApcPowerReceiver
-      powerLoad: 0
   - uid: 26321
     components:
     - type: Transform
       pos: 2.5,-37.5
       parent: 2
-    - type: ApcPowerReceiver
-      powerLoad: 0
   - uid: 26322
     components:
     - type: Transform
       rot: -1.5707963267948966 rad
       pos: 21.5,-15.5
       parent: 2
-    - type: ApcPowerReceiver
-      powerLoad: 0
   - uid: 26323
     components:
     - type: Transform
       rot: 1.5707963267948966 rad
       pos: -19.5,-20.5
       parent: 2
-    - type: ApcPowerReceiver
-      powerLoad: 0
   - uid: 26324
     components:
     - type: Transform
       rot: 3.141592653589793 rad
       pos: -12.5,-22.5
       parent: 2
-    - type: ApcPowerReceiver
-      powerLoad: 0
   - uid: 26325
     components:
     - type: Transform
       rot: -1.5707963267948966 rad
       pos: -11.5,-15.5
       parent: 2
-    - type: ApcPowerReceiver
-      powerLoad: 0
   - uid: 26326
     components:
     - type: Transform
       pos: -16.5,-13.5
       parent: 2
-    - type: ApcPowerReceiver
-      powerLoad: 0
   - uid: 26327
     components:
     - type: Transform
       pos: -7.5,-20.5
       parent: 2
-    - type: ApcPowerReceiver
-      powerLoad: 0
   - uid: 26328
     components:
     - type: Transform
       rot: 3.141592653589793 rad
       pos: -30.5,-60.5
       parent: 2
-    - type: ApcPowerReceiver
-      powerLoad: 0
   - uid: 26329
     components:
     - type: Transform
       rot: -1.5707963267948966 rad
       pos: -37.5,-63.5
       parent: 2
-    - type: ApcPowerReceiver
-      powerLoad: 0
   - uid: 26330
     components:
     - type: Transform
       rot: 1.5707963267948966 rad
       pos: -32.5,-63.5
       parent: 2
-    - type: ApcPowerReceiver
-      powerLoad: 0
   - uid: 26331
     components:
     - type: Transform
       rot: 3.141592653589793 rad
       pos: -43.5,-55.5
       parent: 2
-    - type: ApcPowerReceiver
-      powerLoad: 0
   - uid: 26332
     components:
     - type: Transform
       rot: 1.5707963267948966 rad
       pos: -46.5,-60.5
       parent: 2
-    - type: ApcPowerReceiver
-      powerLoad: 0
   - uid: 26333
     components:
     - type: Transform
       pos: -30.5,-46.5
       parent: 2
-    - type: ApcPowerReceiver
-      powerLoad: 0
   - uid: 26334
     components:
     - type: Transform
       rot: 1.5707963267948966 rad
       pos: -43.5,-47.5
       parent: 2
-    - type: ApcPowerReceiver
-      powerLoad: 0
   - uid: 26335
     components:
     - type: Transform
       rot: -1.5707963267948966 rad
       pos: 101.5,-17.5
       parent: 2
-    - type: ApcPowerReceiver
-      powerLoad: 0
   - uid: 26336
     components:
     - type: Transform
@@ -173958,573 +173113,425 @@ entities:
       rot: -1.5707963267948966 rad
       pos: -21.5,-30.5
       parent: 2
-    - type: ApcPowerReceiver
-      powerLoad: 0
   - uid: 26340
     components:
     - type: Transform
       pos: 16.5,7.5
       parent: 2
-    - type: ApcPowerReceiver
-      powerLoad: 0
   - uid: 26341
     components:
     - type: Transform
       rot: 1.5707963267948966 rad
       pos: 7.5,9.5
       parent: 2
-    - type: ApcPowerReceiver
-      powerLoad: 0
   - uid: 26342
     components:
     - type: Transform
       pos: 8.5,16.5
       parent: 2
-    - type: ApcPowerReceiver
-      powerLoad: 0
   - uid: 26343
     components:
     - type: Transform
       pos: 9.5,23.5
       parent: 2
-    - type: ApcPowerReceiver
-      powerLoad: 0
   - uid: 26344
     components:
     - type: Transform
       pos: 13.5,29.5
       parent: 2
-    - type: ApcPowerReceiver
-      powerLoad: 0
   - uid: 26345
     components:
     - type: Transform
       rot: 3.141592653589793 rad
       pos: 55.5,-24.5
       parent: 2
-    - type: ApcPowerReceiver
-      powerLoad: 0
   - uid: 26346
     components:
     - type: Transform
       rot: 3.141592653589793 rad
       pos: 7.5,36.5
       parent: 2
-    - type: ApcPowerReceiver
-      powerLoad: 0
   - uid: 26347
     components:
     - type: Transform
       rot: 1.5707963267948966 rad
       pos: 2.5,40.5
       parent: 2
-    - type: ApcPowerReceiver
-      powerLoad: 0
   - uid: 26348
     components:
     - type: Transform
       rot: -1.5707963267948966 rad
       pos: 27.5,54.5
       parent: 2
-    - type: ApcPowerReceiver
-      powerLoad: 0
   - uid: 26349
     components:
     - type: Transform
       rot: 3.141592653589793 rad
       pos: -14.5,-10.5
       parent: 2
-    - type: ApcPowerReceiver
-      powerLoad: 0
   - uid: 26350
     components:
     - type: Transform
       rot: 3.141592653589793 rad
       pos: 21.5,62.5
       parent: 2
-    - type: ApcPowerReceiver
-      powerLoad: 0
   - uid: 26351
     components:
     - type: Transform
       rot: 1.5707963267948966 rad
       pos: 10.5,67.5
       parent: 2
-    - type: ApcPowerReceiver
-      powerLoad: 0
   - uid: 26352
     components:
     - type: Transform
       rot: 3.141592653589793 rad
       pos: 10.5,65.5
       parent: 2
-    - type: ApcPowerReceiver
-      powerLoad: 0
   - uid: 26353
     components:
     - type: Transform
       rot: 3.141592653589793 rad
       pos: 26.5,62.5
       parent: 2
-    - type: ApcPowerReceiver
-      powerLoad: 0
   - uid: 26354
     components:
     - type: Transform
       rot: -1.5707963267948966 rad
       pos: 30.5,-51.5
       parent: 2
-    - type: ApcPowerReceiver
-      powerLoad: 0
   - uid: 26355
     components:
     - type: Transform
       rot: 1.5707963267948966 rad
       pos: 27.5,-51.5
       parent: 2
-    - type: ApcPowerReceiver
-      powerLoad: 0
   - uid: 26356
     components:
     - type: Transform
       rot: -1.5707963267948966 rad
       pos: 32.5,-47.5
       parent: 2
-    - type: ApcPowerReceiver
-      powerLoad: 0
   - uid: 26357
     components:
     - type: Transform
       rot: -1.5707963267948966 rad
       pos: 28.5,-60.5
       parent: 2
-    - type: ApcPowerReceiver
-      powerLoad: 0
   - uid: 26358
     components:
     - type: Transform
       rot: 1.5707963267948966 rad
       pos: 24.5,-60.5
       parent: 2
-    - type: ApcPowerReceiver
-      powerLoad: 0
   - uid: 26359
     components:
     - type: Transform
       rot: 3.141592653589793 rad
       pos: 21.5,-50.5
       parent: 2
-    - type: ApcPowerReceiver
-      powerLoad: 0
   - uid: 26360
     components:
     - type: Transform
       pos: 29.5,-41.5
       parent: 2
-    - type: ApcPowerReceiver
-      powerLoad: 0
   - uid: 26361
     components:
     - type: Transform
       rot: 1.5707963267948966 rad
       pos: 23.5,-46.5
       parent: 2
-    - type: ApcPowerReceiver
-      powerLoad: 0
   - uid: 26362
     components:
     - type: Transform
       pos: 40.5,-41.5
       parent: 2
-    - type: ApcPowerReceiver
-      powerLoad: 0
   - uid: 26363
     components:
     - type: Transform
       rot: 3.141592653589793 rad
       pos: 45.5,-47.5
       parent: 2
-    - type: ApcPowerReceiver
-      powerLoad: 0
   - uid: 26364
     components:
     - type: Transform
       pos: 53.5,-45.5
       parent: 2
-    - type: ApcPowerReceiver
-      powerLoad: 0
   - uid: 26365
     components:
     - type: Transform
       rot: 3.141592653589793 rad
       pos: 57.5,-41.5
       parent: 2
-    - type: ApcPowerReceiver
-      powerLoad: 0
   - uid: 26366
     components:
     - type: Transform
       rot: 1.5707963267948966 rad
       pos: 55.5,-43.5
       parent: 2
-    - type: ApcPowerReceiver
-      powerLoad: 0
   - uid: 26367
     components:
     - type: Transform
       rot: -1.5707963267948966 rad
       pos: 53.5,-38.5
       parent: 2
-    - type: ApcPowerReceiver
-      powerLoad: 0
   - uid: 26368
     components:
     - type: Transform
       rot: 3.141592653589793 rad
       pos: 34.5,-31.5
       parent: 2
-    - type: ApcPowerReceiver
-      powerLoad: 0
   - uid: 26369
     components:
     - type: Transform
       rot: 3.141592653589793 rad
       pos: 32.5,-31.5
       parent: 2
-    - type: ApcPowerReceiver
-      powerLoad: 0
   - uid: 26370
     components:
     - type: Transform
       rot: -1.5707963267948966 rad
       pos: 62.5,-30.5
       parent: 2
-    - type: ApcPowerReceiver
-      powerLoad: 0
   - uid: 26371
     components:
     - type: Transform
       rot: 1.5707963267948966 rad
       pos: 29.5,-37.5
       parent: 2
-    - type: ApcPowerReceiver
-      powerLoad: 0
   - uid: 26372
     components:
     - type: Transform
       rot: 3.141592653589793 rad
       pos: 29.5,-39.5
       parent: 2
-    - type: ApcPowerReceiver
-      powerLoad: 0
   - uid: 26373
     components:
     - type: Transform
       rot: 1.5707963267948966 rad
       pos: 77.5,28.5
       parent: 2
-    - type: ApcPowerReceiver
-      powerLoad: 0
   - uid: 26374
     components:
     - type: Transform
       pos: 62.5,-35.5
       parent: 2
-    - type: ApcPowerReceiver
-      powerLoad: 0
   - uid: 26375
     components:
     - type: Transform
       rot: 3.141592653589793 rad
       pos: 59.5,-42.5
       parent: 2
-    - type: ApcPowerReceiver
-      powerLoad: 0
   - uid: 26376
     components:
     - type: Transform
       rot: 3.141592653589793 rad
       pos: 71.5,-42.5
       parent: 2
-    - type: ApcPowerReceiver
-      powerLoad: 0
   - uid: 26377
     components:
     - type: Transform
       rot: 3.141592653589793 rad
       pos: 75.5,-42.5
       parent: 2
-    - type: ApcPowerReceiver
-      powerLoad: 0
   - uid: 26378
     components:
     - type: Transform
       rot: 3.141592653589793 rad
       pos: 79.5,-42.5
       parent: 2
-    - type: ApcPowerReceiver
-      powerLoad: 0
   - uid: 26379
     components:
     - type: Transform
       rot: -1.5707963267948966 rad
       pos: 93.5,-42.5
       parent: 2
-    - type: ApcPowerReceiver
-      powerLoad: 0
   - uid: 26380
     components:
     - type: Transform
       rot: -1.5707963267948966 rad
       pos: 93.5,-38.5
       parent: 2
-    - type: ApcPowerReceiver
-      powerLoad: 0
   - uid: 26381
     components:
     - type: Transform
       rot: -1.5707963267948966 rad
       pos: 93.5,-34.5
       parent: 2
-    - type: ApcPowerReceiver
-      powerLoad: 0
   - uid: 26382
     components:
     - type: Transform
       pos: 92.5,-25.5
       parent: 2
-    - type: ApcPowerReceiver
-      powerLoad: 0
   - uid: 26383
     components:
     - type: Transform
       rot: 3.141592653589793 rad
       pos: 85.5,-16.5
       parent: 2
-    - type: ApcPowerReceiver
-      powerLoad: 0
   - uid: 26384
     components:
     - type: Transform
       rot: -1.5707963267948966 rad
       pos: 89.5,-15.5
       parent: 2
-    - type: ApcPowerReceiver
-      powerLoad: 0
   - uid: 26385
     components:
     - type: Transform
       rot: 3.141592653589793 rad
       pos: 108.5,-17.5
       parent: 2
-    - type: ApcPowerReceiver
-      powerLoad: 0
   - uid: 26386
     components:
     - type: Transform
       rot: -1.5707963267948966 rad
       pos: 79.5,-9.5
       parent: 2
-    - type: ApcPowerReceiver
-      powerLoad: 0
   - uid: 26387
     components:
     - type: Transform
       rot: 1.5707963267948966 rad
       pos: 89.5,-7.5
       parent: 2
-    - type: ApcPowerReceiver
-      powerLoad: 0
   - uid: 26388
     components:
     - type: Transform
       rot: 1.5707963267948966 rad
       pos: 89.5,-3.5
       parent: 2
-    - type: ApcPowerReceiver
-      powerLoad: 0
   - uid: 26389
     components:
     - type: Transform
       rot: -1.5707963267948966 rad
       pos: 61.5,-7.5
       parent: 2
-    - type: ApcPowerReceiver
-      powerLoad: 0
   - uid: 26390
     components:
     - type: Transform
       rot: -1.5707963267948966 rad
       pos: 65.5,-32.5
       parent: 2
-    - type: ApcPowerReceiver
-      powerLoad: 0
   - uid: 26391
     components:
     - type: Transform
       pos: 62.5,-23.5
       parent: 2
-    - type: ApcPowerReceiver
-      powerLoad: 0
   - uid: 26392
     components:
     - type: Transform
       rot: 1.5707963267948966 rad
       pos: 58.5,-16.5
       parent: 2
-    - type: ApcPowerReceiver
-      powerLoad: 0
   - uid: 26393
     components:
     - type: Transform
       rot: -1.5707963267948966 rad
       pos: 40.5,-48.5
       parent: 2
-    - type: ApcPowerReceiver
-      powerLoad: 0
   - uid: 26394
     components:
     - type: Transform
       rot: 1.5707963267948966 rad
       pos: 34.5,-48.5
       parent: 2
-    - type: ApcPowerReceiver
-      powerLoad: 0
   - uid: 26395
     components:
     - type: Transform
       rot: 3.141592653589793 rad
       pos: 111.5,-23.5
       parent: 2
-    - type: ApcPowerReceiver
-      powerLoad: 0
   - uid: 26396
     components:
     - type: Transform
       rot: 3.141592653589793 rad
       pos: 80.5,-24.5
       parent: 2
-    - type: ApcPowerReceiver
-      powerLoad: 0
   - uid: 26397
     components:
     - type: Transform
       rot: -1.5707963267948966 rad
       pos: 98.5,-11.5
       parent: 2
-    - type: ApcPowerReceiver
-      powerLoad: 0
   - uid: 26398
     components:
     - type: Transform
       pos: 93.5,-19.5
       parent: 2
-    - type: ApcPowerReceiver
-      powerLoad: 0
   - uid: 26399
     components:
     - type: Transform
       pos: 114.5,-19.5
       parent: 2
-    - type: ApcPowerReceiver
-      powerLoad: 0
   - uid: 26400
     components:
     - type: Transform
       pos: 101.5,-19.5
       parent: 2
-    - type: ApcPowerReceiver
-      powerLoad: 0
   - uid: 26401
     components:
     - type: Transform
       rot: -1.5707963267948966 rad
       pos: 87.5,-5.5
       parent: 2
-    - type: ApcPowerReceiver
-      powerLoad: 0
   - uid: 26402
     components:
     - type: Transform
       pos: 104.5,-15.5
       parent: 2
-    - type: ApcPowerReceiver
-      powerLoad: 0
   - uid: 26403
     components:
     - type: Transform
       rot: 3.141592653589793 rad
       pos: 113.5,-17.5
       parent: 2
-    - type: ApcPowerReceiver
-      powerLoad: 0
   - uid: 26404
     components:
     - type: Transform
       pos: 97.5,1.5
       parent: 2
-    - type: ApcPowerReceiver
-      powerLoad: 0
   - uid: 26405
     components:
     - type: Transform
       pos: 101.5,-31.5
       parent: 2
-    - type: ApcPowerReceiver
-      powerLoad: 0
   - uid: 26406
     components:
     - type: Transform
       rot: 3.141592653589793 rad
       pos: 86.5,29.5
       parent: 2
-    - type: ApcPowerReceiver
-      powerLoad: 0
   - uid: 26407
     components:
     - type: Transform
       pos: 90.5,33.5
       parent: 2
-    - type: ApcPowerReceiver
-      powerLoad: 0
   - uid: 26408
     components:
     - type: Transform
       rot: -1.5707963267948966 rad
       pos: 88.5,34.5
       parent: 2
-    - type: ApcPowerReceiver
-      powerLoad: 0
   - uid: 26409
     components:
     - type: Transform
       rot: 1.5707963267948966 rad
       pos: 90.5,36.5
       parent: 2
-    - type: ApcPowerReceiver
-      powerLoad: 0
   - uid: 26410
     components:
     - type: Transform
       pos: 99.5,36.5
       parent: 2
-    - type: ApcPowerReceiver
-      powerLoad: 0
   - uid: 26411
     components:
     - type: Transform
       pos: 99.5,33.5
       parent: 2
-    - type: ApcPowerReceiver
-      powerLoad: 0
   - uid: 26412
     components:
     - type: Transform
       rot: 3.141592653589793 rad
       pos: 92.5,28.5
       parent: 2
-    - type: ApcPowerReceiver
-      powerLoad: 0
   - uid: 26413
     components:
     - type: Transform
@@ -174537,709 +173544,523 @@ entities:
       rot: -1.5707963267948966 rad
       pos: 121.5,-16.5
       parent: 2
-    - type: ApcPowerReceiver
-      powerLoad: 0
   - uid: 26415
     components:
     - type: Transform
       rot: 1.5707963267948966 rad
       pos: 116.5,-16.5
       parent: 2
-    - type: ApcPowerReceiver
-      powerLoad: 0
   - uid: 26416
     components:
     - type: Transform
       rot: 1.5707963267948966 rad
       pos: 118.5,-9.5
       parent: 2
-    - type: ApcPowerReceiver
-      powerLoad: 0
   - uid: 26417
     components:
     - type: Transform
       rot: 1.5707963267948966 rad
       pos: 118.5,1.5
       parent: 2
-    - type: ApcPowerReceiver
-      powerLoad: 0
   - uid: 26418
     components:
     - type: Transform
       rot: 1.5707963267948966 rad
       pos: 122.5,-3.5
       parent: 2
-    - type: ApcPowerReceiver
-      powerLoad: 0
   - uid: 26419
     components:
     - type: Transform
       pos: 125.5,3.5
       parent: 2
-    - type: ApcPowerReceiver
-      powerLoad: 0
   - uid: 26420
     components:
     - type: Transform
       pos: 124.5,7.5
       parent: 2
-    - type: ApcPowerReceiver
-      powerLoad: 0
   - uid: 26421
     components:
     - type: Transform
       pos: 58.5,14.5
       parent: 2
-    - type: ApcPowerReceiver
-      powerLoad: 0
   - uid: 26422
     components:
     - type: Transform
       pos: 58.5,16.5
       parent: 2
-    - type: ApcPowerReceiver
-      powerLoad: 0
   - uid: 26423
     components:
     - type: Transform
       pos: 58.5,18.5
       parent: 2
-    - type: ApcPowerReceiver
-      powerLoad: 0
   - uid: 26424
     components:
     - type: Transform
       rot: -1.5707963267948966 rad
       pos: 62.5,16.5
       parent: 2
-    - type: ApcPowerReceiver
-      powerLoad: 0
   - uid: 26425
     components:
     - type: Transform
       pos: 66.5,19.5
       parent: 2
-    - type: ApcPowerReceiver
-      powerLoad: 0
   - uid: 26426
     components:
     - type: Transform
       rot: 1.5707963267948966 rad
       pos: 89.5,19.5
       parent: 2
-    - type: ApcPowerReceiver
-      powerLoad: 0
   - uid: 26427
     components:
     - type: Transform
       rot: -1.5707963267948966 rad
       pos: 94.5,22.5
       parent: 2
-    - type: ApcPowerReceiver
-      powerLoad: 0
   - uid: 26428
     components:
     - type: Transform
       rot: 3.141592653589793 rad
       pos: 78.5,21.5
       parent: 2
-    - type: ApcPowerReceiver
-      powerLoad: 0
   - uid: 26429
     components:
     - type: Transform
       rot: 3.141592653589793 rad
       pos: 78.5,24.5
       parent: 2
-    - type: ApcPowerReceiver
-      powerLoad: 0
   - uid: 26430
     components:
     - type: Transform
       rot: 3.141592653589793 rad
       pos: 86.5,24.5
       parent: 2
-    - type: ApcPowerReceiver
-      powerLoad: 0
   - uid: 26431
     components:
     - type: Transform
       rot: 3.141592653589793 rad
       pos: 86.5,21.5
       parent: 2
-    - type: ApcPowerReceiver
-      powerLoad: 0
   - uid: 26432
     components:
     - type: Transform
       rot: 3.141592653589793 rad
       pos: 86.5,18.5
       parent: 2
-    - type: ApcPowerReceiver
-      powerLoad: 0
   - uid: 26436
     components:
     - type: Transform
       pos: 106.5,40.5
       parent: 2
-    - type: ApcPowerReceiver
-      powerLoad: 0
   - uid: 26437
     components:
     - type: Transform
       rot: -1.5707963267948966 rad
       pos: 97.5,43.5
       parent: 2
-    - type: ApcPowerReceiver
-      powerLoad: 0
   - uid: 26438
     components:
     - type: Transform
       pos: 113.5,50.5
       parent: 2
-    - type: ApcPowerReceiver
-      powerLoad: 0
   - uid: 26439
     components:
     - type: Transform
       pos: 115.5,50.5
       parent: 2
-    - type: ApcPowerReceiver
-      powerLoad: 0
   - uid: 26440
     components:
     - type: Transform
       pos: 79.5,53.5
       parent: 2
-    - type: ApcPowerReceiver
-      powerLoad: 0
   - uid: 26441
     components:
     - type: Transform
       rot: -1.5707963267948966 rad
       pos: 83.5,53.5
       parent: 2
-    - type: ApcPowerReceiver
-      powerLoad: 0
   - uid: 26442
     components:
     - type: Transform
       rot: 1.5707963267948966 rad
       pos: 76.5,50.5
       parent: 2
-    - type: ApcPowerReceiver
-      powerLoad: 0
   - uid: 26443
     components:
     - type: Transform
       rot: -1.5707963267948966 rad
       pos: 83.5,50.5
       parent: 2
-    - type: ApcPowerReceiver
-      powerLoad: 0
   - uid: 26444
     components:
     - type: Transform
       rot: 3.141592653589793 rad
       pos: 90.5,46.5
       parent: 2
-    - type: ApcPowerReceiver
-      powerLoad: 0
   - uid: 26445
     components:
     - type: Transform
       pos: 88.5,51.5
       parent: 2
-    - type: ApcPowerReceiver
-      powerLoad: 0
   - uid: 26446
     components:
     - type: Transform
       rot: 1.5707963267948966 rad
       pos: 59.5,50.5
       parent: 2
-    - type: ApcPowerReceiver
-      powerLoad: 0
   - uid: 26447
     components:
     - type: Transform
       rot: 3.141592653589793 rad
       pos: 64.5,50.5
       parent: 2
-    - type: ApcPowerReceiver
-      powerLoad: 0
   - uid: 26448
     components:
     - type: Transform
       pos: 94.5,66.5
       parent: 2
-    - type: ApcPowerReceiver
-      powerLoad: 0
   - uid: 26449
     components:
     - type: Transform
       rot: 3.141592653589793 rad
       pos: 94.5,61.5
       parent: 2
-    - type: ApcPowerReceiver
-      powerLoad: 0
   - uid: 26450
     components:
     - type: Transform
       rot: 1.5707963267948966 rad
       pos: 90.5,73.5
       parent: 2
-    - type: ApcPowerReceiver
-      powerLoad: 0
   - uid: 26451
     components:
     - type: Transform
       pos: -28.5,65.5
       parent: 2
-    - type: ApcPowerReceiver
-      powerLoad: 0
   - uid: 26452
     components:
     - type: Transform
       rot: -1.5707963267948966 rad
       pos: -28.5,68.5
       parent: 2
-    - type: ApcPowerReceiver
-      powerLoad: 0
   - uid: 26453
     components:
     - type: Transform
       rot: 1.5707963267948966 rad
       pos: 8.5,11.5
       parent: 2
-    - type: ApcPowerReceiver
-      powerLoad: 0
   - uid: 26454
     components:
     - type: Transform
       pos: 20.5,30.5
       parent: 2
-    - type: ApcPowerReceiver
-      powerLoad: 0
   - uid: 26455
     components:
     - type: Transform
       pos: -38.5,-0.5
       parent: 2
-    - type: ApcPowerReceiver
-      powerLoad: 0
   - uid: 26456
     components:
     - type: Transform
       rot: 3.141592653589793 rad
       pos: -45.5,-3.5
       parent: 2
-    - type: ApcPowerReceiver
-      powerLoad: 0
   - uid: 26457
     components:
     - type: Transform
       rot: -1.5707963267948966 rad
       pos: -41.5,-2.5
       parent: 2
-    - type: ApcPowerReceiver
-      powerLoad: 0
   - uid: 26458
     components:
     - type: Transform
       pos: -44.5,2.5
       parent: 2
-    - type: ApcPowerReceiver
-      powerLoad: 0
   - uid: 26459
     components:
     - type: Transform
       pos: -40.5,2.5
       parent: 2
-    - type: ApcPowerReceiver
-      powerLoad: 0
   - uid: 26460
     components:
     - type: Transform
       rot: -1.5707963267948966 rad
       pos: -34.5,8.5
       parent: 2
-    - type: ApcPowerReceiver
-      powerLoad: 0
   - uid: 26461
     components:
     - type: Transform
       rot: -1.5707963267948966 rad
       pos: -27.5,4.5
       parent: 2
-    - type: ApcPowerReceiver
-      powerLoad: 0
   - uid: 26462
     components:
     - type: Transform
       rot: 1.5707963267948966 rad
       pos: -22.5,2.5
       parent: 2
-    - type: ApcPowerReceiver
-      powerLoad: 0
   - uid: 26463
     components:
     - type: Transform
       pos: -15.5,6.5
       parent: 2
-    - type: ApcPowerReceiver
-      powerLoad: 0
   - uid: 26464
     components:
     - type: Transform
       rot: -1.5707963267948966 rad
       pos: -38.5,15.5
       parent: 2
-    - type: ApcPowerReceiver
-      powerLoad: 0
   - uid: 26465
     components:
     - type: Transform
       rot: 3.141592653589793 rad
       pos: -33.5,12.5
       parent: 2
-    - type: ApcPowerReceiver
-      powerLoad: 0
   - uid: 26466
     components:
     - type: Transform
       rot: -1.5707963267948966 rad
       pos: -19.5,28.5
       parent: 2
-    - type: ApcPowerReceiver
-      powerLoad: 0
   - uid: 26467
     components:
     - type: Transform
       rot: 1.5707963267948966 rad
       pos: 26.5,-39.5
       parent: 2
-    - type: ApcPowerReceiver
-      powerLoad: 0
   - uid: 26468
     components:
     - type: Transform
       rot: 3.141592653589793 rad
       pos: 43.5,-51.5
       parent: 2
-    - type: ApcPowerReceiver
-      powerLoad: 0
   - uid: 26469
     components:
     - type: Transform
       rot: 1.5707963267948966 rad
       pos: 50.5,-50.5
       parent: 2
-    - type: ApcPowerReceiver
-      powerLoad: 0
   - uid: 26470
     components:
     - type: Transform
       rot: -1.5707963267948966 rad
       pos: 57.5,-49.5
       parent: 2
-    - type: ApcPowerReceiver
-      powerLoad: 0
   - uid: 26471
     components:
     - type: Transform
       rot: 3.141592653589793 rad
       pos: 50.5,-54.5
       parent: 2
-    - type: ApcPowerReceiver
-      powerLoad: 0
   - uid: 26472
     components:
     - type: Transform
       rot: -1.5707963267948966 rad
       pos: -29.5,61.5
       parent: 2
-    - type: ApcPowerReceiver
-      powerLoad: 0
   - uid: 26473
     components:
     - type: Transform
       rot: 1.5707963267948966 rad
       pos: 100.5,-53.5
       parent: 2
-    - type: ApcPowerReceiver
-      powerLoad: 0
   - uid: 26474
     components:
     - type: Transform
       pos: 106.5,-45.5
       parent: 2
-    - type: ApcPowerReceiver
-      powerLoad: 0
   - uid: 26475
     components:
     - type: Transform
       pos: 103.5,-45.5
       parent: 2
-    - type: ApcPowerReceiver
-      powerLoad: 0
   - uid: 26477
     components:
     - type: Transform
       rot: 3.141592653589793 rad
       pos: 37.5,-9.5
       parent: 2
-    - type: ApcPowerReceiver
-      powerLoad: 0
   - uid: 26478
     components:
     - type: Transform
       pos: 37.5,-4.5
       parent: 2
-    - type: ApcPowerReceiver
-      powerLoad: 0
   - uid: 26479
     components:
     - type: Transform
       rot: 1.5707963267948966 rad
       pos: 32.5,-7.5
       parent: 2
-    - type: ApcPowerReceiver
-      powerLoad: 0
   - uid: 26480
     components:
     - type: Transform
       pos: 67.5,0.5
       parent: 2
-    - type: ApcPowerReceiver
-      powerLoad: 0
   - uid: 26481
     components:
     - type: Transform
       pos: 67.5,-3.5
       parent: 2
-    - type: ApcPowerReceiver
-      powerLoad: 0
   - uid: 26482
     components:
     - type: Transform
       rot: 1.5707963267948966 rad
       pos: 106.5,11.5
       parent: 2
-    - type: ApcPowerReceiver
-      powerLoad: 0
   - uid: 26483
     components:
     - type: Transform
       rot: 3.141592653589793 rad
       pos: 72.5,3.5
       parent: 2
-    - type: ApcPowerReceiver
-      powerLoad: 0
   - uid: 26484
     components:
     - type: Transform
       pos: 103.5,16.5
       parent: 2
-    - type: ApcPowerReceiver
-      powerLoad: 0
   - uid: 26485
     components:
     - type: Transform
       rot: 3.141592653589793 rad
       pos: 107.5,22.5
       parent: 2
-    - type: ApcPowerReceiver
-      powerLoad: 0
   - uid: 26486
     components:
     - type: Transform
       pos: 111.5,26.5
       parent: 2
-    - type: ApcPowerReceiver
-      powerLoad: 0
   - uid: 26487
     components:
     - type: Transform
       pos: 65.5,24.5
       parent: 2
-    - type: ApcPowerReceiver
-      powerLoad: 0
   - uid: 26488
     components:
     - type: Transform
       pos: 72.5,22.5
       parent: 2
-    - type: ApcPowerReceiver
-      powerLoad: 0
   - uid: 26489
     components:
     - type: Transform
       rot: -1.5707963267948966 rad
       pos: 75.5,19.5
       parent: 2
-    - type: ApcPowerReceiver
-      powerLoad: 0
   - uid: 26490
     components:
     - type: Transform
       rot: 3.141592653589793 rad
       pos: 104.5,18.5
       parent: 2
-    - type: ApcPowerReceiver
-      powerLoad: 0
   - uid: 26491
     components:
     - type: Transform
       rot: 1.5707963267948966 rad
       pos: 96.5,12.5
       parent: 2
-    - type: ApcPowerReceiver
-      powerLoad: 0
   - uid: 26492
     components:
     - type: Transform
       pos: 94.5,26.5
       parent: 2
-    - type: ApcPowerReceiver
-      powerLoad: 0
   - uid: 26493
     components:
     - type: Transform
       rot: 3.141592653589793 rad
       pos: 106.5,34.5
       parent: 2
-    - type: ApcPowerReceiver
-      powerLoad: 0
   - uid: 26494
     components:
     - type: Transform
       rot: 3.141592653589793 rad
       pos: 106.5,28.5
       parent: 2
-    - type: ApcPowerReceiver
-      powerLoad: 0
   - uid: 26495
     components:
     - type: Transform
       rot: 3.141592653589793 rad
       pos: 113.5,30.5
       parent: 2
-    - type: ApcPowerReceiver
-      powerLoad: 0
   - uid: 26496
     components:
     - type: Transform
       rot: 3.141592653589793 rad
       pos: 116.5,30.5
       parent: 2
-    - type: ApcPowerReceiver
-      powerLoad: 0
   - uid: 26497
     components:
     - type: Transform
       pos: 29.5,37.5
       parent: 2
-    - type: ApcPowerReceiver
-      powerLoad: 0
   - uid: 26498
     components:
     - type: Transform
       pos: -0.5,69.5
       parent: 2
-    - type: ApcPowerReceiver
-      powerLoad: 0
   - uid: 26499
     components:
     - type: Transform
       rot: 3.141592653589793 rad
       pos: 5.5,74.5
       parent: 2
-    - type: ApcPowerReceiver
-      powerLoad: 0
   - uid: 26500
     components:
     - type: Transform
       pos: 22.5,70.5
       parent: 2
-    - type: ApcPowerReceiver
-      powerLoad: 0
   - uid: 26501
     components:
     - type: Transform
       pos: 30.5,55.5
       parent: 2
-    - type: ApcPowerReceiver
-      powerLoad: 0
   - uid: 26502
     components:
     - type: Transform
       pos: 43.5,44.5
       parent: 2
-    - type: ApcPowerReceiver
-      powerLoad: 0
   - uid: 26503
     components:
     - type: Transform
       rot: 1.5707963267948966 rad
       pos: 38.5,47.5
       parent: 2
-    - type: ApcPowerReceiver
-      powerLoad: 0
   - uid: 26504
     components:
     - type: Transform
       rot: -1.5707963267948966 rad
       pos: 33.5,58.5
       parent: 2
-    - type: ApcPowerReceiver
-      powerLoad: 0
   - uid: 26505
     components:
     - type: Transform
       rot: 3.141592653589793 rad
       pos: 53.5,66.5
       parent: 2
-    - type: ApcPowerReceiver
-      powerLoad: 0
   - uid: 26506
     components:
     - type: Transform
       rot: 1.5707963267948966 rad
       pos: 57.5,68.5
       parent: 2
-    - type: ApcPowerReceiver
-      powerLoad: 0
   - uid: 26507
     components:
     - type: Transform
       rot: 3.141592653589793 rad
       pos: 38.5,58.5
       parent: 2
-    - type: ApcPowerReceiver
-      powerLoad: 0
   - uid: 26508
     components:
     - type: Transform
       rot: 3.141592653589793 rad
       pos: 28.5,66.5
       parent: 2
-    - type: ApcPowerReceiver
-      powerLoad: 0
   - uid: 26509
     components:
     - type: Transform
       pos: 71.5,-46.5
       parent: 2
-    - type: ApcPowerReceiver
-      powerLoad: 0
   - uid: 26510
     components:
     - type: Transform
       pos: 87.5,-46.5
       parent: 2
-    - type: ApcPowerReceiver
-      powerLoad: 0
   - uid: 26511
     components:
     - type: Transform
@@ -175252,97 +174073,71 @@ entities:
       rot: 1.5707963267948966 rad
       pos: 68.5,-51.5
       parent: 2
-    - type: ApcPowerReceiver
-      powerLoad: 0
   - uid: 26513
     components:
     - type: Transform
       pos: 64.5,-48.5
       parent: 2
-    - type: ApcPowerReceiver
-      powerLoad: 0
   - uid: 26514
     components:
     - type: Transform
       rot: -1.5707963267948966 rad
       pos: 89.5,44.5
       parent: 2
-    - type: ApcPowerReceiver
-      powerLoad: 0
   - uid: 26515
     components:
     - type: Transform
       rot: 1.5707963267948966 rad
       pos: 89.5,53.5
       parent: 2
-    - type: ApcPowerReceiver
-      powerLoad: 0
   - uid: 26516
     components:
     - type: Transform
       pos: 17.5,-34.5
       parent: 2
-    - type: ApcPowerReceiver
-      powerLoad: 0
   - uid: 26517
     components:
     - type: Transform
       pos: 120.5,12.5
       parent: 2
-    - type: ApcPowerReceiver
-      powerLoad: 0
   - uid: 26518
     components:
     - type: Transform
       rot: 3.141592653589793 rad
       pos: 124.5,-8.5
       parent: 2
-    - type: ApcPowerReceiver
-      powerLoad: 0
   - uid: 26519
     components:
     - type: Transform
       pos: 107.5,6.5
       parent: 2
-    - type: ApcPowerReceiver
-      powerLoad: 0
   - uid: 26520
     components:
     - type: Transform
       pos: 95.5,8.5
       parent: 2
-    - type: ApcPowerReceiver
-      powerLoad: 0
   - uid: 26521
     components:
     - type: Transform
       rot: -1.5707963267948966 rad
       pos: 20.5,-22.5
       parent: 2
-    - type: ApcPowerReceiver
-      powerLoad: 0
   - uid: 26522
     components:
     - type: Transform
       pos: 43.5,-53.5
       parent: 2
-    - type: ApcPowerReceiver
-      powerLoad: 0
   - uid: 26523
     components:
     - type: Transform
       pos: 51.5,-53.5
       parent: 2
-    - type: ApcPowerReceiver
-      powerLoad: 0
   - uid: 26524
     components:
     - type: Transform
       rot: 1.5707963267948966 rad
       pos: 11.5,-15.5
       parent: 2
-    - type: ApcPowerReceiver
-      powerLoad: 0
   - uid: 26525
     components:
     - type: Transform
@@ -175373,69 +174168,51 @@ entities:
     - type: Transform
       pos: -16.5,-18.5
       parent: 2
-    - type: ApcPowerReceiver
-      powerLoad: 0
   - uid: 26529
     components:
     - type: Transform
       rot: 3.141592653589793 rad
       pos: 78.5,18.5
       parent: 2
-    - type: ApcPowerReceiver
-      powerLoad: 0
   - uid: 26530
     components:
     - type: Transform
       pos: 50.5,47.5
       parent: 2
-    - type: ApcPowerReceiver
-      powerLoad: 0
   - uid: 26531
     components:
     - type: Transform
       rot: -1.5707963267948966 rad
       pos: 55.5,48.5
       parent: 2
-    - type: ApcPowerReceiver
-      powerLoad: 0
   - uid: 26532
     components:
     - type: Transform
       rot: 1.5707963267948966 rad
       pos: 38.5,43.5
       parent: 2
-    - type: ApcPowerReceiver
-      powerLoad: 0
   - uid: 26533
     components:
     - type: Transform
       pos: 33.5,40.5
       parent: 2
-    - type: ApcPowerReceiver
-      powerLoad: 0
   - uid: 26534
     components:
     - type: Transform
       pos: 79.5,-46.5
       parent: 2
-    - type: ApcPowerReceiver
-      powerLoad: 0
   - uid: 26535
     components:
     - type: Transform
       rot: -1.5707963267948966 rad
       pos: 94.5,-47.5
       parent: 2
-    - type: ApcPowerReceiver
-      powerLoad: 0
   - uid: 26536
     components:
     - type: Transform
       rot: 3.141592653589793 rad
       pos: 64.5,-54.5
       parent: 2
-    - type: ApcPowerReceiver
-      powerLoad: 0
 - proto: PoweredWarmSmallLight
   entities:
   - uid: 36089
@@ -175492,17 +174269,6 @@ entities:
     - type: Transform
       pos: -38.5,62.5
       parent: 2
-    - type: SolutionContainerManager
-      solutions:
-        puddle:
-          temperature: 293.15
-          canReact: True
-          maxVol: 1000
-          name: null
-          reagents:
-          - data: null
-            ReagentId: Ale
-            Quantity: 50
 - proto: PuddleVomit
   entities:
   - uid: 26540

@@ -12,12 +12,12 @@ namespace Content.Server._Stories.StationGoal;
 /// <summary>
 /// System to spawn paper with station goal.
 /// </summary>
-public sealed class StationGoalPaperSystem : EntitySystem
+public sealed partial class StationGoalPaperSystem : EntitySystem
 {
-    [Dependency] private readonly FaxSystem _faxSystem = default!;
-    [Dependency] private readonly IPlayerManager _playerManager = default!;
-    [Dependency] private readonly IPrototypeManager _prototypeManager = default!;
-    [Dependency] private readonly IRobustRandom _random = default!;
+    [Dependency] private FaxSystem _faxSystem = default!;
+    [Dependency] private IPlayerManager _playerManager = default!;
+    [Dependency] private IPrototypeManager _prototypeManager = default!;
+    [Dependency] private IRobustRandom _random = default!;
 
     public override void Initialize()
     {

@@ -15,7 +15,6 @@
   icon: "JobIconHeadOfSpacePrison"
   requireAdminNotify: true
   supervisors: job-supervisors-centcom
-  canBeAntag: false
   accessGroups:
   - PrisonAllAccess
   access:

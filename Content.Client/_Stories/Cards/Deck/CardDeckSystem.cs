@@ -6,10 +6,10 @@ using Robust.Client.GameObjects;
 
 namespace Content.Client._Stories.Cards.Deck;
 
-public sealed class CardDeckSystem : EntitySystem
+public sealed partial class CardDeckSystem : EntitySystem
 {
-    [Dependency] private readonly SharedAppearanceSystem _appearance = default!;
-    [Dependency] private readonly SpriteSystem _spriteSystem = default!;
+    [Dependency] private SharedAppearanceSystem _appearance = default!;
+    [Dependency] private SpriteSystem _spriteSystem = default!;
 
     public override void Initialize()
     {

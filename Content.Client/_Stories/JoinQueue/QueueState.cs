@@ -7,11 +7,11 @@ using Robust.Shared.Player;
 
 namespace Content.Client._Stories.JoinQueue;
 
-public sealed class QueueState : State
+public sealed partial class QueueState : State
 {
     private const string JoinSoundPath = "/Audio/Effects/voteding.ogg";
-    [Dependency] private readonly IClientConsoleHost _consoleHost = default!;
-    [Dependency] private readonly IUserInterfaceManager _userInterfaceManager = default!;
+    [Dependency] private IClientConsoleHost _consoleHost = default!;
+    [Dependency] private IUserInterfaceManager _userInterfaceManager = default!;
 
     private QueueGui? _gui;
 

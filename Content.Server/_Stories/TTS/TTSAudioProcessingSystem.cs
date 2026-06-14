@@ -7,9 +7,9 @@ using Robust.Shared.Configuration;
 
 namespace Content.Server._Stories.TTS;
 
-public sealed class TtsAudioProcessingSystem : EntitySystem
+public sealed partial class TtsAudioProcessingSystem : EntitySystem
 {
-    [Dependency] private readonly IConfigurationManager _cfg = default!;
+    [Dependency] private IConfigurationManager _cfg = default!;
     private string _ffmpegArgs = "";
     private string _ffmpegPath = "ffmpeg";
     private bool _radioEffectEnabled;
