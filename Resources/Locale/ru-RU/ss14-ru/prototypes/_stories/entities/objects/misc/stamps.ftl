@@ -1,6 +1,6 @@
-ent-RubberStampIAA = Печать агента внутренних дел
+ent-RubberStampIAA = печать агента внутренних дел
     .desc = { ent-RubberStampBase.desc }
-    .suffix = DO NOT MAP
+    .suffix = НЕ МАППИТЬ
 ent-PRISONRubberStamp = печать начальника тюрьмы
     .desc = Печать из резины, для проставления печатей на важных документах.
     .suffix = DO NOT MAP

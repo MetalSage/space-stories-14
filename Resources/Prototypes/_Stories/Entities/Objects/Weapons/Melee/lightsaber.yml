@@ -48,7 +48,7 @@
     reflects:
       - Energy
   - type: Damageable
-    damageContainer: Inorganic
+  - type: Injurable
   - type: Fixtures
     fixtures:
       fix1:

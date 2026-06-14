@@ -13,7 +13,6 @@
   startingGear: PRISONMedicGear
   icon: "JobIconSpacePrisonMedic"
   supervisors: stories-job-supervisors-headofprison
-  canBeAntag: false
   access:
   - Prisoner
   - Prison

@@ -1,12 +1,12 @@
 ent-SpawnPointJobBaseStories = { ent-MarkerBase }
-    .suffix = Спавнер роли
     .desc = { ent-MarkerBase.desc }
+    .suffix = Спавнер роли
 ent-SpawnPointGuardianNt = страж клинка
     .desc = { ent-SpawnPointJobBaseStories.desc }
     .suffix = { ent-SpawnPointJobBaseStories.suffix }
 ent-STSpawnPointIAA = агент внутрених дел
-    .desc = { ent-SpawnPointJobBaseStories.desc }
-    .suffix = { ent-SpawnPointJobBaseStories.suffix }
+    .desc = { ent-SpawnPointJobBase.desc }
+    .suffix = { ent-SpawnPointJobBase.suffix }
 ent-STSpawnPointJudge = судья
     .desc = { ent-SpawnPointJobBaseStories.desc }
     .suffix = { ent-SpawnPointJobBaseStories.suffix }

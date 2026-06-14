@@ -11,13 +11,13 @@ using Robust.Shared.Timing;
 
 namespace Content.Shared._Stories.Vision.Systems;
 
-public abstract class SharedVisionSystem : EntitySystem
+public abstract partial class SharedVisionSystem : EntitySystem
 {
-    [Dependency] private readonly InventorySystem _inventory = default!;
-    [Dependency] private readonly SharedActionsSystem _actions = default!;
-    [Dependency] private readonly AlertsSystem _alerts = default!;
-    [Dependency] private readonly SharedContainerSystem _container = default!;
-    [Dependency] private readonly IGameTiming _timing = default!;
+    [Dependency] private InventorySystem _inventory = default!;
+    [Dependency] private SharedActionsSystem _actions = default!;
+    [Dependency] private AlertsSystem _alerts = default!;
+    [Dependency] private SharedContainerSystem _container = default!;
+    [Dependency] private IGameTiming _timing = default!;
 
     public override void Initialize()
     {
@@ -170,6 +170,9 @@ public abstract class SharedVisionSystem : EntitySystem
 
     public void UpdateVision(EntityUid user)
     {
+        if (TerminatingOrDeleted(user))
+            return;
+
         var ev = new RefreshVisionEvent();
 
         if (TryComp<VisionProviderComponent>(user, out var innateProvider))

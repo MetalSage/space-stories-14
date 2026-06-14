@@ -18,3 +18,5 @@ ent-ToiletGoldenEmpty = золотой унитаз
 ent-ToiletGoldenDirtyWater = { ent-ToiletGoldenEmpty }
     .desc = { ent-ToiletGoldenEmpty.desc }
     .suffix = Грязная вода, Цель кражи
+ent-ConstructedToilet = унитаз
+    .desc = НТ-451 — устройство для удаления мелких отходов, основанное на вращательном моменте. Этот выглядит удивительно чистым.

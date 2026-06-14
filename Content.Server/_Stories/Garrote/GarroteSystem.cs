@@ -16,12 +16,12 @@ using Robust.Shared.Player;
 
 namespace Content.Server._Stories.Garrote;
 
-public sealed class GarroteSystem : SharedGarroteSystem
+public sealed partial class GarroteSystem : SharedGarroteSystem
 {
-    [Dependency] private readonly ActionBlockerSystem _actionBlocker = default!;
-    [Dependency] private readonly ChatSystem _chatSystem = default!;
-    [Dependency] private readonly SharedDoAfterSystem _doAfter = default!;
-    [Dependency] private readonly PopupSystem _popupSystem = default!;
+    [Dependency] private ActionBlockerSystem _actionBlocker = default!;
+    [Dependency] private ChatSystem _chatSystem = default!;
+    [Dependency] private SharedDoAfterSystem _doAfter = default!;
+    [Dependency] private PopupSystem _popupSystem = default!;
 
     public override void Initialize()
     {

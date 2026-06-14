@@ -19,10 +19,10 @@ paper-ui-fill-level = { $currentLength }/{ $maxLength }
 paper-ui-save-button = Сохранить ({ $keybind })
 
 # Form and signature buttons
-paper-form-fill-button = Заполнить
-paper-signature-sign-button = Подписать
-paper-form-dialog-ok = Принять
-paper-form-dialog-cancel = Отмена
-paper-signature-unknown = Неизвестно
+paper-form-fill-button = Fill
+paper-signature-sign-button = Sign
+paper-form-dialog-ok = OK
+paper-form-dialog-cancel = Cancel
+paper-signature-unknown = Unknown
 
 paper-tamper-proof-modified-message = Текст на странице был написан с использованием нефальсицицируемых чернил.

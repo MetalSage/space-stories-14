@@ -8,12 +8,12 @@ using Robust.Shared.Timing;
 
 namespace Content.Server._Stories.BlockMeleeAttack;
 
-public sealed class BlockMeleeAttackSystem : EntitySystem
+public sealed partial class BlockMeleeAttackSystem : EntitySystem
 {
-    [Dependency] private readonly SharedAudioSystem _audio = default!;
-    [Dependency] private readonly IGameTiming _gameTiming = default!;
-    [Dependency] private readonly SharedPopupSystem _popup = default!;
-    [Dependency] private readonly IRobustRandom _random = default!;
+    [Dependency] private SharedAudioSystem _audio = default!;
+    [Dependency] private IGameTiming _gameTiming = default!;
+    [Dependency] private SharedPopupSystem _popup = default!;
+    [Dependency] private IRobustRandom _random = default!;
 
     public override void Initialize()
     {
