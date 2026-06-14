@@ -15,12 +15,12 @@ namespace Content.Server._Stories.Shadowling;
 
 public sealed partial class ShadowlingSystem : EntitySystem
 {
-    [Dependency] private readonly SharedActionsSystem _actions = default!;
-    [Dependency] private readonly ConversionSystem _conversion = default!;
-    [Dependency] private readonly MobStateSystem _mobState = default!;
-    [Dependency] private readonly SharedVisionSystem _vision = default!;
-    [Dependency] private readonly SharedAppearanceSystem _appearance = default!;
-    [Dependency] private readonly SharedVisualBodySystem _visualBody = default!;
+    [Dependency] private SharedActionsSystem _actions = default!;
+    [Dependency] private ConversionSystem _conversion = default!;
+    [Dependency] private MobStateSystem _mobState = default!;
+    [Dependency] private SharedVisionSystem _vision = default!;
+    [Dependency] private SharedAppearanceSystem _appearance = default!;
+    [Dependency] private SharedVisualBodySystem _visualBody = default!;
 
     public override void Initialize()
     {

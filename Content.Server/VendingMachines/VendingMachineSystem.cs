@@ -24,15 +24,15 @@ using System.Numerics;
 
 namespace Content.Server.VendingMachines
 {
-    public sealed class VendingMachineSystem : SharedVendingMachineSystem
+    public sealed partial class VendingMachineSystem : SharedVendingMachineSystem
     {
-        [Dependency] private readonly IRobustRandom _random = default!;
-        [Dependency] private readonly PricingSystem _pricing = default!;
-        [Dependency] private readonly ThrowingSystem _throwingSystem = default!;
+        [Dependency] private IRobustRandom _random = default!;
+        [Dependency] private PricingSystem _pricing = default!;
+        [Dependency] private ThrowingSystem _throwingSystem = default!;
         // Stories-Economy-Start
-        [Dependency] private readonly BankSystem _bank = default!;
-        [Dependency] private readonly StationSystem _station = default!;
-        [Dependency] private readonly Inventory.ServerInventorySystem _inventory = default!;
+        [Dependency] private BankSystem _bank = default!;
+        [Dependency] private StationSystem _station = default!;
+        [Dependency] private Inventory.ServerInventorySystem _inventory = default!;
         // Stories-Economy-End
 
         private const float WallVendEjectDistanceFromWall = 1f;
@@ -84,7 +84,14 @@ namespace Content.Server.VendingMachines
                 TryUpdateVisualState((uid, component));
             }
 
-            RestockInventoryFromPrototype(uid, component, component.InitialStockQuality); // Stories-Economy
+            if (PrototypeManager.TryIndex(component.PackPrototypeId, out VendingMachineInventoryPrototype? packPrototype) // Stories-Economy
+                && packPrototype.ItemPrices.Count > 0)
+            {
+                ApplyPricesToInventory(component.Inventory, packPrototype.ItemPrices);
+                ApplyPricesToInventory(component.EmaggedInventory, packPrototype.ItemPrices);
+                ApplyPricesToInventory(component.ContrabandInventory, packPrototype.ItemPrices);
+                Dirty(uid, component);
+            }
         }
 
         private void OnPowerChanged(EntityUid uid, VendingMachineComponent component, ref PowerChangedEvent args)

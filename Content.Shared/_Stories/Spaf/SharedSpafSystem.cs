@@ -13,15 +13,15 @@ using Robust.Shared.Containers;
 
 namespace Content.Shared._Stories.Spaf;
 
-public abstract class SharedSpafSystem : EntitySystem
+public abstract partial class SharedSpafSystem : EntitySystem
 {
-    [Dependency] private readonly SharedActionsSystem _action = default!;
-    [Dependency] private readonly SharedContainerSystem _container = default!;
-    [Dependency] private readonly SharedDoAfterSystem _doAfter = default!;
-    [Dependency] private readonly HungerSystem _hunger = default!;
-    [Dependency] private readonly SharedPopupSystem _popup = default!;
-    [Dependency] private readonly SharedPuddleSystem _puddle = default!;
-    [Dependency] private readonly SharedStealthSystem _stealth = default!;
+    [Dependency] private SharedActionsSystem _action = default!;
+    [Dependency] private SharedContainerSystem _container = default!;
+    [Dependency] private SharedDoAfterSystem _doAfter = default!;
+    [Dependency] private HungerSystem _hunger = default!;
+    [Dependency] private SharedPopupSystem _popup = default!;
+    [Dependency] private SharedPuddleSystem _puddle = default!;
+    [Dependency] private SharedStealthSystem _stealth = default!;
 
     public override void Initialize()
     {

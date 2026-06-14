@@ -6,30 +6,35 @@
     minPlayers: 30
   - type: ShadowlingRule
   - type: AntagSelection
-    definitions:
-    - prefRoles: [STShadowling]
-      max: 2
+    antags:
+    - !type:LinearAntagCount
+      proto: STShadowlingSpecifier
       playerRatio: 30
-      blacklist:
-        components:
-        - Holy
-      briefing:
-        text: stories-shadowling-role-greeting
-        color: DarkRed
-        sound: "/Audio/Ambience/Antag/ling_alert.ogg"
-      components:
-      - type: IntrinsicRadioReceiver
-      - type: IntrinsicRadioTransmitter
-        channels:
-        - STShadowlingMind
-      - type: ActiveRadio
-        channels:
-        - STShadowlingMind
-      - type: Shadowling
-        actions:
-          STActionShadowlingHatch: 0
-      mindRoles:
-      - STMindRoleShadowling
+      range:
+        min: 1
+        max: 2
+
+- type: antagSpecifier
+  id: STShadowlingSpecifier
+  prefRoles: [STShadowling]
+  blacklist:
+    components:
+    - Holy
+  briefing:
+    text: stories-shadowling-role-greeting
+    color: DarkRed
+    sound: "/Audio/Ambience/Antag/ling_alert.ogg"
+  components:
+  - type: IntrinsicRadioReceiver
+  - type: IntrinsicRadioTransmitter
+    channels:
+    - STShadowlingMind
+  - type: ActiveRadio
+    channels:
+    - STShadowlingMind
+  - type: Shadowling
+  mindRoles:
+  - STMindRoleShadowling
 
 - type: entity
   parent: BaseGameRule
@@ -45,12 +50,18 @@
   - type: AntagSelection
     selectionTime: PrePlayerSpawn
     agentName: stories-pontific-round-end-agent-name
-    definitions:
-    - prefRoles: [STPontific]
-      spawnerPrototype: STSpawnPointPontific
-      mindRoles:
-      - STMindRolePontific
-      briefing:
-        text: stories-pontific-role-greeting
-        color: "#7d52a8"
-        sound: /Audio/_Stories/Pontific/pontific_start.ogg
+    antags:
+    - !type:FixedAntagCount
+      proto: STPontificSpecifier
+      count: 1
+
+- type: antagSpecifier
+  id: STPontificSpecifier
+  prefRoles: [STPontific]
+  spawnerPrototype: STSpawnPointPontific
+  mindRoles:
+  - STMindRolePontific
+  briefing:
+    text: stories-pontific-role-greeting
+    color: "#7d52a8"
+    sound: /Audio/_Stories/Pontific/pontific_start.ogg

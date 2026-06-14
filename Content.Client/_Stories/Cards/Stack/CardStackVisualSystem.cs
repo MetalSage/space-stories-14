@@ -10,10 +10,10 @@ using Robust.Shared.Containers;
 
 namespace Content.Client._Stories.Cards.Stack;
 
-public sealed class CardStackVisualSystem : VisualizerSystem<CardStackComponent>
+public sealed partial class CardStackVisualSystem : VisualizerSystem<CardStackComponent>
 {
-    [Dependency] private readonly SharedContainerSystem _containerSystem = default!;
-    [Dependency] private readonly SpriteSystem _spriteSystem = default!;
+    [Dependency] private SharedContainerSystem _containerSystem = default!;
+    [Dependency] private SpriteSystem _spriteSystem = default!;
 
     public override void Initialize()
     {

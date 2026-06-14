@@ -113,7 +113,6 @@
       Female: FemaleKidan
       Unsexed: UnsexedKidan
   - type: Damageable
-    damageContainer: Biological
     damageModifierSet: Kidan
   - type: Bioluminescence
   - type: MeleeWeapon
@@ -252,10 +251,9 @@
   parent: OrganAnimalStomach
   categories: [ HideSpawnMenu ]
   components:
-  - type: SolutionContainerManager
+  - type: SolutionManager
     solutions:
-      stomach:
-        maxVol: 40
+    - SolutionStomachKidan
   - type: Stomach
     specialDigestible:
       tags:
@@ -273,3 +271,12 @@
   - type: Metabolizer
     maxReagents: 1
     updateInterval: 0.5
+
+- type: entity
+  parent: SolutionStomach
+  id: SolutionStomachKidan
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Solution
+    solution:
+      maxVol: 40

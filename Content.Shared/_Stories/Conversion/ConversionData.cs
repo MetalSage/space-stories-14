@@ -5,7 +5,7 @@ using Robust.Shared.Serialization.TypeSerializers.Implementations.Custom;
 namespace Content.Shared._Stories.Conversion;
 
 [DataDefinition]
-[Serializable] [NetSerializable]
+[Serializable, NetSerializable]
 public sealed partial class ConversionData
 {
     [DataField("endTime", customTypeSerializer: typeof(TimeOffsetSerializer))]

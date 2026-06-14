@@ -2,9 +2,9 @@ using Content.Shared._Stories.Cards.Stack;
 
 namespace Content.Client._Stories.Cards.Stack;
 
-public sealed class CardStackSystem : SharedCardStackSystem
+public sealed partial class CardStackSystem : SharedCardStackSystem
 {
-    [Dependency] private readonly CardStackVisualSystem _cardStackVisual = default!;
+    [Dependency] private CardStackVisualSystem _cardStackVisual = default!;
 
     public override void Initialize()
     {

@@ -5,10 +5,10 @@ using Robust.Shared.Network;
 
 namespace Content.Client._Stories.Sponsors;
 
-public sealed class SponsorsManager
+public sealed partial class SponsorsManager
 {
-    [Dependency] private readonly IClientNetManager _netMgr = default!;
-    [Dependency] private readonly IPlayerManager _playerMgr = default!;
+    [Dependency] private IClientNetManager _netMgr = default!;
+    [Dependency] private IPlayerManager _playerMgr = default!;
 
     private SponsorInfo? _info;
 

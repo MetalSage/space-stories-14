@@ -7,11 +7,11 @@ using Robust.Shared.Animations;
 namespace Content.Client.Gravity;
 
 /// <inheritdoc />
-public sealed class LiftingUpSystem : SharedLiftingUpSystem
+public sealed partial class LiftingUpSystem : SharedLiftingUpSystem
 {
     public const string AnimationKey = "_gravity";
     public const float AnimationTime = 2f;
-    [Dependency] private readonly AnimationPlayerSystem _animationSystem = default!;
+    [Dependency] private AnimationPlayerSystem _animationSystem = default!;
     public Vector2 Offset = new(0, 0.2f);
 
     public override void Initialize()

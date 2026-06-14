@@ -5,12 +5,12 @@ using Robust.Shared.Network;
 
 namespace Content.Server._Stories.Sponsors;
 
-public sealed class SponsorsManager
+public sealed partial class SponsorsManager
 {
-    [Dependency] private readonly ISponsorsApiClient _apiClient = default!;
+    [Dependency] private ISponsorsApiClient _apiClient = default!;
 
     private readonly Dictionary<NetUserId, SponsorInfo> _cachedSponsors = new();
-    [Dependency] private readonly IServerNetManager _netMgr = default!;
+    [Dependency] private IServerNetManager _netMgr = default!;
 
     private ISawmill _sawmill = default!;
 

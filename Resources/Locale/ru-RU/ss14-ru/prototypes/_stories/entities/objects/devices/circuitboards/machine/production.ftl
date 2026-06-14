@@ -1,5 +1,5 @@
-ent-PrinterDocMachineCircuitboard = бумажный принтер (машинная плата)
-    .desc = Печатна плата для бумажного принтера.
+ent-PrinterDocMachineCircuitboard = принтер документов (машинная плата)
+    .desc = Машинная плата принтера документов.
     .suffix = { ent-BaseMachineCircuitboard.suffix }
 ent-ReflectorBoxMachineCircuitboard = Отражатель, тип "Коробка"
     .desc = Машинная плата отражателя, тип "Коробка"
