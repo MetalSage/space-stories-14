@@ -1,15 +1,14 @@
 using Content.Server._Stories.ForceUser.ProtectiveBubble.Components;
+using Content.Server.Atmos.Components;
 using Content.Shared.Explosion;
 using Content.Shared.Interaction.Events;
-using Content.Shared.StatusEffectNew;
 using Content.Shared.Temperature;
-using Robust.Shared.Prototypes;
 
 namespace Content.Server._Stories.ForceUser.ProtectiveBubble.Systems;
 
 public sealed partial class ProtectiveBubbleSystem
 {
-    private static readonly EntProtoId PressureImmunity = "PressureImmunity";
+    private static readonly string PressureImmunity = "PressureImmunity";
 
     public void InitializeProtected()
     {
@@ -25,7 +24,7 @@ public sealed partial class ProtectiveBubbleSystem
         var query = EntityQueryEnumerator<ProtectedByProtectiveBubbleComponent>();
         while (query.MoveNext(out var uid, out var component))
         {
-            _statusEffect.TryAddStatusEffectDuration(uid, PressureImmunity, TimeSpan.FromSeconds(frameTime));
+            _statusEffect.TryAddStatusEffect<PressureImmunityComponent>(uid, PressureImmunity, TimeSpan.FromSeconds(frameTime), true);
         }
     }
 

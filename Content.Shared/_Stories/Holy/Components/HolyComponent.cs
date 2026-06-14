@@ -7,7 +7,7 @@ using Robust.Shared.Prototypes;
 
 namespace Content.Shared._Stories.Holy;
 
-[RegisterComponent] [NetworkedComponent]
+[RegisterComponent, NetworkedComponent]
 public sealed partial class HolyComponent : Component
 {
     [DataField]

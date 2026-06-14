@@ -4,9 +4,9 @@ using Content.Shared.Weapons.Misc;
 
 namespace Content.Server._Stories.TetherGun;
 
-public sealed class StoriesTetherGunSystem : EntitySystem
+public sealed partial class StoriesTetherGunSystem : EntitySystem
 {
-    [Dependency] private readonly SharedTetherGunSystem _sharedTetherGun = default!;
+    [Dependency] private SharedTetherGunSystem _sharedTetherGun = default!;
 
     public override void Initialize()
     {
@@ -24,10 +24,10 @@ public sealed class StoriesTetherGunSystem : EntitySystem
     public void StopTether(EntityUid gunUid, BaseForceGunComponent component, bool land = true, bool transfer = false)
     {
         var method = typeof(SharedTetherGunSystem).GetMethod(
-            "StopTether", 
-            BindingFlags.Instance | BindingFlags.NonPublic, 
-            null, 
-            new[] { typeof(EntityUid), typeof(BaseForceGunComponent), typeof(bool), typeof(bool) }, 
+            "StopTether",
+            BindingFlags.Instance | BindingFlags.NonPublic,
+            null,
+            new[] { typeof(EntityUid), typeof(BaseForceGunComponent), typeof(bool), typeof(bool) },
             null);
 
         method?.Invoke(_sharedTetherGun, new object[] { gunUid, component, land, transfer });

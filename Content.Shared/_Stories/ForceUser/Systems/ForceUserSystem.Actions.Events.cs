@@ -28,16 +28,19 @@ public sealed partial class EmpActionEvent : InstantActionEvent
     /// <summary>
     /// How long it disables targets in seconds
     /// </summary>
-    [DataField("disableDuration")] [ViewVariables(VVAccess.ReadWrite)]
+    [DataField("disableDuration")]
+    [ViewVariables(VVAccess.ReadWrite)]
     public float DisableDuration = 60f;
 
     /// <summary>
     /// How much energy will be consumed per battery in range
     /// </summary>
-    [DataField("energyConsumption")] [ViewVariables(VVAccess.ReadWrite)]
+    [DataField("energyConsumption")]
+    [ViewVariables(VVAccess.ReadWrite)]
     public float EnergyConsumption;
 
-    [DataField("range")] [ViewVariables(VVAccess.ReadWrite)]
+    [DataField("range")]
+    [ViewVariables(VVAccess.ReadWrite)]
     public float Range = 1.0f;
 }
 
@@ -146,14 +149,16 @@ public sealed partial class InquisitorPolymorphEvent : InstantActionEvent
     /// <summary>
     /// How long the smoke stays for, after it has spread.
     /// </summary>
-    [DataField] [ViewVariables(VVAccess.ReadWrite)]
+    [DataField]
+    [ViewVariables(VVAccess.ReadWrite)]
     public float Duration = 10;
 
     /// <summary>
     /// Smoke entity to spawn.
     /// Defaults to smoke but you can use foam if you want.
     /// </summary>
-    [DataField] [ViewVariables(VVAccess.ReadWrite)]
+    [DataField]
+    [ViewVariables(VVAccess.ReadWrite)]
     public EntProtoId SmokePrototype = "Smoke";
 
     /// <summary>
@@ -162,13 +167,15 @@ public sealed partial class InquisitorPolymorphEvent : InstantActionEvent
     /// <remarks>
     /// When using repeating trigger this essentially gets multiplied so dont do anything crazy like omnizine or lexorin.
     /// </remarks>
-    [DataField] [ViewVariables(VVAccess.ReadWrite)]
+    [DataField]
+    [ViewVariables(VVAccess.ReadWrite)]
     public Solution Solution = new();
 
     /// <summary>
     /// How much the smoke will spread.
     /// </summary>
-    [DataField(required: true)] [ViewVariables(VVAccess.ReadWrite)]
+    [DataField(required: true)]
+    [ViewVariables(VVAccess.ReadWrite)]
     public int SpreadAmount = 15;
 
     [DataField("prototype", customTypeSerializer: typeof(PrototypeIdSerializer<PolymorphPrototype>))]
@@ -183,7 +190,7 @@ public sealed partial class HandTetherGunEvent : InstantActionEvent
 
 #region Strangle
 
-[Serializable] [NetSerializable]
+[Serializable, NetSerializable]
 public sealed partial class StrangledEvent : SimpleDoAfterEvent
 {
     [ViewVariables]
@@ -210,7 +217,7 @@ public sealed partial class StealLifeTargetEvent : EntityTargetActionEvent
     public float DoAfterTime = 0.5f;
 }
 
-[Serializable] [NetSerializable]
+[Serializable, NetSerializable]
 public sealed partial class LifeStolenEvent : SimpleDoAfterEvent
 {
     [ViewVariables]
@@ -287,17 +294,17 @@ public sealed partial class WorldTargetForceUserActionEvent : WorldTargetActionE
     public BaseActionEvent? BaseEvent => Event;
 }
 
-[Serializable] [NetSerializable]
+[Serializable, NetSerializable]
 public sealed partial class LightsaberDetachedEvent : SimpleDoAfterEvent
 {
 }
 
-[Serializable] [NetSerializable]
+[Serializable, NetSerializable]
 public sealed partial class LightsaberConnectedEvent : SimpleDoAfterEvent
 {
 }
 
-[Serializable] [NetSerializable]
+[Serializable, NetSerializable]
 public sealed partial class LightsaberHackedEvent : SimpleDoAfterEvent
 {
 }

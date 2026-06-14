@@ -23,11 +23,11 @@ public sealed partial class TTSSystem : EntitySystem
 
     private static readonly ProtoId<TTSVoicePrototype> FatherGrigoriId = "father_grigori";
 
-    [Dependency] private readonly IConfigurationManager _cfg = default!;
-    [Dependency] private readonly IPrototypeManager _prototypeManager = default!;
-    [Dependency] private readonly IRobustRandom _rng = default!;
-    [Dependency] private readonly InventorySystem _inventory = default!;
-    [Dependency] private readonly SharedContainerSystem _container = default!;
+    [Dependency] private IConfigurationManager _cfg = default!;
+    [Dependency] private IPrototypeManager _prototypeManager = default!;
+    [Dependency] private IRobustRandom _rng = default!;
+    [Dependency] private InventorySystem _inventory = default!;
+    [Dependency] private SharedContainerSystem _container = default!;
 
     private readonly List<string> _sampleText =
         new()
@@ -46,7 +46,7 @@ public sealed partial class TTSSystem : EntitySystem
             "Бармен, налей мне самого крепкого вина, которое есть в твоих запасах!",
         };
 
-    [Dependency] private readonly TTSManager _ttsManager = default!;
+    [Dependency] private TTSManager _ttsManager = default!;
     private bool _isEnabled;
 
     public override void Initialize()

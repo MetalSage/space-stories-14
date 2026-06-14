@@ -5,10 +5,10 @@ using Robust.Shared.Enums;
 
 namespace Content.Client._Stories.Vision.Overlays;
 
-public sealed class VisionAmbientOverlay : Overlay
+public sealed partial class VisionAmbientOverlay : Overlay
 {
-    [Dependency] private readonly IEntityManager _entityManager = default!;
-    [Dependency] private readonly IPlayerManager _playerManager = default!;
+    [Dependency] private IEntityManager _entityManager = default!;
+    [Dependency] private IPlayerManager _playerManager = default!;
 
     public override OverlaySpace Space => OverlaySpace.BeforeLighting;
 

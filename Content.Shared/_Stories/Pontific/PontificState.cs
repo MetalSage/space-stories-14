@@ -2,7 +2,7 @@ using Robust.Shared.Serialization;
 
 namespace Content.Shared._Stories.Pontific;
 
-[Serializable] [NetSerializable]
+[Serializable, NetSerializable]
 public enum PontificState : byte
 {
     Base,
@@ -10,7 +10,7 @@ public enum PontificState : byte
     Prayer,
 }
 
-[Serializable] [NetSerializable]
+[Serializable, NetSerializable]
 public enum PontificVisuals : byte
 {
     State,

@@ -33,37 +33,37 @@ namespace Content.Server._Stories.ForceUser;
 
 public sealed partial class ForceUserSystem : SharedForceUserSystem
 {
-    [Dependency] private readonly ProtectiveBubbleSystem _bubble = default!;
-    [Dependency] private readonly SharedContainerSystem _container = default!;
-    [Dependency] private readonly ConversionSystem _conversion = default!;
-    [Dependency] private readonly CuffableSystem _cuffable = default!;
-    [Dependency] private readonly DamageableSystem _damageable = default!;
-    [Dependency] private readonly SharedDoAfterSystem _doAfterSystem = default!;
-    [Dependency] private readonly EmpSystem _emp = default!;
-    [Dependency] private readonly FlammableSystem _flammable = default!;
-    [Dependency] private readonly FlashSystem _flashSystem = default!;
-    [Dependency] private readonly ForceSystem _force = default!;
-    [Dependency] private readonly SharedHandsSystem _hands = default!;
-    [Dependency] private readonly InventorySystem _inventory = default!;
-    [Dependency] private readonly LightningSystem _lightning = default!;
-    [Dependency] private readonly EntityLookupSystem _lookup = default!;
-    [Dependency] private readonly MobStateSystem _mobState = default!;
-    [Dependency] private readonly MovementSpeedModifierSystem _movementSpeedModifier = default!;
-    [Dependency] private readonly PolymorphSystem _polymorphSystem = default!;
-    [Dependency] private readonly SharedPopupSystem _popup = default!;
-    [Dependency] private readonly IPrototypeManager _proto = default!;
-    [Dependency] private readonly PullToSystem _pullTo = default!;
-    [Dependency] private readonly IRobustRandom _random = default!;
-    [Dependency] private readonly SmokeSystem _smoke = default!;
-    [Dependency] private readonly StandingStateSystem _standingState = default!;
-    [Dependency] private readonly StatusEffectsSystem _statusEffect = default!;
-    [Dependency] private readonly StoreSystem _store = default!;
-    [Dependency] private readonly SharedStunSystem _stun = default!;
-    [Dependency] private readonly TagSystem _tagSystem = default!;
-    [Dependency] private readonly StoriesTetherGunSystem _tetherGunSystem = default!;
-    [Dependency] private readonly ThrowingSystem _throwing = default!;
-    [Dependency] private readonly ItemToggleSystem _toggleSystem = default!;
-    [Dependency] private readonly SharedTransformSystem _transform = default!;
+    [Dependency] private ProtectiveBubbleSystem _bubble = default!;
+    [Dependency] private SharedContainerSystem _container = default!;
+    [Dependency] private ConversionSystem _conversion = default!;
+    [Dependency] private CuffableSystem _cuffable = default!;
+    [Dependency] private DamageableSystem _damageable = default!;
+    [Dependency] private SharedDoAfterSystem _doAfterSystem = default!;
+    [Dependency] private EmpSystem _emp = default!;
+    [Dependency] private FlammableSystem _flammable = default!;
+    [Dependency] private FlashSystem _flashSystem = default!;
+    [Dependency] private ForceSystem _force = default!;
+    [Dependency] private SharedHandsSystem _hands = default!;
+    [Dependency] private InventorySystem _inventory = default!;
+    [Dependency] private LightningSystem _lightning = default!;
+    [Dependency] private EntityLookupSystem _lookup = default!;
+    [Dependency] private MobStateSystem _mobState = default!;
+    [Dependency] private MovementSpeedModifierSystem _movementSpeedModifier = default!;
+    [Dependency] private PolymorphSystem _polymorphSystem = default!;
+    [Dependency] private SharedPopupSystem _popup = default!;
+    [Dependency] private IPrototypeManager _proto = default!;
+    [Dependency] private PullToSystem _pullTo = default!;
+    [Dependency] private IRobustRandom _random = default!;
+    [Dependency] private SmokeSystem _smoke = default!;
+    [Dependency] private StandingStateSystem _standingState = default!;
+    [Dependency] private StatusEffectsSystem _statusEffect = default!;
+    [Dependency] private StoreSystem _store = default!;
+    [Dependency] private SharedStunSystem _stun = default!;
+    [Dependency] private TagSystem _tagSystem = default!;
+    [Dependency] private StoriesTetherGunSystem _tetherGunSystem = default!;
+    [Dependency] private ThrowingSystem _throwing = default!;
+    [Dependency] private ItemToggleSystem _toggleSystem = default!;
+    [Dependency] private SharedTransformSystem _transform = default!;
 
     public override void Initialize()
     {

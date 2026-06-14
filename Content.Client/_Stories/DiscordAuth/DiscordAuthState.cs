@@ -7,11 +7,11 @@ using Timer = Robust.Shared.Timing.Timer;
 
 namespace Content.Client._Stories.DiscordAuth;
 
-public sealed class DiscordAuthState : State
+public sealed partial class DiscordAuthState : State
 {
     private readonly CancellationTokenSource _checkTimerCancel = new();
-    [Dependency] private readonly IClientNetManager _netManager = default!;
-    [Dependency] private readonly IUserInterfaceManager _userInterfaceManager = default!;
+    [Dependency] private IClientNetManager _netManager = default!;
+    [Dependency] private IUserInterfaceManager _userInterfaceManager = default!;
 
     private DiscordAuthGui? _gui;
 

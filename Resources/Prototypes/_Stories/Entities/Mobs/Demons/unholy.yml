@@ -214,7 +214,6 @@
       80: 0.9
       140: 0.8
   - type: Damageable
-    damageContainer: BiologicalMetaphysical
     damageModifierSet: STFallenGuardModifierSet
 
 - type: damageModifierSet
@@ -257,7 +256,6 @@
       100: 0.8
       120: 0.5
   - type: Damageable
-    damageContainer: BiologicalMetaphysical
     damageModifierSet: STDesecratedModifierSet
 
 - type: damageModifierSet
@@ -316,7 +314,6 @@
       120: 0.8
       160: 0.5
   - type: Damageable
-    damageContainer: BiologicalMetaphysical
     damageModifierSet: STCursedmonkModifierSet
 
 - type: damageModifierSet

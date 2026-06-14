@@ -19,12 +19,12 @@ namespace Content.Server._Stories.DiscordAuth;
 /// <summary>
 /// Manage Discord linking with SS14 account through external API
 /// </summary>
-public sealed class DiscordAuthManager
+public sealed partial class DiscordAuthManager
 {
-    [Dependency] private readonly IConfigurationManager _cfg = default!;
+    [Dependency] private IConfigurationManager _cfg = default!;
     private readonly HttpClient _httpClient = new();
-    [Dependency] private readonly IServerNetManager _netMgr = default!;
-    [Dependency] private readonly IPlayerManager _playerMgr = default!;
+    [Dependency] private IServerNetManager _netMgr = default!;
+    [Dependency] private IPlayerManager _playerMgr = default!;
     private string _apiKey = string.Empty;
     private string _apiUrl = string.Empty;
     private bool _isEnabled;

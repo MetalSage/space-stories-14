@@ -43302,15 +43302,11 @@ entities:
     - type: Transform
       pos: -2.6753898,2.5728736
       parent: 2
-    - type: RefillableSolution
-      solution: food
   - uid: 6633
     components:
     - type: Transform
       pos: -2.3370848,-3.5807357
       parent: 2
-    - type: RefillableSolution
-      solution: food
 - proto: FoodCondimentPacketSalt
   entities:
   - uid: 6634
@@ -43318,8 +43314,6 @@ entities:
     - type: Transform
       pos: -2.3003898,9.296319
       parent: 2
-    - type: RefillableSolution
-      solution: food
 - proto: FoodPieBananaCream
   entities:
   - uid: 6636

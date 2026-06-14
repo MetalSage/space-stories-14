@@ -13,7 +13,7 @@ namespace Content.Client._Stories.TTS;
 /// <summary>
 /// Plays TTS audio in world
 /// </summary>
-public sealed class TTSSystem : EntitySystem
+public sealed partial class TTSSystem : EntitySystem
 {
     private const float WhisperFade = 4f;
     public const int VoiceRange = 10;
@@ -22,10 +22,10 @@ public sealed class TTSSystem : EntitySystem
 
     private const float MinimalVolume = -10f;
     private static readonly ResPath Prefix = ResPath.Root / "TTS";
-    [Dependency] private readonly AudioSystem _audio = default!;
-    [Dependency] private readonly IConfigurationManager _cfg = default!;
+    [Dependency] private AudioSystem _audio = default!;
+    [Dependency] private IConfigurationManager _cfg = default!;
     private readonly HashSet<NetEntity> _mutedPlayers = new();
-    [Dependency] private readonly IResourceManager _res = default!;
+    [Dependency] private IResourceManager _res = default!;
     private MemoryContentRoot? _contentRoot;
 
     private int _fileIdx;

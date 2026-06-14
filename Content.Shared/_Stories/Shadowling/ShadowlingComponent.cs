@@ -143,7 +143,7 @@ public sealed partial class ShadowlingComponent : Component
     };
 
     [DataField]
-    public SoundSpecifier? GlareSound = new SoundPathSpecifier("/Audio/_Stories/Magic/forcewall.ogg");
+    public SoundSpecifier? GlareSound = new SoundPathSpecifier("/Audio/Magic/forcewall.ogg");
 
     [DataField]
     public SoundSpecifier? FreezeSound = new SoundPathSpecifier("/Audio/_Stories/Effects/ghost2.ogg");

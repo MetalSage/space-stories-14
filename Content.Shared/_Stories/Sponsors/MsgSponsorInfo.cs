@@ -7,7 +7,7 @@ using Robust.Shared.Utility;
 
 namespace Content.Shared._Stories.Sponsors;
 
-[Serializable] [NetSerializable]
+[Serializable, NetSerializable]
 public sealed class SponsorInfo
 {
     public static readonly TimeSpan TimeAdvantage = TimeSpan.FromMinutes(3);
