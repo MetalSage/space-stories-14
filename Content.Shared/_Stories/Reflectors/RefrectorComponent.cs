@@ -4,7 +4,7 @@ using Robust.Shared.Serialization;
 
 namespace Content.Shared._Stories.Reflectors;
 
-[RegisterComponent] [NetworkedComponent] [AutoGenerateComponentState(true)]
+[RegisterComponent, NetworkedComponent, AutoGenerateComponentState(true)]
 public sealed partial class ReflectorComponent : Component
 {
     [DataField]
@@ -16,14 +16,14 @@ public sealed partial class ReflectorComponent : Component
     [DataField]
     public Direction? ReflectionDirection;
 
-    [DataField] [AutoNetworkedField]
+    [DataField, AutoNetworkedField]
     public ReflectorType State = ReflectorType.Simple;
 
     [DataField]
     public EntityWhitelist? Whitelist;
 }
 
-[Serializable] [NetSerializable]
+[Serializable, NetSerializable]
 public enum ReflectorType
 {
     Simple,

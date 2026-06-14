@@ -6,9 +6,9 @@ using Robust.Shared.Random;
 
 namespace Content.Server._Stories.StationEvents;
 
-public sealed class JobDistributionErrorRule : StationEventSystem<JobDistributionErrorRuleComponent>
+public sealed partial class JobDistributionErrorRule : StationEventSystem<JobDistributionErrorRuleComponent>
 {
-    [Dependency] private readonly StationJobsSystem _stationJobs = default!;
+    [Dependency] private StationJobsSystem _stationJobs = default!;
 
     protected override void Started(EntityUid uid,
         JobDistributionErrorRuleComponent component,

@@ -1,4 +1,4 @@
-﻿- type: entity
+- type: entity
   name: Pontific
   id: STMobPontific
   parent: STBaseUnholyPlayable
@@ -61,6 +61,7 @@
     soundHit:
       collection: AlienClaw
     animation: WeaponArcThrust
+    wideAnimation: WeaponArcThrust
     damage:
       types:
         Slash: 15
@@ -82,11 +83,15 @@
     baseWalkSpeed: 4
     baseSprintSpeed: 5
   - type: Damageable
-    damageContainer: BiologicalMetaphysical
     damageModifierSet: STPontificModifierSet
   - type: Stamina
-    animationThreshold: 50
-    baseCritThreshold: 100
+    baseCritThreshold: 200
+  - type: Tag
+    tags:
+    - CannotSuicide
+    - DoorBumpOpener
+    - FootstepSound
+    - StunImmune
 
 - type: damageModifierSet
   id: STPontificModifierSet

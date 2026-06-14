@@ -5672,63 +5672,6 @@ entities:
     - type: BecomesStation
       id: Prison
     - type: ImplicitRoof
-  - uid: 4
-    components:
-    - type: MetaData
-      name: solution - food
-    - type: Transform
-      parent: 3
-    - type: Solution
-      solution:
-        maxVol: 18
-        name: food
-        reagents:
-        - data: []
-          ReagentId: Nutriment
-          Quantity: 12
-        - data: []
-          ReagentId: Vitamin
-          Quantity: 6
-    - type: ContainedSolution
-      containerName: food
-      container: 3
-  - uid: 8
-    components:
-    - type: MetaData
-      name: solution - food
-    - type: Transform
-      parent: 7
-    - type: Solution
-      solution:
-        maxVol: 18
-        name: food
-        reagents:
-        - data: []
-          ReagentId: Nutriment
-          Quantity: 12
-        - data: []
-          ReagentId: Vitamin
-          Quantity: 6
-    - type: ContainedSolution
-      containerName: food
-      container: 7
-  - uid: 11
-    components:
-    - type: MetaData
-      name: solution - food
-    - type: Transform
-      parent: 10
-    - type: Solution
-      solution:
-        maxVol: 20
-        name: food
-        reagents:
-        - data: []
-          ReagentId: Cognizine
-          Quantity: 20
-    - type: ContainedSolution
-      containerName: food
-      container: 10
 - proto: AccordionInstrument
   entities:
   - uid: 12
@@ -25379,14 +25322,6 @@ entities:
     - type: Transform
       pos: 23.327312,30.624393
       parent: 2
-    - type: SolutionContainerManager
-      solutions: null
-      containers:
-      - food
-    - type: ContainerContainer
-      containers:
-        solution@food: !type:ContainerSlot
-          ent: 4
   - uid: 7
     components:
     - type: MetaData
@@ -25394,14 +25329,6 @@ entities:
     - type: Transform
       pos: 23.530437,30.358768
       parent: 2
-    - type: SolutionContainerManager
-      solutions: null
-      containers:
-      - food
-    - type: ContainerContainer
-      containers:
-        solution@food: !type:ContainerSlot
-          ent: 8
   - uid: 3109
     components:
     - type: Transform
@@ -37243,16 +37170,6 @@ entities:
       parent: 9
     - type: Pill
       pillType: 9
-    - type: SolutionContainerManager
-      solutions: null
-      containers:
-      - food
-    - type: Physics
-      canCollide: False
-    - type: ContainerContainer
-      containers:
-        solution@food: !type:ContainerSlot
-          ent: 11
     - type: Label
       currentLabel: когнизин
     - type: NameModifier
@@ -37953,7 +37870,6 @@ entities:
       rot: 1.5707963267948966 rad
       pos: 8.5,-59.5
       parent: 2
-    - type: Timer
   - uid: 4804
     components:
     - type: Transform
@@ -38478,7 +38394,6 @@ entities:
       rot: 3.141592653589793 rad
       pos: 5.5,-58.5
       parent: 2
-    - type: Timer
   - uid: 4896
     components:
     - type: Transform

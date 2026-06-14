@@ -8,10 +8,10 @@ using Robust.Shared.Prototypes;
 
 namespace Content.Client._Stories.Conversion;
 
-public sealed class ConversionSystem : SharedConversionSystem
+public sealed partial class ConversionSystem : SharedConversionSystem
 {
-    [Dependency] private readonly IPrototypeManager _prototype = default!;
-    [Dependency] private readonly IPlayerManager _player = default!;
+    [Dependency] private IPrototypeManager _prototype = default!;
+    [Dependency] private IPlayerManager _player = default!;
 
     public override void Initialize()
     {

@@ -9,11 +9,11 @@ namespace Content.Server._Stories.Conversion;
 
 public sealed partial class ConversionSystem : SharedConversionSystem
 {
-    [Dependency] private readonly AntagSelectionSystem _antag = default!;
-    [Dependency] private readonly SharedMindSystem _mind = default!;
-    [Dependency] private readonly IPrototypeManager _prototype = default!;
-    [Dependency] private readonly RoleSystem _role = default!;
-    [Dependency] private readonly IGameTiming _timing = default!;
+    [Dependency] private AntagSelectionSystem _antag = default!;
+    [Dependency] private SharedMindSystem _mind = default!;
+    [Dependency] private IPrototypeManager _prototype = default!;
+    [Dependency] private RoleSystem _role = default!;
+    [Dependency] private IGameTiming _timing = default!;
 
     public override void Initialize()
     {

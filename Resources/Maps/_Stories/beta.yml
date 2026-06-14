@@ -8547,79 +8547,6 @@ entities:
     - type: NavMap
     - type: ImplicitRoof
     - type: ExplosionAirtightGrid
-  - uid: 4
-    components:
-    - type: MetaData
-      name: solution - drink
-    - type: Transform
-      parent: 3
-    - type: Solution
-      solution:
-        maxVol: 100
-        name: drink
-        reagents:
-        - data: []
-          ReagentId: Slime
-          Quantity: 50
-        - data: []
-          ReagentId: Beer
-          Quantity: 50
-    - type: ContainedSolution
-      containerName: drink
-      container: 3
-  - uid: 6
-    components:
-    - type: MetaData
-      name: solution - beaker
-    - type: Transform
-      parent: 5
-    - type: Solution
-      solution:
-        maxVol: 50
-        name: beaker
-        reagents:
-        - data: []
-          ReagentId: JuiceThatMakesYouWeh
-          Quantity: 50
-    - type: ContainedSolution
-      containerName: beaker
-      container: 5
-  - uid: 8
-    components:
-    - type: MetaData
-      name: solution - beaker
-    - type: Transform
-      parent: 7
-    - type: Solution
-      solution:
-        maxVol: 50
-        name: beaker
-        reagents:
-        - data: []
-          ReagentId: JuiceThatMakesYouWeh
-          Quantity: 50
-    - type: ContainedSolution
-      containerName: beaker
-      container: 7
-  - uid: 10
-    mapInit: true
-    paused: true
-    components:
-    - type: MetaData
-      name: solution - food
-    - type: Transform
-      parent: 9
-    - type: Solution
-      solution:
-        maxVol: 1
-        name: food
-        reagents:
-        - data: []
-          ReagentId: Fiber
-          Quantity: 1
-    - type: ContainedSolution
-      containerName: food
-      container: 9
 - proto: AcousticGuitarInstrument
   entities:
   - uid: 11
@@ -49331,14 +49258,6 @@ entities:
     - type: Tag
       tags:
       - CentrifugeCompatible
-    - type: SolutionContainerManager
-      solutions: null
-      containers:
-      - beaker
-    - type: ContainerContainer
-      containers:
-        solution@beaker: !type:ContainerSlot
-          ent: 6
   - uid: 7
     components:
     - type: Transform
@@ -49347,14 +49266,6 @@ entities:
     - type: Tag
       tags:
       - CentrifugeCompatible
-    - type: SolutionContainerManager
-      solutions: null
-      containers:
-      - beaker
-    - type: ContainerContainer
-      containers:
-        solution@beaker: !type:ContainerSlot
-          ent: 8
   - uid: 929
     components:
     - type: Transform
@@ -58203,20 +58114,10 @@ entities:
     - type: Transform
       pos: 16.6526,-23.025885
       parent: 2
-    - type: SolutionContainerManager
-      solutions: null
-      containers:
-      - drink
     - type: Label
       currentLabel: Пиво слаймолюда
-    - type: PressurizedSolution
-      sprayFizzinessThresholdRoll: 0.833622
     - type: NameModifier
       baseName: особый запас дадюшки Джонефа
-    - type: ContainerContainer
-      containers:
-        solution@drink: !type:ContainerSlot
-          ent: 4
 - proto: DrinkWhiskeyGlass
   entities:
   - uid: 8890
@@ -93578,56 +93479,6 @@ entities:
 
 
         [italic]   - Гренски Гренкович [/italic]
-    - type: SolutionContainerManager
-      solutions:
-        food:
-          temperature: 293.15
-          canReact: True
-          maxVol: 0
-          name: food
-          reagents: []
-      containers:
-      - food
-    - type: EmitSoundOnCollide
-      nextSound: -27144.7728552
-    - type: Fixtures
-      fixtures:
-        fix1:
-          shape: !type:PolygonShape
-            radius: 0.01
-            vertices:
-            - -0.25,-0.25
-            - 0.25,-0.25
-            - 0.25,0.25
-            - -0.25,0.25
-          mask:
-          - Impassable
-          - HighImpassable
-          layer: []
-          density: 20
-          hard: True
-          restitution: 0.3
-          friction: 0.2
-        flammable:
-          shape: !type:PhysShapeCircle
-            radius: 0.35
-            position: 0,0
-          mask:
-          - TableLayer
-          - HighImpassable
-          - LowImpassable
-          - BulletImpassable
-          - InteractImpassable
-          - Opaque
-          layer: []
-          density: 1
-          hard: False
-          restitution: 0
-          friction: 0.4
-    - type: ContainerContainer
-      containers:
-        solution@food: !type:ContainerSlot
-          ent: 10
   - uid: 1131
     components:
     - type: Transform

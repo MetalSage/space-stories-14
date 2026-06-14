@@ -1,5 +1,5 @@
-ent-BasePlushie = { ent-BaseItem }
-    .desc = { ent-BaseItem.desc }
+ent-BasePlushie = { ent-SolutionFood }
+    .desc = { ent-SolutionFood.desc }
 ent-PlushieThrongler = плюшевый Нагибатор
     .desc = Мягкая игрушка, напоминающая грузчикам о том, чего они больше не могут иметь.
 ent-PlushieGhost = плюшевый призрак
@@ -77,3 +77,7 @@ ent-ToyIan = игрушечный иан
     .desc = Не может кушать, но такой же пушистый, как настоящий!
 ent-ToyAmongPequeno = маленький амонг
     .desc = Сас!
+ent-PlushieSheep = плюшевая овца
+    .desc = Мягкая, пушистая, плюшевая овечка. 100% хлопок.
+ent-PlushieSpaceSheep = плюшевая космическая овца
+    .desc = Мягкая, пушистая, плюшевая космическая овечка. 100% хлопок.

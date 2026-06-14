@@ -6,19 +6,19 @@ using Robust.Shared.Serialization.TypeSerializers.Implementations.Custom.Prototy
 
 namespace Content.Shared._Stories.TargetingTeleporter;
 
-[RegisterComponent] [NetworkedComponent] [AutoGenerateComponentState(true)]
+[RegisterComponent, NetworkedComponent, AutoGenerateComponentState(true)]
 public sealed partial class TargetingTeleporterComponent : Component
 {
     [DataField("exitPortalPrototype", customTypeSerializer: typeof(PrototypeIdSerializer<EntityPrototype>))]
     public string ExitPortalPrototype = "STBluspacePortalExit";
 
-    [DataField] [AutoNetworkedField]
+    [DataField, AutoNetworkedField]
     public EntityUid? EyeEntity;
 
     [DataField(readOnly: true)]
     public EntProtoId? EyeEntityProto = "STTargetingTeleporterEye";
 
-    [DataField] [AutoNetworkedField]
+    [DataField, AutoNetworkedField]
     public EntityUid? GridUid;
 
     [DataField("newPortalSound")]

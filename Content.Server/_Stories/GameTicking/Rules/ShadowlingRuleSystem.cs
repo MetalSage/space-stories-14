@@ -17,14 +17,14 @@ using Robust.Shared.Player;
 
 namespace Content.Server._Stories.GameTicking.Rules;
 
-public sealed class ShadowlingRuleSystem : GameRuleSystem<ShadowlingRuleComponent>
+public sealed partial class ShadowlingRuleSystem : GameRuleSystem<ShadowlingRuleComponent>
 {
-    [Dependency] private readonly AntagSelectionSystem _antag = default!;
-    [Dependency] private readonly AudioSystem _audio = default!;
-    [Dependency] private readonly ChatSystem _chat = default!;
-    [Dependency] private readonly RoundEndSystem _roundEnd = default!;
-    [Dependency] private readonly AlertLevelSystem _alertLevel = default!;
-    [Dependency] private readonly StationSystem _station = default!;
+    [Dependency] private AntagSelectionSystem _antag = default!;
+    [Dependency] private AudioSystem _audio = default!;
+    [Dependency] private ChatSystem _chat = default!;
+    [Dependency] private RoundEndSystem _roundEnd = default!;
+    [Dependency] private AlertLevelSystem _alertLevel = default!;
+    [Dependency] private StationSystem _station = default!;
 
     public override void Initialize()
     {
@@ -88,7 +88,7 @@ public sealed class ShadowlingRuleSystem : GameRuleSystem<ShadowlingRuleComponen
         var winText = Loc.GetString($"stories-shadowling-{component.WinType.ToString().ToLower()}");
         args.AddLine(winText);
 
-        var sessionData = _antag.GetAntagIdentifiers(uid);
+        var sessionData = _antag.GetAntagIdentifiers(uid).ToList();
         args.AddLine(Loc.GetString("stories-shadowling-count", ("initialCount", sessionData.Count)));
 
         foreach (var (_, data, name) in sessionData)

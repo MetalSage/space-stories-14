@@ -12,7 +12,7 @@ namespace Content.Client._Stories.RoundEnd;
 [GenerateTypedNameReferences]
 public sealed partial class NoEorgPopup : FancyWindow
 {
-    [Dependency] private readonly IConfigurationManager _cfg = default!;
+    [Dependency] private IConfigurationManager _cfg = default!;
 
     private float _remainingTime;
     private bool _initialSkipState;
@@ -86,4 +86,3 @@ public sealed partial class NoEorgPopup : FancyWindow
         UpdateCloseButtonText();
     }
 }
-

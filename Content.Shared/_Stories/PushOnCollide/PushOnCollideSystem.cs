@@ -4,11 +4,11 @@ using Content.Shared.Throwing;
 
 namespace Content.Shared._Stories.Damage.Systems;
 
-public sealed class PushOnCollideSystem : EntitySystem
+public sealed partial class PushOnCollideSystem : EntitySystem
 {
     // TODO: Добавить откидывание при контакте с кем-то и значения в компонент
-    [Dependency] private readonly ThrowingSystem _throwing = default!;
-    [Dependency] private readonly SharedTransformSystem _xform = default!;
+    [Dependency] private ThrowingSystem _throwing = default!;
+    [Dependency] private SharedTransformSystem _xform = default!;
 
     public override void Initialize()
     {

@@ -6,19 +6,20 @@ using Content.Shared.Objectives.Components;
 using Content.Shared.Objectives.Systems;
 using Content.Shared.Popups;
 using Content.Shared.Roles.Jobs;
+using Content.Shared.Store.Components;
 using Robust.Shared.Random;
 
 namespace Content.Server.Objectives.Systems;
 
-public sealed class PickRandomJobPersonSystem : EntitySystem
+public sealed partial class PickRandomJobPersonSystem : EntitySystem
 {
     private const float UdateDelay = 10f;
-    [Dependency] private readonly SharedJobSystem _job = default!;
-    [Dependency] private readonly SharedPopupSystem _popup = default!;
-    [Dependency] private readonly IRobustRandom _random = default!;
-    [Dependency] private readonly StoreSystem _store = default!;
-    [Dependency] private readonly TargetObjectiveSystem _target = default!;
-    [Dependency] private readonly TargetSystem _targetSys = default!;
+    [Dependency] private SharedJobSystem _job = default!;
+    [Dependency] private SharedPopupSystem _popup = default!;
+    [Dependency] private IRobustRandom _random = default!;
+    [Dependency] private StoreSystem _store = default!;
+    [Dependency] private TargetObjectiveSystem _target = default!;
+    [Dependency] private TargetSystem _targetSys = default!;
 
     private float _updateTime;
 
@@ -81,7 +82,7 @@ public sealed class PickRandomJobPersonSystem : EntitySystem
 
         _target.SetTarget(uid, targetMindUid, target);
 
-        if (comp.JobID == "GuardianNt" && targetUid != null) // FIXME: SHITCODED
+        if (comp.JobID == "GuardianNt" && targetUid != null && HasComp<StoreComponent>(targetUid.Value))
         {
             _store.TryAddCurrency(new Dictionary<string, FixedPoint2> { { "SkillPoint", 10 } }, targetUid.Value);
             _popup.PopupEntity("Вы чувствуете зло и оно нацелено на вас... Проверьте магазин навыков.",

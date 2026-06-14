@@ -26,78 +26,82 @@
   - type: LoadMapRule
     mapPath: /Maps/_Stories/Nonstations/inquisitor_station.yml
   - type: AntagSelection
-    definitions:
-    - spawnerPrototype: SpawnPointInquisitor
-      min: 1
-      max: 1
-      pickPlayer: false
-      startingGear: InquisitorGear
-      components:
-      - type: Barotrauma
-        protectionSlots:
-        - head
-        - neck
-        damage:
-          types:
-            Blunt: 0.55 #per second, scales with pressure and other constants.
-      - type: Force
-      - type: ForceUser
-        preset: Inquisitor
-      - type: AutoImplant
-        implants:
-        - DeathAcidifierImplant
-      - type: IntrinsicRadioReceiver
-      - type: IntrinsicRadioTransmitter
-        channels:
-        - Empire
-      - type: ActiveRadio
-        channels:
-        - Empire
-      - type: Stamina
-        stunTime: 3
-        decay: 6
-        cooldown: 1
-        baseCritThreshold: 400
-      - type: Puller
-        needsHands: false
-      - type: UserInterface
-        interfaces:
-          enum.StoreUiKey.Key: # SpaceStories Немного магазина во всех нас.
-            type: StoreBoundUserInterface # ! Это нужно, чтобы пользователи силы могли открывать свой магазин навыков.
-          enum.VoiceMaskUIKey.Key:
-            type: VoiceMaskBoundUserInterface
-          enum.HumanoidMarkingModifierKey.Key:
-            type: HumanoidMarkingModifierBoundUserInterface
-          enum.StrippingUiKey.Key:
-            type: StrippableBoundUserInterface
-      - type: StatusEffects
-        allowed:
-        - Stun
-        - KnockedDown
-        - SlowedDown
-        - Stutter
-        - SeeingRainbows
-        - Electrocution
-        - Drunk
-        - SlurredSpeech
-        - RatvarianLanguage
-        - PressureImmunity
-        - FrozeBullets # Stories
-        - Muted
-        - ForcedSleep
-        - TemporaryBlindness
-        - Pacified
-        - StaminaModifier
-      - type: RandomMetadata
-        nameSegments:
-        - InquisitorTitle
-        - Inquisitor
-        nameFormat: name-format-standard
-      - type: NpcFactionMember
-        factions:
-        - Syndicate
-      mindRoles:
-      - MindRoleEmpireMember
+    antags:
+    - !type:FixedAntagCount
+      proto: InquisitorSpecifier
+      count: 1
+
+- type: antagSpecifier
+  id: InquisitorSpecifier
+  spawnerPrototype: SpawnPointInquisitor
+  pickPlayer: false
+  startingGear: InquisitorGear
+  components:
+  - type: Barotrauma
+    protectionSlots:
+    - head
+    - neck
+    damage:
+      types:
+        Blunt: 0.55 #per second, scales with pressure and other constants.
+  - type: Force
+  - type: ForceUser
+    preset: Inquisitor
+  - type: AutoImplant
+    implants:
+    - DeathAcidifierImplant
+  - type: IntrinsicRadioReceiver
+  - type: IntrinsicRadioTransmitter
+    channels:
+    - Empire
+  - type: ActiveRadio
+    channels:
+    - Empire
+  - type: Stamina
+    stunTime: 3
+    decay: 6
+    cooldown: 1
+    baseCritThreshold: 400
+  - type: Puller
+    needsHands: false
+  - type: UserInterface
+    interfaces:
+      enum.StoreUiKey.Key: # SpaceStories Немного магазина во всех нас.
+        type: StoreBoundUserInterface # ! Это нужно, чтобы пользователи силы могли открывать свой магазин навыков.
+      enum.VoiceMaskUIKey.Key:
+        type: VoiceMaskBoundUserInterface
+      enum.HumanoidMarkingModifierKey.Key:
+        type: HumanoidMarkingModifierBoundUserInterface
+      enum.StrippingUiKey.Key:
+        type: StrippableBoundUserInterface
+  - type: StatusEffects
+    allowed:
+    - Stun
+    - KnockedDown
+    - SlowedDown
+    - Stutter
+    - SeeingRainbows
+    - Electrocution
+    - Drunk
+    - SlurredSpeech
+    - RatvarianLanguage
+    - PressureImmunity
+    - FrozeBullets # Stories
+    - Muted
+    - ForcedSleep
+    - TemporaryBlindness
+    - Pacified
+    - StaminaModifier
+  - type: RandomMetadata
+    nameSegments:
+    - InquisitorTitle
+    - Inquisitor
+    nameFormat: name-format-standard
+  - type: NpcFactionMember
+    factions:
+    - Syndicate
+  mindRoles:
+  - MindRoleEmpireMember
 
 - type: entity
   parent: BaseGameRule
@@ -123,76 +127,80 @@
   - type: LoadMapRule
     mapPath: /Maps/_Stories/Nonstations/inquisitor_station.yml
   - type: AntagSelection
-    definitions:
-    - spawnerPrototype: SpawnPointInquisitor
-      min: 1
-      max: 1
-      pickPlayer: false
-      startingGear: KyloGear
-      components:
-      - type: Barotrauma
-        protectionSlots:
-        - head
-        - neck
-        damage:
-          types:
-            Blunt: 0.55 #per second, scales with pressure and other constants.
-      - type: Force
-      - type: ForceUser
-        preset: Inquisitor
-      - type: AutoImplant
-        implants:
-        - DeathAcidifierImplant
-      - type: IntrinsicRadioReceiver
-      - type: IntrinsicRadioTransmitter
-        channels:
-        - Empire
-      - type: ActiveRadio
-        channels:
-        - Empire
-      - type: Stamina
-        stunTime: 3
-        decay: 6
-        cooldown: 1
-        baseCritThreshold: 400
-      - type: Puller
-        needsHands: false
-      - type: UserInterface
-        interfaces:
-          enum.StoreUiKey.Key: # SpaceStories Немного магазина во всех нас.
-            type: StoreBoundUserInterface # ! Это нужно, чтобы пользователи силы могли открывать свой магазин навыков.
-          enum.HumanoidMarkingModifierKey.Key:
-            type: HumanoidMarkingModifierBoundUserInterface
-          enum.StrippingUiKey.Key:
-            type: StrippableBoundUserInterface
-      - type: StatusEffects
-        allowed:
-        - Stun
-        - KnockedDown
-        - SlowedDown
-        - Stutter
-        - SeeingRainbows
-        - Electrocution
-        - Drunk
-        - SlurredSpeech
-        - RatvarianLanguage
-        - PressureImmunity
-        - FrozeBullets # Stories
-        - Muted
-        - ForcedSleep
-        - TemporaryBlindness
-        - Pacified
-        - StaminaModifier
-      - type: RandomMetadata
-        nameSegments:
-        - InquisitorTitle
-        - Inquisitor
-        nameFormat: name-format-standard
-      - type: NpcFactionMember
-        factions:
-        - Syndicate
-      mindRoles:
-      - MindRoleEmpireMember
+    antags:
+    - !type:FixedAntagCount
+      proto: KyloSpecifier
+      count: 1
+
+- type: antagSpecifier
+  id: KyloSpecifier
+  spawnerPrototype: SpawnPointInquisitor
+  pickPlayer: false
+  startingGear: KyloGear
+  components:
+  - type: Barotrauma
+    protectionSlots:
+    - head
+    - neck
+    damage:
+      types:
+        Blunt: 0.55 #per second, scales with pressure and other constants.
+  - type: Force
+  - type: ForceUser
+    preset: Inquisitor
+  - type: AutoImplant
+    implants:
+    - DeathAcidifierImplant
+  - type: IntrinsicRadioReceiver
+  - type: IntrinsicRadioTransmitter
+    channels:
+    - Empire
+  - type: ActiveRadio
+    channels:
+    - Empire
+  - type: Stamina
+    stunTime: 3
+    decay: 6
+    cooldown: 1
+    baseCritThreshold: 400
+  - type: Puller
+    needsHands: false
+  - type: UserInterface
+    interfaces:
+      enum.StoreUiKey.Key: # SpaceStories Немного магазина во всех нас.
+        type: StoreBoundUserInterface # ! Это нужно, чтобы пользователи силы могли открывать свой магазин навыков.
+      enum.HumanoidMarkingModifierKey.Key:
+        type: HumanoidMarkingModifierBoundUserInterface
+      enum.StrippingUiKey.Key:
+        type: StrippableBoundUserInterface
+  - type: StatusEffects
+    allowed:
+    - Stun
+    - KnockedDown
+    - SlowedDown
+    - Stutter
+    - SeeingRainbows
+    - Electrocution
+    - Drunk
+    - SlurredSpeech
+    - RatvarianLanguage
+    - PressureImmunity
+    - FrozeBullets # Stories
+    - Muted
+    - ForcedSleep
+    - TemporaryBlindness
+    - Pacified
+    - StaminaModifier
+  - type: RandomMetadata
+    nameSegments:
+    - InquisitorTitle
+    - Inquisitor
+    nameFormat: name-format-standard
+  - type: NpcFactionMember
+    factions:
+    - Syndicate
+  mindRoles:
+  - MindRoleEmpireMember
 
 - type: entity
   id: SpafMigration
