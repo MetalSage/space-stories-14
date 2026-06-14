@@ -1,0 +1,8 @@
+- type: entity
+  id: STStunbatonBorg
+  parent: Stunbaton
+  name: stunbaton
+  description: A simple Borg baton.
+  components:
+    - type: BatterySelfRecharger
+      autoRechargeRate: 10
