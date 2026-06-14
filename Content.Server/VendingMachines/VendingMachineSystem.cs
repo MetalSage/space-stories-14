@@ -84,7 +84,14 @@ namespace Content.Server.VendingMachines
                 TryUpdateVisualState((uid, component));
             }
 
-            RestockInventoryFromPrototype(uid, component, component.InitialStockQuality); // Stories-Economy
+            if (PrototypeManager.TryIndex(component.PackPrototypeId, out VendingMachineInventoryPrototype? packPrototype) // Stories-Economy
+                && packPrototype.ItemPrices.Count > 0)
+            {
+                ApplyPricesToInventory(component.Inventory, packPrototype.ItemPrices);
+                ApplyPricesToInventory(component.EmaggedInventory, packPrototype.ItemPrices);
+                ApplyPricesToInventory(component.ContrabandInventory, packPrototype.ItemPrices);
+                Dirty(uid, component);
+            }
         }
 
         private void OnPowerChanged(EntityUid uid, VendingMachineComponent component, ref PowerChangedEvent args)

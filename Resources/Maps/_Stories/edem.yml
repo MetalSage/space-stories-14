@@ -28196,14 +28196,6 @@ entities:
     - type: Transform
       pos: 5.5,-44.5
       parent: 1
-- proto: ClothingHeadHatCatEars
-  entities:
-  - uid: 9297
-    components:
-    - type: Transform
-      rot: 3.141592653589793 rad
-      pos: -47.54015,30.812653
-      parent: 1
 - proto: ClothingHeadHatDetGadget
   entities:
   - uid: 6070

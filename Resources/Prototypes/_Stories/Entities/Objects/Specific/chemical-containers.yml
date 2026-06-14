@@ -4,10 +4,10 @@
   id: STBigJug
   description: Used to store very large quantities of chemicals or solutions. Works on experimental bluspace technology.
   components:
-  - type: SolutionContainerManager
-    solutions:
-      drink:
-        maxVol: 300
+  - type: Solution
+    id: drink
+    solution:
+      maxVol: 300
   - type: Sprite
     sprite: _Stories/Objects/Specific/Chemistry/big_jug.rsi
     layers:

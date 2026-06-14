@@ -49,13 +49,15 @@
     - map: ["enum.DamageStateVisualLayers.Base"]
       state: alive
       sprite: _Stories/Mobs/Aliens/corpium.rsi
-  - type: SolutionContainerManager
-    solutions:
-      melee:
-        maxVol: 1
-        reagents:
-        - ReagentId: STCorpium
-          Quantity: 1
+  - type: SolutionManager
+    solutions: []
+  - type: Solution
+    id: melee
+    solution:
+      maxVol: 1
+      reagents:
+      - ReagentId: STCorpium
+        Quantity: 1
   - type: SolutionRegeneration
     duration: 180
     generated:

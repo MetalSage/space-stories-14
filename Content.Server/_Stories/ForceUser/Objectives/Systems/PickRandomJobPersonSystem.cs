@@ -6,6 +6,7 @@ using Content.Shared.Objectives.Components;
 using Content.Shared.Objectives.Systems;
 using Content.Shared.Popups;
 using Content.Shared.Roles.Jobs;
+using Content.Shared.Store.Components;
 using Robust.Shared.Random;
 
 namespace Content.Server.Objectives.Systems;
@@ -81,7 +82,7 @@ public sealed partial class PickRandomJobPersonSystem : EntitySystem
 
         _target.SetTarget(uid, targetMindUid, target);
 
-        if (comp.JobID == "GuardianNt" && targetUid != null) // FIXME: SHITCODED
+        if (comp.JobID == "GuardianNt" && targetUid != null && HasComp<StoreComponent>(targetUid.Value))
         {
             _store.TryAddCurrency(new Dictionary<string, FixedPoint2> { { "SkillPoint", 10 } }, targetUid.Value);
             _popup.PopupEntity("Вы чувствуете зло и оно нацелено на вас... Проверьте магазин навыков.",
