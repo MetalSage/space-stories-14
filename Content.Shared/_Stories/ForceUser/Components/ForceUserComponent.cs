@@ -3,11 +3,11 @@ using Robust.Shared.Serialization.TypeSerializers.Implementations.Custom.Prototy
 
 namespace Content.Shared._Stories.ForceUser;
 
-[RegisterComponent] [AutoGenerateComponentState]
+[RegisterComponent, AutoGenerateComponentState]
 [Access(typeof(SharedForceUserSystem))]
 public sealed partial class ForceUserComponent : Component
 {
-    [Dependency] private readonly IPrototypeManager _proto = default!; // TODO: ECS pls
+    [Dependency] private IPrototypeManager _proto = default!; // TODO: ECS pls
 
     [DataField("preset", customTypeSerializer: typeof(PrototypeIdSerializer<ForcePresetPrototype>))]
     public string Preset = "Debug";
@@ -18,16 +18,18 @@ public sealed partial class ForceUserComponent : Component
     [DataField]
     public EntProtoId ShopAction = "ActionForceShop";
 
-    [DataField] [AutoNetworkedField]
+    [DataField, AutoNetworkedField]
     public EntityUid? ShopActionEntity;
 
-    [DataField("lightsaber")] [AutoNetworkedField]
+    [DataField("lightsaber")]
+    [AutoNetworkedField]
     public EntityUid? Lightsaber { get; set; }
 
     [DataField("equipments")]
     public Dictionary<string, EntityUid>? Equipments { get; set; }
 
-    [DataField("tetherHand")] [AutoNetworkedField]
+    [DataField("tetherHand")]
+    [AutoNetworkedField]
     public EntityUid? TetherHand { get; set; }
 
     public string Name()

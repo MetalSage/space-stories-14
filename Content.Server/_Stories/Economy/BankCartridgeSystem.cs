@@ -9,12 +9,12 @@ using Content.Shared.PDA;
 
 namespace Content.Server._Stories.Economy;
 
-public sealed class BankCartridgeSystem : EntitySystem
+public sealed partial class BankCartridgeSystem : EntitySystem
 {
-    [Dependency] private readonly BankSystem _bank = default!;
-    [Dependency] private readonly CartridgeLoaderSystem _cartridgeLoader = default!;
-    [Dependency] private readonly SharedMindSystem _mind = default!;
-    [Dependency] private readonly StationSystem _station = default!;
+    [Dependency] private BankSystem _bank = default!;
+    [Dependency] private CartridgeLoaderSystem _cartridgeLoader = default!;
+    [Dependency] private SharedMindSystem _mind = default!;
+    [Dependency] private StationSystem _station = default!;
 
     public override void Initialize()
     {

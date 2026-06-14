@@ -9,12 +9,12 @@ using Robust.Shared.Prototypes;
 
 namespace Content.Client._Stories.Shadowling;
 
-public sealed class ShadowlingSystem : EntitySystem
+public sealed partial class ShadowlingSystem : EntitySystem
 {
-    [Dependency] private readonly IPrototypeManager _prototype = default!;
-    [Dependency] private readonly SpriteSystem _spriteSystem = default!;
-    [Dependency] private readonly IPlayerManager _player = default!;
-    [Dependency] private readonly SharedAppearanceSystem _appearance = default!;
+    [Dependency] private IPrototypeManager _prototype = default!;
+    [Dependency] private SpriteSystem _spriteSystem = default!;
+    [Dependency] private IPlayerManager _player = default!;
+    [Dependency] private SharedAppearanceSystem _appearance = default!;
 
     public override void Initialize()
     {

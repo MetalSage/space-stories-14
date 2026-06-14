@@ -13,12 +13,11 @@
     maxFillLevels: 1
     changeColor: false
     emptySpriteName: microstimpen_empty
-  - type: SolutionContainerManager
-    solutions:
-      pen:
-        maxVol: 15
-        reagents:
-        - ReagentId: STAntiCorpium
-          Quantity: 15
+  - type: Solution
+    solution:
+      maxVol: 15
+      reagents:
+      - ReagentId: STAntiCorpium
+        Quantity: 15
   - type: Tag
     tags: []

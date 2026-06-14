@@ -7,12 +7,12 @@ using Robust.Shared.Random;
 
 namespace Content.Server._Stories.TargetingTeleporter;
 
-public sealed class TargetingTeleporterSystem : SharedTargetingTeleporterSystem
+public sealed partial class TargetingTeleporterSystem : SharedTargetingTeleporterSystem
 {
-    [Dependency] private readonly EntityWhitelistSystem _entityWhitelist = default!;
-    [Dependency] private readonly GameTicker _gameTicker = default!;
-    [Dependency] private readonly IRobustRandom _random = default!;
-    [Dependency] private readonly StationSystem _station = default!;
+    [Dependency] private EntityWhitelistSystem _entityWhitelist = default!;
+    [Dependency] private GameTicker _gameTicker = default!;
+    [Dependency] private IRobustRandom _random = default!;
+    [Dependency] private StationSystem _station = default!;
 
     public override void Initialize()
     {

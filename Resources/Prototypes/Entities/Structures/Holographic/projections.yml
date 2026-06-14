@@ -18,6 +18,7 @@
     lifetime: 90
   - type: Clickable
   - type: Damageable
+  - type: Injurable
     damageContainer: Inorganic
   - type: Destructible
     thresholds:

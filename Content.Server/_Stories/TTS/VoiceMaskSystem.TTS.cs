@@ -1,4 +1,4 @@
-﻿using Content.Shared._Stories.TTS;
+using Content.Shared._Stories.TTS;
 using Content.Shared.Implants;
 using Content.Shared.Inventory;
 using Content.Shared.VoiceMask;
@@ -29,7 +29,7 @@ public partial class VoiceMaskSystem
         ImplantRelayEvent<TransformSpeakerVoiceEvent> args)
     {
         if (component.Active)
-            args.Event.VoiceId = component.VoiceId;
+            args.Args.VoiceId = component.VoiceId;
     }
 
     private void OnChangeVoice(Entity<VoiceMaskComponent> entity, ref VoiceMaskChangeVoiceMessage msg)

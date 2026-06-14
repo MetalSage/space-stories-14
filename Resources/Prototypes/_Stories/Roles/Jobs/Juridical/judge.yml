@@ -22,7 +22,6 @@
   startingGear: STJudgeGear
   icon: "STJobIconJudge"
   supervisors: job-supervisors-centcom
-  canBeAntag: false
   access:
   - Brig
   - Maintenance

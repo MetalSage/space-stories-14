@@ -5,10 +5,10 @@ using Robust.Shared.Containers;
 
 namespace Content.Server._Stories.Economy;
 
-public sealed class EconomySystem : EntitySystem
+public sealed partial class EconomySystem : EntitySystem
 {
-    [Dependency] private readonly CartridgeLoaderSystem _cartridgeLoader = default!;
-    [Dependency] private readonly SharedContainerSystem _container = default!;
+    [Dependency] private CartridgeLoaderSystem _cartridgeLoader = default!;
+    [Dependency] private SharedContainerSystem _container = default!;
 
     public bool TrySendNotification(EntityUid mindId, string title, string message)
     {

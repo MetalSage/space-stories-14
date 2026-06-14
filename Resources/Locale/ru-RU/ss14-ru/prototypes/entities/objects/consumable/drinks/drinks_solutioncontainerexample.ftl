@@ -1,6 +1,4 @@
 ent-DrinkVisualizerTestCut = solution container vis cut-out
-    .desc = { ent-Pitcher.desc }
-    .suffix = DEBUG
+    .desc = A stainless steel insulated pitcher. Everyone's best friend in the morning.
 ent-DrinkVisualizerTestNot = solution container vis cut-not
-    .desc = { ent-Pitcher.desc }
-    .suffix = { ent-DrinkVisualizerTestCut.suffix }
+    .desc = A stainless steel insulated pitcher. Everyone's best friend in the morning.
