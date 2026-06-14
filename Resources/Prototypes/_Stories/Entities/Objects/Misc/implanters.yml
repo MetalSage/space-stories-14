@@ -1,0 +1,19 @@
+#Traitor/Nuclear Operative implanter
+
+- type: entity
+  id: STAfterburnerImplanter
+  name: afterburner implanter
+  parent: BaseImplantOnlyImplanterSyndi
+  components:
+  - type: Implanter
+    implant: STAfterburnerImplant
+
+#ERT implanter
+
+- type: entity
+  id: STAdrenocorImplanter
+  name: adrenocor implanter
+  parent: BaseImplantOnlyImplanter
+  components:
+  - type: Implanter
+    implant: STAdrenocorImplant
