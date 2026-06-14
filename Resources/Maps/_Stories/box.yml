@@ -134925,38 +134925,6 @@ entities:
       name: Mrakt
     - type: Transform
       parent: 28071
-    - type: EmitSoundOnCollide
-      nextSound: -6325.6270605
-    - type: MeleeWeapon
-      nextAttack: -2.1970448
-    - type: SolutionContainerManager
-      solutions:
-        food:
-          temperature: 293.15
-          canReact: True
-          maxVol: 0
-          name: food
-          reagents: []
-      containers:
-      - food
-    - type: UseDelay
-      delays:
-        default:
-          endTime: 0
-          startTime: 0
-          length: 3
-    - type: Physics
-      canCollide: False
-    - type: ContainerContainer
-      containers:
-        stash: !type:ContainerSlot
-          showEnts: False
-          occludes: True
-          ent: null
-        solution@food: !type:ContainerSlot
-          showEnts: False
-          occludes: True
-          ent: 28073
     - type: InsideEntityStorage
   - uid: 28075
     mapInit: true
@@ -134966,38 +134934,6 @@ entities:
       name: 'Mr_J_729 '
     - type: Transform
       parent: 28071
-    - type: EmitSoundOnCollide
-      nextSound: -6325.6270605
-    - type: MeleeWeapon
-      nextAttack: -1.5637121
-    - type: SolutionContainerManager
-      solutions:
-        food:
-          temperature: 293.15
-          canReact: True
-          maxVol: 0
-          name: food
-          reagents: []
-      containers:
-      - food
-    - type: UseDelay
-      delays:
-        default:
-          endTime: 0
-          startTime: 0
-          length: 3
-    - type: Physics
-      canCollide: False
-    - type: ContainerContainer
-      containers:
-        stash: !type:ContainerSlot
-          showEnts: False
-          occludes: True
-          ent: null
-        solution@food: !type:ContainerSlot
-          showEnts: False
-          occludes: True
-          ent: 28076
     - type: InsideEntityStorage
   - uid: 28077
     mapInit: true
@@ -135007,38 +134943,6 @@ entities:
       name: P1ckle33
     - type: Transform
       parent: 28071
-    - type: EmitSoundOnCollide
-      nextSound: -6325.6270605
-    - type: MeleeWeapon
-      nextAttack: -0.9303794
-    - type: SolutionContainerManager
-      solutions:
-        food:
-          temperature: 293.15
-          canReact: True
-          maxVol: 0
-          name: food
-          reagents: []
-      containers:
-      - food
-    - type: UseDelay
-      delays:
-        default:
-          endTime: 0
-          startTime: 0
-          length: 3
-    - type: Physics
-      canCollide: False
-    - type: ContainerContainer
-      containers:
-        stash: !type:ContainerSlot
-          showEnts: False
-          occludes: True
-          ent: null
-        solution@food: !type:ContainerSlot
-          showEnts: False
-          occludes: True
-          ent: 28079
     - type: InsideEntityStorage
 - proto: PlushieRGBee
   entities:

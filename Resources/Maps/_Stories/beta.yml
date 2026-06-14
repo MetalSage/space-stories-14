@@ -49331,14 +49331,6 @@ entities:
     - type: Tag
       tags:
       - CentrifugeCompatible
-    - type: SolutionContainerManager
-      solutions: null
-      containers:
-      - beaker
-    - type: ContainerContainer
-      containers:
-        solution@beaker: !type:ContainerSlot
-          ent: 6
   - uid: 7
     components:
     - type: Transform
@@ -49347,14 +49339,6 @@ entities:
     - type: Tag
       tags:
       - CentrifugeCompatible
-    - type: SolutionContainerManager
-      solutions: null
-      containers:
-      - beaker
-    - type: ContainerContainer
-      containers:
-        solution@beaker: !type:ContainerSlot
-          ent: 8
   - uid: 929
     components:
     - type: Transform
@@ -58203,20 +58187,12 @@ entities:
     - type: Transform
       pos: 16.6526,-23.025885
       parent: 2
-    - type: SolutionContainerManager
-      solutions: null
-      containers:
-      - drink
     - type: Label
       currentLabel: Пиво слаймолюда
     - type: PressurizedSolution
       sprayFizzinessThresholdRoll: 0.833622
     - type: NameModifier
       baseName: особый запас дадюшки Джонефа
-    - type: ContainerContainer
-      containers:
-        solution@drink: !type:ContainerSlot
-          ent: 4
 - proto: DrinkWhiskeyGlass
   entities:
   - uid: 8890
@@ -93578,56 +93554,6 @@ entities:
 
 
         [italic]   - Гренски Гренкович [/italic]
-    - type: SolutionContainerManager
-      solutions:
-        food:
-          temperature: 293.15
-          canReact: True
-          maxVol: 0
-          name: food
-          reagents: []
-      containers:
-      - food
-    - type: EmitSoundOnCollide
-      nextSound: -27144.7728552
-    - type: Fixtures
-      fixtures:
-        fix1:
-          shape: !type:PolygonShape
-            radius: 0.01
-            vertices:
-            - -0.25,-0.25
-            - 0.25,-0.25
-            - 0.25,0.25
-            - -0.25,0.25
-          mask:
-          - Impassable
-          - HighImpassable
-          layer: []
-          density: 20
-          hard: True
-          restitution: 0.3
-          friction: 0.2
-        flammable:
-          shape: !type:PhysShapeCircle
-            radius: 0.35
-            position: 0,0
-          mask:
-          - TableLayer
-          - HighImpassable
-          - LowImpassable
-          - BulletImpassable
-          - InteractImpassable
-          - Opaque
-          layer: []
-          density: 1
-          hard: False
-          restitution: 0
-          friction: 0.4
-    - type: ContainerContainer
-      containers:
-        solution@food: !type:ContainerSlot
-          ent: 10
   - uid: 1131
     components:
     - type: Transform

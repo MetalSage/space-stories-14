@@ -70097,17 +70097,6 @@ entities:
     - type: Transform
       pos: -31.668869,-37.148655
       parent: 2
-    - type: SolutionContainerManager
-      solutions:
-        drink:
-          temperature: 293.15
-          canReact: True
-          maxVol: 50
-          name: null
-          reagents:
-          - data: null
-            ReagentId: PoisonWine
-            Quantity: 50
 - proto: DrinkChangelingStingCan
   entities:
   - uid: 10312
@@ -107266,48 +107255,6 @@ entities:
 
         [italic]We are leaving this in your qualified hands and to your discretion. [bold]Best of wishes, NanoTrasen technical build team.[/bold][/italic]
       editingDisabled: True
-    - type: SolutionContainerManager
-      solutions: null
-      containers:
-      - food
-    - type: Fixtures
-      fixtures:
-        fix1:
-          shape: !type:PolygonShape
-            radius: 0.01
-            vertices:
-            - -0.25,-0.25
-            - 0.25,-0.25
-            - 0.25,0.25
-            - -0.25,0.25
-          mask:
-          - Impassable
-          - HighImpassable
-          layer: []
-          density: 20
-          hard: True
-          restitution: 0.3
-          friction: 0.2
-        flammable:
-          shape: !type:PhysShapeCircle
-            radius: 0.35
-            position: 0,0
-          mask:
-          - TableLayer
-          - HighImpassable
-          - LowImpassable
-          - BulletImpassable
-          - InteractImpassable
-          - Opaque
-          layer: []
-          density: 1
-          hard: False
-          restitution: 0
-          friction: 0.4
-    - type: ContainerContainer
-      containers:
-        solution@food: !type:ContainerSlot
-          ent: 4
   - uid: 5
     components:
     - type: MetaData
@@ -107337,48 +107284,6 @@ entities:
 
         [italic]Best wishes, [bold]NanoTrasen Technical Build Team.[/bold][/italic]
       editingDisabled: True
-    - type: SolutionContainerManager
-      solutions: null
-      containers:
-      - food
-    - type: Fixtures
-      fixtures:
-        fix1:
-          shape: !type:PolygonShape
-            radius: 0.01
-            vertices:
-            - -0.25,-0.25
-            - 0.25,-0.25
-            - 0.25,0.25
-            - -0.25,0.25
-          mask:
-          - Impassable
-          - HighImpassable
-          layer: []
-          density: 20
-          hard: True
-          restitution: 0.3
-          friction: 0.2
-        flammable:
-          shape: !type:PhysShapeCircle
-            radius: 0.35
-            position: 0,0
-          mask:
-          - TableLayer
-          - HighImpassable
-          - LowImpassable
-          - BulletImpassable
-          - InteractImpassable
-          - Opaque
-          layer: []
-          density: 1
-          hard: False
-          restitution: 0
-          friction: 0.4
-    - type: ContainerContainer
-      containers:
-        solution@food: !type:ContainerSlot
-          ent: 6
   - uid: 15526
     components:
     - type: Transform

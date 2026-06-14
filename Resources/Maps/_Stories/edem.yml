@@ -60320,18 +60320,6 @@ entities:
     - type: Tag
       tags:
       - Syringe
-    - type: SolutionContainerManager
-      solutions: null
-      containers:
-      - injector
-    - type: EmitSoundOnCollide
-      nextSound: -25962.8740371
-    - type: Physics
-      canCollide: False
-    - type: ContainerContainer
-      containers:
-        solution@injector: !type:ContainerSlot
-          ent: 308
     - type: InsideEntityStorage
 - proto: Table
   entities:

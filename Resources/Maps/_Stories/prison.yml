@@ -25379,14 +25379,6 @@ entities:
     - type: Transform
       pos: 23.327312,30.624393
       parent: 2
-    - type: SolutionContainerManager
-      solutions: null
-      containers:
-      - food
-    - type: ContainerContainer
-      containers:
-        solution@food: !type:ContainerSlot
-          ent: 4
   - uid: 7
     components:
     - type: MetaData
@@ -25394,14 +25386,6 @@ entities:
     - type: Transform
       pos: 23.530437,30.358768
       parent: 2
-    - type: SolutionContainerManager
-      solutions: null
-      containers:
-      - food
-    - type: ContainerContainer
-      containers:
-        solution@food: !type:ContainerSlot
-          ent: 8
   - uid: 3109
     components:
     - type: Transform
@@ -37243,16 +37227,6 @@ entities:
       parent: 9
     - type: Pill
       pillType: 9
-    - type: SolutionContainerManager
-      solutions: null
-      containers:
-      - food
-    - type: Physics
-      canCollide: False
-    - type: ContainerContainer
-      containers:
-        solution@food: !type:ContainerSlot
-          ent: 11
     - type: Label
       currentLabel: когнизин
     - type: NameModifier
