@@ -1,0 +1,25 @@
+- type: entity
+  id: STSyndieRapier
+  parent: [ BaseSword, BaseSyndicateContraband ]
+  name: Syndicate rapier
+  description: An elegantly crafted plastitanium rapier, sharpened using a special method. It is extremely sharp and capable of piercing most types of armor.
+  components:
+  - type: Sprite
+    sprite: _Stories/Objects/Weapons/Melee/syndie_rapier.rsi
+  - type: MeleeWeapon
+    attackRate: 1
+    damage:
+      types:
+        Piercing: 18
+    angle: 0
+    soundHit:
+        path: /Audio/Weapons/bladeslice.ogg
+    resistanceBypass: true
+  - type: Item
+    shape:
+    - 0,0,0,3
+    storedRotation: -45
+  - type: Tag
+    tags:
+    - STSyndieRapier
+  - type: DisarmMalus
