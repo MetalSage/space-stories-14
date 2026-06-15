@@ -37,10 +37,6 @@ namespace Content.Server.Zombies
 {
     public sealed partial class ZombieSystem : SharedZombieSystem
     {
-        // Stories-Start
-        private static EntProtoId ForcedSleepingStatusEffect = "StatusEffectForcedSleeping";
-        // Stories-End
-
         [Dependency] private IGameTiming _timing = default!;
         [Dependency] private IPrototypeManager _protoManager = default!;
         [Dependency] private IRobustRandom _random = default!;
@@ -60,6 +56,9 @@ namespace Content.Server.Zombies
         // Stories-End
 
         public readonly ProtoId<NpcFactionPrototype> Faction = "Zombie";
+        // Stories-Start
+        public readonly EntProtoId ForcedSleepingStatusEffect = "StatusEffectForcedSleeping";
+        // Stories-End
 
         public const SlotFlags ProtectiveSlots =
             SlotFlags.FEET |
