@@ -28,8 +28,6 @@ entities:
     - type: MetaData
       name: NT Evac Lox
     - type: Transform
-      pos: 22.271013,0.58517885
-      parent: invalid
     - type: MapGrid
       chunks:
         -1,0:

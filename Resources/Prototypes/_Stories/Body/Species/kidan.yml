@@ -1,0 +1,282 @@
+- type: markingsGroup
+  parent: Undergarments
+  id: Kidan
+  onlyGroupWhitelisted: true
+  limits:
+    enum.HumanoidVisualLayers.Hair:
+      limit: 1
+      required: false
+    enum.HumanoidVisualLayers.HeadTop:
+      limit: 1
+      default: [ KidanHeadNormal ]
+      required: true
+    enum.HumanoidVisualLayers.Chest:
+      limit: 2
+      required: false
+    enum.HumanoidVisualLayers.LArm:
+      limit: 1
+      required: false
+    enum.HumanoidVisualLayers.RArm:
+      limit: 1
+      required: false
+    enum.HumanoidVisualLayers.LHand:
+      limit: 1
+      required: false
+    enum.HumanoidVisualLayers.RHand:
+      limit: 1
+      required: false
+    enum.HumanoidVisualLayers.LLeg:
+      limit: 1
+      required: false
+    enum.HumanoidVisualLayers.RLeg:
+      limit: 1
+      required: false
+    enum.HumanoidVisualLayers.LFoot:
+      limit: 1
+      required: false
+    enum.HumanoidVisualLayers.RFoot:
+      limit: 1
+      required: false
+
+- type: entity
+  parent: BaseSpeciesAppearance
+  id: AppearanceKidan
+  name: kidan appearance
+  components:
+  - type: InitialBody
+    organs:
+      Torso: OrganKidanTorso
+      Head: OrganKidanHead
+      ArmLeft: OrganKidanArmLeft
+      ArmRight: OrganKidanArmRight
+      HandRight: OrganKidanHandRight
+      HandLeft: OrganKidanHandLeft
+      LegLeft: OrganKidanLegLeft
+      LegRight: OrganKidanLegRight
+      FootLeft: OrganKidanFootLeft
+      FootRight: OrganKidanFootRight
+      Brain: OrganHumanBrain
+      Eyes: OrganKidanEyes
+      Tongue: OrganHumanTongue
+      Appendix: OrganHumanAppendix
+      Ears: OrganHumanEars
+      Lungs: OrganHumanLungs
+      Heart: OrganAnimalHeart
+      Stomach: OrganKidanStomach
+      Liver: OrganKidanLiver
+      Kidneys: OrganAnimalKidneys
+  - type: HumanoidProfile
+    species: Kidan
+
+- type: entity
+  parent:
+  - AppearanceKidan
+  - BaseSpeciesMobOrganic
+  id: MobKidan
+  name: Urist McKidan
+  components:
+  - type: Hunger
+  - type: Thirst
+  - type: Icon
+    sprite: _Stories/Mobs/Species/Kidan/parts.rsi
+    state: full
+  - type: Speech
+    allowedEmotes: ['Grumble', 'Moan', 'WigglesAntennae', 'WavesAntennaeSharply']
+  - type: Butcherable
+    butcheringType: Spike
+    spawned:
+    - id: FoodMeat
+      amount: 5
+  - type: Bloodstream
+    bloodReferenceSolution:
+      reagents:
+      - ReagentId: InsectBlood
+        Quantity: 300
+  - type: DamageVisuals
+    damageOverlayGroups:
+      Brute:
+        sprite: Mobs/Effects/brute_damage.rsi
+        color: "#808A51"
+      Burn:
+        sprite: Mobs/Effects/burn_damage.rsi
+  - type: IntrinsicRadioReceiver
+  - type: IntrinsicRadioTransmitter
+    channels:
+    - Chitine
+  - type: ActiveRadio
+    channels:
+    - Chitine
+  - type: KidanAccent
+  - type: Vocal
+    sounds:
+      Male: UnsexedKidan
+      Female: FemaleKidan
+      Unsexed: UnsexedKidan
+  - type: Damageable
+    damageModifierSet: Kidan
+  - type: Bioluminescence
+  - type: MeleeWeapon
+    animation: WeaponArcClaw
+    soundHit:
+      collection: AlienClaw
+    damage:
+      types:
+        Slash: 5
+  - type: PointLight
+    energy: 1.5
+    radius: 3
+    color: "#556b2f"
+    enabled: false
+  - type: Temperature
+    currentTemperature: 310.15
+    specificHeat: 42
+  - type: TemperatureDamage
+    heatDamageThreshold: 400
+    coldDamageThreshold: 285
+    coldDamage:
+      types:
+        Cold : 0.1
+    heatDamage:
+      types:
+        Heat : 0.1
+  - type: MovementSpeedModifier
+    baseWalkSpeed : 2.7
+    baseSprintSpeed : 4.5
+  - type: Perishable
+  - type: InteractionPopup
+    successChance: 1
+    interactSuccessString: hugging-success-generic
+    interactSuccessSound: /Audio/Effects/thudswoosh.ogg
+    messagePerceivedByOthers: hugging-success-generic-others
+  - type: MindContainer
+  - type: Input
+    context: "human"
+  - type: MobMover
+  - type: InputMover
+  - type: Alerts
+  - type: Eye
+  - type: CameraRecoil
+  - type: Examiner
+  - type: CanHostGuardian
+  - type: NpcFactionMember
+    factions:
+      - NanoTrasen
+  - type: Respirator
+    damage:
+     types:
+      Asphyxiation: 1.0
+    damageRecovery:
+      types:
+        Asphyxiation: -1.0
+
+- type: entity
+  parent: OrganBase
+  id: OrganKidan
+  abstract: true
+  suffix: Kidan
+  components:
+  - type: Extractable
+    juiceSolution:
+      reagents:
+      - ReagentId: Fat
+        Quantity: 3
+      - ReagentId: Blood
+        Quantity: 10
+
+- type: entity
+  parent: OrganKidan
+  id: OrganKidanExternal
+  abstract: true
+  components:
+  - type: Sprite
+    sprite: _Stories/Mobs/Species/Kidan/parts.rsi
+  - type: VisualOrgan
+    data:
+      sprite: _Stories/Mobs/Species/Kidan/parts.rsi
+  - type: VisualOrganMarkings
+    markingData:
+      group: Kidan
+
+- type: entity
+  id: OrganKidanTorso
+  parent: [ OrganBaseTorsoSexed, OrganBaseTorso, OrganKidanExternal ]
+
+- type: entity
+  id: OrganKidanHead
+  parent: [ OrganBaseHeadSexed, OrganBaseHead, OrganKidanExternal ]
+
+- type: entity
+  id: OrganKidanArmLeft
+  parent: [ OrganBaseArmLeft, OrganKidanExternal ]
+
+- type: entity
+  id: OrganKidanArmRight
+  parent: [ OrganBaseArmRight, OrganKidanExternal ]
+
+- type: entity
+  id: OrganKidanHandLeft
+  parent: [ OrganBaseHandLeft, OrganKidanExternal ]
+
+- type: entity
+  id: OrganKidanHandRight
+  parent: [ OrganBaseHandRight, OrganKidanExternal ]
+
+- type: entity
+  id: OrganKidanLegLeft
+  parent: [ OrganBaseLegLeft, OrganKidanExternal ]
+
+- type: entity
+  id: OrganKidanLegRight
+  parent: [ OrganBaseLegRight, OrganKidanExternal ]
+
+- type: entity
+  id: OrganKidanFootLeft
+  parent: [ OrganBaseFootLeft, OrganKidanExternal ]
+
+- type: entity
+  id: OrganKidanFootRight
+  parent: [ OrganBaseFootRight, OrganKidanExternal ]
+
+- type: entity
+  id: OrganKidanEyes
+  parent: [ OrganBaseEyes, OrganHumanInternal, OrganKidanExternal ]
+  components:
+  - type: VisualOrgan
+    data:
+      sprite: _Stories/Mobs/Customization/Kidan/eyes.rsi
+      state: eyes
+
+- type: entity
+  id: OrganKidanStomach
+  parent: OrganAnimalStomach
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: SolutionManager
+    solutions:
+    - SolutionStomachKidan
+  - type: Stomach
+    specialDigestible:
+      tags:
+      - Fruit
+      - Meat
+      - Pill
+      - Crayon
+      - FoodSnack
+
+- type: entity
+  id: OrganKidanLiver
+  parent: OrganAnimalLiver
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Metabolizer
+    maxReagents: 1
+    updateInterval: 0.5
+
+- type: entity
+  parent: SolutionStomach
+  id: SolutionStomachKidan
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Solution
+    solution:
+      maxVol: 40

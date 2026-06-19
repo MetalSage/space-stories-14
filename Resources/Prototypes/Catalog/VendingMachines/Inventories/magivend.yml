@@ -3,7 +3,6 @@
   startingInventory:
     ClothingHeadHatWizard: 3
     ClothingOuterWizard: 3
-    ClothingHeadHatWizardFake: 3
     ClothingHeadHatRedwizard: 3
     ClothingOuterWizardRed: 3
     ClothingHeadHatVioletwizard: 3
@@ -13,3 +12,13 @@
     #TODO:
     #only missing staff
     #and if wizarditis reagent when hacked if we want this.
+  prices: # Stories-Economy
+    ClothingHeadHatWizard: 60
+    ClothingOuterWizard: 100
+    ClothingHeadHatWizardFake: 50
+    ClothingHeadHatRedwizard: 60
+    ClothingOuterWizardRed: 100
+    ClothingHeadHatVioletwizard: 60
+    ClothingOuterWizardViolet: 100
+    ClothingHeadHelmetWizardHelm: 80
+    ClothingShoesWizard: 50

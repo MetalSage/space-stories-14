@@ -19,7 +19,6 @@
   startingGear: GuardianNtGear
   icon: "JobIconGuardianNt"
   supervisors: job-supervisors-centcom
-  canBeAntag: false
   accessGroups:
   - AllAccess
   special:
@@ -30,6 +29,8 @@
     - type: Force
     - type: ForceUser
       preset: Guardian
+  minBankBalance: 250
+  maxBankBalance: 300
 
 - type: startingGear
   id: GuardianNtGear

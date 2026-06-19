@@ -10,7 +10,3 @@
   - type: MovementAlwaysTouching
   - type: CanMoveInAir
   - type: MovementSpeedModifier
-  # Stories-Start
-  - type: MobCollision
-    fixtureId: empty
-  # Stories-End

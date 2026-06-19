@@ -15,3 +15,16 @@
     ClothingMaskBreath: 3
     EmergencyOxygenTankFilled: 3
     DrinkNukieCan: 2
+  prices: # Stories-Economy
+    DrinkMREFlask: 25
+    FoodSnackNutribrick: 20
+    FoodSnackMREBrownie: 20
+    FoodCondimentPacketKetchup: 2
+    FoodTinMRE: 30
+    FoodTinBeans: 20
+    FoodTinPeaches: 20
+    DrinkBeerCan: 20
+    KitchenKnife: 30
+    ClothingMaskBreath: 20
+    EmergencyOxygenTankFilled: 40
+    DrinkNukieCan: 100

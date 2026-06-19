@@ -212,11 +212,17 @@ namespace Content.Shared.VendingMachines
         [DataField]
         public uint Amount;
 
-        public VendingMachineInventoryEntry(InventoryType type, string id, uint amount)
+        // Stories-Economy-Start
+        [DataField]
+        public uint Price;
+        // Stories-Economy-End
+
+        public VendingMachineInventoryEntry(InventoryType type, string id, uint amount, uint price = 0) // Stories-Economy
         {
             Type = type;
             ID = id;
             Amount = amount;
+            Price = price; // Stories-Economy
         }
 
         public VendingMachineInventoryEntry(VendingMachineInventoryEntry entry)
@@ -224,6 +230,7 @@ namespace Content.Shared.VendingMachines
             Type = entry.Type;
             ID = entry.ID;
             Amount = entry.Amount;
+            Price = entry.Price; // Stories-Economy
         }
     }
 

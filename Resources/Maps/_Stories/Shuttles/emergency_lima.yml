@@ -35,8 +35,6 @@ entities:
     - type: MetaData
       name: NT Evac Lima
     - type: Transform
-      pos: -0.515625,-0.453125
-      parent: invalid
     - type: MapGrid
       chunks:
         0,0:

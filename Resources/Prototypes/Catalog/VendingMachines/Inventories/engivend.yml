@@ -2,6 +2,7 @@
   id: EngiVendInventory
   startingInventory:
     ClothingEyesGlassesMeson: 4
+    ClothingEyesGlassesThermal: 4
     ClothingEyesHudDiagnostic: 4
     ClothingHeadHatWelding: 6
     CrowbarYellow: 8
@@ -14,3 +15,16 @@
   contrabandInventory:
     CowToolboxFilled: 1
     DrinkBeerCan: 3
+  prices: # Stories-Economy
+    ClothingEyesGlassesMeson: 100
+    ClothingEyesHudDiagnostic: 120
+    ClothingHeadHatWelding: 50
+    CrowbarYellow: 40
+    Multitool: 80
+    NetworkConfigurator: 80
+    PowerCellMedium: 40
+    ClothingHandsGlovesColorYellow: 180
+    BoxInflatable: 70
+    ClothingHeadHatCone: 30
+    CowToolboxFilled: 150
+    DrinkBeerCan: 20

@@ -7,11 +7,11 @@ public enum PontificState : byte
 {
     Base,
     Flame,
-    Prayer
+    Prayer,
 }
 
 [Serializable, NetSerializable]
 public enum PontificVisuals : byte
 {
-    State
+    State,
 }

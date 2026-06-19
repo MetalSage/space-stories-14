@@ -1,23 +1,27 @@
 - type: conversion
-  id: ShadowlingThrall
-  statusIcon: ShadowlingThrallFaction
+  id: STShadowlingThrall
+  statusIcon: STShadowlingThrallFaction
   blacklist:
     components:
     - Zombie
   briefing:
-    text: thrall-role-greeting
+    text: stories-thrall-role-greeting
     color: Red
   endBriefing:
-    text: thrall-role-goodbye
+    text: stories-thrall-role-goodbye
     color: Red
   components:
-  - type: ThermalVision
-    innate: true
+  - type: VisionProvider
+    isActive: true
+    thermalVision: true
+    ambientColor: "#FFFFFF10"
+    priority: 10
+    toggleAction: STShadowlingActionToggleVision
   - type: ShadowlingThrall
   mindRoles:
-    - MindRoleShadowlingThrall
+  - STMindRoleShadowlingThrall
   channels:
-    - ShadowlingMind
+  - STShadowlingMind
 
 - type: conversion
   id: HypnotizedEmpire
@@ -33,8 +37,8 @@
     text: hypnosis-empire-role-goodbye
     color: Red
   components:
-    - type: HypnotizedEmpire
+  - type: HypnotizedEmpire
   mindRoles:
-    - MindRoleHypnotizedEmpireMember
+  - MindRoleHypnotizedEmpireMember
   channels:
-    - Empire
+  - Empire

@@ -25,11 +25,11 @@ namespace Content.Client.Credits;
 [GenerateTypedNameReferences]
 public sealed partial class CreditsWindow : DefaultWindow
 {
-    [Dependency] private readonly IResourceManager _resourceManager = default!;
-    [Dependency] private readonly IConfigurationManager _cfg = default!;
-    [Dependency] private readonly ISerializationManager _serialization = default!;
-    [Dependency] private readonly IPrototypeManager _protoManager = default!;
-    [Dependency] private readonly ILocalizationManager _loc = default!;
+    [Dependency] private IResourceManager _resourceManager = default!;
+    [Dependency] private IConfigurationManager _cfg = default!;
+    [Dependency] private ISerializationManager _serialization = default!;
+    [Dependency] private IPrototypeManager _protoManager = default!;
+    [Dependency] private ILocalizationManager _loc = default!;
 
     private static readonly Dictionary<string, int> PatronTierPriority = new()
     {
@@ -359,6 +359,7 @@ public sealed partial class CreditsWindow : DefaultWindow
             ss14ContributorsContainer.AddChild(label);
         }
 
+        AddSection(Loc.GetString("stories-credits-window-stories-section-title"), "Stories.txt", true); // Stories
         AddSection(Loc.GetString("credits-window-contributors-section-title"), "GitHub.txt");
         AddSection(Loc.GetString("credits-window-codebases-section-title"), "SpaceStation13.txt");
         AddSection(Loc.GetString("credits-window-original-remake-team-section-title"), "OriginalRemake.txt");

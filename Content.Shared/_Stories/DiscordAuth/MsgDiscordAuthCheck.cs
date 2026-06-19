@@ -19,4 +19,3 @@ public sealed class MsgDiscordAuthCheck : NetMessage
     {
     }
 }
-

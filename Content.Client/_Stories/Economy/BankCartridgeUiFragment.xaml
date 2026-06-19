@@ -1,0 +1,36 @@
+<cartridges:BankCartridgeUiFragment xmlns:cartridges="clr-namespace:Content.Client._Stories.Economy"
+                                    xmlns="https://spacestation14.io"
+                                    Orientation="Vertical"
+                                    HorizontalExpand="True"
+                                    VerticalExpand="True"
+                                    Margin="5">
+    <PanelContainer StyleClasses="Inset" Margin="0 0 0 10">
+        <BoxContainer Orientation="Vertical" Margin="5">
+            <Label Name="OwnerName" Text="{Loc 'access-reader-unknown-id'}" StyleClasses="LabelHeading" Align="Center" />
+            <BoxContainer Orientation="Horizontal" HorizontalAlignment="Center">
+                <Label Text="{Loc 'bank-ui-balance-label'}" StyleClasses="LabelKeyText" />
+                <Label Text=" " />
+                <Label Name="Balance" Text="0 кр." StyleClasses="LabelBig" Modulate="#38b026" />
+            </BoxContainer>
+            <BoxContainer Orientation="Horizontal" HorizontalAlignment="Center">
+                <Label Text="{Loc 'bank-ui-account-number'}" StyleClasses="LabelKeyText" />
+                <Label Text=": " />
+                <Label Name="AccountNumber" Text="--------" />
+            </BoxContainer>
+        </BoxContainer>
+    </PanelContainer>
+    <Label Text="{Loc 'bank-ui-transfer-header'}" StyleClasses="LabelHeading" />
+    <LineEdit Name="TargetInput" PlaceHolder="{Loc 'bank-ui-target-placeholder'}" />
+    <BoxContainer Orientation="Horizontal" Margin="0 5">
+        <LineEdit Name="AmountInput" PlaceHolder="{Loc 'bank-ui-amount-placeholder'}" HorizontalExpand="True" />
+        <Button Name="TransferButton" Text="{Loc 'bank-ui-transfer-btn'}" MinWidth="60" />
+    </BoxContainer>
+    <Control VerticalExpand="True" />
+    <PanelContainer StyleClasses="LowDivider" Margin="-5 5 -5 5" />
+    <Label Text="{Loc 'bank-ui-settings-header'}" StyleClasses="LabelHeading" />
+    <BoxContainer Orientation="Horizontal">
+        <Button Name="LinkButton" Text="{Loc 'bank-ui-link-btn'}" HorizontalExpand="True" />
+        <Button Name="UnlinkButton" Text="{Loc 'bank-ui-unlink-btn'}" HorizontalExpand="True" />
+    </BoxContainer>
+    <Button Name="ToggleNotificationsButton" Text="{Loc 'bank-ui-notifications-enable'}" />
+</cartridges:BankCartridgeUiFragment>

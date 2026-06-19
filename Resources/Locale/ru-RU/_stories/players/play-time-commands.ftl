@@ -5,6 +5,7 @@ cmd-playtime_reduceoverall-succeed = Общее игровое время { $use
 cmd-playtime_reduceoverall-arg-user = <user name>
 cmd-playtime_reduceoverall-arg-minutes = <minutes>
 cmd-playtime_reduceoverall-error-args = Ожидается ровно два аргумента
+
 # - playtime_reducerole
 cmd-playtime_reducerole-desc = Убавляет указанное число минут из времени игрока на определённой роли
 cmd-playtime_reducerole-help = Использование: { $command } <user name> <role> <minutes>

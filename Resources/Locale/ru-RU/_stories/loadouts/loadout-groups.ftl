@@ -47,3 +47,11 @@ loadout-group-detective-belt = Детектив, пояс
 # Ассистент
 
 stories-loadout-group-passenger-storage = Ассистент, хранилища
+
+# Cудья
+
+stories-loadout-group-judge-jumpsuit = Судья, комбинезон
+stories-loadout-group-judge-gloves = Судья, перчатки
+stories-loadout-group-judge-shoes = Судья, обувь
+stories-loadout-group-judge-outerclothing = Судья, мантии
+stories-loadout-group-judge-head = Судья, парик

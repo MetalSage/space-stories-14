@@ -10,3 +10,13 @@
     ClothingHeadBandSkull: 2
     ClothingHeadsetRobotics: 2
     ClothingOuterWinterRobo: 2
+  prices: # Stories-Economy
+    ClothingOuterCoatRobo: 40
+    ClothingUniformJumpsuitRoboticist: 40
+    ClothingUniformJumpskirtRoboticist: 40
+    ClothingShoesColorBlack: 25
+    ClothingHandsGlovesRobohands: 40
+    ClothingHeadHatCorpsoft: 25
+    ClothingHeadBandSkull: 20
+    ClothingHeadsetRobotics: 50
+    ClothingOuterWinterRobo: 80

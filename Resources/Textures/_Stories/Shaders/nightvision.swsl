@@ -1,0 +1,35 @@
+light_mode unshaded;
+
+uniform sampler2D SCREEN_TEXTURE;
+uniform highp vec4 ambient_color;
+
+highp float rand(highp vec2 co) {
+    return fract(sin(dot(co.xy, vec2(12.9898,78.233))) * 43758.5453);
+}
+
+void fragment() {
+    highp vec4 color = zTextureSpec(SCREEN_TEXTURE, UV);
+    highp float luma = dot(color.rgb, vec3(0.299, 0.587, 0.114));
+
+    highp vec3 baseColor = ambient_color.rgb;
+    if (length(baseColor) < 0.01) {
+        baseColor = vec3(0.85, 0.95, 1.0);
+    }
+
+    highp vec3 nvColor = baseColor * pow(luma, 0.7) * 1.5;
+
+    highp float bloomAmount = smoothstep(0.6, 0.9, luma);
+    nvColor += vec3(1.0, 1.0, 0.95) * pow(bloomAmount, 2.0) * 1.2;
+
+    highp float noise = rand(UV * 1000.0 + TIME) * (0.1 + luma * 0.2);
+    nvColor += vec3(noise);
+
+    highp float dirtLuma = rand(UV * 5.0) * rand(UV * 10.0);
+    nvColor *= (1.0 - pow(dirtLuma, 5.0) * 0.1);
+
+    highp vec2 center = UV - 0.5;
+    highp float vignette = 1.0 - pow(length(center) * 1.4, 2.0);
+    nvColor *= vignette;
+
+    COLOR = vec4(clamp(nvColor, 0.0, 1.0), color.a);
+}

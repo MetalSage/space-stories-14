@@ -35,3 +35,34 @@
     # "Legally" obtained currency
     SpaceCash100: 2
     ToyFigurineLawyer: 1
+  prices: # Stories-Economy
+    ClothingUniformJumpsuitLawyerBlue: 50
+    ClothingUniformJumpskirtLawyerBlue: 50
+    ClothingUniformJumpsuitLawyerPurple: 50
+    ClothingUniformJumpskirtLawyerPurple: 50
+    ClothingUniformJumpsuitLawyerRed: 50
+    ClothingUniformJumpskirtLawyerRed: 50
+    ClothingUniformJumpsuitLawyerBlack: 50
+    ClothingUniformJumpskirtLawyerBlack: 50
+    ClothingUniformJumpsuitLawyerGood: 60
+    ClothingUniformJumpskirtLawyerGood: 60
+    ClothingShoesBootsLaceup: 60
+    ClothingHeadsetIAA: 60
+    ClothingNeckLawyerbadge: 30
+    ClothingHandsGlovesColorWhite: 25
+    ClothingHandsGlovesColorGray: 25
+    ClothingHandsGlovesColorBlack: 25
+    ClothingHandsGlovesColorRed: 25
+    ClothingHandsGlovesColorBlue: 25
+    ClothingHeadHatBowlerHat: 30
+    ClothingHeadHatOutlawHat: 40
+    ClothingHeadHatTophat: 40
+    BriefcaseBrown: 50
+    BookSpaceLaw: 25
+    LuxuryPen: 150
+    HandLabeler: 30
+    BoxPrinter: 150
+    ClothingOuterRobesJudge: 120
+    ClothingHeadHatPwig: 80
+    SpaceCash100: 80
+    ToyFigurineLawyer: 100

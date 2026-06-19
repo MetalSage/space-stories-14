@@ -5,7 +5,7 @@ using Content.Server.Administration.Logs;
 using Content.Server.Administration.Managers;
 using Content.Server.Administration.Systems;
 using Content.Server.Discord.DiscordLink;
-using Content.Server._Stories.Partners;
+using Content.Server._Stories.Sponsors;
 using Content.Server.Players.RateLimiting;
 using Content.Server.Preferences.Managers;
 using Content.Shared.Administration;
@@ -19,6 +19,7 @@ using Robust.Shared.Network;
 using Robust.Shared.Player;
 using Robust.Shared.Replays;
 using Robust.Shared.Utility;
+using System.Text;
 
 namespace Content.Server.Chat.Managers;
 
@@ -35,18 +36,21 @@ internal sealed partial class ChatManager : IChatManager
         { "revolutionary", "#aa00ff" }
     };
 
-    [Dependency] private readonly IReplayRecordingManager _replay = default!;
-    [Dependency] private readonly IServerNetManager _netManager = default!;
-    [Dependency] private readonly IAdminManager _adminManager = default!;
-    [Dependency] private readonly IAdminLogManager _adminLogger = default!;
-    [Dependency] private readonly IServerPreferencesManager _preferencesManager = default!;
-    [Dependency] private readonly IConfigurationManager _configurationManager = default!;
-    [Dependency] private readonly INetConfigurationManager _netConfigManager = default!;
-    [Dependency] private readonly IEntityManager _entityManager = default!;
-    [Dependency] private readonly PlayerRateLimitManager _rateLimitManager = default!;
-    [Dependency] private readonly ISharedPlayerManager _player = default!;
-    [Dependency] private readonly DiscordChatLink _discordLink = default!;
-    [Dependency] private readonly PartnersManager _sponsors = default!; // Corvax-Sponsors
+    [Dependency] private IReplayRecordingManager _replay = default!;
+    [Dependency] private IServerNetManager _netManager = default!;
+    [Dependency] private IAdminManager _adminManager = default!;
+    [Dependency] private IAdminLogManager _adminLogger = default!;
+    [Dependency] private IServerPreferencesManager _preferencesManager = default!;
+    [Dependency] private IConfigurationManager _configurationManager = default!;
+    [Dependency] private INetConfigurationManager _netConfigManager = default!;
+    [Dependency] private IEntityManager _entityManager = default!;
+    [Dependency] private PlayerRateLimitManager _rateLimitManager = default!;
+    [Dependency] private ISharedPlayerManager _player = default!;
+    [Dependency] private DiscordChatLink _discordLink = default!;
+    [Dependency] private ILogManager _logManager = default!;
+    [Dependency] private SponsorsManager _sponsorsManager = default!; // Corvax-Sponsors
+
+    private ISawmill _sawmill = default!;
 
     /// <summary>
     /// The maximum length a player-sent message can be sent
@@ -65,6 +69,8 @@ internal sealed partial class ChatManager : IChatManager
 
         _configurationManager.OnValueChanged(CCVars.OocEnabled, OnOocEnabledChanged, true);
         _configurationManager.OnValueChanged(CCVars.AdminOocEnabled, OnAdminOocEnabledChanged, true);
+
+        _sawmill = _logManager.GetSawmill("SERVER");
 
         RegisterRateLimits();
     }
@@ -113,7 +119,7 @@ internal sealed partial class ChatManager : IChatManager
     {
         var wrappedMessage = Loc.GetString("chat-manager-server-wrap-message", ("message", FormattedMessage.EscapeText(message)));
         ChatMessageToAll(ChatChannel.Server, message, wrappedMessage, EntityUid.Invalid, hideChat: false, recordReplay: true, colorOverride: colorOverride);
-        Logger.InfoS("SERVER", message);
+        _sawmill.Info(message);
 
         _adminLogger.Add(LogType.Chat, LogImpact.Low, $"Server announcement: {message}");
     }
@@ -268,7 +274,10 @@ internal sealed partial class ChatManager : IChatManager
 
     private void SendOOC(ICommonSession player, string message)
     {
-        if (_adminManager.IsAdmin(player))
+        // Stories-Start
+        var adminData = _adminManager.GetAdminData(player);
+        if (adminData != null && adminData.HasFlag(AdminFlags.Admin))
+        // Stories-End
         {
             if (!_adminOocEnabled)
             {
@@ -280,27 +289,55 @@ internal sealed partial class ChatManager : IChatManager
             return;
         }
 
+        // Stories-Start
         Color? colorOverride = null;
-        var wrappedMessage = Loc.GetString("chat-manager-send-ooc-wrap-message", ("playerName",player.Name), ("message", FormattedMessage.EscapeText(message)));
-        if (_adminManager.HasAdminFlag(player, AdminFlags.NameColor))
+        if (adminData != null && _adminManager.HasAdminFlag(player, AdminFlags.NameColor))
         {
             var prefs = _preferencesManager.GetPreferences(player.UserId);
             colorOverride = prefs.AdminOOCColor;
         }
-        if (  _netConfigManager.GetClientCVar(player.Channel, CCVars.ShowOocPatronColor) && player.Channel.UserData.PatronTier is { } patron && PatronOocColors.TryGetValue(patron, out var patronColor))
+
+        var senderBuilder = new StringBuilder();
+
+        string? nameColorHex = null;
+        if (adminData != null)
         {
-            wrappedMessage = Loc.GetString("chat-manager-send-ooc-patron-wrap-message", ("patronColor", patronColor),("playerName", player.Name), ("message", FormattedMessage.EscapeText(message)));
+            var prefs = _preferencesManager.GetPreferences(player.UserId);
+            nameColorHex = prefs.AdminOOCColor.ToHex();
+        }
+        else if (_sponsorsManager.TryGetInfo(player.UserId, out var info) && info.OOCColor != null)
+        {
+            nameColorHex = info.OOCColor;
         }
 
-        // Corvax-Sponsors-Start
-        if (_sponsors.TryGetInfo(player.UserId, out var info) && info.OOCColor != null)
+        if (adminData != null && adminData.Title != null)
         {
-            wrappedMessage = Loc.GetString("chat-manager-send-ooc-patron-wrap-message", ("patronColor", info.OOCColor), ("playerName", player.Name), ("message", FormattedMessage.EscapeText(message)));
+            var prefs = _preferencesManager.GetPreferences(player.UserId);
+            var adminColor = prefs.AdminOOCColor.ToHex();
+            senderBuilder.Append($"[color={adminColor}][bold]\\[{adminData.Title}\\][/bold][/color] ");
         }
-        // Corvax-Sponsors-End
 
-        //TODO: player.Name color, this will need to change the structure of the MsgChatMessage
+        if (_sponsorsManager.TryGetInfo(player.UserId, out var sponsorInfo) && !string.IsNullOrEmpty(sponsorInfo.TierName))
+        {
+            var sponsorColor = sponsorInfo.OOCColor ?? "#ffffff";
+            senderBuilder.Append($"[color={sponsorColor}][bold]\\[{sponsorInfo.TierName}\\][/bold][/color] ");
+        }
+
+        if (nameColorHex != null)
+        {
+            senderBuilder.Append($"[color={nameColorHex}][bold]{player.Name}[/bold][/color]");
+        }
+        else
+        {
+            senderBuilder.Append($"[bold]{player.Name}[/bold]");
+        }
+
+        var wrappedMessage = Loc.GetString("chat-manager-ooc-sender-wrap-message",
+            ("sender", senderBuilder.ToString()),
+            ("message", FormattedMessage.EscapeText(message)));
+
         ChatMessageToAll(ChatChannel.OOC, message, wrappedMessage, EntityUid.Invalid, hideChat: false, recordReplay: true, colorOverride: colorOverride, author: player.UserId);
+        // Stories-End
         _discordLink.SendMessage(message, player.Name, ChatChannel.OOC);
         _adminLogger.Add(LogType.Chat, LogImpact.Low, $"OOC from {player:Player}: {message}");
     }

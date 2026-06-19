@@ -7,10 +7,10 @@ using Robust.Shared.Console;
 namespace Content.Server.Administration.Commands;
 
 [AdminCommand(AdminFlags.Ban)]
-public sealed class PlayTimeReduceOverallCommand : IConsoleCommand
+public sealed partial class PlayTimeReduceOverallCommand : IConsoleCommand
 {
-    [Dependency] private readonly IPlayerManager _playerManager = default!;
-    [Dependency] private readonly PlayTimeTrackingManager _playTimeTracking = default!;
+    [Dependency] private IPlayerManager _playerManager = default!;
+    [Dependency] private PlayTimeTrackingManager _playTimeTracking = default!;
 
     public string Command => "playtime_reduceoverall";
     public string Description => Loc.GetString("cmd-playtime_reduceoverall-desc");
@@ -48,8 +48,10 @@ public sealed class PlayTimeReduceOverallCommand : IConsoleCommand
     public CompletionResult GetCompletion(IConsoleShell shell, string[] args)
     {
         if (args.Length == 1)
+        {
             return CompletionResult.FromHintOptions(CompletionHelper.SessionNames(),
                 Loc.GetString("cmd-playtime_reduceoverall-arg-user"));
+        }
 
         if (args.Length == 2)
             return CompletionResult.FromHint(Loc.GetString("cmd-playtime_reduceoverall-arg-minutes"));
@@ -59,10 +61,10 @@ public sealed class PlayTimeReduceOverallCommand : IConsoleCommand
 }
 
 [AdminCommand(AdminFlags.Ban)]
-public sealed class PlayTimeReduceRoleCommand : IConsoleCommand
+public sealed partial class PlayTimeReduceRoleCommand : IConsoleCommand
 {
-    [Dependency] private readonly IPlayerManager _playerManager = default!;
-    [Dependency] private readonly PlayTimeTrackingManager _playTimeTracking = default!;
+    [Dependency] private IPlayerManager _playerManager = default!;
+    [Dependency] private PlayTimeTrackingManager _playTimeTracking = default!;
 
     public string Command => "playtime_reducerole";
     public string Description => Loc.GetString("cmd-playtime_reducerole-desc");
@@ -122,4 +124,3 @@ public sealed class PlayTimeReduceRoleCommand : IConsoleCommand
         return CompletionResult.Empty;
     }
 }
-

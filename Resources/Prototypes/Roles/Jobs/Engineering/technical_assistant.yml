@@ -13,11 +13,14 @@
   startingGear: TechnicalAssistantGear
   icon: "JobIconTechnicalAssistant"
   supervisors: job-supervisors-engineering
-  canBeAntag: false
   access:
   - Maintenance
   - Engineering
   - External
+  # Stories-Economy-Start
+  minBankBalance: 100
+  maxBankBalance: 150
+  # Stories-Economy-End
 
 - type: startingGear
   id: TechnicalAssistantGear

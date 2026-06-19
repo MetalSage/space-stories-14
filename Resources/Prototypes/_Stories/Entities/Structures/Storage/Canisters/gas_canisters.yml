@@ -8,7 +8,7 @@
     layers:
     - state: bz
   - type: GasCanister
-    gasMixture:
+    air:
       volume: 1000
       moles:
         STBZ: 1871.71051
@@ -49,7 +49,7 @@
     layers:
     - state: healium
   - type: GasCanister
-    gasMixture:
+    air:
       volume: 1000
       moles:
         STHealium: 1871.71051
@@ -90,7 +90,7 @@
     layers:
     - state: nitryl
   - type: GasCanister
-    gasMixture:
+    air:
       volume: 1000
       moles:
         STNitryl: 1871.71051
@@ -131,7 +131,7 @@
     layers:
     - state: pluoxium
   - type: GasCanister
-    gasMixture:
+    air:
       volume: 1000
       moles:
         STPluoxium: 1871.71051

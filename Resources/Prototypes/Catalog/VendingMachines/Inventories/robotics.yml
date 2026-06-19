@@ -20,3 +20,21 @@
     Crowbar: 2
   contrabandInventory:
     FoodBurgerRobot: 1  
+  prices: # Stories-Economy
+    CableApcStack: 20
+    SciFlash: 50
+    ProximitySensor: 40
+    ClothingEyesHudDiagnostic: 120
+    ClothingEyesEyepatchHudDiag: 120
+    RemoteSignaller: 40
+    Igniter: 30
+    HandheldHealthAnalyzer: 60
+    Scalpel: 40
+    SawElectric: 80
+    NitrousOxideTankFilled: 50
+    ClothingMaskBreathMedical: 20
+    ClothingHeadHatWeldingMaskFlame: 60
+    Welder: 60
+    Screwdriver: 40
+    Crowbar: 40
+    FoodBurgerRobot: 30

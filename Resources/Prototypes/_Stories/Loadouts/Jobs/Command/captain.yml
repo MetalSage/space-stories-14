@@ -1,0 +1,31 @@
+- type: loadout
+  id: STClothingHeadHatCapcapGeneral
+  equipment:
+    neck: STClothingHeadHatCapcapGeneral
+  effects:
+  - !type:SponsorLoadoutEffect
+    id: STClothingHeadHatCapcapGeneral
+
+- type: loadout
+  id: STClothingHeadHatCapcapGeneralCMO
+  equipment:
+    neck: STClothingHeadHatCapcapGeneralCMO
+  effects:
+  - !type:SponsorLoadoutEffect
+    id: STClothingHeadHatCapcapGeneralCMO
+
+- type: loadout
+  id: STClothingNeckMantleCapGeneral
+  equipment:
+    neck: STClothingNeckMantleCapGeneral
+  effects:
+  - !type:SponsorLoadoutEffect
+    id: STClothingNeckMantleCapGeneral
+
+- type: loadout
+  id: STClothingOuterWinterCapGeneral
+  equipment:
+    outerClothing: STClothingOuterWinterCapGeneral
+  effects:
+  - !type:SponsorLoadoutEffect
+    id: STClothingOuterWinterCapGeneral

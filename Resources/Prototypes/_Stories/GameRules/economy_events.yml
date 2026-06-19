@@ -1,0 +1,49 @@
+- type: entity
+  id: STBankingError
+  parent: BaseGameRule
+  components:
+  - type: StationEvent
+    startAnnouncement: stories-station-event-banking-error
+    startAudio:
+      path: /Audio/Announcements/attention.ogg
+    weight: 3
+  - type: BankingErrorRule
+
+- type: entity
+  id: STSalaryIncrease
+  parent: BaseGameRule
+  components:
+  - type: StationEvent
+    startAnnouncement: stories-station-event-salary-increase
+    startAudio:
+      path: /Audio/Announcements/attention.ogg
+    weight: 4
+    duration: 600
+  - type: SalaryModifierRule
+    modifierMin: 0.1
+    modifierMax: 1.0
+
+- type: entity
+  id: STSalaryDecrease
+  parent: BaseGameRule
+  components:
+  - type: StationEvent
+    startAnnouncement: stories-station-event-salary-decrease
+    startAudio:
+      path: /Audio/Announcements/attention.ogg
+    weight: 3
+    duration: 600
+  - type: SalaryModifierRule
+    modifierMin: -0.5
+    modifierMax: -0.1
+
+- type: entity
+  id: STBankHack
+  parent: BaseGameRule
+  components:
+  - type: StationEvent
+    startAnnouncement: stories-station-event-bank-hack
+    startAudio:
+      path: /Audio/Announcements/attention.ogg
+    weight: 1
+  - type: BankHackRule

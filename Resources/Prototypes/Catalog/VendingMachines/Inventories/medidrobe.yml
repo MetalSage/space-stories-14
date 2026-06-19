@@ -1,30 +1,66 @@
 - type: vendingMachineInventory
   id: MediDrobeInventory
   startingInventory:
-    ClothingBackpackDuffelMedical: 4
-    ClothingBackpackMedical: 4
-    ClothingBackpackSatchelMedical: 4
-    ClothingUniformJumpsuitMedicalDoctor: 4
-    ClothingUniformJumpskirtMedicalDoctor: 4
-    ClothingBeltMedical: 4
-    ClothingHeadHatBeretMedic: 4
-    ClothingHeadNurseHat: 4
-    ClothingOuterCoatLab: 4
-    ClothingShoesColorWhite: 4
-    ClothingHandsGlovesLatex: 4
-    ClothingHandsGlovesNitrile: 2
-    ClothingHeadsetMedical: 4
+    # Essential Medical Clothing
+    ClothingEyesHudMedical: 2
+    ClothingEyesEyepatchHudMedical: 2
+    # Optional Clothing
+    ClothingHeadHatBeretMedic: 2
+    ClothingHeadNurseHat: 2
+    ClothingHeadHatParamedicsoft: 1
+    ClothingHeadHatSurgcapGreen: 2
+    ClothingHeadHatSurgcapBlue: 2
+    ClothingHeadHatSurgcapPurple: 2
+    ClothingMaskSterile: 2
+    ClothingHeadsetMedical: 2
+    ClothingBackpackMedical: 2
+    ClothingBackpackDuffelMedical: 2
+    ClothingBackpackSatchelMedical: 2
+    ClothingUniformJumpsuitMedicalDoctor: 2
+    ClothingUniformJumpskirtMedicalDoctor: 2
+    UniformScrubsColorGreen: 2
+    UniformScrubsColorBlue: 2
+    UniformScrubsColorPurple: 2
+    ClothingUniformJumpsuitParamedic: 1
+    ClothingUniformJumpskirtParamedic: 1
+    ClothingOuterCoatLab: 2
     ClothingOuterWinterMed: 2
-    ClothingOuterHospitalGown: 5
-    UniformScrubsColorGreen: 4
-    UniformScrubsColorBlue: 4
-    UniformScrubsColorPurple: 4
-    ClothingHeadHatSurgcapGreen: 4 
-    ClothingHeadHatSurgcapBlue: 4
-    ClothingHeadHatSurgcapPurple: 4
+    ClothingOuterCoatParamedicWB: 1
+    ClothingOuterWinterPara: 1
+    ClothingHandsGlovesLatex: 2
+    ClothingHandsGlovesNitrile: 2
+    ClothingShoesColorBlue: 2
+    ClothingShoesColorWhite: 2
     ClothingShoesBootsWinterMed: 2
   contrabandInventory:
     ClothingUniformJumpskirtOfLife: 1
     ToyFigurineMedicalDoctor: 1
     ToyFigurineParamedic: 1
     ToyFigurineChiefMedicalOfficer: 1
+  prices: # Stories-Economy
+    ClothingBackpackDuffelMedical: 40
+    ClothingBackpackMedical: 40
+    ClothingBackpackSatchelMedical: 40
+    ClothingUniformJumpsuitMedicalDoctor: 40
+    ClothingUniformJumpskirtMedicalDoctor: 40
+    ClothingBeltMedical: 35
+    ClothingHeadHatBeretMedic: 25
+    ClothingHeadNurseHat: 25
+    ClothingOuterCoatLab: 40
+    ClothingShoesColorWhite: 25
+    ClothingHandsGlovesLatex: 20
+    ClothingHandsGlovesNitrile: 30
+    ClothingHeadsetMedical: 50
+    ClothingOuterWinterMed: 80
+    ClothingOuterHospitalGown: 15
+    UniformScrubsColorGreen: 30
+    UniformScrubsColorBlue: 30
+    UniformScrubsColorPurple: 30
+    ClothingHeadHatSurgcapGreen: 15
+    ClothingHeadHatSurgcapBlue: 15
+    ClothingHeadHatSurgcapPurple: 15
+    ClothingShoesBootsWinterMed: 60
+    ClothingUniformJumpskirtOfLife: 120
+    ToyFigurineMedicalDoctor: 100
+    ToyFigurineParamedic: 100
+    ToyFigurineChiefMedicalOfficer: 150

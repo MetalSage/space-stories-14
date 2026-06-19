@@ -1,0 +1,21 @@
+- type: entity
+  parent: BaseComputerCircuitboard
+  id: PRISONComputerShuttleCircuitboard
+  name: prison computer shuttle computer board
+  description: A computer printed circuit board for an prison computer shuttle.
+  components:
+    - type: Sprite
+      state: cpuboard
+    - type: ComputerBoard
+      prototype: PRISONComputerShuttle
+
+- type: entity
+  parent: BaseComputerCircuitboard
+  id: PRISONComputerIdCircuitboard
+  name: prison computer id board
+  description: A computer printed circuit board for an prison computer id.
+  components:
+    - type: Sprite
+      state: cpuboard
+    - type: ComputerBoard
+      prototype: PRISONComputerId

@@ -1,23 +1,23 @@
 ﻿- type: entity
   parent: BaseAction
-  id: STActioPontificToggleNightvision
+  id: STActionPontificToggleNightvision
   name: Ночное зрение
   description: Переключить своё ночное зрение.
   components:
   - type: Action
-    useDelay: 5
+    useDelay: 1
     icon:
       sprite: _Stories/Actions/pontific.rsi
       state: nightvision
   - type: InstantAction
-    event: !type:ToggleNightvisionEvent
+    event: !type:ToggleVisionActionEvent
 
 - type: entity
   parent: BaseAction
   id: STActionPontificPrayer
   name: Dark Prayer Service
   description: A ritual that summons dark forces into this world. Restores filth.
-  categories: [ HideSpawnMenu ]
+  categories: [HideSpawnMenu]
   components:
   - type: Action
     icon:
@@ -33,7 +33,7 @@
   id: STActionPontificBloodyAltar
   name: Dark Altar
   description: Summons an altar from the darkness. Drag creatures onto it to turn them corrupted. Requires 150 Corruption.
-  categories: [ HideSpawnMenu ]
+  categories: [HideSpawnMenu]
   components:
   - type: Action
     icon:
@@ -52,7 +52,7 @@
   id: STActionPontificSpawnMonk
   name: Summon a monk
   description: Summons a cursed monk who is highly resistant to holy damage. Requires 50 Corruption.
-  categories: [ HideSpawnMenu ]
+  categories: [HideSpawnMenu]
   components:
   - type: Action
     icon:
@@ -71,7 +71,7 @@
   id: STActionPontificSpawnGuardian
   name: Summon a knight
   description: Summons a cursed knight. This is a heavily armored warrior, but slow. Requires 100 corruption.
-  categories: [ HideSpawnMenu ]
+  categories: [HideSpawnMenu]
   components:
   - type: Action
     icon:
@@ -90,7 +90,7 @@
   id: STActionPontificFelLightning
   name: Dark Lightning
   description: A powerful bolt of lightning filled with dark energy. Requires 50 Corruption.
-  categories: [ HideSpawnMenu ]
+  categories: [HideSpawnMenu]
   components:
   - type: Action
     icon:
@@ -113,7 +113,7 @@
   id: STActionPontificFlameSwords
   name: Dark Flame
   description: Your swords will burn with fel flames, greatly increasing speed and damage. Requires 80 fel.
-  categories: [ HideSpawnMenu ]
+  categories: [HideSpawnMenu]
   components:
   - type: Action
     icon:
@@ -131,7 +131,7 @@
   id: STActionPontificKudzu
   name: Desecrated Lilies
   description: Creates corrupted lilies that spread and slowly fill the station. Requires 50 corruption.
-  categories: [ HideSpawnMenu ]
+  categories: [HideSpawnMenu]
   components:
   - type: Action
     icon:

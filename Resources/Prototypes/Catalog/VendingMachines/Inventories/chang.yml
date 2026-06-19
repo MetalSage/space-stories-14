@@ -12,3 +12,13 @@
     FoodBakedDumplings: 2
     FoodSoupMiso: 2
 # rice?
+  prices: # Stories-Economy
+    FoodCondimentPacketSoy: 5
+    FoodSnackCookieFortune: 10
+    DrinkRamen: 20
+    DrinkHellRamen: 25
+    FoodSnackChowMein: 25
+    FoodSnackDanDanNoodles: 25
+    PairedChopsticks: 5
+    FoodBakedDumplings: 30
+    FoodSoupMiso: 20

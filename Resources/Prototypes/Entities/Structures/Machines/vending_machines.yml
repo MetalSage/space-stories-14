@@ -273,7 +273,7 @@
   description: A refurbished Booze-O-Mat for boosting operative morale. An imprint of a blood-red hardsuit is visible on one side, and the paint seems ashed off on the other side.
   components:
   - type: VendingMachine
-    pack: BoozeOMatInventory
+    pack: SyndieBoozeOMatInventory # Stories-Economy
     offState: off
     brokenState: broken
     normalState: normal-unshaded

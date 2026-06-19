@@ -31,3 +31,32 @@
     ClothingHeadHatHoodCulthood: 3
     ClothingShoesCult: 4
     BedsheetCult: 4
+  prices: # Stories-Economy
+    ClothingUniformJumpsuitChaplain: 40
+    ClothingUniformJumpskirtChaplain: 40
+    ClothingUniformJumpsuitMonasticRobeDark: 45
+    ClothingUniformJumpsuitMonasticRobeLight: 45
+    ClothingNeckStoleChaplain: 25
+    ClothingOuterHoodieChaplain: 40
+    ClothingOuterHoodieBlack: 40
+    ClothingHeadHatHoodNunHood: 25
+    ClothingOuterNunRobe: 45
+    ClothingHeadHatFez: 30
+    ClothingHeadHatPlaguedoctor: 60
+    ClothingHeadHatWitch: 50
+    ClothingHeadHatWitch1: 50
+    ClothingOuterPlagueSuit: 80
+    ClothingMaskPlague: 50
+    ClothingHeadsetService: 50
+    BoxCandle: 15
+    BoxCandleSmall: 10
+    Urn: 30
+    Bible: 50
+    FoodBakedBunHotX: 15
+    DrinkWineBottleFull: 60
+    ToyFigurineChaplain: 100
+    ClothingNeckScarfStripedBlack: 20
+    ClothingOuterRobesCult: 100
+    ClothingHeadHatHoodCulthood: 80
+    ClothingShoesCult: 50
+    BedsheetCult: 40

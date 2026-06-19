@@ -17,27 +17,29 @@
   - type: MindRole
     antagPrototype: HypnotizedEmpireMember
     exclusiveAntag: true
+    roleType: TeamAntagonist
   - type: HypnotizedEmpireMemberRole
 
 - type: entity
   parent: BaseMindRoleAntag
-  id: MindRoleShadowling
+  id: STMindRoleShadowling
   name: Shadowling role
   components:
   - type: MindRole
-    antagPrototype: Shadowling
+    antagPrototype: STShadowling
     exclusiveAntag: true
     roleType: TeamAntagonist
   - type: ShadowlingRole
 
 - type: entity
   parent: BaseMindRoleAntag
-  id: MindRoleShadowlingThrall
+  id: STMindRoleShadowlingThrall
   name: Shadowling thrall role
   components:
   - type: MindRole
-    antagPrototype: ShadowlingThrall
+    antagPrototype: STShadowlingThrall
     exclusiveAntag: true
+    roleType: TeamAntagonist
   - type: ShadowlingThrallRole
 
 - type: entity
@@ -47,5 +49,5 @@
   components:
   - type: MindRole
     antagPrototype: STPontific
-    roleType: FreeAgent
+    roleType: TeamAntagonist
     subtype: stories-role-subtype-pontific

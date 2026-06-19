@@ -2,7 +2,6 @@ using Content.Shared.CCVar;
 using Content.Shared.Ghost;
 using Content.Shared.StatusIcon;
 using Content.Shared.StatusIcon.Components;
-using Robust.Client.GameObjects;
 using Content.Shared.Stealth.Components;
 using Content.Shared.Whitelist;
 using Robust.Client.GameObjects;
@@ -15,12 +14,12 @@ namespace Content.Client.StatusIcon;
 /// <summary>
 /// This handles rendering gathering and rendering icons on entities.
 /// </summary>
-public sealed class StatusIconSystem : SharedStatusIconSystem
+public sealed partial class StatusIconSystem : SharedStatusIconSystem
 {
-    [Dependency] private readonly IConfigurationManager _configuration = default!;
-    [Dependency] private readonly IOverlayManager _overlay = default!;
-    [Dependency] private readonly IPlayerManager _playerManager = default!;
-    [Dependency] private readonly EntityWhitelistSystem _entityWhitelist = default!;
+    [Dependency] private IConfigurationManager _configuration = default!;
+    [Dependency] private IOverlayManager _overlay = default!;
+    [Dependency] private IPlayerManager _playerManager = default!;
+    [Dependency] private EntityWhitelistSystem _entityWhitelist = default!;
 
     private EntityQuery<GhostComponent> _ghostQuery;
     private EntityQuery<SpriteComponent> _spriteQuery;

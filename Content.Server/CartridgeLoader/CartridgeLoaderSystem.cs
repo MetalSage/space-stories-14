@@ -13,11 +13,11 @@ using Robust.Shared.Player;
 
 namespace Content.Server.CartridgeLoader;
 
-public sealed class CartridgeLoaderSystem : SharedCartridgeLoaderSystem
+public sealed partial class CartridgeLoaderSystem : SharedCartridgeLoaderSystem
 {
-    [Dependency] private readonly ContainerSystem _containerSystem = default!;
-    [Dependency] private readonly UserInterfaceSystem _userInterfaceSystem = default!;
-    [Dependency] private readonly PdaSystem _pda = default!;
+    [Dependency] private ContainerSystem _containerSystem = default!;
+    [Dependency] private UserInterfaceSystem _userInterfaceSystem = default!;
+    [Dependency] private PdaSystem _pda = default!;
 
     public override void Initialize()
     {
@@ -338,6 +338,14 @@ public sealed class CartridgeLoaderSystem : SharedCartridgeLoaderSystem
 
     protected override void OnItemInserted(EntityUid uid, CartridgeLoaderComponent loader, EntInsertedIntoContainerMessage args)
     {
+        // Stories-Economy-Start
+        if (loader.ActiveProgram.HasValue)
+        {
+            var ev = new CartridgeLoaderExternalContainerChangedEvent(uid, args.Container.ID, args.Entity, true);
+            RaiseLocalEvent(loader.ActiveProgram.Value, ref ev);
+        }
+        // Stories-Economy-End
+
         if (args.Container.ID != InstalledContainerId && args.Container.ID != loader.CartridgeSlot.ID)
             return;
 
@@ -350,6 +358,14 @@ public sealed class CartridgeLoaderSystem : SharedCartridgeLoaderSystem
 
     protected override void OnItemRemoved(EntityUid uid, CartridgeLoaderComponent loader, EntRemovedFromContainerMessage args)
     {
+        // Stories-Economy-Start
+        if (loader.ActiveProgram.HasValue)
+        {
+            var ev = new CartridgeLoaderExternalContainerChangedEvent(uid, args.Container.ID, args.Entity, false);
+            RaiseLocalEvent(loader.ActiveProgram.Value, ref ev);
+        }
+        // Stories-Economy-End
+
         if (args.Container.ID != InstalledContainerId && args.Container.ID != loader.CartridgeSlot.ID)
             return;
 
@@ -519,3 +535,22 @@ public sealed class CartridgeAfterInteractEvent : EntityEventArgs
 /// </summary>
 [ByRefEvent]
 public record struct ProgramInstallationAttempt(EntityUid LoaderUid, string Prototype, bool Cancelled = false);
+
+// Stories-Economy-Start
+[ByRefEvent]
+public readonly struct CartridgeLoaderExternalContainerChangedEvent
+{
+    public readonly EntityUid Loader;
+    public readonly string ContainerId;
+    public readonly EntityUid Item;
+    public readonly bool Inserted;
+
+    public CartridgeLoaderExternalContainerChangedEvent(EntityUid loader, string containerId, EntityUid item, bool inserted)
+    {
+        Loader = loader;
+        ContainerId = containerId;
+        Item = item;
+        Inserted = inserted;
+    }
+}
+// Stories-Economy-End

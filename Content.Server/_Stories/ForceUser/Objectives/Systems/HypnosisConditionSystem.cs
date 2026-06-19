@@ -1,14 +1,13 @@
 using System.Linq;
 using Content.Server.Objectives.Components;
-using Content.Server.Roles;
-using Content.Shared.Objectives.Components;
 using Content.Shared._Stories.Empire.Components;
+using Content.Shared.Objectives.Components;
 
 namespace Content.Server.Objectives.Systems;
 
-public sealed class HypnosisConditionSystem : EntitySystem
+public sealed partial class HypnosisConditionSystem : EntitySystem
 {
-    [Dependency] private readonly NumberObjectiveSystem _number = default!;
+    [Dependency] private NumberObjectiveSystem _number = default!;
 
     public override void Initialize()
     {
@@ -21,6 +20,6 @@ public sealed class HypnosisConditionSystem : EntitySystem
     {
         var hypnosised = EntityQuery<HypnotizedEmpireComponent>();
 
-        args.Progress = hypnosised.Count() / (float) _number.GetTarget(uid);
+        args.Progress = hypnosised.Count() / (float)_number.GetTarget(uid);
     }
 }

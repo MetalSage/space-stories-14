@@ -5,9 +5,10 @@ using Content.Client.Clickable;
 using Content.Client.DebugMon;
 using Content.Client._Stories.DiscordAuth;
 using Content.Client._Stories.JoinQueue;
-using Content.Client._Stories.Partners;
+using Content.Client._Stories.Sponsors;
 using Content.Client.Options;
 using Content.Client.Eui;
+using Content.Client.FeedbackPopup;
 using Content.Client.Fullscreen;
 using Content.Client.GameTicking.Managers;
 using Content.Client.GhostKick;
@@ -27,6 +28,7 @@ using Content.Client.Lobby;
 using Content.Client.Players.RateLimiting;
 using Content.Shared.Administration.Managers;
 using Content.Shared.Chat;
+using Content.Shared.FeedbackSystem;
 using Content.Shared.IoC;
 using Content.Shared.Players.PlayTimeTracking;
 using Content.Shared.Players.RateLimiting;
@@ -66,7 +68,9 @@ namespace Content.Client.IoC
             collection.Register<SharedPlayerRateLimitManager, PlayerRateLimitManager>();
             collection.Register<TitleWindowManager>();
             collection.Register<ClientsidePlaytimeTrackingManager>();
-            IoCManager.Register<PartnersManager>(); // Corvax-Sponsors
+            collection.Register<ClientFeedbackManager>();
+            collection.Register<ISharedFeedbackManager, ClientFeedbackManager>();
+            IoCManager.Register<SponsorsManager>(); // Corvax-Sponsors
             IoCManager.Register<JoinQueueManager>(); // Corvax-Queue
             IoCManager.Register<DiscordAuthManager>(); // Corvax-DiscordAuth
         }

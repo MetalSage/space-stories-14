@@ -1,36 +1,45 @@
-using Robust.Shared.Prototypes;
-using Robust.Shared.GameStates;
 using Robust.Shared.Audio;
-using Robust.Shared.Serialization;
 using Robust.Shared.Containers;
+using Robust.Shared.GameStates;
+using Robust.Shared.Prototypes;
+using Robust.Shared.Serialization;
 
 namespace Content.Shared._Stories.Cards.Stack;
 
 [RegisterComponent, NetworkedComponent, AutoGenerateComponentState]
 public sealed partial class CardStackComponent : Component
 {
-    [ViewVariables, DataField("content")]
-    public List<EntProtoId> InitialContent = [];
-
-    [ViewVariables, AutoNetworkedField]
-    public List<EntityUid> CardOrder = new();
-
-    [ViewVariables(VVAccess.ReadWrite)]
-    public int MaxCards = 216;
+    [DataField]
+    public SoundSpecifier AddCardSound = new SoundCollectionSpecifier("STAddCard");
 
     [ViewVariables]
     public Container CardContainer;
 
-    [DataField]
-    public SoundSpecifier AddCardSound = new SoundCollectionSpecifier("STAddCard");
+    [ViewVariables(VVAccess.ReadWrite)]
+    [DataField("flipCount")]
+    [AutoNetworkedField]
+    public int FlipCount;
+
+    [ViewVariables]
+    [DataField("content")]
+    public List<EntProtoId> InitialContent = [];
+
+    [ViewVariables(VVAccess.ReadWrite)]
+    public int MaxCards = 216;
 
     [DataField]
     public SoundSpecifier RemoveCardSound = new SoundCollectionSpecifier("STRemoveCard");
 }
 
-[Serializable, NetSerializable]
-public enum CardStackVisuals : byte
+[NetSerializable, Serializable]
+public enum CardStackVisual : byte
 {
-    CardsCount,
-    OrderEdited
+    State,
+}
+
+[NetSerializable, Serializable]
+public sealed class CardStackShuffledEvent(NetEntity entity, List<NetEntity>? cards) : EntityEventArgs
+{
+    public List<NetEntity>? Cards = cards;
+    public NetEntity Entity = entity;
 }

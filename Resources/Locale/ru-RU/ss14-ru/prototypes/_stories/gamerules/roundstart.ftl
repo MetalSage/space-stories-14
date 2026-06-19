@@ -1,2 +1,4 @@
-ent-Shadowling = { ent-BaseGameRule }
+ent-STShadowling = { ent-BaseGameRule }
+    .desc = { ent-BaseGameRule.desc }
+ent-STPontific = { ent-BaseGameRule }
     .desc = { ent-BaseGameRule.desc }

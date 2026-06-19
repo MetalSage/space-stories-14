@@ -1,1 +1,1 @@
-admin-verb-make-shadowling = Сделать цель тенеморфом.
+stories-admin-verb-make-shadowling = Сделать цель тенеморфом.

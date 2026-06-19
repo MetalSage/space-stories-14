@@ -13,10 +13,10 @@ public sealed partial class ReagentStatusIconComponent : Component
     public List<MobState> AllowedStates = new();
 
     [DataField]
-    public string Solution = "chemicals";
+    public ReagentId Reagent;
 
     [DataField]
-    public ReagentId Reagent;
+    public string Solution = "chemicals";
 
     [DataField]
     public ProtoId<ReagentIconPrototype> StatusIcon;

@@ -12,3 +12,14 @@
   contrabandInventory:
     ProximitySensor: 1
     LeftArmBorg: 1
+  prices: # Stories-Economy
+    RemoteSignaller: 40
+    Igniter: 30
+    Wirecutter: 40
+    Screwdriver: 40
+    CableApcStack: 20
+    FlashlightLantern: 25
+    PowerCellSmallPrinted: 30
+    MicroManipulatorStockPart: 50
+    ProximitySensor: 40
+    LeftArmBorg: 150

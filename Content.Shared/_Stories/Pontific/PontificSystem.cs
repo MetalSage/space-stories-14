@@ -1,24 +1,22 @@
 using Content.Shared.Actions;
-using Content.Shared.Mobs.Systems;
-using Content.Shared.StatusEffect;
 using Content.Shared.Movement.Systems;
+using Content.Shared.StatusEffectNew;
 using Robust.Shared.Audio.Systems;
+using Robust.Shared.Prototypes;
 
 namespace Content.Shared._Stories.Pontific;
 
 public sealed partial class PontificSystem : EntitySystem
 {
-    [ValidatePrototypeId<StatusEffectPrototype>]
-    private const string PontificFlameStatusEffect = "STPontificFlame";
+    private static readonly EntProtoId PontificFlameStatusEffect = "STPontificFlame";
+    private static readonly EntProtoId PontificPrayerStatusEffect = "STPontificPrayer";
 
-    [ValidatePrototypeId<StatusEffectPrototype>]
-    private const string PontificPrayerStatusEffect = "STPontificPrayer";
+    [Dependency] private SharedActionsSystem _action = default!;
+    [Dependency] private SharedAppearanceSystem _appearance = default!;
+    [Dependency] private SharedAudioSystem _audio = default!;
 
-    [Dependency] private readonly MovementSpeedModifierSystem _movementSpeed = default!;
-    [Dependency] private readonly SharedAppearanceSystem _appearance = default!;
-    [Dependency] private readonly SharedAudioSystem _audio = default!;
-    [Dependency] private readonly SharedActionsSystem _action = default!;
-    [Dependency] private readonly StatusEffectsSystem _statusEffects = default!;
+    [Dependency] private MovementSpeedModifierSystem _movementSpeed = default!;
+    [Dependency] private StatusEffectsSystem _statusEffects = default!;
 
     public override void Initialize()
     {
@@ -32,6 +30,25 @@ public sealed partial class PontificSystem : EntitySystem
 
         InitializeFlame();
         InitializePrayer();
+    }
+
+    public override void Update(float frameTime)
+    {
+        base.Update(frameTime);
+
+        var queryFlame = EntityQueryEnumerator<PontificFlameComponent>();
+        while (queryFlame.MoveNext(out var uid, out _))
+        {
+            if (!_statusEffects.HasStatusEffect(uid, PontificFlameStatusEffect))
+                RemComp<PontificFlameComponent>(uid);
+        }
+
+        var queryPrayer = EntityQueryEnumerator<PontificPrayerComponent>();
+        while (queryPrayer.MoveNext(out var uid, out _))
+        {
+            if (!_statusEffects.HasStatusEffect(uid, PontificPrayerStatusEffect))
+                RemComp<PontificPrayerComponent>(uid);
+        }
     }
 
     private void OnInit(Entity<PontificComponent> entity, ref ComponentInit args)
@@ -60,7 +77,7 @@ public sealed partial class PontificSystem : EntitySystem
         if (HasComp<PontificFlameComponent>(entity))
             return;
 
-        if (_statusEffects.TryAddStatusEffect<PontificFlameComponent>(entity, PontificFlameStatusEffect, args.Duration, true))
+        if (_statusEffects.TrySetStatusEffectDuration(entity, PontificFlameStatusEffect, args.Duration))
         {
             EnsureComp<PontificFlameComponent>(entity).DamageMultiplier = args.DamageMultiplier;
             EnsureComp<PontificFlameComponent>(entity).SpeedMultiplier = args.SpeedMultiplier;
@@ -77,10 +94,12 @@ public sealed partial class PontificSystem : EntitySystem
         if (HasComp<PontificFlameComponent>(entity))
             return;
 
-        if (_statusEffects.TryAddStatusEffect<PontificPrayerComponent>(entity, PontificPrayerStatusEffect, args.Duration, true))
+        if (_statusEffects.TrySetStatusEffectDuration(entity, PontificPrayerStatusEffect, args.Duration))
         {
             if (args.PrayerSound is { } sound)
                 _audio.PlayPvs(sound, entity);
+
+            EnsureComp<PontificPrayerComponent>(entity);
 
             args.Handled = true;
         }

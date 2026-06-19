@@ -1,0 +1,162 @@
+- type: markingsGroup
+  parent: Undergarments
+  id: Felinid
+  limits:
+    enum.HumanoidVisualLayers.Hair:
+      limit: 1
+      required: false
+    enum.HumanoidVisualLayers.FacialHair:
+      limit: 1
+      required: false
+    enum.HumanoidVisualLayers.Tail:
+      limit: 1
+      required: true
+      default: [ FelinidTailBasic ]
+    enum.HumanoidVisualLayers.Chest:
+      limit: 1
+      required: false
+    enum.HumanoidVisualLayers.HeadTop:
+      limit: 1
+      required: true
+      default: [ FelinidEarsBasic ]
+    enum.HumanoidVisualLayers.LArm:
+      limit: 1
+      required: false
+    enum.HumanoidVisualLayers.RArm:
+      limit: 1
+      required: false
+    enum.HumanoidVisualLayers.LHand:
+      limit: 1
+      required: false
+    enum.HumanoidVisualLayers.RHand:
+      limit: 1
+      required: false
+    enum.HumanoidVisualLayers.LLeg:
+      limit: 1
+      required: false
+    enum.HumanoidVisualLayers.RLeg:
+      limit: 1
+      required: false
+    enum.HumanoidVisualLayers.LFoot:
+      limit: 1
+      required: false
+    enum.HumanoidVisualLayers.RFoot:
+      limit: 1
+      required: false
+
+- type: entity
+  parent: BaseSpeciesAppearance
+  id: AppearanceFelinid
+  name: felinid appearance
+  components:
+  - type: InitialBody
+    organs:
+      Torso: OrganFelinidTorso
+      Head: OrganFelinidHead
+      ArmLeft: OrganFelinidArmLeft
+      ArmRight: OrganFelinidArmRight
+      HandRight: OrganFelinidHandRight
+      HandLeft: OrganFelinidHandLeft
+      LegLeft: OrganFelinidLegLeft
+      LegRight: OrganFelinidLegRight
+      FootLeft: OrganFelinidFootLeft
+      FootRight: OrganFelinidFootRight
+      Brain: OrganHumanBrain
+      Eyes: OrganHumanEyes
+      Tongue: OrganHumanTongue
+      Appendix: OrganHumanAppendix
+      Ears: OrganHumanEars
+      Lungs: OrganHumanLungs
+      Heart: OrganAnimalHeart
+      Stomach: OrganReptilianStomach
+      Liver: OrganAnimalLiver
+      Kidneys: OrganHumanKidneys
+  - type: HumanoidProfile
+    species: Felinid
+
+- type: entity
+  parent:
+  - AppearanceFelinid
+  - BaseSpeciesMobOrganic
+  id: MobFelinid
+  name: Urist McFelinid
+  components:
+  - type: FootstepModifier
+    footstepSoundCollection: null
+  - type: FlashDebuff
+  - type: Hunger
+  - type: Thirst
+  - type: Sprite
+    drawdepth: Mobs
+  - type: Vocal
+    sounds:
+      Male: MaleFelinid
+      Unsexed: MaleFelinid
+      Female: FemaleFelinid
+  - type: Speech
+    allowedEmotes: ['Hiss', 'Meow', 'Mew', 'Growl', 'Purr']
+
+- type: entity
+  parent: OrganBase
+  id: OrganFelinid
+  abstract: true
+  suffix: Felinid
+
+- type: entity
+  parent: OrganFelinid
+  id: OrganFelinidExternal
+  abstract: true
+  components:
+  - type: Sprite
+    sprite: Mobs/Species/Human/parts.rsi
+  - type: VisualOrgan
+    data:
+      sprite: Mobs/Species/Human/parts.rsi
+  - type: VisualOrganMarkings
+    markingData:
+      group: Felinid
+
+- type: entity
+  id: OrganFelinidTorso
+  parent: [ OrganBaseTorsoSexed, OrganBaseTorso, OrganFelinidExternal ]
+
+- type: entity
+  id: OrganFelinidHead
+  parent: [ OrganBaseHeadSexed, OrganBaseHead, OrganFelinidExternal ]
+  components:
+  - type: VisualOrganMarkings
+    hideableLayers:
+    - enum.HumanoidVisualLayers.Hair
+    - enum.HumanoidVisualLayers.Snout
+
+- type: entity
+  id: OrganFelinidArmLeft
+  parent: [ OrganBaseArmLeft, OrganFelinidExternal ]
+
+- type: entity
+  id: OrganFelinidArmRight
+  parent: [ OrganBaseArmRight, OrganFelinidExternal ]
+
+- type: entity
+  id: OrganFelinidHandLeft
+  parent: [ OrganBaseHandLeft, OrganFelinidExternal ]
+
+- type: entity
+  id: OrganFelinidHandRight
+  parent: [ OrganBaseHandRight, OrganFelinidExternal ]
+
+- type: entity
+  id: OrganFelinidLegLeft
+  parent: [ OrganBaseLegLeft, OrganFelinidExternal ]
+
+- type: entity
+  id: OrganFelinidLegRight
+  parent: [ OrganBaseLegRight, OrganFelinidExternal ]
+
+- type: entity
+  id: OrganFelinidFootLeft
+  parent: [ OrganBaseFootLeft, OrganFelinidExternal ]
+
+- type: entity
+  id: OrganFelinidFootRight
+  parent: [ OrganBaseFootRight, OrganFelinidExternal ]

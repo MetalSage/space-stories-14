@@ -8,9 +8,6 @@ namespace Content.Shared._Stories.Reflectors;
 public sealed partial class ReflectorComponent : Component
 {
     [DataField]
-    public EntityWhitelist? Whitelist;
-
-    [DataField]
     public EntityWhitelist? Blacklist;
 
     [DataField]
@@ -21,10 +18,13 @@ public sealed partial class ReflectorComponent : Component
 
     [DataField, AutoNetworkedField]
     public ReflectorType State = ReflectorType.Simple;
+
+    [DataField]
+    public EntityWhitelist? Whitelist;
 }
 
 [Serializable, NetSerializable]
-public enum  ReflectorType
+public enum ReflectorType
 {
     Simple,
     Angular,

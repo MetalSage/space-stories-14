@@ -23,3 +23,25 @@
     FoodShakerPepper: 1
     FoodCondimentBottleKetchup: 1
     ReagentContainerMayo: 1
+  prices: # Stories-Economy
+    FoodCondimentPacketAstrotame: 2
+    FoodCondimentPacketBbq: 2
+    FoodCondimentPacketColdsauce: 2
+    FoodCondimentPacketHorseradish: 2
+    FoodCondimentPacketHotsauce: 2
+    FoodCondimentPacketKetchup: 2
+    FoodCondimentPacketMustard: 2
+    FoodCondimentPacketPepper: 2
+    FoodCondimentPacketSalt: 2
+    FoodCondimentPacketSoy: 2
+    FoodCondimentPacketSugar: 2
+    FoodCondimentPacketCornoil: 2
+    ForkPlastic: 1
+    SpoonPlastic: 1
+    KnifePlastic: 1
+    FoodPlatePlastic: 5
+    FoodPlateSmallPlastic: 5
+    FoodShakerSalt: 15
+    FoodShakerPepper: 15
+    FoodCondimentBottleKetchup: 20
+    ReagentContainerMayo: 20

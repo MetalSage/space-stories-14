@@ -24,7 +24,7 @@
   - AllHostile
   - Wizard
   - Xenoborg
-  - Shadowling # Stories-Shadowling
+  - STShadowling # Stories-Shadowling
   - STUnholy # Stories-Pontific
 
 - type: npcFaction
@@ -81,7 +81,7 @@
   - AllHostile
   - Wizard
   - Xenoborg
-  - Shadowling # Stories-Shadowling
+  - STShadowling # Stories-Shadowling
   - STUnholy # Stories-Pontific
 
 - type: npcFaction
@@ -121,7 +121,7 @@
   - Zombie
   - SimpleHostile
   - Dragon
-  - Shadowling # Stories-Shadowling
+  - STShadowling # Stories-Shadowling
   - AllHostile
   - Wizard
   - Xenoborg

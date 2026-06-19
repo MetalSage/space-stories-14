@@ -49,6 +49,28 @@
 
 - type: entity
   parent: BasePDA
+  id: STJudgePDA
+  name: judge PDA
+  description: Justice and profit are best friends.
+  components:
+  - type: Sprite
+    sprite: _Stories/Objects/Devices/pda.rsi
+  - type: Pda
+    id: STJudgeIDCard
+  - type: Appearance
+    appearanceDataInit:
+      enum.PdaVisuals.PdaType:
+        !type:String
+        pda-judge
+  - type: PdaBorderColor
+    borderColor: "#a36042"
+    accentVColor: "#dfdfdf"
+  - type: Icon
+    sprite: _Stories/Objects/Devices/pda.rsi
+    state: pda-judge
+
+- type: entity
+  parent: BasePDA
   id: PRISONPDAHeadOfPrison
   name: КПК начальника тюрьмы
   description: Этот КПК - ваш путь к свободе.

@@ -21,8 +21,6 @@
     interfaces:
       enum.ShuttleConsoleUiKey.Key:
         type: ShuttleConsoleBoundUserInterface
-  - type: WorldLoader
-    radius: 256
   - type: RadarConsole
     maxRange: 256
   - type: ContainerContainer
@@ -45,7 +43,7 @@
           - ShuttleDestinationCoordinates
   - type: PowerCellDraw
     drawRate: 0
-    useRate: 20
+    useCharge: 20
   - type: ActivatableUIRequiresPowerCell
   - type: StaticPrice
     price: 500

@@ -104,3 +104,26 @@
     sprite: _Stories/Clothing/Uniforms/Jumpsuit/Scientist_Sweater.rsi
   - type: Clothing
     sprite: _Stories/Clothing/Uniforms/Jumpsuit/Scientist_Sweater.rsi
+
+
+- type: entity
+  parent: ClothingUniformBase
+  id: STClothingUniformJumpsuitProsecutorBlue
+  name: blue prosecutor's jumpsuit
+  description: A strict suit worthy of the highest ranks of NanoTrasen.
+  components:
+  - type: Sprite
+    sprite: _Stories/Clothing/Uniforms/Jumpsuit/prosecutorblue.rsi
+  - type: Clothing
+    sprite: _Stories/Clothing/Uniforms/Jumpsuit/prosecutorblue.rsi
+
+- type: entity
+  parent: ClothingUniformBase
+  id: STClothingUniformJumpsuitProsecutorBlack
+  name: black prosecutor's jumpsuit
+  description: A strict suit worthy of the highest ranks of NanoTrasen.
+  components:
+  - type: Sprite
+    sprite: _Stories/Clothing/Uniforms/Jumpsuit/prosecutorblack.rsi
+  - type: Clothing
+    sprite: _Stories/Clothing/Uniforms/Jumpsuit/prosecutorblack.rsi

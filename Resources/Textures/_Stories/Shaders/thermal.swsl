@@ -1,0 +1,21 @@
+light_mode unshaded;
+
+void fragment() {
+    highp vec4 color = zTexture(UV);
+    highp float luma = dot(color.rgb, vec3(0.299, 0.587, 0.114));
+
+    highp float heat = smoothstep(0.1, 0.9, luma);
+
+    highp vec3 col;
+
+    col.r = smoothstep(0.0, 0.35, heat);
+    col.g = smoothstep(0.35, 0.8, heat);
+
+    highp float blueCold = (1.0 - smoothstep(0.0, 0.3, heat)) * 0.5;
+    highp float blueHot = smoothstep(0.8, 1.0, heat);
+    col.b = max(blueCold, blueHot);
+
+    col += vec3(pow(heat, 3.0)) * 0.3;
+
+    COLOR = vec4(col, color.a);
+}

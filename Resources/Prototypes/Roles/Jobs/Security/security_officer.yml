@@ -10,18 +10,19 @@
   startingGear: SecurityOfficerGear
   icon: "JobIconSecurityOfficer"
   supervisors: job-supervisors-hos
-  canBeAntag: false
   access:
   - Security
   - Brig
   - Maintenance
   - External
   - Cryogenics
-  - GenpopEnter
-  - GenpopLeave
   special:
   - !type:AddImplantSpecial
     implants: [ MindShieldImplant ]
+  # Stories-Economy-Start
+  minBankBalance: 200
+  maxBankBalance: 250
+  # Stories-Economy-End
 
 - type: startingGear
   id: SecurityOfficerGear

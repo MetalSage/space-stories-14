@@ -1,17 +1,18 @@
-using Robust.Shared.Utility;
 using Content.Shared.FixedPoint;
-using Content.Shared.Alert;
 using Content.Shared.Mobs.Systems;
+using Robust.Shared.Utility;
 
 namespace Content.Shared._Stories.Force;
+
 public sealed partial class ForceSystem : EntitySystem // TODO: Навести порядок с Float и FixedPoint2
 {
-    [Dependency] private readonly AlertsSystem _alerts = default!;
-    [Dependency] private readonly MobStateSystem _mobState = default!;
+    [Dependency] private MobStateSystem _mobState = default!;
+
     public override void Initialize()
     {
         base.Initialize();
     }
+
     public override void Update(float frameTime)
     {
         base.Update(frameTime);
@@ -27,15 +28,24 @@ public sealed partial class ForceSystem : EntitySystem // TODO: Навести �
             RefreshDebuffs(uid);
 
             if (comp.CurrentDebuff == 0 && _mobState.IsAlive(uid))
-                if (!TryAddVolume(uid, comp.PassiveVolume.Float() * frameTime, comp) && comp.Volume + comp.PassiveVolume * frameTime > comp.MaxVolume)
-                    TryAddVolume(uid, (comp.MaxVolume.Float() - comp.Volume.Float()), comp);
+            {
+                if (!TryAddVolume(uid, comp.PassiveVolume.Float() * frameTime, comp) &&
+                    comp.Volume + comp.PassiveVolume * frameTime > comp.MaxVolume)
+                    TryAddVolume(uid, comp.MaxVolume.Float() - comp.Volume.Float(), comp);
+            }
         }
     }
-    public bool SetVolume(EntityUid uid, float volume, float passiveVolume, float maxVolume, ForceComponent? component = null)
+
+    public bool SetVolume(EntityUid uid,
+        float volume,
+        float passiveVolume,
+        float maxVolume,
+        ForceComponent? component = null)
     {
         if (volume <= 0 || maxVolume <= 0 || volume > maxVolume || passiveVolume <= 0)
         {
-            DebugTools.Assert(volume < maxVolume, "Attempted to set volume bigger than max volume"); // ? Дать возможность превышать лимит ?
+            DebugTools.Assert(volume < maxVolume,
+                "Attempted to set volume bigger than max volume"); // ? Дать возможность превышать лимит ?
             DebugTools.Assert(volume == 0, "Attempted to set negative value to volume");
             DebugTools.Assert(maxVolume > 0, "Attempted to set negative value or 0 to max volume");
             DebugTools.Assert(passiveVolume == 0, "Attempted to set negative value to passive volume");
@@ -50,13 +60,18 @@ public sealed partial class ForceSystem : EntitySystem // TODO: Навести �
         component.PassiveVolume = passiveVolume;
         return true;
     }
+
     /// <summary>
-    ///     Попытаться перенести некоторое количество маны из существа в другое существо.
+    /// Попытаться перенести некоторое количество маны из существа в другое существо.
     /// </summary>
     /// <param name="uid">Откуда будет забрано.</param>
     /// <param name="toUid">Куда будет добавлено.</param>
     /// <param name="amount">Сколько будет перенесенно.</param>
-    public bool TryTransferVolume(EntityUid uid, EntityUid toUid, float amount, ForceComponent? component = null, ForceComponent? toComponent = null)
+    public bool TryTransferVolume(EntityUid uid,
+        EntityUid toUid,
+        float amount,
+        ForceComponent? component = null,
+        ForceComponent? toComponent = null)
     {
         if (amount <= 0)
         {
@@ -73,7 +88,7 @@ public sealed partial class ForceSystem : EntitySystem // TODO: Навести �
         if (toComponent.Volume + amount > toComponent.MaxVolume)
             return false;
 
-        var ev = new TransferVolumeAttemptEvent(toUid, uid, oldVolume: toComponent.Volume, newVolume: toComponent.Volume + amount);
+        var ev = new TransferVolumeAttemptEvent(toUid, uid, toComponent.Volume, toComponent.Volume + amount);
         RaiseLocalEvent(uid, ev);
 
         if (ev.Cancelled)
@@ -83,13 +98,18 @@ public sealed partial class ForceSystem : EntitySystem // TODO: Навести �
     }
 
     /// <summary>
-    ///     Перенести некоторое количество маны из существа в другое существо.
-    ///     В отличии от <see cref="TryTransferVolume"/> оно может переполнить <see cref="ForceComponent.Volume"/> сущности в которую переносят.
+    /// Перенести некоторое количество маны из существа в другое существо.
+    /// В отличии от <see cref="TryTransferVolume" /> оно может переполнить <see cref="ForceComponent.Volume" /> сущности в
+    /// которую переносят.
     /// </summary>
     /// <param name="uid">Откуда будет забрано.</param>
     /// <param name="toUid">Куда будет добавлено.</param>
     /// <param name="amount">Сколько будет перенесенно.</param>
-    private bool TransferVolume(EntityUid uid, EntityUid toUid, float amount, ForceComponent? component = null, ForceComponent? toComponent = null)
+    private bool TransferVolume(EntityUid uid,
+        EntityUid toUid,
+        float amount,
+        ForceComponent? component = null,
+        ForceComponent? toComponent = null)
     {
         if (amount <= 0)
         {
@@ -110,7 +130,7 @@ public sealed partial class ForceSystem : EntitySystem // TODO: Навести �
     }
 
     /// <summary>
-    ///     Попытаться добавить ману существу. Не может переполнить ману выше лимита.
+    /// Попытаться добавить ману существу. Не может переполнить ману выше лимита.
     /// </summary>
     /// <param name="uid">Существу куда добавлять.</param>
     /// <param name="toAdd">Сколько добавлять.</param>
@@ -121,12 +141,17 @@ public sealed partial class ForceSystem : EntitySystem // TODO: Навести �
             DebugTools.Assert(toAdd == 0, "Attempted to add negative force volume");
             return false;
         }
+
         if (!Resolve(uid, ref component))
             return false;
         if (component.Volume + toAdd > component.MaxVolume)
             return false;
 
-        var ev = new VolumeChangeAttemptEvent(uid, oldVolume: component.Volume, newVolume: component.Volume + toAdd, component.CurrentDebuff.Float(), component.MaxVolume);
+        var ev = new VolumeChangeAttemptEvent(uid,
+            component.Volume,
+            component.Volume + toAdd,
+            component.CurrentDebuff.Float(),
+            component.MaxVolume);
         RaiseLocalEvent(uid, ev);
 
         if (ev.Cancelled)
@@ -136,7 +161,7 @@ public sealed partial class ForceSystem : EntitySystem // TODO: Навести �
     }
 
     /// <summary>
-    ///     Добавить ману существу. Может переполнить ману выше лимита.
+    /// Добавить ману существу. Может переполнить ману выше лимита.
     /// </summary>
     /// <param name="uid">Существу куда добавлять.</param>
     /// <param name="toAdd">Сколько добавлять.</param>
@@ -147,10 +172,15 @@ public sealed partial class ForceSystem : EntitySystem // TODO: Навести �
             DebugTools.Assert(toAdd == 0, "Attempted to add negative force volume");
             return false;
         }
+
         if (!Resolve(uid, ref component))
             return false;
 
-        var ev = new VolumeChangedEvent(uid, oldVolume: component.Volume, newVolume: component.Volume + toAdd, component.CurrentDebuff.Float(), component.MaxVolume);
+        var ev = new VolumeChangedEvent(uid,
+            component.Volume,
+            component.Volume + toAdd,
+            component.CurrentDebuff.Float(),
+            component.MaxVolume);
         RaiseLocalEvent(uid, ev);
 
         component.Volume += toAdd;
@@ -160,7 +190,7 @@ public sealed partial class ForceSystem : EntitySystem // TODO: Навести �
     }
 
     /// <summary>
-    ///     Попытаться убрать ману из существа. Не может сделать значение маны отрицательным.
+    /// Попытаться убрать ману из существа. Не может сделать значение маны отрицательным.
     /// </summary>
     /// <param name="uid">Существу у которого будет уменьшено.</param>
     /// <param name="toRemove">На сколько уменьшить.</param>
@@ -171,12 +201,17 @@ public sealed partial class ForceSystem : EntitySystem // TODO: Навести �
             DebugTools.Assert(toRemove == 0, "Attempted to remove negative force volume");
             return false;
         }
+
         if (!Resolve(uid, ref component))
             return false;
         if (component.Volume - toRemove < 0)
             return false;
 
-        var ev = new VolumeChangeAttemptEvent(uid, oldVolume: component.Volume, newVolume: component.Volume - toRemove, component.CurrentDebuff.Float(), component.MaxVolume);
+        var ev = new VolumeChangeAttemptEvent(uid,
+            component.Volume,
+            component.Volume - toRemove,
+            component.CurrentDebuff.Float(),
+            component.MaxVolume);
         RaiseLocalEvent(uid, ev);
 
         if (ev.Cancelled)
@@ -186,7 +221,7 @@ public sealed partial class ForceSystem : EntitySystem // TODO: Навести �
     }
 
     /// <summary>
-    ///     Убрать ману из существа. Не может сделать значение маны отрицательным.
+    /// Убрать ману из существа. Не может сделать значение маны отрицательным.
     /// </summary>
     /// <param name="uid">Существу у которого будет уменьшено.</param>
     /// <param name="toRemove">На сколько уменьшить.</param>
@@ -197,35 +232,48 @@ public sealed partial class ForceSystem : EntitySystem // TODO: Навести �
             DebugTools.Assert(toRemove == 0, "Attempted to remove negative force volume");
             return false;
         }
+
         if (!Resolve(uid, ref component))
             return false;
         if (component.Volume - toRemove < 0)
             return false;
 
-        var ev = new VolumeChangedEvent(uid, oldVolume: component.Volume, newVolume: component.Volume - toRemove, component.CurrentDebuff.Float(), component.MaxVolume);
+        var ev = new VolumeChangedEvent(uid,
+            component.Volume,
+            component.Volume - toRemove,
+            component.CurrentDebuff.Float(),
+            component.MaxVolume);
         RaiseLocalEvent(uid, ev);
 
         component.Volume -= toRemove;
 
-        component.CurrentDebuff += (toRemove / component.MaxVolume.Float()) * 10;
+        component.CurrentDebuff += toRemove / component.MaxVolume.Float() * 10;
         return true;
     }
 
     #region Debuffs
+
     public void RefreshDebuffs(EntityUid uid, ForceComponent? component = null)
     {
         if (!Resolve(uid, ref component))
             return;
-        RaiseLocalEvent(uid, new RefreshDebuffsEvent(uid, component.CurrentDebuff.Float(), component.Volume.Float(), component.MaxVolume.Float()));
+        RaiseLocalEvent(uid,
+            new RefreshDebuffsEvent(uid,
+                component.CurrentDebuff.Float(),
+                component.Volume.Float(),
+                component.MaxVolume.Float()));
     }
+
     #endregion
 }
+
 public sealed class RefreshDebuffsEvent : EntityEventArgs
 {
-    public readonly EntityUid EntityUid;
     public readonly float CurrentDebuff;
     public readonly float CurrentVolume;
+    public readonly EntityUid EntityUid;
     public readonly float MaxVolume;
+
     public RefreshDebuffsEvent(EntityUid uid, float currentDebuff, float currentVolume, float maxVolume)
     {
         EntityUid = uid;
@@ -234,12 +282,14 @@ public sealed class RefreshDebuffsEvent : EntityEventArgs
         MaxVolume = maxVolume;
     }
 }
+
 public sealed class TransferVolumeAttemptEvent : CancellableEntityEventArgs
 {
     public readonly EntityUid EntityUid;
-    public readonly EntityUid User;
-    public readonly FixedPoint2 OldVolume;
     public readonly FixedPoint2 NewVolume;
+    public readonly FixedPoint2 OldVolume;
+    public readonly EntityUid User;
+
     public TransferVolumeAttemptEvent(EntityUid uid, EntityUid user, FixedPoint2 oldVolume, FixedPoint2 newVolume)
     {
         EntityUid = uid;
@@ -248,14 +298,20 @@ public sealed class TransferVolumeAttemptEvent : CancellableEntityEventArgs
         NewVolume = newVolume;
     }
 }
+
 public sealed class VolumeChangeAttemptEvent : CancellableEntityEventArgs
 {
-    public readonly EntityUid EntityUid;
     public readonly float CurrentDebuff;
-    public readonly FixedPoint2 OldVolume;
-    public readonly FixedPoint2 NewVolume;
+    public readonly EntityUid EntityUid;
     public readonly FixedPoint2 MaxVolume;
-    public VolumeChangeAttemptEvent(EntityUid uid, FixedPoint2 oldVolume, FixedPoint2 newVolume, float currentDebuff, FixedPoint2 maxVolume)
+    public readonly FixedPoint2 NewVolume;
+    public readonly FixedPoint2 OldVolume;
+
+    public VolumeChangeAttemptEvent(EntityUid uid,
+        FixedPoint2 oldVolume,
+        FixedPoint2 newVolume,
+        float currentDebuff,
+        FixedPoint2 maxVolume)
     {
         EntityUid = uid;
         CurrentDebuff = currentDebuff;
@@ -264,14 +320,20 @@ public sealed class VolumeChangeAttemptEvent : CancellableEntityEventArgs
         MaxVolume = maxVolume;
     }
 }
+
 public sealed class VolumeChangedEvent : CancellableEntityEventArgs
 {
-    public readonly EntityUid EntityUid;
     public readonly float CurrentDebuff;
-    public readonly FixedPoint2 OldVolume;
-    public readonly FixedPoint2 NewVolume;
+    public readonly EntityUid EntityUid;
     public readonly FixedPoint2 MaxVolume;
-    public VolumeChangedEvent(EntityUid uid, FixedPoint2 oldVolume, FixedPoint2 newVolume, float currentDebuff, FixedPoint2 maxVolume)
+    public readonly FixedPoint2 NewVolume;
+    public readonly FixedPoint2 OldVolume;
+
+    public VolumeChangedEvent(EntityUid uid,
+        FixedPoint2 oldVolume,
+        FixedPoint2 newVolume,
+        float currentDebuff,
+        FixedPoint2 maxVolume)
     {
         EntityUid = uid;
         CurrentDebuff = currentDebuff;

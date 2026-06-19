@@ -15,3 +15,17 @@
     ClothingNeckScarfStripedLightBlue: 3
   contrabandInventory:
     ToyFigurineAtmosTech: 1
+  prices: # Stories-Economy
+    ClothingBackpackDuffelAtmospherics: 40
+    ClothingBackpackSatchelAtmospherics: 40
+    ClothingBackpackAtmospherics: 40
+    ClothingUniformJumpsuitAtmos: 40
+    ClothingUniformJumpskirtAtmos: 40
+    ClothingUniformJumpsuitAtmosCasual: 40
+    ClothingShoesColorWhite: 25
+    ClothingHeadsetEngineering: 50
+    ClothingHeadHelmetFire: 120
+    ClothingOuterSuitFire: 150
+    ClothingOuterWinterAtmos: 80
+    ClothingNeckScarfStripedLightBlue: 20
+    ToyFigurineAtmosTech: 100

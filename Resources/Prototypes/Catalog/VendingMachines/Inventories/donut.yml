@@ -9,3 +9,11 @@
     FoodBagel: 2
     FoodBagelPoppy: 2
     FoodDonutPoison: 1
+  prices: # Stories-Economy
+    FoodDonutChocolate: 15
+    FoodDonutApple: 15
+    FoodDonutPink: 15
+    FoodDonutBungo: 20
+    FoodBagel: 15
+    FoodBagelPoppy: 15
+    FoodDonutPoison: 100

@@ -1,22 +1,26 @@
-using Content.Shared.Foldable;
-using Content.Shared.Examine;
-using Content.Shared.Hands.EntitySystems;
-
-using Content.Shared._Stories.Cards.Stack;
 using Content.Shared._Stories.Cards.Fan;
+using Content.Shared._Stories.Cards.Stack;
+using Content.Shared.Examine;
+using Content.Shared.Foldable;
+using Content.Shared.Hands.EntitySystems;
+using Robust.Shared.Audio.Systems;
 
 namespace Content.Shared._Stories.Cards.Card;
-public sealed class SharedCardSystem : EntitySystem
+
+public sealed partial class SharedCardSystem : EntitySystem
 {
-    [Dependency] private readonly SharedAppearanceSystem _appearance = default!;
-    [Dependency] private readonly SharedCardStackSystem _cardStack = default!;
-    [Dependency] private readonly SharedHandsSystem _handsSystem = default!;
+    [Dependency] private SharedAppearanceSystem _appearance = default!;
+    [Dependency] private SharedAudioSystem _audio = default!;
+    [Dependency] private SharedCardStackSystem _cardStack = default!;
+    [Dependency] private SharedHandsSystem _handsSystem = default!;
+
     public override void Initialize()
     {
         base.Initialize();
         SubscribeLocalEvent<CardFanComponent, CardSelectedMessage>(OnCardSelected);
         SubscribeLocalEvent<CardComponent, ExaminedEvent>(OnExamined);
     }
+
     private void OnExamined(EntityUid uid, CardComponent component, ExaminedEvent args)
     {
         if (!TryComp<FoldableComponent>(uid, out var foldable)
@@ -28,13 +32,16 @@ public sealed class SharedCardSystem : EntitySystem
 
     private void OnCardSelected(EntityUid uid, CardFanComponent component, CardSelectedMessage message)
     {
-        if (!TryComp<CardStackComponent>(uid, out var stackComp)
-            || !TryGetEntity(message.CardEntity, out var cardEntity)
-            || !TryGetEntity(message.User, out var user))
+        if (!TryComp<CardStackComponent>(uid, out var stackComp) ||
+            !TryGetEntity(message.CardEntity, out var cardEntity) ||
+            !TryGetEntity(message.User, out var user))
             return;
+
         _cardStack.RemoveCard(uid, cardEntity.Value, stackComp);
         _handsSystem.TryPickupAnyHand(user.Value, cardEntity.Value);
 
+        _appearance.SetData(uid, CardStackVisual.State, stackComp.CardContainer.ContainedEntities.Count);
+        _audio.PlayPredicted(stackComp.RemoveCardSound, uid, user);
         Dirty(uid, stackComp);
     }
 }

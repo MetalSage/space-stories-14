@@ -1,60 +1,48 @@
-using Content.Shared.Actions;
-using Content.Shared.Damage;
 using Content.Shared.Damage.Systems;
-using Content.Shared.DoAfter;
 using Content.Shared.Examine;
-using Content.Shared.Hands;
-using Content.Shared.Hands.Components;
-using Content.Shared.Hands.EntitySystems;
-using Content.Shared.Interaction.Events;
-using Content.Shared.Inventory;
-using Content.Shared.Item;
-using Content.Shared.Item.ItemToggle;
 using Content.Shared.NPC.Prototypes;
-using Content.Shared.Prying.Components;
-using Content.Shared.StatusEffect;
+using Content.Shared.StatusEffectNew;
 using Content.Shared.Stunnable;
 using Content.Shared.Throwing;
 using Content.Shared.Timing;
 using Robust.Shared.Audio.Systems;
 using Robust.Shared.Containers;
-using Robust.Shared.Physics.Events;
 using Robust.Shared.Prototypes;
-using Robust.Shared.Serialization;
 using Robust.Shared.Timing;
 
 namespace Content.Shared._Stories.Holy;
 
 public abstract partial class SharedHolySystem : EntitySystem
 {
-    [Dependency] private readonly DamageableSystem _damageable = default!;
-    [Dependency] private readonly EntityLookupSystem _lookup = default!;
-    [Dependency] private readonly SharedPointLightSystem _pointLight = default!;
-    [Dependency] private readonly SharedStunSystem _stun = default!;
-    [Dependency] private readonly InventorySystem _inventory = default!;
-    [Dependency] private readonly ItemToggleSystem _itemToggle = default!;
-    [Dependency] private readonly ThrowingSystem _throwing = default!;
-    [Dependency] private readonly SharedTransformSystem _transformSystem = default!;
-    [Dependency] private readonly UseDelaySystem _useDelay = default!;
-    [Dependency] private readonly StatusEffectsSystem _statusEffects = default!;
-    [Dependency] private readonly SharedHandsSystem _hands = default!;
-    [Dependency] private readonly IPrototypeManager _prototype = default!;
-    [Dependency] private readonly SharedAudioSystem _audio = default!;
-    [Dependency] private readonly SharedContainerSystem _container = default!;
-    [Dependency] private readonly IGameTiming _timing = default!;
-
-    [ValidatePrototypeId<StatusEffectPrototype>]
-    private const string HolyStatusEffect = "STHoly";
-
-    [ValidatePrototypeId<NpcFactionPrototype>]
-    private const string HolyFaction = "STHoly";
-
     private const string HolyDelay = "STHoly";
+    private static readonly EntProtoId HolyStatusEffect = "STHoly";
+    private static readonly ProtoId<NpcFactionPrototype> HolyFaction = "STHoly";
+
+    [Dependency] private SharedAudioSystem _audio = default!;
+    [Dependency] private SharedContainerSystem _container = default!;
+    [Dependency] private DamageableSystem _damageable = default!;
+    [Dependency] private IPrototypeManager _prototype = default!;
+    [Dependency] private StatusEffectsSystem _statusEffects = default!;
+    [Dependency] private SharedStunSystem _stun = default!;
+    [Dependency] private ThrowingSystem _throwing = default!;
+    [Dependency] private IGameTiming _timing = default!;
+    [Dependency] private SharedTransformSystem _transformSystem = default!;
+    [Dependency] private UseDelaySystem _useDelay = default!;
 
     public override void Update(float frameTime)
     {
         base.Update(frameTime);
         UpdateProtection(frameTime);
+
+        var query = EntityQueryEnumerator<TemporaryHolyComponent>();
+        while (query.MoveNext(out var uid, out _))
+        {
+            if (!_statusEffects.HasStatusEffect(uid, HolyStatusEffect))
+            {
+                RemComp<HolyComponent>(uid);
+                RemComp<TemporaryHolyComponent>(uid);
+            }
+        }
     }
 
     public override void Initialize()
@@ -71,10 +59,10 @@ public abstract partial class SharedHolySystem : EntitySystem
         if (!args.IsInDetailsRange)
             return;
 
-        if (_statusEffects.TryGetTime(entity, HolyStatusEffect, out var timeNullable) && timeNullable is { } time)
+        if (_statusEffects.TryGetTime(entity, HolyStatusEffect, out var time) && time.EndEffectTime is { } endTime)
         {
             var curTime = _timing.CurTime;
-            var timeLeft = time.Item2 - curTime;
+            var timeLeft = endTime - curTime;
             args.PushMarkup(Loc.GetString("stories-holy-examine-time", ("time", timeLeft.ToString("hh\\:mm\\:ss"))));
         }
         else
@@ -87,9 +75,16 @@ public abstract partial class SharedHolySystem : EntitySystem
             return;
 
         if (!IsUnholy(args.Examiner))
+        {
             if (!IsHoly(args.Examiner) || !entity.Comp.Detectable)
                 return;
+        }
 
         args.PushMarkup(Loc.GetString("stories-unholy-examine"));
     }
+}
+
+[RegisterComponent]
+public sealed partial class TemporaryHolyComponent : Component
+{
 }

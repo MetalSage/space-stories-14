@@ -14,18 +14,16 @@
   - Medical
   - Chemistry
   - Maintenance
+  # Stories-Economy-Start
+  minBankBalance: 200
+  maxBankBalance: 250
+  # Stories-Economy-End
 
 - type: startingGear
   id: ChemistGear
   equipment:
     id: ChemistryPDA
     ears: ClothingHeadsetMedical
-    belt: ChemBag
-    pocket1: HandLabeler
-    eyes: ClothingEyesGlassesChemical
-  #storage:
-    #back:
-    #- Stuff
 
 - type: chameleonOutfit
   id: ChemistChameleonOutfit

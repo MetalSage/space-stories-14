@@ -11,7 +11,7 @@
     id: AgentIDCard
     back: JetpackBlackFilled
     ears: ClothingHeadsetGrey
-    pocket1: LightsaberDoubleRed
+    pocket1: STLightsaberDoubleRed
     pocket2: PinpointerUniversal
     belt: ClothingBeltInquisitor
 
@@ -27,6 +27,6 @@
     id: AgentIDCard
     back: JetpackBlackFilled
     ears: ClothingHeadsetGrey
-    pocket1: LightsaberCrossguardRed
+    pocket1: STLightsaberCrossguardRed
     pocket2: PinpointerUniversal
     belt: ClothingBeltInquisitor

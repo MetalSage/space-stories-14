@@ -14,3 +14,15 @@
     DrinkChangelingStingCan: 2
   emaggedInventory:
     DrinkNukieCan: 2
+  prices: # Stories-Economy
+    DrinkSpaceUpCan: 15
+    DrinkSpaceMountainWindCan: 15
+    DrinkGrapeCan: 15
+    DrinkRootBeerCan: 15
+    DrinkIcedTeaCan: 15
+    DrinkSolDryCan: 15
+    DrinkFourteenLokoCan: 20
+    DrinkSpaceMountainWindBottleFull: 25
+    DrinkSpaceUpBottleFull: 25
+    DrinkChangelingStingCan: 80
+    DrinkNukieCan: 100

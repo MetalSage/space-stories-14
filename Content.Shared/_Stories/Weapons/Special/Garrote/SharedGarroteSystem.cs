@@ -1,4 +1,3 @@
-using Content.Shared.Damage;
 using Content.Shared.Damage.Systems;
 using Content.Shared.Mobs;
 using Content.Shared.Mobs.Components;
@@ -8,12 +7,14 @@ using Content.Shared.Stunnable;
 
 namespace Content.Shared._Stories.Weapons.Special.Garrote;
 
-public abstract class SharedGarroteSystem : EntitySystem
+public abstract partial class SharedGarroteSystem : EntitySystem
 {
-    [Dependency] private readonly DamageableSystem _damageable = default!;
-    [Dependency] private readonly StatusEffectsSystem _statusEffect = default!;
-    [Dependency] private readonly SharedStunSystem _stun = default!;
-    [Dependency] protected readonly SharedTransformSystem _transformSystem = default!;
+    private static readonly string MutedStatusEffect = "Muted";
+
+    [Dependency] private DamageableSystem _damageable = default!;
+    [Dependency] private StatusEffectsSystem _statusEffect = default!;
+    [Dependency] private SharedStunSystem _stun = default!;
+    [Dependency] protected SharedTransformSystem _transformSystem = default!;
 
     public override void Initialize()
     {
@@ -24,9 +25,7 @@ public abstract class SharedGarroteSystem : EntitySystem
 
     private void OnGarroteDoAfter(EntityUid uid, GarroteComponent comp, GarroteDoAfterEvent args)
     {
-        if (args.Target == null
-            || !TryComp<MobStateComponent>(args.Target, out var mobState)
-            || !TryComp<StatusEffectsComponent>(args.Target, out var statusEffectsComp))
+        if (args.Target == null || !TryComp<MobStateComponent>(args.Target, out var mobState))
             return;
 
         if (args.Cancelled || mobState.CurrentState != MobState.Alive)
@@ -35,29 +34,28 @@ public abstract class SharedGarroteSystem : EntitySystem
         _damageable.TryChangeDamage(args.Target.Value, comp.Damage, origin: args.User);
 
         _stun.TryAddStunDuration(args.Target.Value, comp.DurationStatusEffects);
-        _statusEffect.TryAddStatusEffect<MutedComponent>(args.Target.Value, "Muted", comp.DurationStatusEffects, refresh: true);
-        Dirty(args.Target.Value, statusEffectsComp);
+        _statusEffect.TryAddStatusEffect<MutedComponent>(args.Target.Value, MutedStatusEffect, comp.DurationStatusEffects, true);
 
         args.Repeat = true;
     }
 
     /// <summary>
-    ///     Checking whether the distance from the user to the target is set correctly.
+    /// Checking whether the distance from the user to the target is set correctly.
     /// </summary>
     /// <remarks>
-    ///     Does not check for the presence of TransformComponent.
+    /// Does not check for the presence of TransformComponent.
     /// </remarks>
     public bool IsRightTargetDistance(TransformComponent user, TransformComponent target, float maxUseDistance)
     {
         var userPosition = _transformSystem.GetWorldPositionRotation(user).WorldPosition;
         var targetPosition = _transformSystem.GetWorldPositionRotation(target).WorldPosition;
 
-        return (Math.Abs(userPosition.X - targetPosition.X) <= maxUseDistance
-            && Math.Abs(userPosition.Y - targetPosition.Y) <= maxUseDistance);
+        return Math.Abs(userPosition.X - targetPosition.X) <= maxUseDistance
+               && Math.Abs(userPosition.Y - targetPosition.Y) <= maxUseDistance;
     }
 
     /// <remarks>
-    ///     Does not check for the presence of TransformComponent.
+    /// Does not check for the presence of TransformComponent.
     /// </remarks>
     public Direction GetEntityDirection(TransformComponent entityTransform)
     {
@@ -74,7 +72,7 @@ public abstract class SharedGarroteSystem : EntitySystem
             > 43.5d and < 136.5d => Direction.East,
             >= 136.5d and <= 223.5d => Direction.North,
             > 223.5d and < 316.5d => Direction.West,
-            _ => Direction.South
+            _ => Direction.South,
         };
     }
 }

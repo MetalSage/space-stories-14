@@ -12,6 +12,20 @@
 
 - type: entity
   parent: IDCardStandard
+  id: STJudgeIDCard
+  name: judge's ID card
+  description: A card required to access various areas of the station.
+  components:
+  - type: Sprite
+    layers:
+    - state: silver
+    - state: idjudge
+      sprite: _Stories/Objects/Misc/id_cards.rsi
+  - type: PresetIdCard
+    job: STJudge
+
+- type: entity
+  parent: IDCardStandard
   id: GuardianNtIDCard
   name: ID карта стража клинка
   description: Карта, необходимая для доступа в различные области станции.
@@ -99,6 +113,25 @@
       slots:
         - idcard
       sprite: Objects/Misc/id_cards.rsi
+
+- type: entity
+  parent: IDCardStandard
+  id: BrigmedicIDCard
+  name: brigmedic ID card
+  components:
+  - type: Sprite
+    sprite: Objects/Misc/id_cards.rsi
+    layers:
+    - state: default
+    - state: stripe_top
+      color: "#cb0000"
+    - state: stripe_bottom
+      color: "#830000"
+    - sprite: Interface/Misc/job_icons.rsi
+      offset: -0.09375, 0.0625
+      state: Brigmedic
+  - type: PresetIdCard
+    job: STBrigmedic
 
 # Event-Restricted-Jobs
 

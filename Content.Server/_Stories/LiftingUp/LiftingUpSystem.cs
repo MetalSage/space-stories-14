@@ -1,7 +1,8 @@
 using Content.Shared.Gravity;
-using Robust.Shared.GameStates;
 
 namespace Content.Server.Gravity;
 
-/// <inheritdoc/>
-public sealed class LiftingUpSystem : SharedLiftingUpSystem { }
+/// <inheritdoc />
+public sealed class LiftingUpSystem : SharedLiftingUpSystem
+{
+}

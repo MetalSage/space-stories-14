@@ -35,7 +35,6 @@ entities:
     - type: MetaData
       name: Pontific hub
     - type: Transform
-      pos: -0.46875,-0.515625
       parent: 1
     - type: MapGrid
       chunks:

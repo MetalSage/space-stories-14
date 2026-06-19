@@ -5,6 +5,6 @@ namespace Content.Shared._Stories.Cards.Card;
 [RegisterComponent, NetworkedComponent, AutoGenerateComponentState]
 public sealed partial class CardComponent : Component
 {
-    [DataField("name"), AutoNetworkedField]
+    [DataField, AutoNetworkedField]
     public string Name = "default";
 }

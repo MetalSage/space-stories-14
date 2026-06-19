@@ -6,6 +6,10 @@
   startingGear: PassengerGear
   icon: "JobIconPassenger"
   supervisors: job-supervisors-everyone
+  # Stories-Economy-Start
+  minBankBalance: 50
+  maxBankBalance: 100
+  # Stories-Economy-End
 
 - type: startingGear
   id: PassengerGear

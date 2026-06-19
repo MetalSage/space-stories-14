@@ -1,35 +1,45 @@
+using System.Numerics;
+using Content.Client.UserInterface.Controls;
+using Content.Shared._Stories.Cards.Card;
+using Content.Shared._Stories.Cards.Stack;
+using Content.Shared.Foldable;
 using Robust.Client.GameObjects;
 using Robust.Client.UserInterface.Controls;
 using Robust.Client.UserInterface.XAML;
-using Content.Client.UserInterface.Controls;
-using Content.Shared.Foldable;
-using System.Numerics;
-using Content.Shared._Stories.Cards.Card;
-using Content.Shared._Stories.Cards.Stack;
 
 namespace Content.Client._Stories.Cards.Fan.UI;
 
 public sealed partial class FanMenu : RadialMenu
 {
-    [Dependency] private readonly EntityManager _entManager = default!;
-    private EntityUid _owner;
-    private EntityUid _user;
-    private FanMenuBoundUserInterface? _boundUI;
-    public Action<NetEntity, NetEntity>? OnCardSelectedMessageAction;
+    private readonly FanMenuBoundUserInterface? _boundUI;
+    [Dependency] private EntityManager _entManager = default!;
+
+    private readonly EntityUid _owner;
+    private readonly SpriteSystem _spriteSystem;
+    private readonly EntityUid _user;
+
+    private readonly Action<NetEntity, NetEntity>? OnCardSelectedMessageAction;
 
     public FanMenu(EntityUid uid, FanMenuBoundUserInterface boundUI, EntityUid user)
     {
         IoCManager.InjectDependencies(this);
         RobustXamlLoader.Load(this);
+        _spriteSystem = _entManager.System<SpriteSystem>();
         _owner = uid;
         _boundUI = boundUI;
         _user = user;
 
-        var main = FindControl<RadialContainer>("Main");
-        main.RemoveAllChildren();
+        Populate();
+        OnCardSelectedMessageAction += _boundUI.OnCardSelected;
+    }
 
+    private void Populate()
+    {
         if (!_entManager.TryGetComponent<CardStackComponent>(_owner, out var stackComp))
             return;
+
+        var main = FindControl<RadialContainer>("Main");
+        main.RemoveAllChildren();
 
         foreach (var card in stackComp.CardContainer.ContainedEntities)
         {
@@ -38,9 +48,9 @@ public sealed partial class FanMenu : RadialMenu
                 continue;
 
             var cardName = foldable.IsFolded ? cardComp.Name : cardMeta.EntityName;
-            var cardLayer = cardSprite.LayerGetState(1);
+            var cardLayer = _spriteSystem.LayerGetRsiState(card, 1);
 
-            var button = new FanMenuButton()
+            var button = new RadialMenuButton
             {
                 StyleClasses = { "RadialMenuButton" },
                 SetSize = new Vector2(64f, 64f),
@@ -57,7 +67,7 @@ public sealed partial class FanMenu : RadialMenu
 
             if (cardLayer != null)
             {
-                var tex = new TextureRect()
+                var tex = new TextureRect
                 {
                     VerticalAlignment = VAlignment.Center,
                     HorizontalAlignment = HAlignment.Center,
@@ -66,7 +76,7 @@ public sealed partial class FanMenu : RadialMenu
                 };
                 button.AddChild(tex);
             }
-            button.SetCard(card);
+
             main.AddChild(button);
 
             button.OnPressed += _ =>
@@ -75,10 +85,6 @@ public sealed partial class FanMenu : RadialMenu
                 Close();
             };
         }
-
-        if (_boundUI == null)
-            return;
-        OnCardSelectedMessageAction += _boundUI.OnCardSelected;
     }
 
     private bool TryGetCardComponents(EntityUid card,
@@ -96,15 +102,5 @@ public sealed partial class FanMenu : RadialMenu
                _entManager.TryGetComponent(card, out cardSprite) &&
                _entManager.TryGetComponent(card, out foldable) &&
                _entManager.TryGetComponent(card, out cardMeta);
-    }
-}
-
-public sealed class FanMenuButton : RadialMenuButton
-{
-    private EntityUid _cardEntity;
-
-    public void SetCard(EntityUid cardEntity)
-    {
-        _cardEntity = cardEntity;
     }
 }

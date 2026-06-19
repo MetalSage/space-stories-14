@@ -1,0 +1,14 @@
+{
+    "version": 1,
+    "license": "All rights reserved",
+    "copyright": "itak_privet_chat(discord)",
+    "size": {
+      "x": 32,
+      "y": 32
+    },
+    "states": [
+      {
+        "name": "nt_bank"
+      }
+    ]
+}

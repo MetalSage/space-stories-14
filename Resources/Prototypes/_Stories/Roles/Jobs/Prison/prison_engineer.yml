@@ -12,8 +12,7 @@
       time: 18000 # 5 hours
   startingGear: PRISONEngineerGear
   icon: "JobIconSpacePrisonEngineer"
-  supervisors: начальник тюрьмы
-  canBeAntag: false
+  supervisors: stories-job-supervisors-headofprison
   access:
   - Prisoner
   - Prison
@@ -23,6 +22,8 @@
   # special:
   # - !type:AddImplantSpecial
   #   implants: [ MindShieldImplant ]
+  minBankBalance: 200
+  maxBankBalance: 250
 
 - type: startingGear
   id: PRISONEngineerGear

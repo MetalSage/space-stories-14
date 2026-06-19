@@ -1,0 +1,84 @@
+- type: roleLoadout
+  id: JobSTJudge
+  groups:
+  - STJudgeJumpsuit
+  - STJudgeGloves
+  - STJudgeShoes
+  - STJudgeHead
+  - GroupTankHarness
+  - STJudgeOuterClothing
+  - CommonBackpack
+  - Survival
+  - Trinkets
+  - GroupSpeciesBreathTool
+
+- type: loadoutGroup
+  id: STJudgeJumpsuit
+  name: stories-loadout-group-judge-jumpsuit
+  loadouts:
+  - IAAJumpsuitBlue
+  - IAAJumpskirtBlue
+  - IAAJumpsuitPurple
+  - IAAJumpskirtPurple
+  - IAAJumpsuitRed
+  - IAAJumpskirtRed
+  - IAAJumpsuitBlack
+  - IAAJumpskirtBlack
+  - IAAJumpsuitGood
+  - IAAJumpskirtGood
+
+# Перчатки
+- type: loadoutGroup
+  id: STJudgeGloves
+  name: stories-loadout-group-judge-gloves
+  minLimit: 0
+  loadouts:
+  - IAAGlovesWhite
+  - IAAGlovesGray
+  - IAAGlovesBlack
+  - IAAGlovesRed
+  - IAAGlovesBlue
+
+# Обувь
+- type: loadoutGroup
+  id: STJudgeShoes
+  name: stories-loadout-group-judge-shoes
+  loadouts:
+  - BlackShoes
+  - WhiteShoes
+  - IAAShoesLaceup
+
+# Мантии
+- type: loadoutGroup
+  id: STJudgeOuterClothing
+  name: stories-loadout-group-judge-outerclothing
+  loadouts:
+  - STJudgeOuterClothingRobesJudgeRed
+  - STJudgeOuterClothingRobes
+  - STJudgeOuterClothingRobesJudgeWorn
+
+- type: loadout
+  id: STJudgeOuterClothingRobesJudgeRed
+  equipment:
+    outerClothing: STClothingOuterRobesJudgeRed
+
+- type: loadout
+  id: STJudgeOuterClothingRobesJudgeWorn
+  equipment:
+    outerClothing: STClothingOuterRobesJudgeWorn
+
+- type: loadout
+  id: STJudgeOuterClothingRobes
+  equipment:
+    outerClothing: ClothingOuterRobesJudge
+
+- type: loadoutGroup
+  id: STJudgeHead
+  name: stories-loadout-group-judge-head
+  loadouts:
+  - STJudgeHeadPwig
+
+- type: loadout
+  id: STJudgeHeadPwig
+  equipment:
+    head: ClothingHeadHatPwig

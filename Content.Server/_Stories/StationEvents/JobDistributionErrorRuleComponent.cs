@@ -11,10 +11,16 @@ namespace Content.Server._Stories.StationEvents;
 public sealed partial class JobDistributionErrorRuleComponent : Component
 {
     /// <summary>
-    /// The minimum amount of jobs from list that will be added.
+    /// List of jobs that can be added.
     /// </summary>
     [DataField]
-    public int MinJobs = 1;
+    public List<ProtoId<JobPrototype>> Jobs = new();
+
+    /// <summary>
+    /// The maximum amount of slots for selected jobs.
+    /// </summary>
+    [DataField]
+    public int MaxAmount = 3;
 
     /// <summary>
     /// The maximum amount of jobs from list that will be added.
@@ -29,14 +35,8 @@ public sealed partial class JobDistributionErrorRuleComponent : Component
     public int MinAmount = 1;
 
     /// <summary>
-    /// The maximum amount of slots for selected jobs.
+    /// The minimum amount of jobs from list that will be added.
     /// </summary>
     [DataField]
-    public int MaxAmount = 3;
-
-    /// <summary>
-    /// List of jobs that can be added.
-    /// </summary>
-    [DataField]
-    public List<ProtoId<JobPrototype>> Jobs = new();
+    public int MinJobs = 1;
 }

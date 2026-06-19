@@ -60,7 +60,6 @@ entities:
     - type: MetaData
       name: IR - InkvisTER
     - type: Transform
-      pos: -0.569444,-0.43055597
       parent: 1
     - type: MapGrid
       chunks:

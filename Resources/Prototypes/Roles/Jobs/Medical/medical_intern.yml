@@ -13,10 +13,13 @@
   startingGear: MedicalInternGear
   icon: "JobIconMedicalIntern"
   supervisors: job-supervisors-medicine
-  canBeAntag: false
   access:
   - Medical
   - Maintenance
+  # Stories-Economy-Start
+  minBankBalance: 100
+  maxBankBalance: 150
+  # Stories-Economy-End
 
 - type: startingGear
   id: MedicalInternGear
@@ -24,11 +27,7 @@
     shoes: ClothingShoesColorWhite
     id: MedicalInternPDA
     ears: ClothingHeadsetMedical
-    belt: ClothingBeltMedicalFilled
     pocket2: BookMedicalReferenceBook
-  #storage:
-    #back:
-    #- Stuff
 
 - type: chameleonOutfit
   id: MedicalInternChameleonOutfit

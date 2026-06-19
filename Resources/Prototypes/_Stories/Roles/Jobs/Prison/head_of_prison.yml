@@ -15,7 +15,6 @@
   icon: "JobIconHeadOfSpacePrison"
   requireAdminNotify: true
   supervisors: job-supervisors-centcom
-  canBeAntag: false
   accessGroups:
   - PrisonAllAccess
   access:
@@ -29,6 +28,8 @@
   special:
   - !type:AddImplantSpecial
     implants: [ MindShieldImplant ]
+  minBankBalance: 300
+  maxBankBalance: 350
 
 - type: startingGear
   id: PRISONHeadOfPrisonGear

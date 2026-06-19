@@ -6,9 +6,11 @@ namespace Content.Shared._Stories.TargetingTeleporter;
 [RegisterComponent, NetworkedComponent, AutoGenerateComponentState(true)]
 public sealed partial class TargetingTeleporterUserComponent : Component
 {
+    [DataField, AutoNetworkedField]
+    public EntProtoId ExitAction = "STActionTargettingTeleporterExit";
 
     [DataField, AutoNetworkedField]
-    public EntityUid? Teleporter;
+    public EntityUid? ExitActionEntity;
 
     [DataField, AutoNetworkedField]
     public EntityUid? Eye;
@@ -17,12 +19,8 @@ public sealed partial class TargetingTeleporterUserComponent : Component
     public EntProtoId SetExitAction = "STActionTargettingTeleporterSetExitPortal";
 
     [DataField, AutoNetworkedField]
-    public EntProtoId ExitAction = "STActionTargettingTeleporterExit";
-
-    [DataField, AutoNetworkedField]
     public EntityUid? SetExitActionEntity;
 
     [DataField, AutoNetworkedField]
-    public EntityUid? ExitActionEntity;
-
+    public EntityUid? Teleporter;
 }

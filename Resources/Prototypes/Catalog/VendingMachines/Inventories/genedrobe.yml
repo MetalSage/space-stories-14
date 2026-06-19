@@ -1,11 +1,20 @@
 - type: vendingMachineInventory
   id: GeneDrobeInventory
   startingInventory:
-    ClothingUniformJumpsuitGenetics: 2
-    ClothingUniformJumpskirtGenetics: 2
-    ClothingShoesColorWhite: 2
-    ClothingOuterCoatLabGene: 2
-    ClothingOuterWinterGen: 2
     ClothingBackpackGenetics: 2
     ClothingBackpackSatchelGenetics: 2
     ClothingBackpackDuffelGenetics: 2
+    ClothingUniformJumpsuitGenetics: 2
+    ClothingUniformJumpskirtGenetics: 2
+    ClothingOuterCoatLabGene: 2
+    ClothingOuterWinterGen: 2
+    ClothingShoesColorWhite: 2
+  prices: # Stories-Economy
+    ClothingUniformJumpsuitGenetics: 40
+    ClothingUniformJumpskirtGenetics: 40
+    ClothingShoesColorWhite: 25
+    ClothingOuterCoatLabGene: 40
+    ClothingOuterWinterGen: 80
+    ClothingBackpackGenetics: 40
+    ClothingBackpackSatchelGenetics: 40
+    ClothingBackpackDuffelGenetics: 40

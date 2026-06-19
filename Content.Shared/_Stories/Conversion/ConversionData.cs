@@ -8,15 +8,15 @@ namespace Content.Shared._Stories.Conversion;
 [Serializable, NetSerializable]
 public sealed partial class ConversionData
 {
+    [DataField("endTime", customTypeSerializer: typeof(TimeOffsetSerializer))]
+    public TimeSpan? EndTime;
+
     [DataField]
     public NetEntity? Owner;
 
-    [DataField("startTime", customTypeSerializer: typeof(TimeOffsetSerializer))]
-    public TimeSpan StartTime;
-
-    [DataField("endTime", customTypeSerializer: typeof(TimeOffsetSerializer))]
-    public TimeSpan? EndTime = null;
-
     [DataField]
     public ProtoId<ConversionPrototype> Prototype;
+
+    [DataField("startTime", customTypeSerializer: typeof(TimeOffsetSerializer))]
+    public TimeSpan StartTime;
 }

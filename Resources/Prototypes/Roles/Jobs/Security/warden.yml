@@ -14,7 +14,6 @@
   startingGear: WardenGear
   icon: "JobIconWarden"
   supervisors: job-supervisors-hos
-  canBeAntag: false
   access:
   - Security
   - Brig
@@ -28,6 +27,10 @@
   special:
   - !type:AddImplantSpecial
     implants: [ MindShieldImplant ]
+  # Stories-Economy-Start
+  minBankBalance: 250
+  maxBankBalance: 300
+  # Stories-Economy-End
 
 - type: startingGear
   id: WardenGear

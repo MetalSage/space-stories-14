@@ -1,35 +1,35 @@
 {
     "version": 1,
     "license": "CC-BY-SA-3.0",
-    "copyright": "https://github.com/RV666/Paradise/commit/7637fe95829668ee064effa4cbff7e4b6837ca69#diff-6a321464c661daae7b6d4fd2058e8164b6ffdfb4cec265a20d68d942cc663580",
+    "copyright": "https://github.com/TauCetiStation/TauCetiClassic/blob/726c4379ea68cf36dd6a5f3a46c41bbe9de66194/icons/hud/actions.dmi",
     "size": {
         "x": 32,
         "y": 32
     },
     "states": [
         {
-            "name": "annihilate"
+            "name": "darksight"
         },
         {
-            "name": "ascendance"
-        },
-        {
-            "name": "ascendant_broadcast"
-        },
-        {
-            "name": "black_recuperation"
-        },
-        {
-            "name": "blindness_smoke"
+            "name": "black_smoke"
         },
         {
             "name": "collective_mind"
         },
         {
-            "name": "destroy_engines"
+            "name": "commune"
+        },
+        {
+            "name": "drain_life"
         },
         {
             "name": "enthrall"
+        },
+        {
+            "name": "ascend"
+        },
+        {
+            "name": "annihilate"
         },
         {
             "name": "glare"
@@ -38,31 +38,28 @@
             "name": "hatch"
         },
         {
-            "name": "hypnosis"
-        },
-        {
             "name": "icy_veins"
         },
         {
-            "name": "lightning_storm"
+            "name": "regen_armor"
         },
         {
-            "name": "plane_shift"
+            "name": "revive_thrall"
         },
         {
-            "name": "rapid_re_hatch"
+            "name": "screech"
         },
         {
             "name": "shadow_walk"
         },
         {
-            "name": "sonic_screech"
+            "name": "transmit"
         },
         {
             "name": "veil"
         },
         {
-            "name": "darksight"
+            "name": "lightning_storm"
         }
     ]
 }

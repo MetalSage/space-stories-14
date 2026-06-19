@@ -1,3 +1,4 @@
+using System.Linq;
 using System.Text;
 using System.Text.RegularExpressions;
 
@@ -128,8 +129,14 @@ public sealed partial class ChatSystem
         { "лкм", "левая рука" },
         { "пкм", "правая рука" },
         // BanWords
-        { "слава Украине", "кхе-кхе" }, { "славаУкраине", "кхе-кхе" }, { "слава России", "кхе-кхе" }, { "славаРоссии", "кхе-кхе" }
+        { "слава Украине", "кхе-кхе" }, { "славаУкраине", "кхе-кхе" }, { "слава России", "кхе-кхе" },
+        { "славаРоссии", "кхе-кхе" },
     };
+
+    private static readonly List<(Regex Regex, string Replacement)> CompiledSlangReplace = SlangReplace
+        .Select(x => (new Regex($@"\b{Regex.Escape(x.Key)}\b", RegexOptions.IgnoreCase | RegexOptions.Compiled),
+            x.Value))
+        .ToList();
 
     private static readonly List<string> Banwords = new()
     {
@@ -139,7 +146,7 @@ public sealed partial class ChatSystem
         "хохол", "хохл",
         "нигер", "негр", "ниггер", "негер", "нигир",
         "куколд",
-        "чурк", "чурок"
+        "чурк", "чурок",
     };
 
     private bool IsContainsBanWords(string message)
@@ -166,23 +173,24 @@ public sealed partial class ChatSystem
             return message;
 
         // Очистка от лишних знаков
-        message = (((Func<string>)(() =>
+        message = ((Func<string>)(() =>
         {
-            StringBuilder result = new StringBuilder();
-            foreach (char ch in message)
+            var result = new StringBuilder();
+            foreach (var ch in message)
             {
                 if (ch != '+' && ch != '/' && ch != '\\' && ch != '*')
                     result.Append(ch);
             }
+
             return result.ToString();
-        }))());
+        }))();
         if (message == "")
             return message;
 
         // Поиск и замена сленга
-        foreach (var pair in SlangReplace)
+        foreach (var pair in CompiledSlangReplace)
         {
-            message = Regex.Replace(message, $@"\b{Regex.Escape(pair.Key)}\b", pair.Value, RegexOptions.IgnoreCase);
+            message = pair.Regex.Replace(message, pair.Replacement);
         }
 
         return message;

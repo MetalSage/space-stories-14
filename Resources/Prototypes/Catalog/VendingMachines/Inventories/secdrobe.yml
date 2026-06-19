@@ -31,3 +31,33 @@
     ToyFigurineSecurity: 1
     ToyFigurineWarden: 1
     ToyFigurineHeadOfSecurity: 1
+  prices: # Stories-Economy
+    ClothingBackpackSecurity: 40
+    ClothingBackpackSatchelSecurity: 40
+    ClothingBackpackDuffelSecurity: 40
+    ClothingUniformJumpsuitSec: 40
+    ClothingShoesBootsJack: 60
+    ClothingHeadHatBeretSecurity: 25
+    ClothingHeadHatSecsoft: 25
+    ClothingHeadBandRed: 15
+    ClothingMaskNeckGaiterRed: 20
+    ClothingHandsGlovesColorBlack: 25
+    ClothingHandsGlovesFingerless: 20
+    ClothingUniformJumpskirtSec: 40
+    ClothingUniformJumpsuitSecGrey: 40
+    ClothingUniformJumpskirtSecGrey: 40
+    ClothingUniformJumpsuitSecBlue: 40
+    ClothingHeadsetSecurity: 60
+    ClothingOuterWinterSec: 80
+    ClothingOuterArmorBasic: 120
+    ClothingNeckScarfStripedRed: 20
+    ClothingOuterArmorBasicSlim: 120
+    ClothingEyesBlindfold: 15
+    ClothingShoesBootsCombat: 80
+    ClothingShoesBootsWinterSec: 60
+    ClothingHeadHelmetJustice: 100
+    ClothingMaskClownSecurity: 50
+    ClothingMaskMimeSecurity: 50
+    ToyFigurineSecurity: 100
+    ToyFigurineWarden: 120
+    ToyFigurineHeadOfSecurity: 150

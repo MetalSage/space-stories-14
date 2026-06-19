@@ -657,9 +657,9 @@
   plantRsi: Objects/Specific/Hydroponics/eggplant.rsi
   packetPrototype: EggplantSeeds
   productPrototypes:
-  - FoodEggplant
+    - FoodEggplant
   mutationPrototypes:
-  - eggy
+    - eggy
   harvestRepeat: Repeat
   lifespan: 25
   maturation: 6

@@ -25,4 +25,27 @@
     FoodBoxDonkpocket: 1
     FoodFrozenSandwich: 2
     FoodFrozenSandwichStrawberry: 2
-    
+  prices: # Stories-Economy
+    ReagentContainerFlour: 15
+    ReagentContainerCornmeal: 15
+    ReagentContainerSugar: 15
+    ReagentContainerRice: 15
+    FoodCondimentPacketSalt: 2
+    FoodCondimentBottleEnzyme: 25
+    FoodCondimentBottleHotsauce: 20
+    FoodCondimentBottleKetchup: 20
+    FoodCondimentBottleBBQ: 20
+    FoodCondimentBottleVinegar: 20
+    ReagentContainerOliveoil: 25
+    ReagentContainerMayo: 20
+    VariantCubeBox: 30
+    FoodContainerEgg: 25
+    DrinkMilkCarton: 20
+    DrinkSoyMilkCarton: 20
+    FoodButter: 15
+    FoodCheese: 20
+    FoodMeat: 30
+    EggBoxBroken: 5
+    FoodBoxDonkpocket: 25
+    FoodFrozenSandwich: 20
+    FoodFrozenSandwichStrawberry: 20

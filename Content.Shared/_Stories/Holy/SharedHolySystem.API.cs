@@ -4,7 +4,6 @@ namespace Content.Shared._Stories.Holy;
 
 public abstract partial class SharedHolySystem : EntitySystem
 {
-
     public bool TryApplyProtection(EntityUid target, Entity<HolyComponent> holy)
     {
         if (!IsUnholy(target))
@@ -16,8 +15,10 @@ public abstract partial class SharedHolySystem : EntitySystem
         if (TryComp<UseDelayComponent>(holy, out var useDelay))
         {
             if (_useDelay.TryGetDelayInfo((holy, useDelay), out _, HolyDelay)) // Если Delay настроен
+            {
                 if (!_useDelay.TryResetDelay((holy, useDelay), true, HolyDelay))
                     return false;
+            }
         }
 
         ApplyProtection((target, unholy), holy);
@@ -38,10 +39,12 @@ public abstract partial class SharedHolySystem : EntitySystem
 
         if (!target.Comp.IgnoreProtectionImpulse)
         {
-            _stun.TryKnockdown(target.Owner, holy.Comp.ProtectionKnockdownTime, true);
+            _stun.TryKnockdown(target.Owner, holy.Comp.ProtectionKnockdownTime);
             var fieldDir = _transformSystem.GetWorldPosition(holy);
             var playerDir = _transformSystem.GetWorldPosition(target);
-            _throwing.TryThrow(target, (playerDir - fieldDir) * holy.Comp.ProtectionImpulseLengthModifier, holy.Comp.ProtectionImpulseSpeed);
+            _throwing.TryThrow(target,
+                (playerDir - fieldDir) * holy.Comp.ProtectionImpulseLengthModifier,
+                holy.Comp.ProtectionImpulseSpeed);
         }
     }
 
@@ -53,7 +56,7 @@ public abstract partial class SharedHolySystem : EntitySystem
         if (!TryComp<BlessableComponent>(uid, out var blessable))
             return false;
 
-        if (!_statusEffects.CanApplyEffect(uid, HolyStatusEffect))
+        if (!_statusEffects.CanAddStatusEffect(uid, HolyStatusEffect))
             return false;
 
         // TODO: BlessAttemptEvent
@@ -70,6 +73,9 @@ public abstract partial class SharedHolySystem : EntitySystem
         if (!TryComp<BlessableComponent>(uid, out var blessable))
             return false;
 
+        if (!_statusEffects.CanAddStatusEffect(uid, HolyStatusEffect))
+            return false;
+
         // TODO: BlessAttemptEvent
 
         Bless((uid, blessable));
@@ -78,14 +84,28 @@ public abstract partial class SharedHolySystem : EntitySystem
 
     private void Bless(Entity<BlessableComponent> entity, TimeSpan time, bool refresh = true)
     {
-        // TODO: BlessedEvent
-        _statusEffects.TryAddStatusEffect<HolyComponent>(entity, HolyStatusEffect, time * entity.Comp.TimeModifier, refresh);
+        var duration = time * entity.Comp.TimeModifier;
+        if (refresh)
+            _statusEffects.TrySetStatusEffectDuration(entity.Owner, HolyStatusEffect, duration);
+        else
+            _statusEffects.TryAddStatusEffectDuration(entity.Owner, HolyStatusEffect, duration);
+
+        if (!HasComp<HolyComponent>(entity))
+        {
+            EnsureComp<HolyComponent>(entity);
+            EnsureComp<TemporaryHolyComponent>(entity);
+        }
     }
 
     private void Bless(Entity<BlessableComponent> entity)
     {
-        // TODO: BlessedEvent
-        EnsureComp<HolyComponent>(entity);
+        _statusEffects.TrySetStatusEffectDuration(entity.Owner, HolyStatusEffect);
+
+        if (!HasComp<HolyComponent>(entity))
+        {
+            EnsureComp<HolyComponent>(entity);
+            EnsureComp<TemporaryHolyComponent>(entity);
+        }
     }
 
     public bool IsUnholy(EntityUid uid)
@@ -97,5 +117,4 @@ public abstract partial class SharedHolySystem : EntitySystem
     {
         return HasComp<HolyComponent>(uid);
     }
-
 }

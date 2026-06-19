@@ -10,19 +10,19 @@ using Content.Shared.Nutrition.EntitySystems;
 using Content.Shared.Popups;
 using Content.Shared.Stealth;
 using Robust.Shared.Containers;
-using Robust.Shared.Prototypes;
 
 namespace Content.Shared._Stories.Spaf;
 
 public abstract partial class SharedSpafSystem : EntitySystem
 {
-    [Dependency] private readonly SharedDoAfterSystem _doAfter = default!;
-    [Dependency] private readonly SharedPopupSystem _popup = default!;
-    [Dependency] private readonly SharedActionsSystem _action = default!;
-    [Dependency] private readonly HungerSystem _hunger = default!;
-    [Dependency] private readonly SharedPuddleSystem _puddle = default!;
-    [Dependency] private readonly SharedStealthSystem _stealth = default!;
-    [Dependency] private readonly SharedContainerSystem _container = default!;
+    [Dependency] private SharedActionsSystem _action = default!;
+    [Dependency] private SharedContainerSystem _container = default!;
+    [Dependency] private SharedDoAfterSystem _doAfter = default!;
+    [Dependency] private HungerSystem _hunger = default!;
+    [Dependency] private SharedPopupSystem _popup = default!;
+    [Dependency] private SharedPuddleSystem _puddle = default!;
+    [Dependency] private SharedStealthSystem _stealth = default!;
+
     public override void Initialize()
     {
         base.Initialize();
@@ -112,7 +112,12 @@ public abstract partial class SharedSpafSystem : EntitySystem
 
         _stealth.SetEnabled(uid, true);
 
-        args.Handled = _doAfter.TryStartDoAfter(new DoAfterArgs(EntityManager, args.Performer, TimeSpan.FromSeconds(args.Seconds), new SpafStealthDoAfterEvent(), args.Performer, args.Performer)
+        args.Handled = _doAfter.TryStartDoAfter(new DoAfterArgs(EntityManager,
+            args.Performer,
+            TimeSpan.FromSeconds(args.Seconds),
+            new SpafStealthDoAfterEvent(),
+            args.Performer,
+            args.Performer)
         {
             Hidden = true,
             BreakOnHandChange = false,

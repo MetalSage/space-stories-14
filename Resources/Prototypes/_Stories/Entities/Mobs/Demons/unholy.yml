@@ -8,20 +8,21 @@
   - MobBloodstream
   - MobFlammable
   components:
-  - type: Body
-    prototype: Animal
+  - type: VisionProvider
+    isActive: true
+    ambientColor: "#7A298A90"
+    toggleAction: STActionPontificToggleNightvision
   - type: Climbing
   - type: NameIdentifier
     group: GenericNumber
-  - type: Hands
   - type: Reactive
     groups:
       Flammable: [Touch]
       Extinguish: [Touch]
       Acidic: [Touch, Ingestion]
     reactions:
-    - reagents: [ Holywater ]
-      methods: [ Touch ]
+    - reagents: [Holywater]
+      methods: [Touch]
       effects:
       - !type:Revert
         conditions:
@@ -30,14 +31,12 @@
   - type: Unholy
   - type: Destructible
     thresholds:
-    - trigger:
-        !type:DamageTypeTrigger
+    - trigger: !type:DamageTypeTrigger
         damageType: Blunt
         damage: 400
       behaviors:
       - !type:GibBehavior
-    - trigger:
-        !type:DamageTypeTrigger
+    - trigger: !type:DamageTypeTrigger
         damageType: Holy
         damage: 500
       behaviors:
@@ -51,8 +50,7 @@
       - !type:PlaySoundBehavior
         sound:
           collection: MeatLaserImpact
-    - trigger:
-        !type:DamageTypeTrigger
+    - trigger: !type:DamageTypeTrigger
         damageType: Heat
         damage: 1500
       behaviors:
@@ -67,8 +65,10 @@
         sound:
           collection: MeatLaserImpact
   - type: Bloodstream
-    bloodMaxVolume: 25
-    bloodReagent: DemonsBlood
+    bloodReferenceSolution:
+      reagents:
+      - ReagentId: DemonsBlood
+        Quantity: 25
     bloodlossDamage:
       types:
         Bloodloss: 0
@@ -79,14 +79,16 @@
     allowedStates:
     - Alive
     - Dead
-    damageCap: 0
     damage:
-      # types:
-      #   Holy: -0.07 # 4 в минуту
-      groups:
-        Brute: -0.25
-        Burn: -0.25
-        Airloss: -0.25
+      types:
+        Blunt: -0.08
+        Slash: -0.08
+        Piercing: -0.08
+        Heat: -0.08
+        Shock: -0.08
+        Cold: -0.08
+        Asphyxiation: -0.12
+        Bloodloss: -0.12
   - type: DamageStateVisuals
     states:
       Alive:
@@ -107,15 +109,19 @@
       75: Dead
   - type: Stamina
     animationThreshold: 50
-    critThreshold: 75
+    baseCritThreshold: 75
   - type: MeleeWeapon
+    altDisarm: false
     soundHit:
       path: /Audio/Weapons/Xeno/alien_claw_flesh3.ogg
     angle: 0
-    animation: WeaponArcClaw
+    animation: WeaponArcThrust
+    wideAnimation: WeaponArcThrust
     damage:
       types:
         Slash: 12
+  - type: Hands
+  - type: ProtectedFromStepTriggers
   - type: ZombieImmune
   - type: InputMover
   - type: MobMover
@@ -177,8 +183,8 @@
     drawdepth: Mobs
     sprite: _Stories/Mobs/Demons/fallenguardian.rsi
     layers:
-      - map: [ "enum.DamageStateVisualLayers.Base" ]
-        state: base
+    - map: ["enum.DamageStateVisualLayers.Base"]
+      state: base
   - type: MobThresholds
     allowRevives: true
     thresholds:
@@ -190,12 +196,12 @@
     angle: 0
     soundHit:
       collection: AlienClaw
-    animation: WeaponArcClaw
+    animation: WeaponArcThrust
+    wideAnimation: WeaponArcThrust
     damage:
       types:
         Slash: 15
-      groups:
-        Brute: 15
+        Blunt: 15
   - type: GhostRole
     allowMovement: true
     allowSpeech: true
@@ -208,7 +214,6 @@
       80: 0.9
       140: 0.8
   - type: Damageable
-    damageContainer: BiologicalMetaphysical
     damageModifierSet: STFallenGuardModifierSet
 
 - type: damageModifierSet
@@ -231,7 +236,7 @@
     drawdepth: Mobs
     sprite: _Stories/Mobs/Demons/desecrated.rsi
     layers:
-    - map: [ "enum.DamageStateVisualLayers.Base" ]
+    - map: ["enum.DamageStateVisualLayers.Base"]
       state: base
   - type: MobThresholds
     allowRevives: true
@@ -251,7 +256,6 @@
       100: 0.8
       120: 0.5
   - type: Damageable
-    damageContainer: BiologicalMetaphysical
     damageModifierSet: STDesecratedModifierSet
 
 - type: damageModifierSet
@@ -275,14 +279,17 @@
     allowedStates:
     - Alive
     - Critical
-    damageCap: 0
     damage:
       types:
         Holy: -0.07 # 4 в минуту
-      groups:
-        Brute: -0.25 # 15 в минуту
-        Burn: -0.25 # 15 в минуту
-        Airloss: -0.25 # 15 в минуту
+        Blunt: -0.08
+        Slash: -0.08
+        Piercing: -0.08
+        Heat: -0.08
+        Shock: -0.08
+        Cold: -0.08
+        Asphyxiation: -0.12
+        Bloodloss: -0.12
   - type: Sprite
     drawdepth: Mobs
     sprite: _Stories/Mobs/Demons/cursedmonk.rsi
@@ -307,7 +314,6 @@
       120: 0.8
       160: 0.5
   - type: Damageable
-    damageContainer: BiologicalMetaphysical
     damageModifierSet: STCursedmonkModifierSet
 
 - type: damageModifierSet

@@ -17,9 +17,9 @@ namespace Content.Server.Station.Systems;
 // Contains code for round-start spawning.
 public sealed partial class StationJobsSystem
 {
-    [Dependency] private readonly IPrototypeManager _prototypeManager = default!;
-    [Dependency] private readonly IBanManager _banManager = default!;
-    [Dependency] private readonly AntagSelectionSystem _antag = default!;
+    [Dependency] private IPrototypeManager _prototypeManager = default!;
+    [Dependency] private IBanManager _banManager = default!;
+    [Dependency] private AntagSelectionSystem _antag = default!;
 
     private Dictionary<int, HashSet<string>> _jobsByWeight = default!;
     private List<int> _orderedWeights = default!;
@@ -247,8 +247,47 @@ public sealed partial class StationJobsSystem
                             if (!jobPlayerOptions.ContainsKey(job))
                                 continue;
 
-                            // Picking players it finds that have the job set.
-                            var player = _random.Pick(jobPlayerOptions[job]);
+                            // Stories-Sponsors-Start
+                            var playerCandidates = jobPlayerOptions[job].ToList();
+                            if (playerCandidates.Count == 0)
+                                continue;
+
+                            NetUserId player;
+                            if (playerCandidates.Count == 1)
+                            {
+                                player = playerCandidates[0];
+                            }
+                            else
+                            {
+                                var totalWeight = 0f;
+                                var weights = new float[playerCandidates.Count];
+
+                                for (var i = 0; i < playerCandidates.Count; i++)
+                                {
+                                    var playerWeight = 1.0f;
+                                    if (_sponsorsManager.TryGetInfo(playerCandidates[i], out var info))
+                                    {
+                                        playerWeight = info.StationRolePriority;
+                                    }
+                                    weights[i] = playerWeight;
+                                    totalWeight += playerWeight;
+                                }
+
+                                var r = _random.NextFloat() * totalWeight;
+                                player = playerCandidates[^1];
+
+                                for (var i = 0; i < playerCandidates.Count; i++)
+                                {
+                                    r -= weights[i];
+                                    if (r <= 0)
+                                    {
+                                        player = playerCandidates[i];
+                                        break;
+                                    }
+                                }
+                            }
+                            // Stories-Sponsors-End
+
                             AssignPlayer(player, job, station);
                             stationShares[station]--;
 
@@ -345,13 +384,20 @@ public sealed partial class StationJobsSystem
     {
         var outputDict = new Dictionary<NetUserId, List<string>>(profiles.Count);
 
+        var antags = _antag.GetAntagJobs();
+
         foreach (var (player, profile) in profiles)
         {
             var roleBans = _banManager.GetJobBans(player);
-            var antagBlocked = _antag.GetPreSelectedAntagSessions();
             var profileJobs = profile.JobPriorities.Keys.Select(k => new ProtoId<JobPrototype>(k)).ToList();
             var ev = new StationJobsGetCandidatesEvent(player, profileJobs);
             RaiseLocalEvent(ref ev);
+
+            // Shouldn't happen but you know :P
+            if (!_player.TryGetSessionById(player, out var session))
+                continue;
+
+            var (whitelist, blacklist) = antags.GetValueOrDefault(session);
 
             List<string>? availableJobs = null;
 
@@ -365,7 +411,10 @@ public sealed partial class StationJobsSystem
                 if (!_prototypeManager.Resolve(jobId, out var job))
                     continue;
 
-                if (!job.CanBeAntag && (!_player.TryGetSessionById(player, out var session) || antagBlocked.Contains(session)))
+                if (whitelist != null && !whitelist.Contains(jobId))
+                    continue;
+
+                if (blacklist != null && blacklist.Contains(jobId))
                     continue;
 
                 if (weight is not null && job.Weight != weight.Value)

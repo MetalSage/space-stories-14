@@ -4,7 +4,8 @@ namespace Content.Shared._Stories.Mindshield;
 
 public sealed partial class MindShieldSystem : EntitySystem
 {
-    [Dependency] private readonly IEntityManager _entityManager = default!;
+    [Dependency] private IEntityManager _entityManager = default!;
+
     public override void Initialize()
     {
         base.Initialize();

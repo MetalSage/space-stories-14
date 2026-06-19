@@ -1,0 +1,10 @@
+- type: guideEntry
+  id: STSopSec
+  name: stories-guide-entry-Sop-Sec
+  priority: -1
+  text: "/ServerInfo/_Stories/ServerRules/SpaceLaw/SpaceStationSop.xml"
+
+- type: guideEntry
+  id: STCrimeModifiers
+  name: stories-guide-entry-modifiers
+  text: "/ServerInfo/_Stories/ServerRules/SpaceLaw/SpaceStationCrimeModifiers.xml"

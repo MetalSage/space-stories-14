@@ -24,7 +24,6 @@
   icon: "JobIconCaptain"
   joinNotifyCrew: true
   supervisors: job-supervisors-centcom
-  canBeAntag: false
   accessGroups:
   - AllAccess
   special:
@@ -33,6 +32,10 @@
   - !type:AddComponentSpecial
     components:
       - type: CommandStaff
+  # Stories-Economy-Start
+  minBankBalance: 400
+  maxBankBalance: 450
+  # Stories-Economy-End
 
 - type: startingGear
   id: CaptainGear

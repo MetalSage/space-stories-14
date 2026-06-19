@@ -4,27 +4,28 @@ using Robust.Shared.Prototypes;
 
 namespace Content.Shared._Stories.Conversion;
 
-public abstract class SharedConversionSystem : EntitySystem
+public abstract partial class SharedConversionSystem : EntitySystem
 {
-    [Dependency] private readonly EntityWhitelistSystem _entityWhitelist = default!;
-    [Dependency] private readonly IPrototypeManager _prototype = default!;
-    public bool IsConverted(EntityUid uid, ProtoId<ConversionPrototype> prototype, ConversionableComponent? component = null)
+    [Dependency] private EntityWhitelistSystem _entityWhitelist = default!;
+    [Dependency] private IPrototypeManager _prototype = default!;
+
+    public bool IsConverted(EntityUid uid,
+        ProtoId<ConversionPrototype> prototype,
+        ConversionableComponent? component = null)
     {
-        if (!Resolve(uid, ref component))
+        if (!Resolve(uid, ref component, false))
             return false;
 
         var proto = _prototype.Index(prototype);
 
         return component.ActiveConversions.ContainsKey(proto.ID);
     }
-    public bool CanConvert(EntityUid target, ProtoId<ConversionPrototype> prototype, EntityUid? performer = null, ConversionableComponent? component = null)
+
+    public bool CanConvert(EntityUid target,
+        ProtoId<ConversionPrototype> prototype,
+        EntityUid? performer = null,
+        ConversionableComponent? component = null)
     {
-        if (!Resolve(target, ref component))
-            return false;
-
-        if (IsConverted(target, prototype))
-            return false;
-
         var proto = _prototype.Index(prototype);
 
         if (TryComp<MobStateComponent>(target, out var mobState) &&
@@ -38,26 +39,36 @@ public abstract class SharedConversionSystem : EntitySystem
         if (_entityWhitelist.IsWhitelistPass(proto.Blacklist, target))
             return false;
 
-        if (!component.AllowedConversions.Contains(proto.ID))
-            return false;
+        if (Resolve(target, ref component, false))
+        {
+            if (component.ActiveConversions.ContainsKey(proto.ID))
+                return false;
+
+            if (component.AllowedConversions.Count > 0 && !component.AllowedConversions.Contains(proto.ID))
+                return false;
+        }
 
         var ev = new ConvertAttemptEvent(target, performer, proto);
-        RaiseLocalEvent(target, (object) ev);
+        RaiseLocalEvent(target, (object)ev);
 
         return !ev.Cancelled;
     }
-    public bool CanRevert(EntityUid target, ProtoId<ConversionPrototype> prototype, EntityUid? performer = null, ConversionableComponent? component = null)
+
+    public bool CanRevert(EntityUid target,
+        ProtoId<ConversionPrototype> prototype,
+        EntityUid? performer = null,
+        ConversionableComponent? component = null)
     {
-        if (!Resolve(target, ref component))
+        if (!Resolve(target, ref component, false))
             return false;
 
-        if (!IsConverted(target, prototype))
+        if (!IsConverted(target, prototype, component))
             return false;
 
         var proto = _prototype.Index(prototype);
 
         var ev = new RevertAttemptEvent(target, performer, proto);
-        RaiseLocalEvent(target, (object) ev);
+        RaiseLocalEvent(target, (object)ev);
 
         return !ev.Cancelled;
     }

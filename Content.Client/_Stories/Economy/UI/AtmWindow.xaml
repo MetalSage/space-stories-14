@@ -1,0 +1,79 @@
+<controls:FancyWindow xmlns="https://spacestation14.io"
+                      xmlns:controls="clr-namespace:Content.Client.UserInterface.Controls"
+                      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                      Title="{Loc 'atm-ui-title'}"
+                      MinSize="400 350"
+                      Resizable="False">
+    <BoxContainer Orientation="Vertical" Margin="8">
+        <PanelContainer StyleClasses="Inset" Margin="0 0 0 10">
+            <BoxContainer Orientation="Horizontal" HorizontalAlignment="Center" Margin="5">
+                <TextureRect StyleClasses="NTLogoDark" Stretch="KeepAspectCentered" SetSize="32 32" Margin="0 0 20 0" />
+                <BoxContainer Orientation="Vertical" VerticalAlignment="Center">
+                    <Label Text="{Loc 'atm-ui-header-bank'}" StyleClasses="LabelHeading" />
+                    <Label Text="{Loc 'atm-ui-header-machine'}" StyleClasses="LabelSubText" />
+                </BoxContainer>
+            </BoxContainer>
+        </PanelContainer>
+        <BoxContainer Name="LoginView" Orientation="Vertical" VerticalExpand="True">
+            <Control VerticalExpand="True" />
+            <PanelContainer StyleClasses="Inset" Margin="40 0" HorizontalAlignment="Center">
+                <BoxContainer Orientation="Vertical" Margin="20">
+                    <Label Text="{Loc 'atm-ui-welcome'}" Align="Center" StyleClasses="LabelHeading" Margin="0 0 0 10" />
+                    <BoxContainer Orientation="Horizontal" Margin="0 5" HorizontalAlignment="Center">
+                        <Label Text="{Loc 'atm-ui-account-number'}" MinWidth="100" />
+                        <Label Text=": " />
+                        <LineEdit Name="AccountNumberInput" PlaceHolder="00000000" MinWidth="150"
+                                  HorizontalAlignment="Center" />
+                    </BoxContainer>
+                    <BoxContainer Orientation="Horizontal" Margin="0 5" HorizontalAlignment="Center">
+                        <Label Text="{Loc 'atm-ui-pin'}" MinWidth="100" />
+                        <Label Text=": " />
+                        <LineEdit Name="PinInput" PlaceHolder="****" MinWidth="150" HorizontalAlignment="Center" />
+                    </BoxContainer>
+                    <Button Name="LoginButton" Text="{Loc 'atm-ui-login-button'}" Margin="0 15 0 0"
+                            HorizontalAlignment="Center" MinWidth="120" />
+                </BoxContainer>
+            </PanelContainer>
+            <Control VerticalExpand="True" />
+        </BoxContainer>
+        <BoxContainer Name="MainView" Orientation="Vertical" VerticalExpand="True" Visible="False">
+            <PanelContainer StyleClasses="Inset" Margin="0 0 0 15">
+                <BoxContainer Orientation="Vertical" Margin="10">
+                    <Label Name="WelcomeLabel" Align="Center" StyleClasses="LabelSubText" />
+                    <BoxContainer Orientation="Horizontal" HorizontalAlignment="Center" Margin="5">
+                        <Label Text="{Loc 'atm-ui-balance-label'}" StyleClasses="LabelKeyText"
+                               VerticalAlignment="Bottom" />
+                        <Label Text=" " />
+                        <Label Name="BalanceLabel" StyleClasses="LabelBig" Modulate="#38b026" Text="0 cr" />
+                    </BoxContainer>
+                </BoxContainer>
+            </PanelContainer>
+            <Label Text="{Loc 'atm-ui-withdraw'}" StyleClasses="LabelHeading" Margin="0 0 0 5" />
+            <GridContainer Columns="4" HorizontalAlignment="Stretch" Margin="0 0 0 10">
+                <Button Name="Withdraw10Button" HorizontalExpand="True" Margin="2" />
+                <Button Name="Withdraw50Button" HorizontalExpand="True" Margin="2" />
+                <Button Name="Withdraw100Button" HorizontalExpand="True" Margin="2" />
+                <Button Name="Withdraw500Button" HorizontalExpand="True" Margin="2" />
+            </GridContainer>
+            <BoxContainer Orientation="Horizontal" HorizontalAlignment="Center" Margin="0 5">
+                <LineEdit Name="CustomWithdrawAmount" PlaceHolder="{Loc 'atm-ui-custom-amount'}" MinWidth="300" />
+                <Button Name="CustomWithdrawButton" Text="{Loc 'atm-ui-withdraw-button'}" Margin="5 0 0 0" />
+            </BoxContainer>
+            <Control VerticalExpand="True" />
+            <Label Name="StatusMessage" HorizontalAlignment="Center" VerticalAlignment="Center"
+                   StyleClasses="LabelSubText" ClipText="True" />
+            <PanelContainer StyleClasses="LowDivider" Margin="-8 5 -8 5" />
+            <Button Name="LogoutButton" StyleClasses="negative" Text="{Loc 'atm-ui-logout-button'}" />
+        </BoxContainer>
+        <BoxContainer Orientation="Vertical">
+            <PanelContainer StyleClasses="LowDivider" Margin="-8 5 -8 5" />
+            <BoxContainer Orientation="Horizontal" VerticalAlignment="Bottom">
+                <Label Text="{Loc 'atm-ui-flavor-left'}" StyleClasses="WindowFooterText" />
+                <Label Text="{Loc 'atm-ui-flavor-right'}" StyleClasses="WindowFooterText"
+                       HorizontalAlignment="Right" HorizontalExpand="True" Margin="0 0 5 0" />
+                <TextureRect StyleClasses="NTLogoDark" Stretch="KeepAspectCentered"
+                             VerticalAlignment="Center" HorizontalAlignment="Right" SetSize="19 19" />
+            </BoxContainer>
+        </BoxContainer>
+    </BoxContainer>
+</controls:FancyWindow>

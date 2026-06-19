@@ -1,2 +1,3 @@
 ent-STMobCorpium = Корпиум
     .desc = Очень страшный скорпион из далекого космоса. Не дайте ему себя укусить.
+    .suffix = { ent-MobTick.suffix }

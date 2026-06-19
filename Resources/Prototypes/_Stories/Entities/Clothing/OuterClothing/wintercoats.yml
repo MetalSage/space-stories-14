@@ -1,0 +1,8 @@
+- type: entity
+  parent: [ClothingOuterWinterCoatToggleable, BaseCommandContraband]
+  id: STClothingOuterWinterCapGeneral
+  components:
+  - type: Sprite
+    sprite: _Stories/Clothing/OuterClothing/WinterCoats/general_armored_jacket.rsi
+  - type: Clothing
+    sprite: _Stories/Clothing/OuterClothing/WinterCoats/general_armored_jacket.rsi

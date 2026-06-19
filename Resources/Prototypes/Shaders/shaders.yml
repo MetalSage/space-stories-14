@@ -59,6 +59,11 @@
   path: "/Textures/Shaders/camera_static.swsl"
 
 - type: shader
+  id: CameraStaticAccessible
+  kind: source
+  path: "/Textures/Shaders/camera_static_accessible.swsl"
+
+- type: shader
   id: Drunk
   kind: source
   path: "/Textures/Shaders/drunk.swsl"
@@ -116,18 +121,7 @@
   kind: source
   path: "/Textures/Shaders/hologram.swsl"
 
-# Base post-processing
 - type: shader
-  id: BasePostProcess
+  id: HeatBlur
   kind: source
-  path: "/Textures/Shaders/base_postprocess.swsl"
-  params:
-    CircleRadius: 420.0
-    CircleMinDist: 0.0
-    CirclePow: 1.0
-    CircleMax: 4.0
-    CircleMult: 0.25
-    FalloffClampMin: 0.075
-    FalloffClampMax: 1.0
-    FalloffStrength: 0.75
-    FalloffPow: 3.0
+  path: "/Textures/Shaders/heatBlur.swsl"

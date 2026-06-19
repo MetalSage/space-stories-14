@@ -14,6 +14,7 @@
         mask:
         - MachineMask
   - type: Damageable
+  - type: Injurable
   - type: GhostRoleMobSpawner
     prototype: MobMiniSpaf
   - type: Destructible
@@ -39,5 +40,7 @@
     name: ghost-role-information-spafegg-name
     description: ghost-role-information-spafegg-description
     rules: ghost-role-information-spaf-rules
+    mindRoles:
+    - MindRoleGhostRoleTeamAntagonistFlock
     raffle:
       settings: default

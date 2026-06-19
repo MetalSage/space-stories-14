@@ -1,5 +1,5 @@
-ent-BasePaper = { ent-BaseItem }
-    .desc = { ent-BaseItem.desc }
+ent-BasePaper = { ent-SolutionFood }
+    .desc = { ent-SolutionFood.desc }
 ent-Paper = бумага
     .desc = Лист белой бумаги.
 ent-PaperScrap = обрывки бумаги
@@ -25,8 +25,8 @@ ent-PaperWritten = { ent-Paper }
 ent-NukeCodePaper = коды ядерной аутентификации
     .desc = { ent-Paper.desc }
 ent-NukeCodePaperStation = { ent-NukeCodePaper }
-    .suffix = Только станция
     .desc = { ent-NukeCodePaper.desc }
+    .suffix = Только станция
 ent-TraitorCodePaper = кодовое слово Синдиката
     .desc = Раскрытое кодовое слово, с помощью которого можно связаться с Синдикатом.
 ent-AllTraitorCodesPaper = реестр кодовых слов Синдиката

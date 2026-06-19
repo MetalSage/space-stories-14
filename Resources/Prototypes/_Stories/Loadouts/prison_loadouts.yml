@@ -25,7 +25,6 @@
   groups:
   - MedicalDoctorHead
   - MedicalMask
-  - MedicalGloves
   - MedicalBackpack
   - MedicalDoctorOuterClothing
   - MedicalShoes

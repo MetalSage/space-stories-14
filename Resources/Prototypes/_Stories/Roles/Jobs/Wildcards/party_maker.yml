@@ -11,6 +11,8 @@
   - Service
   - Maintenance
   - Theatre
+  minBankBalance: 50
+  maxBankBalance: 100
 
 - type: startingGear
   id: STPartyMakerGear

@@ -10,7 +10,6 @@
   startingGear: DetectiveGear
   icon: "JobIconDetective"
   supervisors: job-supervisors-hos
-  canBeAntag: false
   access:
   - Security
   - Brig
@@ -18,11 +17,13 @@
   - Detective
   - Cryogenics
   - External
-  - GenpopEnter
-  - GenpopLeave
   special:
   - !type:AddImplantSpecial
     implants: [ MindShieldImplant ]
+  # Stories-Economy-Start
+  minBankBalance: 200
+  maxBankBalance: 250
+  # Stories-Economy-End
 
 - type: startingGear
   id: DetectiveGear

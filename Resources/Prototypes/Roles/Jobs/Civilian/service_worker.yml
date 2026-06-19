@@ -17,6 +17,10 @@
   - Kitchen
   extendedAccess:
   - Hydroponics
+  # Stories-Economy-Start
+  minBankBalance: 100
+  maxBankBalance: 150
+  # Stories-Economy-End
 
 - type: startingGear
   id: ServiceWorkerGear

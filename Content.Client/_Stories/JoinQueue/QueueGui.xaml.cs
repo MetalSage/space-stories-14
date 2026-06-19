@@ -10,28 +10,28 @@ namespace Content.Client._Stories.JoinQueue;
 [GenerateTypedNameReferences]
 public sealed partial class QueueGui : Control
 {
-    [Dependency] private readonly IConfigurationManager _cfg = default!;
-    
-    public event Action? QuitPressed;
-    
+    [Dependency] private IConfigurationManager _cfg = default!;
+
     public QueueGui()
     {
         RobustXamlLoader.Load(this);
         IoCManager.InjectDependencies(this);
         LayoutContainer.SetAnchorPreset(this, LayoutContainer.LayoutPreset.Wide);
-        
-        QuitButton.OnPressed += (_) => QuitPressed?.Invoke();
-        
+
+        QuitButton.OnPressed += _ => QuitPressed?.Invoke();
+
         // Disable "priority join" button on Steam builds
         // since it violates Valve's rules about alternative storefronts.
         PriorityJoinButton.Visible = !_cfg.GetCVar(CCVars.BrandingSteam);
 
-        PriorityJoinButton.OnPressed += (_) =>
+        PriorityJoinButton.OnPressed += _ =>
         {
             var linkPatreon = _cfg.GetCVar(CCVars.InfoLinksPatreon);
             IoCManager.Resolve<IUriOpener>().OpenUri(linkPatreon);
         };
     }
+
+    public event Action? QuitPressed;
 
     public void UpdateInfo(int total, int position)
     {

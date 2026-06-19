@@ -3,7 +3,11 @@
   id: ClothingEyesThermalVisionBase
   abstract: true
   components:
-  - type: ThermalVisionClothing
+  - type: VisionProvider
+    thermalVision: true
+    thermalShader: ThermalVision
+    thermalAmbientColor: "#FF8888"
+    toggleAction: STActionToggleThermal
 
 - type: entity
   parent: ClothingEyesThermalVisionBase
@@ -17,7 +21,7 @@
     sprite: _Stories/Clothing/Eyes/Glasses/termalhud_oneglass.rsi
 
 - type: entity
-  parent: [ ClothingEyesThermalVisionBase, ClothingEyesHudSyndicate ]
+  parent: [ClothingEyesThermalVisionBase, ClothingEyesHudSyndicate]
   id: ClothingEyesThermalVisionHud
   name: термальный визор оперативника
   description: Новейшая разведочная технология, которую поместили внутрь визора. Позволяет видеть органические цели в полной темноте и даже через стены. Этот вариант специально для Ядерных Оперативников имеет встроенный визор Синдиката.
@@ -33,8 +37,10 @@
   name: прибор ночного видения
   description: Позволяет видеть в полной темноте. Работает на ядерной батарее внутри и совсем не вреден для глаз.
   components:
-  - type: NightvisionClothing # Space Stories
-    toggleOnSound: /Audio/_Stories/Misc/night_vision.ogg
+  - type: VisionProvider
+    shader: Nightvision
+    ambientColor: "#55ff5510"
+    toggleAction: STActionToggleVision
   - type: Sprite
     sprite: _Stories/Clothing/Eyes/Glasses/nvg.rsi
   - type: Clothing
