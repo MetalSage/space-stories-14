@@ -216,7 +216,6 @@
     - Janitor
     - Instruments
     - Equipment
-    - STVision # Stories-RND
   - type: EmagLatheRecipes
     emagDynamicPacks:
     - SecurityAmmo
@@ -407,6 +406,7 @@
     - SecurityAmmo
     - SecurityWeapons
     - SecurityDisablers
+    - STVision # Stories-RND
   - type: EmagLatheRecipes
     emagStaticPacks:
     - SyndicateAmmoStatic
