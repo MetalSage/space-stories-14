@@ -142,7 +142,7 @@
   name: syringe gun
   parent: BaseStorageItem
   id: LauncherSyringe
-  description: Load a full set of poisoned mini-syringes for optimal entertainment.
+  description: Load full of poisoned syringes for optimal fun.
   components:
   - type: Sprite
     sprite: Objects/Weapons/Guns/Cannons/syringe_gun.rsi
