@@ -1687,9 +1687,9 @@
   productEntity: ClothingShoesBootsMagSyndie
   discountCategory: usualDiscounts
   discountDownTo:
-    Telecrystal: 1
+    Telecrystal: 2 # Stories-Price
   cost:
-    Telecrystal: 2
+    Telecrystal: 4 # Stories-Price
   categories:
   - UplinkWearables
 

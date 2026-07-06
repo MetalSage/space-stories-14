@@ -1,0 +1,35 @@
+- type: entity
+  parent: [ClothingShoesBootsMagBase, BaseSecurityContraband]
+  id: STClothingShoesBootsMagSec
+  name: security magboots
+  description: Magnetic boots, specially designed for security. Provide superior mobility.
+  components:
+  - type: Sprite
+    sprite: _Stories/Clothing/Shoes/Boots/magboots-security.rsi
+  - type: Clothing
+    sprite: _Stories/Clothing/Shoes/Boots/magboots-security.rsi
+  - type: ClothingSpeedModifier
+    walkModifier: 0.9
+    sprintModifier: 0.9
+  - type: ClothingSlowOnDamageModifier
+    modifier: 0.5
+  - type: StaticPrice
+    price: 500
+
+- type: entity
+  parent: [ClothingShoesBootsMagBase, BaseCommandContraband]
+  id: STClothingShoesBootsMagCap
+  name: captain magboots
+  description: Magnetic boots, specially designed for captain. Provide enhanced mobility.
+  components:
+  - type: Sprite
+    sprite: _Stories/Clothing/Shoes/Boots/magboots-captain.rsi
+  - type: Clothing
+    sprite: _Stories/Clothing/Shoes/Boots/magboots-captain.rsi
+  - type: ClothingSpeedModifier
+    walkModifier: 0.85
+    sprintModifier: 0.85
+  - type: ClothingSlowOnDamageModifier
+    modifier: 0.75
+  - type: StaticPrice
+    price: 350
