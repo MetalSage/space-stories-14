@@ -2,6 +2,7 @@ using Content.Server._Stories.Economy.Components;
 using Content.Server.Stack;
 using Content.Server.Station.Systems;
 using Content.Shared._Stories.Economy;
+using Content.Shared.Cargo.Components;
 using Content.Shared.Interaction;
 using Content.Shared.Stacks;
 using Content.Shared.UserInterface;
@@ -96,7 +97,7 @@ public sealed partial class AtmSystem : EntitySystem
             return;
 
         if (TryComp<StackComponent>(args.Used, out var stack) &&
-            Prototype(args.Used)?.ID == "SpaceCash")
+            HasComp<CashComponent>(args.Used))
         {
             var station = _station.GetOwningStation(uid);
             if (station == null)
