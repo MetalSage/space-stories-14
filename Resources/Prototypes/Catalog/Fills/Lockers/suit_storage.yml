@@ -184,6 +184,7 @@
     - id: OxygenTankFilled
     - id: ClothingOuterHardsuitSecurity
     - id: ClothingMaskBreath
+    - id: STClothingShoesBootsMagSec # Stories-MagBoots
 
 #CE's hardsuit
 - type: entity

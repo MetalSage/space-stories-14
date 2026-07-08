@@ -57,6 +57,7 @@
     - id: ClothingOuterHardsuitWarden
     - id: OxygenTankFilled
     - id: ClothingMaskBreath
+    - id: STClothingShoesBootsMagSec # Stories-MagBoots
 
 - type: entity
   id: LockerSecurityFilled
