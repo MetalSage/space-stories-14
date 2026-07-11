@@ -17,9 +17,9 @@ public sealed partial class HumanoidProfileEditor
             .OrderBy(o => Loc.GetString(o.Name))
             .ToList();
 
-        VoiceButton.OnItemSelected += args =>
+        VoiceTTSButton.OnItemSelected += args =>
         {
-            VoiceButton.SelectId(args.Id);
+            VoiceTTSButton.SelectId(args.Id);
             SetVoice(_voiceList[args.Id].ID);
         };
 
@@ -31,7 +31,7 @@ public sealed partial class HumanoidProfileEditor
         if (Profile is null)
             return;
 
-        VoiceButton.Clear();
+        VoiceTTSButton.Clear();
 
         var firstVoiceChoiceId = 1;
         for (var i = 0; i < _voiceList.Count; i++)
@@ -41,15 +41,15 @@ public sealed partial class HumanoidProfileEditor
                 continue;
 
             var name = Loc.GetString(voice.Name);
-            VoiceButton.AddItem(name, i);
+            VoiceTTSButton.AddItem(name, i);
 
             if (firstVoiceChoiceId == 1)
                 firstVoiceChoiceId = i;
         }
 
         var voiceChoiceId = _voiceList.FindIndex(x => x.ID == Profile.VoiceTTS);
-        if (!VoiceButton.TrySelectId(voiceChoiceId) &&
-            VoiceButton.TrySelectId(firstVoiceChoiceId))
+        if (!VoiceTTSButton.TrySelectId(voiceChoiceId) &&
+            VoiceTTSButton.TrySelectId(firstVoiceChoiceId))
             SetVoice(_voiceList[firstVoiceChoiceId].ID);
     }
 

@@ -14,21 +14,11 @@ namespace Content.Server.Database.Migrations.Sqlite
                 name: "voice",
                 table: "profile",
                 newName: "voice_tt_s");
-
-            migrationBuilder.AddColumn<string>(
-                name: "voice",
-                table: "profile",
-                type: "TEXT",
-                nullable: true);
         }
 
         /// <inheritdoc />
         protected override void Down(MigrationBuilder migrationBuilder)
         {
-            migrationBuilder.DropColumn(
-                name: "voice",
-                table: "profile");
-
             migrationBuilder.RenameColumn(
                 name: "voice_tt_s",
                 table: "profile",

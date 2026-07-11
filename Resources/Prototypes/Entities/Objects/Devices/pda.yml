@@ -97,7 +97,7 @@
         - id: NotekeeperCartridge
         - id: NanoTaskCartridge
         - id: NewsReaderCartridge
-        - STBankCartridge # Stories-Economy
+        - id: STBankCartridge # Stories-Economy
   - type: ActivatableUI
     key: enum.PdaUiKey.Key
     singleUser: true
@@ -164,7 +164,7 @@
         - id: NanoTaskCartridge
         - id: NewsReaderCartridge
         - id: WantedListCartridge
-        - STBankCartridge # Stories-Economy
+        - id: STBankCartridge # Stories-Economy
 
 - type: entity
   parent: BasePDA
@@ -180,7 +180,7 @@
         - id: NanoTaskCartridge
         - id: NewsReaderCartridge
         - id: MedTekCartridge
-        - STBankCartridge # Stories-Economy
+        - id: STBankCartridge # Stories-Economy
 
 - type: entity
   parent: BasePDA
@@ -499,7 +499,7 @@
         - id: NanoTaskCartridge
         - id: NewsReaderCartridge
         - id: AstroNavCartridge
-        - STBankCartridge # Stories-Economy
+        - id: STBankCartridge # Stories-Economy
 
 - type: entity
   parent: BasePDA
@@ -546,7 +546,7 @@
         - id: NanoTaskCartridge
         - id: NewsReaderCartridge
         - id: AstroNavCartridge
-        - STBankCartridge # Stories-Economy
+        - id: STBankCartridge # Stories-Economy
 
 - type: entity
   parent: BasePDA
@@ -899,7 +899,7 @@
         - id: NewsReaderCartridge
         - id: WantedListCartridge
         - id: LogProbeCartridge
-        - STBankCartridge # Stories-Economy
+        - id: STBankCartridge # Stories-Economy
 
 - type: entity
   parent: BaseSecurityPDA
@@ -973,7 +973,7 @@
         - id: WantedListCartridge
         - id: LogProbeCartridge
         - id: AstroNavCartridge
-        - STBankCartridge # Stories-Economy
+        - id: STBankCartridge # Stories-Economy
 
 - type: entity
   parent: CentcomPDA
@@ -1002,7 +1002,7 @@
         - id: WantedListCartridge
         - id: MedTekCartridge
         - id: AstroNavCartridge
-        - STBankCartridge # Stories-Economy
+        - id: STBankCartridge # Stories-Economy
   - type: Tag #  Ignore Chameleon tags
     tags:
     - DoorBumpOpener
@@ -1210,7 +1210,7 @@
         - id: WantedListCartridge
         - id: LogProbeCartridge
         - id: AstroNavCartridge
-        - STBankCartridge # Stories-Economy
+        - id: STBankCartridge # Stories-Economy
 
 - type: entity
   parent: ERTLeaderPDA
@@ -1384,7 +1384,7 @@
         - id: NewsReaderCartridge
         - id: WantedListCartridge
         - id: LogProbeCartridge
-        - STBankCartridge # Stories-Economy
+        - id: STBankCartridge # Stories-Economy
 
 - type: entity
   parent: BaseMedicalPDA
@@ -1415,7 +1415,7 @@
         - id: NewsReaderCartridge
         - id: WantedListCartridge
         - id: MedTekCartridge
-        - STBankCartridge # Stories-Economy
+        - id: STBankCartridge # Stories-Economy
 
 - type: entity
   parent: ClownPDA

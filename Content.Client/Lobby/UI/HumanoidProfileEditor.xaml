@@ -115,7 +115,7 @@
                                 <BoxContainer HorizontalExpand="True" Visible="True" Name="TTSContainer">
                                     <Label Text="{Loc 'humanoid-profile-editor-voice-label'}" />
                                     <Control HorizontalExpand="True"/>
-                                    <OptionButton Name="VoiceButton" HorizontalAlignment="Right" />
+                                    <OptionButton Name="VoiceTTSButton" HorizontalAlignment="Right" />
                                     <Button Name="VoicePlayButton" Text="{Loc 'humanoid-profile-editor-voice-play'}" MaxWidth="80" />
                                 </BoxContainer>
                                 <!-- Stories-End -->

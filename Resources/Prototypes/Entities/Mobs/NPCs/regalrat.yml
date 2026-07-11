@@ -127,7 +127,6 @@
   - type: Grammar
     attributes:
       gender: male
-  - type: Sharp
   # Stories-Start
   - type: TTS
     voice: twitch
