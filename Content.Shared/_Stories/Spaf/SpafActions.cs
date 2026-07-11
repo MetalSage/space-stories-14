@@ -10,7 +10,7 @@ namespace Content.Shared._Stories.Spaf;
 
 public interface ISpafAction
 {
-    [DataField("cost")] float HungerCost { get; set; }
+    float HungerCost { get; set; }
 }
 
 public sealed partial class SpafCreateEntityEvent : InstantActionEvent, ISpafAction

@@ -1,4 +1,4 @@
-﻿using System.Linq;
+using System.Linq;
 using Content.Client._Stories.TTS;
 using Content.Shared._Stories.TTS;
 using Content.Shared.Humanoid;
@@ -47,7 +47,7 @@ public sealed partial class HumanoidProfileEditor
                 firstVoiceChoiceId = i;
         }
 
-        var voiceChoiceId = _voiceList.FindIndex(x => x.ID == Profile.Voice);
+        var voiceChoiceId = _voiceList.FindIndex(x => x.ID == Profile.VoiceTTS);
         if (!VoiceButton.TrySelectId(voiceChoiceId) &&
             VoiceButton.TrySelectId(firstVoiceChoiceId))
             SetVoice(_voiceList[firstVoiceChoiceId].ID);
@@ -58,7 +58,7 @@ public sealed partial class HumanoidProfileEditor
         if (Profile is null)
             return;
 
-        _entManager.System<TTSSystem>().RequestPreviewTTS(Profile.Voice);
+        _entManager.System<TTSSystem>().RequestPreviewTTS(Profile.VoiceTTS);
     }
 
     private void SetVoice(string voiceId)
@@ -66,7 +66,7 @@ public sealed partial class HumanoidProfileEditor
         if (Profile is null)
             return;
 
-        Profile = Profile.WithVoice(voiceId);
+        Profile = Profile.WithVoiceTTS(voiceId);
         IsDirty = true;
     }
 
