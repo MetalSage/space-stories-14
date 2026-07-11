@@ -306,6 +306,15 @@ cmd-addmap-help = Использование: { $command } <mapID> [pre-init]
 cmd-rmmap-desc = Удаляет карту из мира. Вы не можете удалить nullspace.
 cmd-rmmap-help = Использование: { $command } <mapId>
 
+cmd-pausemap-desc = Pauses a map, pausing all simulation processing on it.
+cmd-pausemap-help = Usage: pausemap <map ID>
+
+cmd-unpausemap-desc = Unpauses a map, resuming all simulation processing on it.
+cmd-unpausemap-help = Usage: unpausemap <map ID>
+
+cmd-querymappaused-desc = Check whether a map is paused or not.
+cmd-querymappaused-help = Usage: querymappaused <map ID>
+
 cmd-savegrid-desc = Сохраняет грид на диск.
 cmd-savegrid-help = Использование: { $command } <gridID> <Path>
 

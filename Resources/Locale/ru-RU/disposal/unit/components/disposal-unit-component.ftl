@@ -12,11 +12,11 @@ ui-disposal-unit-button-power = Питание
 
 ## Verbs
 disposal-flush-verb-get-data-text = Смыть
-disposal-self-insert-verb-get-data-text = Залезть внутрь
 disposal-eject-verb-get-data-text = Извлечь всё
 
-## No hands
+## Errors
 disposal-unit-no-hands = У вас нет рук!
+disposal-unit-is-full = There's no more room inside.
 
 # state
 disposal-unit-state-Ready = Готов
