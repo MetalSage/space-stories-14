@@ -38,8 +38,7 @@
   - type: VisionProvider
     ambientColor: "#8A782940"
   - type: Vocal
-    sounds:
-      Unsexed: STCorpium
+    emoteSounds: STCorpium
   - type: FootstepModifier
     footstepSoundCollection:
       collection: STFootstepCorpium
