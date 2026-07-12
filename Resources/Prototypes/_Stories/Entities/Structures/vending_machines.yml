@@ -9,6 +9,11 @@
       offState: off
       brokenState: broken
       normalState: normal-unshaded
+      freeJobs:
+      - PRISONHeadOfPrison
+      - PRISONEngineer
+      - PRISONMedic
+      - PRISONOfficer
     - type: DatasetVocalizer
       dataset: SecDrobeAds
     - type: Sprite
@@ -37,6 +42,11 @@
       normalState: normal-unshaded
       ejectState: eject-unshaded
       denyState: deny-unshaded
+      freeJobs:
+      - PRISONHeadOfPrison
+      - PRISONEngineer
+      - PRISONMedic
+      - PRISONOfficer
     - type: DatasetVocalizer
       dataset: SecTechAds
     - type: SpeakOnUIClosed
@@ -95,6 +105,10 @@
   id: MusicalVendingMachine
   suffix: Station
   components:
+    - type: VendingMachine
+      freeJobs:
+      - Clown
+      - Mime
     - type: AccessReader
       access: [["Theatre"]]
 
@@ -103,5 +117,11 @@
   id: MusicalVendingMachinePrison
   suffix: Prison
   components:
+    - type: VendingMachine
+      freeJobs:
+      - PRISONHeadOfPrison
+      - PRISONEngineer
+      - PRISONMedic
+      - PRISONOfficer
     - type: AccessReader
       access: [["Prison"]]

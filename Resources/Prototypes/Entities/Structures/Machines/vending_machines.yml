@@ -1,4 +1,4 @@
-﻿# base
+# base
 
 - type: entity
   id: VendingMachine
@@ -245,6 +245,8 @@
     normalState: normal-unshaded
     denyState: deny-unshaded
     loopDeny: false
+    freeJobs:
+    - Bartender
   - type: DatasetVocalizer
     dataset: BoozeOMatAds
   - type: SpeakOnUIClosed
@@ -342,6 +344,8 @@
     brokenState: broken
     normalState: normal-unshaded
     ejectState: eject-unshaded
+    freeJobs:
+    - Chef
   - type: DatasetVocalizer
     dataset: ChefvendAds
   - type: SpeakOnUIClosed
@@ -795,6 +799,8 @@
     brokenState: broken
     normalState: normal-unshaded
     ejectState: eject-unshaded
+    freeJobs:
+    - Chef
   - type: DatasetVocalizer
     dataset: DinnerwareAds
   - type: SpeakOnUIClosed
@@ -892,6 +898,11 @@
     normalState: normal-unshaded
     ejectState: eject-unshaded
     denyState: deny-unshaded
+    freeJobs:
+    - StationEngineer
+    - ChiefEngineer
+    - AtmosphericTechnician
+    - TechnicalAssistant
   - type: Sprite
     sprite: Structures/Machines/VendingMachines/engivend.rsi
     layers:
@@ -924,6 +935,12 @@
     ejectState: eject-unshaded
     denyState: deny-unshaded
     ejectDelay: 0.6
+    freeJobs:
+    - MedicalDoctor
+    - ChiefMedicalOfficer
+    - Chemist
+    - Paramedic
+    - MedicalIntern
   - type: DatasetVocalizer
     dataset: NanoMedAds
   - type: SpeakOnUIClosed
@@ -980,6 +997,8 @@
     normalState: normal-unshaded
     ejectState: eject-unshaded
     denyState: deny-unshaded
+    freeJobs:
+    - Botanist
   - type: DatasetVocalizer
     dataset: NutriMaxAds
   - type: SpeakOnUIClosed
@@ -1014,6 +1033,12 @@
     normalState: normal-unshaded
     ejectState: eject-unshaded
     denyState: deny-unshaded
+    freeJobs:
+    - Warden
+    - SecurityOfficer
+    - HeadOfSecurity
+    - SecurityCadet
+    - Detective
   - type: DatasetVocalizer
     dataset: SecTechAds
   - type: SpeakOnUIClosed
@@ -1053,6 +1078,8 @@
     normalState: normal-unshaded
     ejectState: eject-unshaded
     denyState: deny-unshaded
+    freeJobs:
+    - Botanist
   - type: DatasetVocalizer
     dataset: MegaSeedAds
   - type: SpeakOnUIClosed
@@ -1343,6 +1370,10 @@
     normalState: normal-unshaded
     ejectState: eject-unshaded
     denyState: deny-unshaded
+    freeJobs:
+    - Scientist
+    - ResearchDirector
+    - ResearchAssistant
   - type: DatasetVocalizer
     dataset: VendomatAds
   - type: SpeakOnUIClosed
@@ -1472,6 +1503,8 @@
     brokenState: broken
     normalState: normal-unshaded
     denyState: deny-unshaded
+    freeJobs:
+    - SalvageSpecialist
   - type: Sprite
     sprite: Structures/Machines/VendingMachines/mining.rsi
     layers:
@@ -1538,6 +1571,8 @@
     offState: off
     brokenState: broken
     normalState: normal-unshaded
+    freeJobs:
+    - Botanist
   - type: DatasetVocalizer
     dataset: HyDrobeAds
   - type: SpeakOnUIClosed
@@ -1570,6 +1605,8 @@
     offState: off
     brokenState: broken
     normalState: normal-unshaded
+    freeJobs:
+    - Lawyer
   - type: DatasetVocalizer
     dataset: LawDrobeAds
   - type: SpeakOnUIClosed
@@ -1598,6 +1635,12 @@
     offState: off
     brokenState: broken
     normalState: normal-unshaded
+    freeJobs:
+    - Warden
+    - SecurityOfficer
+    - HeadOfSecurity
+    - SecurityCadet
+    - Detective
   - type: DatasetVocalizer
     dataset: SecDrobeAds
   - type: SpeakOnUIClosed
@@ -1630,6 +1673,8 @@
     offState: off
     brokenState: broken
     normalState: normal-unshaded
+    freeJobs:
+    - Bartender
   - type: DatasetVocalizer
     dataset: BarDrobeAds
   - type: SpeakOnUIClosed
@@ -1658,6 +1703,8 @@
     brokenState: broken
     normalState: normal-unshaded
     denyState: deny-unshaded
+    freeJobs:
+    - Chaplain
   - type: Sprite
     sprite: Structures/Machines/VendingMachines/chapdrobe.rsi
     layers:
@@ -1686,6 +1733,10 @@
     offState: off
     brokenState: broken
     normalState: normal-unshaded
+    freeJobs:
+    - Quartermaster
+    - CargoTechnician
+    - SalvageSpecialist
   - type: DatasetVocalizer
     dataset: CargoDrobeAds
   - type: SpeakOnUIClosed
@@ -1718,6 +1769,12 @@
     offState: off
     brokenState: broken
     normalState: normal-unshaded
+    freeJobs:
+    - MedicalDoctor
+    - ChiefMedicalOfficer
+    - Chemist
+    - Paramedic
+    - MedicalIntern
   - type: DatasetVocalizer
     dataset: MediDrobeAds
   - type: SpeakOnUIClosed
@@ -1746,6 +1803,8 @@
     offState: off
     brokenState: broken
     normalState: normal-unshaded
+    freeJobs:
+    - Chemist
   - type: DatasetVocalizer
     dataset: ChemDrobeAds
   - type: SpeakOnUIClosed
@@ -1775,6 +1834,8 @@
     offState: off
     brokenState: broken
     normalState: normal-unshaded
+    freeJobs:
+    - Librarian
   - type: DatasetVocalizer
     dataset: CuraDrobeAds
   - type: SpeakOnUIClosed
@@ -1803,6 +1864,8 @@
     offState: off
     brokenState: broken
     normalState: normal-unshaded
+    freeJobs:
+    - AtmosphericTechnician
   - type: DatasetVocalizer
     dataset: AtmosDrobeAds
   - type: SpeakOnUIClosed
@@ -1836,6 +1899,11 @@
     offState: off
     brokenState: broken
     normalState: normal-unshaded
+    freeJobs:
+    - StationEngineer
+    - ChiefEngineer
+    - AtmosphericTechnician
+    - TechnicalAssistant
   - type: DatasetVocalizer
     dataset: EngiDrobeAds
   - type: SpeakOnUIClosed
@@ -1869,6 +1937,8 @@
     offState: off
     brokenState: broken
     normalState: normal-unshaded
+    freeJobs:
+    - Chef
   - type: DatasetVocalizer
     dataset: ChefDrobeAds
   - type: SpeakOnUIClosed
@@ -1897,6 +1967,8 @@
     offState: off
     brokenState: broken
     normalState: normal-unshaded
+    freeJobs:
+    - Detective
   - type: DatasetVocalizer
     dataset: DetDrobeAds
   - type: SpeakOnUIClosed
@@ -1925,6 +1997,8 @@
     offState: off
     brokenState: broken
     normalState: normal-unshaded
+    freeJobs:
+    - Janitor
   - type: DatasetVocalizer
     dataset: JaniDrobeAds
   - type: SpeakOnUIClosed
@@ -1957,6 +2031,10 @@
     offState: off
     brokenState: broken
     normalState: normal-unshaded
+    freeJobs:
+    - Scientist
+    - ResearchDirector
+    - ResearchAssistant
   - type: DatasetVocalizer
     dataset: SciDrobeAds
   - type: SpeakOnUIClosed

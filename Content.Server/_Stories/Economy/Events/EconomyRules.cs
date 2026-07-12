@@ -59,8 +59,8 @@ public sealed partial class BankingErrorRule : StationEventSystem<BankingErrorRu
                     if (bankAccount.AccountNumber == accNum)
                     {
                         _economy.TrySendNotification(mindId,
-                            Loc.GetString("bank-app-notification-error-title"),
-                            Loc.GetString("bank-app-notification-error-body", ("amount", loss)));
+                            Loc.GetString("stories-bank-app-notification-error-title"),
+                            Loc.GetString("stories-bank-app-notification-error-body", ("amount", loss)));
                         break;
                     }
                 }

@@ -65,7 +65,7 @@ public sealed partial class CharacterInfoSystem : EntitySystem
             // Stories-Economy-Start
             if (TryComp<MindBankAccountComponent>(mindId, out var bankInfo))
             {
-                var bankMsg = Loc.GetString("character-info-bank-briefing", 
+                var bankMsg = Loc.GetString("stories-character-info-bank-briefing", 
                     ("account", bankInfo.AccountNumber), 
                     ("pin", bankInfo.Pin));
 

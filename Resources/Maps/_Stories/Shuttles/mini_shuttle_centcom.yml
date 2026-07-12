@@ -1087,13 +1087,11 @@ entities:
   - uid: 120
     components:
     - type: Transform
-      rot: -1.5707963267948966 rad
       pos: 0.5,-2.5
       parent: 1
   - uid: 128
     components:
     - type: Transform
-      rot: -1.5707963267948966 rad
       pos: 0.5,-1.5
       parent: 1
   - uid: 150
@@ -1114,13 +1112,11 @@ entities:
   - uid: 167
     components:
     - type: Transform
-      rot: -1.5707963267948966 rad
       pos: 6.5,-2.5
       parent: 1
   - uid: 173
     components:
     - type: Transform
-      rot: -1.5707963267948966 rad
       pos: 6.5,-1.5
       parent: 1
   - uid: 188
