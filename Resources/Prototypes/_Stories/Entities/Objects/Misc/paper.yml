@@ -1,8 +1,8 @@
 - type: entity
-  name: распечатаная бумага
+  name: printed paper
   parent: Paper
   id: PrintedPaper
-  description: Кусок распечатанной бумаги.
+  description: A piece of printed paper.
   components:
   - type: Sprite
     sprite: Objects/Misc/bureaucracy.rsi
@@ -23,10 +23,10 @@
     backgroundPatchMargin: 16.0, 16.0, 16.0, 16.0
 
 - type: entity
-  name: злая печатная бумага
+  name: evil printed paper
   parent: Paper
   id: PrintedSyndiePaper
-  description: Кусок злой распечатанной бумаги.
+  description: A piece of evil printed paper.
   components:
   - type: Sprite
     sprite: Objects/Misc/bureaucracy.rsi

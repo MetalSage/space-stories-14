@@ -1,8 +1,8 @@
 - type: entity
   parent: ClothingHeadsetAlt
   id: ClothingHeadsetGuardianNtAlt
-  name: полноразмерная гарнитура стража клинка
-  description: Наконец-то тут есть командная частота.
+  name: blade guardian's over-ear headset
+  description: Finally, there is a command frequency here.
   components:
     - type: Tag
       tags:

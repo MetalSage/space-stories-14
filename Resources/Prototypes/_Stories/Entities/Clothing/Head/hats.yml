@@ -1,8 +1,8 @@
 - type: entity
   parent: ClothingHeadBase
   id: ClothingHeadHatFedoraSpecialGrey
-  name: серая федора
-  description: Это серая фетровая шляпа.
+  name: grey fedora
+  description: This is a grey fedora.
   components:
   - type: Sprite
     sprite: _Stories/Clothing/Head/Hats/greyfedora.rsi
@@ -17,8 +17,8 @@
 - type: entity
   parent: ClothingHeadBase
   id: ClothingHeadHatCapHoS
-  name: фуражка главы службы безопасности
-  description: Прочная форменная фуражка начальника службы безопасности. Напоминает рядовым офицерам, кто здесь главный.
+  name: head of security's cap
+  description: A sturdy uniform cap of the Head of Security. Reminds rank-and-file officers who is in charge here.
   components:
   - type: Sprite
     sprite: _Stories/Clothing/Head/Hats/hoshat.rsi

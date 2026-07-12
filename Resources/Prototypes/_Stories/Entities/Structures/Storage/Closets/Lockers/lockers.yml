@@ -1,8 +1,8 @@
 - type: entity
   id: LockerGuardianNt
   parent: LockerBaseSecure
-  name: шкаф стража клинка
-  description: Арсенал моды каждого стража клинка.
+  name: blade guardian's locker
+  description: Each bladeguard's fashion arsenal.
   components:
     - type: Sprite
       sprite: _Stories/Structures/Storage/closet.rsi

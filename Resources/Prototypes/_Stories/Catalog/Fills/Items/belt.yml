@@ -1,8 +1,8 @@
 - type: entity
   id: StoriesClothingBeltHolsterFilled
   parent: ClothingBeltHolster
-  name: плечевая кобура c особым револьвером
-  description: 'Кобура для ношения пистолета и боеприпасов. ВНИМАНИЕ: Только для крутых.'
+  name: shoulder holster with a special revolver
+  description: 'A holster for carrying a pistol and ammunition. WARNING: Only for cool people.'
   suffix: Filled
   components:
   - type: StorageFill

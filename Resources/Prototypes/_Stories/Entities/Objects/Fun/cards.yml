@@ -3,7 +3,7 @@
   categories: [ HideSpawnMenu ]
   abstract: true
   id: STCardBase
-  name: карта
+  name: card
   components:
   - type: Sprite
     sprite: _Stories/Objects/Fun/card.rsi
@@ -33,7 +33,7 @@
           False:
             state: Back
   - type: Card
-    name: "трефы 1"
+    name: "1 of clubs"
 
 - type: entity
   parent: STCardBase
@@ -49,7 +49,7 @@
           False:
             state: Back
   - type: Card
-    name: "трефы 2"
+    name: "2 of clubs"
 
 - type: entity
   parent: STCardBase
@@ -65,7 +65,7 @@
           False:
             state: Back
   - type: Card
-    name: "трефы 3"
+    name: "3 of clubs"
 
 - type: entity
   parent: STCardBase
@@ -81,7 +81,7 @@
           False:
             state: Back
   - type: Card
-    name: "трефы 4"
+    name: "4 of clubs"
 
 - type: entity
   parent: STCardBase
@@ -97,7 +97,7 @@
           False:
             state: Back
   - type: Card
-    name: "трефы 5"
+    name: "5 of clubs"
 
 - type: entity
   parent: STCardBase
@@ -113,7 +113,7 @@
           False:
             state: Back
   - type: Card
-    name: "трефы 6"
+    name: "6 of clubs"
 
 - type: entity
   parent: STCardBase
@@ -129,7 +129,7 @@
           False:
             state: Back
   - type: Card
-    name: "трефы 7"
+    name: "7 of clubs"
 
 - type: entity
   parent: STCardBase
@@ -145,7 +145,7 @@
           False:
             state: Back
   - type: Card
-    name: "трефы 8"
+    name: "8 of clubs"
 
 - type: entity
   parent: STCardBase
@@ -161,7 +161,7 @@
           False:
             state: Back
   - type: Card
-    name: "трефы 9"
+    name: "9 of clubs"
 
 - type: entity
   parent: STCardBase
@@ -177,7 +177,7 @@
           False:
             state: Back
   - type: Card
-    name: "трефы 10"
+    name: "10 of clubs"
 
 - type: entity
   parent: STCardBase
@@ -193,7 +193,7 @@
           False:
             state: Back
   - type: Card
-    name: "трефы король"
+    name: "king of clubs"
 
 - type: entity
   parent: STCardBase
@@ -209,7 +209,7 @@
           False:
             state: Back
   - type: Card
-    name: "трефы дама"
+    name: "queen of clubs"
 
 - type: entity
   parent: STCardBase
@@ -225,7 +225,7 @@
           False:
             state: Back
   - type: Card
-    name: "трефы валет"
+    name: "jack of clubs"
 
 # Diamonds
 - type: entity
@@ -242,7 +242,7 @@
           False:
             state: Back
   - type: Card
-    name: "бубны туз"
+    name: "ace of diamonds"
 
 - type: entity
   parent: STCardBase
@@ -258,7 +258,7 @@
           False:
             state: Back
   - type: Card
-    name: "бубны 2"
+    name: "2 of diamonds"
 
 - type: entity
   parent: STCardBase
@@ -274,7 +274,7 @@
           False:
             state: Back
   - type: Card
-    name: "бубны 3"
+    name: "3 of diamonds"
 
 - type: entity
   parent: STCardBase
@@ -290,7 +290,7 @@
           False:
             state: Back
   - type: Card
-    name: "бубны 4"
+    name: "4 of diamonds"
 
 - type: entity
   parent: STCardBase
@@ -306,7 +306,7 @@
           False:
             state: Back
   - type: Card
-    name: "бубны 5"
+    name: "5 of diamonds"
 
 - type: entity
   parent: STCardBase
@@ -322,7 +322,7 @@
           False:
             state: Back
   - type: Card
-    name: "бубны 6"
+    name: "6 of diamonds"
 
 - type: entity
   parent: STCardBase
@@ -338,7 +338,7 @@
           False:
             state: Back
   - type: Card
-    name: "бубны 7"
+    name: "7 of diamonds"
 
 - type: entity
   parent: STCardBase
@@ -354,7 +354,7 @@
           False:
             state: Back
   - type: Card
-    name: "бубны 8"
+    name: "8 of diamonds"
 
 - type: entity
   parent: STCardBase
@@ -370,7 +370,7 @@
           False:
             state: Back
   - type: Card
-    name: "бубны 9"
+    name: "9 of diamonds"
 
 - type: entity
   parent: STCardBase
@@ -386,7 +386,7 @@
           False:
             state: Back
   - type: Card
-    name: "бубны 10"
+    name: "10 of diamonds"
 
 - type: entity
   parent: STCardBase
@@ -402,7 +402,7 @@
           False:
             state: Back
   - type: Card
-    name: "бубны король"
+    name: "king of diamonds"
 
 - type: entity
   parent: STCardBase
@@ -418,7 +418,7 @@
           False:
             state: Back
   - type: Card
-    name: "бубны дама"
+    name: "queen of diamonds"
 
 - type: entity
   parent: STCardBase
@@ -434,7 +434,7 @@
           False:
             state: Back
   - type: Card
-    name: "бубны валет"
+    name: "jack of diamonds"
 
 # Hearts
 - type: entity
@@ -451,7 +451,7 @@
           False:
             state: Back
   - type: Card
-    name: "червы туз"
+    name: "ace of hearts"
 
 - type: entity
   parent: STCardBase
@@ -467,7 +467,7 @@
           False:
             state: Back
   - type: Card
-    name: "червы 2"
+    name: "2 of hearts"
 
 - type: entity
   parent: STCardBase
@@ -483,7 +483,7 @@
           False:
             state: Back
   - type: Card
-    name: "червы 3"
+    name: "3 of hearts"
 
 - type: entity
   parent: STCardBase
@@ -499,7 +499,7 @@
           False:
             state: Back
   - type: Card
-    name: "червы 4"
+    name: "4 of hearts"
 
 - type: entity
   parent: STCardBase
@@ -515,7 +515,7 @@
           False:
             state: Back
   - type: Card
-    name: "червы 5"
+    name: "5 of hearts"
 
 - type: entity
   parent: STCardBase
@@ -531,7 +531,7 @@
           False:
             state: Back
   - type: Card
-    name: "червы 6"
+    name: "6 of hearts"
 
 - type: entity
   parent: STCardBase
@@ -547,7 +547,7 @@
           False:
             state: Back
   - type: Card
-    name: "червы 7"
+    name: "7 of hearts"
 
 - type: entity
   parent: STCardBase
@@ -563,7 +563,7 @@
           False:
             state: Back
   - type: Card
-    name: "червы 8"
+    name: "8 of hearts"
 
 - type: entity
   parent: STCardBase
@@ -579,7 +579,7 @@
           False:
             state: Back
   - type: Card
-    name: "червы 9"
+    name: "9 of hearts"
 
 - type: entity
   parent: STCardBase
@@ -595,7 +595,7 @@
           False:
             state: Back
   - type: Card
-    name: "червы 10"
+    name: "10 of hearts"
 
 - type: entity
   parent: STCardBase
@@ -611,7 +611,7 @@
           False:
             state: Back
   - type: Card
-    name: "червы король"
+    name: "king of hearts"
 
 - type: entity
   parent: STCardBase
@@ -627,7 +627,7 @@
           False:
             state: Back
   - type: Card
-    name: "червы дама"
+    name: "queen of hearts"
 
 - type: entity
   parent: STCardBase
@@ -643,7 +643,7 @@
           False:
             state: Back
   - type: Card
-    name: "червы валет"
+    name: "jack of hearts"
 
 - type: entity
   parent: STCardBase
@@ -659,7 +659,7 @@
           False:
             state: Back
   - type: Card
-    name: "червы джокер"
+    name: "hearts joker"
 
 # Spades
 - type: entity
@@ -676,7 +676,7 @@
           False:
             state: Back
   - type: Card
-    name: "пики туз"
+    name: "ace of spades"
 
 - type: entity
   parent: STCardBase
@@ -692,7 +692,7 @@
           False:
             state: Back
   - type: Card
-    name: "пики 2"
+    name: "2 of spades"
 
 - type: entity
   parent: STCardBase
@@ -708,7 +708,7 @@
           False:
             state: Back
   - type: Card
-    name: "пики 3"
+    name: "3 of spades"
 
 - type: entity
   parent: STCardBase
@@ -724,7 +724,7 @@
           False:
             state: Back
   - type: Card
-    name: "пики 4"
+    name: "4 of spades"
 
 - type: entity
   parent: STCardBase
@@ -740,7 +740,7 @@
           False:
             state: Back
   - type: Card
-    name: "пики 5"
+    name: "5 of spades"
 
 - type: entity
   parent: STCardBase
@@ -756,7 +756,7 @@
           False:
             state: Back
   - type: Card
-    name: "пики 6"
+    name: "6 of spades"
 
 - type: entity
   parent: STCardBase
@@ -772,7 +772,7 @@
           False:
             state: Back
   - type: Card
-    name: "пики 7"
+    name: "7 of spades"
 
 - type: entity
   parent: STCardBase
@@ -788,7 +788,7 @@
           False:
             state: Back
   - type: Card
-    name: "пики 8"
+    name: "8 of spades"
 
 - type: entity
   parent: STCardBase
@@ -804,7 +804,7 @@
           False:
             state: Back
   - type: Card
-    name: "пики 9"
+    name: "9 of spades"
 
 - type: entity
   parent: STCardBase
@@ -820,7 +820,7 @@
           False:
             state: Back
   - type: Card
-    name: "пики 10"
+    name: "10 of spades"
 
 - type: entity
   parent: STCardBase
@@ -836,7 +836,7 @@
           False:
             state: Back
   - type: Card
-    name: "пики король"
+    name: "king of spades"
 
 - type: entity
   parent: STCardBase
@@ -852,7 +852,7 @@
           False:
             state: Back
   - type: Card
-    name: "пики дама"
+    name: "queen of spades"
 
 - type: entity
   parent: STCardBase
@@ -868,7 +868,7 @@
           False:
             state: Back
   - type: Card
-    name: "пики валет"
+    name: "jack of spades"
 
 - type: entity
   parent: STCardBase
@@ -884,13 +884,13 @@
           False:
             state: Back
   - type: Card
-    name: "пики джокер"
+    name: "spades joker"
 
 # Other
 - type: entity
   parent: STCardBase
   id: STCardRandom
-  name: случайная карта
+  name: random card
   components:
   - type: Sprite
     layers:
@@ -962,7 +962,7 @@
   parent: BaseItem
   categories: [ HideSpawnMenu ]
   id: STCardDeck
-  name: колода карт
+  name: deck of cards
   components:
   - type: Sprite
     sprite: _Stories/Objects/Fun/card.rsi
@@ -980,7 +980,7 @@
   parent: STCardDeck
   categories: [ HideSpawnMenu ]
   id: STCardDeckFull
-  name: колода из 54 карт
+  name: deck of 54 cards
   components:
   - type: Sprite
     sprite: _Stories/Objects/Fun/card.rsi
@@ -1050,7 +1050,7 @@
   parent: STCardDeck
   categories: [ HideSpawnMenu ]
   id: STCardDeckFullUSSP
-  name: колода из 36 карт
+  name: deck of 36 cards
   components:
   - type: Sprite
     sprite: _Stories/Objects/Fun/card.rsi
@@ -1102,7 +1102,7 @@
   parent: [ BaseItemCabinet, BaseItem ]
   categories: [ HideSpawnMenu ]
   id: STCardDeckBox
-  name: упаковка карт
+  name: card pack
   components:
   - type: Openable
     closeable: true
@@ -1142,7 +1142,7 @@
 - type: entity
   parent: STCardDeckBox
   id: STCardDeckBoxFilled
-  suffix: Заполнена
+  suffix: Filled
   components:
   - type: ContainerFill
     containers:
@@ -1158,8 +1158,8 @@
   parent: STCardDeckBox
   categories: [ HideSpawnMenu ]
   id: STCardDeckBoxUSSP
-  name: упаковка карт СССП
-  description: Колода, преимущественно использующаяся в СССП.
+  name: USSP card pack
+  description: A deck primarily used in the USSP.
   components:
   - type: Sprite
     sprite: _Stories/Objects/Fun/card.rsi
@@ -1189,8 +1189,8 @@
 - type: entity
   parent: STCardDeckBoxUSSP
   id: STCardDeckBoxFilledUSSP
-  name: упаковка карт СССП
-  suffix: Заполнена
+  name: USSP card pack
+  suffix: Filled
   components:
   - type: ContainerFill
     containers:
@@ -1201,7 +1201,7 @@
   parent: [STCardDeckBoxFilledUSSP, STCardDeckBoxOpenUSSP]
   categories: [ HideSpawnMenu ]
   id: STCardDeckBoxFilledOpenUSSP
-  name: упаковка карт СССП
+  name: USSP card pack
   components:
   - type: Openable
     opened: true
@@ -1214,7 +1214,7 @@
   parent: BaseItem
   categories: [ HideSpawnMenu ]
   id: STCardFan
-  name: карточный веер
+  name: card fan
   components:
   - type: Sprite
     sprite: _Stories/Objects/Fun/card.rsi

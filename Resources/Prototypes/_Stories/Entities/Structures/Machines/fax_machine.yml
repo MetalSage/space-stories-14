@@ -1,9 +1,9 @@
 - type: entity
   parent: FaxMachineBase
   id: STFaxMachineCaptains
-  name: факс дальнего действия капитана
-  description: Блюспейс-технологии на службе бюрократии.
-  suffix: "Ядерные Коды"
+  name: captain's long range fax machine
+  description: Bluespace technology at the service of bureaucracy.
+  suffix: "Nuclear Codes"
   components:
     - type: Sprite
       sprite: _Stories/Structures/Machines/fax_machine/fax_machine_captain.rsi
@@ -15,7 +15,7 @@
       sprite: _Stories/Structures/Machines/fax_machine/fax_machine_captain.rsi
       state: icon
     - type: FaxMachine
-      name: "Офис Капитана"
+      name: "Captain's Office"
       receiveNukeCodes: true
       receiveStationGoal: true # Corvax-StationGoal
     - type: StealTarget
@@ -24,9 +24,9 @@
 - type: entity
   parent: FaxMachineBase
   id: STFaxMachineCargo
-  name: факс дальнего действия 
-  description: Блюспейс-технологии на службе бюрократии.
-  suffix: Снабжение
+  name: long range fax machine 
+  description: Bluespace technology at the service of bureaucracy.
+  suffix: Cargo
   components:
     - type: Sprite
       sprite: _Stories/Structures/Machines/fax_machine/fax_machine_cargo.rsi
@@ -38,14 +38,14 @@
       sprite: _Stories/Structures/Machines/fax_machine/fax_machine_cargo.rsi
       state: icon
     - type: FaxMachine
-      name: "Снабжение"
+      name: "Cargo"
 
 - type: entity
   parent: FaxMachineBase
   id: STFaxMachineEngeneering
-  name: факс дальнего действия 
-  description: Блюспейс-технологии на службе бюрократии.
-  suffix: Инженерный
+  name: long range fax machine 
+  description: Bluespace technology at the service of bureaucracy.
+  suffix: Engineering
   components:
     - type: Sprite
       sprite: _Stories/Structures/Machines/fax_machine/fax_machine_engeneering.rsi
@@ -57,14 +57,14 @@
       sprite: _Stories/Structures/Machines/fax_machine/fax_machine_engeneering.rsi
       state: icon
     - type: FaxMachine
-      name: "Инженерный отдел"
+      name: "Engineering department"
 
 - type: entity
   parent: FaxMachineBase
   id: STFaxMachineScientist
-  name: факс дальнего действия 
-  description: Блюспейс-технологии на службе бюрократии.
-  suffix: Научный
+  name: long range fax machine 
+  description: Bluespace technology at the service of bureaucracy.
+  suffix: Science
   components:
     - type: Sprite
       sprite: _Stories/Structures/Machines/fax_machine/fax_machine_scientist.rsi
@@ -76,14 +76,14 @@
       sprite: _Stories/Structures/Machines/fax_machine/fax_machine_scientist.rsi
       state: icon
     - type: FaxMachine
-      name: "Научный отдел"
+      name: "Science department"
 
 - type: entity
   parent: FaxMachineBase
   id: STFaxMachineSecurity
-  name: факс дальнего действия 
-  description: Блюспейс-технологии на службе бюрократии.
-  suffix: CБ
+  name: long range fax machine 
+  description: Bluespace technology at the service of bureaucracy.
+  suffix: Security
   components:
     - type: Sprite
       sprite: _Stories/Structures/Machines/fax_machine/fax_machine_security.rsi
@@ -95,14 +95,14 @@
       sprite: _Stories/Structures/Machines/fax_machine/fax_machine_security.rsi
       state: icon
     - type: FaxMachine
-      name: "Служба Безопасности"
+      name: "Security"
 
 - type: entity
   parent: FaxMachineBase
   id: STFaxMachineMedical
-  name: факс дальнего действия 
-  description: Блюспейс-технологии на службе бюрократии.
-  suffix: Медицинский
+  name: long range fax machine 
+  description: Bluespace technology at the service of bureaucracy.
+  suffix: Medical
   components:
     - type: Sprite
       sprite: _Stories/Structures/Machines/fax_machine/fax_machine_medical.rsi
@@ -114,14 +114,14 @@
       sprite: _Stories/Structures/Machines/fax_machine/fax_machine_medical.rsi
       state: icon
     - type: FaxMachine
-      name: "Медицинский отдел"
+      name: "Medical department"
 
 - type: entity
   parent: FaxMachineBase
   id: STFaxMachineHop
-  name: факс дальнего действия 
-  description: Блюспейс-технологии на службе бюрократии.
-  suffix: Глава Персонала
+  name: long range fax machine 
+  description: Bluespace technology at the service of bureaucracy.
+  suffix: Head of Personnel
   components:
     - type: Sprite
       sprite: _Stories/Structures/Machines/fax_machine/fax_machine_hop.rsi
@@ -133,14 +133,14 @@
       sprite: _Stories/Structures/Machines/fax_machine/fax_machine_hop.rsi
       state: icon
     - type: FaxMachine
-      name: "Глава Персонала"
+      name: "Head of Personnel"
 
 - type: entity
   parent: FaxMachineBase
   id: STFaxMachineCentcom
-  description: Блюспейс-технологии на службе бюрократии.
-  name: факс дальнего действия центком
-  suffix: Центком
+  description: Bluespace technology at the service of bureaucracy.
+  name: CentCom long range fax machine
+  suffix: CentComm
   components:
     - type: Sprite
       sprite: _Stories/Structures/Machines/fax_machine/fax_machine_centcom.rsi
@@ -152,6 +152,6 @@
       sprite: _Stories/Structures/Machines/fax_machine/fax_machine_centcom.rsi
       state: icon
     - type: FaxMachine
-      name: "Центральное командование"
+      name: "Central Command"
       notifyAdmins: true
       receiveStationGoal: true # Corvax-StationGoal

@@ -7,7 +7,6 @@ using Content.Server.Vocalization.Systems;
 using Content.Shared._Stories.Economy.Components;
 using Content.Shared.Access.Components;
 using Content.Shared.Cargo;
-using Content.Shared.Damage;
 using Content.Shared.Damage.Systems;
 using Content.Shared.Emp;
 using Content.Shared.GameTicking;
@@ -63,7 +62,7 @@ namespace Content.Server.VendingMachines
 
             foreach (var entry in component.Inventory.Values)
             {
-                if (!PrototypeManager.TryIndex<EntityPrototype>(entry.ID, out var proto))
+                if (!ProtoMan.TryIndex<EntityPrototype>(entry.ID, out var proto))
                 {
                     Log.Error($"Unable to find entity prototype {entry.ID} on {ToPrettyString(uid)} vending.");
                     continue;
@@ -84,8 +83,8 @@ namespace Content.Server.VendingMachines
                 TryUpdateVisualState((uid, component));
             }
 
-            if (PrototypeManager.TryIndex(component.PackPrototypeId, out VendingMachineInventoryPrototype? packPrototype) // Stories-Economy
-                && packPrototype.ItemPrices.Count > 0)
+            if (ProtoMan.TryIndex(component.PackPrototypeId, out VendingMachineInventoryPrototype? packPrototype) // Stories-Economy
+                && packPrototype!.ItemPrices.Count > 0)
             {
                 ApplyPricesToInventory(component.Inventory, packPrototype.ItemPrices);
                 ApplyPricesToInventory(component.EmaggedInventory, packPrototype.ItemPrices);
@@ -232,11 +231,11 @@ namespace Content.Server.VendingMachines
             foreach (var vendingInventory in component.CanRestock)
             {
                 double total = 0;
-                if (PrototypeManager.TryIndex(vendingInventory, out VendingMachineInventoryPrototype? inventoryPrototype))
+                if (ProtoMan.TryIndex(vendingInventory, out VendingMachineInventoryPrototype? inventoryPrototype))
                 {
                     foreach (var (item, amount) in inventoryPrototype.StartingInventory)
                     {
-                        if (PrototypeManager.TryIndex(item, out EntityPrototype? entity))
+                        if (ProtoMan.TryIndex(item, out EntityPrototype? entity))
                             total += _pricing.GetEstimatedPrice(entity) * amount;
                     }
                 }
@@ -323,7 +322,7 @@ namespace Content.Server.VendingMachines
 
             foreach (var (id, amount) in entries)
             {
-                if (!PrototypeManager.HasIndex<EntityPrototype>(id))
+                if (!ProtoMan.HasIndex<EntityPrototype>(id))
                     continue;
 
                 var restock = amount;
@@ -349,10 +348,10 @@ namespace Content.Server.VendingMachines
             if (!Resolve(uid, ref component))
                 return;
 
-            if (!PrototypeManager.TryIndex(component.PackPrototypeId, out VendingMachineInventoryPrototype? packPrototype))
+            if (!ProtoMan.TryIndex(component.PackPrototypeId, out VendingMachineInventoryPrototype? packPrototype))
                 return;
 
-            AddInventoryFromPrototype(uid, packPrototype.StartingInventory, InventoryType.Regular, component, restockQuality);
+            AddInventoryFromPrototype(uid, packPrototype!.StartingInventory, InventoryType.Regular, component, restockQuality);
             AddInventoryFromPrototype(uid, packPrototype.EmaggedInventory, InventoryType.Emagged, component, restockQuality);
             AddInventoryFromPrototype(uid, packPrototype.ContrabandInventory, InventoryType.Contraband, component, restockQuality);
 

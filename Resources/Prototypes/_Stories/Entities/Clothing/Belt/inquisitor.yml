@@ -1,8 +1,8 @@
 - type: entity
   parent: ClothingBeltStorageBase
   id: ClothingBeltInquisitor
-  name: пояс инквизитора
-  description: Просто пояс.
+  name: inquisitor's belt
+  description: Just a belt.
   components:
   - type: Sprite
     sprite: _Stories/Clothing/Belt/belt_inquisitor.rsi

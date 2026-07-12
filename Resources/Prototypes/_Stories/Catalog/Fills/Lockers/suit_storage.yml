@@ -1,6 +1,6 @@
 - type: entity
-  name: хранилище скафандра офицера тюрьмы
-  description: Необычное высокотехнологичное хранилище, предназначенное для хранения космических скафандров.
+  name: prison officer hardsuit storage
+  description: An unusual high-tech storage designed for storing space suits.
   id: PRISONSuitStorageOfficer
   parent: SuitStorageBase
   suffix: Officer
@@ -15,8 +15,8 @@
     access: [["PrisonBrig"]]
 
 - type: entity
-  name: хранилище скафандра врача тюрьмы
-  description: Необычное высокотехнологичное хранилище, предназначенное для хранения космических скафандров.
+  name: prison medic hardsuit storage
+  description: An unusual high-tech storage designed for storing space suits.
   id: PRISONSuitStorageMed
   parent: SuitStorageBase
   suffix: Med
@@ -31,8 +31,8 @@
     access: [["PrisonMed"]]
 
 - type: entity
-  name: хранилище скафандра инженера тюрьмы
-  description: Необычное высокотехнологичное хранилище, предназначенное для хранения космических скафандров.
+  name: prison engineer hardsuit storage
+  description: An unusual high-tech storage designed for storing space suits.
   id: PRISONSuitStorageEngi
   parent: SuitStorageBase
   suffix: Engi
@@ -47,8 +47,8 @@
     access: [["PrisonEng"]]
 
 - type: entity
-  name: хранилище скафандра начальника тюрьмы
-  description: Необычное высокотехнологичное хранилище, предназначенное для хранения космических скафандров.
+  name: head of prison hardsuit storage
+  description: An unusual high-tech storage designed for storing space suits.
   id: PRISONSuitStorageHeadOfPrison
   parent: SuitStorageBase
   suffix: HeadOfPrison

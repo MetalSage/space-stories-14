@@ -1,8 +1,8 @@
 - type: entity
   parent: ClothingOuterStorageToggleableBase
   id: ClothingOuterCoatGuardian
-  name: накидка джедая
-  description: Длинный вид одежды, который свободно лежит на плечах, охватывая шею.
+  name: jedi cloak
+  description: A long type of clothing that sits loosely on the shoulders, covering the neck.
   components:
   - type: Tag
     tags:
@@ -30,8 +30,8 @@
 - type: entity
   parent: ClothingOuterStorageBase
   id: PRISONClothingOuterCoatHeadOfPrison
-  name: пальто начальника тюрьмы
-  description: Прочное холщовое пальто, разработанное и созданное компанией TX Fabrication Corp. Его ношение заставляет сочувствовать судьбе тибетцев.
+  name: head of prison's coat
+  description: A durable canvas coat designed and manufactured by TX Fabrication Corp. Wearing it makes you feel sympathetic to the fate of Tibetans.
   components:
   - type: Sprite
     sprite: _Stories/Clothing/OuterClothing/Coats/hosp.rsi
@@ -48,8 +48,8 @@
 - type: entity
   parent: [ClothingOuterStorageBase, AllowSuitStorageClothing, ClothingOuterArmorBasic]
   id: ClothingOuterCoatDetectiveGrey
-  name: серый тренч детектива
-  description: Мультифункциональный тренчкот XVIII века. Носящий его - серьёзный тип.
+  name: detective's grey trenchcoat
+  description: An 18th-century multifunctional trench coat. The wearer is a serious guy.
   components:
   - type: Sprite
     sprite: _Stories/Clothing/OuterClothing/Coats/detective.rsi
