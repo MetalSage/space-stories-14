@@ -19,7 +19,7 @@ public sealed partial class BankCentcomConsoleWindow : FancyWindow
     private List<FinancialLogDto> _logs = new();
     private NetEntity? _selectedStation;
 
-    [Dependency] private readonly IPrototypeManager _prototypeManager = default!;
+    [Dependency] private IPrototypeManager _prototypeManager = default!;
 
     public Action? OnRefresh;
     public Action<NetEntity>? OnChangeStation;

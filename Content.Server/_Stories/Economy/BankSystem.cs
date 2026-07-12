@@ -22,12 +22,12 @@ namespace Content.Server._Stories.Economy;
 
 public sealed partial class BankSystem : EntitySystem
 {
-    [Dependency] private readonly IPrototypeManager _prototypeManager = default!;
-    [Dependency] private readonly IRobustRandom _random = default!;
-    [Dependency] private readonly StationSystem _station = default!;
-    [Dependency] private readonly IGameTiming _timing = default!;
-    [Dependency] private readonly CargoSystem _cargoSystem = default!;
-    [Dependency] private readonly IConfigurationManager _cfg = default!;
+    [Dependency] private IPrototypeManager _prototypeManager = default!;
+    [Dependency] private IRobustRandom _random = default!;
+    [Dependency] private StationSystem _station = default!;
+    [Dependency] private IGameTiming _timing = default!;
+    [Dependency] private CargoSystem _cargoSystem = default!;
+    [Dependency] private IConfigurationManager _cfg = default!;
 
     public override void Initialize()
     {

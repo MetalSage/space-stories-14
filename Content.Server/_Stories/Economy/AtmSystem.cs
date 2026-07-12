@@ -20,9 +20,9 @@ public sealed partial class AtmSystem : EntitySystem
 {
     [Dependency] private SharedAudioSystem _audio = default!;
     [Dependency] private BankSystem _bank = default!;
-    [Dependency] private readonly SharedHandsSystem _handsSystem = default!;
+    [Dependency] private SharedHandsSystem _handsSystem = default!;
     [Dependency] private ServerInventorySystem _inventory = default!;
-    [Dependency] private readonly PopupSystem _popup = default!;
+    [Dependency] private PopupSystem _popup = default!;
     [Dependency] private StackSystem _stack = default!;
     [Dependency] private StationSystem _station = default!;
     [Dependency] private UserInterfaceSystem _ui = default!;

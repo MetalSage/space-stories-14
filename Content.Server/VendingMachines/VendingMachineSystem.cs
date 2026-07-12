@@ -30,14 +30,13 @@ namespace Content.Server.VendingMachines;
 
 public sealed partial class VendingMachineSystem : SharedVendingMachineSystem
 {
-    [Dependency] private readonly IRobustRandom _random = default!;
-    [Dependency] private readonly PricingSystem _pricing = default!;
-    [Dependency] private readonly ThrowingSystem _throwingSystem = default!;
-    [Dependency] private readonly BankSystem _bank = default!;
-    [Dependency] private readonly StationSystem _station = default!;
-    [Dependency] private readonly SharedIdCardSystem _idCard = default!;
-    [Dependency] private readonly PowerReceiverSystem _power = default!;
-    [Dependency] private readonly AccessReaderSystem _accessReader = default!;
+    [Dependency] private IRobustRandom _random = default!;
+    [Dependency] private PricingSystem _pricing = default!;
+    [Dependency] private ThrowingSystem _throwingSystem = default!;
+    [Dependency] private BankSystem _bank = default!;
+    [Dependency] private StationSystem _station = default!;
+    [Dependency] private SharedIdCardSystem _idCard = default!;
+    [Dependency] private PowerReceiverSystem _power = default!;
 
     private const float WallVendEjectDistanceFromWall = 1f;
 

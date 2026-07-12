@@ -9,14 +9,13 @@ using Robust.Server.GameObjects;
 
 namespace Content.Server._Stories.Economy;
 
-public sealed class BankSecurityConsoleSystem : EntitySystem
+public sealed partial class BankSecurityConsoleSystem : EntitySystem
 {
-    [Dependency] private readonly UserInterfaceSystem _ui = default!;
-    [Dependency] private readonly StationSystem _station = default!;
-    [Dependency] private readonly BankSystem _bank = default!;
-    [Dependency] private readonly AccessReaderSystem _access = default!;
-    [Dependency] private readonly EconomySystem _economy = default!;
-    [Dependency] private readonly SharedPopupSystem _popup = default!;
+    [Dependency] private UserInterfaceSystem _ui = default!;
+    [Dependency] private StationSystem _station = default!;
+    [Dependency] private BankSystem _bank = default!;
+    [Dependency] private EconomySystem _economy = default!;
+    [Dependency] private SharedPopupSystem _popup = default!;
 
     public override void Initialize()
     {

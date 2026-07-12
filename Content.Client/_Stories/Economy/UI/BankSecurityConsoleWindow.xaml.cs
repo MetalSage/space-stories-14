@@ -15,7 +15,7 @@ public sealed partial class BankSecurityConsoleWindow : FancyWindow
     private List<AccountDto> _accounts = new();
     private List<FinancialLogDto> _logs = new();
 
-    [Dependency] private readonly IPrototypeManager _prototypeManager = default!;
+    [Dependency] private IPrototypeManager _prototypeManager = default!;
 
     public Action? OnRefresh;
     public Action<string, int, string>? OnIssueFine;

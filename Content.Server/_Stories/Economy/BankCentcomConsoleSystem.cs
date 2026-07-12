@@ -14,18 +14,17 @@ using Robust.Shared.Timing;
 
 namespace Content.Server._Stories.Economy;
 
-public sealed class BankCentcomConsoleSystem : EntitySystem
+public sealed partial class BankCentcomConsoleSystem : EntitySystem
 {
-    [Dependency] private readonly UserInterfaceSystem _ui = default!;
-    [Dependency] private readonly StationSystem _station = default!;
-    [Dependency] private readonly BankSystem _bank = default!;
-    [Dependency] private readonly AccessReaderSystem _access = default!;
-    [Dependency] private readonly IPrototypeManager _prototypeManager = default!;
-    [Dependency] private readonly CargoSystem _cargoSystem = default!;
-    [Dependency] private readonly EconomySystem _economy = default!;
-    [Dependency] private readonly SharedPopupSystem _popup = default!;
-    [Dependency] private readonly ChatSystem _chat = default!;
-    [Dependency] private readonly IGameTiming _timing = default!;
+    [Dependency] private UserInterfaceSystem _ui = default!;
+    [Dependency] private StationSystem _station = default!;
+    [Dependency] private BankSystem _bank = default!;
+    [Dependency] private IPrototypeManager _prototypeManager = default!;
+    [Dependency] private CargoSystem _cargoSystem = default!;
+    [Dependency] private EconomySystem _economy = default!;
+    [Dependency] private SharedPopupSystem _popup = default!;
+    [Dependency] private ChatSystem _chat = default!;
+    [Dependency] private IGameTiming _timing = default!;
 
     public override void Initialize()
     {
