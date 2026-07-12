@@ -1373,7 +1373,7 @@
     freeJobs:
     - Scientist
     - ResearchDirector
-    - ScienceAssistant
+    - ResearchAssistant
   - type: DatasetVocalizer
     dataset: VendomatAds
   - type: SpeakOnUIClosed
@@ -2034,7 +2034,7 @@
     freeJobs:
     - Scientist
     - ResearchDirector
-    - ScienceAssistant
+    - ResearchAssistant
   - type: DatasetVocalizer
     dataset: SciDrobeAds
   - type: SpeakOnUIClosed
