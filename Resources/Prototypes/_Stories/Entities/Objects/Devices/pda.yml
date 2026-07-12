@@ -1,8 +1,8 @@
 - type: entity
   parent: BaseSecurityPDA
   id: GuardianNtPDA
-  name: КПК стража клинка
-  description: Красный значит мощный. На нём имеются царапины от светового меча.
+  name: Bladeguard PDA
+  description: Red means powerful. It has scratches from a lightsaber on it.
   components:
   - type: Tag
     tags:
@@ -26,8 +26,8 @@
 - type: entity
   parent: BaseSecurityPDA
   id: IAAPDA
-  name: КПК агента внутрених дел
-  description: Корпорация и прибыль - лучшие друзья.
+  name: Internal Affairs Agent PDA
+  description: Corporation and profit are best friends.
   components:
   - type: Pda
     id: IAAIDCard
@@ -72,8 +72,8 @@
 - type: entity
   parent: BasePDA
   id: PRISONPDAHeadOfPrison
-  name: КПК начальника тюрьмы
-  description: Этот КПК - ваш путь к свободе.
+  name: Prison warden's PDA
+  description: This PDA is your path to freedom.
   components:
   - type: Sprite
     sprite: _Stories/Objects/Devices/pda.rsi
@@ -91,8 +91,8 @@
 - type: entity
   parent: PRISONPDAHeadOfPrison
   id: PRISONPDAOfficer
-  name: КПК офицера тюрьмы
-  description: Этот КПК - ваш путь к свободе.
+  name: Prison officer PDA
+  description: This PDA is your path to freedom.
   components:
   - type: Pda
     id: PRISONIDCardOfficer
@@ -107,8 +107,8 @@
 - type: entity
   parent: PRISONPDAHeadOfPrison
   id: PRISONPDAEngineer
-  name: КПК инженера тюрьмы
-  description: Этот КПК - ваш путь к свободе.
+  name: Prison engineer's PDA
+  description: This PDA is your path to freedom.
   components:
   - type: Pda
     id: PRISONIDCardEngineer
@@ -123,8 +123,8 @@
 - type: entity
   parent: BaseMedicalPDA
   id: PRISONPDAMedic
-  name: КПК врача тюрьмы
-  description: Этот КПК - ваш путь к свободе.
+  name: Prison doctor PDA
+  description: This PDA is your path to freedom.
   components:
   - type: Sprite
     sprite: _Stories/Objects/Devices/pda.rsi

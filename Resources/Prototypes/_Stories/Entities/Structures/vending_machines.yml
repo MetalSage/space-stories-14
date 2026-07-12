@@ -1,8 +1,8 @@
 - type: entity
   parent: VendingMachine
   id: PRISONVendingMachineDrobe
-  name: Шкаф персонала тюрьмы
-  description: Торговый автомат для одежды, связанной с заключенными и побегами!
+  name: Prison staff locker
+  description: A vending machine for clothing related to prisoners and escapes!
   components:
     - type: VendingMachine
       pack: PRISONDrobeInventory
@@ -27,8 +27,8 @@
 - type: entity
   parent: VendingMachine
   id: PRISONVendingMachine
-  name: Автомат персонала тюрьмы
-  description: Торговый автомат с экпипировкой персонала тюрьмы. На табличке написано "ТОЛЬКО ДЛЯ ПЕРСОНАЛА ТЮРЬМЫ".
+  name: Prison staff vending machine
+  description: A vending machine containing prison staff gear. The sign says "PRISON STAFF ONLY".
   components:
     - type: VendingMachine
       pack: PRISONTechInventory
@@ -62,8 +62,8 @@
   abstract: true
   parent: VendingMachine
   id: MusicalVendingMachineBase
-  name: МузМат
-  description: Торговый автомат с музыкальными инструментами.
+  name: MusMat
+  description: Vending machine with musical instruments.
   components:
     - type: VendingMachine
       pack: MusVendInventory
@@ -93,7 +93,7 @@
 - type: entity
   parent: MusicalVendingMachineBase
   id: MusicalVendingMachine
-  suffix: Станция
+  suffix: Station
   components:
     - type: AccessReader
       access: [["Theatre"]]
@@ -101,7 +101,7 @@
 - type: entity
   parent: MusicalVendingMachineBase
   id: MusicalVendingMachinePrison
-  suffix: Тюрьма
+  suffix: Prison
   components:
     - type: AccessReader
       access: [["Prison"]]

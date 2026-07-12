@@ -1,8 +1,8 @@
 - type: entity
   parent: ClothingOuterHardsuitEngineering
   id: PRISONClothingOuterHardsuitEngi
-  name: скафандр инженера тюрьмы
-  description: Специальный костюм, защищающий от опасной среды с низким давлением. Имеет радиационную защиту.
+  name: prison engineer hardsuit
+  description: A special suit protecting against hazardous low-pressure environments. Features radiation protection.
   components:
     - type: Sprite
       sprite: _Stories/Clothing/OuterClothing/Hardsuits/engisp.rsi
@@ -14,8 +14,8 @@
 - type: entity
   parent: ClothingOuterHardsuitSecurity
   id: PRISONClothingOuterHardsuitOfficer
-  name: скафандр офицера тюрьмы
-  description: Специальный костюм, защищающий от опасной среды с низким давлением. Имеет дополнительный слой брони.
+  name: prison officer hardsuit
+  description: A special suit protecting against hazardous low-pressure environments. Features an extra layer of armor.
   components:
     - type: Sprite
       sprite: _Stories/Clothing/OuterClothing/Hardsuits/securitysp.rsi
@@ -27,8 +27,8 @@
 - type: entity
   parent: ClothingOuterHardsuitMedical
   id: PRISONClothingOuterHardsuitMedic
-  name: скафандр врача тюрьмы
-  description: Специальный костюм, защищающий от опасной среды с низким давлением. Создан из облегчённых материалов для удобства передвижения.
+  name: prison medic hardsuit
+  description: A special suit protecting against hazardous low-pressure environments. Made of lightweight materials for ease of movement.
   components:
     - type: Sprite
       sprite: _Stories/Clothing/OuterClothing/Hardsuits/medicsp.rsi
@@ -40,8 +40,8 @@
 - type: entity
   parent: ClothingOuterHardsuitSecurityRed
   id: PRISONClothingOuterHardsuitHeadOfPrison
-  name: скафандр начальника тюрьмы
-  description: Специальный костюм, защищающий от опасной среды с низким давлением. Имеет дополнительный слой брони.
+  name: head of prison hardsuit
+  description: A special suit protecting against hazardous low-pressure environments. Features an extra layer of armor.
   components:
     - type: Sprite
       sprite: _Stories/Clothing/OuterClothing/Hardsuits/hospsp.rsi

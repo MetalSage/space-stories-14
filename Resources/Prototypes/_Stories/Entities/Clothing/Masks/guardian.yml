@@ -1,8 +1,8 @@
 - type: entity
   parent: ClothingMaskGasSecurity
   id: ClothingMaskGasExe
-  name: противогаз хранителя
-  description: Противогаз неизвестной конструкции.
+  name: guardian's gas mask
+  description: Gas mask of unknown design.
   components:
   - type: Sprite
     sprite: _Stories/Clothing/Mask/exe_mask.rsi

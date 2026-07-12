@@ -17,7 +17,7 @@
 - type: entity
   parent: [BaseInquisitorObjective, BaseKillObjective]
   id: KillGuardianNtObjective
-  description: Уничтожьте его.
+  description: Destroy it.
   components:
   - type: Objective
     difficulty: 3.0
@@ -32,8 +32,8 @@
 - type: entity
   parent: [BaseInquisitorObjective, BaseSurviveObjective]
   id: InquisitorSurviveObjective
-  name: Выжить.
-  description: У вас нет планов умирать.
+  name: Survive.
+  description: You have no plans to die.
   components:
   - type: Objective
     difficulty: 1.0
@@ -44,7 +44,7 @@
 - type: entity
   parent: BaseInquisitorObjective
   id: HypnosisObjective
-  description: Императору нужны новые подданные.
+  description: The Emperor needs new subjects.
   components:
   - type: Objective
     icon:

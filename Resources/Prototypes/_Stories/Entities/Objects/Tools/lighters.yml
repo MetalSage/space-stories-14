@@ -1,8 +1,8 @@
 - type: entity
-  name: гравированная зажигалка флиппо
+  name: engraved flippo lighter
   parent: FlippoLighter
   id: StoriesFlippoEngravedLighter
-  description: Надёжная металлическая зажигалка, рассчитанная на длительный срок службы. Гравировка не даёт никакого тактического преимущества.
+  description: A reliable metal lighter designed to last a long time. The engraving provides no tactical advantage.
   components:
   - type: Sprite
     sprite: _Stories/Objects/Tools/lighters.rsi

@@ -1,8 +1,8 @@
 - type: entity
   parent: BaseFlag
   id: PRISONFlag
-  name: Флаг персонала тюрьмы
-  description: На защите галактики от опасных преступников.
+  name: Prison staff flag
+  description: Protecting the galaxy from dangerous criminals.
   components:
   - type: Sprite
     drawdepth: WallTops
