@@ -88,12 +88,13 @@ public abstract partial class SharedIdCardSystem : EntitySystem
     /// </summary>
     public bool TryFindIdCard(EntityUid uid, out Entity<IdCardComponent> idCard)
     {
-        // check held item?
-        if (_hands.GetActiveItem(uid) is { } heldItem &&
-            TryGetIdCard(heldItem, out idCard))
+        // Stories-Economy-Start
+        foreach (var heldItem in _hands.EnumerateHeld(uid))
         {
-            return true;
+            if (TryGetIdCard(heldItem, out idCard))
+                return true;
         }
+        // Stories-Economy-End
 
         // check entity itself
         if (TryGetIdCard(uid, out idCard))

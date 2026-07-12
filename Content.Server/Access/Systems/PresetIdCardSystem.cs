@@ -1,4 +1,5 @@
 using Content.Server.Access.Components;
+using Content.Shared.Access.Components;
 using Content.Server.GameTicking;
 using Content.Server.Station.Components;
 using Content.Server.Station.Systems;
@@ -78,6 +79,14 @@ public sealed partial class PresetIdCardSystem : EntitySystem
 
         _cardSystem.TryChangeJobTitle(uid, job.LocalizedName);
         _cardSystem.TryChangeJobDepartment(uid, job);
+
+        // Stories-Economy-Start
+        if (TryComp<IdCardComponent>(uid, out var card))
+        {
+            card.JobPrototype = job.ID;
+            Dirty(uid, card);
+        }
+        // Stories-Economy-End
 
         if (ProtoMan.Resolve(job.Icon, out var jobIcon))
             _cardSystem.TryChangeJobIcon(uid, jobIcon);

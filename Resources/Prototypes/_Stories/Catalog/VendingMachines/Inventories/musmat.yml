@@ -13,3 +13,15 @@
    TromboneInstrument: 2 
   emaggedInventory:
    SuperSynthesizerInstrument: 1
+  prices: # Stories-Economy
+   ElectricGuitarInstrument: 60
+   BassGuitarInstrument: 60
+   RockGuitarInstrument: 70
+   ViolinInstrument: 50
+   SaxophoneInstrument: 60
+   AccordionInstrument: 45
+   ClarinetInstrument: 40
+   MicrophoneInstrument: 25
+   SynthesizerInstrument: 80
+   TromboneInstrument: 50
+   SuperSynthesizerInstrument: 150

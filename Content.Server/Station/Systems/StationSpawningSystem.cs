@@ -203,6 +203,11 @@ public sealed partial class StationSpawningSystem : SharedStationSpawningSystem
         _cardSystem.TryChangeFullName(cardId, characterName, card);
         _cardSystem.TryChangeJobTitle(cardId, jobPrototype.LocalizedName, card);
 
+        // Stories-Economy-Start
+        card.JobPrototype = jobPrototype.ID;
+        Dirty(cardId, card);
+        // Stories-Economy-End
+
         if (ProtoMan.Resolve(jobPrototype.Icon, out var jobIcon))
             _cardSystem.TryChangeJobIcon(cardId, jobIcon, card);
 
