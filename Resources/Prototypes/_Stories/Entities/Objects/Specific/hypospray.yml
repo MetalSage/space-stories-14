@@ -21,3 +21,15 @@
         Quantity: 15
   - type: Tag
     tags: []
+
+- type: entity
+  parent: AdvancedJetInjector
+  id: STSyndieJetInjector
+  name: blood-red jet injector
+  description: Advanced injector in the Syndicate's color scheme.
+  components:
+  - type: Sprite
+    sprite: _Stories/Objects/Specific/Medical/syndie_jetinjector.rsi
+  - type: Item
+    sprite: _Stories/Objects/Specific/Medical/syndie_jetinjector.rsi
+

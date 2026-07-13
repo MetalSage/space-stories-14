@@ -179,3 +179,20 @@
     whitelist:
       tags:
       - NukeOpsUplink
+
+#Chemicals
+- type: listing
+  id: STSyndieJetInjector
+  name: stories-uplink-jet-injector-name
+  description: stories-uplink-jet-injector-desc
+  icon: { sprite: _Stories/Objects/Specific/Medical/syndie_jetinjector.rsi, state: jetinjector_base }
+  productEntity: STSyndieJetInjector
+  cost:
+    Telecrystal: 4
+  categories:
+    - UplinkChemicals
+  conditions:
+  - !type:StoreWhitelistCondition
+    whitelist:
+      tags:
+      - NukeOpsUplink

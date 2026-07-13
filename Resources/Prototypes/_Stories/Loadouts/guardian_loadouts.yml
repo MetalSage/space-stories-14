@@ -20,6 +20,8 @@
   minLimit: 0
   loadouts:
   - ClothingHeadHatExe
+  - BeretGuardianNt
+  - HelmetGuardianNt
 
 - type: loadoutGroup
   id: GuardianNtMask
@@ -132,6 +134,18 @@
   effects:
   - !type:SponsorLoadoutEffect
     id: ClothingHeadHatExe
+
+# Берет
+- type: loadout
+  id: BeretGuardianNt
+  equipment:
+    head: STClothingHeadHatBeretGuardianNt
+
+# Шлем
+- type: loadout
+  id: HelmetGuardianNt
+  equipment:
+    head: STClothingHeadHelmetGuardianNt
 
 # Рапира
 - type: loadout
