@@ -1,7 +1,7 @@
 - type: entity
   abstract: true
-  name: портативная консоль управления шаттлом
-  description: Используется, чтобы управлять шаттлом на расстоянии.
+  name: portable shuttle console
+  description: Used to control the shuttle from a distance.
   suffix: DO NOT MAP
   parent:
   - BaseItem
@@ -52,9 +52,9 @@
     - HighRiskItem
 
 - type: entity
-  name: портативная консоль управления шаттлом тюрьмы
-  description: Используется, чтобы управлять шаттлом на расстоянии.
-  suffix: НЕ МАППИТЬ
+  name: prison portable shuttle console
+  description: Used to control the shuttle from a distance.
+  suffix: DON'T MAP
   parent: BaseHandheldShuttleConsole
   id: PRISONHandheldShuttleConsole
   components:

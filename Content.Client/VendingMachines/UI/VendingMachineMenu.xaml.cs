@@ -41,27 +41,16 @@ namespace Content.Client.VendingMachines.UI
         protected override void Dispose(bool disposing)
         {
             base.Dispose(disposing);
-
-            // Don't clean up dummies during disposal or we'll just have to spawn them again
-            if (!disposing)
-                return;
-
-            // Delete any dummy items we spawned
+            if (!disposing) return;
             foreach (var entity in _dummies.Values)
-            {
                 _entityManager.QueueDeleteEntity(entity);
-            }
             _dummies.Clear();
         }
 
         private bool DataFilterCondition(string filter, ListData data)
         {
-            if (data is not VendorItemsListData { ItemText: var text })
-                return false;
-
-            if (string.IsNullOrEmpty(filter))
-                return true;
-
+            if (data is not VendorItemsListData { ItemText: var text }) return false;
+            if (string.IsNullOrEmpty(filter)) return true;
             return text.Contains(filter, StringComparison.CurrentCultureIgnoreCase);
         }
 
@@ -75,13 +64,8 @@ namespace Content.Client.VendingMachines.UI
             button.AddStyleClass("ButtonSquare");
 
             bool isOutOfStock = amount == 0;
-
             button.Disabled = isOutOfStock;
-
-            if (isOutOfStock)
-            {
-                 item.Modulate = Color.Gray;
-            }
+            if (isOutOfStock) item.Modulate = Color.Gray;
         }
 
         /// <summary>
@@ -91,21 +75,15 @@ namespace Content.Client.VendingMachines.UI
         public void Populate(List<VendingMachineInventoryEntry> inventory)
         {
             Inventory = inventory;
-            VendingContents.PopulateList(new List<ListData>()); 
+            VendingContents.PopulateList(new List<ListData>());
 
-            if (inventory.Count == 0)
-            {
-                return;
-            }
+            if (inventory.Count == 0) return;
 
             var listData = new List<ListData>();
-
             for (var i = 0; i < inventory.Count; i++)
             {
                 var entry = inventory[i];
-
-                if (!_prototypeManager.TryIndex(entry.ID, out var prototype))
-                    continue;
+                if (!_prototypeManager.TryIndex(entry.ID, out var prototype)) continue;
 
                 if (!_dummies.TryGetValue(entry.ID, out var dummy))
                 {
@@ -114,21 +92,9 @@ namespace Content.Client.VendingMachines.UI
                 }
 
                 var itemName = Identity.Name(dummy, _entityManager);
-                string itemText;
-
-                if (entry.Price > 0)
-                {
-                    itemText = Loc.GetString("vending-machine-item-entry-with-price", 
-                        ("name", itemName), 
-                        ("amount", entry.Amount), 
-                        ("price", entry.Price));
-                }
-                else
-                {
-                    itemText = Loc.GetString("vending-machine-item-entry-no-price", 
-                        ("name", itemName), 
-                        ("amount", entry.Amount));
-                }
+                string itemText = entry.Price > 0 
+                    ? Loc.GetString("stories-vending-machine-item-entry-with-price", ("name", itemName), ("amount", entry.Amount), ("price", entry.Price))
+                    : Loc.GetString("stories-vending-machine-item-entry-no-price", ("name", itemName), ("amount", entry.Amount));
 
                 listData.Add(new VendorItemsListData(prototype.ID, i)
                 {
@@ -137,20 +103,15 @@ namespace Content.Client.VendingMachines.UI
                     Amount = entry.Amount
                 });
             }
-
             VendingContents.PopulateList(listData);
         }
 
         public void UpdateBalance(int? balance)
         {
             if (balance.HasValue)
-            {
-                BalanceLabel.Text = Loc.GetString("vending-machine-ui-balance", ("balance", balance.Value));
-            }
+                BalanceLabel.Text = Loc.GetString("stories-vending-machine-ui-balance", ("balance", balance.Value));
             else
-            {
-                BalanceLabel.Text = Loc.GetString("vending-machine-ui-balance", ("balance", Loc.GetString("vending-machine-ui-no-balance")));
-            }
+                BalanceLabel.Text = Loc.GetString("stories-vending-machine-ui-balance", ("balance", Loc.GetString("stories-vending-machine-ui-no-balance")));
         }
     }
 

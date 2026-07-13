@@ -161871,13 +161871,11 @@ entities:
   - uid: 36081
     components:
     - type: Transform
-      rot: -1.5707963267948966 rad
       pos: 26.5,-8.5
       parent: 2
   - uid: 36082
     components:
     - type: Transform
-      rot: -1.5707963267948966 rad
       pos: 26.5,-9.5
       parent: 2
 - proto: GrilleBroken

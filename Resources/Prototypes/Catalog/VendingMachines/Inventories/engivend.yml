@@ -17,6 +17,7 @@
     DrinkBeerCan: 3
   prices: # Stories-Economy
     ClothingEyesGlassesMeson: 100
+    ClothingEyesGlassesThermal: 150
     ClothingEyesHudDiagnostic: 120
     ClothingHeadHatWelding: 50
     CrowbarYellow: 40

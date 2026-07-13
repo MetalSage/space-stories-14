@@ -7,7 +7,7 @@
   - type: Sprite
     state: cart-nav
   - type: Cartridge
-    programName: bank-program-name
+    programName: stories-bank-program-name
     icon:
       sprite: _Stories/Interface/Misc/program_icons.rsi
       state: nt_bank

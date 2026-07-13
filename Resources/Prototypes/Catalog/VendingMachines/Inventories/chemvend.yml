@@ -88,3 +88,35 @@
     ChemistryBottleMuteToxin: 3
     ChemistryBottleLead: 2
     ChemistryBottleToxin: 1
+  prices: # Stories-Economy
+    Jug: 10
+    STBigJugSyndie: 30
+    JugAluminium: 20
+    JugCarbon: 20
+    JugChlorine: 25
+    JugCopper: 15
+    JugEthanol: 30
+    JugFluorine: 30
+    JugHydrogen: 20
+    JugIodine: 25
+    JugIron: 15
+    JugLithium: 30
+    JugMercury: 35
+    JugNitrogen: 25
+    JugOxygen: 25
+    JugPhosphorus: 30
+    JugPotassium: 25
+    JugRadium: 45
+    JugSilicon: 20
+    JugSodium: 25
+    JugSugar: 15
+    JugSulfur: 20
+    JugWeldingFuel: 25
+    PlasmaChemistryVial: 150
+    DrinkLithiumFlask: 100
+    StrangePill: 60
+    ChemistryBottlePax: 120
+    ChemistryBottleMuteToxin: 120
+    ChemistryBottleLead: 120
+    ChemistryBottleToxin: 120
+

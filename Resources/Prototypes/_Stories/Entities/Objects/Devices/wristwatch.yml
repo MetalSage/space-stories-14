@@ -1,8 +1,8 @@
 - type: entity
   id: StoriesWristwatchGold
   parent: Wristwatch
-  name: золотые часы
-  description: Модные часы, стоимостью больше, чем ваша почка.
+  name: gold watch
+  description: A fashionable watch that costs more than your kidney.
   components:
   - type: Sprite
     sprite: _Stories/Objects/Devices/goldwatch.rsi
@@ -20,8 +20,8 @@
 - type: entity
   id: WristwatchSilver
   parent: Wristwatch
-  name: серебряные часы
-  description: Модные часы, стоимостью больше, чем ваша почка.
+  name: silver watch
+  description: A fashionable watch that costs more than your kidney.
   components:
   - type: Sprite
     sprite: _Stories/Objects/Devices/silverwatch.rsi

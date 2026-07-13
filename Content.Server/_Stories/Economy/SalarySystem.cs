@@ -1,8 +1,8 @@
 using Content.Server._Stories.Economy.Components;
 using Content.Server.Station.Systems;
-using Content.Shared._Stories.SCCVars;
 using Content.Shared.Mind;
 using Content.Shared.Roles;
+using Content.Shared._Stories.SCCVars;
 using Robust.Shared.Configuration;
 using Robust.Shared.Prototypes;
 using Robust.Shared.Random;
@@ -21,38 +21,43 @@ public sealed partial class SalarySystem : EntitySystem
     [Dependency] private StationSystem _station = default!;
     [Dependency] private IGameTiming _timing = default!;
 
-    private TimeSpan _nextPayday;
-
     public override void Initialize()
     {
         base.Initialize();
-        var freq = _cfg.GetCVar(SCCVars.EconomySalaryFrequency);
-        _nextPayday = _timing.CurTime + TimeSpan.FromMinutes(freq);
     }
 
     public override void Update(float frameTime)
     {
         base.Update(frameTime);
 
-        var freq = _cfg.GetCVar(SCCVars.EconomySalaryFrequency);
-        if (freq <= 0)
-            return;
+        var query = EntityQueryEnumerator<StationBankComponent>();
+        while (query.MoveNext(out var uid, out var bank))
+        {
+            if (bank.SalaryFrequencyMins <= 0)
+                continue;
 
-        if (_timing.CurTime < _nextPayday)
-            return;
+            if (bank.NextPayday == TimeSpan.Zero)
+            {
+                bank.NextPayday = _timing.CurTime + TimeSpan.FromMinutes(bank.SalaryFrequencyMins);
+                continue;
+            }
 
-        PaySalaries();
-        _nextPayday = _timing.CurTime + TimeSpan.FromMinutes(freq);
+            if (_timing.CurTime >= bank.NextPayday)
+            {
+                PaySalaries(uid, bank);
+                bank.NextPayday = _timing.CurTime + TimeSpan.FromMinutes(bank.SalaryFrequencyMins);
+            }
+        }
     }
 
-    public void PaySalaries(float multiplier = 1.0f)
+    public void PaySalaries(EntityUid stationUid, StationBankComponent stationBank, float multiplier = 1.0f)
     {
         var percentage = _cfg.GetCVar(SCCVars.EconomySalaryPercentage);
 
         var query = EntityQueryEnumerator<MindBankAccountComponent, MindComponent>();
         while (query.MoveNext(out var uid, out var bankComp, out var mind))
         {
-            if (mind.OwnedEntity == null)
+            if (mind.OwnedEntity == null || bankComp.BankStation != stationUid)
                 continue;
 
             var roles = _roleSystem.MindGetAllRoleInfo((uid, mind));
@@ -73,10 +78,6 @@ public sealed partial class SalarySystem : EntitySystem
             if (!_prototypeManager.TryIndex<JobPrototype>(jobPrototypeId, out var jobProto))
                 continue;
 
-            var stationUid = _station.GetOwningStation(mind.OwnedEntity.Value);
-            if (!stationUid.HasValue || !TryComp<StationBankComponent>(stationUid, out var stationBank))
-                continue;
-
             if (!stationBank.Accounts.ContainsKey(bankComp.AccountNumber))
                 continue;
 
@@ -85,11 +86,20 @@ public sealed partial class SalarySystem : EntitySystem
 
             if (actualSalary > 0)
             {
-                _bank.TryChangeBalance(stationUid.Value, bankComp.AccountNumber, actualSalary);
+                _bank.TryChangeBalance(stationUid, bankComp.AccountNumber, actualSalary);
                 _economy.TrySendNotification(uid,
-                    Loc.GetString("bank-app-notification-salary-title"),
-                    Loc.GetString("bank-app-notification-salary-body", ("amount", actualSalary)));
+                    Loc.GetString("stories-bank-app-notification-salary-title"),
+                    Loc.GetString("stories-bank-app-notification-salary-body", ("amount", actualSalary)));
             }
+        }
+    }
+
+    public void PaySalaries(float multiplier = 1.0f)
+    {
+        var query = EntityQueryEnumerator<StationBankComponent>();
+        while (query.MoveNext(out var uid, out var bank))
+        {
+            PaySalaries(uid, bank, multiplier);
         }
     }
 }

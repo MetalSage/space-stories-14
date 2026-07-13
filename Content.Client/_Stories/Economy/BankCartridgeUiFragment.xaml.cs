@@ -47,7 +47,7 @@ public sealed partial class BankCartridgeUiFragment : BoxContainer
         Balance.Text = $"{state.Balance} кр.";
         AccountNumber.Text = state.AccountNumber;
 
-        var cardInserted = state.OwnerName != Loc.GetString("bank-ui-insert-id");
+        var cardInserted = state.OwnerName != Loc.GetString("stories-bank-ui-insert-id");
 
         LinkButton.Disabled = !cardInserted || state.IsIdLinked;
         UnlinkButton.Disabled = !state.IsIdLinked;
@@ -56,7 +56,7 @@ public sealed partial class BankCartridgeUiFragment : BoxContainer
         TargetInput.Editable = state.IsIdLinked;
 
         ToggleNotificationsButton.Text = state.NotificationsEnabled
-            ? Loc.GetString("bank-ui-notifications-disable")
-            : Loc.GetString("bank-ui-notifications-enable");
+            ? Loc.GetString("stories-bank-ui-notifications-disable")
+            : Loc.GetString("stories-bank-ui-notifications-enable");
     }
 }

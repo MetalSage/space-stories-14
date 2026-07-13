@@ -47,3 +47,5 @@ ent-OrganKidanStomach = { ent-OrganAnimalStomach }
 ent-OrganKidanLiver = { ent-OrganAnimalLiver }
     .desc = { ent-OrganAnimalLiver.desc }
     .suffix = { ent-OrganAnimalLiver.suffix }
+ent-SolutionStomachKidan = { ent-SolutionStomach }
+    .desc = { ent-SolutionStomach.desc }

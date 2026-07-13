@@ -53,7 +53,7 @@
   name: holy tile
   description: O bless the great tile.
   parent: STHolyFloorEntityInfinity
-  suffix: 30 секунд
+  suffix: 30 seconds
   placement:
     mode: SnapgridCenter
     snap:

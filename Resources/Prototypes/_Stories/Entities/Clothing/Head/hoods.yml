@@ -1,9 +1,9 @@
 - type: entity
   parent: ClothingHeadBase
   id: ClothingHeadHatHoodGuardianhood
-  name: капюшон джедая
+  name: jedi hood
   categories: [ HideSpawnMenu ]
-  description: Достаточно крут, чтобы вы его носили.
+  description: Cool enough for you to wear.
   components:
   - type: HideLayerClothing
     slots:
@@ -22,9 +22,9 @@
 - type: entity
   parent: ClothingHeadBase
   id: ClothingHeadHatHoodInquisitor
-  name: капюшон инквизитора
+  name: inquisitor hood
   categories: [ HideSpawnMenu ]
-  description: Какой же вы злодей без крутого капюшона?
+  description: What kind of villain are you without a cool hood?
   components:
   - type: HideLayerClothing
     slots:
@@ -56,9 +56,9 @@
 - type: entity
   parent: ClothingHeadBase
   id: ClothingHeadHatHoodKylo
-  name: капюшон кайло рена
+  name: kylo ren hood
   categories: [ HideSpawnMenu ]
-  description: Какой же вы злодей без крутого капюшона?
+  description: What kind of villain are you without a cool hood?
   components:
   - type: HideLayerClothing
     slots:

@@ -69,6 +69,8 @@
   - !type:VendingMachineContrabandWireAction
   - !type:VendingMachineEjectItemWireAction
   - !type:SpeechWireAction
+  - !type:VendingMachineFreeWireAction # Stories-Economy
+  - !type:VendingMachineLogWireAction # Stories-Economy
 
 - type: wireLayout
   id: AirAlarm

@@ -109,6 +109,7 @@
     ClothingUniformJumpsuitDameDane: 40
     ClothingShoesDameDane: 30
     ClothingOuterDameDane: 50
+    ClothingHeadHatMitreClown: 30
     ClothingOuterClownPriest: 60
     ClothingMaskSadMime: 25
     ClothingMaskScaredMime: 25
@@ -124,6 +125,8 @@
     ClothingShoesBootsCowboyBrown: 50
     ClothingShoesBootsCowboyBlack: 50
     ClothingShoesBootsCowboyWhite: 50
+    ClothingHeadHatWizardFake: 30
+    ClothingOuterWizardFake: 60
     ClothingHeadHatRichard: 60
     ToyFigurineBoxer: 100
     ToyFigurineMusician: 100

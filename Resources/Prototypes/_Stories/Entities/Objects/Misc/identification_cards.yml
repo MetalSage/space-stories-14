@@ -1,7 +1,7 @@
 - type: entity
   parent: PRISONIDCardHeadOfPrison
   id: IAAIDCard
-  name: ID карта агента внутренних дел
+  name: Internal Affairs Agent ID card
   components:
     - type: Sprite
       layers:
@@ -27,8 +27,8 @@
 - type: entity
   parent: IDCardStandard
   id: GuardianNtIDCard
-  name: ID карта стража клинка
-  description: Карта, необходимая для доступа в различные области станции.
+  name: Bladeguard ID card
+  description: A card required to access various areas of the station.
   components:
     - type: Sprite
       layers:
@@ -43,8 +43,8 @@
 - type: entity
   parent: IDCardStandard
   id: PRISONIDCardHeadOfPrison
-  name: ID карта начальника тюрьмы
-  description: Карта, необходимая для доступа в различные области станции.
+  name: Prison warden ID card
+  description: A card required to access various areas of the station.
   components:
     - type: Sprite
       sprite: _Stories/Objects/Misc/id_cards.rsi
@@ -61,8 +61,8 @@
 - type: entity
   parent: PRISONIDCardHeadOfPrison
   id: PRISONIDCardOfficer
-  name: ID карта офицера тюрьмы
-  description: Карта, необходимая для доступа в различные области станции.
+  name: Prison officer ID card
+  description: A card required to access various areas of the station.
   components:
     - type: Sprite
       layers:
@@ -74,8 +74,8 @@
 - type: entity
   parent: PRISONIDCardHeadOfPrison
   id: PRISONIDCardEngineer
-  name: ID карта инженера тюрьмы
-  description: Карта, необходимая для доступа в различные области станции.
+  name: Prison engineer ID card
+  description: A card required to access various areas of the station.
   components:
     - type: Sprite
       layers:
@@ -87,8 +87,8 @@
 - type: entity
   parent: PRISONIDCardHeadOfPrison
   id: PRISONIDCardMedic
-  name: ID карта врача тюрьмы
-  description: Карта, необходимая для доступа в различные области станции.
+  name: Prison doctor ID card
+  description: A card required to access various areas of the station.
   components:
     - type: Sprite
       layers:
@@ -100,8 +100,8 @@
 - type: entity
   parent: IDCardStandard
   id: PRISONIDCardPrisoner
-  name: ID карта заключенного тюрьмы
-  description: Карта, необходимая для доступа в различные области станции.
+  name: Prison inmate ID card
+  description: A card required to access various areas of the station.
   components:
     - type: Sprite
       sprite: Objects/Misc/id_cards.rsi

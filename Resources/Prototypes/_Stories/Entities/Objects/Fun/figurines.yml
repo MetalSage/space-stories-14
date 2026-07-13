@@ -1,8 +1,8 @@
 - type: entity
   parent: BaseItem
   id: BaseFigurineStories
-  name: фигурка
-  description: Небольшая миниатюра.
+  name: figurine
+  description: A small miniature.
   abstract: true
   components:
   - type: Sprite
@@ -19,8 +19,8 @@
 - type: entity
   parent: BaseFigurineStories
   id: STToyFigurineShadowling
-  name: фигурка тенеморфа
-  description: Темновато.
+  name: shadowling figurine
+  description: It's a bit dark.
   components:
   - type: Sprite
     state: shadowling
@@ -28,8 +28,8 @@
 - type: entity
   parent: BaseFigurineStories
   id: STToyFigurineAscendedShadowling
-  name: фигурка вознесенного тенеморфа
-  description: Кто такой смелый?
+  name: ascended shadowling figurine
+  description: Who is so brave?
   components:
   - type: Sprite
     state: ascendedShadowling
@@ -37,8 +37,8 @@
 - type: entity
   parent: BaseFigurineStories
   id: ToyFigurineInquisitor
-  name: фигурка инквизитора
-  description: Я пришел за тобой!
+  name: inquisitor figurine
+  description: I've come for you!
   components:
   - type: Sprite
     state: inquisitor
@@ -46,8 +46,8 @@
 - type: entity
   parent: BaseFigurineStories
   id: ToyFigurineGuardianNt
-  name: фигурка стража клинка
-  description: Он такой красивый!
+  name: blade guardian figurine
+  description: It's so beautiful!
   components:
   - type: Sprite
     state: guardiannt
@@ -55,8 +55,8 @@
 - type: entity
   parent: BaseFigurineStories
   id: ToyFigurineMSP
-  name: фигурка старого МКТ
-  description: Вот это время то было!
+  name: old Space Prison Medic figurine
+  description: What a time that was!
   components:
   - type: Sprite
     state: msp
@@ -64,8 +64,8 @@
 - type: entity
   parent: BaseFigurineStories
   id: ToyFigurineOSP
-  name: фигурка старого ОКТ
-  description: Вот это время то было!
+  name: old Space Prison Officer figurine
+  description: What a time that was!
   components:
   - type: Sprite
     state: osp
@@ -73,8 +73,8 @@
 - type: entity
   parent: BaseFigurineStories
   id: ToyFigurineESP
-  name: фигурка старого ИКТ
-  description: Вот это время то было!
+  name: old Space Prison Engineer figurine
+  description: What a time that was!
   components:
   - type: Sprite
     state: esp
@@ -82,8 +82,8 @@
 - type: entity
   parent: BaseFigurineStories
   id: ToyFigurineHOSP
-  name: фигурка старого ГКТ
-  description: Вот это время то было!
+  name: old Head of Space Prison figurine
+  description: What a time that was!
   components:
   - type: Sprite
     state: hosp
@@ -91,8 +91,8 @@
 - type: entity
   parent: BaseFigurineStories
   id: ToyFigurineBubblegum
-  name: фигурка Бубльгума
-  description: Король всех демонов резни. Своей тяжелой поступью он сотрясает Лаваленд, оставляя за собой кровавый след.
+  name: Bubblegum figurine
+  description: The king of all slaughter demons. With his heavy tread he shakes Lavaland, leaving a bloody trail behind him.
   components:
   - type: Sprite
     state: bublgum
@@ -100,8 +100,8 @@
 - type: entity
   parent: BaseFigurineStories
   id: ToyFigurineAshDragon
-  name: фигурка Пепельного дракона
-  description: Крылатое чудовище, почитаемый хранитель Некрополя. Ужас во плоти бродит по бесплодной пустоши, изрыгая потоки смертоносного пламени.
+  name: Ash Drake figurine
+  description: A winged monster, the revered guardian of the Necropolis. Terror incarnate roams the barren wasteland, spewing streams of deadly flame.
   components:
   - type: Sprite
     state: dragon
@@ -109,8 +109,8 @@
 - type: entity
   parent: BaseFigurineStories
   id: ToyFigurineColossus
-  name: фигурка Колосса
-  description: Падший ангел, бредущий по пустошам Лаваленда, карающий всех, кто кажется ему нечистым.
+  name: Colossus figurine
+  description: A fallen angel wandering the wastelands of Lavaland, punishing all who seem impure to him.
   components:
   - type: Sprite
     state: colossus

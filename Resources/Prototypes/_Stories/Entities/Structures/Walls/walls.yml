@@ -1,6 +1,6 @@
 - type: entity
   id: WallForceGuardian
-  name: Барьер Силы
+  name: Force Barrier
   placement:
     mode: SnapgridCenter
   components:
