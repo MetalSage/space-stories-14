@@ -41,7 +41,7 @@ public sealed partial class HumanoidProfileSystem : EntitySystem
 
         // Stoires-TTS-Start
         var tts = EnsureComp<TTSComponent>(ent.Owner);
-        tts.VoicePrototypeId = profile.Voice;
+        tts.VoicePrototypeId = profile.VoiceTTS;
         Dirty(ent.Owner, tts);
         // Stoires-TTS-End
     }

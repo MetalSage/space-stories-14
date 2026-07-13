@@ -163,6 +163,8 @@ public abstract partial class GameRuleSystem<T> where T: IComponent
             if (randomTileRef is not { } tileRef)
                 return false;
 
+            tile = tileRef.GridIndices;
+
             // Invalid tile, try again.
             if (_atmosphere.IsTileSpace(targetGrid, Transform(targetGrid).MapUid, tileRef.GridIndices)
                 || _atmosphere.IsTileAirBlockedCached(targetGrid, tile))

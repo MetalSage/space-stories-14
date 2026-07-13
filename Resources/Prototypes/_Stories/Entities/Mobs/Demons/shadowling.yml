@@ -252,6 +252,7 @@
   - type: MobCollision
   - type: PressureImmunity
   - type: MeleeWeapon
+    altDisarm: false
     soundHit:
       collection: Punch
     angle: 30
@@ -303,6 +304,9 @@
   - type: MovementSpeedModifier
     baseWalkSpeed: 5
     baseSprintSpeed: 10
+  - type: Tag
+    tags:
+    - DoorBumpOpener
   - type: Sprite
     noRot: true
     drawdepth: Mobs
