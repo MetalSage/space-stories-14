@@ -658,13 +658,6 @@
     Telecrystal: 6
   categories:
   - UplinkChemicals
-  # Stories-SyndieJetInjector Start
-  conditions:
-  - !type:StoreWhitelistCondition
-    blacklist:
-      tags:
-      - NukeOpsUplink
-  # Stories-SyndieJetInjector End
 
 - type: listing
   id: UplinkHypoDart

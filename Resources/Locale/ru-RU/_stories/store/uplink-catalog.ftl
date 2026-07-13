@@ -22,5 +22,3 @@ uplink-clothing-eyes-hud-syndicate-agent-name = Визор агента
 uplink-clothing-eyes-hud-syndicate-agent-desc = Высокотехнологичный визор для точного обнаружения гуманоидов, оснащенный индикатором здоровья, который позволяет отслеживать состояние как вражеских, так и дружественных сил, повышая эффективность и безопасность операций.
 stories-uplink-afterburner-implanter-name = Имплантер "Форсаж"
 stories-uplink-afterburner-implanter-desc = При активации вводит в тело дозу стимуляторов. Имеет встроенный синтезатор химикатов и может быть использован неограниченное количество раз.
-stories-uplink-jet-injector-name = Инъектор химикатов Interdyne
-stories-uplink-jet-injector-desc = Продвинутый инъектор в расцветке синдиката. Позволяет на ходу вводить любые химикаты.
