@@ -26,7 +26,6 @@ public sealed partial class PrisonSystem : EntitySystem
 
     [Dependency] private GameTicker _gameTicker = default!;
     [Dependency] private SharedMapSystem _map = default!;
-    [Dependency] private IMapManager _mapManager = default!;
     [Dependency] private MindSystem _mind = default!;
     [Dependency] private MobStateSystem _mobState = default!;
     [Dependency] private IPlayerManager _player = default!;
@@ -135,7 +134,7 @@ public sealed partial class PrisonSystem : EntitySystem
 
         if (prison == null)
         {
-            _mapManager.DeleteMap(mapId);
+            _map.DeleteMap(mapId);
             _sawmill.Error("Failed to find prison station");
             return;
         }
@@ -144,6 +143,6 @@ public sealed partial class PrisonSystem : EntitySystem
         prisonComp.Station = uid;
         component.Prison = prison;
 
-        _mapManager.DoMapInitialize(mapId);
+        _map.InitializeMap(_map.GetMap(mapId));
     }
 }

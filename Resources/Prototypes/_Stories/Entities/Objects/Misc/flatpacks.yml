@@ -1,8 +1,8 @@
 - type: entity
   parent: BaseFlatpack
   id: PrinterDocFlatpack
-  name: упакованный бумажный принтер
-  description: Упаковка, используемая для установки бумажного принтера.
+  name: document printer flatpack
+  description: Packaging used to install a paper printer.
   components:
   - type: Flatpack
     entity: PrinterDoc
@@ -10,8 +10,8 @@
 - type: entity
   parent: PrinterDocFlatpack
   id: PrinterDocSyndieFlatpack
-  name: упакованный бумажный синди принтер
-  description: Упаковка, используемая для установки бумажного принтера.
+  name: syndicate document printer flatpack
+  description: Packaging used to install a paper printer.
   components:
   - type: Flatpack
     entity: PrinterDocSyndie

@@ -1,5 +1,7 @@
-ent-BaseHypospray = { ent-SolutionHypospraySmall }
+ent-BaseHypoInjector = { ent-SolutionHypospraySmall }
     .desc = { ent-SolutionHypospraySmall.desc }
+ent-BaseHypospray = { ent-BaseHypoInjector }
+    .desc = { ent-BaseHypoInjector.desc }
 ent-SolutionHypospraySmall = { ent-SolutionHypospray }
     .desc = { ent-SolutionHypospray.desc }
 ent-SolutionHyposprayTiny = { ent-SolutionHypospray }
@@ -50,5 +52,8 @@ ent-Hypopen = { ent-Pen }
     .suffix = Гипоручка
 ent-HypopenBox = футляр гипоручки
     .desc = Небольшая коробочка, содержащая гипоручку. После вскрытия упаковка дезинтегрируется, не оставив улик.
+ent-WehMedipenTiny = weh auto-injector
+    .desc = A non-refillable medipen containing a dose of weh.
 ent-WehMedipen = автоинъектор веха
     .desc = Одноразовый медипен, содержащий большую дозу Веха.
+    .suffix = DO NOT MAP

@@ -4,16 +4,18 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:controls="clr-namespace:Content.Client.UserInterface.Controls"
     xmlns:co="clr-namespace:Content.Client.UserInterface.Controls"
-    MinHeight="250"
+    MinHeight="300"
     MinWidth="350">
     <BoxContainer Name="MainContainer" Orientation="Vertical">
         <LineEdit Name="SearchBar" PlaceHolder="{Loc 'vending-machine-component-search-filter'}" HorizontalExpand="True"  Margin ="4 4"/>
         <co:SearchListContainer Name="VendingContents" VerticalExpand="True" Margin="4 4"/>
-         <!-- Footer -->
+
+
+        <!-- Footer -->
         <BoxContainer Orientation="Vertical">
             <PanelContainer StyleClasses="LowDivider" />
             <BoxContainer Orientation="Horizontal" Margin="10 5 10 5" VerticalAlignment="Center">
-                <Label Name="BalanceLabel" StyleClasses="WindowFooterText" VerticalAlignment="Center" Text="---"/>
+                <Label Name="BalanceLabel" StyleClasses="WindowFooterText" Text="---"/>
                 <Control HorizontalExpand="True" />
                 <Label Text="{Loc 'vending-machine-flavor-right'}" StyleClasses="WindowFooterText"
                         VerticalAlignment="Center" Margin="0 0 5 0" />

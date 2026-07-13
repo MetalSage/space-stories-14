@@ -1,8 +1,8 @@
 - type: entity
   parent: BaseAction
   id: ActionSpafStealth
-  name: "[color=limegreen]Режим невидимости[/color]"
-  description: Потратьте 30 единиц еды, чтобы замаскироваться на 5 секунд.
+  name: "[color=limegreen]Invisibility mode[/color]"
+  description: Spend 30 units of food to disguise yourself for 5 seconds.
   components:
   - type: Action
     useDelay: 15
@@ -17,8 +17,8 @@
 - type: entity
   parent: BaseToggleAction
   id: ActionSpafLight
-  name: "[color=orange]Светящаяся эссенция[/color]"
-  description: Выработайте светящуюся эссенцию, чтобы осветить себе путь.
+  name: "[color=orange]Glowing essence[/color]"
+  description: Produce a glowing essence to light your path.
   components:
   - type: Action
     useDelay: 1
@@ -31,8 +31,8 @@
 - type: entity
   parent: BaseAction
   id: ActionSpafLube
-  name: "[color=purple]Слизь[/color]"
-  description: Потратьте 30 единиц еды, чтобы выделить очень скользкую слизь.
+  name: "[color=purple]Slime[/color]"
+  description: Spend 30 units of food to secrete very slippery slime.
   components:
   - type: Action
     useDelay: 15
@@ -51,8 +51,8 @@
 - type: entity
   parent: BaseAction
   id: ActionSpafMine
-  name: "[color=rosybrown]Органическая ловушка[/color]"
-  description: Потратьте 40 единиц еды, чтобы создать органическую ловушку, которая оглушает врагов на время.
+  name: "[color=rosybrown]Organic trap[/color]"
+  description: Spend 40 units of food to create an organic trap that temporarily stuns enemies.
   components:
   - type: Action
     useDelay: 15
@@ -67,8 +67,8 @@
 - type: entity
   parent: BaseAction
   id: ActionSpafFood
-  name: "[color=lightseagreen]Таинственные знания[/color]"
-  description: Неизвестный науке метод, который позволяет вам с точностью до сотых определить наполненность своего желудка.
+  name: "[color=lightseagreen]Mysterious knowledge[/color]"
+  description: A method unknown to science that allows you to determine how full your stomach is to the nearest hundredth.
   components:
   - type: Action
     useDelay: 1
@@ -81,8 +81,8 @@
 - type: entity
   parent: BaseAction
   id: ActionSpafGlue
-  name: "[color=darkslateblue]Липкая слизь[/color]"
-  description: Потратьте 10 единиц еды, чтобы выделить липкую слизь.
+  name: "[color=darkslateblue]Sticky slime[/color]"
+  description: Spend 10 units of food to secrete sticky slime.
   components:
   - type: Action
     useDelay: 5
@@ -101,8 +101,8 @@
 - type: entity
   parent: BaseAction
   id: ActionSpafEgg
-  name: "[color=orange]Новая жизнь[/color]"
-  description: Потратьте 150 единиц еды, чтобы создать яйцо с маленькой копией себя.
+  name: "[color=orange]New life[/color]"
+  description: Spend 150 units of food to create an egg with a small copy of yourself.
   components:
   - type: Action
     useDelay: 60
@@ -117,8 +117,8 @@
 - type: entity
   parent: BaseAction
   id: ActionSpafEvol
-  name: "[color=blue]Эволюция[/color]"
-  description: Потратьте 100 единиц еды, чтобы эволюционировать во взрослую особь.
+  name: "[color=blue]Evolution[/color]"
+  description: Spend 100 units of food to evolve into an adult.
   components:
   - type: Action
     useDelay: 60
@@ -133,8 +133,8 @@
 - type: entity
   parent: BaseToggleAction
   id: ActionSpafDevour
-  name: "[color=lime]Поглощение[/color]"
-  description: Съешьте свою жертву, чтобы насытиться.
+  name: "[color=lime]Absorption[/color]"
+  description: Devour your victim to satisfy your hunger.
   components:
   - type: Action
     icon:

@@ -19,7 +19,7 @@ public sealed partial class PickRandomJobPersonSystem : EntitySystem
     [Dependency] private IRobustRandom _random = default!;
     [Dependency] private StoreSystem _store = default!;
     [Dependency] private TargetObjectiveSystem _target = default!;
-    [Dependency] private TargetSystem _targetSys = default!;
+    [Dependency] private SharedMindSystem _mind = default!;
 
     private float _updateTime;
 
@@ -63,7 +63,7 @@ public sealed partial class PickRandomJobPersonSystem : EntitySystem
             return;
 
         // no other humans to kill
-        var allHumans = _targetSys.GetAliveHumans(args.MindId);
+        var allHumans = _mind.GetAliveHumans(args.MindId);
         if (allHumans.Count == 0)
             return;
 

@@ -39,8 +39,8 @@
 - type: entity
   id: ReflectorBox
   parent: BaseReflector
-  name: Отражатель, тип "Коробка"
-  description: Это устройство, способное отражать снаряды, попадающие в него, в указанном направлении.
+  name: Reflector, type "Box"
+  description: This device is capable of deflecting projectiles hitting it in the specified direction.
   components:
   - type: Sprite
     state: reflector_circle
@@ -56,8 +56,8 @@
 - type: entity
   id: ReflectorCorner
   parent: BaseReflector
-  name: Отражатель, тип "Угловой"
-  description: Это устройство, способное отражать снаряды, попадающие в него, в указанном направлении.
+  name: Reflector, type "Corner"
+  description: This device is capable of deflecting projectiles hitting it in the specified direction.
   components:
   - type: Sprite
     state: reflector_corner
@@ -88,8 +88,8 @@
 - type: entity
   id: ReflectorCornerTside
   parent: BaseReflector
-  name: Отражатель, тип "Двойной-Угловой"
-  description: Это устройство, способное отражать снаряды, попадающие в него, в указанном направлении.
+  name: Reflector, type "Double-Corner"
+  description: This device is capable of deflecting projectiles hitting it in the specified direction.
   components:
   - type: Sprite
     state: reflector_corner_tside

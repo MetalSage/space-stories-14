@@ -43,6 +43,9 @@ reagent-desc-milk = Непрозрачная белая жидкость, выр
 reagent-name-milk-goat = козье молоко
 reagent-desc-milk-goat = Непрозрачная белая жидкость, производимая козами. Высокая концентрация обезжиренных сливок.
 
+reagent-name-milk-sheep = sheep's milk
+reagent-desc-milk-sheep = An opaque white liquid produced by a sheep. High in fat.
+
 reagent-name-milk-oat = овсяное молоко
 reagent-desc-milk-oat = На удивление вкусное.
 

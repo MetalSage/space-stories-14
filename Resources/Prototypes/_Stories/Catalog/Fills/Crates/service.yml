@@ -1,8 +1,8 @@
 - type: entity
   id: CrateServicePrinter
   parent: CrateGenericSteel
-  name: коробка с принтером
-  description: Принтер для всяких бюрократических штучек.
+  name: printer box
+  description: A printer for all sorts of bureaucratic things.
   components:
   - type: StorageFill
     contents:

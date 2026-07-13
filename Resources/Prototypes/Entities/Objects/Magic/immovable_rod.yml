@@ -34,10 +34,7 @@
         - Opaque
   - type: WarpPoint
     follow: true
-    location: "! неподвижный жезл"
-    blacklist:
-      tags:
-      - GhostOnlyWarp
+    location: immovable rod
 
 - type: entity
   parent: ImmovableRod

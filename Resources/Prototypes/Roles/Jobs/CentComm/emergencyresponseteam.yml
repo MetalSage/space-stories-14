@@ -15,7 +15,7 @@
   - CentralCommand
   special:
   - !type:AddImplantSpecial
-    implants: [ MindShieldImplant, DeathRattleImplantCentcomm ]
+    implants: [ MindShieldImplant, DeathRattleImplantCentcomm, STAdrenocorImplant ] # Stories-AdrenocorImplant
 
 - type: startingGear
   parent: ERTLeaderGearEVA
@@ -120,7 +120,7 @@
     - type: Holy
     # Stories-Pontific-End
   - !type:AddImplantSpecial
-    implants: [ MindShieldImplant, DeathRattleImplantCentcomm ]
+    implants: [ MindShieldImplant, DeathRattleImplantCentcomm, STAdrenocorImplant ] # Stories-AdrenocorImplant
 
 - type: startingGear
   parent: ERTChaplainGearEVA
@@ -194,7 +194,7 @@
   - CentralCommand
   special:
   - !type:AddImplantSpecial
-    implants: [ MindShieldImplant, DeathRattleImplantCentcomm ]
+    implants: [ MindShieldImplant, DeathRattleImplantCentcomm, STAdrenocorImplant ] # Stories-AdrenocorImplant
 
 - type: startingGear
   parent: ERTEngineerGearEVA
@@ -288,7 +288,7 @@
   - CentralCommand
   special:
   - !type:AddImplantSpecial
-    implants: [ MindShieldImplant, DeathRattleImplantCentcomm ]
+    implants: [ MindShieldImplant, DeathRattleImplantCentcomm, STAdrenocorImplant ] # Stories-AdrenocorImplant
 
 - type: startingGear
   parent: ERTSecurityGearEVA
@@ -475,7 +475,7 @@
   - CentralCommand
   special:
   - !type:AddImplantSpecial
-    implants: [ MindShieldImplant, DeathRattleImplantCentcomm ]
+    implants: [ MindShieldImplant, DeathRattleImplantCentcomm, STAdrenocorImplant ] # Stories-AdrenocorImplant
 
 - type: startingGear
   parent: ERTMedicalGearEVA
@@ -575,7 +575,7 @@
   - CentralCommand
   special:
   - !type:AddImplantSpecial
-    implants: [ MindShieldImplant, DeathRattleImplantCentcomm ]
+    implants: [ MindShieldImplant, DeathRattleImplantCentcomm, STAdrenocorImplant ] # Stories-AdrenocorImplant
 
 - type: startingGear
   parent: ERTJanitorGearEVA

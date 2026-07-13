@@ -20,7 +20,10 @@ namespace Content.Shared.VendingMachines
     public sealed class VendingMachineBalanceMessage : BoundUserInterfaceMessage
     {
         public readonly int Balance;
-        public VendingMachineBalanceMessage(int balance) => Balance = balance;
+        public VendingMachineBalanceMessage(int balance)
+        {
+            Balance = balance;
+        }
     }
     // Stories-Economy-End
 
@@ -29,6 +32,7 @@ namespace Content.Shared.VendingMachines
     {
         public readonly InventoryType Type;
         public readonly string ID;
+        
         public VendingMachineEjectMessage(InventoryType type, string id)
         {
             Type = type;

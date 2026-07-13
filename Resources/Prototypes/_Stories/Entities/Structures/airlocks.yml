@@ -2,8 +2,8 @@
 
 - type: entity
   parent: AirlockGlass
-  name: стеклянный шлюз начальника тюрьмы
-  description: Он открывается, он закрывается, и он может вас раздавить.
+  name: head of prison glass airlock
+  description: It opens, it closes, and it can crush you.
   id: PRISONAirlockGlassLockedHeadOfPrison
   suffix: HeadOfPrison, Locked
   components:
@@ -15,8 +15,8 @@
 
 - type: entity
   parent: Airlock
-  name: шлюз начальника тюрьмы
-  description: Он открывается, он закрывается, и он может вас раздавить.
+  name: head of prison airlock
+  description: It opens, it closes, and it can crush you.
   id: PRISONAirlockLockedHeadOfPrison
   suffix: HeadOfPrison, Locked
   components:
@@ -30,8 +30,8 @@
 
 - type: entity
   parent: AirlockGlass
-  name: стеклянный шлюз брига тюрьмы
-  description: Он открывается, он закрывается, и он может вас раздавить.
+  name: prison brig glass airlock
+  description: It opens, it closes, and it can crush you.
   id: PRISONAirlockGlassLockedBrig
   suffix: PrisonBrig, Glass, Locked
   components:
@@ -43,8 +43,8 @@
 
 - type: entity
   parent: Airlock
-  name: шлюз брига тюрьмы
-  description: Он открывается, он закрывается, и он может вас раздавить.
+  name: prison brig airlock
+  description: It opens, it closes, and it can crush you.
   id: PRISONAirlockLockedBrig
   suffix: PrisonBrig, Locked
   components:
@@ -58,8 +58,8 @@
 
 - type: entity
   parent: AirlockGlass
-  name: стеклянный шлюз тюрьмы
-  description: Он открывается, он закрывается, и он может вас раздавить.
+  name: prison glass airlock
+  description: It opens, it closes, and it can crush you.
   id: PRISONAirlockGlassLocked
   suffix: Prison, Glass, Locked
   components:
@@ -71,8 +71,8 @@
 
 - type: entity
   parent: Airlock
-  name: шлюз тюрьмы
-  description: Он открывается, он закрывается, и он может вас раздавить.
+  name: prison airlock
+  description: It opens, it closes, and it can crush you.
   id: PRISONAirlockLocked
   suffix: Prison, Locked
   components:
@@ -86,8 +86,8 @@
 
 - type: entity
   parent: AirlockGlass
-  name: стеклянный шлюз медицинского тюрьмы
-  description: Он открывается, он закрывается, и он может вас раздавить.
+  name: prison medical glass airlock
+  description: It opens, it closes, and it can crush you.
   id: PRISONAirlockGlassLockedMed
   suffix: PrisonMed, Glass, Locked
   components:
@@ -99,8 +99,8 @@
 
 - type: entity
   parent: Airlock
-  name: шлюз медицинского тюрьмы
-  description: Он открывается, он закрывается, и он может вас раздавить.
+  name: prison medical airlock
+  description: It opens, it closes, and it can crush you.
   id: PRISONAirlockLockedMed
   suffix: PrisonMed, Locked
   components:
@@ -114,8 +114,8 @@
 
 - type: entity
   parent: AirlockGlass
-  name: стеклянный шлюз инженерного тюрьмы
-  description: Он открывается, он закрывается, и он может вас раздавить.
+  name: prison engineering glass airlock
+  description: It opens, it closes, and it can crush you.
   id: PRISONAirlockGlassLockedEng
   suffix: PrisonEng, Glass, Locked
   components:
@@ -127,8 +127,8 @@
 
 - type: entity
   parent: Airlock
-  name: шлюз инженерного тюрьмы
-  description: Он открывается, он закрывается, и он может вас раздавить.
+  name: prison engineering airlock
+  description: It opens, it closes, and it can crush you.
   id: PRISONAirlockLockedEng
   suffix: PrisonEng, Locked
   components:
@@ -142,8 +142,8 @@
 
 - type: entity
   parent: AirlockGlass
-  name: стеклянный шлюз заключенных
-  description: Он открывается, он закрывается, и он может вас раздавить.
+  name: prisoner glass airlock
+  description: It opens, it closes, and it can crush you.
   id: PRISONAirlockGlassLockedPrisoner
   suffix: Prisoner, Glass, Locked
   components:
@@ -153,8 +153,8 @@
 
 - type: entity
   parent: Airlock
-  name: шлюз заключенных
-  description: Он открывается, он закрывается, и он может вас раздавить.
+  name: prisoner airlock
+  description: It opens, it closes, and it can crush you.
   id: PRISONAirlockLockedPrisoner
   suffix: Prisoner, Locked
   components:

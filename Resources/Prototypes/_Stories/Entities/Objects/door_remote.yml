@@ -1,8 +1,8 @@
 - type: entity
   parent: DoorRemoteDefault
   id: PRISONDoorRemote
-  name: пульт от шлюзов тюрьмы
-  description: Гаджет, который может открывать и закрывать шлюзы дистанционно.
+  name: prison airlock remote
+  description: A gadget that can open and close airlocks remotely.
   components:
   - type: Sprite
     layers:

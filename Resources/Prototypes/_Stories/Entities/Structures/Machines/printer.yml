@@ -3,8 +3,8 @@
 - type: entity
   parent: BaseLathe
   id: PrinterDoc
-  name: бумажный принтер
-  description: Бюрократический идеал. Хранит в своей базе данных документы и позволяет их печатать, пока у вас есть бумага и чернила.
+  name: paper printer
+  description: A bureaucratic ideal. It stores documents in its database and allows printing them as long as you have paper and ink.
   components:
   - type: Sprite
     sprite: _Stories/Structures/Machines/printer.rsi
@@ -52,7 +52,7 @@
 - type: entity
   parent: PrinterDoc
   id: PrinterDocSyndie
-  name: бумажный синди принтер
+  name: syndicate paper printer
   components:
   - type: Lathe
     producingSound: /Audio/Machines/scanning.ogg

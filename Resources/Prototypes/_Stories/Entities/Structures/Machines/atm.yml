@@ -6,7 +6,10 @@
   components:
   - type: Sprite
     sprite: _Stories/Structures/Machines/atm.rsi
-    state: normal-unshaded
+    layers:
+    - state: normal-unshaded
+    - state: panel
+      map: ["enum.WiresVisualLayers.MaintenancePanel"]
   - type: Destructible
     thresholds:
     - trigger:
@@ -38,6 +41,8 @@
     interfaces:
       enum.AtmUiKey.Key:
         type: AtmBoundUserInterface
+      enum.WiresUiKey.Key:
+        type: WiresBoundUserInterface
   - type: Atm
   - type: PointLight
     enabled: false
@@ -49,3 +54,8 @@
     enabled: false
     usesApcPower: true
   - type: Rotatable
+  - type: WiresPanel
+  - type: Wires
+    boardName: wires-board-name-atm
+    layoutId: Atm
+  - type: WiresVisuals

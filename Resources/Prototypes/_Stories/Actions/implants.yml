@@ -1,0 +1,27 @@
+- type: entity
+  parent: BaseImplantAction
+  id: STActionActivateAfterburnerImplant
+  name: Activate afterburner implant
+  description: Injects a limited dose of stimulants into the body.
+  components:
+  - type: Action
+    useDelay: 140
+    itemIconStyle: BigAction
+    priority: -20
+    icon:
+      sprite: Objects/Specific/Medical/medipen.rsi
+      state: stimpen
+
+- type: entity
+  parent: BaseImplantAction
+  id: STActionActivateAdrenocorImplant
+  name: Activate adrenocor implant
+  description: Injects a solution of combat stimulants and medical drugs into the body.
+  components:
+  - type: Action
+    useDelay: 120
+    itemIconStyle: BigAction
+    priority: -20
+    icon:
+      sprite: Objects/Specific/Medical/medipen.rsi
+      state: morphen
