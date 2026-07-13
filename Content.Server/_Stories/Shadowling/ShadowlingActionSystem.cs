@@ -388,6 +388,7 @@ public sealed partial class ShadowlingActionSystem : EntitySystem
             else if (HasComp<MobStateComponent>(target))
             {
                 _stun.TryKnockdown(target, TimeSpan.FromSeconds(2), true);
+                _stun.TryAddStunDuration(target, TimeSpan.FromSeconds(2));
             }
         }
         args.Handled = true;

@@ -3,6 +3,9 @@ using Content.Shared.Buckle.Components;
 using Content.Shared.CombatMode.Pacification;
 using Content.Shared.Damage.ForceSay;
 using Content.Shared.Damage.Systems;
+using Content.Shared.NPC.Components;
+using Content.Shared.NPC.Systems;
+using System.Linq;
 using Content.Shared.Emoting;
 using Content.Shared.Hands;
 using Content.Shared.Interaction;
@@ -209,8 +212,25 @@ public partial class MobStateSystem
             args.Cancelled = true;
     }
 
+    private static readonly string NanoTrasenFaction = "NanoTrasen";
+
     private void OnAttemptPacifiedAttack(Entity<MobStateComponent> ent, ref AttemptPacifiedAttackEvent args)
     {
+        if (TryComp<PacifiedComponent>(args.User, out var pacified))
+        {
+            if (!pacified.AllowAttackingHostiles)
+            {
+                args.Cancelled = true;
+                return;
+            }
+        }
+
+        var factionSystem = EntityManager.System<NpcFactionSystem>();
+        if (factionSystem.IsFactionHostile(NanoTrasenFaction, ent.Owner))
+        {
+            return;
+        }
+
         args.Cancelled = true;
     }
 
