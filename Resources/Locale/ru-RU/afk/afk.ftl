@@ -1,7 +1,7 @@
-afk-system-afk-warning = You have been marked AFK. Confirm you are still there within { $seconds } seconds or you will be disconnected.
-afk-system-kick-reason = Disconnected for being AFK.
+afk-system-afk-warning = Вы помечены как неактивный (AFK). Подтвердите что вы здесь в течении { $seconds } секунд или вы будете отключены.
+afk-system-kick-reason = Отключён за бездействие (AFK).
 
-afk-confirm-window-title = AFK Check
-afk-confirm-window-prompt = You have been marked AFK.
-afk-confirm-window-seconds = Time remaining: { $seconds }s
-afk-confirm-window-confirm = I'm here
+afk-confirm-window-title = Проверка активности
+afk-confirm-window-prompt = Вы помечены как неактивный (AFK).
+afk-confirm-window-seconds = Осталось: { $seconds }с
+afk-confirm-window-confirm = Я здесь!

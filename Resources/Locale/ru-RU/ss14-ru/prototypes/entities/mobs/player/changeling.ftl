@@ -1,8 +1,8 @@
 ent-MobLing = Урист МакКрад
     .desc = { ent-MobHuman.desc }
     .suffix = Неантаг
-ent-MobHeadSlug = headslug
-    .desc = A small, slug-like creature with a large, gaping maw. It's covered in a thick, slimy mucus.
+ent-MobHeadSlug = головной слизень
+    .desc = Маленькое, похожее на слизня существо с огромной, широко раскрытой пастью. Оно покрыто толстым слоем густой слизи.
     .suffix = { ent-SimpleSpaceMobBase.suffix }
 ent-ChangelingFleshClothingAbilityStoreDummy = { "" }
     .desc = { "" }

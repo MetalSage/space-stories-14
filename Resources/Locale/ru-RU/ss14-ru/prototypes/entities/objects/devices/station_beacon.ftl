@@ -1,5 +1,5 @@
-ent-BaseStationBeacon = station beacon
-    .desc = A small device that transmits information to station maps. Can be configured.
+ent-BaseStationBeacon = станционный маяк
+    .desc = Небольшое устройство, передающее информацию на карты станции. Может быть настроено.
     .suffix = Not teleport point, Ninja bombing target blacklist
 ent-TeleportStationBeacon = { ent-BaseStationBeacon }
     .desc = { ent-BaseStationBeacon.desc }

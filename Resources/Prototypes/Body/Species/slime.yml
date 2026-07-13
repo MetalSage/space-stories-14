@@ -110,7 +110,10 @@
   - type: TypingIndicator
     proto: slime
   - type: Vocal
-    emoteSounds: MaleSlime
+    sounds:
+      Male: MaleSlime
+      Female: FemaleSlime
+      Unsexed: MaleSlime
   - type: Damageable
     damageModifierSet: Slime
   - type: PassiveDamage # Around 8 damage a minute healed
@@ -161,6 +164,7 @@
         messages: [ "slime-hurt-by-water-popup" ]
         probability: 0.25
   - type: Butcherable
+    butcheringType: Spike
     spawned:
     - id: FoodMeatSlime
       amount: 5
@@ -174,7 +178,7 @@
     maxSaturation: 15
 
 - type: entity
-  parent: OrganBaseOrganic
+  parent: OrganBase
   id: OrganSlimePerson
   abstract: true
   suffix: slime person
@@ -261,6 +265,16 @@
     maxReagents: 6
     metabolizerTypes: [ Slime ]
     stages: [ Digestion, Bloodstream, Metabolites ]
+  - type: VisualOrgan
+    layer: enum.HumanoidVisualLayers.Eyes
+    data:
+      sprite: Mobs/Customization/eyes.rsi
+      state: eyes
+  - type: VisualOrganMarkings
+    markingData:
+      group: Slime
+      layers:
+      - Eyes
 
 - type: entity
   parent: [ OrganBaseLungs, OrganSlimePersonInternal, OrganSlimePersonMetabolizer ]

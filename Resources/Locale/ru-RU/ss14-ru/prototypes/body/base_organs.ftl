@@ -1,6 +1,6 @@
 ent-OrganBase = орган
     .desc = { ent-BaseItem.desc }
-ent-OrganBaseOrganic = organ
+ent-OrganBaseOrganic = орган
     .desc = { ent-OrganBase.desc }
 ent-OrganBaseTorso = торс
     .desc = { ent-OrganBase.desc }
