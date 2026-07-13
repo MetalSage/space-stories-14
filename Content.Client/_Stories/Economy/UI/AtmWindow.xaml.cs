@@ -11,6 +11,8 @@ namespace Content.Client._Stories.Economy.UI;
 public sealed partial class AtmWindow : FancyWindow
 {
     private readonly AtmBoundUserInterface _bui;
+    private string _prefillAccountNumber = string.Empty;
+    private string _prefillPin = string.Empty;
 
     public AtmWindow(AtmBoundUserInterface bui)
     {
@@ -20,10 +22,19 @@ public sealed partial class AtmWindow : FancyWindow
         LoginButton.OnPressed += _ => _bui.Login(AccountNumberInput.Text, PinInput.Text);
         LogoutButton.OnPressed += _ => _bui.Logout();
 
-        Withdraw10Button.Text = Loc.GetString("atm-ui-withdraw-option", ("amount", 10));
-        Withdraw50Button.Text = Loc.GetString("atm-ui-withdraw-option", ("amount", 50));
-        Withdraw100Button.Text = Loc.GetString("atm-ui-withdraw-option", ("amount", 100));
-        Withdraw500Button.Text = Loc.GetString("atm-ui-withdraw-option", ("amount", 500));
+        FillFromCardButton.OnPressed += _ =>
+        {
+            if (!string.IsNullOrEmpty(_prefillAccountNumber))
+            {
+                AccountNumberInput.Text = _prefillAccountNumber;
+                PinInput.Text = _prefillPin;
+            }
+        };
+
+        Withdraw10Button.Text = Loc.GetString("stories-atm-ui-withdraw-option", ("amount", 10));
+        Withdraw50Button.Text = Loc.GetString("stories-atm-ui-withdraw-option", ("amount", 50));
+        Withdraw100Button.Text = Loc.GetString("stories-atm-ui-withdraw-option", ("amount", 100));
+        Withdraw500Button.Text = Loc.GetString("stories-atm-ui-withdraw-option", ("amount", 500));
 
         Withdraw10Button.OnPressed += _ => _bui.Withdraw(10);
         Withdraw50Button.OnPressed += _ => _bui.Withdraw(50);
@@ -70,10 +81,18 @@ public sealed partial class AtmWindow : FancyWindow
         LoginView.Visible = !state.IsLoggedIn;
         MainView.Visible = state.IsLoggedIn;
 
+        if (!string.IsNullOrEmpty(state.PrefillAccountNumber))
+        {
+            _prefillAccountNumber = state.PrefillAccountNumber;
+            _prefillPin = state.PrefillPin;
+        }
+
+        FillFromCardButton.Visible = !string.IsNullOrEmpty(_prefillAccountNumber);
+
         if (state.IsLoggedIn)
         {
-            WelcomeLabel.Text = Loc.GetString("atm-ui-welcome-user", ("user", state.OwnerName));
-            BalanceLabel.Text = Loc.GetString("atm-ui-balance-value", ("balance", state.Balance));
+            WelcomeLabel.Text = Loc.GetString("stories-atm-ui-welcome-user", ("user", state.OwnerName));
+            BalanceLabel.Text = Loc.GetString("stories-atm-ui-balance-value", ("balance", state.Balance));
             CustomWithdrawAmount.Clear();
         }
         else

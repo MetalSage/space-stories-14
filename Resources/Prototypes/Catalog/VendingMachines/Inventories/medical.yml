@@ -43,8 +43,11 @@
     Brutepack: 20
     Ointment: 20
     Bloodpack: 20
+    Tourniquet: 30
     ChemistryBottleEpinephrine: 30
+    ChemistryBottleInaprovaline: 25
     Syringe: 5
+    PillTricordrazine: 5
     PillCanisterTricordrazine: 20
     PillCanisterRandom: 50
 
@@ -77,6 +80,8 @@
     PillSpaceDrugs: 3
     FoodApple: 1
   prices: # Stories-Economy
+    ClothingBeltMedicalFilled: 120
+    ClothingBeltMedicalEMTFilled: 120
     HandheldHealthAnalyzer: 60
     Gauze: 10
     Brutepack: 20
@@ -95,6 +100,10 @@
     SyringeIpecac: 15 
     ClothingEyesHudMedical: 100
     ClothingEyesEyepatchHudMedical: 100
+    Defibrillator: 150
+    EmergencyRollerBedSpawnFolded: 60
+    BoxBodyBag: 30
+    ClothingOuterHospitalGown: 30
     PillCanisterRandom: 50
     PillSpaceDrugs: 80
     FoodApple: 5
@@ -126,8 +135,12 @@
     Bloodpack: 20
     Tourniquet: 30
     ChemistryBottleEpinephrine: 30
+    ChemistryBottleInaprovaline: 25
     Syringe: 5
     BoxBottle: 10
+    PillTricordrazine: 5
+    PillIron: 3
+    PillCopper: 3
     PillCanisterTricordrazine: 30
     PillCanisterIron: 10
     PillCanisterCopper: 10

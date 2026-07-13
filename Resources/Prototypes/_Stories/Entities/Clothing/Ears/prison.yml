@@ -1,8 +1,8 @@
 - type: entity
   parent: ClothingHeadset
   id: PRISONClothingHeadset
-  name: гарнитура тюрьмы
-  description: Гарнитура, используемая сотрудниками тюрьмы.
+  name: prison headset
+  description: A headset used by prison staff.
   components:
     - type: ContainerFill
       containers:
@@ -18,8 +18,8 @@
 - type: entity
   parent: ClothingHeadset
   id: PRISONClothingHeadsetMedic
-  name: гарнитура врача тюрьмы
-  description: Гарнитура, используемая сотрудниками тюрьмы.
+  name: prison doctor headset
+  description: A headset used by prison staff.
   components:
     - type: ContainerFill
       containers:
@@ -34,8 +34,8 @@
 - type: entity
   parent: ClothingHeadset
   id: PRISONClothingHeadsetEngi
-  name: гарнитура инженера тюрьмы
-  description: Гарнитура, используемая сотрудниками тюрьмы.
+  name: prison engineer headset
+  description: A headset used by prison staff.
   components:
     - type: ContainerFill
       containers:
@@ -50,8 +50,8 @@
 - type: entity
   parent: ClothingHeadsetAlt
   id: PRISONClothingHeadsetAlt
-  name: полноразмерная гарнитура начальника тюрьмы
-  description: Нужна, чтобы сообщить капитану о побеге клоуна.
+  name: head of prison's over-ear headset
+  description: Needed to report the clown's escape to the captain.
   components:
     - type: ContainerFill
       containers:

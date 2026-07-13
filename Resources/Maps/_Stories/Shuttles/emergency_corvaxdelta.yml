@@ -6804,32 +6804,27 @@ entities:
       type: Transform
   - uid: 449
     components:
-    - rot: 1.5707963267948966 rad
-      pos: -9.5,-12.5
+    - pos: -9.5,-12.5
       parent: 410
       type: Transform
   - uid: 450
     components:
-    - rot: 1.5707963267948966 rad
-      pos: -8.5,-12.5
+    - pos: -8.5,-12.5
       parent: 410
       type: Transform
   - uid: 451
     components:
-    - rot: 1.5707963267948966 rad
-      pos: -7.5,-12.5
+    - pos: -7.5,-12.5
       parent: 410
       type: Transform
   - uid: 452
     components:
-    - rot: 1.5707963267948966 rad
-      pos: -6.5,-12.5
+    - pos: -6.5,-12.5
       parent: 410
       type: Transform
   - uid: 453
     components:
-    - rot: 1.5707963267948966 rad
-      pos: -5.5,-12.5
+    - pos: -5.5,-12.5
       parent: 410
       type: Transform
 - proto: KitchenKnife

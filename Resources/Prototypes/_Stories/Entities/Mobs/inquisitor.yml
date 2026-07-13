@@ -1,8 +1,8 @@
 - type: entity
   id: MobInquisitorGhost
   parent: BaseMobJaunt
-  name: инквизитор
-  description: Очень страшный.
+  name: inquisitor
+  description: Very scary.
   components:
   - type: InquisitorGhost
     range: 5

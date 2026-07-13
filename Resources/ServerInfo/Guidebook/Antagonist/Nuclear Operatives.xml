@@ -2,7 +2,13 @@
   # Nuclear Operatives
 
   <Box>
-    <GuideEntityEmbed Entity="ClothingOuterHardsuitSyndieCommander" Caption="Скафандр командира"/>
+    [color=#999999][italic]"OPERATIVES STANDBY. YOUR OBJECTIVES ARE SIMPLE.[/italic][/color]
+  </Box>
+  <Box>
+    [color=#999999][italic]DELIVER THE PAYLOAD AND GET OUT BEFORE THE PAYLOAD DETONATES. BEGIN MISSION."[/italic][/color]
+  </Box>
+  <Box>
+    <GuideEntityEmbed Entity="PosterContrabandEnlistGorlex" Caption=""/>
   </Box>
 
   You've just been chosen to be a nuclear operative for the [color=#ff0000]Syndicate[/color]. You have one goal, to blow up one of Nanotrasen's finest vessels with a nuclear fission explosive.
@@ -27,14 +33,15 @@
   The disk belongs to the [color=yellow]Captain[/color], who will almost always have it on them. Follow the direction of the arrow on the pinpointer to the disk, and [italic]do whatever it takes to get it[/italic].
 
   <Box>
-    <GuideEntityEmbed Entity="ClothingOuterHardsuitSyndie" Caption="Кроваво-красный скафандр"/>
+    <GuideEntityEmbed Entity="PinpointerNuclear"/>
+    <GuideEntityEmbed Entity="NukeDisk"/>
   </Box>
 
   ## Preparation
   Each member in your squad has been given an [color=cyan]uplink[/color] to purchase everything you will need for the mission, similar to [textlink="traitors." link="Traitors"]
 
   <Box>
-    <GuideEntityEmbed Entity="BaseUplinkRadio40TC" Caption="Аплинк"/>
+    <GuideEntityEmbed Entity="BaseUplinkRadio40TC" Caption="your uplink"/>
   </Box>
 
   You can purchase the same kinds of gear traitors can, but you have higher quality gear available to you and more telecrystals to spend.
@@ -53,13 +60,16 @@
     <GuideEntityEmbed Entity="ClothingEyesGlassesOutlawGlasses" Caption="Pointless"/>
   </Box>
 
-  Вооружившись и разработав план, возьмите джетпак из оружейной и вместе с другими оперативниками отправляйтесь на [color=#a4885c]Шаттл Ядерных Оперативников[/color]. Здесь вы найдете несколько дополнительных взрывчаток и инструментов, а также ядерную бомбу и ядерные коды.
-  На шаттле вы найдете [color=#a4885c]консоль системы опознавания[/color], которая позволит вам скрываться от других кораблей и сканеров массы. Убедитесь, что [color=#a4885c]Показать "свой-чужой"[/color] и [color=#a4885c]Показать судно[/color] выключены, чтобы скрыть ваш шаттл от экипажа. Когда все будут готовы, отправляйтесь к станции с помощью БСС, а затем летите к ней с помощью реактивного ранца. Не забудьте ядерную бомбу на своём корабле, если собираетесь её использовать, и уж точно не забудьте ядерные коды или пинпоинтер.
+  You'll also have to choose if you want to [color=red]declare war[/color] or not. Doing so grants your team [bold]40 extra telecrystals each[/bold].
+  However, the crew will immediately know of your existence and will have plenty of time to prepare for your arrival.
 
-  ## Диск
+  The [bold]Commander[/bold] is the only person who can declare war. Make your choice quick, [italic]this is a limited-time offer![/italic]
+  <Box>
+    <GuideEntityEmbed Entity="NukeOpsDeclarationOfWar"/>
+  </Box>
 
-  Вы заметите, что каждый оперативник стартует с [color=#a4885c]пинпоинтером[/color]. Это устройство - один из самых важных предметов в миссии, и вы должны всегда держать его при себе. Включите пинпоинтер, когда прибудете на станцию, и он всегда будет указывать на вашу следующую цель - [color=#a4885c]ядерный диск[/color].
-  Ядерный диск (формально диск ядерной аутентификации) принадлежит капитану, который почти всегда будет иметь его при себе. Следуйте по направлению стрелки на пинпоинтере к диску и сделайте всё возможное, чтобы получить его.
+  ## Getting to the Station
+  You've got the plan, you've got the gear. Now, execute.
 
   Go with your other operatives to your [color=cyan]shuttle[/color].
   Onboard, you'll find a folder with the [color=cyan]nuclear authentication code[/color].
@@ -88,33 +98,28 @@
   Should the nuke be re-armed, the timer will continue from where it left off.
 
   <Box>
-    <GuideEntityEmbed Entity="NuclearBomb" Caption="Ядерная боеголовка"/>
+    <GuideEntityEmbed Entity="NuclearBomb" Caption="The Nuclear Fission Explosive"/>
   </Box>
 
-  ## Победы
+  ## Winning Conditions
 
-  Победитель объявляется на экране окончания раунда, как и то, с каким перевесом он победил. Масштаб победы зависит от обстоятельств в конце раунда.
+  The [color=#00ff00]victor[/color] of the round is announced on the round end screen, as well as the scale of their victory.
 
-  [color=#a4885c]Крупная победа Синдиката[/color]
-  - Ядерная бомба взрывается на станции.
-  - Экипаж спасается, но ядерная бомба была взведена, когда они убегали.
-  - Ядерная бомба была доставлена в Центральное командование.
+  [bold][color=red]Syndicate Major Victory![/color][/bold]
+  - The nuke detonates on the station.
+  - The crew escapes on evac, but the nuke is still armed.
+  - The nuke is armed and delivered to Central Command on the evac shuttle.
 
-  [color=#a4885c]Скромная победа Синдиката[/color]
-  - Экипаж сбегает, но оставляет всех оперативников в живых.
-  - Экипаж сбегает, и некоторые оперативники остаются в живых, но экипаж не забирают с собой диск.
+  [bold][color=red]Syndicate Minor Victory[/color][/bold]
+  - At least one operative survives, and the crew escapes, leaving the disk behind.
 
-  [color=#a4885c]Ничья[/color]
-  - Ядерная бомба взрывается за пределами станции.
+  [bold][color=#999999]Neutral Victory[/color][/bold]
+  - The nuke detonates off the station.
 
-  [color=#a4885c]Малая победа экипажа[/color]
-  - Экипаж спасается, некоторые оперативники остаются в живых, но экипажу удается защитить диск.
+  [bold][color=green]Crew Minor Victory[/color][/bold]
+  - The crew escapes on evac with the disk and some operatives die.
 
-  [color=#a4885c]Разгромная победа экипажа[/color]
-  - Все ядерные оперативники мертвы.
-  - Экипажу удается взорвать аванпост ядерных оперативников.
-
-  Если вы чувствуете, что не сможете полностью победить в роли члена экипажа или оперативника, рассмотрите эти варианты компромисса.
+  [bold][color=green]Crew Major Victory![/color][/bold]
+  - All operatives die.
+  - The crew blow up the nuclear operative outpost with the nuke.
 </Document>
-
-

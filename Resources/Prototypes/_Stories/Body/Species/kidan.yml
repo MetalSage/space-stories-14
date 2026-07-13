@@ -83,7 +83,6 @@
   - type: Speech
     allowedEmotes: ['Grumble', 'Moan', 'WigglesAntennae', 'WavesAntennaeSharply']
   - type: Butcherable
-    butcheringType: Spike
     spawned:
     - id: FoodMeat
       amount: 5
@@ -108,10 +107,7 @@
     - Chitine
   - type: KidanAccent
   - type: Vocal
-    sounds:
-      Male: UnsexedKidan
-      Female: FemaleKidan
-      Unsexed: UnsexedKidan
+    emoteSounds: UnsexedKidan
   - type: Damageable
     damageModifierSet: Kidan
   - type: Bioluminescence

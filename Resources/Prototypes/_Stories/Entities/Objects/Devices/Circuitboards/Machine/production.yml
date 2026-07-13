@@ -13,8 +13,8 @@
 - type: entity
   id: ReflectorBoxMachineCircuitboard
   parent: BaseMachineCircuitboard
-  name: Отражатель, тип "Коробка"
-  description: Машинная плата отражателя, тип "Коробка"
+  name: Reflector, type "Box"
+  description: Reflector machine board, type "Box"
   components:
   - type: Sprite
     sprite: _Stories/Objects/Misc/module.rsi
@@ -32,8 +32,8 @@
 - type: entity
   id: ReflectorCornerMachineCircuitboard
   parent: BaseMachineCircuitboard
-  name: Отражатель, тип "Угловой"
-  description: Машинная плата отражателя, тип "Угловой"
+  name: Reflector, type "Corner"
+  description: Reflector machine board, type "Corner"
   components:
   - type: Sprite
     sprite: _Stories/Objects/Misc/module.rsi
@@ -51,8 +51,8 @@
 - type: entity
   id: ReflectorCornerTsideMachineCircuitboard
   parent: BaseMachineCircuitboard
-  name: Отражатель, тип "Двойной-Угловой"
-  description: Машинная плата отражателя, тип "Двойной-Угловой"
+  name: Reflector, type "Double-Corner"
+  description: Reflector machine board, type "Double-Corner"
   components:
   - type: Sprite
     sprite: _Stories/Objects/Misc/module.rsi

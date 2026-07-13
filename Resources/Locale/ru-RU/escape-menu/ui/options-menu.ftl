@@ -59,6 +59,7 @@ ui-options-show-ooc-patron-color = Цветной ник в OOC для патр�
 ui-options-show-looc-on-head = Показывать LOOC-чат над головами персонажей
 ui-options-fancy-speech = Показывать имена в облачках с текстом
 ui-options-fancy-name-background = Добавить фон облачкам с текстом
+ui-options-chat-follow-button = As ghost, show a follow button next to chat messages
 ui-options-vsync = Вертикальная синхронизация
 ui-options-fullscreen = Полный экран
 ui-options-lighting-label = Качество освещения:
@@ -360,13 +361,35 @@ cmd-options-help = Использование: options [tab]
 
 ## Accessibility menu
 
-ui-options-accessability-header-visuals = Изображение
-ui-options-accessability-header-content = Содержимое
+ui-options-accessibility-header-reduced-motion = Reduced Motion
+ui-options-accessibility-header-visuals = Visuals
+ui-options-accessibility-header-content = Content
 
 ui-options-enable-color-name = Цветные имена персонажей
 ui-options-colorblind-friendly = Режим для дальтоников
+
 ui-options-reduced-motion = Снижение интенсивности визуальных эффектов
+ui-options-reduced-motion-tooltip = Toggle on to show alternative sprites with reduced motion for some items.
+
+# accessibility option tooltips taken from CVar summary blocks.
+
 ui-options-disable-ai-static = Отключить статический эффект помех на ИИ.
+ui-options-disable-ai-static-tooltip = Replaces the AI static camera effect with a plain gradient.
+ui-options-disable-blurry-vision = Blurry vision
+ui-options-disable-blurry-vision-tooltip = Replaces the movement in the blurry shader with a static effect.
+ui-options-disable-drunk-overlay = Drunk overlay
+ui-options-disable-drunk-overlay-tooltip = Replaces the movement in the drunk shader with a static offset.
+ui-options-disable-flash-effect = Flash
+ui-options-disable-flash-effect-tooltip = Replaces the 'flash' effect with a reduced movement equivalent.
+ui-options-disable-heat-distortion = Heat distortion
+ui-options-disable-heat-distortion-tooltip = Decreases motion on the heat distortion shader.
+ui-options-disable-nv-noise = Night vision overlay
+ui-options-disable-nv-noise-tooltip = Disables the noise effect on the night vision overlay.
+ui-options-disable-rainbow-overlay = Rainbow overlay
+ui-options-disable-rainbow-overlay-tooltip = Replaces the movement in the rainbow overlay shader with a static offset.
+ui-options-disable-singulo-warp = Singularity
+ui-options-disable-singulo-warp-tooltip = Disables the screen warping effect on the singularity.
+
 ui-options-screen-shake-intensity = Интенсивность дрожания экрана
 
 ui-options-chat-window-opacity = Непрозрачность окна чата

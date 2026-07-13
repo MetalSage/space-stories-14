@@ -1,6 +1,7 @@
 using Content.Shared.Actions;
 using Robust.Shared.Audio;
 using Robust.Shared.GameStates;
+using Robust.Shared.Prototypes;
 using Robust.Shared.Serialization;
 using Robust.Shared.Serialization.TypeSerializers.Implementations.Custom;
 using Robust.Shared.Serialization.TypeSerializers.Implementations.Custom.Prototype;
@@ -146,6 +147,17 @@ namespace Content.Shared.VendingMachines
         [DataField]
         public EntityUid? RestockStream;
 
+        // Stories-Start
+        [DataField]
+        public bool FreeVend;
+
+        [DataField]
+        public bool DisableFinancialLogging;
+
+        [DataField]
+        public List<ProtoId<Content.Shared.Roles.JobPrototype>> FreeJobs = new();
+        // Stories-End
+
         #region Client Visuals
         /// <summary>
         /// RSI state for when the vending machine is unpowered.
@@ -286,6 +298,22 @@ namespace Content.Shared.VendingMachines
     {
         StatusKey,
     }
+
+    // Stories-Start
+    [Serializable, NetSerializable]
+    public enum FreeWireKey : byte
+    {
+        StatusKey,
+        TimeoutKey
+    }
+
+    [Serializable, NetSerializable]
+    public enum LogWireKey : byte
+    {
+        StatusKey,
+        TimeoutKey
+    }
+    // Stories-End
 
     public sealed partial class VendingMachineSelfDispenseEvent : InstantActionEvent
     {

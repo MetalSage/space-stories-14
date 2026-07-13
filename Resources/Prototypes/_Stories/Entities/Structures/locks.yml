@@ -1,8 +1,8 @@
 - type: entity
   id: PRISONLocker
   parent: LockerBaseSecure
-  name: шкаф персонала тюрьмы
-  description: Стандартное хранилище персонала тюрьмы.
+  name: prison staff locker
+  description: Standard prison staff locker.
   components:
     - type: Sprite
       sprite: _Stories/Structures/Storage/closet.rsi
@@ -17,8 +17,8 @@
 - type: entity
   id: PRISONLockerHeadOfPrison
   parent: PRISONLocker
-  name: шкаф главы персонала тюрьмы
-  description: Стандартное хранилище персонала тюрьмы.
+  name: prison head of personnel's locker
+  description: Standard prison staff locker.
   components:
     - type: Appearance
     - type: EntityStorageVisuals

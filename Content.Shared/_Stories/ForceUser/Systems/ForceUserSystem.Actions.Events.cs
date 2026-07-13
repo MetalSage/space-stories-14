@@ -241,9 +241,8 @@ public sealed partial class LifeStolenEvent : SimpleDoAfterEvent
 
 public interface IForceActionEvent
 {
-    [DataField("volume")] float Volume { get; set; }
+    float Volume { get; set; }
 
-    [DataField("maxDebuff")]
     float MaxDebuff { get; set; } // Если дефафф больше или равен, то не получится применить способность.
 
     BaseActionEvent? BaseEvent { get; }

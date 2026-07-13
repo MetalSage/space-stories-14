@@ -1,0 +1,273 @@
+<controls:FancyWindow
+    xmlns="https://spacestation14.io"
+    xmlns:controls="clr-namespace:Content.Client.UserInterface.Controls"
+    xmlns:gfx="clr-namespace:Robust.Client.Graphics;assembly=Robust.Client"
+    Title="{Loc 'stories-bank-centcom-title'}"
+    MinSize="900 700"
+>
+    <BoxContainer Orientation="Vertical" Margin="5">
+
+        <BoxContainer Orientation="Horizontal" Margin="5" HorizontalAlignment="Center">
+            <Label
+                Text="{Loc 'stories-bank-centcom-target-station'}"
+                Margin="0 0 10 0"
+                VerticalAlignment="Center"
+                StyleClasses="LabelKeyText"
+            />
+            <OptionButton Name="StationSelector" MinWidth="250" />
+        </BoxContainer>
+
+        <TabContainer Name="Tabs" VerticalExpand="True">
+
+            <BoxContainer Name="OperationsTab" Orientation="Vertical" Margin="10" SeparationOverride="15">
+                <ScrollContainer VerticalExpand="True" HorizontalExpand="True">
+                    <BoxContainer Orientation="Vertical" SeparationOverride="15">
+
+                        <PanelContainer StyleClasses="Inset">
+                            <BoxContainer Orientation="Vertical" Margin="10">
+                                <Label
+                                    Text="{Loc 'stories-bank-centcom-fines-title'}"
+                                    StyleClasses="LabelHeading"
+                                    HorizontalAlignment="Center"
+                                    Margin="0 0 0 10"
+                                />
+
+                                <GridContainer Columns="2" HSeparationOverride="10" VSeparationOverride="10">
+                                    <Label
+                                        Text="{Loc 'stories-bank-centcom-fine-target-type'}"
+                                        VerticalAlignment="Center"
+                                    />
+                                    <OptionButton Name="FineTypeSelector" MinWidth="200" />
+
+                                    <Label Text="{Loc 'stories-bank-centcom-fine-target'}" VerticalAlignment="Center" />
+                                    <OptionButton Name="FineTargetSelector" MinWidth="200" />
+
+                                    <Label Text="{Loc 'stories-bank-security-amount'}" VerticalAlignment="Center" />
+                                    <SpinBox Name="FineAmountSpinBox" MinWidth="150" />
+
+                                    <Label Text="{Loc 'stories-bank-security-reason'}" VerticalAlignment="Center" />
+                                    <LineEdit Name="FineReasonLineEdit" HorizontalExpand="True" />
+                                </GridContainer>
+
+                                <BoxContainer Orientation="Horizontal" SeparationOverride="20" Margin="0 10">
+                                    <CheckBox
+                                        Name="FineIsPercentageCheckBox"
+                                        Text="{Loc 'stories-bank-centcom-fine-percentage'}"
+                                    />
+                                    <CheckBox
+                                        Name="FineSendNotificationCheckBox"
+                                        Text="{Loc 'stories-bank-centcom-fine-notify'}"
+                                        Pressed="True"
+                                    />
+                                    <CheckBox
+                                        Name="FineAnnounceCheckBox"
+                                        Text="{Loc 'stories-bank-centcom-fine-announce'}"
+                                        Pressed="False"
+                                    />
+                                </BoxContainer>
+
+                                <BoxContainer
+                                    Name="AnnouncementContainer"
+                                    Orientation="Vertical"
+                                    Visible="False"
+                                    Margin="0 0 0 10"
+                                >
+                                    <Label
+                                        Text="{Loc 'stories-bank-centcom-announce-preview'}"
+                                        StyleClasses="LabelKeyText"
+                                    />
+                                    <Label
+                                        Text="{Loc 'stories-bank-centcom-announce-vars'}"
+                                        StyleClasses="LabelSubText"
+                                        FontColorOverride="Gray"
+                                    />
+
+                                    <PanelContainer Margin="0 5 0 0">
+                                        <PanelContainer.PanelOverride>
+                                            <gfx:StyleBoxFlat
+                                                BackgroundColor="#1B1B1E"
+                                                BorderColor="#5a5a5a"
+                                                BorderThickness="1"
+                                            />
+                                        </PanelContainer.PanelOverride>
+                                        <TextEdit
+                                            Name="AnnouncementTextEdit"
+                                            MinHeight="80"
+                                            VerticalExpand="False"
+                                            Margin="2"
+                                        />
+                                    </PanelContainer>
+                                </BoxContainer>
+
+                                <Button
+                                    Name="IssueFineButton"
+                                    Text="{Loc 'stories-bank-security-issue-fine'}"
+                                    StyleClasses="Caution"
+                                    HorizontalAlignment="Right"
+                                />
+                            </BoxContainer>
+                        </PanelContainer>
+
+                        <PanelContainer StyleClasses="Inset">
+                            <BoxContainer Orientation="Vertical" Margin="10">
+                                <Label
+                                    Text="{Loc 'stories-bank-centcom-salary-title'}"
+                                    StyleClasses="LabelHeading"
+                                    HorizontalAlignment="Center"
+                                    Margin="0 0 0 10"
+                                />
+
+                                <GridContainer Columns="2" HSeparationOverride="10" VSeparationOverride="10">
+                                    <Label
+                                        Text="{Loc 'stories-bank-centcom-salary-modifier'}"
+                                        VerticalAlignment="Center"
+                                    />
+                                    <LineEdit Name="SalaryModifierInput" PlaceHolder="1.0" MinWidth="150" />
+
+                                    <Label
+                                        Text="{Loc 'stories-bank-centcom-salary-frequency'}"
+                                        VerticalAlignment="Center"
+                                    />
+                                    <SpinBox Name="SalaryFrequencySpinBox" MinWidth="150" />
+                                </GridContainer>
+
+                                <Button
+                                    Name="ApplySalaryButton"
+                                    Text="{Loc 'stories-bank-centcom-apply-salary'}"
+                                    Margin="0 10 0 0"
+                                    HorizontalAlignment="Right"
+                                />
+                            </BoxContainer>
+                        </PanelContainer>
+                    </BoxContainer>
+                </ScrollContainer>
+            </BoxContainer>
+
+            <BoxContainer Name="AccountsTab" Orientation="Horizontal" Margin="10" SeparationOverride="10">
+                <BoxContainer Orientation="Vertical" HorizontalExpand="True" SizeFlagsStretchRatio="1">
+                    <controls:StripeBack>
+                        <Label
+                            Text="{Loc 'stories-bank-centcom-edit-acc-title'}"
+                            HorizontalAlignment="Center"
+                            Margin="5"
+                        />
+                    </controls:StripeBack>
+                    <LineEdit Name="AccSearchBar" PlaceHolder="{Loc 'stories-bank-security-target-search-ph'}" />
+                    <PanelContainer VerticalExpand="True" Margin="0 5 0 0">
+                        <PanelContainer.PanelOverride>
+                            <gfx:StyleBoxFlat BackgroundColor="#1B1B1E" />
+                        </PanelContainer.PanelOverride>
+                        <ItemList Name="AccountItemList" />
+                    </PanelContainer>
+                </BoxContainer>
+
+                <BoxContainer
+                    Orientation="Vertical"
+                    HorizontalExpand="True"
+                    SizeFlagsStretchRatio="1.5"
+                    SeparationOverride="10"
+                >
+                    <PanelContainer StyleClasses="Inset" HorizontalExpand="True">
+                        <BoxContainer Orientation="Vertical" Margin="10" SeparationOverride="10">
+                            <Label
+                                Text="{Loc 'stories-bank-security-acc-info-title'}"
+                                StyleClasses="LabelHeading"
+                                HorizontalAlignment="Center"
+                            />
+                            <GridContainer Columns="2" HSeparationOverride="10" VSeparationOverride="5">
+                                <Label Text="{Loc 'stories-bank-security-acc-owner'}" StyleClasses="LabelKeyText" />
+                                <Label Name="InfoOwnerLabel" Text="---" />
+
+                                <Label Text="{Loc 'stories-bank-security-acc-number'}" StyleClasses="LabelKeyText" />
+                                <Label Name="InfoNumberLabel" Text="---" StyleClasses="Monospace" />
+
+                                <Label Text="{Loc 'stories-bank-security-acc-balance'}" StyleClasses="LabelKeyText" />
+                                <Label Name="InfoBalanceLabel" Text="---" Modulate="#38b026" StyleClasses="LabelBig" />
+                            </GridContainer>
+
+                            <PanelContainer StyleClasses="LowDivider" Margin="0 5" />
+
+                            <BoxContainer Orientation="Horizontal" SeparationOverride="10">
+                                <Label Text="{Loc 'stories-bank-centcom-new-balance'}" VerticalAlignment="Center" />
+                                <SpinBox Name="EditBalanceSpinBox" MinWidth="120" />
+                                <Button Name="EditBalanceButton" Text="{Loc 'stories-bank-centcom-edit-balance'}" />
+                            </BoxContainer>
+                            <BoxContainer Orientation="Horizontal" SeparationOverride="10">
+                                <Button Name="ResetPinButton" Text="{Loc 'stories-bank-centcom-reset-pin'}" />
+                                <Control HorizontalExpand="True" />
+                                <Button
+                                    Name="DeleteAccountButton"
+                                    Text="{Loc 'stories-bank-centcom-delete-account'}"
+                                    StyleClasses="Caution"
+                                />
+                            </BoxContainer>
+                        </BoxContainer>
+                    </PanelContainer>
+
+                    <PanelContainer StyleClasses="Inset" HorizontalExpand="True">
+                        <BoxContainer Orientation="Vertical" Margin="10" SeparationOverride="10">
+                            <Label
+                                Text="{Loc 'stories-bank-centcom-create-acc-title'}"
+                                StyleClasses="LabelHeading"
+                                HorizontalAlignment="Center"
+                            />
+                            <GridContainer Columns="2" HSeparationOverride="10" VSeparationOverride="10">
+                                <Label Text="{Loc 'stories-bank-centcom-create-acc-name'}" VerticalAlignment="Center" />
+                                <LineEdit Name="CreateAccNameInput" HorizontalExpand="True" />
+
+                                <Label Text="{Loc 'stories-bank-security-amount'}" VerticalAlignment="Center" />
+                                <SpinBox Name="CreateAccBalanceSpinBox" MinWidth="120" />
+                            </GridContainer>
+                            <Button
+                                Name="CreateAccButton"
+                                Text="{Loc 'stories-bank-centcom-create-acc-btn'}"
+                                HorizontalAlignment="Right"
+                            />
+                        </BoxContainer>
+                    </PanelContainer>
+                </BoxContainer>
+            </BoxContainer>
+
+            <BoxContainer Name="LogsTab" Orientation="Vertical" Margin="10" SeparationOverride="5">
+                <BoxContainer Orientation="Horizontal" SeparationOverride="5">
+                    <LineEdit
+                        Name="LogSearchBar"
+                        PlaceHolder="{Loc 'stories-bank-security-log-search'}"
+                        HorizontalExpand="True"
+                    />
+                    <Button Name="RefreshButton" Text="{Loc 'stories-bank-security-refresh'}" />
+                </BoxContainer>
+                <PanelContainer VerticalExpand="True">
+                    <PanelContainer.PanelOverride>
+                        <gfx:StyleBoxFlat BackgroundColor="#1B1B1E" />
+                    </PanelContainer.PanelOverride>
+                    <ScrollContainer VerticalExpand="True" HorizontalExpand="True">
+                        <GridContainer
+                            Name="LogsGrid"
+                            Columns="5"
+                            HorizontalExpand="True"
+                            Margin="5"
+                            VerticalAlignment="Top"
+                        >
+                        </GridContainer>
+                    </ScrollContainer>
+                </PanelContainer>
+            </BoxContainer>
+
+        </TabContainer>
+
+        <PanelContainer StyleClasses="LowDivider" Margin="0 5" />
+        <BoxContainer Orientation="Horizontal" VerticalAlignment="Bottom" Margin="5">
+            <Label Text="{Loc 'stories-bank-flavor-left'}" StyleClasses="WindowFooterText" />
+            <Control HorizontalExpand="True" />
+            <Label Text="{Loc 'stories-bank-flavor-right'}" StyleClasses="WindowFooterText" Margin="0 0 5 0" />
+            <TextureRect
+                StyleClasses="NTLogoDark"
+                Stretch="KeepAspectCentered"
+                SetSize="19 19"
+                VerticalAlignment="Center"
+                Margin="5 0 0 0"
+            />
+        </BoxContainer>
+    </BoxContainer>
+</controls:FancyWindow>

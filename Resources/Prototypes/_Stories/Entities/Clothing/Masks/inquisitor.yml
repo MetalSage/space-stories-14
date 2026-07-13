@@ -1,8 +1,8 @@
 - type: entity
   parent: ClothingMaskGas
   id: ClothingMaskGasInquisitor
-  name: маска инквизитора
-  description: Зловещая маска. Она так манит надеть её...
+  name: inquisitor mask
+  description: A sinister mask. It is so tempting to put it on...
   components:
   - type: Tag
     tags:

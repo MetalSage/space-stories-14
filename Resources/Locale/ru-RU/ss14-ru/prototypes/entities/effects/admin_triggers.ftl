@@ -24,3 +24,6 @@ ent-AdminInstantEffectTearGas = { ent-AdminInstantEffectBase }
 ent-AdminInstantEffectGravityWell = { ent-AdminInstantEffectBase }
     .desc = { ent-AdminInstantEffectBase.desc }
     .suffix = Гравитационный колодец
+ent-AdminInstantEffectLightning = { ent-AdminInstantEffectBase }
+    .desc = { ent-AdminInstantEffectBase.desc }
+    .suffix = Lightning

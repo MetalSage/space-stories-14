@@ -43,8 +43,14 @@ public sealed partial class CharacterInfoSystem : EntitySystem
                 if (info == null)
                     continue;
 
+                if (!ProtoMan.TryIndex(Comp<ObjectiveComponent>(objective).Issuer, out var issuerProto))
+                {
+                    Log.Error($"Found incorrect objective issuer {issuerProto} when generating character info for objective {MetaData(objective).EntityPrototype}.");
+                    continue;
+                }
+
                 // group objectives by their issuer
-                var issuer = Comp<ObjectiveComponent>(objective).LocIssuer;
+                var issuer = issuerProto.LocalizedName;
                 if (!objectives.ContainsKey(issuer))
                     objectives[issuer] = new List<ObjectiveInfo>();
                 objectives[issuer].Add(info.Value);
@@ -59,7 +65,7 @@ public sealed partial class CharacterInfoSystem : EntitySystem
             // Stories-Economy-Start
             if (TryComp<MindBankAccountComponent>(mindId, out var bankInfo))
             {
-                var bankMsg = Loc.GetString("character-info-bank-briefing", 
+                var bankMsg = Loc.GetString("stories-character-info-bank-briefing", 
                     ("account", bankInfo.AccountNumber), 
                     ("pin", bankInfo.Pin));
 
