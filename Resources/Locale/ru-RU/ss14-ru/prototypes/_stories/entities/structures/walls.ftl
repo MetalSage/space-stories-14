@@ -1,9 +1,9 @@
 ent-PRISONWallShuttle = стена шаттла
     .desc = Удерживает заключенных внутри, а космос снаружи.
-    .suffix = Reinforced, Exterior
+    .suffix = Укреплённая, Экстерьер
 ent-PRISONWallShuttleInterior = стена шаттла
     .desc = Удерживает заключенных внутри, а космос снаружи.
-    .suffix = Interior
+    .suffix = Интерьер
 ent-PRISONWallShuttleDiagonal = стена шаттла
     .desc = Удерживает заключенных внутри, а космос снаружи.
-    .suffix = diagonal
+    .suffix = Диагональ
