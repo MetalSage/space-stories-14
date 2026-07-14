@@ -8,7 +8,7 @@
   rules:
   - STShadowling
   - SubGamemodesRule
-  - BasicStationEventScheduler
+  - CalmStationEventScheduler
   - MeteorSwarmScheduler
   - BasicRoundstartVariation
 
@@ -22,7 +22,7 @@
   rules:
   - STPontific
   - SubGamemodesRule
-  - BasicStationEventScheduler
+  - CalmStationEventScheduler
   - MeteorSwarmScheduler
   - SpaceTrafficControlEventScheduler
   - BasicRoundstartVariation
