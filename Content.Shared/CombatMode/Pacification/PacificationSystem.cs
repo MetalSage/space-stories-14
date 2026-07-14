@@ -31,6 +31,14 @@ public sealed partial class PacificationSystem : EntitySystem
         SubscribeLocalEvent<PacifismDangerousAttackComponent, AttemptPacifiedAttackEvent>(OnPacifiedDangerousAttack);
     }
 
+    public void SetAllowAttackingHostiles(EntityUid uid, bool value, PacifiedComponent? component = null)
+    {
+        if (!Resolve(uid, ref component, false))
+            return;
+        component.AllowAttackingHostiles = value;
+        Dirty(uid, component);
+    }
+
     private bool PacifiedCanAttack(EntityUid user, EntityUid target, [NotNullWhen(false)] out string? reason)
     {
         var ev = new AttemptPacifiedAttackEvent(user);

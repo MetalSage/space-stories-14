@@ -39,6 +39,12 @@ public sealed partial class PhotosensitivityComponent : Component
             { "Piercing", -5 },
             { "Heat", -5 },
             { "Shock", -5 },
+            { "Cold", -5 },
+            { "Caustic", -5 },
+            { "Asphyxiation", -5 },
+            { "Bloodloss", -5 },
+            { "Poison", -5 },
+            { "Radiation", -5 },
         },
     };
 

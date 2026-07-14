@@ -448,6 +448,29 @@
       prob: 0.05 # Only 1 in 20 rounds...
       tableId: SpaceTrafficControlTable
 
+- type: entityTable
+  id: CalmGameRulesTable
+  table: !type:AllSelector
+    children:
+      - !type:NestedSelector
+        tableId: BasicCalmEventsTable
+      - !type:NestedSelector
+        tableId: BasicAntagEventsTable
+      - !type:NestedSelector
+        tableId: CargoGiftsTable
+      - !type:NestedSelector
+        tableId: CalmPestEventsTable
+      - !type:NestedSelector
+        tableId: SpicyPestEventsTable
+
+- type: entity
+  id: CalmStationEventScheduler
+  parent: BaseGameRule
+  components:
+  - type: BasicStationEventScheduler
+    scheduledGameRules: !type:NestedSelector
+      tableId: CalmGameRulesTable
+
 # variation passes
 - type: entity
   id: BasicRoundstartVariation
