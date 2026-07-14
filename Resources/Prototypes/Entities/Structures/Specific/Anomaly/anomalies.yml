@@ -58,7 +58,6 @@
     damage:
       types:
         Radiation: 10
-  - type: Damageable # Stories-BugFix
 
 - type: entity
   id: AnomalyPyroclastic
