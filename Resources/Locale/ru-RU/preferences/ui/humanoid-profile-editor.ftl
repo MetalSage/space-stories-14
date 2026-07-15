@@ -78,5 +78,5 @@ humanoid-profile-editor-voice-neutral = Нейтральный
 humanoid-profile-editor-voice-none = Нет
 
 # Stories-TTS
-stories-humanoid-profile-editor-tts-voice-label = Голос
+stories-humanoid-profile-editor-tts-voice-label = Голос:
 stories-humanoid-profile-editor-tts-voice-play = ▶
