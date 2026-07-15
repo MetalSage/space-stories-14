@@ -1,8 +1,8 @@
 - type: entity
   parent: ClothingShoesBootsJack
   id: PRISONClothingShoesBootsJack
-  name: подкованные сапоги
-  description: Обувь тюрьмы, для боевых операций или боевых действий. Борьба - всё, борьба - всегда.
+  name: jackboots
+  description: Prison footwear for combat operations or warfare. The fight is everything, the fight is always.
   components:
     - type: Sprite
       sprite: _Stories/Clothing/Shoes/Boots/jackboots_sp.rsi

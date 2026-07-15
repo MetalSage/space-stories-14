@@ -11,12 +11,18 @@ chat-manager-crit-looc-chat-enabled-message = Игроки в критическ
 chat-manager-crit-looc-chat-disabled-message = Игроки в критическом состоянии больше не могут говорить в LOOC.
 chat-manager-admin-ooc-chat-enabled-message = Админ OOC чат был включён.
 chat-manager-admin-ooc-chat-disabled-message = Админ OOC чат был выключен.
+chat-manager-dead-chat-enabled-message = Dead chat has been enabled.
+chat-manager-dead-chat-disabled-message = Dead chat has been disabled.
 
 chat-manager-max-message-length-exceeded-message = Ваше сообщение превышает лимит в { $limit } символов
 chat-manager-no-headset-on-message = У вас нет гарнитуры!
 chat-manager-no-radio-key = Не задан ключ канала!
 chat-manager-no-such-channel = Нет канала с ключём '{ $key }'!
 chat-manager-whisper-headset-on-message = Вы не можете шептать в радио!
+
+# Unicode U+201C and U+201D Double quotes.
+chat-manager-speech-double-quote-begin = “
+chat-manager-speech-double-quote-end = ”
 
 chat-manager-server-wrap-message = [bold]{ $message }[/bold]
 chat-manager-sender-announcement = Центральное командование
@@ -48,6 +54,8 @@ chat-manager-admin-channel-name = АДМИН
 
 chat-manager-rate-limited = Вы отправляете сообщения слишком быстро!
 chat-manager-rate-limit-admin-announcement = Предупреждение о превышении ограничения скорости: { $player }
+
+chat-manager-follow-button = (F)
 
 ## Speech verbs for chat
 
@@ -120,6 +128,10 @@ chat-speech-verb-name-goat = Коза
 chat-speech-verb-goat-1 = блеет
 chat-speech-verb-goat-2 = кряхтит
 chat-speech-verb-goat-3 = кричит
+
+chat-speech-verb-name-sheep = Sheep
+chat-speech-verb-sheep-1 = bleats
+chat-speech-verb-sheep-2 = baas
 
 chat-speech-verb-name-small-mob = Мышь
 chat-speech-verb-small-mob-1 = скрипит

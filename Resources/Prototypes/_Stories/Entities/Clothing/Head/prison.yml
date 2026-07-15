@@ -1,8 +1,8 @@
 - type: entity
   parent: ClothingHeadBaseButcherable
   id: PRISONClothingHeadHatCapHeadOfPrison
-  name: фуражка начальника тюрьмы
-  description: Прочная форменная фуражка начальника тюрьмы. Напоминает рядовым офицерам, кто здесь главный.
+  name: head of prison's cap
+  description: A sturdy uniform cap of the Warden. Reminds rank-and-file officers who is in charge here.
   components:
     - type: Sprite
       sprite: _Stories/Clothing/Head/Soft/hosp_cap.rsi
@@ -12,8 +12,8 @@
 - type: entity
   parent: ClothingHeadBaseButcherable
   id: PRISONClothingHeadHatSoft
-  name: кепка тюрьмы
-  description: Это надежная бейсболка со вкусом подобранного синего цвета.
+  name: prison cap
+  description: This is a reliable baseball cap in a tastefully chosen blue color.
   components:
     - type: Sprite
       sprite: _Stories/Clothing/Head/Soft/cap_sp.rsi
@@ -23,8 +23,8 @@
 - type: entity
   parent: ClothingHeadBase
   id: PRISONClothingHeadHatUshanka
-  name: ушанка
-  description: Идеально подходит для зимы в Сибири, da?
+  name: ushanka
+  description: Ideal for winter in Siberia, da?
   components:
     - type: Sprite
       sprite: _Stories/Clothing/Head/Hats/hosp_ushanka.rsi
@@ -38,8 +38,8 @@
 - type: entity
   parent: ClothingHeadBase
   id: PRISONClothingHeadHatBeret
-  name: берет тюрьмы
-  description: Берет - любимый головной убор заключенного. Из него делаются бинты.
+  name: prison beret
+  description: The beret is the prisoner's favorite headwear. Bandages are made from it.
   components:
     - type: Sprite
       sprite: _Stories/Clothing/Head/Hats/beret_sp.rsi

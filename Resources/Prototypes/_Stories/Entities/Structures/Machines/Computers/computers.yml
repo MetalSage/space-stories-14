@@ -12,3 +12,65 @@
         path: /Audio/Announcements/centcomm.ogg
         params:
           volume: -4
+
+- type: entity
+  parent: BaseComputerAiAccess
+  id: STComputerBankSecurity
+  name: security financial console
+  description: Used by security to issue fines to specific personnel.
+  components:
+  - type: Sprite
+    layers:
+    - map: ["computerLayerBody"]
+      state: computer
+    - map: ["computerLayerKeyboard"]
+      state: generic_keyboard
+    - map: ["computerLayerScreen"]
+      state: id
+    - map: ["computerLayerKeys"]
+      state: security_key
+    - map: [ "enum.WiresVisualLayers.MaintenancePanel" ]
+      state: generic_panel_open
+  - type: AccessReader
+    access: [["Security"]]
+  - type: BankSecurityConsole
+  - type: ActivatableUI
+    key: enum.BankSecurityConsoleUiKey.Key
+  - type: ActivatableUIRequiresAccess
+  - type: UserInterface
+    interfaces:
+      enum.BankSecurityConsoleUiKey.Key:
+        type: BankSecurityConsoleBoundUserInterface
+      enum.WiresUiKey.Key:
+        type: WiresBoundUserInterface
+
+- type: entity
+  parent: BaseComputerAiAccess
+  id: STComputerBankCentcom
+  name: central command economic console
+  description: A highly advanced terminal used by Central Command to fully manage and manipulate station economies.
+  components:
+  - type: Sprite
+    layers:
+    - map: ["computerLayerBody"]
+      state: computer
+    - map: ["computerLayerKeyboard"]
+      state: generic_keyboard
+    - map: ["computerLayerScreen"]
+      state: comm_logs
+    - map: ["computerLayerKeys"]
+      state: generic_keys
+    - map: [ "enum.WiresVisualLayers.MaintenancePanel" ]
+      state: generic_panel_open
+  - type: AccessReader
+    access: [["CentralCommand"]]
+  - type: BankCentcomConsole
+  - type: ActivatableUI
+    key: enum.BankCentcomConsoleUiKey.Key
+  - type: ActivatableUIRequiresAccess
+  - type: UserInterface
+    interfaces:
+      enum.BankCentcomConsoleUiKey.Key:
+        type: BankCentcomConsoleBoundUserInterface
+      enum.WiresUiKey.Key:
+        type: WiresBoundUserInterface

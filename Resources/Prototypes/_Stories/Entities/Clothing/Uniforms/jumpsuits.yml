@@ -1,8 +1,8 @@
 - type: entity
   parent: ClothingUniformBase
   id: ClothingUniformJumpsuitGuardian
-  name: роба джедая
-  description: Свободная роба, носимая членами Ордена джедаев.
+  name: jedi robe
+  description: A loose robe worn by members of the Jedi Order.
   components:
     - type: Tag
       tags:
@@ -15,8 +15,8 @@
 - type: entity
   parent: ClothingUniformBase
   id: ClothingUniformJumpsuitGuardianNt
-  name: униформа стража клинка
-  description: Специальная униформа, никак не повышающая точность владения мечом.
+  name: blade guardian's uniform
+  description: A special uniform that does not increase sword accuracy in any way.
   components:
     - type: Tag
       tags:
@@ -30,8 +30,8 @@
 - type: entity
   parent: ClothingUniformBase
   id: ClothingUniformJumpsuitInquisitor
-  name: униформа инквизитора
-  description: Однажды на одной станции Галактической Империи...
+  name: inquisitor's uniform
+  description: Once upon a time on a Galactic Empire station...
   components:
     - type: Tag
       tags:
@@ -44,8 +44,8 @@
 - type: entity
   parent: ClothingUniformBase
   id: ClothingUniformJumpsuitKylo
-  name: униформа кайло рена
-  description: Однажды на одной станции Первого Ордена...
+  name: kylo ren's uniform
+  description: Once upon a time on a First Order station...
   components:
     - type: Tag
       tags:
@@ -58,8 +58,8 @@
 - type: entity
   parent: ClothingUniformBase
   id: ClothingUniformJumpsuitGuardianNomad
-  name: униформа путника
-  description: Униформа, никак не повышающая точность владения мечом.
+  name: traveler's uniform
+  description: A uniform that does not increase sword accuracy in any way.
   components:
     - type: Tag
       tags:
@@ -72,8 +72,8 @@
 - type: entity
   parent: ClothingUniformBase
   id: ClothingUniformJumpsuitExe
-  name: униформа хранителя
-  description: Специальная униформа, никак не повышающая точность владения мечом.
+  name: guardian's uniform
+  description: A special uniform that does not increase sword accuracy in any way.
   components:
     - type: Tag
       tags:
@@ -86,8 +86,8 @@
 - type: entity
   parent: ClothingUniformBase
   id: ClothingUniformJumpsuitDetectiveSpecialGrey
-  name: поношенный костюм
-  description: Тот, кто носит это, олицетворяет занятость.
+  name: hard-worn suit
+  description: Whoever wears this represents being busy.
   components:
     - type: Sprite
       sprite: _Stories/Clothing/Uniforms/Jumpsuit/detective.rsi

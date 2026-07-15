@@ -89,10 +89,7 @@
   - type: Sprite
     drawdepth: Mobs
   - type: Vocal
-    sounds:
-      Male: MaleFelinid
-      Unsexed: MaleFelinid
-      Female: FemaleFelinid
+    emoteSounds: MaleFelinid
   - type: Speech
     allowedEmotes: ['Hiss', 'Meow', 'Mew', 'Growl', 'Purr']
 

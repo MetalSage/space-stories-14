@@ -48,7 +48,8 @@ namespace Content.IntegrationTests.Tests.Preferences
                 FlavorText = "The biggest boy around.",
                 Species = "Human",
                 Age = 21,
-                Voice = "Eugene", // Stories-TTS
+                Voice = "MaleHuman",
+                VoiceTTS = "father_grigori", // Stories-TTS
                 Appearance = new(
                     Color.Azure,
                     Color.Beige,

@@ -16,14 +16,10 @@
   - type: ArrivalsBlacklist
   - type: WarpPoint
     follow: true
-    location: "! диск ядерной аунтефикации"
-    blacklist:
-      tags:
-      - GhostOnlyWarp
+    location: nuke disk
   - type: Tag
     tags:
     - HighRiskItem
-    - GhostOnlyWarp
   - type: StealTarget
     stealGroup: NukeDisk
 

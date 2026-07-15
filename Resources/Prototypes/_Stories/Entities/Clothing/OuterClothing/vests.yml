@@ -1,8 +1,8 @@
 - type: entity
   parent: ClothingOuterArmorBasic
   id: ClothingOuterVestGuardianNt
-  name: утепленный бронежилет стража клинка
-  description: Потому что кто-то сказал, что бронежилеты могут быть утеплены. Ваш щит уже утеплен!
+  name: blade guardian's insulated armor vest
+  description: Because someone said body armor could be insulated. Your shield is already insulated!
   components:
     - type: Tag
       tags:
@@ -19,8 +19,8 @@
 - type: entity
   parent: ClothingOuterArmorBasic
   id: PRISONClothingOuterVestArmor
-  name: бронежилет
-  description: Тонкий бронежилет типа I, обеспечивающий достойную защиту от большинства видов повреждений.
+  name: armor vest
+  description: Type I thin armor vest, providing decent protection against most types of damage.
   components:
     - type: Sprite
       sprite: _Stories/Clothing/OuterClothing/Vests/armor_sp.rsi
@@ -30,8 +30,8 @@
 - type: entity
   parent: ClothingOuterArmorBasic
   id: ClothingOuterVestArmorExe
-  name: бронежилет хранителя
-  description: Элегантный бронежилет, оберегающий хранителя от большинства видов повреждений и перепадов температур.
+  name: warden's armor vest
+  description: An elegant armor vest protecting the warden from most types of damage and temperature fluctuations.
   components:
     - type: Tag
       tags:
@@ -47,8 +47,8 @@
 - type: entity
   parent: ClothingOuterArmorBasic
   id: ClothingOuterVestInquisitor
-  name: бронежилет инквизитора
-  description: Грозный бронежилет, обеспечивающий высокую защиту от механических повреждений.
+  name: inquisition armor vest
+  description: A formidable body armor that provides high protection against mechanical damage.
   components:
   - type: ExplosionResistance
     damageCoefficient: 0.2

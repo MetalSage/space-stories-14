@@ -2,7 +2,7 @@
   parent: BaseWall
   id: WallRockBasaltIndestructible
   name: basalt
-  suffix: Неразрушимый
+  suffix: Indestructible
   components:
     - type: IconSmooth
       key: walls

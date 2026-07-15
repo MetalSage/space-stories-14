@@ -24,6 +24,7 @@ public sealed partial class BankCartridgeSystem : EntitySystem
 
         SubscribeLocalEvent<BankCartridgeComponent, CartridgeLoaderExternalContainerChangedEvent>(
             OnExternalContainerChanged);
+        SubscribeLocalEvent<BankBalanceChangedEventArgs>(OnBalanceChanged);
     }
 
     private void OnExternalContainerChanged(Entity<BankCartridgeComponent> ent,
@@ -62,8 +63,8 @@ public sealed partial class BankCartridgeSystem : EntitySystem
 
     private void UpdateUi(EntityUid cartridgeUid, EntityUid loaderUid)
     {
-        var accNum = Loc.GetString("bank-ui-no-account-number");
-        var ownerName = Loc.GetString("bank-ui-no-name");
+        var accNum = Loc.GetString("stories-bank-ui-no-account-number");
+        var ownerName = Loc.GetString("stories-bank-ui-no-name");
         var balance = 0;
         var isLinked = false;
         var notifications = false;
@@ -81,13 +82,13 @@ public sealed partial class BankCartridgeSystem : EntitySystem
                     isLinked = true;
                 }
                 else
-                    ownerName = Loc.GetString("bank-ui-account-error");
+                    ownerName = Loc.GetString("stories-bank-ui-account-error");
             }
             else
-                ownerName = Loc.GetString("bank-ui-no-account");
+                ownerName = Loc.GetString("stories-bank-ui-no-account");
         }
         else
-            ownerName = Loc.GetString("bank-ui-insert-id");
+            ownerName = Loc.GetString("stories-bank-ui-insert-id");
 
         if (isLinked && !string.IsNullOrEmpty(accNum))
         {
@@ -123,10 +124,10 @@ public sealed partial class BankCartridgeSystem : EntitySystem
             if (_bank.TryTransfer(station.Value, idBank.AccountNumber, args.TargetAccount, args.Amount))
             {
                 UpdateUi(uid, loaderUid);
-                _cartridgeLoader.SendNotification(loaderUid, "Bank", Loc.GetString("bank-app-transfer-success"));
+                _cartridgeLoader.SendNotification(loaderUid, "Bank", Loc.GetString("stories-bank-app-transfer-success"));
             }
             else
-                _cartridgeLoader.SendNotification(loaderUid, "Bank", Loc.GetString("bank-app-transfer-fail"));
+                _cartridgeLoader.SendNotification(loaderUid, "Bank", Loc.GetString("stories-bank-app-transfer-fail"));
         }
     }
 
@@ -149,7 +150,7 @@ public sealed partial class BankCartridgeSystem : EntitySystem
             _bank.AttachBankToId(mindId, pda.ContainedId.Value, mindBank);
 
             UpdateUi(uid, loaderUid);
-            _cartridgeLoader.SendNotification(loaderUid, "Bank", Loc.GetString("bank-app-link-success"));
+            _cartridgeLoader.SendNotification(loaderUid, "Bank", Loc.GetString("stories-bank-app-link-success"));
         }
     }
 
@@ -167,7 +168,7 @@ public sealed partial class BankCartridgeSystem : EntitySystem
             RemComp<IdBankAccountComponent>(pda.ContainedId.Value);
 
             UpdateUi(uid, loaderUid);
-            _cartridgeLoader.SendNotification(loaderUid, "Bank", Loc.GetString("bank-app-unlink-success"));
+            _cartridgeLoader.SendNotification(loaderUid, "Bank", Loc.GetString("stories-bank-app-unlink-success"));
         }
     }
 
@@ -185,6 +186,29 @@ public sealed partial class BankCartridgeSystem : EntitySystem
 
             if (TryComp<CartridgeComponent>(uid, out var cartridge) && cartridge.LoaderUid.HasValue)
                 UpdateUi(uid, cartridge.LoaderUid.Value);
+        }
+    }
+
+    private void OnBalanceChanged(BankBalanceChangedEventArgs ev)
+    {
+        var query = EntityQueryEnumerator<BankCartridgeComponent, CartridgeComponent>();
+        while (query.MoveNext(out var uid, out var component, out var cartridge))
+        {
+            if (cartridge.LoaderUid is not { } loaderUid)
+                continue;
+
+            if (TryComp<PdaComponent>(loaderUid, out var pda) && pda.ContainedId != null)
+            {
+                if (TryComp<IdBankAccountComponent>(pda.ContainedId.Value, out var idBank) &&
+                    idBank.AccountNumber == ev.AccountNumber)
+                {
+                    var station = _station.GetOwningStation(loaderUid);
+                    if (station == ev.Station)
+                    {
+                        UpdateUi(uid, loaderUid);
+                    }
+                }
+            }
         }
     }
 }

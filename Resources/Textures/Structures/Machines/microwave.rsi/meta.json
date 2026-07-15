@@ -9,11 +9,10 @@
     "states": [
         {
             "name": "mw"
-
         },
         {
             "name": "mw_unlit"
-        },		
+        },
         {
             "name": "mw0"
         },
@@ -70,8 +69,16 @@
                 ]
             ]
         },
-       {
-           "name": "mw-o"
-       }
+        {
+            "name": "mw-o"
+        },
+        {
+            "name": "inhand-right",
+            "directions": 4
+        },
+        {
+            "name": "inhand-left",
+            "directions": 4
+        }
     ]
 }

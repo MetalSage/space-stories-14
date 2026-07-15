@@ -42,6 +42,12 @@ changeling-flesh-clothing-alert-desc = Нажмите, чтобы переклю
 changeling-biodegrade-used-popup = { CAPITALIZE(THE($user)) } извергает кислоту на { POSS-ADJ($user) } { $restraint }!
 changeling-biodegrade-used-popup-self = Мы извергаем кислоту на { $restraint }!
 
+# last resort
+changeling-takeover-not-dead = This body yet lives! We cannot infest it alive.
+changeling-takeover-is-changeling = This body rejects our attempts to take over!
+changeling-takeover-start-others = { CAPITALIZE(THE($user)) } begins to crawl inside the corpse!
+changeling-takeover-success-self = We have successfully infested the body and assumed its form.
+
 # stings
 changeling-sting-success = Мы незаметно жалим { THE($target) }!
 

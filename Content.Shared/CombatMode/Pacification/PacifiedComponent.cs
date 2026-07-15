@@ -13,21 +13,27 @@ namespace Content.Shared.CombatMode.Pacification;
 ///
 /// If you want full-pacifism (no combat mode at all), you can simply set <see cref="DisallowAllCombat"/> before adding.
 /// </summary>
-[RegisterComponent, NetworkedComponent, AutoGenerateComponentPause]
+[RegisterComponent, NetworkedComponent, AutoGenerateComponentPause, AutoGenerateComponentState]
 [Access(typeof(PacificationSystem))]
 public sealed partial class PacifiedComponent : Component
 {
     /// <summary>
     /// If true, this will prevent you from disarming opponents in combat.
     /// </summary>
-    [DataField]
+    [DataField, AutoNetworkedField]
     public bool DisallowDisarm = false;
 
     /// <summary>
     /// If true, this will disable combat entirely instead of only disallowing attacking living creatures and harmful things.
     /// </summary>
-    [DataField]
+    [DataField, AutoNetworkedField]
     public bool DisallowAllCombat = false;
+
+    /// <summary>
+    /// If true, this will allow the pacified entity to attack hostile creatures.
+    /// </summary>
+    [DataField, AutoNetworkedField]
+    public bool AllowAttackingHostiles = false;
 
 
     /// <summary>
