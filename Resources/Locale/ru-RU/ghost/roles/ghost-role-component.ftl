@@ -103,10 +103,6 @@ ghost-role-information-salvage-carp-description = Защищайте ценно�
 
 ghost-role-information-sentient-carp-name = Разумный карп
 ghost-role-information-sentient-carp-description = Помогите дракону наводнить станцию карпами!
-# Stories - start
-stories-ghost-role-information-sentient-holo-carp-name = Разумный голокарп
-stories-ghost-role-information-sentient-shark-name = Разумная карпоакула
-# Stories - end
 
 ghost-role-information-willow-name = Кенгуру Уиллоу
 ghost-role-information-willow-description = Вы кенгуру по имени Уиллоу! Уиллоу любит бокс.

@@ -3,6 +3,7 @@ using Content.Server.NPC;
 using Content.Server.NPC.Systems;
 using Content.Server.Pinpointer;
 using Content.Shared.Dragon;
+using Content.Shared.EntityTable;
 using Content.Shared.Examine;
 using Content.Shared.Sprite;
 using Robust.Shared.Map;
@@ -13,9 +14,6 @@ using Content.Shared.Damage.Components;
 using Robust.Shared.Audio.Systems;
 using Robust.Shared.GameStates;
 using Robust.Shared.Utility;
-// Stories - start
-using Content.Shared.EntityTable;
-// Stories - end
 
 namespace Content.Server.Dragon;
 
@@ -26,13 +24,11 @@ public sealed partial class DragonRiftSystem : EntitySystem
 {
     [Dependency] private ChatSystem _chat = default!;
     [Dependency] private DragonSystem _dragon = default!;
+    [Dependency] private EntityTableSystem _entityTable = default!;
     [Dependency] private ISerializationManager _serManager = default!;
     [Dependency] private NavMapSystem _navMap = default!;
     [Dependency] private NPCSystem _npc = default!;
     [Dependency] private SharedAudioSystem _audio = default!;
-    // Stories - start
-    [Dependency] private EntityTableSystem _entityTable = default!;
-    // Stories - end
 
     public override void Initialize()
     {
@@ -94,19 +90,7 @@ public sealed partial class DragonRiftSystem : EntitySystem
             if (comp.SpawnAccumulator > comp.SpawnCooldown)
             {
                 comp.SpawnAccumulator -= comp.SpawnCooldown;
-            // Stories - start
-            //    var ent = Spawn(comp.SpawnPrototype, xform.Coordinates);
-            //
-            //    // Update their look to match the leader.
-            //    if (TryComp<RandomSpriteComponent>(comp.Dragon, out var randomSprite))
-            //    {
-            //        var spawnedSprite = EnsureComp<RandomSpriteComponent>(ent);
-            //        _serManager.CopyTo(randomSprite, ref spawnedSprite, notNullableOverride: true);
-            //        Dirty(ent, spawnedSprite);
-            //    }
-            //
-            //    if (comp.Dragon != null)
-            //        _npc.SetBlackboard(ent, NPCBlackboard.FollowTarget, new EntityCoordinates(comp.Dragon.Value, Vector2.Zero));
+            // Stories-DragonRift Start
                 var spawns = _entityTable.GetSpawns(comp.SpawnTable);
                 foreach (var proto in spawns)
                 {
@@ -123,7 +107,7 @@ public sealed partial class DragonRiftSystem : EntitySystem
                     if (comp.Dragon != null)
                         _npc.SetBlackboard(ent, NPCBlackboard.FollowTarget, new EntityCoordinates(comp.Dragon.Value, Vector2.Zero));
                 }
-            // Stories - end
+            // Stories-DragonRift End
             }
         }
     }

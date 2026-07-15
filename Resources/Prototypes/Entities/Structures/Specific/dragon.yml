@@ -6,7 +6,7 @@
     mode: SnapgridCenter
   components:
   - type: DragonRift
-    # Stories - start
+    # Stories-DragonRift Start
     spawnCooldown: 25
     spawnTable: !type:GroupSelector
       children:
@@ -17,7 +17,7 @@
       - id: STMobCarpHoloDragon
         weight: 1
     offset: 0
-    # Stories - end
+    # Stories-DragonRift End
   - type: Transform
     anchored: true
   - type: Physics
