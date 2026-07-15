@@ -1,8 +1,8 @@
 - type: entity
   parent: Paper
   id: SheetPrinter
-  name: бумага
-  description: Лист материала, широко применяемого на станции в различных целях.
+  name: paper
+  description: A sheet of material widely used on the station for various purposes.
   suffix: Full
   components:
   - type: Material
@@ -36,8 +36,8 @@
 - type: entity
   parent: SheetOtherBase
   id: InkPrinter
-  name: чернила
-  description: Лист материала, широко применяемого на станции в различных целях.
+  name: ink
+  description: A sheet of material widely used on the station for various purposes.
   suffix: Full
   components:
   - type: Sprite

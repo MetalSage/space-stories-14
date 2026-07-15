@@ -1,7 +1,7 @@
 - type: entity
   parent: WindoorSecure
-  name: раздвижное бронеокно
-  description: Это и прочное окно, и раздвижная дверь. Вот это да!
+  name: secure windoor
+  description: It's both a sturdy window and a sliding door. Wow!
   id: PRISONWindoorSecureHeadOfPrisonLocked
   suffix: HeadOfPrison, Locked
   components:
@@ -11,8 +11,8 @@
 
 - type: entity
   parent: WindoorSecure
-  name: раздвижное бронеокно
-  description: Это и прочное окно, и раздвижная дверь. Вот это да!
+  name: secure windoor
+  description: It's both a sturdy window and a sliding door. Wow!
   id: PRISONWindoorSecureBrigLocked
   suffix: PrisonBrig, Locked
   components:
@@ -22,8 +22,8 @@
 
 - type: entity
   parent: WindoorSecure
-  name: раздвижное бронеокно
-  description: Это и прочное окно, и раздвижная дверь. Вот это да!
+  name: secure windoor
+  description: It's both a sturdy window and a sliding door. Wow!
   id: PRISONWindoorSecureLocked
   suffix: Prison, Locked
   components:
@@ -33,8 +33,8 @@
 
 - type: entity
   parent: WindoorSecure
-  name: раздвижное бронеокно
-  description: Это и прочное окно, и раздвижная дверь. Вот это да!
+  name: secure windoor
+  description: It's both a sturdy window and a sliding door. Wow!
   id: PRISONWindoorSecureEngLocked
   suffix: PrisonEng, Locked
   components:
@@ -44,8 +44,8 @@
 
 - type: entity
   parent: WindoorSecure
-  name: раздвижное бронеокно
-  description: Это и прочное окно, и раздвижная дверь. Вот это да!
+  name: secure windoor
+  description: It's both a sturdy window and a sliding door. Wow!
   id: PRISONWindoorSecureMedLocked
   suffix: PrisonMed, Locked
   components:
@@ -55,8 +55,8 @@
 
 - type: entity
   parent: WindoorSecure
-  name: раздвижное бронеокно
-  description: Это и прочное окно, и раздвижная дверь. Вот это да!
+  name: secure windoor
+  description: It's both a sturdy window and a sliding door. Wow!
   id: PRISONWindoorSecurePrisonerLocked
   suffix: Prisoner, Locked
   components:

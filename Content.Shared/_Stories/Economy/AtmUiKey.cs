@@ -17,17 +17,25 @@ public sealed class AtmBoundUserInterfaceState : BoundUserInterfaceState
     public string Message = string.Empty;
     public string OwnerName = string.Empty;
 
+    public string PrefillAccountNumber = string.Empty;
+
+    public string PrefillPin = string.Empty;
+
     public AtmBoundUserInterfaceState(bool isLoggedIn,
         string accountNumber,
         int balance,
         string message,
-        string ownerName)
+        string ownerName,
+        string prefillAccountNumber = "",
+        string prefillPin = "")
     {
         IsLoggedIn = isLoggedIn;
         AccountNumber = accountNumber;
         Balance = balance;
         Message = message;
         OwnerName = ownerName;
+        PrefillAccountNumber = prefillAccountNumber;
+        PrefillPin = prefillPin;
     }
 }
 

@@ -1,8 +1,8 @@
 - type: entity
   parent: BaseAction
   id: ActionCreateProtectiveBubble
-  name: Защитный пузырь
-  description: Создайте защитный телекинетический кокон, который отразит любые лазеры, сильно уменьшит урон от пуль и защитит от взрывов и давления. Почти не защищает от ударов ближнего боя.
+  name: Protective bubble
+  description: Create a protective telekinetic cocoon that reflects all lasers, greatly reduces damage from bullets, and protects against explosions and pressure. Offers almost no protection against melee attacks.
   categories: [ HideSpawnMenu ]
   components:
   - type: Action
@@ -19,8 +19,8 @@
 - type: entity
   parent: BaseAction
   id: ActionGuardianForceWall
-  name: Барьер Силы
-  description: Создайте нерушимый барьер 3x1 в направлении вашего взгляда, который остановит ваших врагов. Вы можете проходить сквозь свой барьер.
+  name: Force Barrier
+  description: Create an indestructible 3x1 barrier in the direction of your view, which will stop your enemies. You can pass through your barrier.
   categories: [ HideSpawnMenu ]
   components:
   - type: Action
@@ -42,8 +42,8 @@
 - type: entity
   parent: BaseAction
   id: ActionHibernationTrance
-  name: Гибернационный транс
-  description: Вы излечите множество своих ранений, восстановите жажду и голод, остановите кровотечение, но будете спать на протяжении 2 минут. Вы можете войти в транс даже в критическом состоянии.
+  name: Hibernation trance
+  description: You will heal many of your wounds, satisfy your hunger and thirst, stop bleeding, but you will sleep for 2 minutes. You can enter a trance even in a critical state.
   categories: [ HideSpawnMenu ]
   components:
   - type: Action
@@ -76,8 +76,8 @@
 - type: entity
   parent: BaseAction
   id: ActionHealingTouch
-  name: Целебное прикосновение
-  description: Излечивает легкие травмы. Можно использовать на себе.
+  name: Healing touch
+  description: Heals minor injuries. Can be used on yourself.
   categories: [ HideSpawnMenu ]
   components:
   - type: Action
@@ -113,8 +113,8 @@
 - type: entity
   parent: BaseAction
   id: ActionPushBall
-  name: Силовой толчок
-  description: Создайте сильный толчок, который может сбить человека с ног. Полностью ослабевает, пролетев 4 тайла.
+  name: Force push
+  description: Create a powerful push that can knock a person down. Completely weakens after traveling 4 tiles.
   components:
   - type: Action
     useDelay: 10

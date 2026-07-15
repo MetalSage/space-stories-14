@@ -87,7 +87,7 @@
 
 - type: entity
   name: S.P.A.F.
-  description: Ужасное на вид создание... Брр.. Пожалуй, от него стоит убегать.
+  description: A terrible-looking creature... Brr.. You should probably run from it.
   parent: BaseMobSpaf
   id: MobSpaf
   components:
@@ -163,8 +163,8 @@
     voice: ziggs
 
 - type: entity
-  name: маленький радужный слизняк
-  description: На вид очень милый и безобидный! Скорее всего, он сбежал из РНД.
+  name: little rainbow slug
+  description: It looks very cute and harmless! Most likely, it escaped from R&D.
   parent: BaseMobSpaf
   id: MobMiniSpaf
   components:

@@ -1,8 +1,8 @@
 - type: entity
   parent: BaseAction
   id: ActionForceShop
-  name: "[color=purple]Магазин навыков[/color]"
-  description: Вспомните, что должны были.
+  name: "[color=purple]Skill store[/color]"
+  description: Remember what you had to do.
   categories: [ HideSpawnMenu ]
   components:
   - type: Action
@@ -15,8 +15,8 @@
 - type: entity
   parent: BaseAction
   id: ActionStopProtectiveBubble
-  name: Отключить защитный пузырь
-  description: Отключит защитный пузырь вокруг вас.
+  name: Disable protective bubble
+  description: Disables the protective bubble around you.
   categories: [ HideSpawnMenu ]
   components:
   - type: Action
@@ -31,8 +31,8 @@
 - type: entity
   parent: BaseAction
   id: ActionRecallEquipments
-  name: Призвать экипировку
-  description: Призовите вашу экипировку к себе.
+  name: Summon equipment
+  description: Summon your equipment to you.
   categories: [ HideSpawnMenu ]
   components:
   - type: Action
@@ -49,8 +49,8 @@
 - type: entity
   parent: BaseAction
   id: ActionForceLookUp
-  name: Прислушаться к силе
-  description: Прислушайтесь к силе и узнайте есть ли другие пользователи силы в радиусе 25 метров.
+  name: Listen to the Force
+  description: Listen to the Force and find out if there are other Force users within a 25-meter radius.
   categories: [ HideSpawnMenu ]
   components:
   - type: Action
@@ -67,8 +67,8 @@
 - type: entity
   parent: BaseAction
   id: ActionRecallLightsaber
-  name: Призвать световой меч
-  description: Телепортируйте свой световой меч к себе. Чем дальше меч, тем больше времени понадобится, чтобы притянуть меч во второй раз.
+  name: Summon lightsaber
+  description: Teleport your lightsaber to you. The farther the saber is, the more time it will take to pull it back a second time.
   categories: [ HideSpawnMenu ]
   components:
   - type: Action
@@ -85,8 +85,8 @@
 - type: entity
   parent: BaseAction
   id: ActionTelekinesis
-  name: Телекинез
-  description: Ваша рука сможет манипулировать гравитацией вокруг объектов. Левитируйте своим мечом, чтобы вести бой на расстоянии.
+  name: Telekinesis
+  description: Your hand will be able to manipulate gravity around objects. Levitate your sword to fight from a distance.
   categories: [ HideSpawnMenu ]
   components:
   - type: Action
@@ -103,8 +103,8 @@
 - type: entity
   parent: BaseAction
   id: ActionFlashArea
-  name: Ослепление Силы
-  description: Cоздайте при помощи телекинеза вспышки энергии, вызывая временную слепоту.
+  name: Force Blindness
+  description: Create bursts of energy using telekinesis, causing temporary blindness.
   categories: [ HideSpawnMenu ]
   components:
   - type: Action
@@ -121,8 +121,8 @@
 - type: entity
   parent: BaseAction
   id: ActionArtOfMovement
-  name: Искусство движения
-  description: Ускоряет вас, блокирует вашу боль на короткое время.
+  name: Art of Movement
+  description: Speeds you up, blocks your pain for a short time.
   categories: [ HideSpawnMenu ]
   components:
   - type: Action
@@ -145,8 +145,8 @@
 - type: entity
   parent: BaseAction
   id: ActionEmp
-  name: Ионизация
-  description: Создайте ЭМ импульс в небольшом радиусе.
+  name: Ionization
+  description: Create an EMP pulse in a small radius.
   categories: [ HideSpawnMenu ]
   components:
   - type: Action
@@ -166,8 +166,8 @@
 - type: entity
   parent: BaseAction
   id: ActionFreedom
-  name: Снятие оков
-  description: Снимите наручники с помощью телекинеза.
+  name: Break cuffs
+  description: Remove handcuffs using telekinesis.
   categories: [ HideSpawnMenu ]
   components:
   - type: Action
@@ -185,8 +185,8 @@
 - type: entity
   parent: BaseAction
   id: ActionForceDash
-  name: Силовой рывок
-  description: Вскочите с огромной скоростью в нужную точку. Только не стену, пожалуйста.
+  name: Force dash
+  description: Leap at high speed to the target point. Just not into a wall, please.
   categories: [ HideSpawnMenu ]
   components:
   - type: Action
@@ -209,8 +209,8 @@
 - type: entity
   parent: BaseAction
   id: ActionForceKnock
-  name: Стук
-  description: Особая техника позволяющая открыть все ближайшие двери. По слухам, именно космическая федерация магов подала первый патент на это заклинание.
+  name: Knock
+  description: A special technique that allows opening all nearby doors. Rumor has it that the Space Wizard Federation filed the first patent for this spell.
   categories: [ HideSpawnMenu ]
   components:
   - type: Action

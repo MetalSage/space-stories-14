@@ -1,8 +1,8 @@
 - type: entity
   parent: ClothingBeltSheath
   id: PRISONClothingBeltSheath
-  name: ножны для тюремной сабли
-  description: Богато украшенные ножны, предназначенные для хранения клинка.
+  name: scabbard for prison saber
+  description: An ornate sheath designed to hold a blade.
   components:
     - type: Sprite
       sprite: _Stories/Clothing/Belt/hosp_sheath.rsi
@@ -28,8 +28,8 @@
 - type: entity
   parent: ClothingBeltSecurity
   id: PRISONClothingBeltWebbing
-  name: РПС сотрудника тюрьмы
-  description: Уникальный, универсальный разгрузочный жилет с ремнями и поясом, может вмещать снаряжение сотрудников тюрьмы.
+  name: Prison guard webbing
+  description: A unique, versatile load-bearing vest with straps and a belt, capable of holding prison staff gear.
   components:
     - type: Sprite
       sprite: _Stories/Clothing/Belt/sp_webbing.rsi

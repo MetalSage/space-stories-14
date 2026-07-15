@@ -1,7 +1,7 @@
 - type: entity
   id: PRISONShuttleWindow
-  name: окно
-  description: Смотри не заляпай.
+  name: window
+  description: Try not to stain it.
   parent: WindowRCDResistant
   components:
     - type: Sprite
@@ -55,8 +55,8 @@
 - type: entity
   parent: PRISONShuttleWindow
   id: PRISONShuttleWindowDiagonal
-  name: окно
-  description: Смотри не заляпай.
+  name: window
+  description: Try not to stain it.
   suffix: diagonal
   placement:
     mode: SnapgridCenter

@@ -406,6 +406,7 @@
     - SecurityAmmo
     - SecurityWeapons
     - SecurityDisablers
+    - STVision # Stories-RND
   - type: EmagLatheRecipes
     emagStaticPacks:
     - SyndicateAmmoStatic
@@ -491,6 +492,7 @@
   - type: OreSiloClient
   - type: LatheAnnouncing
     channels: [Medical]
+  - type: AmbientMusicMarkerMedical
 
 - type: entity
   parent: BaseLathe

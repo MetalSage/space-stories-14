@@ -1,8 +1,8 @@
 - type: entity
   parent: ClothingNeckBase
   id: ClothingNeckElectrospheres
-  name: электросферы
-  description: Странные сферы, которые красиво светятся и летают.
+  name: electrospheres
+  description: Strange spheres that glow beautifully and fly.
   components:
   - type: PointLight
     color: "#00FFF8FF"

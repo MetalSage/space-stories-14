@@ -2,7 +2,7 @@
   id: PRISONLockableButtonPrisonBrig
   suffix: PrisonBrig
   name: кнопка с замком
-  description: Эта кнопка что-то активирует.
+  description: This button activates something.
   parent: LockableButton
   components:
   - type: AccessReader
@@ -12,7 +12,7 @@
   id: PRISONLockableButtonHeadOfPrison
   suffix: HeadOfPrison
   name: кнопка с замком
-  description: Эта кнопка что-то активирует.
+  description: This button activates something.
   parent: LockableButton
   components:
   - type: AccessReader
@@ -22,7 +22,7 @@
   id: PRISONLockableButtonPrisonMed
   suffix: PrisonMed
   name: кнопка с замком
-  description: Эта кнопка что-то активирует.
+  description: This button activates something.
   parent: LockableButton
   components:
   - type: AccessReader
@@ -32,7 +32,7 @@
   id: PRISONLockableButtonPrisonEng
   suffix: PrisonEng
   name: кнопка с замком
-  description: Эта кнопка что-то активирует.
+  description: This button activates something.
   parent: LockableButton
   components:
   - type: AccessReader

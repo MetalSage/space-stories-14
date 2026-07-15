@@ -196,6 +196,6 @@ public sealed partial class ConversionSystem
         if (proto == null)
             return false;
 
-        return roles.Contains(proto);
+        return roles.Any(r => r.Id == proto.ID);
     }
 }

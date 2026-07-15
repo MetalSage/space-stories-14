@@ -17,7 +17,7 @@
   - type: RefillableSolution
     solution: Welder
   - type: Solution
-    id: Welder
+    id: welder
     solution:
       maxVol: 100
       reagents:

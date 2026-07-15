@@ -1,5 +1,5 @@
 - type: entity
-  name: Печать агента внутренних дел
+  name: Internal Affairs Agent stamp
   parent: RubberStampBase
   id: RubberStampIAA
   suffix: DO NOT MAP
@@ -13,8 +13,8 @@
       state: stamp-iaa
 
 - type: entity
-  name: печать начальника тюрьмы
-  description: Печать из резины, для проставления печатей на важных документах.
+  name: head of prison's stamp
+  description: A rubber stamp for stamping important documents.
   parent: RubberStampBase
   id: PRISONRubberStamp
   suffix: DO NOT MAP

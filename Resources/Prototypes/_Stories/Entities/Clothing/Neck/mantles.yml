@@ -1,7 +1,7 @@
 - type: entity
   parent: ClothingNeckBase
   id: ClothingNeckMantleGuardianNomad
-  name: мантия путника
+  name: traveler mantle
   description: Похоже, тут выгравировано "o k h r i m m". Что же это может значить?
   components:
   - type: Tag
@@ -15,7 +15,7 @@
 - type: entity
   parent: ClothingNeckBase
   id: ClothingNeckMantleGuardianNt
-  name: мантия стража клинка
+  name: blade guardian mantle
   description: Похоже, тут выгравировано "W o o b y". Что же это может значить?
   components:
   - type: Tag

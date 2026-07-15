@@ -227,7 +227,7 @@
   - Xenoborgs
   - DummyNonAntagChance
   - SubGamemodesRuleNoWizardNoXenoborg # no two motherships
-  - BasicStationEventScheduler
+  - CalmStationEventScheduler
   - MeteorSwarmScheduler
   - SpaceTrafficControlEventScheduler
   - BasicRoundstartVariation

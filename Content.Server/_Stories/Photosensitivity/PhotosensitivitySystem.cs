@@ -22,7 +22,6 @@ public sealed partial class PhotosensitivitySystem : EntitySystem
 
     [Dependency] private DamageableSystem _damageable = default!;
     [Dependency] private EntityLookupSystem _entityLookup = default!;
-    [Dependency] private IMapManager _mapManager = default!;
     [Dependency] private MapSystem _mapSystem = default!;
     [Dependency] private TransformSystem _transform = default!;
     [Dependency] private TurfSystem _turf = default!;
@@ -138,7 +137,7 @@ public sealed partial class PhotosensitivitySystem : EntitySystem
 
             var box = Box2.FromTwoPoints(_transform.GetWorldPosition(sourceTrs), _transform.GetWorldPosition(destTrs));
             var grids = new List<Entity<MapGridComponent>>();
-            _mapManager.FindGridsIntersecting(sourceTrs.MapID, box, ref grids, true);
+            _mapSystem.FindGridsIntersecting(sourceTrs.MapID, box, ref grids, true);
 
             var dir = destination - source;
             var dist = dir.Length();

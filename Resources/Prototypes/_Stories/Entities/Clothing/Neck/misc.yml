@@ -1,8 +1,8 @@
 - type: entity
   parent: ClothingNeckBase
   id: ClothingNeckDecbadge
-  name: значок детектива
-  description: Значок, свидетельствующий что владелец является "законным" детективом, сдавшим экзамен Nanotrasen, необходимый для курения сигар.
+  name: detective badge
+  description: A badge indicating that the owner is a "legal" detective who has passed the Nanotrasen exam required to smoke cigars.
   components:
   - type: Sprite
     sprite: _Stories/Clothing/Neck/Misc/decbadge.rsi

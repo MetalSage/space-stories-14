@@ -19,3 +19,18 @@
   - STMagazineBoxMagnumSilver
   - STMagazineBoxLightRifleSilver
   - STMagazineBoxRifleSilver
+
+
+- type: technology
+  id: STVision
+  name: stories-research-technology-Vision
+  icon:
+    sprite: Clothing/Eyes/Glasses/thermal.rsi
+    state: icon
+  discipline: Arsenal
+  tier: 3
+  cost: 15000
+  recipeUnlocks:
+  - STThermal
+  - STNightVisionDevice
+

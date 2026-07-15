@@ -24,7 +24,6 @@ namespace Content.Shared.VendingMachines;
 public abstract partial class SharedVendingMachineSystem : EntitySystem
 {
     [Dependency] protected IGameTiming Timing = default!;
-    [Dependency] protected IPrototypeManager PrototypeManager = default!;
     [Dependency] private AccessReaderSystem _accessReader = default!;
     [Dependency] private SharedAppearanceSystem _appearanceSystem = default!;
     [Dependency] protected SharedAudioSystem Audio = default!;
@@ -172,8 +171,6 @@ public abstract partial class SharedVendingMachineSystem : EntitySystem
         if (_accessReader.IsAllowed(sender, uid, accessReader) || HasComp<EmaggedComponent>(uid))
             return true;
 
-        Popup.PopupClient(Loc.GetString("vending-machine-component-try-eject-access-denied"), uid, sender);
-        Deny((uid, vendComponent), sender);
         return false;
     }
 
@@ -297,7 +294,7 @@ public abstract partial class SharedVendingMachineSystem : EntitySystem
     /// <param name="type">The type of inventory the item is from</param>
     /// <param name="itemId">The prototype ID of the item</param>
     /// <param name="component"></param>
-    public virtual void AuthorizedVend(EntityUid uid, EntityUid sender, InventoryType type, string itemId, VendingMachineComponent component) // Stories-Economy
+    protected virtual void AuthorizedVend(EntityUid uid, EntityUid sender, InventoryType type, string itemId, VendingMachineComponent component) // Stories-Economy
     {
         if (IsAuthorized(uid, sender, component))
         {
@@ -313,7 +310,7 @@ public abstract partial class SharedVendingMachineSystem : EntitySystem
             return;
         }
 
-        if (!PrototypeManager.TryIndex(component.PackPrototypeId, out VendingMachineInventoryPrototype? packPrototype))
+        if (!ProtoMan.TryIndex(component.PackPrototypeId, out VendingMachineInventoryPrototype? packPrototype))
             return;
 
         AddInventoryFromPrototype(uid, packPrototype.StartingInventory, InventoryType.Regular, component, restockQuality);
@@ -393,7 +390,7 @@ public abstract partial class SharedVendingMachineSystem : EntitySystem
 
         foreach (var (id, amount) in entries)
         {
-            if (PrototypeManager.HasIndex<EntityPrototype>(id))
+            if (ProtoMan.HasIndex<EntityPrototype>(id))
             {
                 var restock = amount;
                 var chanceOfMissingStock = 1 - restockQuality;

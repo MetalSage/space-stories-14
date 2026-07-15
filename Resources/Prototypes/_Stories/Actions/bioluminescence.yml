@@ -1,8 +1,8 @@
 - type: entity
   parent: BaseToggleAction
   id: TurnBioluminescenceAction
-  name: Биолюминесценция
-  description: Начать или прекратить светится
+  name: Bioluminescence
+  description: Start or stop glowing
   components:
   - type: Action
     useDelay: 5

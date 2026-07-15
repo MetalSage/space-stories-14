@@ -10,6 +10,9 @@ tool-quality-screwing-tool-name = Отвёртка
 tool-quality-cutting-name = Резка
 tool-quality-cutting-tool-name = Кусачки
 
+tool-quality-shearing-name = Shearing
+tool-quality-shearing-tool-name = Wirecutter
+
 tool-quality-welding-name = Варка
 tool-quality-welding-tool-name = Сварка
 

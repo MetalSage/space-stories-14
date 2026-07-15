@@ -4,6 +4,8 @@ using Content.Shared._Stories.ForceUser.Actions.Events;
 using Content.Shared.Damage.Components;
 using Content.Shared.Weapons.Melee.Events;
 
+using Content.Shared.CombatMode;
+
 namespace Content.Server._Stories.ForceUser.ProtectiveBubble.Systems;
 
 public sealed partial class ProtectiveBubbleSystem
@@ -14,6 +16,7 @@ public sealed partial class ProtectiveBubbleSystem
         SubscribeLocalEvent<ProtectiveBubbleUserComponent, ComponentShutdown>(OnShutdown);
         SubscribeLocalEvent<ProtectiveBubbleUserComponent, StopProtectiveBubbleEvent>(OnStopProtectiveBubble);
         SubscribeLocalEvent<ProtectiveBubbleUserComponent, AttackedEvent>(OnAttack);
+        SubscribeLocalEvent<ProtectiveBubbleUserComponent, DisarmedEvent>(OnDisarmed);
     }
 
     public void UpdateUser(float frameTime)
@@ -72,5 +75,14 @@ public sealed partial class ProtectiveBubbleSystem
     {
         if (comp.ProtectiveBubble != null)
             Del(comp.ProtectiveBubble.Value);
+    }
+
+    private void OnDisarmed(EntityUid uid, ProtectiveBubbleUserComponent component, ref DisarmedEvent args)
+    {
+        if (component.ProtectiveBubble != null)
+        {
+            QueueDel(component.ProtectiveBubble.Value);
+            component.ProtectiveBubble = null;
+        }
     }
 }
