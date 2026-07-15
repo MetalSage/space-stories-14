@@ -10,7 +10,6 @@ new_player_threshold = 600
 
 [ahelp]
 admin_prefix = true
-admin_prefix_webhook = true
 
 [atmos]
 monstermos_rip_tiles = true

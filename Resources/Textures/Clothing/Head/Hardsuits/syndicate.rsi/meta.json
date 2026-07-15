@@ -44,6 +44,10 @@
         {
             "name": "on-equipped-HELMET-reptilian",
             "directions": 4
+        },
+        {
+            "name": "combat-equipped-HELMET-vulpkanin",
+            "directions": 4
         }
     ]
 }

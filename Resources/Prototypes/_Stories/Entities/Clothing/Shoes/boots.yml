@@ -16,8 +16,8 @@
 - type: entity
   parent: ClothingShoesBootsJack
   id: ClothingShoesBootsJackGuardian
-  name: подкованные сапоги джедая
-  description: Созданы, чтобы ваши ножки не промокли на далеких планетах.
+  name: jedi jackboots
+  description: Designed to keep your feet dry on distant planets.
   components:
     - type: Tag
       tags:
@@ -31,8 +31,8 @@
 - type: entity
   parent: ClothingShoesBootsJack
   id: ClothingShoesBootsJackGuardianNt
-  name: подкованные сапоги стража клинка
-  description: Планировалось, что они будут удобнее обычных.
+  name: blade guardian jackboots
+  description: They were planned to be more comfortable than standard ones.
   components:
     - type: Tag
       tags:
@@ -47,8 +47,8 @@
 - type: entity
   parent: ClothingShoesBootsJack
   id: ClothingShoesBootsJackGuardianNomad
-  name: сапоги путника
-  description: Планировалось, что они будут удобнее обычных.
+  name: traveler's boots
+  description: They were planned to be more comfortable than standard ones.
   components:
     - type: Tag
       tags:
@@ -62,8 +62,8 @@
 - type: entity
   parent: ClothingShoesBootsJack
   id: ClothingShoesBootsExe
-  name: сапоги хранителя
-  description: Продвинутая обувь, гарантирующая удобство носителя и полное сцепление с любой поверхностью.
+  name: guardian's boots
+  description: Advanced footwear ensuring wearer comfort and perfect grip on any surface.
   components:
   - type: Tag
     tags:

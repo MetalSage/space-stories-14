@@ -1,8 +1,8 @@
 - type: entity
-  name: экспериментальный глушитель связи
+  name: experimental radio jammer
   parent: RadioJammer
   id: RadioJammerIndustrial
-  description: Это устройство является улучшенной версией обычного глушителя связи. Радиус действия увеличен, но и потребление больше.
+  description: This device is an improved version of the standard comms scrambler. The range is increased, but so is the power consumption.
   components:
   - type: Sprite
     sprite: _Stories/Objects/Devices/jammer_ind.rsi

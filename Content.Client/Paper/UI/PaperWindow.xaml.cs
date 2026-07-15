@@ -27,7 +27,9 @@ namespace Content.Client.Paper.UI
 
         private static Color DefaultTextColor = new(25, 25, 25);
 
-        // <summary>
+        // Default color for text which hasn't been changed using markup
+        private Color _writtenTextColor = DefaultTextColor;
+
         // Size of resize handles around the paper
         private const int DRAG_MARGIN_SIZE = 16;
 
@@ -170,7 +172,8 @@ namespace Content.Client.Paper.UI
                     visuals.FooterMargin.Right, visuals.FooterMargin.Bottom);
 
             PaperContent.ModulateSelfOverride = visuals.ContentImageModulate;
-            FillStatus.ModulateSelfOverride = visuals.FontAccentColor;
+            _writtenTextColor = visuals.DefaultTextColor ?? DefaultTextColor;
+            FillStatus.ModulateSelfOverride = _writtenTextColor;
 
             var contentImage = visuals.ContentImagePath != null ? _resCache.GetResource<TextureResource>(visuals.ContentImagePath) : null;
             if (contentImage != null)
@@ -271,11 +274,12 @@ namespace Content.Client.Paper.UI
             _currentState = state;
             _currentRawText = state.Text;
             var isEditing = state.Mode == PaperComponent.PaperAction.Write;
+            var wasEditing = InputContainer.Visible;
 
             // Show/hide UI elements based on edit mode
             InputContainer.Visible = isEditing;
             EditButtons.Visible = isEditing;
-            WrittenTextLabel.Visible = !isEditing;
+            WrittenTextLabel.Visible = !isEditing && state.Text.Length > 0;
             WrittenTextContainer.Visible = false;
             BlankPaperIndicator.Visible = !isEditing && state.Text.Length == 0;
 
@@ -286,7 +290,7 @@ namespace Content.Client.Paper.UI
                     
                 // Initialize the text input field with server content if it's currently empty
                 // This allows editing existing documents while preserving any text the user has already typed
-                var shouldCopy = Input.TextLength == 0 && state.Text.Length > 0;
+                var shouldCopy = (Input.TextLength == 0 && state.Text.Length > 0) || !wasEditing;
                 if (shouldCopy)
                 {
                     // We can get repeated messages with state.Mode == Write if another
@@ -311,7 +315,11 @@ namespace Content.Client.Paper.UI
             // The markup system converts [form] and [signature] tags into interactive buttons
             var fm = new FormattedMessage();
             fm.AddMarkupPermissive(state.Text);
-            WrittenTextLabel.SetMessage(fm, _allowedTags, DefaultTextColor);
+            for (var i = 0; i <= state.StampedBy.Count * 3 + 1; i++)
+            {
+                fm.AddMarkupPermissive("\r\n");
+            }
+            WrittenTextLabel.SetMessage(fm, _allowedTags, _writtenTextColor);
             
             // Add extra bottom margin based on tag count to prevent cutoff (only in read mode)
             var tagCount = CountTags(state.Text);

@@ -1,8 +1,8 @@
 - type: entity
   parent: ClothingBackpackDuffelSyndicateBundle
   id: ClothingBackpackDuffelCrateTacticalMaid
-  name: чёрно-красный вещмешок
-  description: Вместительный и удобный вещмешок цвета эбонита и крови, в который влезут «игрушки» для любых возрастов.
+  name: чёрно-красный duffel bag
+  description: A spacious and comfortable duffel bag the color of ebony and blood, which can fit "toys" for all ages.
   components:
   - type: Storage
     grid:

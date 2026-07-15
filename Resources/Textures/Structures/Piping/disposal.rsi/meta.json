@@ -392,6 +392,14 @@
         {
             "name": "signal-router-flipped-free",
             "directions": 4
+        },
+        {
+            "name": "mailing-full",
+            "directions": 1
+        },
+        {
+            "name": "mailover-handle-off",
+            "directions": 1
         }
     ]
 }

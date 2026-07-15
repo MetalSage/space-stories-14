@@ -1,8 +1,8 @@
 - type: entity
   parent: ClothingBackpackDuffel
   id: PRISONClothingBackpackDuffel
-  name: вещмешок сотрудника тюрьмы
-  description: Большой вещмешок для хранения дополнительных предметов, связанных с обеспечением побегов.
+  name: prison staff duffel bag
+  description: A large duffel bag for storing additional escape-related items.
   components:
   - type: Sprite
     sprite: _Stories/Clothing/Back/Duffels/sp.rsi
@@ -10,8 +10,8 @@
 - type: entity
   parent: ClothingBackpackSatchel
   id: PRISONClothingBackpackSatchel
-  name: сумка сотрудника тюрьмы
-  description: Прочная сумка для обеспечения побегов.
+  name: prison staff satchel
+  description: Durable bag for facilitating escapes.
   components:
   - type: Sprite
     sprite: _Stories/Clothing/Back/Satchels/sp.rsi
@@ -19,8 +19,8 @@
 - type: entity
   parent: ClothingBackpack
   id: PRISONClothingBackpack
-  name: рюкзак сотрудника тюрьмы
-  description: Это очень прочный рюкзак.
+  name: prison staff backpack
+  description: This is a very durable backpack.
   components:
   - type: Sprite
     sprite: _Stories/Clothing/Back/Backpacks/sp.rsi

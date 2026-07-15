@@ -1,10 +1,9 @@
 - type: entity
   parent: CaptainSabre
   id: PRISONSabre
-  name: тюремная сабля
-  description: Нет. Просто скажите, зачем в тюрьме кого-то резать?
+  name: prison saber
+  description: No. Just tell me, why cut anyone in prison?
   components:
-    - type: Sharp
     - type: Sprite
       sprite: _Stories/Objects/Weapons/Melee/hosp_sabre.rsi
       state: icon

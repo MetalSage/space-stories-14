@@ -1,8 +1,8 @@
 - type: entity
   parent: ClothingHeadBase
   id: ClothingHeadHatExe
-  name: шляпа
-  description: Идеально подходит для зимы в Сибири, da? Нет.
+  name: hat
+  description: Ideal for winter in Siberia, da? No.
   components:
   - type: Sprite
     sprite: _Stories/Clothing/Head/Hats/exe_hat.rsi

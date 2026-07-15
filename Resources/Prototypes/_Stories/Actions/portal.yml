@@ -1,8 +1,8 @@
 - type: entity
   parent: BaseToggleAction
   id: STActionTargettingTeleporterSetExitPortal
-  name: Установить портал
-  description: Установит выход портала там, где вы находитесь.
+  name: Set portal
+  description: Sets the portal exit where you are.
   categories: [ HideSpawnMenu ]
   components:
   - type: Action
@@ -18,8 +18,8 @@
 - type: entity
   parent: BaseToggleAction
   id: STActionTargettingTeleporterExit
-  name: Выйти
-  description: Выйти, не установив выход портала.
+  name: Exit
+  description: Exit without setting the portal exit.
   categories: [ HideSpawnMenu ]
   components:
   - type: Action

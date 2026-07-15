@@ -17,8 +17,8 @@
 - type: entity
   parent: BaseAction
   id: ActionLifeSteal
-  name: Кража жизни
-  description: Иссушает жертву, восстанавливая вас.
+  name: Life Drain
+  description: Drains the victim, restoring you.
   components:
   - type: Action
     useDelay: 10
@@ -44,8 +44,8 @@
 - type: entity
   parent: BaseAction
   id: ActionInquisitorGhost
-  name: Теневой призрак
-  description: Станьте призраком и проходите сквозь стены. В таком состоянии вы не можете воздействовать на мир, но всегда можете вернуться.
+  name: Shadow ghost
+  description: Become a ghost and pass through walls. In this state, you cannot affect the world, but you can always return.
   components:
   - type: Action
     useDelay: 5
@@ -67,8 +67,8 @@
 - type: entity
   parent: BaseAction
   id: ActionFrozeBullets
-  name: Замедление силы
-  description: Используйте телекинез, чтобы останавливать пули вокруг вас на протяжении 10 секунд.
+  name: Force Slow
+  description: Use telekinesis to stop bullets around you for 10 seconds.
   components:
   - type: Action
     useDelay: 5
@@ -101,8 +101,8 @@
 - type: entity
   parent: BaseAction
   id: ActionRecliningPulse
-  name: Оттолкнуть
-  description: Оттолкните всех вокруг вас.
+  name: Repel
+  description: Push everyone around you away.
   components:
   - type: Action
     useDelay: 30
@@ -121,8 +121,8 @@
 - type: entity
   parent: BaseAction
   id: ActionStrangle
-  name: Удушение силой
-  description: Удушающий прием техники бесконтактного боя.
+  name: Force choke
+  description: Choking technique of no-contact combat.
   components:
   - type: Action
     useDelay: 10
@@ -148,8 +148,8 @@
 - type: entity
   parent: BaseAction
   id: ActionLightningStrike
-  name: Молнии силы
-  description: Направьте молнию из ваших рук в вашего врага.
+  name: Force Lightning
+  description: Direct lightning from your hands into your enemy.
   components:
   - type: Action
     useDelay: 5
@@ -169,8 +169,8 @@
 - type: entity
   parent: BaseAction
   id: ActionIgniteTarget
-  name: Пирокинез
-  description: Вызывает легкое выгорание у врага.
+  name: Pyrokinesis
+  description: Causes a slight burnout in the enemy.
   components:
   - type: Action
     useDelay: 10
@@ -193,8 +193,8 @@
 - type: entity
   parent: BaseAction
   id: ActionHypnosis
-  name: Гипноз силы
-  description: Обращает жертву на сторону Императора.
+  name: Force Hypnosis
+  description: Converts the victim to the Emperor's side.
   components:
   - type: Action
     useDelay: 3
@@ -223,8 +223,8 @@
 - type: entity
   parent: BaseAction
   id: ActionInquisitorRevertPolymorph
-  name: Вернуться в обычную форму
-  description: Перестаньте бегать и сразитесь!
+  name: Return to normal form
+  description: Stop running and fight!
   components:
   - type: Action
     icon:

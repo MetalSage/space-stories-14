@@ -20,8 +20,8 @@
 - type: entity
   parent: EncryptionKey
   id: PRISONEncryptionKey
-  name: ключ шифрования тюрьмы
-  description: Ключ шифрования, используемый сотрудниками космической тюрьмы.
+  name: prison encryption key
+  description: An encryption key used by space prison staff.
   components:
     - type: EncryptionKey
       channels:

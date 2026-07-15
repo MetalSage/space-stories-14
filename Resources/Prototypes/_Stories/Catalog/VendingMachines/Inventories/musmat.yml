@@ -3,13 +3,25 @@
   startingInventory:
    ElectricGuitarInstrument: 1
    BassGuitarInstrument: 1
-   RockGuitarInstrument: 1 
+   RockGuitarInstrument: 1
    ViolinInstrument: 2
    SaxophoneInstrument: 1
    AccordionInstrument: 2
-   ClarinetInstrument: 1 
+   ClarinetInstrument: 1
    MicrophoneInstrument: 2
    SynthesizerInstrument: 1
-   TromboneInstrument: 2 
+   TromboneInstrument: 2
   emaggedInventory:
    SuperSynthesizerInstrument: 1
+  prices: # Stories-Economy
+   ElectricGuitarInstrument: 60
+   BassGuitarInstrument: 60
+   RockGuitarInstrument: 70
+   ViolinInstrument: 50
+   SaxophoneInstrument: 60
+   AccordionInstrument: 45
+   ClarinetInstrument: 40
+   MicrophoneInstrument: 25
+   SynthesizerInstrument: 80
+   TromboneInstrument: 50
+   SuperSynthesizerInstrument: 150

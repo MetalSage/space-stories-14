@@ -1,8 +1,8 @@
 - type: entity
   parent: ClothingBackpack
   id: ClothingBackpackGuardianNt
-  name: рюкзак стража клинка
-  description: Кажется, вы где-то это уже видели.
+  name: blade guardian's backpack
+  description: It seems like you've already seen this somewhere.
   components:
   - type: Tag
     tags:
@@ -14,8 +14,8 @@
 - type: entity
   parent: ClothingBackpack
   id: ClothingBackpackAdidos
-  name: рюкзак
-  description: Вы носите это на спине и кладёте в него предметы.
+  name: backpack
+  description: You wear this on your back and put items in it.
   components:
   - type: Sprite
     sprite: _Stories/Clothing/Back/Backpacks/backpacks_adidos.rsi
@@ -23,8 +23,8 @@
 - type: entity
   parent: ClothingBackpack
   id: ClothingBackpackBluesky
-  name: рюкзак
-  description: Вы носите это на спине и кладёте в него предметы.
+  name: backpack
+  description: You wear this on your back and put items in it.
   components:
   - type: Sprite
     sprite: _Stories/Clothing/Back/Backpacks/backpacks_bluesky.rsi
@@ -32,8 +32,8 @@
 - type: entity
   parent: ClothingBackpack
   id: ClothingBackpackEight
-  name: рюкзак
-  description: Вы носите это на спине и кладёте в него предметы.
+  name: backpack
+  description: You wear this on your back and put items in it.
   components:
   - type: Sprite
     sprite: _Stories/Clothing/Back/Backpacks/backpacks_eight.rsi
@@ -41,8 +41,8 @@
 - type: entity
   parent: ClothingBackpack
   id: ClothingBackpackGachi
-  name: рюкзак
-  description: Вы носите это на спине и кладёте в него предметы.
+  name: backpack
+  description: You wear this on your back and put items in it.
   components:
   - type: Sprite
     sprite: _Stories/Clothing/Back/Backpacks/backpacks_gachi.rsi
@@ -50,8 +50,8 @@
 - type: entity
   parent: ClothingBackpack
   id: ClothingBackpackRl
-  name: рюкзак
-  description: Вы носите это на спине и кладёте в него предметы.
+  name: backpack
+  description: You wear this on your back and put items in it.
   components:
   - type: Sprite
     sprite: _Stories/Clothing/Back/Backpacks/backpacks_rl.rsi

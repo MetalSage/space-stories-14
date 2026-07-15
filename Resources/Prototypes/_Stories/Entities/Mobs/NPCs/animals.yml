@@ -1,8 +1,8 @@
 - type: entity
-  name: космический кои
+  name: space koi
   id: BaseMobKoi
   parent: [ SimpleSpaceMobBase, FlyingMobBase ]
-  description: Цветастая пародия на космического карпа, выглядит дружелюбно.
+  description: A colorful parody of a space carp, looks friendly.
   abstract: true
   components:
     - type: Sprite
@@ -71,7 +71,7 @@
 - type: entity
   parent: BaseMobKoi
   id: MobRedBlackKoi
-  suffix: "Красно-чёрный"
+  suffix: "Red-black"
   components:
   - type: Sprite
     sprite: _Stories/Mobs/Aliens/Kois/red_black.rsi
@@ -81,7 +81,7 @@
 - type: entity
   parent: BaseMobKoi
   id: MobGoldBlackKoi
-  suffix: "Чёрно-золотой"
+  suffix: "Black and gold"
   components:
   - type: Sprite
     sprite: _Stories/Mobs/Aliens/Kois/gold_black.rsi
@@ -92,7 +92,7 @@
 - type: entity
   parent: BaseMobKoi
   id: MobRedCircleKoi
-  suffix: "Красный круг"
+  suffix: "Red circle"
   components:
   - type: Sprite
     sprite: _Stories/Mobs/Aliens/Kois/red_circle.rsi
@@ -103,7 +103,7 @@
 - type: entity
   parent: BaseMobKoi
   id: MobBloodSkeletonKoi
-  suffix: "Кровавый скелет"
+  suffix: "Bloody skeleton"
   components:
   - type: Sprite
     sprite: _Stories/Mobs/Aliens/Kois/blood_skeleton.rsi
@@ -113,7 +113,7 @@
 - type: entity
   parent: BaseMobKoi
   id: MobSpaceGlowKoi
-  suffix: "Космическое свечение"
+  suffix: "Space Glow"
   components:
   - type: Sprite
     sprite: _Stories/Mobs/Aliens/Kois/space_glow.rsi

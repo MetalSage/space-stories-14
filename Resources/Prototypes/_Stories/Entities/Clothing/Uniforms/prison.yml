@@ -1,8 +1,8 @@
 - type: entity
   parent: ClothingUniformBase
   id: PRISONClothingUniformJumpsuit
-  name: комбинезон сотрудника тюрьмы
-  description: Комбинезон из прочного материала, обеспечивающий надежную защиту.
+  name: prison staff jumpsuit
+  description: A jumpsuit made of durable material that provides reliable protection.
   components:
     - type: Sprite
       sprite: _Stories/Clothing/Uniforms/Jumpsuit/officersp.rsi
@@ -12,8 +12,8 @@
 - type: entity
   parent: ClothingUniformBase
   id: PRISONClothingUniformJumpsuitEngi
-  name: комбинезон инженера тюрьмы
-  description: Комбинезон из прочного материала, обеспечивающий надежную защиту.
+  name: prison engineer jumpsuit
+  description: A jumpsuit made of durable material that provides reliable protection.
   components:
     - type: Sprite
       sprite: _Stories/Clothing/Uniforms/Jumpsuit/eng_sp.rsi
@@ -23,8 +23,8 @@
 - type: entity
   parent: ClothingUniformBase
   id: PRISONClothingUniformJumpsuitMedic
-  name: комбинезон врача тюрьмы
-  description: Комбинезон из прочного материала, обеспечивающий надежную защиту.
+  name: prison doctor jumpsuit
+  description: A jumpsuit made of durable material that provides reliable protection.
   components:
     - type: Sprite
       sprite: _Stories/Clothing/Uniforms/Jumpsuit/medic_sp.rsi
@@ -34,8 +34,8 @@
 - type: entity
   parent: ClothingUniformBase
   id: PRISONClothingUniformJumpsuitHeadOfPrison
-  name: комбинезон начальника тюрьмы
-  description: Комбинезон из прочного материала, обеспечивающий надежную защиту.
+  name: warden jumpsuit
+  description: A jumpsuit made of durable material that provides reliable protection.
   components:
     - type: Sprite
       sprite: _Stories/Clothing/Uniforms/Jumpsuit/hosp.rsi

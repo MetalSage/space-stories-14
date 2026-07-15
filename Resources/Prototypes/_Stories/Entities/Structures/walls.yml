@@ -1,8 +1,8 @@
 - type: entity
   parent: WallShuttle
   id: PRISONWallShuttle
-  name: стена шаттла
-  description: Удерживает заключенных внутри, а космос снаружи.
+  name: shuttle wall
+  description: Keeps prisoners in and space out.
   suffix: Reinforced, Exterior
   components:
     - type: Sprite
@@ -44,8 +44,8 @@
 - type: entity
   parent: WallSolid
   id: PRISONWallShuttleInterior
-  name: стена шаттла
-  description: Удерживает заключенных внутри, а космос снаружи.
+  name: shuttle wall
+  description: Keeps prisoners in and space out.
   suffix: Interior
   components:
     - type: Sprite
@@ -61,8 +61,8 @@
 - type: entity
   parent: WallShuttleDiagonal
   id: PRISONWallShuttleDiagonal
-  name: стена шаттла
-  description: Удерживает заключенных внутри, а космос снаружи.
+  name: shuttle wall
+  description: Keeps prisoners in and space out.
   suffix: diagonal
   placement:
     mode: SnapgridCenter
