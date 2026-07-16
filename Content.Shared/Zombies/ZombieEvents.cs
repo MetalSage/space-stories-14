@@ -1,11 +1,9 @@
 using Content.Shared.Actions;
-// Stories-Start
 using Content.Shared.Damage;
 using Content.Shared.Damage.Components;
 using Content.Shared.Damage.Prototypes;
 using Content.Shared.FixedPoint;
 using Robust.Shared.Prototypes;
-// Stories-End
 
 namespace Content.Shared.Zombies;
 
@@ -32,7 +30,7 @@ public readonly struct EntityZombifiedEvent
 /// </summary>
 public sealed partial class ZombifySelfActionEvent : InstantActionEvent { };
 
-// Stories-Start
+// Stories-ZombieAbilities Start
 public sealed partial class ZombieLookUpActionEvent : InstantActionEvent
 {
     [DataField("range")]
@@ -54,4 +52,4 @@ public sealed partial class ZombieRegenerativeSleepEvent : InstantActionEvent
         { "Shock", -0.35 },
     };
 }
-// Stories-End
+// Stories-ZombieAbilities End

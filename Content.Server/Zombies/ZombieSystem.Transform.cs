@@ -1,4 +1,5 @@
 using System.Linq;
+using Content.Server.Actions;
 using Content.Server.Administration.Managers;
 using Content.Server.Atmos.Components;
 using Content.Server.Body.Components;
@@ -14,16 +15,19 @@ using Content.Server.NPC.HTN;
 using Content.Server.NPC.Systems;
 using Content.Server.StationEvents.Components;
 using Content.Server.Speech.Components;
+using Content.Shared.Actions.Components;
 using Content.Shared.Body;
 using Content.Shared.Body.Components;
 using Content.Shared.CombatMode;
 using Content.Shared.CombatMode.Pacification;
+using Content.Shared.Guardian.Components;
 using Content.Shared.Hands.Components;
 using Content.Shared.Hands.EntitySystems;
 using Content.Shared.Humanoid;
 using Content.Shared.Interaction.Components;
 using Content.Shared.Mobs;
 using Content.Shared.Mobs.Components;
+using Content.Shared.Movement.Components;
 using Content.Shared.Movement.Pulling.Components;
 using Content.Shared.Movement.Systems;
 using Content.Shared.NameModifier.EntitySystems;
@@ -46,12 +50,6 @@ using Content.Shared.NPC.Prototypes;
 using Content.Shared.Roles;
 using Content.Shared.Temperature.Components;
 using Robust.Shared.Utility;
-// Stories-Start
-using Content.Server.Actions;
-using Content.Shared.Actions.Components;
-using Content.Server.Guardian;
-using Content.Shared.Movement.Components;
-// Stories-End
 
 namespace Content.Server.Zombies;
 
@@ -86,11 +84,10 @@ public sealed partial class ZombieSystem
     private static readonly string MindRoleZombie = "MindRoleZombie";
     private static readonly List<ProtoId<AntagPrototype>> BannableZombiePrototypes = ["Zombie"];
     internal static readonly HashSet<HumanoidVisualLayers> AdditionalZombieLayers = [HumanoidVisualLayers.Tail, HumanoidVisualLayers.HeadSide, HumanoidVisualLayers.HeadTop, HumanoidVisualLayers.Snout];
-    // Stories-Start
+
     private static readonly EntProtoId ZombieGravityJumpAction = "STActionZombieGravityJump";
     private static readonly EntProtoId ZombieLookUpAction = "STActionZombieLookUp";
     private static readonly EntProtoId ZombieRegenerativeSleepAction = "STActionZombieRegenerativeSleep";
-    // Stories-End
 
     /// <summary>
     /// Handles an entity turning into a zombie when they die or go into crit
@@ -354,7 +351,7 @@ public sealed partial class ZombieSystem
         _tag.AddTag(target, InvalidForGlobalSpawnSpellTag);
         _tag.AddTag(target, CannotSuicideTag);
 
-        // Stories-Start
+        // Stories-ZombieAbilities Start
         if (HasComp<CanHostGuardianComponent>(target) && TryComp(target, out ActionsComponent? actionsComp)) // CanHostGuardianComponent is present on MobMonkey, MobKobold, STMobShadowling and BaseSpeciesMob (playable races)
         {
             if (!HasComp<JumpAbilityComponent>(target))
@@ -370,6 +367,6 @@ public sealed partial class ZombieSystem
             _actions.AddAction(target, ZombieLookUpAction);
             _actions.AddAction(target, ZombieRegenerativeSleepAction);
         }
-        // Stories-End
+        // Stories-ZombieAbilities End
     }
 }

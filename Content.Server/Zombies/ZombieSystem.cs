@@ -10,6 +10,8 @@ using Content.Shared.Armor;
 using Content.Shared.Bed.Sleep;
 using Content.Shared.Cloning.Events;
 using Content.Shared.Chat;
+using Content.Shared.Damage;
+using Content.Shared.Damage.Components;
 using Content.Shared.Damage.Systems;
 using Content.Shared.Inventory;
 using Content.Shared.Mind;
@@ -21,16 +23,12 @@ using Content.Shared.Popups;
 using Content.Shared.Revolutionary;
 using Content.Shared.Roles;
 using Content.Shared.Roles.Components;
+using Content.Shared.StatusEffectNew;
 using Content.Shared.Weapons.Melee.Events;
 using Content.Shared.Zombies;
 using Robust.Shared.Prototypes;
 using Robust.Shared.Random;
 using Robust.Shared.Timing;
-// Stories-Start
-using Content.Shared.Damage;
-using Content.Shared.Damage.Components;
-using Content.Shared.StatusEffectNew;
-// Stories-End
 
 namespace Content.Server.Zombies
 {
@@ -47,16 +45,12 @@ namespace Content.Server.Zombies
         [Dependency] private MobStateSystem _mobState = default!;
         [Dependency] private SharedPopupSystem _popup = default!;
         [Dependency] private SharedRoleSystem _role = default!;
-        // Stories-Start
         [Dependency] private EntityLookupSystem _lookup = default!;
         [Dependency] private SharedTransformSystem _transform = default!;
         [Dependency] private StatusEffectsSystem _statusEffects = default!;
-        // Stories-End
 
-        public readonly ProtoId<NpcFactionPrototype> Faction = "Zombie";
-        // Stories-Start
         public readonly EntProtoId ForcedSleepingStatusEffect = "StatusEffectForcedSleeping";
-        // Stories-End
+        public readonly ProtoId<NpcFactionPrototype> Faction = "Zombie";
 
         public const SlotFlags ProtectiveSlots =
             SlotFlags.FEET |
@@ -92,10 +86,8 @@ namespace Content.Server.Zombies
 
             SubscribeLocalEvent<ZombifyOnDeathComponent, MobStateChangedEvent>(OnDamageChanged);
 
-            // Stories-Start
             SubscribeLocalEvent<ZombieComponent, ZombieLookUpActionEvent>(OnLookUp);
             SubscribeLocalEvent<ZombieComponent, ZombieRegenerativeSleepEvent>(OnSleep);
-            // Stories-End
         }
 
         private void OnBeforeRemoveAnomalyOnDeath(Entity<PendingZombieComponent> ent, ref BeforeRemoveAnomalyOnDeathEvent args)
@@ -344,7 +336,7 @@ namespace Content.Server.Zombies
             args.Cancelled = true;
         }
 
-        // Stories-Start
+        // Stories-ZombieAbilities Start
         private void OnLookUp(EntityUid uid, ZombieComponent component, ZombieLookUpActionEvent args)
         {
             var allMobs  = _lookup.GetEntitiesInRange<MobThresholdsComponent>(_transform.GetMapCoordinates(uid), args.Range);
@@ -395,6 +387,6 @@ namespace Content.Server.Zombies
             args.Handled = true;
         }
         // TODO: переделать ZombieRegenerativeSleepEvent в обобщённой форме и вынести от сюда, использовать можно для регенеративного транса стража клинка
-        // Stories-End
+        // Stories-ZombieAbilities End
     }
 }
