@@ -1,0 +1,7 @@
+- type: entity
+  parent: DefaultStationBeaconCommand
+  id: STDefaultStationBeaconGuardianNT
+  suffix: Guardian
+  components:
+  - type: NavMapBeacon
+    defaultText: stories-station-beacon-guardian
