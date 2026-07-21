@@ -59,7 +59,7 @@ ui-options-show-ooc-patron-color = Цветной ник в OOC для патр�
 ui-options-show-looc-on-head = Показывать LOOC-чат над головами персонажей
 ui-options-fancy-speech = Показывать имена в облачках с текстом
 ui-options-fancy-name-background = Добавить фон облачкам с текстом
-ui-options-chat-follow-button = As ghost, show a follow button next to chat messages
+ui-options-chat-follow-button = Показывать кнопку быстрого телепорта для призрака
 ui-options-vsync = Вертикальная синхронизация
 ui-options-fullscreen = Полный экран
 ui-options-lighting-label = Качество освещения:
@@ -163,7 +163,7 @@ ui-options-function-alt-activate-item-in-world = Альтернативно ис
 ui-options-function-drop = Положить предмет
 ui-options-function-examine-entity = Осмотреть
 ui-options-function-swap-hands = Поменять руки
-ui-options-function-swap-hands-reverse = Swap hands (other direction)
+ui-options-function-swap-hands-reverse = Поменять руки (в другую сторону)
 ui-options-function-move-stored-item = Переместить хранящийся объект
 ui-options-function-rotate-stored-item = Повернуть хранящийся объект
 ui-options-function-save-item-location = Сохранить расположение объекта
@@ -187,7 +187,7 @@ ui-options-function-flip-object = Перевернуть
 
 ui-options-function-focus-chat-input-window = Писать в чат
 ui-options-function-focus-local-chat-window = Писать в чат (IC)
-ui-options-function-focus-emote = Писать в чат (Emote)
+ui-options-function-focus-emote = Писать в чат (Эмоции)
 ui-options-function-focus-whisper-chat-window = Писать в чат (Шёпот)
 ui-options-function-focus-radio-window = Писать в чат (Радио)
 ui-options-function-focus-looc-window = Писать в чат (LOOC)
@@ -317,7 +317,7 @@ ui-options-function-text-cut = Вырезать
 ui-options-function-text-paste = Вставить
 ui-options-function-text-history-prev = Предыдущее с истории
 ui-options-function-text-history-next = Следующее с истории
-ui-options-function-text-release-focus = Release focus
+ui-options-function-text-release-focus = Отменить сообщение
 ui-options-function-text-scroll-to-bottom = Пролистать вниз
 ui-options-function-text-tab-complete = Tab completion
 ui-options-function-text-complete-next = Complete next
@@ -361,34 +361,34 @@ cmd-options-help = Использование: options [tab]
 
 ## Accessibility menu
 
-ui-options-accessibility-header-reduced-motion = Reduced Motion
-ui-options-accessibility-header-visuals = Visuals
-ui-options-accessibility-header-content = Content
+ui-options-accessibility-header-reduced-motion = Уменьшение эффектов
+ui-options-accessibility-header-visuals = Визуальное
+ui-options-accessibility-header-content = Контент
 
 ui-options-enable-color-name = Цветные имена персонажей
 ui-options-colorblind-friendly = Режим для дальтоников
 
 ui-options-reduced-motion = Снижение интенсивности визуальных эффектов
-ui-options-reduced-motion-tooltip = Toggle on to show alternative sprites with reduced motion for some items.
+ui-options-reduced-motion-tooltip = Включите, чтобы показывать альтернативные спрайты с уменьшенной анимацией для некоторых эффектов.
 
 # accessibility option tooltips taken from CVar summary blocks.
 
 ui-options-disable-ai-static = Отключить статический эффект помех на ИИ.
-ui-options-disable-ai-static-tooltip = Replaces the AI static camera effect with a plain gradient.
-ui-options-disable-blurry-vision = Blurry vision
-ui-options-disable-blurry-vision-tooltip = Replaces the movement in the blurry shader with a static effect.
-ui-options-disable-drunk-overlay = Drunk overlay
-ui-options-disable-drunk-overlay-tooltip = Replaces the movement in the drunk shader with a static offset.
-ui-options-disable-flash-effect = Flash
-ui-options-disable-flash-effect-tooltip = Replaces the 'flash' effect with a reduced movement equivalent.
-ui-options-disable-heat-distortion = Heat distortion
-ui-options-disable-heat-distortion-tooltip = Decreases motion on the heat distortion shader.
-ui-options-disable-nv-noise = Night vision overlay
-ui-options-disable-nv-noise-tooltip = Disables the noise effect on the night vision overlay.
-ui-options-disable-rainbow-overlay = Rainbow overlay
-ui-options-disable-rainbow-overlay-tooltip = Replaces the movement in the rainbow overlay shader with a static offset.
-ui-options-disable-singulo-warp = Singularity
-ui-options-disable-singulo-warp-tooltip = Disables the screen warping effect on the singularity.
+ui-options-disable-ai-static-tooltip = Заменяет эффект статических помех на камере ИИ на простой градиент.
+ui-options-disable-blurry-vision = Размытое зрение
+ui-options-disable-blurry-vision-tooltip = Заменяет движение в шейдере размытия на статический эффект.
+ui-options-disable-drunk-overlay = Эффект опьянения
+ui-options-disable-drunk-overlay-tooltip = Заменяет движение в шейдере опьянения на статическое смещение.
+ui-options-disable-flash-effect = Вспышка
+ui-options-disable-flash-effect-tooltip = Заменяет эффект вспышки на упрощённый аналог с уменьшенным движением.
+ui-options-disable-heat-distortion = Тепловая дисторсия
+ui-options-disable-heat-distortion-tooltip = Уменьшает движение в шейдере тепловой дисторсии.
+ui-options-disable-nv-noise = Оверлей ночного зрения
+ui-options-disable-nv-noise-tooltip = Отключает шумовой эффект в оверлее ночного зрения.
+ui-options-disable-rainbow-overlay = Радужный оверлей (галлюциногенный)
+ui-options-disable-rainbow-overlay-tooltip = Заменяет движение в шейдере радужного оверлея на статическое смещение.
+ui-options-disable-singulo-warp = Сингулярность
+ui-options-disable-singulo-warp-tooltip = Отключает эффект искажения экрана от сингулярности.
 
 ui-options-screen-shake-intensity = Интенсивность дрожания экрана
 
