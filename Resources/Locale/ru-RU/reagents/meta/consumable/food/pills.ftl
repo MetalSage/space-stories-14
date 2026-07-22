@@ -1,0 +1,11 @@
+pill-dexalin-20u = дексалин 20u
+pill-dylovene-20u = диловен 20u
+pill-hyronalin-20u = хироналин 20u
+pill-potassium-iodide-20u = иодид калия 20u
+pill-iron-20u = железо 20u
+pill-copper-20u = медь 20u
+pill-kelotane-20u = келотан 20u
+pill-dermaline-20u = дермалин 20u
+pill-tricordrazine-20u = трикордразин 20u
+pill-bicaridine-20u = бикаридин 20u
+pill-charcoal-20u = уголь 20u

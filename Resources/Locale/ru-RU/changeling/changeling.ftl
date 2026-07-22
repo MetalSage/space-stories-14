@@ -43,10 +43,10 @@ changeling-biodegrade-used-popup = { CAPITALIZE(THE($user)) } извергает
 changeling-biodegrade-used-popup-self = Мы извергаем кислоту на { $restraint }!
 
 # last resort
-changeling-takeover-not-dead = This body yet lives! We cannot infest it alive.
-changeling-takeover-is-changeling = This body rejects our attempts to take over!
-changeling-takeover-start-others = { CAPITALIZE(THE($user)) } begins to crawl inside the corpse!
-changeling-takeover-success-self = We have successfully infested the body and assumed its form.
+changeling-takeover-not-dead = Это тело ещё живое! Мы не можем заразить его, пока оно дышит.
+changeling-takeover-is-changeling = Это тело отвергает наши попытки захватить его!
+changeling-takeover-start-others = { CAPITALIZE(THE($user)) } начинает заползать внутрь трупа!
+changeling-takeover-success-self = Мы успешно внедрились в тело и приняли его облик.
 
 # stings
 changeling-sting-success = Мы незаметно жалим { THE($target) }!

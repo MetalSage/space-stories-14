@@ -18,8 +18,8 @@
 
 entity-effect-guidebook-spawn-entity =
     { $chance ->
-        [1] Creates
-        *[other] create
+        [1] Создаёт
+        *[other] создают
     } { $amount ->
         [1] { INDEFINITE($entname) }
         *[other] { $amount } { MAKEPLURAL($entname) }
@@ -39,22 +39,21 @@ entity-effect-guidebook-break =
 
 entity-effect-guidebook-explosion =
     { $chance ->
-        [1] Causes
-        *[other] cause
+        [1] Вызывает
+        *[other] вызывают
     } an explosion
 
 entity-effect-guidebook-emp =
     { $chance ->
-        [1] Causes
-        *[other] cause
-    } an electromagnetic pulse
+        [1] Вызывает
+        *[other] вызывают
+    } электромагнитный импульс
 
 entity-effect-guidebook-flash =
     { $chance ->
-        [1] Causes
-        *[other] cause
-    } a blinding flash
-
+        [1] Вызывает
+        *[other] вызывают
+    } ослепляющую вспышку
 entity-effect-guidebook-foam-area =
     { $chance ->
         [1] Creates

@@ -22,9 +22,9 @@ ent-ActionChangelingStingLead = Отравляющее жало
     .desc = Бесшумно ужалите жертву, впрыскивая смертельную дозу медленно действующего яда.
 ent-ActionChangelingStingHallucinogenic = Галлюциногенное жало
     .desc = Бесшумно ужальте жертву, впрыскивая ей химические вещества, замедляющие работу высших отделов головного мозга.
-ent-ActionChangelingLastResort = [color=red]Last Resort[/color]
-    .desc = We sacrifice our current body in a moment of need, violently expanding to break through obstacles and reforming as a headslug.
-ent-ActionChangelingTakeOverCorpse = Take Over Corpse
-    .desc = Infest a corpse to return to your true form.
-ent-ActionChangelingNightVision = Toggle Night Vision
-    .desc = Turns our night vision on/off.
+ent-ActionChangelingLastResort = [color=red]Крайняя мера[/color]
+    .desc = В момент крайней необходимости мы приносим в жертву своё текущее тело, стремительно расширяясь, чтобы прорваться сквозь препятствия, и перерождаемся в виде головного слизня.
+ent-ActionChangelingTakeOverCorpse = Захват трупа
+    .desc = Заразите труп, чтобы вернуть свою истинную форму.
+ent-ActionChangelingNightVision = Переключить ночное зрение
+    .desc = Включает и выключает ваше ночное зрение.
