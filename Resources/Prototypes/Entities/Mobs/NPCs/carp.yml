@@ -191,6 +191,7 @@
     - type: Temperature
     - type: TemperatureDamage
       heatDamageThreshold: 1200
+
 - type: entity
   id: MobCarpDungeon
   parent: MobCarp
