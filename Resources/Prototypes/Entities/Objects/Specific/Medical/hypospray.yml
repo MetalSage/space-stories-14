@@ -145,6 +145,7 @@
     solutionName: hypospray
   - type: Injector
     solutionName: hypospray
+    movementThreshold: infinity # Stories-Сhange: allows movement while injecting
     currentTransferAmount: null # Inject everything on injection.
     activeModeProtoId: JetInjectorDynamicMode
     allowedModes:

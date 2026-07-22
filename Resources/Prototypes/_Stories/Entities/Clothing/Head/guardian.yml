@@ -12,3 +12,33 @@
     tags:
       - HamsterWearable
       - WhitelistChameleon
+
+- type: entity
+  parent: ClothingHeadBase
+  id: STClothingHeadHatBeretGuardianNt
+  name: guardian beret
+  description: Grey beret for a command Guardian. NT began production of this beret due to the constant dissatisfaction of the Guardians over the ban on wearing gear that didn't fit their image - and now they have their own beret.
+  components:
+  - type: Sprite
+    sprite: _Stories/Clothing/Head/Hats/beret_guardian_nt.rsi
+  - type: Clothing
+    sprite: _Stories/Clothing/Head/Hats/beret_guardian_nt.rsi
+  - type: Tag
+    tags:
+    - CorgiWearable
+    - HamsterWearable
+    - WhitelistChameleon
+
+- type: entity
+  parent: ClothingHeadHelmetBasic
+  id: STClothingHeadHelmetGuardianNt
+  name: guardian helmet
+  description: Standard security gear. Protects the head from impacts.
+  components:
+  - type: Sprite
+    sprite: _Stories/Clothing/Head/Helmets/guardian_nt.rsi
+  - type: Clothing
+    sprite: _Stories/Clothing/Head/Helmets/guardian_nt.rsi
+  - type: Tag
+    tags:
+    - WhitelistChameleon
