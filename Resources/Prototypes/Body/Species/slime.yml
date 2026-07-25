@@ -69,6 +69,7 @@
       FootLeft: OrganSlimePersonFootLeft
       FootRight: OrganSlimePersonFootRight
       Brain: OrganSlimePersonCore
+      Eyes: STOrganSlimeEyes # Stories-SlimesOrgan
       Lungs: OrganSlimePersonLungs
   - type: HumanoidProfile
     species: SlimePerson
