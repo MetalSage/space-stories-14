@@ -1,0 +1,30 @@
+<Document>
+  # Расы
+
+  Нанотразен нанимает разнообразные разумные виды.
+
+  <Box>
+  <GuideEntityEmbed Entity="AppearanceArachnid" Caption="Арахнид"/>
+  <GuideEntityEmbed Entity="AppearanceDiona" Caption="Диона"/>
+  <GuideEntityEmbed Entity="AppearanceDwarf" Caption="Дворф"/>
+  <GuideEntityEmbed Entity="AppearanceHuman" Caption="Человек"/>
+  </Box>
+
+  <Box>
+  <GuideEntityEmbed Entity="AppearanceMoth" Caption="Ниан"/>
+  <GuideEntityEmbed Entity="AppearanceReptilian" Caption="Унатх"/>
+  <GuideEntityEmbed Entity="AppearanceSlimePerson" Caption="Слаймолюд"/>
+  <GuideEntityEmbed Entity="AppearanceVox" Caption="Вокс"/>
+  </Box>
+
+  <Box>
+	<GuideEntityEmbed Entity="AppearanceFelinid" Caption="Фелинид"/>
+	<GuideEntityEmbed Entity="AppearanceAvali" Caption="Авали"/>
+	<GuideEntityEmbed Entity="AppearanceRodentia" Caption="Родентия"/>
+	<GuideEntityEmbed Entity="AppearanceKidan" Caption="Кидан"/>
+  </Box>
+  <Box>
+    <GuideEntityEmbed Entity="AppearanceVulpkanin" Caption="Вульпканин"/>
+  </Box>
+
+</Document>

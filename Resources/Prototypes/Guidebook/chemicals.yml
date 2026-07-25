@@ -1,7 +1,7 @@
 - type: guideEntry
   id: Chemicals
   name: guide-entry-chemicals
-  text: "/ServerInfo/Guidebook/Chemicals.xml"
+  text: "/ServerInfo/_Stories/Guidebook/Chemicals.xml"
   children:
   - Elements
   - Medicine
@@ -18,53 +18,53 @@
 - type: guideEntry
   id: Elements
   name: guide-entry-elements
-  text: "/ServerInfo/Guidebook/ChemicalTabs/Elements.xml"
+  text: "/ServerInfo/_Stories/Guidebook/ChemicalTabs/Elements.xml"
   filterEnabled: True
 
 - type: guideEntry
   id: Narcotics
   name: guide-entry-narcotics
-  text: "/ServerInfo/Guidebook/ChemicalTabs/Narcotics.xml"
+  text: "/ServerInfo/_Stories/Guidebook/ChemicalTabs/Narcotics.xml"
   filterEnabled: True
 
 - type: guideEntry
   id: Pyrotechnic
   name: guide-entry-pyrotechnics
-  text: "/ServerInfo/Guidebook/ChemicalTabs/Pyrotechnic.xml"
+  text: "/ServerInfo/_Stories/Guidebook/ChemicalTabs/Pyrotechnic.xml"
   filterEnabled: True
 
 - type: guideEntry
   id: Toxins
   name: guide-entry-toxins
-  text: "/ServerInfo/Guidebook/ChemicalTabs/Toxins.xml"
+  text: "/ServerInfo/_Stories/Guidebook/ChemicalTabs/Toxins.xml"
   filterEnabled: True
 
 - type: guideEntry
   id: Foods
   name: guide-entry-foods
-  text: "/ServerInfo/Guidebook/ChemicalTabs/Foods.xml"
+  text: "/ServerInfo/_Stories/Guidebook/ChemicalTabs/Foods.xml"
   filterEnabled: True
 
 - type: guideEntry
   id: Botanical
   name: guide-entry-botanical
-  text: "/ServerInfo/Guidebook/Medical/Botanicals.xml"
+  text: "/ServerInfo/_Stories/Guidebook/Medical/Botanicals.xml"
   filterEnabled: True
 
 - type: guideEntry
   id: Biological
   name: guide-entry-biological
-  text: "/ServerInfo/Guidebook/ChemicalTabs/Biological.xml"
+  text: "/ServerInfo/_Stories/Guidebook/ChemicalTabs/Biological.xml"
   filterEnabled: True
 
 - type: guideEntry
   id: Special
   name: guide-entry-special
-  text: "/ServerInfo/Guidebook/ChemicalTabs/Special.xml"
+  text: "/ServerInfo/_Stories/Guidebook/ChemicalTabs/Special.xml"
   filterEnabled: True
 
 - type: guideEntry
   id: Others
   name: guide-entry-others
-  text: "/ServerInfo/Guidebook/ChemicalTabs/Other.xml"
+  text: "/ServerInfo/_Stories/Guidebook/ChemicalTabs/Other.xml"
   filterEnabled: True

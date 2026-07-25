@@ -2,7 +2,7 @@
   id: SS14
   name: guide-entry-ss14
   priority: 20
-  text: "/ServerInfo/Guidebook/SpaceStation14.xml"
+  text: "/ServerInfo/_Stories/Guidebook/SpaceStation14.xml"
   children:
   - Jobs
   - Survival
@@ -12,9 +12,9 @@
 - type: guideEntry
   id: Glossary
   name: guide-entry-glossary
-  text: "/ServerInfo/Guidebook/Glossary.xml"
+  text: "/ServerInfo/_Stories/Guidebook/Glossary.xml"
 
 - type: guideEntry
   id: Survival
   name: guide-entry-survival
-  text: "/ServerInfo/Guidebook/Survival.xml"
+  text: "/ServerInfo/_Stories/Guidebook/Survival.xml"

@@ -1,0 +1,70 @@
+<Document>
+  # Thieves
+
+  <Box>
+    [color=#999999][italic]"Йоинк! Я возьму это! И это! О, не возражай, если я это сделаю!"[/italic][/color]
+  </Box>
+  <Box>
+    <GuideEntityEmbed Entity="ClothingNeckCloakVoid" Caption=""/>
+  </Box>
+
+  Воры - мелкие, но хитрые [color=green]преступники[/color], которые не могут держать свои руки при себе.
+
+  ## Art of the Steal
+  Unlike other antagonists, [bold]staying out of trouble is almost a requirement for you[/bold] because of your implant.
+  You can only run if [color=#cb0000]Security[/color] picks a fight with you, and because you work alone you don't have any friends to pull you out of danger.
+
+  But against all odds, you'll sucessfully swipe what you want using determination, sleight of hand, a few tools and your [color=cyan]pickpocketing skills.[/color]
+
+  The pickpocketing skills you have give you a major advantage: [bold]the ability to take things from people without them even noticing.[/bold] With a little practice you can steal their wallet and keep up a conversation at the same time.
+
+  It is advised to get a pair of gloves as your fingerprints could still be traced back to the stolen goods if they're found.
+
+
+
+  ## Tools of the Trade
+  You've got two more aces up your stolen sleeves: your [color=cyan]beacon[/color] and your [color=cyan]satchel.[/color]
+
+  [color=cyan]Маяк[/color] обеспечивает телепорт для безделушек, которые нелегко было бы пронести с собой в эвакуационном шаттле. Просто найдите укромное место на станции, чтобы включить маяк, а затем установите его координаты.
+  Все блестяшки, находящиеся рядом с ним, будут [bold]телепортированы в ваше хранилище по окончании смены[/bold], что поможет выполнить ваши задачи.
+
+  <Box>
+    <GuideEntityEmbed Entity="ThiefBeacon"/>
+  </Box>
+
+  Your [color=cyan]satchel[/color] contains... well, whatever you remembered to pack. [bold]You can select two pre-made kits[/bold] to help you complete grander heists.
+
+  <Box>
+    <GuideEntityEmbed Entity="SatchelThief"/>
+  </Box>
+  <Box>
+    <GuideEntityEmbed Entity="Implanter" Caption="Anatomy"/>
+    <GuideEntityEmbed Entity="C4" Caption="Breacher"/>
+    <GuideEntityEmbed Entity="ChameleonProjector" Caption="Chameleon"/>
+    <GuideEntityEmbed Entity="BaseUplinkRadio" Caption="Communicator"/>
+  </Box>
+  <Box>
+    <GuideEntityEmbed Entity="NitrousOxideTank" Caption="Sleeper"/>
+    <GuideEntityEmbed Entity="Fulton" Caption="Smuggler"/>
+    <GuideEntityEmbed Entity="Telecrystal" Caption="Syndie"/>
+  </Box>
+
+  ## Centerpiece of the Collection
+  Your kleptomania will take you places. One day, you'll feel like stealing a few figurines. Another day, you'll feel like stealing an industrial machine.
+
+  No matter. They'll all be a part of your collection within a matter of time.
+
+  Вы можете украсть предметы, [bold]забрав их с собой[/bold], когда доберетесь до ЦентКома. В противном случае вы можете украсть более крупные предметы, [bold]оставив их рядом с вашим маяком.[/bold]
+
+  Некоторые [italic]живые[/italic] объекты могут не содействовать вам. Убедитесь, что они живы и будут с вами или с вашим маяком, когда смена закончится.
+
+  Things that you may desire include but are not limited to:
+
+  <Box>
+    <GuideEntityEmbed Entity="ToyFigurineGreytider" Caption="Figurines"/>
+    <GuideEntityEmbed Entity="PassengerIDCard" Caption="ID cards"/>
+    <GuideEntityEmbed Entity="ChemDispenser" Caption="Structures"/>
+    <GuideEntityEmbed Entity="MobCorgiIan" Caption="Animals/Pets"/>
+  </Box>
+
+</Document>

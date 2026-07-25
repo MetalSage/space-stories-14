@@ -1,7 +1,7 @@
 ﻿- type: guideEntry
   id: Engineering
   name: guide-entry-engineering
-  text: "/ServerInfo/Guidebook/Engineering/Engineering.xml"
+  text: "/ServerInfo/_Stories/Guidebook/Engineering/Engineering.xml"
   children:
   - Construction
   - Power
@@ -12,7 +12,7 @@
 - type: guideEntry
   id: Construction
   name: guide-entry-construction
-  text: "/ServerInfo/Guidebook/Engineering/Construction.xml"
+  text: "/ServerInfo/_Stories/Guidebook/Engineering/Construction.xml"
   children:
   - Airlocks
   - ExpandingRepairingStation
@@ -21,29 +21,29 @@
 - type: guideEntry
   id: ExpandingRepairingStation
   name: guide-entry-expandingrepairingstation
-  text: "/ServerInfo/Guidebook/Engineering/ExpandingRepairingStation.xml"
+  text: "/ServerInfo/_Stories/Guidebook/Engineering/ExpandingRepairingStation.xml"
 
 - type: guideEntry
   id: Airlocks
   name: guide-entry-airlocks
-  text: "/ServerInfo/Guidebook/Engineering/Airlocks.xml"
+  text: "/ServerInfo/_Stories/Guidebook/Engineering/Airlocks.xml"
   children:
   - AirlockSecurity
 
 - type: guideEntry
   id: WirePanels
   name: guide-entry-wirepanels
-  text: "/ServerInfo/Guidebook/Engineering/WirePanels.xml"
+  text: "/ServerInfo/_Stories/Guidebook/Engineering/WirePanels.xml"
 
 - type: guideEntry
   id: AirlockSecurity
   name: guide-entry-airlock-security
-  text: "/ServerInfo/Guidebook/Engineering/AirlockSecurity.xml"
+  text: "/ServerInfo/_Stories/Guidebook/Engineering/AirlockSecurity.xml"
 
 - type: guideEntry
   id: Atmospherics
   name: guide-entry-atmospherics
-  text: "/ServerInfo/Guidebook/Engineering/Atmospherics.xml"
+  text: "/ServerInfo/_Stories/Guidebook/Engineering/Atmospherics.xml"
   children:
   - GasManipulation
   - AtmosphericsSystems
@@ -54,7 +54,7 @@
 - type: guideEntry
   id: GasManipulation
   name: guide-entry-gasmanipulation
-  text: "/ServerInfo/Guidebook/Engineering/GasManipulation.xml"
+  text: "/ServerInfo/_Stories/Guidebook/Engineering/GasManipulation.xml"
   children:
   - AtmosphereInOut
   - Pipes
@@ -69,17 +69,17 @@
 - type: guideEntry
   id: Pipes
   name: guide-entry-pipes
-  text: "/ServerInfo/Guidebook/Engineering/Pipes.xml"
+  text: "/ServerInfo/_Stories/Guidebook/Engineering/Pipes.xml"
 
 - type: guideEntry
   id: Pumps
   name: guide-entry-pumps
-  text: "/ServerInfo/Guidebook/Engineering/Pumps.xml"
+  text: "/ServerInfo/_Stories/Guidebook/Engineering/Pumps.xml"
 
 - type: guideEntry
   id: AtmosphereInOut
   name: guide-entry-atmosphereinout
-  text: "/ServerInfo/Guidebook/Engineering/AtmosphereInOut.xml"
+  text: "/ServerInfo/_Stories/Guidebook/Engineering/AtmosphereInOut.xml"
   children:
   - AirVent
   - PassiveVent
@@ -90,32 +90,32 @@
 - type: guideEntry
   id: AirVent
   name: guide-entry-airvent
-  text: "/ServerInfo/Guidebook/Engineering/AirVent.xml"
+  text: "/ServerInfo/_Stories/Guidebook/Engineering/AirVent.xml"
 
 - type: guideEntry
   id: PassiveVent
   name: guide-entry-passivevent
-  text: "/ServerInfo/Guidebook/Engineering/PassiveVent.xml"
+  text: "/ServerInfo/_Stories/Guidebook/Engineering/PassiveVent.xml"
 
 - type: guideEntry
   id: AirInjector
   name: guide-entry-airinjector
-  text: "/ServerInfo/Guidebook/Engineering/AirInjector.xml"
+  text: "/ServerInfo/_Stories/Guidebook/Engineering/AirInjector.xml"
 
 - type: guideEntry
   id: AirScrubber
   name: guide-entry-airscrubber
-  text: "/ServerInfo/Guidebook/Engineering/AirScrubber.xml"
+  text: "/ServerInfo/_Stories/Guidebook/Engineering/AirScrubber.xml"
 
 - type: guideEntry
   id: PortableScrubber
   name: guide-entry-portablescrubber
-  text: "/ServerInfo/Guidebook/Engineering/PortableScrubber.xml"
+  text: "/ServerInfo/_Stories/Guidebook/Engineering/PortableScrubber.xml"
 
 - type: guideEntry
   id: Valves
   name: guide-entry-valves
-  text: "/ServerInfo/Guidebook/Engineering/Valves.xml"
+  text: "/ServerInfo/_Stories/Guidebook/Engineering/Valves.xml"
   children:
   - ManualValve
   - SignalValve
@@ -126,64 +126,64 @@
 - type: guideEntry
   id: ManualValve
   name: guide-entry-manualvalve
-  text: "/ServerInfo/Guidebook/Engineering/ManualValve.xml"
+  text: "/ServerInfo/_Stories/Guidebook/Engineering/ManualValve.xml"
 
 - type: guideEntry
   id: SignalValve
   name: guide-entry-signalvalve
-  text: "/ServerInfo/Guidebook/Engineering/SignalValve.xml"
+  text: "/ServerInfo/_Stories/Guidebook/Engineering/SignalValve.xml"
 
 - type: guideEntry
   id: PneumaticValve
   name: guide-entry-pneumaticvalve
-  text: "/ServerInfo/Guidebook/Engineering/PneumaticValve.xml"
+  text: "/ServerInfo/_Stories/Guidebook/Engineering/PneumaticValve.xml"
 
 - type: guideEntry
   id: PassiveGate
   name: guide-entry-passivegate
-  text: "/ServerInfo/Guidebook/Engineering/PassiveGate.xml"
+  text: "/ServerInfo/_Stories/Guidebook/Engineering/PassiveGate.xml"
 
 - type: guideEntry
   id: PressureRegulator
   name: guide-entry-ressureregulator
-  text: "/ServerInfo/Guidebook/Engineering/PressureRegulator.xml"
+  text: "/ServerInfo/_Stories/Guidebook/Engineering/PressureRegulator.xml"
 
 - type: guideEntry
   id: MixingAndFiltering
   name: guide-entry-mixingandfiltering
-  text: "/ServerInfo/Guidebook/Engineering/MixingAndFiltering.xml"
+  text: "/ServerInfo/_Stories/Guidebook/Engineering/MixingAndFiltering.xml"
 
 - type: guideEntry
   id: GasCanisters
   name: guide-entry-gascanisters
-  text: "/ServerInfo/Guidebook/Engineering/GasCanisters.xml"
+  text: "/ServerInfo/_Stories/Guidebook/Engineering/GasCanisters.xml"
 
 - type: guideEntry
   id: Thermomachines
   name: guide-entry-thermomachines
-  text: "/ServerInfo/Guidebook/Engineering/Thermomachines.xml"
+  text: "/ServerInfo/_Stories/Guidebook/Engineering/Thermomachines.xml"
   children:
   - Radiators
 
 - type: guideEntry
   id: GasCondensing
   name: guide-entry-gascondensing
-  text: "/ServerInfo/Guidebook/Engineering/GasCondensing.xml"
+  text: "/ServerInfo/_Stories/Guidebook/Engineering/GasCondensing.xml"
 
 - type: guideEntry
   id: GasRecycling
   name: guide-entry-gasrecycling
-  text: "/ServerInfo/Guidebook/Engineering/GasRecycling.xml"
+  text: "/ServerInfo/_Stories/Guidebook/Engineering/GasRecycling.xml"
 
 - type: guideEntry
   id: Radiators
   name: guide-entry-radiators
-  text: "/ServerInfo/Guidebook/Engineering/Radiators.xml"
+  text: "/ServerInfo/_Stories/Guidebook/Engineering/Radiators.xml"
 
 - type: guideEntry
   id: AtmosphericsSystems
   name: guide-entry-atmosphericssystems
-  text: "/ServerInfo/Guidebook/Engineering/AtmosphericsSystems.xml"
+  text: "/ServerInfo/_Stories/Guidebook/Engineering/AtmosphericsSystems.xml"
   children:
   - PipeNetworks
   - DeviceMonitoringAndControl
@@ -193,12 +193,12 @@
 - type: guideEntry
   id: PipeNetworks
   name: guide-entry-pipenetworks
-  text: "/ServerInfo/Guidebook/Engineering/PipeNetworks.xml"
+  text: "/ServerInfo/_Stories/Guidebook/Engineering/PipeNetworks.xml"
 
 - type: guideEntry
   id: DeviceMonitoringAndControl
   name: guide-entry-devicemonitoringandcontrol
-  text: "/ServerInfo/Guidebook/Engineering/DeviceMonitoringAndControl.xml"
+  text: "/ServerInfo/_Stories/Guidebook/Engineering/DeviceMonitoringAndControl.xml"
   children:
   - AirAlarms
   - AtmosphericAlertsComputer
@@ -207,32 +207,32 @@
 - type: guideEntry
   id: AirAlarms
   name: guide-entry-airalarms
-  text: "/ServerInfo/Guidebook/Engineering/AirAlarms.xml"
+  text: "/ServerInfo/_Stories/Guidebook/Engineering/AirAlarms.xml"
 
 - type: guideEntry
   id: AtmosphericAlertsComputer
   name: guide-entry-atmosphericalertscomputer
-  text: "/ServerInfo/Guidebook/Engineering/AtmosphericAlertsComputer.xml"
+  text: "/ServerInfo/_Stories/Guidebook/Engineering/AtmosphericAlertsComputer.xml"
 
 - type: guideEntry
   id: AtmosphericNetworkMonitor
   name: guide-entry-atmosphericnetworkmonitor
-  text: "/ServerInfo/Guidebook/Engineering/AtmosphericNetworkMonitor.xml"
+  text: "/ServerInfo/_Stories/Guidebook/Engineering/AtmosphericNetworkMonitor.xml"
 
 - type: guideEntry
   id: FireAndGasControl
   name: guide-entry-fireandgascontrol
-  text: "/ServerInfo/Guidebook/Engineering/FireAndGasControl.xml"
+  text: "/ServerInfo/_Stories/Guidebook/Engineering/FireAndGasControl.xml"
 
 - type: guideEntry
   id: GasMiningAndStorage
   name: guide-entry-gasminingandstorage
-  text: "/ServerInfo/Guidebook/Engineering/GasMiningAndStorage.xml"
+  text: "/ServerInfo/_Stories/Guidebook/Engineering/GasMiningAndStorage.xml"
 
 - type: guideEntry
   id: AtmosphericUpsets
   name: guide-entry-atmosphericupsets
-  text: "/ServerInfo/Guidebook/Engineering/AtmosphericUpsets.xml"
+  text: "/ServerInfo/_Stories/Guidebook/Engineering/AtmosphericUpsets.xml"
   children:
   - Fires
   - Spacing
@@ -241,49 +241,49 @@
 - type: guideEntry
   id: Fires
   name: guide-entry-fires
-  text: "/ServerInfo/Guidebook/Engineering/Fires.xml"
+  text: "/ServerInfo/_Stories/Guidebook/Engineering/Fires.xml"
 
 - type: guideEntry
   id: Spacing
   name: guide-entry-spacing
-  text: "/ServerInfo/Guidebook/Engineering/Spacing.xml"
+  text: "/ServerInfo/_Stories/Guidebook/Engineering/Spacing.xml"
 
 - type: guideEntry
   id: DeltaPressure
   name: guide-entry-deltapressure
-  text: "/ServerInfo/Guidebook/Engineering/DeltaPressure.xml"
+  text: "/ServerInfo/_Stories/Guidebook/Engineering/DeltaPressure.xml"
 
 - type: guideEntry
   id: AtmosTools
   name: guide-entry-atmostools
-  text: "/ServerInfo/Guidebook/Engineering/AtmosTools.xml"
+  text: "/ServerInfo/_Stories/Guidebook/Engineering/AtmosTools.xml"
 
 - type: guideEntry
   id: Gasses
   name: guide-entry-gasses
-  text: "/ServerInfo/Guidebook/Engineering/Gasses.xml"
+  text: "/ServerInfo/_Stories/Guidebook/Engineering/Gasses.xml"
 
 - type: guideEntry
   id: ShuttleCraft
   name: guide-entry-shuttle-craft
-  text: "/ServerInfo/Guidebook/Engineering/Shuttlecraft.xml"
+  text: "/ServerInfo/_Stories/Guidebook/Engineering/Shuttlecraft.xml"
 
 - type: guideEntry
   id: Networking
   name: guide-entry-networking
-  text: "/ServerInfo/Guidebook/Engineering/Networking.xml"
+  text: "/ServerInfo/_Stories/Guidebook/Engineering/Networking.xml"
   children:
   - AccessConfigurator
 
 - type: guideEntry
   id: AccessConfigurator
   name: guide-entry-access-configurator
-  text: "/ServerInfo/Guidebook/Engineering/AccessConfigurator.xml"
+  text: "/ServerInfo/_Stories/Guidebook/Engineering/AccessConfigurator.xml"
 
 - type: guideEntry
   id: Power
   name: guide-entry-power
-  text: "/ServerInfo/Guidebook/Engineering/Power.xml"
+  text: "/ServerInfo/_Stories/Guidebook/Engineering/Power.xml"
   children:
     - Generators
     - InspectingPower
@@ -294,27 +294,27 @@
 - type: guideEntry
   id: InspectingPower
   name: guide-entry-inspectingpower
-  text: "/ServerInfo/Guidebook/Engineering/InspectingPower.xml"
+  text: "/ServerInfo/_Stories/Guidebook/Engineering/InspectingPower.xml"
 
 - type: guideEntry
   id: PowerStorage
   name: guide-entry-powerstorage
-  text: "/ServerInfo/Guidebook/Engineering/PowerStorage.xml"
+  text: "/ServerInfo/_Stories/Guidebook/Engineering/PowerStorage.xml"
 
 - type: guideEntry
   id: Ramping
   name: guide-entry-ramping
-  text: "/ServerInfo/Guidebook/Engineering/Ramping.xml"
+  text: "/ServerInfo/_Stories/Guidebook/Engineering/Ramping.xml"
 
 - type: guideEntry
   id: VoltageNetworks
   name: guide-entry-voltagenetworks
-  text: "/ServerInfo/Guidebook/Engineering/VoltageNetworks.xml"
+  text: "/ServerInfo/_Stories/Guidebook/Engineering/VoltageNetworks.xml"
 
 - type: guideEntry
   id: Generators
   name: guide-entry-generators
-  text: "/ServerInfo/Guidebook/Engineering/Generators.xml"
+  text: "/ServerInfo/_Stories/Guidebook/Engineering/Generators.xml"
   children:
   - PortableGenerator
   - AME
@@ -326,12 +326,12 @@
 - type: guideEntry
   id: AME
   name: guide-entry-ame
-  text: "/ServerInfo/Guidebook/Engineering/AME.xml"
+  text: "/ServerInfo/_Stories/Guidebook/Engineering/AME.xml"
 
 - type: guideEntry
   id: SingularityTeslaEngine
   name: guide-entry-singularityteslaengine
-  text: "/ServerInfo/Guidebook/Engineering/SingularityTeslaEngine.xml"
+  text: "/ServerInfo/_Stories/Guidebook/Engineering/SingularityTeslaEngine.xml"
   children:
   - SingularityEngine
   - TeslaEngine
@@ -339,29 +339,29 @@
 - type: guideEntry
   id: SingularityEngine
   name: guide-entry-singularityengine
-  text: "/ServerInfo/Guidebook/Engineering/SingularityEngine.xml"
+  text: "/ServerInfo/_Stories/Guidebook/Engineering/SingularityEngine.xml"
 
 - type: guideEntry
   id: TeslaEngine
   name: guide-entry-teslaengine
-  text: "/ServerInfo/Guidebook/Engineering/TeslaEngine.xml"
+  text: "/ServerInfo/_Stories/Guidebook/Engineering/TeslaEngine.xml"
 
 - type: guideEntry
   id: TEG
   name: guide-entry-teg
-  text: "/ServerInfo/Guidebook/Engineering/TEG.xml"
+  text: "/ServerInfo/_Stories/Guidebook/Engineering/TEG.xml"
 
 - type: guideEntry
   id: RTG
   name: guide-entry-rtg
-  text: "/ServerInfo/Guidebook/Engineering/RTG.xml"
+  text: "/ServerInfo/_Stories/Guidebook/Engineering/RTG.xml"
 
 - type: guideEntry
   id: PortableGenerator
   name: guide-entry-portable-generator
-  text: "/ServerInfo/Guidebook/Engineering/PortableGenerator.xml"
+  text: "/ServerInfo/_Stories/Guidebook/Engineering/PortableGenerator.xml"
 
 - type: guideEntry
   id: SolarPanels
   name: guide-entry-solarpanels
-  text: "/ServerInfo/Guidebook/Engineering/SolarPanels.xml"
+  text: "/ServerInfo/_Stories/Guidebook/Engineering/SolarPanels.xml"

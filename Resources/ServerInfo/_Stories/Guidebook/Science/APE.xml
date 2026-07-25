@@ -1,0 +1,21 @@
+<Document>
+# М.А.К.А.К.
+
+Мобильный Аномальный Кинетический Акселератор это устройство, используемое для взаимодействия с аномалиями. Он является основным способ манипуляции параметрами аномалии.
+
+<Box>
+<GuideEntityEmbed Entity="MachineAPE"/>
+</Box>
+
+The A.P.E. can shoot four different kinds of anomalous particles: Delta, Epsilon, Sigma and Zeta. Each particle type has certain effects:
+
+- [color=crimson]Danger:[/color] Increases the severity of an anomaly.
+- [color=plum]Unstable:[/color] Increases the instability of an anomaly.
+- [color=goldenrod]Containment:[/color] Increases anomaly stability at the cost of its health - if an anomaly is struck by too many containment particles, it will collapse, leaving behind an anomaly core.
+- [color=#6b75fa]Transformation:[/color] Increases anomaly severity with a chance of changing its behavior.
+
+Просканировав аномалию можно узнать какой тип частиц какой эффект на неё оказывает.
+
+М.А.К.А.К. может быть заблокирован любым членом экипажа, обладающим научным доступом, что не позволит его разобрать, включить или выключить, или переключить тип выпускаемых частиц.
+
+</Document>
