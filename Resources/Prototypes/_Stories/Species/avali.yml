@@ -8,3 +8,10 @@
   maleFirstNames: AvaliUnisex
   femaleFirstNames: AvaliUnisex
   naming: First
+  defaultSoundsBySex:
+  - MaleAvali
+  - FemaleAvali
+  - MaleAvali
+  voices:
+  - MaleAvali
+  - FemaleAvali

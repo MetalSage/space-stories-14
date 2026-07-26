@@ -9,3 +9,10 @@
   maleFirstNames: RodentiaMale
   femaleFirstNames: RodentiaFemale
   lastNames: RodentiaLast
+  defaultSoundsBySex:
+  - MaleRodentia
+  - FemaleRodentia
+  - MaleRodentia
+  voices:
+  - MaleRodentia
+  - FemaleRodentia
