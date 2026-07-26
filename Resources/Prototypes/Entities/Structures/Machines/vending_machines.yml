@@ -2318,6 +2318,9 @@
     normalState: normal
     denyState: deny
     ejectDelay: 2
+    freeJobs:
+    - ChiefMedicalOfficer
+    - Chemist
   - type: Sprite
     sprite: Structures/Machines/VendingMachines/chemvend.rsi
     layers:
