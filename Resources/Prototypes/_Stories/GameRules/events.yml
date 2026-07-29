@@ -207,17 +207,19 @@
   parent: BaseStationEventShortDelay
   components:
   - type: StationEvent
-    startAnnouncement: station-event-vent-creatures-start-announcement
+    startAnnouncement: station-event-vent-creatures-start-horde-announcement
     startAudio:
       path: /Audio/Announcements/attention.ogg
     earliestStart: 15
-    weight: 6.5
-    duration: 50
     minimumPlayers: 30
-  - type: VentCrittersRule
-    specialEntries:
-    - id: SpawnPointGhostSpaf
-      prob: 0.001
+    weight: 6.5
+    duration: 5
+    maxDuration: 20
+  - type: VentHordeRule
+    table: !type:GroupSelector
+      rolls: 1, 2
+      children:
+      - id: SpawnPointGhostSpaf
 
 - type: entity
   id: STJobDistributionError
@@ -236,20 +238,19 @@
 
 - type: entity
   id: STCorpiumSpawn
-  parent: BaseStationEventLongDelay
+  parent: BaseStationEventShortDelay
   components:
   - type: StationEvent
-    startAnnouncementColor: DarkRed
-    startAnnouncement: stories-station-event-vent-corpium-start-announcement
+    startAnnouncement: station-event-vent-creatures-start-horde-announcement
     startAudio:
-      path: /Audio/_Stories/Corpium/alert.ogg
-      params:
-        volume: -8
+      path: /Audio/Announcements/attention.ogg
     earliestStart: 20
     minimumPlayers: 30
     weight: 6.5
-    duration: 1
-  - type: VentCrittersRule
-    entries:
-    - id: STSpawnPointGhostCorpium
-      prob: 0.025
+    duration: 5
+    maxDuration: 20
+  - type: VentHordeRule
+    table: !type:GroupSelector
+      rolls: 3, 6
+      children:
+      - id: STSpawnPointGhostCorpium
