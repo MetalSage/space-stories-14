@@ -5,3 +5,10 @@
   prototype: MobFelinid
   dollPrototype: AppearanceFelinid
   skinColoration: HumanToned
+  defaultSoundsBySex:
+  - MaleFelinid
+  - FemaleFelinid
+  - MaleFelinid
+  voices:
+  - MaleFelinid
+  - FemaleFelinid

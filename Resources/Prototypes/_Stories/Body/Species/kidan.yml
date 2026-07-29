@@ -107,7 +107,7 @@
     - Chitine
   - type: KidanAccent
   - type: Vocal
-    emoteSounds: UnsexedKidan
+    emoteSounds: MaleKidan
   - type: Damageable
     damageModifierSet: Kidan
   - type: Bioluminescence

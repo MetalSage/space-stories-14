@@ -1,5 +1,6 @@
 - type: emoteSounds
   id: MaleRodentia
+  voiceSelectorName: humanoid-profile-editor-voice-masculine
   params:
     variation: 0.125
   sounds:
@@ -44,6 +45,7 @@
 
 - type: emoteSounds
   id: FemaleRodentia
+  voiceSelectorName: humanoid-profile-editor-voice-feminine
   params:
     variation: 0.125
   sounds:

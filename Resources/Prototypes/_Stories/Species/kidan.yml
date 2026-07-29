@@ -9,3 +9,10 @@
   maleFirstNames: KidanMale
   femaleFirstNames: KidanMale
   naming: FirstDashFirst
+  defaultSoundsBySex:
+  - MaleKidan
+  - FemaleKidan
+  - MaleKidan
+  voices:
+  - MaleKidan
+  - FemaleKidan
