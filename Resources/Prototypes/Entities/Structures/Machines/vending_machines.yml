@@ -1510,7 +1510,6 @@
     denyState: deny-unshaded
     freeJobs:
     - SalvageSpecialist
-    - Quartermaster
   - type: Sprite
     sprite: Structures/Machines/VendingMachines/mining.rsi
     layers:
