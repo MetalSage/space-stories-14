@@ -1,0 +1,32 @@
+<Document>
+  # Сервис
+  [color=#9fed58]Сервис[/color] поддерживает чистоту, эффективность и порядок на станции, чтобы все остальные отделы могли лучше выполнять свои задачи и поддерживать свой персонал довольным. Они также занимаются большей частью документации на станции.
+
+  ## Персонал
+  Персонал [color=#9fed58]Сервиса[/color] состоит из Работников сервиса, Шеф-Поваров, Ботаников, Барменов, Уборщиков, Священников, Клоунов, Мимов, Музыкантов, Библиотекарей и Ассистентов. Отделом [color=#9fed58]Сервиса[/color] руководит Глава Персонала.
+
+  <Box>
+    <GuideEntityEmbed Entity="ToyFigurineChef" Caption="Шеф-Повар"/>
+    <GuideEntityEmbed Entity="ToyFigurineBotanist" Caption="Ботаник"/>
+    <GuideEntityEmbed Entity="ToyFigurineBartender" Caption="Бармен"/>
+    <GuideEntityEmbed Entity="ToyFigurineJanitor" Caption="Уборщик"/>
+  </Box>
+  <Box>
+    <GuideEntityEmbed Entity="ToyFigurineChaplain" Caption="Священник"/>
+    <GuideEntityEmbed Entity="ToyFigurineClown" Caption="Клоун"/>
+    <GuideEntityEmbed Entity="ToyFigurineMime" Caption="Мим"/>
+    <GuideEntityEmbed Entity="ToyFigurineMusician" Caption="Музыкант"/>
+  </Box>
+  <Box>
+    <GuideEntityEmbed Entity="ToyFigurineLibrarian" Caption="Библиотекарь"/>
+    <GuideEntityEmbed Entity="ToyFigurinePassenger" Caption="Ассистент"/>
+    <GuideEntityEmbed Entity="ToyFigurineHeadOfPersonnel" Caption="ГП"/>
+  </Box>
+
+  ## Совместная Работа
+  Несмотря на свою разнообразность, [color=#9fed58]Сервис[/color] часто является наиболее [color=#a4885c]взаимосвязанным[/color] отделом.
+  Многие [color=#9fed58]служебные[/color] обязанности требуют [color=#a4885c]сотрудничества[/color] между работниками.
+  Повару часто нужны ингредиенты, которые эффективно вырастают только у ботаников. Бармен может попросить бананы, которые только клоуны носят в избытке.
+
+  Много [color=#a4885c]сотрудничества[/color] необходимо как внутри, так и за пределами [color=#9fed58]Сервиса[/color]. Часто другие отделы нуждаются в помощи [color=#9fed58]Сервиса[/color], поэтому будьте на чеку.
+</Document>

@@ -1,7 +1,7 @@
 - type: guideEntry
   id: Science
   name: guide-entry-science
-  text: "/ServerInfo/Guidebook/Science/Science.xml"
+  text: "/ServerInfo/_Stories/Guidebook/Science/Science.xml"
   children:
   - Technologies
   - AnomalousResearch
@@ -11,13 +11,13 @@
 - type: guideEntry
   id: Technologies
   name: guide-entry-technologies
-  text: "/ServerInfo/Guidebook/Science/Technologies.xml"
+  text: "/ServerInfo/_Stories/Guidebook/Science/Technologies.xml"
   filterEnabled: True
 
 - type: guideEntry
   id: AnomalousResearch
   name: guide-entry-anomalous-research
-  text: "/ServerInfo/Guidebook/Science/AnomalousResearch.xml"
+  text: "/ServerInfo/_Stories/Guidebook/Science/AnomalousResearch.xml"
   children:
   - APE
   - ScannersAndVessels
@@ -25,17 +25,17 @@
 - type: guideEntry
   id: ScannersAndVessels
   name: guide-entry-scanners-and-vessels
-  text: "/ServerInfo/Guidebook/Science/ScannersAndVessels.xml"
+  text: "/ServerInfo/_Stories/Guidebook/Science/ScannersAndVessels.xml"
 
 - type: guideEntry
   id: APE
   name: guide-entry-ape
-  text: "/ServerInfo/Guidebook/Science/APE.xml"
+  text: "/ServerInfo/_Stories/Guidebook/Science/APE.xml"
 
 - type: guideEntry
   id: Xenoarchaeology
   name: guide-entry-xenoarchaeology
-  text: "/ServerInfo/Guidebook/Science/Xenoarchaeology.xml"
+  text: "/ServerInfo/_Stories/Guidebook/Science/Xenoarchaeology.xml"
   children:
     - AnalysisConsole
     - XenoarchaeologyUnlockingNodes
@@ -43,21 +43,21 @@
 - type: guideEntry
   id: XenoarchaeologyUnlockingNodes
   name: guide-entry-xenoarchaeologyunlockingnodes
-  text: "/ServerInfo/Guidebook/Science/UnlockingNodes.xml"
+  text: "/ServerInfo/_Stories/Guidebook/Science/UnlockingNodes.xml"
 
 - type: guideEntry
   id: AnalysisConsole
   name: guide-entry-analysisconsole
-  text: "/ServerInfo/Guidebook/Science/AnalysisConsole.xml"
+  text: "/ServerInfo/_Stories/Guidebook/Science/AnalysisConsole.xml"
 
 - type: guideEntry
   id: Robotics
   name: guide-entry-robotics
-  text: "/ServerInfo/Guidebook/Science/Robotics.xml"
+  text: "/ServerInfo/_Stories/Guidebook/Science/Robotics.xml"
   children:
   - Cyborgs
 
 - type: guideEntry
   id: Cyborgs
   name: guide-entry-cyborgs
-  text: "/ServerInfo/Guidebook/Science/Cyborgs.xml"
+  text: "/ServerInfo/_Stories/Guidebook/Science/Cyborgs.xml"

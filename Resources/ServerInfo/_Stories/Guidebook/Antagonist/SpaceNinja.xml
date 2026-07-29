@@ -1,0 +1,98 @@
+<Document>
+  # Космический ниндзя
+
+  [color=#66FF00]Космический ниндзя[/color] - это призрачная роль, которую можно получить случайным образом в середине игры. Если вы выберете ее, то вам выдадут снаряжение и цели.
+
+  Whether you get bloody or stay out of trouble, your discipline has taught you that [italic]your objectives must be at least attempted[/italic]. For honor!
+
+  Безжалостно уничтожайте экипаж станции или клоунов, что решили рассекретить или помешать вам, ваша дисциплина научила вас, что [color=#66FF00]ваши цели обязательно должны быть достигнуты[/color]. За честь!
+
+  # Снаряжение
+
+  <Box>
+    <GuideEntityEmbed Entity="JetpackBlack"/>
+    <GuideEntityEmbed Entity="PinpointerStation"/>
+  </Box>
+
+  ## Your Suit
+
+  <Box>
+    <GuideEntityEmbed Entity="ClothingEyesVisorNinja" Caption="your visor"/>
+    <GuideEntityEmbed Entity="ClothingOuterSuitSpaceNinja" Caption="your suit"/>
+    <GuideEntityEmbed Entity="ClothingShoesSpaceNinja" Caption="your boots"/>
+  </Box>
+
+  Your single most important item is [color=cyan]your suit[/color], without it none of your abilities would work.
+  Your suit requires power to function, which is supplied by its [bold]internal battery[/bold]. It can be replaced, and [italic]high capacity batteries[/italic] mean a [italic]highly effective ninja[/italic].
+
+  [bold]You can recharge your internal battery directly[/bold] by using [color=cyan]your gloves[/color]. You can see the current charge by examining the suit or checking the nifty battery alert on your screen.
+
+  Your outfit also includes [color=cyan]special boots[/color] that keep you agile, upright and grounded without using energy. You've also got flash protection thanks to your [color=cyan]visor[/color].
+
+  ## Костюм ниндзя
+
+Самым важным предметом является ваш костюм, без него ни одна из ваших способностей не будет работать.
+Для работы костюма требуется энергия, его внутреннюю батарею можно заменить, взяв батарейку и  заменив её **на версию лучше**.
+Текущий заряд можно узнать, посмотрев на костюм или в оповещении в правом верхнем углу экрана.
+
+  Ваше самое важное снаряжение - [color=#66FF00]ваш костюм[/color], без него ни одна из ваших способностей не работала бы.
+  Для функционирования вашего костюма требуется энергия. Его [color=#a4885c]внутреннюю батарею[/color] можно заменить, щелкнув по костюму, другой батареей, а [color=#a4885c]батареи большей емкости[/color] означают [color=#a4885c]большую эффективность для ниндзя[/color].
+  Вы можете увидеть текущий уровень заряда, а также предупреждение о необходимости подзарядки аккумулятора в правой части экрана.
+
+  Если у вас закончилось питание и вам нужно подзарядить батарею, просто наденьте и активируйте перчатки, чтобы разрядиться от ЛКП, подстанции или СМЭСа.
+
+  ## Перчатки ниндзя
+
+  <GuideEntityEmbed Entity="ClothingHandsGlovesSpaceNinja" Caption="перчатки ниндзя"/>
+
+  [color=#66FF00]Эти плохие парни - ваш хлеб да соль.[/color]
+
+  Они изготовлены из [color=#a4885c]изолированных наномашин[/color], которые помогут вам изящно проникать в различные помещения, не оставляя отпечатков.
+
+  Your [color=cyan]energy katana[/color] hurts plenty and can be [bold]recalled at will[/bold] at the cost of suit power. The farther away it is from you, the more energy required to recall it.
+
+  While in hand you may also [color=cyan]teleport[/color] to anywhere that you can see, [bold]including through windows[/bold]. The charges required to do this regenerate slowly, so keep a charge or two spare in case you need a quick getaway.
+
+  ## Spider Clan Charge
+
+  <Box>
+    <GuideEntityEmbed Entity="SpiderCharge"/>
+  </Box>
+
+  This is a [color=cyan]modified C-4 explosive[/color] which can be found in your pocket. Creates a large explosion but [bold]must be armed in your target area[/bold] as it is one of your objectives.
+
+  It can't be activated manually, so simply plant it on a wall near your assigned target. Choose wisely, it can't be unstuck once planted.
+
+## Бомба Клана Паука
+
+  Вы присягнули [color=#66FF00]мечу[/color] и отказываетесь использовать огнестрельное оружие.
+  Наносит большой урон и может быть призван по желанию, расходуя энергию костюма пропорционально расстоянию телепортации.
+
+  Держа его в руках, вы можете [color=#a4885c]телепортироваться [/color] в любое видимое место, то есть в большинство дверей и окон, но не за сплошные стены.
+  У него ограниченное количество зарядов, которые медленно восстанавливаются, поэтому оставляйте прозапас один или два заряда на случай, если вам понадобится быстро скрыться.
+
+  ## Бомба клана паука
+
+  <GuideEntityEmbed Entity="SpiderCharge" Caption="бомба клана паука"/>
+
+  [color=#66FF00] Модифицированное C-4[/color], изначально находится в вашем кармане. Создает мощный взрыв, но должен быть приведен в действие только в определённой области.
+  Для взрыва выбирается случайная область на карте, которая является одной из ваших [color=#a4885c]целей[/color].
+
+  Ее нельзя активировать вручную, просто прикрепите к стене или к особенно уродливой мебели.
+  После установки не снимается.
+
+  ## Обувь ниндзя
+
+  Специальные [color=#a4885c]нескользящие[/color] ботинки, которые позволяют вам быть гибким, проворным и держаться на ногах.
+  Энергия не требуется.
+
+  # Цели
+
+  - Кража \[9-13\] исследований: Используйте свои перчатки на сервере РнД, для кражи технологий.
+  - Взлом \[15-40\] дверей на станции: Используйте свои перчатки, чтобы взломать определённое количество дверей.
+  - Взорвите паучий заряд: Установите бомбу клана паука в указанном месте и наблюдайте, как он взорвется!
+  - Вызовите [textlink="угрозу" link="MinorAntagonists"]: Используйте перчатки на консоли связи.
+  - Объявите всех в розыск: Воспользуйтесь перчатками на консоли криминальных записей.
+  - Выжить: Не умирайте.
+
+</Document>
