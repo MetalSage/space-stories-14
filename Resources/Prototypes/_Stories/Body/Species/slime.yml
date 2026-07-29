@@ -1,0 +1,9 @@
+- type: entity
+  parent: [ OrganBaseEyes, OrganSlimePersonInternal, OrganSlimePersonExternal ]
+  id: STOrganSlimeEyes
+  components:
+  - type: Sprite
+    sprite: _Stories/Mobs/Species/Slime/organs.rsi
+  - type: VisualOrgan
+    data:
+      sprite: Mobs/Customization/eyes.rsi
