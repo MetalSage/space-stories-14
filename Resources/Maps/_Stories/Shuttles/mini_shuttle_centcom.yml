@@ -170,14 +170,6 @@ entities:
         chunkSize: 4
     - type: GasTileOverlay
     - type: ImplicitRoof
-- proto: ActionToggleLight
-  entities:
-  - uid: 67
-    mapInit: true
-    paused: true
-    components:
-    - type: Transform
-      parent: 66
 - proto: AirCanister
   entities:
   - uid: 39

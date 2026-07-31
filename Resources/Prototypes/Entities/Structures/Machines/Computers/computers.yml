@@ -36,8 +36,8 @@
           4: { state: alert-2 }
       enum.WiresVisuals.MaintenancePanelState:
         enum.WiresVisualLayers.MaintenancePanel:
-          True: { visible: false }
-          False: { visible: true }
+          True: { visible: true } # Stories-TextureFix
+          False: { visible: false } # Stories-TextureFix
   - type: AtmosAlertsComputer
   - type: ActivatableUI
     singleUser: true
@@ -1276,8 +1276,8 @@
             False: { visible: true }
         enum.WiresVisuals.MaintenancePanelState:
           enum.WiresVisualLayers.MaintenancePanel:
-            True: { visible: false }
-            False: { visible: true }
+            True: { visible: true } # Stories-TextureFix
+            False: { visible: false } # Stories-TextureFix
     - type: SalvageExpeditionConsole
     - type: ActivatableUI
       key: enum.SalvageConsoleUiKey.Expedition
@@ -1705,8 +1705,8 @@
           Dead: { state: ai-fixer-404 }
       enum.WiresVisuals.MaintenancePanelState:
         enum.WiresVisualLayers.MaintenancePanel:
-          True: { visible: false }
-          False: { visible: true }
+          True: { visible: true } # Stories-TextureFix
+          False: { visible: false } # Stories-TextureFix
   - type: ApcPowerReceiver
     powerLoad: 50
   - type: PowerState

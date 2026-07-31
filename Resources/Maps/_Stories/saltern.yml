@@ -3630,26 +3630,6 @@ entities:
     - type: Transform
       parent: 31
       pos: -37.568184,29.675117
-- proto: ActionToggleInternals
-  entities:
-  - uid: 2202
-    mapInit: true
-    paused: true
-    components:
-    - type: Transform
-      parent: 11326
-    - type: Action
-      originalIconColor: '#FFFFFFFF'
-      container: 11326
-  - uid: 8198
-    mapInit: true
-    paused: true
-    components:
-    - type: Transform
-      parent: 6881
-    - type: Action
-      originalIconColor: '#FFFFFFFF'
-      container: 6881
 - proto: AirAlarm
   entities:
   - uid: 1352
@@ -5546,8 +5526,6 @@ entities:
     - type: DeviceNetwork
       deviceLists:
       - 11812
-      configurators:
-      - invalid
   - uid: 6588
     components:
     - type: Transform
@@ -33807,8 +33785,6 @@ entities:
     - type: DeviceNetwork
       deviceLists:
       - 11812
-      configurators:
-      - invalid
   - uid: 11814
     components:
     - type: Transform
@@ -33818,8 +33794,6 @@ entities:
       deviceLists:
       - 11812
       - 11811
-      configurators:
-      - invalid
   - uid: 11815
     components:
     - type: Transform
@@ -45197,8 +45171,6 @@ entities:
     - type: DeviceNetwork
       deviceLists:
       - 11812
-      configurators:
-      - invalid
     - type: AtmosPipeColor
       color: '#0055CCFF'
   - uid: 11810
@@ -45860,8 +45832,6 @@ entities:
     - type: DeviceNetwork
       deviceLists:
       - 11812
-      configurators:
-      - invalid
     - type: AtmosPipeColor
       color: '#990000FF'
 - proto: GasVolumePump
@@ -51883,27 +51853,11 @@ entities:
     - type: Transform
       parent: 31
       pos: 55.3981,8.496717
-    - type: GasTank
-      toggleActionEntity: 8198
-    - type: ActionsContainer
-    - type: ContainerContainer
-      containers:
-        actions: !type:Container
-          ents:
-          - 8198
   - uid: 11326
     components:
     - type: Transform
       parent: 31
       pos: 55.477123,8.625341
-    - type: GasTank
-      toggleActionEntity: 2202
-    - type: ActionsContainer
-    - type: ContainerContainer
-      containers:
-        actions: !type:Container
-          ents:
-          - 2202
 - proto: PlasticFlapsAirtightClear
   entities:
   - uid: 547
@@ -62987,75 +62941,6 @@ entities:
     - type: Transform
       parent: 31
       pos: 46.59725,12.520283
-    - type: ItemToggle
-      activated: True
-    - type: ItemToggleActiveSound
-      playingStream: invalid
-    - type: PointLight
-      enabled: True
-    - type: MeleeWeapon
-      soundSwing: !type:SoundPathSpecifier
-        path: /Audio/Weapons/eblademiss.ogg
-        params:
-          volume: 0
-          variation: 0.125
-          rolloffFactor: 1
-          referenceDistance: 1
-          playOffsetSeconds: 0
-          pitch: 1
-          maxDistance: 15
-          loop: False
-      soundNoDamage: !type:SoundPathSpecifier
-        path: /Audio/Weapons/eblade1.ogg
-        params:
-          volume: 0
-          variation: 0.25
-          rolloffFactor: 1
-          referenceDistance: 1
-          playOffsetSeconds: 0
-          pitch: 1
-          maxDistance: 15
-          loop: False
-      soundHit: !type:SoundPathSpecifier
-        path: /Audio/Weapons/eblade1.ogg
-        params:
-          volume: 0
-          variation: 0.25
-          rolloffFactor: 1
-          referenceDistance: 1
-          playOffsetSeconds: 0
-          pitch: 1
-          maxDistance: 15
-          loop: False
-      damage:
-        types:
-          Heat: 0.3
-    - type: ItemToggleMeleeWeapon
-      deactivatedSoundOnSwing: !type:SoundPathSpecifier
-        path: /Audio/Weapons/punchmiss.ogg
-        params:
-          volume: -3
-          variation: 0.025
-          rolloffFactor: 1
-          referenceDistance: 1
-          playOffsetSeconds: 0
-          pitch: 1
-          maxDistance: 15
-          loop: False
-      deactivatedSoundOnHitNoDamage: !type:SoundCollectionSpecifier
-        collection: WeakHit
-        params:
-          volume: 0
-          variation: null
-          rolloffFactor: 1
-          referenceDistance: 1
-          playOffsetSeconds: 0
-          pitch: 1
-          maxDistance: 15
-          loop: False
-      deactivatedDamage:
-        types:
-          Blunt: 0
 - proto: TrainingBomb
   entities:
   - uid: 631

@@ -5422,17 +5422,6 @@ entities:
     - type: ExplosionAirtightGrid
     - type: TileHistory
       chunkHistory: {}
-- proto: ActionToggleBlock
-  entities:
-  - uid: 7
-    mapInit: true
-    paused: true
-    components:
-    - type: Transform
-      parent: 6
-    - type: Action
-      originalIconColor: '#FFFFFFFF'
-      container: 6
 - proto: AirAlarm
   entities:
   - uid: 8
@@ -57570,14 +57559,6 @@ entities:
     - type: Transform
       parent: 2
       pos: -13.643242,-34.640526
-    - type: Blocking
-      blockingToggleActionEntity: 7
-    - type: ActionsContainer
-    - type: ContainerContainer
-      containers:
-        actions: !type:Container
-          ents:
-          - 7
 - proto: RobocopCircuitBoard
   entities:
   - uid: 8622
