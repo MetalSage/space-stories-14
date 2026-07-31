@@ -15826,12 +15826,6 @@ entities:
     - type: Transform
       parent: 2
       pos: 86.510315,-15.505127
-- proto: ActionToggleBlock
-  entities:
-  - uid: 7
-    components:
-    - type: Transform
-      parent: 6
 - proto: AirAlarm
   entities:
   - uid: 8

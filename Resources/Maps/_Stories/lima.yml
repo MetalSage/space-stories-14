@@ -10396,28 +10396,6 @@ entities:
     - type: ExplosionAirtightGrid
     - type: TileHistory
       chunkHistory: {}
-- proto: ActionToggleInternals
-  entities:
-  - uid: 4
-    mapInit: true
-    paused: true
-    components:
-    - type: Transform
-      parent: 3
-  - uid: 6
-    mapInit: true
-    paused: true
-    components:
-    - type: Transform
-      parent: 5
-- proto: ActionToggleJetpack
-  entities:
-  - uid: 7
-    mapInit: true
-    paused: true
-    components:
-    - type: Transform
-      parent: 5
 - proto: AirAlarm
   entities:
   - uid: 8

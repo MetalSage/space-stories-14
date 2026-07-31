@@ -8562,45 +8562,6 @@ entities:
     - type: Transform
       parent: 2
       pos: -21.448877,13.558832
-- proto: ActionToggleInternals
-  entities:
-  - uid: 14
-    components:
-    - type: Transform
-      parent: 13
-  - uid: 17
-    components:
-    - type: Transform
-      parent: 16
-  - uid: 20
-    components:
-    - type: Transform
-      parent: 19
-- proto: ActionToggleJetpack
-  entities:
-  - uid: 15
-    components:
-    - type: Transform
-      parent: 13
-  - uid: 18
-    components:
-    - type: Transform
-      parent: 16
-- proto: ActionToggleLight
-  entities:
-  - uid: 22
-    components:
-    - type: Transform
-      parent: 21
-  - uid: 8855
-    mapInit: true
-    paused: true
-    components:
-    - type: Transform
-      parent: 8849
-    - type: Action
-      originalIconColor: '#FFFFFFFF'
-      container: 8849
 - proto: AirAlarm
   entities:
   - uid: 23
@@ -89652,20 +89613,6 @@ entities:
     - type: Transform
       parent: 2
       pos: 41.7623,12.65237
-    - type: HandheldLight
-      toggleActionEntity: 8855
-    - type: ContainerContainer
-      containers:
-        cell_slot: !type:ContainerSlot
-          ent: null
-          showEnts: False
-          occludes: True
-        actions: !type:Container
-          ents:
-          - 8855
-          showEnts: False
-          occludes: True
-    - type: ActionsContainer
   - uid: 13268
     components:
     - type: Transform

@@ -35978,18 +35978,6 @@ entities:
       parent: 2
       rot: 1.0182609457842773E-06 rad
       pos: 85.43188,7.632456
-- proto: ActionToggleInternals
-  entities:
-  - uid: 15
-    components:
-    - type: Transform
-      parent: 14
-- proto: ActionToggleLight
-  entities:
-  - uid: 17
-    components:
-    - type: Transform
-      parent: 16
 - proto: AirAlarm
   entities:
   - uid: 18

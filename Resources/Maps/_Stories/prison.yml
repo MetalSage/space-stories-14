@@ -5686,22 +5686,6 @@ entities:
     - type: Transform
       pos: -20.35024,-28.669575
       parent: 2
-- proto: ActionBibleSummon
-  entities:
-  - uid: 16
-    components:
-    - type: Transform
-      parent: 15
-  - uid: 19
-    components:
-    - type: Transform
-      parent: 18
-- proto: ActionToggleInternals
-  entities:
-  - uid: 21
-    components:
-    - type: Transform
-      parent: 20
 - proto: AdvancedMineralScannerEmpty
   entities:
   - uid: 22
@@ -6740,14 +6724,6 @@ entities:
     - type: Transform
       pos: 21.500929,-68.42343
       parent: 2
-    - type: GasTank
-      toggleActionEntity: 21
-    - type: ActionsContainer
-    - type: ContainerContainer
-      containers:
-        actions: !type:Container
-          ents:
-          - 21
   - uid: 118
     components:
     - type: Transform
@@ -8071,42 +8047,14 @@ entities:
     components:
     - type: Transform
       parent: 14
-    - type: Summonable
-      summonActionEntity: 16
-    - type: ContainerContainer
-      containers:
-        storagebase: !type:Container
-          showEnts: False
-          occludes: True
-          ents: []
-        actions: !type:Container
-          showEnts: False
-          occludes: True
-          ents:
-          - 16
     - type: Physics
       canCollide: False
-    - type: ActionsContainer
   - uid: 18
     components:
     - type: Transform
       parent: 17
-    - type: Summonable
-      summonActionEntity: 19
-    - type: ContainerContainer
-      containers:
-        storagebase: !type:Container
-          showEnts: False
-          occludes: True
-          ents: []
-        actions: !type:Container
-          showEnts: False
-          occludes: True
-          ents:
-          - 19
     - type: Physics
       canCollide: False
-    - type: ActionsContainer
   - uid: 335
     components:
     - type: Transform

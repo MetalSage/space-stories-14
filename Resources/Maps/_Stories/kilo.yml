@@ -15143,46 +15143,6 @@ entities:
     - type: Transform
       parent: 2
       pos: 44.469795,25.594456
-- proto: ActionToggleBlock
-  entities:
-  - uid: 10
-    mapInit: true
-    paused: true
-    components:
-    - type: Transform
-      parent: 9
-  - uid: 12
-    mapInit: true
-    paused: true
-    components:
-    - type: Transform
-      parent: 11
-  - uid: 14
-    mapInit: true
-    paused: true
-    components:
-    - type: Transform
-      parent: 13
-  - uid: 16
-    mapInit: true
-    paused: true
-    components:
-    - type: Transform
-      parent: 15
-- proto: ActionToggleLight
-  entities:
-  - uid: 18
-    mapInit: true
-    paused: true
-    components:
-    - type: Transform
-      parent: 17
-  - uid: 20
-    mapInit: true
-    paused: true
-    components:
-    - type: Transform
-      parent: 19
 - proto: AirAlarm
   entities:
   - uid: 21
@@ -19618,8 +19578,6 @@ entities:
     - type: DeviceNetwork
       deviceLists:
       - 52
-      configurators:
-      - invalid
   - uid: 637
     components:
     - type: Transform
@@ -19629,8 +19587,6 @@ entities:
       deviceLists:
       - 54
       - 52
-      configurators:
-      - invalid
   - uid: 638
     components:
     - type: Transform
@@ -117261,8 +117217,6 @@ entities:
     - type: DeviceNetwork
       deviceLists:
       - 88
-      configurators:
-      - invalid
   - uid: 32781
     components:
     - type: Transform
@@ -117272,8 +117226,6 @@ entities:
     - type: DeviceNetwork
       deviceLists:
       - 88
-      configurators:
-      - invalid
   - uid: 32782
     components:
     - type: Transform
@@ -117283,8 +117235,6 @@ entities:
     - type: DeviceNetwork
       deviceLists:
       - 88
-      configurators:
-      - invalid
 - proto: Fireplace
   entities:
   - uid: 19027
@@ -141446,8 +141396,6 @@ entities:
     - type: DeviceNetwork
       deviceLists:
       - 52
-      configurators:
-      - invalid
   - uid: 22050
     components:
     - type: Transform
@@ -141505,8 +141453,6 @@ entities:
     - type: DeviceNetwork
       deviceLists:
       - 95
-      configurators:
-      - invalid
     - type: AtmosPipeColor
       color: '#0055CCFF'
   - uid: 22201
@@ -141917,8 +141863,6 @@ entities:
     - type: DeviceNetwork
       deviceLists:
       - 52
-      configurators:
-      - invalid
     - type: AtmosPipeColor
       color: '#0055CCFF'
   - uid: 22248
@@ -141930,8 +141874,6 @@ entities:
     - type: DeviceNetwork
       deviceLists:
       - 52
-      configurators:
-      - invalid
     - type: AtmosPipeColor
       color: '#0055CCFF'
   - uid: 22249
@@ -141944,8 +141886,6 @@ entities:
       deviceLists:
       - 54
       - 52
-      configurators:
-      - invalid
     - type: AtmosPipeColor
       color: '#0055CCFF'
   - uid: 22250
@@ -142746,8 +142686,6 @@ entities:
     - type: DeviceNetwork
       deviceLists:
       - 17696
-      configurators:
-      - invalid
     - type: AtmosPipeColor
       color: '#0055CCFF'
   - uid: 22343
@@ -143198,8 +143136,6 @@ entities:
     - type: DeviceNetwork
       deviceLists:
       - 17696
-      configurators:
-      - invalid
     - type: AtmosPipeColor
       color: '#990000FF'
   - uid: 20508
@@ -143240,8 +143176,6 @@ entities:
     - type: DeviceNetwork
       deviceLists:
       - 95
-      configurators:
-      - invalid
     - type: AtmosPipeColor
       color: '#990000FF'
   - uid: 21343
@@ -143254,8 +143188,6 @@ entities:
       deviceLists:
       - 54
       - 52
-      configurators:
-      - invalid
     - type: AtmosPipeColor
       color: '#990000FF'
   - uid: 21509
@@ -143276,8 +143208,6 @@ entities:
     - type: DeviceNetwork
       deviceLists:
       - 52
-      configurators:
-      - invalid
   - uid: 22084
     components:
     - type: Transform
@@ -143659,8 +143589,6 @@ entities:
     - type: DeviceNetwork
       deviceLists:
       - 52
-      configurators:
-      - invalid
     - type: AtmosPipeColor
       color: '#990000FF'
   - uid: 22422
@@ -143672,8 +143600,6 @@ entities:
     - type: DeviceNetwork
       deviceLists:
       - 52
-      configurators:
-      - invalid
     - type: AtmosPipeColor
       color: '#990000FF'
   - uid: 22423

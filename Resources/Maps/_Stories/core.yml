@@ -11726,12 +11726,6 @@ entities:
     - type: Transform
       parent: 2
       pos: -0.019477844,-27.376728
-- proto: ActionToggleLight
-  entities:
-  - uid: 10
-    components:
-    - type: Transform
-      parent: 9
 - proto: AirAlarm
   entities:
   - uid: 11
@@ -18080,8 +18074,6 @@ entities:
     - type: DeviceNetwork
       deviceLists:
       - 153
-      configurators:
-      - invalid
 - proto: AltarHeaven
   entities:
   - uid: 728
@@ -75912,8 +75904,6 @@ entities:
     - type: DeviceNetwork
       deviceLists:
       - 153
-      configurators:
-      - invalid
   - uid: 11152
     components:
     - type: Transform
@@ -75922,8 +75912,6 @@ entities:
     - type: DeviceNetwork
       deviceLists:
       - 153
-      configurators:
-      - invalid
 - proto: Fireplace
   entities:
   - uid: 11153
@@ -95964,8 +95952,6 @@ entities:
     - type: DeviceNetwork
       deviceLists:
       - 153
-      configurators:
-      - invalid
     - type: AtmosPipeColor
       color: '#0055CCFF'
   - uid: 13783
@@ -95977,8 +95963,6 @@ entities:
     - type: DeviceNetwork
       deviceLists:
       - 153
-      configurators:
-      - invalid
     - type: AtmosPipeColor
       color: '#0055CCFF'
   - uid: 22573

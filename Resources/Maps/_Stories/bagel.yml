@@ -10278,26 +10278,6 @@ entities:
     - type: Transform
       parent: 60
       pos: 31.477634,-79.4623
-- proto: ActionToggleBlock
-  entities:
-  - uid: 4898
-    mapInit: true
-    paused: true
-    components:
-    - type: Transform
-      parent: 4754
-    - type: Action
-      originalIconColor: '#FFFFFFFF'
-      container: 4754
-  - uid: 5020
-    mapInit: true
-    paused: true
-    components:
-    - type: Transform
-      parent: 5010
-    - type: Action
-      originalIconColor: '#FFFFFFFF'
-      container: 5010
 - proto: AirAlarm
   entities:
   - uid: 105
@@ -15170,8 +15150,6 @@ entities:
     - type: DeviceNetwork
       deviceLists:
       - 6651
-      configurators:
-      - invalid
 - proto: AltarSpawner
   entities:
   - uid: 14509
@@ -73211,8 +73189,6 @@ entities:
     - type: DeviceNetwork
       deviceLists:
       - 26021
-      configurators:
-      - invalid
   - uid: 25787
     components:
     - type: Transform
@@ -100926,8 +100902,6 @@ entities:
     - type: DeviceNetwork
       deviceLists:
       - 26021
-      configurators:
-      - invalid
     - type: AtmosPipeColor
       color: '#0055CCFF'
   - uid: 2370
@@ -129256,28 +129230,11 @@ entities:
     - type: Transform
       parent: 60
       pos: -24.546942,1.6238494
-    - type: Blocking
-      user: invalid
-      blockingToggleActionEntity: 4898
-    - type: ActionsContainer
-    - type: ContainerContainer
-      containers:
-        actions: !type:Container
-          ents:
-          - 4898
   - uid: 5010
     components:
     - type: Transform
       parent: 60
       pos: -24.406317,1.6233296
-    - type: Blocking
-      blockingToggleActionEntity: 5020
-    - type: ActionsContainer
-    - type: ContainerContainer
-      containers:
-        actions: !type:Container
-          ents:
-          - 5020
 - proto: RobocopCircuitBoard
   entities:
   - uid: 24823
@@ -142627,8 +142584,6 @@ entities:
       pos: -47.532043,37.504673
     - type: ItemToggle
       activated: True
-    - type: ItemToggleActiveSound
-      playingStream: invalid
     - type: PointLight
       enabled: True
     - type: MeleeWeapon
