@@ -1,0 +1,20 @@
+{
+    "version": 1,
+    "license": "CC-BY-SA-3.0",
+    "copyright": "State 'jump' taken from tgstation at commit https://github.com/tgstation/tgstation/commit/a373b4cb08298523d40acc14f9c390a0c403fc31, state 'scent' taken from tgstation at commit https://github.com/tgstation/tgstation/commit/c4b7f3c41b6742aca260fe60cc358a778ba9b8c8, 'sleep' taken from tgstation at commit https://github.com/tgstation/tgstation/commit/4f6190e2895e09116663ef282d3ce1d8b35c032e, all resprited (add green square) by JustGiveMeALaserSword (github: JustGiveMeALaserSword4) for Space Stories (Server SS14)",
+    "size": {
+        "x": 32,
+        "y": 32
+    },
+    "states": [
+        {
+            "name": "jump"
+        },
+        {
+            "name": "scent"
+        },
+        {
+            "name": "sleep"
+        }
+    ]
+}

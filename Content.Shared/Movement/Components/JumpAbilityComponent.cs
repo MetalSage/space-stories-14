@@ -11,7 +11,7 @@ namespace Content.Shared.Movement.Components;
 /// To give the jump action to an entity use <see cref="ActionGrantComponent"/> and <see cref="ItemActionGrantComponent"/>.
 /// The basic action prototype is "ActionGravityJump".
 /// </summary>
-[RegisterComponent, NetworkedComponent, AutoGenerateComponentState, Access(typeof(SharedJumpAbilitySystem))]
+[RegisterComponent, NetworkedComponent, AutoGenerateComponentState] // Removed "Access(typeof(SharedJumpAbilitySystem))" - Stories-ZombieAbilities
 public sealed partial class JumpAbilityComponent : Component
 {
     /// <summary>

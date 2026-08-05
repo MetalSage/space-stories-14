@@ -1,4 +1,5 @@
 using System.Linq;
+using Content.Server.Actions;
 using Content.Server.Administration.Managers;
 using Content.Server.Atmos.Components;
 using Content.Server.Body.Components;
@@ -14,16 +15,19 @@ using Content.Server.NPC.HTN;
 using Content.Server.NPC.Systems;
 using Content.Server.StationEvents.Components;
 using Content.Server.Speech.Components;
+using Content.Shared.Actions.Components;
 using Content.Shared.Body;
 using Content.Shared.Body.Components;
 using Content.Shared.CombatMode;
 using Content.Shared.CombatMode.Pacification;
+using Content.Shared.Guardian.Components;
 using Content.Shared.Hands.Components;
 using Content.Shared.Hands.EntitySystems;
 using Content.Shared.Humanoid;
 using Content.Shared.Interaction.Components;
 using Content.Shared.Mobs;
 using Content.Shared.Mobs.Components;
+using Content.Shared.Movement.Components;
 using Content.Shared.Movement.Pulling.Components;
 using Content.Shared.Movement.Systems;
 using Content.Shared.NameModifier.EntitySystems;
@@ -80,6 +84,10 @@ public sealed partial class ZombieSystem
     private static readonly string MindRoleZombie = "MindRoleZombie";
     private static readonly List<ProtoId<AntagPrototype>> BannableZombiePrototypes = ["Zombie"];
     internal static readonly HashSet<HumanoidVisualLayers> AdditionalZombieLayers = [HumanoidVisualLayers.Tail, HumanoidVisualLayers.HeadSide, HumanoidVisualLayers.HeadTop, HumanoidVisualLayers.Snout];
+
+    private static readonly EntProtoId ZombieGravityJumpAction = "STActionZombieGravityJump";
+    private static readonly EntProtoId ZombieLookUpAction = "STActionZombieLookUp";
+    private static readonly EntProtoId ZombieRegenerativeSleepAction = "STActionZombieRegenerativeSleep";
 
     /// <summary>
     /// Handles an entity turning into a zombie when they die or go into crit
@@ -342,5 +350,23 @@ public sealed partial class ZombieSystem
         // Also prevents them from becoming a Survivor. They're undead.
         _tag.AddTag(target, InvalidForGlobalSpawnSpellTag);
         _tag.AddTag(target, CannotSuicideTag);
+
+        // Stories-ZombieAbilities Start
+        if (HasComp<CanHostGuardianComponent>(target) && TryComp(target, out ActionsComponent? actionsComp)) // CanHostGuardianComponent is present on MobMonkey, MobKobold, STMobShadowling and BaseSpeciesMob (playable races)
+        {
+            if (!HasComp<JumpAbilityComponent>(target))
+            {
+                var jumpComp = AddComp<JumpAbilityComponent>(target);
+                jumpComp.Action = ZombieGravityJumpAction;
+                _actions.RemoveAction(target, jumpComp.ActionEntity);
+                jumpComp.ActionEntity = _actions.AddAction(target, jumpComp.Action);
+                jumpComp.CanCollide = true;
+                jumpComp.JumpDistance = 2;
+                Dirty(target, jumpComp);
+            }
+            _actions.AddAction(target, ZombieLookUpAction);
+            _actions.AddAction(target, ZombieRegenerativeSleepAction);
+        }
+        // Stories-ZombieAbilities End
     }
 }

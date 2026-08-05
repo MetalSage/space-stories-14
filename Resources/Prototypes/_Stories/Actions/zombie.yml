@@ -1,0 +1,41 @@
+- type: entity
+  parent: BaseAction
+  id: STActionZombieLookUp
+  name: Scent
+  description: Your heightened scents detect the scent of the living, allowing you to unerringly determine their number nearby.
+  components:
+  - type: Action
+    useDelay: 7
+    icon:
+      sprite: _Stories/Actions/zombie.rsi
+      state: scent
+  - type: InstantAction
+    event: !type:ZombieLookUpActionEvent
+
+- type: entity
+  parent: BaseAction
+  id: STActionZombieGravityJump
+  name: Hungry lunge
+  description: You lunge forward in a fit of hunger, quickly covering a distance of 2 tiles.
+  components:
+  - type: Action
+    useDelay: 10
+    icon:
+      sprite: _Stories/Actions/zombie.rsi
+      state: jump
+  - type: InstantAction
+    event: !type:GravityJumpEvent {}
+
+- type: entity
+  parent: BaseAction
+  id: STActionZombieRegenerativeSleep
+  name: Dormancy
+  description: You drift into a brief sleep, rapidly regenerating your wounds.
+  components:
+  - type: Action
+    useDelay: 270
+    icon:
+      sprite: _Stories/Actions/zombie.rsi
+      state: sleep
+  - type: InstantAction    
+    event: !type:ZombieRegenerativeSleepEvent
