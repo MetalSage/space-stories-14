@@ -32,6 +32,7 @@
   - type: SlimPoweredLight
     enabled: false
   - type: StationAiVision
+    needsPower: true # Stories-AIFix
   - type: Clickable
   - type: InteractionOutline
   - type: Construction
