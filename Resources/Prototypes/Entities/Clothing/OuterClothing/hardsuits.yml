@@ -172,6 +172,8 @@
         Heat: 0.7 #Goliath hide gets grilled instead of you
         Radiation: 0.3
         Caustic: 0.8
+  - type: StaminaResistance  #Balance Space Stories
+    damageCoefficient: 0.7
   - type: ClothingSpeedModifier
     walkModifier: 0.8
     sprintModifier: 0.8
@@ -211,6 +213,8 @@
         Piercing: 0.5
         Heat: 0.3
         Radiation: 0.1
+  - type: StaminaResistance  #Balance Space Stories
+    damageCoefficient: 0.65
   - type: ExplosionResistance
     damageCoefficient: 0.2
   - type: TemperatureProtection
@@ -243,6 +247,8 @@
         Piercing: 0.6
         Heat: 0.8
         Caustic: 0.7
+  - type: StaminaResistance  #Balance Space Stories
+    damageCoefficient: 0.6
   - type: ClothingSpeedModifier
     walkModifier: 0.75
     sprintModifier: 0.75
@@ -274,6 +280,8 @@
         Blunt: 0.8
         Slash: 0.8
         Piercing: 0.7
+  - type: StaminaResistance  #Balance Space Stories
+    damageCoefficient: 0.65
   - type: ClothingSpeedModifier
     walkModifier: 0.65
     sprintModifier: 0.65
@@ -305,6 +313,8 @@
         Piercing: 0.6
         Heat: 0.8
         Caustic: 0.7
+  - type: StaminaResistance  #Balance Space Stories
+    damageCoefficient: 0.5
   - type: ClothingSpeedModifier
     walkModifier: 0.7
     sprintModifier: 0.7
@@ -337,6 +347,8 @@
         Heat: 0.5
         Radiation: 0.5
         Caustic: 0.6
+  - type: StaminaResistance  #Balance Space Stories
+    damageCoefficient: 0.5
   - type: ClothingSpeedModifier
     walkModifier: 0.8
     sprintModifier: 0.8
@@ -487,6 +499,8 @@
         Heat: 0.8
         Radiation: 0.5
         Caustic: 0.6
+  - type: StaminaResistance  #Balance Space Stories
+    damageCoefficient: 0.5
   - type: ClothingSpeedModifier
     walkModifier: 0.8
     sprintModifier: 0.8
@@ -520,6 +534,8 @@
         Heat: 0.9
         Radiation: 0.5
         Caustic: 0.8
+  - type: StaminaResistance  #Balance Space Stories
+    damageCoefficient: 0.75
   - type: ClothingSpeedModifier
     walkModifier: 0.9
     sprintModifier: 0.9
@@ -547,7 +563,7 @@
   - type: ExplosionResistance
     damageCoefficient: 0.5
   - type: StaminaResistance # do not add these to other equipment or mobs, we don't want to microbalance these everywhere
-    damageCoefficient: 0.75
+    damageCoefficient: 0.5 #Balance Space Stories. Official stats - 0.75
   - type: Armor
     modifiers:
       coefficients:
@@ -628,7 +644,7 @@
   - type: FireProtection
     reduction: 0.8
   - type: StaminaResistance # do not add these to other equipment or mobs, we don't want to microbalance these everywhere
-    damageCoefficient: 0.6
+    damageCoefficient: 0.5 #Balance Space Stories. Official stats - 0.6
   - type: Armor
     modifiers:
       coefficients:
@@ -684,7 +700,7 @@
   - type: ExplosionResistance
     damageCoefficient: 0.5
   - type: StaminaResistance # do not add these to other equipment or mobs, we don't want to microbalance these everywhere
-    damageCoefficient: 0.6
+    damageCoefficient: 0.4 #Balance Space Stories. Official stats - 0.6
   - type: Armor
     modifiers:
       coefficients:
@@ -736,7 +752,8 @@
   - type: PressureProtection
     highPressureMultiplier: 0.2
     lowPressureMultiplier: 1000
-  # - type: StaminaResistance # Should not have stamina resistance, this is purely so people know it was not forgotten.
+  - type: StaminaResistance #Balance Space Stories
+    damageCoefficient: 0.65 
   - type: Armor
     modifiers:
       coefficients:
@@ -799,6 +816,8 @@
         Heat: 0.25
         Radiation: 0.25
         Caustic: 0.75
+  - type: StaminaResistance #Balance Space Stories
+    damageCoefficient: 0.65 
   - type: ClothingSpeedModifier
     walkModifier: 0.8
     sprintModifier: 0.8
@@ -865,6 +884,8 @@
         Piercing: 0.9
         Heat: 0.4
         Caustic: 0.75
+  - type: StaminaResistance #Balance Space Stories
+    damageCoefficient: 0.65 
   - type: ClothingSpeedModifier
     walkModifier: 0.6
     sprintModifier: 0.6
@@ -900,6 +921,8 @@
         Piercing: 0.85
         Heat: 0.4
         Caustic: 0.75
+  - type: StaminaResistance #Balance Space Stories
+    damageCoefficient: 0.6
   - type: ClothingSpeedModifier
     walkModifier: 0.8
     sprintModifier: 0.8
@@ -1093,6 +1116,8 @@
         Shock: 0.1
         Radiation: 0.1
         Caustic: 0.1
+  - type: StaminaResistance #Balance Space Stories
+    damageCoefficient: 0.6
   - type: ZombificationResistance
     zombificationResistanceCoefficient: 0.25
   - type: ClothingSpeedModifier

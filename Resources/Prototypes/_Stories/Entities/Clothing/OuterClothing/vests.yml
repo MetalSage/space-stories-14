@@ -58,6 +58,8 @@
         Blunt: 0.6
         Slash: 0.6
         Piercing: 0.3
+  - type: StaminaResistance 
+    damageCoefficient: 0.4
   - type: Tag
     tags:
     - ForceRecallEquipment

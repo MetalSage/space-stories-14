@@ -18,6 +18,8 @@
         Slash: 0.9
         Piercing: 0.9
         Heat: 0.75
+  - type: StaminaResistance #Balance Space Stories
+    damageCoefficient: 0.7
   - type: ExplosionResistance
     damageCoefficient: 0.15
   - type: GroupExamine
@@ -169,6 +171,8 @@
         Slash: 0.8
         Piercing: 0.8
         Heat: 0.8
+  - type: StaminaResistance #Balance Space Stories
+    damageCoefficient: 0.6
   # phase cloak
   - type: ToggleClothing
     action: ActionTogglePhaseCloak
