@@ -24,6 +24,8 @@
         Slash: 0.75
         Piercing: 0.75
         Heat: 0.70
+  - type: StaminaResistance
+    damageCoefficient: 0.6
   - type: ExplosionResistance
     damageCoefficient: 0.90
 
@@ -44,6 +46,10 @@
         Slash: 0.70
         Piercing: 0.70
         Heat: 0.80
+  - type: StaminaResistance 
+    damageCoefficient: 0.5
+  - type: ExplosionResistance
+    damageCoefficient: 0.90
 
 - type: entity
   parent: [ClothingOuterStorageBase, AllowSuitStorageClothing, ClothingOuterArmorBasic]
