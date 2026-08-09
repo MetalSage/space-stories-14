@@ -1,63 +1,63 @@
 - type: entity
   name: prison officer hardsuit storage
   description: An unusual high-tech storage designed for storing space suits.
-  id: PRISONSuitStorageOfficer
+  id: STPRISONSuitStorageOfficer
   parent: SuitStorageBase
   suffix: Officer
   components:
   - type: StorageFill
     contents:
         - id: OxygenTankFilled
-        - id: PRISONClothingOuterHardsuitOfficer
+        - id: STPRISONClothingOuterHardsuitOfficer
         - id: ClothingMaskBreath
         - id: ClothingShoesBootsMag
   - type: AccessReader
-    access: [["PrisonBrig"]]
+    access: [["STPrisonBrig"]]
 
 - type: entity
   name: prison medic hardsuit storage
   description: An unusual high-tech storage designed for storing space suits.
-  id: PRISONSuitStorageMed
+  id: STPRISONSuitStorageMed
   parent: SuitStorageBase
   suffix: Med
   components:
   - type: StorageFill
     contents:
         - id: OxygenTankFilled
-        - id: PRISONClothingOuterHardsuitMedic
+        - id: STPRISONClothingOuterHardsuitMedic
         - id: ClothingMaskBreath
         - id: ClothingShoesBootsMag
   - type: AccessReader
-    access: [["PrisonMed"]]
+    access: [["STPrisonMed"]]
 
 - type: entity
   name: prison engineer hardsuit storage
   description: An unusual high-tech storage designed for storing space suits.
-  id: PRISONSuitStorageEngi
+  id: STPRISONSuitStorageEngi
   parent: SuitStorageBase
   suffix: Engi
   components:
   - type: StorageFill
     contents:
         - id: OxygenTankFilled
-        - id: PRISONClothingOuterHardsuitEngi
+        - id: STPRISONClothingOuterHardsuitEngi
         - id: ClothingMaskBreath
         - id: ClothingShoesBootsMag
   - type: AccessReader
-    access: [["PrisonEng"]]
+    access: [["STPrisonEng"]]
 
 - type: entity
   name: head of prison hardsuit storage
   description: An unusual high-tech storage designed for storing space suits.
-  id: PRISONSuitStorageHeadOfPrison
+  id: STPRISONSuitStorageHeadOfPrison
   parent: SuitStorageBase
-  suffix: HeadOfPrison
+  suffix: STHeadOfPrison
   components:
   - type: StorageFill
     contents:
         - id: OxygenTankFilled
-        - id: PRISONClothingOuterHardsuitHeadOfPrison
+        - id: STPRISONClothingOuterHardsuitHeadOfPrison
         - id: ClothingMaskBreath
         - id: ClothingShoesBootsMag
   - type: AccessReader
-    access: [["HeadOfPrison"]]
+    access: [["STHeadOfPrison"]]

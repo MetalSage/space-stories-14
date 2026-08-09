@@ -1,12 +1,12 @@
 - type: entity
   parent: ClothingBeltStorageBase
-  id: ClothingBeltGuardian
+  id: STClothingBeltGuardian
   name: jedi belt
   description: Hang your sword on it.
   components:
     - type: Tag
       tags:
-        - ForceRecallEquipment
+        - STForceRecallEquipment
     - type: Sprite
       sprite: _Stories/Clothing/Belt/guardian_belt.rsi
       state: icon
@@ -27,7 +27,7 @@
 
 - type: entity
   parent: ClothingBeltSheath
-  id: ClothingBeltSheathExe
+  id: STClothingBeltSheathExe
   name: sheath for energy rapier
   description: An ornate sheath designed to hold a blade.
   components:

@@ -1,35 +1,35 @@
 - type: entity
-  id: PRISONLockerHeadOfPrisonFilled
+  id: STPRISONLockerHeadOfPrisonFilled
   suffix: Filled
-  parent: PRISONLockerHeadOfPrison
+  parent: STPRISONLockerHeadOfPrison
   components:
     - type: StorageFill
       contents:
-        # - id: PRISONHandheldShuttleConsole
-        - id: PRISONClothingHeadHatUshanka
-        - id: PRISONClothingHeadHatCapHeadOfPrison
+        # - id: STPRISONHandheldShuttleConsole
+        - id: STPRISONClothingHeadHatUshanka
+        - id: STPRISONClothingHeadHatCapHeadOfPrison
         - id: ClothingMaskGasSwat
-        # - id: PRISONClothingBeltSheathFilled
+        # - id: STPRISONClothingBeltSheathFilled
         - id: WeaponDisabler
         - id: DrinkVacuumFlask
         - id: ClothingBeltSecurityFilled
-        - id: PRISONClothingOuterCoatHeadOfPrison
+        - id: STPRISONClothingOuterCoatHeadOfPrison
         - id: ClothingHandsGlovesCombat
-        - id: PRISONClothingHeadsetAlt
-        - id: PRISONClothingEyesGlasses
-        - id: PRISONClothingShoesBootsJack
+        - id: STPRISONClothingHeadsetAlt
+        - id: STPRISONClothingEyesGlasses
+        - id: STPRISONClothingShoesBootsJack
         - id: CigarGoldCase
           prob: 0.50
-        - id: PRISONDoorRemote
-        - id: PRISONClothingUniformJumpsuitHeadOfPrison
-        - id: PRISONRubberStamp
+        - id: STPRISONDoorRemote
+        - id: STPRISONClothingUniformJumpsuitHeadOfPrison
+        - id: STPRISONRubberStamp
         - id: HoloprojectorSecurity
         - id: AccessConfigurator
 
 - type: entity
-  id: PRISONLockerFilled
+  id: STPRISONLockerFilled
   suffix: Filled
-  parent: PRISONLocker
+  parent: STPRISONLocker
   components:
     - type: StorageFill
       contents:
@@ -40,10 +40,10 @@
         - id: FlashlightSeclite
           prob: 0.8
         - id: ClothingHandsGlovesColorBlack
-        - id: PRISONClothingUniformJumpsuit
-        - id: PRISONClothingOuterVestArmor
-        - id: PRISONClothingEyesGlasses
-        - id: PRISONClothingHeadset
-        - id: PRISONClothingShoesBootsJack
-        - id: PRISONClothingHeadHatSoft
+        - id: STPRISONClothingUniformJumpsuit
+        - id: STPRISONClothingOuterVestArmor
+        - id: STPRISONClothingEyesGlasses
+        - id: STPRISONClothingHeadset
+        - id: STPRISONClothingShoesBootsJack
+        - id: STPRISONClothingHeadHatSoft
           prob: 0.2

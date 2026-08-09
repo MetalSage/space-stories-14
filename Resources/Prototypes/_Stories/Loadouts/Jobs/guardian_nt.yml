@@ -4,7 +4,7 @@
   - !type:JobRequirementLoadoutEffect
     requirement:
       !type:RoleTimeRequirement
-      role: JobGuardianNt
+      role: STJobGuardianNt
       time: 36000 # 10 hours
 
 - type: loadoutEffectGroup
@@ -13,5 +13,5 @@
   - !type:JobRequirementLoadoutEffect
     requirement:
       !type:RoleTimeRequirement
-      role: JobGuardianNt
+      role: STJobGuardianNt
       time: 108000 # 30 hours

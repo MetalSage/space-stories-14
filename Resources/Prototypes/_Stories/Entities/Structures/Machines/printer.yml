@@ -1,8 +1,6 @@
-# Printers
-
 - type: entity
   parent: BaseLathe
-  id: PrinterDoc
+  id: STPrinterDoc
   name: paper printer
   description: A bureaucratic ideal. It stores documents in its database and allows printing them as long as you have paper and ink.
   components:
@@ -20,7 +18,7 @@
   - type: Transform
     noRot: false
   - type: Machine
-    board: PrinterDocMachineCircuitboard
+    board: STPrinterDocMachineCircuitboard
   - type: Lathe
     producingSound: /Audio/Machines/scanning.ogg
     idleState: icon
@@ -46,12 +44,12 @@
       tags:
       - Document
     storage:
-      SheetPrinter: 0
-      Ink: 0
+      STSheetPrinter: 0
+      STInk: 0
 
 - type: entity
-  parent: PrinterDoc
-  id: PrinterDocSyndie
+  parent: STPrinterDoc
+  id: STPrinterDocSyndie
   name: syndicate paper printer
   components:
   - type: Lathe
@@ -61,72 +59,70 @@
     staticPacks:
     - STPrinterDocSyndieStatic
 
-# Lathe
-
 - type: latheRecipePack
   id: STPrinterDocStatic
   recipes:
-    - PrintedDocumentReportStationRecipe
-    - PrintedDocumentReporDepartmentRecipe
-    - PrintedDocumentReportEmployeePerformanceRecipe
-    - PrintedDocumentInternalAffairsAgentsReportRecipe
-    - PrintedDocumentConditionReportRecipe
-    - PrintedDocumentReportStudyObjectRecipe
-    - PrintedDocumentExperimentReportRecipe
-    - PrintedDocumentDisposalReportRecipe
-    - PrintedDocumentApplicationAppointmentInterimRecipe
-    - PrintedDocumentApplicationEmploymentRecipe
-    - PrintedDocumentLetterResignationRecipe
-    - PrintedDocumentApplicationAccessRecipe
-    - PrintedDocumentApplicationEquipmentRecipe
-    - PrintedDocumentEvacuationShuttleRequestRecipe
-    - PrintedDocumentShuttleRegistrationRequestRecipe
-    - PrintedDocumentRequestCallMembersCentralCommitteeDSORecipe
-    - PrintedDocumentRequestChangeSalaryRecipe
-    - PrintedDocumentRequestForNonlistedEmploymentRecipe
-    - PrintedDocumentRequestForPromotionRecipe
-    - PrintedDocumentRequestEuthanasiaRecipe
-    - PrintedDocumentRequestConstructionWorkRecipe
-    - PrintedDocumentComplaintOffenseRecipe
-    - PrintedDocumentPermissionEquipmentRecipe
-    - PrintedDocumentSearchPermissionRecipe
-    - PrintedDocumentPrescriptionDrugAuthorizationRecipe
-    - PrintedDocumentPermissionDisposeBodyRecipe
-    - PrintedDocumentConstructionPermitRecipe
-    - PrintedDocumentOrderDismissalRecipe
-    - PrintedDocumentOrderDeprivationAccessRecipe
-    - PrintedDocumentOrderEncouragementRecipe
-    - PrintedDocumentOrderParolePrisonerRecipe
-    - PrintedDocumentOrderRecognizingSentienceCreatureRecipe
-    - PrintedDocumentOrderMedicalInterventionRecipe
-    - PrintedDocumentProductManufacturingOrderRecipe
-    - PrintedDocumentOrderPurchaseResourcesEquipmentRecipe
-    - PrintedDocumentOrderingSpecialEquipmentRecipe
-    - PrintedDocumentCertificateRecipe
-    - PrintedDocumentCertificateAdvancedTrainingRecipe
-    - PrintedDocumentCertificateOffenseRecipe
-    - PrintedDocumentDeathCertificateRecipe
-    - PrintedDocumentMarriageCertificateRecipe
-    - PrintedDocumentDivorceCertificateRecipe
-    - PrintedDocumentClosingIndictmentRecipe
-    - PrintedDocumentSentenceRecipe
-    - PrintedDocumentJudgmentRecipe
-    - PrintedDocumentStatementHealtheRecipe
+    - STPrintedDocumentReportStationRecipe
+    - STPrintedDocumentReporDepartmentRecipe
+    - STPrintedDocumentReportEmployeePerformanceRecipe
+    - STPrintedDocumentInternalAffairsAgentsReportRecipe
+    - STPrintedDocumentConditionReportRecipe
+    - STPrintedDocumentReportStudyObjectRecipe
+    - STPrintedDocumentExperimentReportRecipe
+    - STPrintedDocumentDisposalReportRecipe
+    - STPrintedDocumentApplicationAppointmentInterimRecipe
+    - STPrintedDocumentApplicationEmploymentRecipe
+    - STPrintedDocumentLetterResignationRecipe
+    - STPrintedDocumentApplicationAccessRecipe
+    - STPrintedDocumentApplicationEquipmentRecipe
+    - STPrintedDocumentEvacuationShuttleRequestRecipe
+    - STPrintedDocumentShuttleRegistrationRequestRecipe
+    - STPrintedDocumentRequestCallMembersCentralCommitteeDSORecipe
+    - STPrintedDocumentRequestChangeSalaryRecipe
+    - STPrintedDocumentRequestForNonlistedEmploymentRecipe
+    - STPrintedDocumentRequestForPromotionRecipe
+    - STPrintedDocumentRequestEuthanasiaRecipe
+    - STPrintedDocumentRequestConstructionWorkRecipe
+    - STPrintedDocumentComplaintOffenseRecipe
+    - STPrintedDocumentPermissionEquipmentRecipe
+    - STPrintedDocumentSearchPermissionRecipe
+    - STPrintedDocumentPrescriptionDrugAuthorizationRecipe
+    - STPrintedDocumentPermissionDisposeBodyRecipe
+    - STPrintedDocumentConstructionPermitRecipe
+    - STPrintedDocumentOrderDismissalRecipe
+    - STPrintedDocumentOrderDeprivationAccessRecipe
+    - STPrintedDocumentOrderEncouragementRecipe
+    - STPrintedDocumentOrderParolePrisonerRecipe
+    - STPrintedDocumentOrderRecognizingSentienceCreatureRecipe
+    - STPrintedDocumentOrderMedicalInterventionRecipe
+    - STPrintedDocumentProductManufacturingOrderRecipe
+    - STPrintedDocumentOrderPurchaseResourcesEquipmentRecipe
+    - STPrintedDocumentOrderingSpecialEquipmentRecipe
+    - STPrintedDocumentCertificateRecipe
+    - STPrintedDocumentCertificateAdvancedTrainingRecipe
+    - STPrintedDocumentCertificateOffenseRecipe
+    - STPrintedDocumentDeathCertificateRecipe
+    - STPrintedDocumentMarriageCertificateRecipe
+    - STPrintedDocumentDivorceCertificateRecipe
+    - STPrintedDocumentClosingIndictmentRecipe
+    - STPrintedDocumentSentenceRecipe
+    - STPrintedDocumentJudgmentRecipe
+    - STPrintedDocumentStatementHealtheRecipe
 
 - type: latheRecipePack
   id: STEmagPrinterDocStatic
   recipes:
-  - PrintedDocumentErrorLoadingFormHeaderRecipe
-  - PrintedDocumentNoticeOfLiquidationRecipe
-  - PrintedDocumentBusinessDealRecipe
-  - PrintedDocumentNoteBeginningMilitaryActionsRecipe
-  - PrintedDocumentReportAccomplishmentGoalsRecipe
+  - STPrintedDocumentErrorLoadingFormHeaderRecipe
+  - STPrintedDocumentNoticeOfLiquidationRecipe
+  - STPrintedDocumentBusinessDealRecipe
+  - STPrintedDocumentNoteBeginningMilitaryActionsRecipe
+  - STPrintedDocumentReportAccomplishmentGoalsRecipe
 
 - type: latheRecipePack
   id: STPrinterDocSyndieStatic
   recipes:
-  - PrintedDocumentErrorLoadingFormHeaderRecipe
-  - PrintedDocumentNoticeOfLiquidationRecipe
-  - PrintedDocumentBusinessDealRecipe
-  - PrintedDocumentNoteBeginningMilitaryActionsRecipe
-  - PrintedDocumentReportAccomplishmentGoalsRecipe
+  - STPrintedDocumentErrorLoadingFormHeaderRecipe
+  - STPrintedDocumentNoticeOfLiquidationRecipe
+  - STPrintedDocumentBusinessDealRecipe
+  - STPrintedDocumentNoteBeginningMilitaryActionsRecipe
+  - STPrintedDocumentReportAccomplishmentGoalsRecipe

@@ -1,5 +1,5 @@
 - type: entity
-  id: StoriesWristwatchGold
+  id: STWristwatchGold
   parent: Wristwatch
   name: gold watch
   description: A fashionable watch that costs more than your kidney.
@@ -15,10 +15,10 @@
   - type: Clothing
     sprite: Objects/Devices/goldwatch.rsi
   - type: StaticPrice
-    price: 500 #if you ever increase the price of kidneys, increase this too.
+    price: 500
 
 - type: entity
-  id: WristwatchSilver
+  id: STWristwatchSilver
   parent: Wristwatch
   name: silver watch
   description: A fashionable watch that costs more than your kidney.
@@ -32,6 +32,6 @@
   - type: Item
     sprite: _Stories/Objects/Devices/silverwatch.rsi
   - type: Clothing
-    sprite: Objects/Devices/goldwatch.rsi # No...
+    sprite: Objects/Devices/goldwatch.rsi
   - type: StaticPrice
-    price: 400 #if you ever increase the price of kidneys, increase this too.
+    price: 400

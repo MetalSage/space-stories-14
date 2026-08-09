@@ -1,11 +1,11 @@
 - type: storeCategory
   id: Force
-  name: Общие способности
+  name: General Abilities
 
 - type: storeCategory
-  id: ForceDark
+  id: STForceDark
   name: Темная сторона
 
 - type: storeCategory
-  id: ForceLight
-  name: Светлая сторона
+  id: STForceLight
+  name: Light Side

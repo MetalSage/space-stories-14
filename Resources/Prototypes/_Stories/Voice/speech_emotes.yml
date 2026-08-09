@@ -1,7 +1,5 @@
-# Kidan
-
 - type: emote
-  id: Grumble
+  id: STGrumble
   name: emote-name-grumble
   category: Vocal
   whitelist:
@@ -28,7 +26,7 @@
   - ворчит!
 
 - type: emote
-  id: Moan
+  id: STMoan
   name: emote-name-moan
   category: Vocal
   whitelist:
@@ -52,7 +50,7 @@
   - стонет!
 
 - type: emote
-  id: WigglesAntennae
+  id: STWigglesAntennae
   category: Vocal
   whitelist:
     components:
@@ -85,7 +83,7 @@
   - машет усиками!
 
 - type: emote
-  id: WavesAntennaeSharply
+  id: STWavesAntennaeSharply
   category: Vocal
   whitelist:
     components:
@@ -108,10 +106,8 @@
   - резко машет антенками.
   - резко машет антенками!
 
-# Felinid
-
 - type: emote
-  id: Meow
+  id: STMeow
   name: emote-name-meow
   category: Vocal
   whitelist:
@@ -139,7 +135,7 @@
   - ня
 
 - type: emote
-  id: Mew
+  id: STMew
   name: emote-name-mew
   category: Vocal
   whitelist:
@@ -158,7 +154,7 @@
   - mewed
 
 - type: emote
-  id: Purr
+  id: STPurr
   name: emote-name-purr
   category: Vocal
   whitelist:
@@ -180,7 +176,7 @@
   - мурчит
 
 - type: emote
-  id: Hiss
+  id: STHiss
   name: emote-name-hiss
   category: Vocal
   whitelist:

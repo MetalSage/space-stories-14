@@ -1,5 +1,5 @@
 - type: speechSounds
-  id: MaleAvali
+  id: STMaleAvali
   saySound:
     path: /Audio/_Stories/Voice/Avali/avali_1.ogg
   askSound:

@@ -1,7 +1,7 @@
 - type: entity
   name: Internal Affairs Agent stamp
   parent: RubberStampBase
-  id: RubberStampIAA
+  id: STRubberStampIAA
   suffix: DO NOT MAP
   components:
     - type: Stamp
@@ -16,7 +16,7 @@
   name: head of prison's stamp
   description: A rubber stamp for stamping important documents.
   parent: RubberStampBase
-  id: PRISONRubberStamp
+  id: STPRISONRubberStamp
   suffix: DO NOT MAP
   components:
     - type: Stamp

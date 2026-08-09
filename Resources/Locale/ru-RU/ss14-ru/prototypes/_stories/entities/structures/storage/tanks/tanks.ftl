@@ -1,6 +1,6 @@
-ent-KvassTank = { ent-StorageTank }
+ent-STKvassTank = { ent-StorageTank }
     .desc = { ent-StorageTank.desc }
     .suffix = Пустой
-ent-KvassTankFull = { ent-KvassTank }
-    .desc = { ent-KvassTank.desc }
+ent-STKvassTankFull = { ent-STKvassTank }
+    .desc = { ent-STKvassTank.desc }
     .suffix = Полный

@@ -1,9 +1,9 @@
 - type: entity
-  id: PRISONClothingBeltSheathFilled
-  parent: PRISONClothingBeltSheath
+  id: STPRISONClothingBeltSheathFilled
+  parent: STPRISONClothingBeltSheath
   suffix: Filled
   components:
     - type: ContainerFill
       containers:
         item:
-          - PRISONSabre
+          - STPRISONSabre

@@ -1,8 +1,8 @@
 - type: job
-  id: GuardianNt
+  id: STGuardianNt
   name: страж клинка
   description: Встань на защиту командования станции со своим крутым мечом и способностями!
-  playTimeTracker: JobGuardianNt
+  playTimeTracker: STJobGuardianNt
   requirements:
     - !type:RoleTimeRequirement
       role: JobHeadOfSecurity
@@ -11,13 +11,13 @@
       role: JobCaptain
       time: 36000 # 10 hours
     - !type:RoleTimeRequirement
-      role: JobIAA
+      role: STJobIAA
       time: 36000 # 10 hours # ! Почему так чертовски много?
     - !type:RoleTimeRequirement
       role: JobDetective
       time: 18000 # 5 hours
-  startingGear: GuardianNtGear
-  icon: "JobIconGuardianNt"
+  startingGear: STGuardianNtGear
+  icon: "STJobIconGuardianNt"
   supervisors: job-supervisors-centcom
   accessGroups:
   - AllAccess
@@ -33,22 +33,22 @@
   maxBankBalance: 300
 
 - type: startingGear
-  id: GuardianNtGear
+  id: STGuardianNtGear
   equipment:
-    id: GuardianNtPDA
-    ears: ClothingHeadsetGuardianNtAlt
+    id: STGuardianNtPDA
+    ears: STClothingHeadsetGuardianNtAlt
     gloves: ClothingHandsGlovesCombat
     eyes: ClothingEyesGlassesSecurity
 
 - type: chameleonOutfit
-  id: GuardianNtChameleonOutfit
-  job: GuardianNt
+  id: STGuardianNtChameleonOutfit
+  job: STGuardianNt
   hasMindShield: true
   equipment:
-    head: ClothingHeadHatExe
-    mask: ClothingMaskGasExe
-    neck: ClothingNeckMantleGuardianNt
-    outerClothing: ClothingOuterVestGuardianNt
-    jumpsuit: ClothingUniformJumpsuitGuardianNt
-    back: ClothingBackpackGuardianNt
-    shoes: ClothingShoesBootsJackGuardianNt
+    head: STClothingHeadHatExe
+    mask: STClothingMaskGasExe
+    neck: STClothingNeckMantleGuardianNt
+    outerClothing: STClothingOuterVestGuardianNt
+    jumpsuit: STClothingUniformJumpsuitGuardianNt
+    back: STClothingBackpackGuardianNt
+    shoes: STClothingShoesBootsJackGuardianNt

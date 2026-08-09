@@ -1,5 +1,5 @@
 - type: speechSounds
-  id: Kidan
+  id: STKidan
   saySound:
     path: /Audio/_Stories/Voice/Kidan/speak1.ogg
   askSound:

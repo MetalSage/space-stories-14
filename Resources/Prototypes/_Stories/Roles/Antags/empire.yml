@@ -1,6 +1,6 @@
 - type: antag
-  id: EmpireMember
-  name: Имперец
+  id: STEmpireMember
+  name: Empire Member
   antagonist: true
   setPreference: false
   objective: Выполняйте приказы императора.
@@ -12,14 +12,14 @@
     role: JobCaptain
     time: 36000 # 10 hours
   - !type:RoleTimeRequirement
-    role: JobIAA
+    role: STJobIAA
     time: 36000 # 10 hours
   - !type:RoleTimeRequirement
     role: JobDetective
     time: 18000 # 5 hours
 
 - type: antag
-  id: HypnotizedEmpireMember
+  id: STHypnotizedEmpireMember
   name: Гипнотизированный Имперец
   antagonist: true
   setPreference: false

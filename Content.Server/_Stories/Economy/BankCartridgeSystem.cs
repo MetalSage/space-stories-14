@@ -1,5 +1,4 @@
 using Content.Server._Stories.Economy.Components;
-using Content.Server.CartridgeLoader;
 using Content.Server.Station.Systems;
 using Content.Shared._Stories.Economy;
 using Content.Shared._Stories.Economy.Components;
@@ -124,7 +123,9 @@ public sealed partial class BankCartridgeSystem : EntitySystem
             if (_bank.TryTransfer(station.Value, idBank.AccountNumber, args.TargetAccount, args.Amount))
             {
                 UpdateUi(uid, loaderUid);
-                _cartridgeLoader.SendNotification(loaderUid, "Bank", Loc.GetString("stories-bank-app-transfer-success"));
+                _cartridgeLoader.SendNotification(loaderUid,
+                    "Bank",
+                    Loc.GetString("stories-bank-app-transfer-success"));
             }
             else
                 _cartridgeLoader.SendNotification(loaderUid, "Bank", Loc.GetString("stories-bank-app-transfer-fail"));
@@ -204,9 +205,7 @@ public sealed partial class BankCartridgeSystem : EntitySystem
                 {
                     var station = _station.GetOwningStation(loaderUid);
                     if (station == ev.Station)
-                    {
                         UpdateUi(uid, loaderUid);
-                    }
                 }
             }
         }

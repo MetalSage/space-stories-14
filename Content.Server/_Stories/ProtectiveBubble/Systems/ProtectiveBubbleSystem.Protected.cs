@@ -24,7 +24,10 @@ public sealed partial class ProtectiveBubbleSystem
         var query = EntityQueryEnumerator<ProtectedByProtectiveBubbleComponent>();
         while (query.MoveNext(out var uid, out var component))
         {
-            _statusEffect.TryAddStatusEffect<PressureImmunityComponent>(uid, PressureImmunity, TimeSpan.FromSeconds(frameTime), true);
+            _statusEffect.TryAddStatusEffect<PressureImmunityComponent>(uid,
+                PressureImmunity,
+                TimeSpan.FromSeconds(frameTime),
+                true);
         }
     }
 
@@ -38,7 +41,7 @@ public sealed partial class ProtectiveBubbleSystem
         ProtectedByProtectiveBubbleComponent component,
         ref GetExplosionResistanceEvent args)
     {
-        args.DamageCoefficient = 0; // Щит полностью защищает от взрыва впитывая весь урон.
+        args.DamageCoefficient = 0;
     }
 
     private void OnTemperatureChangeAttempt(EntityUid uid,

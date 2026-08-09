@@ -1,5 +1,5 @@
 - type: reagent
-  id: Kvass
+  id: STKvass
   name: reagent-name-kvass
   parent: BaseDrink
   desc: reagent-desc-kvass

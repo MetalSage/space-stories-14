@@ -155,7 +155,7 @@
     stateDoorOpen: eng_secure_open
     stateDoorClosed: eng_secure_door
   - type: AccessReader
-    access: [ [ "Engineering" ], ["PrisonEng"]] # [ [ "Engineering" ] ] # Stories-Prison
+    access: [ [ "Engineering" ], ["STPrisonEng"]] # [ [ "Engineering" ] ] # Stories-Prison
 
 # Evac Repair
 - type: entity

@@ -40,7 +40,6 @@ public abstract partial class SharedHolySystem
 
         while (query.MoveNext(out var uid, out var holy, out var useDelay))
         {
-            // Защита от случаев, когда святой предмет взяли пока он был на кд.
             if (!_useDelay.IsDelayed((uid, useDelay), HolyDelay))
             {
                 if (_container.TryGetContainingContainer((uid, null, null), out var container) &&
@@ -110,7 +109,7 @@ public abstract partial class SharedHolySystem
 
         if (TryComp<UseDelayComponent>(entity, out var useDelay))
         {
-            if (_useDelay.TryGetDelayInfo((entity, useDelay), out _, HolyDelay)) // Если Delay настроен
+            if (_useDelay.TryGetDelayInfo((entity, useDelay), out _, HolyDelay))
             {
                 if (!_useDelay.TryResetDelay((entity, useDelay), true, HolyDelay))
                     return;
@@ -121,8 +120,6 @@ public abstract partial class SharedHolySystem
             return;
 
         var coefficient = 1 + (1 - unholy.ResistanceCoefficient);
-
-        // У меня есть некоторые сомнения насчет кода ниже
 
         var protectionDamageDamageModifierSet = _prototype.Index(entity.Comp.ProtectionDamageDamageModifierSet);
 

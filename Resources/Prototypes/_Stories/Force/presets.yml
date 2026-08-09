@@ -3,26 +3,26 @@
   name: Hacker
   side: Debug
   volume: 500
-  alert: ForceVolume
+  alert: STForceVolume
   maxVolume: 1000
   componentsToAdd:
   - type: Empire
   - type: Store
     balance:
-      SkillPoint: 9999
+      STSkillPoint: 9999
     categories:
     - Force
-    - ForceLight
-    - ForceDark
+    - STForceLight
+    - STForceDark
     currencyWhitelist:
-    - SkillPoint
+    - STSkillPoint
 
 - type: forcePreset
-  id: Inquisitor
-  name: Инквизитор
+  id: STInquisitor
+  name: Inquisitor
   side: Dark
   volume: 140
-  alert: InquisitorForceVolume
+  alert: STInquisitorForceVolume
   maxVolume: 150
   passiveVolume: 10
   componentsToAdd:
@@ -37,12 +37,12 @@
   - type: Empire
   - type: Store
     balance:
-      SkillPoint: 20
+      STSkillPoint: 20
     categories:
-    - ForceDark
+    - STForceDark
     - Force
     currencyWhitelist:
-    - SkillPoint
+    - STSkillPoint
   componentsToRemove:
   - type: Strippable
 
@@ -51,15 +51,15 @@
   name: Джедай
   side: Light
   volume: 140
-  alert: GuardianNtForceVolume
+  alert: STGuardianNtForceVolume
   maxVolume: 150
   passiveVolume: 10
   componentsToAdd:
   - type: Store
     balance:
-      SkillPoint: 10
+      STSkillPoint: 10
     categories:
-    - ForceLight
+    - STForceLight
     - Force
     currencyWhitelist:
-    - SkillPoint
+    - STSkillPoint

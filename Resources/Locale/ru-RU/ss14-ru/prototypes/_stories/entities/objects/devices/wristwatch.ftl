@@ -1,4 +1,4 @@
-ent-StoriesWristwatchGold = золотые часы
+ent-STWristwatchGold = золотые часы
     .desc = Модные часы, стоимостью больше, чем ваша почка.
-ent-WristwatchSilver = серебряные часы
+ent-STWristwatchSilver = серебряные часы
     .desc = Модные часы, стоимостью больше, чем ваша почка.

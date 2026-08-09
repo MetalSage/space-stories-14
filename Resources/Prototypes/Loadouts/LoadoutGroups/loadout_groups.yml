@@ -52,24 +52,24 @@
   - ToySword
   # Stories-End
   # Stories-Partners-Start
-  - ToyFigurineMSP
-  - ToyFigurineOSP
-  - ToyFigurineESP
-  - ToyFigurineHOSP
-  - WristwatchSilver
-  - ClothingNeckCloakCollector
-  - ClothingNeckCloakAnomalist
-  - ClothingNeckElectrospheres
+  - STToyFigurineMSP
+  - STToyFigurineOSP
+  - STToyFigurineESP
+  - STToyFigurineHOSP
+  - STWristwatchSilver
+  - STClothingNeckCloakCollector
+  - STClothingNeckCloakAnomalist
+  - STClothingNeckElectrospheres
   - STToyFigurineShadowling
   - STToyFigurineAscendedShadowling
-  - ToyFigurineGuardianNt
-  - StoriesFlippoEngravedLighter
-  - StoriesWristwatchGold
-  - ClothingNeckCloakSnake
-  - ToyFigurineColossus
-  - ToyFigurineAshDragon
-  - ToyFigurineBubblegum
-  - ToyFigurineInquisitor
+  - STToyFigurineGuardianNt
+  - STFlippoEngravedLighter
+  - STWristwatchGold
+  - STClothingNeckCloakSnake
+  - STToyFigurineColossus
+  - STToyFigurineAshDragon
+  - STToyFigurineBubblegum
+  - STToyFigurineInquisitor
   - STClothingOuterCoatSas
   - STClothingOuterCoatSlayer # Stories-Sponsors
   - STClothingNeckCloakFlame
@@ -169,30 +169,30 @@
   - CaptainDuffel
   # Stories-Partners-Start
   # Adidos
-  - ClothingBackpackHandbagAdidos
-  - ClothingBackpackAdidos
-  - ClothingBackpackDuffelAdidos
-  - ClothingBackpackSatchelAdidos
+  - STClothingBackpackHandbagAdidos
+  - STClothingBackpackAdidos
+  - STClothingBackpackDuffelAdidos
+  - STClothingBackpackSatchelAdidos
   # Bluesky
-  - ClothingBackpackHandbagBluesky
-  - ClothingBackpackBluesky
-  - ClothingBackpackDuffelBluesky
-  - ClothingBackpackSatchelBluesky
+  - STClothingBackpackHandbagBluesky
+  - STClothingBackpackBluesky
+  - STClothingBackpackDuffelBluesky
+  - STClothingBackpackSatchelBluesky
   # Eight
-  - ClothingBackpackHandbagEight
-  - ClothingBackpackEight
-  - ClothingBackpackDuffelEight
-  - ClothingBackpackSatchelEight
+  - STClothingBackpackHandbagEight
+  - STClothingBackpackEight
+  - STClothingBackpackDuffelEight
+  - STClothingBackpackSatchelEight
   # Gachi
-  - ClothingBackpackHandbagGachi
-  - ClothingBackpackGachi
-  - ClothingBackpackDuffelGachi
-  - ClothingBackpackSatchelGachi
+  - STClothingBackpackHandbagGachi
+  - STClothingBackpackGachi
+  - STClothingBackpackDuffelGachi
+  - STClothingBackpackSatchelGachi
   # Rl
-  - ClothingBackpackHandbagRl
-  - ClothingBackpackRl
-  - ClothingBackpackDuffelRl
-  - ClothingBackpackSatchelRl
+  - STClothingBackpackHandbagRl
+  - STClothingBackpackRl
+  - STClothingBackpackDuffelRl
+  - STClothingBackpackSatchelRl
   # Stories-Partners-End
 
 - type: loadoutGroup
@@ -241,30 +241,30 @@
   - HoPBackpackIan
   # Stories-Partners-Start
   # Adidos
-  - ClothingBackpackHandbagAdidos
-  - ClothingBackpackAdidos
-  - ClothingBackpackDuffelAdidos
-  - ClothingBackpackSatchelAdidos
+  - STClothingBackpackHandbagAdidos
+  - STClothingBackpackAdidos
+  - STClothingBackpackDuffelAdidos
+  - STClothingBackpackSatchelAdidos
   # Bluesky
-  - ClothingBackpackHandbagBluesky
-  - ClothingBackpackBluesky
-  - ClothingBackpackDuffelBluesky
-  - ClothingBackpackSatchelBluesky
+  - STClothingBackpackHandbagBluesky
+  - STClothingBackpackBluesky
+  - STClothingBackpackDuffelBluesky
+  - STClothingBackpackSatchelBluesky
   # Eight
-  - ClothingBackpackHandbagEight
-  - ClothingBackpackEight
-  - ClothingBackpackDuffelEight
-  - ClothingBackpackSatchelEight
+  - STClothingBackpackHandbagEight
+  - STClothingBackpackEight
+  - STClothingBackpackDuffelEight
+  - STClothingBackpackSatchelEight
   # Gachi
-  - ClothingBackpackHandbagGachi
-  - ClothingBackpackGachi
-  - ClothingBackpackDuffelGachi
-  - ClothingBackpackSatchelGachi
+  - STClothingBackpackHandbagGachi
+  - STClothingBackpackGachi
+  - STClothingBackpackDuffelGachi
+  - STClothingBackpackSatchelGachi
   # Rl
-  - ClothingBackpackHandbagRl
-  - ClothingBackpackRl
-  - ClothingBackpackDuffelRl
-  - ClothingBackpackSatchelRl
+  - STClothingBackpackHandbagRl
+  - STClothingBackpackRl
+  - STClothingBackpackDuffelRl
+  - STClothingBackpackSatchelRl
   # Stories-Partners-End
 
 - type: loadoutGroup
@@ -314,30 +314,30 @@
   - CommonDuffel
   # Stories-Partners-Start
   # Adidos
-  - ClothingBackpackHandbagAdidos
-  - ClothingBackpackAdidos
-  - ClothingBackpackDuffelAdidos
-  - ClothingBackpackSatchelAdidos
+  - STClothingBackpackHandbagAdidos
+  - STClothingBackpackAdidos
+  - STClothingBackpackDuffelAdidos
+  - STClothingBackpackSatchelAdidos
   # Bluesky
-  - ClothingBackpackHandbagBluesky
-  - ClothingBackpackBluesky
-  - ClothingBackpackDuffelBluesky
-  - ClothingBackpackSatchelBluesky
+  - STClothingBackpackHandbagBluesky
+  - STClothingBackpackBluesky
+  - STClothingBackpackDuffelBluesky
+  - STClothingBackpackSatchelBluesky
   # Eight
-  - ClothingBackpackHandbagEight
-  - ClothingBackpackEight
-  - ClothingBackpackDuffelEight
-  - ClothingBackpackSatchelEight
+  - STClothingBackpackHandbagEight
+  - STClothingBackpackEight
+  - STClothingBackpackDuffelEight
+  - STClothingBackpackSatchelEight
   # Gachi
-  - ClothingBackpackHandbagGachi
-  - ClothingBackpackGachi
-  - ClothingBackpackDuffelGachi
-  - ClothingBackpackSatchelGachi
+  - STClothingBackpackHandbagGachi
+  - STClothingBackpackGachi
+  - STClothingBackpackDuffelGachi
+  - STClothingBackpackSatchelGachi
   # Rl
-  - ClothingBackpackHandbagRl
-  - ClothingBackpackRl
-  - ClothingBackpackDuffelRl
-  - ClothingBackpackSatchelRl
+  - STClothingBackpackHandbagRl
+  - STClothingBackpackRl
+  - STClothingBackpackDuffelRl
+  - STClothingBackpackSatchelRl
   # Stories-Partners-End
 
 - type: loadoutGroup
@@ -608,30 +608,30 @@
   - BotanistDuffel
   # Stories-Partners-Start
   # Adidos
-  - ClothingBackpackHandbagAdidos
-  - ClothingBackpackAdidos
-  - ClothingBackpackDuffelAdidos
-  - ClothingBackpackSatchelAdidos
+  - STClothingBackpackHandbagAdidos
+  - STClothingBackpackAdidos
+  - STClothingBackpackDuffelAdidos
+  - STClothingBackpackSatchelAdidos
   # Bluesky
-  - ClothingBackpackHandbagBluesky
-  - ClothingBackpackBluesky
-  - ClothingBackpackDuffelBluesky
-  - ClothingBackpackSatchelBluesky
+  - STClothingBackpackHandbagBluesky
+  - STClothingBackpackBluesky
+  - STClothingBackpackDuffelBluesky
+  - STClothingBackpackSatchelBluesky
   # Eight
-  - ClothingBackpackHandbagEight
-  - ClothingBackpackEight
-  - ClothingBackpackDuffelEight
-  - ClothingBackpackSatchelEight
+  - STClothingBackpackHandbagEight
+  - STClothingBackpackEight
+  - STClothingBackpackDuffelEight
+  - STClothingBackpackSatchelEight
   # Gachi
-  - ClothingBackpackHandbagGachi
-  - ClothingBackpackGachi
-  - ClothingBackpackDuffelGachi
-  - ClothingBackpackSatchelGachi
+  - STClothingBackpackHandbagGachi
+  - STClothingBackpackGachi
+  - STClothingBackpackDuffelGachi
+  - STClothingBackpackSatchelGachi
   # Rl
-  - ClothingBackpackHandbagRl
-  - ClothingBackpackRl
-  - ClothingBackpackDuffelRl
-  - ClothingBackpackSatchelRl
+  - STClothingBackpackHandbagRl
+  - STClothingBackpackRl
+  - STClothingBackpackDuffelRl
+  - STClothingBackpackSatchelRl
   # Stories-Partners-End
 
 - type: loadoutGroup
@@ -675,30 +675,30 @@
   - ClownDuffel
   # Stories-Partners-Start
   # Adidos
-  - ClothingBackpackHandbagAdidos
-  - ClothingBackpackAdidos
-  - ClothingBackpackDuffelAdidos
-  - ClothingBackpackSatchelAdidos
+  - STClothingBackpackHandbagAdidos
+  - STClothingBackpackAdidos
+  - STClothingBackpackDuffelAdidos
+  - STClothingBackpackSatchelAdidos
   # Bluesky
-  - ClothingBackpackHandbagBluesky
-  - ClothingBackpackBluesky
-  - ClothingBackpackDuffelBluesky
-  - ClothingBackpackSatchelBluesky
+  - STClothingBackpackHandbagBluesky
+  - STClothingBackpackBluesky
+  - STClothingBackpackDuffelBluesky
+  - STClothingBackpackSatchelBluesky
   # Eight
-  - ClothingBackpackHandbagEight
-  - ClothingBackpackEight
-  - ClothingBackpackDuffelEight
-  - ClothingBackpackSatchelEight
+  - STClothingBackpackHandbagEight
+  - STClothingBackpackEight
+  - STClothingBackpackDuffelEight
+  - STClothingBackpackSatchelEight
   # Gachi
-  - ClothingBackpackHandbagGachi
-  - ClothingBackpackGachi
-  - ClothingBackpackDuffelGachi
-  - ClothingBackpackSatchelGachi
+  - STClothingBackpackHandbagGachi
+  - STClothingBackpackGachi
+  - STClothingBackpackDuffelGachi
+  - STClothingBackpackSatchelGachi
   # Rl
-  - ClothingBackpackHandbagRl
-  - ClothingBackpackRl
-  - ClothingBackpackDuffelRl
-  - ClothingBackpackSatchelRl
+  - STClothingBackpackHandbagRl
+  - STClothingBackpackRl
+  - STClothingBackpackDuffelRl
+  - STClothingBackpackSatchelRl
   # Stories-Partners-End
 
 - type: loadoutGroup
@@ -766,30 +766,30 @@
   - MimeDuffel
   # Stories-Partners-Start
   # Adidos
-  - ClothingBackpackHandbagAdidos
-  - ClothingBackpackAdidos
-  - ClothingBackpackDuffelAdidos
-  - ClothingBackpackSatchelAdidos
+  - STClothingBackpackHandbagAdidos
+  - STClothingBackpackAdidos
+  - STClothingBackpackDuffelAdidos
+  - STClothingBackpackSatchelAdidos
   # Bluesky
-  - ClothingBackpackHandbagBluesky
-  - ClothingBackpackBluesky
-  - ClothingBackpackDuffelBluesky
-  - ClothingBackpackSatchelBluesky
+  - STClothingBackpackHandbagBluesky
+  - STClothingBackpackBluesky
+  - STClothingBackpackDuffelBluesky
+  - STClothingBackpackSatchelBluesky
   # Eight
-  - ClothingBackpackHandbagEight
-  - ClothingBackpackEight
-  - ClothingBackpackDuffelEight
-  - ClothingBackpackSatchelEight
+  - STClothingBackpackHandbagEight
+  - STClothingBackpackEight
+  - STClothingBackpackDuffelEight
+  - STClothingBackpackSatchelEight
   # Gachi
-  - ClothingBackpackHandbagGachi
-  - ClothingBackpackGachi
-  - ClothingBackpackDuffelGachi
-  - ClothingBackpackSatchelGachi
+  - STClothingBackpackHandbagGachi
+  - STClothingBackpackGachi
+  - STClothingBackpackDuffelGachi
+  - STClothingBackpackSatchelGachi
   # Rl
-  - ClothingBackpackHandbagRl
-  - ClothingBackpackRl
-  - ClothingBackpackDuffelRl
-  - ClothingBackpackSatchelRl
+  - STClothingBackpackHandbagRl
+  - STClothingBackpackRl
+  - STClothingBackpackDuffelRl
+  - STClothingBackpackSatchelRl
   # Stories-Partners-End
 
 - type: loadoutGroup
@@ -949,30 +949,30 @@
   - CargoTechnicianDuffel
   # Stories-Partners-Start
   # Adidos
-  - ClothingBackpackHandbagAdidos
-  - ClothingBackpackAdidos
-  - ClothingBackpackDuffelAdidos
-  - ClothingBackpackSatchelAdidos
+  - STClothingBackpackHandbagAdidos
+  - STClothingBackpackAdidos
+  - STClothingBackpackDuffelAdidos
+  - STClothingBackpackSatchelAdidos
   # Bluesky
-  - ClothingBackpackHandbagBluesky
-  - ClothingBackpackBluesky
-  - ClothingBackpackDuffelBluesky
-  - ClothingBackpackSatchelBluesky
+  - STClothingBackpackHandbagBluesky
+  - STClothingBackpackBluesky
+  - STClothingBackpackDuffelBluesky
+  - STClothingBackpackSatchelBluesky
   # Eight
-  - ClothingBackpackHandbagEight
-  - ClothingBackpackEight
-  - ClothingBackpackDuffelEight
-  - ClothingBackpackSatchelEight
+  - STClothingBackpackHandbagEight
+  - STClothingBackpackEight
+  - STClothingBackpackDuffelEight
+  - STClothingBackpackSatchelEight
   # Gachi
-  - ClothingBackpackHandbagGachi
-  - ClothingBackpackGachi
-  - ClothingBackpackDuffelGachi
-  - ClothingBackpackSatchelGachi
+  - STClothingBackpackHandbagGachi
+  - STClothingBackpackGachi
+  - STClothingBackpackDuffelGachi
+  - STClothingBackpackSatchelGachi
   # Rl
-  - ClothingBackpackHandbagRl
-  - ClothingBackpackRl
-  - ClothingBackpackDuffelRl
-  - ClothingBackpackSatchelRl
+  - STClothingBackpackHandbagRl
+  - STClothingBackpackRl
+  - STClothingBackpackDuffelRl
+  - STClothingBackpackSatchelRl
   # Stories-Partners-End
 
 - type: loadoutGroup
@@ -1011,30 +1011,30 @@
   - SalvageSpecialistDuffel
   # Stories-Partners-Start
   # Adidos
-  - ClothingBackpackHandbagAdidos
-  - ClothingBackpackAdidos
-  - ClothingBackpackDuffelAdidos
-  - ClothingBackpackSatchelAdidos
+  - STClothingBackpackHandbagAdidos
+  - STClothingBackpackAdidos
+  - STClothingBackpackDuffelAdidos
+  - STClothingBackpackSatchelAdidos
   # Bluesky
-  - ClothingBackpackHandbagBluesky
-  - ClothingBackpackBluesky
-  - ClothingBackpackDuffelBluesky
-  - ClothingBackpackSatchelBluesky
+  - STClothingBackpackHandbagBluesky
+  - STClothingBackpackBluesky
+  - STClothingBackpackDuffelBluesky
+  - STClothingBackpackSatchelBluesky
   # Eight
-  - ClothingBackpackHandbagEight
-  - ClothingBackpackEight
-  - ClothingBackpackDuffelEight
-  - ClothingBackpackSatchelEight
+  - STClothingBackpackHandbagEight
+  - STClothingBackpackEight
+  - STClothingBackpackDuffelEight
+  - STClothingBackpackSatchelEight
   # Gachi
-  - ClothingBackpackHandbagGachi
-  - ClothingBackpackGachi
-  - ClothingBackpackDuffelGachi
-  - ClothingBackpackSatchelGachi
+  - STClothingBackpackHandbagGachi
+  - STClothingBackpackGachi
+  - STClothingBackpackDuffelGachi
+  - STClothingBackpackSatchelGachi
   # Rl
-  - ClothingBackpackHandbagRl
-  - ClothingBackpackRl
-  - ClothingBackpackDuffelRl
-  - ClothingBackpackSatchelRl
+  - STClothingBackpackHandbagRl
+  - STClothingBackpackRl
+  - STClothingBackpackDuffelRl
+  - STClothingBackpackSatchelRl
   # Stories-Partners-End
 
 - type: loadoutGroup
@@ -1145,30 +1145,30 @@
   - StationEngineerDuffel
   # Stories-Partners-Start
   # Adidos
-  - ClothingBackpackHandbagAdidos
-  - ClothingBackpackAdidos
-  - ClothingBackpackDuffelAdidos
-  - ClothingBackpackSatchelAdidos
+  - STClothingBackpackHandbagAdidos
+  - STClothingBackpackAdidos
+  - STClothingBackpackDuffelAdidos
+  - STClothingBackpackSatchelAdidos
   # Bluesky
-  - ClothingBackpackHandbagBluesky
-  - ClothingBackpackBluesky
-  - ClothingBackpackDuffelBluesky
-  - ClothingBackpackSatchelBluesky
+  - STClothingBackpackHandbagBluesky
+  - STClothingBackpackBluesky
+  - STClothingBackpackDuffelBluesky
+  - STClothingBackpackSatchelBluesky
   # Eight
-  - ClothingBackpackHandbagEight
-  - ClothingBackpackEight
-  - ClothingBackpackDuffelEight
-  - ClothingBackpackSatchelEight
+  - STClothingBackpackHandbagEight
+  - STClothingBackpackEight
+  - STClothingBackpackDuffelEight
+  - STClothingBackpackSatchelEight
   # Gachi
-  - ClothingBackpackHandbagGachi
-  - ClothingBackpackGachi
-  - ClothingBackpackDuffelGachi
-  - ClothingBackpackSatchelGachi
+  - STClothingBackpackHandbagGachi
+  - STClothingBackpackGachi
+  - STClothingBackpackDuffelGachi
+  - STClothingBackpackSatchelGachi
   # Rl
-  - ClothingBackpackHandbagRl
-  - ClothingBackpackRl
-  - ClothingBackpackDuffelRl
-  - ClothingBackpackSatchelRl
+  - STClothingBackpackHandbagRl
+  - STClothingBackpackRl
+  - STClothingBackpackDuffelRl
+  - STClothingBackpackSatchelRl
   # Stories-Partners-End
 
 - type: loadoutGroup
@@ -1223,30 +1223,30 @@
   - AtmosphericTechnicianDuffel
   # Stories-Partners-Start
   # Adidos
-  - ClothingBackpackHandbagAdidos
-  - ClothingBackpackAdidos
-  - ClothingBackpackDuffelAdidos
-  - ClothingBackpackSatchelAdidos
+  - STClothingBackpackHandbagAdidos
+  - STClothingBackpackAdidos
+  - STClothingBackpackDuffelAdidos
+  - STClothingBackpackSatchelAdidos
   # Bluesky
-  - ClothingBackpackHandbagBluesky
-  - ClothingBackpackBluesky
-  - ClothingBackpackDuffelBluesky
-  - ClothingBackpackSatchelBluesky
+  - STClothingBackpackHandbagBluesky
+  - STClothingBackpackBluesky
+  - STClothingBackpackDuffelBluesky
+  - STClothingBackpackSatchelBluesky
   # Eight
-  - ClothingBackpackHandbagEight
-  - ClothingBackpackEight
-  - ClothingBackpackDuffelEight
-  - ClothingBackpackSatchelEight
+  - STClothingBackpackHandbagEight
+  - STClothingBackpackEight
+  - STClothingBackpackDuffelEight
+  - STClothingBackpackSatchelEight
   # Gachi
-  - ClothingBackpackHandbagGachi
-  - ClothingBackpackGachi
-  - ClothingBackpackDuffelGachi
-  - ClothingBackpackSatchelGachi
+  - STClothingBackpackHandbagGachi
+  - STClothingBackpackGachi
+  - STClothingBackpackDuffelGachi
+  - STClothingBackpackSatchelGachi
   # Rl
-  - ClothingBackpackHandbagRl
-  - ClothingBackpackRl
-  - ClothingBackpackDuffelRl
-  - ClothingBackpackSatchelRl
+  - STClothingBackpackHandbagRl
+  - STClothingBackpackRl
+  - STClothingBackpackDuffelRl
+  - STClothingBackpackSatchelRl
   # Stories-Partners-End
 
 - type: loadoutGroup
@@ -1353,30 +1353,30 @@
   - ScientistDuffel
   # Stories-Partners-Start
   # Adidos
-  - ClothingBackpackHandbagAdidos
-  - ClothingBackpackAdidos
-  - ClothingBackpackDuffelAdidos
-  - ClothingBackpackSatchelAdidos
+  - STClothingBackpackHandbagAdidos
+  - STClothingBackpackAdidos
+  - STClothingBackpackDuffelAdidos
+  - STClothingBackpackSatchelAdidos
   # Bluesky
-  - ClothingBackpackHandbagBluesky
-  - ClothingBackpackBluesky
-  - ClothingBackpackDuffelBluesky
-  - ClothingBackpackSatchelBluesky
+  - STClothingBackpackHandbagBluesky
+  - STClothingBackpackBluesky
+  - STClothingBackpackDuffelBluesky
+  - STClothingBackpackSatchelBluesky
   # Eight
-  - ClothingBackpackHandbagEight
-  - ClothingBackpackEight
-  - ClothingBackpackDuffelEight
-  - ClothingBackpackSatchelEight
+  - STClothingBackpackHandbagEight
+  - STClothingBackpackEight
+  - STClothingBackpackDuffelEight
+  - STClothingBackpackSatchelEight
   # Gachi
-  - ClothingBackpackHandbagGachi
-  - ClothingBackpackGachi
-  - ClothingBackpackDuffelGachi
-  - ClothingBackpackSatchelGachi
+  - STClothingBackpackHandbagGachi
+  - STClothingBackpackGachi
+  - STClothingBackpackDuffelGachi
+  - STClothingBackpackSatchelGachi
   # Rl
-  - ClothingBackpackHandbagRl
-  - ClothingBackpackRl
-  - ClothingBackpackDuffelRl
-  - ClothingBackpackSatchelRl
+  - STClothingBackpackHandbagRl
+  - STClothingBackpackRl
+  - STClothingBackpackDuffelRl
+  - STClothingBackpackSatchelRl
   # Stories-Partners-End
 
 - type: loadoutGroup
@@ -1539,30 +1539,30 @@
   - SecurityDuffel
   # Stories-Partners-Start
   # Adidos
-  - ClothingBackpackHandbagAdidos
-  - ClothingBackpackAdidos
-  - ClothingBackpackDuffelAdidos
-  - ClothingBackpackSatchelAdidos
+  - STClothingBackpackHandbagAdidos
+  - STClothingBackpackAdidos
+  - STClothingBackpackDuffelAdidos
+  - STClothingBackpackSatchelAdidos
   # Bluesky
-  - ClothingBackpackHandbagBluesky
-  - ClothingBackpackBluesky
-  - ClothingBackpackDuffelBluesky
-  - ClothingBackpackSatchelBluesky
+  - STClothingBackpackHandbagBluesky
+  - STClothingBackpackBluesky
+  - STClothingBackpackDuffelBluesky
+  - STClothingBackpackSatchelBluesky
   # Eight
-  - ClothingBackpackHandbagEight
-  - ClothingBackpackEight
-  - ClothingBackpackDuffelEight
-  - ClothingBackpackSatchelEight
+  - STClothingBackpackHandbagEight
+  - STClothingBackpackEight
+  - STClothingBackpackDuffelEight
+  - STClothingBackpackSatchelEight
   # Gachi
-  - ClothingBackpackHandbagGachi
-  - ClothingBackpackGachi
-  - ClothingBackpackDuffelGachi
-  - ClothingBackpackSatchelGachi
+  - STClothingBackpackHandbagGachi
+  - STClothingBackpackGachi
+  - STClothingBackpackDuffelGachi
+  - STClothingBackpackSatchelGachi
   # Rl
-  - ClothingBackpackHandbagRl
-  - ClothingBackpackRl
-  - ClothingBackpackDuffelRl
-  - ClothingBackpackSatchelRl
+  - STClothingBackpackHandbagRl
+  - STClothingBackpackRl
+  - STClothingBackpackDuffelRl
+  - STClothingBackpackSatchelRl
   # Stories-Partners-End
 
 - type: loadoutGroup
@@ -1606,7 +1606,7 @@
   name: loadout-group-detective-head
   minLimit: 0
   loadouts:
-  - DetectiveFedoraSpecialGrey # Stories
+  - STDetectiveFedoraSpecialGrey # Stories
   - DetectiveFedora
   - DetectiveFedoraGrey
 
@@ -1615,14 +1615,14 @@
   name: loadout-group-detective-neck
   minLimit: 0
   loadouts:
-  - Decbadge # Stories
+  - STDecbadge # Stories
   - DetectiveTie
 
 - type: loadoutGroup
   id: DetectiveJumpsuit
   name: loadout-group-detective-jumpsuit
   loadouts:
-  - DetectiveJumpsuitSpecialGrey # Stories
+  - STDetectiveJumpsuitSpecialGrey # Stories
   - DetectiveJumpsuit
   - DetectiveJumpskirt
   - NoirJumpsuit
@@ -1632,7 +1632,7 @@
   id: DetectiveOuterClothing
   name: loadout-group-detective-outerclothing
   loadouts:
-  - DetectiveCoatSpecialGrey # Stories
+  - STDetectiveCoatSpecialGrey # Stories
   - DetectiveArmorVest
   - DetectiveCoat
   - DetectiveCoatGrey

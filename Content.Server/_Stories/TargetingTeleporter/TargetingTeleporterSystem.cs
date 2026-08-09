@@ -23,7 +23,6 @@ public sealed partial class TargetingTeleporterSystem : SharedTargetingTeleporte
 
     private void OnInit(Entity<TargetingTeleporterComponent> entity, ref ComponentInit args)
     {
-        // Станции еще не заспавнились
         if (_gameTicker.RunLevel == GameRunLevel.PreRoundLobby)
             return;
 

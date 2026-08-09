@@ -1,18 +1,18 @@
 - type: species
-  id: Kidan
+  id: STKidan
   name: species-name-kidan
   roundStart: true
-  prototype: MobKidan
+  prototype: STMobKidan
   defaultSkinTone: "#FF69B4"
-  dollPrototype: AppearanceKidan
+  dollPrototype: STAppearanceKidan
   skinColoration: Hues
-  maleFirstNames: KidanMale
-  femaleFirstNames: KidanMale
+  maleFirstNames: STKidanMale
+  femaleFirstNames: STKidanMale
   naming: FirstDashFirst
   defaultSoundsBySex:
-  - MaleKidan
-  - FemaleKidan
-  - MaleKidan
+  - STMaleKidan
+  - STFemaleKidan
+  - STMaleKidan
   voices:
-  - MaleKidan
-  - FemaleKidan
+  - STMaleKidan
+  - STFemaleKidan

@@ -6,10 +6,10 @@
   requirements:
   - !type:DepartmentTimeRequirement
     department: Security
-    time: 36000 #10 часов
+    time: 36000 # 10 hours
   - !type:DepartmentTimeRequirement
     department: Medical
-    time: 7200 #2 часа
+    time: 7200 # 2 hours
   startingGear: STBrigmedicGear
   icon: "JobIconBrigmedic"
   supervisors: job-supervisors-hos

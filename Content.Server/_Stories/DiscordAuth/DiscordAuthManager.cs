@@ -14,26 +14,18 @@ using Robust.Shared.Player;
 
 namespace Content.Server._Stories.DiscordAuth;
 
-// TODO: Add minimal Discord account age check for panic bunker by extracting timestamp from snowflake received from API secured with key
-
-/// <summary>
-/// Manage Discord linking with SS14 account through external API
-/// </summary>
 public sealed partial class DiscordAuthManager
 {
-    [Dependency] private IConfigurationManager _cfg = default!;
     private readonly HttpClient _httpClient = new();
-    [Dependency] private IServerNetManager _netMgr = default!;
-    [Dependency] private IPlayerManager _playerMgr = default!;
     private string _apiKey = string.Empty;
     private string _apiUrl = string.Empty;
+    [Dependency] private IConfigurationManager _cfg = default!;
     private bool _isEnabled;
+    [Dependency] private IServerNetManager _netMgr = default!;
+    [Dependency] private IPlayerManager _playerMgr = default!;
 
     private ISawmill _sawmill = default!;
 
-    /// <summary>
-    /// Raised when player passed verification or if feature disabled
-    /// </summary>
     public event EventHandler<ICommonSession>? PlayerVerified;
 
     public void Initialize()

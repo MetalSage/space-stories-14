@@ -15,7 +15,7 @@
     ClothingHandsGlovesColorBlack: 2
     ClothingHandsGlovesLatex: 2
     ClothingHeadsetSecurity: 2
-    ClothingUniformJumpsuitDetectiveSpecialGrey: 2 # Stories-Drip
+    STClothingUniformJumpsuitDetectiveSpecialGrey: 2 # Stories-Drip
   contrabandInventory:
     ToyFigurineDetective: 1
   prices: # Stories-Economy
@@ -33,5 +33,5 @@
     ClothingHandsGlovesColorBlack: 25
     ClothingHandsGlovesLatex: 20
     ClothingHeadsetSecurity: 60
-    ClothingUniformJumpsuitDetectiveSpecialGrey: 60
+    STClothingUniformJumpsuitDetectiveSpecialGrey: 60
     ToyFigurineDetective: 100

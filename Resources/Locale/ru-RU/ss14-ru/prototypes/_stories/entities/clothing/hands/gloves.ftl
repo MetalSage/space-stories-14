@@ -1,4 +1,4 @@
-ent-ClothingHandsGlovesInquisitor = перчатки инквизитора
+ent-STClothingHandsGlovesInquisitor = перчатки инквизитора
     .desc = Странные перчатки.
-ent-ClothingHandsGlovesExe = перчатки хранителя
+ent-STClothingHandsGlovesExe = перчатки хранителя
     .desc = Странные перчатки.

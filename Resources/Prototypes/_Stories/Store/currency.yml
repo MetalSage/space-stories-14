@@ -1,4 +1,4 @@
 - type: currency
-  id: SkillPoint
+  id: STSkillPoint
   displayName: store-currency-display-skill-point
   canWithdraw: false

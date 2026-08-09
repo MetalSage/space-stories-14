@@ -9,7 +9,7 @@ namespace Content.Server._Stories.ForceUser;
 
 public sealed partial class ForceUserSystem
 {
-    private static readonly ProtoId<TagPrototype> ForceRecallEquipmentTag = "ForceRecallEquipment";
+    private static readonly ProtoId<TagPrototype> ForceRecallEquipmentTag = "STForceRecallEquipment";
 
     public void InitializeRecallEquipment()
     {

@@ -1,5 +1,5 @@
 - type: roleLoadout
-  id: JobSTSecurityClown
+  id: STJobSTSecurityClown
   groups:
   - ClownBackpack
   - SurvivalSecurity

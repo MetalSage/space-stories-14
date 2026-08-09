@@ -4,11 +4,11 @@
   description: department-Cargo-description
   color: "#e99844"
   roles:
-  - PRISONHeadOfPrison
-  - PRISONEngineer
-  - PRISONMedic
-  - PRISONOfficer
-  - PRISONPrisoner
+  - STPRISONHeadOfPrison
+  - STPRISONEngineer
+  - STPRISONMedic
+  - STPRISONOfficer
+  - STPRISONPrisoner
 
 - type: department
   id: STJuridical
@@ -16,6 +16,6 @@
   description: stories-department-Juridical-description
   color: "#6d5d53"
   roles:
-  - IAA
+  - STIAA
   - Lawyer
   - STJudge

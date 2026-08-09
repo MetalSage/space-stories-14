@@ -1,21 +1,21 @@
 - type: entity
   parent: BaseMindRoleAntag
-  id: MindRoleEmpireMember
-  name: EmpireMember Role
+  id: STMindRoleEmpireMember
+  name: STEmpireMember Role
   components:
   - type: MindRole
-    antagPrototype: EmpireMember
+    antagPrototype: STEmpireMember
     exclusiveAntag: true
     roleType: TeamAntagonist
   - type: EmpireMemberRole
 
 - type: entity
   parent: BaseMindRoleAntag
-  id: MindRoleHypnotizedEmpireMember
-  name: HypnotizedEmpireMember Role
+  id: STMindRoleHypnotizedEmpireMember
+  name: STHypnotizedEmpireMember Role
   components:
   - type: MindRole
-    antagPrototype: HypnotizedEmpireMember
+    antagPrototype: STHypnotizedEmpireMember
     exclusiveAntag: true
     roleType: TeamAntagonist
   - type: HypnotizedEmpireMemberRole

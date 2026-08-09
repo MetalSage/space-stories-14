@@ -17,7 +17,7 @@
     role: JobHeadOfSecurity
     time: 5h
   - !type:RoleTimeRequirement
-    role: JobIAA
+    role: STJobIAA
     time: 30h
   startingGear: STJudgeGear
   icon: "STJobIconJudge"
@@ -37,7 +37,7 @@
   equipment:
     id: STJudgePDA
     eyes: ClothingEyesGlassesSunglasses
-    ears: ClothingHeadsetIAA
+    ears: STClothingHeadsetIAA
   storage:
     back:
     - STRubberStampJudge

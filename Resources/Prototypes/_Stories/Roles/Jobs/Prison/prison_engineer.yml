@@ -1,8 +1,8 @@
 - type: job
-  id: PRISONEngineer
+  id: STPRISONEngineer
   name: инженер космической тюрьмы
   description: Обслуживайте тюрьму, ибо сбежавшие зеки придут за вами в первую очередь.
-  playTimeTracker: JobSpacePrisonEngineer
+  playTimeTracker: STJobSpacePrisonEngineer
   requirements:
     - !type:DepartmentTimeRequirement
       department: Security
@@ -10,13 +10,13 @@
     - !type:DepartmentTimeRequirement
       department: Engineering
       time: 18000 # 5 hours
-  startingGear: PRISONEngineerGear
-  icon: "JobIconSpacePrisonEngineer"
+  startingGear: STPRISONEngineerGear
+  icon: "STJobIconSpacePrisonEngineer"
   supervisors: stories-job-supervisors-headofprison
   access:
   - Prisoner
   - Prison
-  - PrisonEng
+  - STPrisonEng
   - Maintenance
   - External
   # special:
@@ -26,16 +26,16 @@
   maxBankBalance: 250
 
 - type: startingGear
-  id: PRISONEngineerGear
+  id: STPRISONEngineerGear
   equipment:
-    jumpsuit: PRISONClothingUniformJumpsuitEngi
-    id: PRISONPDAEngineer
-    ears: PRISONClothingHeadsetEngi
+    jumpsuit: STPRISONClothingUniformJumpsuitEngi
+    id: STPRISONPDAEngineer
+    ears: STPRISONClothingHeadsetEngi
     belt: ClothingBeltUtilityEngineering
 
 - type: chameleonOutfit
-  id: PRISONEngineerChameleonOutfit
-  job: PRISONEngineer
+  id: STPRISONEngineerChameleonOutfit
+  job: STPRISONEngineer
   equipment:
     head: ClothingHeadHatHardhatYellow
     mask: ClothingMaskBreath

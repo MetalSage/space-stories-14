@@ -1,5 +1,5 @@
 - type: entity
-  id: LockerGuardianNt
+  id: STLockerGuardianNt
   parent: LockerBaseSecure
   name: blade guardian's locker
   description: Each bladeguard's fashion arsenal.

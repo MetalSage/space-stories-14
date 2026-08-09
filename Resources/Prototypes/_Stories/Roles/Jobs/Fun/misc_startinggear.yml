@@ -1,32 +1,32 @@
 - type: startingGear
-  id: InquisitorGear
+  id: STInquisitorGear
   equipment:
-    jumpsuit: ClothingUniformJumpsuitInquisitor
-    mask: ClothingMaskGasInquisitor
-    neck: ClothingNeckCloakInquisitor
+    jumpsuit: STClothingUniformJumpsuitInquisitor
+    mask: STClothingMaskGasInquisitor
+    neck: STClothingNeckCloakInquisitor
     eyes: ClothingEyesHudSyndicate
-    gloves: ClothingHandsGlovesInquisitor
-    outerClothing: ClothingOuterVestInquisitor
+    gloves: STClothingHandsGlovesInquisitor
+    outerClothing: STClothingOuterVestInquisitor
     shoes: ClothingShoesInquisitor
     id: AgentIDCard
     back: JetpackBlackFilled
     ears: ClothingHeadsetGrey
     pocket1: STLightsaberDoubleRed
     pocket2: PinpointerUniversal
-    belt: ClothingBeltInquisitor
+    belt: STClothingBeltInquisitor
 
 - type: startingGear
-  id: KyloGear
+  id: STKyloGear
   equipment:
-    jumpsuit: ClothingUniformJumpsuitKylo
+    jumpsuit: STClothingUniformJumpsuitKylo
     mask: ClothingMaskGasSyndicate
-    neck: ClothingNeckCloakKylo
+    neck: STClothingNeckCloakKylo
     gloves: ClothingHandsGlovesCombat
-    outerClothing: ClothingOuterVestInquisitor
+    outerClothing: STClothingOuterVestInquisitor
     shoes: ClothingShoesInquisitor
     id: AgentIDCard
     back: JetpackBlackFilled
     ears: ClothingHeadsetGrey
     pocket1: STLightsaberCrossguardRed
     pocket2: PinpointerUniversal
-    belt: ClothingBeltInquisitor
+    belt: STClothingBeltInquisitor

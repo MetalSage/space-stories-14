@@ -1,4 +1,4 @@
-ent-PRISONClothingBeltSheath = ножны для тюремной сабли
+ent-STPRISONClothingBeltSheath = ножны для тюремной сабли
     .desc = Богато украшенные ножны, предназначенные для хранения клинка.
-ent-PRISONClothingBeltWebbing = РПС сотрудника тюрьмы
+ent-STPRISONClothingBeltWebbing = РПС сотрудника тюрьмы
     .desc = Уникальный, универсальный разгрузочный жилет с ремнями и поясом, может вмещать снаряжение сотрудников тюрьмы.

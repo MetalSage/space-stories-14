@@ -648,14 +648,14 @@ entities:
       pos: 0.5,0.5
       parent: 2
     - type: TargetingTeleporter
-- proto: ToyFigurineGuardianNt
+- proto: STToyFigurineGuardianNt
   entities:
   - uid: 213
     components:
     - type: Transform
       pos: 0.5,-7.5
       parent: 2
-- proto: ToyFigurineInquisitor
+- proto: STToyFigurineInquisitor
   entities:
   - uid: 212
     components:

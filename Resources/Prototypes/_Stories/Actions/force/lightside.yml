@@ -1,6 +1,6 @@
 - type: entity
   parent: BaseAction
-  id: ActionCreateProtectiveBubble
+  id: STActionCreateProtectiveBubble
   name: Protective bubble
   description: Create a protective telekinetic cocoon that reflects all lasers, greatly reduces damage from bullets, and protects against explosions and pressure. Offers almost no protection against melee attacks.
   categories: [ HideSpawnMenu ]
@@ -11,14 +11,14 @@
       sprite: _Stories/Actions/force.rsi
       state: shield
     itemIconStyle: NoItem
-  - type: InstantAction    
+  - type: InstantAction
     event: !type:InstantForceUserActionEvent
       volume: 100
       event: !type:CreateProtectiveBubbleEvent
 
 - type: entity
   parent: BaseAction
-  id: ActionGuardianForceWall
+  id: STActionGuardianForceWall
   name: Force Barrier
   description: Create an indestructible 3x1 barrier in the direction of your view, which will stop your enemies. You can pass through your barrier.
   categories: [ HideSpawnMenu ]
@@ -32,16 +32,16 @@
     icon:
       sprite: _Stories/Actions/force.rsi
       state: forcewall
-  - type: InstantAction    
+  - type: InstantAction
     event: !type:InstantForceUserActionEvent
       volume: 100
       event: !type:InstantSpawnSpellEvent
-        prototype: WallForceGuardian
+        prototype: STWallForceGuardian
         posData: !type:TargetInFront
 
 - type: entity
   parent: BaseAction
-  id: ActionHibernationTrance
+  id: STActionHibernationTrance
   name: Hibernation trance
   description: You will heal many of your wounds, satisfy your hunger and thirst, stop bleeding, but you will sleep for 2 minutes. You can enter a trance even in a critical state.
   categories: [ HideSpawnMenu ]
@@ -53,7 +53,7 @@
       state: trance
     itemIconStyle: NoItem
     checkCanInteract: false
-  - type: InstantAction    
+  - type: InstantAction
     event: !type:InstantForceUserActionEvent
       volume: 100
       event: !type:InjectReagentsEvent
@@ -75,7 +75,7 @@
 
 - type: entity
   parent: BaseAction
-  id: ActionHealingTouch
+  id: STActionHealingTouch
   name: Healing touch
   description: Heals minor injuries. Can be used on yourself.
   categories: [ HideSpawnMenu ]
@@ -112,7 +112,7 @@
 
 - type: entity
   parent: BaseAction
-  id: ActionPushBall
+  id: STActionPushBall
   name: Force push
   description: Create a powerful push that can knock a person down. Completely weakens after traveling 4 tiles.
   components:
@@ -128,7 +128,7 @@
     event: !type:WorldTargetForceUserActionEvent
       volume: 50
       event: !type:ProjectileSpellEvent
-        prototype: GuardianPushBall
+        prototype: STGuardianPushBall
   - type: TargetAction
     range: 60
     checkCanAccess: false

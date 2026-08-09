@@ -1,6 +1,6 @@
 - type: entity
   parent: ClothingBeltStorageBase
-  id: ClothingBeltInquisitor
+  id: STClothingBeltInquisitor
   name: inquisitor's belt
   description: Just a belt.
   components:
@@ -10,4 +10,4 @@
     sprite: _Stories/Clothing/Belt/belt_inquisitor.rsi
   - type: Tag
     tags:
-      - ForceRecallEquipment
+      - STForceRecallEquipment

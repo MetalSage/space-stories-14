@@ -9,7 +9,7 @@
   supervisors: job-supervisors-centcom # Corvax-JobSupervisors
   accessGroups:
   - AllAccess
-  - PrisonAllAccess # Stories
+  - STPrisonAllAccess # Stories
   access:
   - CentralCommand
   special:

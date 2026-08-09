@@ -1,6 +1,6 @@
 - type: entity
   parent: DoorRemoteDefault
-  id: PRISONDoorRemote
+  id: STPRISONDoorRemote
   name: prison airlock remote
   description: A gadget that can open and close airlocks remotely.
   components:
@@ -13,4 +13,4 @@
       color: "#2f3d79"
   - type: Access
     groups:
-    - PrisonAllAccess
+    - STPrisonAllAccess

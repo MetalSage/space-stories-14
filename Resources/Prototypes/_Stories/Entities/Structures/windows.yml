@@ -1,5 +1,5 @@
 - type: entity
-  id: PRISONShuttleWindow
+  id: STPRISONShuttleWindow
   name: window
   description: Try not to stain it.
   parent: WindowRCDResistant
@@ -53,8 +53,8 @@
       price: 150
 
 - type: entity
-  parent: PRISONShuttleWindow
-  id: PRISONShuttleWindowDiagonal
+  parent: STPRISONShuttleWindow
+  id: STPRISONShuttleWindowDiagonal
   name: window
   description: Try not to stain it.
   suffix: diagonal

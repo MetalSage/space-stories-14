@@ -21953,7 +21953,7 @@ entities:
     - type: Transform
       parent: 2
       pos: 25.563133,-78.83694
-- proto: BoxPrinter
+- proto: STBoxPrinter
   entities:
   - uid: 1631
     components:
@@ -21993,7 +21993,7 @@ entities:
     - type: Transform
       parent: 2
       pos: -37.14321,-67.2125
-- proto: BriefcaseSteel
+- proto: STBriefcaseSteel
   entities:
   - uid: 1636
     components:
@@ -130370,7 +130370,7 @@ entities:
       pos: -57.3525,-63.42221
     - type: Stack
       count: 5
-- proto: InkPrinter
+- proto: STInkPrinter
   entities:
   - uid: 28136
     components:
@@ -131428,7 +131428,7 @@ entities:
     - type: Transform
       parent: 2
       pos: -32.5,-83.5
-- proto: LockerGuardianNtFilled
+- proto: STLockerGuardianNtFilled
   entities:
   - uid: 20067
     components:
@@ -132954,7 +132954,7 @@ entities:
     - type: Transform
       parent: 2
       pos: 66.61116,-71.40818
-- proto: MusicalVendingMachine
+- proto: STMusicalVendingMachine
   entities:
   - uid: 20311
     components:
@@ -138672,7 +138672,7 @@ entities:
     - type: Transform
       parent: 2
       pos: 23.5,-61.5
-- proto: PrintedDocumentJudgment
+- proto: STPrintedDocumentJudgment
   entities:
   - uid: 16225
     components:
@@ -138685,7 +138685,7 @@ entities:
       parent: 2
       rot: 1.5707963267948966 rad
       pos: -39.514534,-64.802734
-- proto: PrinterDoc
+- proto: STPrinterDoc
   entities:
   - uid: 21303
     components:
@@ -149090,7 +149090,7 @@ entities:
     - type: Transform
       parent: 2
       pos: -34.5,-44.5
-- proto: SpawnPointGuardianNt
+- proto: STSpawnPointGuardianNt
   entities:
   - uid: 23146
     components:
@@ -149489,7 +149489,7 @@ entities:
     - type: Transform
       parent: 2
       pos: -40.5,-54.5
-- proto: SpawnSpaceKoi
+- proto: STSpawnSpaceKoi
   entities:
   - uid: 23215
     components:
@@ -150953,7 +150953,7 @@ entities:
     - type: Transform
       parent: 2
       pos: -60.5,-123.5
-- proto: StoriesFlippoEngravedLighter
+- proto: STFlippoEngravedLighter
   entities:
   - uid: 23441
     components:

@@ -1,7 +1,7 @@
 - type: marking
-  id: RodentiaHeadTopEarDefault
+  id: STRodentiaHeadTopEarDefault
   bodyPart: HeadTop
-  groupWhitelist: [Rodentia]
+  groupWhitelist: [STRodentia]
   coloring:
     default:
       type: !type:TattooColoring
@@ -12,9 +12,9 @@
       state: mouse_overlay
 
 - type: marking
-  id: RodentiaTailDefault
+  id: STRodentiaTailDefault
   bodyPart: Tail
-  groupWhitelist: [Rodentia]
+  groupWhitelist: [STRodentia]
   coloring:
     default:
       type: !type:TattooColoring
@@ -23,25 +23,25 @@
       state: mouse
 
 - type: marking
-  id: RodentiaHeadTopEarBat
+  id: STRodentiaHeadTopEarBat
   bodyPart: HeadTop
-  groupWhitelist: [Rodentia]
+  groupWhitelist: [STRodentia]
   sprites:
     - sprite: _Stories/Mobs/Rodentia/ear_markings.rsi
       state: bat
 
 - type: marking
-  id: RodentiaHeadTopEarBatLarge
+  id: STRodentiaHeadTopEarBatLarge
   bodyPart: HeadTop
-  groupWhitelist: [Rodentia]
+  groupWhitelist: [STRodentia]
   sprites:
     - sprite: _Stories/Mobs/Rodentia/ear_markings.rsi
       state: bat_large
 
 - type: marking
-  id: RodentiaHeadTopEarHamster
+  id: STRodentiaHeadTopEarHamster
   bodyPart: HeadTop
-  groupWhitelist: [Rodentia]
+  groupWhitelist: [STRodentia]
   sprites:
     - sprite: _Stories/Mobs/Rodentia/ear_markings.rsi
       state: hamster
@@ -49,9 +49,9 @@
       state: hamster_overlay
 
 - type: marking
-  id: RodentiaHeadTopEarLong
+  id: STRodentiaHeadTopEarLong
   bodyPart: HeadTop
-  groupWhitelist: [Rodentia]
+  groupWhitelist: [STRodentia]
   sprites:
     - sprite: _Stories/Mobs/Rodentia/ear_markings.rsi
       state: long
@@ -59,9 +59,9 @@
       state: long_overlay
 
 - type: marking
-  id: RodentiaHeadTopEarMouse
+  id: STRodentiaHeadTopEarMouse
   bodyPart: HeadTop
-  groupWhitelist: [Rodentia]
+  groupWhitelist: [STRodentia]
   sprites:
     - sprite: _Stories/Mobs/Rodentia/ear_markings.rsi
       state: mouse
@@ -69,9 +69,9 @@
       state: mouse_overlay
 
 - type: marking
-  id: RodentiaHeadTopEarMouseLarge
+  id: STRodentiaHeadTopEarMouseLarge
   bodyPart: HeadTop
-  groupWhitelist: [Rodentia]
+  groupWhitelist: [STRodentia]
   sprites:
     - sprite: _Stories/Mobs/Rodentia/ear_markings.rsi
       state: mouse_large
@@ -79,25 +79,25 @@
       state: mouse_large_overlay
 
 - type: marking
-  id: RodentiaHeadTopEarNone
+  id: STRodentiaHeadTopEarNone
   bodyPart: HeadTop
-  groupWhitelist: [Rodentia]
+  groupWhitelist: [STRodentia]
   sprites:
     - sprite: _Stories/Mobs/Rodentia/ear_markings.rsi
       state: none
 
 - type: marking
-  id: RodentiaHeadTopEarPointy
+  id: STRodentiaHeadTopEarPointy
   bodyPart: HeadTop
-  groupWhitelist: [Rodentia]
+  groupWhitelist: [STRodentia]
   sprites:
     - sprite: _Stories/Mobs/Rodentia/ear_markings.rsi
       state: pointy
 
 - type: marking
-  id: RodentiaHeadTopEarRabbit
+  id: STRodentiaHeadTopEarRabbit
   bodyPart: HeadTop
-  groupWhitelist: [Rodentia]
+  groupWhitelist: [STRodentia]
   sprites:
     - sprite: _Stories/Mobs/Rodentia/ear_markings.rsi
       state: rabbit
@@ -105,9 +105,9 @@
       state: rabbit_overlay
 
 - type: marking
-  id: RodentiaHeadTopEarSmall
+  id: STRodentiaHeadTopEarSmall
   bodyPart: HeadTop
-  groupWhitelist: [Rodentia]
+  groupWhitelist: [STRodentia]
   sprites:
     - sprite: _Stories/Mobs/Rodentia/ear_markings.rsi
       state: small
@@ -115,9 +115,9 @@
 ## SNOUTS
 
 - type: marking
-  id: RodentiaSnoutBat
+  id: STRodentiaSnoutBat
   bodyPart: Snout
-  groupWhitelist: [Rodentia]
+  groupWhitelist: [STRodentia]
   sprites:
     - sprite: _Stories/Mobs/Rodentia/snout_markings.rsi
       state: bat
@@ -125,9 +125,9 @@
       state: bat_nose
 
 - type: marking
-  id: RodentiaSnoutBatCounter
+  id: STRodentiaSnoutBatCounter
   bodyPart: Snout
-  groupWhitelist: [Rodentia]
+  groupWhitelist: [STRodentia]
   sprites:
     - sprite: _Stories/Mobs/Rodentia/snout_markings.rsi
       state: bat
@@ -137,9 +137,9 @@
       state: bat_overlay
 
 - type: marking
-  id: RodentiaSnoutFlat
+  id: STRodentiaSnoutFlat
   bodyPart: Snout
-  groupWhitelist: [Rodentia]
+  groupWhitelist: [STRodentia]
   sprites:
     - sprite: _Stories/Mobs/Rodentia/snout_markings.rsi
       state: flat
@@ -147,9 +147,9 @@
       state: flat_nose
 
 - type: marking
-  id: RodentiaSnoutFlatCounter
+  id: STRodentiaSnoutFlatCounter
   bodyPart: Snout
-  groupWhitelist: [Rodentia]
+  groupWhitelist: [STRodentia]
   sprites:
     - sprite: _Stories/Mobs/Rodentia/snout_markings.rsi
       state: flat
@@ -159,9 +159,9 @@
       state: flat_overlay
 
 - type: marking
-  id: RodentiaSnoutRound
+  id: STRodentiaSnoutRound
   bodyPart: Snout
-  groupWhitelist: [Rodentia]
+  groupWhitelist: [STRodentia]
   sprites:
     - sprite: _Stories/Mobs/Rodentia/snout_markings.rsi
       state: round
@@ -169,9 +169,9 @@
       state: round_nose
 
 - type: marking
-  id: RodentiaSnoutRoundCounter
+  id: STRodentiaSnoutRoundCounter
   bodyPart: Snout
-  groupWhitelist: [Rodentia]
+  groupWhitelist: [STRodentia]
   sprites:
     - sprite: _Stories/Mobs/Rodentia/snout_markings.rsi
       state: round
@@ -183,17 +183,17 @@
 ## CHEEKS
 
 - type: marking
-  id: RodentiaCheeksRound
+  id: STRodentiaCheeksRound
   bodyPart: HeadSide
-  groupWhitelist: [Rodentia]
+  groupWhitelist: [STRodentia]
   sprites:
     - sprite: _Stories/Mobs/Rodentia/cheek_markings.rsi
       state: cheeks
 
 - type: marking
-  id: RodentiaCheeksRoundCounter
+  id: STRodentiaCheeksRoundCounter
   bodyPart: HeadSide
-  groupWhitelist: [Rodentia]
+  groupWhitelist: [STRodentia]
   sprites:
     - sprite: _Stories/Mobs/Rodentia/cheek_markings.rsi
       state: cheeks
@@ -201,17 +201,17 @@
       state: cheeks_overlay
 
 - type: marking
-  id: RodentiaCheeksFluff
+  id: STRodentiaCheeksFluff
   bodyPart: HeadSide
-  groupWhitelist: [Rodentia]
+  groupWhitelist: [STRodentia]
   sprites:
     - sprite: _Stories/Mobs/Rodentia/cheek_markings.rsi
       state: fluff
 
 - type: marking
-  id: RodentiaCheeksFluffCounter
+  id: STRodentiaCheeksFluffCounter
   bodyPart: HeadSide
-  groupWhitelist: [Rodentia]
+  groupWhitelist: [STRodentia]
   sprites:
     - sprite: _Stories/Mobs/Rodentia/cheek_markings.rsi
       state: fluff
@@ -219,17 +219,17 @@
       state: fluff_overlay
 
 - type: marking
-  id: RodentiaCheeksFluffAlt
+  id: STRodentiaCheeksFluffAlt
   bodyPart: HeadSide
-  groupWhitelist: [Rodentia]
+  groupWhitelist: [STRodentia]
   sprites:
     - sprite: _Stories/Mobs/Rodentia/cheek_markings.rsi
       state: fluff_alt
 
 - type: marking
-  id: RodentiaCheeksFluffAltCounter
+  id: STRodentiaCheeksFluffAltCounter
   bodyPart: HeadSide
-  groupWhitelist: [Rodentia]
+  groupWhitelist: [STRodentia]
   sprites:
     - sprite: _Stories/Mobs/Rodentia/cheek_markings.rsi
       state: fluff_alt
@@ -237,9 +237,9 @@
       state: fluff_alt_overlay
 
 - type: marking
-  id: RodentiaCheeksWhiskers
-  bodyPart: HeadTop # for layering
-  groupWhitelist: [Rodentia]
+  id: STRodentiaCheeksWhiskers
+  bodyPart: HeadTop
+  groupWhitelist: [STRodentia]
   sprites:
     - sprite: _Stories/Mobs/Rodentia/cheek_markings.rsi
       state: whiskers
@@ -249,33 +249,33 @@
 ## TAIL
 
 - type: marking
-  id: RodentiaTailBeaver
+  id: STRodentiaTailBeaver
   bodyPart: Tail
-  groupWhitelist: [Rodentia]
+  groupWhitelist: [STRodentia]
   sprites:
     - sprite: _Stories/Mobs/Rodentia/tail_markings.rsi
       state: beaver
 
 - type: marking
-  id: RodentiaTailHamster
+  id: STRodentiaTailHamster
   bodyPart: Tail
-  groupWhitelist: [Rodentia]
+  groupWhitelist: [STRodentia]
   sprites:
     - sprite: _Stories/Mobs/Rodentia/tail_markings.rsi
       state: hamster
 
 - type: marking
-  id: RodentiaTailLong
+  id: STRodentiaTailLong
   bodyPart: Tail
-  groupWhitelist: [Rodentia]
+  groupWhitelist: [STRodentia]
   sprites:
     - sprite: _Stories/Mobs/Rodentia/tail_markings.rsi
       state: long
 
 - type: marking
-  id: RodentiaTailLongCounter
+  id: STRodentiaTailLongCounter
   bodyPart: Tail
-  groupWhitelist: [Rodentia]
+  groupWhitelist: [STRodentia]
   sprites:
     - sprite: _Stories/Mobs/Rodentia/tail_markings.rsi
       state: long
@@ -283,9 +283,9 @@
       state: long_overlay
 
 - type: marking
-  id: RodentiaTailLongCounterTip
+  id: STRodentiaTailLongCounterTip
   bodyPart: Tail
-  groupWhitelist: [Rodentia]
+  groupWhitelist: [STRodentia]
   sprites:
     - sprite: _Stories/Mobs/Rodentia/tail_markings.rsi
       state: long
@@ -295,25 +295,25 @@
       state: long_tip
 
 - type: marking
-  id: RodentiaTailMouse
+  id: STRodentiaTailMouse
   bodyPart: Tail
-  groupWhitelist: [Rodentia]
+  groupWhitelist: [STRodentia]
   sprites:
     - sprite: _Stories/Mobs/Rodentia/tail_markings.rsi
       state: mouse
 
 - type: marking
-  id: RodentiaTailRabbit
+  id: STRodentiaTailRabbit
   bodyPart: Tail
-  groupWhitelist: [Rodentia]
+  groupWhitelist: [STRodentia]
   sprites:
     - sprite: _Stories/Mobs/Rodentia/tail_markings.rsi
       state: rabbit
 
 - type: marking
-  id: RodentiaTailRabbitCounter
+  id: STRodentiaTailRabbitCounter
   bodyPart: Tail
-  groupWhitelist: [Rodentia]
+  groupWhitelist: [STRodentia]
   sprites:
     - sprite: _Stories/Mobs/Rodentia/tail_markings.rsi
       state: rabbit
@@ -321,25 +321,25 @@
       state: rabbit_overlay
 
 - type: marking
-  id: RodentiaTailShort
+  id: STRodentiaTailShort
   bodyPart: Tail
-  groupWhitelist: [Rodentia]
+  groupWhitelist: [STRodentia]
   sprites:
     - sprite: _Stories/Mobs/Rodentia/tail_markings.rsi
       state: short
 
 - type: marking
-  id: RodentiaTailSquirrel
+  id: STRodentiaTailSquirrel
   bodyPart: Tail
-  groupWhitelist: [Rodentia]
+  groupWhitelist: [STRodentia]
   sprites:
     - sprite: _Stories/Mobs/Rodentia/tail_markings.rsi
       state: squirrel
 
 - type: marking
-  id: RodentiaTailSquirrelBicolor
+  id: STRodentiaTailSquirrelBicolor
   bodyPart: Tail
-  groupWhitelist: [Rodentia]
+  groupWhitelist: [STRodentia]
   sprites:
     - sprite: _Stories/Mobs/Rodentia/tail_markings.rsi
       state: squirrel
@@ -349,27 +349,27 @@
 ## PATTERNS
 
 - type: marking
-  id: RodentiaChestCountershade
+  id: STRodentiaChestCountershade
   bodyPart: Chest
-  groupWhitelist: [Rodentia]
+  groupWhitelist: [STRodentia]
   sexRestriction: Male
   sprites:
     - sprite: _Stories/Mobs/Rodentia/body_markings.rsi
       state: countershade
 
 - type: marking
-  id: RodentiaChestCountershadeF
+  id: STRodentiaChestCountershadeF
   bodyPart: Chest
-  groupWhitelist: [Rodentia]
+  groupWhitelist: [STRodentia]
   sexRestriction: Female
   sprites:
     - sprite: _Stories/Mobs/Rodentia/body_markings.rsi
       state: countershade_f
 
 - type: marking
-  id: RodentiaLegLeftCountershade
+  id: STRodentiaLegLeftCountershade
   bodyPart: LLeg
-  groupWhitelist: [Rodentia]
+  groupWhitelist: [STRodentia]
   sprites:
     - sprite: _Stories/Mobs/Rodentia/parts.rsi
       state: l_leg
@@ -377,9 +377,9 @@
       state: countershade_lleg
 
 - type: marking
-  id: RodentiaLegRightCountershade
+  id: STRodentiaLegRightCountershade
   bodyPart: RLeg
-  groupWhitelist: [Rodentia]
+  groupWhitelist: [STRodentia]
   sprites:
     - sprite: _Stories/Mobs/Rodentia/parts.rsi
       state: r_leg
@@ -387,26 +387,26 @@
       state: countershade_rleg
 
 - type: marking
-  id: RodentiaChestFawn
+  id: STRodentiaChestFawn
   bodyPart: Chest
-  groupWhitelist: [Rodentia]
+  groupWhitelist: [STRodentia]
   sprites:
     - sprite: _Stories/Mobs/Rodentia/body_markings.rsi
       state: fawn
 
 - type: marking
-  id: RodentiaChestHooded
+  id: STRodentiaChestHooded
   bodyPart: Chest
-  groupWhitelist: [Rodentia]
+  groupWhitelist: [STRodentia]
   sexRestriction: Male
   sprites:
     - sprite: _Stories/Mobs/Rodentia/body_markings.rsi
       state: hooded
 
 - type: marking
-  id: RodentiaChestHoodedF
+  id: STRodentiaChestHoodedF
   bodyPart: Chest
-  groupWhitelist: [Rodentia]
+  groupWhitelist: [STRodentia]
   sexRestriction: Female
   sprites:
     - sprite: _Stories/Mobs/Rodentia/body_markings.rsi
@@ -415,9 +415,9 @@
 ### HEAD PATTERNS
 
 - type: marking
-  id: RodentiaHeadBlaze
+  id: STRodentiaHeadBlaze
   bodyPart: Head
-  groupWhitelist: [Rodentia]
+  groupWhitelist: [STRodentia]
   sprites:
     - sprite: _Stories/Mobs/Rodentia/parts.rsi
       state: head_m
@@ -425,9 +425,9 @@
       state: blaze
 
 - type: marking
-  id: RodentiaHeadRound
+  id: STRodentiaHeadRound
   bodyPart: Head
-  groupWhitelist: [Rodentia]
+  groupWhitelist: [STRodentia]
   sprites:
     - sprite: _Stories/Mobs/Rodentia/parts.rsi
       state: head_m
@@ -439,9 +439,9 @@
 ## HEAD
 
 - type: marking
-  id: RodentiaHeadBasic
+  id: STRodentiaHeadBasic
   bodyPart: Head
-  groupWhitelist: [Rodentia]
+  groupWhitelist: [STRodentia]
   sprites:
     - sprite: _Stories/Mobs/Rodentia/parts.rsi
       state: head_m
@@ -449,17 +449,17 @@
 ## ARMS
 
 - type: marking
-  id: RodentiaArmLeftBasic
+  id: STRodentiaArmLeftBasic
   bodyPart: LArm
-  groupWhitelist: [Rodentia]
+  groupWhitelist: [STRodentia]
   sprites:
     - sprite: _Stories/Mobs/Rodentia/parts.rsi
       state: l_arm
 
 - type: marking
-  id: RodentiaArmRightBasic
+  id: STRodentiaArmRightBasic
   bodyPart: RArm
-  groupWhitelist: [Rodentia]
+  groupWhitelist: [STRodentia]
   sprites:
     - sprite: _Stories/Mobs/Rodentia/parts.rsi
       state: r_arm
@@ -467,17 +467,17 @@
 ## LEGS
 
 - type: marking
-  id: RodentiaLegLeftBasic
+  id: STRodentiaLegLeftBasic
   bodyPart: LLeg
-  groupWhitelist: [Rodentia]
+  groupWhitelist: [STRodentia]
   sprites:
     - sprite: _Stories/Mobs/Rodentia/parts.rsi
       state: l_leg
 
 - type: marking
-  id: RodentiaLegRightBasic
+  id: STRodentiaLegRightBasic
   bodyPart: RLeg
-  groupWhitelist: [Rodentia]
+  groupWhitelist: [STRodentia]
   sprites:
     - sprite: _Stories/Mobs/Rodentia/parts.rsi
       state: r_leg
@@ -485,17 +485,17 @@
 ## HANDS
 
 - type: marking
-  id: RodentiaHandLeftBasic
+  id: STRodentiaHandLeftBasic
   bodyPart: LHand
-  groupWhitelist: [Rodentia]
+  groupWhitelist: [STRodentia]
   sprites:
     - sprite: _Stories/Mobs/Rodentia/parts.rsi
       state: l_hand
 
 - type: marking
-  id: RodentiaHandRightBasic
+  id: STRodentiaHandRightBasic
   bodyPart: RHand
-  groupWhitelist: [Rodentia]
+  groupWhitelist: [STRodentia]
   sprites:
     - sprite: _Stories/Mobs/Rodentia/parts.rsi
       state: r_hand
@@ -503,17 +503,17 @@
 ## FEET
 
 - type: marking
-  id: RodentiaFootLeftBasic
+  id: STRodentiaFootLeftBasic
   bodyPart: LFoot
-  groupWhitelist: [Rodentia]
+  groupWhitelist: [STRodentia]
   sprites:
     - sprite: _Stories/Mobs/Rodentia/parts.rsi
       state: l_foot
 
 - type: marking
-  id: RodentiaFootRightBasic
+  id: STRodentiaFootRightBasic
   bodyPart: RFoot
-  groupWhitelist: [Rodentia]
+  groupWhitelist: [STRodentia]
   sprites:
     - sprite: _Stories/Mobs/Rodentia/parts.rsi
       state: r_foot

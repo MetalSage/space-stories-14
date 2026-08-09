@@ -1,12 +1,12 @@
 - type: entity
   parent: ClothingHandsGlovesColorBlack
-  id: ClothingHandsGlovesInquisitor
+  id: STClothingHandsGlovesInquisitor
   name: inquisitor's gloves
   description: Strange gloves.
   components:
   - type: Tag
     tags:
-      - ForceRecallEquipment
+      - STForceRecallEquipment
   - type: Sprite
     sprite: _Stories/Clothing/Hands/Gloves/gloves_inquisitor.rsi
   - type: Clothing
@@ -17,13 +17,13 @@
 
 - type: entity
   parent: ClothingHandsGlovesColorBlack
-  id: ClothingHandsGlovesExe
+  id: STClothingHandsGlovesExe
   name: guardian's gloves
   description: Strange gloves.
   components:
   - type: Tag
     tags:
-      - ForceRecallEquipment
+      - STForceRecallEquipment
   - type: Sprite
     sprite: _Stories/Clothing/Hands/Gloves/exe_gloves.rsi
   - type: Clothing

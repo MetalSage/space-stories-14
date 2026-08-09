@@ -4935,7 +4935,7 @@ entities:
       rot: 3.141592653589793 rad
       pos: -0.75222385,-19.498
       parent: 1
-- proto: SheetPrinter
+- proto: STSheetPrinter
   entities:
   - uid: 789
     components:

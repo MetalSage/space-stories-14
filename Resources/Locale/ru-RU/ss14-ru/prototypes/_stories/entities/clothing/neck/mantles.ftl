@@ -1,6 +1,6 @@
-ent-ClothingNeckMantleGuardianNomad = мантия путника
+ent-STClothingNeckMantleGuardianNomad = мантия путника
     .desc = В ней вы чувствуете ветер, который подгоняет вас вперёд.
-ent-ClothingNeckMantleGuardianNt = мантия стража клинка
+ent-STClothingNeckMantleGuardianNt = мантия стража клинка
     .desc = Чёрный, броский цвет, он показывает вашу доминацию перед врагами NanoTrasen.
-ent-ClothingShoulderMantleHoS = накидка Главы Службы Безопасности
+ent-STClothingShoulderMantleHoS = накидка Главы Службы Безопасности
     .desc = Перестрелки с оперативниками — это просто очередной вторник для этого ГСБ. Эта накидка — символ преданности станции.

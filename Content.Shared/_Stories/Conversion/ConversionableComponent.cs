@@ -2,11 +2,10 @@ using Robust.Shared.GameStates;
 
 namespace Content.Shared._Stories.Conversion;
 
-[RegisterComponent, NetworkedComponent, AutoGenerateComponentState]
+[RegisterComponent, NetworkedComponent, AutoGenerateComponentState]  
 public sealed partial class ConversionableComponent : Component
 {
-    [DataField("active")]
-    [AutoNetworkedField]
+    [DataField("active"), AutoNetworkedField]
     public Dictionary<string, ConversionData> ActiveConversions = new();
 
     [DataField("allowed", required: true)]

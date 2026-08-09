@@ -21,7 +21,8 @@ public sealed partial class ConversionSystem
         {
             foreach (var conversion in comp.ActiveConversions)
             {
-                if (conversion.Key == prototype.Id && conversion.Value.Owner != null && GetEntity(conversion.Value.Owner.Value) == uid)
+                if (conversion.Key == prototype.Id && conversion.Value.Owner != null &&
+                    GetEntity(conversion.Value.Owner.Value) == uid)
                     entities.Add(entity);
             }
         }

@@ -1,3 +1,3 @@
-ent-PRISONClothingBeltSheathFilled = { ent-PRISONClothingBeltSheath }
-    .desc = { ent-PRISONClothingBeltSheath.desc }
+ent-STPRISONClothingBeltSheathFilled = { ent-STPRISONClothingBeltSheath }
+    .desc = { ent-STPRISONClothingBeltSheath.desc }
     .suffix = Заполненный

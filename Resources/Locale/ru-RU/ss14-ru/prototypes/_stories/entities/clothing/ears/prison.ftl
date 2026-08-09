@@ -1,8 +1,8 @@
-ent-PRISONClothingHeadset = гарнитура тюрьмы
+ent-STPRISONClothingHeadset = гарнитура тюрьмы
     .desc = Гарнитура, используемая сотрудниками тюрьмы.
-ent-PRISONClothingHeadsetMedic = гарнитура врача тюрьмы
+ent-STPRISONClothingHeadsetMedic = гарнитура врача тюрьмы
     .desc = Гарнитура, используемая сотрудниками тюрьмы.
-ent-PRISONClothingHeadsetEngi = гарнитура инженера тюрьмы
+ent-STPRISONClothingHeadsetEngi = гарнитура инженера тюрьмы
     .desc = Гарнитура, используемая сотрудниками тюрьмы.
-ent-PRISONClothingHeadsetAlt = полноразмерная гарнитура начальника тюрьмы
+ent-STPRISONClothingHeadsetAlt = полноразмерная гарнитура начальника тюрьмы
     .desc = Нужна, чтобы сообщить капитану о побеге клоуна.

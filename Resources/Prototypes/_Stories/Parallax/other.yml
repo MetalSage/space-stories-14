@@ -1,4 +1,3 @@
-# Based on /Prototypes/_Corvax/Parallax/other.yml
 - type: parallax
   id: STWater
   layers:

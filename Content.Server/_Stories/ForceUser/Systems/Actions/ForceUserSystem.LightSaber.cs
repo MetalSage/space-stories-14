@@ -33,7 +33,7 @@ public sealed partial class ForceUserSystem
         if (args.DamageDelta.GetTotal() <= 0)
             return;
 
-        var prob = args.DamageDelta.GetTotal().Float() * 0.01f; // Урон > 100 = 100%
+        var prob = args.DamageDelta.GetTotal().Float() * 0.01f;
         if (!_random.Prob(prob > 1 ? 1 : prob))
             return;
 
@@ -69,7 +69,7 @@ public sealed partial class ForceUserSystem
 
     private void OnActivateAttempt(EntityUid uid, LightsaberComponent comp, ref ItemToggleActivateAttemptEvent args)
     {
-        if (comp.LightsaberOwner != args.User) // TODO: Черт, как его включить, если меня клонировали?
+        if (comp.LightsaberOwner != args.User)
             args.Cancelled = true;
     }
 }

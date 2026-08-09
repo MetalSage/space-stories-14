@@ -1,6 +1,6 @@
 - type: entity
   parent: EncryptionKey
-  id: EncryptionKeyIAA
+  id: STEncryptionKeyIAA
   name: internal Affairs encryption key
   description: The encryption key used by the most meticulous person on the station.
   components:
@@ -19,7 +19,7 @@
 
 - type: entity
   parent: EncryptionKey
-  id: PRISONEncryptionKey
+  id: STPRISONEncryptionKey
   name: prison encryption key
   description: An encryption key used by space prison staff.
   components:

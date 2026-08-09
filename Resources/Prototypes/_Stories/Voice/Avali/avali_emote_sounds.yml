@@ -1,5 +1,5 @@
 - type: emoteSounds
-  id: MaleAvali
+  id: STMaleAvali
   voiceSelectorName: humanoid-profile-editor-voice-masculine
   params:
     variation: 0.125
@@ -42,7 +42,7 @@
       collection: MaleDeathGasp
 
 - type: emoteSounds
-  id: FemaleAvali
+  id: STFemaleAvali
   voiceSelectorName: humanoid-profile-editor-voice-feminine
   params:
     variation: 0.125

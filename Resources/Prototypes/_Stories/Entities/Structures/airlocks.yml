@@ -1,163 +1,151 @@
-# HeadOfPrison
-
 - type: entity
   parent: AirlockGlass
   name: head of prison glass airlock
   description: It opens, it closes, and it can crush you.
-  id: PRISONAirlockGlassLockedHeadOfPrison
-  suffix: HeadOfPrison, Locked
+  id: STPRISONAirlockGlassLockedHeadOfPrison
+  suffix: STHeadOfPrison, Locked
   components:
     - type: Sprite
       sprite: _Stories/Structures/Doors/Airlocks/Glass/security.rsi
     - type: ContainerFill
       containers:
-        board: [PRISONDoorElectronicsHeadOfPrison]
+        board: [STPRISONDoorElectronicsHeadOfPrison]
 
 - type: entity
   parent: Airlock
   name: head of prison airlock
   description: It opens, it closes, and it can crush you.
-  id: PRISONAirlockLockedHeadOfPrison
-  suffix: HeadOfPrison, Locked
+  id: STPRISONAirlockLockedHeadOfPrison
+  suffix: STHeadOfPrison, Locked
   components:
     - type: Sprite
       sprite: _Stories/Structures/Doors/Airlocks/Standard/security.rsi
     - type: ContainerFill
       containers:
-        board: [PRISONDoorElectronicsHeadOfPrison]
-
-# Prison Brig
+        board: [STPRISONDoorElectronicsHeadOfPrison]
 
 - type: entity
   parent: AirlockGlass
   name: prison brig glass airlock
   description: It opens, it closes, and it can crush you.
-  id: PRISONAirlockGlassLockedBrig
-  suffix: PrisonBrig, Glass, Locked
+  id: STPRISONAirlockGlassLockedBrig
+  suffix: STPrisonBrig, Glass, Locked
   components:
     - type: Sprite
       sprite: _Stories/Structures/Doors/Airlocks/Glass/security.rsi
     - type: ContainerFill
       containers:
-        board: [PRISONDoorElectronicsBrig]
+        board: [STPRISONDoorElectronicsBrig]
 
 - type: entity
   parent: Airlock
   name: prison brig airlock
   description: It opens, it closes, and it can crush you.
-  id: PRISONAirlockLockedBrig
-  suffix: PrisonBrig, Locked
+  id: STPRISONAirlockLockedBrig
+  suffix: STPrisonBrig, Locked
   components:
     - type: Sprite
       sprite: _Stories/Structures/Doors/Airlocks/Standard/security.rsi
     - type: ContainerFill
       containers:
-        board: [PRISONDoorElectronicsBrig]
-
-# Prison
+        board: [STPRISONDoorElectronicsBrig]
 
 - type: entity
   parent: AirlockGlass
   name: prison glass airlock
   description: It opens, it closes, and it can crush you.
-  id: PRISONAirlockGlassLocked
+  id: STPRISONAirlockGlassLocked
   suffix: Prison, Glass, Locked
   components:
     - type: Sprite
       sprite: _Stories/Structures/Doors/Airlocks/Glass/security.rsi
     - type: ContainerFill
       containers:
-        board: [PRISONDoorElectronics]
+        board: [STPRISONDoorElectronics]
 
 - type: entity
   parent: Airlock
   name: prison airlock
   description: It opens, it closes, and it can crush you.
-  id: PRISONAirlockLocked
+  id: STPRISONAirlockLocked
   suffix: Prison, Locked
   components:
     - type: Sprite
       sprite: _Stories/Structures/Doors/Airlocks/Standard/security.rsi
     - type: ContainerFill
       containers:
-        board: [PRISONDoorElectronics]
-
-# Prison Med
+        board: [STPRISONDoorElectronics]
 
 - type: entity
   parent: AirlockGlass
   name: prison medical glass airlock
   description: It opens, it closes, and it can crush you.
-  id: PRISONAirlockGlassLockedMed
-  suffix: PrisonMed, Glass, Locked
+  id: STPRISONAirlockGlassLockedMed
+  suffix: STPrisonMed, Glass, Locked
   components:
     - type: Sprite
       sprite: _Stories/Structures/Doors/Airlocks/Glass/security.rsi
     - type: ContainerFill
       containers:
-        board: [PRISONDoorElectronicsMed]
+        board: [STPRISONDoorElectronicsMed]
 
 - type: entity
   parent: Airlock
   name: prison medical airlock
   description: It opens, it closes, and it can crush you.
-  id: PRISONAirlockLockedMed
-  suffix: PrisonMed, Locked
+  id: STPRISONAirlockLockedMed
+  suffix: STPrisonMed, Locked
   components:
     - type: Sprite
       sprite: _Stories/Structures/Doors/Airlocks/Standard/security.rsi
     - type: ContainerFill
       containers:
-        board: [PRISONDoorElectronicsMed]
-
-# Prison Eng
+        board: [STPRISONDoorElectronicsMed]
 
 - type: entity
   parent: AirlockGlass
   name: prison engineering glass airlock
   description: It opens, it closes, and it can crush you.
-  id: PRISONAirlockGlassLockedEng
-  suffix: PrisonEng, Glass, Locked
+  id: STPRISONAirlockGlassLockedEng
+  suffix: STPrisonEng, Glass, Locked
   components:
     - type: Sprite
       sprite: _Stories/Structures/Doors/Airlocks/Glass/security.rsi
     - type: ContainerFill
       containers:
-        board: [PRISONDoorElectronicsEng]
+        board: [STPRISONDoorElectronicsEng]
 
 - type: entity
   parent: Airlock
   name: prison engineering airlock
   description: It opens, it closes, and it can crush you.
-  id: PRISONAirlockLockedEng
-  suffix: PrisonEng, Locked
+  id: STPRISONAirlockLockedEng
+  suffix: STPrisonEng, Locked
   components:
     - type: Sprite
       sprite: _Stories/Structures/Doors/Airlocks/Standard/security.rsi
     - type: ContainerFill
       containers:
-        board: [PRISONDoorElectronicsEng]
-
-# Prisoner
+        board: [STPRISONDoorElectronicsEng]
 
 - type: entity
   parent: AirlockGlass
   name: prisoner glass airlock
   description: It opens, it closes, and it can crush you.
-  id: PRISONAirlockGlassLockedPrisoner
+  id: STPRISONAirlockGlassLockedPrisoner
   suffix: Prisoner, Glass, Locked
   components:
     - type: ContainerFill
       containers:
-        board: [PRISONDoorElectronicsPrisoner]
+        board: [STPRISONDoorElectronicsPrisoner]
 
 - type: entity
   parent: Airlock
   name: prisoner airlock
   description: It opens, it closes, and it can crush you.
-  id: PRISONAirlockLockedPrisoner
+  id: STPRISONAirlockLockedPrisoner
   suffix: Prisoner, Locked
   components:
     - type: ContainerFill
       containers:
-        board: [PRISONDoorElectronicsPrisoner]
+        board: [STPRISONDoorElectronicsPrisoner]

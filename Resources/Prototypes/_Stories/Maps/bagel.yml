@@ -1,5 +1,5 @@
 - type: gameMap
-  id: StoriesBagel
+  id: STBagel
   mapName: 'Bagel Station'
   mapPath: /Maps/_Stories/bagel.yml
   minPlayers: 0
@@ -64,7 +64,7 @@
             StationAi: [ 1, 1 ]
             Borg: [ 2, 2 ]
             #stories content
-            GuardianNt: [ 1, 1 ]
-            IAA: [ 1, 1 ]
+            STGuardianNt: [ 1, 1 ]
+            STIAA: [ 1, 1 ]
             STBrigmedic: [ 1, 1 ]
             #STJudge: [ 1, 1 ]

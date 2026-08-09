@@ -1,8 +1,8 @@
-ent-PRISONClothingHeadHatCapHeadOfPrison = фуражка начальника тюрьмы
+ent-STPRISONClothingHeadHatCapHeadOfPrison = фуражка начальника тюрьмы
     .desc = Прочная форменная фуражка начальника тюрьмы. Напоминает рядовым офицерам, кто здесь главный.
-ent-PRISONClothingHeadHatSoft = кепка тюрьмы
+ent-STPRISONClothingHeadHatSoft = кепка тюрьмы
     .desc = Это надежная бейсболка со вкусом подобранного синего цвета.
-ent-PRISONClothingHeadHatUshanka = ушанка
+ent-STPRISONClothingHeadHatUshanka = ушанка
     .desc = Идеально подходит для зимы в Сибири, da?
-ent-PRISONClothingHeadHatBeret = берет тюрьмы
+ent-STPRISONClothingHeadHatBeret = берет тюрьмы
     .desc = Берет — любимый головной убор заключенного. Из него делаются бинты.

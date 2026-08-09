@@ -1,19 +1,19 @@
 - type: job
-  id: PRISONOfficer
+  id: STPRISONOfficer
   name: офицер космической тюрьмы
   description: Ограждать станцию от преступного элемента - это ваша наивысшая миссия на смену, не подведите.
-  playTimeTracker: JobSpacePrisonOfficer
+  playTimeTracker: STJobSpacePrisonOfficer
   requirements:
     - !type:DepartmentTimeRequirement
       department: Security
       time: 18000 # 5 hours
-  startingGear: PRISONOfficerGear
-  icon: "JobIconSpacePrisonOfficer"
+  startingGear: STPRISONOfficerGear
+  icon: "STJobIconSpacePrisonOfficer"
   supervisors: stories-job-supervisors-headofprison
   access:
   - Prisoner
   - Prison
-  - PrisonBrig
+  - STPrisonBrig
   - Security
   - Brig
   - Maintenance
@@ -25,23 +25,23 @@
   maxBankBalance: 250
 
 - type: startingGear
-  id: PRISONOfficerGear
+  id: STPRISONOfficerGear
   storage:
     back:
     - WeaponPistolMk58
     - MagazinePistol
     - Flash
   equipment:
-    jumpsuit: PRISONClothingUniformJumpsuit
-    id: PRISONPDAOfficer
-    ears: PRISONClothingHeadset
-    eyes: PRISONClothingEyesGlasses
+    jumpsuit: STPRISONClothingUniformJumpsuit
+    id: STPRISONPDAOfficer
+    ears: STPRISONClothingHeadset
+    eyes: STPRISONClothingEyesGlasses
 
 - type: chameleonOutfit
-  id: PRISONOfficerChameleonOutfit
-  job: PRISONOfficer
+  id: STPRISONOfficerChameleonOutfit
+  job: STPRISONOfficer
   hasMindShield: true
   equipment:
-    head: PRISONClothingHeadHatBeret
+    head: STPRISONClothingHeadHatBeret
     mask: ClothingMaskGasSecurity
     neck: Dinkystar

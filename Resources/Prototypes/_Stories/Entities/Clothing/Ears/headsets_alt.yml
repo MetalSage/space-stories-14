@@ -1,12 +1,12 @@
 - type: entity
   parent: ClothingHeadsetAlt
-  id: ClothingHeadsetGuardianNtAlt
+  id: STClothingHeadsetGuardianNtAlt
   name: blade guardian's over-ear headset
   description: Finally, there is a command frequency here.
   components:
     - type: Tag
       tags:
-        - ForceRecallEquipment
+        - STForceRecallEquipment
         - WhitelistChameleon
     - type: ContainerFill
       containers:

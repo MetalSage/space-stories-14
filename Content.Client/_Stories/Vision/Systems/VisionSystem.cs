@@ -63,9 +63,7 @@ public sealed partial class VisionSystem : SharedVisionSystem
                 _overlayManager.AddOverlay(new VisionAmbientOverlay());
         }
         else
-        {
             _overlayManager.RemoveOverlay<VisionAmbientOverlay>();
-        }
 
         if (comp.ThermalVision || comp.Shader != null)
         {
@@ -73,9 +71,7 @@ public sealed partial class VisionSystem : SharedVisionSystem
                 _overlayManager.AddOverlay(new VisionOverlay());
         }
         else
-        {
             _overlayManager.RemoveOverlay<VisionOverlay>();
-        }
     }
 
     private void ClearVisionModifiers()

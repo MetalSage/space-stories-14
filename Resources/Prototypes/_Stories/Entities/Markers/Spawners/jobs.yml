@@ -1,7 +1,7 @@
 # Base
 
 - type: entity
-  id: SpawnPointJobBaseStories
+  id: STSpawnPointJobBaseStories
   parent: MarkerBase
   abstract: true
   suffix: Job Spawn
@@ -14,12 +14,12 @@
 # GuardianNt
 
 - type: entity
-  id: SpawnPointGuardianNt
-  parent: SpawnPointJobBaseStories
+  id: STSpawnPointGuardianNt
+  parent: STSpawnPointJobBaseStories
   name: guardiannt
   components:
   - type: SpawnPoint
-    job_id: GuardianNt
+    job_id: STGuardianNt
   - type: Sprite
     layers:
     - state: green
@@ -33,7 +33,7 @@
   name: lawyer
   components:
   - type: SpawnPoint
-    job_id: IAA
+    job_id: STIAA
   - type: Sprite
     layers:
     - state: green
@@ -41,7 +41,7 @@
 
 - type: entity
   id: STSpawnPointJudge
-  parent: SpawnPointJobBaseStories
+  parent: STSpawnPointJobBaseStories
   name: judge
   components:
   - type: SpawnPoint
@@ -50,4 +50,3 @@
     layers:
     - state: green
     - state: guardiannt
-

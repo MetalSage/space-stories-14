@@ -1,11 +1,11 @@
 - type: entity
   parent: MobObserver
-  id: SponsorObserverTier1
+  id: STSponsorObserverTier1
   name: observer
   description: This ghost is suspicious.
   components:
   - type: Sprite
-    overrideContainerOcclusion: true # Ghosts always show up regardless of where they're contained.
+    overrideContainerOcclusion: true
     drawdepth: Ghosts
     sprite: _Stories/Mobs/Ghosts/sponsor.rsi
     layers:
@@ -14,12 +14,12 @@
 
 - type: entity
   parent: MobObserver
-  id: SponsorObserverTier2
+  id: STSponsorObserverTier2
   name: observer
   description: This ghost is suspicious.
   components:
   - type: Sprite
-    overrideContainerOcclusion: true # Ghosts always show up regardless of where they're contained.
+    overrideContainerOcclusion: true
     drawdepth: Ghosts
     sprite: _Stories/Mobs/Ghosts/sponsor.rsi
     layers:
@@ -28,12 +28,12 @@
 
 - type: entity
   parent: MobObserver
-  id: SponsorObserverTier3
+  id: STSponsorObserverTier3
   name: observer
   description: This ghost is suspicious.
   components:
   - type: Sprite
-    overrideContainerOcclusion: true # Ghosts always show up regardless of where they're contained.
+    overrideContainerOcclusion: true
     drawdepth: Ghosts
     sprite: _Stories/Mobs/Ghosts/sponsor.rsi
     layers:
@@ -42,12 +42,12 @@
 
 - type: entity
   parent: MobObserver
-  id: SponsorObserverTier4
+  id: STSponsorObserverTier4
   name: observer
   description: This ghost is suspicious.
   components:
   - type: Sprite
-    overrideContainerOcclusion: true # Ghosts always show up regardless of where they're contained.
+    overrideContainerOcclusion: true
     drawdepth: Ghosts
     sprite: _Stories/Mobs/Ghosts/sponsor.rsi
     layers:
@@ -56,12 +56,12 @@
 
 - type: entity
   parent: MobObserver
-  id: SponsorObserverTier5
+  id: STSponsorObserverTier5
   name: observer
   description: This ghost is suspicious.
   components:
   - type: Sprite
-    overrideContainerOcclusion: true # Ghosts always show up regardless of where they're contained.
+    overrideContainerOcclusion: true
     drawdepth: Ghosts
     sprite: _Stories/Mobs/Ghosts/sponsor.rsi
     layers:

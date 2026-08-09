@@ -1,109 +1,109 @@
 - type: roleLoadout
-  id: JobGuardianNt
+  id: STJobGuardianNt
   groups:
-  - GuardianNtHead
-  - GuardianNtMask
-  - GuardianNtNeck
-  - GuardianNtJumpsuit
-  - GuardianNtBelt
-  - GuardianNtBackpack
-  - GuardianNtOuterClothing
-  - GuardianNtShoes
-  - GuardianNtLightsaber
+  - STGuardianNtHead
+  - STGuardianNtMask
+  - STGuardianNtNeck
+  - STGuardianNtJumpsuit
+  - STGuardianNtBelt
+  - STGuardianNtBackpack
+  - STGuardianNtOuterClothing
+  - STGuardianNtShoes
+  - STGuardianNtLightsaber
   - SurvivalSecurity
   - Trinkets
   - GroupSpeciesBreathTool
 
 - type: loadoutGroup
-  id: GuardianNtHead
+  id: STGuardianNtHead
   name: loadout-group-Guardian-head
   minLimit: 0
   loadouts:
-  - ClothingHeadHatExe
-  - BeretGuardianNt
-  - HelmetGuardianNt
+  - STClothingHeadHatExe
+  - STBeretGuardianNt
+  - STHelmetGuardianNt
 
 - type: loadoutGroup
-  id: GuardianNtMask
+  id: STGuardianNtMask
   name: loadout-group-Guardian-mask
   minLimit: 0
   loadouts:
-  - ClothingMaskGasExe
+  - STClothingMaskGasExe
 
 - type: loadoutGroup
-  id: GuardianNtShoes
+  id: STGuardianNtShoes
   name: loadout-group-Guardian-shoes
   loadouts:
-  - ClothingShoesBootsJackGuardianNt
-  - ClothingShoesBootsJackGuardian
-  - ClothingShoesBootsJackGuardianNomad
-  - ClothingShoesBootsExe
+  - STClothingShoesBootsJackGuardianNt
+  - STClothingShoesBootsJackGuardian
+  - STClothingShoesBootsJackGuardianNomad
+  - STClothingShoesBootsExe
 
 - type: loadoutGroup
-  id: GuardianNtBelt
+  id: STGuardianNtBelt
   name: loadout-group-Guardian-belt
   loadouts:
   - SecurityBelt
-  - ClothingBeltGuardian
-  - ClothingBeltSheathExe
+  - STClothingBeltGuardian
+  - STClothingBeltSheathExe
 
 - type: loadoutGroup
-  id: GuardianNtNeck
+  id: STGuardianNtNeck
   name: loadout-group-Guardian-neck
   minLimit: 0
   loadouts:
-  - ClothingNeckMantleGuardianNt
-  - ClothingNeckMantleGuardianNomad
-  - ClothingNeckCloakExe
+  - STClothingNeckMantleGuardianNt
+  - STClothingNeckMantleGuardianNomad
+  - STClothingNeckCloakExe
 
 - type: loadoutGroup
-  id: GuardianNtJumpsuit
+  id: STGuardianNtJumpsuit
   name: loadout-group-Guardian-jumpsuits
   minLimit: 1
   loadouts:
-  - ClothingUniformJumpsuitGuardianNt
-  - ClothingUniformJumpsuitGuardian
-  - ClothingUniformJumpsuitGuardianNomad
-  - ClothingUniformJumpsuitExe
+  - STClothingUniformJumpsuitGuardianNt
+  - STClothingUniformJumpsuitGuardian
+  - STClothingUniformJumpsuitGuardianNomad
+  - STClothingUniformJumpsuitExe
 
 - type: loadoutGroup
-  id: GuardianNtBackpack
+  id: STGuardianNtBackpack
   name: loadout-group-Guardian-backpack
   loadouts:
-  - ClothingBackpackGuardianNt
-  - ClothingBackpackSatchelGuardianNt
-  - ClothingBackpackHandbagAdidos
-  - ClothingBackpackAdidos
-  - ClothingBackpackDuffelAdidos
-  - ClothingBackpackSatchelAdidos
-  - ClothingBackpackHandbagBluesky
-  - ClothingBackpackBluesky
-  - ClothingBackpackDuffelBluesky
-  - ClothingBackpackSatchelBluesky
-  - ClothingBackpackHandbagEight
-  - ClothingBackpackEight
-  - ClothingBackpackDuffelEight
-  - ClothingBackpackSatchelEight
-  - ClothingBackpackHandbagGachi
-  - ClothingBackpackGachi
-  - ClothingBackpackDuffelGachi
-  - ClothingBackpackSatchelGachi
-  - ClothingBackpackHandbagRl
-  - ClothingBackpackRl
-  - ClothingBackpackDuffelRl
-  - ClothingBackpackSatchelRl
+  - STClothingBackpackGuardianNt
+  - STClothingBackpackSatchelGuardianNt
+  - STClothingBackpackHandbagAdidos
+  - STClothingBackpackAdidos
+  - STClothingBackpackDuffelAdidos
+  - STClothingBackpackSatchelAdidos
+  - STClothingBackpackHandbagBluesky
+  - STClothingBackpackBluesky
+  - STClothingBackpackDuffelBluesky
+  - STClothingBackpackSatchelBluesky
+  - STClothingBackpackHandbagEight
+  - STClothingBackpackEight
+  - STClothingBackpackDuffelEight
+  - STClothingBackpackSatchelEight
+  - STClothingBackpackHandbagGachi
+  - STClothingBackpackGachi
+  - STClothingBackpackDuffelGachi
+  - STClothingBackpackSatchelGachi
+  - STClothingBackpackHandbagRl
+  - STClothingBackpackRl
+  - STClothingBackpackDuffelRl
+  - STClothingBackpackSatchelRl
 
 - type: loadoutGroup
-  id: GuardianNtOuterClothing
+  id: STGuardianNtOuterClothing
   name: loadout-group-Guardian-outer-clothing
   minLimit: 0
   loadouts:
-  - ClothingOuterVestGuardianNt
-  - ClothingOuterCoatGuardian
-  - ClothingOuterVestArmorExe
+  - STClothingOuterVestGuardianNt
+  - STClothingOuterCoatGuardian
+  - STClothingOuterVestArmorExe
 
 - type: loadoutGroup
-  id: GuardianNtLightsaber
+  id: STGuardianNtLightsaber
   name: loadout-group-Guardian-lightsaber
   minLimit: 1
   loadouts:
@@ -117,243 +117,211 @@
   - STLightsaberCrossguard
   - STLightsaberRapier
 
-# Маска хранителя
 - type: loadout
-  id: ClothingMaskGasExe
+  id: STClothingMaskGasExe
   equipment:
-    mask: ClothingMaskGasExe
+    mask: STClothingMaskGasExe
   effects:
   - !type:SponsorLoadoutEffect
-    id: ClothingMaskGasExe
+    id: STClothingMaskGasExe
 
-# Шляпа хранителя
 - type: loadout
-  id: ClothingHeadHatExe
+  id: STClothingHeadHatExe
   equipment:
-    head: ClothingHeadHatExe
+    head: STClothingHeadHatExe
   effects:
   - !type:SponsorLoadoutEffect
-    id: ClothingHeadHatExe
+    id: STClothingHeadHatExe
 
-# Берет
 - type: loadout
-  id: BeretGuardianNt
+  id: STBeretGuardianNt
   equipment:
     head: STClothingHeadHatBeretGuardianNt
 
-# Шлем
 - type: loadout
-  id: HelmetGuardianNt
+  id: STHelmetGuardianNt
   equipment:
     head: STClothingHeadHelmetGuardianNt
 
-# Рапира
 - type: loadout
   id: STLightsaberRapier
   equipment:
     pocket1: STLightsaberRapier
   effects:
   - !type:SponsorLoadoutEffect
-    id: LightsaberRapier
+    id: STLightsaberRapier
 
-# Двухклинковый меч
 - type: loadout
   id: STLightsaberDouble
   equipment:
     pocket1: STLightsaberDouble
   effects:
   - !type:SponsorLoadoutEffect
-    id: LightsaberDouble
+    id: STLightsaberDouble
 
-# Меч с боковыми лезвиями
 - type: loadout
   id: STLightsaberCrossguard
   equipment:
     pocket1: STLightsaberCrossguard
   effects:
   - !type:SponsorLoadoutEffect
-    id: LightsaberCrossguard
+    id: STLightsaberCrossguard
 
-# Короткий меч
 - type: loadout
   id: STLightsaberShort
   equipment:
     pocket1: STLightsaberShort
   effects:
   - !type:SponsorLoadoutEffect
-    id: LightsaberShort
+    id: STLightsaberShort
 
-# -- Стандартные мечи (без эффектов, если они не были выделены в группах) --
-# Синий меч
 - type: loadout
   id: STLightsaberBlue
   equipment:
     pocket1: STLightsaberBlue
 
-# Зелёный меч
 - type: loadout
   id: STLightsaberGreen
   equipment:
     pocket1: STLightsaberGreen
 
-# Белый меч
 - type: loadout
   id: STLightsaberWhite
   equipment:
     pocket1: STLightsaberWhite
 
-# Жёлтый меч
 - type: loadout
   id: STLightsaberYellow
   equipment:
     pocket1: STLightsaberYellow
 
-# Фиолетовый меч
 - type: loadout
   id: STLightsaberPurple
   equipment:
     pocket1: STLightsaberPurple
 
-# Накидка джедая
 - type: loadout
-  id: ClothingOuterCoatGuardian
+  id: STClothingOuterCoatGuardian
   equipment:
-    outerClothing: ClothingOuterCoatGuardian
+    outerClothing: STClothingOuterCoatGuardian
   effects:
   - !type:SponsorLoadoutEffect
-    id: ClothingOuterCoatGuardian
+    id: STClothingOuterCoatGuardian
 
-# Бронежилет хранителя
 - type: loadout
-  id: ClothingOuterVestArmorExe
+  id: STClothingOuterVestArmorExe
   equipment:
-    outerClothing: ClothingOuterVestArmorExe
+    outerClothing: STClothingOuterVestArmorExe
   effects:
   - !type:SponsorLoadoutEffect
-    id: ClothingOuterVestArmorExe
+    id: STClothingOuterVestArmorExe
 
-# Бронежилет стража
 - type: loadout
-  id: ClothingOuterVestGuardianNt
+  id: STClothingOuterVestGuardianNt
   equipment:
-    outerClothing: ClothingOuterVestGuardianNt
+    outerClothing: STClothingOuterVestGuardianNt
 
-# Рюкзак стража (стандартный, без эффекта)
 - type: loadout
-  id: ClothingBackpackGuardianNt
+  id: STClothingBackpackGuardianNt
   equipment:
-    back: ClothingBackpackGuardianNt
+    back: STClothingBackpackGuardianNt
 
-# Рюкзак стража (стандартный, без эффекта)
 - type: loadout
-  id: ClothingBackpackSatchelGuardianNt
+  id: STClothingBackpackSatchelGuardianNt
   equipment:
-    back: ClothingBackpackSatchelGuardianNt
+    back: STClothingBackpackSatchelGuardianNt
 
-# Роба джедая
 - type: loadout
-  id: ClothingUniformJumpsuitGuardian
+  id: STClothingUniformJumpsuitGuardian
   equipment:
-    jumpsuit: ClothingUniformJumpsuitGuardian
+    jumpsuit: STClothingUniformJumpsuitGuardian
   effects:
   - !type:SponsorLoadoutEffect
-    id: ClothingUniformJumpsuitGuardian
+    id: STClothingUniformJumpsuitGuardian
 
-# Комбинезон хранителя
 - type: loadout
-  id: ClothingUniformJumpsuitExe
+  id: STClothingUniformJumpsuitExe
   equipment:
-    jumpsuit: ClothingUniformJumpsuitExe
+    jumpsuit: STClothingUniformJumpsuitExe
   effects:
   - !type:SponsorLoadoutEffect
-    id: ClothingUniformJumpsuitExe
+    id: STClothingUniformJumpsuitExe
 
-# Комбинезон путника
 - type: loadout
-  id: ClothingUniformJumpsuitGuardianNomad
+  id: STClothingUniformJumpsuitGuardianNomad
   equipment:
-    jumpsuit: ClothingUniformJumpsuitGuardianNomad
+    jumpsuit: STClothingUniformJumpsuitGuardianNomad
   effects:
   - !type:SponsorLoadoutEffect
-    id: ClothingUniformJumpsuitGuardianNomad
+    id: STClothingUniformJumpsuitGuardianNomad
 
-# Униформа стража (стандартная)
 - type: loadout
-  id: ClothingUniformJumpsuitGuardianNt
+  id: STClothingUniformJumpsuitGuardianNt
   equipment:
-    jumpsuit: ClothingUniformJumpsuitGuardianNt
+    jumpsuit: STClothingUniformJumpsuitGuardianNt
 
-# Плащ хранителя
 - type: loadout
-  id: ClothingNeckCloakExe
+  id: STClothingNeckCloakExe
   equipment:
-    neck: ClothingNeckCloakExe
+    neck: STClothingNeckCloakExe
   effects:
   - !type:SponsorLoadoutEffect
-    id: ClothingNeckCloakExe
+    id: STClothingNeckCloakExe
 
-# Мантия стража (была выделена тегами Start/End в группе)
 - type: loadout
-  id: ClothingNeckMantleGuardianNt
+  id: STClothingNeckMantleGuardianNt
   equipment:
-    neck: ClothingNeckMantleGuardianNt
+    neck: STClothingNeckMantleGuardianNt
 
-# Мантия путника
 - type: loadout
-  id: ClothingNeckMantleGuardianNomad
+  id: STClothingNeckMantleGuardianNomad
   equipment:
-    neck: ClothingNeckMantleGuardianNomad
+    neck: STClothingNeckMantleGuardianNomad
   effects:
   - !type:SponsorLoadoutEffect
-    id: ClothingNeckMantleGuardianNomad
+    id: STClothingNeckMantleGuardianNomad
 
-# Ботинки стража (стандартные)
 - type: loadout
-  id: ClothingShoesBootsJackGuardianNt
+  id: STClothingShoesBootsJackGuardianNt
   equipment:
-    shoes: ClothingShoesBootsJackGuardianNt
+    shoes: STClothingShoesBootsJackGuardianNt
 
-# Ботинки путника
 - type: loadout
-  id: ClothingShoesBootsJackGuardianNomad
+  id: STClothingShoesBootsJackGuardianNomad
   equipment:
-    shoes: ClothingShoesBootsJackGuardianNomad
+    shoes: STClothingShoesBootsJackGuardianNomad
   effects:
   - !type:SponsorLoadoutEffect
-    id: ClothingShoesBootsJackGuardianNomad
+    id: STClothingShoesBootsJackGuardianNomad
 
-# Ботинки хранителя
 - type: loadout
-  id: ClothingShoesBootsExe
+  id: STClothingShoesBootsExe
   equipment:
-    shoes: ClothingShoesBootsExe
+    shoes: STClothingShoesBootsExe
   effects:
   - !type:SponsorLoadoutEffect
-    id: ClothingShoesBootsExe
+    id: STClothingShoesBootsExe
 
-# Ботинки джедая
 - type: loadout
-  id: ClothingShoesBootsJackGuardian
+  id: STClothingShoesBootsJackGuardian
   equipment:
-    shoes: ClothingShoesBootsJackGuardian
+    shoes: STClothingShoesBootsJackGuardian
   effects:
   - !type:SponsorLoadoutEffect
-    id: ClothingShoesBootsJackGuardian
+    id: STClothingShoesBootsJackGuardian
 
-# Пояс джедая
 - type: loadout
-  id: ClothingBeltGuardian
+  id: STClothingBeltGuardian
   equipment:
-    belt: ClothingBeltGuardian
+    belt: STClothingBeltGuardian
   effects:
   - !type:SponsorLoadoutEffect
-    id: ClothingBeltGuardian
+    id: STClothingBeltGuardian
 
-# Пояс хранителя
 - type: loadout
-  id: ClothingBeltSheathExe
+  id: STClothingBeltSheathExe
   equipment:
-    belt: ClothingBeltSheathExe
+    belt: STClothingBeltSheathExe
   effects:
   - !type:SponsorLoadoutEffect
-    id: ClothingBeltSheathExe
+    id: STClothingBeltSheathExe

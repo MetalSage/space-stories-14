@@ -8,17 +8,11 @@ using Robust.Shared.Utility;
 
 namespace Content.Client.UserInterface.RichText;
 
-/// <summary>
-/// Converts [check] tags into clickable buttons that toggle between ✔ and ✖.
-/// </summary>
 public sealed class CheckTagHandler : IMarkupTagHandler
 {
     private static int _checkCounter;
 
-    /// <summary>
-    /// Font line height set by PaperWindow to ensure buttons match text height
-    /// </summary>
-    public static float FontLineHeight { get; set; } = 16.0f; // Default fallback
+    public static float FontLineHeight { get; set; } = 16.0f;
 
     public string Name => "check";
 
@@ -35,9 +29,6 @@ public sealed class CheckTagHandler : IMarkupTagHandler
         return "";
     }
 
-    /// <summary>
-    /// Creates a clickable button to replace the [check] tag.
-    /// </summary>
     public bool TryCreateControl(MarkupNode node, [NotNullWhen(true)] out Control? control)
     {
         var btn = new Button
@@ -55,7 +46,6 @@ public sealed class CheckTagHandler : IMarkupTagHandler
 
         btn.OnPressed += _ =>
         {
-            // Find the PaperWindow parent
             var parent = btn.Parent;
             while (parent != null && parent is not PaperWindow)
             {
@@ -64,7 +54,6 @@ public sealed class CheckTagHandler : IMarkupTagHandler
 
             if (parent is PaperWindow paperWindow)
             {
-                // Count buttons to determine which [check] tag this represents
                 var buttonIndex = CountCheckButtonsBefore(btn);
                 paperWindow.OpenCheckDialog(buttonIndex);
             }
@@ -79,29 +68,21 @@ public sealed class CheckTagHandler : IMarkupTagHandler
         return _checkCounter++;
     }
 
-    /// <summary>
-    /// Resets the check counter to ensure consistent indexing across renders.
-    /// </summary>
     public static void ResetCheckCounter()
     {
         _checkCounter = 0;
     }
 
-    /// <summary>
-    /// Counts check buttons before the clicked button to determine which [check] tag it represents.
-    /// </summary>
     private static int CountCheckButtonsBefore(Control clickedButton)
     {
         var count = 0;
         var root = clickedButton;
 
-        // Find the root container
         while (root.Parent != null)
         {
             root = root.Parent;
         }
 
-        // Count check buttons in document order
         var found = false;
         CountCheckButtonsRecursive(root, clickedButton, ref count, ref found);
         return found ? count : 0;
@@ -129,9 +110,6 @@ public sealed class CheckTagHandler : IMarkupTagHandler
         }
     }
 
-    /// <summary>
-    /// Replaces the nth occurrence of [check] tag with replacement symbol.
-    /// </summary>
     private static string ReplaceNthCheckTag(string text, int index, string replacement)
     {
         const string checkTag = "[check]";

@@ -62375,7 +62375,7 @@ entities:
     - type: Transform
       parent: 60
       pos: 38.489937,-12.380952
-- proto: ClothingBackpackSatchelGuardianNt
+- proto: STClothingBackpackSatchelGuardianNt
   entities:
   - uid: 15340
     components:
@@ -63190,7 +63190,7 @@ entities:
     - type: Transform
       parent: 60
       pos: -44.655315,-25.795544
-- proto: ClothingNeckMantleGuardianNt
+- proto: STClothingNeckMantleGuardianNt
   entities:
   - uid: 15339
     components:
@@ -63692,7 +63692,7 @@ entities:
     - type: Transform
       parent: 60
       pos: -64.47217,0.5909052
-- proto: ClothingUniformJumpsuitGuardianNt
+- proto: STClothingUniformJumpsuitGuardianNt
   entities:
   - uid: 15341
     components:
@@ -115222,7 +115222,7 @@ entities:
     - type: Transform
       parent: 60
       pos: 3.5,-5.5
-- proto: LockerGuardianNtFilled
+- proto: STLockerGuardianNtFilled
   entities:
   - uid: 24520
     components:
@@ -136250,7 +136250,7 @@ entities:
     - type: Transform
       parent: 60
       pos: -26.5,-29.5
-- proto: SpawnPointGuardianNt
+- proto: STSpawnPointGuardianNt
   entities:
   - uid: 24525
     components:
@@ -136639,7 +136639,7 @@ entities:
     - type: Transform
       parent: 60
       pos: -27.5,-7.5
-- proto: SpawnSpaceKoi
+- proto: STSpawnSpaceKoi
   entities:
   - uid: 18640
     components:

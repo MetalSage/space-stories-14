@@ -1,7 +1,7 @@
 - type: marking
-  id: AvaliHairBigPonytail
+  id: STAvaliHairBigPonytail
   bodyPart: HeadTop
-  groupWhitelist: [Avali]
+  groupWhitelist: [STAvali]
   sprites:
     - sprite: _Stories/Mobs/Avali/avali_crests.rsi
       state: avali_crest_bigponytail_primary
@@ -11,9 +11,9 @@
       state: avali_crest_bigponytail_tertiary
 
 - type: marking
-  id: AvaliHairCockatiel
+  id: STAvaliHairCockatiel
   bodyPart: HeadTop
-  groupWhitelist: [Avali]
+  groupWhitelist: [STAvali]
   sprites:
     - sprite: _Stories/Mobs/Avali/avali_crests.rsi
       state: avali_crest_cockatiel_primary
@@ -21,9 +21,9 @@
       state: avali_crest_cockatiel_secondary
 
 - type: marking
-  id: AvaliHairCockatoo
+  id: STAvaliHairCockatoo
   bodyPart: HeadTop
-  groupWhitelist: [Avali]
+  groupWhitelist: [STAvali]
   sprites:
     - sprite: _Stories/Mobs/Avali/avali_crests.rsi
       state: avali_crest_cockatoo_primary
@@ -31,9 +31,9 @@
       state: avali_crest_cockatoo_secondary
 
 - type: marking
-  id: AvaliHairDuelFeather
+  id: STAvaliHairDuelFeather
   bodyPart: HeadTop
-  groupWhitelist: [Avali]
+  groupWhitelist: [STAvali]
   sprites:
     - sprite: _Stories/Mobs/Avali/avali_crests.rsi
       state: avali_crest_dualfeather_primary
@@ -41,9 +41,9 @@
       state: avali_crest_dualfeather_secondary
 
 - type: marking
-  id: AvaliHairHooked
+  id: STAvaliHairHooked
   bodyPart: HeadTop
-  groupWhitelist: [Avali]
+  groupWhitelist: [STAvali]
   sprites:
     - sprite: _Stories/Mobs/Avali/avali_crests.rsi
       state: avali_crest_hooked_primary
@@ -51,9 +51,9 @@
       state: avali_crest_hooked_secondary
 
 - type: marking
-  id: AvaliHairJay
+  id: STAvaliHairJay
   bodyPart: HeadTop
-  groupWhitelist: [Avali]
+  groupWhitelist: [STAvali]
   sprites:
     - sprite: _Stories/Mobs/Avali/avali_crests.rsi
       state: avali_crest_jay_primary
@@ -61,9 +61,9 @@
       state: avali_crest_jay_secondary
 
 - type: marking
-  id: AvaliHairLongFeather
+  id: STAvaliHairLongFeather
   bodyPart: HeadTop
-  groupWhitelist: [Avali]
+  groupWhitelist: [STAvali]
   sprites:
     - sprite: _Stories/Mobs/Avali/avali_crests.rsi
       state: avali_crest_longfeather_primary
@@ -71,9 +71,9 @@
       state: avali_crest_longfeather_secondary
 
 - type: marking
-  id: AvaliHairPunk
+  id: STAvaliHairPunk
   bodyPart: HeadTop
-  groupWhitelist: [Avali]
+  groupWhitelist: [STAvali]
   sprites:
     - sprite: _Stories/Mobs/Avali/avali_crests.rsi
       state: avali_crest_punk_primary
@@ -83,10 +83,10 @@
 # Base Markings
 
 - type: marking
-  id: AvaliEarsBase
+  id: STAvaliEarsBase
   bodyPart: HeadSide
   forcedColoring: true  
-  groupWhitelist: [Avali]
+  groupWhitelist: [STAvali]
   sprites:
   - sprite: _Stories/Mobs/Avali/avali_parts.rsi
     state: ears_avalibase_primary
@@ -94,10 +94,10 @@
     state: ears_avalibase_secondary
 
 - type: marking
-  id: AvaliTailBase
+  id: STAvaliTailBase
   bodyPart: Tail
   forcedColoring: true  
-  groupWhitelist: [Avali]
+  groupWhitelist: [STAvali]
   sprites:
   - sprite: _Stories/Mobs/Avali/avali_parts.rsi
     state: tail_avalibase
@@ -105,9 +105,9 @@
 # Stripe one
 
 - type: marking
-  id: AvaliEarsStripeOne
+  id: STAvaliEarsStripeOne
   bodyPart: HeadSide
-  groupWhitelist: [Avali]
+  groupWhitelist: [STAvali]
   sprites:
   - sprite: _Stories/Mobs/Avali/avali_parts.rsi
     state: ears_avalibase_primary
@@ -123,9 +123,9 @@
     state: ears_bottom_secondary
 
 - type: marking
-  id: AvaliHeadStripeOne
+  id: STAvaliHeadStripeOne
   bodyPart: Head
-  groupWhitelist: [Avali]
+  groupWhitelist: [STAvali]
   sprites:
   - sprite: _Stories/Mobs/Avali/avali_stripes_one.rsi
     state: head_primary
@@ -133,9 +133,9 @@
     state: head_secondary
 
 - type: marking
-  id: AvaliTorsoStripeOne
+  id: STAvaliTorsoStripeOne
   bodyPart: Chest
-  groupWhitelist: [Avali]
+  groupWhitelist: [STAvali]
   sprites:
   - sprite: _Stories/Mobs/Avali/avali_stripes_one.rsi
     state: torso_primary
@@ -143,9 +143,9 @@
     state: torso_secondary
 
 - type: marking
-  id: AvaliLArmStripeOne
+  id: STAvaliLArmStripeOne
   bodyPart: LArm
-  groupWhitelist: [Avali]
+  groupWhitelist: [STAvali]
   sprites:
   - sprite: _Stories/Mobs/Avali/avali_stripes_one.rsi
     state: larm_primary
@@ -153,9 +153,9 @@
     state: larm_secondary
 
 - type: marking
-  id: AvaliRArmStripeOne
+  id: STAvaliRArmStripeOne
   bodyPart: RArm
-  groupWhitelist: [Avali]
+  groupWhitelist: [STAvali]
   sprites:
   - sprite: _Stories/Mobs/Avali/avali_stripes_one.rsi
     state: rarm_primary
@@ -163,9 +163,9 @@
     state: rarm_secondary
 
 - type: marking
-  id: AvaliLHandStripeOne
+  id: STAvaliLHandStripeOne
   bodyPart: LHand
-  groupWhitelist: [Avali]
+  groupWhitelist: [STAvali]
   sprites:
   - sprite: _Stories/Mobs/Avali/avali_stripes_one.rsi
     state: lhand_primary
@@ -173,9 +173,9 @@
     state: lhand_secondary
 
 - type: marking
-  id: AvaliRHandStripeOne
+  id: STAvaliRHandStripeOne
   bodyPart: RHand
-  groupWhitelist: [Avali]
+  groupWhitelist: [STAvali]
   sprites:
   - sprite: _Stories/Mobs/Avali/avali_stripes_one.rsi
     state: rhand_primary
@@ -183,25 +183,25 @@
     state: rhand_secondary
 
 - type: marking
-  id: AvaliLLegStripeOne
+  id: STAvaliLLegStripeOne
   bodyPart: LLeg
-  groupWhitelist: [Avali]
+  groupWhitelist: [STAvali]
   sprites:
   - sprite: _Stories/Mobs/Avali/avali_stripes_one.rsi
     state: lleg
 
 - type: marking
-  id: AvaliRLegStripeOne
+  id: STAvaliRLegStripeOne
   bodyPart: RLeg
-  groupWhitelist: [Avali]
+  groupWhitelist: [STAvali]
   sprites:
   - sprite: _Stories/Mobs/Avali/avali_stripes_one.rsi
     state: rleg
 
 - type: marking
-  id: AvaliTailStripeOne
+  id: STAvaliTailStripeOne
   bodyPart: Tail
-  groupWhitelist: [Avali]
+  groupWhitelist: [STAvali]
   sprites:
   - sprite: _Stories/Mobs/Avali/avali_parts.rsi
     state: tail_avalibase
@@ -213,9 +213,9 @@
 # Trim one
 
 - type: marking
-  id: AvaliEarsTrimOne
+  id: STAvaliEarsTrimOne
   bodyPart: HeadSide
-  groupWhitelist: [Avali]
+  groupWhitelist: [STAvali]
   sprites:
   - sprite: _Stories/Mobs/Avali/avali_parts.rsi
     state: ears_avalibase_primary
@@ -231,9 +231,9 @@
     state: ears_bottom_secondary
 
 - type: marking
-  id: AvaliHeadTrimOne
+  id: STAvaliHeadTrimOne
   bodyPart: Head
-  groupWhitelist: [Avali]
+  groupWhitelist: [STAvali]
   sprites:
   - sprite: _Stories/Mobs/Avali/avali_trim_one.rsi
     state: head_primary
@@ -241,9 +241,9 @@
     state: head_secondary
 
 - type: marking
-  id: AvaliTorsoTrimOne
+  id: STAvaliTorsoTrimOne
   bodyPart: Chest
-  groupWhitelist: [Avali]
+  groupWhitelist: [STAvali]
   sprites:
   - sprite: _Stories/Mobs/Avali/avali_trim_one.rsi
     state: torso_primary
@@ -251,9 +251,9 @@
     state: torso_secondary
 
 - type: marking
-  id: AvaliLArmTrimOne
+  id: STAvaliLArmTrimOne
   bodyPart: LArm
-  groupWhitelist: [Avali]
+  groupWhitelist: [STAvali]
   sprites:
   - sprite: _Stories/Mobs/Avali/avali_trim_one.rsi
     state: larm_primary
@@ -261,9 +261,9 @@
     state: larm_secondary
 
 - type: marking
-  id: AvaliRArmTrimOne
+  id: STAvaliRArmTrimOne
   bodyPart: RArm
-  groupWhitelist: [Avali]
+  groupWhitelist: [STAvali]
   sprites:
   - sprite: _Stories/Mobs/Avali/avali_trim_one.rsi
     state: rarm_primary
@@ -271,9 +271,9 @@
     state: rarm_secondary
 
 - type: marking
-  id: AvaliRHandTrimOne
+  id: STAvaliRHandTrimOne
   bodyPart: RHand
-  groupWhitelist: [Avali]
+  groupWhitelist: [STAvali]
   sprites:
   - sprite: _Stories/Mobs/Avali/avali_trim_one.rsi
     state: rhand_primary
@@ -281,9 +281,9 @@
     state: rhand_secondary
 
 - type: marking
-  id: AvaliLHandTrimOne
+  id: STAvaliLHandTrimOne
   bodyPart: LHand
-  groupWhitelist: [Avali]
+  groupWhitelist: [STAvali]
   sprites:
   - sprite: _Stories/Mobs/Avali/avali_trim_one.rsi
     state: lhand_primary
@@ -291,9 +291,9 @@
     state: lhand_secondary
 
 - type: marking
-  id: AvaliLLegTrimOne
+  id: STAvaliLLegTrimOne
   bodyPart: LLeg
-  groupWhitelist: [Avali]
+  groupWhitelist: [STAvali]
   sprites:
   - sprite: _Stories/Mobs/Avali/avali_trim_one.rsi
     state: lleg_primary
@@ -301,9 +301,9 @@
     state: lleg_secondary
 
 - type: marking
-  id: AvaliRLegTrimOne
+  id: STAvaliRLegTrimOne
   bodyPart: RLeg
-  groupWhitelist: [Avali]
+  groupWhitelist: [STAvali]
   sprites:
   - sprite: _Stories/Mobs/Avali/avali_trim_one.rsi
     state: rleg_primary
@@ -311,9 +311,9 @@
     state: rleg_secondary
 
 - type: marking
-  id: AvaliTailTrimOne
+  id: STAvaliTailTrimOne
   bodyPart: Tail
-  groupWhitelist: [Avali]
+  groupWhitelist: [STAvali]
   sprites:
   - sprite: _Stories/Mobs/Avali/avali_parts.rsi
     state: tail_avalibase
@@ -325,9 +325,9 @@
 # Trim two
 
 - type: marking
-  id: AvaliEarsTrimTwo
+  id: STAvaliEarsTrimTwo
   bodyPart: HeadSide
-  groupWhitelist: [Avali]
+  groupWhitelist: [STAvali]
   sprites:
   - sprite: _Stories/Mobs/Avali/avali_parts.rsi
     state: ears_avalibase_primary
@@ -343,9 +343,9 @@
     state: ears_bottom_secondary
 
 - type: marking
-  id: AvaliHeadTrimTwo
+  id: STAvaliHeadTrimTwo
   bodyPart: Head
-  groupWhitelist: [Avali]
+  groupWhitelist: [STAvali]
   sprites:
   - sprite: _Stories/Mobs/Avali/avali_trim_two.rsi
     state: head_primary
@@ -353,9 +353,9 @@
     state: head_secondary
 
 - type: marking
-  id: AvaliTorsoTrimTwo
+  id: STAvaliTorsoTrimTwo
   bodyPart: Chest
-  groupWhitelist: [Avali]
+  groupWhitelist: [STAvali]
   sprites:
   - sprite: _Stories/Mobs/Avali/avali_trim_two.rsi
     state: torso_primary
@@ -363,9 +363,9 @@
     state: torso_secondary
 
 - type: marking
-  id: AvaliLArmTrimTwo
+  id: STAvaliLArmTrimTwo
   bodyPart: LArm
-  groupWhitelist: [Avali]
+  groupWhitelist: [STAvali]
   sprites:
   - sprite: _Stories/Mobs/Avali/avali_trim_two.rsi
     state: larm_primary
@@ -373,9 +373,9 @@
     state: larm_secondary
 
 - type: marking
-  id: AvaliRArmTrimTwo
+  id: STAvaliRArmTrimTwo
   bodyPart: RArm
-  groupWhitelist: [Avali]
+  groupWhitelist: [STAvali]
   sprites:
   - sprite: _Stories/Mobs/Avali/avali_trim_two.rsi
     state: rarm_primary
@@ -383,9 +383,9 @@
     state: rarm_secondary
 
 - type: marking
-  id: AvaliLHandTrimTwo
+  id: STAvaliLHandTrimTwo
   bodyPart: LHand
-  groupWhitelist: [Avali]
+  groupWhitelist: [STAvali]
   sprites:
   - sprite: _Stories/Mobs/Avali/avali_trim_two.rsi
     state: lhand_primary
@@ -393,9 +393,9 @@
     state: lhand_secondary
 
 - type: marking
-  id: AvaliRHandTrimTwo
+  id: STAvaliRHandTrimTwo
   bodyPart: RHand
-  groupWhitelist: [Avali]
+  groupWhitelist: [STAvali]
   sprites:
   - sprite: _Stories/Mobs/Avali/avali_trim_two.rsi
     state: rhand_primary
@@ -403,9 +403,9 @@
     state: rhand_secondary
 
 - type: marking
-  id: AvaliTailTrimTwo
+  id: STAvaliTailTrimTwo
   bodyPart: Tail
-  groupWhitelist: [Avali]
+  groupWhitelist: [STAvali]
   sprites:
   - sprite: _Stories/Mobs/Avali/avali_parts.rsi
     state: tail_avalibase

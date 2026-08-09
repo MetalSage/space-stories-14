@@ -21,7 +21,7 @@
       - Pontific
 
 - type: statusEffect
-  id: FrozeBullets
+  id: STFrozeBullets
 
 - type: entity
   parent: StatusEffectBase

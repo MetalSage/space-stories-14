@@ -1,3 +1,3 @@
-ent-MobInquisitorGhost = инквизитор
+ent-STMobInquisitorGhost = инквизитор
     .desc = Очень страшный.
     .suffix = { ent-BaseMobJaunt.suffix }

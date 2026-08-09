@@ -1,7 +1,7 @@
-ent-SpawnPointInquisitor = спавнер роли призрака
+ent-STSpawnPointInquisitor = спавнер роли призрака
     .desc = { ent-BaseAntagSpawner.desc }
     .suffix = Инквизитор
-ent-SpawnPointGhostSpaf = спавнер роли призрака
+ent-STSpawnPointGhostSpaf = спавнер роли призрака
     .desc = { ent-MarkerBase.desc }
     .suffix = S.P.A.F.
 ent-STSpawnPointGhostCorpium = спавнер роли призрака

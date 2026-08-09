@@ -13,9 +13,9 @@ namespace Content.Client._Stories.RoundEnd;
 public sealed partial class NoEorgPopup : FancyWindow
 {
     [Dependency] private IConfigurationManager _cfg = default!;
+    private bool _initialSkipState;
 
     private float _remainingTime;
-    private bool _initialSkipState;
 
     public NoEorgPopup()
     {
@@ -33,7 +33,7 @@ public sealed partial class NoEorgPopup : FancyWindow
         MessageLabel.SetMessage(FormattedMessage.FromMarkupOrThrow(Loc.GetString("no-eorg-popup-message")));
 
         _initialSkipState =
-            _cfg.GetCVar(SCCVars.SkipRoundEndNoEorgPopup); // Store the initial CVar value to compare against
+            _cfg.GetCVar(SCCVars.SkipRoundEndNoEorgPopup);
         SkipCheckBox.Pressed = _initialSkipState;
         NoEorgCloseButton.Disabled = true;
 
@@ -42,13 +42,13 @@ public sealed partial class NoEorgPopup : FancyWindow
 
     private void InitializeEvents()
     {
-        OnClose += SaveSkipState; // Only change the CVar once the close button is pressed
+        OnClose += SaveSkipState;
         NoEorgCloseButton.OnPressed += OnClosePressed;
     }
 
     private void ResetTimer()
     {
-        _remainingTime = _cfg.GetCVar(SCCVars.RoundEndNoEorgPopupTime); // Set how long to show the popup for
+        _remainingTime = _cfg.GetCVar(SCCVars.RoundEndNoEorgPopupTime);
         UpdateCloseButtonText();
     }
 

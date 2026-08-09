@@ -3,11 +3,9 @@
 [RegisterComponent]
 public sealed partial class FrozeBulletsComponent : Component
 {
-    [DataField("maxRange")]
-    [ViewVariables(VVAccess.ReadWrite)]
+    [DataField("maxRange"), ViewVariables(VVAccess.ReadWrite)]
     public float MaxRange = 2f;
 
-    [DataField("minRange")]
-    [ViewVariables(VVAccess.ReadWrite)]
+    [DataField("minRange"), ViewVariables(VVAccess.ReadWrite)]
     public float MinRange = 0.9f;
 }

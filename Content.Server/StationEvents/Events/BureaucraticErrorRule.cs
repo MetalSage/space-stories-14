@@ -13,7 +13,7 @@ namespace Content.Server.StationEvents.Events;
 public sealed partial class BureaucraticErrorRule : StationEventSystem<BureaucraticErrorRuleComponent>
 {
     [Dependency] private StationJobsSystem _stationJobs = default!;
-    private HashSet<string> _ignoredJobs = ["GuardianNt"];
+    private HashSet<string> _ignoredJobs = ["STGuardianNt"];
     protected override void Started(EntityUid uid, BureaucraticErrorRuleComponent component, GameRuleComponent gameRule, GameRuleStartedEvent args)
     {
         base.Started(uid, component, gameRule, args);

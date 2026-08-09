@@ -1,2 +1,2 @@
-ent-ClothingHeadsetGuardianNtAlt = полноразмерная гарнитура стража клинка
+ent-STClothingHeadsetGuardianNtAlt = полноразмерная гарнитура стража клинка
     .desc = Наконец-то тут есть командная частота.

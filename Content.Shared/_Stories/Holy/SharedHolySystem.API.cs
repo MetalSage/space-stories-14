@@ -14,7 +14,7 @@ public abstract partial class SharedHolySystem : EntitySystem
 
         if (TryComp<UseDelayComponent>(holy, out var useDelay))
         {
-            if (_useDelay.TryGetDelayInfo((holy, useDelay), out _, HolyDelay)) // Если Delay настроен
+            if (_useDelay.TryGetDelayInfo((holy, useDelay), out _, HolyDelay))
             {
                 if (!_useDelay.TryResetDelay((holy, useDelay), true, HolyDelay))
                     return false;
@@ -29,8 +29,6 @@ public abstract partial class SharedHolySystem : EntitySystem
     {
         if (target.Comp.ResistanceCoefficient == 0)
             return;
-
-        // TODO: HolyProtectionEvent
 
         if (holy.Comp.ProtectionSound is { } sound)
             _audio.PlayPvs(sound, holy);
@@ -59,8 +57,6 @@ public abstract partial class SharedHolySystem : EntitySystem
         if (!_statusEffects.CanAddStatusEffect(uid, HolyStatusEffect))
             return false;
 
-        // TODO: BlessAttemptEvent
-
         Bless((uid, blessable), time, refresh);
         return true;
     }
@@ -75,8 +71,6 @@ public abstract partial class SharedHolySystem : EntitySystem
 
         if (!_statusEffects.CanAddStatusEffect(uid, HolyStatusEffect))
             return false;
-
-        // TODO: BlessAttemptEvent
 
         Bless((uid, blessable));
         return true;

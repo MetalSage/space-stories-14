@@ -1,7 +1,7 @@
 - type: gasReaction
   id: STbzFormation
   priority: 2
-  maximumTemperature: 313.149 # Atmospherics.FireMinimumTemperatureToExist - 60
+  maximumTemperature: 313.149
   minimumRequirements:
     Plasma: 0.01
     NitrousOxide: 0.01
@@ -20,7 +20,7 @@
 - type: gasReaction
   id: STNitrylFormation
   priority: 2
-  minimumTemperature: 873.149 # 600 Celsius
+  minimumTemperature: 873.149
   minimumRequirements:
     Nitrogen: 0.1
     STBZ: 0.05

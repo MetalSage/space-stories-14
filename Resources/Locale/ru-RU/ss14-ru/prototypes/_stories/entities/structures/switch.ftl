@@ -1,12 +1,12 @@
-ent-PRISONLockableButtonPrisonBrig = кнопка с замком
+ent-STPRISONLockableButtonPrisonBrig = кнопка с замком
     .desc = Эта кнопка что-то активирует.
     .suffix = Бриг Тюрьмы
-ent-PRISONLockableButtonHeadOfPrison = кнопка с замком
+ent-STPRISONLockableButtonHeadOfPrison = кнопка с замком
     .desc = Эта кнопка что-то активирует.
     .suffix = Глава Тюрьмы
-ent-PRISONLockableButtonPrisonMed = кнопка с замком
+ent-STPRISONLockableButtonPrisonMed = кнопка с замком
     .desc = Эта кнопка что-то активирует.
     .suffix = Мед Тюрьмы
-ent-PRISONLockableButtonPrisonEng = кнопка с замком
+ent-STPRISONLockableButtonPrisonEng = кнопка с замком
     .desc = Эта кнопка что-то активирует.
     .suffix = Инж Тюрьмы

@@ -1,5 +1,5 @@
 - type: roleLoadout
-  id: JobSTCommandMaid
+  id: STJobSTCommandMaid
   groups:
   - CommonBackpack
   - Survival

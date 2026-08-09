@@ -299,7 +299,9 @@ public sealed partial class FineAllCommand : LocalizedCommands
                     {
                         economySystem.TrySendNotification(mindId,
                             Loc.GetString("stories-bank-app-notification-fine-title"),
-                            Loc.GetString("stories-bank-app-notification-fine-body", ("amount", amount), ("reason", Loc.GetString("stories-bank-app-notification-fine-reason-admin"))));
+                            Loc.GetString("stories-bank-app-notification-fine-body",
+                                ("amount", amount),
+                                ("reason", Loc.GetString("stories-bank-app-notification-fine-reason-admin"))));
                     }
                 }
             }

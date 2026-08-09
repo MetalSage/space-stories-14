@@ -1,5 +1,3 @@
-using Content.Shared.Inventory.Events;
-using Content.Shared.Popups;
 using Content.Shared.Weapons.Ranged.Events;
 
 namespace Content.Shared._Stories.Shadowling;

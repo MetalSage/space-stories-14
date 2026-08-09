@@ -1,4 +1,4 @@
-ent-CentcomComputerComms = коммуникационный компьютер центком
+ent-STCentcomComputerComms = коммуникационный компьютер центком
     .desc = { ent-ComputerComms.desc }
 ent-STComputerBankSecurity = финансовая консоль службы безопасности
     .desc = Используется службой безопасности для выписывания штрафов конкретным сотрудникам.

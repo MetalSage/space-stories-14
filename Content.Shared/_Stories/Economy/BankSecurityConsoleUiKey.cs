@@ -2,17 +2,17 @@ using Robust.Shared.Serialization;
 
 namespace Content.Shared._Stories.Economy;
 
-[Serializable, NetSerializable]
+[Serializable, NetSerializable] 
 public enum BankSecurityConsoleUiKey
 {
-    Key
+    Key,
 }
 
-[Serializable, NetSerializable]
+[Serializable, NetSerializable] 
 public sealed class BankSecurityConsoleState : BoundUserInterfaceState
 {
-    public readonly List<FinancialLogDto> Logs;
     public readonly List<AccountDto> KnownAccounts;
+    public readonly List<FinancialLogDto> Logs;
 
     public BankSecurityConsoleState(List<FinancialLogDto> logs, List<AccountDto> knownAccounts)
     {
@@ -21,7 +21,7 @@ public sealed class BankSecurityConsoleState : BoundUserInterfaceState
     }
 }
 
-[Serializable, NetSerializable]
+[Serializable, NetSerializable] 
 public struct FinancialLogDto
 {
     public TimeSpan Timestamp;
@@ -31,7 +31,7 @@ public struct FinancialLogDto
     public string Reason;
 }
 
-[Serializable, NetSerializable]
+[Serializable, NetSerializable] 
 public struct AccountDto
 {
     public string Id;
@@ -48,12 +48,12 @@ public struct AccountDto
     }
 }
 
-[Serializable, NetSerializable]
+[Serializable, NetSerializable] 
 public sealed class BankSecurityIssueFineMessage : BoundUserInterfaceMessage
 {
-    public readonly string TargetAccount;
     public readonly int Amount;
     public readonly string Reason;
+    public readonly string TargetAccount;
 
     public BankSecurityIssueFineMessage(string targetAccount, int amount, string reason)
     {
@@ -63,7 +63,7 @@ public sealed class BankSecurityIssueFineMessage : BoundUserInterfaceMessage
     }
 }
 
-[Serializable, NetSerializable]
+[Serializable, NetSerializable] 
 public sealed class BankSecurityRefreshMessage : BoundUserInterfaceMessage
 {
 }

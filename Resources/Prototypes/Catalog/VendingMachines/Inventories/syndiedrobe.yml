@@ -15,7 +15,7 @@
     ClothingNeckScarfStripedSyndieGreen: 2
     ClothingNeckScarfStripedSyndieRed: 2
     ClothingShoesBootsWinterSyndicate: 2
-    BoxSyndiePrinter: 1 # Stories
+    STBoxSyndiePrinter: 1 # Stories
   contrabandInventory:
     ToyFigurineFootsoldier: 1
     ToyFigurineNukieElite: 1

@@ -1,6 +1,5 @@
-# Base post-processing
 - type: shader
-  id: BasePostProcess
+  id: STBasePostProcess
   kind: source
   path: "/Textures/Shaders/base_postprocess.swsl"
   params:

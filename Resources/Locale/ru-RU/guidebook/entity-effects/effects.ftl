@@ -54,6 +54,7 @@ entity-effect-guidebook-flash =
         [1] Вызывает
         *[other] вызывают
     } ослепляющую вспышку
+
 entity-effect-guidebook-foam-area =
     { $chance ->
         [1] Creates

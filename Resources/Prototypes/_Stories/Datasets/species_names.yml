@@ -1,29 +1,29 @@
 - type: localizedDataset
-  id: AvaliUnisex
+  id: STAvaliUnisex
   values:
     prefix: names-avali-unisex-dataset-
     count: 20
 
 - type: localizedDataset
-  id: KidanMale
+  id: STKidanMale
   values:
     prefix: names-kidan-male-dataset-
     count: 120
 
 - type: localizedDataset
-  id: RodentiaMale
+  id: STRodentiaMale
   values:
     prefix: names-rodentia-male-dataset-
     count: 166
 
 - type: localizedDataset
-  id: RodentiaFemale
+  id: STRodentiaFemale
   values:
     prefix: names-rodentia-female-dataset-
     count: 158
 
 - type: localizedDataset
-  id: RodentiaLast
+  id: STRodentiaLast
   values:
     prefix: names-rodentia-last-dataset-
     count: 86

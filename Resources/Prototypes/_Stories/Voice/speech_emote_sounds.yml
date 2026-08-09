@@ -1,34 +1,33 @@
-# species
 - type: emoteSounds
-  id: MaleKidan
+  id: STMaleKidan
   voiceSelectorName: humanoid-profile-editor-voice-masculine
   params:
     variation: 0.125
   sounds:
     Sneeze:
-      collection: KidanSneeze
+      collection: STKidanSneeze
     Cough:
-      collection: KidanCough
+      collection: STKidanCough
     Scream:
-      collection: KidanScream
+      collection: STKidanScream
     Laugh:
-      collection: KidanLaugh
+      collection: STKidanLaugh
     Sigh:
-      collection: KidanSigh
+      collection: STKidanSigh
     Crying:
-      collection: KidanCry
-    Grumble:
-      collection: KidanGrumble
-    Moan:
-      collection: KidanMoan
-    WigglesAntennae:
-      collection: KidanWigglesAtennae
-    WavesAntennaeSharply:
-      collection: KidanWavesAntennaeSharply
+      collection: STKidanCry
+    STGrumble:
+      collection: STKidanGrumble
+    STMoan:
+      collection: STKidanMoan
+    STWigglesAntennae:
+      collection: STKidanWigglesAtennae
+    STWavesAntennaeSharply:
+      collection: STKidanWavesAntennaeSharply
     Weh:
       collection: Weh
     Gasp:
-      collection: KidanGasp
+      collection: STKidanGasp
     MonkeyScreeches:
       collection: MonkeyScreeches
     RobotBeep:
@@ -44,38 +43,38 @@
     Hew:
       collection: Hew
     DefaultDeathgasp:
-      collection: KidanDeathGasp
+      collection: STKidanDeathGasp
 
 - type: emoteSounds
-  id: FemaleKidan
+  id: STFemaleKidan
   voiceSelectorName: humanoid-profile-editor-voice-feminine
   params:
     variation: 0.125
   sounds:
     Sneeze:
-      collection: KidanSneeze
+      collection: STKidanSneeze
     Cough:
-      collection: KidanCough
+      collection: STKidanCough
     Scream:
-      collection: KidanScream
+      collection: STKidanScream
     Laugh:
-      collection: KidanLaugh
+      collection: STKidanLaugh
     Sigh:
-      collection: KidanSigh
+      collection: STKidanSigh
     Crying:
-      collection: KidanCry
-    Grumble:
-      collection: KidanGrumble
-    Moan:
-      collection: KidanMoan
-    WigglesAntennae:
-      collection: KidanWigglesAtennae
-    WavesAntennaeSharply:
-      collection: KidanWavesAntennaeSharply
+      collection: STKidanCry
+    STGrumble:
+      collection: STKidanGrumble
+    STMoan:
+      collection: STKidanMoan
+    STWigglesAntennae:
+      collection: STKidanWigglesAtennae
+    STWavesAntennaeSharply:
+      collection: STKidanWavesAntennaeSharply
     Weh:
       collection: Weh
     Gasp:
-      collection: KidanGasp
+      collection: STKidanGasp
     MonkeyScreeches:
       collection: MonkeyScreeches
     RobotBeep:
@@ -91,7 +90,7 @@
     Hew:
       collection: Hew
     DefaultDeathgasp:
-      collection: KidanDeathGasp
+      collection: STKidanDeathGasp
 
 - type: emoteSounds
   id: STCorpium

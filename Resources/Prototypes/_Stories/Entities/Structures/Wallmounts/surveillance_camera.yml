@@ -1,0 +1,25 @@
+- type: entity
+  parent: SurveillanceCameraBase
+  id: STSurveillanceCameraPrison
+  name: camera
+  suffix: Prison
+  components:
+  - type: DeviceNetwork
+    deviceNetId: Wired
+    receiveFrequencyId: STSurveillanceCameraPrison
+    transmitFrequencyId: SurveillanceCamera
+  - type: SurveillanceCamera
+    networkSet: true
+
+- type: entity
+  parent: SurveillanceCameraBase
+  id: STSurveillanceCameraPrisoners
+  name: camera
+  suffix: Prisoners
+  components:
+  - type: DeviceNetwork
+    deviceNetId: Wireless
+    receiveFrequencyId: STSurveillanceCameraPrisoners
+    transmitFrequencyId: SurveillanceCamera
+  - type: SurveillanceCamera
+    networkSet: true

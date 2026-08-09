@@ -1,5 +1,5 @@
 - type: entity
-  id: GuardianPushBall
+  id: STGuardianPushBall
   name: base bullet rubber
   parent: BaseBullet
   categories: [ HideSpawnMenu ]
@@ -8,7 +8,7 @@
     reflective:
     - None
   - type: TimedDespawn
-    lifetime: 0.2 # 4 тайла
+    lifetime: 0.2
   - type: Sprite
     visible: false
     sprite: Objects/Weapons/Guns/Projectiles/magic.rsi

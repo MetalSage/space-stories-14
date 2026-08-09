@@ -75,9 +75,7 @@
         Structural: 0
     ignoreWhitelist:
       components:
-      - ForceUser # Чувствительные к силе отражают это, так как иначе бы это было имбой против них.
-
-# Рапира
+      - ForceUser
 
 - type: entity
   name: lightrapier
@@ -98,8 +96,6 @@
         visible: false
         shader: unshaded
         map: [ "blade" ]
-
-# Случайный цвет
 
 - type: entity
   name: short lightsaber
@@ -163,8 +159,6 @@
         visible: false
         shader: unshaded
         map: [ "blade" ]
-
-# Красный
 
 - type: entity
   name: red lightsaber
@@ -247,8 +241,6 @@
     colorOptions:
       - Red
 
-# Синий
-
 - type: entity
   name: blue lightsaber
   parent: STBaseLightsaber
@@ -258,8 +250,6 @@
   - type: EnergySword
     colorOptions:
     - DodgerBlue
-
-# Зелёный
 
 - type: entity
   name: green lightsaber
@@ -271,8 +261,6 @@
     colorOptions:
     - MediumSpringGreen
 
-# Жёлтый
-
 - type: entity
   name: yellow lightsaber
   parent: STBaseLightsaber
@@ -283,8 +271,6 @@
     colorOptions:
     - Yellow
 
-# Фиолетовый
-
 - type: entity
   name: purple lightsaber
   parent: STBaseLightsaber
@@ -294,8 +280,6 @@
   - type: EnergySword
     colorOptions:
     - MediumOrchid
-
-# Белый
 
 - type: entity
   name: white lightsaber

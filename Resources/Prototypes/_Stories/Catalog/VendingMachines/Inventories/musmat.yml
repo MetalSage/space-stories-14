@@ -1,5 +1,5 @@
 - type: vendingMachineInventory
-  id: MusVendInventory
+  id: STMusVendInventory
   startingInventory:
    ElectricGuitarInstrument: 1
    BassGuitarInstrument: 1
@@ -13,7 +13,7 @@
    TromboneInstrument: 2
   emaggedInventory:
    SuperSynthesizerInstrument: 1
-  prices: # Stories-Economy
+  prices:
    ElectricGuitarInstrument: 60
    BassGuitarInstrument: 60
    RockGuitarInstrument: 70

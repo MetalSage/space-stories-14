@@ -1,13 +1,13 @@
 - type: job
-  id: PRISONPrisoner
+  id: STPRISONPrisoner
   name: заключенный космической тюрьмы
-  playTimeTracker: JobPrisoner
+  playTimeTracker: STJobPrisoner
   requirements:
     - !type:OverallPlaytimeRequirement
-      time: 7200 #2 часа
+      time: 7200 # 2 hours
   description: Как я сюда попал?
-  startingGear: PRISONPrisoner
-  icon: "JobIconPRISONPrisoner"
+  startingGear: STPRISONPrisoner
+  icon: "STJobIconPRISONPrisoner"
   supervisors: job-supervisors-everyone
   access:
   - Prisoner
@@ -19,8 +19,8 @@
   maxBankBalance: 0
 
 - type: startingGear
-  id: PRISONPrisoner
+  id: STPRISONPrisoner
   equipment:
-    id: PRISONIDCardPrisoner
+    id: STPRISONIDCardPrisoner
     jumpsuit: ClothingUniformJumpsuitPrisoner
     shoes: ClothingShoesColorBlack

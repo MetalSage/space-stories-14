@@ -1,6 +1,6 @@
 - type: entity
-  parent: PRISONIDCardHeadOfPrison
-  id: IAAIDCard
+  parent: STPRISONIDCardHeadOfPrison
+  id: STIAAIDCard
   name: Internal Affairs Agent ID card
   components:
     - type: Sprite
@@ -8,7 +8,7 @@
         - state: silver
         - state: idiaa
     - type: PresetIdCard
-      job: IAA
+      job: STIAA
 
 - type: entity
   parent: IDCardStandard
@@ -26,7 +26,7 @@
 
 - type: entity
   parent: IDCardStandard
-  id: GuardianNtIDCard
+  id: STGuardianNtIDCard
   name: Bladeguard ID card
   description: A card required to access various areas of the station.
   components:
@@ -38,11 +38,11 @@
     - type: Item
       heldPrefix: blue
     - type: PresetIdCard
-      job: GuardianNt
+      job: STGuardianNt
 
 - type: entity
   parent: IDCardStandard
-  id: PRISONIDCardHeadOfPrison
+  id: STPRISONIDCardHeadOfPrison
   name: Prison warden ID card
   description: A card required to access various areas of the station.
   components:
@@ -52,15 +52,15 @@
         - state: silver_sp
         - state: idhosp
     - type: PresetIdCard
-      job: PRISONHeadOfPrison
+      job: STPRISONHeadOfPrison
     - type: Clothing
       slots:
         - idcard
       sprite: _Stories/Objects/Misc/id_cards.rsi
 
 - type: entity
-  parent: PRISONIDCardHeadOfPrison
-  id: PRISONIDCardOfficer
+  parent: STPRISONIDCardHeadOfPrison
+  id: STPRISONIDCardOfficer
   name: Prison officer ID card
   description: A card required to access various areas of the station.
   components:
@@ -69,11 +69,11 @@
         - state: default_sp
         - state: idspofficer
     - type: PresetIdCard
-      job: PRISONOfficer
+      job: STPRISONOfficer
 
 - type: entity
-  parent: PRISONIDCardHeadOfPrison
-  id: PRISONIDCardEngineer
+  parent: STPRISONIDCardHeadOfPrison
+  id: STPRISONIDCardEngineer
   name: Prison engineer ID card
   description: A card required to access various areas of the station.
   components:
@@ -82,11 +82,11 @@
         - state: default_sp
         - state: idspengineer
     - type: PresetIdCard
-      job: PRISONEngineer
+      job: STPRISONEngineer
 
 - type: entity
-  parent: PRISONIDCardHeadOfPrison
-  id: PRISONIDCardMedic
+  parent: STPRISONIDCardHeadOfPrison
+  id: STPRISONIDCardMedic
   name: Prison doctor ID card
   description: A card required to access various areas of the station.
   components:
@@ -95,11 +95,11 @@
         - state: default_sp
         - state: idspmedic
     - type: PresetIdCard
-      job: PRISONMedic
+      job: STPRISONMedic
 
 - type: entity
   parent: IDCardStandard
-  id: PRISONIDCardPrisoner
+  id: STPRISONIDCardPrisoner
   name: Prison inmate ID card
   description: A card required to access various areas of the station.
   components:
@@ -108,7 +108,7 @@
       layers:
         - state: orange
     - type: PresetIdCard
-      job: PRISONPrisoner
+      job: STPRISONPrisoner
     - type: Clothing
       slots:
         - idcard

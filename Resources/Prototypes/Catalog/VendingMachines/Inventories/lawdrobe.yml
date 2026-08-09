@@ -12,7 +12,7 @@
     ClothingUniformJumpsuitLawyerGood: 1
     ClothingUniformJumpskirtLawyerGood: 1
     ClothingShoesBootsLaceup: 2
-    ClothingHeadsetIAA: 2 # Corvax-IAA
+    STClothingHeadsetIAA: 2 # Corvax-IAA
     ClothingNeckLawyerbadge: 2
     # Corvax-LawyerDrip-Start
     ClothingHandsGlovesColorWhite: 1
@@ -28,7 +28,7 @@
     BookSpaceLaw: 3
     LuxuryPen: 2
     HandLabeler: 2
-    BoxPrinter: 1 # Stories
+    STBoxPrinter: 1 # Stories
   contrabandInventory:
     ClothingOuterRobesJudge: 1
     ClothingHeadHatPwig: 1
@@ -47,7 +47,7 @@
     ClothingUniformJumpsuitLawyerGood: 60
     ClothingUniformJumpskirtLawyerGood: 60
     ClothingShoesBootsLaceup: 60
-    ClothingHeadsetIAA: 60
+    STClothingHeadsetIAA: 60
     ClothingNeckLawyerbadge: 30
     ClothingHandsGlovesColorWhite: 25
     ClothingHandsGlovesColorGray: 25
@@ -61,7 +61,7 @@
     BookSpaceLaw: 25
     LuxuryPen: 150
     HandLabeler: 30
-    BoxPrinter: 150
+    STBoxPrinter: 150
     ClothingOuterRobesJudge: 120
     ClothingHeadHatPwig: 80
     SpaceCash100: 80

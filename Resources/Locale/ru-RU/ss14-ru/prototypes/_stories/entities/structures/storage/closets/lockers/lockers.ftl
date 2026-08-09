@@ -1,2 +1,2 @@
-ent-LockerGuardianNt = шкаф стража клинка
+ent-STLockerGuardianNt = шкаф стража клинка
     .desc = Арсенал моды каждого стража клинка.

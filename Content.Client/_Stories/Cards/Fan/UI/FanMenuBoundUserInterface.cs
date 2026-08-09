@@ -7,12 +7,11 @@ namespace Content.Client._Stories.Cards.Fan.UI;
 
 public sealed partial class FanMenuBoundUserInterface : BoundUserInterface
 {
+    private readonly EntityUid _owner;
     [Dependency] private IClyde _displayManager = default!;
     [Dependency] private IInputManager _inputManager = default!;
-
-    private readonly EntityUid _owner;
-    [Dependency] private IPlayerManager _playerManager = default!;
     private FanMenu? _menu;
+    [Dependency] private IPlayerManager _playerManager = default!;
 
     public FanMenuBoundUserInterface(EntityUid owner, Enum uiKey) : base(owner, uiKey)
     {

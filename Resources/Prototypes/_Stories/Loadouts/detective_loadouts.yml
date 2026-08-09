@@ -1,9 +1,9 @@
 - type: loadoutGroup
-  id: DetectiveBelt
+  id: STDetectiveBelt
   name:  loadout-group-detective-belt
   loadouts:
   - ClothingBeltHolsterFilled
-  - StoriesClothingBeltHolsterFilled
+  - STClothingBeltHolsterFilled
 
 - type: loadout
   id: ClothingBeltHolsterFilled
@@ -11,26 +11,26 @@
     belt: ClothingBeltHolsterFilled
 
 - type: loadout
-  id: StoriesClothingBeltHolsterFilled
+  id: STClothingBeltHolsterFilled
   equipment:
-    belt: StoriesClothingBeltHolsterFilled
+    belt: STClothingBeltHolsterFilled
 
 - type: loadout
-  id: DetectiveFedoraSpecialGrey
+  id: STDetectiveFedoraSpecialGrey
   equipment:
-    head: ClothingHeadHatFedoraSpecialGrey
+    head: STClothingHeadHatFedoraSpecialGrey
 
 - type: loadout
-  id: Decbadge
+  id: STDecbadge
   equipment:
-    neck: ClothingNeckDecbadge
+    neck: STClothingNeckDecbadge
 
 - type: loadout
-  id: DetectiveJumpsuitSpecialGrey
+  id: STDetectiveJumpsuitSpecialGrey
   equipment:
-    jumpsuit: ClothingUniformJumpsuitDetectiveSpecialGrey
+    jumpsuit: STClothingUniformJumpsuitDetectiveSpecialGrey
 
 - type: loadout
-  id: DetectiveCoatSpecialGrey
+  id: STDetectiveCoatSpecialGrey
   equipment:
-    outerClothing: ClothingOuterCoatDetectiveGrey
+    outerClothing: STClothingOuterCoatDetectiveGrey

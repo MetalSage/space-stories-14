@@ -104519,7 +104519,7 @@ entities:
     - type: Transform
       parent: 2
       pos: 54.5,-32.5
-- proto: LockerGuardianNtFilled
+- proto: STLockerGuardianNtFilled
   entities:
   - uid: 15276
     components:
@@ -121597,7 +121597,7 @@ entities:
     - type: Transform
       parent: 2
       pos: -29.5,26.5
-- proto: SpawnPointGuardianNt
+- proto: STSpawnPointGuardianNt
   entities:
   - uid: 17912
     components:
@@ -121926,7 +121926,7 @@ entities:
     - type: Transform
       parent: 2
       pos: 5.5,25.5
-- proto: SpawnSpaceKoi
+- proto: STSpawnSpaceKoi
   entities:
   - uid: 17966
     components:

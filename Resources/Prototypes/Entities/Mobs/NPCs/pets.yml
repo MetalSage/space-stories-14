@@ -936,4 +936,3 @@
       gender: male
   - type: Loadout
     prototypes: [ MobPollyGear ]
-

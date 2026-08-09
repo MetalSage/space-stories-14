@@ -15,6 +15,7 @@ humanoid-profile-editor-sex-male-text = Мужской
 humanoid-profile-editor-sex-female-text = Женский
 humanoid-profile-editor-sex-unsexed-text = Отсутствует
 humanoid-profile-editor-voice-label = Тип голоса:
+humanoid-profile-editor-voice-play = ▶
 humanoid-profile-editor-age-label = Возраст:
 humanoid-profile-editor-skin-color-label = Цвет кожи:
 humanoid-profile-editor-species-label = Вид:
@@ -76,7 +77,3 @@ humanoid-profile-editor-voice-masculine = Мужской
 humanoid-profile-editor-voice-feminine = Женский
 humanoid-profile-editor-voice-neutral = Нейтральный
 humanoid-profile-editor-voice-none = Нет
-
-# Stories-TTS
-stories-humanoid-profile-editor-tts-voice-label = Голос:
-stories-humanoid-profile-editor-tts-voice-play = ▶

@@ -1,5 +1,5 @@
 - type: entity
-  id: LandMineSpaf
+  id: STLandMineSpaf
   name: organic trap
   description: It is hard to understand its functionality by its appearance, but you definitely shouldn't step on it...
   parent: BaseLandMine

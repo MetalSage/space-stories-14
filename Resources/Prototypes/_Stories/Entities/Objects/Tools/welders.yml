@@ -25,7 +25,7 @@
           Quantity: 100
   - type: Tool
     useSound:
-      collection: ColdWelding
+      collection: STColdWelding
     qualities: Welding
   - type: Welder
     enabled: True

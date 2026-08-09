@@ -23,7 +23,7 @@
     state: ShadowlingsSlave
 
 - type: factionIcon
-  id: EmpireFaction
+  id: STEmpireFaction
   priority: 12
   locationPreference: Right
   showTo:
@@ -36,7 +36,7 @@
     state: Empire
 
 - type: factionIcon
-  id: HypnotizedEmpireFaction
+  id: STHypnotizedEmpireFaction
   priority: 12
   locationPreference: Right
   showTo:

@@ -1,9 +1,9 @@
 - type: accessGroup
-  id: PrisonAllAccess
+  id: STPrisonAllAccess
   tags:
-  - HeadOfPrison
-  - PrisonBrig
+  - STHeadOfPrison
+  - STPrisonBrig
   - Prison
-  - PrisonMed
-  - PrisonEng
+  - STPrisonMed
+  - STPrisonEng
   - Prisoner

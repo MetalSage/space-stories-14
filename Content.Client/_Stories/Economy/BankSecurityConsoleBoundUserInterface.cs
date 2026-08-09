@@ -1,6 +1,5 @@
 using Content.Client._Stories.Economy.UI;
 using Content.Shared._Stories.Economy;
-using Robust.Client.UserInterface;
 
 namespace Content.Client._Stories.Economy;
 
@@ -8,16 +7,16 @@ public sealed class BankSecurityConsoleBoundUserInterface : BoundUserInterface
 {
     private BankSecurityConsoleWindow? _window;
 
-    public BankSecurityConsoleBoundUserInterface(EntityUid owner, Enum uiKey) : base(owner, uiKey) {}
+    public BankSecurityConsoleBoundUserInterface(EntityUid owner, Enum uiKey) : base(owner, uiKey) { }
 
     protected override void Open()
     {
         base.Open();
         _window = new BankSecurityConsoleWindow();
         _window.OnClose += Close;
-        
+
         _window.OnRefresh += () => SendMessage(new BankSecurityRefreshMessage());
-        _window.OnIssueFine += (targetId, amount, reason) => 
+        _window.OnIssueFine += (targetId, amount, reason) =>
             SendMessage(new BankSecurityIssueFineMessage(targetId, amount, reason));
 
         _window.OpenCentered();
@@ -33,7 +32,8 @@ public sealed class BankSecurityConsoleBoundUserInterface : BoundUserInterface
     protected override void Dispose(bool disposing)
     {
         base.Dispose(disposing);
-        if (!disposing) return;
+        if (!disposing)
+            return;
         _window?.Dispose();
     }
 }

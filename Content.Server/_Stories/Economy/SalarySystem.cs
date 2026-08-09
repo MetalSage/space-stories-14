@@ -1,8 +1,8 @@
 using Content.Server._Stories.Economy.Components;
 using Content.Server.Station.Systems;
+using Content.Shared._Stories.SCCVars;
 using Content.Shared.Mind;
 using Content.Shared.Roles;
-using Content.Shared._Stories.SCCVars;
 using Robust.Shared.Configuration;
 using Robust.Shared.Prototypes;
 using Robust.Shared.Random;

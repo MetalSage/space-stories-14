@@ -6,7 +6,6 @@ using Robust.Shared.Animations;
 
 namespace Content.Client.Gravity;
 
-/// <inheritdoc />
 public sealed partial class LiftingUpSystem : SharedLiftingUpSystem
 {
     public const string AnimationKey = "_gravity";

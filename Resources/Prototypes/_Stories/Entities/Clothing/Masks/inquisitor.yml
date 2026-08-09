@@ -1,12 +1,12 @@
 - type: entity
   parent: ClothingMaskGas
-  id: ClothingMaskGasInquisitor
+  id: STClothingMaskGasInquisitor
   name: inquisitor mask
   description: A sinister mask. It is so tempting to put it on...
   components:
   - type: Tag
     tags:
-      - ForceRecallEquipment
+      - STForceRecallEquipment
   - type: Item
     size: Tiny
   - type: Sprite

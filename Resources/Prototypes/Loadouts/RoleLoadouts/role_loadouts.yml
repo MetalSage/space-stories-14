@@ -413,7 +413,7 @@
 - type: roleLoadout
   id: JobDetective
   groups:
-  - DetectiveBelt # Stories
+  - STDetectiveBelt # Stories
   - GroupTankHarness
   - DetectiveHead
   - DetectiveNeck

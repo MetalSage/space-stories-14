@@ -1,11 +1,10 @@
-# Космическая Тюрьма
 - type: antagSpecifier
   abstract: true
   parent: BaseAntagSpecifier
   id: STSpacePrisonBlacklistedAntag
   jobBlacklist:
-  - PRISONHeadOfPrison
-  - PRISONEngineer
-  - PRISONMedic
-  - PRISONOfficer
-  - PRISONPrisoner
+  - STPRISONHeadOfPrison
+  - STPRISONEngineer
+  - STPRISONMedic
+  - STPRISONOfficer
+  - STPRISONPrisoner

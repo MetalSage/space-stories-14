@@ -16670,7 +16670,7 @@ entities:
         components:
         - Armor
         - ClothingSpeedModifier
-- proto: BoxPrinter
+- proto: STBoxPrinter
   entities:
   - uid: 1138
     components:
@@ -49767,7 +49767,7 @@ entities:
       inSlot: head
     - type: Physics
       canCollide: False
-- proto: ClothingHeadHatFedoraSpecialGrey
+- proto: STClothingHeadHatFedoraSpecialGrey
   entities:
   - uid: 7574
     components:
@@ -50041,7 +50041,7 @@ entities:
       inSlot: neck
     - type: Physics
       canCollide: False
-- proto: ClothingNeckDecbadge
+- proto: STClothingNeckDecbadge
   entities:
   - uid: 7644
     components:
@@ -50258,7 +50258,7 @@ entities:
     - type: Physics
       canCollide: False
     - type: InsideEntityStorage
-- proto: ClothingUniformJumpsuitDetectiveSpecialGrey
+- proto: STClothingUniformJumpsuitDetectiveSpecialGrey
   entities:
   - uid: 7576
     components:
@@ -89266,7 +89266,7 @@ entities:
     - type: Transform
       parent: 2
       pos: -6.772251,-65.31777
-- proto: InkPrinter
+- proto: STInkPrinter
   entities:
   - uid: 4553
     components:
@@ -90560,7 +90560,7 @@ entities:
           Oxygen: 1.8968438
           Nitrogen: 7.1357465
         immutable: False
-- proto: LockerGuardianNtFilled
+- proto: STLockerGuardianNtFilled
   entities:
   - uid: 13327
     components:
@@ -92061,7 +92061,7 @@ entities:
     - type: Transform
       parent: 2
       pos: 3.5875611,-26.40324
-- proto: MusicalVendingMachine
+- proto: STMusicalVendingMachine
   entities:
   - uid: 13553
     components:
@@ -96989,7 +96989,7 @@ entities:
     - type: Transform
       parent: 2
       pos: 3.1427107,3.9066591
-- proto: PrintedDocumentCertificateAdvancedTraining
+- proto: STPrintedDocumentCertificateAdvancedTraining
   entities:
   - uid: 13574
     components:
@@ -96997,7 +96997,7 @@ entities:
       parent: 13573
     - type: Physics
       canCollide: False
-- proto: PrintedDocumentConstructionPermit
+- proto: STPrintedDocumentConstructionPermit
   entities:
   - uid: 13575
     components:
@@ -97005,7 +97005,7 @@ entities:
       parent: 13573
     - type: Physics
       canCollide: False
-- proto: PrintedDocumentJudgment
+- proto: STPrintedDocumentJudgment
   entities:
   - uid: 7337
     components:
@@ -97013,7 +97013,7 @@ entities:
       parent: 2
       rot: 1.5707963267948966 rad
       pos: 40.613037,6.389335
-- proto: PrintedDocumentOrderEncouragement
+- proto: STPrintedDocumentOrderEncouragement
   entities:
   - uid: 13576
     components:
@@ -97021,7 +97021,7 @@ entities:
       parent: 13573
     - type: Physics
       canCollide: False
-- proto: PrintedDocumentOrderingSpecialEquipment
+- proto: STPrintedDocumentOrderingSpecialEquipment
   entities:
   - uid: 13577
     components:
@@ -97029,7 +97029,7 @@ entities:
       parent: 13573
     - type: Physics
       canCollide: False
-- proto: PrintedDocumentOrderPurchaseResourcesEquipment
+- proto: STPrintedDocumentOrderPurchaseResourcesEquipment
   entities:
   - uid: 13578
     components:
@@ -97037,14 +97037,14 @@ entities:
       parent: 13573
     - type: Physics
       canCollide: False
-- proto: PrintedDocumentOrderRecognizingSentienceCreature
+- proto: STPrintedDocumentOrderRecognizingSentienceCreature
   entities:
   - uid: 14370
     components:
     - type: Transform
       parent: 2
       pos: 52.01616,-17.540413
-- proto: PrintedDocumentProductManufacturingOrder
+- proto: STPrintedDocumentProductManufacturingOrder
   entities:
   - uid: 13579
     components:
@@ -97052,7 +97052,7 @@ entities:
       parent: 13573
     - type: Physics
       canCollide: False
-- proto: PrintedPaper
+- proto: STPrintedPaper
   entities:
   - uid: 13580
     components:
@@ -97091,7 +97091,7 @@ entities:
                                     [italic]Место для печатей[/italic]
     - type: Physics
       canCollide: False
-- proto: PrinterDoc
+- proto: STPrinterDoc
   entities:
   - uid: 6383
     components:
@@ -105456,7 +105456,7 @@ entities:
     - type: Transform
       parent: 2
       pos: 15.5,-22.5
-- proto: SpawnPointGuardianNt
+- proto: STSpawnPointGuardianNt
   entities:
   - uid: 15795
     components:
@@ -105825,7 +105825,7 @@ entities:
     - type: Transform
       parent: 2
       pos: 13.5,-6.5
-- proto: SpawnSpaceKoi
+- proto: STSpawnSpaceKoi
   entities:
   - uid: 15857
     components:

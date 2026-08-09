@@ -1,6 +1,6 @@
 - type: entity
   parent: ClothingEyesGlassesSecurity
-  id: PRISONClothingEyesGlasses
+  id: STPRISONClothingEyesGlasses
   name: prison staff sunglasses
   description: Strange ancient technology is used to provide basic eye protection. Reinforced protection blocks many flashes.
   components:

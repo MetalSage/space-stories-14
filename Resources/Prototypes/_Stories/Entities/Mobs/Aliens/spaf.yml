@@ -1,7 +1,7 @@
 - type: entity
   save: false
   parent: [ SimpleSpaceMobBase, FlyingMobBase ]
-  id: BaseMobSpaf
+  id: STBaseMobSpaf
   abstract: true
   components:
   - type: TypingIndicator
@@ -32,10 +32,10 @@
   - type: IntrinsicRadioReceiver
   - type: IntrinsicRadioTransmitter
     channels:
-    - SpafMind
+    - STSpafMind
   - type: ActiveRadio
     channels:
-    - SpafMind
+    - STSpafMind
   - type: Fixtures
     fixtures:
       fix1:
@@ -50,13 +50,13 @@
   - type: Puller
     needsHands: false
   - type: Hunger
-    thresholds: # only animals and rats are derived from this prototype so let's override it here and in rats' proto
+    thresholds:
       Overfed: 200
       Okay: 50
       Peckish: 25
       Starving: 10
       Dead: 0
-    baseDecayRate: 0 # it is okay for animals to eat and drink less than humans, but more frequently
+    baseDecayRate: 0
   - type: Thirst
     thresholds:
       OverHydrated: 200
@@ -71,7 +71,7 @@
   - type: UnpoweredFlashlight
     toggleFlashlightSound:
       path: /Audio/Voice/Slime/slime_squish.ogg
-    toggleAction: ActionSpafLight
+    toggleAction: STActionSpafLight
   - type: PointLight
     enabled: false
     color: DarkGreen
@@ -88,19 +88,19 @@
 - type: entity
   name: S.P.A.F.
   description: A terrible-looking creature... Brr.. You should probably run from it.
-  parent: BaseMobSpaf
-  id: MobSpaf
+  parent: STBaseMobSpaf
+  id: STMobSpaf
   components:
   - type: Spaf
     actions:
-    - ActionSpafStealth
-    - ActionSpafLube
-    - ActionSpafMine
-    - ActionSpafFood
-    - ActionSpafGlue
-    - ActionSpafEgg
+    - STActionSpafStealth
+    - STActionSpafLube
+    - STActionSpafMine
+    - STActionSpafFood
+    - STActionSpafGlue
+    - STActionSpafEgg
   - type: Devourer
-    devourAction: ActionSpafDevour
+    devourAction: STActionSpafDevour
     foodPreferenceWhitelist:
       components:
       - HumanoidProfile
@@ -114,8 +114,8 @@
       - MobState
   - type: RandomMetadata
     nameSegments:
-    - SpafFirst
-    - SpafLast
+    - STSpafFirst
+    - STSpafLast
     nameFormat: name-format-standard
   - type: MeleeWeapon
     altDisarm: false
@@ -150,8 +150,8 @@
       0: Alive
       100: Dead
     stateAlertDict:
-      Alive: SpafHealth
-      Dead: SpafDead
+      Alive: STSpafHealth
+      Dead: STSpafDead
     showOverlays: false
   - type: DamageStateVisuals
     states:
@@ -165,13 +165,13 @@
 - type: entity
   name: little rainbow slug
   description: It looks very cute and harmless! Most likely, it escaped from R&D.
-  parent: BaseMobSpaf
-  id: MobMiniSpaf
+  parent: STBaseMobSpaf
+  id: STMobMiniSpaf
   components:
   - type: Spaf
     actions:
-    - ActionSpafFood
-    - ActionSpafEvol
+    - STActionSpafFood
+    - STActionSpafEvol
   - type: Sprite
     drawdepth: SmallMobs
     sprite: _Stories/Mobs/Aliens/minispaf.rsi
@@ -183,8 +183,8 @@
       0: Alive
       50: Dead
     stateAlertDict:
-      Alive: SpafHealth
-      Dead: SpafDead
+      Alive: STSpafHealth
+      Dead: STSpafDead
     showOverlays: false
   - type: DamageStateVisuals
     states:

@@ -1,18 +1,17 @@
 using Content.Server.Players.PlayTimeTracking;
 using Content.Shared.CombatMode.Pacification;
 using Content.Shared.GameTicking;
-using Robust.Shared.GameObjects;
 using Robust.Shared.Player;
 
 namespace Content.Server._Stories.Antigrief;
 
 public sealed partial class NewPlayerAntigriefSystem : EntitySystem
 {
-    [Dependency] private PlayTimeTrackingManager _playTimeTracking = default!;
+    private const float CheckInterval = 30f;
     [Dependency] private PacificationSystem _pacification = default!;
+    [Dependency] private PlayTimeTrackingManager _playTimeTracking = default!;
 
     private float _timer;
-    private const float CheckInterval = 30f;
 
     public override void Initialize()
     {

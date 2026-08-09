@@ -1,0 +1,84 @@
+<controls:FancyWindow
+    xmlns="https://spacestation14.io"
+    xmlns:viewport="clr-namespace:Content.Client.Viewport"
+    xmlns:controls="clr-namespace:Content.Client.UserInterface.Controls"
+    Title="{Loc prisoner-collar-console-window-title}"
+    Resizable="False"
+    SetSize="1080 620"
+    MinSize="1080 620">
+    <BoxContainer Orientation="Vertical">
+        <BoxContainer Orientation="Horizontal" VerticalExpand="True" HorizontalExpand="True" Margin="8">
+            <BoxContainer Orientation="Vertical" SetWidth="520" Margin="0 0 10 0" SeparationOverride="6">
+                <LineEdit
+                    Name="SearchLineEdit"
+                    HorizontalExpand="True"
+                    PlaceHolder="{Loc prisoner-collar-console-search-placeholder}" />
+
+                <ScrollContainer
+                    Name="ListScroller"
+                    VerticalExpand="True"
+                    HorizontalExpand="True"
+                    Margin="2"
+                    HScrollEnabled="False">
+                    <BoxContainer
+                        Name="CollarListContainer"
+                        Orientation="Vertical"
+                        HorizontalExpand="True"
+                        SeparationOverride="6" />
+                </ScrollContainer>
+
+                <Button
+                    Name="ScanButton"
+                    Text="{Loc prisoner-collar-console-scan}"
+                    HorizontalExpand="True"
+                    Margin="2 2 2 0" />
+            </BoxContainer>
+            <BoxContainer Orientation="Vertical" HorizontalExpand="True" VerticalExpand="True">
+                <PanelContainer StyleClasses="PanelDark" VerticalExpand="True" HorizontalExpand="True" Margin="4">
+                    <BoxContainer Orientation="Vertical" Margin="8" SeparationOverride="6">
+                        <Control Name="CameraViewBox" VerticalExpand="True" HorizontalExpand="True" Margin="2">
+                            <viewport:ScalingViewport
+                                Name="CameraView"
+                                MinSize="450 400"
+                                VerticalExpand="True"
+                                HorizontalExpand="True"
+                                MouseFilter="Ignore" />
+                            <TextureRect
+                                Name="CameraViewBackground"
+                                MinSize="450 400"
+                                VerticalExpand="True"
+                                HorizontalExpand="True" />
+                        </Control>
+                        <PanelContainer StyleClasses="LowDivider" SetHeight="2" />
+                        <BoxContainer Orientation="Horizontal" SeparationOverride="10">
+                            <Label
+                                Name="CameraCoordsLabel"
+                                Text="Координаты: N/A"
+                                StyleClasses="LabelSubText"
+                                HorizontalExpand="True" />
+                            <Label Name="CameraGridLabel" Text="Сектор: N/A" StyleClasses="LabelSubText" />
+                        </BoxContainer>
+                    </BoxContainer>
+                </PanelContainer>
+            </BoxContainer>
+        </BoxContainer>
+        <BoxContainer Orientation="Vertical">
+            <PanelContainer StyleClasses="LowDivider" />
+            <BoxContainer Orientation="Horizontal" Margin="10 2 5 0" VerticalAlignment="Bottom">
+                <Label Text="{Loc prisoner-collar-console-footer-left}" StyleClasses="WindowFooterText" />
+                <Label
+                    Text="{Loc prisoner-collar-console-footer-right}"
+                    StyleClasses="WindowFooterText"
+                    HorizontalAlignment="Right"
+                    HorizontalExpand="True"
+                    Margin="0 0 5 0" />
+                <TextureRect
+                    StyleClasses="NTLogoDark"
+                    Stretch="KeepAspectCentered"
+                    VerticalAlignment="Center"
+                    HorizontalAlignment="Right"
+                    SetSize="19 19" />
+            </BoxContainer>
+        </BoxContainer>
+    </BoxContainer>
+</controls:FancyWindow>

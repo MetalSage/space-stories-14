@@ -11,9 +11,9 @@ public sealed partial class QueueState : State
 {
     private const string JoinSoundPath = "/Audio/Effects/voteding.ogg";
     [Dependency] private IClientConsoleHost _consoleHost = default!;
-    [Dependency] private IUserInterfaceManager _userInterfaceManager = default!;
 
     private QueueGui? _gui;
+    [Dependency] private IUserInterfaceManager _userInterfaceManager = default!;
 
     protected override void Startup()
     {

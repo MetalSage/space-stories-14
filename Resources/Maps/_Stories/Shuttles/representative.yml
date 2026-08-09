@@ -844,7 +844,7 @@ entities:
     - type: Physics
       canCollide: False
     - type: InsideEntityStorage
-- proto: BoxPrinter
+- proto: STBoxPrinter
   entities:
   - uid: 93
     components:

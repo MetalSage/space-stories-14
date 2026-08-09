@@ -1,9 +1,9 @@
 - type: shader
-  id: Nightvision
+  id: STNightvision
   kind: source
   path: "/Textures/_Stories/Shaders/nightvision.swsl"
 
 - type: shader
-  id: ThermalVision
+  id: STThermalVision
   kind: source
   path: "/Textures/_Stories/Shaders/thermal.swsl"

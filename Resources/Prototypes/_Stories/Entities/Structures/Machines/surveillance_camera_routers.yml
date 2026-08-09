@@ -1,0 +1,17 @@
+- type: entity
+  parent: SurveillanceCameraRouterBase
+  id: STSurveillanceCameraRouterPrison
+  name: prison camera router
+  suffix: Prison
+  components:
+    - type: SurveillanceCameraRouter
+      subnetFrequency: STSurveillanceCameraPrison
+
+- type: entity
+  parent: SurveillanceCameraWirelessRouterBase
+  id: STSurveillanceCameraWirelessRouterPrisoners
+  name: prisoner collar camera router
+  suffix: Prisoners
+  components:
+    - type: SurveillanceCameraRouter
+      subnetFrequency: STSurveillanceCameraPrisoners

@@ -1,0 +1,9 @@
+- type: deviceFrequency
+  id: STSurveillanceCameraPrison
+  name: device-frequency-prototype-name-surveillance-camera-prison
+  frequency: 1950
+
+- type: deviceFrequency
+  id: STSurveillanceCameraPrisoners
+  name: device-frequency-prototype-name-surveillance-camera-prisoners
+  frequency: 1951

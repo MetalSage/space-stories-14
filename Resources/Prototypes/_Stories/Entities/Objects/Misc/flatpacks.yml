@@ -1,17 +1,17 @@
 - type: entity
   parent: BaseFlatpack
-  id: PrinterDocFlatpack
+  id: STPrinterDocFlatpack
   name: document printer flatpack
   description: Packaging used to install a paper printer.
   components:
   - type: Flatpack
-    entity: PrinterDoc
+    entity: STPrinterDoc
 
 - type: entity
-  parent: PrinterDocFlatpack
-  id: PrinterDocSyndieFlatpack
+  parent: STPrinterDocFlatpack
+  id: STPrinterDocSyndieFlatpack
   name: syndicate document printer flatpack
   description: Packaging used to install a paper printer.
   components:
   - type: Flatpack
-    entity: PrinterDocSyndie
+    entity: STPrinterDocSyndie

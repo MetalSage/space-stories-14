@@ -1,4 +1,4 @@
-ent-PrinterDoc = принтер документов
+ent-STPrinterDoc = принтер документов
     .desc = Бюрократическое совершенство. Хранит базу данных всех документов Nanotrasen. Для быстрого заполнения документов вашими личными данными используйте слот для ID-карты. Печать доступна при наличии бумаги.
-ent-PrinterDocSyndie = бумажный синди принтер
-    .desc = { ent-PrinterDoc.desc }
+ent-STPrinterDocSyndie = бумажный синди принтер
+    .desc = { ent-STPrinterDoc.desc }

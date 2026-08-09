@@ -1,6 +1,6 @@
-ent-PRISONAirlockShuttleLocked = стыковочный шлюз
+ent-STPRISONAirlockShuttleLocked = стыковочный шлюз
     .desc = Необходим для соединения двух космических кораблей вместе.
     .suffix = Тюрьма, Стыковочный, Закрыт
-ent-PRISONAirlockGlassShuttleLocked = стыковочный шлюз
+ent-STPRISONAirlockGlassShuttleLocked = стыковочный шлюз
     .desc = Необходим для соединения двух космических кораблей вместе.
     .suffix = Тюрьма, Стыковочный, Стеклянный, Закрыт

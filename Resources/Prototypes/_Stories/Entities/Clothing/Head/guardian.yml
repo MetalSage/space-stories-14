@@ -1,6 +1,6 @@
 - type: entity
   parent: ClothingHeadBase
-  id: ClothingHeadHatExe
+  id: STClothingHeadHatExe
   name: hat
   description: Ideal for winter in Siberia, da? No.
   components:

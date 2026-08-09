@@ -1,5 +1,5 @@
 - type: entity
-  id: StoriesClothingBeltHolsterFilled
+  id: STClothingBeltHolsterFilled
   parent: ClothingBeltHolster
   name: shoulder holster with a special revolver
   description: 'A holster for carrying a pistol and ammunition. WARNING: Only for cool people.'
@@ -7,5 +7,5 @@
   components:
   - type: StorageFill
     contents:
-        - id: WeaponRevolver
+        - id: STWeaponRevolver
         - id: SpeedLoaderMagnum

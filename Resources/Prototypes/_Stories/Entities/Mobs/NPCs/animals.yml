@@ -1,6 +1,6 @@
 - type: entity
   name: space koi
-  id: BaseMobKoi
+  id: STBaseMobKoi
   parent: [ SimpleSpaceMobBase, FlyingMobBase ]
   description: A colorful parody of a space carp, looks friendly.
   abstract: true
@@ -69,8 +69,8 @@
 
 
 - type: entity
-  parent: BaseMobKoi
-  id: MobRedBlackKoi
+  parent: STBaseMobKoi
+  id: STMobRedBlackKoi
   suffix: "Red-black"
   components:
   - type: Sprite
@@ -79,8 +79,8 @@
     - map: [ "enum.DamageStateVisualLayers.Base" ]
       state: alive
 - type: entity
-  parent: BaseMobKoi
-  id: MobGoldBlackKoi
+  parent: STBaseMobKoi
+  id: STMobGoldBlackKoi
   suffix: "Black and gold"
   components:
   - type: Sprite
@@ -90,8 +90,8 @@
       state: alive
 
 - type: entity
-  parent: BaseMobKoi
-  id: MobRedCircleKoi
+  parent: STBaseMobKoi
+  id: STMobRedCircleKoi
   suffix: "Red circle"
   components:
   - type: Sprite
@@ -101,8 +101,8 @@
       state: alive
 
 - type: entity
-  parent: BaseMobKoi
-  id: MobBloodSkeletonKoi
+  parent: STBaseMobKoi
+  id: STMobBloodSkeletonKoi
   suffix: "Bloody skeleton"
   components:
   - type: Sprite
@@ -111,8 +111,8 @@
     - map: [ "enum.DamageStateVisualLayers.Base" ]
       state: alive
 - type: entity
-  parent: BaseMobKoi
-  id: MobSpaceGlowKoi
+  parent: STBaseMobKoi
+  id: STMobSpaceGlowKoi
   suffix: "Space Glow"
   components:
   - type: Sprite

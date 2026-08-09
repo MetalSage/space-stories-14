@@ -1,6 +1,6 @@
 - type: entity
   parent: ClothingBackpackSatchel
-  id: ClothingBackpackHandbagAdidos
+  id: STClothingBackpackHandbagAdidos
   name: waist bag
   description: A fashionable bag.
   components:
@@ -9,7 +9,7 @@
 
 - type: entity
   parent: ClothingBackpackSatchel
-  id: ClothingBackpackHandbagBluesky
+  id: STClothingBackpackHandbagBluesky
   name: handbag
   description: A fashionable handbag.
   components:
@@ -18,7 +18,7 @@
 
 - type: entity
   parent: ClothingBackpackSatchel
-  id: ClothingBackpackHandbagEight
+  id: STClothingBackpackHandbagEight
   name: waist bag
   description: A fashionable bag.
   components:
@@ -27,7 +27,7 @@
 
 - type: entity
   parent: ClothingBackpackSatchel
-  id: ClothingBackpackHandbagGachi
+  id: STClothingBackpackHandbagGachi
   name: waist bag
   description: A fashionable bag.
   components:
@@ -36,7 +36,7 @@
 
 - type: entity
   parent: ClothingBackpackSatchel
-  id: ClothingBackpackHandbagRl
+  id: STClothingBackpackHandbagRl
   name: handbag
   description: A fashionable handbag.
   components:

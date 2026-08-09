@@ -50,11 +50,11 @@
       - Theatre
       - GenpopEnter
       - GenpopLeave
-      - HeadOfPrison # Stories
-      - PrisonBrig # Stories
+      - STHeadOfPrison # Stories
+      - STPrisonBrig # Stories
       - Prison # Stories
-      - PrisonMed # Stories
-      - PrisonEng # Stories
+      - STPrisonMed # Stories
+      - STPrisonEng # Stories
       - Prisoner # Stories
       privilegedIdSlot:
         name: id-card-console-privileged-id
@@ -129,11 +129,11 @@
     - Service
     - StationAi
     - Theatre
-    - HeadOfPrison # Stories
-    - PrisonBrig # Stories
+    - STHeadOfPrison # Stories
+    - STPrisonBrig # Stories
     - Prison # Stories
-    - PrisonMed # Stories
-    - PrisonEng # Stories
+    - STPrisonMed # Stories
+    - STPrisonEng # Stories
     - Prisoner # Stories
     - CentralCommand
     - NuclearOperative

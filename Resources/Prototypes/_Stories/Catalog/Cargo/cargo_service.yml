@@ -1,9 +1,9 @@
 - type: cargoProduct
-  id: ServicePrinter
+  id: STServicePrinter
   icon:
     sprite: _Stories/Structures/Machines/printer.rsi
     state: icon
-  product: CrateServicePrinter
+  product: STCrateServicePrinter
   cost: 1000
   category: cargoproduct-category-name-service
   group: market

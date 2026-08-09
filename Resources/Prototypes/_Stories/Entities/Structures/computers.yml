@@ -1,6 +1,6 @@
 - type: entity
   parent: BaseComputerShuttle
-  id: PRISONComputerShuttle
+  id: STPRISONComputerShuttle
   name: shuttle console prison
   description: Used for piloting a ship or escaping from prison.
   components:
@@ -16,14 +16,14 @@
         - map: ["computerLayerKeys"]
           state: generic_keys_sp
     - type: Computer
-      board: PRISONComputerShuttleCircuitboard
+      board: STPRISONComputerShuttleCircuitboard
     - type: DroneConsole
       components:
         - type: PrisonShuttle
 
 - type: entity
   parent: ComputerId
-  id: PRISONComputerId
+  id: STPRISONComputerId
   name: ID card computers
   description: Terminal for programming Nanotrasen employee ID cards to access parts of the prison.
   components:
@@ -48,10 +48,10 @@
     - External
     - Armory
     - Prisoner
-    - PrisonEng
-    - PrisonMed
+    - STPrisonEng
+    - STPrisonMed
     - Prison
-    - PrisonBrig
-    - HeadOfPrison
+    - STPrisonBrig
+    - STHeadOfPrison
   - type: Computer
-    board: PRISONComputerIdCircuitboard
+    board: STPRISONComputerIdCircuitboard

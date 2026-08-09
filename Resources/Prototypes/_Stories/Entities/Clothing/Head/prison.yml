@@ -1,6 +1,6 @@
 - type: entity
   parent: ClothingHeadBaseButcherable
-  id: PRISONClothingHeadHatCapHeadOfPrison
+  id: STPRISONClothingHeadHatCapHeadOfPrison
   name: head of prison's cap
   description: A sturdy uniform cap of the Warden. Reminds rank-and-file officers who is in charge here.
   components:
@@ -11,7 +11,7 @@
 
 - type: entity
   parent: ClothingHeadBaseButcherable
-  id: PRISONClothingHeadHatSoft
+  id: STPRISONClothingHeadHatSoft
   name: prison cap
   description: This is a reliable baseball cap in a tastefully chosen blue color.
   components:
@@ -22,7 +22,7 @@
 
 - type: entity
   parent: ClothingHeadBase
-  id: PRISONClothingHeadHatUshanka
+  id: STPRISONClothingHeadHatUshanka
   name: ushanka
   description: Ideal for winter in Siberia, da?
   components:
@@ -37,7 +37,7 @@
 
 - type: entity
   parent: ClothingHeadBase
-  id: PRISONClothingHeadHatBeret
+  id: STPRISONClothingHeadHatBeret
   name: prison beret
   description: The beret is the prisoner's favorite headwear. Bandages are made from it.
   components:

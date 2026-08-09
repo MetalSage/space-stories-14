@@ -1,7 +1,7 @@
 - type: entity
   name: Revolver
   parent: BaseWeaponRevolver
-  id: WeaponRevolver
+  id: STWeaponRevolver
   description: A multi-shot short-barreled firearm with a rotating cylinder. Uses .45 magnum rounds.
   components:
   - type: Sprite

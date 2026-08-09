@@ -19485,7 +19485,7 @@ entities:
       rot: -1.5707963267948966 rad
       pos: 23.5,-22.5
       parent: 2
-- proto: PRISONComputerId
+- proto: STPRISONComputerId
   entities:
   - uid: 5056
     components:
@@ -34442,7 +34442,7 @@ entities:
       parent: 2
     - type: AccessReader
       access:
-      - - HeadOfPrison
+      - - STHeadOfPrison
   - uid: 11180
     components:
     - type: Transform
@@ -34450,7 +34450,7 @@ entities:
       parent: 2
     - type: AccessReader
       access:
-      - - HeadOfPrison
+      - - STHeadOfPrison
 - proto: HospitalCurtainsOpen
   entities:
   - uid: 4302
@@ -38471,7 +38471,7 @@ entities:
       rot: -1.5707963267948966 rad
       pos: -4.5,1.5
       parent: 2
-- proto: PrintedDocumentEvacuationShuttleRequest
+- proto: STPrintedDocumentEvacuationShuttleRequest
   entities:
   - uid: 4926
     components:
@@ -38483,7 +38483,7 @@ entities:
     - type: Transform
       pos: -42.513115,-32.484642
       parent: 2
-- proto: PrintedDocumentOrderParolePrisoner
+- proto: STPrintedDocumentOrderParolePrisoner
   entities:
   - uid: 4928
     components:
@@ -38495,7 +38495,7 @@ entities:
     - type: Transform
       pos: 10.748702,17.264202
       parent: 2
-- proto: PrinterDoc
+- proto: STPrinterDoc
   entities:
   - uid: 4930
     components:
@@ -38507,7 +38507,7 @@ entities:
     - type: Transform
       pos: 13.5,-43.5
       parent: 2
-- proto: PRISONAirlockGlassLocked
+- proto: STPRISONAirlockGlassLocked
   entities:
   - uid: 4932
     components:
@@ -38634,7 +38634,7 @@ entities:
     - type: Transform
       pos: 3.5,-6.5
       parent: 2
-- proto: PRISONAirlockGlassLockedBrig
+- proto: STPRISONAirlockGlassLockedBrig
   entities:
   - uid: 4956
     components:
@@ -38687,7 +38687,7 @@ entities:
     - type: Transform
       pos: 21.5,-55.5
       parent: 2
-- proto: PRISONAirlockGlassLockedEng
+- proto: STPRISONAirlockGlassLockedEng
   entities:
   - uid: 4969
     components:
@@ -38726,7 +38726,7 @@ entities:
     - type: Transform
       pos: 24.5,-5.5
       parent: 2
-- proto: PRISONAirlockGlassLockedMed
+- proto: STPRISONAirlockGlassLockedMed
   entities:
   - uid: 4977
     components:
@@ -38734,7 +38734,7 @@ entities:
       rot: 1.5707963267948966 rad
       pos: 20.5,-18.5
       parent: 2
-- proto: PRISONAirlockGlassLockedPrisoner
+- proto: STPRISONAirlockGlassLockedPrisoner
   entities:
   - uid: 4978
     components:
@@ -38771,7 +38771,7 @@ entities:
       rot: -1.5707963267948966 rad
       pos: 29.5,-54.5
       parent: 2
-- proto: PRISONAirlockGlassShuttleLocked
+- proto: STPRISONAirlockGlassShuttleLocked
   entities:
   - uid: 4984
     components:
@@ -38791,7 +38791,7 @@ entities:
       rot: 3.141592653589793 rad
       pos: 6.5,49.5
       parent: 2
-- proto: PRISONAirlockLocked
+- proto: STPRISONAirlockLocked
   entities:
   - uid: 4815
     components:
@@ -38860,7 +38860,7 @@ entities:
     - type: Transform
       pos: 8.5,45.5
       parent: 2
-- proto: PRISONAirlockLockedBrig
+- proto: STPRISONAirlockLockedBrig
   entities:
   - uid: 4996
     components:
@@ -38879,7 +38879,7 @@ entities:
     - type: Transform
       pos: -4.5,-12.5
       parent: 2
-- proto: PRISONAirlockLockedEng
+- proto: STPRISONAirlockLockedEng
   entities:
   - uid: 4999
     components:
@@ -38920,7 +38920,7 @@ entities:
       rot: 3.141592653589793 rad
       pos: 19.5,16.5
       parent: 2
-- proto: PRISONAirlockLockedHeadOfPrison
+- proto: STPRISONAirlockLockedHeadOfPrison
   entities:
   - uid: 2004
     components:
@@ -38934,7 +38934,7 @@ entities:
       rot: 1.5707963267948966 rad
       pos: -19.5,-2.5
       parent: 2
-- proto: PRISONAirlockLockedMed
+- proto: STPRISONAirlockLockedMed
   entities:
   - uid: 5006
     components:
@@ -38947,14 +38947,14 @@ entities:
     - type: Transform
       pos: 19.5,-24.5
       parent: 2
-- proto: PRISONClothingHeadHatBeret
+- proto: STPRISONClothingHeadHatBeret
   entities:
   - uid: 5008
     components:
     - type: Transform
       pos: 22.517754,12.519048
       parent: 2
-- proto: PRISONClothingHeadHatCapHeadOfPrison
+- proto: STPRISONClothingHeadHatCapHeadOfPrison
   entities:
   - uid: 224
     components:
@@ -38962,7 +38962,7 @@ entities:
       parent: 8665
     - type: Physics
       canCollide: False
-- proto: PRISONClothingOuterCoatHeadOfPrison
+- proto: STPRISONClothingOuterCoatHeadOfPrison
   entities:
   - uid: 225
     components:
@@ -38970,14 +38970,14 @@ entities:
       parent: 8665
     - type: Physics
       canCollide: False
-- proto: PRISONClothingUniformJumpsuit
+- proto: STPRISONClothingUniformJumpsuit
   entities:
   - uid: 5009
     components:
     - type: Transform
       pos: 28.494564,0.2477684
       parent: 2
-- proto: PRISONClothingUniformJumpsuitHeadOfPrison
+- proto: STPRISONClothingUniformJumpsuitHeadOfPrison
   entities:
   - uid: 226
     components:
@@ -38985,7 +38985,7 @@ entities:
       parent: 8665
     - type: Physics
       canCollide: False
-- proto: PRISONComputerShuttle
+- proto: STPRISONComputerShuttle
   entities:
   - uid: 5196
     components:
@@ -38993,7 +38993,7 @@ entities:
       rot: -1.5707963267948966 rad
       pos: -20.5,3.5
       parent: 2
-- proto: PRISONEncryptionKey
+- proto: STPRISONEncryptionKey
   entities:
   - uid: 8412
     components:
@@ -39001,7 +39001,7 @@ entities:
       parent: 8411
     - type: Physics
       canCollide: False
-- proto: PRISONFlag
+- proto: STPRISONFlag
   entities:
   - uid: 5011
     components:
@@ -39111,7 +39111,7 @@ entities:
     - type: Transform
       pos: 20.5,-44.5
       parent: 2
-- proto: PRISONLockableButtonHeadOfPrison
+- proto: STPRISONLockableButtonHeadOfPrison
   entities:
   - uid: 5033
     components:
@@ -39127,7 +39127,7 @@ entities:
         364:
         - - Pressed
           - Toggle
-- proto: PRISONLockableButtonPrisonBrig
+- proto: STPRISONLockableButtonPrisonBrig
   entities:
   - uid: 5034
     components:
@@ -39238,7 +39238,7 @@ entities:
         346:
         - - Pressed
           - Toggle
-- proto: PRISONLocker
+- proto: STPRISONLocker
   entities:
   - uid: 5041
     components:
@@ -39267,7 +39267,7 @@ entities:
         - 0
         - 0
         - 0
-- proto: PRISONLockerFilled
+- proto: STPRISONLockerFilled
   entities:
   - uid: 5042
     components:
@@ -39289,7 +39289,7 @@ entities:
     - type: Transform
       pos: -13.5,1.5
       parent: 2
-- proto: PRISONLockerHeadOfPrisonFilled
+- proto: STPRISONLockerHeadOfPrisonFilled
   entities:
   - uid: 7231
     components:
@@ -39318,7 +39318,7 @@ entities:
         - 0
         - 0
         - 0
-- proto: PRISONShuttleWindow
+- proto: STPRISONShuttleWindow
   entities:
   - uid: 2804
     components:
@@ -39408,28 +39408,28 @@ entities:
       rot: -1.5707963267948966 rad
       pos: 14.5,46.5
       parent: 2
-- proto: PRISONSpawnPointEngineer
+- proto: STPRISONSpawnPointEngineer
   entities:
   - uid: 11419
     components:
     - type: Transform
       pos: 10.5,3.5
       parent: 2
-- proto: PRISONSpawnPointHeadOfPrison
+- proto: STPRISONSpawnPointHeadOfPrison
   entities:
   - uid: 8886
     components:
     - type: Transform
       pos: -21.5,3.5
       parent: 2
-- proto: PRISONSpawnPointMedic
+- proto: STPRISONSpawnPointMedic
   entities:
   - uid: 5060
     components:
     - type: Transform
       pos: 22.5,-18.5
       parent: 2
-- proto: PRISONSpawnPointOfficer
+- proto: STPRISONSpawnPointOfficer
   entities:
   - uid: 5061
     components:
@@ -39451,7 +39451,7 @@ entities:
     - type: Transform
       pos: -17.5,-7.5
       parent: 2
-- proto: PRISONSpawnPointPrisoner
+- proto: STPRISONSpawnPointPrisoner
   entities:
   - uid: 5065
     components:
@@ -39473,28 +39473,28 @@ entities:
     - type: Transform
       pos: 32.5,-57.5
       parent: 2
-- proto: PRISONSuitStorageEngi
+- proto: STPRISONSuitStorageEngi
   entities:
   - uid: 5069
     components:
     - type: Transform
       pos: -1.5,18.5
       parent: 2
-- proto: PRISONSuitStorageHeadOfPrison
+- proto: STPRISONSuitStorageHeadOfPrison
   entities:
   - uid: 8623
     components:
     - type: Transform
       pos: -22.5,4.5
       parent: 2
-- proto: PRISONSuitStorageMed
+- proto: STPRISONSuitStorageMed
   entities:
   - uid: 5071
     components:
     - type: Transform
       pos: -1.5,19.5
       parent: 2
-- proto: PRISONSuitStorageOfficer
+- proto: STPRISONSuitStorageOfficer
   entities:
   - uid: 5072
     components:
@@ -39516,21 +39516,21 @@ entities:
     - type: Transform
       pos: -1.5,17.5
       parent: 2
-- proto: PRISONVendingMachine
+- proto: STPRISONVendingMachine
   entities:
   - uid: 5076
     components:
     - type: Transform
       pos: -8.5,-4.5
       parent: 2
-- proto: PRISONVendingMachineDrobe
+- proto: STPRISONVendingMachineDrobe
   entities:
   - uid: 5078
     components:
     - type: Transform
       pos: -9.5,-4.5
       parent: 2
-- proto: PRISONWindoorSecureHeadOfPrisonLocked
+- proto: STPRISONWindoorSecureHeadOfPrisonLocked
   entities:
   - uid: 927
     components:
@@ -39580,7 +39580,7 @@ entities:
       rot: 1.5707963267948966 rad
       pos: -23.5,-0.5
       parent: 2
-- proto: PRISONWindoorSecureLocked
+- proto: STPRISONWindoorSecureLocked
   entities:
   - uid: 5081
     components:
@@ -46337,7 +46337,7 @@ entities:
       parent: 2
     - type: AccessReader
       access:
-      - - HeadOfPrison
+      - - STHeadOfPrison
 - proto: VendingMachineChefvend
   entities:
   - uid: 6201
@@ -46389,7 +46389,7 @@ entities:
       parent: 2
     - type: AccessReader
       access:
-      - - PrisonEng
+      - - STPrisonEng
 - proto: VendingMachineEngivend
   entities:
   - uid: 6208
@@ -46399,7 +46399,7 @@ entities:
       parent: 2
     - type: AccessReader
       access:
-      - - PrisonEng
+      - - STPrisonEng
 - proto: VendingMachineGames
   entities:
   - uid: 6209
@@ -71888,7 +71888,7 @@ entities:
     - type: Transform
       pos: 31.46653,-58.360916
       parent: 2
-- proto: WristwatchSilver
+- proto: STWristwatchSilver
   entities:
   - uid: 11222
     components:

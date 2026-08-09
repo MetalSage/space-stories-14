@@ -4,10 +4,9 @@ using Robust.Shared.Prototypes;
 
 namespace Content.Shared._Stories.Empire.Components;
 
-[RegisterComponent, NetworkedComponent]
+[RegisterComponent, NetworkedComponent] 
 public sealed partial class EmpireComponent : Component
 {
-    [DataField]
-    [ViewVariables(VVAccess.ReadWrite)]
-    public ProtoId<FactionIconPrototype> StatusIcon { get; set; } = "EmpireFaction";
+    [DataField, ViewVariables(VVAccess.ReadWrite)]
+    public ProtoId<FactionIconPrototype> StatusIcon { get; set; } = "STEmpireFaction";
 }

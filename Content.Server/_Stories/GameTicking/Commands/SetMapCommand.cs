@@ -35,7 +35,6 @@ internal sealed partial class SetMapCommand : IConsoleCommand
         var ticker = _entityManager.EntitySysManager.GetEntitySystem<GameTicker>();
         if (ticker.CanUpdateMap())
         {
-            // deny effect of forcemap if it was used before
             _configurationManager.SetCVar(CCVars.GameMap, "");
 
             _gameMapManager.SelectMap(name);

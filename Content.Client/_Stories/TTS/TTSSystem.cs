@@ -10,9 +10,6 @@ using Robust.Shared.Utility;
 
 namespace Content.Client._Stories.TTS;
 
-/// <summary>
-/// Plays TTS audio in world
-/// </summary>
 public sealed partial class TTSSystem : EntitySystem
 {
     private const float WhisperFade = 4f;
@@ -22,13 +19,13 @@ public sealed partial class TTSSystem : EntitySystem
 
     private const float MinimalVolume = -10f;
     private static readonly ResPath Prefix = ResPath.Root / "TTS";
+    private readonly HashSet<NetEntity> _mutedPlayers = new();
     [Dependency] private AudioSystem _audio = default!;
     [Dependency] private IConfigurationManager _cfg = default!;
-    private readonly HashSet<NetEntity> _mutedPlayers = new();
-    [Dependency] private IResourceManager _res = default!;
     private MemoryContentRoot? _contentRoot;
 
     private int _fileIdx;
+    [Dependency] private IResourceManager _res = default!;
 
     private ISawmill _sawmill = default!;
 

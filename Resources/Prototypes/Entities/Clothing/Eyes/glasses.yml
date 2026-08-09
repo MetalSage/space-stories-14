@@ -276,7 +276,7 @@
   description: An advanced visor protecting a ninja's eyes from flashing lights.
   components:
   - type: VisionProvider
-    shader: Nightvision
+    shader: STNightvision
     ambientColor: "#55ff5510"
     toggleAction: STActionToggleVision
   - type: Sprite

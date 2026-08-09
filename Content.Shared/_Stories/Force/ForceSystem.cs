@@ -4,7 +4,7 @@ using Robust.Shared.Utility;
 
 namespace Content.Shared._Stories.Force;
 
-public sealed partial class ForceSystem : EntitySystem // TODO: Навести порядок с Float и FixedPoint2
+public sealed partial class ForceSystem : EntitySystem
 {
     [Dependency] private MobStateSystem _mobState = default!;
 
@@ -45,7 +45,7 @@ public sealed partial class ForceSystem : EntitySystem // TODO: Навести �
         if (volume <= 0 || maxVolume <= 0 || volume > maxVolume || passiveVolume <= 0)
         {
             DebugTools.Assert(volume < maxVolume,
-                "Attempted to set volume bigger than max volume"); // ? Дать возможность превышать лимит ?
+                "Attempted to set volume bigger than max volume");
             DebugTools.Assert(volume == 0, "Attempted to set negative value to volume");
             DebugTools.Assert(maxVolume > 0, "Attempted to set negative value or 0 to max volume");
             DebugTools.Assert(passiveVolume == 0, "Attempted to set negative value to passive volume");
@@ -61,12 +61,6 @@ public sealed partial class ForceSystem : EntitySystem // TODO: Навести �
         return true;
     }
 
-    /// <summary>
-    /// Попытаться перенести некоторое количество маны из существа в другое существо.
-    /// </summary>
-    /// <param name="uid">Откуда будет забрано.</param>
-    /// <param name="toUid">Куда будет добавлено.</param>
-    /// <param name="amount">Сколько будет перенесенно.</param>
     public bool TryTransferVolume(EntityUid uid,
         EntityUid toUid,
         float amount,
@@ -97,14 +91,6 @@ public sealed partial class ForceSystem : EntitySystem // TODO: Навести �
         return TransferVolume(uid, toUid, amount, component, toComponent);
     }
 
-    /// <summary>
-    /// Перенести некоторое количество маны из существа в другое существо.
-    /// В отличии от <see cref="TryTransferVolume" /> оно может переполнить <see cref="ForceComponent.Volume" /> сущности в
-    /// которую переносят.
-    /// </summary>
-    /// <param name="uid">Откуда будет забрано.</param>
-    /// <param name="toUid">Куда будет добавлено.</param>
-    /// <param name="amount">Сколько будет перенесенно.</param>
     private bool TransferVolume(EntityUid uid,
         EntityUid toUid,
         float amount,
@@ -129,11 +115,6 @@ public sealed partial class ForceSystem : EntitySystem // TODO: Навести �
         return false;
     }
 
-    /// <summary>
-    /// Попытаться добавить ману существу. Не может переполнить ману выше лимита.
-    /// </summary>
-    /// <param name="uid">Существу куда добавлять.</param>
-    /// <param name="toAdd">Сколько добавлять.</param>
     public bool TryAddVolume(EntityUid uid, float toAdd, ForceComponent? component = null)
     {
         if (toAdd <= 0)
@@ -160,11 +141,6 @@ public sealed partial class ForceSystem : EntitySystem // TODO: Навести �
         return AddVolume(uid, toAdd, component);
     }
 
-    /// <summary>
-    /// Добавить ману существу. Может переполнить ману выше лимита.
-    /// </summary>
-    /// <param name="uid">Существу куда добавлять.</param>
-    /// <param name="toAdd">Сколько добавлять.</param>
     public bool AddVolume(EntityUid uid, float toAdd, ForceComponent? component = null)
     {
         if (toAdd <= 0)
@@ -189,11 +165,6 @@ public sealed partial class ForceSystem : EntitySystem // TODO: Навести �
         return true;
     }
 
-    /// <summary>
-    /// Попытаться убрать ману из существа. Не может сделать значение маны отрицательным.
-    /// </summary>
-    /// <param name="uid">Существу у которого будет уменьшено.</param>
-    /// <param name="toRemove">На сколько уменьшить.</param>
     public bool TryRemoveVolume(EntityUid uid, float toRemove, ForceComponent? component = null)
     {
         if (toRemove <= 0)
@@ -220,11 +191,6 @@ public sealed partial class ForceSystem : EntitySystem // TODO: Навести �
         return RemoveVolume(uid, toRemove, component);
     }
 
-    /// <summary>
-    /// Убрать ману из существа. Не может сделать значение маны отрицательным.
-    /// </summary>
-    /// <param name="uid">Существу у которого будет уменьшено.</param>
-    /// <param name="toRemove">На сколько уменьшить.</param>
     public bool RemoveVolume(EntityUid uid, float toRemove, ForceComponent? component = null)
     {
         if (toRemove <= 0)

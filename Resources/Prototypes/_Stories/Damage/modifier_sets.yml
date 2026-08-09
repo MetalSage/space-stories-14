@@ -1,5 +1,5 @@
 - type: damageModifierSet
-  id: ProtectiveBubble
+  id: STProtectiveBubble
   coefficients:
     Slash: 0.5
     Piercing: 0.5
@@ -9,7 +9,7 @@
     Caustic: 0.5
 
 - type: damageModifierSet
-  id: Kidan
+  id: STKidan
   coefficients:
     Cold: 1.3
     Heat: 0.7

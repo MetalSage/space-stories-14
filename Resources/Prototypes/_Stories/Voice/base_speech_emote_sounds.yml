@@ -1,5 +1,5 @@
 - type: emoteSounds
-  id: BaseHumanoidSounds
+  id: STBaseHumanoidSounds
   abstract: true
   params:
     variation: 0.125
@@ -10,8 +10,8 @@
       collection: Whistles
 
 - type: emoteSounds
-  parent: BaseHumanoidSounds
-  id: BaseMaleSounds
+  parent: STBaseHumanoidSounds
+  id: STBaseMaleSounds
   abstract: true
   sounds:
     Sneeze:
@@ -30,8 +30,8 @@
       collection: MaleDeathGasp
 
 - type: emoteSounds
-  parent: BaseHumanoidSounds
-  id: BaseFemaleSounds
+  parent: STBaseHumanoidSounds
+  id: STBaseFemaleSounds
   abstract: true
   sounds:
     Sneeze:

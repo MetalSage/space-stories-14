@@ -1,6 +1,6 @@
 - type: entity
   parent: ClothingMaskGasSecurity
-  id: ClothingMaskGasExe
+  id: STClothingMaskGasExe
   name: guardian's gas mask
   description: Gas mask of unknown design.
   components:

@@ -433,7 +433,7 @@ entities:
     - type: Transform
       pos: 5.5,3.5
       parent: 1
-- proto: CentcomComputerComms
+- proto: STCentcomComputerComms
   entities:
   - uid: 90
     components:

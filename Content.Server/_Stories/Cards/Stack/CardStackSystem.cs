@@ -12,6 +12,7 @@ namespace Content.Server._Stories.Cards.Stack;
 
 public sealed partial class CardStackSystem : SharedCardStackSystem
 {
+    private const string SplitCardToSpawnEntity = "STCardDeck";
     [Dependency] private AppearanceSystem _appearance = default!;
     [Dependency] private AudioSystem _audio = default!;
     [Dependency] private ContainerSystem _containerSystem = default!;
@@ -19,8 +20,6 @@ public sealed partial class CardStackSystem : SharedCardStackSystem
     [Dependency] private PopupSystem _popup = default!;
     [Dependency] private IRobustRandom _robustRandom = default!;
     [Dependency] private SharedTransformSystem _transform = default!;
-
-    private const string SplitCardToSpawnEntity = "STCardDeck";
 
     public override void Initialize()
     {

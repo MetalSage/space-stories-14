@@ -1,10 +1,10 @@
 - type: listing
-  id: ActionForceLookUp
+  id: STActionForceLookUp
   name: Прислушаться к силе
   description: Позволяет обнаружить других пользователей силы в радиусе 25 метров.
-  productAction: ActionForceLookUp
+  productAction: STActionForceLookUp
   cost:
-    SkillPoint: 1
+    STSkillPoint: 1
   categories:
   - Force
   conditions:
@@ -12,12 +12,12 @@
     stock: 1
 
 - type: listing
-  id: ActionForceKnock
+  id: STActionForceKnock
   name: Стук
   description: Особая техника позволяющая открыть все ближайшие двери. По слухам, именно космическая федерация магов подала первый патент на это заклинание.
-  productAction: ActionForceKnock
+  productAction: STActionForceKnock
   cost:
-    SkillPoint: 1
+    STSkillPoint: 1
   categories:
   - Force
   conditions:
@@ -25,12 +25,12 @@
     stock: 1
 
 - type: listing
-  id: ActionRecallEquipments
+  id: STActionRecallEquipments
   name: Призвать экипировку
   description: Призовите вашу экипировку к себе. Если она не сможет настигнуть вас, то телепортируется к вам.
-  productAction: ActionRecallEquipments
+  productAction: STActionRecallEquipments
   cost:
-    SkillPoint: 2
+    STSkillPoint: 2
   categories:
   - Force
   conditions:
@@ -38,12 +38,12 @@
     stock: 1
 
 - type: listing
-  id: ActionRecallLightsaber
+  id: STActionRecallLightsaber
   name: Призвать световой меч
   description: Призовите ваш световой меч к себе. Если он не сможет настигнуть вас, то телепортируется к вам.
-  productAction: ActionRecallLightsaber
+  productAction: STActionRecallLightsaber
   cost:
-    SkillPoint: 2
+    STSkillPoint: 2
   categories:
   - Force
   conditions:
@@ -51,12 +51,12 @@
     stock: 1
 
 - type: listing
-  id: ActionTelekinesis
+  id: STActionTelekinesis
   name: Телекинез
   description: Ваша рука сможет манипулировать гравитацией вокруг объектов. Левитируйте своим мечом, чтобы вести бой на расстоянии. Другие пользователи силы уворачиваются от этого.
-  productAction: ActionTelekinesis
+  productAction: STActionTelekinesis
   cost:
-    SkillPoint: 3
+    STSkillPoint: 3
   categories:
   - Force
   conditions:
@@ -64,12 +64,12 @@
     stock: 1
 
 - type: listing
-  id: ActionFlashArea
+  id: STActionFlashArea
   name: Ослепление Силы
   description: Cоздайте при помощи телекинеза вспышки энергии, вызывая временную слепоту. Может ослепить вас.
-  productAction: ActionFlashArea
+  productAction: STActionFlashArea
   cost:
-    SkillPoint: 1
+    STSkillPoint: 1
   categories:
   - Force
   conditions:
@@ -77,12 +77,12 @@
     stock: 1
 
 - type: listing
-  id: ActionArtOfMovement
+  id: STActionArtOfMovement
   name: Искусство движения
   description: Ускоряет вас, блокирует вашу боль на короткое время.
-  productAction: ActionArtOfMovement
+  productAction: STActionArtOfMovement
   cost:
-    SkillPoint: 3
+    STSkillPoint: 3
   categories:
   - Force
   conditions:
@@ -90,12 +90,12 @@
     stock: 1
 
 - type: listing
-  id: ActionEmp
+  id: STActionEmp
   name: Ионизация
   description: Создайте ЭМ импульс в небольшом радиусе.
-  productAction: ActionEmp
+  productAction: STActionEmp
   cost:
-    SkillPoint: 1
+    STSkillPoint: 1
   categories:
   - Force
   conditions:
@@ -103,12 +103,12 @@
     stock: 1
 
 - type: listing
-  id: ActionFreedom
+  id: STActionFreedom
   name: Снятие оков
   description: Снимите наручники с помощью телекинеза.
-  productAction: ActionFreedom
+  productAction: STActionFreedom
   cost:
-    SkillPoint: 1
+    STSkillPoint: 1
   categories:
   - Force
   conditions:
@@ -116,12 +116,12 @@
     stock: 1
 
 - type: listing
-  id: ActionForceDash
+  id: STActionForceDash
   name: Силовой рывок
   description: Вскочите с огромной скоростью в нужную точку. Только не стену, пожалуйста.
-  productAction: ActionForceDash
+  productAction: STActionForceDash
   cost:
-    SkillPoint: 3
+    STSkillPoint: 3
   categories:
   - Force
   conditions:

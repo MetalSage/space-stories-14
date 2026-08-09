@@ -5,10 +5,10 @@
   id: STCard
 
 - type: Tag
-  id: ForceRecallEquipment
+  id: STForceRecallEquipment
 
 - type: Tag
-  id: PRISONSabre
+  id: STPRISONSabre
 
 - type: Tag
   id: Prison

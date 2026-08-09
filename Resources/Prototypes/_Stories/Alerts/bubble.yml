@@ -1,5 +1,5 @@
 - type: alert
-  id: ProjectiveBubble
+  id: STProjectiveBubble
   icons:
   - sprite: /Textures/_Stories/Interface/Alerts/projective_bubble.rsi
     state: 0

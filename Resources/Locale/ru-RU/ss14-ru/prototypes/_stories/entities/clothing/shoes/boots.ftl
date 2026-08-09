@@ -1,10 +1,10 @@
 ent-ClothingShoesInquisitor = ботинки инквизитора
     .desc = Обычные черные ботинки.
-ent-ClothingShoesBootsJackGuardian = подкованные сапоги джедая
+ent-STClothingShoesBootsJackGuardian = подкованные сапоги джедая
     .desc = Созданы, чтобы ваши ножки не промокли на далеких планетах.
-ent-ClothingShoesBootsJackGuardianNt = подкованные сапоги стража клинка
+ent-STClothingShoesBootsJackGuardianNt = подкованные сапоги стража клинка
     .desc = Планировалось, что они будут удобнее обычных.
-ent-ClothingShoesBootsJackGuardianNomad = сапоги путника
+ent-STClothingShoesBootsJackGuardianNomad = сапоги путника
     .desc = Планировалось, что они будут удобнее обычных.
-ent-ClothingShoesBootsExe = сапоги хранителя
+ent-STClothingShoesBootsExe = сапоги хранителя
     .desc = Продвинутая обувь, гарантирующая удобство носителя и полное сцепление с любой поверхностью.

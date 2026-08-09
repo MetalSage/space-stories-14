@@ -1,5 +1,5 @@
 - type: entity
-  id: MobInquisitorGhost
+  id: STMobInquisitorGhost
   parent: BaseMobJaunt
   name: inquisitor
   description: Very scary.
@@ -48,6 +48,6 @@
     radius: 2
     softness: 1
   - type: Visibility
-    layer: 2 #ghost vis layer
+    layer: 2
   - type: Speech
     speechVerb: Ghost

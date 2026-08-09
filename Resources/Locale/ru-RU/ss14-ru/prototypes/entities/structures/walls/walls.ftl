@@ -72,6 +72,7 @@ ent-WallReinforcedChitin = укреплённый хитин
     .desc = { ent-BaseWall.desc }
 ent-WallXenoborg = ксеноборг-стена
     .desc = { ent-WallPlastitanium.desc }
+    .suffix = { ent-WallPlastitanium.suffix }
 ent-WallXenoborgDiagonal = ксеноборг-стена
     .desc = { ent-WallPlastitaniumDiagonal.desc }
     .suffix = Диагональ

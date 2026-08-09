@@ -1,6 +1,6 @@
 - type: entity
   name: space koi spawner
-  id: SpawnSpaceKoi
+  id: STSpawnSpaceKoi
   parent: MarkerBase
   components:
   - type: Sprite
@@ -11,8 +11,8 @@
       - state: ai
   - type: ConditionalSpawner
     prototypes:
-    - MobSpaceGlowKoi
-    - MobRedBlackKoi
-    - MobGoldBlackKoi
-    - MobRedCircleKoi
-    - MobBloodSkeletonKoi
+    - STMobSpaceGlowKoi
+    - STMobRedBlackKoi
+    - STMobGoldBlackKoi
+    - STMobRedCircleKoi
+    - STMobBloodSkeletonKoi

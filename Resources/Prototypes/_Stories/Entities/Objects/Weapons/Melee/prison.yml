@@ -1,6 +1,6 @@
 - type: entity
   parent: CaptainSabre
-  id: PRISONSabre
+  id: STPRISONSabre
   name: prison saber
   description: No. Just tell me, why cut anyone in prison?
   components:
@@ -23,5 +23,5 @@
       sprite: _Stories/Objects/Weapons/Melee/hosp_sabre.rsi
     - type: Tag
       tags:
-        - PRISONSabre
+        - STPRISONSabre
     - type: DisarmMalus

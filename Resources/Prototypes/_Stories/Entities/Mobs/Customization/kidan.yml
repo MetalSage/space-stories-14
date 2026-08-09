@@ -1,135 +1,135 @@
 - type: marking
-  id: KidanHeadNormal
+  id: STKidanHeadNormal
   bodyPart: HeadTop
-  groupWhitelist: [Kidan]
+  groupWhitelist: [STKidan]
   sprites:
     - sprite: _Stories/Mobs/Customization/Kidan/head_accessories.rsi
       state: normal_s
 
 - type: marking
-  id: KidanHeadAlert
+  id: STKidanHeadAlert
   bodyPart: HeadTop
-  groupWhitelist: [Kidan]
+  groupWhitelist: [STKidan]
   sprites:
     - sprite: _Stories/Mobs/Customization/Kidan/head_accessories.rsi
       state: alert_s
 
 - type: marking
-  id: KidanHeadCrescent
+  id: STKidanHeadCrescent
   bodyPart: HeadTop
-  groupWhitelist: [Kidan]
+  groupWhitelist: [STKidan]
   sprites:
     - sprite: _Stories/Mobs/Customization/Kidan/head_accessories.rsi
       state: crescent_s
 
 - type: marking
-  id: KidanHeadCurious
+  id: STKidanHeadCurious
   bodyPart: HeadTop
-  groupWhitelist: [Kidan]
+  groupWhitelist: [STKidan]
   sprites:
     - sprite: _Stories/Mobs/Customization/Kidan/head_accessories.rsi
       state: curious_s
 
 - type: marking
-  id: KidanHeadLong
+  id: STKidanHeadLong
   bodyPart: HeadTop
-  groupWhitelist: [Kidan]
+  groupWhitelist: [STKidan]
   sprites:
     - sprite: _Stories/Mobs/Customization/Kidan/head_accessories.rsi
       state: long_s
 
 - type: marking
-  id: KidanHeadMantieLong
+  id: STKidanHeadMantieLong
   bodyPart: HeadTop
-  groupWhitelist: [Kidan]
+  groupWhitelist: [STKidan]
   sprites:
     - sprite: _Stories/Mobs/Customization/Kidan/head_accessories.rsi
       state: mantie_long
 
 - type: marking
-  id: KidanHeadMopey
+  id: STKidanHeadMopey
   bodyPart: HeadTop
-  groupWhitelist: [Kidan]
+  groupWhitelist: [STKidan]
   sprites:
     - sprite: _Stories/Mobs/Customization/Kidan/head_accessories.rsi
       state: mopey_s
 
 - type: marking
-  id: KidanHeadMoth
+  id: STKidanHeadMoth
   bodyPart: HeadTop
-  groupWhitelist: [Kidan]
+  groupWhitelist: [STKidan]
   sprites:
     - sprite: _Stories/Mobs/Customization/Kidan/head_accessories.rsi
       state: moth_s
 
 - type: marking
-  id: KidanHeadPerky
+  id: STKidanHeadPerky
   bodyPart: HeadTop
-  groupWhitelist: [Kidan]
+  groupWhitelist: [STKidan]
   sprites:
     - sprite: _Stories/Mobs/Customization/Kidan/head_accessories.rsi
       state: perky_s
 
 - type: marking
-  id: KidanHeadMarkingOutline
+  id: STKidanHeadMarkingOutline
   bodyPart: Head
-  groupWhitelist: [Kidan]
+  groupWhitelist: [STKidan]
   sprites:
     - sprite: _Stories/Mobs/Customization/Kidan/head_markings.rsi
       state: outline_s
 
 - type: marking
-  id: KidanHairBrokenPullHorns
+  id: STKidanHairBrokenPullHorns
   bodyPart: Hair
-  groupWhitelist: [Kidan]
+  groupWhitelist: [STKidan]
   sprites:
     - sprite: _Stories/Mobs/Customization/Kidan/hair.rsi
       state: broken_pull_horns
 
 - type: marking
-  id: KidanHairBullHorns
+  id: STKidanHairBullHorns
   bodyPart: Hair
-  groupWhitelist: [Kidan]
+  groupWhitelist: [STKidan]
   sprites:
     - sprite: _Stories/Mobs/Customization/Kidan/hair.rsi
       state: bull_horns_s
 
 - type: marking
-  id: KidanHairCurledHorns
+  id: STKidanHairCurledHorns
   bodyPart: Hair
-  groupWhitelist: [Kidan]
+  groupWhitelist: [STKidan]
   sprites:
     - sprite: _Stories/Mobs/Customization/Kidan/hair.rsi
       state: curled_horns_s
 
 - type: marking
-  id: KidanHairHawkHorns
+  id: STKidanHairHawkHorns
   bodyPart: Hair
-  groupWhitelist: [Kidan]
+  groupWhitelist: [STKidan]
   sprites:
     - sprite: _Stories/Mobs/Customization/Kidan/hair.rsi
       state: hawk_horns_s
 
 - type: marking
-  id: KidanHairHollowHorns
+  id: STKidanHairHollowHorns
   bodyPart: Hair
-  groupWhitelist: [Kidan]
+  groupWhitelist: [STKidan]
   sprites:
     - sprite: _Stories/Mobs/Customization/Kidan/hair.rsi
       state: hollow_horns_s
 
 - type: marking
-  id: KidanHairTallHorns
+  id: STKidanHairTallHorns
   bodyPart: Hair
-  groupWhitelist: [Kidan]
+  groupWhitelist: [STKidan]
   sprites:
     - sprite: _Stories/Mobs/Customization/Kidan/hair.rsi
       state: tall_horns_s
 
 - type: marking
-  id: KidanHairWideHorns
+  id: STKidanHairWideHorns
   bodyPart: Hair
-  groupWhitelist: [Kidan]
+  groupWhitelist: [STKidan]
   sprites:
     - sprite: _Stories/Mobs/Customization/Kidan/hair.rsi
       state: wide_horns_s

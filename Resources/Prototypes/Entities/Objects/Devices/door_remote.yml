@@ -226,7 +226,7 @@
   - type: Access
     groups:
     - AllAccess
-    - PrisonAllAccess # Stories
+    - STPrisonAllAccess # Stories
     tags:
     - CentralCommand
     - NuclearOperative

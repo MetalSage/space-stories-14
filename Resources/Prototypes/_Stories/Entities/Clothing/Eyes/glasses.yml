@@ -1,17 +1,17 @@
 - type: entity
   parent: ClothingEyesBase
-  id: ClothingEyesThermalVisionBase
+  id: STClothingEyesThermalVisionBase
   abstract: true
   components:
   - type: VisionProvider
     thermalVision: true
-    thermalShader: ThermalVision
+    thermalShader: STThermalVision
     thermalAmbientColor: "#FF8888"
     toggleAction: STActionToggleThermal
 
 - type: entity
-  parent: ClothingEyesThermalVisionBase
-  id: ClothingEyesThermalVisionMonocular
+  parent: STClothingEyesThermalVisionBase
+  id: STClothingEyesThermalVisionMonocular
   name: thermal vision monocle
   description: The latest scouting technology placed inside a monocle. Allows seeing organic targets in complete darkness and even through walls.
   components:
@@ -21,8 +21,8 @@
     sprite: _Stories/Clothing/Eyes/Glasses/termalhud_oneglass.rsi
 
 - type: entity
-  parent: [ClothingEyesThermalVisionBase, ClothingEyesHudSyndicate]
-  id: ClothingEyesThermalVisionHud
+  parent: [STClothingEyesThermalVisionBase, ClothingEyesHudSyndicate]
+  id: STClothingEyesThermalVisionHud
   name: operative's thermal visor
   description: The latest scouting technology placed inside a visor. Allows seeing organic targets in complete darkness and even through walls. This variant, specifically for Nuclear Operatives, has a built-in Syndicate visor.
   components:
@@ -33,12 +33,12 @@
 
 - type: entity
   parent: ClothingEyesBase
-  id: ClothingEyesNightvision
+  id: STClothingEyesNightvision
   name: night vision goggles
   description: Allows seeing in complete darkness. Powered by an internal nuclear battery and not at all harmful to the eyes.
   components:
   - type: VisionProvider
-    shader: Nightvision
+    shader: STNightvision
     ambientColor: "#55ff5510"
     toggleAction: STActionToggleVision
   - type: Sprite

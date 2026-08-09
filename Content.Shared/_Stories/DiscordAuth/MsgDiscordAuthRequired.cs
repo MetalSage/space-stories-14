@@ -4,9 +4,6 @@ using Robust.Shared.Serialization;
 
 namespace Content.Shared._Stories.DiscordAuth;
 
-/// <summary>
-/// Server sends this event to client on connect if Discord auth is required
-/// </summary>
 public sealed class MsgDiscordAuthRequired : NetMessage
 {
     public string AuthUrl = string.Empty;

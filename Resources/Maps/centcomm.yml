@@ -10453,7 +10453,7 @@ entities:
     - type: Physics
       canCollide: False
     - type: InsideEntityStorage
-- proto: BoxPrinter
+- proto: STBoxPrinter
   entities:
   - uid: 666
     components:
@@ -52857,7 +52857,7 @@ entities:
     - type: Transform
       parent: 1
       pos: -15.5106535,-28.711018
-- proto: InkPrinter
+- proto: STInkPrinter
   entities:
   - uid: 7451
     components:
@@ -57450,14 +57450,14 @@ entities:
       parent: 1
       rot: -1.5707963267948966 rad
       pos: 33.5,-25.5
-- proto: PrintedDocumentJudgment
+- proto: STPrintedDocumentJudgment
   entities:
   - uid: 8157
     components:
     - type: Transform
       parent: 1
       pos: -4.21227,-68.45868
-- proto: PrintedDocumentSentence
+- proto: STPrintedDocumentSentence
   entities:
   - uid: 8158
     components:
@@ -57471,7 +57471,7 @@ entities:
       parent: 1
       rot: 1.5707963267948966 rad
       pos: -16.461803,-42.396194
-- proto: PrinterDoc
+- proto: STPrinterDoc
   entities:
   - uid: 8160
     components:
@@ -59702,7 +59702,7 @@ entities:
     - type: Transform
       parent: 1
       pos: 56.5,-26.5
-- proto: SheetPrinter
+- proto: STSheetPrinter
   entities:
   - uid: 8555
     components:
@@ -61313,7 +61313,7 @@ entities:
       parent: 1
       rot: -1.5707963267948966 rad
       pos: 37.5,-63.5
-- proto: StoriesFlippoEngravedLighter
+- proto: STFlippoEngravedLighter
   entities:
   - uid: 8804
     components:

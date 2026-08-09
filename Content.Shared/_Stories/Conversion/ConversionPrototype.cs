@@ -10,7 +10,7 @@ namespace Content.Shared._Stories.Conversion;
 [Prototype]
 public sealed partial class ConversionPrototype : IPrototype
 {
-    [ViewVariables] [IdDataField] public string ID { get; private set; } = default!;
+    [ViewVariables, IdDataField]  public string ID { get; private set; } = default!;
 
     #region Other
 
@@ -62,21 +62,12 @@ public sealed partial class ConversionPrototype : IPrototype
 [DataDefinition]
 public partial struct ConversionBriefingData
 {
-    /// <summary>
-    /// The text shown
-    /// </summary>
     [DataField]
     public LocId? Text;
 
-    /// <summary>
-    /// The color of the text.
-    /// </summary>
     [DataField]
     public Color? Color;
 
-    /// <summary>
-    /// The sound played.
-    /// </summary>
     [DataField]
     public SoundSpecifier? Sound;
 }

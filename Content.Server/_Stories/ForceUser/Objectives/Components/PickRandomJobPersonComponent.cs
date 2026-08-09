@@ -8,5 +8,5 @@ public sealed partial class PickRandomJobPersonComponent : Component
     public EntityUid MindId;
 
     [DataField("jobID")]
-    public string JobID { get; private set; } = "GuardianNt";
+    public string JobID { get; private set; } = "STGuardianNt";
 }

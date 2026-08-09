@@ -2,7 +2,7 @@ using Robust.Shared.GameStates;
 
 namespace Content.Shared._Stories.Economy.Components;
 
-[RegisterComponent, NetworkedComponent]
+[RegisterComponent, NetworkedComponent] 
 public sealed partial class StationFinancialLogComponent : Component
 {
     [DataField]
@@ -13,17 +13,17 @@ public sealed partial class StationFinancialLogComponent : Component
 public sealed partial class FinancialLogEntry
 {
     [DataField]
-    public TimeSpan Timestamp;
-
-    [DataField]
-    public string Source = string.Empty;
+    public int Amount;
 
     [DataField]
     public string Destination = string.Empty;
 
     [DataField]
-    public int Amount;
+    public string Reason = string.Empty;
 
     [DataField]
-    public string Reason = string.Empty;
+    public string Source = string.Empty;
+
+    [DataField]
+    public TimeSpan Timestamp;
 }

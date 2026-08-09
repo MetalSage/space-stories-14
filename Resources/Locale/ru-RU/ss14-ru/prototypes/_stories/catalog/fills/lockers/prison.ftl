@@ -1,6 +1,6 @@
-ent-PRISONLockerHeadOfPrisonFilled = { ent-PRISONLockerHeadOfPrison }
-    .desc = { ent-PRISONLockerHeadOfPrison.desc }
+ent-STPRISONLockerHeadOfPrisonFilled = { ent-STPRISONLockerHeadOfPrison }
+    .desc = { ent-STPRISONLockerHeadOfPrison.desc }
     .suffix = Заполненный
-ent-PRISONLockerFilled = { ent-PRISONLocker }
-    .desc = { ent-PRISONLocker.desc }
+ent-STPRISONLockerFilled = { ent-STPRISONLocker }
+    .desc = { ent-STPRISONLocker.desc }
     .suffix = Заполненный

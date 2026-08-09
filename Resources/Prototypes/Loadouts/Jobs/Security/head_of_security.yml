@@ -59,7 +59,7 @@
 - type: loadout # Stories
   id: HeadofSecurityCap
   equipment:
-    head: ClothingHeadHatCapHoS
+    head: STClothingHeadHatCapHoS
 
 # Neck
 - type: loadout

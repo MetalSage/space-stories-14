@@ -1,5 +1,5 @@
 - type: gameMap
-  id: StoriesPrison
+  id: STPrison
   mapName: 'Prison Station'
   mapPath: /Maps/_Stories/prison.yml
   minPlayers: 15
@@ -15,8 +15,8 @@
             prefixCreator: 'DC'
         - type: StationJobs
           availableJobs:
-            PRISONHeadOfPrison: [ 1, 1 ]
-            PRISONOfficer: [ 6, 6 ]
-            PRISONMedic: [ 1, 1 ]
-            PRISONEngineer: [ 1, 1 ]
-            PRISONPrisoner: [ 6, 0 ]
+            STPRISONHeadOfPrison: [ 1, 1 ]
+            STPRISONOfficer: [ 6, 6 ]
+            STPRISONMedic: [ 1, 1 ]
+            STPRISONEngineer: [ 1, 1 ]
+            STPRISONPrisoner: [ 6, 0 ]

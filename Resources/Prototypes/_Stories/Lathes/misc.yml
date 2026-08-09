@@ -1,6 +1,6 @@
 - type: latheRecipe
-  id: PrinterDocMachineCircuitboard
-  result: PrinterDocMachineCircuitboard
+  id: STPrinterDocMachineCircuitboard
+  result: STPrinterDocMachineCircuitboard
   completetime: 4
   materials:
      Steel: 100
@@ -8,15 +8,15 @@
 
 - type: latheRecipe
   parent: BaseCircuitboardRecipe
-  id: ReflectorBoxMachineCircuitboard
-  result: ReflectorBoxMachineCircuitboard
+  id: STReflectorBoxMachineCircuitboard
+  result: STReflectorBoxMachineCircuitboard
 
 - type: latheRecipe
   parent: BaseCircuitboardRecipe
-  id: ReflectorCornerMachineCircuitboard
-  result: ReflectorCornerMachineCircuitboard
+  id: STReflectorCornerMachineCircuitboard
+  result: STReflectorCornerMachineCircuitboard
 
 - type: latheRecipe
   parent: BaseCircuitboardRecipe
-  id: ReflectorCornerTsideMachineCircuitboard
-  result: ReflectorCornerTsideMachineCircuitboard
+  id: STReflectorCornerTsideMachineCircuitboard
+  result: STReflectorCornerTsideMachineCircuitboard

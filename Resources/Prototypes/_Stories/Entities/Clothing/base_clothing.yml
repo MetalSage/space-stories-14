@@ -1,6 +1,6 @@
 - type: entity
   abstract: true
-  id: BaseSyndicateExplodingClothing
+  id: STBaseSyndicateExplodingClothing
   components:
   - type: ClothingWhitelist
     factionsWhitelist:
@@ -15,8 +15,8 @@
 
 - type: entity
   abstract: true
-  id: BaseERTNotExplodingClothing
+  id: STBaseERTNotExplodingClothing
   components:
   - type: ClothingWhitelist
     factionsWhitelist: null
-  - type: Emagged # Нельзя емагнуть скафандр без биокода, если он уже емагнут.
+  - type: Emagged

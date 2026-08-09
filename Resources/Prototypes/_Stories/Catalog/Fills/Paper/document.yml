@@ -1,422 +1,422 @@
 - type: entity
-  parent: PrintedPaper
-  id: PrintedDocument
+  parent: STPrintedPaper
+  id: STPrintedDocument
   abstract: true
   description: A neatly printed paper document.
   components:
   - type: Paper
 
 - type: entity
-  parent: PrintedSyndiePaper
-  id: PrintedSyndieDocument
+  parent: STPrintedSyndiePaper
+  id: STPrintedSyndieDocument
   abstract: true
   description: An angrily printed paper document.
   components:
   - type: Paper
 
 - type: entity
-  parent: PrintedDocument
-  id: PrintedDocumentReportStation
+  parent: STPrintedDocument
+  id: STPrintedDocumentReportStation
   name: situation report
   components:
   - type: Paper
     content: doc-text-printer-report-station
 
 - type: entity
-  parent: PrintedDocument
-  id: PrintedDocumentReporDepartment
+  parent: STPrintedDocument
+  id: STPrintedDocumentReporDepartment
   name: department work report
   components:
   - type: Paper
     content: doc-text-printer-report-department
 
 - type: entity
-  parent: PrintedDocument
-  id: PrintedDocumentReportEmployeePerformance
+  parent: STPrintedDocument
+  id: STPrintedDocumentReportEmployeePerformance
   name: employee work report
   components:
   - type: Paper
     content: doc-text-printer-report-employee-performance
 
 - type: entity
-  parent: PrintedDocument
-  id: PrintedDocumentInternalAffairsAgentsReport
+  parent: STPrintedDocument
+  id: STPrintedDocumentInternalAffairsAgentsReport
   name: internal investigation report
   components:
   - type: Paper
     content: doc-text-printer-internal-affairs-agents-report
 
 - type: entity
-  parent: PrintedDocument
-  id: PrintedDocumentConditionReport
+  parent: STPrintedDocument
+  id: STPrintedDocumentConditionReport
   name: technical status report
   components:
   - type: Paper
     content: doc-text-printer-condition-report
 
 - type: entity
-  parent: PrintedDocument
-  id: PrintedDocumentReportStudyObject
+  parent: STPrintedDocument
+  id: STPrintedDocumentReportStudyObject
   name: object research report
   components:
   - type: Paper
     content: doc-text-printer-report-study-object
 
 - type: entity
-  parent: PrintedDocument
-  id: PrintedDocumentExperimentReport
+  parent: STPrintedDocument
+  id: STPrintedDocumentExperimentReport
   name: experiment report
   components:
   - type: Paper
     content: doc-text-printer-experiment-report
 
 - type: entity
-  parent: PrintedDocument
-  id: PrintedDocumentDisposalReport
+  parent: STPrintedDocument
+  id: STPrintedDocumentDisposalReport
   name: disposal report
   components:
   - type: Paper
     content: doc-text-printer-disposal-report
 
 - type: entity
-  parent: PrintedDocument
-  id: PrintedDocumentApplicationAppointmentInterim
+  parent: STPrintedDocument
+  id: STPrintedDocumentApplicationAppointmentInterim
   name: interim appointment application
   components:
   - type: Paper
     content: doc-text-printer-application-appointment-interim
 
 - type: entity
-  parent: PrintedDocument
-  id: PrintedDocumentApplicationEmployment
+  parent: STPrintedDocument
+  id: STPrintedDocumentApplicationEmployment
   name: employment application
   components:
   - type: Paper
     content: doc-text-printer-application-employment
 
 - type: entity
-  parent: PrintedDocument
-  id: PrintedDocumentLetterResignation
+  parent: STPrintedDocument
+  id: STPrintedDocumentLetterResignation
   name: resignation letter
   components:
   - type: Paper
     content: doc-text-printer-letter-resignation
 
 - type: entity
-  parent: PrintedDocument
-  id: PrintedDocumentApplicationAccess
+  parent: STPrintedDocument
+  id: STPrintedDocumentApplicationAccess
   name: access request application
   components:
   - type: Paper
     content: doc-text-printer-application-access
 
 - type: entity
-  parent: PrintedDocument
-  id: PrintedDocumentApplicationEquipment
+  parent: STPrintedDocument
+  id: STPrintedDocumentApplicationEquipment
   name: equipment request application
   components:
   - type: Paper
     content: doc-text-printer-application-equipment
 
 - type: entity
-  parent: PrintedDocument
-  id: PrintedDocumentEvacuationShuttleRequest
+  parent: STPrintedDocument
+  id: STPrintedDocumentEvacuationShuttleRequest
   name: evacuation shuttle request
   components:
   - type: Paper
     content: doc-text-printer-evacuation-shuttle-request
 
 - type: entity
-  parent: PrintedDocument
-  id: PrintedDocumentShuttleRegistrationRequest
+  parent: STPrintedDocument
+  id: STPrintedDocumentShuttleRegistrationRequest
   name: shuttle registration request
   components:
   - type: Paper
     content: doc-text-printer-shuttle-registration-request
 
 - type: entity
-  parent: PrintedDocument
-  id: PrintedDocumentRequestCallMembersCentralCommitteeDSO
+  parent: STPrintedDocument
+  id: STPrintedDocumentRequestCallMembersCentralCommitteeDSO
   name: request to summon CentComm or DSO staff
   components:
   - type: Paper
     content: doc-text-printer-request-call-members-central-committee-dso
 
 - type: entity
-  parent: PrintedDocument
-  id: PrintedDocumentRequestChangeSalary
+  parent: STPrintedDocument
+  id: STPrintedDocumentRequestChangeSalary
   name: salary change request
   components:
   - type: Paper
     content: doc-text-printer-request-change-salary
 
 - type: entity
-  parent: PrintedDocument
-  id: PrintedDocumentRequestForNonlistedEmployment
+  parent: STPrintedDocument
+  id: STPrintedDocumentRequestForNonlistedEmployment
   name: request for non-listed employment
   components:
   - type: Paper
     content: doc-text-printer-request-for-non-listed-employment
 
 - type: entity
-  parent: PrintedDocument
-  id: PrintedDocumentRequestForPromotion
+  parent: STPrintedDocument
+  id: STPrintedDocumentRequestForPromotion
   name: promotion request
   components:
   - type: Paper
     content: doc-text-printer-request-for-promotion
 
 - type: entity
-  parent: PrintedDocument
-  id: PrintedDocumentRequestEuthanasia
+  parent: STPrintedDocument
+  id: STPrintedDocumentRequestEuthanasia
   name: euthanasia request
   components:
   - type: Paper
     content: doc-text-printer-request-euthanasia
 
 - type: entity
-  parent: PrintedDocument
-  id: PrintedDocumentRequestConstructionWork
+  parent: STPrintedDocument
+  id: STPrintedDocumentRequestConstructionWork
   name: technical work request
   components:
   - type: Paper
     content: doc-text-printer-request-construction-work
 
 - type: entity
-  parent: PrintedDocument
-  id: PrintedDocumentComplaintOffense
+  parent: STPrintedDocument
+  id: STPrintedDocumentComplaintOffense
   name: offense complaint
   components:
   - type: Paper
     content: doc-text-printer-complaint-offense
 
 - type: entity
-  parent: PrintedDocument
-  id: PrintedDocumentPermissionEquipment
+  parent: STPrintedDocument
+  id: STPrintedDocumentPermissionEquipment
   name: equipment or weapon carry permit
   components:
   - type: Paper
     content: doc-text-printer-permission-equipment
 
 - type: entity
-  parent: PrintedDocument
-  id: PrintedDocumentSearchPermission
+  parent: STPrintedDocument
+  id: STPrintedDocumentSearchPermission
   name: search warrant
   components:
   - type: Paper
     content: doc-text-printer-search-permission
 
 - type: entity
-  parent: PrintedDocument
-  id: PrintedDocumentPrescriptionDrugAuthorization
+  parent: STPrintedDocument
+  id: STPrintedDocumentPrescriptionDrugAuthorization
   name: prescription drug authorization
   components:
   - type: Paper
     content: doc-text-printer-prescription-drug-authorization
 
 - type: entity
-  parent: PrintedDocument
-  id: PrintedDocumentPermissionDisposeBody
+  parent: STPrintedDocument
+  id: STPrintedDocumentPermissionDisposeBody
   name: body disposal permit
   components:
   - type: Paper
     content: doc-text-printer-permission-dispose-body
 
 - type: entity
-  parent: PrintedDocument
-  id: PrintedDocumentConstructionPermit
+  parent: STPrintedDocument
+  id: STPrintedDocumentConstructionPermit
   name: construction permit
   components:
   - type: Paper
     content: doc-text-printer-construction-permit
 
 - type: entity
-  parent: PrintedDocument
-  id: PrintedDocumentOrderDismissal
+  parent: STPrintedDocument
+  id: STPrintedDocumentOrderDismissal
   name: dismissal order
   components:
   - type: Paper
     content: doc-text-printer-order-dismissal
 
 - type: entity
-  parent: PrintedDocument
-  id: PrintedDocumentOrderDeprivationAccess
+  parent: STPrintedDocument
+  id: STPrintedDocumentOrderDeprivationAccess
   name: access revocation order
   components:
   - type: Paper
     content: doc-text-printer-order-deprivation-access
 
 - type: entity
-  parent: PrintedDocument
-  id: PrintedDocumentOrderEncouragement
+  parent: STPrintedDocument
+  id: STPrintedDocumentOrderEncouragement
   name: promotion order
   components:
   - type: Paper
     content: doc-text-printer-order-encouragement
 
 - type: entity
-  parent: PrintedDocument
-  id: PrintedDocumentOrderParolePrisoner
+  parent: STPrintedDocument
+  id: STPrintedDocumentOrderParolePrisoner
   name: prisoner parole order
   components:
   - type: Paper
     content: doc-text-printer-order-parole-prisoner
 
 - type: entity
-  parent: PrintedDocument
-  id: PrintedDocumentOrderRecognizingSentienceCreature
+  parent: STPrintedDocument
+  id: STPrintedDocumentOrderRecognizingSentienceCreature
   name: sentience recognition order
   components:
   - type: Paper
     content: doc-text-printer-order-recognizing-rentience-creature
 
 - type: entity
-  parent: PrintedDocument
-  id: PrintedDocumentOrderMedicalIntervention
+  parent: STPrintedDocument
+  id: STPrintedDocumentOrderMedicalIntervention
   name: medical intervention order
   components:
   - type: Paper
     content: doc-text-printer-order-medical-intervention
 
 - type: entity
-  parent: PrintedDocument
-  id: PrintedDocumentProductManufacturingOrder
+  parent: STPrintedDocument
+  id: STPrintedDocumentProductManufacturingOrder
   name: production order
   components:
   - type: Paper
     content: doc-text-printer-product-manufacturing-order
 
 - type: entity
-  parent: PrintedDocument
-  id: PrintedDocumentOrderPurchaseResourcesEquipment
+  parent: STPrintedDocument
+  id: STPrintedDocumentOrderPurchaseResourcesEquipment
   name: purchase order
   components:
   - type: Paper
     content: doc-text-printer-order-purchase-resources-equipment
 
 - type: entity
-  parent: PrintedDocument
-  id: PrintedDocumentOrderingSpecialEquipment
+  parent: STPrintedDocument
+  id: STPrintedDocumentOrderingSpecialEquipment
   name: special equipment order
   components:
   - type: Paper
     content: doc-text-printer-ordering-special-equipment
 
 - type: entity
-  parent: PrintedDocument
-  id: PrintedDocumentCertificate
+  parent: STPrintedDocument
+  id: STPrintedDocumentCertificate
   name: certificate
   components:
   - type: Paper
     content: doc-text-printer-certificate
 
 - type: entity
-  parent: PrintedDocument
-  id: PrintedDocumentCertificateAdvancedTraining
+  parent: STPrintedDocument
+  id: STPrintedDocumentCertificateAdvancedTraining
   name: advanced training certificate
   components:
   - type: Paper
     content: doc-text-printer-certificate-advanced-training
 
 - type: entity
-  parent: PrintedDocument
-  id: PrintedDocumentCertificateOffense
+  parent: STPrintedDocument
+  id: STPrintedDocumentCertificateOffense
   name: citation of violation
   components:
   - type: Paper
     content: doc-text-printer-certificate-offense
 
 - type: entity
-  parent: PrintedDocument
-  id: PrintedDocumentDeathCertificate
+  parent: STPrintedDocument
+  id: STPrintedDocumentDeathCertificate
   name: death certificate
   components:
   - type: Paper
     content: doc-text-printer-death-certificate
 
 - type: entity
-  parent: PrintedDocument
-  id: PrintedDocumentMarriageCertificate
+  parent: STPrintedDocument
+  id: STPrintedDocumentMarriageCertificate
   name: marriage certificate
   components:
   - type: Paper
     content: doc-text-printer-marriage-certificate
 
 - type: entity
-  parent: PrintedDocument
-  id: PrintedDocumentDivorceCertificate
+  parent: STPrintedDocument
+  id: STPrintedDocumentDivorceCertificate
   name: divorce certificate
   components:
   - type: Paper
     content: doc-text-printer-divorce-certificate
 
 - type: entity
-  parent: PrintedDocument
-  id: PrintedDocumentClosingIndictment
+  parent: STPrintedDocument
+  id: STPrintedDocumentClosingIndictment
   name: indictment
   components:
   - type: Paper
     content: doc-text-printer-closing-indictment
 
 - type: entity
-  parent: PrintedDocument
-  id: PrintedDocumentSentence
+  parent: STPrintedDocument
+  id: STPrintedDocumentSentence
   name: sentence
   components:
   - type: Paper
     content: doc-text-printer-sentence
 
 - type: entity
-  parent: PrintedDocument
-  id: PrintedDocumentJudgment
+  parent: STPrintedDocument
+  id: STPrintedDocumentJudgment
   name: court judgment
   components:
   - type: Paper
     content: doc-text-printer-judgment
 
 - type: entity
-  parent: PrintedDocument
-  id: PrintedDocumentStatementHealth
+  parent: STPrintedDocument
+  id: STPrintedDocumentStatementHealth
   name: medical report
   components:
   - type: Paper
     content: doc-text-printer-statement-health
 
 - type: entity
-  parent: PrintedSyndieDocument
-  id: PrintedDocumentErrorLoadingFormHeader
+  parent: STPrintedSyndieDocument
+  id: STPrintedDocumentErrorLoadingFormHeader
   name: HEADER LOAD ERROR
   components:
   - type: Paper
     content: doc-text-printer-error-loading-form-header
 
 - type: entity
-  parent: PrintedSyndieDocument
-  id: PrintedDocumentNoticeOfLiquidation
+  parent: STPrintedSyndieDocument
+  id: STPrintedDocumentNoticeOfLiquidation
   name: TERMINATION NOTICE
   components:
   - type: Paper
     content: doc-text-printer-notice-of-liquidation
 
 - type: entity
-  parent: PrintedSyndieDocument
-  id: PrintedDocumentBusinessDeal
+  parent: STPrintedSyndieDocument
+  id: STPrintedDocumentBusinessDeal
   name: BUSINESS DEAL
   components:
   - type: Paper
     content: doc-text-printer-business-deal
 
 - type: entity
-  parent: PrintedSyndieDocument
-  id: PrintedDocumentNoteBeginningMilitaryActions
+  parent: STPrintedSyndieDocument
+  id: STPrintedDocumentNoteBeginningMilitaryActions
   name: DECLARATION OF WAR
   components:
   - type: Paper
     content: doc-text-printer-note-beginning-military-actions
 
 - type: entity
-  parent: PrintedSyndieDocument
-  id: PrintedDocumentReportAccomplishmentGoals
+  parent: STPrintedSyndieDocument
+  id: STPrintedDocumentReportAccomplishmentGoals
   name: OBJECTIVE COMPLETION REPORT
   components:
   - type: Paper
