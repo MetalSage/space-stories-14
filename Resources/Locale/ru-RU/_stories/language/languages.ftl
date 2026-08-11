@@ -13,6 +13,9 @@ language-Nekomimetic-name = некомиметик
 language-Chitin-name = хитин
 language-Avalese-name = авалийский
 language-Squeakspeak-name = писклявый
+language-Machine-name = машинный код
+language-Shadowtongue-name = теневой язык
+language-Codespeak-name = шифрокод
 
 language-menu-title = Языки
 game-hud-open-language-menu-button-tooltip = Открыть меню языков.

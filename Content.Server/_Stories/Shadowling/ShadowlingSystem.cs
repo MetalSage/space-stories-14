@@ -1,6 +1,9 @@
 using System.Linq;
 using Content.Server._Stories.Conversion;
+using Content.Server._Stories.Language.Systems;
 using Content.Shared._Stories.Conversion;
+using Content.Shared._Stories.Language;
+using Content.Shared._Stories.Language.Prototypes;
 using Content.Shared._Stories.Mindshield;
 using Content.Shared._Stories.Shadowling;
 using Content.Shared._Stories.Vision.Components;
@@ -10,6 +13,7 @@ using Content.Shared.Body;
 using Content.Shared.Mindshield.Components;
 using Content.Shared.Mobs;
 using Content.Shared.Mobs.Systems;
+using Robust.Shared.Prototypes;
 
 namespace Content.Server._Stories.Shadowling;
 
@@ -21,6 +25,9 @@ public sealed partial class ShadowlingSystem : EntitySystem
     [Dependency] private SharedVisionSystem _vision = default!;
     [Dependency] private SharedAppearanceSystem _appearance = default!;
     [Dependency] private SharedVisualBodySystem _visualBody = default!;
+    [Dependency] private LanguageSystem _language = default!;
+
+    private static readonly ProtoId<LanguagePrototype> ShadowtongueLanguage = "Shadowtongue";
 
     public override void Initialize()
     {
@@ -37,6 +44,8 @@ public sealed partial class ShadowlingSystem : EntitySystem
 
     private void OnInit(EntityUid uid, ShadowlingComponent component, ComponentInit args)
     {
+        _language.AddLanguage(uid, ShadowtongueLanguage, source: LanguageSource.Shadowling);
+
         RefreshActions(uid, component);
 
         if (!HasComp<VisionProviderComponent>(uid))
@@ -78,6 +87,8 @@ public sealed partial class ShadowlingSystem : EntitySystem
         if (args.Handled)
             return;
 
+        _language.AddLanguage(uid, ShadowtongueLanguage, source: LanguageSource.Shadowling);
+
         _appearance.SetData(uid, ShadowlingThrallVisuals.IsThrall, true);
 
         if (_visualBody.TryGatherMarkingsData(uid, null, out var profiles, out _, out _) && profiles.Count > 0)
@@ -100,6 +111,8 @@ public sealed partial class ShadowlingSystem : EntitySystem
     {
         if (args.Handled)
             return;
+
+        _language.RemoveLanguage(uid, ShadowtongueLanguage, source: LanguageSource.Shadowling);
 
         _appearance.SetData(uid, ShadowlingThrallVisuals.IsThrall, false);
 

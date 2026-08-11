@@ -118,6 +118,15 @@ public abstract partial class SharedLanguageSystem : EntitySystem
         return $"[color={color.ToHex()}]{escapedMessage}[/color]";
     }
 
+    public string LanguageIconMarkup(ProtoId<LanguagePrototype> language, float comprehension = 1f)
+    {
+        if (!_prototypeManager.TryIndex(language, out var languageProto) || languageProto.DisplayedLanguageIcon is not { } icon)
+            return string.Empty;
+
+        var partial = comprehension is > 0f and < 1f;
+        return $"[langicon language=\"{icon}\" partial=\"{(partial ? "true" : "false")}\"][/langicon]";
+    }
+
     public string ObfuscateMessage(string message, ProtoId<LanguagePrototype> language, float comprehension = 0f)
     {
         if (comprehension >= 1f)

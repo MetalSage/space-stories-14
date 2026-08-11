@@ -553,6 +553,188 @@
     - skree
 
 - type: language
+  id: Codespeak
+  name: Codespeak
+  isVisibleLanguage: true
+  showLanguageName: false
+  showLanguageIcon: false
+  obfuscationMethod: !type:PhraseObfuscation
+    minPhrases: 1
+    maxPhrases: 3
+    separator: ", "
+    replacement:
+    - два кофе, один без сахара
+    - как обычно, но послаще
+    - двойная порция, без льда
+    - заказ готов на кассе
+    - запишите на мой счёт
+    - сегодня в меню есть кое-что особое
+    - счёт, пожалуйста
+    - навынос, не здесь
+    - столик на двоих у окна
+    - можно ещё чашечку
+    - без лука в этот раз
+    - автомат с газировкой опять сломался
+    - салфеток побольше, пожалуйста
+    - кухня ещё работает?
+    - мне то же самое, что и им
+    - одну большую, с двойным сыром
+    - кофе совсем остыл
+    - три ложки сахара, без сливок
+    - запишите столик на моё имя
+    - наша обычная кабинка свободна
+    - принесите ещё один стул
+    - где мой заказ, я жду уже полчаса
+    - это блюдо сегодня не советую брать
+    - у нас закончился лёд
+    - добавьте корицы, если можно
+    - я возьму то же, что вчера
+    - курьер уже выехал
+    - меню поменяли на этой неделе
+    - давайте разделим счёт пополам
+    - у вас есть столик у окна
+    - бармен, повторите то же самое
+    - скидка действует только до обеда
+    - закажите мне что-нибудь горячее
+    - вода без газа, пожалуйста
+    - у нас гости, нужен ещё один прибор
+    - эта смена подаёт только выпечку
+    - десерт за счёт заведения?
+    - очередь на кассе не двигается
+    - пирожки ещё тёплые?
+    - посуду можно не убирать, мы ещё сидим
+
+- type: language
+  id: Shadowtongue
+  name: Shadowtongue
+  isVisibleLanguage: true
+  speechOverride:
+    color: "#4A148C"
+  obfuscationMethod: !type:SyllableObfuscation
+    minSyllables: 1
+    maxSyllables: 2
+    replacement:
+    - er
+    - sint
+    - en
+    - et
+    - nor
+    - bahr
+    - sint
+    - un
+    - ku'elm
+    - lakor
+    - eri
+    - noj
+    - dashilu
+    - as
+    - ot
+    - lih
+    - morh
+    - ghinu
+    - kin
+    - sha
+    - marik
+    - jibu
+    - sudas
+    - fut
+    - kol
+    - bivi
+    - pohim
+    - devohr
+    - ru
+    - huirf
+    - neiris
+    - sut
+    - devehr
+    - iru
+    - gher
+    - gan
+    - ujil
+    - lacor
+    - bahris
+    - ghar
+    - alnef
+    - wah
+    - khurdhar
+    - bar
+    - et
+    - ilu
+    - dash
+    - diru
+    - noj
+    - de
+    - damjulan
+    - luvahr
+    - telshahr
+    - tifur
+    - enhi
+    - am
+    - bahr
+    - nei
+    - neibahri
+    - n'chow
+    - n'wah
+    - s'wit
+    - b'vehk
+    - f'lah
+    - muth
+    - sera
+    - sedura
+    - bal
+    - dun
+
+- type: language
+  id: Machine
+  name: Encoded Audio Language
+  isVisibleLanguage: true
+  speechOverride:
+    color: "#00E676"
+  mutualUnderstanding:
+    Draconic: 0.66
+    Moffic: 0.66
+    Calcic: 0.66
+    Slime: 0.66
+    Buzzwords: 0.66
+    Sylvan: 0.66
+    VoxPidgin: 0.66
+    Canilunzt: 0.66
+    Dwarvish: 0.66
+    Gingerspeak: 0.66
+    Nekomimetic: 0.66
+    Chitin: 0.66
+    Avalese: 0.66
+    Squeakspeak: 0.66
+  obfuscationMethod: !type:SyllableObfuscation
+    minSyllables: 1
+    maxSyllables: 2
+    replacement:
+    - beep
+    - beep
+    - beep
+    - beep
+    - beep
+    - boop
+    - boop
+    - boop
+    - bop
+    - bop
+    - dee
+    - dee
+    - doo
+    - doo
+    - hiss
+    - hss
+    - buzz
+    - buzz
+    - bzz
+    - ksssh
+    - keey
+    - wurr
+    - wahh
+    - tzzz
+
+- type: language
   id: Squeakspeak
   name: Squeakspeak
   isVisibleLanguage: true
