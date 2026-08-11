@@ -118,7 +118,7 @@ public sealed partial class LanguageMenuUIController : UIController, IOnStateEnt
 
     private void RefreshList()
     {
-        if (_window == null || !_window.IsOpen)
+        if (_window == null)
             return;
 
         _window.LanguageList.RemoveAllChildren();

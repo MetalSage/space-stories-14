@@ -1,26 +1,32 @@
-# Every species starts fluent in GalacticCommon so default gameplay stays unaffected.
-# Reptilian additionally knows Draconic, understood only by other Draconic speakers
-# (or anyone with a translator, once stage 5 adds those).
-
 - type: speciesLanguages
   id: Arachnid
-  spokenLanguages: [GalacticCommon]
-  understoodLanguages: [GalacticCommon]
+  spokenLanguages: [GalacticCommon, Buzzwords]
+  understoodLanguages: [GalacticCommon, Buzzwords]
+
+- type: speciesLanguages
+  id: Avali
+  spokenLanguages: [GalacticCommon, Avalese]
+  understoodLanguages: [GalacticCommon, Avalese]
 
 - type: speciesLanguages
   id: Diona
-  spokenLanguages: [GalacticCommon]
-  understoodLanguages: [GalacticCommon]
+  spokenLanguages: [GalacticCommon, Sylvan]
+  understoodLanguages: [GalacticCommon, Sylvan]
 
 - type: speciesLanguages
   id: Dwarf
-  spokenLanguages: [GalacticCommon]
-  understoodLanguages: [GalacticCommon]
+  spokenLanguages: [GalacticCommon, Dwarvish]
+  understoodLanguages: [GalacticCommon, Dwarvish]
+
+- type: speciesLanguages
+  id: Felinid
+  spokenLanguages: [GalacticCommon, Nekomimetic]
+  understoodLanguages: [GalacticCommon, Nekomimetic]
 
 - type: speciesLanguages
   id: Gingerbread
-  spokenLanguages: [GalacticCommon]
-  understoodLanguages: [GalacticCommon]
+  spokenLanguages: [GalacticCommon, Gingerspeak]
+  understoodLanguages: [GalacticCommon, Gingerspeak]
 
 - type: speciesLanguages
   id: Human
@@ -28,9 +34,14 @@
   understoodLanguages: [GalacticCommon]
 
 - type: speciesLanguages
+  id: Kidan
+  spokenLanguages: [GalacticCommon, Chitin]
+  understoodLanguages: [GalacticCommon, Chitin]
+
+- type: speciesLanguages
   id: Moth
-  spokenLanguages: [GalacticCommon]
-  understoodLanguages: [GalacticCommon]
+  spokenLanguages: [GalacticCommon, Moffic]
+  understoodLanguages: [GalacticCommon, Moffic]
 
 - type: speciesLanguages
   id: Reptilian
@@ -38,21 +49,26 @@
   understoodLanguages: [GalacticCommon, Draconic]
 
 - type: speciesLanguages
+  id: Rodentia
+  spokenLanguages: [GalacticCommon, Squeakspeak]
+  understoodLanguages: [GalacticCommon, Squeakspeak]
+
+- type: speciesLanguages
   id: Skeleton
-  spokenLanguages: [GalacticCommon]
-  understoodLanguages: [GalacticCommon]
+  spokenLanguages: [GalacticCommon, Calcic]
+  understoodLanguages: [GalacticCommon, Calcic]
 
 - type: speciesLanguages
   id: SlimePerson
-  spokenLanguages: [GalacticCommon]
-  understoodLanguages: [GalacticCommon]
+  spokenLanguages: [GalacticCommon, Slime]
+  understoodLanguages: [GalacticCommon, Slime]
 
 - type: speciesLanguages
   id: Vox
-  spokenLanguages: [GalacticCommon]
-  understoodLanguages: [GalacticCommon]
+  spokenLanguages: [GalacticCommon, VoxPidgin]
+  understoodLanguages: [GalacticCommon, VoxPidgin]
 
 - type: speciesLanguages
   id: Vulpkanin
-  spokenLanguages: [GalacticCommon]
-  understoodLanguages: [GalacticCommon]
+  spokenLanguages: [GalacticCommon, Canilunzt]
+  understoodLanguages: [GalacticCommon, Canilunzt]

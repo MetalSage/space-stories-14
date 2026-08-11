@@ -1,5 +1,18 @@
-language-galacticcommon-name = галактический общий
-language-draconic-name = драконий
+language-GalacticCommon-name = галактический общий
+language-Draconic-name = драконий
+language-Moffic-name = моффийский
+language-Calcic-name = кальцитовый
+language-Slime-name = слаймский
+language-Buzzwords-name = жужжащий
+language-Sylvan-name = сильванский
+language-VoxPidgin-name = вокс-пиджин
+language-Canilunzt-name = канилунц
+language-Dwarvish-name = дворфийский
+language-Gingerspeak-name = пряничный
+language-Nekomimetic-name = некомиметик
+language-Chitin-name = хитин
+language-Avalese-name = авалийский
+language-Squeakspeak-name = писклявый
 
 language-menu-title = Языки
 game-hud-open-language-menu-button-tooltip = Открыть меню языков.

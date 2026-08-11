@@ -1,5 +1,18 @@
-language-galacticcommon-name = Galactic Common
-language-draconic-name = Draconic
+language-GalacticCommon-name = Galactic Common
+language-Draconic-name = Draconic
+language-Moffic-name = Moffic
+language-Calcic-name = Calcic
+language-Slime-name = Slime
+language-Buzzwords-name = Buzzwords
+language-Sylvan-name = Sylvan
+language-VoxPidgin-name = Vox Pidgin
+language-Canilunzt-name = Canilunzt
+language-Dwarvish-name = Dwarvish
+language-Gingerspeak-name = Gingerspeak
+language-Nekomimetic-name = Nekomimetic
+language-Chitin-name = Chitin
+language-Avalese-name = Avalese
+language-Squeakspeak-name = Squeakspeak
 
 language-menu-title = Languages
 game-hud-open-language-menu-button-tooltip = Open the language menu.
