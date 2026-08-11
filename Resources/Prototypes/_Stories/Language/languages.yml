@@ -2,6 +2,9 @@
   id: GalacticCommon
   name: Galactic Common
   isVisibleLanguage: true
+  languageIcon:
+    sprite: /Textures/_Stories/Interface/language_icons.rsi
+    state: GalacticCommon
   mutualUnderstanding:
     VoxPidgin: 0.25
   obfuscationMethod: !type:SyllableObfuscation
@@ -300,9 +303,6 @@
   id: VoxPidgin
   name: Vox Pidgin
   isVisibleLanguage: true
-  languageIcon:
-    sprite: /Textures/_Stories/Interface/language_icons.rsi
-    state: Unknown
   speechOverride:
     color: "#455A64"
   mutualUnderstanding:
@@ -337,9 +337,6 @@
   id: Canilunzt
   name: Canilunzt
   isVisibleLanguage: true
-  languageIcon:
-    sprite: /Textures/_Stories/Interface/language_icons.rsi
-    state: Unknown
   speechOverride:
     color: "#8D6E63"
   mutualUnderstanding:
@@ -405,9 +402,6 @@
   id: Dwarvish
   name: Dwarvish
   isVisibleLanguage: true
-  languageIcon:
-    sprite: /Textures/_Stories/Interface/language_icons.rsi
-    state: Unknown
   speechOverride:
     color: "#C9A227"
   obfuscationMethod: !type:SyllableObfuscation
@@ -439,9 +433,6 @@
   id: Gingerspeak
   name: Gingerspeak
   isVisibleLanguage: true
-  languageIcon:
-    sprite: /Textures/_Stories/Interface/language_icons.rsi
-    state: Unknown
   speechOverride:
     color: "#EC407A"
   obfuscationMethod: !type:SyllableObfuscation
@@ -537,9 +528,6 @@
   id: Chitin
   name: Chitin
   isVisibleLanguage: true
-  languageIcon:
-    sprite: /Textures/_Stories/Interface/language_icons.rsi
-    state: Unknown
   speechOverride:
     color: "#827717"
   mutualUnderstanding:
@@ -559,9 +547,6 @@
   id: Avalese
   name: Avalese
   isVisibleLanguage: true
-  languageIcon:
-    sprite: /Textures/_Stories/Interface/language_icons.rsi
-    state: Unknown
   speechOverride:
     color: "#29B6F6"
   mutualUnderstanding:
@@ -804,9 +789,6 @@
   id: Squeakspeak
   name: Squeakspeak
   isVisibleLanguage: true
-  languageIcon:
-    sprite: /Textures/_Stories/Interface/language_icons.rsi
-    state: Unknown
   speechOverride:
     color: "#BCAAA4"
   obfuscationMethod: !type:SyllableObfuscation
