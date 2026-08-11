@@ -1,6 +1,7 @@
 using System.Linq;
 using System.Text;
 using Content.Server.Speech.Prototypes;
+using Content.Shared._Stories.Language.Prototypes;
 using Content.Shared.Chat;
 using Content.Shared.Ghost;
 using Content.Shared.Players;
@@ -64,7 +65,19 @@ public sealed partial class ChatSystem
     /// <summary>
     ///     Sends a chat message to the given players in range of the source entity.
     /// </summary>
-    private void SendInVoiceRange(ChatChannel channel, string message, string wrappedMessage, EntityUid source, ChatTransmitRange range, NetUserId? author = null)
+    private void SendInVoiceRange(
+        ChatChannel channel,
+        string message,
+        string wrappedMessage,
+        EntityUid source,
+        ChatTransmitRange range,
+        NetUserId? author = null,
+        // Stories-Language Start
+        ProtoId<LanguagePrototype>? language = null,
+        string? obfuscatedMessage = null,
+        string? wrappedObfuscatedMessage = null
+        // Stories-Language End
+        )
     {
         foreach (var (session, data) in GetRecipients(source, VoiceRange))
         {
@@ -72,6 +85,23 @@ public sealed partial class ChatSystem
             if (entRange == MessageRangeCheckResult.Disallowed)
                 continue;
             var entHideChat = entRange == MessageRangeCheckResult.HideChat;
+
+            // Stories-Language Start
+            if (language != null && obfuscatedMessage != null && wrappedObfuscatedMessage != null &&
+                session.AttachedEntity is { Valid: true } listener)
+            {
+                var needsLos = ProtoMan.TryIndex(language.Value, out var languageProto) && languageProto.NeedsLOS;
+                var understands = _language.CanUnderstand(listener, language.Value) &&
+                    (!needsLos || _examineSystem.InRangeUnOccluded(source, listener, VoiceRange));
+
+                if (!understands)
+                {
+                    _chatManager.ChatMessageToOne(channel, obfuscatedMessage, wrappedObfuscatedMessage, source, entHideChat, session.Channel, author: author);
+                    continue;
+                }
+            }
+            // Stories-Language End
+
             _chatManager.ChatMessageToOne(channel, message, wrappedMessage, source, entHideChat, session.Channel, author: author);
         }
 

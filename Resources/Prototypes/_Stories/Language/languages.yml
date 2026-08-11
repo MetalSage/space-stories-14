@@ -1,0 +1,37 @@
+- type: language
+  id: GalacticCommon
+  name: Galactic Common
+  isVisibleLanguage: true
+  obfuscationMethod: !type:SyllableObfuscation
+    minSyllables: 1
+    maxSyllables: 3
+    replacement:
+    - la
+    - ba
+    - mo
+    - ne
+    - ri
+    - ta
+    - ko
+    - shu
+    - fen
+    - vor
+
+- type: language
+  id: Draconic
+  name: Draconic
+  isVisibleLanguage: true
+  obfuscationMethod: !type:SyllableObfuscation
+    minSyllables: 2
+    maxSyllables: 4
+    replacement:
+    - za
+    - az
+    - hss
+    - kra
+    - ryth
+    - vex
+    - oth
+    - grr
+    - sca
+    - thra

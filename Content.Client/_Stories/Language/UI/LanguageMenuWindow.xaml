@@ -1,0 +1,10 @@
+<windows:LanguageMenuWindow
+    xmlns="https://spacestation14.io"
+    xmlns:windows="clr-namespace:Content.Client._Stories.Language.UI"
+    Title="{Loc 'language-menu-title'}"
+    MinWidth="250"
+    MinHeight="150">
+    <ScrollContainer>
+        <BoxContainer Orientation="Vertical" Name="LanguageList" Access="Public" Margin="4"/>
+    </ScrollContainer>
+</windows:LanguageMenuWindow>

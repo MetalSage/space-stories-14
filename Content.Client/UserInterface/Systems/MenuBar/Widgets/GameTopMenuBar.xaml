@@ -54,6 +54,16 @@
         AppendStyleClass="{x:Static style:StyleClass.ButtonSquare}"
         />
     <ui:MenuButton
+        Name="LanguageButton"
+        Access="Internal"
+        Icon="{xe:Tex '/Textures/Interface/VerbIcons/information.svg.192dpi.png'}"
+        ToolTip="{Loc 'game-hud-open-language-menu-button-tooltip'}"
+        BoundKey = "{x:Static is:ContentKeyFunctions.OpenLanguageMenu}"
+        MinSize="42 64"
+        HorizontalExpand="True"
+        AppendStyleClass="{x:Static style:StyleClass.ButtonSquare}"
+        />
+    <ui:MenuButton
         Name="CraftingButton"
         Access="Internal"
         Icon="{xe:Tex '/Textures/Interface/hammer.svg.192dpi.png'}"

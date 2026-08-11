@@ -1,0 +1,58 @@
+# Every species starts fluent in GalacticCommon so default gameplay stays unaffected.
+# Reptilian additionally knows Draconic, understood only by other Draconic speakers
+# (or anyone with a translator, once stage 5 adds those).
+
+- type: speciesLanguages
+  id: Arachnid
+  spokenLanguages: [GalacticCommon]
+  understoodLanguages: [GalacticCommon]
+
+- type: speciesLanguages
+  id: Diona
+  spokenLanguages: [GalacticCommon]
+  understoodLanguages: [GalacticCommon]
+
+- type: speciesLanguages
+  id: Dwarf
+  spokenLanguages: [GalacticCommon]
+  understoodLanguages: [GalacticCommon]
+
+- type: speciesLanguages
+  id: Gingerbread
+  spokenLanguages: [GalacticCommon]
+  understoodLanguages: [GalacticCommon]
+
+- type: speciesLanguages
+  id: Human
+  spokenLanguages: [GalacticCommon]
+  understoodLanguages: [GalacticCommon]
+
+- type: speciesLanguages
+  id: Moth
+  spokenLanguages: [GalacticCommon]
+  understoodLanguages: [GalacticCommon]
+
+- type: speciesLanguages
+  id: Reptilian
+  spokenLanguages: [GalacticCommon, Draconic]
+  understoodLanguages: [GalacticCommon, Draconic]
+
+- type: speciesLanguages
+  id: Skeleton
+  spokenLanguages: [GalacticCommon]
+  understoodLanguages: [GalacticCommon]
+
+- type: speciesLanguages
+  id: SlimePerson
+  spokenLanguages: [GalacticCommon]
+  understoodLanguages: [GalacticCommon]
+
+- type: speciesLanguages
+  id: Vox
+  spokenLanguages: [GalacticCommon]
+  understoodLanguages: [GalacticCommon]
+
+- type: speciesLanguages
+  id: Vulpkanin
+  spokenLanguages: [GalacticCommon]
+  understoodLanguages: [GalacticCommon]
