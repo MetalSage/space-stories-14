@@ -1,6 +1,8 @@
-﻿using Content.Shared.Interaction.Components;
+using Content.Shared.Access;
+using Content.Shared.Interaction.Components;
 using Content.Shared.Inventory;
 using Content.Shared.Radio;
+using Content.Shared.Roles;
 using Content.Shared.Silicons.Borgs.Components;
 using Content.Shared.Whitelist;
 using Robust.Shared.Audio;
@@ -81,6 +83,11 @@ public sealed partial class BorgTypePrototype : IPrototype
     /// <seealso cref="BorgModuleComponent.DefaultModule"/>
     [DataField]
     public EntProtoId[] DefaultModules = [];
+
+    // Stories-Borg-Start
+    [DataField]
+    public List<HashSet<ProtoId<AccessLevelPrototype>>>? AccessReaderAccess;
+    // Stories-Borg-End
 
     /// <summary>
     /// Additional components to add to the borg entity when this type is selected.

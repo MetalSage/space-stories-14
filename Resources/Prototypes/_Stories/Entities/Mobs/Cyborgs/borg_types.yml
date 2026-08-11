@@ -1,0 +1,50 @@
+- type: borgType
+  id: security
+
+  dummyPrototype: STBorgChassisSecurity
+
+  extraModuleCount: 3
+  moduleWhitelist:
+    tags:
+    - BorgModuleGeneric
+    - STBorgModuleSecurity
+
+  defaultModules:
+  - BorgModulePrying
+  - STBorgModuleSecurity
+  - BorgModuleFireExtinguisher
+
+  radioChannels:
+  - Science
+  - Security
+
+  accessReaderAccess:
+  - - Security
+  - - Command
+
+  addComponents:
+  - type: ShowJobIcons
+  - type: ShowMindShieldIcons
+  - type: ShowCriminalRecordIcons
+  - type: ShowContrabandDetails
+  - type: ShowHealthBars
+    damageContainers:
+    - Biological
+    - HalfDemon
+    - Inorganic
+    - Silicon
+  - type: ShowHealthIcons
+    damageContainers:
+    - Biological
+    - HalfDemon
+    - Inorganic
+    - Silicon
+
+  inventoryTemplateId: borgShort
+  spriteBodyState: sec
+  spriteHasMindState: sec_e
+  spriteNoMindState: sec_e_r
+  spriteToggleLightState: sec_l
+
+  petSuccessString: stories-petting-success-security-cyborg
+  petFailureString: stories-petting-failure-security-cyborg

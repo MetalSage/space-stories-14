@@ -46,7 +46,7 @@
     thresholds:
       0: Alive
       100: Critical
-      300: Dead # Same as destruction threshold. Borgs act exactly like crit when dead, except for ghosting on move
+      200: Dead # Stories-Borg
     stateAlertDict:
       Alive: BorgHealth
       Critical: BorgCrit
@@ -81,8 +81,22 @@
     - ActionViewLaws
   - type: EmagSiliconLaw
     stunTime: 5
+  # Stories-Borg-Start
   - type: SiliconLawProvider
-    laws: Crewsimov
+    laws: NTDefault
+  - type: ShowHealthBars
+    damageContainers:
+    - Biological
+    - HalfDemon
+    - Inorganic
+    - Silicon
+  - type: ShowHealthIcons
+    damageContainers:
+    - Biological
+    - HalfDemon
+    - Inorganic
+    - Silicon
+  # Stories-Borg-End
   - type: Inventory
     templateId: borg
   - type: Hands
@@ -148,7 +162,7 @@
     emoteSounds: UnisexSilicon
     wilhelmProbability: 0
   - type: DamagedSiliconAccent
-    damageAtMaxCorruption: 300
+    damageAtMaxCorruption: 200 # Stories-Borg
   - type: UnblockableSpeech
   - type: FootstepModifier
     footstepSoundCollection:
@@ -167,6 +181,7 @@
     - enum.BorgUiKey.Key
   - type: LockedWiresPanel
   - type: Damageable
+    damageModifierSet: STBorgMetallic # Stories-Borg
   - type: Injurable
     damageContainer: Silicon
   - type: Destructible
@@ -183,7 +198,7 @@
             volume: 5
     - trigger:
         !type:DamageTrigger
-        damage: 300
+        damage: 200 # Stories-Borg
       behaviors:
       - !type:PlaySoundBehavior
         sound:
@@ -379,6 +394,8 @@
     color: "#dd200b"
   - type: BypassLock
     bypassDelay: 15 # We don't want people to easily be able to remove syndieborg brains.
+  - type: Damageable
+    damageModifierSet: STBorgStructuralMetallicStrong # Stories-Borg
 
 - type: entity
   id: BaseBorgChassisDerelict
@@ -405,6 +422,8 @@
   parent: BaseBorgChassis # We don't want them to see Nukies or have syndi comms, their database is out of date
   abstract: true
   components:
+  - type: Damageable
+    damageModifierSet: STBorgStructuralMetallicStrong # Stories-Borg
   - type: SiliconLawProvider
     laws: SyndicateStatic #Non-subverted version so they can still be changed
   - type: StartIonStormed
@@ -459,7 +478,7 @@
     thresholds: # slightly tankier than a normal borg
       0: Alive
       125: Critical
-      375: Dead # Same as destruction threshold. Borgs act exactly like crit when dead, except for ghosting on move
+      250: Dead # Stories-Borg
   - type: EmagSiliconLaw # should xenoborgs be emagable?
     stunTime: 5
   - type: SiliconLawProvider
@@ -520,7 +539,7 @@
             volume: 5
     - trigger:
         !type:DamageTrigger
-        damage: 375
+        damage: 250 # Stories-Borg
       behaviors:
       - !type:PlaySoundBehavior
         sound:

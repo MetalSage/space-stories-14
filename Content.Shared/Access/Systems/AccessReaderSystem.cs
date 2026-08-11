@@ -488,6 +488,10 @@ public sealed partial class AccessReaderSystem : EntitySystem
     {
         ent.Comp.AccessLists.Clear();
         AddAccesses(ent, accesses);
+        // Stories-Borg-Start
+        ent.Comp.AccessListsOriginal = [.. ent.Comp.AccessLists];
+        Dirty(ent);
+        // Stories-Borg-End
     }
 
     /// <inheritdoc cref = "TrySetAccesses"/>
@@ -504,6 +508,10 @@ public sealed partial class AccessReaderSystem : EntitySystem
     {
         ent.Comp.AccessLists.Clear();
         AddAccesses(ent, accesses);
+        // Stories-Borg-Start
+        ent.Comp.AccessListsOriginal = [.. ent.Comp.AccessLists];
+        Dirty(ent);
+        // Stories-Borg-End
     }
 
     /// <summary>

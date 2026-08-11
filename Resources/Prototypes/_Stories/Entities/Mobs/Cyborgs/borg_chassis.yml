@@ -1,0 +1,80 @@
+- type: entity
+  id: STBorgChassisSecurity
+  parent: [ BorgChassisSelectable, ShowSecurityIcons ]
+  name: security cyborg
+  description: A peacekeeper cyborg built to protect the station crew and subdue criminals according to its laws.
+  components:
+  - type: Damageable
+    damageModifierSet: STBorgStructuralMetallicStrong
+  - type: BorgSwitchableType
+    selectedBorgType: security
+  - type: AccessReader
+    access: [["Security"], ["Command"]]
+  - type: ContainerFill
+    containers:
+      borg_brain:
+      - PositronicBrain
+  - type: ItemSlots
+    slots:
+      cell_slot:
+        name: power-cell-slot-component-slot-name-default
+        startingItem: PowerCellHigh
+
+- type: entity
+  parent: [ BaseBorgChassisDerelict, ShowSecurityIcons ]
+  id: STSecurityBorgChassisDerelict
+  name: derelict security cyborg
+  description: A man-machine hybrid that assists the security department. This one's armor and non-lethal systems show heavy wear and tear.
+  components:
+  - type: Damageable
+    damageModifierSet: STBorgStructuralMetallicStrong
+  - type: Sprite
+    layers:
+    - state: sec
+      map: ["movement"]
+    - state: sec_e_r
+      map: ["enum.BorgVisualLayers.Light"]
+      shader: unshaded
+      visible: false
+    - state: sec_l
+      shader: unshaded
+      map: ["light"]
+      visible: false
+  - type: BorgChassis
+    maxModules: 5
+    moduleWhitelist:
+      tags:
+      - BorgModuleGeneric
+      - STBorgModuleSecurity
+    hasMindState: sec_e
+    noMindState: sec_e_r
+  - type: ContainerFill
+    containers:
+      borg_brain:
+      - PositronicBrain
+      borg_module:
+      - BorgModulePrying
+      - STBorgModuleSecurity
+      - BorgModuleFireExtinguisher
+  - type: ItemSlots
+    slots:
+      cell_slot:
+        name: power-cell-slot-component-slot-name-default
+        startingItem: PowerCellHigh
+
+- type: entity
+  parent: STBorgChassisSecurity
+  id: STPlayerBorgSecurity
+  suffix: Battery, Module, Brain
+  components:
+  - type: ContainerFill
+    containers:
+      borg_brain:
+      - PositronicBrain
+  - type: ItemSlots
+    slots:
+      cell_slot:
+        name: power-cell-slot-component-slot-name-default
+        startingItem: PowerCellHigh
+  - type: RandomMetadata
+    nameSegments: [NamesBorg]

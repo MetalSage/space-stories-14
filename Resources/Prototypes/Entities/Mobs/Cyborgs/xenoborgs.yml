@@ -95,7 +95,7 @@
     thresholds:
       0: Alive
       250: Critical
-      750: Dead # Same as destruction threshold. Borgs act exactly like crit when dead, except for ghosting on move
+      500: Dead # Stories-Borg
     stateAlertDict:
       Alive: BorgHealth
       Critical: BorgCrit
@@ -115,7 +115,7 @@
             volume: 5
     - trigger:
         !type:DamageTrigger
-        damage: 750
+        damage: 500 # Stories-Borg
       behaviors:
       - !type:PlaySoundBehavior
         sound:

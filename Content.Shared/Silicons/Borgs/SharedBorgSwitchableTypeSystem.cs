@@ -1,7 +1,10 @@
+using Content.Shared.Access;
+using Content.Shared.Access.Systems;
 using Content.Shared.Actions;
 using Content.Shared.Interaction;
 using Content.Shared.Interaction.Components;
 using Content.Shared.Movement.Components;
+using Content.Shared.Popups;
 using Content.Shared.Silicons.Borgs.Components;
 using Robust.Shared.Player;
 using Robust.Shared.Prototypes;
@@ -19,6 +22,10 @@ public abstract partial class SharedBorgSwitchableTypeSystem : EntitySystem
     [Dependency] private SharedActionsSystem _actionsSystem = default!;
     [Dependency] private SharedUserInterfaceSystem _userInterface = default!;
     [Dependency] private InteractionPopupSystem _interactionPopup = default!;
+    // Stories-Borg-Start
+    [Dependency] private AccessReaderSystem _accessReader = default!;
+    [Dependency] private SharedPopupSystem _popup = default!;
+    // Stories-Borg-End
 
     public static readonly EntProtoId ActionId = "ActionSelectBorgType";
 
@@ -72,7 +79,7 @@ public abstract partial class SharedBorgSwitchableTypeSystem : EntitySystem
         if (ent.Comp.SelectedBorgType != null)
             return;
 
-        if (!ProtoMan.HasIndex(args.Prototype))
+        if (!ProtoMan.TryIndex(args.Prototype, out var prototype)) // Stories-Borg
             return;
 
         SelectBorgModule(ent, args.Prototype);
