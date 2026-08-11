@@ -52,22 +52,25 @@ public sealed partial class ChatSystem
 
         var speechVerb = Loc.GetString(_random.Pick(speech.SpeechVerbStrings));
 
+        // Stories-Language Start
+        var language = _language.GetCurrentLanguage(source);
+        // Stories-Language End
+
         var wrappedMessage = Loc.GetString(speech.Bold ? "chat-manager-entity-say-bold-wrap-message" : "chat-manager-entity-say-wrap-message",
             ("entityName", name),
             ("verb", speechVerb),
             ("fontType", speech.FontId),
             ("fontSize", speech.FontSize),
-            ("message", FormattedMessage.EscapeText(message)));
+            ("message", _language.ColorizeMessage(FormattedMessage.EscapeText(message), language)));
 
         // Stories-Language Start
-        var language = _language.GetCurrentLanguage(source);
         var obfuscatedMessage = _language.ObfuscateMessage(message, language);
         var wrappedObfuscatedMessage = Loc.GetString(speech.Bold ? "chat-manager-entity-say-bold-wrap-message" : "chat-manager-entity-say-wrap-message",
             ("entityName", name),
             ("verb", speechVerb),
             ("fontType", speech.FontId),
             ("fontSize", speech.FontSize),
-            ("message", FormattedMessage.EscapeText(obfuscatedMessage)));
+            ("message", _language.ColorizeMessage(FormattedMessage.EscapeText(obfuscatedMessage), language)));
         // Stories-Language End
 
         SendInVoiceRange(ChatChannel.Local, message, wrappedMessage, source, range,
@@ -134,21 +137,24 @@ public sealed partial class ChatSystem
         }
         name = FormattedMessage.EscapeText(name);
 
-        var wrappedMessage = Loc.GetString("chat-manager-entity-whisper-wrap-message",
-            ("entityName", name), ("message", FormattedMessage.EscapeText(message)));
-
-        var wrappedobfuscatedMessage = Loc.GetString("chat-manager-entity-whisper-wrap-message",
-            ("entityName", nameIdentity), ("message", FormattedMessage.EscapeText(obfuscatedMessage)));
-
-        var wrappedUnknownMessage = Loc.GetString("chat-manager-entity-whisper-unknown-wrap-message",
-            ("message", FormattedMessage.EscapeText(obfuscatedMessage)));
-
         // Stories-Language Start
         var language = _language.GetCurrentLanguage(source);
+        // Stories-Language End
+
+        var wrappedMessage = Loc.GetString("chat-manager-entity-whisper-wrap-message",
+            ("entityName", name), ("message", _language.ColorizeMessage(FormattedMessage.EscapeText(message), language)));
+
+        var wrappedobfuscatedMessage = Loc.GetString("chat-manager-entity-whisper-wrap-message",
+            ("entityName", nameIdentity), ("message", _language.ColorizeMessage(FormattedMessage.EscapeText(obfuscatedMessage), language)));
+
+        var wrappedUnknownMessage = Loc.GetString("chat-manager-entity-whisper-unknown-wrap-message",
+            ("message", _language.ColorizeMessage(FormattedMessage.EscapeText(obfuscatedMessage), language)));
+
+        // Stories-Language Start
         var needsLos = ProtoMan.TryIndex(language, out var languageProto) && languageProto.NeedsLOS;
         var languageObfuscatedMessage = _language.ObfuscateMessage(message, language);
         var wrappedLanguageBarrierMessage = Loc.GetString("chat-manager-entity-whisper-wrap-message",
-            ("entityName", name), ("message", FormattedMessage.EscapeText(languageObfuscatedMessage)));
+            ("entityName", name), ("message", _language.ColorizeMessage(FormattedMessage.EscapeText(languageObfuscatedMessage), language)));
         // Stories-Language End
 
         foreach (var (session, data) in GetRecipients(source, WhisperMuffledRange))

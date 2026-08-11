@@ -21,6 +21,8 @@
   id: Draconic
   name: Draconic
   isVisibleLanguage: true
+  speechOverride:
+    color: "#D84315"
   obfuscationMethod: !type:SyllableObfuscation
     minSyllables: 2
     maxSyllables: 4
@@ -40,6 +42,8 @@
   id: Moffic
   name: Moffic
   isVisibleLanguage: true
+  speechOverride:
+    color: "#7E57C2"
   obfuscationMethod: !type:SyllableObfuscation
     minSyllables: 1
     maxSyllables: 2
@@ -105,6 +109,8 @@
   id: Calcic
   name: Calcic
   isVisibleLanguage: true
+  speechOverride:
+    color: "#90A4AE"
   obfuscationMethod: !type:SyllableObfuscation
     minSyllables: 1
     maxSyllables: 2
@@ -160,6 +166,8 @@
   id: Slime
   name: Slime
   isVisibleLanguage: true
+  speechOverride:
+    color: "#26A69A"
   obfuscationMethod: !type:SyllableObfuscation
     minSyllables: 1
     maxSyllables: 2
@@ -182,6 +190,8 @@
   id: Buzzwords
   name: Buzzwords
   isVisibleLanguage: true
+  speechOverride:
+    color: "#FDD835"
   obfuscationMethod: !type:SyllableObfuscation
     minSyllables: 2
     maxSyllables: 3
@@ -201,6 +211,8 @@
   id: Sylvan
   name: Sylvan
   isVisibleLanguage: true
+  speechOverride:
+    color: "#388E3C"
   obfuscationMethod: !type:SyllableObfuscation
     minSyllables: 2
     maxSyllables: 3
@@ -266,6 +278,8 @@
   id: VoxPidgin
   name: Vox Pidgin
   isVisibleLanguage: true
+  speechOverride:
+    color: "#455A64"
   obfuscationMethod: !type:SyllableObfuscation
     minSyllables: 2
     maxSyllables: 3
@@ -295,6 +309,8 @@
   id: Canilunzt
   name: Canilunzt
   isVisibleLanguage: true
+  speechOverride:
+    color: "#8D6E63"
   obfuscationMethod: !type:SyllableObfuscation
     minSyllables: 1
     maxSyllables: 3
@@ -356,6 +372,8 @@
   id: Dwarvish
   name: Dwarvish
   isVisibleLanguage: true
+  speechOverride:
+    color: "#C9A227"
   obfuscationMethod: !type:SyllableObfuscation
     minSyllables: 1
     maxSyllables: 2
@@ -385,6 +403,8 @@
   id: Gingerspeak
   name: Gingerspeak
   isVisibleLanguage: true
+  speechOverride:
+    color: "#EC407A"
   obfuscationMethod: !type:SyllableObfuscation
     minSyllables: 1
     maxSyllables: 2
@@ -414,6 +434,8 @@
   id: Nekomimetic
   name: Nekomimetic
   isVisibleLanguage: true
+  speechOverride:
+    color: "#FFA726"
   obfuscationMethod: !type:SyllableObfuscation
     minSyllables: 1
     maxSyllables: 2
@@ -471,6 +493,8 @@
   id: Chitin
   name: Chitin
   isVisibleLanguage: true
+  speechOverride:
+    color: "#827717"
   obfuscationMethod: !type:SyllableObfuscation
     minSyllables: 1
     maxSyllables: 2
@@ -486,6 +510,8 @@
   id: Avalese
   name: Avalese
   isVisibleLanguage: true
+  speechOverride:
+    color: "#29B6F6"
   obfuscationMethod: !type:SyllableObfuscation
     minSyllables: 1
     maxSyllables: 3
@@ -515,6 +541,8 @@
   id: Squeakspeak
   name: Squeakspeak
   isVisibleLanguage: true
+  speechOverride:
+    color: "#BCAAA4"
   obfuscationMethod: !type:SyllableObfuscation
     minSyllables: 1
     maxSyllables: 2

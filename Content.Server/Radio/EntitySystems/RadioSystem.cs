@@ -1,5 +1,7 @@
 using System.Linq;
+using Content.Server._Stories.Language.Systems;
 using Content.Server._Stories.TTS;
+using Content.Shared._Stories.Language.Components;
 using Content.Server.Administration.Logs;
 using Content.Server.Chat.Managers;
 using Content.Server.Chat.Systems;
@@ -37,6 +39,7 @@ public sealed partial class RadioSystem : EntitySystem
     [Dependency] private IChatManager _chatManager = default!;
     [Dependency] private GhostSystem _ghost = default!;
     [Dependency] private EntityQuery<TelecomExemptComponent> _exemptQuery = default!;
+    [Dependency] private LanguageSystem _language = default!;
 
     // Stories-TTS Start
     [Dependency] private TTSSystem _tts = default!;
@@ -152,6 +155,11 @@ public sealed partial class RadioSystem : EntitySystem
         else
             speech = _chat.GetSpeechVerb(messageSource, message);
 
+        // Stories-Language Start
+        var language = _language.GetCurrentLanguage(messageSource);
+        var forceObfuscated = ProtoMan.TryIndex(language, out var languageProto) && !languageProto.CanUseRadio;
+        // Stories-Language End
+
         var content = escapeMarkup
             ? FormattedMessage.EscapeText(message)
             : message;
@@ -163,7 +171,7 @@ public sealed partial class RadioSystem : EntitySystem
             ("verb", Loc.GetString(_random.Pick(speech.SpeechVerbStrings))),
             ("channel", $"\\[{channel.LocalizedName}\\]"),
             ("name", name),
-            ("message", content));
+            ("message", _language.ColorizeMessage(content, language)));
 
         // most radios are relayed to chat, so lets parse the chat message beforehand
         var chat = new ChatMessage(
@@ -175,6 +183,27 @@ public sealed partial class RadioSystem : EntitySystem
         var chatMsg = new MsgChatMessage { Message = chat };
         var ev = new RadioReceiveEvent(message, messageSource, channel, radioSource, chatMsg);
 
+        var obfuscatedMessage = _language.ObfuscateMessage(message, language);
+        var obfuscatedContent = escapeMarkup
+            ? FormattedMessage.EscapeText(obfuscatedMessage)
+            : obfuscatedMessage;
+        var wrappedObfuscatedMessage = Loc.GetString(speech.Bold ? "chat-radio-message-wrap-bold" : "chat-radio-message-wrap",
+            ("color", channel.Color),
+            ("fontType", speech.FontId),
+            ("fontSize", speech.FontSize),
+            ("verb", Loc.GetString(_random.Pick(speech.SpeechVerbStrings))),
+            ("channel", $"\\[{channel.LocalizedName}\\]"),
+            ("name", name),
+            ("message", _language.ColorizeMessage(obfuscatedContent, language)));
+        var chatObfuscated = new ChatMessage(
+            ChatChannel.Radio,
+            obfuscatedMessage,
+            wrappedObfuscatedMessage,
+            NetEntity.Invalid,
+            null);
+        var chatMsgObfuscated = new MsgChatMessage { Message = chatObfuscated };
+        var evObfuscated = new RadioReceiveEvent(obfuscatedMessage, messageSource, channel, radioSource, chatMsgObfuscated);
+
         var sendAttemptEv = new RadioSendAttemptEvent(channel, radioSource);
         RaiseLocalEvent(ref sendAttemptEv);
         RaiseLocalEvent(radioSource, ref sendAttemptEv);
@@ -184,7 +213,8 @@ public sealed partial class RadioSystem : EntitySystem
         var hasActiveServer = HasActiveServer(sourceMapId, channel.ID);
         var sourceServerExempt = _exemptQuery.HasComp(radioSource);
 
-        var recipientUids = new List<EntityUid>(); // Stories-TTS
+        var recipientsUnderstand = new List<EntityUid>(); // Stories-TTS
+        var recipientsObfuscated = new List<EntityUid>(); // Stories-TTS
 
         var radioQuery = EntityQueryEnumerator<ActiveRadioComponent, TransformComponent>();
         while (canSend && radioQuery.MoveNext(out var receiver, out var radio, out var transform))
@@ -212,32 +242,41 @@ public sealed partial class RadioSystem : EntitySystem
                 continue;
 
             // send the message
-            RaiseLocalEvent(receiver, ref ev);
+            // Stories-Language Start
+            var listener = ResolveLanguageListener(receiver);
+            bool understands;
+            if (forceObfuscated)
+                understands = false;
+            else if (listener is null)
+                understands = true;
+            else
+                understands = _language.CanUnderstand(listener.Value, language);
+            // Stories-Language End
 
-            recipientUids.Add(receiver); // Stories-TTS
+            if (understands)
+            {
+                RaiseLocalEvent(receiver, ref ev);
+                recipientsUnderstand.Add(receiver); // Stories-TTS
+            }
+            else
+            {
+                RaiseLocalEvent(receiver, ref evObfuscated);
+                recipientsObfuscated.Add(receiver); // Stories-TTS
+            }
         }
 
         // Stories-TTS Start
-        if (canSend && recipientUids.Count > 0)
+        if (canSend)
         {
-            var sessions = new List<ICommonSession>();
             var actorQuery = GetEntityQuery<ActorComponent>();
-            foreach (var uid in recipientUids)
-            {
-                var parent = Transform(uid).ParentUid;
-                var target = actorQuery.HasComponent(uid) ? uid : (actorQuery.HasComponent(parent) ? parent : (EntityUid?)null);
 
-                if (target.HasValue && actorQuery.TryGetComponent(target.Value, out var actor))
-                {
-                    if (actor.PlayerSession.Status == SessionStatus.InGame)
-                        sessions.Add(actor.PlayerSession);
-                }
-            }
+            var understandSessions = ResolveTtsSessions(recipientsUnderstand, actorQuery);
+            if (understandSessions.Count > 0)
+                ProcessAndSendRadioTts(messageSource, message, channel, understandSessions);
 
-            if (sessions.Count > 0)
-            {
-                ProcessAndSendRadioTts(messageSource, message, channel, sessions);
-            }
+            var obfuscatedSessions = ResolveTtsSessions(recipientsObfuscated, actorQuery);
+            if (obfuscatedSessions.Count > 0)
+                ProcessAndSendRadioTts(messageSource, obfuscatedMessage, channel, obfuscatedSessions);
         }
         // Stories-TTS End
 
@@ -249,6 +288,42 @@ public sealed partial class RadioSystem : EntitySystem
         _replay.RecordServerMessage(chat);
         _messages.Remove(message);
     }
+
+    // Stories-Language Start
+    // Radios raise RadioReceiveEvent on whatever entity has ActiveRadioComponent, which for
+    // headsets/handheld radios is the item, not the wearer. Only entities we can trace to an
+    // actual language-aware listener get gated; anything else (intercoms, unheld radios) is sent
+    // clear, since there's no specific listener to check understanding against.
+    private EntityUid? ResolveLanguageListener(EntityUid receiver)
+    {
+        if (HasComp<LanguageComponent>(receiver))
+            return receiver;
+
+        var wearer = Transform(receiver).ParentUid;
+        if (wearer.IsValid() && TryComp<WearingHeadsetComponent>(wearer, out var wearing) && wearing.Headset == receiver)
+            return wearer;
+
+        return null;
+    }
+
+    private HashSet<ICommonSession> ResolveTtsSessions(List<EntityUid> recipients, EntityQuery<ActorComponent> actorQuery)
+    {
+        var sessions = new HashSet<ICommonSession>();
+        foreach (var uid in recipients)
+        {
+            var parent = Transform(uid).ParentUid;
+            var target = actorQuery.HasComponent(uid) ? uid : (actorQuery.HasComponent(parent) ? parent : (EntityUid?)null);
+
+            if (target.HasValue && actorQuery.TryGetComponent(target.Value, out var actor))
+            {
+                if (actor.PlayerSession.Status == SessionStatus.InGame)
+                    sessions.Add(actor.PlayerSession);
+            }
+        }
+
+        return sessions;
+    }
+    // Stories-Language End
 
     /// <inheritdoc cref="TelecomServerComponent"/>
     private bool HasActiveServer(MapId mapId, string channelId)

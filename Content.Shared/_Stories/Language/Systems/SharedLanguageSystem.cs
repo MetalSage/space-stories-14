@@ -84,6 +84,14 @@ public abstract partial class SharedLanguageSystem : EntitySystem
         return ent.Comp.SpokenLanguages;
     }
 
+    public string ColorizeMessage(string escapedMessage, ProtoId<LanguagePrototype> language)
+    {
+        if (!_prototypeManager.TryIndex(language, out var languageProto) || languageProto.SpeechOverride.Color is not { } color)
+            return escapedMessage;
+
+        return $"[color={color.ToHex()}]{escapedMessage}[/color]";
+    }
+
     public string ObfuscateMessage(string message, ProtoId<LanguagePrototype> language)
     {
         if (!_prototypeManager.TryIndex(language, out var languageProto))
