@@ -71,6 +71,32 @@ public abstract partial class SharedLanguageSystem : EntitySystem
         return ent.Comp.UnderstoodLanguages.Contains(language);
     }
 
+    public float GetComprehension(EntityUid entity, ProtoId<LanguagePrototype> language)
+    {
+        return GetComprehension((entity, CompOrNull<LanguageComponent>(entity)), language);
+    }
+
+    public float GetComprehension(Entity<LanguageComponent?> ent, ProtoId<LanguagePrototype> language)
+    {
+        if (CanUnderstand(ent, language))
+            return 1f;
+
+        if (!Resolve(ent, ref ent.Comp, false))
+            return 0f;
+
+        var best = 0f;
+        foreach (var known in ent.Comp.UnderstoodLanguages)
+        {
+            if (!_prototypeManager.TryIndex(known, out var knownProto))
+                continue;
+
+            if (knownProto.MutualUnderstanding.TryGetValue(language, out var comprehension) && comprehension > best)
+                best = comprehension;
+        }
+
+        return best;
+    }
+
     public IReadOnlySet<ProtoId<LanguagePrototype>> GetSpokenLanguages(EntityUid entity)
     {
         return GetSpokenLanguages((entity, CompOrNull<LanguageComponent>(entity)));
@@ -92,21 +118,25 @@ public abstract partial class SharedLanguageSystem : EntitySystem
         return $"[color={color.ToHex()}]{escapedMessage}[/color]";
     }
 
-    public string ObfuscateMessage(string message, ProtoId<LanguagePrototype> language)
+    public string ObfuscateMessage(string message, ProtoId<LanguagePrototype> language, float comprehension = 0f)
     {
+        if (comprehension >= 1f)
+            return message;
+
         if (!_prototypeManager.TryIndex(language, out var languageProto))
             return message;
 
-        return ObfuscateMessageInternal(message, languageProto.ObfuscationMethod, languageProto.RandomizeObfuscation);
+        return ObfuscateMessageInternalWithComprehension(message, languageProto.ObfuscationMethod, languageProto.RandomizeObfuscation, comprehension);
     }
 
-    protected string ObfuscateMessageInternal(
+    protected string ObfuscateMessageInternalWithComprehension(
         string message,
         ObfuscationMethod obfuscationMethod,
-        bool randomize)
+        bool randomize,
+        float comprehension)
     {
         var builder = new StringBuilder(message.Length);
-        obfuscationMethod.ObfuscateInternal(builder, message, this, randomize);
+        obfuscationMethod.ObfuscateInternalWithComprehension(builder, message, this, randomize, comprehension);
         return builder.ToString();
     }
 

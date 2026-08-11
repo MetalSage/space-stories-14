@@ -54,6 +54,9 @@ public sealed partial class LanguagePrototype : IPrototype
     [DataField]
     public SpeechOverrideInfo SpeechOverride = new();
 
+    [DataField]
+    public Dictionary<ProtoId<LanguagePrototype>, float> MutualUnderstanding = new();
+
     public string LocalizedName => Loc.GetString($"language-{ID}-name");
     public string ChatName => Loc.GetString($"chat-language-{ID}-name");
     public string? LocalizedDescription => Description == null ? null : Loc.GetString($"language-{ID}-description");

@@ -71,12 +71,21 @@ public sealed partial class ChatSystem
         string wrappedMessage,
         EntityUid source,
         ChatTransmitRange range,
+        NetUserId? author = null
+        )
+    {
+        SendInVoiceRange(channel, message, _ => wrappedMessage, source, range, author);
+    }
+
+    // Stories-Language Start
+    private void SendInVoiceRange(
+        ChatChannel channel,
+        string message,
+        Func<string, string> wrapMessage,
+        EntityUid source,
+        ChatTransmitRange range,
         NetUserId? author = null,
-        // Stories-Language Start
-        ProtoId<LanguagePrototype>? language = null,
-        string? obfuscatedMessage = null,
-        string? wrappedObfuscatedMessage = null
-        // Stories-Language End
+        ProtoId<LanguagePrototype>? language = null
         )
     {
         foreach (var (session, data) in GetRecipients(source, VoiceRange))
@@ -86,27 +95,24 @@ public sealed partial class ChatSystem
                 continue;
             var entHideChat = entRange == MessageRangeCheckResult.HideChat;
 
-            // Stories-Language Start
-            if (language != null && obfuscatedMessage != null && wrappedObfuscatedMessage != null &&
-                session.AttachedEntity is { Valid: true } listener)
+            var listenerMessage = message;
+
+            if (language != null && session.AttachedEntity is { Valid: true } listener)
             {
                 var needsLos = ProtoMan.TryIndex(language.Value, out var languageProto) && languageProto.NeedsLOS;
-                var understands = _language.CanUnderstand(listener, language.Value) &&
-                    (!needsLos || _examineSystem.InRangeUnOccluded(source, listener, VoiceRange));
+                var hasLos = !needsLos || _examineSystem.InRangeUnOccluded(source, listener, VoiceRange);
+                var comprehension = hasLos ? _language.GetComprehension(listener, language.Value) : 0f;
 
-                if (!understands)
-                {
-                    _chatManager.ChatMessageToOne(channel, obfuscatedMessage, wrappedObfuscatedMessage, source, entHideChat, session.Channel, author: author);
-                    continue;
-                }
+                if (comprehension < 1f)
+                    listenerMessage = _language.ObfuscateMessage(message, language.Value, comprehension);
             }
-            // Stories-Language End
 
-            _chatManager.ChatMessageToOne(channel, message, wrappedMessage, source, entHideChat, session.Channel, author: author);
+            _chatManager.ChatMessageToOne(channel, listenerMessage, wrapMessage(listenerMessage), source, entHideChat, session.Channel, author: author);
         }
 
-        _replay.RecordServerMessage(new ChatMessage(channel, message, wrappedMessage, GetNetEntity(source), null, MessageRangeHideChatForReplay(range)));
+        _replay.RecordServerMessage(new ChatMessage(channel, message, wrapMessage(message), GetNetEntity(source), null, MessageRangeHideChatForReplay(range)));
     }
+    // Stories-Language End
 
     /// <summary>
     ///     Returns true if the given player is 'allowed' to send the given message, false otherwise.

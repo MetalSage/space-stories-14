@@ -2,6 +2,8 @@
   id: GalacticCommon
   name: Galactic Common
   isVisibleLanguage: true
+  mutualUnderstanding:
+    VoxPidgin: 0.25
   obfuscationMethod: !type:SyllableObfuscation
     minSyllables: 1
     maxSyllables: 3
@@ -192,6 +194,8 @@
   isVisibleLanguage: true
   speechOverride:
     color: "#FDD835"
+  mutualUnderstanding:
+    Chitin: 0.25
   obfuscationMethod: !type:SyllableObfuscation
     minSyllables: 2
     maxSyllables: 3
@@ -280,6 +284,9 @@
   isVisibleLanguage: true
   speechOverride:
     color: "#455A64"
+  mutualUnderstanding:
+    GalacticCommon: 0.25
+    Avalese: 0.25
   obfuscationMethod: !type:SyllableObfuscation
     minSyllables: 2
     maxSyllables: 3
@@ -311,6 +318,8 @@
   isVisibleLanguage: true
   speechOverride:
     color: "#8D6E63"
+  mutualUnderstanding:
+    Nekomimetic: 0.25
   obfuscationMethod: !type:SyllableObfuscation
     minSyllables: 1
     maxSyllables: 3
@@ -436,6 +445,8 @@
   isVisibleLanguage: true
   speechOverride:
     color: "#FFA726"
+  mutualUnderstanding:
+    Canilunzt: 0.25
   obfuscationMethod: !type:SyllableObfuscation
     minSyllables: 1
     maxSyllables: 2
@@ -495,6 +506,8 @@
   isVisibleLanguage: true
   speechOverride:
     color: "#827717"
+  mutualUnderstanding:
+    Buzzwords: 0.25
   obfuscationMethod: !type:SyllableObfuscation
     minSyllables: 1
     maxSyllables: 2
@@ -512,6 +525,8 @@
   isVisibleLanguage: true
   speechOverride:
     color: "#29B6F6"
+  mutualUnderstanding:
+    VoxPidgin: 0.25
   obfuscationMethod: !type:SyllableObfuscation
     minSyllables: 1
     maxSyllables: 3

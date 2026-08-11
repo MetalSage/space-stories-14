@@ -233,17 +233,11 @@ public sealed partial class LanguageSystem : SharedLanguageSystem
 
     public string ObfuscateMessageForSpeaker(EntityUid speaker, string message, ProtoId<LanguagePrototype> language)
     {
-        if (CanUnderstand(speaker, language))
-            return message;
-
-        return ObfuscateMessage(message, language);
+        return ObfuscateMessage(message, language, GetComprehension(speaker, language));
     }
 
     public string ObfuscateMessageForListener(EntityUid listener, string speakerMessage, ProtoId<LanguagePrototype> language)
     {
-        if (CanUnderstand(listener, language))
-            return speakerMessage;
-
-        return ObfuscateMessage(speakerMessage, language);
+        return ObfuscateMessage(speakerMessage, language, GetComprehension(listener, language));
     }
 }

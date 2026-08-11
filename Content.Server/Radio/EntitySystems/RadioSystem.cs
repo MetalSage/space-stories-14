@@ -183,26 +183,9 @@ public sealed partial class RadioSystem : EntitySystem
         var chatMsg = new MsgChatMessage { Message = chat };
         var ev = new RadioReceiveEvent(message, messageSource, channel, radioSource, chatMsg);
 
+        // Stories-Language Start
         var obfuscatedMessage = _language.ObfuscateMessage(message, language);
-        var obfuscatedContent = escapeMarkup
-            ? FormattedMessage.EscapeText(obfuscatedMessage)
-            : obfuscatedMessage;
-        var wrappedObfuscatedMessage = Loc.GetString(speech.Bold ? "chat-radio-message-wrap-bold" : "chat-radio-message-wrap",
-            ("color", channel.Color),
-            ("fontType", speech.FontId),
-            ("fontSize", speech.FontSize),
-            ("verb", Loc.GetString(_random.Pick(speech.SpeechVerbStrings))),
-            ("channel", $"\\[{channel.LocalizedName}\\]"),
-            ("name", name),
-            ("message", _language.ColorizeMessage(obfuscatedContent, language)));
-        var chatObfuscated = new ChatMessage(
-            ChatChannel.Radio,
-            obfuscatedMessage,
-            wrappedObfuscatedMessage,
-            NetEntity.Invalid,
-            null);
-        var chatMsgObfuscated = new MsgChatMessage { Message = chatObfuscated };
-        var evObfuscated = new RadioReceiveEvent(obfuscatedMessage, messageSource, channel, radioSource, chatMsgObfuscated);
+        // Stories-Language End
 
         var sendAttemptEv = new RadioSendAttemptEvent(channel, radioSource);
         RaiseLocalEvent(ref sendAttemptEv);
@@ -244,25 +227,34 @@ public sealed partial class RadioSystem : EntitySystem
             // send the message
             // Stories-Language Start
             var listener = ResolveLanguageListener(receiver);
-            bool understands;
-            if (forceObfuscated)
-                understands = false;
-            else if (listener is null)
-                understands = true;
-            else
-                understands = _language.CanUnderstand(listener.Value, language);
-            // Stories-Language End
+            var comprehension = forceObfuscated ? 0f : (listener is null ? 1f : _language.GetComprehension(listener.Value, language));
 
-            if (understands)
+            if (comprehension >= 1f)
             {
                 RaiseLocalEvent(receiver, ref ev);
                 recipientsUnderstand.Add(receiver); // Stories-TTS
             }
             else
             {
-                RaiseLocalEvent(receiver, ref evObfuscated);
+                var listenerMessage = _language.ObfuscateMessage(message, language, comprehension);
+                var listenerContent = escapeMarkup
+                    ? FormattedMessage.EscapeText(listenerMessage)
+                    : listenerMessage;
+                var listenerWrapped = Loc.GetString(speech.Bold ? "chat-radio-message-wrap-bold" : "chat-radio-message-wrap",
+                    ("color", channel.Color),
+                    ("fontType", speech.FontId),
+                    ("fontSize", speech.FontSize),
+                    ("verb", Loc.GetString(_random.Pick(speech.SpeechVerbStrings))),
+                    ("channel", $"\\[{channel.LocalizedName}\\]"),
+                    ("name", name),
+                    ("message", _language.ColorizeMessage(listenerContent, language)));
+                var listenerChat = new ChatMessage(ChatChannel.Radio, listenerMessage, listenerWrapped, NetEntity.Invalid, null);
+                var listenerChatMsg = new MsgChatMessage { Message = listenerChat };
+                var evListener = new RadioReceiveEvent(listenerMessage, messageSource, channel, radioSource, listenerChatMsg);
+                RaiseLocalEvent(receiver, ref evListener);
                 recipientsObfuscated.Add(receiver); // Stories-TTS
             }
+            // Stories-Language End
         }
 
         // Stories-TTS Start
@@ -290,10 +282,6 @@ public sealed partial class RadioSystem : EntitySystem
     }
 
     // Stories-Language Start
-    // Radios raise RadioReceiveEvent on whatever entity has ActiveRadioComponent, which for
-    // headsets/handheld radios is the item, not the wearer. Only entities we can trace to an
-    // actual language-aware listener get gated; anything else (intercoms, unheld radios) is sent
-    // clear, since there's no specific listener to check understanding against.
     private EntityUid? ResolveLanguageListener(EntityUid receiver)
     {
         if (HasComp<LanguageComponent>(receiver))
