@@ -1,3 +1,4 @@
+using Content.Shared._Stories.Language;
 using Content.Shared._Stories.Language.Prototypes;
 using Content.Shared.GameTicking;
 using Robust.Shared.Prototypes;
@@ -22,12 +23,12 @@ public sealed partial class SpeciesLanguageSystem : EntitySystem
             return;
 
         foreach (var language in languages.SpokenLanguages)
-            _language.AddLanguage(args.Mob, language, addSpoken: true, addUnderstood: languages.UnderstoodLanguages.Contains(language));
+            _language.AddLanguage(args.Mob, language, addSpoken: true, addUnderstood: languages.UnderstoodLanguages.Contains(language), source: LanguageSource.Species);
 
         foreach (var language in languages.UnderstoodLanguages)
         {
             if (!languages.SpokenLanguages.Contains(language))
-                _language.AddLanguage(args.Mob, language, addSpoken: false, addUnderstood: true);
+                _language.AddLanguage(args.Mob, language, addSpoken: false, addUnderstood: true, source: LanguageSource.Species);
         }
     }
 }

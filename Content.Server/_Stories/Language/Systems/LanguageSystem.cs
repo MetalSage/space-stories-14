@@ -26,8 +26,15 @@ public sealed partial class LanguageSystem : SharedLanguageSystem
     {
         if (ent.Comp.Preset is { } presetId && presetId.TryGet(out var preset, _prototypeManager, _compFactory))
         {
-            ent.Comp.SpokenLanguages = new(preset.SpokenLanguages);
-            ent.Comp.UnderstoodLanguages = new(preset.UnderstoodLanguages);
+            foreach (var language in preset.SpokenLanguages)
+                AddLanguage(ent, language, addSpoken: true, addUnderstood: preset.UnderstoodLanguages.Contains(language), source: LanguageSource.Preset);
+
+            foreach (var language in preset.UnderstoodLanguages)
+            {
+                if (!preset.SpokenLanguages.Contains(language))
+                    AddLanguage(ent, language, addSpoken: false, addUnderstood: true, source: LanguageSource.Preset);
+            }
+
             ent.Comp.CurrentLanguage ??= preset.CurrentLanguage;
             ent.Comp.DefaultLanguage ??= preset.DefaultLanguage;
         }
@@ -72,15 +79,16 @@ public sealed partial class LanguageSystem : SharedLanguageSystem
         EntityUid uid,
         ProtoId<LanguagePrototype> language,
         bool addSpoken = true,
-        bool addUnderstood = true)
+        bool addUnderstood = true,
+        string source = LanguageSource.Admin)
     {
         var component = EnsureComp<LanguageComponent>(uid);
 
-        if (addSpoken && !component.SpokenLanguages.Contains(language))
-            component.SpokenLanguages.Add(language);
+        if (addSpoken)
+            AddLanguageSource(component.SpokenLanguageSources, language, source);
 
-        if (addUnderstood && !component.UnderstoodLanguages.Contains(language))
-            component.UnderstoodLanguages.Add(language);
+        if (addUnderstood)
+            AddLanguageSource(component.UnderstoodLanguageSources, language, source);
 
         UpdateEntityLanguages((uid, component));
     }
@@ -89,18 +97,87 @@ public sealed partial class LanguageSystem : SharedLanguageSystem
         Entity<LanguageComponent?> ent,
         ProtoId<LanguagePrototype> language,
         bool removeSpoken = true,
-        bool removeUnderstood = true)
+        bool removeUnderstood = true,
+        string? source = null)
     {
         if (!Resolve(ent, ref ent.Comp, false))
             return;
 
         if (removeSpoken)
-            ent.Comp.SpokenLanguages.Remove(language);
+            RemoveLanguageSource(ent.Comp.SpokenLanguageSources, language, source);
 
         if (removeUnderstood)
-            ent.Comp.UnderstoodLanguages.Remove(language);
+            RemoveLanguageSource(ent.Comp.UnderstoodLanguageSources, language, source);
 
         UpdateEntityLanguages(ent.Owner);
+    }
+
+    public void AddBlockedLanguage(
+        EntityUid uid,
+        ProtoId<LanguagePrototype> language,
+        bool blockSpeaking = true,
+        bool blockUnderstanding = true)
+    {
+        var component = EnsureComp<LanguageComponent>(uid);
+
+        if (blockSpeaking)
+            component.BlockedSpeaking.Add(language);
+
+        if (blockUnderstanding)
+            component.BlockedUnderstanding.Add(language);
+
+        UpdateEntityLanguages((uid, component));
+    }
+
+    public void RemoveBlockedLanguage(
+        Entity<LanguageComponent?> ent,
+        ProtoId<LanguagePrototype> language,
+        bool unblockSpeaking = true,
+        bool unblockUnderstanding = true)
+    {
+        if (!Resolve(ent, ref ent.Comp, false))
+            return;
+
+        if (unblockSpeaking)
+            ent.Comp.BlockedSpeaking.Remove(language);
+
+        if (unblockUnderstanding)
+            ent.Comp.BlockedUnderstanding.Remove(language);
+
+        UpdateEntityLanguages(ent.Owner);
+    }
+
+    private static void AddLanguageSource(
+        Dictionary<ProtoId<LanguagePrototype>, HashSet<string>> sources,
+        ProtoId<LanguagePrototype> language,
+        string source)
+    {
+        if (!sources.TryGetValue(language, out var set))
+        {
+            set = new HashSet<string>();
+            sources[language] = set;
+        }
+
+        set.Add(source);
+    }
+
+    private static void RemoveLanguageSource(
+        Dictionary<ProtoId<LanguagePrototype>, HashSet<string>> sources,
+        ProtoId<LanguagePrototype> language,
+        string? source)
+    {
+        if (!sources.TryGetValue(language, out var set))
+            return;
+
+        if (source == null)
+        {
+            sources.Remove(language);
+            return;
+        }
+
+        set.Remove(source);
+        if (set.Count == 0)
+            sources.Remove(language);
     }
 
     public bool TryFixCurrentLanguage(Entity<LanguageComponent?> ent)
@@ -128,13 +205,16 @@ public sealed partial class LanguageSystem : SharedLanguageSystem
 
         var ev = new DetermineEntityLanguagesEvent();
 
-        foreach (var spoken in ent.Comp.SpokenLanguages)
+        foreach (var spoken in ent.Comp.SpokenLanguageSources.Keys)
             ev.SpokenLanguages.Add(spoken);
 
-        foreach (var understood in ent.Comp.UnderstoodLanguages)
+        foreach (var understood in ent.Comp.UnderstoodLanguageSources.Keys)
             ev.UnderstoodLanguages.Add(understood);
 
         RaiseLocalEvent(ent, ref ev);
+
+        ev.SpokenLanguages.ExceptWith(ent.Comp.BlockedSpeaking);
+        ev.UnderstoodLanguages.ExceptWith(ent.Comp.BlockedUnderstanding);
 
         ent.Comp.SpokenLanguages.Clear();
         ent.Comp.UnderstoodLanguages.Clear();

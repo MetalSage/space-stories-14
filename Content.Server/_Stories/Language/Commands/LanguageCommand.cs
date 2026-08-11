@@ -87,6 +87,48 @@ public sealed class LanguageCommand : ToolshedCommand
         return ent;
     }
 
+    [CommandImplementation("block")]
+    public EntityUid Block(
+        [CommandInvocationContext] IInvocationContext ctx,
+        [PipedArgument] EntityUid ent,
+        [CommandArgument] ProtoId<LanguagePrototype> language,
+        [CommandArgument] bool blockSpeaking,
+        [CommandArgument] bool blockUnderstanding)
+    {
+        if (!EntityManager.HasComponent<LanguageComponent>(ent))
+        {
+            ctx.WriteLine("Cannot block language for entity without a language comp!");
+            return ent;
+        }
+
+        _language ??= GetSys<LanguageSystem>();
+
+        _language.AddBlockedLanguage(ent, language, blockSpeaking, blockUnderstanding);
+
+        return ent;
+    }
+
+    [CommandImplementation("unblock")]
+    public EntityUid Unblock(
+        [CommandInvocationContext] IInvocationContext ctx,
+        [PipedArgument] EntityUid ent,
+        [CommandArgument] ProtoId<LanguagePrototype> language,
+        [CommandArgument] bool unblockSpeaking,
+        [CommandArgument] bool unblockUnderstanding)
+    {
+        if (!EntityManager.HasComponent<LanguageComponent>(ent))
+        {
+            ctx.WriteLine("Cannot unblock language for entity without a language comp!");
+            return ent;
+        }
+
+        _language ??= GetSys<LanguageSystem>();
+
+        _language.RemoveBlockedLanguage(ent, language, unblockSpeaking, unblockUnderstanding);
+
+        return ent;
+    }
+
     [CommandImplementation("add")]
     public IEnumerable<EntityUid> Add(
         [CommandInvocationContext] IInvocationContext ctx,
@@ -107,5 +149,27 @@ public sealed class LanguageCommand : ToolshedCommand
         [CommandArgument] bool removeUnderstanding)
     {
         return ents.Select(ent => Remove(ctx, ent, language, removeSpeaking, removeUnderstanding));
+    }
+
+    [CommandImplementation("block")]
+    public IEnumerable<EntityUid> Block(
+        [CommandInvocationContext] IInvocationContext ctx,
+        [PipedArgument] IEnumerable<EntityUid> ents,
+        [CommandArgument] ProtoId<LanguagePrototype> language,
+        [CommandArgument] bool blockSpeaking,
+        [CommandArgument] bool blockUnderstanding)
+    {
+        return ents.Select(ent => Block(ctx, ent, language, blockSpeaking, blockUnderstanding));
+    }
+
+    [CommandImplementation("unblock")]
+    public IEnumerable<EntityUid> Unblock(
+        [CommandInvocationContext] IInvocationContext ctx,
+        [PipedArgument] IEnumerable<EntityUid> ents,
+        [CommandArgument] ProtoId<LanguagePrototype> language,
+        [CommandArgument] bool unblockSpeaking,
+        [CommandArgument] bool unblockUnderstanding)
+    {
+        return ents.Select(ent => Unblock(ctx, ent, language, unblockSpeaking, unblockUnderstanding));
     }
 }
