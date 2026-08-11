@@ -16,6 +16,7 @@ language-Squeakspeak-name = писклявый
 language-Machine-name = машинный код
 language-Shadowtongue-name = теневой язык
 language-Codespeak-name = шифрокод
+language-Monkey-name = шимпанзийский
 
 language-menu-title = Языки
 game-hud-open-language-menu-button-tooltip = Открыть меню языков.

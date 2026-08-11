@@ -1,0 +1,47 @@
+{
+    "version": 1,
+    "license": "CC-BY-SA-3.0",
+    "copyright": "Taken from tgstation at https://github.com/tgstation/tgstation/blob/master/icons/ui/chat/language.dmi, per their README all assets are CC-BY-SA-3.0 unless otherwise indicated",
+    "size": {
+        "x": 16,
+        "y": 16
+    },
+    "states": [
+        {
+            "name": "Draconic"
+        },
+        {
+            "name": "Moffic"
+        },
+        {
+            "name": "Calcic"
+        },
+        {
+            "name": "Slime"
+        },
+        {
+            "name": "Buzzwords"
+        },
+        {
+            "name": "Sylvan"
+        },
+        {
+            "name": "Nekomimetic"
+        },
+        {
+            "name": "Machine"
+        },
+        {
+            "name": "Shadowtongue"
+        },
+        {
+            "name": "Codespeak"
+        },
+        {
+            "name": "Monkey"
+        },
+        {
+            "name": "Unknown"
+        }
+    ]
+}

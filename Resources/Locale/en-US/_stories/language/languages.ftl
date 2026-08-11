@@ -16,6 +16,7 @@ language-Squeakspeak-name = Squeakspeak
 language-Machine-name = Encoded Audio Language
 language-Shadowtongue-name = Shadowtongue
 language-Codespeak-name = Codespeak
+language-Monkey-name = Chimpanzee
 
 language-menu-title = Languages
 game-hud-open-language-menu-button-tooltip = Open the language menu.

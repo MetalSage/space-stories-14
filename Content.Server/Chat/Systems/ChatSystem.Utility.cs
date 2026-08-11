@@ -96,23 +96,18 @@ public sealed partial class ChatSystem
             var entHideChat = entRange == MessageRangeCheckResult.HideChat;
 
             var listenerMessage = message;
-            var comprehension = 1f;
 
             if (language != null && session.AttachedEntity is { Valid: true } listener)
             {
                 var needsLos = ProtoMan.TryIndex(language.Value, out var languageProto) && languageProto.NeedsLOS;
                 var hasLos = !needsLos || _examineSystem.InRangeUnOccluded(source, listener, VoiceRange);
-                comprehension = hasLos ? _language.GetComprehension(listener, language.Value) : 0f;
+                var comprehension = hasLos ? _language.GetComprehension(listener, language.Value) : 0f;
 
                 if (comprehension < 1f)
                     listenerMessage = _language.ObfuscateMessage(message, language.Value, comprehension);
             }
 
-            var wrapped = wrapMessage(listenerMessage);
-            if (language != null)
-                wrapped = _language.LanguageIconMarkup(language.Value, comprehension) + wrapped;
-
-            _chatManager.ChatMessageToOne(channel, listenerMessage, wrapped, source, entHideChat, session.Channel, author: author);
+            _chatManager.ChatMessageToOne(channel, listenerMessage, wrapMessage(listenerMessage), source, entHideChat, session.Channel, author: author);
         }
 
         _replay.RecordServerMessage(new ChatMessage(channel, message, wrapMessage(message), GetNetEntity(source), null, MessageRangeHideChatForReplay(range)));

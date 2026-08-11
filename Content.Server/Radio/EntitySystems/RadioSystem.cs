@@ -164,7 +164,7 @@ public sealed partial class RadioSystem : EntitySystem
             ? FormattedMessage.EscapeText(message)
             : message;
 
-        var wrappedMessage = _language.LanguageIconMarkup(language, 1f) + Loc.GetString(speech.Bold ? "chat-radio-message-wrap-bold" : "chat-radio-message-wrap",
+        var wrappedMessage = Loc.GetString(speech.Bold ? "chat-radio-message-wrap-bold" : "chat-radio-message-wrap",
             ("color", channel.Color),
             ("fontType", speech.FontId),
             ("fontSize", speech.FontSize),
@@ -240,7 +240,7 @@ public sealed partial class RadioSystem : EntitySystem
                 var listenerContent = escapeMarkup
                     ? FormattedMessage.EscapeText(listenerMessage)
                     : listenerMessage;
-                var listenerWrapped = _language.LanguageIconMarkup(language, comprehension) + Loc.GetString(speech.Bold ? "chat-radio-message-wrap-bold" : "chat-radio-message-wrap",
+                var listenerWrapped = Loc.GetString(speech.Bold ? "chat-radio-message-wrap-bold" : "chat-radio-message-wrap",
                     ("color", channel.Color),
                     ("fontType", speech.FontId),
                     ("fontSize", speech.FontSize),

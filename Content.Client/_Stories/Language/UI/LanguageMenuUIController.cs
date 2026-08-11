@@ -7,6 +7,7 @@ using Content.Shared._Stories.Language.Components;
 using Content.Shared._Stories.Language.Prototypes;
 using Content.Shared.Input;
 using JetBrains.Annotations;
+using Robust.Client.GameObjects;
 using Robust.Client.Player;
 using Robust.Client.UserInterface;
 using Robust.Client.UserInterface.Controllers;
@@ -26,6 +27,7 @@ public sealed partial class LanguageMenuUIController : UIController, IOnStateEnt
     [Dependency] private IPrototypeManager _prototypeManager = default!;
 
     [UISystemDependency] private readonly LanguageSystem _language = default!;
+    [UISystemDependency] private readonly SpriteSystem _sprite = default!;
 
     private LanguageMenuWindow? _window;
     private MenuButton? LanguageButton => UIManager.GetActiveUIWidgetOrNull<GameTopMenuBar>()?.LanguageButton;
@@ -136,10 +138,32 @@ public sealed partial class LanguageMenuUIController : UIController, IOnStateEnt
 
             var button = new Button
             {
-                Text = language.LocalizedName,
                 ToggleMode = true,
                 Pressed = languageId == speaker.CurrentLanguage,
             };
+
+            var row = new BoxContainer
+            {
+                Orientation = BoxContainer.LayoutOrientation.Horizontal,
+                SeparationOverride = 4,
+            };
+
+            if (language.LanguageIcon is { } icon)
+            {
+                row.AddChild(new TextureRect
+                {
+                    Texture = _sprite.Frame0(icon),
+                    VerticalAlignment = Control.VAlignment.Center,
+                });
+            }
+
+            row.AddChild(new Label
+            {
+                Text = language.LocalizedName,
+                VerticalAlignment = Control.VAlignment.Center,
+            });
+
+            button.AddChild(row);
 
             button.OnPressed += _ => SelectLanguage(languageId);
 

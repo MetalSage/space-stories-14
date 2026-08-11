@@ -23,6 +23,9 @@
   id: Draconic
   name: Draconic
   isVisibleLanguage: true
+  languageIcon:
+    sprite: /Textures/_Stories/Interface/language_icons.rsi
+    state: Draconic
   speechOverride:
     color: "#D84315"
   obfuscationMethod: !type:SyllableObfuscation
@@ -44,6 +47,9 @@
   id: Moffic
   name: Moffic
   isVisibleLanguage: true
+  languageIcon:
+    sprite: /Textures/_Stories/Interface/language_icons.rsi
+    state: Moffic
   speechOverride:
     color: "#7E57C2"
   obfuscationMethod: !type:SyllableObfuscation
@@ -111,6 +117,9 @@
   id: Calcic
   name: Calcic
   isVisibleLanguage: true
+  languageIcon:
+    sprite: /Textures/_Stories/Interface/language_icons.rsi
+    state: Calcic
   speechOverride:
     color: "#90A4AE"
   obfuscationMethod: !type:SyllableObfuscation
@@ -168,6 +177,9 @@
   id: Slime
   name: Slime
   isVisibleLanguage: true
+  languageIcon:
+    sprite: /Textures/_Stories/Interface/language_icons.rsi
+    state: Slime
   speechOverride:
     color: "#26A69A"
   obfuscationMethod: !type:SyllableObfuscation
@@ -192,6 +204,9 @@
   id: Buzzwords
   name: Buzzwords
   isVisibleLanguage: true
+  languageIcon:
+    sprite: /Textures/_Stories/Interface/language_icons.rsi
+    state: Buzzwords
   speechOverride:
     color: "#FDD835"
   mutualUnderstanding:
@@ -215,6 +230,9 @@
   id: Sylvan
   name: Sylvan
   isVisibleLanguage: true
+  languageIcon:
+    sprite: /Textures/_Stories/Interface/language_icons.rsi
+    state: Sylvan
   speechOverride:
     color: "#388E3C"
   obfuscationMethod: !type:SyllableObfuscation
@@ -282,6 +300,9 @@
   id: VoxPidgin
   name: Vox Pidgin
   isVisibleLanguage: true
+  languageIcon:
+    sprite: /Textures/_Stories/Interface/language_icons.rsi
+    state: Unknown
   speechOverride:
     color: "#455A64"
   mutualUnderstanding:
@@ -316,6 +337,9 @@
   id: Canilunzt
   name: Canilunzt
   isVisibleLanguage: true
+  languageIcon:
+    sprite: /Textures/_Stories/Interface/language_icons.rsi
+    state: Unknown
   speechOverride:
     color: "#8D6E63"
   mutualUnderstanding:
@@ -381,6 +405,9 @@
   id: Dwarvish
   name: Dwarvish
   isVisibleLanguage: true
+  languageIcon:
+    sprite: /Textures/_Stories/Interface/language_icons.rsi
+    state: Unknown
   speechOverride:
     color: "#C9A227"
   obfuscationMethod: !type:SyllableObfuscation
@@ -412,6 +439,9 @@
   id: Gingerspeak
   name: Gingerspeak
   isVisibleLanguage: true
+  languageIcon:
+    sprite: /Textures/_Stories/Interface/language_icons.rsi
+    state: Unknown
   speechOverride:
     color: "#EC407A"
   obfuscationMethod: !type:SyllableObfuscation
@@ -443,6 +473,9 @@
   id: Nekomimetic
   name: Nekomimetic
   isVisibleLanguage: true
+  languageIcon:
+    sprite: /Textures/_Stories/Interface/language_icons.rsi
+    state: Nekomimetic
   speechOverride:
     color: "#FFA726"
   mutualUnderstanding:
@@ -504,6 +537,9 @@
   id: Chitin
   name: Chitin
   isVisibleLanguage: true
+  languageIcon:
+    sprite: /Textures/_Stories/Interface/language_icons.rsi
+    state: Unknown
   speechOverride:
     color: "#827717"
   mutualUnderstanding:
@@ -523,6 +559,9 @@
   id: Avalese
   name: Avalese
   isVisibleLanguage: true
+  languageIcon:
+    sprite: /Textures/_Stories/Interface/language_icons.rsi
+    state: Unknown
   speechOverride:
     color: "#29B6F6"
   mutualUnderstanding:
@@ -553,11 +592,32 @@
     - skree
 
 - type: language
+  id: Monkey
+  name: Chimpanzee
+  isVisibleLanguage: true
+  languageIcon:
+    sprite: /Textures/_Stories/Interface/language_icons.rsi
+    state: Monkey
+  speechOverride:
+    color: "#795548"
+  obfuscationMethod: !type:SyllableObfuscation
+    minSyllables: 1
+    maxSyllables: 2
+    replacement:
+    - oop
+    - aak
+    - chee
+    - eek
+
+- type: language
   id: Codespeak
   name: Codespeak
   isVisibleLanguage: true
   showLanguageName: false
   showLanguageIcon: false
+  languageIcon:
+    sprite: /Textures/_Stories/Interface/language_icons.rsi
+    state: Codespeak
   obfuscationMethod: !type:PhraseObfuscation
     minPhrases: 1
     maxPhrases: 3
@@ -608,6 +668,9 @@
   id: Shadowtongue
   name: Shadowtongue
   isVisibleLanguage: true
+  languageIcon:
+    sprite: /Textures/_Stories/Interface/language_icons.rsi
+    state: Shadowtongue
   speechOverride:
     color: "#4A148C"
   obfuscationMethod: !type:SyllableObfuscation
@@ -688,6 +751,9 @@
   id: Machine
   name: Encoded Audio Language
   isVisibleLanguage: true
+  languageIcon:
+    sprite: /Textures/_Stories/Interface/language_icons.rsi
+    state: Machine
   speechOverride:
     color: "#00E676"
   mutualUnderstanding:
@@ -738,6 +804,9 @@
   id: Squeakspeak
   name: Squeakspeak
   isVisibleLanguage: true
+  languageIcon:
+    sprite: /Textures/_Stories/Interface/language_icons.rsi
+    state: Unknown
   speechOverride:
     color: "#BCAAA4"
   obfuscationMethod: !type:SyllableObfuscation
