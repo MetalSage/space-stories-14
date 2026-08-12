@@ -49,6 +49,7 @@ public sealed partial class SyllableObfuscation : ReplacementObfuscation
         {
             var wordBeginIndex = 0;
             var hashCode = 0;
+            var sentenceStart = true;
 
             for (var i = 0; i <= _message.Length; i++)
             {
@@ -61,10 +62,14 @@ public sealed partial class SyllableObfuscation : ReplacementObfuscation
                     continue;
                 }
 
-                ProcessWord(builder, wordBeginIndex, i, hashCode, minSyllables, maxSyllables);
+                ProcessWord(builder, wordBeginIndex, i, hashCode, minSyllables, maxSyllables, ref sentenceStart);
 
                 if (isWordEnd && ch != EndOfFile)
+                {
                     builder.Append(ch);
+                    if (IsSentenceEndPunctuation(ch))
+                        sentenceStart = true;
+                }
 
                 hashCode = 0;
                 wordBeginIndex = i + 1;
@@ -72,7 +77,7 @@ public sealed partial class SyllableObfuscation : ReplacementObfuscation
         }
 
         private void ProcessWord(StringBuilder builder, int wordBeginIndex, int wordEndIndex,
-            int hashCode, int minSyllables, int maxSyllables)
+            int hashCode, int minSyllables, int maxSyllables, ref bool sentenceStart)
         {
             var wordLength = wordEndIndex - wordBeginIndex;
             if (wordLength <= 0)
@@ -81,10 +86,33 @@ public sealed partial class SyllableObfuscation : ReplacementObfuscation
             if (_comprehension > 0f && WordUnderstood(hashCode))
             {
                 builder.Append(_message, wordBeginIndex, wordLength);
+                sentenceStart = false;
                 return;
             }
 
-            ObfuscateWordCompletely(builder, hashCode, minSyllables, maxSyllables);
+            var shouting = IsShouting(wordBeginIndex, wordLength);
+            ObfuscateWordCompletely(builder, hashCode, minSyllables, maxSyllables, shouting, sentenceStart);
+            sentenceStart = false;
+        }
+
+        private bool IsShouting(int wordBeginIndex, int wordLength)
+        {
+            if (wordLength < 2)
+                return false;
+
+            var hasLetter = false;
+            for (var i = 0; i < wordLength; i++)
+            {
+                var ch = _message[wordBeginIndex + i];
+                if (!char.IsLetter(ch))
+                    continue;
+
+                hasLetter = true;
+                if (char.IsLower(ch))
+                    return false;
+            }
+
+            return hasLetter;
         }
 
         private bool WordUnderstood(int hashCode)
@@ -93,10 +121,22 @@ public sealed partial class SyllableObfuscation : ReplacementObfuscation
             return roll < (int) (_comprehension * 1000f);
         }
 
-        private void ObfuscateWordCompletely(StringBuilder builder, int hashCode, int minSyllables, int maxSyllables)
+        private void ObfuscateWordCompletely(StringBuilder builder, int hashCode, int minSyllables, int maxSyllables,
+            bool shouting, bool capitalizeFirst)
         {
             var syllableCount = _context.PseudoRandomNumber(hashCode, minSyllables, maxSyllables, _randomize);
+            var startIndex = builder.Length;
             AppendRandomSyllables(builder, hashCode, syllableCount);
+
+            if (shouting)
+            {
+                for (var i = startIndex; i < builder.Length; i++)
+                    builder[i] = char.ToUpperInvariant(builder[i]);
+            }
+            else if (capitalizeFirst && builder.Length > startIndex)
+            {
+                builder[startIndex] = char.ToUpperInvariant(builder[startIndex]);
+            }
         }
 
         private void AppendRandomSyllables(StringBuilder builder, int hashCode, int syllableCount)
