@@ -39,8 +39,6 @@ public sealed partial class LanguageSystem : SharedLanguageSystem
             ent.Comp.DefaultLanguage ??= preset.DefaultLanguage;
         }
 
-        // UpdateEntityLanguages derives SpokenLanguages and then picks a valid CurrentLanguage;
-        // assigning one here would run against a set that has not been rebuilt yet.
         UpdateEntityLanguages(ent.AsNullable());
     }
 
@@ -187,9 +185,6 @@ public sealed partial class LanguageSystem : SharedLanguageSystem
         if (ent.Comp.CurrentLanguage is { } current && ent.Comp.SpokenLanguages.Contains(current))
             return false;
 
-        // Only fall back to a language the entity can actually speak -- a default that is
-        // blocked or never granted would otherwise be reassigned on every update, and an
-        // empty set would yield a default(ProtoId) that resolves to no prototype at all.
         ProtoId<LanguagePrototype>? replacement = null;
 
         if (ent.Comp.DefaultLanguage is { } fallback && ent.Comp.SpokenLanguages.Contains(fallback))
@@ -207,10 +202,6 @@ public sealed partial class LanguageSystem : SharedLanguageSystem
         return true;
     }
 
-    /// <summary>
-    ///     Marks a relay device (intercom, handheld radio speaker) as carrying <paramref name="language"/>,
-    ///     so that speech it emits is subject to the same barrier as the original transmission.
-    /// </summary>
     public void SetRelayLanguage(EntityUid uid, ProtoId<LanguagePrototype> language)
     {
         var component = EnsureComp<LanguageComponent>(uid);
@@ -222,9 +213,6 @@ public sealed partial class LanguageSystem : SharedLanguageSystem
             return;
         }
 
-        // Replace rather than accumulate: a relay only ever carries the last thing it received.
-        // Going through the source lists (instead of writing the derived sets directly) keeps the
-        // state reproducible if anything re-runs UpdateEntityLanguages on the device later.
         component.SpokenLanguageSources.Clear();
         component.UnderstoodLanguageSources.Clear();
         AddLanguageSource(component.SpokenLanguageSources, language, LanguageSource.Relay);

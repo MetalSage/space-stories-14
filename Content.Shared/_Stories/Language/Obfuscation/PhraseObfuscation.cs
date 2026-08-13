@@ -81,8 +81,6 @@ public sealed partial class PhraseObfuscation : ReplacementObfuscation
                     }
                 }
 
-                // i is exclusive here, so the trailing character of an unpunctuated message
-                // is part of the sentence rather than being dropped.
                 ProcessSentence(builder, sentenceBeginIndex, i, hashCode,
                     minPhrases, maxPhrases, separator, proportion);
 

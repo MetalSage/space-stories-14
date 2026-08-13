@@ -153,8 +153,6 @@ public sealed partial class ChatSystem
 
             // Stories-Language Start
             var isClear = data.Range <= WhisperClearRange || data.Observer;
-            // Only raycast when the result is actually consulted: either the language requires
-            // line of sight, or the listener is far enough that the branch below needs it.
             var hasLos = (needsLos || !isClear) && _examineSystem.InRangeUnOccluded(source, listener, WhisperMuffledRange);
             var comprehension = (needsLos && !hasLos) ? 0f : _language.GetComprehension(listener, language);
             var listenerClear = comprehension < 1f ? _language.ObfuscateMessage(message, language, comprehension) : message;

@@ -192,9 +192,7 @@ public sealed partial class RadioSystem : EntitySystem
         var hasActiveServer = HasActiveServer(sourceMapId, channel.ID);
         var sourceServerExempt = _exemptQuery.HasComp(radioSource);
 
-        // Stories-TTS: recipients grouped by the text they actually received, so each
-        // distinct variant is voiced with audio matching what that listener reads.
-        var recipientsByMessage = new Dictionary<string, List<EntityUid>>();
+        var recipientsByMessage = new Dictionary<string, List<EntityUid>>(); // Stories-TTS
 
         var radioQuery = EntityQueryEnumerator<ActiveRadioComponent, TransformComponent>();
         while (canSend && radioQuery.MoveNext(out var receiver, out var radio, out var transform))
@@ -227,9 +225,6 @@ public sealed partial class RadioSystem : EntitySystem
 
             if (IsRelaySpeaker(receiver))
             {
-                // A speaker device is a relay, not a listener: it carries the signal verbatim
-                // and re-speaks it aloud. Tag it with the spoken language so the barrier is
-                // applied per listener when it talks, instead of leaking clear Common text.
                 if (forceObfuscated)
                 {
                     comprehension = 0f;
@@ -298,11 +293,6 @@ public sealed partial class RadioSystem : EntitySystem
     }
 
     // Stories-Language Start
-    /// <summary>
-    ///     A device that re-speaks received traffic out loud (intercom, handheld radio with the
-    ///     speaker on) relays rather than listens, so it must not be treated as a comprehending
-    ///     receiver.
-    /// </summary>
     private bool IsRelaySpeaker(EntityUid receiver)
     {
         return HasComp<RadioSpeakerComponent>(receiver);

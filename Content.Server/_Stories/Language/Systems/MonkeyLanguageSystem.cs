@@ -28,8 +28,6 @@ public sealed partial class MonkeyLanguageSystem : EntitySystem
 
     private void OnMonkeyAccentRemoved(EntityUid uid, MonkeyAccentComponent component, ComponentRemove args)
     {
-        // ComponentRemove also fires while the entity is being deleted, where EnsureComp would
-        // try to add a component to a terminating entity.
         if (TerminatingOrDeleted(uid))
             return;
 
