@@ -11,12 +11,6 @@ public abstract partial class ObfuscationMethod
         Replacement = new List<string> { "<?>" }
     };
 
-    internal abstract void ObfuscateInternal(
-        StringBuilder builder,
-        string message,
-        SharedLanguageSystem context,
-        bool randomize);
-
     internal abstract void ObfuscateInternalWithComprehension(
         StringBuilder builder,
         string message,

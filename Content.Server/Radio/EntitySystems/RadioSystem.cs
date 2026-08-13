@@ -183,10 +183,6 @@ public sealed partial class RadioSystem : EntitySystem
         var chatMsg = new MsgChatMessage { Message = chat };
         var ev = new RadioReceiveEvent(message, messageSource, channel, radioSource, chatMsg);
 
-        // Stories-Language Start
-        var obfuscatedMessage = _language.ObfuscateMessage(message, language);
-        // Stories-Language End
-
         var sendAttemptEv = new RadioSendAttemptEvent(channel, radioSource);
         RaiseLocalEvent(ref sendAttemptEv);
         RaiseLocalEvent(radioSource, ref sendAttemptEv);
@@ -196,8 +192,9 @@ public sealed partial class RadioSystem : EntitySystem
         var hasActiveServer = HasActiveServer(sourceMapId, channel.ID);
         var sourceServerExempt = _exemptQuery.HasComp(radioSource);
 
-        var recipientsUnderstand = new List<EntityUid>(); // Stories-TTS
-        var recipientsObfuscated = new List<EntityUid>(); // Stories-TTS
+        // Stories-TTS: recipients grouped by the text they actually received, so each
+        // distinct variant is voiced with audio matching what that listener reads.
+        var recipientsByMessage = new Dictionary<string, List<EntityUid>>();
 
         var radioQuery = EntityQueryEnumerator<ActiveRadioComponent, TransformComponent>();
         while (canSend && radioQuery.MoveNext(out var receiver, out var radio, out var transform))
@@ -226,13 +223,33 @@ public sealed partial class RadioSystem : EntitySystem
 
             // send the message
             // Stories-Language Start
-            var listener = ResolveLanguageListener(receiver);
-            var comprehension = forceObfuscated ? 0f : (listener is null ? 1f : _language.GetComprehension(listener.Value, language));
+            float comprehension;
+
+            if (IsRelaySpeaker(receiver))
+            {
+                // A speaker device is a relay, not a listener: it carries the signal verbatim
+                // and re-speaks it aloud. Tag it with the spoken language so the barrier is
+                // applied per listener when it talks, instead of leaking clear Common text.
+                if (forceObfuscated)
+                {
+                    comprehension = 0f;
+                }
+                else
+                {
+                    _language.SetRelayLanguage(receiver, language);
+                    comprehension = 1f;
+                }
+            }
+            else
+            {
+                var listener = ResolveLanguageListener(receiver);
+                comprehension = forceObfuscated ? 0f : (listener is null ? 1f : _language.GetComprehension(listener.Value, language));
+            }
 
             if (comprehension >= 1f)
             {
                 RaiseLocalEvent(receiver, ref ev);
-                recipientsUnderstand.Add(receiver); // Stories-TTS
+                AddTtsRecipient(recipientsByMessage, message, receiver); // Stories-TTS
             }
             else
             {
@@ -252,7 +269,7 @@ public sealed partial class RadioSystem : EntitySystem
                 var listenerChatMsg = new MsgChatMessage { Message = listenerChat };
                 var evListener = new RadioReceiveEvent(listenerMessage, messageSource, channel, radioSource, listenerChatMsg);
                 RaiseLocalEvent(receiver, ref evListener);
-                recipientsObfuscated.Add(receiver); // Stories-TTS
+                AddTtsRecipient(recipientsByMessage, listenerMessage, receiver); // Stories-TTS
             }
             // Stories-Language End
         }
@@ -262,13 +279,12 @@ public sealed partial class RadioSystem : EntitySystem
         {
             var actorQuery = GetEntityQuery<ActorComponent>();
 
-            var understandSessions = ResolveTtsSessions(recipientsUnderstand, actorQuery);
-            if (understandSessions.Count > 0)
-                ProcessAndSendRadioTts(messageSource, message, channel, understandSessions);
-
-            var obfuscatedSessions = ResolveTtsSessions(recipientsObfuscated, actorQuery);
-            if (obfuscatedSessions.Count > 0)
-                ProcessAndSendRadioTts(messageSource, obfuscatedMessage, channel, obfuscatedSessions);
+            foreach (var (variant, recipients) in recipientsByMessage)
+            {
+                var sessions = ResolveTtsSessions(recipients, actorQuery);
+                if (sessions.Count > 0)
+                    ProcessAndSendRadioTts(messageSource, variant, channel, sessions);
+            }
         }
         // Stories-TTS End
 
@@ -282,6 +298,27 @@ public sealed partial class RadioSystem : EntitySystem
     }
 
     // Stories-Language Start
+    /// <summary>
+    ///     A device that re-speaks received traffic out loud (intercom, handheld radio with the
+    ///     speaker on) relays rather than listens, so it must not be treated as a comprehending
+    ///     receiver.
+    /// </summary>
+    private bool IsRelaySpeaker(EntityUid receiver)
+    {
+        return HasComp<RadioSpeakerComponent>(receiver);
+    }
+
+    private static void AddTtsRecipient(Dictionary<string, List<EntityUid>> recipients, string message, EntityUid receiver)
+    {
+        if (!recipients.TryGetValue(message, out var list))
+        {
+            list = new List<EntityUid>();
+            recipients[message] = list;
+        }
+
+        list.Add(receiver);
+    }
+
     private EntityUid? ResolveLanguageListener(EntityUid receiver)
     {
         if (HasComp<LanguageComponent>(receiver))
@@ -294,7 +331,7 @@ public sealed partial class RadioSystem : EntitySystem
         return null;
     }
 
-    private HashSet<ICommonSession> ResolveTtsSessions(List<EntityUid> recipients, EntityQuery<ActorComponent> actorQuery)
+    private HashSet<ICommonSession> ResolveTtsSessions(IReadOnlyList<EntityUid> recipients, EntityQuery<ActorComponent> actorQuery)
     {
         var sessions = new HashSet<ICommonSession>();
         foreach (var uid in recipients)

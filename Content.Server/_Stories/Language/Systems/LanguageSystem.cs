@@ -39,9 +39,8 @@ public sealed partial class LanguageSystem : SharedLanguageSystem
             ent.Comp.DefaultLanguage ??= preset.DefaultLanguage;
         }
 
-        if (ent.Comp.CurrentLanguage == null)
-            ent.Comp.CurrentLanguage = ent.Comp.DefaultLanguage ?? ent.Comp.SpokenLanguages.FirstOrDefault();
-
+        // UpdateEntityLanguages derives SpokenLanguages and then picks a valid CurrentLanguage;
+        // assigning one here would run against a set that has not been rebuilt yet.
         UpdateEntityLanguages(ent.AsNullable());
     }
 
@@ -185,17 +184,54 @@ public sealed partial class LanguageSystem : SharedLanguageSystem
         if (!Resolve(ent, ref ent.Comp, false))
             return false;
 
-        if (ent.Comp.CurrentLanguage == null ||
-            !ent.Comp.SpokenLanguages.Contains(ent.Comp.CurrentLanguage.Value))
+        if (ent.Comp.CurrentLanguage is { } current && ent.Comp.SpokenLanguages.Contains(current))
+            return false;
+
+        // Only fall back to a language the entity can actually speak -- a default that is
+        // blocked or never granted would otherwise be reassigned on every update, and an
+        // empty set would yield a default(ProtoId) that resolves to no prototype at all.
+        ProtoId<LanguagePrototype>? replacement = null;
+
+        if (ent.Comp.DefaultLanguage is { } fallback && ent.Comp.SpokenLanguages.Contains(fallback))
+            replacement = fallback;
+        else if (ent.Comp.SpokenLanguages.Count > 0)
+            replacement = ent.Comp.SpokenLanguages.First();
+
+        if (ent.Comp.CurrentLanguage == replacement)
+            return false;
+
+        ent.Comp.CurrentLanguage = replacement;
+        var update = new LanguagesUpdateEvent();
+        RaiseLocalEvent(ent, ref update);
+        Dirty(ent);
+        return true;
+    }
+
+    /// <summary>
+    ///     Marks a relay device (intercom, handheld radio speaker) as carrying <paramref name="language"/>,
+    ///     so that speech it emits is subject to the same barrier as the original transmission.
+    /// </summary>
+    public void SetRelayLanguage(EntityUid uid, ProtoId<LanguagePrototype> language)
+    {
+        var component = EnsureComp<LanguageComponent>(uid);
+
+        if (component.SpokenLanguageSources.Count == 1 &&
+            component.SpokenLanguageSources.ContainsKey(language) &&
+            component.CurrentLanguage == language)
         {
-            ent.Comp.CurrentLanguage = ent.Comp.DefaultLanguage ?? ent.Comp.SpokenLanguages.FirstOrDefault();
-            var update = new LanguagesUpdateEvent();
-            RaiseLocalEvent(ent, ref update);
-            Dirty(ent);
-            return true;
+            return;
         }
 
-        return false;
+        // Replace rather than accumulate: a relay only ever carries the last thing it received.
+        // Going through the source lists (instead of writing the derived sets directly) keeps the
+        // state reproducible if anything re-runs UpdateEntityLanguages on the device later.
+        component.SpokenLanguageSources.Clear();
+        component.UnderstoodLanguageSources.Clear();
+        AddLanguageSource(component.SpokenLanguageSources, language, LanguageSource.Relay);
+        AddLanguageSource(component.UnderstoodLanguageSources, language, LanguageSource.Relay);
+        component.DefaultLanguage = language;
+
+        UpdateEntityLanguages((uid, component));
     }
 
     public void UpdateEntityLanguages(Entity<LanguageComponent?> ent)
@@ -229,15 +265,5 @@ public sealed partial class LanguageSystem : SharedLanguageSystem
         }
 
         Dirty(ent);
-    }
-
-    public string ObfuscateMessageForSpeaker(EntityUid speaker, string message, ProtoId<LanguagePrototype> language)
-    {
-        return ObfuscateMessage(message, language, GetComprehension(speaker, language));
-    }
-
-    public string ObfuscateMessageForListener(EntityUid listener, string speakerMessage, ProtoId<LanguagePrototype> language)
-    {
-        return ObfuscateMessage(speakerMessage, language, GetComprehension(listener, language));
     }
 }

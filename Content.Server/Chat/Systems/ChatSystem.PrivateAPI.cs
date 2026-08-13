@@ -152,12 +152,15 @@ public sealed partial class ChatSystem
                 continue; // Won't get logged to chat, and ghosts are too far away to see the pop-up, so we just won't send it to them.
 
             // Stories-Language Start
-            var hasLos = _examineSystem.InRangeUnOccluded(source, listener, WhisperMuffledRange);
+            var isClear = data.Range <= WhisperClearRange || data.Observer;
+            // Only raycast when the result is actually consulted: either the language requires
+            // line of sight, or the listener is far enough that the branch below needs it.
+            var hasLos = (needsLos || !isClear) && _examineSystem.InRangeUnOccluded(source, listener, WhisperMuffledRange);
             var comprehension = (needsLos && !hasLos) ? 0f : _language.GetComprehension(listener, language);
             var listenerClear = comprehension < 1f ? _language.ObfuscateMessage(message, language, comprehension) : message;
             var listenerMuffled = comprehension < 1f ? ObfuscateMessageReadability(listenerClear, 0.2f) : obfuscatedMessage;
 
-            if (data.Range <= WhisperClearRange || data.Observer)
+            if (isClear)
                 _chatManager.ChatMessageToOne(ChatChannel.Whisper, listenerClear, WrapClear(listenerClear), source, false, session.Channel);
             //If listener is too far, they only hear fragments of the message
             else if (hasLos)

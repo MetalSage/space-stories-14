@@ -66,23 +66,31 @@ public sealed partial class PhraseObfuscation : ReplacementObfuscation
             var sentenceBeginIndex = 0;
             var hashCode = 0;
 
-            for (var i = 0; i < _message.Length; i++)
+            for (var i = 0; i <= _message.Length; i++)
             {
-                var ch = char.ToLowerInvariant(_message[i]);
+                var atEnd = i == _message.Length;
 
-                if (!IsSentenceEndPunctuation(ch) && i != _message.Length - 1)
+                if (!atEnd)
                 {
-                    hashCode = hashCode * 31 + ch;
-                    continue;
+                    var ch = char.ToLowerInvariant(_message[i]);
+
+                    if (!IsSentenceEndPunctuation(ch))
+                    {
+                        hashCode = hashCode * 31 + ch;
+                        continue;
+                    }
                 }
 
+                // i is exclusive here, so the trailing character of an unpunctuated message
+                // is part of the sentence rather than being dropped.
                 ProcessSentence(builder, sentenceBeginIndex, i, hashCode,
                     minPhrases, maxPhrases, separator, proportion);
 
-                sentenceBeginIndex = i + 1;
+                if (!atEnd)
+                    builder.Append(_message[i]);
 
-                if (IsSentenceEndPunctuation(ch))
-                    builder.Append(ch).Append(' ');
+                hashCode = 0;
+                sentenceBeginIndex = i + 1;
             }
         }
 
@@ -90,7 +98,7 @@ public sealed partial class PhraseObfuscation : ReplacementObfuscation
             int hashCode, int minPhrases, int maxPhrases, string separator, float proportion)
         {
             var length = sentenceEndIndex - sentenceBeginIndex;
-            if (length < 0)
+            if (length <= 0)
                 return;
 
             var sentence = _message.Substring(sentenceBeginIndex, length);

@@ -13,8 +13,6 @@ public abstract partial class SharedLanguageSystem : EntitySystem
     [Dependency] private IRobustRandom _random = default!;
 
     public static readonly ProtoId<LanguagePrototype> CommonLanguage = "GalacticCommon";
-    private static readonly IReadOnlySet<ProtoId<LanguagePrototype>> DefaultLanguages =
-        new HashSet<ProtoId<LanguagePrototype>> { CommonLanguage };
     private int _roundSeed;
 
     public ProtoId<LanguagePrototype> GetCurrentLanguage(EntityUid entity)
@@ -95,19 +93,6 @@ public abstract partial class SharedLanguageSystem : EntitySystem
         }
 
         return best;
-    }
-
-    public IReadOnlySet<ProtoId<LanguagePrototype>> GetSpokenLanguages(EntityUid entity)
-    {
-        return GetSpokenLanguages((entity, CompOrNull<LanguageComponent>(entity)));
-    }
-
-    public IReadOnlySet<ProtoId<LanguagePrototype>> GetSpokenLanguages(Entity<LanguageComponent?> ent)
-    {
-        if (!Resolve(ent, ref ent.Comp, false))
-            return DefaultLanguages;
-
-        return ent.Comp.SpokenLanguages;
     }
 
     public string ColorizeMessage(string escapedMessage, ProtoId<LanguagePrototype> language)

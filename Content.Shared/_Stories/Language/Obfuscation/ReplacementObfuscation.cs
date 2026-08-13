@@ -9,15 +9,6 @@ public partial class ReplacementObfuscation : ObfuscationMethod
     [DataField(required: true)]
     public List<string> Replacement = [];
 
-    internal override void ObfuscateInternal(
-        StringBuilder builder,
-        string message,
-        SharedLanguageSystem context,
-        bool randomize)
-    {
-        ObfuscateInternalWithComprehension(builder, message, context, randomize, 0.0f);
-    }
-
     internal override void ObfuscateInternalWithComprehension(
         StringBuilder builder,
         string message,
