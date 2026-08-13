@@ -21,6 +21,9 @@ public sealed partial class LanguageComponent : Component
     [DataField]
     public Dictionary<ProtoId<LanguagePrototype>, HashSet<string>> UnderstoodLanguageSources = new();
 
+    [DataField]
+    public Dictionary<ProtoId<LanguagePrototype>, Dictionary<string, float>> PartialUnderstanding = new();
+
     [DataField, AutoNetworkedField]
     public HashSet<ProtoId<LanguagePrototype>> BlockedSpeaking = new();
 

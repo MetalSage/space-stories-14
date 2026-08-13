@@ -39,7 +39,7 @@ public sealed partial class RadioSystem : EntitySystem
     [Dependency] private IChatManager _chatManager = default!;
     [Dependency] private GhostSystem _ghost = default!;
     [Dependency] private EntityQuery<TelecomExemptComponent> _exemptQuery = default!;
-    [Dependency] private LanguageSystem _language = default!;
+    [Dependency] private LanguageSystem _language = default!; // Stories-Language
 
     // Stories-TTS Start
     [Dependency] private TTSSystem _tts = default!;

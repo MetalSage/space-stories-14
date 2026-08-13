@@ -10,4 +10,11 @@ public static class LanguageSource
     public const string Relay = "Relay";
     public const string Preset = "Preset";
     public const string Admin = "Admin";
+    public const string Learned = "Learned";
+
+    public static readonly IReadOnlySet<string> MindBound = new HashSet<string>
+    {
+        Admin,
+        Learned,
+    };
 }

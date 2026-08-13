@@ -1,6 +1,7 @@
 using System.Text;
 using Content.Shared._Stories.Language.Components;
 using Content.Shared._Stories.Language.Prototypes;
+using Content.Shared.Dataset;
 using Content.Shared.Ghost;
 using Robust.Shared.Prototypes;
 using Robust.Shared.Random;
@@ -13,7 +14,43 @@ public abstract partial class SharedLanguageSystem : EntitySystem
     [Dependency] private IRobustRandom _random = default!;
 
     public static readonly ProtoId<LanguagePrototype> CommonLanguage = "GalacticCommon";
+
+    private static readonly ProtoId<DatasetPrototype> CommonWordsDataset = "STLanguageCommonWords";
+
+    private const float CommonWordBonus = 0.2f;
+    private const float UncommonWordPenalty = -0.05f;
+
+    private Dictionary<string, int>? _wordRanks;
     private int _roundSeed;
+
+    public float GetWordCommonnessBonus(string word)
+    {
+        _wordRanks ??= BuildWordRanks();
+
+        if (_wordRanks.Count == 0)
+            return 0f;
+
+        if (!_wordRanks.TryGetValue(word, out var rank))
+            return UncommonWordPenalty;
+
+        var falloff = (float) rank / _wordRanks.Count * CommonWordBonus;
+        return Math.Max(CommonWordBonus - falloff, UncommonWordPenalty);
+    }
+
+    private Dictionary<string, int> BuildWordRanks()
+    {
+        var ranks = new Dictionary<string, int>();
+
+        if (!_prototypeManager.TryIndex(CommonWordsDataset, out var dataset))
+            return ranks;
+
+        for (var i = 0; i < dataset.Values.Count; i++)
+        {
+            ranks.TryAdd(dataset.Values[i].ToLowerInvariant(), i + 1);
+        }
+
+        return ranks;
+    }
 
     public ProtoId<LanguagePrototype> GetCurrentLanguage(EntityUid entity)
     {
@@ -92,7 +129,16 @@ public abstract partial class SharedLanguageSystem : EntitySystem
                 best = comprehension;
         }
 
-        return best;
+        if (ent.Comp.PartialUnderstanding.TryGetValue(language, out var granted))
+        {
+            foreach (var amount in granted.Values)
+            {
+                if (amount > best)
+                    best = amount;
+            }
+        }
+
+        return Math.Clamp(best, 0f, 1f);
     }
 
     public string ColorizeMessage(string escapedMessage, ProtoId<LanguagePrototype> language)
@@ -145,6 +191,7 @@ public abstract partial class SharedLanguageSystem : EntitySystem
     protected void ReseedObfuscationForRound()
     {
         _roundSeed = _random.Next();
+        _wordRanks = null;
     }
 
     private static int CombineSeed(int seed, int roundSeed)

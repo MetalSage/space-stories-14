@@ -37,6 +37,9 @@ public sealed partial class LanguagePrototype : IPrototype
     public SpriteSpecifier? LanguageIcon;
 
     [DataField]
+    public int Priority;
+
+    [DataField]
     public bool CanUseRadio = true;
 
     [DataField]

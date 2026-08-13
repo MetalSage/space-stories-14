@@ -1,6 +1,7 @@
 using System.Linq;
 using Content.Server._Stories.Language.Systems;
 using Content.Server.Administration;
+using Content.Shared._Stories.Language;
 using Content.Shared._Stories.Language.Components;
 using Content.Shared._Stories.Language.Prototypes;
 using Content.Shared.Administration;
@@ -83,6 +84,23 @@ public sealed class LanguageCommand : ToolshedCommand
         return ent;
     }
 
+    [CommandImplementation("partial")]
+    public EntityUid Partial(
+        [CommandInvocationContext] IInvocationContext ctx,
+        [PipedArgument] EntityUid ent,
+        [CommandArgument] ProtoId<LanguagePrototype> language,
+        [CommandArgument] float amount)
+    {
+        _language ??= GetSys<LanguageSystem>();
+
+        if (amount <= 0f)
+            _language.RemovePartialUnderstanding(ent, language, LanguageSource.Admin);
+        else
+            _language.AddPartialUnderstanding(ent, language, amount);
+
+        return ent;
+    }
+
     [CommandImplementation("block")]
     public EntityUid Block(
         [CommandInvocationContext] IInvocationContext ctx,
@@ -139,6 +157,16 @@ public sealed class LanguageCommand : ToolshedCommand
         [CommandArgument] bool removeUnderstanding)
     {
         return ents.Select(ent => Remove(ctx, ent, language, removeSpeaking, removeUnderstanding));
+    }
+
+    [CommandImplementation("partial")]
+    public IEnumerable<EntityUid> Partial(
+        [CommandInvocationContext] IInvocationContext ctx,
+        [PipedArgument] IEnumerable<EntityUid> ents,
+        [CommandArgument] ProtoId<LanguagePrototype> language,
+        [CommandArgument] float amount)
+    {
+        return ents.Select(ent => Partial(ctx, ent, language, amount));
     }
 
     [CommandImplementation("block")]

@@ -2,14 +2,13 @@
   id: GalacticCommon
   name: Galactic Common
   isVisibleLanguage: true
+  priority: 100
   languageIcon:
     sprite: /Textures/_Stories/Interface/language_icons.rsi
     state: GalacticCommon
   mutualUnderstanding:
     VoxPidgin: 0.25
   obfuscationMethod: !type:SyllableObfuscation
-    minSyllables: 1
-    maxSyllables: 3
     replacement:
     - la
     - ba
@@ -32,8 +31,6 @@
   speechOverride:
     color: "#D84315"
   obfuscationMethod: !type:SyllableObfuscation
-    minSyllables: 2
-    maxSyllables: 4
     replacement:
     - za
     - az
@@ -56,8 +53,6 @@
   speechOverride:
     color: "#7E57C2"
   obfuscationMethod: !type:SyllableObfuscation
-    minSyllables: 1
-    maxSyllables: 2
     replacement:
     - år
     - i
@@ -126,8 +121,6 @@
   speechOverride:
     color: "#90A4AE"
   obfuscationMethod: !type:SyllableObfuscation
-    minSyllables: 1
-    maxSyllables: 2
     replacement:
     - k
     - ck
@@ -186,8 +179,6 @@
   speechOverride:
     color: "#26A69A"
   obfuscationMethod: !type:SyllableObfuscation
-    minSyllables: 1
-    maxSyllables: 2
     replacement:
     - qr
     - qrr
@@ -215,8 +206,6 @@
   mutualUnderstanding:
     Chitin: 0.25
   obfuscationMethod: !type:SyllableObfuscation
-    minSyllables: 2
-    maxSyllables: 3
     replacement:
     - bzz
     - zzz
@@ -239,8 +228,6 @@
   speechOverride:
     color: "#388E3C"
   obfuscationMethod: !type:SyllableObfuscation
-    minSyllables: 2
-    maxSyllables: 3
     replacement:
     - fii
     - sii
@@ -309,8 +296,6 @@
     GalacticCommon: 0.25
     Avalese: 0.25
   obfuscationMethod: !type:SyllableObfuscation
-    minSyllables: 2
-    maxSyllables: 3
     replacement:
     - ti
     - hi
@@ -342,8 +327,6 @@
   mutualUnderstanding:
     Nekomimetic: 0.25
   obfuscationMethod: !type:SyllableObfuscation
-    minSyllables: 1
-    maxSyllables: 3
     replacement:
     - rur
     - ya
@@ -405,8 +388,6 @@
   speechOverride:
     color: "#C9A227"
   obfuscationMethod: !type:SyllableObfuscation
-    minSyllables: 1
-    maxSyllables: 2
     replacement:
     - dur
     - grim
@@ -436,8 +417,6 @@
   speechOverride:
     color: "#EC407A"
   obfuscationMethod: !type:SyllableObfuscation
-    minSyllables: 1
-    maxSyllables: 2
     replacement:
     - ging
     - ger
@@ -472,8 +451,6 @@
   mutualUnderstanding:
     Canilunzt: 0.25
   obfuscationMethod: !type:SyllableObfuscation
-    minSyllables: 1
-    maxSyllables: 2
     replacement:
     - neko
     - nyan
@@ -533,8 +510,6 @@
   mutualUnderstanding:
     Buzzwords: 0.25
   obfuscationMethod: !type:SyllableObfuscation
-    minSyllables: 1
-    maxSyllables: 2
     replacement:
     - click
     - clack
@@ -552,8 +527,6 @@
   mutualUnderstanding:
     VoxPidgin: 0.25
   obfuscationMethod: !type:SyllableObfuscation
-    minSyllables: 1
-    maxSyllables: 3
     replacement:
     - chirp
     - trill
@@ -586,8 +559,6 @@
   speechOverride:
     color: "#795548"
   obfuscationMethod: !type:SyllableObfuscation
-    minSyllables: 1
-    maxSyllables: 2
     replacement:
     - oop
     - aak
@@ -659,8 +630,6 @@
   speechOverride:
     color: "#4A148C"
   obfuscationMethod: !type:SyllableObfuscation
-    minSyllables: 1
-    maxSyllables: 2
     replacement:
     - er
     - sint
@@ -757,8 +726,6 @@
     Avalese: 0.66
     Squeakspeak: 0.66
   obfuscationMethod: !type:SyllableObfuscation
-    minSyllables: 1
-    maxSyllables: 2
     replacement:
     - beep
     - beep
@@ -792,8 +759,6 @@
   speechOverride:
     color: "#BCAAA4"
   obfuscationMethod: !type:SyllableObfuscation
-    minSyllables: 1
-    maxSyllables: 2
     replacement:
     - eek
     - squee

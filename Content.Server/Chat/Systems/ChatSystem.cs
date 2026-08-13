@@ -50,7 +50,7 @@ public sealed partial class ChatSystem : SharedChatSystem
     [Dependency] private ReplacementAccentSystem _wordreplacement = default!;
     [Dependency] private ExamineSystemShared _examineSystem = default!;
     [Dependency] private EntityQuery<GhostHearingComponent> _ghostHearingQuery = default!;
-    [Dependency] private LanguageSystem _language = default!;
+    [Dependency] private LanguageSystem _language = default!; // Stories-Language
 
     public new const int VoiceRange = 10; // how far voice goes in world units
     public new const int WhisperClearRange = 2; // how far whisper goes while still being understandable, in world units

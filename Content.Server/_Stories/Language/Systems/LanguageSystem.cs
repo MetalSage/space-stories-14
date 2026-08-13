@@ -109,6 +109,47 @@ public sealed partial class LanguageSystem : SharedLanguageSystem
         UpdateEntityLanguages(ent.Owner);
     }
 
+    public void AddPartialUnderstanding(
+        EntityUid uid,
+        ProtoId<LanguagePrototype> language,
+        float amount,
+        string source = LanguageSource.Admin)
+    {
+        var component = EnsureComp<LanguageComponent>(uid);
+
+        if (!component.PartialUnderstanding.TryGetValue(language, out var sources))
+        {
+            sources = new Dictionary<string, float>();
+            component.PartialUnderstanding[language] = sources;
+        }
+
+        sources[source] = Math.Clamp(amount, 0f, 1f);
+        Dirty(uid, component);
+    }
+
+    public void RemovePartialUnderstanding(
+        Entity<LanguageComponent?> ent,
+        ProtoId<LanguagePrototype> language,
+        string? source = null)
+    {
+        if (!Resolve(ent, ref ent.Comp, false))
+            return;
+
+        if (!ent.Comp.PartialUnderstanding.TryGetValue(language, out var sources))
+            return;
+
+        if (source == null)
+            ent.Comp.PartialUnderstanding.Remove(language);
+        else
+        {
+            sources.Remove(source);
+            if (sources.Count == 0)
+                ent.Comp.PartialUnderstanding.Remove(language);
+        }
+
+        Dirty(ent);
+    }
+
     public void AddBlockedLanguage(
         EntityUid uid,
         ProtoId<LanguagePrototype> language,
@@ -142,6 +183,32 @@ public sealed partial class LanguageSystem : SharedLanguageSystem
             ent.Comp.BlockedUnderstanding.Remove(language);
 
         UpdateEntityLanguages(ent.Owner);
+    }
+
+    private ProtoId<LanguagePrototype>? SelectPreferredLanguage(IReadOnlySet<ProtoId<LanguagePrototype>> languages)
+    {
+        ProtoId<LanguagePrototype>? best = null;
+        var bestPriority = int.MinValue;
+
+        foreach (var candidate in languages)
+        {
+            if (!_prototypeManager.TryIndex(candidate, out var proto))
+                continue;
+
+            if (proto.Priority < bestPriority)
+                continue;
+
+            if (proto.Priority == bestPriority &&
+                (best == null || string.CompareOrdinal(candidate.Id, best.Value.Id) >= 0))
+            {
+                continue;
+            }
+
+            best = candidate;
+            bestPriority = proto.Priority;
+        }
+
+        return best;
     }
 
     public void ClearBlockedLanguages(Entity<LanguageComponent?> ent)
@@ -203,8 +270,8 @@ public sealed partial class LanguageSystem : SharedLanguageSystem
 
         if (ent.Comp.DefaultLanguage is { } fallback && ent.Comp.SpokenLanguages.Contains(fallback))
             replacement = fallback;
-        else if (ent.Comp.SpokenLanguages.Count > 0)
-            replacement = ent.Comp.SpokenLanguages.First();
+        else
+            replacement = SelectPreferredLanguage(ent.Comp.SpokenLanguages);
 
         if (ent.Comp.CurrentLanguage == replacement)
             return false;

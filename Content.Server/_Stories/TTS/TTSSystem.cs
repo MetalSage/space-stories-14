@@ -2,6 +2,8 @@ using System.Diagnostics.CodeAnalysis;
 using System.Threading.Tasks;
 using Content.Server.Chat.Systems;
 using Content.Server.Radio.EntitySystems;
+using Content.Server._Stories.Language.Systems;
+using Content.Shared._Stories.Language.Prototypes;
 using Content.Shared._Stories.SCCVars;
 using Content.Shared._Stories.TTS;
 using Content.Shared.Chat;
@@ -28,6 +30,7 @@ public sealed partial class TTSSystem : EntitySystem
     [Dependency] private IRobustRandom _rng = default!;
     [Dependency] private InventorySystem _inventory = default!;
     [Dependency] private SharedContainerSystem _container = default!;
+    [Dependency] private LanguageSystem _language = default!;
 
     private readonly List<string> _sampleText =
         new()
@@ -116,57 +119,76 @@ public sealed partial class TTSSystem : EntitySystem
         if (!GetVoicePrototype(voiceId, out var protoVoice))
             return;
 
+        var language = _language.GetCurrentLanguage(uid);
+
         if (args.ObfuscatedMessage != null)
         {
-            HandleWhisper(uid, args.Message, protoVoice.Speaker);
+            HandleWhisper(uid, args.Message, protoVoice.Speaker, language);
             return;
         }
 
-        HandleSay(uid, args.Message, protoVoice.Speaker);
+        HandleSay(uid, args.Message, protoVoice.Speaker, language);
     }
 
-    private async void HandleSay(EntityUid uid, string message, string speaker)
+    private async void HandleSay(EntityUid uid, string message, string speaker, ProtoId<LanguagePrototype> language)
     {
-        var soundData = await GenerateTTS(message, speaker);
-        if (soundData is null)
-            return;
+        foreach (var (variant, recipients) in GroupListenersByComprehension(uid, message, language, ChatSystem.VoiceRange))
+        {
+            var soundData = await GenerateTTS(variant, speaker);
+            if (soundData is null)
+                continue;
 
-        var ttsEvent = new PlayTTSEvent(soundData, GetNetEntity(uid));
-        FilterAndSend(uid, ttsEvent, ChatSystem.VoiceRange);
+            RaiseNetworkEvent(new PlayTTSEvent(soundData, GetNetEntity(uid)), Filter.Empty().AddPlayers(recipients));
+        }
     }
 
-    private async void HandleWhisper(EntityUid uid, string message, string speaker)
+    private async void HandleWhisper(EntityUid uid, string message, string speaker, ProtoId<LanguagePrototype> language)
     {
-        var fullSoundData = await GenerateTTS(message, speaker, true);
-        if (fullSoundData is null)
-            return;
+        foreach (var (variant, recipients) in GroupListenersByComprehension(uid, message, language, ChatSystem.WhisperClearRange))
+        {
+            var soundData = await GenerateTTS(variant, speaker, true);
+            if (soundData is null)
+                continue;
 
-        var fullTtsEvent = new PlayTTSEvent(fullSoundData, GetNetEntity(uid), true);
-        FilterAndSend(uid, fullTtsEvent, ChatSystem.WhisperClearRange);
+            RaiseNetworkEvent(new PlayTTSEvent(soundData, GetNetEntity(uid), true), Filter.Empty().AddPlayers(recipients));
+        }
     }
 
-    private void FilterAndSend(EntityUid source, PlayTTSEvent ev, float range)
+    private Dictionary<string, List<ICommonSession>> GroupListenersByComprehension(
+        EntityUid source,
+        string message,
+        ProtoId<LanguagePrototype> language,
+        float range)
     {
+        var groups = new Dictionary<string, List<ICommonSession>>();
         var xformQuery = GetEntityQuery<TransformComponent>();
-        var sourceXform = xformQuery.GetComponent(source);
-        var sourceCoords = sourceXform.Coordinates;
+        var sourceCoords = xformQuery.GetComponent(source).Coordinates;
 
-        var recipients = new List<ICommonSession>();
         foreach (var player in Filter.Pvs(source).Recipients)
         {
             if (player.AttachedEntity is not { } listener)
                 continue;
 
-            var listenerXform = xformQuery.GetComponent(listener);
-            if (!listenerXform.Coordinates.InRange(EntityManager, sourceCoords, range))
+            if (!xformQuery.GetComponent(listener).Coordinates.InRange(EntityManager, sourceCoords, range))
                 continue;
+
+            var comprehension = _language.GetComprehension(listener, language);
+            var variant = comprehension >= 1f
+                ? message
+                : _language.ObfuscateMessage(message, language, comprehension);
+
+            if (!groups.TryGetValue(variant, out var recipients))
+            {
+                recipients = new List<ICommonSession>();
+                groups[variant] = recipients;
+            }
 
             recipients.Add(player);
         }
 
-        if (recipients.Count > 0)
-            RaiseNetworkEvent(ev, Filter.Empty().AddPlayers(recipients));
+        return groups;
     }
+
 
     public async Task<byte[]?> GenerateTTS(string text, string speaker, bool isWhisper = false)
     {
