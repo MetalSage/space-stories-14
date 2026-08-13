@@ -22,4 +22,12 @@ public sealed partial class NuclearOperativeLanguageSystem : EntitySystem
     {
         _language.AddLanguage(uid, CodespeakLanguage, source: LanguageSource.NuclearOperative);
     }
+
+    public void RevokeCodespeak(EntityUid uid)
+    {
+        if (TerminatingOrDeleted(uid))
+            return;
+
+        _language.RemoveLanguage(uid, CodespeakLanguage, source: LanguageSource.NuclearOperative);
+    }
 }

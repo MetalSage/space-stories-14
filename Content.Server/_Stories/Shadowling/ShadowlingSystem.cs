@@ -34,6 +34,7 @@ public sealed partial class ShadowlingSystem : EntitySystem
         base.Initialize();
 
         SubscribeLocalEvent<ShadowlingComponent, ComponentInit>(OnInit);
+        SubscribeLocalEvent<ShadowlingComponent, ComponentRemove>(OnShadowlingRemoved);
         SubscribeLocalEvent<ShadowlingComponent, MobStateChangedEvent>(OnMobStateChanged);
         SubscribeLocalEvent<ShadowlingComponent, MindShieldImplantedEvent>(OnMindShieldImplanted);
 
@@ -63,6 +64,14 @@ public sealed partial class ShadowlingSystem : EntitySystem
             Dirty(uid, vision);
             _vision.UpdateVision(uid);
         }
+    }
+
+    private void OnShadowlingRemoved(EntityUid uid, ShadowlingComponent component, ComponentRemove args)
+    {
+        if (TerminatingOrDeleted(uid))
+            return;
+
+        _language.RemoveLanguage(uid, ShadowtongueLanguage, source: LanguageSource.Shadowling);
     }
 
     private void OnMobStateChanged(EntityUid uid, ShadowlingComponent component, MobStateChangedEvent args)

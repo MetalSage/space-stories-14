@@ -19,11 +19,22 @@ public sealed partial class SyntheticLanguageSystem : EntitySystem
 
         SubscribeLocalEvent<BorgChassisComponent, ComponentInit>(OnSyntheticInit);
         SubscribeLocalEvent<StationAiHeldComponent, ComponentInit>(OnSyntheticInit);
+        SubscribeLocalEvent<BorgChassisComponent, ComponentRemove>(OnSyntheticRemoved);
+        SubscribeLocalEvent<StationAiHeldComponent, ComponentRemove>(OnSyntheticRemoved);
     }
 
     private void OnSyntheticInit(EntityUid uid, Component component, ComponentInit args)
     {
         _language.AddLanguage(uid, SharedLanguageSystem.CommonLanguage, source: LanguageSource.Synthetic);
         _language.AddLanguage(uid, MachineLanguage, source: LanguageSource.Synthetic);
+    }
+
+    private void OnSyntheticRemoved(EntityUid uid, Component component, ComponentRemove args)
+    {
+        if (TerminatingOrDeleted(uid))
+            return;
+
+        _language.RemoveLanguage(uid, SharedLanguageSystem.CommonLanguage, source: LanguageSource.Synthetic);
+        _language.RemoveLanguage(uid, MachineLanguage, source: LanguageSource.Synthetic);
     }
 }

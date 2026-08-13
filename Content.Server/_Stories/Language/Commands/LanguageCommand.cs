@@ -22,12 +22,6 @@ public sealed class LanguageCommand : ToolshedCommand
         [CommandArgument] bool canSpeak,
         [CommandArgument] bool canUnderstand)
     {
-        if (!EntityManager.HasComponent<LanguageComponent>(ent))
-        {
-            ctx.WriteLine("Cannot add language to entity without a language comp!");
-            return ent;
-        }
-
         _language ??= GetSys<LanguageSystem>();
 
         _language.AddLanguage(ent, language, canSpeak, canUnderstand);
@@ -77,6 +71,8 @@ public sealed class LanguageCommand : ToolshedCommand
 
         langs.Remove(language);
 
+        _language.ClearBlockedLanguages(ent);
+
         _language.AddLanguage(ent, language);
 
         foreach (var known in langs)
@@ -95,12 +91,6 @@ public sealed class LanguageCommand : ToolshedCommand
         [CommandArgument] bool blockSpeaking,
         [CommandArgument] bool blockUnderstanding)
     {
-        if (!EntityManager.HasComponent<LanguageComponent>(ent))
-        {
-            ctx.WriteLine("Cannot block language for entity without a language comp!");
-            return ent;
-        }
-
         _language ??= GetSys<LanguageSystem>();
 
         _language.AddBlockedLanguage(ent, language, blockSpeaking, blockUnderstanding);

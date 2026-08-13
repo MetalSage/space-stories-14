@@ -144,6 +144,20 @@ public sealed partial class LanguageSystem : SharedLanguageSystem
         UpdateEntityLanguages(ent.Owner);
     }
 
+    public void ClearBlockedLanguages(Entity<LanguageComponent?> ent)
+    {
+        if (!Resolve(ent, ref ent.Comp, false))
+            return;
+
+        if (ent.Comp.BlockedSpeaking.Count == 0 && ent.Comp.BlockedUnderstanding.Count == 0)
+            return;
+
+        ent.Comp.BlockedSpeaking.Clear();
+        ent.Comp.BlockedUnderstanding.Clear();
+
+        UpdateEntityLanguages(ent);
+    }
+
     private static void AddLanguageSource(
         Dictionary<ProtoId<LanguagePrototype>, HashSet<string>> sources,
         ProtoId<LanguagePrototype> language,
