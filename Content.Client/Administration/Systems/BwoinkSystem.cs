@@ -12,12 +12,34 @@ namespace Content.Client.Administration.Systems
         [Dependency] private IGameTiming _timing = default!;
 
         public event EventHandler<BwoinkTextMessage>? OnBwoinkTextMessageRecieved;
+        public event EventHandler<BwoinkHistoryMessage>? OnBwoinkHistoryReceived; // Stories-FixAchat
         private (TimeSpan Timestamp, bool Typing) _lastTypingUpdateSent;
+
+        // Stories-FixAchat-Start
+        public override void Initialize()
+        {
+            base.Initialize();
+
+            SubscribeNetworkEvent<BwoinkHistoryMessage>(OnHistoryMessage);
+        }
+        // Stories-FixAchat-End
 
         protected override void OnBwoinkTextMessage(BwoinkTextMessage message, EntitySessionEventArgs eventArgs)
         {
             OnBwoinkTextMessageRecieved?.Invoke(this, message);
         }
+
+        // Stories-FixAchat-Start
+        private void OnHistoryMessage(BwoinkHistoryMessage message, EntitySessionEventArgs args)
+        {
+            OnBwoinkHistoryReceived?.Invoke(this, message);
+        }
+
+        public void RequestHistory(NetUserId channel)
+        {
+            RaiseNetworkEvent(new BwoinkRequestHistoryMessage(channel));
+        }
+        // Stories-FixAchat-End
 
         public void Send(NetUserId channelId, string text, bool playSound, bool adminOnly)
         {

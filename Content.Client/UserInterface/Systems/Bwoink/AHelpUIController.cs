@@ -99,6 +99,7 @@ public sealed partial class AHelpUIController: UIController, IOnSystemChanged<Bw
     {
         _bwoinkSystem = system;
         _bwoinkSystem.OnBwoinkTextMessageRecieved += ReceivedBwoink;
+        _bwoinkSystem.OnBwoinkHistoryReceived += ReceivedHistory; // Stories-FixAchat
 
         _input.SetInputCommand(ContentKeyFunctions.OpenAHelp,
             InputCmdHandler.FromDelegate(_ => ToggleWindow()));
@@ -110,6 +111,7 @@ public sealed partial class AHelpUIController: UIController, IOnSystemChanged<Bw
 
         DebugTools.Assert(_bwoinkSystem != null);
         _bwoinkSystem!.OnBwoinkTextMessageRecieved -= ReceivedBwoink;
+        _bwoinkSystem.OnBwoinkHistoryReceived -= ReceivedHistory; // Stories-FixAchat
         _bwoinkSystem = null;
     }
 
@@ -154,6 +156,13 @@ public sealed partial class AHelpUIController: UIController, IOnSystemChanged<Bw
         UIHelper!.Receive(message);
     }
 
+    // Stories-FixAchat-Start
+    private void ReceivedHistory(object? sender, BwoinkHistoryMessage message)
+    {
+        UIHelper?.ReceiveHistory(message.Channel, message.Messages);
+    }
+    // Stories-FixAchat-End
+
     private void DiscordRelayUpdated(BwoinkDiscordRelayUpdated args, EntitySessionEventArgs session)
     {
         _discordRelayActive = args.DiscordRelayEnabled;
@@ -178,6 +187,7 @@ public sealed partial class AHelpUIController: UIController, IOnSystemChanged<Bw
         UIHelper.DiscordRelayChanged(_discordRelayActive);
 
         UIHelper.SendMessageAction = (userId, textMessage, playSound, adminOnly) => _bwoinkSystem?.Send(userId, textMessage, playSound, adminOnly);
+        UIHelper.RequestHistoryAction = channel => _bwoinkSystem?.RequestHistory(channel); // Stories-FixAchat
         UIHelper.InputTextChanged += (channel, text) => _bwoinkSystem?.SendInputTextUpdated(channel, text.Length > 0);
         UIHelper.OnClose += () => { SetAHelpPressed(false); };
         UIHelper.OnOpen +=  () => { SetAHelpPressed(true); };
@@ -319,6 +329,7 @@ public interface IAHelpUIHandler : IDisposable
     public bool IsAdmin { get; }
     public bool IsOpen { get; }
     public void Receive(SharedBwoinkSystem.BwoinkTextMessage message);
+    public void ReceiveHistory(NetUserId channel, List<SharedBwoinkSystem.BwoinkTextMessage> messages); // Stories-FixAchat
     public void Close();
     public void Open(NetUserId netUserId, bool relayActive);
     public void ToggleWindow();
@@ -327,6 +338,7 @@ public interface IAHelpUIHandler : IDisposable
     public event Action OnClose;
     public event Action OnOpen;
     public Action<NetUserId, string, bool, bool>? SendMessageAction { get; set; }
+    public Action<NetUserId>? RequestHistoryAction { get; set; } // Stories-FixAchat
     public event Action<NetUserId, string>? InputTextChanged;
 }
 public sealed class AdminAHelpUIHandler : IAHelpUIHandler
@@ -352,6 +364,14 @@ public sealed class AdminAHelpUIHandler : IAHelpUIHandler
         panel.ReceiveLine(message);
         Control?.OnBwoink(message.UserId);
     }
+
+    // Stories-FixAchat-Start
+    public void ReceiveHistory(NetUserId channel, List<SharedBwoinkSystem.BwoinkTextMessage> messages)
+    {
+        if (_activePanelMap.TryGetValue(channel, out var panel))
+            panel.ReceiveHistory(messages);
+    }
+    // Stories-FixAchat-End
 
     private void OpenWindow()
     {
@@ -411,6 +431,7 @@ public sealed class AdminAHelpUIHandler : IAHelpUIHandler
     public event Action? OnClose;
     public event Action? OnOpen;
     public Action<NetUserId, string, bool, bool>? SendMessageAction { get; set; }
+    public Action<NetUserId>? RequestHistoryAction { get; set; } // Stories-FixAchat
     public event Action<NetUserId, string>? InputTextChanged;
 
     public void Open(NetUserId channelId, bool relayActive)
@@ -470,6 +491,8 @@ public sealed class AdminAHelpUIHandler : IAHelpUIHandler
         if (!Control!.BwoinkArea.Children.Contains(existingPanel))
             Control.BwoinkArea.AddChild(existingPanel);
 
+        RequestHistoryAction?.Invoke(channelId); // Stories-FixAchat
+
         return existingPanel;
     }
     public bool TryGetChannel(NetUserId ch, [NotNullWhen(true)] out BwoinkPanel? bp) => _activePanelMap.TryGetValue(ch, out bp);
@@ -511,6 +534,17 @@ public sealed class UserAHelpUIHandler : IAHelpUIHandler
         _window!.OpenCentered();
     }
 
+    // Stories-FixAchat-Start
+    public void ReceiveHistory(NetUserId channel, List<SharedBwoinkSystem.BwoinkTextMessage> messages)
+    {
+        if (channel != _ownerId)
+            return;
+
+        EnsureInit(_discordRelayActive);
+        _chatPanel!.ReceiveHistory(messages);
+    }
+    // Stories-FixAchat-End
+
     public void Close()
     {
         _window?.Close();
@@ -551,6 +585,7 @@ public sealed class UserAHelpUIHandler : IAHelpUIHandler
     public event Action? OnClose;
     public event Action? OnOpen;
     public Action<NetUserId, string, bool, bool>? SendMessageAction { get; set; }
+    public Action<NetUserId>? RequestHistoryAction { get; set; } // Stories-FixAchat
     public event Action<NetUserId, string>? InputTextChanged;
 
     public void Open(NetUserId channelId, bool relayActive)
@@ -580,6 +615,8 @@ public sealed class UserAHelpUIHandler : IAHelpUIHandler
         var introText = Loc.GetString("bwoink-system-introductory-message");
         var introMessage = new SharedBwoinkSystem.BwoinkTextMessage( _ownerId, SharedBwoinkSystem.SystemUserId, introText);
         Receive(introMessage);
+
+        RequestHistoryAction?.Invoke(_ownerId); // Stories-FixAchat
     }
 
     public void Dispose()

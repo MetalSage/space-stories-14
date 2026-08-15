@@ -89,6 +89,43 @@ namespace Content.Server.Administration.Systems
         private int _maxAdditionalChars;
         private readonly Dictionary<NetUserId, DateTime> _activeConversations = new();
 
+        // Stories-FixAchat-Start
+        private const int MaxHistoryPerChannel = 100;
+        private readonly Dictionary<NetUserId, List<BwoinkTextMessage>> _historyForAdmins = new();
+        private readonly Dictionary<NetUserId, List<BwoinkTextMessage>> _historyForPlayer = new();
+
+        private static void AddHistory(Dictionary<NetUserId, List<BwoinkTextMessage>> history, NetUserId channel, BwoinkTextMessage message)
+        {
+            var list = history.GetOrNew(channel);
+            list.Add(message);
+            if (list.Count > MaxHistoryPerChannel)
+                list.RemoveAt(0);
+        }
+
+        private void OnHistoryRequested(BwoinkRequestHistoryMessage msg, EntitySessionEventArgs args)
+        {
+            var sender = args.SenderSession;
+            var isAdmin = _adminManager.GetAdminData(sender)?.HasFlag(AdminFlags.Adminhelp) ?? false;
+
+            if (isAdmin)
+            {
+                var adminHistory = _historyForAdmins.TryGetValue(msg.Channel, out var adminList)
+                    ? adminList
+                    : new List<BwoinkTextMessage>();
+                RaiseNetworkEvent(new BwoinkHistoryMessage(msg.Channel, adminHistory), sender);
+                return;
+            }
+
+            if (sender.UserId != msg.Channel)
+                return;
+
+            var playerHistory = _historyForPlayer.TryGetValue(msg.Channel, out var playerList)
+                ? playerList
+                : new List<BwoinkTextMessage>();
+            RaiseNetworkEvent(new BwoinkHistoryMessage(msg.Channel, playerHistory), sender);
+        }
+        // Stories-FixAchat-End
+
         public override void Initialize()
         {
             base.Initialize();
@@ -116,6 +153,7 @@ namespace Content.Server.Administration.Systems
 
             SubscribeLocalEvent<GameRunLevelChangedEvent>(OnGameRunLevelChanged);
             SubscribeNetworkEvent<BwoinkClientTypingUpdated>(OnClientTypingUpdated);
+            SubscribeNetworkEvent<BwoinkRequestHistoryMessage>(OnHistoryRequested); // Stories-FixAchat
             SubscribeLocalEvent<RoundRestartCleanupEvent>(_ => _activeConversations.Clear());
 
             _rateLimit.Register(
@@ -155,9 +193,9 @@ namespace Content.Server.Administration.Systems
 
         private void PlayerRateLimitedAction(ICommonSession obj)
         {
-            RaiseNetworkEvent(
-                new BwoinkTextMessage(obj.UserId, default, Loc.GetString("bwoink-system-rate-limited"), playSound: false),
-                obj.Channel);
+            var msg = new BwoinkTextMessage(obj.UserId, default, Loc.GetString("bwoink-system-rate-limited"), playSound: false);
+            AddHistory(_historyForPlayer, obj.UserId, msg); // Stories-FixAchat
+            RaiseNetworkEvent(msg, obj.Channel);
         }
 
         private void OnOverrideChanged(string obj)
@@ -267,6 +305,8 @@ namespace Content.Server.Administration.Systems
             {
                 RaiseNetworkEvent(bwoinkMessage, admin);
             }
+
+            AddHistory(_historyForAdmins, session.UserId, bwoinkMessage); // Stories-FixAchat
 
             // Enqueue the message for Discord relay
             if (_webhookUrl != string.Empty)
@@ -777,6 +817,7 @@ namespace Content.Server.Administration.Systems
 
             var admins = GetTargetAdmins();
             var adminMsg = await FormatFullMessageForRecipient(forAdmin: true, senderAdmin, senderSession, message);
+            AddHistory(_historyForAdmins, message.UserId, adminMsg); // Stories-FixAchat
 
             // Notify all admins
             foreach (var channel in admins)
@@ -785,11 +826,14 @@ namespace Content.Server.Administration.Systems
             }
 
             // Notify player
-            if (_playerManager.TryGetSessionById(message.UserId, out var session) && !message.AdminOnly)
+            if (!message.AdminOnly)
             {
-                if (!admins.Contains(session.Channel))
+                var playerMsg = await FormatFullMessageForRecipient(forAdmin: false, senderAdmin, senderSession, message);
+                AddHistory(_historyForPlayer, message.UserId, playerMsg); // Stories-FixAchat
+
+                if (_playerManager.TryGetSessionById(message.UserId, out var session) &&
+                    !admins.Contains(session.Channel))
                 {
-                    var playerMsg = await FormatFullMessageForRecipient(forAdmin: false, senderAdmin, senderSession, message);
                     RaiseNetworkEvent(playerMsg, session.Channel);
                 }
             }
@@ -828,6 +872,7 @@ namespace Content.Server.Administration.Systems
             // No admin online, let the player know
             var systemText = Loc.GetString("bwoink-system-starmute-message-no-other-users");
             var starMuteMsg = new BwoinkTextMessage(message.UserId, SystemUserId, systemText);
+            AddHistory(_historyForPlayer, message.UserId, starMuteMsg); // Stories-FixAchat
             RaiseNetworkEvent(starMuteMsg, senderSession.Channel);
         }
 

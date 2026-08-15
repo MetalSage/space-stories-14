@@ -65,6 +65,32 @@ namespace Content.Shared.Administration
         }
     }
 
+    // Stories-FixAchat-Start
+    [Serializable, NetSerializable]
+    public sealed class BwoinkRequestHistoryMessage : EntityEventArgs
+    {
+        public NetUserId Channel { get; }
+
+        public BwoinkRequestHistoryMessage(NetUserId channel)
+        {
+            Channel = channel;
+        }
+    }
+
+    [Serializable, NetSerializable]
+    public sealed class BwoinkHistoryMessage : EntityEventArgs
+    {
+        public NetUserId Channel { get; }
+        public List<SharedBwoinkSystem.BwoinkTextMessage> Messages { get; }
+
+        public BwoinkHistoryMessage(NetUserId channel, List<SharedBwoinkSystem.BwoinkTextMessage> messages)
+        {
+            Channel = channel;
+            Messages = messages;
+        }
+    }
+    // Stories-FixAchat-End
+
     /// <summary>
     ///     Sent by the client to notify the server when it begins or stops typing.
     /// </summary>

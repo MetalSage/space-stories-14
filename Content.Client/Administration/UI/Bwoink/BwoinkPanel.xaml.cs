@@ -70,11 +70,27 @@ namespace Content.Client.Administration.UI.Bwoink
             if (!Visible)
                 Unread++;
 
+            AppendLine(message);
+        }
+
+        // Stories-FixAchat-Start
+        public void ReceiveHistory(IEnumerable<SharedBwoinkSystem.BwoinkTextMessage> messages)
+        {
+            foreach (var message in messages)
+            {
+                AppendLine(message);
+            }
+        }
+
+        private void AppendLine(SharedBwoinkSystem.BwoinkTextMessage message)
+        {
             var formatted = new FormattedMessage(1);
             formatted.AddMarkupOrThrow($"[color=gray]{message.SentAt.ToShortTimeString()}[/color] {message.Text}");
             TextOutput.AddMessage(formatted, AllowedTags);
-            LastMessage = message.SentAt;
+            if (message.SentAt > LastMessage)
+                LastMessage = message.SentAt;
         }
+        // Stories-FixAchat-End
 
         private void UpdateTypingIndicator()
         {
