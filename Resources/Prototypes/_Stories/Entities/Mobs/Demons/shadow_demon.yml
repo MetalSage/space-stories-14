@@ -104,7 +104,7 @@
 
 - type: entity
   id: STMobShadowDemonPhased
-  noSpawn: true
+  categories: [ HideSpawnMenu ]
   name: сгусток тьмы
   description: Нечто нематериальное, растворившееся во тьме.
   parent:

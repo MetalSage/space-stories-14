@@ -116,7 +116,7 @@
 
 - type: entity
   id: STMobSlaughterDemonPhased
-  noSpawn: true
+  categories: [ HideSpawnMenu ]
   name: странная кровь
   description: Нечто нематериальное, растворившееся в крови.
   parent:
