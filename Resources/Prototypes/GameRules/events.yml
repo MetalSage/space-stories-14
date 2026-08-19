@@ -52,6 +52,8 @@
     - id: SpafMigration
     - id: InquisitorSpawn
     - id: STCorpiumSpawn
+    - id: STSlaughterDemonSpawn
+    - id: STShadowDemonSpawn
     # Stories-End
 
 - type: entityTable

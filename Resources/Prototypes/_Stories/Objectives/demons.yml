@@ -1,0 +1,86 @@
+- type: entity
+  abstract: true
+  parent: BaseObjective
+  id: STBaseSlaughterDemonObjective
+  components:
+  - type: Objective
+    difficulty: 1.5
+    issuer: STSlaughterDemon
+
+- type: entity
+  parent: STBaseSlaughterDemonObjective
+  id: STSlaughterDevourObjective
+  components:
+  - type: Objective
+    icon:
+      sprite: _Stories/Mobs/Demons/slaughter_demon.rsi
+      state: icon
+  - type: NumberObjective
+    min: 10
+    max: 20
+    title: st-objective-slaughter-devour-title
+    description: st-objective-slaughter-devour-description
+  - type: STCounterObjective
+
+- type: entity
+  parent: [STBaseSlaughterDemonObjective, BaseFreeObjective]
+  id: STSlaughterFluffObjective
+  name: Залейте станцию кровью
+  description: Устройте резню неосторожным. Охотьтесь на тех, кто попытается охотиться на вас.
+  components:
+  - type: Objective
+    icon:
+      sprite: _Stories/Mobs/Demons/slaughter_demon.rsi
+      state: icon
+  - type: STSlaughterFluffCondition
+    lines:
+    - st-objective-slaughter-fluff-line-1
+    - st-objective-slaughter-fluff-line-2
+    - st-objective-slaughter-fluff-line-3
+    - st-objective-slaughter-fluff-line-4
+    - st-objective-slaughter-fluff-line-5
+    - st-objective-slaughter-fluff-line-6
+    - st-objective-slaughter-fluff-line-7
+
+- type: entity
+  abstract: true
+  parent: BaseObjective
+  id: STBaseShadowDemonObjective
+  components:
+  - type: Objective
+    difficulty: 1.5
+    issuer: STShadowDemon
+
+- type: entity
+  parent: STBaseShadowDemonObjective
+  id: STShadowWrapObjective
+  components:
+  - type: Objective
+    icon:
+      sprite: _Stories/Mobs/Demons/shadow_demon.rsi
+      state: icon
+  - type: NumberObjective
+    min: 10
+    max: 20
+    title: st-objective-shadow-wrap-title
+    description: st-objective-shadow-wrap-description
+  - type: STCounterObjective
+
+- type: entity
+  parent: [STBaseShadowDemonObjective, BaseSurviveObjective]
+  id: STShadowSurviveObjective
+  name: Выживите
+  description: Тени укрывают вас. Не дайте свету и экипажу оборвать вашу охоту — доживите до конца смены.
+  components:
+  - type: Objective
+    icon:
+      sprite: _Stories/Mobs/Demons/shadow_demon.rsi
+      state: icon
+
+- type: objectiveIssuer
+  id: STSlaughterDemon
+  name: st-objective-issuer-slaughter-demon
+
+- type: objectiveIssuer
+  id: STShadowDemon
+  name: st-objective-issuer-shadow-demon

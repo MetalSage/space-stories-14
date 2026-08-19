@@ -1,0 +1,189 @@
+- type: entity
+  id: STMobShadowDemon
+  parent:
+  - BaseSimpleMob
+  - MobCombat
+  name: демон тени
+  description: Существо, которое едва ощутимо. Вы чувствуете, как его взгляд пронзает вас.
+  components:
+  - type: Sprite
+    sprite: _Stories/Mobs/Demons/shadow_demon.rsi
+    layers:
+    - state: shadow_demon
+  - type: MovementSpeedModifier
+    baseWalkSpeed: 3
+    baseSprintSpeed: 4.5
+  - type: MobThresholds
+    thresholds:
+      0: Alive
+      300: Dead
+  - type: MeleeWeapon
+    range: 1.5
+    angle: 0
+    animation: WeaponArcThrust
+    wideAnimation: WeaponArcThrust
+    soundHit:
+      collection: STShadowDemonAttack
+    damage:
+      types:
+        Slash: 30
+  - type: NpcFactionMember
+    factions:
+    - STDemon
+  - type: DemonDeathSound
+    sound:
+      path: /Audio/_Stories/Demons/ShadowDemon/shadowdeath.ogg
+  - type: DemonImmunities
+    smashDamage:
+      types:
+        Structural: 50
+    heartPrototype: STItemDemonHeartShadow
+  - type: NoSlip
+  - type: Puller
+    needsHands: false
+  - type: Hands
+  - type: Eye
+    drawFov: false
+    visMask:
+    - Normal
+    - Ghost
+  - type: VisionProvider
+    isActive: true
+    drawFov: false
+    ambientColor: "#FFFFFF10"
+    shader: GreyscaleFullscreen
+    priority: 10
+  - type: LightSensitivity
+    lookupRange: 3
+    darknessThreshold: 0.2
+  - type: LightSensitivityDamage
+    damageOnLight:
+      types:
+        Heat: 30
+    healInDarkness:
+      types:
+        Blunt: -30
+        Slash: -30
+        Piercing: -30
+        Heat: -30
+    lightAlert: STLightExposure
+    lightSpeedMultiplier: 1
+    darkSpeedMultiplier: 1.4
+  - type: DemonPhase
+    anchor: Darkness
+    phasePolymorph: STPolymorphShadowDemonPhase
+    failPopup: shadow-demon-phase-fail
+    phaseOutEffect: STShadowDemonDisappearEffect
+    phaseInEffect: STShadowDemonAppearEffect
+  - type: ShadowGrapple
+    hitDamage:
+      types:
+        Blunt: 40
+  - type: DemonWrap
+    cocoonPrototype: STStructureShadowCocoon
+  - type: DemonSpawnPhased
+  - type: DemonWhisper
+  - type: ActionGrant
+    actions:
+    - STActionShadowCrawl
+    - STActionShadowGrapple
+    - STActionDemonWhisper
+  - type: GhostRole
+    name: stories-ghost-role-information-shadow-demon-name
+    description: stories-ghost-role-information-shadow-demon-desc
+    rules: stories-ghost-role-information-demon-rules
+    mindRoles:
+    - STMindRoleShadowDemon
+    raffle:
+      settings: default
+  - type: GhostTakeoverAvailable
+  - type: Tag
+    tags:
+    - CannotSuicide
+    - DoorBumpOpener
+
+- type: entity
+  id: STMobShadowDemonPhased
+  noSpawn: true
+  name: сгусток тьмы
+  description: Нечто нематериальное, растворившееся во тьме.
+  parent:
+  - Incorporeal
+  - BaseMob
+  components:
+  - type: Sprite
+    sprite: _Stories/Mobs/Demons/shadow_demon.rsi
+    color: "#3A2A5AAA"
+    layers:
+    - state: shadow_demon
+      shader: unshaded
+  - type: Damageable
+  - type: Injurable
+    damageContainer: Biological
+  - type: Alerts
+  - type: MobState
+    allowedStates:
+    - Alive
+    - Dead
+  - type: MobThresholds
+    thresholds:
+      0: Alive
+      300: Dead
+  - type: LightSensitivityDamage
+    damageOnLight:
+      types:
+        Heat: 15
+    healInDarkness:
+      types:
+        Blunt: -30
+        Slash: -30
+        Piercing: -30
+        Heat: -30
+    lightAlert: STLightExposure
+  - type: MovementSpeedModifier
+    baseWalkSpeed: 5
+    baseSprintSpeed: 7
+  - type: Puller
+    needsHands: false
+  - type: Eye
+    drawFov: false
+    visMask:
+    - Normal
+    - Ghost
+  - type: Visibility
+    layer: 2
+  - type: VisionProvider
+    isActive: true
+    drawFov: false
+    ambientColor: "#FFFFFF10"
+    shader: GreyscaleFullscreen
+    priority: 10
+  - type: LightSensitivity
+    lookupRange: 3
+    darknessThreshold: 0.2
+  - type: DemonPhase
+    anchor: Darkness
+    phasePolymorph: STPolymorphShadowDemonPhase
+    failPopup: shadow-demon-phase-fail
+    phaseOutEffect: STShadowDemonDisappearEffect
+    phaseInEffect: STShadowDemonAppearEffect
+  - type: DemonWhisper
+  - type: ActionGrant
+    actions:
+    - STActionShadowCrawl
+    - STActionDemonWhisper
+  - type: Tag
+    tags:
+    - CannotSuicide
+
+- type: polymorph
+  id: STPolymorphShadowDemonPhase
+  configuration:
+    entity: STMobShadowDemonPhased
+    forced: true
+    inventory: Drop
+    allowRepeatedMorphs: true
+    transferDamage: true
+    transferName: false
+    revertOnCrit: false
+    revertOnDeath: true

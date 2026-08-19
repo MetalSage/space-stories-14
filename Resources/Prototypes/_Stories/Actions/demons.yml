@@ -1,0 +1,59 @@
+- type: entity
+  parent: BaseAction
+  id: STActionBloodCrawl
+  name: Кровавый путь
+  description: Провалиться в лужу крови, чтобы стать неосязаемым и появиться в другом месте.
+  components:
+  - type: Action
+    icon: { sprite: _Stories/Actions/demons.rsi, state: bloodcrawl }
+    itemIconStyle: NoItem
+    useDelay: 1
+  - type: InstantAction
+    event: !type:DemonPhaseActionEvent
+
+- type: entity
+  parent: BaseAction
+  id: STActionShadowCrawl
+  name: Теневой путь
+  description: Раствориться во тьме, чтобы стать неосязаемым и появиться в другом месте.
+  components:
+  - type: Action
+    icon: { sprite: _Stories/Actions/demons.rsi, state: shadow_crawl }
+    itemIconStyle: NoItem
+    useDelay: 1
+  - type: InstantAction
+    event: !type:DemonPhaseActionEvent
+
+- type: entity
+  parent: BaseAction
+  id: STActionShadowGrapple
+  name: Теневой захват
+  description: Притянуть живую цель к себе, или притянуться к структуре. Гасит источники света рядом с целью.
+  components:
+  - type: Action
+    icon: { sprite: _Stories/Actions/demons.rsi, state: shadow_grapple }
+    itemIconStyle: NoItem
+    useDelay: 10
+  - type: TargetAction
+    range: 6
+  - type: WorldTargetAction
+    event: !type:ProjectileSpellEvent
+      prototype: STProjectileShadowHand
+      projectileSpeed: 20
+
+- type: entity
+  parent: BaseAction
+  id: STActionDemonWhisper
+  name: Демонический шёпот
+  description: Отправить пугающую мысль выбранной живой цели — её услышат только они.
+  components:
+  - type: Action
+    icon:
+      sprite: Interface/Actions/voice-mask.rsi
+      state: icon
+    itemIconStyle: NoItem
+    useDelay: 3
+  - type: TargetAction
+    range: 7
+  - type: EntityTargetAction
+    event: !type:DemonWhisperActionEvent
