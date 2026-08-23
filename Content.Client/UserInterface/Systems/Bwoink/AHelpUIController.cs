@@ -411,6 +411,7 @@ public sealed class AdminAHelpUIHandler : IAHelpUIHandler
     public void ToggleWindow()
     {
         EnsurePanel(_ownerId);
+        RequestHistoryIfNeeded(_ownerId); // Stories-FixAchat
 
         if (IsOpen)
             Close();
@@ -491,11 +492,19 @@ public sealed class AdminAHelpUIHandler : IAHelpUIHandler
         if (!Control!.BwoinkArea.Children.Contains(existingPanel))
             Control.BwoinkArea.AddChild(existingPanel);
 
-        RequestHistoryAction?.Invoke(channelId); // Stories-FixAchat
-
         return existingPanel;
     }
     public bool TryGetChannel(NetUserId ch, [NotNullWhen(true)] out BwoinkPanel? bp) => _activePanelMap.TryGetValue(ch, out bp);
+
+    // Stories-FixAchat-Start
+    private readonly HashSet<NetUserId> _historyRequested = new();
+
+    public void RequestHistoryIfNeeded(NetUserId channelId)
+    {
+        if (_historyRequested.Add(channelId))
+            RequestHistoryAction?.Invoke(channelId);
+    }
+    // Stories-FixAchat-End
 
     private void SelectChannel(NetUserId uid)
     {
@@ -509,6 +518,7 @@ public sealed class AdminAHelpUIHandler : IAHelpUIHandler
         Window = null;
         Control = null;
         _activePanelMap.Clear();
+        _historyRequested.Clear(); // Stories-FixAchat
         EverOpened = false;
     }
 }
@@ -615,8 +625,6 @@ public sealed class UserAHelpUIHandler : IAHelpUIHandler
         var introText = Loc.GetString("bwoink-system-introductory-message");
         var introMessage = new SharedBwoinkSystem.BwoinkTextMessage( _ownerId, SharedBwoinkSystem.SystemUserId, introText);
         Receive(introMessage);
-
-        RequestHistoryAction?.Invoke(_ownerId); // Stories-FixAchat
     }
 
     public void Dispose()

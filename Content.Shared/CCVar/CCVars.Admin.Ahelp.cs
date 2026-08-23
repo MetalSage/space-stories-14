@@ -19,6 +19,14 @@ public sealed partial class CCVars
     public static readonly CVarDef<int> AhelpRateLimitCount =
         CVarDef.Create("ahelp.rate_limit_count", 10, CVar.SERVERONLY);
 
+    // Stories-FixAchat-Start
+    public static readonly CVarDef<float> AhelpHistoryRateLimitPeriod =
+        CVarDef.Create("ahelp.history_rate_limit_period", 2f, CVar.SERVERONLY);
+
+    public static readonly CVarDef<int> AhelpHistoryRateLimitCount =
+        CVarDef.Create("ahelp.history_rate_limit_count", 30, CVar.SERVERONLY);
+    // Stories-FixAchat-End
+
     /// <summary>
     ///     Should the administrator's position be displayed in ahelp.
     ///     If it is is false, only the admin's ckey will be displayed in the ahelp.

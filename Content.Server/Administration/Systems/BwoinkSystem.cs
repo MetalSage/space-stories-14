@@ -35,6 +35,7 @@ namespace Content.Server.Administration.Systems
     public sealed partial class BwoinkSystem : SharedBwoinkSystem
     {
         private const string RateLimitKey = "AdminHelp";
+        private const string HistoryRateLimitKey = "AdminHelpHistory"; // Stories-FixAchat
 
         [Dependency] private IPlayerManager _playerManager = default!;
         [Dependency] private IAdminManager _adminManager = default!;
@@ -105,24 +106,18 @@ namespace Content.Server.Administration.Systems
         private void OnHistoryRequested(BwoinkRequestHistoryMessage msg, EntitySessionEventArgs args)
         {
             var sender = args.SenderSession;
+
+            if (_rateLimit.CountAction(sender, HistoryRateLimitKey) != RateLimitStatus.Allowed) // Stories-FixAchat
+                return;
+
             var isAdmin = _adminManager.GetAdminData(sender)?.HasFlag(AdminFlags.Adminhelp) ?? false;
-
-            if (isAdmin)
-            {
-                var adminHistory = _historyForAdmins.TryGetValue(msg.Channel, out var adminList)
-                    ? adminList
-                    : new List<BwoinkTextMessage>();
-                RaiseNetworkEvent(new BwoinkHistoryMessage(msg.Channel, adminHistory), sender);
-                return;
-            }
-
-            if (sender.UserId != msg.Channel)
+            if (!isAdmin)
                 return;
 
-            var playerHistory = _historyForPlayer.TryGetValue(msg.Channel, out var playerList)
-                ? playerList
+            var adminHistory = _historyForAdmins.TryGetValue(msg.Channel, out var adminList)
+                ? new List<BwoinkTextMessage>(adminList)
                 : new List<BwoinkTextMessage>();
-            RaiseNetworkEvent(new BwoinkHistoryMessage(msg.Channel, playerHistory), sender);
+            RaiseNetworkEvent(new BwoinkHistoryMessage(msg.Channel, adminHistory), sender);
         }
         // Stories-FixAchat-End
 
@@ -155,6 +150,13 @@ namespace Content.Server.Administration.Systems
             SubscribeNetworkEvent<BwoinkClientTypingUpdated>(OnClientTypingUpdated);
             SubscribeNetworkEvent<BwoinkRequestHistoryMessage>(OnHistoryRequested); // Stories-FixAchat
             SubscribeLocalEvent<RoundRestartCleanupEvent>(_ => _activeConversations.Clear());
+            // Stories-FixAchat-Start
+            SubscribeLocalEvent<RoundRestartCleanupEvent>(_ =>
+            {
+                _historyForAdmins.Clear();
+                _historyForPlayer.Clear();
+            });
+            // Stories-FixAchat-End
 
             _rateLimit.Register(
                 RateLimitKey,
@@ -162,6 +164,15 @@ namespace Content.Server.Administration.Systems
                     CCVars.AhelpRateLimitCount,
                     PlayerRateLimitedAction)
                 );
+
+            // Stories-FixAchat-Start
+            _rateLimit.Register(
+                HistoryRateLimitKey,
+                new RateLimitRegistration(CCVars.AhelpHistoryRateLimitPeriod,
+                    CCVars.AhelpHistoryRateLimitCount,
+                    null)
+                );
+            // Stories-FixAchat-End
         }
 
         private async void OnCallChanged(string url)
@@ -248,6 +259,13 @@ namespace Content.Server.Administration.Systems
                 return;
 
             RaiseNetworkEvent(new BwoinkDiscordRelayUpdated(!string.IsNullOrWhiteSpace(_webhookUrl)), e.Session);
+
+            // Stories-FixAchat-Start
+            if (_historyForPlayer.TryGetValue(e.Session.UserId, out var ownHistory) && ownHistory.Count > 0)
+            {
+                RaiseNetworkEvent(new BwoinkHistoryMessage(e.Session.UserId, new List<BwoinkTextMessage>(ownHistory)), e.Session);
+            }
+            // Stories-FixAchat-End
         }
 
         private void NotifyAdmins(ICommonSession session, string message, PlayerStatusType statusType)

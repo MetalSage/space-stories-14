@@ -287,6 +287,7 @@ namespace Content.Client.Administration.UI.Bwoink
             {
                 var panel = AHelpHelper.EnsurePanel(ch.Value);
                 panel.Visible = true;
+                AHelpHelper.RequestHistoryIfNeeded(ch.Value); // Stories-FixAchat
             }
         }
 
