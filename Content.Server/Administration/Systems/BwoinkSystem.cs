@@ -149,14 +149,14 @@ namespace Content.Server.Administration.Systems
             SubscribeLocalEvent<GameRunLevelChangedEvent>(OnGameRunLevelChanged);
             SubscribeNetworkEvent<BwoinkClientTypingUpdated>(OnClientTypingUpdated);
             SubscribeNetworkEvent<BwoinkRequestHistoryMessage>(OnHistoryRequested); // Stories-FixAchat
-            SubscribeLocalEvent<RoundRestartCleanupEvent>(_ => _activeConversations.Clear());
-            // Stories-FixAchat-Start
             SubscribeLocalEvent<RoundRestartCleanupEvent>(_ =>
             {
+                _activeConversations.Clear();
+                // Stories-FixAchat-Start
                 _historyForAdmins.Clear();
                 _historyForPlayer.Clear();
+                // Stories-FixAchat-End
             });
-            // Stories-FixAchat-End
 
             _rateLimit.Register(
                 RateLimitKey,
