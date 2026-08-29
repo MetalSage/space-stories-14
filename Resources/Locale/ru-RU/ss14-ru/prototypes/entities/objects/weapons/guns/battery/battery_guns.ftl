@@ -1,5 +1,7 @@
-ent-BaseWeaponBattery = { ent-BaseItem }
+ent-BaseWeaponBatteryNoAmmoCounter = { ent-BaseItem }
     .desc = { ent-BaseItem.desc }
+ent-BaseWeaponBattery = { ent-BaseWeaponBatteryNoAmmoCounter }
+    .desc = { ent-BaseWeaponBatteryNoAmmoCounter.desc }
 ent-BaseLaserRifle = { ent-BaseWeaponBattery }
     .desc = { ent-BaseWeaponBattery.desc }
 ent-BaseWeaponPowerCell = { ent-BaseItem }
@@ -64,3 +66,7 @@ ent-WeaponLaserGunXenoborg = лазерная винтовка ксенобор�
     .desc = { ent-WeaponAdvancedLaser.desc }
 ent-WeaponLaserCannonXenoborg = тяжёлая лазерная пушка ксеноборга
     .desc = { ent-WeaponLaserCannon.desc }
+ent-WeaponBurstFireLaserXenoborg = xenoborg burst fire laser
+    .desc = An alien weapon, channelling a burst-fire laser through a prism, causing targets to burst into fire.
+ent-WeaponRangeFinderXenoborg = xenoborg range finder
+    .desc = { ent-BaseWeaponBatteryNoAmmoCounter.desc }

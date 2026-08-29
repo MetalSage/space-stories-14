@@ -5,6 +5,7 @@ clumsy-vaulting-fail-message-others = { $victim } стукается своей 
 clumsy-gun-fail-message = Оружие взрывается вам в лицо!
 
 clumsy-hypospray-fail-message = Ой! Вы сделали инъекцию себе.
+clumsy-defibrillator-fail-message = Oops! You zapped yourself.
 
 clumsy-catch-fail-message-user = { CAPITALIZE($item) } попадает вам в голову!
 clumsy-catch-fail-message-others = { CAPITALIZE($item) } попадает в голову { $catcher }!

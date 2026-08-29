@@ -1,5 +1,7 @@
-ent-CrateGeneric = ящик
-    .desc = Большой контейнер для предметов.
+ent-BaseCrate = crate
+    .desc = A large container for items.
+ent-CrateGeneric = { ent-BaseCrate }
+    .desc = { ent-BaseCrate.desc }
 ent-CrateBaseWeldable = { ent-CrateGeneric }
     .desc = { ent-CrateGeneric.desc }
 ent-CrateBaseSecure = { ent-CrateBaseWeldable }

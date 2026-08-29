@@ -1,3 +1,5 @@
+ent-BaseGravityGenerator = { ent-BaseMachinePowered }
+    .desc = { ent-BaseMachinePowered.desc }
 ent-GravityGenerator = генератор гравитации
     .desc = Это то, что удерживает вас у пола.
 ent-GravityGeneratorMini = мини генератор гравитации

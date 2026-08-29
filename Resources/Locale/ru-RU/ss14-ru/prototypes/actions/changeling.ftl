@@ -6,6 +6,10 @@ ent-ActionChangelingDevour = [color=red]Поглотить[/color]
     .desc = Поглощайте сущность ваших жертв и впитывайте их личности и разум в себя.
 ent-ActionChangelingTransform = [color=red]Трансформация[/color]
     .desc = Трансформируйтесь и обретайте личности тех, кого вы поглотили.
+ent-ActionChangelingStasis = [color=red]Enter Stasis[/color]
+    .desc = Enter a regenerative stasis, faking death and allowing to regenerate all damage.
+ent-ActionChangelingStasisWeak = { ent-ActionChangelingStasis }
+    .desc = { ent-ActionChangelingStasis.desc }
 ent-ActionChangelingStore = Магазин ДНК
     .desc = Открывает магазин способностей.
 ent-ActionChangelingVoiceMimic = Подражание голоса
@@ -22,9 +26,17 @@ ent-ActionChangelingStingLead = Отравляющее жало
     .desc = Бесшумно ужалите жертву, впрыскивая смертельную дозу медленно действующего яда.
 ent-ActionChangelingStingHallucinogenic = Галлюциногенное жало
     .desc = Бесшумно ужальте жертву, впрыскивая ей химические вещества, замедляющие работу высших отделов головного мозга.
+ent-ActionChangelingStingMute = Mute Sting
+    .desc = Silently sting a target and inject them with chemicals that prevent them from speaking. 
+
+        Requires 30 Chemicals.
 ent-ActionChangelingLastResort = [color=red]Крайняя мера[/color]
     .desc = В момент крайней необходимости мы приносим в жертву своё текущее тело, стремительно расширяясь, чтобы прорваться сквозь препятствия, и перерождаемся в виде головного слизня.
 ent-ActionChangelingTakeOverCorpse = Захват трупа
     .desc = Заразите труп, чтобы вернуть свою истинную форму.
 ent-ActionChangelingNightVision = Переключить ночное зрение
     .desc = Включает и выключает ваше ночное зрение.
+ent-ActionChangelingScreech = Screech
+    .desc = We produce a deafening screech that weakens those around us.
+ent-ActionChangelingFakeMindshieldToggle = [color=green]Toggle Fake Mindshield[/color]
+    .desc = Turn our mindshield visibility on or off.

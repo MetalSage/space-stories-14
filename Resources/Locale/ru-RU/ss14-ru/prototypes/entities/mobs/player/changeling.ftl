@@ -10,3 +10,5 @@ ent-ChangelingVoiceMimicDummy = { "" }
     .desc = { "" }
 ent-ChangelingNightVisionDummy = { "" }
     .desc = { "" }
+ent-ChangelingFakeMindshieldDummy = { "" }
+    .desc = { "" }

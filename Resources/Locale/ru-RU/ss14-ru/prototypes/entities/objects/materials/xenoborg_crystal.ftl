@@ -1,0 +1,9 @@
+ent-MaterialXenoborgCrystal = xenoborg crystal
+    .desc = A special crystal created from nuclear fusion. It's used to make xenoborgs.
+    .suffix = 10
+ent-MaterialXenoborgCrystal5 = { ent-MaterialXenoborgCrystal }
+    .desc = { ent-MaterialXenoborgCrystal.desc }
+    .suffix = 5
+ent-MaterialXenoborgCrystal1 = { ent-MaterialXenoborgCrystal }
+    .desc = { ent-MaterialXenoborgCrystal.desc }
+    .suffix = 1

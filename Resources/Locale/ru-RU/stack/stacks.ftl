@@ -162,6 +162,10 @@ stack-artifact-fragment = { $amount ->
     [few] фрагмента
     *[other] фрагментов
 } артефакта
+stack-xenoborg-crystal = xenoborg {$amount ->
+    [1] crystal
+    *[other] crystals
+}
 stack-conveyor-belt = { $amount ->
     [1] конвейерная лента
     *[other] конвейерные ленты
@@ -289,6 +293,9 @@ stack-white-steel-slats-tile-continuous = белая сплошная реечн
 stack-steel-dark-checker-tile = тёмная стальная плитка шашечками
 stack-steel-light-checker-tile = светлая стальная плитка шашечками
 stack-steel-tile = стальная плитка
+stack-plastic-tile = plastic tile
+stack-plastic-dark-tile = dark plastic tile
+stack-plastic-white-tile = white plastic tile
 stack-wood-floor = деревянный пол
 stack-techmaint-floor = технический пол
 stack-techmaint-floor-dark = тёмная техническая плитка
@@ -371,15 +378,21 @@ stack-large-wood-floor = большой деревянный пол
 stack-red-circuit-floor = плитка красных микросхем
 stack-asteroid-astro-sand-floor = астро-песок астероида
 stack-desert-astro-sand-floor = пустынный астро-песок
-stack-xeno-floor = ксенопол
-stack-xeno-steel = стальной ксенопол
-stack-xeno-steel-corner = стальной угловой ксенопол
-stack-xenoborg = ксеноборг-плитка
-stack-xeno-maint = технический ксенопол
-stack-dark-squiggly = тёмная волнистая стальная плитка
 stack-white-marble-floor = белый мраморный пол
+stack-white-marble-mono-floor = white marble mono floor
 stack-dark-marble-floor = чёрный мраморный пол
+stack-dark-marble-mono-floor = dark marble mono floor
 stack-plasma-marble-floor = плазменный мраморный пол
 stack-uranium-marble-floor = урановый мраморный пол
 stack-astro-ironsand-floor = астро-железный песок
 stack-astro-ironsand-floor-borderless = безграничный астро-железный песок
+stack-exo-hull-floor = exodermis hull floor
+stack-exo-viscera-floor = exodermis viscera floor
+stack-exo-techmaint-floor = exodermis techmaint floor
+stack-exo-horizontal-floor = exodermis horizontal floor
+stack-exo-vertical-floor = exodermis vertical floor
+stack-exo-corner-ne-floor = exodermis NE corner floor
+stack-exo-corner-nw-floor = exodermis NW corner floor
+stack-exo-corner-se-floor = exodermis SE corner floor
+stack-exo-corner-sw-floor = exodermis SW corner floor
+stack-exo-borg-floor = mechadermis floor

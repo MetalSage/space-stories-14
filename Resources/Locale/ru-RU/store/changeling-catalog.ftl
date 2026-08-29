@@ -25,10 +25,19 @@ changeling-catalog-lethal-sting-desc = Наносит цели очень мед
 changeling-catalog-hallucinogenic-sting-name = Галлюциногенное жало
 changeling-catalog-hallucinogenic-sting-desc = Вызывает у цели состояние опьянения и затрудняет речь. Вносит сумятицу среди экипажа. Можно использовать на себе.
 
+changeling-catalog-mute-sting-name = Mute Sting
+changeling-catalog-mute-sting-desc = Causes the target to be incapable of speech. Imperceptible until the target tries to speak. Can be used on self.
+
+changeling-catalog-screech-name = Screech [TEMPORARY]
+changeling-catalog-screech-desc = We let out a powerful screech that disarms people who hear it without adequate ear protection. THIS ACTION WILL BE MOVED TO THE HORROR FORM WHEN IT IS IMPLEMENTED.
+
 changeling-catalog-last-resort-name = Крайняя мера
 changeling-catalog-last-resort-desc = Уничтожает ваше текущее тело, позволяя сбежать в виде слабого головного слизня. Если вы заразите труп гуманоида, вы сможете восстановить полноценное тело генокрада.
 
                                       Предупреждение! Это сбрасывает ваш прогресс в качестве генокрада, удаляя все покупки в магазине и поглощённые личности!
+
+changeling-catalog-voice-mindshield-name = Fake Mindshield
+changeling-catalog-voice-mindshield-desc = Modify your neuron's natural waves to copy those produced by Nanotrasen mindshield implants, making you look mindshielded to security members. Can be toggled.
 
 changeling-catalog-night-vision-name = Ночное Зрение
 changeling-catalog-night-vision-desc = Вы модифицируете свои фоторецепторы и обостряете чувства, чтобы видеть в полной темноте.

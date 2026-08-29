@@ -132,8 +132,14 @@ law-emag-cannot-emag-self = Вы не можете использовать ЕМ
 
 laws-ui-menu-title = Законы
 laws-ui-law-header = Закон { $id }
+laws-ui-select-all = Select All
+laws-ui-select-all-tooltip = This will select ALL laws, including ones that should probably remain secret.
+laws-ui-select-none = Select None
 laws-ui-state-law = Объявить законы:
 
 laws-notify = Вы обязаны соблюдать законы синтетиков, увидеть которые можно через панель действий. Вы должны всегда следовать своим законам.
 laws-update-notify = Ваши законы были обновлены. Ознакомиться с изменениями можно через панель действий.
 laws-notify-subverted = Законы этого шасси изменены. Обязательно ознакомьтесь с ними.
+
+laws-window-footer-left = Remember: You must be consistent with your interpretation of your laws!
+laws-window-footer-right = V{ $version }

@@ -54,6 +54,7 @@ xenoarch-trigger-tip-ammonia = Аммиак
 xenoarch-trigger-tip-n2o = Оксид азота
 xenoarch-trigger-tip-frezon = Фрезон
 xenoarch-trigger-tip-radiation = Радиация
+xenoarch-trigger-tip-microwave = Microwave radiation
 xenoarch-trigger-tip-brute-damage = Физический урон
 xenoarch-trigger-tip-interaction = Физическое взаимодействие
 xenoarch-trigger-tip-wrenching = Затягивание
@@ -68,6 +69,17 @@ xenoarch-trigger-tip-blood = Кровь
 xenoarch-trigger-tip-throw = Бросок
 xenoarch-trigger-tip-death = Смерть
 xenoarch-trigger-tip-magnet = Магнитные волны
+xenoarch-trigger-tip-money = Bribery
+xenoarch-trigger-tip-knowledge = Knowledge Intake
+xenoarch-trigger-tip-carbs = Carbohydrate Intake
+xenoarch-trigger-tip-meat = Protein Intake
+xenoarch-trigger-tip-produce = Healthy Produce Intake
+xenoarch-trigger-tip-stamp = Bureaucratic Approval
+xenoarch-trigger-tip-shock = Electrical Shock
+xenoarch-trigger-tip-particle = Singularity-Effecting Particles
+xenoarch-trigger-tip-anomparticle = Anomaly-Effecting Particles
+xenoarch-trigger-tip-stamina-damage = Organic Exhaustion
+xenoarch-trigger-tip-laser = High-Intensity photon impacts
 
 ### Description hints
 xenoarch-trigger-examine-wrenching = Вокруг него свободно крутится частичка.

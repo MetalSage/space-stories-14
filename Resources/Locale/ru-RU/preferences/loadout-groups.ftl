@@ -4,6 +4,7 @@ loadout-group-species-restriction = Этот предмет недоступен
 # Miscellaneous
 loadout-group-trinkets = Безделушки
 loadout-group-jobtrinkets = Безделушки должности
+loadout-group-assistive-items = Assistive items
 loadout-group-glasses = Очки
 loadout-group-backpack = Рюкзак
 loadout-group-instruments = Инструменты
@@ -207,3 +208,8 @@ loadout-group-reporter-head = Репортёр, голова
 loadout-group-reporter-outerclothing = Репортёр, верхняя одежда
 
 loadout-group-psychologist-jumpsuit = Психолог, комбинезон
+
+loadout-group-tramdriver-jumpsuit = Tram driver jumpsuit
+loadout-group-tramdriver-outerclothing = Tram driver suit
+loadout-group-tramdriver-hat = Tram driver hat
+loadout-group-tramdriver-gloves = Tram driver gloves

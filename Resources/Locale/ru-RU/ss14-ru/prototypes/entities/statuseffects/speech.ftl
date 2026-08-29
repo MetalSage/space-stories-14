@@ -10,5 +10,7 @@ ent-StatusEffectOwO = owoaccent
     .desc = { ent-SpeechStatusEffectBase.desc }
 ent-StatusEffectAllCaps = allcapsaccent
     .desc = { ent-SpeechStatusEffectBase.desc }
+ent-StatusEffectRatvarianLanguage = ratvarian language patterns
+    .desc = { ent-SpeechStatusEffectBase.desc }
 ent-StatusEffectBark = barkaccent
     .desc = { ent-SpeechStatusEffectBase.desc }

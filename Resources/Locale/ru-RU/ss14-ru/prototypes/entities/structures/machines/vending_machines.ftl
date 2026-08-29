@@ -1,5 +1,7 @@
-ent-VendingMachine = торговый автомат
-    .desc = Просто добавь капитализма!
+ent-BaseVendingMachine = vending machine
+    .desc = Just add capitalism!
+ent-VendingMachine = { ent-BaseVendingMachine }
+    .desc = { ent-BaseVendingMachine.desc }
 ent-VendingMachineWallmount = торговый автомат
     .desc = { ent-BaseWallmountMachine.desc }
 ent-VendingMachineCondiments = островок соусов

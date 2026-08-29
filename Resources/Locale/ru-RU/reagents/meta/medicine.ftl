@@ -56,6 +56,10 @@ reagent-desc-phalanximine = Современный препарат, испол�
 reagent-name-polypyrylium-oligomers = олигомеры полипирилия
 reagent-desc-polypyrylium-oligomers = Фиолетовая смесь коротких полиэлектролитных цепочек, синтезировать которые в лаборатории не так-то просто. Лечит удушение и механические повреждения. С течением времени останавливает кровотечение.
 
+reagent-name-romerodone = romerodone
+reagent-desc-romerodone = A byproduct of centrifuging zombie blood, perhaps you could make a cure with this.
+
+
 reagent-name-ambuzol = амбузол
 reagent-desc-ambuzol = Высокотехнологичный препарат, способный остановить развитие зомби-вируса.
 

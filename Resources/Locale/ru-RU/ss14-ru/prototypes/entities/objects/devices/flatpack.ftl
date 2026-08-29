@@ -36,3 +36,7 @@ ent-HydroponicsTrayFlatpack = упаковка гидропонного лотк
     .desc = Универсально-сборная упаковка, используемая для сборки гидропонного лотка.
 ent-SyndicateMicrowaveFlatpack = упаковка микрововолновки donk co.
     .desc = Универсально-сборная упаковка, используемая для сборки микроволновки, слишком горячая для Nanotrasen.
+ent-XenoborgExtractorFlatpack = xenoborg extractor flatpack
+    .desc = A flatpack used for constructing a xenoborg extractor.
+ent-MachineAnomalyVesselFlatpack = anomaly vessel flatpack
+    .desc = A flatpack used for constructing an anomaly vessel.

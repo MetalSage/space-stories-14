@@ -1,5 +1,3 @@
-## Entity
-
 seed-component-description = На этикетке имеется изображение — [color=yellow]{ $seedName }[/color].
 seed-component-has-variety-tag = Помечено как сорт [color=lightgray]номер { $seedUid }[/color].
 seed-component-plant-yield-text = Урожайность растения:    [color=lightblue]{ $seedYield }[/color]

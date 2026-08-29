@@ -39,6 +39,10 @@ ui-options-restart-sounds = Звуки перезапуска раунда
 ui-options-event-music = Музыка событий
 ui-options-admin-sounds = Музыка админов
 ui-options-bwoink-sound = Звук уведомления Ахелпа
+ui-options-mute-unfocused = Mute audio when unfocused
+ui-options-audio-device = Output device:
+ui-options-audio-device-default = System default
+ui-options-audio-hrtf = Enable HRTF Audio Processing (Requires Restart)
 ui-options-volume-label = Громкость
 
 ## Graphics menu
@@ -61,6 +65,9 @@ ui-options-fancy-speech = Показывать имена в облачках с
 ui-options-fancy-name-background = Добавить фон облачкам с текстом
 ui-options-chat-follow-button = Показывать кнопку быстрого телепорта для призрака
 ui-options-vsync = Вертикальная синхронизация
+ui-options-max-fps = Maximum FPS:
+ui-options-max-fps-display-rate = Display Rate
+ui-options-max-fps-tooltip = Maximum framerate the client should run at. Set to 0 for no limit. This has no effect if VSync is enabled.
 ui-options-fullscreen = Полный экран
 ui-options-lighting-label = Качество освещения:
 ui-options-lighting-very-low = Очень низкое
@@ -106,6 +113,7 @@ ui-options-ambient-occlusion = Отображать окружающее зат�
 ui-options-fps-counter = Показать счётчик FPS
 ui-options-vp-width = Ширина окна игры:
 ui-options-hud-layout = Тип HUD:
+ui-options-sharpness = Sharpness:
 
 ## Controls menu
 

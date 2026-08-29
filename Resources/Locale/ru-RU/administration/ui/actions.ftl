@@ -1,5 +1,5 @@
 admin-player-actions-reason = Причина
-admin-player-actions-bans = Бан-лист
+admin-player-actions-logs = Player logs
 admin-player-actions-notes = Заметки
 admin-player-actions-kick = Кикнуть
 admin-player-actions-ban = Забанить

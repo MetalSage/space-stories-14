@@ -31,6 +31,9 @@ reagent-desc-nocturine = Высокоэффективное снотворное
 reagent-name-mute-toxin = токсин немоты
 reagent-desc-mute-toxin = Густой препарат, воздействующий на голосовые связки и лишающий пользователя возможности говорить пока усваивается организмом.
 
+reagent-name-tacitic-acid = tacitic acid
+reagent-desc-tacitic-acid = A paralytic agent that targets the larynx, rendering the user incapable of speech. Due to the numbing effect, the target is unaware until they try to speak.
+
 reagent-name-norepinephric-acid = норэпинефриновая кислота
 reagent-desc-norepinephric-acid = Мягкое химическое вещество, которое блокирует оптические рецепторы, делая употребившего слепым пока усваивается организмом.
 
@@ -39,3 +42,9 @@ reagent-desc-tear-gas = Химическое вещество, вызывающ�
 
 reagent-name-happiness = счастье
 reagent-desc-happiness = Доводит до экстатического оцепенения и вызывает лёгкие повреждения мозга. Легко вызывает привыкание. Передозировка вызывает резкие перепады настроения.
+
+reagent-name-Hydroxysomnolene = Hydroxysomnolene
+reagent-desc-Hydroxysomnolene = Byproduct of Methylenedioxystraquinone (aka Strawberry Ice) when metabolized. It binds to the newly vacant neuroreceptors in the brain after Methylenedioxystraquinone is flushed out of the system, causing slowness and drowsiness. The only ways to reduce its effects is to either wait it out, or take another hit of that strawberry goodness...
+
+reagent-name-StrawberryIce = Methylenedioxystraquinone
+reagent-desc-StrawberryIce = A special drug designed to be even stronger than Desoxyephedrine. Known as "Strawberry Ice" or "Girl Ice" given its color and flavor, it is incredibly addictive and comes with strong withdrawal symptoms. While the highs are higher and users report flying in rainbows through space while under its influence, near-eternal horrors await those who cease consuming it.
