@@ -205,7 +205,7 @@ public abstract partial class SharedStationSystem : EntitySystem
     /// <summary>
     /// Retrieves a filter for everything in a particular station or near its member grids.
     /// </summary>
-    public Filter GetInStation(StationDataComponent dataComponent, float range = 32f)
+    public Filter GetInStation(StationDataComponent dataComponent, float range = 256f) // Stories. Маппил, а оказалось, что консоль связи должна быть не дальше 32. Увеличим.
     {
         var filter = Filter.Empty();
         _mapIds.Clear();

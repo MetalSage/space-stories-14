@@ -208,4 +208,15 @@ public abstract partial class SharedTemperatureSystem : EntitySystem
         var changeEv = new TemperatureChangedEvent(entity.Comp.Temperature, lastTemp);
         RaiseLocalEvent(entity, ref changeEv, broadcast: true);
     }
+
+    public void ForceChangeTemperature(Entity<TemperatureComponent?> entity, float temp, TemperatureComponent? comp = null)
+    {
+        if (!TemperatureQuery.Resolve(entity, ref entity.Comp))
+            return;
+
+        var lastTemp = entity.Comp.Temperature;
+        entity.Comp.Temperature = temp;
+        var changeEv = new TemperatureChangedEvent(entity.Comp.Temperature, lastTemp);
+        RaiseLocalEvent(entity, ref changeEv, broadcast: true);
+    }
 }

@@ -113,7 +113,7 @@ public sealed partial class TTSSystem : EntitySystem
 
         voiceId = voiceEv.VoiceId;
 
-        if (!GetVoicePrototype(voiceId, out var protoVoice))
+        if (voiceId == null || !GetVoicePrototype(voiceId, out var protoVoice))
             return;
 
         if (args.ObfuscatedMessage != null)

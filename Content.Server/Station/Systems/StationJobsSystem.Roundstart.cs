@@ -142,176 +142,6 @@ public sealed partial class StationJobsSystem
 
                     AssignPlayer(player, job, station, stationJobs, jobCandidates, playerCandidates, profiles, assigned);
                 }
-
-                jobPlayerOptions.Clear(); // We reuse this collection.
-
-                // Goes through every candidate, and adds them to jobPlayerOptions, so that the candidate players
-                // have an index sorted by job. We use this (much) later when actually assigning people to randomly
-                // pick from the list of candidates for the job.
-                foreach (var (user, jobs) in candidates)
-                {
-                    foreach (var job in jobs)
-                    {
-                        if (!jobPlayerOptions.ContainsKey(job))
-                            jobPlayerOptions.Add(job, new HashSet<NetUserId>());
-
-                        jobPlayerOptions[job].Add(user);
-                    }
-
-                    optionsRemaining++;
-                }
-
-                // We reuse this collection, so clear it's children.
-                foreach (var slots in currentlySelectingJobs)
-                {
-                    slots.Value.Clear();
-                }
-
-                // Go through every station..
-                foreach (var station in stations)
-                {
-                    var slots = currentlySelectingJobs[station];
-
-                    // Get all of the jobs in the selected weight category.
-                    foreach (var (job, slot) in stationJobs[station])
-                    {
-                        if (_jobsByWeight[weight].Contains(job))
-                            slots.Add(job, slot);
-                    }
-                }
-
-
-                // Clear for reuse.
-                stationTotalSlots.Clear();
-
-                // Intentionally discounts the value of uncapped slots! They're only a single slot when deciding a station's share.
-                foreach (var (station, jobs) in currentlySelectingJobs)
-                {
-                    stationTotalSlots.Add(
-                        station,
-                        (int)jobs.Values.Sum(x => x ?? 1)
-                        );
-                }
-
-                var totalSlots = 0;
-
-                // LINQ moment.
-                // totalSlots = stationTotalSlots.Sum(x => x.Value);
-                foreach (var (_, slot) in stationTotalSlots)
-                {
-                    totalSlots += slot;
-                }
-
-                if (totalSlots == 0)
-                    continue; // No slots so just move to the next iteration.
-
-                // Clear for reuse.
-                stationShares.Clear();
-
-                // How many players we've distributed so far. Used to grant any remaining slots if we have leftovers.
-                var distributed = 0;
-
-                // Goes through each station and figures out how many players we should give it for the current iteration.
-                foreach (var station in stations)
-                {
-                    // Calculates the percent share then multiplies.
-                    stationShares[station] = (int)Math.Floor(((float)stationTotalSlots[station] / totalSlots) * candidates.Count);
-                    distributed += stationShares[station];
-                }
-
-                // Avoids the fair share problem where if there's two stations and one player neither gets one.
-                // We do this by simply selecting a station randomly and giving it the remaining share(s).
-                if (distributed < candidates.Count)
-                {
-                    var choice = _random.Pick(stations);
-                    stationShares[choice] += candidates.Count - distributed;
-                }
-
-                // Actual meat, goes through each station and shakes the tree until everyone has a job.
-                foreach (var station in stations)
-                {
-                    if (stationShares[station] == 0)
-                        continue;
-
-                    // The jobs we're selecting from for the current station.
-                    var currStationSelectingJobs = currentlySelectingJobs[station];
-                    // We only need this list because we need to go through this in a random order.
-                    // Oh the misery, another allocation.
-                    var allJobs = currStationSelectingJobs.Keys.ToList();
-                    _random.Shuffle(allJobs);
-                    // And iterates through all it's jobs in a random order until the count settles.
-                    // No, AFAIK it cannot be done any saner than this. I hate "shaking" collections as much
-                    // as you do but it's what seems to be the absolute best option here.
-                    // It doesn't seem to show up on the chart, perf-wise, anyway, so it's likely fine.
-                    int priorCount;
-                    do
-                    {
-                        priorCount = stationShares[station];
-
-                        foreach (var job in allJobs)
-                        {
-                            if (stationShares[station] == 0)
-                                break;
-
-                            if (currStationSelectingJobs[job] != null && currStationSelectingJobs[job] == 0)
-                                continue; // Can't assign this job.
-
-                            if (!jobPlayerOptions.ContainsKey(job))
-                                continue;
-
-                            // Stories-Sponsors-Start
-                            var playerCandidates = jobPlayerOptions[job].ToList();
-                            if (playerCandidates.Count == 0)
-                                continue;
-
-                            NetUserId player;
-                            if (playerCandidates.Count == 1)
-                            {
-                                player = playerCandidates[0];
-                            }
-                            else
-                            {
-                                var totalWeight = 0f;
-                                var weights = new float[playerCandidates.Count];
-
-                                for (var i = 0; i < playerCandidates.Count; i++)
-                                {
-                                    var playerWeight = 1.0f;
-                                    if (_sponsorsManager.TryGetInfo(playerCandidates[i], out var info))
-                                    {
-                                        playerWeight = info.StationRolePriority;
-                                    }
-                                    weights[i] = playerWeight;
-                                    totalWeight += playerWeight;
-                                }
-
-                                var r = _random.NextFloat() * totalWeight;
-                                player = playerCandidates[^1];
-
-                                for (var i = 0; i < playerCandidates.Count; i++)
-                                {
-                                    r -= weights[i];
-                                    if (r <= 0)
-                                    {
-                                        player = playerCandidates[i];
-                                        break;
-                                    }
-                                }
-                            }
-                            // Stories-Sponsors-End
-
-                            AssignPlayer(player, job, station);
-                            stationShares[station]--;
-
-                            if (currStationSelectingJobs[job] != null)
-                                currStationSelectingJobs[job]--;
-
-                            if (optionsRemaining == 0)
-                                goto done;
-                        }
-                    } while (priorCount != stationShares[station]);
-                }
-                done: ;
             }
         }
 
@@ -364,8 +194,42 @@ public sealed partial class StationJobsSystem
             if (!candidates.TryGetValue(priority, out var players) || players.Count == 0)
                 continue;
 
-            player = _random.Pick(players);
+            // Stories-Sponsors-Start
+            var playerCandidates = players.ToList();
+            if (playerCandidates.Count == 1)
+            {
+                player = playerCandidates[0];
+                return true;
+            }
+
+            var totalWeight = 0f;
+            var weights = new float[playerCandidates.Count];
+
+            for (var i = 0; i < playerCandidates.Count; i++)
+            {
+                var playerWeight = 1.0f;
+                if (_sponsorsManager.TryGetInfo(playerCandidates[i], out var info))
+                {
+                    playerWeight = info.StationRolePriority;
+                }
+                weights[i] = playerWeight;
+                totalWeight += playerWeight;
+            }
+
+            var r = _random.NextFloat() * totalWeight;
+            player = playerCandidates[^1];
+
+            for (var i = 0; i < playerCandidates.Count; i++)
+            {
+                r -= weights[i];
+                if (r <= 0)
+                {
+                    player = playerCandidates[i];
+                    break;
+                }
+            }
             return true;
+            // Stories-Sponsors-End
         }
 
         player = default;

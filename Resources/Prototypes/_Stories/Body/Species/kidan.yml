@@ -75,8 +75,6 @@
   id: MobKidan
   name: Urist McKidan
   components:
-  - type: Hunger
-  - type: Thirst
   - type: Icon
     sprite: _Stories/Mobs/Species/Kidan/parts.rsi
     state: full
@@ -124,7 +122,7 @@
     color: "#556b2f"
     enabled: false
   - type: Temperature
-    currentTemperature: 310.15
+    temperature: 310.15
     specificHeat: 42
   - type: TemperatureDamage
     heatDamageThreshold: 400

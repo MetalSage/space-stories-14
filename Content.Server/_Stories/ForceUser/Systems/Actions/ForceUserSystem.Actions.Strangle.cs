@@ -65,7 +65,7 @@ public sealed partial class ForceUserSystem
             _standingState.Stand(uid);
 
             EnsureComp<LiftingUpComponent>(uid);
-            EnsureComp<MutedComponent>(uid);
+            EnsureComp<MutedStatusEffectComponent>(uid);
 
             _damageable.TryChangeDamage(uid, args.Damage, out var dmg, true);
 
@@ -90,6 +90,6 @@ public sealed partial class ForceUserSystem
             MovementSpeedModifierComponent.DefaultAcceleration);
         _movementSpeedModifier.RefreshMovementSpeedModifiers(uid);
         RemComp<LiftingUpComponent>(uid);
-        RemComp<MutedComponent>(uid);
+        RemComp<MutedStatusEffectComponent>(uid);
     }
 }

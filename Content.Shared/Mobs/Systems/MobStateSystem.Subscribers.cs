@@ -21,15 +21,18 @@ using Content.Shared.Pulling.Events;
 using Content.Shared.Speech;
 using Content.Shared.Standing;
 using Content.Shared.Strip.Components;
+using Content.Shared.NPC.Prototypes;
+using Content.Shared.Popups;
 using Content.Shared.Throwing;
 using Content.Shared.Tools.Systems;
-using System.Linq;
-using Content.Shared.Popups;
+using Robust.Shared.Prototypes;
 
 namespace Content.Shared.Mobs.Systems;
 
 public partial class MobStateSystem
 {
+    private static readonly ProtoId<NpcFactionPrototype> NanoTrasenFaction = "NanoTrasen";
+
     //General purpose event subscriptions. If you can avoid it register these events inside their own systems
     private void SubscribeEvents()
     {

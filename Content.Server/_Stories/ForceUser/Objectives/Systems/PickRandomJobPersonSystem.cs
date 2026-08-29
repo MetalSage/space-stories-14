@@ -84,7 +84,7 @@ public sealed partial class PickRandomJobPersonSystem : EntitySystem
 
         if (comp.JobID == "GuardianNt" && targetUid != null && HasComp<StoreComponent>(targetUid.Value))
         {
-            _store.TryAddCurrency(new Dictionary<string, FixedPoint2> { { "SkillPoint", 10 } }, targetUid.Value);
+            _store.TryAddCurrency(new() { { "SkillPoint", 10 } }, targetUid.Value);
             _popup.PopupEntity("Вы чувствуете зло и оно нацелено на вас... Проверьте магазин навыков.",
                 targetUid.Value,
                 targetUid.Value,

@@ -84,12 +84,7 @@ public abstract partial class SharedVendingMachineSystem
         if (!TryComp<AccessReaderComponent>(uid, out var accessReader))
             return true;
 
-        if (_accessReader.IsAllowed(sender, uid, accessReader) || HasComp<EmaggedComponent>(uid))
-            return true;
-
-        Popup.PopupEntity(Loc.GetString("vending-machine-component-try-eject-access-denied"), uid, sender);
-        Deny((uid, vendComponent), sender);
-        return false;
+        return _accessReader.IsAllowed(sender, uid, accessReader) || HasComp<EmaggedComponent>(uid);
     }
 
     protected VendingMachineInventoryEntry? GetEntry(EntityUid uid, string entryId, InventoryType type, VendingMachineComponent? component = null)
@@ -166,7 +161,7 @@ public abstract partial class SharedVendingMachineSystem
         Dirty(uid, ejectComponent);
         UpdateUI((uid, vendComponent));
         OnEjectStateChanged((uid, vendComponent), ejectComponent);
-        Audio.PlayPredicted(ejectComponent.SoundVend, uid, user);
+        Audio.PlayPvs(ejectComponent.SoundVend, uid);
     }
 
     public void Deny(Entity<VendingMachineComponent?> entity, EntityUid? user = null, VendingMachineEjectComponent? ejectComponent = null)
@@ -183,7 +178,7 @@ public abstract partial class SharedVendingMachineSystem
         ejectComponent.DenyEnd = Timing.CurTime + ejectComponent.DenyDelay;
         var audioParams = ejectComponent.SoundDeny?.Params ?? AudioParams.Default;
         audioParams = audioParams.AddVolume(-2f);
-        Audio.PlayPredicted(ejectComponent.SoundDeny, entity.Owner, user, audioParams);
+        Audio.PlayPvs(ejectComponent.SoundDeny, entity.Owner, audioParams);
         OnEjectStateChanged(entity, ejectComponent);
         Dirty(entity.Owner, ejectComponent);
     }
@@ -196,13 +191,17 @@ public abstract partial class SharedVendingMachineSystem
     /// <param name="type">The type of inventory the item is from</param>
     /// <param name="itemId">The prototype ID of the item</param>
     /// <param name="component"></param>
-    public void AuthorizedVend(EntityUid uid, EntityUid sender, InventoryType type, string itemId, VendingMachineComponent component)
+    public virtual void AuthorizedVend(EntityUid uid, EntityUid sender, InventoryType type, string itemId, VendingMachineComponent component)
     {
-        if (!IsAuthorized(uid, sender, component))
-            return;
-
         if (!TryComp<VendingMachineEjectComponent>(uid, out var ejectComponent))
             return;
+
+        if (!IsAuthorized(uid, sender, component))
+        {
+            Popup.PopupEntity(Loc.GetString("vending-machine-component-try-eject-access-denied"), uid, sender);
+            Deny((uid, component), sender, ejectComponent);
+            return;
+        }
 
         TryEjectVendorItem(uid, type, itemId, ShouldThrowVendItem((uid, ejectComponent)), sender, component, ejectComponent);
     }

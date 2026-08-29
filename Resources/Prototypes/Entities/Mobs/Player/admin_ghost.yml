@@ -128,8 +128,6 @@
   id: BaseAGhostAction
   components:
   - type: Action
-    icon: _Stories/Interface/AdminActions/solar.png # Stories-Resprite
-    iconOn: _Stories/Interface/AdminActions/solar.png # Stories-Resprite
     keywords: [ "AI", "console", "interface" ]
     priority: -10
   - type: Sprite

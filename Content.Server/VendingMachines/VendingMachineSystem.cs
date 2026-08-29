@@ -1,32 +1,30 @@
 // Stories-Economy
 using System.Linq;
-using Content.Shared.Roles;
+using System.Numerics;
 using Content.Server._Stories.Economy;
 using Content.Server.Cargo.Systems;
-using Content.Server.VendingMachines.Components;
 using Content.Server.Power.Components;
-using Content.Server.Station.Systems;
-using Content.Server.Vocalization.Systems;
 using Content.Server.Power.EntitySystems;
+using Content.Server.Station.Systems;
+using Content.Server.VendingMachines.Components;
+using Content.Server.Access.Components;
+using Content.Server.Vocalization.Systems;
 using Content.Shared._Stories.Economy.Components;
 using Content.Shared.Access.Components;
 using Content.Shared.Access.Systems;
 using Content.Shared.Cargo;
 using Content.Shared.Damage.Systems;
 using Content.Shared.Emp;
-using Content.Shared.GameTicking;
 using Content.Shared.PDA;
 using Content.Shared.Power;
+using Content.Shared.Roles;
 using Content.Shared.Throwing;
 using Content.Shared.UserInterface;
 using Content.Shared.VendingMachines;
 using Content.Shared.VendingMachines.Components;
 using Content.Shared.Wall;
-using Robust.Server.GameObjects;
 using Robust.Shared.Prototypes;
 using Robust.Shared.Random;
-using Content.Server.Access.Components;
-using System.Numerics;
 
 namespace Content.Server.VendingMachines;
 
@@ -46,28 +44,89 @@ public sealed partial class VendingMachineSystem : SharedVendingMachineSystem
     {
         base.Initialize();
 
-        SubscribeLocalEvent<VendingMachineComponent, PowerChangedEvent>(OnPowerChanged);
-        SubscribeLocalEvent<VendingMachineComponent, DamageChangedEvent>(OnDamageChanged);
-        SubscribeLocalEvent<VendingMachineComponent, PriceCalculationEvent>(OnVendingPrice);
-        SubscribeLocalEvent<VendingMachineComponent, TryVocalizeEvent>(OnTryVocalize);
-        SubscribeLocalEvent<VendingMachineComponent, VendingMachineSelfDispenseEvent>(OnSelfDispense);
-        SubscribeLocalEvent<VendingMachineRestockComponent, PriceCalculationEvent>(OnPriceCalculation);
-
         SubscribeLocalEvent<VendingMachineComponent, BeforeActivatableUIOpenEvent>(
             (uid, comp, args) => UpdateVendingUI(uid, args.User, comp));
         SubscribeLocalEvent<VendingMachineComponent, BoundUIOpenedEvent>(OnBoundUIOpened);
         SubscribeLocalEvent<BankBalanceChangedEventArgs>(OnBalanceChanged);
     }
 
-    private void OnVendingPrice(EntityUid uid, VendingMachineComponent component, ref PriceCalculationEvent args)
+    protected override bool ShouldThrowVendItem(Entity<VendingMachineEjectComponent> entity)
+    {
+        return HasComp<VendingMachineShootComponent>(entity.Owner);
+    }
+
+    protected override void EjectItem(Entity<VendingMachineComponent?, VendingMachineEjectComponent?> entity, bool forceEject = false)
+    {
+        if (!Resolve(entity.Owner, ref entity.Comp1, ref entity.Comp2))
+            return;
+
+        var uid = entity.Owner;
+        var ejectComponent = entity.Comp2;
+
+        if (ejectComponent.NextItemToEject is not { } item)
+        {
+            ejectComponent.ThrowNextItem = false;
+            return;
+        }
+
+        // Default spawn coordinates
+        var xform = Transform(uid);
+        var spawnCoordinates = xform.Coordinates;
+
+        // Make sure the wallvends spawn outside of the wall.
+        if (TryComp<WallMountComponent>(uid, out var wallMountComponent))
+        {
+            var offset = (wallMountComponent.Direction + xform.LocalRotation - Math.PI / 2).ToVec() * WallVendEjectDistanceFromWall;
+            spawnCoordinates = spawnCoordinates.Offset(offset);
+        }
+
+        var ent = Spawn(item, spawnCoordinates);
+
+        if (ejectComponent.ThrowNextItem)
+        {
+            var range = ejectComponent.NonLimitedEjectRange;
+            var direction = new Vector2(_random.NextFloat(-range, range), _random.NextFloat(-range, range));
+            _throwingSystem.TryThrow(ent, direction, ejectComponent.NonLimitedEjectForce);
+        }
+
+        ejectComponent.NextItemToEject = null;
+        ejectComponent.ThrowNextItem = false;
+    }
+
+    public override void Update(float frameTime)
+    {
+        base.Update(frameTime);
+
+        var curTime = Timing.CurTime;
+        var dispenseOnHitQuery = EntityQueryEnumerator<VendingMachineDispenseOnHitComponent>();
+        while (dispenseOnHitQuery.MoveNext(out _, out var dispenseOnHit))
+        {
+            if (dispenseOnHit.NextDispenseTime is not { } nextDispenseTime || curTime <= nextDispenseTime)
+                continue;
+
+            dispenseOnHit.NextDispenseTime = null;
+        }
+
+        var disabled = EntityQueryEnumerator<EmpDisabledComponent, VendingMachineComponent, VendingMachineEjectComponent>();
+        while (disabled.MoveNext(out var uid, out _, out var comp, out var eject))
+        {
+            if (eject.NextEmpEject >= curTime) continue;
+
+            EjectRandom((uid, comp, eject), true, false);
+            eject.NextEmpEject += (5 * eject.EjectDelay);
+        }
+    }
+
+    [SubscribeLocalEvent]
+    private void OnVendingPrice(Entity<VendingMachineComponent> entity, ref PriceCalculationEvent args)
     {
         var price = 0.0;
 
-        foreach (var entry in component.Inventory.Values)
+        foreach (var entry in entity.Comp.Inventory.Values)
         {
             if (!ProtoMan.TryIndex<EntityPrototype>(entry.ID, out var proto))
             {
-                Log.Error($"Unable to find entity prototype {entry.ID} on {ToPrettyString(uid)} vending.");
+                Log.Error($"Unable to find entity prototype {entry.ID} on {ToPrettyString(entity)} vending.");
                 continue;
             }
 
@@ -77,146 +136,133 @@ public sealed partial class VendingMachineSystem : SharedVendingMachineSystem
         args.Price += price;
     }
 
-    protected override void OnMapInit(EntityUid uid, VendingMachineComponent component, MapInitEvent args)
+    [SubscribeLocalEvent]
+    private void OnDamageChanged(Entity<VendingMachineComponent> entity, ref DamageChangedEvent args)
     {
-        base.OnMapInit(uid, component, args);
-
-        if (HasComp<ApcPowerReceiverComponent>(uid))
+        if (!args.DamageIncreased && entity.Comp.Broken)
         {
-            TryUpdateVisualState((uid, component));
-        }
-
-        if (ProtoMan.TryIndex(component.PackPrototypeId, out VendingMachineInventoryPrototype? packPrototype) // Stories-Economy
-            && packPrototype!.ItemPrices.Count > 0)
-        {
-            ApplyPricesToInventory(component.Inventory, packPrototype.ItemPrices);
-            ApplyPricesToInventory(component.EmaggedInventory, packPrototype.ItemPrices);
-            ApplyPricesToInventory(component.ContrabandInventory, packPrototype.ItemPrices);
-            Dirty(uid, component);
-        }
-    }
-
-    private void OnPowerChanged(EntityUid uid, VendingMachineComponent component, ref PowerChangedEvent args)
-    {
-        TryUpdateVisualState((uid, component));
-    }
-
-    private void OnDamageChanged(EntityUid uid, VendingMachineComponent component, DamageChangedEvent args)
-    {
-        if (!args.DamageIncreased && component.Broken)
-        {
-            component.Broken = false;
-            Dirty(uid, component);
-            TryUpdateVisualState((uid, component));
+            entity.Comp.Broken = false;
+            Dirty(entity);
             return;
         }
 
-        if (component.Broken || component.DispenseOnHitCoolingDown || component.DispenseOnHitChance == null || args.DamageDelta == null)
+        if (!TryComp<VendingMachineDispenseOnHitComponent>(entity.Owner, out var dispenseOnHit))
             return;
 
-        if (args.DamageIncreased && args.DamageDelta.GetTotal() >= component.DispenseOnHitThreshold && _random.Prob(component.DispenseOnHitChance.Value))
+        if (entity.Comp.Broken || dispenseOnHit.CoolingDown || args.DamageDelta == null)
+            return;
+
+        if (!(args.DamageIncreased && args.DamageDelta.GetTotal() >= dispenseOnHit.Threshold) ||
+            !_random.Prob(dispenseOnHit.Chance)) return;
+
+        if (dispenseOnHit.NextDispenseDelay != null)
         {
-            if (component.DispenseOnHitCooldown != null)
-                component.DispenseOnHitEnd = Timing.CurTime + component.DispenseOnHitCooldown.Value;
-            EjectRandom(uid, throwItem: true, forceEject: true, component);
+            dispenseOnHit.NextDispenseTime = Timing.CurTime + dispenseOnHit.NextDispenseDelay.Value;
         }
+
+        EjectRandom((entity.Owner, entity.Comp), throwItem: true, forceEject: true);
     }
 
-    private void OnSelfDispense(EntityUid uid, VendingMachineComponent component, VendingMachineSelfDispenseEvent args)
+    [SubscribeLocalEvent]
+    private void OnSelfDispense(Entity<VendingMachineComponent> entity, ref VendingMachineSelfDispenseEvent args)
     {
-        if (args.Handled) return;
+        if (args.Handled)
+            return;
+
         args.Handled = true;
-        EjectRandom(uid, throwItem: true, forceEject: false, component);
+        EjectRandom((entity.Owner, entity.Comp), throwItem: true, forceEject: false);
     }
 
-    public void SetShooting(EntityUid uid, bool canShoot, VendingMachineComponent? component = null)
+    [SubscribeLocalEvent]
+    private void OnPriceCalculation(Entity<VendingMachineRestockComponent> entity, ref PriceCalculationEvent args)
     {
-        if (!Resolve(uid, ref component)) return;
-        component.CanShoot = canShoot;
-    }
+        List<double> priceSets = new();
 
-    public void SetContraband(EntityUid uid, bool contraband, VendingMachineComponent? component = null)
-    {
-        if (!Resolve(uid, ref component)) return;
-        component.Contraband = contraband;
-        Dirty(uid, component);
-    }
-
-    public void EjectRandom(EntityUid uid, bool throwItem, bool forceEject = false, VendingMachineComponent? vendComponent = null)
-    {
-        if (!Resolve(uid, ref vendComponent)) return;
-        var availableItems = GetAvailableInventory(uid, vendComponent);
-        if (availableItems.Count <= 0) return;
-        var item = _random.Pick(availableItems);
-
-        if (forceEject)
-        {
-            vendComponent.NextItemToEject = item.ID;
-            vendComponent.ThrowNextItem = throwItem;
-            var entry = GetEntry(uid, item.ID, item.Type, vendComponent);
-            if (entry != null) entry.Amount--;
-            EjectItem(uid, vendComponent, forceEject);
-        }
-        else
-        {
-            TryEjectVendorItem(uid, item.Type, item.ID, throwItem, user: null, vendComponent: vendComponent);
-        }
-    }
-
-    protected override void EjectItem(EntityUid uid, VendingMachineComponent? vendComponent = null, bool forceEject = false)
-    {
-        if (!Resolve(uid, ref vendComponent)) return;
-        if (!forceEject) TryUpdateVisualState((uid, vendComponent));
-        if (string.IsNullOrEmpty(vendComponent.NextItemToEject))
-        {
-            vendComponent.ThrowNextItem = false;
-            return;
-        }
-
-        var xform = Transform(uid);
-        var spawnCoordinates = xform.Coordinates;
-
-        if (TryComp<WallMountComponent>(uid, out var wallMountComponent))
-        {
-            var offset = (wallMountComponent.Direction + xform.LocalRotation - Math.PI / 2).ToVec() * WallVendEjectDistanceFromWall;
-            spawnCoordinates = spawnCoordinates.Offset(offset);
-        }
-
-        var ent = Spawn(vendComponent.NextItemToEject, spawnCoordinates);
-
-        if (vendComponent.ThrowNextItem)
-        {
-            var range = vendComponent.NonLimitedEjectRange;
-            var direction = new Vector2(_random.NextFloat(-range, range), _random.NextFloat(-range, range));
-            _throwingSystem.TryThrow(ent, direction, vendComponent.NonLimitedEjectForce);
-        }
-
-        vendComponent.NextItemToEject = null;
-        vendComponent.ThrowNextItem = false;
-    }
-
-    private void OnPriceCalculation(EntityUid uid, VendingMachineRestockComponent component, ref PriceCalculationEvent args)
-    {
-        var priceSets = new List<double>();
-        foreach (var vendingInventory in component.CanRestock)
+        // Find the most expensive inventory and use that as the highest price.
+        foreach (var vendingInventory in entity.Comp.CanRestock)
         {
             double total = 0;
+
             if (ProtoMan.TryIndex(vendingInventory, out VendingMachineInventoryPrototype? inventoryPrototype))
             {
                 foreach (var (item, amount) in inventoryPrototype.StartingInventory)
                 {
-                    if (ProtoMan.TryIndex(item, out EntityPrototype? entity))
-                        total += _pricing.GetEstimatedPrice(entity) * amount;
+                    if (ProtoMan.TryIndex(item, out EntityPrototype? prototype))
+                        total += _pricing.GetEstimatedPrice(prototype) * amount;
                 }
             }
+
             priceSets.Add(total);
         }
-        if (priceSets.Any()) args.Price += priceSets.Max();
+
+        if (priceSets.Any())
+            args.Price += priceSets.Max();
     }
 
+    [SubscribeLocalEvent]
     private void OnTryVocalize(Entity<VendingMachineComponent> ent, ref TryVocalizeEvent args)
     {
         args.Cancelled |= ent.Comp.Broken;
+    }
+
+    public void SetShooting(Entity<VendingMachineEjectComponent?> entity, bool canShoot)
+    {
+        if (!Resolve(entity.Owner, ref entity.Comp))
+            return;
+
+        if (canShoot)
+            EnsureComp<VendingMachineShootComponent>(entity.Owner);
+        else
+            RemComp<VendingMachineShootComponent>(entity.Owner);
+    }
+
+    /// <summary>
+    /// Sets the <see cref="VendingMachineComponent.Contraband"/> property of the vending machine.
+    /// </summary>
+    public void SetContraband(Entity<VendingMachineComponent> entity, bool contraband)
+    {
+        entity.Comp.Contraband = contraband;
+        Dirty(entity);
+    }
+
+    /// <summary>
+    /// Ejects a random item from the available stock. Will do nothing if the vending machine is empty.
+    /// </summary>
+    public void EjectRandom(
+        Entity<VendingMachineComponent?, VendingMachineEjectComponent?> entity,
+        bool throwItem,
+        bool forceEject = false)
+    {
+        if (!Resolve(entity.Owner, ref entity.Comp1, ref entity.Comp2))
+            return;
+
+        var uid = entity.Owner;
+        var vendComponent = entity.Comp1;
+        var ejectComponent = entity.Comp2;
+        var availableItems = GetAvailableInventory(uid, vendComponent);
+        if (availableItems.Count <= 0)
+            return;
+
+        var item = _random.Pick(availableItems);
+
+        if (forceEject)
+        {
+            ejectComponent.NextItemToEject = item.ID;
+            ejectComponent.ThrowNextItem = throwItem;
+            var entry = GetEntry(uid, item.ID, item.Type, vendComponent);
+            if (entry != null)
+            {
+                entry.Amount--;
+                Dirty(uid, vendComponent);
+                UpdateUI((uid, vendComponent));
+            }
+
+            EjectItem((uid, vendComponent, ejectComponent), forceEject);
+        }
+        else
+        {
+            TryEjectVendorItem(uid, item.Type, item.ID, throwItem, user: null, vendComponent: vendComponent, ejectComponent: ejectComponent);
+        }
     }
 
     /// <summary>
@@ -260,8 +306,8 @@ public sealed partial class VendingMachineSystem : SharedVendingMachineSystem
         var authorized = IsAuthorized(uid, user, component);
         var inventory = GetAllInventory(uid, component);
 
-        // If the user is authorized via access card, show prices as 0
-        if (IsFreeForUser(uid, user, component))
+        // If the machine is freeVend or user is authorized via access card/job, show prices as 0
+        if (component.FreeVend || IsFreeForUser(uid, user, component))
         {
             var freeInventory = new List<VendingMachineInventoryEntry>();
             foreach (var entry in inventory)
@@ -272,12 +318,12 @@ public sealed partial class VendingMachineSystem : SharedVendingMachineSystem
         var state = new VendingMachineUIState(inventory, authorized);
         UISystem.SetUiState(uid, VendingMachineUiKey.Key, state);
 
-        if (authorized) SendBalanceToUser(uid, user, component);
+        SendBalanceToUser(uid, user, component);
     }
 
     protected override void UpdateUI(Entity<VendingMachineComponent?> entity)
     {
-        if (!Resolve(entity, ref entity.Comp)) return;
+        if (!Resolve(entity.Owner, ref entity.Comp)) return;
 
         var actors = UISystem.GetActors(entity.Owner, VendingMachineUiKey.Key).ToList();
         if (actors.Count == 0) return;
@@ -300,64 +346,6 @@ public sealed partial class VendingMachineSystem : SharedVendingMachineSystem
         return false;
     }
 
-
-
-    private void AddInventoryFromPrototype(EntityUid uid, Dictionary<string, uint>? entries, InventoryType type, VendingMachineComponent? component = null, float restockQuality = 1.0f)
-    {
-        if (!Resolve(uid, ref component) || entries == null) return;
-
-        Dictionary<string, VendingMachineInventoryEntry> inventory;
-
-        if (type == InventoryType.Regular)
-            inventory = component.Inventory;
-        else if (type == InventoryType.Emagged)
-            inventory = component.EmaggedInventory;
-        else if (type == InventoryType.Contraband)
-            inventory = component.ContrabandInventory;
-        else
-            return;
-
-        foreach (var (id, amount) in entries)
-        {
-            if (!ProtoMan.HasIndex<EntityPrototype>(id)) continue;
-            var restock = amount;
-            if (restockQuality < 1.0f && !_random.Prob(restockQuality))
-                restock = (uint)_random.Next(0, (int)amount);
-
-            if (inventory.TryGetValue(id, out var entry))
-                entry.Amount = Math.Min(entry.Amount + restock, amount * 3);
-            else
-                inventory.Add(id, new VendingMachineInventoryEntry(type, id, restock));
-        }
-    }
-
-    public new void RestockInventoryFromPrototype(EntityUid uid, VendingMachineComponent? component = null, float restockQuality = 1f)
-    {
-        if (!Resolve(uid, ref component)) return;
-        if (!ProtoMan.TryIndex(component.PackPrototypeId, out VendingMachineInventoryPrototype? packPrototype)) return;
-
-        AddInventoryFromPrototype(uid, packPrototype!.StartingInventory, InventoryType.Regular, component, restockQuality);
-        AddInventoryFromPrototype(uid, packPrototype.EmaggedInventory, InventoryType.Emagged, component, restockQuality);
-        AddInventoryFromPrototype(uid, packPrototype.ContrabandInventory, InventoryType.Contraband, component, restockQuality);
-
-        if (packPrototype.ItemPrices.Count > 0)
-        {
-            ApplyPricesToInventory(component.Inventory, packPrototype.ItemPrices);
-            ApplyPricesToInventory(component.EmaggedInventory, packPrototype.ItemPrices);
-            ApplyPricesToInventory(component.ContrabandInventory, packPrototype.ItemPrices);
-        }
-        Dirty(uid, component);
-    }
-
-    private void ApplyPricesToInventory(Dictionary<string, VendingMachineInventoryEntry> inventory, Dictionary<string, uint> prices)
-    {
-        foreach (var (itemId, entry) in inventory)
-        {
-            if (prices.TryGetValue(itemId, out var price))
-                entry.Price = price;
-        }
-    }
-
     private void OnBoundUIOpened(EntityUid uid, VendingMachineComponent component, BoundUIOpenedEvent args)
     {
         if (args.UiKey is not VendingMachineUiKey key || key != VendingMachineUiKey.Key) return;
@@ -367,25 +355,29 @@ public sealed partial class VendingMachineSystem : SharedVendingMachineSystem
     private void SendBalanceToUser(EntityUid machine, EntityUid user, VendingMachineComponent component)
     {
         var station = _station.GetOwningStation(machine);
-        if (station == null) return;
+        int? balance = null;
 
-        var personalBal = 0;
+        if (station != null && TryGetAccountNumber(user, out var accountNumber) && _bank.TryGetAccount(station.Value, accountNumber, out var account))
+            balance = account.Balance;
 
-        if (TryGetAccountNumber(user, out var accountNumber) && _bank.TryGetAccount(station.Value, accountNumber, out var account))
-            personalBal = account!.Balance;
-
-        UISystem.ServerSendUiMessage(machine, VendingMachineUiKey.Key, new VendingMachineBalanceMessage(personalBal), user);
+        UISystem.ServerSendUiMessage(machine, VendingMachineUiKey.Key, new VendingMachineBalanceMessage(balance), user);
     }
 
-    protected override void AuthorizedVend(EntityUid uid, EntityUid sender, InventoryType type, string itemId, VendingMachineComponent component)
+    public override void AuthorizedVend(EntityUid uid, EntityUid sender, InventoryType type, string itemId, VendingMachineComponent component)
     {
-        if (component.Ejecting || component.Broken || !_power.IsPowered(uid))
+        if (component.Broken || !_power.IsPowered(uid))
+            return;
+
+        if (!TryComp<VendingMachineEjectComponent>(uid, out var ejectComponent))
+            return;
+
+        if (ejectComponent.Ejecting)
             return;
 
         if (!IsAuthorized(uid, sender, component))
         {
             Popup.PopupEntity(Loc.GetString("vending-machine-component-try-eject-access-denied"), uid, sender);
-            Deny((uid, component), sender);
+            Deny((uid, component), sender, ejectComponent);
             return;
         }
 
@@ -393,7 +385,7 @@ public sealed partial class VendingMachineSystem : SharedVendingMachineSystem
 
         if (entry == null || entry.Amount <= 0)
         {
-            Deny((uid, component), sender);
+            Deny((uid, component), sender, ejectComponent);
             return;
         }
 
@@ -404,12 +396,12 @@ public sealed partial class VendingMachineSystem : SharedVendingMachineSystem
                 !TryProcessPayment(sender, uid, component, (int)entry.Price, itemId, !component.DisableFinancialLogging))
             {
                 Popup.PopupEntity(Loc.GetString("stories-vending-machine-insufficient-funds"), uid, sender);
-                Deny((uid, component), sender);
+                Deny((uid, component), sender, ejectComponent);
                 return;
             }
         }
 
-        TryEjectVendorItem(uid, type, itemId, component.CanShoot, sender, component);
+        TryEjectVendorItem(uid, type, itemId, ShouldThrowVendItem((uid, ejectComponent)), sender, component, ejectComponent);
     }
 
     private bool TryProcessPayment(EntityUid user, EntityUid machine, VendingMachineComponent component, int amount, string itemId, bool logTrans)
@@ -449,5 +441,4 @@ public sealed partial class VendingMachineSystem : SharedVendingMachineSystem
             }
         }
     }
-
 }

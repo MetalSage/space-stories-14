@@ -44,12 +44,6 @@ public sealed partial class VendingMachineSystem : SharedVendingMachineSystem
         var uid = entity.Owner;
         var component = entity.Comp;
 
-        // If all we did was update amounts, then we can leave BUI buttons in place.
-        var fullUiUpdate = !component.Inventory.Keys.SequenceEqual(state.Inventory.Keys) ||
-                           !component.EmaggedInventory.Keys.SequenceEqual(state.EmaggedInventory.Keys) ||
-                           !component.ContrabandInventory.Keys.SequenceEqual(state.ContrabandInventory.Keys) ||
-                           component.Contraband != state.Contraband;
-
         component.Contraband = state.Contraband;
         var brokenChanged = component.Broken != state.Broken;
         component.Broken = state.Broken;
@@ -60,20 +54,16 @@ public sealed partial class VendingMachineSystem : SharedVendingMachineSystem
 
         if (brokenChanged)
             TryUpdateVisualState((uid, component));
-
-        if (!TryGetOpenUi(uid, out var bui))
-            return;
-
-        if (fullUiUpdate)
-            bui.Refresh();
-        else
-            bui.UpdateAmounts();
     }
 
     [SubscribeLocalEvent]
     private void OnEjectHandleState(Entity<VendingMachineEjectComponent> entity, ref AfterAutoHandleStateEvent args)
     {
         TryUpdateVisualState(entity.Owner);
+        if (TryGetOpenUi(entity.Owner, out var bui))
+        {
+            bui.UpdateAmounts();
+        }
     }
 
     [SubscribeLocalEvent]

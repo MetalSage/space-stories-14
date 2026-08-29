@@ -1,5 +1,5 @@
-﻿using System.Text.RegularExpressions;
-using Content.Server.Speech.Components;
+using System.Text.RegularExpressions;
+using Content.Shared.Speech.Components;
 using Content.Shared.Speech;
 using Robust.Shared.Random;
 
@@ -79,6 +79,6 @@ public sealed partial class LizardAccentSystem : RelayAccentSystem<LizardAccentC
             _random.Pick(new List<string>() { "ЩЩ", "ЩЩЩ" })
         );
         // Corvax-Localization-End
-        args.Message = message;
+        return message;
     }
 }

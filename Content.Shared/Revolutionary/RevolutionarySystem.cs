@@ -8,21 +8,22 @@ using Robust.Shared.Player;
 using Content.Shared.Antag;
 using Content.Shared.StatusIcon.Components;
 
+using Content.Shared.Stunnable;
+
 namespace Content.Shared.Revolutionary;
 
 public sealed partial class RevolutionarySystem : EntitySystem
 {
+    [Dependency] private SharedStunSystem _sharedStun = default!;
+    [Dependency] private SharedPopupSystem _popupSystem = default!;
+
     public override void Initialize()
     {
         base.Initialize();
 
-        // SubscribeLocalEvent<MindShieldComponent, MapInitEvent>(MindShieldImplanted); // Stories
-        SubscribeLocalEvent<RevolutionaryComponent, ComponentGetStateAttemptEvent>(OnRevCompGetStateAttempt);
-        SubscribeLocalEvent<HeadRevolutionaryComponent, ComponentGetStateAttemptEvent>(OnRevCompGetStateAttempt);
         SubscribeLocalEvent<RevolutionaryComponent, ComponentStartup>(DirtyRevComps);
         SubscribeLocalEvent<HeadRevolutionaryComponent, ComponentStartup>(DirtyRevComps);
         SubscribeLocalEvent<ShowAntagIconsComponent, ComponentStartup>(DirtyRevComps);
-        SubscribeLocalEvent<RevolutionaryComponent, AttemptConvertRevolutionaryEvent>(OnAttemptConvert);
         // Stories Start
         SubscribeLocalEvent<HeadRevolutionaryComponent, MindShieldImplantedEvent>(HeadRevMindShieldImplanted);
         SubscribeLocalEvent<RevolutionaryComponent, MindShieldImplantedEvent>(RevMindShieldImplanted);

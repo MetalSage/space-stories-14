@@ -18,6 +18,8 @@ public sealed class VendingMachineBoundUserInterface(EntityUid owner, Enum uiKey
     [ViewVariables]
     private List<VendingMachineInventoryEntry> _cachedInventory = new();
 
+    private int? _lastBalance;
+
     protected override void Open()
     {
         base.Open();
@@ -25,26 +27,41 @@ public sealed class VendingMachineBoundUserInterface(EntityUid owner, Enum uiKey
         _menu = this.CreateWindowCenteredLeft<VendingMachineMenu>();
         _menu.Title = EntMan.GetComponent<MetaDataComponent>(Owner).EntityName;
         _menu.OnItemSelected += OnItemSelected;
-        Refresh();
+
+        if (_lastBalance != null)
+            _menu.UpdateBalance(_lastBalance);
     }
 
-    public void Refresh()
+    protected override void UpdateState(BoundUserInterfaceState state)
     {
+        base.UpdateState(state);
+
+        if (state is not VendingMachineUIState uiState)
+            return;
+
+        _cachedInventory = uiState.Inventory;
         var enabled = EntMan.TryGetComponent(Owner, out VendingMachineEjectComponent? eject) && !eject.Ejecting;
-
-        var system = EntMan.System<VendingMachineSystem>();
-        _cachedInventory = system.GetAllInventory(Owner);
-
         _menu?.Populate(_cachedInventory, enabled);
+
+        if (_lastBalance != null)
+            _menu?.UpdateBalance(_lastBalance);
     }
 
     public void UpdateAmounts()
     {
         var enabled = EntMan.TryGetComponent(Owner, out VendingMachineEjectComponent? eject) && !eject.Ejecting;
-
-        var system = EntMan.System<VendingMachineSystem>();
-        _cachedInventory = system.GetAllInventory(Owner);
         _menu?.UpdateAmounts(_cachedInventory, enabled);
+    }
+
+    protected override void ReceiveMessage(BoundUserInterfaceMessage message)
+    {
+        base.ReceiveMessage(message);
+
+        if (message is VendingMachineBalanceMessage balanceMessage)
+        {
+            _lastBalance = balanceMessage.Balance;
+            _menu?.UpdateBalance(_lastBalance);
+        }
     }
 
     private void OnItemSelected(GUIBoundKeyEventArgs args, ListData data)
@@ -52,18 +69,15 @@ public sealed class VendingMachineBoundUserInterface(EntityUid owner, Enum uiKey
         if (args.Function != EngineKeyFunctions.UIClick)
             return;
 
-        if (data is not VendorItemsListData { ItemIndex: var itemIndex })
+        if (data is not VendorItemsListData itemData)
             return;
 
-        if (_cachedInventory.Count == 0)
+        if (_menu == null || itemData.ItemIndex < 0 || itemData.ItemIndex >= _menu.Inventory.Count)
             return;
 
-        var selectedItem = _cachedInventory.ElementAtOrDefault(itemIndex);
-
-        if (selectedItem == null)
-            return;
-
-        SendPredictedMessage(new VendingMachineEjectMessage(selectedItem.Type, selectedItem.ID));
+        var selectedItem = _menu.Inventory[itemData.ItemIndex];
+        _menu.SetButtonsDisabled(true);
+        SendMessage(new VendingMachineEjectMessage(selectedItem.Type, selectedItem.ID));
     }
 
     protected override void Dispose(bool disposing)

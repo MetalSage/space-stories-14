@@ -240,9 +240,12 @@ public sealed partial class TextScreenSystem : VisualizerSystem<TextScreenVisual
         if (CharStatePairs.TryGetValue(character.Value, out var value))
             return value;
 
-        // Or else it checks if its a normal letter or digit
-        if (char.IsLetterOrDigit(character.Value))
-            return character.Value.ToString().ToLower();
+        var lower = char.ToLowerInvariant(character.Value);
+
+        // Stories-Localize-Start
+        if ((lower >= 'a' && lower <= 'z') || (lower >= '0' && lower <= '9') || (lower >= 'а' && lower <= 'я') || lower == 'ё')
+            return lower.ToString();
+        // Stories-Localize-End
 
         return null;
     }

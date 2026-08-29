@@ -5,8 +5,7 @@
   description: An incredible work of art that protects against space hardships. Charged with an unknown energy.
   components:
   - type: TemperatureProtection
-    heatingCoefficient: 0.005
-    coolingCoefficient: 0.005
+    coefficient: 0.005
   - type: PressureProtection
     highPressureMultiplier: 0.02
     lowPressureMultiplier: 1000
@@ -42,8 +41,7 @@
   description: A dark cloak, absorbs fire damage and protects against space hazards.
   components:
   - type: TemperatureProtection
-    heatingCoefficient: 0.005
-    coolingCoefficient: 0.005
+    coefficient: 0.005
   - type: PressureProtection
     highPressureMultiplier: 0.02
     lowPressureMultiplier: 1000
