@@ -34,7 +34,7 @@ public sealed partial class PassiveGhostBooSystem : EntitySystem
         foreach (var ent in entities)
         {
             var ghostBoo = new GhostBooEvent();
-            RaiseLocalEvent(ent, ghostBoo, true);
+            RaiseLocalEvent(ent, ref ghostBoo, true);
 
             if (ghostBoo.Handled)
                 booCounter++;

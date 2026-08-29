@@ -1,4 +1,5 @@
 [color=white]Мейнтейнеры:[/color]
-Oliver, metalsage, doublechest
-[color=white]Разработчики:[/color]
-Oliver, metalsage, doublechest, Fragoler, Lokilife, BeatusCrow, BombasterDS, M1and1B, Aristophan_, Dentristan, saga3152, Mistic108, Shegare, pheenty
+Oliver, MetalSage, doublechest
+
+[color=white]Разработчики и контрибьюторы:[/color]
+Aniloris, Aristophan_, BeatusCrow, BeBright, BombasterDS, DenisShvalov, Dentristan, doublechest, echotry, Enoter, FilinCod, Fragoler, GeRosKUter121, Higertas, JustGiveMeALaserSword4, Lokilife, M1and1B, MetalSage, Mistic1083, No Elka, Nonne, Offlzier, Oliver, pheenty, polbearms, ReichDSD, saga3152, SerVerHo, Shegare, Vaskov24, XcenLegend

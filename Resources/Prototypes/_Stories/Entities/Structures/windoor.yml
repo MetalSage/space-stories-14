@@ -1,5 +1,5 @@
 - type: entity
-  parent: WindoorSecure
+  parent: Windoor
   name: secure windoor
   description: It's both a sturdy window and a sliding door. Wow!
   id: PRISONWindoorSecureHeadOfPrisonLocked
@@ -10,7 +10,7 @@
       board: [ PRISONDoorElectronicsHeadOfPrison ]
 
 - type: entity
-  parent: WindoorSecure
+  parent: Windoor
   name: secure windoor
   description: It's both a sturdy window and a sliding door. Wow!
   id: PRISONWindoorSecureBrigLocked
@@ -21,7 +21,7 @@
       board: [ PRISONDoorElectronicsBrig ]
 
 - type: entity
-  parent: WindoorSecure
+  parent: Windoor
   name: secure windoor
   description: It's both a sturdy window and a sliding door. Wow!
   id: PRISONWindoorSecureLocked
@@ -32,7 +32,7 @@
       board: [ PRISONDoorElectronics ]
 
 - type: entity
-  parent: WindoorSecure
+  parent: Windoor
   name: secure windoor
   description: It's both a sturdy window and a sliding door. Wow!
   id: PRISONWindoorSecureEngLocked
@@ -43,7 +43,7 @@
       board: [ PRISONDoorElectronicsEng ]
 
 - type: entity
-  parent: WindoorSecure
+  parent: Windoor
   name: secure windoor
   description: It's both a sturdy window and a sliding door. Wow!
   id: PRISONWindoorSecureMedLocked
@@ -54,7 +54,7 @@
       board: [ PRISONDoorElectronicsMed ]
 
 - type: entity
-  parent: WindoorSecure
+  parent: Windoor
   name: secure windoor
   description: It's both a sturdy window and a sliding door. Wow!
   id: PRISONWindoorSecurePrisonerLocked

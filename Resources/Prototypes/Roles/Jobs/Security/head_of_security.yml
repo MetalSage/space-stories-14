@@ -15,8 +15,7 @@
       time: 30h
     - !type:DepartmentTimeRequirement
       department: Security
-      time: 50h
-  weight: 10
+      time: 10h
   startingGear: HoSGear
   icon: "JobIconHeadOfSecurity"
   supervisors: job-supervisors-captain
@@ -61,5 +60,6 @@
   job: HeadOfSecurity
   hasMindShield: true
   equipment:
+    head: ClothingHeadHatBeretHoS
     mask: ClothingMaskGasSecurity
     neck: ClothingNeckCloakHos

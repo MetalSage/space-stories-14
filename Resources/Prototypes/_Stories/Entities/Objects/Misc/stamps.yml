@@ -9,7 +9,7 @@
       stampedColor: "#33CC33"
       stampState: "paper_stamp-ok"
     - type: Sprite
-      sprite: Objects/Misc/bureaucracy.rsi
+      sprite: _Stories/Objects/Misc/bureaucracy.rsi
       state: stamp-iaa
 
 - type: entity
@@ -24,7 +24,7 @@
       stampedColor: "#0036A2"
       stampState: "paper_stamp-hosp"
     - type: Sprite
-      sprite: Objects/Misc/bureaucracy.rsi
+      sprite: _Stories/Objects/Misc/bureaucracy.rsi
       state: stamp-hosp
 
 - type: entity

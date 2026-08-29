@@ -6,14 +6,15 @@
   components:
   - type: Action
     useDelay: 15
-    icon:
-      sprite: _Stories/Actions/spaf.rsi
-      state: spaf_stealth
+
+  - type: Sprite
+    sprite: _Stories/Actions/spaf.rsi
+    layers:
+    - state: spaf_stealth
   - type: InstantAction
     event: !type:SpafStealthEvent
       cost: 30
       seconds: 5
-
 - type: entity
   parent: BaseToggleAction
   id: ActionSpafLight
@@ -22,12 +23,13 @@
   components:
   - type: Action
     useDelay: 1
-    icon:
-      sprite: _Stories/Actions/spaf.rsi
-      state: spaf_light
+
+  - type: Sprite
+    sprite: _Stories/Actions/spaf.rsi
+    layers:
+    - state: spaf_light
   - type: InstantAction
     event: !type:ToggleActionEvent
-
 - type: entity
   parent: BaseAction
   id: ActionSpafLube
@@ -36,9 +38,11 @@
   components:
   - type: Action
     useDelay: 15
-    icon:
-      sprite: _Stories/Actions/spaf.rsi
-      state: spaf_lube
+
+  - type: Sprite
+    sprite: _Stories/Actions/spaf.rsi
+    layers:
+    - state: spaf_lube
   - type: InstantAction
     event: !type:SpafSpillSolutionEvent
       cost: 30
@@ -47,7 +51,6 @@
         reagents:
           - ReagentId: SpaceLube
             Quantity: 12
-
 - type: entity
   parent: BaseAction
   id: ActionSpafMine
@@ -56,14 +59,15 @@
   components:
   - type: Action
     useDelay: 15
-    icon:
-      sprite: _Stories/Actions/spaf.rsi
-      state: spaf_mine
+
+  - type: Sprite
+    sprite: _Stories/Actions/spaf.rsi
+    layers:
+    - state: spaf_mine
   - type: InstantAction
     event: !type:SpafCreateEntityEvent
       cost: 40
       proto: LandMineSpaf
-
 - type: entity
   parent: BaseAction
   id: ActionSpafFood
@@ -72,12 +76,13 @@
   components:
   - type: Action
     useDelay: 1
-    icon:
-      sprite: _Stories/Actions/spaf.rsi
-      state: spaf_food 
+
+  - type: Sprite
+    sprite: _Stories/Actions/spaf.rsi
+    layers:
+    - state: spaf_food
   - type: InstantAction
     event: !type:FoodPopupEvent
-
 - type: entity
   parent: BaseAction
   id: ActionSpafGlue
@@ -86,9 +91,11 @@
   components:
   - type: Action
     useDelay: 5
-    icon:
-      sprite: _Stories/Actions/spaf.rsi
-      state: spaf_glue
+
+  - type: Sprite
+    sprite: _Stories/Actions/spaf.rsi
+    layers:
+    - state: spaf_glue
   - type: InstantAction
     event: !type:SpafSpillSolutionEvent
       cost: 10
@@ -97,7 +104,6 @@
         reagents:
           - ReagentId: Slime
             Quantity: 12
-
 - type: entity
   parent: BaseAction
   id: ActionSpafEgg
@@ -106,14 +112,15 @@
   components:
   - type: Action
     useDelay: 60
-    icon:
-      sprite: _Stories/Actions/spaf.rsi
-      state: spaf_egg
+
+  - type: Sprite
+    sprite: _Stories/Actions/spaf.rsi
+    layers:
+    - state: spaf_egg
   - type: InstantAction
     event: !type:SpafCreateEntityEvent
       cost: 150
       proto: MobSpafEgg
-
 - type: entity
   parent: BaseAction
   id: ActionSpafEvol
@@ -122,14 +129,15 @@
   components:
   - type: Action
     useDelay: 60
-    icon:
-      sprite: _Stories/Actions/spaf.rsi
-      state: spaf_evol
+
+  - type: Sprite
+    sprite: _Stories/Actions/spaf.rsi
+    layers:
+    - state: spaf_evol
   - type: InstantAction
     event: !type:SpafPolymorphEvent
       cost: 100
       protoId: MobSpaf
-
 - type: entity
   parent: BaseToggleAction
   id: ActionSpafDevour
@@ -137,12 +145,12 @@
   description: Devour your victim to satisfy your hunger.
   components:
   - type: Action
-    icon:
-      sprite: _Stories/Actions/spaf.rsi
-      state: spaf_devour
-    iconOn:
-      sprite: _Stories/Actions/spaf.rsi
-      state: spaf_devour_on
+  - type: Sprite
+    sprite: _Stories/Actions/spaf.rsi
+    layers:
+    - state: spaf_devour
+    - state: spaf_devour_on
+      map: [ "enum.ActionVisuals.IconToggled" ]
   - type: TargetAction
   - type: EntityTargetAction
     event: !type:DevourActionEvent

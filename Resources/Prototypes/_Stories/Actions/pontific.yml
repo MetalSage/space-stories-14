@@ -1,4 +1,4 @@
-﻿- type: entity
+- type: entity
   parent: BaseAction
   id: STActionPontificToggleNightvision
   name: Ночное зрение
@@ -6,12 +6,13 @@
   components:
   - type: Action
     useDelay: 1
-    icon:
-      sprite: _Stories/Actions/pontific.rsi
-      state: nightvision
+
+  - type: Sprite
+    sprite: _Stories/Actions/pontific.rsi
+    layers:
+    - state: nightvision
   - type: InstantAction
     event: !type:ToggleVisionActionEvent
-
 - type: entity
   parent: BaseAction
   id: STActionPontificPrayer
@@ -20,14 +21,15 @@
   categories: [HideSpawnMenu]
   components:
   - type: Action
-    icon:
-      sprite: _Stories/Actions/pontific.rsi
-      state: prayer
     useDelay: 120
     itemIconStyle: NoItem
+
+  - type: Sprite
+    sprite: _Stories/Actions/pontific.rsi
+    layers:
+    - state: prayer
   - type: InstantAction
     event: !type:PontificPrayerEvent
-
 - type: entity
   parent: BaseAction
   id: STActionPontificBloodyAltar
@@ -36,17 +38,18 @@
   categories: [HideSpawnMenu]
   components:
   - type: Action
-    icon:
-      sprite: _Stories/Actions/pontific.rsi
-      state: desecrated_statue
     useDelay: 300
     itemIconStyle: NoItem
+
+  - type: Sprite
+    sprite: _Stories/Actions/pontific.rsi
+    layers:
+    - state: desecrated_statue
   - type: InstantAction
     event: !type:InstantForceUserActionEvent
       volume: 150
       event: !type:CreateEntityEvent
         proto: STPontificAltar
-
 - type: entity
   parent: BaseAction
   id: STActionPontificSpawnMonk
@@ -55,17 +58,18 @@
   categories: [HideSpawnMenu]
   components:
   - type: Action
-    icon:
-      sprite: _Stories/Actions/pontific.rsi
-      state: call_monk
     useDelay: 240
     itemIconStyle: NoItem
+
+  - type: Sprite
+    sprite: _Stories/Actions/pontific.rsi
+    layers:
+    - state: call_monk
   - type: InstantAction
     event: !type:InstantForceUserActionEvent
       volume: 50
       event: !type:CreateEntityEvent
         proto: STMobCursedMonk
-
 - type: entity
   parent: BaseAction
   id: STActionPontificSpawnGuardian
@@ -74,17 +78,18 @@
   categories: [HideSpawnMenu]
   components:
   - type: Action
-    icon:
-      sprite: _Stories/Actions/pontific.rsi
-      state: call_guardian
     useDelay: 240
     itemIconStyle: NoItem
+
+  - type: Sprite
+    sprite: _Stories/Actions/pontific.rsi
+    layers:
+    - state: call_guardian
   - type: InstantAction
     event: !type:InstantForceUserActionEvent
       volume: 100
       event: !type:CreateEntityEvent
         proto: STMobFallenGuard
-
 - type: entity
   parent: BaseAction
   id: STActionPontificFelLightning
@@ -93,11 +98,13 @@
   categories: [HideSpawnMenu]
   components:
   - type: Action
-    icon:
-      sprite: _Stories/Actions/pontific.rsi
-      state: fel_lightning
     useDelay: 15
     itemIconStyle: NoItem
+
+  - type: Sprite
+    sprite: _Stories/Actions/pontific.rsi
+    layers:
+    - state: fel_lightning
   - type: TargetAction
     interactOnMiss: false
     range: 6
@@ -107,7 +114,6 @@
       event: !type:LightningStrikeEvent
         proto: LightningRevenant
     canTargetSelf: false
-
 - type: entity
   parent: BaseAction
   id: STActionPontificFlameSwords
@@ -116,16 +122,17 @@
   categories: [HideSpawnMenu]
   components:
   - type: Action
-    icon:
-      sprite: _Stories/Actions/pontific.rsi
-      state: flame_swords
     useDelay: 60
     itemIconStyle: NoItem
+
+  - type: Sprite
+    sprite: _Stories/Actions/pontific.rsi
+    layers:
+    - state: flame_swords
   - type: InstantAction
     event: !type:InstantForceUserActionEvent
       volume: 80
       event: !type:PontificFlameSwordsEvent
-
 - type: entity
   parent: BaseAction
   id: STActionPontificKudzu
@@ -134,11 +141,12 @@
   categories: [HideSpawnMenu]
   components:
   - type: Action
-    icon:
-      sprite: _Stories/Actions/pontific.rsi
-      state: kudzu
     useDelay: 180
     itemIconStyle: NoItem
+  - type: Sprite
+    sprite: _Stories/Actions/pontific.rsi
+    layers:
+    - state: kudzu
   - type: InstantAction
     event: !type:InstantForceUserActionEvent
       volume: 50

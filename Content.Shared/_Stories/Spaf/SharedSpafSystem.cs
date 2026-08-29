@@ -18,7 +18,7 @@ public abstract partial class SharedSpafSystem : EntitySystem
     [Dependency] private SharedActionsSystem _action = default!;
     [Dependency] private SharedContainerSystem _container = default!;
     [Dependency] private SharedDoAfterSystem _doAfter = default!;
-    [Dependency] private HungerSystem _hunger = default!;
+    [Dependency] private SatiationSystem _satiation = default!;
     [Dependency] private SharedPopupSystem _popup = default!;
     [Dependency] private SharedPuddleSystem _puddle = default!;
     [Dependency] private SharedStealthSystem _stealth = default!;
@@ -37,29 +37,30 @@ public abstract partial class SharedSpafSystem : EntitySystem
         SubscribeLocalEvent<SpafComponent, DevourDoAfterEvent>(OnDevourDoAfter);
         SubscribeLocalEvent<SpafComponent, MobStateChangedEvent>(OnMobStateChanged);
 
-        SubscribeLocalEvent<HungerComponent, FoodPopupEvent>(OnFood);
+        SubscribeLocalEvent<SatiationComponent, FoodPopupEvent>(OnFood);
     }
 
-    public bool TryModifyHunger(EntityUid uid, float amount, HungerComponent? component = null)
+    public bool TryModifyHunger(EntityUid uid, float amount, SatiationComponent? component = null)
     {
         if (!Resolve(uid, ref component))
             return false;
 
-        if (_hunger.GetHunger(component) - amount < 0)
+        var curValue = _satiation.GetValueOrNull((uid, component), SatiationSystem.Hunger) ?? 0f;
+        if (curValue - amount < 0)
         {
             _popup.PopupEntity(Loc.GetString("need-more-food"), uid, uid);
             return false;
         }
 
-        _hunger.ModifyHunger(uid, -amount, component);
+        _satiation.ModifyValue((uid, component), SatiationSystem.Hunger, -amount);
 
         return true;
     }
 
     private void OnDevourDoAfter(EntityUid uid, SpafComponent component, DevourDoAfterEvent args)
     {
-        if (!args.Cancelled && TryComp<DevourerComponent>(uid, out var devourer))
-            _hunger.ModifyHunger(uid, devourer.HealRate);
+        if (!args.Cancelled && TryComp<DevourerComponent>(uid, out var devourer) && TryComp<SatiationComponent>(uid, out var satiation))
+            _satiation.ModifyValue((uid, satiation), SatiationSystem.Hunger, devourer.HealRate);
     }
 
     private void OnMobStateChanged(EntityUid uid, SpafComponent component, MobStateChangedEvent args)
@@ -137,12 +138,13 @@ public abstract partial class SharedSpafSystem : EntitySystem
         args.Handled = true;
     }
 
-    private void OnFood(EntityUid uid, HungerComponent component, FoodPopupEvent args)
+    private void OnFood(EntityUid uid, SatiationComponent component, FoodPopupEvent args)
     {
         if (args.Handled)
             return;
 
-        _popup.PopupEntity("" + _hunger.GetHunger(component), uid, uid);
+        var val = _satiation.GetValueOrNull((uid, component), SatiationSystem.Hunger) ?? 0f;
+        _popup.PopupEntity("" + val, uid, uid);
 
         args.Handled = true;
     }

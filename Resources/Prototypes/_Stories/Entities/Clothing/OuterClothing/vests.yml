@@ -9,8 +9,7 @@
         - ForceRecallEquipment
         - WhitelistChameleon
     - type: TemperatureProtection
-      heatingCoefficient: 0.005
-      coolingCoefficient: 0.005
+      coefficient: 0.005
     - type: Sprite
       sprite: _Stories/Clothing/OuterClothing/Vests/guardian_nt.rsi
     - type: Clothing
@@ -37,8 +36,7 @@
       tags:
         - ForceRecallEquipment
     - type: TemperatureProtection
-      coolingCoefficient: 0.001
-      heatingCoefficient: 0.001
+      coefficient: 0.001
     - type: Sprite
       sprite: _Stories/Clothing/OuterClothing/Vests/exe_armor.rsi
     - type: Clothing

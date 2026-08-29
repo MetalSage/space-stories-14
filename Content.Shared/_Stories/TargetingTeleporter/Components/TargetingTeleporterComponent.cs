@@ -9,8 +9,8 @@ namespace Content.Shared._Stories.TargetingTeleporter;
 [RegisterComponent, NetworkedComponent, AutoGenerateComponentState(true)]
 public sealed partial class TargetingTeleporterComponent : Component
 {
-    [DataField("exitPortalPrototype", customTypeSerializer: typeof(PrototypeIdSerializer<EntityPrototype>))]
-    public string ExitPortalPrototype = "STBluspacePortalExit";
+    [DataField("exitPortalPrototype")]
+    public EntProtoId ExitPortalPrototype = "STBluspacePortalExit";
 
     [DataField, AutoNetworkedField]
     public EntityUid? EyeEntity;

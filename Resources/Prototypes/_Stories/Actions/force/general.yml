@@ -6,12 +6,13 @@
   categories: [ HideSpawnMenu ]
   components:
   - type: Action
-    icon:
-      sprite: _Stories/Actions/force.rsi
-      state: skill
+
+  - type: Sprite
+    sprite: _Stories/Actions/force.rsi
+    layers:
+    - state: skill
   - type: InstantAction
     event: !type:ForceShopActionEvent
-
 - type: entity
   parent: BaseAction
   id: ActionStopProtectiveBubble
@@ -21,13 +22,14 @@
   components:
   - type: Action
     useDelay: 1
-    icon:
-      sprite: _Stories/Actions/force.rsi
-      state: stopshield
     itemIconStyle: NoItem
+
+  - type: Sprite
+    sprite: _Stories/Actions/force.rsi
+    layers:
+    - state: stopshield
   - type: InstantAction    
     event: !type:StopProtectiveBubbleEvent
-
 - type: entity
   parent: BaseAction
   id: ActionRecallEquipments
@@ -37,15 +39,16 @@
   components:
   - type: Action
     useDelay: 3
-    icon: 
-      sprite: _Stories/Actions/force.rsi
-      state: equip
     itemIconStyle: NoItem
+
+  - type: Sprite
+    sprite: _Stories/Actions/force.rsi
+    layers:
+    - state: equip
   - type: InstantAction    
     event: !type:InstantForceUserActionEvent
       volume: 50
       event: !type:RecallEquipmentsEvent
-
 - type: entity
   parent: BaseAction
   id: ActionForceLookUp
@@ -55,15 +58,16 @@
   components:
   - type: Action
     useDelay: 5
-    icon: 
-      sprite: _Stories/Actions/force.rsi
-      state: lookup
     itemIconStyle: BigAction
+
+  - type: Sprite
+    sprite: _Stories/Actions/force.rsi
+    layers:
+    - state: lookup
   - type: InstantAction
     event: !type:InstantForceUserActionEvent
       volume: 5
       event: !type:ForceLookUpActionEvent
-
 - type: entity
   parent: BaseAction
   id: ActionRecallLightsaber
@@ -73,15 +77,16 @@
   components:
   - type: Action
     useDelay: 3
-    icon: 
-      sprite: _Stories/Actions/force.rsi
-      state: sword
     itemIconStyle: NoItem
+
+  - type: Sprite
+    sprite: _Stories/Actions/force.rsi
+    layers:
+    - state: sword
   - type: InstantAction    
     event: !type:InstantForceUserActionEvent
       volume: 25
       event: !type:RecallLightsaberEvent
-
 - type: entity
   parent: BaseAction
   id: ActionTelekinesis
@@ -91,15 +96,16 @@
   components:
   - type: Action
     useDelay: 1
-    icon: 
-      sprite: _Stories/Actions/force.rsi
-      state: telekines
     itemIconStyle: NoItem
+
+  - type: Sprite
+    sprite: _Stories/Actions/force.rsi
+    layers:
+    - state: telekines
   - type: InstantAction    
     event: !type:InstantForceUserActionEvent
       volume: 5
       event: !type:HandTetherGunEvent
-
 - type: entity
   parent: BaseAction
   id: ActionFlashArea
@@ -109,15 +115,16 @@
   components:
   - type: Action
     useDelay: 5
-    icon:
-      sprite: _Stories/Actions/force.rsi
-      state: flash
     itemIconStyle: NoItem
+
+  - type: Sprite
+    sprite: _Stories/Actions/force.rsi
+    layers:
+    - state: flash
   - type: InstantAction    
     event: !type:InstantForceUserActionEvent
       volume: 25
       event: !type:FlashAreaEvent
-
 - type: entity
   parent: BaseAction
   id: ActionArtOfMovement
@@ -127,11 +134,13 @@
   components:
   - type: Action
     useDelay: 10
-    icon:
-      sprite: _Stories/Actions/force.rsi
-      state: movement
     itemIconStyle: NoItem
     checkCanInteract: false
+
+  - type: Sprite
+    sprite: _Stories/Actions/force.rsi
+    layers:
+    - state: movement
   - type: InstantAction    
     event: !type:InstantForceUserActionEvent
       volume: 100
@@ -141,7 +150,6 @@
           reagents:
           - ReagentId: Stimulants
             Quantity: 15
-
 - type: entity
   parent: BaseAction
   id: ActionEmp
@@ -151,10 +159,12 @@
   components:
   - type: Action
     useDelay: 10
-    icon:
-      sprite: _Stories/Actions/force.rsi
-      state: emp
     itemIconStyle: NoItem
+
+  - type: Sprite
+    sprite: _Stories/Actions/force.rsi
+    layers:
+    - state: emp
   - type: InstantAction    
     event: !type:InstantForceUserActionEvent
       volume: 25
@@ -162,7 +172,6 @@
         range: 1.75
         energyConsumption: 50000
         disableDuration: 10
-
 - type: entity
   parent: BaseAction
   id: ActionFreedom
@@ -173,15 +182,16 @@
   - type: Action
     useDelay: 10
     checkCanInteract: false
-    icon:
-      sprite: _Stories/Actions/force.rsi
-      state: freedom
     itemIconStyle: NoItem
+
+  - type: Sprite
+    sprite: _Stories/Actions/force.rsi
+    layers:
+    - state: freedom
   - type: InstantAction    
     event: !type:InstantForceUserActionEvent
       volume: 50
       event: !type:FreedomActionEvent
-
 - type: entity
   parent: BaseAction
   id: ActionForceDash
@@ -191,12 +201,14 @@
   components:
   - type: Action
     useDelay: 10
-    icon:
-      sprite: _Stories/Actions/force.rsi
-      state: dash
     itemIconStyle: NoItem
     sound: !type:SoundPathSpecifier
       path: /Audio/Magic/blink.ogg
+
+  - type: Sprite
+    sprite: _Stories/Actions/force.rsi
+    layers:
+    - state: dash
   - type: WorldTargetAction
     event: !type:WorldTargetForceUserActionEvent
       volume: 50
@@ -205,7 +217,6 @@
   - type: TargetAction
     range: 0
     checkCanAccess: false
-
 - type: entity
   parent: BaseAction
   id: ActionForceKnock
@@ -216,9 +227,10 @@
   - type: Action
     useDelay: 3
     itemIconStyle: BigAction
-    icon:
-      sprite: _Stories/Actions/force.rsi
-      state: knock
+  - type: Sprite
+    sprite: _Stories/Actions/force.rsi
+    layers:
+    - state: knock
   - type: InstantAction
     event: !type:InstantForceUserActionEvent
       volume: 25

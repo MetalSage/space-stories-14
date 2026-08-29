@@ -2,7 +2,7 @@ using Content.Shared._Stories.Shadowling;
 using Content.Shared.Humanoid;
 using Content.Shared.StatusIcon;
 using Content.Shared.StatusIcon.Components;
-using Content.Shared.Ghost;
+using Content.Shared.Ghost.Components;
 using Robust.Client.GameObjects;
 using Robust.Client.Player;
 using Robust.Shared.Prototypes;
