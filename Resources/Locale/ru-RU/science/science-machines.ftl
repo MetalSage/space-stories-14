@@ -1,1 +1,1 @@
-ape-unlocked-broadcast = A powered A.P.E. { $location } has been unlocked.
+ape-unlocked-broadcast = Включенный М.А.К.А.К. { $location } был разблокирован.

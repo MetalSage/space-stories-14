@@ -1,1 +1,1 @@
-admin-notes-manager-note-notification = Your account has received an administrative note. For further information, open the admin remarks panel via the escape menu.
+admin-notes-manager-note-notification = Вы получили админ заметку. Для прочтения откройте админ заметки в меню.

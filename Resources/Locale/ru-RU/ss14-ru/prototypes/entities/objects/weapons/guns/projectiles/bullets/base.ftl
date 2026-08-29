@@ -1,5 +1,5 @@
-ent-BaseBullet = BaseBullet
-    .desc = Если вы можете видеть это, вы, вероятно, мертвы!
+ent-BaseBullet = базовая пуля
+    .desc = Если вы это видите, вы скорее всего мертвы!
 ent-BaseBulletTrigger = base bullet trigger
     .desc = { ent-BaseBullet.desc }
 ent-BaseBulletPractice = базовая пуля учебная

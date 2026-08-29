@@ -4,5 +4,5 @@ mutation-plant-scream = Это растение кажется каким-то �
 mutation-plant-sentient = Кажется, оно изучает окрестности.
 mutation-plant-slippery = Оно гладкое на ощупь.
 mutation-plant-unviable = Оно увядает и выглядит болезненно.
-mutation-plant-seedless = Its harvested produce is seedless.
-mutation-plant-sampled = It has already been sampled.
+mutation-plant-seedless = Его плоды не имеют семян.
+mutation-plant-sampled = Семена были взяты.

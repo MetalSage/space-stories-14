@@ -1,10 +1,10 @@
-ent-WallMalignBase = malign wall
+ent-WallMalignBase = зловещая стена
     .desc = { ent-BaseStructureWall.desc }
-ent-WallMalignIndestructibleNoOcclusion = malign wall
+ent-WallMalignIndestructibleNoOcclusion = зловещая стена
     .desc = { ent-WallMalignBase.desc }
-    .suffix = indestructible, no occlusion
-ent-WallMalignIndestructible = malign wall
+    .suffix = Неразрушимое, Прозрачное
+ent-WallMalignIndestructible = зловещая стена
     .desc = { ent-WallMalignBase.desc }
-    .suffix = indestructible
-ent-WallMalign = malign wall
+    .suffix = Неразрушимое
+ent-WallMalign = зловещая стена
     .desc = { ent-WallMalignBase.desc }

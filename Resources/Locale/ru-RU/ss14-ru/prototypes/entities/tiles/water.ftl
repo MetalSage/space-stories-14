@@ -1,4 +1,4 @@
 ent-FloorWaterEntity = вода
     .desc = Настоящий утолитель жажды.
-ent-FloorSwimmingPoolEntity = swimming pool
-    .desc = Refreshing and relaxing!
+ent-FloorSwimmingPoolEntity = бассейн
+    .desc = Освежающе и расслабляюще!

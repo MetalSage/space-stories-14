@@ -1,7 +1,7 @@
 ent-BulletTaser = заряд тазера
     .desc = { ent-BaseBullet.desc }
 ent-BulletTaserSuper = заряд тазера
-    .desc = Если вы можете видеть это, вероятно, вас застанметили.
+    .desc = Если вы это видите, вы скорее всего стали жертвой стан-меты.
 ent-BulletDisabler = заряд станнера
     .desc = { ent-BaseBullet.desc }
 ent-BulletDisablerPractice = заряд тренировочного станнера

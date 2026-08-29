@@ -43,20 +43,20 @@ changeling-biodegrade-used-popup = { CAPITALIZE(THE($user)) } извергает
 changeling-biodegrade-used-popup-self = Мы извергаем кислоту на { $restraint }!
 
 # last resort
-changeling-takeover-not-dead = Это тело ещё живое! Мы не можем заразить его, пока оно дышит.
-changeling-takeover-is-changeling = Это тело отвергает наши попытки захватить его!
-changeling-takeover-start-others = { CAPITALIZE(THE($user)) } начинает заползать внутрь трупа!
-changeling-takeover-success-self = Мы успешно внедрились в тело и приняли его облик.
+changeling-takeover-not-dead = Это тело не мертво! Мы не можем заразить его.
+changeling-takeover-is-changeling = Это тело отвергает наши попытки завладеть им!
+changeling-takeover-start-others = { CAPITALIZE(THE($user)) } начинает залезать в тело!
+changeling-takeover-success-self = Мы успешно заразили тело и приняли его облик.
 
 # stings
 changeling-sting-success = Мы незаметно жалим { THE($target) }!
 
 # mindshield
-changeling-fake-mindshield-enabled = We emit fake mindshield waves.
-changeling-fake-mindshield-disabled = We stop emitting fake mindshield waves.
+changeling-fake-mindshield-enabled = Мы излучаем сигналы, имитирующие защиту разума.
+changeling-fake-mindshield-disabled = Мы прекращаем излучать сигналы, имитирующие защиту разума.
 
 # chemicals
-changeling-not-enough-chemicals = We don't have enough Chemicals.
+changeling-not-enough-chemicals = У нас недостаточно химикатов.
 
 # other
 changeling-paused-map-name = Карта хранения личностей генокрада

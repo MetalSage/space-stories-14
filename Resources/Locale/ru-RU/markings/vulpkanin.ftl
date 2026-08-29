@@ -221,82 +221,82 @@ marking-VulpPointsSharpFootRight-points_sharp-foot-r = Острые
 # Hair
 
 marking-VulpHairAdhara = Адхара
-marking-VulpHairAdhara-adhara = Adhara
+marking-VulpHairAdhara-adhara = Адхара
 
 marking-VulpHairAnita = Анита
-marking-VulpHairAnita-anita = Anita
+marking-VulpHairAnita-anita = Анита
 
 marking-VulpHairApollo = Аполлон
-marking-VulpHairApollo-apollo = Apollo
+marking-VulpHairApollo-apollo = Аполлон
 
 marking-VulpHairBelle = Белль
-marking-VulpHairBelle-belle = Belle
+marking-VulpHairBelle-belle = Белль
 
 marking-VulpHairBraided = Заплетённые волосы
-marking-VulpHairBraided-braided = Braided Hair
+marking-VulpHairBraided-braided = Заплетённые волосы
 
 marking-VulpHairBun = Пучок
-marking-VulpHairBun-bun = Bun
+marking-VulpHairBun-bun = Пучок
 
 marking-VulpHairCleanCut = Короткая стрижка
-marking-VulpHairCleanCut-clean_cut = Clean Cut
+marking-VulpHairCleanCut-clean_cut = Короткая стрижка
 
 marking-VulpHairCurl = Локоны
-marking-VulpHairCurl-curl = Curl
+marking-VulpHairCurl-curl = Локоны
 
 marking-VulpHairHawk = Ирокез
-marking-VulpHairHawk-hawk = Hawk
+marking-VulpHairHawk-hawk = Ирокез
 
 marking-VulpHairJagged = Рваная стрижка
-marking-VulpHairJagged-jagged = Jagged
+marking-VulpHairJagged-jagged = Рваная стрижка
 
 marking-VulpHairJeremy = Джереми
-marking-VulpHairJeremy-jeremy = Jeremy
+marking-VulpHairJeremy-jeremy = Джереми
 
 marking-VulpHairKajam = Каджам
-marking-VulpHairKajam-kajam = Kajam
+marking-VulpHairKajam-kajam = Каджам
 
 marking-VulpHairKeid = Кейд
-marking-VulpHairKeid-keid = Keid
+marking-VulpHairKeid-keid = Кейд
 
 marking-VulpHairKleeia = Клея
-marking-VulpHairKleeia-kleeia = Kleeia
+marking-VulpHairKleeia-kleeia = Клея
 
 marking-VulpHairMizar = Мицар
-marking-VulpHairMizar-mizar = Mizar
+marking-VulpHairMizar-mizar = Мицар
 
 marking-VulpHairPunkBraided = Панк-косы
-marking-VulpHairPunkBraided-punkbraided = Punk Braided
+marking-VulpHairPunkBraided-punkbraided = Панк-косы
 
 marking-VulpHairRaine = Рейн
-marking-VulpHairRaine-raine = Raine
+marking-VulpHairRaine-raine = Рейн
 
 marking-VulpHairRough = Лохматые волосы
-marking-VulpHairRough-rough = Rough
+marking-VulpHairRough-rough = Лохматые волосы
 
 marking-VulpHairShort = Короткие волосы
-marking-VulpHairShort-short = Short Hair
+marking-VulpHairShort-short = Короткие волосы
 
 marking-VulpHairShort2 = Короткие волосы 2
-marking-VulpHairShort2-short2 = Short Hair 2
+marking-VulpHairShort2-short2 = Короткие волосы 2
 
 marking-VulpHairSpike = Шипы
-marking-VulpHairSpike-spike = Spike
+marking-VulpHairSpike-spike = Шипы
 
 
 # Facial Hair
 
 marking-VulpFacialHairRuff = Грива
-marking-VulpFacialHairRuff-ruff = Ruff
+marking-VulpFacialHairRuff-ruff = Грива
 
 marking-VulpFacialHairElder = Старец
-marking-VulpFacialHairElder-elder = Elder
+marking-VulpFacialHairElder-elder = Старец
 
 marking-VulpFacialHairElderChin = Старец (Подбородок)
-marking-VulpFacialHairElderChin-elder_chin = Elder Chin
+marking-VulpFacialHairElderChin-elder_chin = Старец (Подбородок)
 
 marking-VulpFacialHairKita = Кита
-marking-VulpFacialHairKita-kita = Kita
+marking-VulpFacialHairKita-kita = Кита
 
 marking-VulpFacialHairGoatee = Борода (Козлиная на морде)
-marking-VulpFacialHairGoatee-goatee = Beard (Snout Goatee)
+marking-VulpFacialHairGoatee-goatee = Борода (Козлиная на морде)

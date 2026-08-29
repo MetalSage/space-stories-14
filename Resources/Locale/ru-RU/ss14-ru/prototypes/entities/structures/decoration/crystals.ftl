@@ -1,5 +1,5 @@
-ent-BaseCrystalStalagmite = crystal
-    .desc = An outcrop of jagged crystals.
+ent-BaseCrystalStalagmite = кристалл
+    .desc = Твёрдое кристаллическое образование.
 ent-CrystalGreen = { ent-BaseCrystalStalagmite }
     .desc = { ent-BaseCrystalStalagmite.desc }
     .suffix = Зелёный

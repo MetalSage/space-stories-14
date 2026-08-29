@@ -33,7 +33,7 @@ cmd-replay-error-no-replay = Сейчас не проигрывается пов
 cmd-replay-error-already-loaded = Повтор уже загружен.
 cmd-replay-error-run-level = Вы не можете загрузить повтор, пока присоединены к серверу.
 
-cmd-replay-toggleui-desc = Переключение пользовательского интерфейса управления воспроизведением.
+cmd-replay-toggleui-desc = Toggles the replay control UI.
 
 # Recording commands
 

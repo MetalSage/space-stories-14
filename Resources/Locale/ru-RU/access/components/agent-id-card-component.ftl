@@ -7,15 +7,15 @@ agent-id-new = { CAPITALIZE($card) } { $number ->
 
 agent-id-open-ui-verb = Настроить
 
-agent-id-ui-menu-title = Agent ID Card
-agent-id-ui-tab-settings = Settings
-agent-id-ui-tab-job-icons = Job Icons
+agent-id-ui-menu-title = ID карта агента
+agent-id-ui-tab-settings = Настройки
+agent-id-ui-tab-job-icons = Иконка должности
 
-agent-id-ui-input-name = Name:
-agent-id-ui-input-job = Job:
+agent-id-ui-input-name = Имя:
+agent-id-ui-input-job = Должность:
 
 agent-id-ui-os = Nuke#OS ™
-agent-id-ui-os-flavor = When in doubt, nobody questions a mime
+agent-id-ui-os-flavor = Когда возникают сомнения, никто не задает вопросов миму.
 # Get your mind out of the gutter.
-agent-id-ui-footer-flavor-left = Just a regular ID nothing to see here
+agent-id-ui-footer-flavor-left = Просто обычная ID карта, тут не на что смотреть
 agent-id-ui-footer-flavor-right = v2.0

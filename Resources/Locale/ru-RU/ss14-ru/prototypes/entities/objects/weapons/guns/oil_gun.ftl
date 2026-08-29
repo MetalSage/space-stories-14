@@ -1,2 +1,2 @@
-ent-WeaponOilGun = oil gun
-    .desc = This gun launches ampoules of xenoborg oil to make organics slip or become flammable if hit with a direct hit. It comes with a tiny flame to light them on fire!
+ent-WeaponOilGun = масломёт
+    .desc = Данное оружие стреляет ампулами с маслом ксеноборгов, заставляя органиков поскальзываться или делая их возгораемыми при прямом попадании. В комплекте идёт крошечное пламя для поджигания!

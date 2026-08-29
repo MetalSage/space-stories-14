@@ -13,6 +13,6 @@ ent-AirlockGlassShuttleSyndicate = { ent-AirlockGlassShuttle }
 ent-AirlockShuttleSyndicate = { ent-AirlockShuttle }
     .desc = { ent-AirlockShuttle.desc }
     .suffix = { ent-AirlockShuttle.suffix }
-ent-AirlockShuttleXenoborg = external mechadermis airlock
+ent-AirlockShuttleXenoborg = мехадермический стыковочный шлюз
     .desc = { ent-AirlockShuttle.desc }
     .suffix = { ent-AirlockShuttle.suffix }

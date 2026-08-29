@@ -29,4 +29,4 @@ ent-AdminInstantEffectLightning = { ent-AdminInstantEffectBase }
     .suffix = Lightning
 ent-AdminInstantEffectScreech = { ent-AdminInstantEffectBase }
     .desc = { ent-AdminInstantEffectBase.desc }
-    .suffix = Screech
+    .suffix = Крик ужаса

@@ -28,8 +28,8 @@ signal-port-description-doorbolt = Меняет статус болтирова�
 signal-port-name-trigger-receiver = Триггер
 signal-port-description-trigger-receiver = Запускает определённый механизм на устройстве.
 
-signal-port-name-timer = Timer
-signal-port-description-timer = Starts the timer countdown of the device.
+signal-port-name-timer = Таймер
+signal-port-description-timer = Запускает обратный отчет устройства.
 
 signal-port-name-order-sender = Отправитель заказа
 signal-port-description-order-sender = Отправляет заказ на консоль заказа грузов
@@ -93,8 +93,8 @@ signal-port-description-logic-enable = Входной сигнал загруж�
 signal-port-name-logic-random-input = Входной сигнал
 signal-port-description-logic-random-input = Получает любой сигнал для события случайного вывода.
 
-signal-port-name-target-receiver = Target receiver
-signal-port-description-target-receiver = Receives target information from a target finder.
+signal-port-name-target-receiver = Целевой приемник
+signal-port-description-target-receiver = Получает информацию о цели от устройства обнаружения цели.
 
-signal-port-name-target-source = Target Finder
-signal-port-description-target-source = Sends target information to a target receiver.
+signal-port-name-target-source = Целевой отправитель
+signal-port-description-target-source = Отправляет целевую информацию целевому приемнику.

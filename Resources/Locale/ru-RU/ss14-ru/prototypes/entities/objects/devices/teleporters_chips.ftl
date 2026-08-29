@@ -1,3 +1,3 @@
-ent-TeleporterChipBlank = teleporter chip
-    .desc = A chip that can store teleporter coordinates. Insert it into the teleporter control console to be able to control the linked portal.
-    .suffix = Blank
+ent-TeleporterChipBlank = чип телепорта
+    .desc = Чип, способный хранить координаты телепорта. Вставьте его в консоль управления телепортами, чтобы управлять связанным порталом.
+    .suffix = Пустой

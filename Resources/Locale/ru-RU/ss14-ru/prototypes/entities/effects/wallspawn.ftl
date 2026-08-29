@@ -24,7 +24,3 @@ ent-WallSpawnAsteroidCoalCrab = { ent-WallSpawnAsteroid }
     .desc = { ent-WallSpawnAsteroid.desc }
 ent-WallSpawnAsteroidCoal = { ent-WallSpawnAsteroid }
     .desc = { ent-WallSpawnAsteroid.desc }
-ent-WallSpawnAsteroidBananium = { ent-WallSpawnAsteroid }
-    .desc = { ent-WallSpawnAsteroid.desc }
-ent-WallSpawnAsteroidBananiumCrab = { ent-WallSpawnAsteroid }
-    .desc = { ent-WallSpawnAsteroid.desc }

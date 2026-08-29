@@ -7,4 +7,4 @@ ent-GravityGeneratorMini = мини генератор гравитации
     .suffix = Charged
 ent-GravityGeneratorMiniUncharged = { ent-GravityGeneratorMini }
     .desc = { ent-GravityGeneratorMini.desc }
-    .suffix = Uncharged
+    .suffix = Разряженный

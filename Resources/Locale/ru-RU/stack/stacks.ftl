@@ -162,9 +162,9 @@ stack-artifact-fragment = { $amount ->
     [few] фрагмента
     *[other] фрагментов
 } артефакта
-stack-xenoborg-crystal = xenoborg {$amount ->
-    [1] crystal
-    *[other] crystals
+stack-xenoborg-crystal = {$amount ->
+    [1] кристалл ксеноборгов
+    *[other] кристаллы ксенобргов
 }
 stack-conveyor-belt = { $amount ->
     [1] конвейерная лента
@@ -293,9 +293,9 @@ stack-white-steel-slats-tile-continuous = белая сплошная реечн
 stack-steel-dark-checker-tile = тёмная стальная плитка шашечками
 stack-steel-light-checker-tile = светлая стальная плитка шашечками
 stack-steel-tile = стальная плитка
-stack-plastic-tile = plastic tile
-stack-plastic-dark-tile = dark plastic tile
-stack-plastic-white-tile = white plastic tile
+stack-plastic-tile = пластиковая плитка
+stack-plastic-dark-tile = тёмная пластиковая плитка
+stack-plastic-white-tile = белая пластиковая плитка
 stack-wood-floor = деревянный пол
 stack-techmaint-floor = технический пол
 stack-techmaint-floor-dark = тёмная техническая плитка
@@ -379,20 +379,20 @@ stack-red-circuit-floor = плитка красных микросхем
 stack-asteroid-astro-sand-floor = астро-песок астероида
 stack-desert-astro-sand-floor = пустынный астро-песок
 stack-white-marble-floor = белый мраморный пол
-stack-white-marble-mono-floor = white marble mono floor
+stack-white-marble-mono-floor = белая мраморная плита
 stack-dark-marble-floor = чёрный мраморный пол
-stack-dark-marble-mono-floor = dark marble mono floor
+stack-dark-marble-mono-floor = чёрная мраморная плита
 stack-plasma-marble-floor = плазменный мраморный пол
 stack-uranium-marble-floor = урановый мраморный пол
 stack-astro-ironsand-floor = астро-железный песок
 stack-astro-ironsand-floor-borderless = безграничный астро-железный песок
-stack-exo-hull-floor = exodermis hull floor
-stack-exo-viscera-floor = exodermis viscera floor
-stack-exo-techmaint-floor = exodermis techmaint floor
-stack-exo-horizontal-floor = exodermis horizontal floor
-stack-exo-vertical-floor = exodermis vertical floor
-stack-exo-corner-ne-floor = exodermis NE corner floor
-stack-exo-corner-nw-floor = exodermis NW corner floor
-stack-exo-corner-se-floor = exodermis SE corner floor
-stack-exo-corner-sw-floor = exodermis SW corner floor
-stack-exo-borg-floor = mechadermis floor
+stack-exo-hull-floor = экзодермический пол
+stack-exo-viscera-floor = экзодермический органический пол
+stack-exo-techmaint-floor = экзодермический техничекий пол
+stack-exo-horizontal-floor = экзодермический горизонтальный пол
+stack-exo-vertical-floor = экзодермический вертикальный пол
+stack-exo-corner-ne-floor = экзодермический угловой пол Северо-восток
+stack-exo-corner-nw-floor = экзодермический угловой пол Северо-запад
+stack-exo-corner-se-floor = экзодермический угловой пол Юго-восток
+stack-exo-corner-sw-floor = экзодермический угловой пол Юго-запад
+stack-exo-borg-floor = мехадермический пол

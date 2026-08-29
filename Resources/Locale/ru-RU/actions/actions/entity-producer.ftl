@@ -1,3 +1,3 @@
-entity-producer-action-popup-user = You produce something.
-entity-producer-action-popup-others = { CAPITALIZE(THE($entity)) } produces something.
-entity-producer-action-popup-too-hungry = You need more food before you can produce anything!
+entity-producer-action-popup-user = Вы что-то производите.
+entity-producer-action-popup-others = { CAPITALIZE($entity) } что-то производит.
+entity-producer-action-popup-too-hungry = Вам нужно больше еды чтобы что-то произвести!

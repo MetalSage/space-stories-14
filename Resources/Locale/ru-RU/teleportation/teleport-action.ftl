@@ -1,2 +1,2 @@
-teleport-action-popup-cant-see = You cannot see the destination.
-teleport-action-popup-blocked = There is no room at the destination.
+teleport-action-popup-cant-see = Вы не можете увидеть точку прибытия.
+teleport-action-popup-blocked = В точке прибытия нет места.

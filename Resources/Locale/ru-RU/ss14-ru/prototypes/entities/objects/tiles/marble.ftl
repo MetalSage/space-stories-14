@@ -1,8 +1,8 @@
 ent-FloorTileItemWhiteMarble = белая мраморная плитка
     .desc = Резной полированный квадрат из лучшего космического мрамора. Лучше его не потерять.
-ent-FloorTileItemWhiteMarbleMono = white marble mono tile
+ent-FloorTileItemWhiteMarbleMono = белая мраморная плита
     .desc = { ent-FloorTileItemWhiteMarble.desc }
 ent-FloorTileItemDarkMarble = чёрная мраморная плитка
     .desc = { ent-FloorTileItemWhiteMarble.desc }
-ent-FloorTileItemDarkMarbleMono = dark marble mono tile
+ent-FloorTileItemDarkMarbleMono = чёрная мраморная плита
     .desc = { ent-FloorTileItemWhiteMarble.desc }

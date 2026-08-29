@@ -9,4 +9,4 @@ metabolizer-type-plant = Растение
 metabolizer-type-dwarf = Дварф
 metabolizer-type-moth = Моль
 metabolizer-type-arachnid = Арахнид
-metabolizer-type-changeling = Changeling
+metabolizer-type-changeling = Генокрад

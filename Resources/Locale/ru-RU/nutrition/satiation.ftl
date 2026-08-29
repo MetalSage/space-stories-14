@@ -1,7 +1,7 @@
 # Types
-satiation-type-hunger = hunger
-satiation-type-thirst = thirst
-satiation-type-chemicals = chemicals
+satiation-type-hunger = голод
+satiation-type-thirst = жажда
+satiation-type-chemicals = химикаты
 
 # Other
-satiation-not-enough-hunger = You are too hungry!
+satiation-not-enough-hunger = Вы слишком голодны!

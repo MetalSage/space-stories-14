@@ -3,7 +3,11 @@ melee-inject-failed-hardsuit = Ваш { $weapon } не может проникн
 melee-balloon-pop = { CAPITALIZE($balloon) } лопнул!
 
 melee-weapon-dealt-no-damage = { CAPITALIZE(THE($weapon)) } is not damaging { THE($target) }!
-melee-self-weapon-dealt-no-damage = You are not damaging { THE($target) }!
+melee-self-weapon-dealt-no-damage = Вы не наносите урона { $target }!
 
 # MeleeBatteryHitsLeftSystem
-examine-battery-hits-left = It has enough charge for [color={ $color }]{ $count }[/color] hits.
+examine-battery-hits-left = Заряда хватит на [color={ $color }]{ $count }[/color] { $count ->
+    [one] удар
+    [few] удара
+    *[other] ударов
+}.

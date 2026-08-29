@@ -1,7 +1,7 @@
 ## Implanter Attempt Messages
 
 implanter-component-implanting-target = {CAPITALIZE(THE({ $user }))} пытается что-то в вас имплантировать!
-implanter-component-draw-target = {CAPITALIZE(THE({ $user }))} is trying to extract something from you!
+implanter-component-draw-target = {CAPITALIZE(THE({ $user }))} пытается что-то извлечь из вас!
 implanter-component-implant-failed = { $implant } нельзя имплантировать в { $target }!
 implanter-draw-failed-permanent = { $implant } вросся в { $target } и не может быть удалён!
 implanter-draw-failed = Вы пытаетесь удалить имплант, но ничего не находите.

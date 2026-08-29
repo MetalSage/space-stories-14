@@ -11,33 +11,33 @@ changeling-catalog-biodegrade-name = Биоразложение
 changeling-catalog-biodegrade-desc = Вы научитесь использовать кислотные железы в своем организме, чтобы извергать кислоту на оковы, освобождаясь от них.
 
 changeling-catalog-sting-dna-name = Извлечение ДНК
-changeling-catalog-sting-dna-desc = Научитесь использовать свое жало, чтобы поглотить личность ни о чём не подозревающих жертв. Не предоставляет ДНК для новых способностей или достижения целей.
+changeling-catalog-sting-dna-desc = Научитесь использовать свое жало, чтобы поглотить личность ни о чём не подозревающих жертв. Не предоставляет ДНК для новых способностей или не засчитывается как поглощение.
 
-changeling-catalog-blind-sting-name = Жало слепоты
-changeling-catalog-blind-sting-desc = Вызывает временную слепоту у цели. Хорошо подходит для побега или начала боя. Можно использовать на себе.
+changeling-catalog-blind-sting-name = Ослепляющее жало
+changeling-catalog-blind-sting-desc = Вызывает временную слепоту у цели. Хорошо подходит для побега или начала драки. Может быть использовано на себе.
 
-changeling-catalog-cryogenic-sting-name = Крио жало
-changeling-catalog-cryogenic-sting-desc = Замедляет движение цели. Идеально, чтобы не дать жертве сбежать. Можно использовать на себе.
+changeling-catalog-cryogenic-sting-name = Охлаждающее жало
+changeling-catalog-cryogenic-sting-desc = Вызывает замедление движения у цели. Идеально подходит для предотвращения побега добычи. Может быть использовано на себе.
 
-changeling-catalog-lethal-sting-name = Смертельное жало
-changeling-catalog-lethal-sting-desc = Наносит цели очень медленный урон. Бесполезно в бою, но гарантирует, что ей потребуется медицинская помощь. Можно использовать на себе.
+changeling-catalog-lethal-sting-name = Отравляющее жало
+changeling-catalog-lethal-sting-desc = Со временем наносит урон цели. Бесполезен в бою, но гарантирует, что им потребуется медицинская помощь. Может быть использовано на себе.
 
 changeling-catalog-hallucinogenic-sting-name = Галлюциногенное жало
-changeling-catalog-hallucinogenic-sting-desc = Вызывает у цели состояние опьянения и затрудняет речь. Вносит сумятицу среди экипажа. Можно использовать на себе.
+changeling-catalog-hallucinogenic-sting-desc = Вызывает у жертвы состояние эйфории и затруднения в речи. Вызывает растерянность среди экипажа. Может быть использовано на себе.
 
-changeling-catalog-mute-sting-name = Mute Sting
-changeling-catalog-mute-sting-desc = Causes the target to be incapable of speech. Imperceptible until the target tries to speak. Can be used on self.
+changeling-catalog-mute-sting-name = Жало немоты
+changeling-catalog-mute-sting-desc = Лишает способности говорить. Эффект незаметен, пока цель не попытается заговорить. Можно использовать на себе.
 
-changeling-catalog-screech-name = Screech [TEMPORARY]
-changeling-catalog-screech-desc = We let out a powerful screech that disarms people who hear it without adequate ear protection. THIS ACTION WILL BE MOVED TO THE HORROR FORM WHEN IT IS IMPLEMENTED.
+changeling-catalog-screech-name = Крик ужаса [ВРЕМЕННЫЙ]
+changeling-catalog-screech-desc = Мы издаем пронзительный крик, обезоруживающий тех, кто слышит его без надлежащей защиты слуха. ПОСЛЕ РЕАЛИЗАЦИИ ДАННОЕ ДЕЙСТВИЕ БУДЕТ ПЕРЕВЕДЕНО В ФОРМУ УЖАСА.
 
-changeling-catalog-last-resort-name = Крайняя мера
-changeling-catalog-last-resort-desc = Уничтожает ваше текущее тело, позволяя сбежать в виде слабого головного слизня. Если вы заразите труп гуманоида, вы сможете восстановить полноценное тело генокрада.
+changeling-catalog-last-resort-name = Последний шанс
+changeling-catalog-last-resort-desc = Уничтожьте свою текущую оболочку и сбегите в виде слабого мозгового червя. Если вы заразите труп гуманоида, вы сможете вернуться к полноценному телу генокрада. Становится доступно для приобретения после поглощения хотя бы одного тела.
 
-                                      Предупреждение! Это сбрасывает ваш прогресс в качестве генокрада, удаляя все покупки в магазине и поглощённые личности!
+                                      Внимание! Это обнулит ваш прогресс генокрада, удаляя ваши приобретённые способности и поглощенные личности!
 
-changeling-catalog-voice-mindshield-name = Fake Mindshield
-changeling-catalog-voice-mindshield-desc = Modify your neuron's natural waves to copy those produced by Nanotrasen mindshield implants, making you look mindshielded to security members. Can be toggled.
+changeling-catalog-voice-mindshield-name = Фальшивый щит разума
+changeling-catalog-voice-mindshield-desc = Модифицируйте собственные нейронные волны для имитации сигнала импланта защиты разума Nanotrasen, создавая видимость установленного Щита разума для сотрудников службы безопасности. Эффект можно переключить.
 
-changeling-catalog-night-vision-name = Ночное Зрение
-changeling-catalog-night-vision-desc = Вы модифицируете свои фоторецепторы и обостряете чувства, чтобы видеть в полной темноте.
+changeling-catalog-night-vision-name = Ночное зрение
+changeling-catalog-night-vision-desc = Вы модифицируете свои фоторецепторы и обостряете свои чувства, чтобы обрести способность видеть в полной темноте.

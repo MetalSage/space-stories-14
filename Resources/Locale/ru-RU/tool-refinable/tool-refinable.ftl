@@ -1,6 +1,6 @@
-refined-butchered-success = Вы разделываете { $target } при помощи { $tool }.
-refined-butchered-success-others = { $user } разделал { $target } при помощи { $tool }.
-refined-slice-verb-message-default = Разделать цель при помощи острого предмета.
+refined-butchered-success = Вы разрезаете { $target } используя { $tool }.
+refined-butchered-success-others = { $user } разрезал { $target } используя { $tool }.
+refined-slice-verb-message-default = Разрезать острым предметом.
 refined-slice-verb-target-isnt-dead = Цель должна быть мертва.
-refined-slice-verb-message-tool = Вам нужно что-то острое, что бы разделать { $target }.
-refined-slice-verb-name = Разделать
+refined-slice-verb-message-tool = Вам понадобится другой инструмент для разрезания { $target }.
+refined-slice-verb-name = Разрезать

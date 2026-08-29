@@ -1,3 +1,3 @@
-hydroxysomnolene-effect-flavor = You feel a need for fizzy pink flavor.
-hydroxysomnolene-effect-another-hit = You could really use another hit.
-hydroxysomnolene-effect-sluggish = You feel sluggish and tired.
+hydroxysomnolene-effect-flavor = Вы испытываете потребность в шипучем розовом вкусе.
+hydroxysomnolene-effect-another-hit = Тебе бы очень хотелось ещё одну дозу.
+hydroxysomnolene-effect-sluggish = Вы чувствуете вялость и усталость.

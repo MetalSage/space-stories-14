@@ -1,6 +1,6 @@
-ent-BaseBola = bola
+ent-BaseBola = бола
     .desc = { ent-BaseItem.desc }
-ent-Bola = бола
-    .desc = Скреплённые с металлом кабельные стяжки.
-ent-SecurityBola = tactical bola
-    .desc = A bola, comprised of steel anchors linked together with a wire cable. Reliable and reusable.
+ent-Bola = самодельная бола
+    .desc = Самодельная бола, кое-как скреплённая из запасных наручников и кусков металла. Похоже, она долго не продержится.
+ent-SecurityBola = тактическая бола
+    .desc = Прочная бола из стальных грузов, соединенных между собой проволочным тросом. Надежная и многоразовая.

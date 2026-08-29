@@ -17,4 +17,4 @@ emitter-component-type-set = Установить тип: { $type }
 emitter-destroyed-broadcast = Включенный эмиттер { $location } был уничтожен.
 emitter-unlocked-broadcast = Включенный эмиттер  { $location } разблокирован.
 emitter-unpowered-broadcast = Включенный эмиттер  { $location } потерял питание.
-emitter-turn-off-broadcast = A powered emitter { $location } was turned off.
+emitter-turn-off-broadcast = Включенный эмиттер { $location } был выключен.

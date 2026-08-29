@@ -1,4 +1,4 @@
-harvestable-solution-success = You fill { THE($target) } with { $amount }u from { THE($source) }.
-harvestable-solution-empty = { CAPITALIZE(THE($source)) } has nothing ready to harvest.
-harvestable-solution-target-full = { CAPITALIZE(THE($target)) } is full!
-harvestable-solution-verb = Harvest
+harvestable-solution-success = Вы наполнили { $target } { $amount } ед. из { $source }.
+harvestable-solution-empty = { CAPITALIZE($source) } не готов к сбору.
+harvestable-solution-target-full = { CAPITALIZE($target) } полон!
+harvestable-solution-verb = Сбор

@@ -1,7 +1,7 @@
-item-toggle-examined-on = The light is currently [color=darkgreen]on[/color].
-item-toggle-examined-off = The light is currently [color=darkred]off[/color].
+item-toggle-examined-on = Устройство [color=darkgreen]включено[/color].
+item-toggle-examined-off = Устройство [color=darkred]выключено[/color].
 
-item-toggle-examined-active = { CAPITALIZE(OBJECT($target)) } { CONJUGATE-BE($target) } currently [color=darkgreen]activated[/color].
-item-toggle-examined-not-active = { CAPITALIZE(OBJECT($target)) } { CONJUGATE-BE(target) } currently [color=darkred]deactivated[/color].
+item-toggle-examined-active = { CAPITALIZE($target) } [color=darkgreen]активирован[/color].
+item-toggle-examined-not-active = { CAPITALIZE($target) } [color=darkred]деактивирован[/color].
 
-item-toggle-activated-low-charge = Insufficient charge...
+item-toggle-activated-low-charge = Недостаточно заряда...

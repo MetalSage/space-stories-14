@@ -14,4 +14,4 @@ mech-energy-missing = Энергия: ОТСУТСТВУЕТ
 mech-slot-display = Доступно слотов: { $amount }
 
 mech-construction-guide-string = Все механические детали должны быть прикреплены к каркасу.
-mech-construction-guide-string-vim = Two borg legs and an EVA helmet must be attached to the harness.
+mech-construction-guide-string-vim = ВКД шлем и две ноги киборга должны быть прикреплены к каркасу.

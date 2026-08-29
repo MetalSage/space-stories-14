@@ -33,7 +33,3 @@ ent-CrateTechBoardRandom = излишки плат
     .desc = Откуда-то взятые излишки плат.
 ent-CrateAirGrenade = ящик воздушных гранат
     .desc = Ящик, содержащий 3 воздушные гранаты.
-ent-CrateEngineeringJetpack = ящик джетпаков
-    .desc = Два джетпака для тех, кто не умеет пользоваться огнетушителями.
-ent-CrateEngineeringMiniJetpack = ящик мини-джетпаков
-    .desc = Два мини-джетпака для тех, кому хочется вызова.

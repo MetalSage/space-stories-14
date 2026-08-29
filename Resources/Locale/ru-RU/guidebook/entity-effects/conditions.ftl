@@ -27,11 +27,11 @@ entity-condition-guidebook-group-damage =
 
 entity-condition-guidebook-total-satiation =
     { $max ->
-        [2147483648] the target has at least { NATURALFIXED($min, 2) } total { $type }
+        [2147483648] цель имеет по крайней мере { NATURALFIXED($min, 2) } общего { $type }
         *[other] { $min ->
-                    [0] the target has at most { NATURALFIXED($max, 2) } total { $type }
-                    *[other] the target has between { NATURALFIXED($min, 2) } and { NATURALFIXED($max, 2) } total { $type }
-                 }
+                [0] цель имеет не более { NATURALFIXED($max, 2) } общего { $type }
+                *[other] цель имеет между { NATURALFIXED($min, 2) } и { NATURALFIXED($max, 2) } общего { $type }
+            }
     }
 
 entity-condition-guidebook-reagent-threshold =
@@ -44,7 +44,7 @@ entity-condition-guidebook-reagent-threshold =
     }
 
 entity-condition-guidebook-mob-state-condition =
-    пациент в { $state }
+    пациент { $state }
 
 entity-condition-guidebook-job-condition =
     должность цели — { $job }
@@ -88,7 +88,7 @@ entity-condition-guidebook-breathing =
     }
 
 entity-condition-guidebook-internals =
-    the metabolizer is { $usingInternals ->
-        [true] using internals
-        *[false] breathing atmospheric air
+    цель { $usingInternals ->
+        [true] использует балон
+        *[false] дышит атмосферой
     }

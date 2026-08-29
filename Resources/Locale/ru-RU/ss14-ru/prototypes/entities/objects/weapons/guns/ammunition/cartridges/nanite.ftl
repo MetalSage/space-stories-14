@@ -1,2 +1,2 @@
-ent-CartridgeNanite = nanite crystal
-    .desc = A high-power nanite crystal used by xenoborgs.
+ent-CartridgeNanite = нанитовый кристалл
+    .desc = Мощный нанитовый кристалл, используемый ксеноборгами.

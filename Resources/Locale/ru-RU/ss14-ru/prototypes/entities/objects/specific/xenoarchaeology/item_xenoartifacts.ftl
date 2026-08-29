@@ -1,6 +1,6 @@
 ent-BaseXenoArtifactItem = артефакт
     .desc = Странный артефакт неизвестных времён. Похоже, хороших времён. Идеально помещается в руку.
-ent-DummyArtifactItem = artifact
+ent-DummyArtifactItem = артефакт
     .desc = { ent-BaseXenoArtifactItem.desc }
     .suffix = Debug
 ent-ComplexXenoArtifactItem = { ent-BaseXenoArtifactItem }

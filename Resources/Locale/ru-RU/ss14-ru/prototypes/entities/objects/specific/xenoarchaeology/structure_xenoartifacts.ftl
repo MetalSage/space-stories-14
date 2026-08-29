@@ -1,6 +1,6 @@
 ent-BaseXenoArtifactStructure = артефакт
     .desc = { ent-BaseXenoArtifact.desc }
-ent-DummyArtifactStructure = artifact
+ent-DummyArtifactStructure = артефакт
     .desc = { ent-BaseXenoArtifactStructure.desc }
     .suffix = Debug
 ent-ComplexXenoArtifact = { ent-BaseXenoArtifactStructure }

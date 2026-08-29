@@ -29,12 +29,12 @@ verb-categories-select-type = Выбрать тип
 verb-categories-fax = Задать место назначения
 verb-categories-power-level = Уровень мощности
 verb-categories-adjust = Отрегулировать
-verb-categories-select-target = Set Target
+verb-categories-select-target = Установить цель
 
 verb-common-toggle-light = Переключить свет
 verb-common-close = Закрыть
 verb-common-open = Открыть
 verb-common-close-ui = Закрыть UI
 verb-common-open-ui = Открыть UI
-verb-common-enter = Enter
-verb-common-exit = Exit
+verb-common-enter = Залезть
+verb-common-exit = Вылезти

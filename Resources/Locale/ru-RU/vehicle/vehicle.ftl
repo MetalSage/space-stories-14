@@ -1,5 +1,5 @@
-vehicle-slot-component-slot-name-keys = keys
-container-vehicle-verb-enter = Enter
-container-vehicle-verb-remove-operator = Remove operator
-container-vehicle-entry-denied = You cannot operate this.
-container-vehicle-operator-removal-started = { $user } is pulling the operator out of the { $vehicle }!
+vehicle-slot-component-slot-name-keys = ключи
+container-vehicle-verb-enter = Сесть
+container-vehicle-verb-remove-operator = Вытащить водителя
+container-vehicle-entry-denied = Вы не можете управлять этим.
+container-vehicle-operator-removal-started = { $user } вытаскивает водителя из { $vehicle }!

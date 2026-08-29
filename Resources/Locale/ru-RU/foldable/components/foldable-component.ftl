@@ -12,5 +12,5 @@ fold-flip-verb = Перевернуть
 fold-zip-verb = Застегнуть
 fold-unzip-verb = Расстегнуть
 
-fold-lower-visor-verb = Lower visor
-fold-raise-visor-verb = Raise visor
+fold-lower-visor-verb = Опустить забрало
+fold-raise-visor-verb = Поднять забрало
