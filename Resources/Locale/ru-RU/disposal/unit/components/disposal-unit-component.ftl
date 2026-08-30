@@ -16,7 +16,7 @@ disposal-eject-verb-get-data-text = Извлечь всё
 
 ## Errors
 disposal-unit-no-hands = У вас нет рук!
-disposal-unit-is-full = There's no more room inside.
+disposal-unit-is-full = Внутри больше нет места.
 
 # state
 disposal-unit-state-Ready = Готов

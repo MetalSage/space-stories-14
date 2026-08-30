@@ -3,11 +3,13 @@ using System.Linq;
 using Content.Server._Stories.Sponsors;
 using Content.Server.GameTicking;
 using Content.Server.Station.Components;
+using Content.Server.Station.Events;
 using Content.Shared.CCVar;
 using Content.Shared.FixedPoint;
 using Content.Shared.GameTicking;
 using Content.Shared.Preferences;
 using Content.Shared.Roles;
+using Content.Shared.Station.Components;
 using JetBrains.Annotations;
 using Robust.Server.Player;
 using Robust.Shared.Configuration;
@@ -79,6 +81,13 @@ public sealed partial class StationJobsSystem : EntitySystem
 
         stationJobs.TotalJobs = stationJobs.JobList.Values.Select(x => x ?? 0).Sum();
 
+        UpdateJobsAvailable();
+    }
+
+    [SubscribeLocalEvent]
+    private void OnStationPostInit(ref StationPostInitEvent ev)
+    {
+        // Station data receives the game map's job-weight profile during station initialization.
         UpdateJobsAvailable();
     }
 
@@ -397,11 +406,11 @@ public sealed partial class StationJobsSystem : EntitySystem
     }
 
     /// <summary>
-    /// Returns a readonly dictionary of all round-start jobs and their slot info.
+    /// Returns a readonly dictionary of all round-start minimum jobs and their slot info.
     /// </summary>
     /// <param name="station">Station to get jobs for</param>
     /// <param name="stationJobs">Resolve pattern, station jobs component of the station.</param>
-    /// <returns>List of all round-start jobs.</returns>
+    /// <returns>List of all round-start minimum jobs.</returns>
     /// <exception cref="ArgumentException">Thrown when the given station is not a station.</exception>
     public Dictionary<ProtoId<JobPrototype>, int?> GetRoundStartJobs(EntityUid station, StationJobsComponent? stationJobs = null)
     {
@@ -474,7 +483,7 @@ public sealed partial class StationJobsSystem : EntitySystem
 
     private bool _availableJobsDirty;
 
-    private TickerJobsAvailableEvent _cachedAvailableJobs = new(new(), new());
+    private TickerJobsAvailableEvent _cachedAvailableJobs = new(new(), new(), new());
 
     /// <summary>
     /// Assembles an event from the current available-to-play jobs.
@@ -485,10 +494,11 @@ public sealed partial class StationJobsSystem : EntitySystem
     {
         // If late join is disallowed, return no available jobs.
         if (_gameTicker.DisallowLateJoin)
-            return new TickerJobsAvailableEvent(new(), new());
+            return new TickerJobsAvailableEvent(new(), new(), new());
 
         var jobs = new Dictionary<NetEntity, Dictionary<ProtoId<JobPrototype>, int?>>();
         var stationNames = new Dictionary<NetEntity, string>();
+        var jobWeights = new Dictionary<NetEntity, ProtoId<JobWeightPrototype>?>();
 
         var query = EntityQueryEnumerator<StationJobsComponent>();
 
@@ -498,8 +508,11 @@ public sealed partial class StationJobsSystem : EntitySystem
             var list = comp.JobList.ToDictionary(x => x.Key, x => x.Value);
             jobs.Add(netStation, list);
             stationNames.Add(netStation, Name(station));
+            jobWeights.Add(netStation, TryComp<StationDataComponent>(station, out var stationData)
+                ? stationData.JobWeights
+                : null);
         }
-        return new TickerJobsAvailableEvent(stationNames, jobs);
+        return new TickerJobsAvailableEvent(stationNames, jobs, jobWeights);
     }
 
     /// <summary>

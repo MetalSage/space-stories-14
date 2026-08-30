@@ -18,14 +18,14 @@ public sealed partial class PontificSystem
 
     private void OnFlameInit(Entity<PontificFlameComponent> entity, ref ComponentInit args)
     {
-        _movementSpeed.RefreshMovementSpeedModifiers(entity);
+        _movementSpeed.RefreshMovementSpeedModifiers(entity.Owner);
         if (HasComp<AppearanceComponent>(entity))
             _appearance.SetData(entity, PontificVisuals.State, PontificState.Flame);
     }
 
     private void OnFlameShutdown(Entity<PontificFlameComponent> entity, ref ComponentShutdown args)
     {
-        _movementSpeed.RefreshMovementSpeedModifiers(entity);
+        _movementSpeed.RefreshMovementSpeedModifiers(entity.Owner);
         if (HasComp<AppearanceComponent>(entity))
         {
             if (_appearance.TryGetData(entity, PontificVisuals.State, out var data) && data is PontificState.Flame)

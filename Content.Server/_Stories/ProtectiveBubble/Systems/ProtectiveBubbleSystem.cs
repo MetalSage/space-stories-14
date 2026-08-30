@@ -3,7 +3,7 @@ using Content.Shared._Stories.Force;
 using Content.Shared.Actions;
 using Content.Shared.Alert;
 using Content.Shared.Damage.Systems;
-using Content.Shared.StatusEffect;
+using Content.Shared.StatusEffectNew;
 
 namespace Content.Server._Stories.ForceUser.ProtectiveBubble.Systems;
 

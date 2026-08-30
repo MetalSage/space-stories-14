@@ -16,6 +16,7 @@ cmd-parse-failure-grid = { $arg } не является допустимым г�
 cmd-parse-failure-cultureinfo = "{ $arg }" не является допустимым CultureInfo.
 cmd-parse-failure-entity-exist = UID { $arg } не соответствует существующей сущности.
 cmd-parse-failure-session = Не существует сессии с именем пользователя: { $username }
+cmd-parse-failure-session-guid = There is no session with the GUID: { $guid }
 
 cmd-error-file-not-found = Не удалось найти файл: { $file }.
 cmd-error-dir-not-found = Не удалось найти директорию: { $dir }.
@@ -234,6 +235,22 @@ cmd-togglelightbuf-help = Использование: { $command }
 
 cmd-chunkinfo-desc = Получает информацию о чанке под курсором мыши.
 cmd-chunkinfo-help = Использование: { $command }
+
+cmd-chunkentities-desc = Lists chunk entities in the client viewport OR in the specified range.
+cmd-chunkentities-help = Usage: { $command } [<root entity> <x> <y> <range>]
+cmd-chunkentities-error-invalid-root = Invalid root entity: { $root }
+cmd-chunkentities-error-parse = x, y, and range must be numbers.
+cmd-chunkentities-error-nullspace = Current eye is in nullspace.
+cmd-chunkentities-error-no-map = No map entity for current eye map { $map }.
+cmd-chunkentities-range-header = Chunk entities for { $root } around ({ $x }, { $y }) range { $range }:
+cmd-chunkentities-viewport-header = Chunk entities in client viewport on map { $map } ({ $viewport }):
+cmd-chunkentities-total = Total: { $count }
+cmd-chunkentities-root-count = Root { $root }: { $count }
+cmd-chunkentities-entry = { $netEntity } uid={ $uid } root={ $root } chunk={ $chunk } comps={ $componentCount } { $name }
+cmd-chunkentities-arg-root = <root entity>
+cmd-chunkentities-arg-x = <x>
+cmd-chunkentities-arg-y = <y>
+cmd-chunkentities-arg-range = <range>
 
 cmd-rldshader-desc = Перезагружает все шейдеры.
 cmd-rldshader-help = Использование: { $command }

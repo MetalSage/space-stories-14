@@ -1,6 +1,6 @@
 ent-BaseRock = валун
     .desc = Тяжёлый как действительно тяжёлая вещь.
-ent-BaseTree = { "" }
+ent-BaseTree = { ent-StructureHealthFurnitureStrong }
     .desc = Да, это дерево.
 ent-BaseTreeSnow = { ent-BaseTree }
     .desc = { ent-BaseTree.desc }

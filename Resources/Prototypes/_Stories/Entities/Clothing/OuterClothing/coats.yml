@@ -1,5 +1,5 @@
 - type: entity
-  parent: ClothingOuterStorageToggleableBase
+  parent: ClothingOuterStorageBase
   id: ClothingOuterCoatGuardian
   name: jedi cloak
   description: A long type of clothing that sits loosely on the shoulders, covering the neck.
@@ -10,8 +10,7 @@
   - type: ToggleableClothing
     clothingPrototype: ClothingHeadHatHoodGuardianhood
   - type: TemperatureProtection
-    heatingCoefficient: 0.005
-    coolingCoefficient: 0.005
+    coefficient: 0.005
   - type: AllowSuitStorage
   - type: Sprite
     sprite: _Stories/Clothing/OuterClothing/Coats/guardian.rsi

@@ -1,6 +1,6 @@
 using Content.Client.Chemistry.Containers.EntitySystems;
 using Content.Shared._Stories.ReagentStatusIcon;
-using Content.Shared.Ghost;
+using Content.Shared.Ghost.Components;
 using Content.Shared.Mobs.Components;
 using Content.Shared.StatusIcon.Components;
 using Content.Shared.Whitelist;

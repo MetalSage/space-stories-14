@@ -1,3 +1,5 @@
+ent-BaseGravityGenerator = { ent-BaseMachinePowered }
+    .desc = { ent-BaseMachinePowered.desc }
 ent-GravityGenerator = генератор гравитации
     .desc = Это то, что удерживает вас у пола.
 ent-GravityGeneratorMini = мини генератор гравитации
@@ -5,4 +7,4 @@ ent-GravityGeneratorMini = мини генератор гравитации
     .suffix = Charged
 ent-GravityGeneratorMiniUncharged = { ent-GravityGeneratorMini }
     .desc = { ent-GravityGeneratorMini.desc }
-    .suffix = Uncharged
+    .suffix = Разряженный

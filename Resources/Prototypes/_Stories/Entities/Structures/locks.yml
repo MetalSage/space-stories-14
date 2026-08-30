@@ -1,6 +1,6 @@
 - type: entity
   id: PRISONLocker
-  parent: LockerBaseSecure
+  parent: LockerBase
   name: prison staff locker
   description: Standard prison staff locker.
   components:

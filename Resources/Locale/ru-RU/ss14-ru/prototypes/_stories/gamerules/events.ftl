@@ -8,5 +8,5 @@ ent-SpafMigration = { ent-BaseStationEventShortDelay }
     .desc = { ent-BaseStationEventShortDelay.desc }
 ent-STJobDistributionError = { ent-BaseGameRule }
     .desc = { ent-BaseGameRule.desc }
-ent-STCorpiumSpawn = { ent-BaseStationEventLongDelay }
-    .desc = { ent-BaseStationEventLongDelay.desc }
+ent-STCorpiumSpawn = { ent-BaseStationEventShortDelay }
+    .desc = { ent-BaseStationEventShortDelay.desc }

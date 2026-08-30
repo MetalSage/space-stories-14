@@ -81,7 +81,7 @@ public sealed partial class PontificSystem : EntitySystem
         {
             EnsureComp<PontificFlameComponent>(entity).DamageMultiplier = args.DamageMultiplier;
             EnsureComp<PontificFlameComponent>(entity).SpeedMultiplier = args.SpeedMultiplier;
-            _movementSpeed.RefreshMovementSpeedModifiers(entity);
+            _movementSpeed.RefreshMovementSpeedModifiers(entity.Owner);
             args.Handled = true;
         }
     }

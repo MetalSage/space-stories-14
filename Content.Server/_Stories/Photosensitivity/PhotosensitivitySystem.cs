@@ -225,18 +225,18 @@ public sealed partial class PhotosensitivitySystem : EntitySystem
             if (lightDirInterrupted)
                 continue;
 
-            if (lightPoint.Comp.MaskPath is { } maskPath)
+            if (lightPoint.Comp.LightMask is { } lightMask)
             {
                 var localPos = Vector2.Transform(destination, _transform.GetInvWorldMatrix(sourceTrs));
                 var x = localPos.X;
                 var y = localPos.Y;
 
-                if (maskPath.EndsWith("cone.png"))
+                if (lightMask.Id == "ConeSingle" || lightMask.Id.EndsWith("cone.png"))
                 {
                     if (-y + 0.5f < x * x * 0.25f)
                         continue;
                 }
-                else if (maskPath.EndsWith("double_cone.png"))
+                else if (lightMask.Id == "ConeDouble" || lightMask.Id.EndsWith("double_cone.png"))
                 {
                     var cond1 = y + 0.5f >= x * x * 0.25f;
                     var cond2 = -y + 0.5f >= x * x * 0.25f;
