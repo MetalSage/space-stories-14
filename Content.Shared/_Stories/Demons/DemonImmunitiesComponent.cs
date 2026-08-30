@@ -1,5 +1,4 @@
 using Content.Shared.Damage;
-using Robust.Shared.Prototypes;
 
 namespace Content.Shared._Stories.Demons;
 
@@ -20,7 +19,4 @@ public sealed partial class DemonImmunitiesComponent : Component
 
     [DataField]
     public TimeSpan? VanishDelay = TimeSpan.FromSeconds(3);
-
-    [DataField]
-    public EntProtoId? HeartPrototype;
 }

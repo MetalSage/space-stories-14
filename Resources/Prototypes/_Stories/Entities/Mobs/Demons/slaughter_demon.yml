@@ -41,7 +41,6 @@
     smashDamage:
       types:
         Structural: 50
-    heartPrototype: STItemDemonHeartSlaughter
   - type: NoSlip
   - type: TemperatureDamage
     heatDamageThreshold: 10000

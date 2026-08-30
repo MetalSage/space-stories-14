@@ -54,9 +54,6 @@ public sealed partial class DemonImmunitiesSystem : EntitySystem
         if (args.NewMobState != MobState.Dead)
             return;
 
-        if (ent.Comp.HeartPrototype is { } heart)
-            Spawn(heart, Transform(ent).Coordinates);
-
         if (ent.Comp.VanishDelay is not { } delay)
             return;
 

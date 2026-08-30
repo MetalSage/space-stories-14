@@ -37,7 +37,6 @@
     smashDamage:
       types:
         Structural: 50
-    heartPrototype: STItemDemonHeartShadow
   - type: NoSlip
   - type: Puller
     needsHands: false
