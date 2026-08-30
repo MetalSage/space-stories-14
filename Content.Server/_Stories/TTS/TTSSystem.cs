@@ -132,35 +132,52 @@ public sealed partial class TTSSystem : EntitySystem
 
     private async void HandleSay(EntityUid uid, string message, string speaker, ProtoId<LanguagePrototype> language)
     {
-        foreach (var (variant, recipients) in GroupListenersByComprehension(uid, message, language, ChatSystem.VoiceRange))
-        {
-            var soundData = await GenerateTTS(variant, speaker);
-            if (soundData is null)
-                continue;
+        SplitListenersByComprehension(uid, language, ChatSystem.VoiceRange, out var understood, out var confused);
 
-            RaiseNetworkEvent(new PlayTTSEvent(soundData, GetNetEntity(uid)), Filter.Empty().AddPlayers(recipients));
+        if (understood.Count > 0)
+        {
+            var soundData = await GenerateTTS(message, speaker);
+            if (soundData is not null)
+                RaiseNetworkEvent(new PlayTTSEvent(soundData, GetNetEntity(uid)), Filter.Empty().AddPlayers(understood));
+        }
+
+        if (confused.Count > 0)
+        {
+            var soundData = await GenerateTTS(_language.ObfuscateMessage(message, language), speaker);
+            if (soundData is not null)
+                RaiseNetworkEvent(new PlayTTSEvent(soundData, GetNetEntity(uid)), Filter.Empty().AddPlayers(confused));
         }
     }
 
     private async void HandleWhisper(EntityUid uid, string message, string speaker, ProtoId<LanguagePrototype> language)
     {
-        foreach (var (variant, recipients) in GroupListenersByComprehension(uid, message, language, ChatSystem.WhisperClearRange))
-        {
-            var soundData = await GenerateTTS(variant, speaker, true);
-            if (soundData is null)
-                continue;
+        SplitListenersByComprehension(uid, language, ChatSystem.WhisperClearRange, out var understood, out var confused);
 
-            RaiseNetworkEvent(new PlayTTSEvent(soundData, GetNetEntity(uid), true), Filter.Empty().AddPlayers(recipients));
+        if (understood.Count > 0)
+        {
+            var soundData = await GenerateTTS(message, speaker, true);
+            if (soundData is not null)
+                RaiseNetworkEvent(new PlayTTSEvent(soundData, GetNetEntity(uid), true), Filter.Empty().AddPlayers(understood));
+        }
+
+        if (confused.Count > 0)
+        {
+            var soundData = await GenerateTTS(_language.ObfuscateMessage(message, language), speaker, true);
+            if (soundData is not null)
+                RaiseNetworkEvent(new PlayTTSEvent(soundData, GetNetEntity(uid), true), Filter.Empty().AddPlayers(confused));
         }
     }
 
-    private Dictionary<string, List<ICommonSession>> GroupListenersByComprehension(
+    private void SplitListenersByComprehension(
         EntityUid source,
-        string message,
         ProtoId<LanguagePrototype> language,
-        float range)
+        float range,
+        out List<ICommonSession> understood,
+        out List<ICommonSession> confused)
     {
-        var groups = new Dictionary<string, List<ICommonSession>>();
+        understood = new List<ICommonSession>();
+        confused = new List<ICommonSession>();
+
         var xformQuery = GetEntityQuery<TransformComponent>();
         var sourceCoords = xformQuery.GetComponent(source).Coordinates;
 
@@ -172,21 +189,11 @@ public sealed partial class TTSSystem : EntitySystem
             if (!xformQuery.GetComponent(listener).Coordinates.InRange(EntityManager, sourceCoords, range))
                 continue;
 
-            var comprehension = _language.GetComprehension(listener, language);
-            var variant = comprehension >= 1f
-                ? message
-                : _language.ObfuscateMessage(message, language, comprehension);
-
-            if (!groups.TryGetValue(variant, out var recipients))
-            {
-                recipients = new List<ICommonSession>();
-                groups[variant] = recipients;
-            }
-
-            recipients.Add(player);
+            if (_language.GetComprehension(listener, language) >= 1f)
+                understood.Add(player);
+            else
+                confused.Add(player);
         }
-
-        return groups;
     }
 
 

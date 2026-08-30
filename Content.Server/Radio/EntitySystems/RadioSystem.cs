@@ -144,7 +144,12 @@ public sealed partial class RadioSystem : SharedRadioSystem
 
         // Stories-Language-Start
         var language = _language.GetCurrentLanguage(messageSource);
-        var forceObfuscated = ProtoMan.TryIndex(language, out var languageProto) && !languageProto.CanUseRadio;
+
+        if (ProtoMan.TryIndex(language, out var languageProto) && !languageProto.CanUseRadio)
+        {
+            _messages.Remove(message);
+            return;
+        }
         // Stories-Language-End
 
         var content = escapeMarkup
@@ -179,7 +184,8 @@ public sealed partial class RadioSystem : SharedRadioSystem
         var hasActiveServer = HasActiveServer(sourceMapId, channel.ID);
         var sourceServerExempt = _exemptQuery.HasComp(radioSource);
 
-        var recipientsByMessage = new Dictionary<string, List<EntityUid>>(); // Stories-TTS
+        var ttsUnderstood = new List<EntityUid>(); // Stories-TTS
+        var ttsConfused = new List<EntityUid>(); // Stories-TTS
 
         var radioQuery = EntityQueryEnumerator<ActiveRadioComponent, TransformComponent>();
         while (canSend && radioQuery.MoveNext(out var receiver, out var radio, out var transform))
@@ -212,26 +218,19 @@ public sealed partial class RadioSystem : SharedRadioSystem
 
             if (IsRelaySpeaker(receiver))
             {
-                if (forceObfuscated)
-                {
-                    comprehension = 0f;
-                }
-                else
-                {
-                    _language.SetRelayLanguage(receiver, language);
-                    comprehension = 1f;
-                }
+                _language.SetRelayLanguage(receiver, language);
+                comprehension = 1f;
             }
             else
             {
                 var listener = ResolveLanguageListener(receiver);
-                comprehension = forceObfuscated ? 0f : (listener is null ? 1f : _language.GetComprehension(listener.Value, language));
+                comprehension = listener is null ? 1f : _language.GetComprehension(listener.Value, language);
             }
 
             if (comprehension >= 1f)
             {
                 RaiseLocalEvent(receiver, ref ev);
-                AddTtsRecipient(recipientsByMessage, message, receiver); // Stories-TTS
+                ttsUnderstood.Add(receiver); // Stories-TTS
             }
             else
             {
@@ -251,7 +250,7 @@ public sealed partial class RadioSystem : SharedRadioSystem
                 var listenerChatMsg = new MsgChatMessage { Message = listenerChat };
                 var evListener = new RadioReceiveEvent(listenerMessage, messageSource, channel, radioSource, listenerChatMsg);
                 RaiseLocalEvent(receiver, ref evListener);
-                AddTtsRecipient(recipientsByMessage, listenerMessage, receiver); // Stories-TTS
+                ttsConfused.Add(receiver); // Stories-TTS
             }
             // Stories-Language-End
         }
@@ -261,12 +260,13 @@ public sealed partial class RadioSystem : SharedRadioSystem
         {
             var actorQuery = GetEntityQuery<ActorComponent>();
 
-            foreach (var (variant, recipients) in recipientsByMessage)
-            {
-                var sessions = ResolveTtsSessions(recipients, actorQuery);
-                if (sessions.Count > 0)
-                    ProcessAndSendRadioTts(messageSource, variant, channel, sessions);
-            }
+            var understoodSessions = ResolveTtsSessions(ttsUnderstood, actorQuery);
+            if (understoodSessions.Count > 0)
+                ProcessAndSendRadioTts(messageSource, message, channel, understoodSessions);
+
+            var confusedSessions = ResolveTtsSessions(ttsConfused, actorQuery);
+            if (confusedSessions.Count > 0)
+                ProcessAndSendRadioTts(messageSource, _language.ObfuscateMessage(message, language), channel, confusedSessions);
         }
         // Stories-TTS End
 
@@ -285,16 +285,6 @@ public sealed partial class RadioSystem : SharedRadioSystem
         return HasComp<RadioSpeakerComponent>(receiver);
     }
 
-    private static void AddTtsRecipient(Dictionary<string, List<EntityUid>> recipients, string message, EntityUid receiver)
-    {
-        if (!recipients.TryGetValue(message, out var list))
-        {
-            list = new List<EntityUid>();
-            recipients[message] = list;
-        }
-
-        list.Add(receiver);
-    }
 
     private EntityUid? ResolveLanguageListener(EntityUid receiver)
     {
