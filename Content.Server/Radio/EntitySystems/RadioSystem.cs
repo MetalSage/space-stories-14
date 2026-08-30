@@ -155,10 +155,10 @@ public sealed partial class RadioSystem : EntitySystem
         else
             speech = _chat.GetSpeechVerb(messageSource, message);
 
-        // Stories-Language Start
+        // Stories-Language-Start
         var language = _language.GetCurrentLanguage(messageSource);
         var forceObfuscated = ProtoMan.TryIndex(language, out var languageProto) && !languageProto.CanUseRadio;
-        // Stories-Language End
+        // Stories-Language-End
 
         var content = escapeMarkup
             ? FormattedMessage.EscapeText(message)
@@ -220,7 +220,7 @@ public sealed partial class RadioSystem : EntitySystem
                 continue;
 
             // send the message
-            // Stories-Language Start
+            // Stories-Language-Start
             float comprehension;
 
             if (IsRelaySpeaker(receiver))
@@ -266,7 +266,7 @@ public sealed partial class RadioSystem : EntitySystem
                 RaiseLocalEvent(receiver, ref evListener);
                 AddTtsRecipient(recipientsByMessage, listenerMessage, receiver); // Stories-TTS
             }
-            // Stories-Language End
+            // Stories-Language-End
         }
 
         // Stories-TTS Start
@@ -292,7 +292,7 @@ public sealed partial class RadioSystem : EntitySystem
         _messages.Remove(message);
     }
 
-    // Stories-Language Start
+    // Stories-Language-Start
     private bool IsRelaySpeaker(EntityUid receiver)
     {
         return HasComp<RadioSpeakerComponent>(receiver);
@@ -338,7 +338,7 @@ public sealed partial class RadioSystem : EntitySystem
 
         return sessions;
     }
-    // Stories-Language End
+    // Stories-Language-End
 
     /// <inheritdoc cref="TelecomServerComponent"/>
     private bool HasActiveServer(MapId mapId, string channelId)

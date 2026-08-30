@@ -52,7 +52,7 @@ public sealed partial class ChatSystem
 
         var speechVerb = Loc.GetString(_random.Pick(speech.SpeechVerbStrings));
 
-        // Stories-Language Start
+        // Stories-Language-Start
         var language = _language.GetCurrentLanguage(source);
 
         string WrapSpeakMessage(string content) => Loc.GetString(speech.Bold ? "chat-manager-entity-say-bold-wrap-message" : "chat-manager-entity-say-wrap-message",
@@ -61,7 +61,7 @@ public sealed partial class ChatSystem
             ("fontType", speech.FontId),
             ("fontSize", speech.FontSize),
             ("message", _language.ColorizeMessage(FormattedMessage.EscapeText(content), language)));
-        // Stories-Language End
+        // Stories-Language-End
 
         SendInVoiceRange(ChatChannel.Local, message, WrapSpeakMessage, source, range, language: language);
 
@@ -126,7 +126,7 @@ public sealed partial class ChatSystem
         }
         name = FormattedMessage.EscapeText(name);
 
-        // Stories-Language Start
+        // Stories-Language-Start
         var language = _language.GetCurrentLanguage(source);
         var needsLos = ProtoMan.TryIndex(language, out var languageProto) && languageProto.NeedsLOS;
 
@@ -138,7 +138,7 @@ public sealed partial class ChatSystem
 
         string WrapUnknown(string content) => Loc.GetString("chat-manager-entity-whisper-unknown-wrap-message",
             ("message", _language.ColorizeMessage(FormattedMessage.EscapeText(content), language)));
-        // Stories-Language End
+        // Stories-Language-End
 
         foreach (var (session, data) in GetRecipients(source, WhisperMuffledRange))
         {
@@ -151,7 +151,7 @@ public sealed partial class ChatSystem
             if (MessageRangeCheck(session, data, range) != MessageRangeCheckResult.Full)
                 continue; // Won't get logged to chat, and ghosts are too far away to see the pop-up, so we just won't send it to them.
 
-            // Stories-Language Start
+            // Stories-Language-Start
             var isClear = data.Range <= WhisperClearRange || data.Observer;
             var hasLos = (needsLos || !isClear) && _examineSystem.InRangeUnOccluded(source, listener, WhisperMuffledRange);
             var comprehension = (needsLos && !hasLos) ? 0f : _language.GetComprehension(listener, language);
@@ -166,7 +166,7 @@ public sealed partial class ChatSystem
             //If listener is too far and has no line of sight, they can't identify the whisperer's identity
             else
                 _chatManager.ChatMessageToOne(ChatChannel.Whisper, listenerMuffled, WrapUnknown(listenerMuffled), source, false, session.Channel);
-            // Stories-Language End
+            // Stories-Language-End
         }
 
         _replay.RecordServerMessage(new ChatMessage(ChatChannel.Whisper, message, WrapClear(message), GetNetEntity(source), null, MessageRangeHideChatForReplay(range)));

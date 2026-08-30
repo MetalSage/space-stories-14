@@ -21,35 +21,39 @@ public abstract partial class SharedLanguageSystem : EntitySystem
     private const float UncommonWordPenalty = -0.05f;
 
     private Dictionary<string, int>? _wordRanks;
+    private Dictionary<string, int>.AlternateLookup<ReadOnlySpan<char>> _wordRanksLookup;
     private int _roundSeed;
 
-    public float GetWordCommonnessBonus(string word)
+    public float GetWordCommonnessBonus(ReadOnlySpan<char> word)
     {
-        _wordRanks ??= BuildWordRanks();
+        EnsureWordRanks();
 
-        if (_wordRanks.Count == 0)
+        if (_wordRanks!.Count == 0)
             return 0f;
 
-        if (!_wordRanks.TryGetValue(word, out var rank))
+        if (!_wordRanksLookup.TryGetValue(word, out var rank))
             return UncommonWordPenalty;
 
         var falloff = (float) rank / _wordRanks.Count * CommonWordBonus;
         return Math.Max(CommonWordBonus - falloff, UncommonWordPenalty);
     }
 
-    private Dictionary<string, int> BuildWordRanks()
+    private void EnsureWordRanks()
     {
-        var ranks = new Dictionary<string, int>();
+        if (_wordRanks != null)
+            return;
 
-        if (!_prototypeManager.TryIndex(CommonWordsDataset, out var dataset))
-            return ranks;
+        _wordRanks = new Dictionary<string, int>(StringComparer.OrdinalIgnoreCase);
 
-        for (var i = 0; i < dataset.Values.Count; i++)
+        if (_prototypeManager.TryIndex(CommonWordsDataset, out var dataset))
         {
-            ranks.TryAdd(dataset.Values[i].ToLowerInvariant(), i + 1);
+            for (var i = 0; i < dataset.Values.Count; i++)
+            {
+                _wordRanks.TryAdd(dataset.Values[i], i + 1);
+            }
         }
 
-        return ranks;
+        _wordRanksLookup = _wordRanks.GetAlternateLookup<ReadOnlySpan<char>>();
     }
 
     public ProtoId<LanguagePrototype> GetCurrentLanguage(EntityUid entity)
@@ -73,7 +77,19 @@ public abstract partial class SharedLanguageSystem : EntitySystem
             return false;
         }
 
-        language = ent.Comp.CurrentLanguage ?? ent.Comp.DefaultLanguage ?? CommonLanguage;
+        if (ent.Comp.CurrentLanguage is { } current)
+        {
+            language = current;
+            return true;
+        }
+
+        if (ent.Comp.DefaultLanguage is { } fallback && ent.Comp.SpokenLanguages.Contains(fallback))
+        {
+            language = fallback;
+            return true;
+        }
+
+        language = CommonLanguage;
         return true;
     }
 
@@ -117,6 +133,9 @@ public abstract partial class SharedLanguageSystem : EntitySystem
             return 1f;
 
         if (!Resolve(ent, ref ent.Comp, false))
+            return 0f;
+
+        if (ent.Comp.BlockedUnderstanding.Contains(language))
             return 0f;
 
         var best = 0f;
@@ -180,25 +199,23 @@ public abstract partial class SharedLanguageSystem : EntitySystem
         return builder.ToString();
     }
 
-    public System.Random CreateRandom(int seed, bool randomize)
-    {
-        if (!randomize)
-            return new System.Random(CombineSeed(seed, _roundSeed));
-
-        return new System.Random(_random.Next());
-    }
-
     protected void ReseedObfuscationForRound()
     {
         _roundSeed = _random.Next();
         _wordRanks = null;
     }
 
-    private static int CombineSeed(int seed, int roundSeed)
+    private static uint CombineSeed(int seed, int roundSeed)
     {
         unchecked
         {
-            return (seed * 397) ^ roundSeed;
+            var x = (uint) seed ^ (uint) (roundSeed * 397);
+            x ^= x >> 16;
+            x *= 0x7feb352d;
+            x ^= x >> 15;
+            x *= 0x846ca68b;
+            x ^= x >> 16;
+            return x;
         }
     }
 
@@ -212,10 +229,11 @@ public abstract partial class SharedLanguageSystem : EntitySystem
         if (min >= max)
             return min;
 
-        var random = CreateRandom(seed, randomize);
-        if (max == int.MaxValue)
-            return (int) random.NextInt64(min, (long) max + 1);
+        var range = (long) max - min + 1;
 
-        return random.Next(min, max + 1);
+        if (randomize)
+            return (int) (min + (uint) _random.Next() % range);
+
+        return (int) (min + CombineSeed(seed, _roundSeed) % range);
     }
 }

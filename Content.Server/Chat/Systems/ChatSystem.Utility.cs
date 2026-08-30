@@ -77,7 +77,7 @@ public sealed partial class ChatSystem
         SendInVoiceRange(channel, message, _ => wrappedMessage, source, range, author);
     }
 
-    // Stories-Language Start
+    // Stories-Language-Start
     private void SendInVoiceRange(
         ChatChannel channel,
         string message,
@@ -112,7 +112,7 @@ public sealed partial class ChatSystem
 
         _replay.RecordServerMessage(new ChatMessage(channel, message, wrapMessage(message), GetNetEntity(source), null, MessageRangeHideChatForReplay(range)));
     }
-    // Stories-Language End
+    // Stories-Language-End
 
     /// <summary>
     ///     Returns true if the given player is 'allowed' to send the given message, false otherwise.

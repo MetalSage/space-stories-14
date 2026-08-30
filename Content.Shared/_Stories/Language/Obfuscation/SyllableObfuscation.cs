@@ -126,7 +126,7 @@ public sealed partial class SyllableObfuscation : ReplacementObfuscation
 
         private bool WordUnderstood(int hashCode, int wordBeginIndex, int wordLength)
         {
-            var word = _message.Substring(wordBeginIndex, wordLength).ToLowerInvariant();
+            var word = _message.AsSpan(wordBeginIndex, wordLength);
             var chance = Math.Clamp(_comprehension + _context.GetWordCommonnessBonus(word), 0f, 1f);
 
             var roll = _context.PseudoRandomNumber(hashCode, 0, 999, _randomize);

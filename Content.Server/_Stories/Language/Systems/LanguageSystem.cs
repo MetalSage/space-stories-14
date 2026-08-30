@@ -11,8 +11,6 @@ namespace Content.Server._Stories.Language.Systems;
 
 public sealed partial class LanguageSystem : SharedLanguageSystem
 {
-    [Dependency] private IComponentFactory _compFactory = default!;
-
     public override void Initialize()
     {
         base.Initialize();
@@ -24,21 +22,6 @@ public sealed partial class LanguageSystem : SharedLanguageSystem
 
     private void OnInitLanguageSpeaker(Entity<LanguageComponent> ent, ref MapInitEvent args)
     {
-        if (ent.Comp.Preset is { } presetId && presetId.TryGet(out var preset, _prototypeManager, _compFactory))
-        {
-            foreach (var language in preset.SpokenLanguages)
-                AddLanguage(ent, language, addSpoken: true, addUnderstood: preset.UnderstoodLanguages.Contains(language), source: LanguageSource.Preset);
-
-            foreach (var language in preset.UnderstoodLanguages)
-            {
-                if (!preset.SpokenLanguages.Contains(language))
-                    AddLanguage(ent, language, addSpoken: false, addUnderstood: true, source: LanguageSource.Preset);
-            }
-
-            ent.Comp.CurrentLanguage ??= preset.CurrentLanguage;
-            ent.Comp.DefaultLanguage ??= preset.DefaultLanguage;
-        }
-
         UpdateEntityLanguages(ent.AsNullable());
     }
 
@@ -52,18 +35,15 @@ public sealed partial class LanguageSystem : SharedLanguageSystem
         if (args.SenderSession.AttachedEntity is not { Valid: true } uid)
             return;
 
-        if (!TryComp<LanguageComponent>(uid, out var component))
-            return;
-
-        if (!CanSpeak(uid, message.CurrentLanguage))
-            return;
-
         SetLanguage(uid, message.CurrentLanguage);
     }
 
     public void SetLanguage(Entity<LanguageComponent?> ent, ProtoId<LanguagePrototype> language)
     {
-        if (!CanSpeak(ent, language) || !Resolve(ent, ref ent.Comp) || ent.Comp.CurrentLanguage == language)
+        if (!Resolve(ent, ref ent.Comp, false))
+            return;
+
+        if (!CanSpeak(ent, language) || ent.Comp.CurrentLanguage == language)
             return;
 
         ent.Comp.CurrentLanguage = language;
@@ -124,7 +104,6 @@ public sealed partial class LanguageSystem : SharedLanguageSystem
         }
 
         sources[source] = Math.Clamp(amount, 0f, 1f);
-        Dirty(uid, component);
     }
 
     public void RemovePartialUnderstanding(
@@ -146,8 +125,6 @@ public sealed partial class LanguageSystem : SharedLanguageSystem
             if (sources.Count == 0)
                 ent.Comp.PartialUnderstanding.Remove(language);
         }
-
-        Dirty(ent);
     }
 
     public void AddBlockedLanguage(
@@ -301,6 +278,91 @@ public sealed partial class LanguageSystem : SharedLanguageSystem
         component.DefaultLanguage = language;
 
         UpdateEntityLanguages((uid, component));
+    }
+
+    public void TransferMindBoundLanguages(EntityUid from, EntityUid to)
+    {
+        if (!TryComp<LanguageComponent>(from, out var source))
+            return;
+
+        var target = EnsureComp<LanguageComponent>(to);
+        var moved = false;
+
+        moved |= MoveMindBoundSources(source.SpokenLanguageSources, target.SpokenLanguageSources);
+        moved |= MoveMindBoundSources(source.UnderstoodLanguageSources, target.UnderstoodLanguageSources);
+
+        foreach (var (language, owners) in source.PartialUnderstanding)
+        {
+            foreach (var (owner, amount) in owners)
+            {
+                if (!LanguageSource.MindBound.Contains(owner))
+                    continue;
+
+                if (!target.PartialUnderstanding.TryGetValue(language, out var targetOwners))
+                {
+                    targetOwners = new Dictionary<string, float>();
+                    target.PartialUnderstanding[language] = targetOwners;
+                }
+
+                targetOwners[owner] = amount;
+                moved = true;
+            }
+        }
+
+        foreach (var language in source.PartialUnderstanding.Keys.ToArray())
+        {
+            RemovePartialUnderstandingSources(source.PartialUnderstanding, language);
+        }
+
+        if (!moved)
+            return;
+
+        UpdateEntityLanguages((from, source));
+        UpdateEntityLanguages((to, target));
+    }
+
+    private static bool MoveMindBoundSources(
+        Dictionary<ProtoId<LanguagePrototype>, HashSet<string>> from,
+        Dictionary<ProtoId<LanguagePrototype>, HashSet<string>> to)
+    {
+        var moved = false;
+
+        foreach (var language in from.Keys.ToArray())
+        {
+            var owners = from[language];
+
+            foreach (var owner in owners.ToArray())
+            {
+                if (!LanguageSource.MindBound.Contains(owner))
+                    continue;
+
+                AddLanguageSource(to, language, owner);
+                owners.Remove(owner);
+                moved = true;
+            }
+
+            if (owners.Count == 0)
+                from.Remove(language);
+        }
+
+        return moved;
+    }
+
+    private static void RemovePartialUnderstandingSources(
+        Dictionary<ProtoId<LanguagePrototype>, Dictionary<string, float>> partial,
+        ProtoId<LanguagePrototype> language)
+    {
+        if (!partial.TryGetValue(language, out var owners))
+            return;
+
+        foreach (var owner in owners.Keys.ToArray())
+        {
+            if (LanguageSource.MindBound.Contains(owner))
+                owners.Remove(owner);
+        }
+
+        if (owners.Count == 0)
+            partial.Remove(language);
     }
 
     public void UpdateEntityLanguages(Entity<LanguageComponent?> ent)
