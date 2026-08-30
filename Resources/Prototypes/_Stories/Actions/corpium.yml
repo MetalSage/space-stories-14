@@ -8,11 +8,12 @@
   - type: Action
     useDelay: 300
     itemIconStyle: BigAction
-    icon:
-      sprite: _Stories/Actions/corpium.rsi
-      state: hit
     sound: !type:SoundPathSpecifier
       path: /Audio/Effects/bite.ogg
+  - type: Sprite
+    sprite: _Stories/Actions/corpium.rsi
+    layers:
+    - state: hit
   - type: TargetAction
     range: 1
     interactOnMiss: false

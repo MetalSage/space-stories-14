@@ -1,5 +1,5 @@
-ent-PaintingBase = { ent-BaseSign }
-    .desc = { ent-BaseSign.desc }
+ent-PaintingBase = { ent-BaseSignWeak }
+    .desc = { ent-BaseSignWeak.desc }
 ent-PaintingEmpty = пустая рама
     .desc = Пустая рама, ожидающая, когда её наполнят искусством.
 ent-PaintingMoony = Абстракция №1

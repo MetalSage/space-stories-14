@@ -10,8 +10,7 @@
   - type: ToggleableClothing
     clothingPrototype: STClothingHeadHatHoodGuardianhood
   - type: TemperatureProtection
-    heatingCoefficient: 0.005
-    coolingCoefficient: 0.005
+    coefficient: 0.005
   - type: AllowSuitStorage
   - type: Sprite
     sprite: _Stories/Clothing/OuterClothing/Coats/guardian.rsi

@@ -5,67 +5,92 @@ using Content.Shared.VendingMachines;
 using Robust.Client.GameObjects;
 using Robust.Client.UserInterface;
 using Robust.Shared.Input;
+using System.Linq;
+using Content.Shared.VendingMachines.Components;
 
-namespace Content.Client.VendingMachines
+namespace Content.Client.VendingMachines;
+
+public sealed class VendingMachineBoundUserInterface(EntityUid owner, Enum uiKey) : BoundUserInterface(owner, uiKey)
 {
-    public sealed class VendingMachineBoundUserInterface : BoundUserInterface
+    [ViewVariables]
+    private VendingMachineMenu? _menu;
+
+    [ViewVariables]
+    private List<VendingMachineInventoryEntry> _cachedInventory = new();
+
+    private int? _lastBalance;
+
+    protected override void Open()
     {
-        [ViewVariables] private VendingMachineMenu? _menu;
-        private int? _lastBalance;
+        base.Open();
 
-        public VendingMachineBoundUserInterface(EntityUid owner, Enum uiKey) : base(owner, uiKey) {}
+        _menu = this.CreateWindowCenteredLeft<VendingMachineMenu>();
+        _menu.Title = EntMan.GetComponent<MetaDataComponent>(Owner).EntityName;
+        _menu.OnItemSelected += OnItemSelected;
 
-        protected override void Open()
+        if (_lastBalance != null)
+            _menu.UpdateBalance(_lastBalance);
+    }
+
+    protected override void UpdateState(BoundUserInterfaceState state)
+    {
+        base.UpdateState(state);
+
+        if (state is not VendingMachineUIState uiState)
+            return;
+
+        _cachedInventory = uiState.Inventory;
+        var enabled = EntMan.TryGetComponent(Owner, out VendingMachineEjectComponent? eject) && !eject.Ejecting;
+        _menu?.Populate(_cachedInventory, enabled);
+
+        if (_lastBalance != null)
+            _menu?.UpdateBalance(_lastBalance);
+    }
+
+    public void UpdateAmounts()
+    {
+        var enabled = EntMan.TryGetComponent(Owner, out VendingMachineEjectComponent? eject) && !eject.Ejecting;
+        _menu?.UpdateAmounts(_cachedInventory, enabled);
+    }
+
+    protected override void ReceiveMessage(BoundUserInterfaceMessage message)
+    {
+        base.ReceiveMessage(message);
+
+        if (message is VendingMachineBalanceMessage balanceMessage)
         {
-            base.Open();
-            _menu = this.CreateWindowCenteredLeft<VendingMachineMenu>();
-            _menu.Title = EntMan.GetComponent<MetaDataComponent>(Owner).EntityName;
-            _menu.OnItemSelected += OnItemSelected;
-            
-            if (_lastBalance != null)
-                _menu.UpdateBalance(_lastBalance);
+            _lastBalance = balanceMessage.Balance;
+            _menu?.UpdateBalance(_lastBalance);
         }
+    }
 
-        protected override void UpdateState(BoundUserInterfaceState state)
-        {
-            base.UpdateState(state);
-            if (state is not VendingMachineUIState uiState) return;
+    private void OnItemSelected(GUIBoundKeyEventArgs args, ListData data)
+    {
+        if (args.Function != EngineKeyFunctions.UIClick)
+            return;
 
-            _menu?.Populate(uiState.Inventory);
-            
-            if (_lastBalance != null)
-                _menu?.UpdateBalance(_lastBalance);
-        }
+        if (data is not VendorItemsListData itemData)
+            return;
 
-        protected override void ReceiveMessage(BoundUserInterfaceMessage message)
-        {
-            base.ReceiveMessage(message);
-            if (message is VendingMachineBalanceMessage balanceMessage)
-            {
-                _lastBalance = balanceMessage.Balance;
-                _menu?.UpdateBalance(_lastBalance);
-            }
-        }
+        if (_menu == null || itemData.ItemIndex < 0 || itemData.ItemIndex >= _menu.Inventory.Count)
+            return;
 
-        private void OnItemSelected(GUIBoundKeyEventArgs args, ListData data)
-        {
-            if (args.Function != EngineKeyFunctions.UIClick) return;
-            if (data is not VendorItemsListData itemData) return;
+        var selectedItem = _menu.Inventory[itemData.ItemIndex];
+        _menu.SetButtonsDisabled(true);
+        SendMessage(new VendingMachineEjectMessage(selectedItem.Type, selectedItem.ID));
+    }
 
-            SendMessage(new VendingMachineEjectMessage(
-                _menu!.Inventory[itemData.ItemIndex].Type,
-                _menu!.Inventory[itemData.ItemIndex].ID));
-        }
+    protected override void Dispose(bool disposing)
+    {
+        base.Dispose(disposing);
+        if (!disposing)
+            return;
 
-        protected override void Dispose(bool disposing)
-        {
-            base.Dispose(disposing);
-            if (!disposing) return;
-            if (_menu == null) return;
+        if (_menu == null)
+            return;
 
-            _menu.OnItemSelected -= OnItemSelected;
-            _menu.OnClose -= Close;
-            _menu.Dispose();
-        }
+        _menu.OnItemSelected -= OnItemSelected;
+        _menu.OnClose -= Close;
+        _menu.Dispose();
     }
 }

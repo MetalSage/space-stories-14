@@ -42,7 +42,7 @@ public sealed partial class PontificSystem
         };
 
         EnsureComp<StunnedComponent>(entity);
-        EnsureComp<MutedComponent>(entity);
+        EnsureComp<MutedStatusEffectComponent>(entity);
     }
 
     private void OnPrayerShutdown(Entity<PontificPrayerComponent> entity, ref ComponentShutdown args)
@@ -71,7 +71,7 @@ public sealed partial class PontificSystem
         };
 
         RemComp<StunnedComponent>(entity);
-        RemComp<MutedComponent>(entity);
-        _movementSpeed.RefreshMovementSpeedModifiers(entity);
+        RemComp<MutedStatusEffectComponent>(entity);
+        _movementSpeed.RefreshMovementSpeedModifiers(entity.Owner);
     }
 }

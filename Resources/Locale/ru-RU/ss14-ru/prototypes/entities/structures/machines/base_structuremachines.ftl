@@ -1,8 +1,14 @@
 ent-BaseMachine = { ent-BaseStructure }
     .desc = { ent-BaseStructure.desc }
+ent-BaseMachineDestructible = { ent-StructureHealthMachine }
+    .desc = { ent-StructureHealthMachine.desc }
 ent-BaseMachinePowered = { ent-BaseMachine }
     .desc = { ent-BaseMachine.desc }
 ent-ConstructibleMachine = { "" }
     .desc = { "" }
+ent-BaseConstructibleMachineDestructible = { ent-StructureHealthMachine }
+    .desc = { ent-StructureHealthMachine.desc }
 ent-SmallConstructibleMachine = { ent-ConstructibleMachine }
     .desc = { ent-ConstructibleMachine.desc }
+ent-BaseSmallConstructibleMachineDestructible = { ent-StructureHealthMachineWeak }
+    .desc = { ent-StructureHealthMachineWeak.desc }

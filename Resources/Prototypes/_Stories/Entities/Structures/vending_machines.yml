@@ -6,14 +6,15 @@
   components:
     - type: VendingMachine
       pack: STPRISONDrobeInventory
-      offState: off
-      brokenState: broken
-      normalState: normal-unshaded
       freeJobs:
       - STPRISONHeadOfPrison
       - STPRISONEngineer
       - STPRISONMedic
       - STPRISONOfficer
+    - type: VendingMachineVisuals
+      offState: off
+      brokenState: broken
+      normalState: normal-unshaded
     - type: DatasetVocalizer
       dataset: SecDrobeAds
     - type: Sprite
@@ -37,16 +38,17 @@
   components:
     - type: VendingMachine
       pack: STPRISONTechInventory
-      offState: off
-      brokenState: broken
-      normalState: normal-unshaded
-      ejectState: eject-unshaded
-      denyState: deny-unshaded
       freeJobs:
       - STPRISONHeadOfPrison
       - STPRISONEngineer
       - STPRISONMedic
       - STPRISONOfficer
+    - type: VendingMachineVisuals
+      offState: off
+      brokenState: broken
+      normalState: normal-unshaded
+      ejectState: eject-unshaded
+      denyState: deny-unshaded
     - type: DatasetVocalizer
       dataset: SecTechAds
     - type: SpeakOnUIClosed
@@ -77,6 +79,7 @@
   components:
     - type: VendingMachine
       pack: STMusVendInventory
+    - type: VendingMachineVisuals
       offState: off
       brokenState: broken
       normalState: normal-unshaded

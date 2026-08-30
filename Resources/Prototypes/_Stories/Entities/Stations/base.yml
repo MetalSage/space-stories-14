@@ -2,5 +2,14 @@
   id: STBasePrisonStationAlertLevels
   abstract: true
   components:
-    - type: AlertLevel
-      alertLevelPrototype: STPrisonStationAlerts
+  - type: AlertLevel
+    defaultAlertLevel: STPrisonGreen
+    currentAlertLevel: STPrisonGreen
+    availableAlertLevels:
+    - STPrisonBlue
+    - STPrisonDelta
+    - STPrisonGamma
+    - STPrisonGreen
+    - STPrisonRed
+    - STPrisonViolet
+    - STPrisonYellow

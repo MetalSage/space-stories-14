@@ -6,12 +6,13 @@
   components:
   - type: Action
     useDelay: 1
-    icon:
-      sprite: _Stories/Clothing/Eyes/Glasses/nvg.rsi
-      state: icon
+
+  - type: Sprite
+    sprite: _Stories/Clothing/Eyes/Glasses/nvg.rsi
+    layers:
+    - state: icon
   - type: InstantAction
     event: !type:ToggleVisionActionEvent
-
 - type: entity
   id: STActionToggleThermal
   name: Toggle Thermal Vision
@@ -20,8 +21,9 @@
   components:
   - type: Action
     useDelay: 1
-    icon:
-      sprite: _Stories/Actions/thermalVision.rsi
-      state: toggle
+  - type: Sprite
+    sprite: _Stories/Actions/thermalVision.rsi
+    layers:
+    - state: toggle
   - type: InstantAction
     event: !type:ToggleVisionActionEvent

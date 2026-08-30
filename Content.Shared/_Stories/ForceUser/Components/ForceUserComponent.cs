@@ -8,8 +8,8 @@ public sealed partial class ForceUserComponent : Component
 {
     [Dependency] private IPrototypeManager _proto = default!;
 
-    [DataField("preset", customTypeSerializer: typeof(PrototypeIdSerializer<ForcePresetPrototype>))]
-    public string Preset = "Debug";
+    [DataField("preset")]
+    public ProtoId<ForcePresetPrototype> Preset = "Debug";
 
     [DataField]
     public EntProtoId ShopAction = "STActionForceShop";

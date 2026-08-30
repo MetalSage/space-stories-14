@@ -7,6 +7,12 @@
   components:
     - type: Sprite
       sprite: _Stories/Structures/Doors/Airlocks/Standard/shuttle_sp.rsi
+      layers:
+      - state: docking-clamp
+        sprite: Structures/Doors/Airlocks/Standard/shuttle-base.rsi
+        offset: 0, -1
+      - state: closed
+        map: ["enum.DoorVisualLayers.Base"]
     - type: ContainerFill
       containers:
         board: [STPRISONDoorElectronics]
@@ -23,3 +29,9 @@
         board: [STPRISONDoorElectronics]
     - type: Sprite
       sprite: _Stories/Structures/Doors/Airlocks/Glass/shuttle_sp.rsi
+      layers:
+      - state: docking-clamp
+        sprite: Structures/Doors/Airlocks/Standard/shuttle-base.rsi
+        offset: 0, -1
+      - state: closed
+        map: ["enum.DoorVisualLayers.Base"]

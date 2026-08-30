@@ -60,7 +60,6 @@
   icon:
     sprite: /Textures/_Stories/Interface/Misc/job_icons.rsi
     state: CommandMaid
-  allowSelection: false
 
 - type: jobIcon
   parent: JobIcon
@@ -68,7 +67,6 @@
   icon:
     sprite: /Textures/_Stories/Interface/Misc/job_icons.rsi
     state: PartyMaker
-  allowSelection: false
 
 - type: jobIcon
   parent: JobIcon
@@ -76,4 +74,3 @@
   icon:
     sprite: /Textures/_Stories/Interface/Misc/job_icons.rsi
     state: SecurityClown
-  allowSelection: false

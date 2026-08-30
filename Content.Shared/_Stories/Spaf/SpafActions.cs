@@ -15,8 +15,8 @@ public interface ISpafAction
 
 public sealed partial class SpafCreateEntityEvent : InstantActionEvent, ISpafAction
 {
-    [DataField("proto", required: true, customTypeSerializer: typeof(PrototypeIdSerializer<EntityPrototype>))]
-    public string Prototype;
+    [DataField("proto", required: true)]
+    public EntProtoId Prototype;
 
     [DataField("cost")]
     public float HungerCost { get; set; } = 20f;

@@ -30,7 +30,7 @@
     - WhitelistChameleon
 
 - type: entity
-  parent: ClothingHeadHelmetBasic
+  parent: [ClothingHeadHelmetArmoredBase, BaseSecurityContraband]
   id: STClothingHeadHelmetGuardianNt
   name: guardian helmet
   description: Standard security gear. Protects the head from impacts.

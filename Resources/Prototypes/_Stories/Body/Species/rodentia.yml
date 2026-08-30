@@ -100,8 +100,6 @@
       80: 0.7
   - type: StandingState
     crawlingSpeedModifier: 0.5
-  - type: Hunger
-  - type: Thirst
   - type: Icon
     sprite: _Stories/Mobs/Rodentia/parts.rsi
     state: full

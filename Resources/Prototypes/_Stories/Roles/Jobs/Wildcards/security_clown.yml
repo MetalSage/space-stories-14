@@ -24,13 +24,9 @@
   special:
   - !type:AddComponentSpecial
     components:
-    - type: Clumsy
-      clumsyDamage:
-        types:
-          Blunt: 5
-          Piercing: 4
-        groups:
-          Burn: 3
+    - type: PermanentStatusEffects
+      statusEffects:
+      - StatusEffectClumsyClown
     - type: SleepEmitSound
       snore: /Audio/Voice/Misc/silly_snore.ogg
       interval: 10

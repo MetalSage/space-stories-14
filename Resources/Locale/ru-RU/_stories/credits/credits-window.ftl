@@ -1,1 +1,1 @@
-stories-credits-window-stories-section-title = Комада проекта Space Stories
+stories-credits-window-stories-section-title = Команда проекта Space Stories

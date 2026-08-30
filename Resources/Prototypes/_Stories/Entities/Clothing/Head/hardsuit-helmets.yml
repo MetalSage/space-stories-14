@@ -7,6 +7,8 @@
   components:
     - type: Sprite
       sprite: _Stories/Clothing/Head/Hardsuits/medicsp.rsi
+      layers:
+      - state: icon
     - type: Clothing
       sprite: _Stories/Clothing/Head/Hardsuits/medicsp.rsi
 
@@ -19,6 +21,8 @@
   components:
     - type: Sprite
       sprite: _Stories/Clothing/Head/Hardsuits/engisp.rsi
+      layers:
+      - state: icon
     - type: Clothing
       sprite: _Stories/Clothing/Head/Hardsuits/engisp.rsi
 
@@ -31,6 +35,8 @@
   components:
     - type: Sprite
       sprite: _Stories/Clothing/Head/Hardsuits/securitysp.rsi
+      layers:
+      - state: icon
     - type: Clothing
       sprite: _Stories/Clothing/Head/Hardsuits/securitysp.rsi
 
@@ -43,5 +49,7 @@
   components:
     - type: Sprite
       sprite: _Stories/Clothing/Head/Hardsuits/hospsp.rsi
+      layers:
+      - state: icon
     - type: Clothing
       sprite: _Stories/Clothing/Head/Hardsuits/hospsp.rsi

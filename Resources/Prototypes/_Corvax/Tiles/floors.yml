@@ -391,59 +391,59 @@
 - type: tile
   id: FloorGrayConcreteOutside
   name: tiles-gray-concrete-outside
-  parent: FloorGrayConcrete
+  parent: FloorConcrete
   baseTurf: Plating
   isSubfloor: false
   deconstructTools: [ Prying ]
-  itemDrop: FloorTileItemGrayConcrete
+  itemDrop: FloorTileItemConcrete
   weather: true
 
 - type: tile
   id: FloorGrayConcreteOutsideMono
   name: tiles-gray-concrete-outside-slab
-  parent: FloorGrayConcreteMono
+  parent: FloorConcreteMono
   baseTurf: Plating
   isSubfloor: false
   deconstructTools: [ Prying ]
-  itemDrop: FloorTileItemGrayConcrete
+  itemDrop: FloorTileItemConcrete
   weather: true
 
 - type: tile
   id: FloorGrayConcreteOutsideSmooth
   name: tiles-gray-concrete-outside-smooth
-  parent: FloorGrayConcreteSmooth
+  parent: FloorConcreteSmooth
   baseTurf: Plating
   isSubfloor: false
   deconstructTools: [ Prying ]
-  itemDrop: FloorTileItemGrayConcrete
+  itemDrop: FloorTileItemConcrete
   weather: true
 
 - type: tile
   id: FloorOldConcreteOutside
   name: tiles-old-concrete-outside
-  parent: FloorOldConcrete
+  parent: FloorConcrete
   baseTurf: Plating
   isSubfloor: false
   deconstructTools: [ Prying ]
-  itemDrop: FloorTileItemOldConcrete
+  itemDrop: FloorTileItemConcrete
   weather: true
 
 - type: tile
   id: FloorOldConcreteOutsideMono
   name: tiles-old-concrete-outside-slab
-  parent: FloorOldConcreteMono
+  parent: FloorConcreteMono
   baseTurf: Plating
   isSubfloor: false
   deconstructTools: [ Prying ]
-  itemDrop: FloorTileItemOldConcrete
+  itemDrop: FloorTileItemConcrete
   weather: true
 
 - type: tile
   id: FloorOldConcreteOutsideSmooth
   name: tiles-old-concrete-outside-smooth
-  parent: FloorOldConcreteSmooth
+  parent: FloorConcreteSmooth
   baseTurf: Plating
   isSubfloor: false
   deconstructTools: [ Prying ]
-  itemDrop: FloorTileItemOldConcrete
+  itemDrop: FloorTileItemConcrete
   weather: true

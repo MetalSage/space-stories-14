@@ -22,12 +22,13 @@
   components:
   - type: Action
     useDelay: 10
-    itemIconStyle: BigAction
-    icon:
-      sprite: _Stories/Actions/force.rsi
-      state: steal
     sound: !type:SoundPathSpecifier
       path: /Audio/Effects/radpulse1.ogg
+
+  - type: Sprite
+    sprite: _Stories/Actions/force.rsi
+    layers:
+    - state: steal
   - type: EntityTargetAction
     whitelist:
       components:
@@ -40,7 +41,6 @@
   - type: TargetAction
     range: 2
     interactOnMiss: false
-
 - type: entity
   parent: BaseAction
   id: STActionInquisitorGhost
@@ -50,9 +50,11 @@
   - type: Action
     useDelay: 5
     itemIconStyle: BigAction
-    icon:
-      sprite: _Stories/Actions/force.rsi
-      state: inquisitor
+
+  - type: Sprite
+    sprite: _Stories/Actions/force.rsi
+    layers:
+    - state: inquisitor
   - type: InstantAction
     event: !type:DoAfterUserEvent
       hidden: false
@@ -63,7 +65,6 @@
       event: !type:InstantForceUserActionEvent
         volume: 100
         event: !type:InquisitorPolymorphEvent
-
 - type: entity
   parent: BaseAction
   id: STActionFrozeBullets
@@ -72,15 +73,7 @@
   components:
   - type: Action
     useDelay: 5
-    icon:
-      sprite: _Stories/Actions/force.rsi
-      state: stopbullets
     itemIconStyle: BigAction
-  - type: InstantAction
-    event: !type:InstantForceUserActionEvent
-      volume: 50
-      event: !type:FrozeBulletsActionEvent
-        seconds: 100
 
 # - type: entity
 #   parent: BaseAction
@@ -98,6 +91,15 @@
 #       volume: 200
 #       event: !type:RejuvenateActionEvent
 
+  - type: Sprite
+    sprite: _Stories/Actions/force.rsi
+    layers:
+    - state: stopbullets
+  - type: InstantAction
+    event: !type:InstantForceUserActionEvent
+      volume: 50
+      event: !type:FrozeBulletsActionEvent
+        seconds: 100
 - type: entity
   parent: BaseAction
   id: STActionRecliningPulse
@@ -107,9 +109,11 @@
   - type: Action
     useDelay: 30
     itemIconStyle: BigAction
-    icon:
-      sprite: _Stories/Actions/force.rsi
-      state: pulse
+
+  - type: Sprite
+    sprite: _Stories/Actions/force.rsi
+    layers:
+    - state: pulse
   - type: InstantAction
     event: !type:InstantForceUserActionEvent
       volume: 100
@@ -117,7 +121,6 @@
         strength: 15
         stun: 3
         range: 5
-
 - type: entity
   parent: BaseAction
   id: STActionStrangle
@@ -126,12 +129,14 @@
   components:
   - type: Action
     useDelay: 10
-    icon:
-      sprite: _Stories/Actions/force.rsi
-      state: strangle
     itemIconStyle: BigAction
     sound: !type:SoundPathSpecifier
       path: /Audio/Effects/radpulse1.ogg
+
+  - type: Sprite
+    sprite: _Stories/Actions/force.rsi
+    layers:
+    - state: strangle
   - type: EntityTargetAction
     whitelist:
       components:
@@ -144,7 +149,6 @@
   - type: TargetAction
     range: 2
     interactOnMiss: false
-
 - type: entity
   parent: BaseAction
   id: STActionLightningStrike
@@ -153,10 +157,11 @@
   components:
   - type: Action
     useDelay: 5
-    icon:
-      sprite: _Stories/Actions/force.rsi
-      state: lightning
     itemIconStyle: BigAction
+  - type: Sprite
+    sprite: _Stories/Actions/force.rsi
+    layers:
+    - state: lightning
   - type: EntityTargetAction
     canTargetSelf: false
     event: !type:EntityTargetForceUserActionEvent
@@ -165,7 +170,6 @@
   - type: TargetAction
     range: 10
     interactOnMiss: false
-
 - type: entity
   parent: BaseAction
   id: STActionIgniteTarget
@@ -175,11 +179,13 @@
   - type: Action
     useDelay: 10
     itemIconStyle: BigAction
-    icon:
-      sprite: _Stories/Actions/force.rsi
-      state: ignite
     sound: !type:SoundPathSpecifier
       path: /Audio/Magic/rumble.ogg
+
+  - type: Sprite
+    sprite: _Stories/Actions/force.rsi
+    layers:
+    - state: ignite
   - type: EntityTargetAction
     canTargetSelf: false
     event: !type:EntityTargetForceUserActionEvent
@@ -189,7 +195,6 @@
   - type: TargetAction
     range: 10
     interactOnMiss: false
-
 - type: entity
   parent: BaseAction
   id: STActionHypnosis
@@ -199,9 +204,11 @@
   - type: Action
     useDelay: 3
     itemIconStyle: BigAction
-    icon:
-      sprite: _Stories/Actions/force.rsi
-      state: hypnosis
+
+  - type: Sprite
+    sprite: _Stories/Actions/force.rsi
+    layers:
+    - state: hypnosis
   - type: EntityTargetAction
     whitelist:
       components:
@@ -219,7 +226,6 @@
   - type: TargetAction
     range: 1
     interactOnMiss: false
-
 - type: entity
   parent: BaseAction
   id: STActionInquisitorRevertPolymorph
@@ -227,8 +233,9 @@
   description: Stop running and fight!
   components:
   - type: Action
-    icon:
-      sprite: _Stories/Actions/force.rsi
-      state: inquisitor
+  - type: Sprite
+    sprite: _Stories/Actions/force.rsi
+    layers:
+    - state: inquisitor
   - type: InstantAction
     event: !type:RevertPolymorphActionEvent

@@ -139,8 +139,8 @@ public sealed partial class InquisitorPolymorphEvent : InstantActionEvent
     [DataField(required: true), ViewVariables(VVAccess.ReadWrite)]
     public int SpreadAmount = 15;
 
-    [DataField("prototype", customTypeSerializer: typeof(PrototypeIdSerializer<PolymorphPrototype>))]
-    public string PolymorphPrototype { get; set; } = "STInquisitorGhost";
+    [DataField("prototype")]
+    public ProtoId<PolymorphPrototype> PolymorphPrototype { get; set; } = "STInquisitorGhost";
 }
 
 public sealed partial class HandTetherGunEvent : InstantActionEvent

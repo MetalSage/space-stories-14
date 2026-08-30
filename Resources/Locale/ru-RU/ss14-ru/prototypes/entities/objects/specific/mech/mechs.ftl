@@ -1,5 +1,5 @@
-ent-BaseMech = { "" }
-    .desc = { "" }
+ent-BaseMech = { ent-StructureHealthMachineMassive }
+    .desc = { ent-StructureHealthMachineMassive.desc }
 ent-MechRipley = Рипли АВП
     .desc = Универсальный и легкобронированный, Рипли пригодится практически для любого сценария тяжёлой работы. АВП означает АВтономный Погрузчик.
 ent-MechRipleyBattery = { ent-MechRipley }

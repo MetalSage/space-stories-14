@@ -84,8 +84,6 @@
   - type: FootstepModifier
     footstepSoundCollection: null
   - type: FlashDebuff
-  - type: Hunger
-  - type: Thirst
   - type: Sprite
     drawdepth: Mobs
   - type: Vocal

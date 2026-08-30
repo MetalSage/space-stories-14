@@ -7,15 +7,15 @@
   components:
   - type: Action
     useDelay: 300
-    icon:
-      sprite: _Stories/Actions/force.rsi
-      state: shield
     itemIconStyle: NoItem
+  - type: Sprite
+    sprite: _Stories/Actions/force.rsi
+    layers:
+    - state: shield
   - type: InstantAction
     event: !type:InstantForceUserActionEvent
       volume: 100
       event: !type:CreateProtectiveBubbleEvent
-
 - type: entity
   parent: BaseAction
   id: STActionGuardianForceWall
@@ -29,16 +29,17 @@
     itemIconStyle: BigAction
     sound: !type:SoundPathSpecifier
       path: /Audio/Magic/forcewall.ogg
-    icon:
-      sprite: _Stories/Actions/force.rsi
-      state: forcewall
+
+  - type: Sprite
+    sprite: _Stories/Actions/force.rsi
+    layers:
+    - state: forcewall
   - type: InstantAction
     event: !type:InstantForceUserActionEvent
       volume: 100
       event: !type:InstantSpawnSpellEvent
         prototype: STWallForceGuardian
         posData: !type:TargetInFront
-
 - type: entity
   parent: BaseAction
   id: STActionHibernationTrance
@@ -48,11 +49,13 @@
   components:
   - type: Action
     useDelay: 180
-    icon:
-      sprite: _Stories/Actions/force.rsi
-      state: trance
     itemIconStyle: NoItem
     checkCanInteract: false
+
+  - type: Sprite
+    sprite: _Stories/Actions/force.rsi
+    layers:
+    - state: trance
   - type: InstantAction
     event: !type:InstantForceUserActionEvent
       volume: 100
@@ -72,7 +75,6 @@
             Quantity: 30
           - ReagentId: Nocturine
             Quantity: 30
-
 - type: entity
   parent: BaseAction
   id: STActionHealingTouch
@@ -83,11 +85,13 @@
   - type: Action
     useDelay: 60
     itemIconStyle: BigAction
-    icon:
-      sprite: _Stories/Actions/force.rsi
-      state: healingtouch
     sound: !type:SoundPathSpecifier
       path: /Audio/Items/Medical/ointment_begin.ogg
+
+  - type: Sprite
+    sprite: _Stories/Actions/force.rsi
+    layers:
+    - state: healingtouch
   - type: EntityTargetAction
     whitelist:
       components:
@@ -109,7 +113,6 @@
   - type: TargetAction
     range: 1
     interactOnMiss: false
-
 - type: entity
   parent: BaseAction
   id: STActionPushBall
@@ -119,11 +122,12 @@
   - type: Action
     useDelay: 10
     itemIconStyle: BigAction
-    icon:
-      sprite: _Stories/Actions/force.rsi
-      state: push
     sound: !type:SoundPathSpecifier
       path: /Audio/Magic/forcewall.ogg
+  - type: Sprite
+    sprite: _Stories/Actions/force.rsi
+    layers:
+    - state: push
   - type: WorldTargetAction
     event: !type:WorldTargetForceUserActionEvent
       volume: 50

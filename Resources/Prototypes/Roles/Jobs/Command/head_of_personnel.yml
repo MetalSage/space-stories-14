@@ -18,8 +18,7 @@
       time: 10h
     - !type:DepartmentTimeRequirement
       department: Command
-      time: 10h
-  weight: 20
+      time: 2.5h
   startingGear: HoPGear
   icon: "JobIconHeadOfPersonnel"
   supervisors: job-supervisors-captain
