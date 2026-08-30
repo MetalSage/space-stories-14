@@ -83,7 +83,7 @@ public sealed partial class SlaughterDemonSystem : EntitySystem
     {
         ent.Comp.BoostEndTime = _timing.CurTime + ent.Comp.BoostDuration;
         ent.Comp.BoostActive = true;
-        _movement.RefreshMovementSpeedModifiers(ent);
+        _movement.RefreshMovementSpeedModifiers(ent.Owner);
     }
 
     private void OnRefreshSpeed(Entity<SlaughterDemonComponent> ent, ref RefreshMovementSpeedModifiersEvent args)
