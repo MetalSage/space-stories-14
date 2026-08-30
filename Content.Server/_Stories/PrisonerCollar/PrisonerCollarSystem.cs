@@ -26,7 +26,6 @@ namespace Content.Server._Stories.PrisonerCollar;
 
 public sealed partial class PrisonerCollarSystem : EntitySystem
 {
-    [ValidatePrototypeId<ToolQualityPrototype>]
     public static readonly ProtoId<ToolQualityPrototype> SawingQuality = "Sawing";
 
     private static readonly TimeSpan ShockCooldown = TimeSpan.FromSeconds(5.0);

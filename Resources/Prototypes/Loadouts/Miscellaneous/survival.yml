@@ -68,6 +68,7 @@
   - !type:GroupLoadoutEffect
     proto: NitrogenBreather
   storage:
+    back:
     - BoxSurvivalHugNitrogen
 
 # Engineering / Extended

@@ -33,9 +33,6 @@ lobbyduration = 210
 map_pool = "STDefaultMapPool"
 secret_weight_prototype = "STSecret"
 
-[gateway]
-generator_enabled = false
-
 [hub]
 tags = "lang:ru,rp:med,region:eu_e"
 

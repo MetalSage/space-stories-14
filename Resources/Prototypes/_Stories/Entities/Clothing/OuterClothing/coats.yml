@@ -1,5 +1,5 @@
 - type: entity
-  parent: ClothingOuterStorageToggleableBase
+  parent: ClothingOuterJacketToggleableBase
   id: STClothingOuterCoatGuardian
   name: jedi cloak
   description: A long type of clothing that sits loosely on the shoulders, covering the neck.

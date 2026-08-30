@@ -15,7 +15,7 @@
     sprite: _Stories/Objects/Tools/cold_welding.rsi
   - type: UseDelay
   - type: RefillableSolution
-    solution: Welder
+    solution: welder
   - type: Solution
     id: welder
     solution:
@@ -26,7 +26,7 @@
   - type: Tool
     useSound:
       collection: STColdWelding
-    qualities: Welding
+    qualities: [ Welding ]
   - type: Welder
     enabled: True
     fuelReagent: FoamingAgent

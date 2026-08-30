@@ -1277,7 +1277,7 @@
     freeJobs:
     - Scientist
     - ResearchDirector
-    - ScienceAssistant
+    - ResearchAssistant
   - type: VendingMachineVisuals
     ejectState: eject-unshaded
     denyState: deny-unshaded
@@ -1912,7 +1912,7 @@
     freeJobs:
     - Scientist
     - ResearchDirector
-    - ScienceAssistant
+    - ResearchAssistant
   - type: DatasetVocalizer
     dataset: SciDrobeAds
   - type: SpeakOnUIClosed
