@@ -1,4 +1,4 @@
-using Content.Server.Speech.Components;
+using Content.Shared.Speech.Components;
 using Content.Shared._Stories.Language;
 using Content.Shared._Stories.Language.Prototypes;
 using Content.Shared._Stories.Language.Systems;

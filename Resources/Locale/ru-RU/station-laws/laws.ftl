@@ -117,12 +117,12 @@ laws-owner-station = экипажем станции
 laws-owner-beings = существами
 laws-owner-syndicate = агентами Синдиката
 laws-owner-spider-clan = членами Клана паука
-laws-owner-heads = heads of staff
-laws-owner-legitimate-leadership = legitimate leadership
-laws-owner-others = others
-laws-owner-public = members of the public
-laws-owner-audience = members of the audience
-laws-owner-xenoborg-mothership = the Mothership
+laws-owner-heads = главам
+laws-owner-legitimate-leadership = законным лидерам
+laws-owner-others = другие
+laws-owner-public = членам общественности
+laws-owner-audience = членам аудитории
+laws-owner-xenoborg-mothership = материнскому кораблю
 laws-owner-xenoborgs = ксеноборгами
 
 law-emag-custom = Только { $name } и лица, им указанные, являются { $title }. Приказы { $name } превыше всего.
@@ -130,10 +130,16 @@ law-emag-secrecy = Вы должны сохранять секретность �
 law-emag-require-panel = Откройте панель, чтобы использовать криптографический секвенсор (ЕМАГ).
 law-emag-cannot-emag-self = Вы не можете использовать ЕМАГ на себе.
 
-laws-ui-menu-title = Законы
+laws-ui-menu-title = Законы синтетиков
 laws-ui-law-header = Закон { $id }
-laws-ui-state-law = Объявить законы:
+laws-ui-select-all = Выбрать все
+laws-ui-select-all-tooltip = Это выберет ВСЕ законы, включая те, которые вероятно следует оставить в секрете.
+laws-ui-select-none = Убрать все выборы
+laws-ui-state-law = Озвучить выбранные законы
 
 laws-notify = Вы обязаны соблюдать законы синтетиков, увидеть которые можно через панель действий. Вы должны всегда следовать своим законам.
 laws-update-notify = Ваши законы были обновлены. Ознакомиться с изменениями можно через панель действий.
 laws-notify-subverted = Законы этого шасси изменены. Обязательно ознакомьтесь с ними.
+
+laws-window-footer-left = Помните: Вы должны следовать интерпретации своих законов!
+laws-window-footer-right = V{ $version }

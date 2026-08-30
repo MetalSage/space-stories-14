@@ -8,9 +8,10 @@
     useDelay: 140
     itemIconStyle: BigAction
     priority: -20
-    icon:
-      sprite: Objects/Specific/Medical/medipen.rsi
-      state: stimpen
+  - type: Sprite
+    sprite: Objects/Specific/Medical/medipen.rsi
+    layers:
+    - state: stimpen
 
 - type: entity
   parent: BaseImplantAction
@@ -22,6 +23,7 @@
     useDelay: 120
     itemIconStyle: BigAction
     priority: -20
-    icon:
-      sprite: Objects/Specific/Medical/medipen.rsi
-      state: morphen
+  - type: Sprite
+    sprite: Objects/Specific/Medical/medipen.rsi
+    layers:
+    - state: morphen

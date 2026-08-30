@@ -9,8 +9,8 @@ public sealed partial class ForceUserComponent : Component
 {
     [Dependency] private IPrototypeManager _proto = default!; // TODO: ECS pls
 
-    [DataField("preset", customTypeSerializer: typeof(PrototypeIdSerializer<ForcePresetPrototype>))]
-    public string Preset = "Debug";
+    [DataField("preset")]
+    public ProtoId<ForcePresetPrototype> Preset = "Debug";
 
     /// <summary>
     /// Способность для открытия магазина. Не более.

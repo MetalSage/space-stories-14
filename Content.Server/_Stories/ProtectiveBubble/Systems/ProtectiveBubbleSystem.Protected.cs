@@ -1,19 +1,19 @@
 using Content.Server._Stories.ForceUser.ProtectiveBubble.Components;
-using Content.Server.Atmos.Components;
 using Content.Shared.Explosion;
 using Content.Shared.Interaction.Events;
 using Content.Shared.Temperature;
+using Robust.Shared.Prototypes;
 
 namespace Content.Server._Stories.ForceUser.ProtectiveBubble.Systems;
 
 public sealed partial class ProtectiveBubbleSystem
 {
-    private static readonly string PressureImmunity = "PressureImmunity";
+    private static readonly EntProtoId PressureImmunity = "StatusEffectPressureImmunity";
 
     public void InitializeProtected()
     {
-        SubscribeLocalEvent<ProtectedByProtectiveBubbleComponent, ModifyChangedTemperatureEvent>(
-            OnTemperatureChangeAttempt);
+        SubscribeLocalEvent<ProtectedByProtectiveBubbleComponent, BeforeHeatExchangeEvent>(
+            OnBeforeHeatExchange);
         SubscribeLocalEvent<ProtectedByProtectiveBubbleComponent, GetExplosionResistanceEvent>(
             OnGetExplosionResistance);
         SubscribeLocalEvent<ProtectedByProtectiveBubbleComponent, AttackAttemptEvent>(OnAttack);
@@ -24,7 +24,7 @@ public sealed partial class ProtectiveBubbleSystem
         var query = EntityQueryEnumerator<ProtectedByProtectiveBubbleComponent>();
         while (query.MoveNext(out var uid, out var component))
         {
-            _statusEffect.TryAddStatusEffect<PressureImmunityComponent>(uid, PressureImmunity, TimeSpan.FromSeconds(frameTime), true);
+            _statusEffect.TrySetStatusEffectDuration(uid, PressureImmunity, TimeSpan.FromSeconds(frameTime));
         }
     }
 
@@ -41,10 +41,10 @@ public sealed partial class ProtectiveBubbleSystem
         args.DamageCoefficient = 0; // Щит полностью защищает от взрыва впитывая весь урон.
     }
 
-    private void OnTemperatureChangeAttempt(EntityUid uid,
+    private void OnBeforeHeatExchange(EntityUid uid,
         ProtectedByProtectiveBubbleComponent component,
-        ModifyChangedTemperatureEvent args)
+        ref BeforeHeatExchangeEvent args)
     {
-        args.TemperatureDelta *= component.TemperatureCoefficient;
+        args.HeatTransferModifier *= component.TemperatureCoefficient;
     }
 }

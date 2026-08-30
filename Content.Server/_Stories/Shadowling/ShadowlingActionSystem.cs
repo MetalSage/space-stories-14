@@ -33,7 +33,7 @@ using Content.Shared.Popups;
 using Content.Shared.Silicons.Borgs.Components;
 using Content.Shared.Speech.Muting;
 using Content.Shared.Standing;
-using Content.Shared.StatusEffect;
+using Content.Shared.StatusEffectNew;
 using Content.Shared.Stunnable;
 using Content.Shared.Tag;
 using Content.Shared.Temperature.Components;
@@ -42,17 +42,19 @@ using Robust.Server.Player;
 using Robust.Shared.Audio.Systems;
 using Robust.Shared.Configuration;
 using Robust.Shared.Map;
+using Robust.Shared.Network;
 using Robust.Shared.Physics;
 using Robust.Shared.Physics.Systems;
 using Robust.Shared.Player;
 using Robust.Shared.Prototypes;
+using Robust.Shared.Random;
 using Robust.Shared.Timing;
 
 namespace Content.Server._Stories.Shadowling;
 
 public sealed partial class ShadowlingActionSystem : EntitySystem
 {
-    private static readonly string MutedStatusEffect = "Muted";
+    private static readonly EntProtoId MutedStatusEffect = "StatusEffectMuted";
     private static readonly ProtoId<TagPrototype> WindowTag = "Window";
 
     [Dependency] private IConfigurationManager _cfg = default!;
@@ -561,7 +563,7 @@ public sealed partial class ShadowlingActionSystem : EntitySystem
 
         _flash.Flash(args.Target, uid, null, component.GlareFlashDuration, 0.8f, false);
         _stun.TryAddStunDuration(args.Target, component.GlareStunDuration);
-        _status.TryAddStatusEffect<MutedComponent>(args.Target, MutedStatusEffect, component.GlareStunDuration, true);
+        _status.TrySetStatusEffectDuration(args.Target, MutedStatusEffect, component.GlareStunDuration);
 
         args.Handled = true;
     }

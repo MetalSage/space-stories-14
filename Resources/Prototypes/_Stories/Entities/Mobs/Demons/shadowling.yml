@@ -32,7 +32,9 @@
       enum.StrippingUiKey.Key:
         type: StrippableBoundUserInterface
   - type: MobCollision
-  - type: PressureImmunity
+  - type: PermanentStatusEffects
+    statusEffects:
+    - StatusEffectPressureImmunity
   - type: Cuffer
   - type: ZombieImmune
   - type: VisionProvider
@@ -120,7 +122,6 @@
     - Drunk
     - SlurredSpeech
     - RatvarianLanguage
-    - PressureImmunity
     - Muted
     - ForcedSleep
     - TemporaryBlindness
@@ -250,7 +251,9 @@
       enum.StrippingUiKey.Key:
         type: StrippableBoundUserInterface
   - type: MobCollision
-  - type: PressureImmunity
+  - type: PermanentStatusEffects
+    statusEffects:
+    - StatusEffectPressureImmunity
   - type: MeleeWeapon
     altDisarm: false
     soundHit:

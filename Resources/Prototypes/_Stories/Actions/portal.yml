@@ -8,13 +8,14 @@
   - type: Action
     useDelay: 1
     priority: 0
-    icon:
-      sprite: /Textures/_Stories/Effects/bluespace_portal.rsi
-      state: exit
     itemIconStyle: NoItem
+
+  - type: Sprite
+    sprite: _Stories/Effects/bluespace_portal.rsi
+    layers:
+    - state: exit
   - type: InstantAction
     event: !type:TargettingTeleporterSetExitPortalEvent
-
 - type: entity
   parent: BaseToggleAction
   id: STActionTargettingTeleporterExit
@@ -25,9 +26,10 @@
   - type: Action
     useDelay: 1
     priority: 1
-    icon:
-      sprite: Markers/cross.rsi
-      state: red
     itemIconStyle: NoItem
+  - type: Sprite
+    sprite: Markers/cross.rsi
+    layers:
+    - state: red
   - type: InstantAction
     event: !type:TargettingTeleporterExitEvent

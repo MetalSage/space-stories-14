@@ -2,7 +2,7 @@ using System.Text;
 using Content.Shared._Stories.Language.Components;
 using Content.Shared._Stories.Language.Prototypes;
 using Content.Shared.Dataset;
-using Content.Shared.Ghost;
+using Content.Shared.Ghost.Components;
 using Robust.Shared.Prototypes;
 using Robust.Shared.Random;
 

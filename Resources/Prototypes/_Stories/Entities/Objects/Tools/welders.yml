@@ -26,7 +26,7 @@
   - type: Tool
     useSound:
       collection: ColdWelding
-    qualities: Welding
+    qualities: [ Welding ]
   - type: Welder
     enabled: True
     fuelReagent: FoamingAgent

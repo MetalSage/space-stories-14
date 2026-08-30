@@ -6,14 +6,15 @@
   categories: [HideSpawnMenu]
   components:
   - type: Action
-    icon:
-      sprite: _Stories/Actions/shadowling.rsi
-      state: hatch
     itemIconStyle: NoItem
     priority: -11
+
+  - type: Sprite
+    sprite: _Stories/Actions/shadowling.rsi
+    layers:
+    - state: hatch
   - type: InstantAction
     event: !type:ShadowlingHatchEvent
-
 - type: entity
   parent: BaseAction
   id: STActionShadowlingEnthrall
@@ -23,16 +24,17 @@
   components:
   - type: Action
     useDelay: 60
-    icon:
-      sprite: _Stories/Actions/shadowling.rsi
-      state: enthrall
     itemIconStyle: NoItem
     priority: -11
+
+  - type: Sprite
+    sprite: _Stories/Actions/shadowling.rsi
+    layers:
+    - state: enthrall
   - type: EntityTargetAction
     event: !type:ShadowlingEnthrallEvent
   - type: TargetAction
     range: 1
-
 - type: entity
   parent: BaseAction
   id: STActionShadowlingGlare
@@ -42,16 +44,17 @@
   components:
   - type: Action
     useDelay: 30
-    icon:
-      sprite: _Stories/Actions/shadowling.rsi
-      state: glare
     itemIconStyle: NoItem
     priority: -11
+
+  - type: Sprite
+    sprite: _Stories/Actions/shadowling.rsi
+    layers:
+    - state: glare
   - type: EntityTargetAction
     event: !type:ShadowlingGlareEvent
   - type: TargetAction
     range: 10
-
 - type: entity
   parent: BaseAction
   id: STActionShadowlingVeil
@@ -61,14 +64,15 @@
   components:
   - type: Action
     useDelay: 15
-    icon:
-      sprite: _Stories/Actions/shadowling.rsi
-      state: veil
     itemIconStyle: NoItem
     priority: -11
+
+  - type: Sprite
+    sprite: _Stories/Actions/shadowling.rsi
+    layers:
+    - state: veil
   - type: InstantAction
     event: !type:ShadowlingVeilEvent
-
 - type: entity
   parent: BaseAction
   id: STActionShadowlingShadowWalk
@@ -78,15 +82,16 @@
   components:
   - type: Action
     useDelay: 60
-    icon:
-      sprite: _Stories/Actions/shadowling.rsi
-      state: shadow_walk
     itemIconStyle: NoItem
     checkCanInteract: false
     priority: -11
+
+  - type: Sprite
+    sprite: _Stories/Actions/shadowling.rsi
+    layers:
+    - state: shadow_walk
   - type: InstantAction
     event: !type:ShadowlingShadowWalkEvent
-
 - type: entity
   parent: BaseAction
   id: STActionShadowlingFlashFreeze
@@ -96,14 +101,15 @@
   components:
   - type: Action
     useDelay: 120
-    icon:
-      sprite: _Stories/Actions/shadowling.rsi
-      state: icy_veins
     itemIconStyle: NoItem
     priority: -11
+
+  - type: Sprite
+    sprite: _Stories/Actions/shadowling.rsi
+    layers:
+    - state: icy_veins
   - type: InstantAction
     event: !type:ShadowlingFlashFreezeEvent
-
 - type: entity
   parent: BaseAction
   id: STActionShadowlingCollectiveMind
@@ -113,14 +119,15 @@
   components:
   - type: Action
     useDelay: 15
-    icon:
-      sprite: _Stories/Actions/shadowling.rsi
-      state: collective_mind
     itemIconStyle: NoItem
     priority: -11
+
+  - type: Sprite
+    sprite: _Stories/Actions/shadowling.rsi
+    layers:
+    - state: collective_mind
   - type: InstantAction
     event: !type:ShadowlingCollectiveMindEvent
-
 - type: entity
   parent: BaseAction
   id: STActionShadowlingDrainLife
@@ -130,14 +137,15 @@
   components:
   - type: Action
     useDelay: 30
-    icon:
-      sprite: _Stories/Actions/shadowling.rsi
-      state: drain_life
     itemIconStyle: NoItem
     priority: -11
+
+  - type: Sprite
+    sprite: _Stories/Actions/shadowling.rsi
+    layers:
+    - state: drain_life
   - type: InstantAction
     event: !type:ShadowlingDrainLifeEvent
-
 - type: entity
   parent: BaseAction
   id: STActionShadowlingSonicScreech
@@ -147,14 +155,15 @@
   components:
   - type: Action
     useDelay: 60
-    icon:
-      sprite: _Stories/Actions/shadowling.rsi
-      state: screech
     itemIconStyle: NoItem
     priority: -11
+
+  - type: Sprite
+    sprite: _Stories/Actions/shadowling.rsi
+    layers:
+    - state: screech
   - type: InstantAction
     event: !type:ShadowlingSonicScreechEvent
-
 - type: entity
   parent: BaseAction
   id: STActionShadowlingBlindnessSmoke
@@ -164,14 +173,15 @@
   components:
   - type: Action
     useDelay: 60
-    icon:
-      sprite: _Stories/Actions/shadowling.rsi
-      state: black_smoke
     itemIconStyle: NoItem
     priority: -11
+
+  - type: Sprite
+    sprite: _Stories/Actions/shadowling.rsi
+    layers:
+    - state: black_smoke
   - type: InstantAction
     event: !type:ShadowlingBlindnessSmokeEvent
-
 - type: entity
   parent: BaseAction
   id: STActionShadowlingBlackRecuperation
@@ -181,15 +191,16 @@
   components:
   - type: Action
     useDelay: 300
-    icon:
-      sprite: _Stories/Actions/shadowling.rsi
-      state: revive_thrall
     itemIconStyle: NoItem
     priority: -11
+
+  - type: Sprite
+    sprite: _Stories/Actions/shadowling.rsi
+    layers:
+    - state: revive_thrall
   - type: EntityTargetAction
     event: !type:ShadowlingBlackRecuperationEvent
   - type: TargetAction
-
 - type: entity
   parent: BaseAction
   id: STActionShadowlingAscendance
@@ -198,14 +209,15 @@
   categories: [HideSpawnMenu]
   components:
   - type: Action
-    icon:
-      sprite: _Stories/Actions/shadowling.rsi
-      state: ascend
     itemIconStyle: NoItem
     priority: -11
+
+  - type: Sprite
+    sprite: _Stories/Actions/shadowling.rsi
+    layers:
+    - state: ascend
   - type: InstantAction
     event: !type:ShadowlingAscendanceEvent
-
 - type: entity
   parent: BaseAction
   id: STActionShadowlingAnnihilate
@@ -215,16 +227,17 @@
   components:
   - type: Action
     useDelay: 10
-    icon:
-      sprite: _Stories/Actions/shadowling.rsi
-      state: annihilate
     itemIconStyle: NoItem
     priority: -11
+
+  - type: Sprite
+    sprite: _Stories/Actions/shadowling.rsi
+    layers:
+    - state: annihilate
   - type: EntityTargetAction
     event: !type:ShadowlingAnnihilateEvent
   - type: TargetAction
     range: 7
-
 - type: entity
   parent: BaseAction
   id: STActionShadowlingHypnosis
@@ -234,16 +247,17 @@
   components:
   - type: Action
     useDelay: 30
-    icon:
-      sprite: _Stories/Actions/shadowling.rsi
-      state: enthrall
     itemIconStyle: NoItem
     priority: -11
+
+  - type: Sprite
+    sprite: _Stories/Actions/shadowling.rsi
+    layers:
+    - state: enthrall
   - type: EntityTargetAction
     event: !type:ShadowlingHypnosisEvent
   - type: TargetAction
     range: 7
-
 - type: entity
   parent: BaseAction
   id: STActionShadowlingPlaneShift
@@ -253,15 +267,16 @@
   components:
   - type: Action
     useDelay: 2
-    icon:
-      sprite: _Stories/Actions/shadowling.rsi
-      state: shadow_walk
     itemIconStyle: NoItem
     priority: -11
     checkCanInteract: false
+
+  - type: Sprite
+    sprite: _Stories/Actions/shadowling.rsi
+    layers:
+    - state: shadow_walk
   - type: InstantAction
     event: !type:ShadowlingPlaneShiftEvent
-
 - type: entity
   parent: BaseAction
   id: STActionShadowlingGlacialBlast
@@ -271,14 +286,15 @@
   components:
   - type: Action
     useDelay: 30
-    icon:
-      sprite: _Stories/Actions/shadowling.rsi
-      state: lightning_storm
     itemIconStyle: NoItem
     priority: -11
+
+  - type: Sprite
+    sprite: _Stories/Actions/shadowling.rsi
+    layers:
+    - state: lightning_storm
   - type: InstantAction
     event: !type:ShadowlingGlacialBlastEvent
-
 - type: entity
   parent: BaseAction
   id: STActionShadowlingAscendantBroadcast
@@ -288,15 +304,16 @@
   components:
   - type: Action
     useDelay: 2
-    icon:
-      sprite: _Stories/Actions/shadowling.rsi
-      state: transmit
     itemIconStyle: NoItem
     priority: -11
     checkCanInteract: false
+
+  - type: Sprite
+    sprite: _Stories/Actions/shadowling.rsi
+    layers:
+    - state: transmit
   - type: InstantAction
     event: !type:ToggleAscendantBroadcastEvent
-
 - type: entity
   id: STShadowlingActionToggleVision
   name: Toggle Vision
@@ -305,9 +322,10 @@
   components:
   - type: Action
     useDelay: 1
-    icon:
-      sprite: _Stories/Actions/shadowling.rsi
-      state: darksight
     itemIconStyle: NoItem
+  - type: Sprite
+    sprite: _Stories/Actions/shadowling.rsi
+    layers:
+    - state: darksight
   - type: InstantAction
     event: !type:ToggleVisionActionEvent
