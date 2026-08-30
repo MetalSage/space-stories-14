@@ -1,4 +1,4 @@
-using Content.Server._Stories.LightSensitivity;
+using Content.Server._Stories.Photosensitivity;
 using Content.Server.Polymorph.Components;
 using Content.Server.Polymorph.Systems;
 using Content.Server.Popups;
@@ -22,7 +22,7 @@ public sealed partial class DemonPhaseSystem : EntitySystem
 {
     [Dependency] private EntityLookupSystem _lookup = default!;
     [Dependency] private SharedSolutionContainerSystem _solutionContainer = default!;
-    [Dependency] private LightSensitivitySystem _lightSensitivity = default!;
+    [Dependency] private PhotosensitivitySystem _photosensitivity = default!;
     [Dependency] private PolymorphSystem _polymorph = default!;
     [Dependency] private PopupSystem _popup = default!;
     [Dependency] private SharedDoAfterSystem _doAfter = default!;
@@ -121,7 +121,7 @@ public sealed partial class DemonPhaseSystem : EntitySystem
         return ent.Comp.Anchor switch
         {
             DemonPhaseAnchor.Blood => HasBloodNearby(ent),
-            DemonPhaseAnchor.Darkness => _lightSensitivity.IsInDarkness(ent),
+            DemonPhaseAnchor.Darkness => _photosensitivity.GetIllumination(ent) < ent.Comp.DarknessThreshold,
             _ => false,
         };
     }

@@ -7,7 +7,7 @@ using Content.Shared.Light.Components;
 using Content.Shared.Light.EntitySystems;
 using Content.Shared.Mobs.Components;
 using Content.Shared.Projectiles;
-using Content.Shared.Stunnable;
+using Content.Shared.Movement.Systems;
 using Content.Shared.Weapons.Melee.Events;
 using Robust.Server.GameObjects;
 using Robust.Shared.GameObjects;
@@ -21,7 +21,7 @@ public sealed partial class ShadowGrappleSystem : EntitySystem
     [Dependency] private SharedPointLightSystem _pointLight = default!;
     [Dependency] private EntityLookupSystem _lookup = default!;
     [Dependency] private DamageableSystem _damageable = default!;
-    [Dependency] private SharedStunSystem _stun = default!;
+    [Dependency] private MovementModStatusSystem _movementMod = default!;
     [Dependency] private SharedPoweredLightSystem _poweredLight = default!;
     [Dependency] private SharedLightBulbSystem _lightBulb = default!;
 
@@ -57,7 +57,12 @@ public sealed partial class ShadowGrappleSystem : EntitySystem
         if (HasComp<MobStateComponent>(target))
         {
             _pullTo.TryPullTo(target, shooter, PulledToOnEnter.None, duration: grapple.PullDuration);
-            _stun.TryAddParalyzeDuration(target, grapple.ImmobilizeDuration);
+            _movementMod.TryUpdateMovementSpeedModDuration(
+                target,
+                MovementModStatusSystem.TaserSlowdown,
+                grapple.SlowdownDuration,
+                grapple.SlowdownWalkModifier,
+                grapple.SlowdownSprintModifier);
             _damageable.TryChangeDamage(target, grapple.HitDamage);
         }
         else

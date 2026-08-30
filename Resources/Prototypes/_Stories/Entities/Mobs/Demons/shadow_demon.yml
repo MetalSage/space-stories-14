@@ -53,21 +53,17 @@
     ambientColor: "#FFFFFF10"
     shader: GreyscaleFullscreen
     priority: 10
-  - type: LightSensitivity
-    lookupRange: 3
-    darknessThreshold: 0.2
-  - type: LightSensitivityDamage
-    damageOnLight:
+  - type: Photosensitivity
+    damage:
       types:
-        Heat: 30
-    healInDarkness:
+        Heat: 15
+    darknessHealing:
       types:
         Blunt: -30
         Slash: -30
         Piercing: -30
         Heat: -30
     lightAlert: STLightExposure
-    lightSpeedMultiplier: 1
     darkSpeedMultiplier: 1.4
   - type: DemonPhase
     anchor: Darkness
@@ -129,11 +125,11 @@
     thresholds:
       0: Alive
       300: Dead
-  - type: LightSensitivityDamage
-    damageOnLight:
+  - type: Photosensitivity
+    damage:
       types:
-        Heat: 15
-    healInDarkness:
+        Heat: 7.5
+    darknessHealing:
       types:
         Blunt: -30
         Slash: -30
@@ -158,9 +154,6 @@
     ambientColor: "#FFFFFF10"
     shader: GreyscaleFullscreen
     priority: 10
-  - type: LightSensitivity
-    lookupRange: 3
-    darknessThreshold: 0.2
   - type: DemonPhase
     anchor: Darkness
     phasePolymorph: STPolymorphShadowDemonPhase

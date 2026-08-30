@@ -1,6 +1,8 @@
 using Content.Server.Administration;
+using Content.Server.Administration.Logs;
 using Content.Server.Popups;
 using Content.Shared._Stories.Demons;
+using Content.Shared.Database;
 using Content.Shared.Mind;
 using Content.Shared.Mobs.Systems;
 using Robust.Shared.Player;
@@ -13,6 +15,8 @@ public sealed partial class DemonWhisperSystem : EntitySystem
     [Dependency] private MobStateSystem _mobState = default!;
     [Dependency] private SharedMindSystem _mind = default!;
     [Dependency] private QuickDialogSystem _quickDialog = default!;
+    [Dependency] private SharedTransformSystem _transform = default!;
+    [Dependency] private IAdminLogManager _adminLogger = default!;
 
     public override void Initialize()
     {
@@ -28,7 +32,7 @@ public sealed partial class DemonWhisperSystem : EntitySystem
 
         var target = args.Target;
 
-        if (!_mobState.IsAlive(target) || !_mind.TryGetMind(target, out _, out _))
+        if (!IsValidTarget(ent, target))
         {
             _popup.PopupEntity(Loc.GetString("demon-whisper-invalid-target"), ent, ent);
             return;
@@ -45,12 +49,38 @@ public sealed partial class DemonWhisperSystem : EntitySystem
             message => SendWhisper(ent, target, message));
     }
 
-    private void SendWhisper(EntityUid demon, EntityUid target, string message)
+    private bool IsValidTarget(Entity<DemonWhisperComponent> ent, EntityUid target)
     {
-        if (Deleted(demon) || Deleted(target) || string.IsNullOrWhiteSpace(message))
+        if (Deleted(target) || !_mobState.IsAlive(target) || !_mind.TryGetMind(target, out _, out _))
+            return false;
+
+        return _transform.InRange(Transform(ent).Coordinates, Transform(target).Coordinates, ent.Comp.Range);
+    }
+
+    private void SendWhisper(Entity<DemonWhisperComponent> ent, EntityUid target, string message)
+    {
+        if (Deleted(ent) || MetaData(ent).EntityPaused)
             return;
 
-        _popup.PopupEntity(Loc.GetString("demon-whisper-sent", ("target", target)), demon, demon);
-        _popup.PopupEntity(Loc.GetString("demon-whisper-received", ("message", message)), target, target);
+        if (!IsValidTarget(ent, target))
+        {
+            _popup.PopupEntity(Loc.GetString("demon-whisper-invalid-target"), ent, ent);
+            return;
+        }
+
+        var trimmed = message.Trim();
+
+        if (string.IsNullOrWhiteSpace(trimmed))
+            return;
+
+        if (trimmed.Length > ent.Comp.MaxMessageLength)
+            trimmed = trimmed[..ent.Comp.MaxMessageLength];
+
+        _adminLogger.Add(LogType.Chat,
+            LogImpact.Medium,
+            $"Demon whisper from {ToPrettyString(ent):user} to {ToPrettyString(target):target}: {trimmed}");
+
+        _popup.PopupEntity(Loc.GetString("demon-whisper-sent", ("target", target)), ent, ent);
+        _popup.PopupEntity(Loc.GetString("demon-whisper-received", ("message", trimmed)), target, target);
     }
 }

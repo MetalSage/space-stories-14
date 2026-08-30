@@ -12,7 +12,13 @@ public sealed partial class ShadowGrappleComponent : Component
     public float ExtinguishRange = 3f;
 
     [DataField]
-    public TimeSpan ImmobilizeDuration = TimeSpan.FromSeconds(4);
+    public TimeSpan SlowdownDuration = TimeSpan.FromSeconds(3);
+
+    [DataField]
+    public float SlowdownWalkModifier = 0.35f;
+
+    [DataField]
+    public float SlowdownSprintModifier = 0.35f;
 
     [DataField(required: true)]
     public DamageSpecifier HitDamage = default!;

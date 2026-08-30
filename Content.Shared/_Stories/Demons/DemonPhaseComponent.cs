@@ -18,6 +18,9 @@ public sealed partial class DemonPhaseComponent : Component
     public float SearchRange = 1.5f;
 
     [DataField]
+    public float DarknessThreshold = 1f;
+
+    [DataField]
     public LocId FailPopup = "demon-phase-fail";
 
     [DataField(required: true)]
