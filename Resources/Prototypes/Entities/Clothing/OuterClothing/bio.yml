@@ -83,6 +83,8 @@
         Caustic: 0.8
         Slash: 0.6
         Piercing: 0.8
+  - type: StaminaResistance  #Space-Stories
+    damageCoefficient: 0.6
   - type: ZombificationResistance
     zombificationResistanceCoefficient: 0.4
   - type: GroupExamine
