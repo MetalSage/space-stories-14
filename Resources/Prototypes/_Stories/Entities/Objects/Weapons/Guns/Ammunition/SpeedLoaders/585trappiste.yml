@@ -1,0 +1,72 @@
+- type: entity
+  abstract: true
+  parent: [ BaseItem, BaseSecurityContraband ]
+  id: STBaseSpeedLoader585Trappiste
+  name: "speed loader (.585 Trappiste)"
+  components:
+  - type: Tag
+    tags:
+      - SpeedLoader585Trappiste
+  - type: SpeedLoader
+  - type: BallisticAmmoProvider
+    whitelist:
+      tags:
+        - Cartridge585Trappiste
+    capacity: 5
+  - type: Sprite
+  - type: ContainerContainer
+    containers:
+      ballistic-ammo: !type:Container
+        ents: []
+
+- type: entity
+  parent: STBaseSpeedLoader585Trappiste
+  id: STSpeedLoader585Trappiste
+  name: "speed loader (.585 Trappiste lethal)"
+  description: Designed to quickly load up to five rounds of .585 Trappiste into an empty revolver.
+  components:
+  - type: BallisticAmmoProvider
+    proto: STCartridge585Trappiste
+  - type: Sprite
+    sprite: Objects/Weapons/Guns/Ammunition/SpeedLoaders/Magnum/magnum_speed_loader.rsi
+    layers:
+      - state: base
+        map: [ "enum.GunVisualLayers.Base" ]
+      - state: base-5
+        map: [ "enum.GunVisualLayers.Mag" ]
+  - type: MagazineVisuals
+    magState: base
+    steps: 6
+    zeroVisible: false
+  - type: Appearance
+  - type: Item
+    inhandVisuals:
+      left:
+      - state: inhand-left-mag
+      - state: inhand-left-ammo
+      right:
+      - state: inhand-right-mag
+      - state: inhand-right-ammo
+
+- type: entity
+  parent: STSpeedLoader585Trappiste
+  id: STSpeedLoader585TrappisteEmpty
+  name: "speed loader (.585 Trappiste any)"
+  suffix: empty
+  description: Designed to quickly load up to five rounds of .585 Trappiste into an empty revolver.
+  components:
+  - type: BallisticAmmoProvider
+    proto: null
+  - type: Sprite
+    sprite: Objects/Weapons/Guns/Ammunition/SpeedLoaders/Magnum/magnum_speed_loader.rsi
+    layers:
+      - state: base
+        map: [ "enum.GunVisualLayers.Base" ]
+      - state: base-5
+        map: [ "enum.GunVisualLayers.Mag" ]
+  - type: Item
+    inhandVisuals:
+      left:
+      - state: inhand-left-mag
+      right:
+      - state: inhand-right-mag

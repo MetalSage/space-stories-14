@@ -8,3 +8,5 @@ ent-STClothingBackpackDuffelGachi = вещмешок
     .desc = Большой вещмешок для хранения дополнительных предметов.
 ent-STClothingBackpackDuffelRl = вещмешок
     .desc = Большой вещмешок для хранения дополнительных предметов.
+ent-STClothingBackpackDuffelBlueshield = вещмешок синего щита
+    .desc = Вместительный вещмешок, выдаваемый лучшим сотрудникам Nanotrasen.

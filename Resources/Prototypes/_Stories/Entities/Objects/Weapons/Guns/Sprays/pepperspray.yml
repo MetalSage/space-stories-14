@@ -1,0 +1,43 @@
+- type: entity
+  parent: [ SprayBottleBase, DrinkVisualsFill, BaseSecurityContraband ]
+  id: STWeaponSprayPepper
+  name: pepperspray
+  description: Manufactured by UhangInc, used to blind and down an opponent quickly.
+  components:
+  - type: Sprite
+    sprite: _Stories/Objects/Weapons/Guns/Sprays/pepperspray.rsi
+    layers:
+    - state: pepperspray
+    - state: pepperspray-fill-1
+      map: ["enum.SolutionContainerLayers.Fill"]
+      visible: false
+  - type: Item
+    size: Small
+    sprite: _Stories/Objects/Weapons/Guns/Sprays/pepperspray.rsi
+  - type: Clothing
+    sprite: _Stories/Objects/Weapons/Guns/Sprays/pepperspray.rsi
+    quickEquip: false
+    slots:
+    - Belt
+    - Pocket
+  - type: SolutionContainerVisuals
+    fillBaseName: pepperspray-fill-
+    maxFillLevels: 4
+  - type: Spray
+    solution: drink
+    transferAmount: 5
+    sprayVelocity: 4
+    sprayDistance: 4
+    sprayedPrototype: Vapor
+    spraySound:
+      path: /Audio/Effects/spray2.ogg
+  - type: RefillableSolution
+    solution: drink
+  - type: FitsInDispenser
+    solution: drink
+  - type: Solution
+    solution:
+      maxVol: 50
+      reagents:
+      - ReagentId: TearGas
+        Quantity: 50

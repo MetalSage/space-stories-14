@@ -1,5 +1,5 @@
 - type: roleLoadout
-  id: STJobSTPartyMaker
+  id: STJobPartyMaker
   groups:
   - GroupTankHarness
   - CommonBackpack

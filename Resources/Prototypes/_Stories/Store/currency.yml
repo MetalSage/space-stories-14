@@ -2,3 +2,8 @@
   id: STSkillPoint
   displayName: store-currency-display-skill-point
   canWithdraw: false
+
+- type: currency
+  id: STBlueshieldToken
+  displayName: stories-store-currency-display-blueshield-token
+  canWithdraw: false

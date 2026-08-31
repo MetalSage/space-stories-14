@@ -1,0 +1,26 @@
+- type: entity
+  parent: BaseItem
+  id: STChoiceBeaconBlueshield
+  name: armament beacon
+  description: A single use beacon to deliver a gunset of your choice. Please only call this in your office.
+  components:
+  - type: Sprite
+    sprite: _Stories/Objects/Devices/beacons.rsi
+    state: blueshield_scanner
+  - type: Item
+    size: Small
+    sprite: _Stories/Objects/Devices/beacons.rsi
+  - type: UserInterface
+    interfaces:
+      enum.StoreUiKey.Key:
+        type: StoreBoundUserInterface
+  - type: ActivatableUI
+    key: enum.StoreUiKey.Key
+  - type: Store
+    name: stories-store-category-blueshield-armaments
+    currencyWhitelist:
+    - STBlueshieldToken
+    categories:
+    - STBlueshieldArmamentsCategory
+    balance:
+      STBlueshieldToken: 1

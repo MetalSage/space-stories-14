@@ -2,41 +2,96 @@
   name: Internal Affairs Agent stamp
   parent: RubberStampBase
   id: STRubberStampIAA
+  categories: [ DoNotMap ]
   suffix: DO NOT MAP
   components:
-    - type: Stamp
-      stampedName: stamp-component-stamped-name-iaa
-      stampedColor: "#33CC33"
-      stampState: "paper_stamp-ok"
-    - type: Sprite
-      sprite: _Stories/Objects/Misc/bureaucracy.rsi
-      state: stamp-iaa
+  - type: Stamp
+    stampedName: stamp-component-stamped-name-iaa
+    stampedColor: "#33CC33"
+    stampState: "paper_stamp-ok"
+  - type: Sprite
+    state: stamp-iaa
+  - type: Item
+    inhandVisuals:
+      left:
+      - state: stamp-inhand-left
+      - state: handle-inhand-left
+        color: "#33CC33"
+      right:
+      - state: stamp-inhand-right
+      - state: handle-inhand-right
+        color: "#33CC33"
 
 - type: entity
   name: head of prison's stamp
   description: A rubber stamp for stamping important documents.
   parent: RubberStampBase
   id: STPRISONRubberStamp
+  categories: [ DoNotMap ]
   suffix: DO NOT MAP
   components:
-    - type: Stamp
-      stampedName: Начальник тюрьмы
-      stampedColor: "#0036A2"
-      stampState: "paper_stamp-hosp"
-    - type: Sprite
-      sprite: _Stories/Objects/Misc/bureaucracy.rsi
-      state: stamp-hosp
+  - type: Stamp
+    stampedName: Начальник тюрьмы
+    stampedColor: "#0036A2"
+    stampState: "paper_stamp-hosp"
+  - type: Sprite
+    state: stamp-hosp
+  - type: Item
+    inhandVisuals:
+      left:
+      - state: stamp-inhand-left
+      - state: handle-inhand-left
+        color: "#0036A2"
+      right:
+      - state: stamp-inhand-right
+      - state: handle-inhand-right
+        color: "#0036A2"
 
 - type: entity
   name: judge's rubber stamp
   parent: RubberStampBase
   id: STRubberStampJudge
+  categories: [ DoNotMap ]
   suffix: DO NOT MAP
   components:
   - type: Stamp
     stampedName: stories-stamp-component-stamped-name-judge
     stampedColor: "#773e24"
-    stampState: "paper_stamp-qm"
+    stampState: "paper_stamp-judge"
   - type: Sprite
-    sprite: _Stories/Objects/Misc/bureaucracy.rsi
     state: stamp-judge
+  - type: Item
+    inhandVisuals:
+      left:
+      - state: stamp-inhand-left
+      - state: handle-inhand-left
+        color: "#773e24"
+      right:
+      - state: stamp-inhand-right
+      - state: handle-inhand-right
+        color: "#773e24"
+
+- type: entity
+  name: blueshield's rubber stamp
+  description: A rubber stamp for stamping important security and command documents.
+  parent: RubberStampBase
+  id: STRubberStampBlueshield
+  categories: [ DoNotMap ]
+  suffix: DO NOT MAP
+  components:
+  - type: Stamp
+    stampedName: stories-stamp-component-stamped-name-blueshield
+    stampedColor: "#3A4E7D"
+    stampState: "paper_stamp-blueshield"
+  - type: Sprite
+    state: stamp-blueshield
+  - type: Item
+    inhandVisuals:
+      left:
+      - state: stamp-inhand-left
+      - state: handle-inhand-left
+        color: "#3A4E7D"
+      right:
+      - state: stamp-inhand-right
+      - state: handle-inhand-right
+        color: "#3A4E7D"

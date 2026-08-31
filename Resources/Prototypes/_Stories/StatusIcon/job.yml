@@ -56,21 +56,28 @@
 
 - type: jobIcon
   parent: JobIcon
-  id: STJobIconSTCommandMaid
+  id: STJobIconCommandMaid
   icon:
     sprite: /Textures/_Stories/Interface/Misc/job_icons.rsi
     state: CommandMaid
 
 - type: jobIcon
   parent: JobIcon
-  id: STJobIconSTPartyMaker
+  id: STJobIconPartyMaker
   icon:
     sprite: /Textures/_Stories/Interface/Misc/job_icons.rsi
     state: PartyMaker
 
 - type: jobIcon
   parent: JobIcon
-  id: STJobIconSTSecurityClown
+  id: STJobIconSecurityClown
   icon:
     sprite: /Textures/_Stories/Interface/Misc/job_icons.rsi
     state: SecurityClown
+
+- type: jobIcon
+  parent: JobIcon
+  id: STJobIconBlueshield
+  icon:
+    sprite: /Textures/_Stories/Interface/Misc/job_icons.rsi
+    state: Blueshield

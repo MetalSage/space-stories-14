@@ -167,3 +167,26 @@
   components:
   - type: Pda
     id: STPartyMakerIDCard
+
+- type: entity
+  parent: BaseSecurityPDA
+  id: STBlueshieldPDA
+  name: blueshield PDA
+  description: A specialized PDA issued to the Blueshield Officer, built with high security standards.
+  components:
+  - type: Sprite
+    sprite: _Stories/Objects/Devices/pda.rsi
+  - type: Pda
+    id: STBlueshieldIDCard
+  - type: Appearance
+    appearanceDataInit:
+      enum.PdaVisuals.PdaType:
+        !type:String
+        pda-blueshield
+  - type: PdaBorderColor
+    borderColor: "#28287a"
+    accentVColor: "#dfdfdf"
+    accentHColor: "#dfdfdf"
+  - type: Icon
+    sprite: _Stories/Objects/Devices/pda.rsi
+    state: pda-blueshield

@@ -6,3 +6,7 @@ ent-STClothingHeadHatCapcapGeneral = { ent-ClothingHeadHatCapcap }
     .desc = { ent-ClothingHeadHatCapcap.desc }
 ent-STClothingHeadHatCapcapGeneralCMO = { ent-ClothingHeadHatCapcap }
     .desc = { ent-ClothingHeadHatCapcap.desc }
+ent-STClothingHeadHatBeretBlueshield = берет синего щита
+    .desc = Синий берет из дюраткани с настоящим золотым значком, обозначающим его владельца как лейтенанта Синего Щита. Усилен нанокевларом.
+ent-STClothingHeadHatBeretBlueshieldNavy = темно-синий берет синего щита
+    .desc = Темно-синий берет из дюраткани с серебряным значком, обозначающим его владельца как лейтенанта Синего Щита. Усилен нанокевларом.

@@ -37,3 +37,20 @@
     sprite: Clothing/Neck/mantles/hosmantle_shoulder.rsi
   - type: Clothing
     sprite: Clothing/Neck/mantles/hosmantle_shoulder.rsi
+
+- type: entity
+  parent: ClothingNeckBase
+  id: STClothingNeckMantleBlueshield
+  name: blueshield's mantle
+  description: A plated mantle with command colors. Suitable for the one assigned to making sure they're still breathing.
+  components:
+  - type: Sprite
+    sprite: _Stories/Clothing/Neck/mantles/blueshield_mantle.rsi
+  - type: Clothing
+    sprite: _Stories/Clothing/Neck/mantles/blueshield_mantle.rsi
+  - type: Armor
+    modifiers:
+      coefficients:
+        Blunt: 0.9
+        Slash: 0.9
+        Piercing: 0.9

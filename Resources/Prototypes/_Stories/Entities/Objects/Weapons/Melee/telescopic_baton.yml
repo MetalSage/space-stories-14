@@ -1,0 +1,57 @@
+- type: entity
+  name: telescopic baton
+  parent: [BaseItem, BaseSecurityContraband]
+  id: STWeaponTelescopicBaton
+  description: A compact yet robust personal defense weapon. Can be concealed when folded.
+  components:
+  - type: Sprite
+    sprite: _Stories/Objects/Weapons/Melee/telescopic_baton.rsi
+    layers:
+    - state: icon
+      map: [ "enum.ToggleableVisuals.Layer" ]
+  - type: Item
+    size: Small
+  - type: Clothing
+    sprite: _Stories/Objects/Weapons/Melee/telescopic_baton.rsi
+    quickEquip: false
+    slots:
+    - Belt
+    - Pocket
+  - type: ItemToggle
+    predictable: false
+    soundActivate:
+      path: /Audio/_Stories/Weapons/batonextend.ogg
+    soundDeactivate:
+      path: /Audio/_Stories/Weapons/batonextend.ogg
+  - type: ItemTogglePrefix
+    prefixOn: on
+    prefixOff: off
+  - type: ItemToggleSize
+    activatedSize: Normal
+  - type: ItemToggleMeleeWeapon
+    activatedDamage:
+      types:
+        Blunt: 10
+  - type: MeleeWeapon
+    wideAnimationRotation: -135
+    damage:
+      types:
+        Blunt: 2
+    bluntStaminaDamageFactor: 2.5
+    animation: WeaponArcThrust
+    soundHit:
+      collection: MetalThud
+  - type: StaminaDamageOnHitRequiresToggle
+  - type: StaminaDamageOnHit
+    damage: 45
+    sound:
+      collection: MetalThud
+  - type: DisarmMalus
+    malus: 0.2
+  - type: Appearance
+  - type: GenericVisualizer
+    visuals:
+      enum.ToggleableVisuals.Enabled:
+        enum.ToggleableVisuals.Layer:
+          True: {state: icon-on}
+          False: {state: icon-off}

@@ -4,7 +4,7 @@
     "x": 32,
     "y": 32
   },
-  "copyright": "Taken from tgstation, brigmedic locker is a resprited CMO locker by PuroSlavKing (Github)",
+  "copyright": "Taken from tgstation, brigmedic locker is a resprited CMO locker by PuroSlavKing (Github), bs, bs_door, bs_open taken from Monkestation at https://github.com/Monkestation/Monkestation2.0/blob/bdf60a966c1f57b8a0d9dc640c3e5dda340c7054/monkestation/code/modules/blueshift/icons/obj/closet.dmi",
   "license": "CC-BY-SA-3.0",
   "states": [
     {
@@ -60,6 +60,15 @@
     },
     {
       "name": "guardian_open"
+    },
+    {
+      "name": "bs"
+    },
+    {
+      "name": "bs_door"
+    },
+    {
+      "name": "bs_open"
     }
   ]
 }

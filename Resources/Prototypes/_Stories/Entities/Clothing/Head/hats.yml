@@ -43,3 +43,40 @@
   - type: Clothing
     sprite: _Stories/Clothing/Head/Hats/old_beret_cmo.rsi
 
+
+- type: entity
+  parent: ClothingHeadBase
+  id: STClothingHeadHatBeretBlueshield
+  name: blueshield's beret
+  description: A blue beret made of durathread with a genuine golden badge, denoting its owner as a Blueshield Lieutenant. It seems to be padded with nano-kevlar, making it tougher than standard reinforced berets.
+  components:
+  - type: Sprite
+    sprite: _Stories/Clothing/Head/Hats/beret_blueshield.rsi
+    state: icon
+  - type: Clothing
+    sprite: _Stories/Clothing/Head/Hats/beret_blueshield.rsi
+  - type: Armor
+    modifiers:
+      coefficients:
+        Blunt: 0.85
+        Slash: 0.85
+        Piercing: 0.85
+
+- type: entity
+  parent: ClothingHeadBase
+  id: STClothingHeadHatBeretBlueshieldNavy
+  name: navy blueshield's beret
+  description: A navy-blue beret made of durathread with a silver badge, denoting its owner as a Blueshield Lieutenant. It seems to be padded with nano-kevlar, making it tougher than standard reinforced berets.
+  components:
+  - type: Sprite
+    sprite: _Stories/Clothing/Head/Hats/beret_blueshield.rsi
+    state: icon_navy
+  - type: Clothing
+    sprite: _Stories/Clothing/Head/Hats/beret_blueshield.rsi
+    equippedPrefix: navy
+  - type: Armor
+    modifiers:
+      coefficients:
+        Blunt: 0.85
+        Slash: 0.85
+        Piercing: 0.85

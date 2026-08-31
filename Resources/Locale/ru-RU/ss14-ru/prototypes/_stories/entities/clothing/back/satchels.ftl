@@ -10,3 +10,7 @@ ent-STClothingBackpackSatchelGachi = сумка
     .desc = Модная сумка.
 ent-STClothingBackpackSatchelRl = сумка
     .desc = Модная сумка.
+ent-STClothingBackpackSatchelBlueshield = сумка синего щита
+    .desc = Прочная сумка, выдаваемая лучшим сотрудникам Nanotrasen.
+ent-STClothingBackpackMessengerBlueshield = сумка-мессенджер синего щита
+    .desc = Прочная сумка через плечо, выдаваемая лучшим сотрудникам Nanotrasen.

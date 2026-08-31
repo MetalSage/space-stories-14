@@ -84,3 +84,22 @@
     sprite: _Stories/Clothing/Head/Hoods/helmet_kylo.rsi
   - type: Clothing
     sprite: _Stories/Clothing/Head/Hoods/helmet_kylo.rsi
+
+- type: entity
+  parent: ClothingHeadBase
+  id: STClothingHeadHatHoodBlueshieldWinter
+  name: blueshield's winter hood
+  description: A comfy kevlar-lined hood to go with the comfy kevlar-lined coat.
+  components:
+  - type: HideLayerClothing
+    slots:
+    - Hair
+    - Snout
+    - HeadTop
+    - HeadSide
+  - type: Sprite
+    sprite: _Stories/Clothing/Head/Hoods/blueshield_winterhood.rsi
+  - type: Clothing
+    sprite: _Stories/Clothing/Head/Hoods/blueshield_winterhood.rsi
+  - type: TemperatureProtection
+    coefficient: 0.05

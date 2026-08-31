@@ -1,0 +1,154 @@
+- type: roleLoadout
+  id: JobSTBlueshield
+  groups:
+  - STBlueshieldHead
+  - STBlueshieldNeck
+  - STBlueshieldJumpsuit
+  - STBlueshieldOuterClothing
+  - STBlueshieldBackpack
+  - Glasses
+  - AssistiveItems
+  - Survival
+  - Trinkets
+  - GroupSpeciesBreathTool
+
+- type: roleLoadout
+  id: STBlueshield
+  groups:
+  - STBlueshieldHead
+  - STBlueshieldNeck
+  - STBlueshieldJumpsuit
+  - STBlueshieldOuterClothing
+  - STBlueshieldBackpack
+  - Glasses
+  - AssistiveItems
+  - Survival
+  - Trinkets
+  - GroupSpeciesBreathTool
+
+- type: roleLoadout
+  id: STJobBlueshield
+  groups:
+  - STBlueshieldHead
+  - STBlueshieldNeck
+  - STBlueshieldJumpsuit
+  - STBlueshieldOuterClothing
+  - STBlueshieldBackpack
+  - Glasses
+  - AssistiveItems
+  - Survival
+  - Trinkets
+  - GroupSpeciesBreathTool
+
+- type: loadoutGroup
+  id: STBlueshieldHead
+  name: stories-loadout-group-blueshield-head
+  minLimit: 0
+  loadouts:
+  - STClothingHeadHatBeretBlueshield
+  - STClothingHeadHatBeretBlueshieldNavy
+
+- type: loadoutGroup
+  id: STBlueshieldNeck
+  name: stories-loadout-group-blueshield-neck
+  minLimit: 0
+  loadouts:
+  - STClothingNeckMantleBlueshield
+
+- type: loadoutGroup
+  id: STBlueshieldJumpsuit
+  name: stories-loadout-group-blueshield-jumpsuits
+  minLimit: 1
+  loadouts:
+  - STClothingUniformJumpsuitBlueshield
+  - STClothingUniformJumpsuitBlueshieldTurtleneck
+  - STClothingUniformJumpskirtBlueshield
+  - STClothingUniformJumpskirtBlueshieldSkirtleneck
+
+- type: loadoutGroup
+  id: STBlueshieldOuterClothing
+  name: stories-loadout-group-blueshield-outer-clothing
+  minLimit: 0
+  loadouts:
+  - STClothingOuterVestBlueshieldJacket
+  - STClothingOuterVestBlueshieldArmor
+  - STClothingOuterWinterBlueshield
+
+- type: loadoutGroup
+  id: STBlueshieldBackpack
+  name: stories-loadout-group-blueshield-backpack
+  loadouts:
+  - STClothingBackpackBlueshield
+  - STClothingBackpackSatchelBlueshield
+  - STClothingBackpackDuffelBlueshield
+  - STClothingBackpackMessengerBlueshield
+
+- type: loadout
+  id: STClothingHeadHatBeretBlueshield
+  equipment:
+    head: STClothingHeadHatBeretBlueshield
+
+- type: loadout
+  id: STClothingHeadHatBeretBlueshieldNavy
+  equipment:
+    head: STClothingHeadHatBeretBlueshieldNavy
+
+- type: loadout
+  id: STClothingNeckMantleBlueshield
+  equipment:
+    neck: STClothingNeckMantleBlueshield
+
+- type: loadout
+  id: STClothingUniformJumpsuitBlueshield
+  equipment:
+    jumpsuit: STClothingUniformJumpsuitBlueshield
+
+- type: loadout
+  id: STClothingUniformJumpsuitBlueshieldTurtleneck
+  equipment:
+    jumpsuit: STClothingUniformJumpsuitBlueshieldTurtleneck
+
+- type: loadout
+  id: STClothingUniformJumpskirtBlueshield
+  equipment:
+    jumpsuit: STClothingUniformJumpskirtBlueshield
+
+- type: loadout
+  id: STClothingUniformJumpskirtBlueshieldSkirtleneck
+  equipment:
+    jumpsuit: STClothingUniformJumpskirtBlueshieldSkirtleneck
+
+- type: loadout
+  id: STClothingOuterVestBlueshieldJacket
+  equipment:
+    outerClothing: STClothingOuterVestBlueshieldJacket
+
+- type: loadout
+  id: STClothingOuterVestBlueshieldArmor
+  equipment:
+    outerClothing: STClothingOuterVestBlueshieldArmor
+
+- type: loadout
+  id: STClothingOuterWinterBlueshield
+  equipment:
+    outerClothing: STClothingOuterWinterBlueshield
+
+- type: loadout
+  id: STClothingBackpackBlueshield
+  equipment:
+    back: STClothingBackpackBlueshield
+
+- type: loadout
+  id: STClothingBackpackSatchelBlueshield
+  equipment:
+    back: STClothingBackpackSatchelBlueshield
+
+- type: loadout
+  id: STClothingBackpackDuffelBlueshield
+  equipment:
+    back: STClothingBackpackDuffelBlueshield
+
+- type: loadout
+  id: STClothingBackpackMessengerBlueshield
+  equipment:
+    back: STClothingBackpackMessengerBlueshield

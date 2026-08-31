@@ -54,3 +54,25 @@
   components:
   - type: Sprite
     sprite: _Stories/Clothing/Back/Satchels/satchel_rl.rsi
+
+- type: entity
+  parent: ClothingBackpackSatchel
+  id: STClothingBackpackSatchelBlueshield
+  name: blueshield satchel
+  description: A robust satchel issued to Nanotrasen's finest.
+  components:
+  - type: Sprite
+    sprite: _Stories/Clothing/Back/Satchels/blueshield_satchel.rsi
+  - type: Clothing
+    sprite: _Stories/Clothing/Back/Satchels/blueshield_satchel.rsi
+
+- type: entity
+  parent: ClothingBackpackSatchel
+  id: STClothingBackpackMessengerBlueshield
+  name: blueshield messenger bag
+  description: A robust messenger bag issued to Nanotrasen's finest.
+  components:
+  - type: Sprite
+    sprite: _Stories/Clothing/Back/Satchels/blueshield_messenger.rsi
+  - type: Clothing
+    sprite: _Stories/Clothing/Back/Satchels/blueshield_messenger.rsi

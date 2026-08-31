@@ -22,7 +22,7 @@ prisoner-collar-verb-unlock = Разблокировать и снять оше�
 prisoner-collar-verb-remove-dangerous = Снять ошейник (опасно)
 prisoner-collar-verb-strip = Снять ошейник с заключенного
 
-prisoner-collar-console-window-title = Консоль контроля заключенных «Тартар-7»
+prisoner-collar-console-window-title = Консоль контроля заключенных "Тартар-7"
 prisoner-collar-console-header = Мониторинг и управление ошейниками
 prisoner-collar-console-scan = Сканировать ошейники (15м)
 prisoner-collar-console-no-collars = Привязанные ошейники не обнаружены.
@@ -50,5 +50,5 @@ prisoner-collar-mob-crit = Крит
 prisoner-collar-mob-dead = Мертв
 prisoner-collar-mob-unknown = Н/Д
 
-prisoner-collar-console-footer-left = Система безопасности Натразен
-prisoner-collar-console-footer-right = Тюремный сектор «Тартар-7»
+prisoner-collar-console-footer-left = Система безопасности NanoTrasen
+prisoner-collar-console-footer-right = Тюремный сектор "Тартар-7"

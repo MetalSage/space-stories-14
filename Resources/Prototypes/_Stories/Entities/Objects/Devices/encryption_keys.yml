@@ -51,3 +51,21 @@
   - type: Tag
     tags:
     - STEncryptionJuridical
+
+- type: entity
+  parent: EncryptionKey
+  id: STEncryptionKeyBlueshield
+  name: blueshield encryption key
+  description: An encryption key used by the Blueshield Officer.
+  components:
+  - type: EncryptionKey
+    channels:
+    - Command
+    - Security
+    - Common
+    defaultChannel: Command
+  - type: Sprite
+    sprite: _Stories/Objects/Devices/encryption_keys.rsi
+    layers:
+    - state: crypt_silver
+    - state: nano_label

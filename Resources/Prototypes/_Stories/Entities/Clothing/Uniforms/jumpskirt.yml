@@ -19,3 +19,41 @@
     sprite: _Stories/Clothing/Uniforms/Jumpskirt/prosecutorblack.rsi
   - type: Clothing
     sprite: _Stories/Clothing/Uniforms/Jumpskirt/prosecutorblack.rsi
+
+- type: entity
+  parent: ClothingUniformSkirtBase
+  id: STClothingUniformJumpskirtBlueshield
+  name: blueshield's suitskirt
+  description: A classic bodyguard's suitskirt, with custom-fitted Blueshield-Blue cuffs and a Nanotrasen insignia over one of the pockets.
+  components:
+  - type: Sprite
+    sprite: _Stories/Clothing/Uniforms/Jumpskirt/blueshield_skirt.rsi
+  - type: Clothing
+    sprite: _Stories/Clothing/Uniforms/Jumpskirt/blueshield_skirt.rsi
+  - type: Armor
+    modifiers:
+      coefficients:
+        Blunt: 0.9
+        Slash: 0.9
+        Piercing: 0.9
+        Heat: 0.8
+        Caustic: 0.8
+
+- type: entity
+  parent: ClothingUniformSkirtBase
+  id: STClothingUniformJumpskirtBlueshieldSkirtleneck
+  name: blueshield's skirtleneck
+  description: A tactical jumper fit for only the best of bodyguards - instead of tactical pockets, this one has a tactical lack of leg protection.
+  components:
+  - type: Sprite
+    sprite: _Stories/Clothing/Uniforms/Jumpskirt/blueshield_skirtleneck.rsi
+  - type: Clothing
+    sprite: _Stories/Clothing/Uniforms/Jumpskirt/blueshield_skirtleneck.rsi
+  - type: Armor
+    modifiers:
+      coefficients:
+        Blunt: 0.9
+        Slash: 0.9
+        Piercing: 0.9
+        Heat: 0.8
+        Caustic: 0.8

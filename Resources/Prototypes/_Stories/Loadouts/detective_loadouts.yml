@@ -3,17 +3,11 @@
   name:  loadout-group-detective-belt
   loadouts:
   - ClothingBeltHolsterFilled
-  - STClothingBeltHolsterFilled
 
 - type: loadout
   id: ClothingBeltHolsterFilled
   equipment:
     belt: ClothingBeltHolsterFilled
-
-- type: loadout
-  id: STClothingBeltHolsterFilled
-  equipment:
-    belt: STClothingBeltHolsterFilled
 
 - type: loadout
   id: STDetectiveFedoraSpecialGrey

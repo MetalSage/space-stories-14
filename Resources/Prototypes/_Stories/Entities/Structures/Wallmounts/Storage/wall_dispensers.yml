@@ -1,0 +1,21 @@
+- type: entity
+  parent: BaseDispenser
+  id: STPepperSprayDispenser
+  name: pepper spray dispenser
+  description: Wallmount Pepper Spray dispenser. Refills pepper spray canisters with Tear Gas.
+  components:
+  - type: Sprite
+    sprite: _Stories/Structures/Wallmounts/pepperspray_dispenser.rsi
+    layers:
+    - state: pepperdispenser
+    - state: fill-1
+      map: ["enum.SolutionContainerLayers.Fill"]
+      visible: false
+  - type: SolutionContainerVisuals
+    maxFillLevels: 5
+    fillBaseName: fill-
+  - type: Solution
+    solution:
+      reagents:
+      - ReagentId: TearGas
+        Quantity: 960

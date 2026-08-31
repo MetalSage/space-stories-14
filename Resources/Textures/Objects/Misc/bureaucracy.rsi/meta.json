@@ -222,6 +222,18 @@
             "name": "paper_stamp-wizard"
         },
         {
+            "name": "paper_stamp-blueshield"
+        },
+        {
+            "name": "paper_stamp-hosp"
+        },
+        {
+            "name": "paper_stamp-judge"
+        },
+        {
+            "name": "paper_stamp-prosecutor"
+        },
+        {
             "name": "paper-inhand-right",
             "directions": 4
         },

@@ -1,0 +1,90 @@
+- type: entity
+  parent: BoxCardboard
+  id: STGunCaseTakbokBlueshield
+  name: Unmarked 'Takbok' gunset
+  description: A thick yellow gun case with foam inserts laid out to fit a weapon, magazines, and gear securely. The five square grid of Trappiste Fabriek is displayed prominently on the top.
+  components:
+  - type: Sprite
+    sprite: _Stories/Objects/Storage/Cases/trappiste_case.rsi
+    layers:
+    - state: icon
+      map: ["base"]
+  - type: GenericVisualizer
+    visuals:
+      enum.StorageVisuals.Open:
+        base:
+          True: { state: open }
+          False: { state: icon }
+  - type: Appearance
+  - type: Item
+    size: Large
+    sprite: _Stories/Objects/Storage/Cases/trappiste_case.rsi
+  - type: Storage
+    grid:
+    - 0,0,7,2
+    maxItemSize: Large
+  - type: StorageFill
+    contents:
+    - id: STWeaponRevolverTakbokBlueshield
+    - id: STAmmoBox585TrappisteIncapacitator
+    - id: STAmmoBox585Trappiste
+    - id: STAmmoBox585TrappisteHollowpoint
+    - id: STSpeedLoader585TrappisteEmpty
+      amount: 2
+
+- type: entity
+  parent: BoxCardboard
+  id: STGunCaseBogseo
+  name: Xhihao 'Bogseo' gunset
+  description: A heavy tactical gun case for the Xhihao Bogseo submachine gun.
+  components:
+  - type: Sprite
+    sprite: _Stories/Objects/Storage/Cases/xhihao_case.rsi
+    layers:
+    - state: icon
+      map: ["base"]
+  - type: GenericVisualizer
+    visuals:
+      enum.StorageVisuals.Open:
+        base:
+          True: { state: open }
+          False: { state: icon }
+  - type: Appearance
+  - type: Item
+    size: Huge
+    sprite: _Stories/Objects/Storage/Cases/xhihao_case.rsi
+  - type: Storage
+    grid:
+    - 0,0,9,3
+    maxItemSize: Huge
+  - type: StorageFill
+    contents:
+    - id: STWeaponSubmachineGunBogseo
+    - id: STAmmoBox585TrappisteIncapacitator
+      amount: 2
+    - id: STAmmoBox585Trappiste
+      amount: 1
+    - id: STMagazine585TrappistePistolEmpty
+      amount: 3
+
+- type: entity
+  parent: BoxCardboard
+  id: STBoxShieldBlades
+  name: arm defense system cyberset
+  description: A box with essentials for the Arm Defense System. Contains left and right blade implanters.
+  components:
+  - type: Sprite
+    sprite: _Stories/Objects/Storage/boxes.rsi
+    layers:
+    - state: cyber_implants
+  - type: Item
+    size: Normal
+    sprite: _Stories/Objects/Storage/boxes.rsi
+  - type: Storage
+    grid:
+    - 0,0,3,1
+    maxItemSize: Normal
+  - type: StorageFill
+    contents:
+    - id: STShieldBladeImplanterLeft
+    - id: STShieldBladeImplanterRight

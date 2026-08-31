@@ -1,0 +1,56 @@
+- type: entity
+  parent: BaseCartridgePistol
+  id: STCartridge585Trappiste
+  name: .585 Trappiste lethal cartridge
+  description: A white polymer cased high caliber round commonly used in handguns.
+  components:
+  - type: Sprite
+    sprite: _Stories/Objects/Weapons/Guns/Ammunition/Cartridges/585trappiste.rsi
+    layers:
+    - state: 585trappiste
+      map: [ "enum.AmmoVisualLayers.Base" ]
+  - type: SpentAmmoVisuals
+    state: 585trappiste
+  - type: CartridgeAmmo
+    proto: STBullet585Trappiste
+  - type: Tag
+    tags:
+    - Cartridge585Trappiste
+
+- type: entity
+  parent: BaseCartridgePistol
+  id: STCartridge585TrappisteIncapacitator
+  name: .585 Trappiste flathead cartridge
+  description: A white polymer cased high caliber round with a relatively soft, flat tip. Designed to flatten against targets and usually not penetrate on impact.
+  components:
+  - type: Sprite
+    sprite: _Stories/Objects/Weapons/Guns/Ammunition/Cartridges/585trappiste.rsi
+    layers:
+    - state: 585trappiste_disabler
+      map: [ "enum.AmmoVisualLayers.Base" ]
+  - type: SpentAmmoVisuals
+    state: 585trappiste_disabler
+  - type: CartridgeAmmo
+    proto: STBullet585TrappisteIncapacitator
+  - type: Tag
+    tags:
+    - Cartridge585Trappiste
+
+- type: entity
+  parent: BaseCartridgePistol
+  id: STCartridge585TrappisteHollowpoint
+  name: .585 Trappiste hollowhead cartridge
+  description: A white polymer cased high caliber round with a hollowed tip. Designed to cause as much damage on impact to fleshy targets as possible.
+  components:
+  - type: Sprite
+    sprite: _Stories/Objects/Weapons/Guns/Ammunition/Cartridges/585trappiste.rsi
+    layers:
+    - state: 585trappiste_shrapnel
+      map: [ "enum.AmmoVisualLayers.Base" ]
+  - type: SpentAmmoVisuals
+    state: 585trappiste_shrapnel
+  - type: CartridgeAmmo
+    proto: STBullet585TrappisteHollowpoint
+  - type: Tag
+    tags:
+    - Cartridge585Trappiste

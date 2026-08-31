@@ -9,3 +9,8 @@
 - type: storeCategory
   id: STForceLight
   name: Light Side
+
+- type: storeCategory
+  id: STBlueshieldArmamentsCategory
+  name: stories-store-category-blueshield-armaments
+  priority: 1

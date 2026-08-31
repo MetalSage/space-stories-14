@@ -1,71 +1,74 @@
 {
-    "version": 1,
-    "license": "CC-BY-SA-3.0",
-    "copyright": "Taken from https://github.com/vgstation-coders/vgstation13/blob/e71d6c4fba5a51f99b81c295dcaec4fc2f58fb19/icons/mob/screen1.dmi & made by Space Stories. PartyMaker SecurityClown CommandMaid by lzk228 (github), CorpiumInfected, CorpiumReady by doublechest0 (github), Judge, Prosecutor by itak_privet_chat (discord)",
-    "size": {
-        "x": 8,
-        "y": 8
+  "version": 1,
+  "license": "CC-BY-SA-3.0",
+  "copyright": "Taken from https://github.com/vgstation-coders/vgstation13/blob/e71d6c4fba5a51f99b81c295dcaec4fc2f58fb19/icons/mob/screen1.dmi & made by Space Stories. PartyMaker SecurityClown CommandMaid by lzk228 (github), CorpiumInfected, CorpiumReady by doublechest0 (github), Judge, Prosecutor by itak_privet_chat (discord), Blueshield taken from Monkestation at https://github.com/Monkestation/Monkestation2.0/blob/bdf60a966c1f57b8a0d9dc640c3e5dda340c7054/icons/mob/huds/hud.dmi",
+  "size": {
+    "x": 8,
+    "y": 8
+  },
+  "states": [
+    {
+      "name": "spaf"
     },
-    "states": [
-        {
-            "name": "spaf"
-        },
-        {
-            "name": "spafinfected"
-        },
-        {
-            "name": "prisoner"
-        },
-        {
-            "name": "HeadOfSpacePrison"
-        },
-        {
-            "name": "SpacePrisonSecurityOfficer"
-        },
-        {
-            "name": "GuardianNtSecurity"
-        },
-        {
-            "name": "SpacePrisonEngineer"
-        },
-        {
-            "name": "SpacePrisonMedic"
-        },
-        {
-            "name": "IAA"
-        },
-        {
-            "name": "Shadowlings"
-        },
-        {
-            "name": "ShadowlingsSlave"
-        },
-        {
-            "name": "Empire"
-        },
-        {
-            "name": "HypnotizedEmpire"
-        },
-        {
-            "name": "CommandMaid"
-        },
-        {
-            "name": "PartyMaker"
-        },
-        {
-            "name": "SecurityClown"
-        },
-        {
-            "name": "CorpiumInfected"
-        },
-        {
-            "name": "CorpiumReady"
-        },
-        {
-            "name": "Prosecutor"
-        },
-        {
-            "name": "Judge"
-        }
-    ]
+    {
+      "name": "spafinfected"
+    },
+    {
+      "name": "prisoner"
+    },
+    {
+      "name": "HeadOfSpacePrison"
+    },
+    {
+      "name": "SpacePrisonSecurityOfficer"
+    },
+    {
+      "name": "GuardianNtSecurity"
+    },
+    {
+      "name": "SpacePrisonEngineer"
+    },
+    {
+      "name": "SpacePrisonMedic"
+    },
+    {
+      "name": "IAA"
+    },
+    {
+      "name": "Shadowlings"
+    },
+    {
+      "name": "ShadowlingsSlave"
+    },
+    {
+      "name": "Empire"
+    },
+    {
+      "name": "HypnotizedEmpire"
+    },
+    {
+      "name": "CommandMaid"
+    },
+    {
+      "name": "PartyMaker"
+    },
+    {
+      "name": "SecurityClown"
+    },
+    {
+      "name": "CorpiumInfected"
+    },
+    {
+      "name": "CorpiumReady"
+    },
+    {
+      "name": "Prosecutor"
+    },
+    {
+      "name": "Judge"
+    },
+    {
+      "name": "Blueshield"
+    }
+  ]
 }

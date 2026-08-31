@@ -10,3 +10,5 @@ ent-STClothingBackpackGachi = рюкзак
     .desc = Вы носите это на спине и кладёте в него предметы.
 ent-STClothingBackpackRl = рюкзак
     .desc = Вы носите это на спине и кладёте в него предметы.
+ent-STClothingBackpackBlueshield = рюкзак синего щита
+    .desc = Прочный рюкзак, выдаваемый лучшим сотрудникам Nanotrasen.

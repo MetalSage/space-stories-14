@@ -63,3 +63,43 @@
     sprite: _Stories/Clothing/OuterClothing/Vests/inquisitor_armor.rsi
   - type: Clothing
     sprite: _Stories/Clothing/OuterClothing/Vests/inquisitor_armor.rsi
+
+- type: entity
+  parent: ClothingOuterArmorBasic
+  id: STClothingOuterVestBlueshieldJacket
+  name: blueshield's jacket
+  description: An expensive kevlar-lined jacket with a golden badge on the chest and "NT" emblazoned on the back. It weighs surprisingly little, despite how heavy it looks.
+  components:
+  - type: Sprite
+    sprite: _Stories/Clothing/OuterClothing/Vests/blueshield_jacket.rsi
+  - type: Clothing
+    sprite: _Stories/Clothing/OuterClothing/Vests/blueshield_jacket.rsi
+  - type: Armor
+    modifiers:
+      coefficients:
+        Blunt: 0.7
+        Slash: 0.7
+        Piercing: 0.6
+        Heat: 0.8
+  - type: ExplosionResistance
+    damageCoefficient: 0.85
+
+- type: entity
+  parent: ClothingOuterArmorBasic
+  id: STClothingOuterVestBlueshieldArmor
+  name: blueshield's armor
+  description: A tight-fitting kevlar-lined vest with a blue badge on the chest of it.
+  components:
+  - type: Sprite
+    sprite: _Stories/Clothing/OuterClothing/Vests/blueshield_armor.rsi
+  - type: Clothing
+    sprite: _Stories/Clothing/OuterClothing/Vests/blueshield_armor.rsi
+  - type: Armor
+    modifiers:
+      coefficients:
+        Blunt: 0.65
+        Slash: 0.65
+        Piercing: 0.55
+        Heat: 0.8
+  - type: ExplosionResistance
+    damageCoefficient: 0.8

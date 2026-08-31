@@ -443,6 +443,24 @@
   color: "#ffffff4d"
   boilingPoint: 255.0
   meltingPoint: 36.0
+  reactiveEffects:
+    Acidic:
+      methods: [ Touch ]
+      effects:
+      - !type:PopupMessage
+        type: Local
+        messages:
+        - generic-reagent-effect-burning-eyes
+        - generic-reagent-effect-burning-eyes-a-bit
+        - generic-reagent-effect-tearing-up
+      - !type:ModifyStatusEffect
+        effectProto: StatusEffectBlindness
+        time: 6
+        type: Update
+      - !type:MovementSpeedModifier
+        walkSpeedModifier: 0.5
+        sprintSpeedModifier: 0.5
+        time: 6
   metabolisms:
     Bloodstream:
       effects:
@@ -468,17 +486,22 @@
         - norepinephricacid-effect-blindness
       - !type:Emote
         emote: Scream
-        probability: 0.08
+        probability: 0.04
         conditions:
         - !type:ReagentCondition
           reagent: TearGas
           min: 4
       - !type:Emote
         emote: Cough
-        probability: 0.08
+        probability: 0.05
+        conditions:
+        - !type:ReagentCondition
+          reagent: TearGas
+          min: 4
       - !type:ModifyStatusEffect
         effectProto: StatusEffectBlindness
-        type: Add
+        time: 3
+        type: Update
         conditions:
         - !type:ReagentCondition
           reagent: TearGas
@@ -487,11 +510,10 @@
         walkSpeedModifier: 0.65
         sprintSpeedModifier: 0.65
         time: 1.5
-        conditions: # because of the remainding after effect, threshold is given so the effects ends simultaniously
+        conditions:
         - !type:ReagentCondition
           reagent: TearGas
           min: 4
-
 - type: reagent
   id: StrawberryIce
   name: reagent-name-StrawberryIce

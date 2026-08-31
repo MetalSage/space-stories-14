@@ -1,0 +1,43 @@
+- type: listing
+  id: STListingTakbokGuncase
+  name: stories-store-listing-blueshield-takbok-name
+  description: stories-store-listing-blueshield-takbok-desc
+  icon: { sprite: _Stories/Objects/Storage/Cases/trappiste_case.rsi, state: case_trappiste }
+  productEntity: STGunCaseTakbokBlueshield
+  cost:
+    STBlueshieldToken: 1
+  categories:
+  - STBlueshieldArmamentsCategory
+
+- type: listing
+  id: STListingHellgun
+  name: stories-store-listing-blueshield-hellgun-name
+  description: stories-store-listing-blueshield-hellgun-desc
+  icon: { sprite: _Stories/Objects/Weapons/Guns/Laser/hellgun.rsi, state: hellgun }
+  productEntity: STWeaponLaserHellfireBlueshield
+  cost:
+    STBlueshieldToken: 1
+  categories:
+  - STBlueshieldArmamentsCategory
+
+- type: listing
+  id: STListingBogseoGuncase
+  name: stories-store-listing-blueshield-bogseo-name
+  description: stories-store-listing-blueshield-bogseo-desc
+  icon: { sprite: _Stories/Objects/Storage/Cases/xhihao_case.rsi, state: case_xhihao }
+  productEntity: STGunCaseBogseo
+  cost:
+    STBlueshieldToken: 1
+  categories:
+  - STBlueshieldArmamentsCategory
+
+- type: listing
+  id: STListingShieldBlades
+  name: stories-store-listing-blueshield-blades-name
+  description: stories-store-listing-blueshield-blades-desc
+  icon: { sprite: _Stories/Objects/Storage/boxes.rsi, state: cyber_implants }
+  productEntity: STBoxShieldBlades
+  cost:
+    STBlueshieldToken: 1
+  categories:
+  - STBlueshieldArmamentsCategory

@@ -1,3 +1,4 @@
+using Content.Shared.Hands.Components; // Stories-RetractableItems
 using Robust.Shared.Audio;
 using Robust.Shared.GameStates;
 using Robust.Shared.Prototypes;
@@ -16,17 +17,25 @@ public sealed partial class RetractableItemActionComponent : Component
     [DataField(required: true)]
     public EntProtoId SpawnedPrototype;
 
+    // Stories-RetractableItems-Start
     /// <summary>
-    /// Sound collection to play when the item is summoned.
+    /// Target hand location (Left/Right) to deploy the item into. If null, uses active hand.
     /// </summary>
-    [DataField]
-    public SoundCollectionSpecifier? SummonSounds;
+    [DataField, AutoNetworkedField]
+    public HandLocation? TargetHandLocation;
+    // Stories-RetractableItems-End
 
     /// <summary>
-    /// Sound collection to play when the summoned item is retracted back into the action.
+    /// Sound to play when the item is summoned.
     /// </summary>
     [DataField]
-    public SoundCollectionSpecifier? RetractSounds;
+    public SoundSpecifier? SummonSounds; // Stories-RetractableItems
+
+    /// <summary>
+    /// Sound to play when the summoned item is retracted back into the action.
+    /// </summary>
+    [DataField]
+    public SoundSpecifier? RetractSounds; // Stories-RetractableItems
 
     /// <summary>
     /// The item managed by the action. Will be summoned and hidden as the action is used.

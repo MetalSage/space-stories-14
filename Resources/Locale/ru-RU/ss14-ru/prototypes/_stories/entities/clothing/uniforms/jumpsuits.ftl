@@ -18,3 +18,7 @@ ent-STClothingUniformJumpsuitProsecutorBlue = поношенный костюм
     .desc = Тот, кто носит это, олицетворяет занятость.
 ent-STClothingUniformJumpsuitProsecutorBlack = поношенный костюм
     .desc = Тот, кто носит это, олицетворяет занятость.
+ent-STClothingUniformJumpsuitBlueshield = костюм синего щита
+    .desc = Классический костюм телохранителя с манжетами фирменного синего цвета и эмблемой Nanotrasen на кармане.
+ent-STClothingUniformJumpsuitBlueshieldTurtleneck = водолазка синего щита
+    .desc = Тактический джемпер для лучших телохранителей, оснащенный множеством тактических карманов.

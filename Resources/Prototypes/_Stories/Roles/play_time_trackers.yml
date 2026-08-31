@@ -26,10 +26,13 @@
   id: STJobJudge
 
 - type: playTimeTracker
-  id: STJobSTSecurityClown
+  id: STJobSecurityClown
 
 - type: playTimeTracker
-  id: STJobSTCommandMaid
+  id: STJobCommandMaid
 
 - type: playTimeTracker
-  id: STJobSTPartyMaker
+  id: STJobPartyMaker
+
+- type: playTimeTracker
+  id: STJobBlueshield

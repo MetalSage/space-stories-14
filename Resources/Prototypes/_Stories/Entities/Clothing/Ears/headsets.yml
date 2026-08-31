@@ -25,3 +25,20 @@
       - EncryptionKeyCommon
   - type: Sprite
     sprite: _Stories/Clothing/Ears/Headsets/juridical.rsi
+
+- type: entity
+  parent: ClothingHeadset
+  id: STClothingHeadsetBlueshield
+  name: blueshield headset
+  description: The headset of the bodyguard who keeps the administration alive.
+  components:
+  - type: ContainerFill
+    containers:
+      key_slots:
+      - STEncryptionKeyBlueshield
+      - EncryptionKeyCommon
+  - type: Sprite
+    sprite: _Stories/Clothing/Ears/Headsets/blueshield.rsi
+    state: icon
+  - type: Clothing
+    sprite: _Stories/Clothing/Ears/Headsets/blueshield.rsi

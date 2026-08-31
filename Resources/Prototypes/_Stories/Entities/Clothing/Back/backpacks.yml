@@ -55,3 +55,14 @@
   components:
   - type: Sprite
     sprite: _Stories/Clothing/Back/Backpacks/backpacks_rl.rsi
+
+- type: entity
+  parent: ClothingBackpack
+  id: STClothingBackpackBlueshield
+  name: blueshield backpack
+  description: A robust backpack issued to Nanotrasen's finest.
+  components:
+  - type: Sprite
+    sprite: _Stories/Clothing/Back/Backpacks/blueshield_backpack.rsi
+  - type: Clothing
+    sprite: _Stories/Clothing/Back/Backpacks/blueshield_backpack.rsi
