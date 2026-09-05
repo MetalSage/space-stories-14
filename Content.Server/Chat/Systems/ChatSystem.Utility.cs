@@ -1,5 +1,6 @@
-using System.Linq;
+﻿using System.Linq;
 using System.Text;
+using Content.Shared._Stories.Language.Prototypes;
 using Content.Shared.Chat;
 using Content.Shared.Ghost.Components;
 using Content.Shared.Players;
@@ -64,7 +65,28 @@ public sealed partial class ChatSystem
     /// <summary>
     ///     Sends a chat message to the given players in range of the source entity.
     /// </summary>
-    private void SendInVoiceRange(ChatChannel channel, string message, string wrappedMessage, EntityUid source, ChatTransmitRange range, NetUserId? author = null)
+    private void SendInVoiceRange(
+        ChatChannel channel,
+        string message,
+        string wrappedMessage,
+        EntityUid source,
+        ChatTransmitRange range,
+        NetUserId? author = null
+        )
+    {
+        SendInVoiceRange(channel, message, _ => wrappedMessage, source, range, author);
+    }
+
+    // Stories-Language-Start
+    private void SendInVoiceRange(
+        ChatChannel channel,
+        string message,
+        Func<string, string> wrapMessage,
+        EntityUid source,
+        ChatTransmitRange range,
+        NetUserId? author = null,
+        ProtoId<LanguagePrototype>? language = null
+        )
     {
         foreach (var (session, data) in GetRecipients(source, VoiceRange))
         {
@@ -72,11 +94,25 @@ public sealed partial class ChatSystem
             if (entRange == MessageRangeCheckResult.Disallowed)
                 continue;
             var entHideChat = entRange == MessageRangeCheckResult.HideChat;
-            _chatManager.ChatMessageToOne(channel, message, wrappedMessage, source, entHideChat, session.Channel, author: author);
+
+            var listenerMessage = message;
+
+            if (language != null && session.AttachedEntity is { Valid: true } listener)
+            {
+                var needsLos = ProtoMan.TryIndex(language.Value, out var languageProto) && languageProto.NeedsLOS;
+                var hasLos = !needsLos || _examineSystem.InRangeUnOccluded(source, listener, VoiceRange);
+                var comprehension = hasLos ? _language.GetComprehension(listener, language.Value) : 0f;
+
+                if (comprehension < 1f)
+                    listenerMessage = _language.ObfuscateMessage(message, language.Value, comprehension);
+            }
+
+            _chatManager.ChatMessageToOne(channel, listenerMessage, wrapMessage(listenerMessage), source, entHideChat, session.Channel, author: author);
         }
 
-        _replay.RecordServerMessage(new ChatMessage(channel, message, wrappedMessage, GetNetEntity(source), null, MessageRangeHideChatForReplay(range)));
+        _replay.RecordServerMessage(new ChatMessage(channel, message, wrapMessage(message), GetNetEntity(source), null, MessageRangeHideChatForReplay(range)));
     }
+    // Stories-Language-End
 
     /// <summary>
     ///     Returns true if the given player is 'allowed' to send the given message, false otherwise.

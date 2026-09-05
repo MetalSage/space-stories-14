@@ -2,6 +2,7 @@ using Content.Server.Access.Systems;
 using Content.Server.Administration.Logs;
 using Content.Server.Chat.Systems;
 using Content.Server.Interaction;
+using Content.Server._Stories.Language.Systems;
 using Content.Server.Power.EntitySystems;
 using Content.Shared.Chat;
 using Content.Shared.Database;
@@ -34,6 +35,7 @@ public sealed partial class TelephoneSystem : SharedTelephoneSystem
     [Dependency] private IRobustRandom _random = default!;
     [Dependency] private IAdminLogManager _adminLogger = default!;
     [Dependency] private IReplayRecordingManager _replay = default!;
+    [Dependency] private LanguageSystem _language = default!; // Stories-Language
 
     // Has set used to prevent telephone feedback loops
     private HashSet<(EntityUid, string, Entity<TelephoneComponent>)> _recentChatMessages = new();
@@ -113,6 +115,8 @@ public sealed partial class TelephoneSystem : SharedTelephoneSystem
 
         var range = args.TelephoneSource.Comp.LinkedTelephones.Count > 1 ? ChatTransmitRange.HideChat : ChatTransmitRange.GhostRangeLimit;
         var volume = entity.Comp.SpeakerVolume == TelephoneVolume.Speak ? InGameICChatType.Speak : InGameICChatType.Whisper;
+
+        _language.SetRelayLanguage(speaker, _language.GetCurrentLanguage(args.MessageSource)); // Stories-Language
 
         _chat.TrySendInGameICMessage(speaker, args.Message, volume, range, nameOverride: name, checkRadioPrefix: false);
     }

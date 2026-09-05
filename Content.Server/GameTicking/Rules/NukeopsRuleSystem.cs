@@ -1,4 +1,4 @@
-using Content.Server.Antag;
+﻿using Content.Server.Antag;
 using Content.Server.Communications;
 using Content.Server.GameTicking.Rules.Components;
 using Content.Server.Nuke;
@@ -41,6 +41,7 @@ using Robust.Shared.Utility;
 using System.Data;
 using System.Linq;
 using System.Text;
+using Content.Server._Stories.Language.Systems;
 using Content.Shared.StationRecords.Systems;
 
 namespace Content.Server.GameTicking.Rules;
@@ -63,6 +64,7 @@ public sealed partial class NukeopsRuleSystem : GameRuleSystem<NukeopsRuleCompon
     [Dependency] private StationRecordsSystem _records = default!;
     [Dependency] private StoreSystem _store = default!;
     [Dependency] private TagSystem _tag = default!;
+    [Dependency] private NuclearOperativeLanguageSystem _nukeOpsLanguage = default!; // Stories-Language
 
     private static readonly ProtoId<CurrencyPrototype> TelecrystalCurrencyPrototype = "Telecrystal";
     private static readonly ProtoId<TagPrototype> NukeOpsUplinkTagPrototype = "NukeOpsUplink";
@@ -363,6 +365,8 @@ public sealed partial class NukeopsRuleSystem : GameRuleSystem<NukeopsRuleCompon
 
     private void OnComponentRemove(EntityUid uid, NukeOperativeComponent component, ComponentRemove args)
     {
+        _nukeOpsLanguage.RevokeCodespeak(uid); // Stories-Language
+
         CheckRoundShouldEnd();
     }
 
