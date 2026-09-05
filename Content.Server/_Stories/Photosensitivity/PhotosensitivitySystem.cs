@@ -1,10 +1,12 @@
 using System.Numerics;
 using Content.Shared._Stories.Shadowling;
+using Content.Shared.Alert;
 using Content.Shared.Damage.Systems;
 using Content.Shared.Flash;
 using Content.Shared.Maps;
 using Content.Shared.Mobs;
 using Content.Shared.Mobs.Components;
+using Content.Shared.Movement.Systems;
 using Robust.Server.GameObjects;
 using Robust.Shared.Audio.Systems;
 using Robust.Shared.GameObjects;
@@ -26,6 +28,8 @@ public sealed partial class PhotosensitivitySystem : EntitySystem
     [Dependency] private TransformSystem _transform = default!;
     [Dependency] private TurfSystem _turf = default!;
     [Dependency] private SharedAudioSystem _audio = default!;
+    [Dependency] private AlertsSystem _alerts = default!;
+    [Dependency] private MovementSpeedModifierSystem _movement = default!;
 
     private float _timer;
 
@@ -33,6 +37,33 @@ public sealed partial class PhotosensitivitySystem : EntitySystem
     {
         base.Initialize();
         SubscribeLocalEvent<PhotosensitivityComponent, AfterFlashedEvent>(OnFlashed);
+        SubscribeLocalEvent<PhotosensitivityComponent, RefreshMovementSpeedModifiersEvent>(OnRefreshSpeed);
+    }
+
+    private void OnRefreshSpeed(Entity<PhotosensitivityComponent> ent, ref RefreshMovementSpeedModifiersEvent args)
+    {
+        var multiplier = ent.Comp.WasInDarkness == true
+            ? ent.Comp.DarkSpeedMultiplier
+            : ent.Comp.LightSpeedMultiplier;
+
+        args.ModifySpeed(multiplier, multiplier);
+    }
+
+    private void UpdateLightState(EntityUid uid, PhotosensitivityComponent comp, bool inDarkness)
+    {
+        if (comp.WasInDarkness == inDarkness)
+            return;
+
+        comp.WasInDarkness = inDarkness;
+        _movement.RefreshMovementSpeedModifiers(uid);
+
+        if (comp.LightAlert is not { } alert)
+            return;
+
+        if (inDarkness)
+            _alerts.ClearAlert(uid, alert);
+        else
+            _alerts.ShowAlert(uid, alert);
     }
 
     private float GetDamageMultiplier(EntityUid uid, PhotosensitivityComponent comp)
@@ -69,10 +100,13 @@ public sealed partial class PhotosensitivitySystem : EntitySystem
 
         _timer -= UpdateTimer;
 
-        var query = EntityQueryEnumerator<PhotosensitivityComponent>();
+        var query = EntityQueryEnumerator<PhotosensitivityComponent, MetaDataComponent>();
 
-        while (query.MoveNext(out var uid, out var comp))
+        while (query.MoveNext(out var uid, out var comp, out var meta))
         {
+            if (meta.EntityPaused)
+                continue;
+
             if (!comp.Enabled || HasComp<ShadowWalkingComponent>(uid))
                 continue;
 
@@ -94,12 +128,15 @@ public sealed partial class PhotosensitivitySystem : EntitySystem
 
             if (inSpace)
             {
+                UpdateLightState(uid, comp, false);
                 _damageable.TryChangeDamage(uid, comp.DamageInSpace * damageMult, true, false);
                 _audio.PlayPvs(comp.BurnSound, uid);
                 continue;
             }
 
             var illumination = Math.Min(GetIllumination(uid), 10);
+
+            UpdateLightState(uid, comp, illumination < 1f);
 
             if (illumination > 1.5f)
             {

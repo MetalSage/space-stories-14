@@ -12,6 +12,21 @@
   - Xenoborg
   - STUnholy # Stories-Pontific
 
+# Stories-Demons-Start
+- type: npcFaction
+  id: STDemon
+  hostile:
+  - NanoTrasen
+  - Syndicate
+  - Xeno
+  - PetsNT
+  - Zombie
+  - Revolutionary
+  - AllHostile
+  - Wizard
+  - Xenoborg
+# Stories-Demons-End
+
 - type: npcFaction
   id: NanoTrasen
   hostile:
@@ -26,6 +41,7 @@
   - Xenoborg
   - STShadowling # Stories-Shadowling
   - STUnholy # Stories-Pontific
+  - STDemon # Stories-Demons
 
 - type: npcFaction
   id: Mouse

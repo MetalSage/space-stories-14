@@ -1,3 +1,4 @@
+using Content.Shared.Alert;
 using Content.Shared.Damage;
 using Content.Shared.Damage.Prototypes;
 using Content.Shared.FixedPoint;
@@ -77,4 +78,16 @@ public sealed partial class PhotosensitivityComponent : Component
 
     [DataField("critDamageMultiplier")]
     public float CritDamageMultiplier = 5f;
+
+    [DataField("lightAlert")]
+    public ProtoId<AlertPrototype>? LightAlert;
+
+    [DataField("lightSpeedMultiplier")]
+    public float LightSpeedMultiplier = 1f;
+
+    [DataField("darkSpeedMultiplier")]
+    public float DarkSpeedMultiplier = 1f;
+
+    [ViewVariables]
+    public bool? WasInDarkness;
 }
