@@ -16,10 +16,10 @@ public sealed partial class ClothingWhitelistComponent : Component
     [DataField("delay")]
     public float Delay = 3f;
 
-    [DataField("factionsBlacklist")] [ViewVariables(VVAccess.ReadWrite)]
+    [DataField("factionsBlacklist"), ViewVariables(VVAccess.ReadWrite)] 
     public HashSet<ProtoId<NpcFactionPrototype>>? FactionsBlacklist = new();
 
-    [DataField("factionsWhitelist")] [ViewVariables(VVAccess.ReadWrite)]
+    [DataField("factionsWhitelist"), ViewVariables(VVAccess.ReadWrite)] 
     public HashSet<ProtoId<NpcFactionPrototype>>? FactionsWhitelist = new();
 
     [DataField("initialBeepDelay")]

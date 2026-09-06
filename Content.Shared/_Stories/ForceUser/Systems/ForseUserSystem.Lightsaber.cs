@@ -142,7 +142,7 @@ public abstract partial class SharedForceUserSystem
         if (lightsaberComponent.LightsaberOwner != null)
             UnbindLightsaber(lightsaberComponent.LightsaberOwner.Value);
 
-        _popup.PopupEntity(Loc.GetString("Вы чувствуете связь с мечом..."), uid, uid); // FIXME: Hardcode
+        _popup.PopupEntity(Loc.GetString("Вы чувствуете связь с мечом..."), uid, uid);
 
         forceUserComponent.Lightsaber = lightsaber;
         lightsaberComponent.LightsaberOwner = uid;
@@ -158,7 +158,7 @@ public abstract partial class SharedForceUserSystem
 
         var lightsaberComponent = Comp<LightsaberComponent>(lightsaber);
 
-        _popup.PopupEntity(Loc.GetString("Вы чувствуете разрыв связи с мечом..."), uid, uid); // FIXME: Hardcode
+        _popup.PopupEntity(Loc.GetString("Вы чувствуете разрыв связи с мечом..."), uid, uid);
 
         forceUserComponent.Lightsaber = null;
         lightsaberComponent.LightsaberOwner = null;

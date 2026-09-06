@@ -1,6 +1,6 @@
 - type: entity
   parent: BaseFlag
-  id: PRISONFlag
+  id: STPRISONFlag
   name: Prison staff flag
   description: Protecting the galaxy from dangerous criminals.
   components:

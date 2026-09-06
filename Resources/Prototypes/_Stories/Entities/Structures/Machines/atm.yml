@@ -57,5 +57,5 @@
   - type: WiresPanel
   - type: Wires
     boardName: wires-board-name-atm
-    layoutId: Atm
+    layoutId: STAtm
   - type: WiresVisuals

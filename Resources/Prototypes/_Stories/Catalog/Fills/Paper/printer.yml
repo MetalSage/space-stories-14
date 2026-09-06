@@ -1,7 +1,7 @@
 - type: entity
   name: printer box
   parent: BoxBase
-  id: BoxPrinter
+  id: STBoxPrinter
   description: A cardboard box with everything for a paper printer.
   components:
   - type: Item
@@ -49,26 +49,26 @@
   - type: Appearance
   - type: StorageFill
     contents:
-    - id: InkPrinter
+    - id: STInkPrinter
       amount: 2
-    - id: SheetPrinter
+    - id: STSheetPrinter
       amount: 2
     - id: Multitool
-    - id: PrinterDocFlatpack
+    - id: STPrinterDocFlatpack
 
 - type: entity
   name: syndicate printer box
-  parent: BoxPrinter
-  id: BoxSyndiePrinter
+  parent: STBoxPrinter
+  id: STBoxSyndiePrinter
   description: A cardboard box with everything for a paper printer.
   components:
   - type: Sprite
     sprite: _Stories/Objects/Storage/printer_box_syndie.rsi
   - type: StorageFill
     contents:
-    - id: InkPrinter
+    - id: STInkPrinter
       amount: 2
-    - id: SheetPrinter
+    - id: STSheetPrinter
       amount: 2
     - id: Multitool
-    - id: PrinterDocSyndieFlatpack
+    - id: STPrinterDocSyndieFlatpack

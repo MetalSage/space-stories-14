@@ -8,19 +8,13 @@ using Robust.Shared.Utility;
 
 namespace Content.Client.UserInterface.RichText;
 
-/// <summary>
-/// Converts [form] tags into clickable buttons that open fill-in dialogs.
-/// </summary>
 public sealed class FormTagHandler : IMarkupTagHandler
 {
     private static int _formCounter;
     private static readonly Dictionary<string, int> _formPositions = new();
     private static string _lastText = "";
 
-    /// <summary>
-    /// Font line height set by PaperWindow to ensure buttons match text height
-    /// </summary>
-    public static float FontLineHeight { get; set; } = 16.0f; // Default fallback
+    public static float FontLineHeight { get; set; } = 16.0f;
 
     public string Name => "form";
 
@@ -37,9 +31,6 @@ public sealed class FormTagHandler : IMarkupTagHandler
         return "";
     }
 
-    /// <summary>
-    /// Creates a clickable button to replace the [form] tag.
-    /// </summary>
     public bool TryCreateControl(MarkupNode node, [NotNullWhen(true)] out Control? control)
     {
         var btn = new Button
@@ -57,7 +48,6 @@ public sealed class FormTagHandler : IMarkupTagHandler
 
         btn.OnPressed += _ =>
         {
-            // Find the PaperWindow parent
             var parent = btn.Parent;
             while (parent != null && parent is not PaperWindow)
             {
@@ -66,7 +56,6 @@ public sealed class FormTagHandler : IMarkupTagHandler
 
             if (parent is PaperWindow paperWindow)
             {
-                // Count buttons to determine which [form] tag this represents
                 var buttonIndex = CountFormButtonsBefore(btn);
                 paperWindow.OpenFormDialog(buttonIndex);
             }
@@ -86,29 +75,21 @@ public sealed class FormTagHandler : IMarkupTagHandler
         return _formCounter++;
     }
 
-    /// <summary>
-    /// Resets the form counter to ensure consistent indexing across renders.
-    /// </summary>
     public static void ResetFormCounter()
     {
         _formCounter = 0;
     }
 
-    /// <summary>
-    /// Counts form buttons before the clicked button to determine which [form] tag it represents.
-    /// </summary>
     private static int CountFormButtonsBefore(Control clickedButton)
     {
         var count = 0;
         var root = clickedButton;
 
-        // Find the root container
         while (root.Parent != null)
         {
             root = root.Parent;
         }
 
-        // Count form buttons in document order
         var found = false;
         CountFormButtonsRecursive(root, clickedButton, ref count, ref found);
         return found ? count : 0;
@@ -136,9 +117,6 @@ public sealed class FormTagHandler : IMarkupTagHandler
         }
     }
 
-    /// <summary>
-    /// Caches form tag positions to avoid recalculating on every render.
-    /// </summary>
     public static void SetFormText(string text)
     {
         if (_lastText != text)

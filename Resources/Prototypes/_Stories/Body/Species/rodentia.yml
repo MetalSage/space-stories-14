@@ -1,6 +1,6 @@
 - type: markingsGroup
   parent: Undergarments
-  id: Rodentia
+  id: STRodentia
   onlyGroupWhitelisted: true
   limits:
     enum.HumanoidVisualLayers.Hair:
@@ -12,7 +12,7 @@
     enum.HumanoidVisualLayers.Tail:
       limit: 1
       required: true
-      default: [ RodentiaTailDefault ]
+      default: [ STRodentiaTailDefault ]
     enum.HumanoidVisualLayers.Chest:
       limit: 2
       required: false
@@ -22,7 +22,7 @@
     enum.HumanoidVisualLayers.HeadTop:
       limit: 1
       required: true
-      default: [ RodentiaHeadTopEarDefault ]
+      default: [ STRodentiaHeadTopEarDefault ]
     enum.HumanoidVisualLayers.HeadSide:
       limit: 1
       required: false
@@ -53,21 +53,21 @@
 
 - type: entity
   parent: BaseSpeciesAppearance
-  id: AppearanceRodentia
+  id: STAppearanceRodentia
   name: rodentia appearance
   components:
   - type: InitialBody
     organs:
-      Torso: OrganRodentiaTorso
-      Head: OrganRodentiaHead
-      ArmLeft: OrganRodentiaArmLeft
-      ArmRight: OrganRodentiaArmRight
-      HandRight: OrganRodentiaHandRight
-      HandLeft: OrganRodentiaHandLeft
-      LegLeft: OrganRodentiaLegLeft
-      LegRight: OrganRodentiaLegRight
-      FootLeft: OrganRodentiaFootLeft
-      FootRight: OrganRodentiaFootRight
+      Torso: STOrganRodentiaTorso
+      Head: STOrganRodentiaHead
+      ArmLeft: STOrganRodentiaArmLeft
+      ArmRight: STOrganRodentiaArmRight
+      HandRight: STOrganRodentiaHandRight
+      HandLeft: STOrganRodentiaHandLeft
+      LegLeft: STOrganRodentiaLegLeft
+      LegRight: STOrganRodentiaLegRight
+      FootLeft: STOrganRodentiaFootLeft
+      FootRight: STOrganRodentiaFootRight
       Brain: OrganHumanBrain
       Eyes: OrganHumanEyes
       Tongue: OrganHumanTongue
@@ -75,18 +75,18 @@
       Ears: OrganHumanEars
       Lungs: OrganHumanLungs
       Heart: OrganAnimalHeart
-      Stomach: OrganRodentiaStomach
+      Stomach: STOrganRodentiaStomach
       Liver: OrganAnimalLiver
       Kidneys: OrganHumanKidneys
   - type: HumanoidProfile
-    species: Rodentia
+    species: STRodentia
 
 - type: entity
   save: false
   parent:
-  - AppearanceRodentia
+  - STAppearanceRodentia
   - BaseSpeciesMobOrganic
-  id: MobRodentia
+  id: STMobRodentia
   name: Urist McRat
   components:
   - type: MobThresholds
@@ -104,7 +104,7 @@
     sprite: _Stories/Mobs/Rodentia/parts.rsi
     state: full
   - type: Speech
-    speechVerb: Rodentia
+    speechVerb: STRodentia
     speechSounds: Squeak
     allowedEmotes: ['Squeak']
   - type: MeleeWeapon
@@ -112,19 +112,19 @@
       path: /Audio/Weapons/pierce.ogg
     animation: WeaponArcClaw
   - type: Vocal
-    emoteSounds: MaleRodentia
+    emoteSounds: STMaleRodentia
   - type: Inventory
     speciesId: rodentia
 
 - type: entity
   parent: OrganBase
-  id: OrganRodentia
+  id: STOrganRodentia
   abstract: true
-  suffix: Rodentia
+  suffix: STRodentia
 
 - type: entity
-  parent: OrganRodentia
-  id: OrganRodentiaExternal
+  parent: STOrganRodentia
+  id: STOrganRodentiaExternal
   abstract: true
   components:
   - type: Sprite
@@ -134,50 +134,50 @@
       sprite: _Stories/Mobs/Rodentia/parts.rsi
   - type: VisualOrganMarkings
     markingData:
-      group: Rodentia
+      group: STRodentia
 
 - type: entity
-  id: OrganRodentiaTorso
-  parent: [ OrganBaseTorsoSexed, OrganBaseTorso, OrganRodentiaExternal ]
+  id: STOrganRodentiaTorso
+  parent: [ OrganBaseTorsoSexed, OrganBaseTorso, STOrganRodentiaExternal ]
 
 - type: entity
-  id: OrganRodentiaHead
-  parent: [ OrganBaseHeadSexed, OrganBaseHead, OrganRodentiaExternal ]
+  id: STOrganRodentiaHead
+  parent: [ OrganBaseHeadSexed, OrganBaseHead, STOrganRodentiaExternal ]
 
 - type: entity
-  id: OrganRodentiaArmLeft
-  parent: [ OrganBaseArmLeft, OrganRodentiaExternal ]
+  id: STOrganRodentiaArmLeft
+  parent: [ OrganBaseArmLeft, STOrganRodentiaExternal ]
 
 - type: entity
-  id: OrganRodentiaArmRight
-  parent: [ OrganBaseArmRight, OrganRodentiaExternal ]
+  id: STOrganRodentiaArmRight
+  parent: [ OrganBaseArmRight, STOrganRodentiaExternal ]
 
 - type: entity
-  id: OrganRodentiaHandLeft
-  parent: [ OrganBaseHandLeft, OrganRodentiaExternal ]
+  id: STOrganRodentiaHandLeft
+  parent: [ OrganBaseHandLeft, STOrganRodentiaExternal ]
 
 - type: entity
-  id: OrganRodentiaHandRight
-  parent: [ OrganBaseHandRight, OrganRodentiaExternal ]
+  id: STOrganRodentiaHandRight
+  parent: [ OrganBaseHandRight, STOrganRodentiaExternal ]
 
 - type: entity
-  id: OrganRodentiaLegLeft
-  parent: [ OrganBaseLegLeft, OrganRodentiaExternal ]
+  id: STOrganRodentiaLegLeft
+  parent: [ OrganBaseLegLeft, STOrganRodentiaExternal ]
 
 - type: entity
-  id: OrganRodentiaLegRight
-  parent: [ OrganBaseLegRight, OrganRodentiaExternal ]
+  id: STOrganRodentiaLegRight
+  parent: [ OrganBaseLegRight, STOrganRodentiaExternal ]
 
 - type: entity
-  id: OrganRodentiaFootLeft
-  parent: [ OrganBaseFootLeft, OrganRodentiaExternal ]
+  id: STOrganRodentiaFootLeft
+  parent: [ OrganBaseFootLeft, STOrganRodentiaExternal ]
 
 - type: entity
-  id: OrganRodentiaFootRight
-  parent: [ OrganBaseFootRight, OrganRodentiaExternal ]
+  id: STOrganRodentiaFootRight
+  parent: [ OrganBaseFootRight, STOrganRodentiaExternal ]
 
 - type: entity
-  id: OrganRodentiaStomach
+  id: STOrganRodentiaStomach
   parent: OrganReptilianStomach
   categories: [ HideSpawnMenu ]
   components:

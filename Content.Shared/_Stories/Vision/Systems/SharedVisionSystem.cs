@@ -6,17 +6,16 @@ using Content.Shared.Inventory;
 using Content.Shared.Inventory.Events;
 using Content.Shared.Item;
 using Robust.Shared.Containers;
-using Robust.Shared.GameStates;
 using Robust.Shared.Timing;
 
 namespace Content.Shared._Stories.Vision.Systems;
 
 public abstract partial class SharedVisionSystem : EntitySystem
 {
-    [Dependency] private InventorySystem _inventory = default!;
     [Dependency] private SharedActionsSystem _actions = default!;
     [Dependency] private AlertsSystem _alerts = default!;
     [Dependency] private SharedContainerSystem _container = default!;
+    [Dependency] private InventorySystem _inventory = default!;
     [Dependency] private IGameTiming _timing = default!;
 
     public override void Initialize()
@@ -56,9 +55,7 @@ public abstract partial class SharedVisionSystem : EntitySystem
         }
 
         if (comp.ToggleAlert != null && !HasComp<ItemComponent>(uid))
-        {
             _alerts.ClearAlert(uid, comp.ToggleAlert.Value);
-        }
 
         if (_container.TryGetContainingContainer(uid, out var container))
             UpdateVision(container.Owner);
@@ -87,7 +84,9 @@ public abstract partial class SharedVisionSystem : EntitySystem
         UpdateVision(args.EquipTarget);
     }
 
-    private void OnRelayedRefresh(EntityUid uid, VisionProviderComponent comp, ref InventoryRelayedEvent<RefreshVisionEvent> args)
+    private void OnRelayedRefresh(EntityUid uid,
+        VisionProviderComponent comp,
+        ref InventoryRelayedEvent<RefreshVisionEvent> args)
     {
         OnRefresh(uid, comp, ref args.Args);
     }
@@ -196,6 +195,7 @@ public abstract partial class SharedVisionSystem : EntitySystem
                 existingVision.ThermalAmbientColor = ev.ThermalAmbientColor;
                 Dirty(user, existingVision);
             }
+
             return;
         }
 

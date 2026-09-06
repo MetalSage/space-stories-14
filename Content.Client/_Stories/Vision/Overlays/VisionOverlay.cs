@@ -10,21 +10,18 @@ namespace Content.Client._Stories.Vision.Overlays;
 
 public sealed partial class VisionOverlay : Overlay
 {
+    private readonly SpriteSystem _sprite;
+
+    private readonly TransformSystem _transform;
+    private string? _cachedScreenShaderId;
+    private string? _cachedThermalShaderId;
     [Dependency] private IEntityManager _entityManager = default!;
     [Dependency] private IPlayerManager _playerManager = default!;
     [Dependency] private IPrototypeManager _prototypeManager = default!;
 
-    public override OverlaySpace Space => OverlaySpace.WorldSpace;
-    public override bool RequestScreenTexture => true;
-
-    private readonly TransformSystem _transform;
-    private readonly SpriteSystem _sprite;
-
     private ShaderInstance? _screenShader;
-    private string? _cachedScreenShaderId;
 
     private ShaderInstance? _thermalShader;
-    private string? _cachedThermalShaderId;
 
     public VisionOverlay()
     {
@@ -33,9 +30,13 @@ public sealed partial class VisionOverlay : Overlay
         _sprite = _entityManager.System<SpriteSystem>();
     }
 
+    public override OverlaySpace Space => OverlaySpace.WorldSpace;
+    public override bool RequestScreenTexture => true;
+
     protected override void Draw(in OverlayDrawArgs args)
     {
-        if (!_entityManager.TryGetComponent(_playerManager.LocalEntity, out VisionComponent? vision) || !vision.IsActive)
+        if (!_entityManager.TryGetComponent(_playerManager.LocalEntity, out VisionComponent? vision) ||
+            !vision.IsActive)
             return;
 
         var handle = args.WorldHandle;
@@ -55,7 +56,7 @@ public sealed partial class VisionOverlay : Overlay
             if (vision.AmbientColor != null)
                 _screenShader.SetParameter("ambient_color", vision.AmbientColor.Value);
             else
-                _screenShader.SetParameter("ambient_color", new Color(1.0f, 1.0f, 1.0f, 1.0f));
+                _screenShader.SetParameter("ambient_color", new Color(1.0f, 1.0f, 1.0f));
 
             handle.UseShader(_screenShader);
             handle.DrawRect(args.WorldBounds, Color.White);
@@ -71,14 +72,14 @@ public sealed partial class VisionOverlay : Overlay
                     _thermalShader = _prototypeManager.Index<ShaderPrototype>(vision.ThermalShader).InstanceUnique();
                     _cachedThermalShaderId = vision.ThermalShader;
                 }
+
                 handle.UseShader(_thermalShader);
             }
             else
-            {
                 handle.UseShader(null);
-            }
 
-            var entities = _entityManager.EntityQueryEnumerator<MobStateComponent, SpriteComponent, TransformComponent>();
+            var entities =
+                _entityManager.EntityQueryEnumerator<MobStateComponent, SpriteComponent, TransformComponent>();
             while (entities.MoveNext(out var uid, out _, out var sprite, out var xform))
             {
                 if (xform.MapID != args.MapId)
@@ -91,16 +92,12 @@ public sealed partial class VisionOverlay : Overlay
 
                 var colorCache = sprite.Color;
                 if (vision.ThermalAmbientColor != null)
-                {
                     _sprite.SetColor((uid, sprite), colorCache * vision.ThermalAmbientColor.Value);
-                }
 
                 _sprite.RenderSprite((uid, sprite), handle, eyeRot, rotation, position);
 
                 if (vision.ThermalAmbientColor != null)
-                {
                     _sprite.SetColor((uid, sprite), colorCache);
-                }
             }
 
             handle.UseShader(null);

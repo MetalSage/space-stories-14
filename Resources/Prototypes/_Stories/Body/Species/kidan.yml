@@ -1,6 +1,6 @@
 - type: markingsGroup
   parent: Undergarments
-  id: Kidan
+  id: STKidan
   onlyGroupWhitelisted: true
   limits:
     enum.HumanoidVisualLayers.Hair:
@@ -8,7 +8,7 @@
       required: false
     enum.HumanoidVisualLayers.HeadTop:
       limit: 1
-      default: [ KidanHeadNormal ]
+      default: [ STKidanHeadNormal ]
       required: true
     enum.HumanoidVisualLayers.Chest:
       limit: 2
@@ -40,46 +40,46 @@
 
 - type: entity
   parent: BaseSpeciesAppearance
-  id: AppearanceKidan
+  id: STAppearanceKidan
   name: kidan appearance
   components:
   - type: InitialBody
     organs:
-      Torso: OrganKidanTorso
-      Head: OrganKidanHead
-      ArmLeft: OrganKidanArmLeft
-      ArmRight: OrganKidanArmRight
-      HandRight: OrganKidanHandRight
-      HandLeft: OrganKidanHandLeft
-      LegLeft: OrganKidanLegLeft
-      LegRight: OrganKidanLegRight
-      FootLeft: OrganKidanFootLeft
-      FootRight: OrganKidanFootRight
+      Torso: STOrganKidanTorso
+      Head: STOrganKidanHead
+      ArmLeft: STOrganKidanArmLeft
+      ArmRight: STOrganKidanArmRight
+      HandRight: STOrganKidanHandRight
+      HandLeft: STOrganKidanHandLeft
+      LegLeft: STOrganKidanLegLeft
+      LegRight: STOrganKidanLegRight
+      FootLeft: STOrganKidanFootLeft
+      FootRight: STOrganKidanFootRight
       Brain: OrganHumanBrain
-      Eyes: OrganKidanEyes
+      Eyes: STOrganKidanEyes
       Tongue: OrganHumanTongue
       Appendix: OrganHumanAppendix
       Ears: OrganHumanEars
       Lungs: OrganHumanLungs
       Heart: OrganAnimalHeart
-      Stomach: OrganKidanStomach
-      Liver: OrganKidanLiver
+      Stomach: STOrganKidanStomach
+      Liver: STOrganKidanLiver
       Kidneys: OrganAnimalKidneys
   - type: HumanoidProfile
-    species: Kidan
+    species: STKidan
 
 - type: entity
   parent:
-  - AppearanceKidan
+  - STAppearanceKidan
   - BaseSpeciesMobOrganic
-  id: MobKidan
+  id: STMobKidan
   name: Urist McKidan
   components:
   - type: Icon
     sprite: _Stories/Mobs/Species/Kidan/parts.rsi
     state: full
   - type: Speech
-    allowedEmotes: ['Grumble', 'Moan', 'WigglesAntennae', 'WavesAntennaeSharply']
+    allowedEmotes: ['STGrumble', 'STMoan', 'STWigglesAntennae', 'STWavesAntennaeSharply']
   - type: Butcherable
     spawned:
     - id: FoodMeat
@@ -99,15 +99,15 @@
   - type: IntrinsicRadioReceiver
   - type: IntrinsicRadioTransmitter
     channels:
-    - Chitine
+    - STChitine
   - type: ActiveRadio
     channels:
-    - Chitine
+    - STChitine
   - type: KidanAccent
   - type: Vocal
-    emoteSounds: MaleKidan
+    emoteSounds: STMaleKidan
   - type: Damageable
-    damageModifierSet: Kidan
+    damageModifierSet: STKidan
   - type: Bioluminescence
   - type: MeleeWeapon
     animation: WeaponArcClaw
@@ -165,9 +165,9 @@
 
 - type: entity
   parent: OrganBase
-  id: OrganKidan
+  id: STOrganKidan
   abstract: true
-  suffix: Kidan
+  suffix: STKidan
   components:
   - type: Extractable
     juiceSolution:
@@ -178,8 +178,8 @@
         Quantity: 10
 
 - type: entity
-  parent: OrganKidan
-  id: OrganKidanExternal
+  parent: STOrganKidan
+  id: STOrganKidanExternal
   abstract: true
   components:
   - type: Sprite
@@ -189,51 +189,51 @@
       sprite: _Stories/Mobs/Species/Kidan/parts.rsi
   - type: VisualOrganMarkings
     markingData:
-      group: Kidan
+      group: STKidan
 
 - type: entity
-  id: OrganKidanTorso
-  parent: [ OrganBaseTorsoSexed, OrganBaseTorso, OrganKidanExternal ]
+  id: STOrganKidanTorso
+  parent: [ OrganBaseTorsoSexed, OrganBaseTorso, STOrganKidanExternal ]
 
 - type: entity
-  id: OrganKidanHead
-  parent: [ OrganBaseHeadSexed, OrganBaseHead, OrganKidanExternal ]
+  id: STOrganKidanHead
+  parent: [ OrganBaseHeadSexed, OrganBaseHead, STOrganKidanExternal ]
 
 - type: entity
-  id: OrganKidanArmLeft
-  parent: [ OrganBaseArmLeft, OrganKidanExternal ]
+  id: STOrganKidanArmLeft
+  parent: [ OrganBaseArmLeft, STOrganKidanExternal ]
 
 - type: entity
-  id: OrganKidanArmRight
-  parent: [ OrganBaseArmRight, OrganKidanExternal ]
+  id: STOrganKidanArmRight
+  parent: [ OrganBaseArmRight, STOrganKidanExternal ]
 
 - type: entity
-  id: OrganKidanHandLeft
-  parent: [ OrganBaseHandLeft, OrganKidanExternal ]
+  id: STOrganKidanHandLeft
+  parent: [ OrganBaseHandLeft, STOrganKidanExternal ]
 
 - type: entity
-  id: OrganKidanHandRight
-  parent: [ OrganBaseHandRight, OrganKidanExternal ]
+  id: STOrganKidanHandRight
+  parent: [ OrganBaseHandRight, STOrganKidanExternal ]
 
 - type: entity
-  id: OrganKidanLegLeft
-  parent: [ OrganBaseLegLeft, OrganKidanExternal ]
+  id: STOrganKidanLegLeft
+  parent: [ OrganBaseLegLeft, STOrganKidanExternal ]
 
 - type: entity
-  id: OrganKidanLegRight
-  parent: [ OrganBaseLegRight, OrganKidanExternal ]
+  id: STOrganKidanLegRight
+  parent: [ OrganBaseLegRight, STOrganKidanExternal ]
 
 - type: entity
-  id: OrganKidanFootLeft
-  parent: [ OrganBaseFootLeft, OrganKidanExternal ]
+  id: STOrganKidanFootLeft
+  parent: [ OrganBaseFootLeft, STOrganKidanExternal ]
 
 - type: entity
-  id: OrganKidanFootRight
-  parent: [ OrganBaseFootRight, OrganKidanExternal ]
+  id: STOrganKidanFootRight
+  parent: [ OrganBaseFootRight, STOrganKidanExternal ]
 
 - type: entity
-  id: OrganKidanEyes
-  parent: [ OrganBaseEyes, OrganHumanInternal, OrganKidanExternal ]
+  id: STOrganKidanEyes
+  parent: [ OrganBaseEyes, OrganHumanInternal, STOrganKidanExternal ]
   components:
   - type: VisualOrgan
     data:
@@ -241,13 +241,13 @@
       state: eyes
 
 - type: entity
-  id: OrganKidanStomach
+  id: STOrganKidanStomach
   parent: OrganAnimalStomach
   categories: [ HideSpawnMenu ]
   components:
   - type: SolutionManager
     solutions:
-    - SolutionStomachKidan
+    - STSolutionStomachKidan
   - type: Stomach
     specialDigestible:
       tags:
@@ -258,7 +258,7 @@
       - FoodSnack
 
 - type: entity
-  id: OrganKidanLiver
+  id: STOrganKidanLiver
   parent: OrganAnimalLiver
   categories: [ HideSpawnMenu ]
   components:
@@ -268,7 +268,7 @@
 
 - type: entity
   parent: SolutionStomach
-  id: SolutionStomachKidan
+  id: STSolutionStomachKidan
   categories: [ HideSpawnMenu ]
   components:
   - type: Solution

@@ -1,7 +1,7 @@
 - type: entity
   name: engraved flippo lighter
   parent: FlippoLighter
-  id: StoriesFlippoEngravedLighter
+  id: STFlippoEngravedLighter
   description: A reliable metal lighter designed to last a long time. The engraving provides no tactical advantage.
   components:
   - type: Sprite

@@ -1,8 +1,12 @@
-ent-ClothingOuterVestGuardianNt = утепленный бронежилет стража клинка
+ent-STClothingOuterVestGuardianNt = утепленный бронежилет стража клинка
     .desc = Потому что кто-то сказал, что бронежилеты могут быть утеплены. Ваш щит уже утеплен!
-ent-PRISONClothingOuterVestArmor = бронежилет
+ent-STPRISONClothingOuterVestArmor = бронежилет
     .desc = Тонкий бронежилет типа I, обеспечивающий достойную защиту от большинства видов повреждений.
-ent-ClothingOuterVestArmorExe = бронежилет хранителя
+ent-STClothingOuterVestArmorExe = бронежилет хранителя
     .desc = Элегантный бронежилет, оберегающий хранителя от большинства видов повреждений и перепадов температур.
-ent-ClothingOuterVestInquisitor = бронежилет инквизитора
+ent-STClothingOuterVestInquisitor = бронежилет инквизитора
     .desc = Грозный бронежилет, обеспечивающий высокую защиту от механических повреждений.
+ent-STClothingOuterVestBlueshieldJacket = куртка синего щита
+    .desc = Дорогая кевларовая куртка с золотым значком на груди и надписью «NT» на спине. Весит на удивление мало, несмотря на массивный вид.
+ent-STClothingOuterVestBlueshieldArmor = бронежилет синего щита
+    .desc = Облегающий кевларовый бронежилет с синим значком на груди.

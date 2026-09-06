@@ -1,5 +1,5 @@
 - type: alert
-  id: ForceVolume
+  id: STForceVolume
   icons:
   - sprite: /Textures/_Stories/Interface/Alerts/force_volume.rsi
     state: 0
@@ -41,13 +41,13 @@
     state: 18
   - sprite: /Textures/_Stories/Interface/Alerts/force_volume.rsi
     state: 19
-  name: Сила
+  name: Force
   description: Когда количество имеет значение.
   minSeverity: 0
   maxSeverity: 19
 
 - type: alert
-  id: InquisitorForceVolume
+  id: STInquisitorForceVolume
   icons:
   - sprite: /Textures/_Stories/Interface/Alerts/inquisitor_volume.rsi
     state: 0
@@ -89,13 +89,13 @@
     state: 18
   - sprite: /Textures/_Stories/Interface/Alerts/inquisitor_volume.rsi
     state: 19
-  name: Сила Инквизитора
+  name: Inquisitor Force
   description: Дизайн придает сил.
   minSeverity: 0
   maxSeverity: 19
 
 - type: alert
-  id: GuardianNtForceVolume
+  id: STGuardianNtForceVolume
   icons:
   - sprite: /Textures/_Stories/Interface/Alerts/guardiannt_volume.rsi
     state: 0
@@ -137,7 +137,7 @@
     state: 18
   - sprite: /Textures/_Stories/Interface/Alerts/guardiannt_volume.rsi
     state: 19
-  name: Сила Стража Клинка
+  name: Force Стража Клинка
   description: В вашем стиле. Точен на 20%.
   minSeverity: 0
   maxSeverity: 19

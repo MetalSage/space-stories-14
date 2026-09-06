@@ -40,28 +40,28 @@ public sealed partial class ToggleAscendantBroadcastEvent : InstantActionEvent;
 
 public sealed partial class ToggleShadowlingVisionEvent : InstantActionEvent;
 
-[Serializable, NetSerializable]
+[Serializable, NetSerializable] 
 public sealed partial class ShadowlingHatchDoAfterEvent : SimpleDoAfterEvent;
 
-[Serializable, NetSerializable]
+[Serializable, NetSerializable] 
 public sealed partial class ShadowlingEnthrallDoAfterEvent : SimpleDoAfterEvent;
 
-[Serializable, NetSerializable]
+[Serializable, NetSerializable] 
 public sealed partial class ShadowlingAscendanceDoAfterEvent : SimpleDoAfterEvent;
 
-[Serializable, NetSerializable]
+[Serializable, NetSerializable] 
 public sealed class ShadowlingWorldAscendanceEvent : EntityEventArgs
 {
     public NetEntity Entity;
 }
 
-[Serializable, NetSerializable]
+[Serializable, NetSerializable] 
 public sealed class ShadowlingHalfwayEvent : EntityEventArgs
 {
 }
 
-[Serializable, NetSerializable]
+[Serializable, NetSerializable] 
 public enum ShadowlingThrallVisuals : byte
 {
-    IsThrall
+    IsThrall,
 }

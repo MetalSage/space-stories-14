@@ -5,7 +5,7 @@ namespace Content.Server._Stories.ForceUser;
 
 public sealed partial class ForceUserSystem
 {
-    public const string HandTetherGunProto = "HandTetherGun";
+    public const string HandTetherGunProto = "STHandTetherGun";
 
     public void InitializeTetherHand()
     {
@@ -23,7 +23,7 @@ public sealed partial class ForceUserSystem
             _hands.TryPickupAnyHand(args.Performer, comp.TetherHand.Value);
             _popup.PopupEntity(Loc.GetString("Вы чувствуете силу в ваших руках..."),
                 args.Performer,
-                args.Performer); // TODO: Добавить локализацию
+                args.Performer);
         }
         else
         {

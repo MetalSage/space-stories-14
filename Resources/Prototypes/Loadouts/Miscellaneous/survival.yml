@@ -20,10 +20,10 @@
     - Reptilian
     - Vulpkanin
     # Stories-Start
-    - Kidan
-    - Avali
-    - Felinid
-    - Rodentia
+    - STKidan
+    - STAvali
+    - STFelinid
+    - STRodentia
     # Stories-End
 
 - type: loadoutEffectGroup

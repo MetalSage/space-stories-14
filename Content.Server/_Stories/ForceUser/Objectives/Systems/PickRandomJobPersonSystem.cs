@@ -3,7 +3,6 @@ using Content.Server.Store.Systems;
 using Content.Shared.FixedPoint;
 using Content.Shared.Mind;
 using Content.Shared.Objectives.Components;
-using Content.Shared.Objectives.Systems;
 using Content.Shared.Popups;
 using Content.Shared.Roles.Jobs;
 using Content.Shared.Store.Components;
@@ -15,11 +14,11 @@ public sealed partial class PickRandomJobPersonSystem : EntitySystem
 {
     private const float UdateDelay = 10f;
     [Dependency] private SharedJobSystem _job = default!;
+    [Dependency] private SharedMindSystem _mind = default!;
     [Dependency] private SharedPopupSystem _popup = default!;
     [Dependency] private IRobustRandom _random = default!;
     [Dependency] private StoreSystem _store = default!;
     [Dependency] private TargetObjectiveSystem _target = default!;
-    [Dependency] private SharedMindSystem _mind = default!;
 
     private float _updateTime;
 
@@ -54,15 +53,12 @@ public sealed partial class PickRandomJobPersonSystem : EntitySystem
     {
         comp.MindId = args.MindId;
 
-        // invalid prototype
         if (!TryComp<TargetObjectiveComponent>(uid, out var target))
             return;
 
-        // target already assigned
         if (comp.Handled)
             return;
 
-        // no other humans to kill
         var allHumans = _mind.GetAliveHumans(args.MindId);
         if (allHumans.Count == 0)
             return;
@@ -75,16 +71,16 @@ public sealed partial class PickRandomJobPersonSystem : EntitySystem
         }
 
         if (allHeads.Count == 0)
-            allHeads = allHumans; // fallback to non-head target
+            allHeads = allHumans;
 
         var targetMindUid = _random.Pick(allHeads);
         var targetUid = EnsureComp<MindComponent>(targetMindUid).OwnedEntity;
 
         _target.SetTarget(uid, targetMindUid, target);
 
-        if (comp.JobID == "GuardianNt" && targetUid != null && HasComp<StoreComponent>(targetUid.Value))
+        if (comp.JobID == "STGuardianNt" && targetUid != null && HasComp<StoreComponent>(targetUid.Value))
         {
-            _store.TryAddCurrency(new() { { "SkillPoint", 10 } }, targetUid.Value);
+            _store.TryAddCurrency(new() { { "STSkillPoint", 10 } }, targetUid.Value);
             _popup.PopupEntity("Вы чувствуете зло и оно нацелено на вас... Проверьте магазин навыков.",
                 targetUid.Value,
                 targetUid.Value,

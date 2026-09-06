@@ -1,6 +1,6 @@
 - type: forcePreset
   id: STPontific
-  name: Понтифик
+  name: Pontiff
   side: Light
   volume: 290
   alert: STPontificFel

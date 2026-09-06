@@ -1,5 +1,5 @@
 - type: alert
-  id: SpafHealth
+  id: STSpafHealth
   category: Health
   icons:
     - sprite: /Textures/_Stories/Interface/Alerts/spaf_alive.rsi
@@ -18,7 +18,7 @@
   maxSeverity: 4
 
 - type: alert
-  id: SpafDead
+  id: STSpafDead
   category: Health
   icons:
     - sprite: /Textures/Interface/Alerts/human_dead.rsi

@@ -1,5 +1,4 @@
 using Content.Server._Stories.Economy.Components;
-using Content.Server.CartridgeLoader;
 using Content.Shared.CartridgeLoader;
 using Robust.Shared.Containers;
 

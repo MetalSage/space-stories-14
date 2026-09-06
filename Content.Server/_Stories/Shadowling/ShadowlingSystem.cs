@@ -20,10 +20,10 @@ namespace Content.Server._Stories.Shadowling;
 public sealed partial class ShadowlingSystem : EntitySystem
 {
     [Dependency] private SharedActionsSystem _actions = default!;
+    [Dependency] private SharedAppearanceSystem _appearance = default!;
     [Dependency] private ConversionSystem _conversion = default!;
     [Dependency] private MobStateSystem _mobState = default!;
     [Dependency] private SharedVisionSystem _vision = default!;
-    [Dependency] private SharedAppearanceSystem _appearance = default!;
     [Dependency] private SharedVisualBodySystem _visualBody = default!;
     [Dependency] private LanguageSystem _language = default!;
 
@@ -170,7 +170,8 @@ public sealed partial class ShadowlingSystem : EntitySystem
                 if (actionId != null)
                     component.GrantedActions[action] = actionId.Value;
             }
-            else if (aliveThrallsAmount < requiredAmount && component.GrantedActions.TryGetValue(action, out var actionId))
+            else if (aliveThrallsAmount < requiredAmount &&
+                     component.GrantedActions.TryGetValue(action, out var actionId))
             {
                 _actions.RemoveAction(uid, actionId);
                 component.GrantedActions.Remove(action);

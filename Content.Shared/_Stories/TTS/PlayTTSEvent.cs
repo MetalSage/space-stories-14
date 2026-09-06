@@ -2,8 +2,7 @@ using Robust.Shared.Serialization;
 
 namespace Content.Shared._Stories.TTS;
 
-[Serializable, NetSerializable]
-// ReSharper disable once InconsistentNaming
+[Serializable, NetSerializable] 
 public sealed class PlayTTSEvent : EntityEventArgs
 {
     public PlayTTSEvent(byte[] data,

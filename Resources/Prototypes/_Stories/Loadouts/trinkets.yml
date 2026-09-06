@@ -1,104 +1,93 @@
-# Гравированная зажигалка флиппо
 - type: loadout
-  id: StoriesFlippoEngravedLighter
+  id: STFlippoEngravedLighter
   storage:
     back:
-    - StoriesFlippoEngravedLighter
+    - STFlippoEngravedLighter
   effects:
   - !type:SponsorLoadoutEffect
-    id: StoriesFlippoEngravedLighter
+    id: STFlippoEngravedLighter
 
-# Сереб. часы (Стандарт)
 - type: loadout
-  id: WristwatchSilver
+  id: STWristwatchSilver
   storage:
     back:
-    - WristwatchSilver
+    - STWristwatchSilver
   effects:
   - !type:SponsorLoadoutEffect
-    id: WristwatchSilver
+    id: STWristwatchSilver
 
-# Золотые часы
 - type: loadout
-  id: StoriesWristwatchGold
+  id: STWristwatchGold
   storage:
     back:
-    - StoriesWristwatchGold
+    - STWristwatchGold
   effects:
   - !type:SponsorLoadoutEffect
-    id: StoriesWristwatchGold
+    id: STWristwatchGold
 
-# Плащ коллекционера
 - type: loadout
-  id: ClothingNeckCloakCollector
+  id: STClothingNeckCloakCollector
   storage:
     back:
-    - ClothingNeckCloakCollector
+    - STClothingNeckCloakCollector
   effects:
   - !type:SponsorLoadoutEffect
-    id: ClothingNeckCloakCollector
+    id: STClothingNeckCloakCollector
 
-# Плащ аномалиста
 - type: loadout
-  id: ClothingNeckCloakAnomalist
+  id: STClothingNeckCloakAnomalist
   storage:
     back:
-    - ClothingNeckCloakAnomalist
+    - STClothingNeckCloakAnomalist
   effects:
   - !type:SponsorLoadoutEffect
-    id: ClothingNeckCloakAnomalist
+    id: STClothingNeckCloakAnomalist
 
-# Плащ заклинателя змей
 - type: loadout
-  id: ClothingNeckCloakSnake
+  id: STClothingNeckCloakSnake
   storage:
     back:
-    - ClothingNeckCloakSnake
+    - STClothingNeckCloakSnake
   effects:
   - !type:SponsorLoadoutEffect
-    id: ClothingNeckCloakSnake
+    id: STClothingNeckCloakSnake
 
-# Колосс
 - type: loadout
-  id: ToyFigurineColossus
+  id: STToyFigurineColossus
   storage:
     back:
-    - ToyFigurineColossus
+    - STToyFigurineColossus
   effects:
   - !type:SponsorLoadoutEffect
-    id: ToyFigurineColossus
+    id: STToyFigurineColossus
 
-# Дракон
 - type: loadout
-  id: ToyFigurineAshDragon
+  id: STToyFigurineAshDragon
   storage:
     back:
-    - ToyFigurineAshDragon
+    - STToyFigurineAshDragon
   effects:
   - !type:SponsorLoadoutEffect
-    id: ToyFigurineAshDragon
+    id: STToyFigurineAshDragon
 
-# Бубл
 - type: loadout
-  id: ToyFigurineBubblegum
+  id: STToyFigurineBubblegum
   storage:
     back:
-    - ToyFigurineBubblegum
+    - STToyFigurineBubblegum
   effects:
   - !type:SponsorLoadoutEffect
-    id: ToyFigurineBubblegum
+    id: STToyFigurineBubblegum
 
-# Сферы
 - type: loadout
-  id: ClothingNeckElectrospheres
+  id: STClothingNeckElectrospheres
   storage:
     back:
-    - ClothingNeckElectrospheres
+    - STClothingNeckElectrospheres
   effects:
   - !type:SponsorLoadoutEffect
-    id: ClothingNeckElectrospheres
+    id: STClothingNeckElectrospheres
 
-# Тенеморф
 - type: loadout
   id: STToyFigurineShadowling
   storage:
@@ -108,7 +97,6 @@
   - !type:SponsorLoadoutEffect
     id: STToyFigurineShadowling
 
-# Вознесенный тенеморф
 - type: loadout
   id: STToyFigurineAscendedShadowling
   storage:
@@ -118,65 +106,59 @@
   - !type:SponsorLoadoutEffect
     id: STToyFigurineAscendedShadowling
 
-# Ситх
 - type: loadout
-  id: ToyFigurineInquisitor
+  id: STToyFigurineInquisitor
   storage:
     back:
-    - ToyFigurineInquisitor
+    - STToyFigurineInquisitor
   effects:
   - !type:SponsorLoadoutEffect
-    id: ToyFigurineInquisitor
+    id: STToyFigurineInquisitor
 
-# Страж
 - type: loadout
-  id: ToyFigurineGuardianNt
+  id: STToyFigurineGuardianNt
   storage:
     back:
-    - ToyFigurineGuardianNt
+    - STToyFigurineGuardianNt
   effects:
   - !type:SponsorLoadoutEffect
-    id: ToyFigurineGuardianNt
+    id: STToyFigurineGuardianNt
 
-# Медик КТ
 - type: loadout
-  id: ToyFigurineMSP
+  id: STToyFigurineMSP
   storage:
     back:
-    - ToyFigurineMSP
+    - STToyFigurineMSP
   effects:
   - !type:SponsorLoadoutEffect
-    id: ToyFigurineMSP
+    id: STToyFigurineMSP
 
-# Офицер КТ
 - type: loadout
-  id: ToyFigurineOSP
+  id: STToyFigurineOSP
   storage:
     back:
-    - ToyFigurineOSP
+    - STToyFigurineOSP
   effects:
   - !type:SponsorLoadoutEffect
-    id: ToyFigurineOSP
+    id: STToyFigurineOSP
 
-# Офицер КТ (Е)
 - type: loadout
-  id: ToyFigurineESP
+  id: STToyFigurineESP
   storage:
     back:
-    - ToyFigurineESP
+    - STToyFigurineESP
   effects:
   - !type:SponsorLoadoutEffect
-    id: ToyFigurineESP
+    id: STToyFigurineESP
 
-# Глава КТ
 - type: loadout
-  id: ToyFigurineHOSP
+  id: STToyFigurineHOSP
   storage:
     back:
-    - ToyFigurineHOSP
+    - STToyFigurineHOSP
   effects:
   - !type:SponsorLoadoutEffect
-    id: ToyFigurineHOSP
+    id: STToyFigurineHOSP
 
 - type: loadout
   id: STClothingOuterCoatSas
@@ -232,7 +214,6 @@
   - !type:SponsorLoadoutEffect
     id: STClothingNeckCloakShadow
 
-# Игрушечный меч
 - type: loadout
   id: ToySword
   effects:

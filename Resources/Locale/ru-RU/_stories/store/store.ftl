@@ -1,0 +1,11 @@
+stories-store-currency-display-blueshield-token = Жетон вооружения
+stories-store-category-blueshield-armaments = Вооружение
+stories-store-listing-blueshield-takbok-name = Немаркированный револьвер Такбок (Оружейный набор)
+stories-store-listing-blueshield-takbok-desc = Оружейный кейс с модифицированным револьвером Такбок и патронами калибра .45 магнум.
+stories-store-listing-blueshield-hellgun-name = Модифицированная лазерная винтовка Адское Пламя
+stories-store-listing-blueshield-hellgun-desc = Модифицированная лазерная винтовка с улучшенной энергоэффективностью.
+stories-store-listing-blueshield-bogseo-name = Пистолет-пулемет Богсео (Оружейный набор)
+stories-store-listing-blueshield-bogseo-desc = Оружейный кейс с пистолетом-пулеметом Богсео и дополнительными магазинами.
+stories-store-listing-blueshield-blades-name = Кибернабор защитной системы
+stories-store-listing-blueshield-blades-desc = Коробка с защитными наручными лезвиями системы.
+stories-stamp-component-stamped-name-blueshield = Офицер синего щита

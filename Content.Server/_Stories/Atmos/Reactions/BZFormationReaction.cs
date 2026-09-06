@@ -5,10 +5,6 @@ using JetBrains.Annotations;
 
 namespace Content.Server.Atmos.Reactions;
 
-/// <summary>
-/// Forms BZ from mixing Plasma and Nitrous Oxide at low pressure. Also decomposes Nitrous Oxide when there are more than 3
-/// parts Plasma per N2O.
-/// </summary>
 [UsedImplicitly]
 public sealed partial class BZFormationReaction : IGasReactionEffect
 {
@@ -22,8 +18,8 @@ public sealed partial class BZFormationReaction : IGasReactionEffect
         var pressure = mixture.Pressure;
         var volume = mixture.Volume;
 
-        var environmentEfficiency = volume / pressure; // more volume and less pressure gives better rates
-        var ratioEfficiency = Math.Min(initN2O / initPlasma, 1); // less n2o than plasma gives lower rates
+        var environmentEfficiency = volume / pressure;
+        var ratioEfficiency = Math.Min(initN2O / initPlasma, 1);
 
         var totalRate = environmentEfficiency * ratioEfficiency / Atmospherics.BZFormationRate;
 

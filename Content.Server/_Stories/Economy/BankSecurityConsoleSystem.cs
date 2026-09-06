@@ -1,9 +1,7 @@
-using System.Linq;
 using Content.Server._Stories.Economy.Components;
 using Content.Server.Station.Systems;
 using Content.Shared._Stories.Economy;
 using Content.Shared._Stories.Economy.Components;
-using Content.Shared.Access.Systems;
 using Content.Shared.Popups;
 using Robust.Server.GameObjects;
 
@@ -11,22 +9,23 @@ namespace Content.Server._Stories.Economy;
 
 public sealed partial class BankSecurityConsoleSystem : EntitySystem
 {
-    [Dependency] private UserInterfaceSystem _ui = default!;
-    [Dependency] private StationSystem _station = default!;
     [Dependency] private BankSystem _bank = default!;
     [Dependency] private EconomySystem _economy = default!;
     [Dependency] private SharedPopupSystem _popup = default!;
+    [Dependency] private StationSystem _station = default!;
+    [Dependency] private UserInterfaceSystem _ui = default!;
 
     public override void Initialize()
     {
         base.Initialize();
-        
-        Subs.BuiEvents<BankSecurityConsoleComponent>(BankSecurityConsoleUiKey.Key, subs =>
-        {
-            subs.Event<BoundUIOpenedEvent>(OnOpened);
-            subs.Event<BankSecurityRefreshMessage>(OnRefresh);
-            subs.Event<BankSecurityIssueFineMessage>(OnIssueFine);
-        });
+
+        Subs.BuiEvents<BankSecurityConsoleComponent>(BankSecurityConsoleUiKey.Key,
+            subs =>
+            {
+                subs.Event<BoundUIOpenedEvent>(OnOpened);
+                subs.Event<BankSecurityRefreshMessage>(OnRefresh);
+                subs.Event<BankSecurityIssueFineMessage>(OnIssueFine);
+            });
 
         SubscribeLocalEvent<BankBalanceChangedEventArgs>(OnBalanceChanged);
         SubscribeLocalEvent<BankDepartmentBalanceChangedEventArgs>(OnDeptBalanceChanged);
@@ -45,7 +44,8 @@ public sealed partial class BankSecurityConsoleSystem : EntitySystem
     private void UpdateUi(EntityUid uid)
     {
         var station = _station.GetOwningStation(uid);
-        if (station == null) return;
+        if (station == null)
+            return;
 
         var logs = new List<FinancialLogDto>();
         if (TryComp<StationFinancialLogComponent>(station.Value, out var logComp))
@@ -58,7 +58,7 @@ public sealed partial class BankSecurityConsoleSystem : EntitySystem
                     Source = log.Source,
                     Destination = log.Destination,
                     Amount = log.Amount,
-                    Reason = log.Reason
+                    Reason = log.Reason,
                 });
             }
         }
@@ -67,7 +67,9 @@ public sealed partial class BankSecurityConsoleSystem : EntitySystem
         if (TryComp<StationBankComponent>(station.Value, out var bankComp))
         {
             foreach (var acc in bankComp.Accounts.Values)
+            {
                 accounts.Add(new AccountDto(acc.AccountNumber, acc.OwnerName, false, acc.Balance));
+            }
         }
 
         _ui.SetUiState(uid, BankSecurityConsoleUiKey.Key, new BankSecurityConsoleState(logs, accounts));
@@ -75,32 +77,38 @@ public sealed partial class BankSecurityConsoleSystem : EntitySystem
 
     private void OnIssueFine(EntityUid uid, BankSecurityConsoleComponent component, BankSecurityIssueFineMessage args)
     {
-        if (args.Actor is not { Valid: true } actor) return;
+        if (args.Actor is not { Valid: true } actor)
+            return;
 
         var station = _station.GetOwningStation(uid);
-        if (station == null) return;
+        if (station == null)
+            return;
 
         var targetAcc = args.TargetAccount;
 
         if (_bank.TryChangeBalance(station.Value, targetAcc, -args.Amount))
         {
             _bank.TryChangeDepartmentBalance(station.Value, component.DestinationAccount, args.Amount);
-            _bank.LogTransaction(station.Value, targetAcc, component.DestinationAccount, args.Amount, Loc.GetString("stories-bank-log-fine-reason", ("reason", args.Reason)));
-            
+            _bank.LogTransaction(station.Value,
+                targetAcc,
+                component.DestinationAccount,
+                args.Amount,
+                Loc.GetString("stories-bank-log-fine-reason", ("reason", args.Reason)));
+
             if (_bank.TryGetMindByAccountNumber(targetAcc, out var mindId))
             {
                 _economy.TrySendNotification(mindId,
                     Loc.GetString("stories-bank-app-notification-fine-title"),
-                    Loc.GetString("stories-bank-app-notification-fine-body", ("amount", args.Amount), ("reason", args.Reason)));
+                    Loc.GetString("stories-bank-app-notification-fine-body",
+                        ("amount", args.Amount),
+                        ("reason", args.Reason)));
             }
 
             _popup.PopupEntity(Loc.GetString("stories-bank-security-fine-success"), uid, actor);
             UpdateUi(uid);
         }
         else
-        {
             _popup.PopupEntity(Loc.GetString("stories-bank-security-error-funds"), uid, actor);
-        }
     }
 
     private void OnBalanceChanged(BankBalanceChangedEventArgs ev)
@@ -110,9 +118,7 @@ public sealed partial class BankSecurityConsoleSystem : EntitySystem
         {
             var station = _station.GetOwningStation(uid);
             if (station == ev.Station)
-            {
                 UpdateUi(uid);
-            }
         }
     }
 
@@ -123,9 +129,7 @@ public sealed partial class BankSecurityConsoleSystem : EntitySystem
         {
             var station = _station.GetOwningStation(uid);
             if (station == ev.Station)
-            {
                 UpdateUi(uid);
-            }
         }
     }
 }

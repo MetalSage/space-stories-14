@@ -1,22 +1,22 @@
 - type: objectiveIssuer
-  id: Inquisitor
+  id: STInquisitor
   name: objective-issuer-inquisitor
 
 - type: entity
   abstract: true
   parent: BaseObjective
-  id: BaseInquisitorObjective
+  id: STBaseInquisitorObjective
   components:
   - type: Objective
-    issuer: Inquisitor
+    issuer: STInquisitor
     difficulty: 1.0
   - type: RoleRequirement
     roles:
     - EmpireMemberRole
 
 - type: entity
-  parent: [BaseInquisitorObjective, BaseKillObjective]
-  id: KillGuardianNtObjective
+  parent: [STBaseInquisitorObjective, BaseKillObjective]
+  id: STKillGuardianNtObjective
   description: Destroy it.
   components:
   - type: Objective
@@ -25,13 +25,13 @@
   - type: TargetObjective
     title: objective-condition-kill-head-title
   - type: PickRandomJobPerson
-    jobID: GuardianNt
+    jobID: STGuardianNt
   - type: KillPersonCondition
     requireDead: true
 
 - type: entity
-  parent: [BaseInquisitorObjective, BaseSurviveObjective]
-  id: InquisitorSurviveObjective
+  parent: [STBaseInquisitorObjective, BaseSurviveObjective]
+  id: STInquisitorSurviveObjective
   name: Survive.
   description: You have no plans to die.
   components:
@@ -42,8 +42,8 @@
       state: inquisitor
 
 - type: entity
-  parent: BaseInquisitorObjective
-  id: HypnosisObjective
+  parent: STBaseInquisitorObjective
+  id: STHypnosisObjective
   description: The Emperor needs new subjects.
   components:
   - type: Objective

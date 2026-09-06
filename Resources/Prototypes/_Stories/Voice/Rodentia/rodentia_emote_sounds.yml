@@ -1,5 +1,5 @@
 - type: emoteSounds
-  id: MaleRodentia
+  id: STMaleRodentia
   voiceSelectorName: humanoid-profile-editor-voice-masculine
   params:
     variation: 0.125
@@ -44,7 +44,7 @@
       collection: MaleDeathGasp
 
 - type: emoteSounds
-  id: FemaleRodentia
+  id: STFemaleRodentia
   voiceSelectorName: humanoid-profile-editor-voice-feminine
   params:
     variation: 0.125

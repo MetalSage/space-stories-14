@@ -1,5 +1,5 @@
 - type: entity
-  id: PRISONLocker
+  id: STPRISONLocker
   parent: LockerBase
   name: prison staff locker
   description: Standard prison staff locker.
@@ -15,8 +15,8 @@
       access: [["Prison"]]
 
 - type: entity
-  id: PRISONLockerHeadOfPrison
-  parent: PRISONLocker
+  id: STPRISONLockerHeadOfPrison
+  parent: STPRISONLocker
   name: prison head of personnel's locker
   description: Standard prison staff locker.
   components:
@@ -26,4 +26,4 @@
       stateDoorOpen: hosofsp_open
       stateDoorClosed: hosofsp_door
     - type: AccessReader
-      access: [["HeadOfPrison"]]
+      access: [["STHeadOfPrison"]]

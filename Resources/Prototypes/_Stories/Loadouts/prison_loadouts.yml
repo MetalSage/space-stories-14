@@ -1,27 +1,27 @@
 - type: roleLoadout
-  id: JobPRISONOfficer
+  id: STJobPRISONOfficer
   groups:
-  - PRISONGloves
-  - PRISONOuterClothing
-  - PRISONBackpack
-  - PRISONHead
-  - PRISONBelt
-  - PRISONShoes
+  - STPRISONGloves
+  - STPRISONOuterClothing
+  - STPRISONBackpack
+  - STPRISONHead
+  - STPRISONBelt
+  - STPRISONShoes
   - SurvivalSecurity
   - Trinkets
 
 - type: roleLoadout
-  id: JobPRISONHeadOfPrison
+  id: STJobPRISONHeadOfPrison
   groups:
-  - PRISONGloves
-  - PRISONBackpack
-  - PRISONHeadOfPrisonHead
-  - PRISONShoes
+  - STPRISONGloves
+  - STPRISONBackpack
+  - STPRISONHeadOfPrisonHead
+  - STPRISONShoes
   - SurvivalSecurity
   - Trinkets
 
 - type: roleLoadout
-  id: JobPRISONMedic
+  id: STJobPRISONMedic
   groups:
   - MedicalDoctorHead
   - MedicalMask
@@ -33,7 +33,7 @@
   - Trinkets
 
 - type: roleLoadout
-  id: JobPRISONEngineer
+  id: STJobPRISONEngineer
   groups:
   - StationEngineerHead
   - StationEngineerBackpack
@@ -51,160 +51,139 @@
       department: Prison
       time: 36000 # 10 hour
 
-# ГОЛОВА - начальник
-
 - type: loadoutGroup
-  id: PRISONHeadOfPrisonHead
+  id: STPRISONHeadOfPrisonHead
   name: loadout-group-HeadOfPrison-head
   minLimit: 0
   loadouts:
-  - PRISONCapHeadOfPrison
-  - PRISONUshankaHeadOfPrison
+  - STPRISONCapHeadOfPrison
+  - STPRISONUshankaHeadOfPrison
 
 - type: loadout
-  id: PRISONUshankaHeadOfPrison
+  id: STPRISONUshankaHeadOfPrison
   equipment:
-    head: PRISONClothingHeadHatUshanka
+    head: STPRISONClothingHeadHatUshanka
 
 - type: loadout
-  id: PRISONCapHeadOfPrison
+  id: STPRISONCapHeadOfPrison
   equipment:
-    head: PRISONClothingHeadHatCapHeadOfPrison
-
-# ПЕРЧАТКИ
+    head: STPRISONClothingHeadHatCapHeadOfPrison
 
 - type: loadoutGroup
-  id: PRISONGloves
+  id: STPRISONGloves
   name: loadout-group-PRISON-Gloves
   minLimit: 0
   loadouts:
-  - PRISONGloves
-  - PRISONCombatGloves
+  - STPRISONGloves
+  - STPRISONCombatGloves
 
 - type: loadout
-  id: PRISONGloves
+  id: STPRISONGloves
   equipment:
     gloves: ClothingHandsGlovesColorBlack
 
 - type: loadout
-  id: PRISONCombatGloves
+  id: STPRISONCombatGloves
   effects:
   - !type:GroupLoadoutEffect
     proto: Prison
   equipment:
     gloves: ClothingHandsGlovesCombat
 
-# БРОНЕЖИЛЕТ
-
 - type: loadoutGroup
-  id: PRISONOuterClothing
+  id: STPRISONOuterClothing
   name: loadout-group-PRISON-OuterClothing
   loadouts:
-  - PRISONArmorVest
+  - STPRISONArmorVest
 
 - type: loadout
-  id: PRISONArmorVest
+  id: STPRISONArmorVest
   equipment:
-    outerClothing: PRISONClothingOuterVestArmor
-
-# РЮКЗАК
+    outerClothing: STPRISONClothingOuterVestArmor
 
 - type: loadoutGroup
-  id: PRISONBackpack
+  id: STPRISONBackpack
   name: loadout-group-PRISON-Backpack
   loadouts:
-  - PRISONBackpack
-  - PRISONSatchel
-  - PRISONDuffel
-  # Stories-Partners-Start
-  # Adidos
-  - ClothingBackpackHandbagAdidos
-  - ClothingBackpackAdidos
-  - ClothingBackpackDuffelAdidos
-  - ClothingBackpackSatchelAdidos
-  # Bluesky
-  - ClothingBackpackHandbagBluesky
-  - ClothingBackpackBluesky
-  - ClothingBackpackDuffelBluesky
-  - ClothingBackpackSatchelBluesky
-  # Eight
-  - ClothingBackpackHandbagEight
-  - ClothingBackpackEight
-  - ClothingBackpackDuffelEight
-  - ClothingBackpackSatchelEight
-  # Gachi
-  - ClothingBackpackHandbagGachi
-  - ClothingBackpackGachi
-  - ClothingBackpackDuffelGachi
-  - ClothingBackpackSatchelGachi
-  # Rl
-  - ClothingBackpackHandbagRl
-  - ClothingBackpackRl
-  - ClothingBackpackDuffelRl
-  - ClothingBackpackSatchelRl
-  # Stories-Partners-End
+  - STPRISONBackpack
+  - STPRISONSatchel
+  - STPRISONDuffel
+  - STClothingBackpackHandbagAdidos
+  - STClothingBackpackAdidos
+  - STClothingBackpackDuffelAdidos
+  - STClothingBackpackSatchelAdidos
+  - STClothingBackpackHandbagBluesky
+  - STClothingBackpackBluesky
+  - STClothingBackpackDuffelBluesky
+  - STClothingBackpackSatchelBluesky
+  - STClothingBackpackHandbagEight
+  - STClothingBackpackEight
+  - STClothingBackpackDuffelEight
+  - STClothingBackpackSatchelEight
+  - STClothingBackpackHandbagGachi
+  - STClothingBackpackGachi
+  - STClothingBackpackDuffelGachi
+  - STClothingBackpackSatchelGachi
+  - STClothingBackpackHandbagRl
+  - STClothingBackpackRl
+  - STClothingBackpackDuffelRl
+  - STClothingBackpackSatchelRl
 
 - type: loadout
-  id: PRISONDuffel
+  id: STPRISONDuffel
   equipment:
-    back: PRISONClothingBackpackDuffel
+    back: STPRISONClothingBackpackDuffel
 
 - type: loadout
-  id: PRISONSatchel
+  id: STPRISONSatchel
   equipment:
-    back: PRISONClothingBackpackSatchel
+    back: STPRISONClothingBackpackSatchel
 
 - type: loadout
-  id: PRISONBackpack
+  id: STPRISONBackpack
   equipment:
-    back: PRISONClothingBackpack
-
-# ГОЛОВА
+    back: STPRISONClothingBackpack
 
 - type: loadoutGroup
-  id: PRISONHead
+  id: STPRISONHead
   name: loadout-group-PRISON-head
   minLimit: 0
   loadouts:
-  - PRISONCap
-  - PRISONBeret
+  - STPRISONCap
+  - STPRISONBeret
 
 - type: loadout
-  id: PRISONBeret
+  id: STPRISONBeret
   equipment:
-    head: PRISONClothingHeadHatBeret
+    head: STPRISONClothingHeadHatBeret
 
 - type: loadout
-  id: PRISONCap
+  id: STPRISONCap
   equipment:
-    head: PRISONClothingHeadHatSoft
-
-# ОБУВЬ
+    head: STPRISONClothingHeadHatSoft
 
 - type: loadoutGroup
-  id: PRISONShoes
+  id: STPRISONShoes
   name: loadout-group-PRISON-Shoes
   loadouts:
   - CombatBoots
   - JackBoots
   - SecurityWinterBoots
-  - PRISONJackBoots
+  - STPRISONJackBoots
 
 - type: loadout
-  id: PRISONJackBoots
+  id: STPRISONJackBoots
   equipment:
-    shoes: PRISONClothingShoesBootsJack
-
-# ПОЯС
+    shoes: STPRISONClothingShoesBootsJack
 
 - type: loadoutGroup
-  id: PRISONBelt
+  id: STPRISONBelt
   name: loadout-group-PRISON-Belt
   loadouts:
   - SecurityBelt
-  - PRISONWebbing
+  - STPRISONWebbing
 
 - type: loadout
-  id: PRISONWebbing
+  id: STPRISONWebbing
   equipment:
-    belt: PRISONClothingBeltWebbing
+    belt: STPRISONClothingBeltWebbing

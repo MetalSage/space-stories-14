@@ -30,7 +30,7 @@
   - Quartermaster
   # Stories-Roles-Start
   - STJudge
-  - IAA
+  - STIAA
   # Stories-Roles-End
 
 # Borgs
@@ -68,7 +68,7 @@
   # Stories-Roles-Start
   - STBrigmedic
   - STSecurityClown
-  - GuardianNt
+  - STGuardianNt
   # Stories-Roles-End
 
 - type: antagSpecifier

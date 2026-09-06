@@ -1,2 +1,2 @@
-ent-ClothingBeltInquisitor = пояс инквизитора
+ent-STClothingBeltInquisitor = пояс инквизитора
     .desc = Просто пояс.

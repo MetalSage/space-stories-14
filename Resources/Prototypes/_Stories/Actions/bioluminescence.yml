@@ -1,6 +1,6 @@
 - type: entity
   parent: BaseToggleAction
-  id: TurnBioluminescenceAction
+  id: STTurnBioluminescenceAction
   name: Bioluminescence
   description: Start or stop glowing
   components:

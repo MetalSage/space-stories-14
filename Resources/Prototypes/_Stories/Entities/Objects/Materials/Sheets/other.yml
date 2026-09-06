@@ -1,6 +1,6 @@
 - type: entity
   parent: Paper
-  id: SheetPrinter
+  id: STSheetPrinter
   name: paper
   description: A sheet of material widely used on the station for various purposes.
   suffix: Full
@@ -8,9 +8,9 @@
   - type: Material
   - type: PhysicalComposition
     materialComposition:
-      SheetPrinter: 100
+      STSheetPrinter: 100
   - type: Stack
-    stackType: SheetPrinter
+    stackType: STSheetPrinter
     baseLayer: paper
   - type: Sprite
     layers:
@@ -26,8 +26,8 @@
     - Document
 
 - type: entity
-  parent: SheetPrinter
-  id: SheetPrinter1
+  parent: STSheetPrinter
+  id: STSheetPrinter1
   suffix: Single
   components:
   - type: Stack
@@ -35,7 +35,7 @@
 
 - type: entity
   parent: SheetOtherBase
-  id: InkPrinter
+  id: STInkPrinter
   name: ink
   description: A sheet of material widely used on the station for various purposes.
   suffix: Full
@@ -46,19 +46,19 @@
   - type: Item
     size: Small
   - type: Stack
-    stackType: InkPrinter
+    stackType: STInkPrinter
     baseLayer: ink
   - type: Material
   - type: PhysicalComposition
     materialComposition:
-      Ink: 100
+      STInk: 100
   - type: Tag
     tags:
     - Document
 
 - type: entity
-  parent: InkPrinter
-  id: InkPrinter1
+  parent: STInkPrinter
+  id: STInkPrinter1
   suffix: Single
   components:
   - type: Stack

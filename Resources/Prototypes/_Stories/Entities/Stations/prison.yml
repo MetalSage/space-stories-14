@@ -16,7 +16,6 @@
           - type: PrisonShuttle
           paths:
           - /Maps/_Stories/Shuttles/prison.yml
-        # Spawn last
         ruins: !type:GridSpawnGroup
           hide: true
           nameGrid: true

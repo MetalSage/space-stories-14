@@ -1,48 +1,48 @@
 - type: jobIcon
   parent: JobIcon
-  id: JobIconPRISONPrisoner
+  id: STJobIconPRISONPrisoner
   icon:
     sprite: /Textures/_Stories/Interface/Misc/job_icons.rsi
     state: prisoner
 
 - type: jobIcon
   parent: JobIcon
-  id: JobIconHeadOfSpacePrison
+  id: STJobIconHeadOfSpacePrison
   icon:
     sprite: /Textures/_Stories/Interface/Misc/job_icons.rsi
     state: HeadOfSpacePrison
 
 - type: jobIcon
   parent: JobIcon
-  id: JobIconSpacePrisonOfficer
+  id: STJobIconSpacePrisonOfficer
   icon:
     sprite: /Textures/_Stories/Interface/Misc/job_icons.rsi
     state: SpacePrisonSecurityOfficer
 
 - type: jobIcon
   parent: JobIcon
-  id: JobIconGuardianNt
+  id: STJobIconGuardianNt
   icon:
     sprite: /Textures/_Stories/Interface/Misc/job_icons.rsi
     state: GuardianNtSecurity
 
 - type: jobIcon
   parent: JobIcon
-  id: JobIconSpacePrisonEngineer
+  id: STJobIconSpacePrisonEngineer
   icon:
     sprite: /Textures/_Stories/Interface/Misc/job_icons.rsi
     state: SpacePrisonEngineer
 
 - type: jobIcon
   parent: JobIcon
-  id: JobIconSpacePrisonMedic
+  id: STJobIconSpacePrisonMedic
   icon:
     sprite: /Textures/_Stories/Interface/Misc/job_icons.rsi
     state: SpacePrisonMedic
 
 - type: jobIcon
   parent: JobIcon
-  id: JobIconIAA
+  id: STJobIconIAA
   icon:
     sprite: /Textures/_Stories/Interface/Misc/job_icons.rsi
     state: IAA
@@ -54,25 +54,30 @@
     sprite: /Textures/_Stories/Interface/Misc/job_icons.rsi
     state: Judge
 
-# Event-Restricted-Jobs
-
 - type: jobIcon
   parent: JobIcon
-  id: JobIconSTCommandMaid
+  id: STJobIconCommandMaid
   icon:
     sprite: /Textures/_Stories/Interface/Misc/job_icons.rsi
     state: CommandMaid
 
 - type: jobIcon
   parent: JobIcon
-  id: JobIconSTPartyMaker
+  id: STJobIconPartyMaker
   icon:
     sprite: /Textures/_Stories/Interface/Misc/job_icons.rsi
     state: PartyMaker
 
 - type: jobIcon
   parent: JobIcon
-  id: JobIconSTSecurityClown
+  id: STJobIconSecurityClown
   icon:
     sprite: /Textures/_Stories/Interface/Misc/job_icons.rsi
     state: SecurityClown
+
+- type: jobIcon
+  parent: JobIcon
+  id: STJobIconBlueshield
+  icon:
+    sprite: /Textures/_Stories/Interface/Misc/job_icons.rsi
+    state: Blueshield

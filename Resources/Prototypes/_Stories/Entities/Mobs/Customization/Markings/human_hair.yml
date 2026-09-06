@@ -1,138 +1,138 @@
 - type: marking
-  id: HumanHairCornrowbacktail
+  id: STHumanHairCornrowbacktail
   bodyPart: Hair
   sprites:
     - sprite: _Stories/Mobs/Customization/human_hair.rsi
       state: cornrowbacktail
 
 - type: marking
-  id: HumanHairDragon
+  id: STHumanHairDragon
   bodyPart: Hair
   sprites:
     - sprite: _Stories/Mobs/Customization/human_hair.rsi
       state: dragon
 
 - type: marking
-  id: HumanHairFighter
+  id: STHumanHairFighter
   bodyPart: Hair
   sprites:
     - sprite: _Stories/Mobs/Customization/human_hair.rsi
       state: fighter
 
 - type: marking
-  id: HumanHairKaren
+  id: STHumanHairKaren
   bodyPart: Hair
   sprites:
     - sprite: _Stories/Mobs/Customization/human_hair.rsi
       state: karen
 
 - type: marking
-  id: HumanHairLongshoulder
+  id: STHumanHairLongshoulder
   bodyPart: Hair
   sprites:
     - sprite: _Stories/Mobs/Customization/human_hair.rsi
       state: longshoulder
 
 - type: marking
-  id: HumanHairMaster
+  id: STHumanHairMaster
   bodyPart: Hair
   sprites:
     - sprite: _Stories/Mobs/Customization/human_hair.rsi
       state: master
 
 - type: marking
-  id: HumanHairMusician
+  id: STHumanHairMusician
   bodyPart: Hair
   sprites:
     - sprite: _Stories/Mobs/Customization/human_hair.rsi
       state: musician
 
 - type: marking
-  id: HumanHairPonytail8
+  id: STHumanHairPonytail8
   bodyPart: Hair
   sprites:
     - sprite: _Stories/Mobs/Customization/human_hair.rsi
       state: ponytail8
 
 - type: marking
-  id: HumanHairPowder
+  id: STHumanHairPowder
   bodyPart: Hair
   sprites:
     - sprite: _Stories/Mobs/Customization/human_hair.rsi
       state: powder
 
 - type: marking
-  id: HumanHairShortsidebangs
+  id: STHumanHairShortsidebangs
   bodyPart: Hair
   sprites:
     - sprite: _Stories/Mobs/Customization/human_hair.rsi
       state: shortsidebangs
 
 - type: marking
-  id: HumanHairSide
+  id: STHumanHairSide
   bodyPart: Hair
   sprites:
     - sprite: _Stories/Mobs/Customization/human_hair.rsi
       state: side
 
 - type: marking
-  id: HumanHairSidesweeps
+  id: STHumanHairSidesweeps
   bodyPart: Hair
   sprites:
     - sprite: _Stories/Mobs/Customization/human_hair.rsi
       state: sidesweeps
 
 - type: marking
-  id: HumanHairStock
+  id: STHumanHairStock
   bodyPart: Hair
   sprites:
     - sprite: _Stories/Mobs/Customization/human_hair.rsi
       state: stock
 
 - type: marking
-  id: HumanHairStylish
+  id: STHumanHairStylish
   bodyPart: Hair
   sprites:
     - sprite: _Stories/Mobs/Customization/human_hair.rsi
       state: stylish
 
 - type: marking
-  id: HumanHairTwinbangs
+  id: STHumanHairTwinbangs
   bodyPart: Hair
   sprites:
     - sprite: _Stories/Mobs/Customization/human_hair.rsi
       state: twinbangs
 
 - type: marking
-  id: HumanHairTwotails
+  id: STHumanHairTwotails
   bodyPart: Hair
   sprites:
     - sprite: _Stories/Mobs/Customization/human_hair.rsi
       state: twotails
 
 - type: marking
-  id: HumanHairUndercutfade
+  id: STHumanHairUndercutfade
   bodyPart: Hair
   sprites:
     - sprite: _Stories/Mobs/Customization/human_hair.rsi
       state: undercutfade
 
 - type: marking
-  id: HumanHairUpbangs
+  id: STHumanHairUpbangs
   bodyPart: Hair
   sprites:
     - sprite: _Stories/Mobs/Customization/human_hair.rsi
       state: upbangs
 
 - type: marking
-  id: HumanHairWheatear
+  id: STHumanHairWheatear
   bodyPart: Hair
   sprites:
     - sprite: _Stories/Mobs/Customization/human_hair.rsi
       state: wheatear
 
 - type: marking
-  id: HumanHairYoga
+  id: STHumanHairYoga
   bodyPart: Hair
   sprites:
     - sprite: _Stories/Mobs/Customization/human_hair.rsi

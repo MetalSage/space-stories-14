@@ -1,6 +1,6 @@
 - type: entity
   parent: BriefcaseBase
-  id: BriefcaseSteel
+  id: STBriefcaseSteel
   name: steel briefcase
   description: Useful for carrying a million credits in your hands.
   components:

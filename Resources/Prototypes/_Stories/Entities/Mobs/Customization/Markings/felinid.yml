@@ -1,7 +1,7 @@
 - type: marking
-  id: FelinidEarsBasic
+  id: STFelinidEarsBasic
   bodyPart: HeadTop
-  groupWhitelist: [Felinid]
+  groupWhitelist: [STFelinid]
   coloring:
     default:
       type:
@@ -16,9 +16,9 @@
     state: basic_inner
 
 - type: marking
-  id: FelinidEarsCurled
+  id: STFelinidEarsCurled
   bodyPart: HeadTop
-  groupWhitelist: [Felinid]
+  groupWhitelist: [STFelinid]
   coloring:
     default:
       type:
@@ -33,9 +33,9 @@
     state: curled_inner
 
 - type: marking
-  id: FelinidEarsDroopy
+  id: STFelinidEarsDroopy
   bodyPart: HeadTop
-  groupWhitelist: [Felinid]
+  groupWhitelist: [STFelinid]
   coloring:
     default:
       type:
@@ -50,9 +50,9 @@
     state: droopy_inner
 
 - type: marking
-  id: FelinidEarsFuzzy
+  id: STFelinidEarsFuzzy
   bodyPart: HeadTop
-  groupWhitelist: [Felinid]
+  groupWhitelist: [STFelinid]
   coloring:
     default:
       type:
@@ -67,9 +67,9 @@
     state: fuzzy_inner
 
 - type: marking
-  id: FelinidEarsStubby
+  id: STFelinidEarsStubby
   bodyPart: HeadTop
-  groupWhitelist: [Felinid]
+  groupWhitelist: [STFelinid]
   coloring:
     default:
       type:
@@ -84,9 +84,9 @@
     state: stubby_inner
 
 - type: marking
-  id: FelinidEarsTall
+  id: STFelinidEarsTall
   bodyPart: HeadTop
-  groupWhitelist: [Felinid]
+  groupWhitelist: [STFelinid]
   coloring:
     default:
       type:
@@ -103,9 +103,9 @@
     state: tall_fuzz
 
 - type: marking
-  id: FelinidEarsTorn
+  id: STFelinidEarsTorn
   bodyPart: HeadTop
-  groupWhitelist: [Felinid]
+  groupWhitelist: [STFelinid]
   coloring:
     default:
       type:
@@ -120,9 +120,9 @@
     state: torn_inner
 
 - type: marking
-  id: FelinidEarsWide
+  id: STFelinidEarsWide
   bodyPart: HeadTop
-  groupWhitelist: [Felinid]
+  groupWhitelist: [STFelinid]
   coloring:
     default:
       type:
@@ -139,9 +139,9 @@
 # Felinid Tails
 
 - type: marking
-  id: FelinidTailBasic
+  id: STFelinidTailBasic
   bodyPart: Tail
-  groupWhitelist: [Felinid]
+  groupWhitelist: [STFelinid]
   coloring:
     default:
       type:
@@ -158,9 +158,9 @@
     state: basic_tail_stripes_odd
 
 - type: marking
-  id: FelinidTailBasicWithBow
+  id: STFelinidTailBasicWithBow
   bodyPart: Tail
-  groupWhitelist: [Felinid]
+  groupWhitelist: [STFelinid]
   coloring:
     default:
       type:
@@ -184,9 +184,9 @@
     state: basic_bow
 
 - type: marking
-  id: FelinidTailBasicWithBell
+  id: STFelinidTailBasicWithBell
   bodyPart: Tail
-  groupWhitelist: [Felinid]
+  groupWhitelist: [STFelinid]
   coloring:
     default:
       type:
@@ -210,9 +210,9 @@
     state: basic_bell
 
 - type: marking
-  id: FelinidTailBasicWithBowAndBell
+  id: STFelinidTailBasicWithBowAndBell
   bodyPart: Tail
-  groupWhitelist: [Felinid]
+  groupWhitelist: [STFelinid]
   coloring:
     default:
       type:
@@ -242,9 +242,9 @@
     state: basic_bell
 
 - type: marking
-  id: FelinidTiger
+  id: STFelinidTiger
   bodyPart: Tail
-  groupWhitelist: [Felinid]
+  groupWhitelist: [STFelinid]
   coloring:
     default:
       type:

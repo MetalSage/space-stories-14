@@ -1,4 +1,4 @@
-﻿using System.Linq;
+using System.Linq;
 using Content.Shared.Actions;
 using Content.Shared.Blocking.Components;
 using Content.Shared.Damage;
@@ -18,6 +18,7 @@ using Content.Shared.Toggleable;
 using Content.Shared.Verbs;
 using Robust.Shared.Physics.Components;
 using Robust.Shared.Physics.Systems;
+using Robust.Shared.Timing; // Stories-Shields
 using Robust.Shared.Toolshed.Syntax;
 using Robust.Shared.Utility;
 
@@ -34,6 +35,7 @@ public sealed partial class BlockingSystem : EntitySystem
     [Dependency] private SharedHandsSystem _handsSystem = default!;
     [Dependency] private SharedPhysicsSystem _physics = default!;
     [Dependency] private SharedPopupSystem _popupSystem = default!;
+    [Dependency] private IGameTiming _timing = default!; // Stories-Shields
     [Dependency] private SharedTransformSystem _transformSystem = default!;
     [Dependency] private TurfSystem _turf = default!;
 
@@ -83,6 +85,11 @@ public sealed partial class BlockingSystem : EntitySystem
 
     private void OnEquip(Entity<BlockingComponent> entity, ref GotEquippedHandEvent args)
     {
+        // Stories-Shields-Start
+        if (_timing.ApplyingState)
+            return;
+        // Stories-Shields-End
+
         if (!CanBlock(entity.AsNullable()))
             return;
 

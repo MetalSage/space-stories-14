@@ -1,8 +1,8 @@
 - type: entity
   categories: [ HideSpawnMenu, Spawner ]
-  id: SpawnPointInquisitor
+  id: STSpawnPointInquisitor
   name: ghost role spawn point
-  suffix: Inquisitor
+  suffix: STInquisitor
   parent: BaseAntagSpawner
   components:
   - type: SpawnPoint
@@ -19,7 +19,7 @@
 
 - type: entity
   categories: [ HideSpawnMenu, Spawner ]
-  id: SpawnPointGhostSpaf
+  id: STSpawnPointGhostSpaf
   name: ghost role spawn point
   suffix: S.P.A.F.
   parent: MarkerBase
@@ -31,7 +31,7 @@
     raffle:
       settings: default
   - type: GhostRoleMobSpawner
-    prototype: MobSpaf
+    prototype: STMobSpaf
   - type: Sprite
     sprite: Markers/jobs.rsi
     layers:

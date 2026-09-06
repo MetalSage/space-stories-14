@@ -1,4 +1,4 @@
 - type: preloadedGrid
-  id: TIE
+  id: STTIE
   path: /Maps/_Stories/Shuttles/TIE.yml
   copies: 1

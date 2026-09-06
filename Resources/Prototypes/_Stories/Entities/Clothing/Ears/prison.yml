@@ -1,13 +1,13 @@
 - type: entity
   parent: ClothingHeadset
-  id: PRISONClothingHeadset
+  id: STPRISONClothingHeadset
   name: prison headset
   description: A headset used by prison staff.
   components:
     - type: ContainerFill
       containers:
         key_slots:
-          - PRISONEncryptionKey
+          - STPRISONEncryptionKey
           - EncryptionKeyCommon
           - EncryptionKeySecurity
     - type: Sprite
@@ -17,14 +17,14 @@
 
 - type: entity
   parent: ClothingHeadset
-  id: PRISONClothingHeadsetMedic
+  id: STPRISONClothingHeadsetMedic
   name: prison doctor headset
   description: A headset used by prison staff.
   components:
     - type: ContainerFill
       containers:
         key_slots:
-          - PRISONEncryptionKey
+          - STPRISONEncryptionKey
           - EncryptionKeyCommon
     - type: Sprite
       sprite: _Stories/Clothing/Ears/Headsets/prison.rsi
@@ -33,14 +33,14 @@
 
 - type: entity
   parent: ClothingHeadset
-  id: PRISONClothingHeadsetEngi
+  id: STPRISONClothingHeadsetEngi
   name: prison engineer headset
   description: A headset used by prison staff.
   components:
     - type: ContainerFill
       containers:
         key_slots:
-          - PRISONEncryptionKey
+          - STPRISONEncryptionKey
           - EncryptionKeyCommon
     - type: Sprite
       sprite: _Stories/Clothing/Ears/Headsets/prison.rsi
@@ -49,14 +49,14 @@
 
 - type: entity
   parent: ClothingHeadsetAlt
-  id: PRISONClothingHeadsetAlt
+  id: STPRISONClothingHeadsetAlt
   name: head of prison's over-ear headset
   description: Needed to report the clown's escape to the captain.
   components:
     - type: ContainerFill
       containers:
         key_slots:
-          - PRISONEncryptionKey
+          - STPRISONEncryptionKey
           - EncryptionKeyCommon
           - EncryptionKeySecurity
           - EncryptionKeyCommand

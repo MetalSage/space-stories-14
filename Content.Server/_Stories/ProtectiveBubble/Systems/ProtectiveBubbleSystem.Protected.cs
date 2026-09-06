@@ -38,7 +38,7 @@ public sealed partial class ProtectiveBubbleSystem
         ProtectedByProtectiveBubbleComponent component,
         ref GetExplosionResistanceEvent args)
     {
-        args.DamageCoefficient = 0; // Щит полностью защищает от взрыва впитывая весь урон.
+        args.DamageCoefficient = 0;
     }
 
     private void OnBeforeHeatExchange(EntityUid uid,

@@ -1,10 +1,7 @@
-# Hats
 - type: latheRecipe
   parent: BaseCommandHatRecipe
-  id: ClothingHeadHatCapHoS
-  result: ClothingHeadHatCapHoS
-
-# Jumpsuits
+  id: STClothingHeadHatCapHoS
+  result: STClothingHeadHatCapHoS
 
 - type: latheRecipe
   parent: BaseJumpsuitRecipe
@@ -13,5 +10,5 @@
 
 - type: latheRecipe
   parent: BaseJumpsuitRecipe
-  id: JumpsuitDetectiveSpecialGrey
-  result: ClothingUniformJumpsuitDetectiveSpecialGrey
+  id: STJumpsuitDetectiveSpecialGrey
+  result: STClothingUniformJumpsuitDetectiveSpecialGrey

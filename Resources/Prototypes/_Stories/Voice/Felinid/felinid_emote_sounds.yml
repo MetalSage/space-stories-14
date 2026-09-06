@@ -1,21 +1,21 @@
 - type: emoteSounds
-  id: MaleFelinid
+  id: STMaleFelinid
   voiceSelectorName: humanoid-profile-editor-voice-masculine
   params:
     variation: 0.125
   sounds:
     Scream:
-      collection: FelinidScreams
-    Hiss:
-      collection: FelinidHisses
-    Meow:
-      collection: FelinidMeows
-    Mew:
-      collection: FelinidMews
+      collection: STFelinidScreams
+    STHiss:
+      collection: STFelinidHisses
+    STMeow:
+      collection: STFelinidMeows
+    STMew:
+      collection: STFelinidMews
     Growl:
-      collection: FelinidGrowls
-    Purr:
-      collection: FelinidPurrs
+      collection: STFelinidGrowls
+    STPurr:
+      collection: STFelinidPurrs
     Laugh:
       collection: MaleLaugh
     Sneeze:
@@ -52,23 +52,23 @@
       collection: MaleDeathGasp
 
 - type: emoteSounds
-  id: FemaleFelinid
+  id: STFemaleFelinid
   voiceSelectorName: humanoid-profile-editor-voice-feminine
   params:
     variation: 0.125
   sounds:
     Scream:
-      collection: FelinidScreams
-    Hiss:
-      collection: FelinidHisses
-    Meow:
-      collection: FelinidMeows
-    Mew:
-      collection: FelinidMews
+      collection: STFelinidScreams
+    STHiss:
+      collection: STFelinidHisses
+    STMeow:
+      collection: STFelinidMeows
+    STMew:
+      collection: STFelinidMews
     Growl:
-      collection: FelinidGrowls
-    Purr:
-      collection: FelinidPurrs
+      collection: STFelinidGrowls
+    STPurr:
+      collection: STFelinidPurrs
     Laugh:
       collection: FemaleLaugh
     Sneeze:

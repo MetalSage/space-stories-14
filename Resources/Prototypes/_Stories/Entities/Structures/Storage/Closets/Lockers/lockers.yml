@@ -1,5 +1,5 @@
 - type: entity
-  id: LockerGuardianNt
+  id: STLockerGuardianNt
   parent: LockerBase
   name: blade guardian's locker
   description: Each bladeguard's fashion arsenal.
@@ -13,3 +13,26 @@
       stateDoorClosed: guardian_door
     - type: AccessReader
       access: [["Security"]]
+
+- type: entity
+  id: STLockerBlueshield
+  parent: LockerBase
+  name: blueshield's locker
+  description: A secure locker containing the gear and spare equipment of the Blueshield Officer.
+  components:
+  - type: Sprite
+    sprite: _Stories/Structures/Storage/closet.rsi
+  - type: Appearance
+  - type: EntityStorageVisuals
+    stateBaseClosed: bs
+    stateDoorOpen: bs_open
+    stateDoorClosed: bs_door
+  - type: AccessReader
+    access: [["Command"], ["Security"]]
+  - type: StorageFill
+    contents:
+    - id: BriefcaseBrown
+    - id: ClothingEyesGlassesSecurity
+    - id: MedkitFilled
+    - id: STHandheldCrewMonitorCommand
+    - id: STRubberStampBlueshield

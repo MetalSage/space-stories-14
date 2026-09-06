@@ -1,0 +1,58 @@
+- type: entity
+  name: .585 Trappiste bullet
+  parent: BaseBullet
+  id: STBullet585Trappiste
+  components:
+  - type: Projectile
+    damage:
+      types:
+        Piercing: 25
+    soundHit:
+      collection: MeatBulletImpact
+
+- type: entity
+  name: .585 Trappiste flathead bullet
+  parent: BaseBullet
+  id: STBullet585TrappisteIncapacitator
+  components:
+  - type: Projectile
+    damage:
+      types:
+        Blunt: 9
+    soundHit:
+      collection: MeatBulletImpact
+  - type: StaminaDamageOnCollide
+    damage: 30
+
+- type: entity
+  name: .585 Trappiste hollowhead bullet
+  parent: BaseBullet
+  id: STBullet585TrappisteHollowpoint
+  components:
+  - type: Projectile
+    damage:
+      types:
+        Piercing: 25
+        Slash: 10
+    soundHit:
+      collection: MeatBulletImpact
+
+- type: entity
+  name: hellfire laser
+  parent: BaseBulletTrigger
+  id: STProjectileLaserHellfire
+  components:
+  - type: Sprite
+    sprite: _Stories/Objects/Weapons/Guns/Projectiles/laser_hellfire.rsi
+    layers:
+    - state: heavylaser
+  - type: Projectile
+    damage:
+      types:
+        Heat: 25
+    soundHit:
+      path: /Audio/Weapons/Guns/Hits/laser_sear_wall.ogg
+  - type: PointLight
+    radius: 2.5
+    energy: 1.5
+    color: "#FF969D"

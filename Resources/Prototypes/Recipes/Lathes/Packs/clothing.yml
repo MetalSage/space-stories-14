@@ -91,7 +91,7 @@
   - ClothingUniformJumpsuitDetective
   - ClothingUniformJumpskirtDetective
   - ClothingHeadHatBeretHoS
-  - ClothingHeadHatCapHoS # Stories
+  - STClothingHeadHatCapHoS # Stories
   - ClothingHeadHatHoshat
   - ClothingUniformJumpsuitHoS
   - ClothingUniformJumpskirtHoS
@@ -117,7 +117,7 @@
   - ClothingHeadHatWarden
   - ClothingUniformJumpsuitWarden
   - ClothingUniformJumpskirtWarden
-  - JumpsuitDetectiveSpecialGrey # Stories-Drip
+  - STJumpsuitDetectiveSpecialGrey # Stories-Drip
 
 - type: latheRecipePack
   id: ClothingService

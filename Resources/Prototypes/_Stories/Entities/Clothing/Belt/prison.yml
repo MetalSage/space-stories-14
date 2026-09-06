@@ -1,6 +1,6 @@
 - type: entity
   parent: ClothingBeltSheath
-  id: PRISONClothingBeltSheath
+  id: STPRISONClothingBeltSheath
   name: scabbard for prison saber
   description: An ornate sheath designed to hold a blade.
   components:
@@ -17,17 +17,17 @@
           ejectVerbText: sheath-eject-verb
           whitelist:
             tags:
-              - PRISONSabre
+              - STPRISONSabre
     - type: ItemMapper
       mapLayers:
         sheath-sabre:
           whitelist:
             tags:
-              - PRISONSabre
+              - STPRISONSabre
 
 - type: entity
   parent: ClothingBeltSecurity
-  id: PRISONClothingBeltWebbing
+  id: STPRISONClothingBeltWebbing
   name: Prison guard webbing
   description: A unique, versatile load-bearing vest with straps and a belt, capable of holding prison staff gear.
   components:

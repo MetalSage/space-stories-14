@@ -1,5 +1,5 @@
 - type: wireLayout
-  id: Atm
+  id: STAtm
   wires:
   - !type:PowerWireAction
   - !type:AccessWireAction

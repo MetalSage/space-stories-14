@@ -1,2 +1,2 @@
-ent-PRISONClothingShoesBootsJack = подкованные сапоги
+ent-STPRISONClothingShoesBootsJack = подкованные сапоги
     .desc = Обувь тюрьмы, для боевых операций или боевых действий. Борьба — всё, борьба — всегда.

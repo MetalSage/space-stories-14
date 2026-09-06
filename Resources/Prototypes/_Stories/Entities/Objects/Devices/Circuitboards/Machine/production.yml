@@ -1,17 +1,17 @@
 ﻿- type: entity
-  id: PrinterDocMachineCircuitboard
+  id: STPrinterDocMachineCircuitboard
   parent: BaseMachineCircuitboard
   name: бумажный принтер (машинная плата)
   description: Печатна плата для бумажного принтера.
   components:
   - type: MachineBoard
-    prototype: PrinterDoc
+    prototype: STPrinterDoc
     stackRequirements:
       Manipulator: 4
       Glass: 1
 
 - type: entity
-  id: ReflectorBoxMachineCircuitboard
+  id: STReflectorBoxMachineCircuitboard
   parent: BaseMachineCircuitboard
   name: Reflector, type "Box"
   description: Reflector machine board, type "Box"
@@ -20,7 +20,7 @@
     sprite: _Stories/Objects/Misc/module.rsi
     state: reflectorbox_circuitboard
   - type: MachineBoard
-    prototype: ReflectorBox
+    prototype: STReflectorBox
     stackRequirements:
       Manipulator: 3
       CableHV: 10
@@ -30,7 +30,7 @@
         defaultPrototype: PowerCellMedium
 
 - type: entity
-  id: ReflectorCornerMachineCircuitboard
+  id: STReflectorCornerMachineCircuitboard
   parent: BaseMachineCircuitboard
   name: Reflector, type "Corner"
   description: Reflector machine board, type "Corner"
@@ -39,7 +39,7 @@
     sprite: _Stories/Objects/Misc/module.rsi
     state: reflectorcorner_circuitboard
   - type: MachineBoard
-    prototype: ReflectorCorner
+    prototype: STReflectorCorner
     stackRequirements:
       Manipulator: 3
       CableHV: 10
@@ -49,7 +49,7 @@
         defaultPrototype: PowerCellMedium
 
 - type: entity
-  id: ReflectorCornerTsideMachineCircuitboard
+  id: STReflectorCornerTsideMachineCircuitboard
   parent: BaseMachineCircuitboard
   name: Reflector, type "Double-Corner"
   description: Reflector machine board, type "Double-Corner"
@@ -58,7 +58,7 @@
     sprite: _Stories/Objects/Misc/module.rsi
     state: reflectortsidecorner_circuitboard
   - type: MachineBoard
-    prototype: ReflectorCornerTside
+    prototype: STReflectorCornerTside
     stackRequirements:
       Manipulator: 3
       CableHV: 10

@@ -1,5 +1,5 @@
-using Content.Shared.GameTicking;
 using Content.Shared._Stories.SCCVars;
+using Content.Shared.GameTicking;
 using Robust.Shared.Configuration;
 
 namespace Content.Client._Stories.RoundEnd;
@@ -18,7 +18,7 @@ public sealed partial class NoEorgPopupSystem : EntitySystem
 
     private void OnRoundEnd(RoundEndMessageEvent ev)
     {
-        if (_cfg.GetCVar(SCCVars.SkipRoundEndNoEorgPopup) || _cfg.GetCVar(SCCVars.RoundEndNoEorgPopup) == false)
+        if (_cfg.GetCVar(SCCVars.SkipRoundEndNoEorgPopup) || !_cfg.GetCVar(SCCVars.RoundEndNoEorgPopup))
             return;
 
         OpenNoEorgPopup();

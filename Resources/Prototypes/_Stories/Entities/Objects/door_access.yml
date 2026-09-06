@@ -1,22 +1,22 @@
 - type: entity
   parent: DoorElectronics
-  id: PRISONDoorElectronicsHeadOfPrison
-  suffix: HeadOfPrison, Locked
+  id: STPRISONDoorElectronicsHeadOfPrison
+  suffix: STHeadOfPrison, Locked
   components:
     - type: AccessReader
-      access: [["HeadOfPrison"]]
+      access: [["STHeadOfPrison"]]
 
 - type: entity
   parent: DoorElectronics
-  id: PRISONDoorElectronicsBrig
-  suffix: PrisonBrig, Locked
+  id: STPRISONDoorElectronicsBrig
+  suffix: STPrisonBrig, Locked
   components:
     - type: AccessReader
-      access: [["PrisonBrig"]]
+      access: [["STPrisonBrig"]]
 
 - type: entity
   parent: DoorElectronics
-  id: PRISONDoorElectronics
+  id: STPRISONDoorElectronics
   suffix: Prison, Locked
   components:
     - type: AccessReader
@@ -24,23 +24,23 @@
 
 - type: entity
   parent: DoorElectronics
-  id: PRISONDoorElectronicsMed
-  suffix: PrisonMed, Locked
+  id: STPRISONDoorElectronicsMed
+  suffix: STPrisonMed, Locked
   components:
     - type: AccessReader
-      access: [["PrisonMed"]]
+      access: [["STPrisonMed"]]
 
 - type: entity
   parent: DoorElectronics
-  id: PRISONDoorElectronicsEng
-  suffix: PrisonEng, Locked
+  id: STPRISONDoorElectronicsEng
+  suffix: STPrisonEng, Locked
   components:
     - type: AccessReader
-      access: [["PrisonEng"]]
+      access: [["STPrisonEng"]]
 
 - type: entity
   parent: DoorElectronics
-  id: PRISONDoorElectronicsPrisoner
+  id: STPRISONDoorElectronicsPrisoner
   suffix: Prisoner, Locked
   components:
     - type: AccessReader

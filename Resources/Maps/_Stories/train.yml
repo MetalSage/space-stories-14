@@ -77557,7 +77557,7 @@ entities:
           ent: null
           showEnts: False
           occludes: True
-- proto: LockerGuardianNtFilled
+- proto: STLockerGuardianNtFilled
   entities:
   - uid: 17070
     components:
@@ -89682,7 +89682,7 @@ entities:
     - type: Transform
       parent: 2
       pos: 5.5,-331.5
-- proto: SpawnPointGuardianNt
+- proto: STSpawnPointGuardianNt
   entities:
   - uid: 17069
     components:
@@ -93238,7 +93238,7 @@ entities:
     - type: Transform
       parent: 2
       pos: -2.8305314,-148.27542
-- proto: ToyFigurineGuardianNt
+- proto: STToyFigurineGuardianNt
   entities:
   - uid: 17453
     components:

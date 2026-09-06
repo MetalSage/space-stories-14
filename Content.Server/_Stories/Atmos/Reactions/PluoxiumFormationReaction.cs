@@ -5,9 +5,6 @@ using JetBrains.Annotations;
 
 namespace Content.Server.Atmos.Reactions;
 
-/// <summary>
-/// Forms pluoxium from mixing Oxygen and Tritium and Carbon Dioxide at low temperature.
-/// </summary>
 [UsedImplicitly]
 public sealed partial class PluoxiumFormationReaction : IGasReactionEffect
 {
@@ -22,7 +19,7 @@ public sealed partial class PluoxiumFormationReaction : IGasReactionEffect
         var temperature = mixture.Temperature;
         var volume = mixture.Volume;
 
-        var environmentEfficiency = volume / temperature; // more volume and less temperature gives better rates
+        var environmentEfficiency = volume / temperature;
 
         var totalRate = environmentEfficiency / Atmospherics.PluoxiumProductionRate;
 

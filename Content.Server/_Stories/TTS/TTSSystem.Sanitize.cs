@@ -4,7 +4,6 @@ using Content.Shared.Chat;
 
 namespace Content.Server._Stories.TTS;
 
-// ReSharper disable once InconsistentNaming
 public sealed partial class TTSSystem
 {
     private static readonly Regex SanitizePunctuationRegex =
@@ -107,8 +106,8 @@ public sealed partial class TTSSystem
             { "мк", "Эм Ка" },
             { "mk", "Эм Ка" },
             { "рпг", "Эр Пэ Гэ" },
-            { "с4", "Си 4" }, // cyrillic
-            { "c4", "Си 4" }, // latinic
+            { "с4", "Си 4" },
+            { "c4", "Си 4" },
             { "бсс", "Бэ Эс Эс" },
         };
 
@@ -192,7 +191,6 @@ public sealed partial class TTSSystem
     }
 }
 
-// Source: https://codelab.ru/s/csharp/digits2phrase
 public static class NumberConverter
 {
     private static readonly string[] Frac20Male =

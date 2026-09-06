@@ -1,12 +1,12 @@
 - type: entity
   parent: ClothingNeckBase
-  id: ClothingNeckMantleGuardianNomad
+  id: STClothingNeckMantleGuardianNomad
   name: traveler mantle
   description: Похоже, тут выгравировано "o k h r i m m". Что же это может значить?
   components:
   - type: Tag
     tags:
-      - ForceRecallEquipment
+      - STForceRecallEquipment
   - type: Sprite
     sprite: _Stories/Clothing/Neck/mantles/guardian_nomad.rsi
   - type: Clothing
@@ -14,13 +14,13 @@
 
 - type: entity
   parent: ClothingNeckBase
-  id: ClothingNeckMantleGuardianNt
+  id: STClothingNeckMantleGuardianNt
   name: blade guardian mantle
   description: Похоже, тут выгравировано "W o o b y". Что же это может значить?
   components:
   - type: Tag
     tags:
-      - ForceRecallEquipment
+      - STForceRecallEquipment
       - WhitelistChameleon
   - type: Sprite
     sprite: _Stories/Clothing/Neck/mantles/guardian_nt_mantle_shoulder.rsi
@@ -29,7 +29,7 @@
 
 - type: entity
   parent: [ClothingNeckBase, BaseCommandContraband]
-  id: ClothingShoulderMantleHoS
+  id: STClothingShoulderMantleHoS
   name: HoS's Shoulder Mantle
   description: A comfortable and chique mantle befitting of only the most experienced captain.
   components:
@@ -37,3 +37,20 @@
     sprite: Clothing/Neck/mantles/hosmantle_shoulder.rsi
   - type: Clothing
     sprite: Clothing/Neck/mantles/hosmantle_shoulder.rsi
+
+- type: entity
+  parent: ClothingNeckBase
+  id: STClothingNeckMantleBlueshield
+  name: blueshield's mantle
+  description: A plated mantle with command colors. Suitable for the one assigned to making sure they're still breathing.
+  components:
+  - type: Sprite
+    sprite: _Stories/Clothing/Neck/mantles/blueshield_mantle.rsi
+  - type: Clothing
+    sprite: _Stories/Clothing/Neck/mantles/blueshield_mantle.rsi
+  - type: Armor
+    modifiers:
+      coefficients:
+        Blunt: 0.9
+        Slash: 0.9
+        Piercing: 0.9

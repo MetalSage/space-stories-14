@@ -6,19 +6,19 @@ using Robust.Shared.Serialization.TypeSerializers.Implementations.Custom.Prototy
 
 namespace Content.Shared._Stories.TargetingTeleporter;
 
-[RegisterComponent, NetworkedComponent, AutoGenerateComponentState(true)]
+[RegisterComponent, NetworkedComponent, AutoGenerateComponentState(true)]  
 public sealed partial class TargetingTeleporterComponent : Component
 {
     [DataField("exitPortalPrototype")]
     public EntProtoId ExitPortalPrototype = "STBluspacePortalExit";
 
-    [DataField, AutoNetworkedField]
+    [DataField, AutoNetworkedField] 
     public EntityUid? EyeEntity;
 
     [DataField(readOnly: true)]
     public EntProtoId? EyeEntityProto = "STTargetingTeleporterEye";
 
-    [DataField, AutoNetworkedField]
+    [DataField, AutoNetworkedField] 
     public EntityUid? GridUid;
 
     [DataField("newPortalSound")]
@@ -30,9 +30,6 @@ public sealed partial class TargetingTeleporterComponent : Component
     [DataField]
     public EntityWhitelist? StationWhitelist;
 
-    /// <summary>
-    /// Можно ли будет вернуться обратно через портал выхода.
-    /// </summary>
     [DataField]
     public bool Wayback = true;
 }

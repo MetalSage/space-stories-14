@@ -14,7 +14,7 @@
 
 # Pointless  
 - type: listing
-  id: UplinkRichard
+  id: STUplinkRichard
   name: uplink-richard-name
   description: uplink-richard-desc
   productEntity: ClothingHeadHatRichard
@@ -26,7 +26,7 @@
   id: STUplinkClothingTacticalMaid
   name: uplink-costume-tactical-maid-name
   description: uplink-costume-tactical-maid-desc
-  productEntity: ClothingBackpackDuffelCrateTacticalMaid
+  productEntity: STClothingBackpackDuffelCrateTacticalMaid
   cost:
     Telecrystal: 6
   categories:
@@ -47,7 +47,7 @@
   id: STUplinkRadioJammerIndustrial
   name: uplink-radio-jammer-idndustrial-name
   description: uplink-radio-jammer-idndustrial-desc
-  productEntity: RadioJammerIndustrial
+  productEntity: STRadioJammerIndustrial
   cost:
     Telecrystal: 6
   categories:
@@ -58,7 +58,7 @@
   id: STUplinkNightvision
   name: uplink-nightvision-name
   description: uplink-nightvision-desc
-  productEntity: ClothingEyesNightvision
+  productEntity: STClothingEyesNightvision
   discountCategory: rareDiscounts
   discountDownTo:
     Telecrystal: 2
@@ -76,7 +76,7 @@
   id: STUplinkNightvisionNukeOps
   name: uplink-nightvision-name
   description: uplink-nightvision-desc
-  productEntity: ClothingEyesNightvision
+  productEntity: STClothingEyesNightvision
   discountCategory: rareDiscounts
   discountDownTo:
     Telecrystal: 4
@@ -94,7 +94,7 @@
   id: STUplinkClothingEyesThermalVisionMonocular
   name: uplink-clothing-eyes-thermal-vision-monocular-name
   description: uplink-clothing-eyes-thermal-vision-monocular-desc
-  productEntity: ClothingEyesThermalVisionMonocular
+  productEntity: STClothingEyesThermalVisionMonocular
   discountCategory: rareDiscounts
   discountDownTo:
     Telecrystal: 4
@@ -112,7 +112,7 @@
   id: STUplinkClothingEyesThermalVisionHud
   name: uplink-clothing-eyes-thermal-vision-hud-name
   description: uplink-clothing-eyes-thermal-vision-hud-desc
-  productEntity: ClothingEyesThermalVisionHud
+  productEntity: STClothingEyesThermalVisionHud
   discountCategory: rareDiscounts
   discountDownTo:
     Telecrystal: 6

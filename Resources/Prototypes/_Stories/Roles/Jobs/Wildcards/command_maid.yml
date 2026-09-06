@@ -2,13 +2,13 @@
   id: STCommandMaid
   name: stories-job-name-command-maid
   description: stories-job-description-command-maid
-  playTimeTracker: JobSTCommandMaid
+  playTimeTracker: STJobCommandMaid
   requirements:
   - !type:RoleTimeRequirement
     role: JobJanitor
     time: 3600 #1 hr
   startingGear: STCommandMaidGear
-  icon: "JobIconSTCommandMaid"
+  icon: "STJobIconCommandMaid"
   supervisors: job-supervisors-captain
   setPreference: false
   access:

@@ -5,7 +5,7 @@
   category: Disabilities
   blacklist:
     components:
-      - Holy # Проклятый священник
+      - Holy
   components:
   - type: Unholy
     detectable: false

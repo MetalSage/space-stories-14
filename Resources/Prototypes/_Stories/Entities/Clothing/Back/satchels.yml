@@ -1,18 +1,18 @@
 - type: entity
   parent: ClothingBackpackSatchel
-  id: ClothingBackpackSatchelGuardianNt
+  id: STClothingBackpackSatchelGuardianNt
   name: blade guardian's satchel
   description: Where is my fudge?
   components:
   - type: Tag
     tags:
-      - ForceRecallEquipment
+      - STForceRecallEquipment
   - type: Sprite
     sprite: _Stories/Clothing/Back/Satchels/satchel_guardiannt.rsi
 
 - type: entity
   parent: ClothingBackpackSatchel
-  id: ClothingBackpackSatchelAdidos
+  id: STClothingBackpackSatchelAdidos
   name: satchel
   description: A fashionable bag.
   components:
@@ -21,7 +21,7 @@
 
 - type: entity
   parent: ClothingBackpackSatchel
-  id: ClothingBackpackSatchelBluesky
+  id: STClothingBackpackSatchelBluesky
   name: satchel
   description: A fashionable bag.
   components:
@@ -30,7 +30,7 @@
 
 - type: entity
   parent: ClothingBackpackSatchel
-  id: ClothingBackpackSatchelEight
+  id: STClothingBackpackSatchelEight
   name: satchel
   description: A fashionable bag.
   components:
@@ -39,7 +39,7 @@
 
 - type: entity
   parent: ClothingBackpackSatchel
-  id: ClothingBackpackSatchelGachi
+  id: STClothingBackpackSatchelGachi
   name: satchel
   description: A fashionable bag.
   components:
@@ -48,9 +48,31 @@
 
 - type: entity
   parent: ClothingBackpackSatchel
-  id: ClothingBackpackSatchelRl
+  id: STClothingBackpackSatchelRl
   name: satchel
   description: A fashionable bag.
   components:
   - type: Sprite
     sprite: _Stories/Clothing/Back/Satchels/satchel_rl.rsi
+
+- type: entity
+  parent: ClothingBackpackSatchel
+  id: STClothingBackpackSatchelBlueshield
+  name: blueshield satchel
+  description: A robust satchel issued to Nanotrasen's finest.
+  components:
+  - type: Sprite
+    sprite: _Stories/Clothing/Back/Satchels/blueshield_satchel.rsi
+  - type: Clothing
+    sprite: _Stories/Clothing/Back/Satchels/blueshield_satchel.rsi
+
+- type: entity
+  parent: ClothingBackpackSatchel
+  id: STClothingBackpackMessengerBlueshield
+  name: blueshield messenger bag
+  description: A robust messenger bag issued to Nanotrasen's finest.
+  components:
+  - type: Sprite
+    sprite: _Stories/Clothing/Back/Satchels/blueshield_messenger.rsi
+  - type: Clothing
+    sprite: _Stories/Clothing/Back/Satchels/blueshield_messenger.rsi

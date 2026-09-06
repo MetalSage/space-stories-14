@@ -1,6 +1,6 @@
-ent-MindRoleEmpireMember = EmpireMember Role
+ent-STMindRoleEmpireMember = EmpireMember Role
     .desc = { ent-BaseMindRoleAntag.desc }
-ent-MindRoleHypnotizedEmpireMember = HypnotizedEmpireMember Role
+ent-STMindRoleHypnotizedEmpireMember = HypnotizedEmpireMember Role
     .desc = { ent-BaseMindRoleAntag.desc }
 ent-STMindRoleShadowling = Shadowling role
     .desc = { ent-BaseMindRoleAntag.desc }

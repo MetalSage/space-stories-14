@@ -1,5 +1,5 @@
 - type: gameMap
-  id: StoriesCore
+  id: STCore
   mapName: 'Core'
   mapPath: /Maps/_Stories/core.yml
   minPlayers: 35
@@ -65,7 +65,7 @@
             StationAi: [ 1, 1 ]
             Borg: [ 2, 2 ]
             #stories content
-            GuardianNt: [ 1, 1 ]
-            IAA: [ 1, 1 ]
+            STGuardianNt: [ 1, 1 ]
+            STIAA: [ 1, 1 ]
             STBrigmedic: [ 1, 1 ]
             #STJudge: [ 1, 1 ]

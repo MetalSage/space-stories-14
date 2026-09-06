@@ -1,2 +1,2 @@
-ent-ClothingMaskGasExe = противогаз хранителя
+ent-STClothingMaskGasExe = противогаз хранителя
     .desc = Противогаз неизвестной конструкции.

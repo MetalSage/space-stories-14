@@ -1,0 +1,32 @@
+- type: entity
+  parent: BaseMagazinePistolSubMachineGun
+  id: STMagazine585TrappistePistol
+  name: Trappiste pistol magazine (.585)
+  description: A standard size magazine for Trappiste weapons, holds sixteen rounds.
+  components:
+  - type: Sprite
+    sprite: _Stories/Objects/Weapons/Guns/Ammunition/Magazines/585trappiste_pistol.rsi
+    layers:
+    - state: pistol_585_standard
+  - type: BallisticAmmoProvider
+    mayTransfer: true
+    proto: STCartridge585Trappiste
+    capacity: 16
+    whitelist:
+      tags:
+      - Cartridge585Trappiste
+  - type: Tag
+    tags:
+    - STMagazine585Trappiste
+
+- type: entity
+  parent: STMagazine585TrappistePistol
+  id: STMagazine585TrappistePistolEmpty
+  suffix: Empty
+  components:
+  - type: BallisticAmmoProvider
+    proto: null
+    capacity: 16
+    whitelist:
+      tags:
+      - Cartridge585Trappiste

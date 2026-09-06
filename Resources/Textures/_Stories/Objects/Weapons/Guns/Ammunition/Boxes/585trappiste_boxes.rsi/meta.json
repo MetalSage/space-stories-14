@@ -1,0 +1,41 @@
+{
+  "version": 1,
+  "license": "CC-BY-SA-3.0",
+  "copyright": "Taken from Monkestation at https://github.com/Monkestation/Monkestation2.0/blob/bdf60a966c1f57b8a0d9dc640c3e5dda340c7054/monkestation/code/modules/blueshift/icons/obj/company_and_or_faction_based/trappiste_fabriek/ammo.dmi",
+  "size": {
+    "x": 32,
+    "y": 32
+  },
+  "states": [
+    {
+      "name": "585box"
+    },
+    {
+      "name": "585box-full"
+    },
+    {
+      "name": "585box-empty"
+    },
+    {
+      "name": "585box_disabler"
+    },
+    {
+      "name": "585box_disabler-full"
+    },
+    {
+      "name": "585box_disabler-empty"
+    },
+    {
+      "name": "585box_shrapnel"
+    },
+    {
+      "name": "585box_shrapnel-full"
+    },
+    {
+      "name": "585box_shrapnel-empty"
+    },
+    {
+      "name": "icon"
+    }
+  ]
+}

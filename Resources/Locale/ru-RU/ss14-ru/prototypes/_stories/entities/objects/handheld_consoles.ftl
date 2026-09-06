@@ -1,6 +1,6 @@
-ent-BaseHandheldShuttleConsole = портативная консоль управления шаттлом
+ent-STBaseHandheldShuttleConsole = портативная консоль управления шаттлом
     .desc = Используется, чтобы управлять шаттлом на расстоянии.
     .suffix = НЕ МАППИТЬ
-ent-PRISONHandheldShuttleConsole = портативная консоль управления шаттлом тюрьмы
+ent-STPRISONHandheldShuttleConsole = портативная консоль управления шаттлом тюрьмы
     .desc = Используется, чтобы управлять шаттлом на расстоянии.
     .suffix = НЕ МАППИТЬ

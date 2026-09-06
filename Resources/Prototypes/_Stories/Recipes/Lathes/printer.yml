@@ -1,607 +1,607 @@
 - type: latheRecipe
-  id: PrintedDocumentReportStationRecipe
-  result: PrintedDocumentReportStation
+  id: STPrintedDocumentReportStationRecipe
+  result: STPrintedDocumentReportStation
   icon: _Stories/Interface/Printer/reports.png
   categories:
   - Reports
   completetime: 2
   applyMaterialDiscount: false
   materials:
-    SheetPrinter: 100
-    Ink: 100
+    STSheetPrinter: 100
+    STInk: 100
 
 - type: latheRecipe
-  id: PrintedDocumentReporDepartmentRecipe
-  result: PrintedDocumentReporDepartment
+  id: STPrintedDocumentReporDepartmentRecipe
+  result: STPrintedDocumentReporDepartment
   icon: _Stories/Interface/Printer/reports.png
   categories:
   - Reports
   completetime: 2
   applyMaterialDiscount: false
   materials:
-    SheetPrinter: 100
-    Ink: 100
+    STSheetPrinter: 100
+    STInk: 100
 
 - type: latheRecipe
-  id: PrintedDocumentReportEmployeePerformanceRecipe
-  result: PrintedDocumentReportEmployeePerformance
+  id: STPrintedDocumentReportEmployeePerformanceRecipe
+  result: STPrintedDocumentReportEmployeePerformance
   icon: _Stories/Interface/Printer/reports.png
   categories:
   - Reports
   completetime: 2
   applyMaterialDiscount: false
   materials:
-    SheetPrinter: 100
-    Ink: 100
+    STSheetPrinter: 100
+    STInk: 100
 
 - type: latheRecipe
-  id: PrintedDocumentInternalAffairsAgentsReportRecipe
-  result: PrintedDocumentInternalAffairsAgentsReport
+  id: STPrintedDocumentInternalAffairsAgentsReportRecipe
+  result: STPrintedDocumentInternalAffairsAgentsReport
   icon: _Stories/Interface/Printer/reports.png
   categories:
   - Reports
   completetime: 2
   applyMaterialDiscount: false
   materials:
-    SheetPrinter: 100
-    Ink: 100
+    STSheetPrinter: 100
+    STInk: 100
 
 - type: latheRecipe
-  id: PrintedDocumentConditionReportRecipe
-  result: PrintedDocumentConditionReport
+  id: STPrintedDocumentConditionReportRecipe
+  result: STPrintedDocumentConditionReport
   icon: _Stories/Interface/Printer/reports.png
   categories:
   - Reports
   completetime: 2
   applyMaterialDiscount: false
   materials:
-    SheetPrinter: 100
-    Ink: 100
+    STSheetPrinter: 100
+    STInk: 100
 
 - type: latheRecipe
-  id: PrintedDocumentReportStudyObjectRecipe
-  result: PrintedDocumentReportStudyObject
+  id: STPrintedDocumentReportStudyObjectRecipe
+  result: STPrintedDocumentReportStudyObject
   icon: _Stories/Interface/Printer/reports.png
   categories:
   - Reports
   completetime: 2
   applyMaterialDiscount: false
   materials:
-    SheetPrinter: 100
-    Ink: 100
+    STSheetPrinter: 100
+    STInk: 100
 
 - type: latheRecipe
-  id: PrintedDocumentExperimentReportRecipe
-  result: PrintedDocumentExperimentReport
+  id: STPrintedDocumentExperimentReportRecipe
+  result: STPrintedDocumentExperimentReport
   icon: _Stories/Interface/Printer/reports.png
   categories:
   - Reports
   completetime: 2
   applyMaterialDiscount: false
   materials:
-    SheetPrinter: 100
-    Ink: 100
+    STSheetPrinter: 100
+    STInk: 100
 
 - type: latheRecipe
-  id: PrintedDocumentDisposalReportRecipe
-  result: PrintedDocumentDisposalReport
+  id: STPrintedDocumentDisposalReportRecipe
+  result: STPrintedDocumentDisposalReport
   icon: _Stories/Interface/Printer/reports.png
   categories:
   - Reports
   completetime: 2
   applyMaterialDiscount: false
   materials:
-    SheetPrinter: 100
-    Ink: 100
+    STSheetPrinter: 100
+    STInk: 100
 
 - type: latheRecipe
-  id: PrintedDocumentApplicationAppointmentInterimRecipe
-  result: PrintedDocumentApplicationAppointmentInterim
+  id: STPrintedDocumentApplicationAppointmentInterimRecipe
+  result: STPrintedDocumentApplicationAppointmentInterim
   icon: _Stories/Interface/Printer/statements.png
   categories:
-  - Statements
+  - STStatements
   completetime: 2
   applyMaterialDiscount: false
   materials:
-    SheetPrinter: 100
-    Ink: 100
+    STSheetPrinter: 100
+    STInk: 100
 
 - type: latheRecipe
-  id: PrintedDocumentApplicationEmploymentRecipe
-  result: PrintedDocumentApplicationEmployment
+  id: STPrintedDocumentApplicationEmploymentRecipe
+  result: STPrintedDocumentApplicationEmployment
   icon: _Stories/Interface/Printer/statements.png
   categories:
-  - Statements
+  - STStatements
   completetime: 2
   applyMaterialDiscount: false
   materials:
-    SheetPrinter: 100
-    Ink: 100
+    STSheetPrinter: 100
+    STInk: 100
 
 - type: latheRecipe
-  id: PrintedDocumentLetterResignationRecipe
-  result: PrintedDocumentLetterResignation
+  id: STPrintedDocumentLetterResignationRecipe
+  result: STPrintedDocumentLetterResignation
   icon: _Stories/Interface/Printer/statements.png
   categories:
-  - Statements
+  - STStatements
   completetime: 2
   applyMaterialDiscount: false
   materials:
-    SheetPrinter: 100
-    Ink: 100
+    STSheetPrinter: 100
+    STInk: 100
 
 - type: latheRecipe
-  id: PrintedDocumentApplicationAccessRecipe
-  result: PrintedDocumentApplicationAccess
+  id: STPrintedDocumentApplicationAccessRecipe
+  result: STPrintedDocumentApplicationAccess
   icon: _Stories/Interface/Printer/statements.png
   categories:
-  - Statements
+  - STStatements
   completetime: 2
   applyMaterialDiscount: false
   materials:
-    SheetPrinter: 100
-    Ink: 100
+    STSheetPrinter: 100
+    STInk: 100
 
 - type: latheRecipe
-  id: PrintedDocumentApplicationEquipmentRecipe
-  result: PrintedDocumentApplicationEquipment
+  id: STPrintedDocumentApplicationEquipmentRecipe
+  result: STPrintedDocumentApplicationEquipment
   icon: _Stories/Interface/Printer/statements.png
   categories:
-  - Statements
+  - STStatements
   completetime: 2
   applyMaterialDiscount: false
   materials:
-    SheetPrinter: 100
-    Ink: 100
+    STSheetPrinter: 100
+    STInk: 100
 
 - type: latheRecipe
-  id: PrintedDocumentEvacuationShuttleRequestRecipe
-  result: PrintedDocumentEvacuationShuttleRequest
+  id: STPrintedDocumentEvacuationShuttleRequestRecipe
+  result: STPrintedDocumentEvacuationShuttleRequest
   icon: _Stories/Interface/Printer/inquiries.png
   categories:
-  - InquiriesAndAppeals
+  - STInquiriesAndAppeals
   completetime: 2
   applyMaterialDiscount: false
   materials:
-    SheetPrinter: 100
-    Ink: 100
+    STSheetPrinter: 100
+    STInk: 100
 
 - type: latheRecipe
-  id: PrintedDocumentShuttleRegistrationRequestRecipe
-  result: PrintedDocumentShuttleRegistrationRequest
+  id: STPrintedDocumentShuttleRegistrationRequestRecipe
+  result: STPrintedDocumentShuttleRegistrationRequest
   icon: _Stories/Interface/Printer/inquiries.png
   categories:
-  - InquiriesAndAppeals
+  - STInquiriesAndAppeals
   completetime: 2
   applyMaterialDiscount: false
   materials:
-    SheetPrinter: 100
-    Ink: 100
+    STSheetPrinter: 100
+    STInk: 100
 
 - type: latheRecipe
-  id: PrintedDocumentRequestCallMembersCentralCommitteeDSORecipe
-  result: PrintedDocumentRequestCallMembersCentralCommitteeDSO
+  id: STPrintedDocumentRequestCallMembersCentralCommitteeDSORecipe
+  result: STPrintedDocumentRequestCallMembersCentralCommitteeDSO
   icon: _Stories/Interface/Printer/inquiries.png
   categories:
-  - InquiriesAndAppeals
+  - STInquiriesAndAppeals
   completetime: 2
   applyMaterialDiscount: false
   materials:
-    SheetPrinter: 100
-    Ink: 100
+    STSheetPrinter: 100
+    STInk: 100
 
 - type: latheRecipe
-  id: PrintedDocumentRequestChangeSalaryRecipe
-  result: PrintedDocumentRequestChangeSalary
+  id: STPrintedDocumentRequestChangeSalaryRecipe
+  result: STPrintedDocumentRequestChangeSalary
   icon: _Stories/Interface/Printer/inquiries.png
   categories:
-  - InquiriesAndAppeals
+  - STInquiriesAndAppeals
   completetime: 2
   applyMaterialDiscount: false
   materials:
-    SheetPrinter: 100
-    Ink: 100
+    STSheetPrinter: 100
+    STInk: 100
 
 - type: latheRecipe
-  id: PrintedDocumentRequestForNonlistedEmploymentRecipe
-  result: PrintedDocumentRequestForNonlistedEmployment
+  id: STPrintedDocumentRequestForNonlistedEmploymentRecipe
+  result: STPrintedDocumentRequestForNonlistedEmployment
   icon: _Stories/Interface/Printer/inquiries.png
   categories:
-  - InquiriesAndAppeals
+  - STInquiriesAndAppeals
   completetime: 2
   applyMaterialDiscount: false
   materials:
-    SheetPrinter: 100
-    Ink: 100
+    STSheetPrinter: 100
+    STInk: 100
 
 - type: latheRecipe
-  id: PrintedDocumentRequestForPromotionRecipe
-  result: PrintedDocumentRequestForPromotion
+  id: STPrintedDocumentRequestForPromotionRecipe
+  result: STPrintedDocumentRequestForPromotion
   icon: _Stories/Interface/Printer/inquiries.png
   categories:
-  - InquiriesAndAppeals
+  - STInquiriesAndAppeals
   completetime: 2
   applyMaterialDiscount: false
   materials:
-    SheetPrinter: 100
-    Ink: 100
+    STSheetPrinter: 100
+    STInk: 100
 
 - type: latheRecipe
-  id: PrintedDocumentRequestEuthanasiaRecipe
-  result: PrintedDocumentRequestEuthanasia
+  id: STPrintedDocumentRequestEuthanasiaRecipe
+  result: STPrintedDocumentRequestEuthanasia
   icon: _Stories/Interface/Printer/inquiries.png
   categories:
-  - InquiriesAndAppeals
+  - STInquiriesAndAppeals
   completetime: 2
   applyMaterialDiscount: false
   materials:
-    SheetPrinter: 100
-    Ink: 100
+    STSheetPrinter: 100
+    STInk: 100
 
 - type: latheRecipe
-  id: PrintedDocumentRequestConstructionWorkRecipe
-  result: PrintedDocumentRequestConstructionWork
+  id: STPrintedDocumentRequestConstructionWorkRecipe
+  result: STPrintedDocumentRequestConstructionWork
   icon: _Stories/Interface/Printer/inquiries.png
   categories:
-  - InquiriesAndAppeals
+  - STInquiriesAndAppeals
   completetime: 2
   applyMaterialDiscount: false
   materials:
-    SheetPrinter: 100
-    Ink: 100
+    STSheetPrinter: 100
+    STInk: 100
 
 - type: latheRecipe
-  id: PrintedDocumentComplaintOffenseRecipe
-  result: PrintedDocumentComplaintOffense
+  id: STPrintedDocumentComplaintOffenseRecipe
+  result: STPrintedDocumentComplaintOffense
   icon: _Stories/Interface/Printer/complaintst.png
   categories:
-  - Complaintst
+  - STComplaintst
   completetime: 2
   applyMaterialDiscount: false
   materials:
-    SheetPrinter: 100
-    Ink: 100
+    STSheetPrinter: 100
+    STInk: 100
 
 - type: latheRecipe
-  id: PrintedDocumentPermissionEquipmentRecipe
-  result: PrintedDocumentPermissionEquipment
+  id: STPrintedDocumentPermissionEquipmentRecipe
+  result: STPrintedDocumentPermissionEquipment
   icon: _Stories/Interface/Printer/permissions.png
   categories:
-  - Permissions
+  - STPermissions
   completetime: 2
   applyMaterialDiscount: false
   materials:
-    SheetPrinter: 100
-    Ink: 100
+    STSheetPrinter: 100
+    STInk: 100
 
 
 - type: latheRecipe
-  id: PrintedDocumentSearchPermissionRecipe
-  result: PrintedDocumentSearchPermission
+  id: STPrintedDocumentSearchPermissionRecipe
+  result: STPrintedDocumentSearchPermission
   icon: _Stories/Interface/Printer/permissions.png
   categories:
-  - Permissions
+  - STPermissions
   completetime: 2
   applyMaterialDiscount: false
   materials:
-    SheetPrinter: 100
-    Ink: 100
+    STSheetPrinter: 100
+    STInk: 100
 
 - type: latheRecipe
-  id: PrintedDocumentPrescriptionDrugAuthorizationRecipe
-  result: PrintedDocumentPrescriptionDrugAuthorization
+  id: STPrintedDocumentPrescriptionDrugAuthorizationRecipe
+  result: STPrintedDocumentPrescriptionDrugAuthorization
   icon: _Stories/Interface/Printer/permissions.png
   categories:
-  - Permissions
+  - STPermissions
   completetime: 2
   applyMaterialDiscount: false
   materials:
-    SheetPrinter: 100
-    Ink: 100
+    STSheetPrinter: 100
+    STInk: 100
 
 - type: latheRecipe
-  id: PrintedDocumentPermissionDisposeBodyRecipe
-  result: PrintedDocumentPermissionDisposeBody
+  id: STPrintedDocumentPermissionDisposeBodyRecipe
+  result: STPrintedDocumentPermissionDisposeBody
   icon: _Stories/Interface/Printer/permissions.png
   categories:
-  - Permissions
+  - STPermissions
   completetime: 2
   applyMaterialDiscount: false
   materials:
-    SheetPrinter: 100
-    Ink: 100
+    STSheetPrinter: 100
+    STInk: 100
 
 - type: latheRecipe
-  id: PrintedDocumentConstructionPermitRecipe
-  result: PrintedDocumentConstructionPermit
+  id: STPrintedDocumentConstructionPermitRecipe
+  result: STPrintedDocumentConstructionPermit
   icon: _Stories/Interface/Printer/permissions.png
   categories:
-  - Permissions
+  - STPermissions
   completetime: 2
   applyMaterialDiscount: false
   materials:
-    SheetPrinter: 100
-    Ink: 100
+    STSheetPrinter: 100
+    STInk: 100
 
 - type: latheRecipe
-  id: PrintedDocumentOrderDismissalRecipe
-  result: PrintedDocumentOrderDismissal
+  id: STPrintedDocumentOrderDismissalRecipe
+  result: STPrintedDocumentOrderDismissal
   icon: _Stories/Interface/Printer/instructions.png
   categories:
-  - OrdersAndInstructions
+  - STOrdersAndInstructions
   completetime: 2
   applyMaterialDiscount: false
   materials:
-    SheetPrinter: 100
-    Ink: 100
+    STSheetPrinter: 100
+    STInk: 100
 
 - type: latheRecipe
-  id: PrintedDocumentOrderDeprivationAccessRecipe
-  result: PrintedDocumentOrderDeprivationAccess
+  id: STPrintedDocumentOrderDeprivationAccessRecipe
+  result: STPrintedDocumentOrderDeprivationAccess
   icon: _Stories/Interface/Printer/instructions.png
   categories:
-  - OrdersAndInstructions
+  - STOrdersAndInstructions
   completetime: 2
   applyMaterialDiscount: false
   materials:
-    SheetPrinter: 100
-    Ink: 100
+    STSheetPrinter: 100
+    STInk: 100
 
 - type: latheRecipe
-  id: PrintedDocumentOrderEncouragementRecipe
-  result: PrintedDocumentOrderEncouragement
+  id: STPrintedDocumentOrderEncouragementRecipe
+  result: STPrintedDocumentOrderEncouragement
   icon: _Stories/Interface/Printer/instructions.png
   categories:
-  - OrdersAndInstructions
+  - STOrdersAndInstructions
   completetime: 2
   applyMaterialDiscount: false
   materials:
-    SheetPrinter: 100
-    Ink: 100
+    STSheetPrinter: 100
+    STInk: 100
 
 - type: latheRecipe
-  id: PrintedDocumentOrderParolePrisonerRecipe
-  result: PrintedDocumentOrderParolePrisoner
+  id: STPrintedDocumentOrderParolePrisonerRecipe
+  result: STPrintedDocumentOrderParolePrisoner
   icon: _Stories/Interface/Printer/instructions.png
   categories:
-  - OrdersAndInstructions
+  - STOrdersAndInstructions
   completetime: 2
   applyMaterialDiscount: false
   materials:
-    SheetPrinter: 100
-    Ink: 100
+    STSheetPrinter: 100
+    STInk: 100
 
 - type: latheRecipe
-  id: PrintedDocumentOrderRecognizingSentienceCreatureRecipe
-  result: PrintedDocumentOrderRecognizingSentienceCreature
+  id: STPrintedDocumentOrderRecognizingSentienceCreatureRecipe
+  result: STPrintedDocumentOrderRecognizingSentienceCreature
   icon: _Stories/Interface/Printer/instructions.png
   categories:
-  - OrdersAndInstructions
+  - STOrdersAndInstructions
   completetime: 2
   applyMaterialDiscount: false
   materials:
-    SheetPrinter: 100
-    Ink: 100
+    STSheetPrinter: 100
+    STInk: 100
 
 - type: latheRecipe
-  id: PrintedDocumentOrderMedicalInterventionRecipe
-  result: PrintedDocumentOrderMedicalIntervention
+  id: STPrintedDocumentOrderMedicalInterventionRecipe
+  result: STPrintedDocumentOrderMedicalIntervention
   icon: _Stories/Interface/Printer/instructions.png
   categories:
-  - OrdersAndInstructions
+  - STOrdersAndInstructions
   completetime: 2
   applyMaterialDiscount: false
   materials:
-    SheetPrinter: 100
-    Ink: 100
+    STSheetPrinter: 100
+    STInk: 100
 
 - type: latheRecipe
-  id: PrintedDocumentProductManufacturingOrderRecipe
-  result: PrintedDocumentProductManufacturingOrder
+  id: STPrintedDocumentProductManufacturingOrderRecipe
+  result: STPrintedDocumentProductManufacturingOrder
   icon: _Stories/Interface/Printer/orders.png
   categories:
   - Orders
   completetime: 2
   applyMaterialDiscount: false
   materials:
-    SheetPrinter: 100
-    Ink: 100
+    STSheetPrinter: 100
+    STInk: 100
 
 - type: latheRecipe
-  id: PrintedDocumentOrderPurchaseResourcesEquipmentRecipe
-  result: PrintedDocumentOrderPurchaseResourcesEquipment
+  id: STPrintedDocumentOrderPurchaseResourcesEquipmentRecipe
+  result: STPrintedDocumentOrderPurchaseResourcesEquipment
   icon: _Stories/Interface/Printer/orders.png
   categories:
   - Orders
   completetime: 2
   applyMaterialDiscount: false
   materials:
-    SheetPrinter: 100
-    Ink: 100
+    STSheetPrinter: 100
+    STInk: 100
 
 - type: latheRecipe
-  id: PrintedDocumentOrderingSpecialEquipmentRecipe
-  result: PrintedDocumentOrderingSpecialEquipment
+  id: STPrintedDocumentOrderingSpecialEquipmentRecipe
+  result: STPrintedDocumentOrderingSpecialEquipment
   icon: _Stories/Interface/Printer/orders.png
   categories:
   - Orders
   completetime: 2
   applyMaterialDiscount: false
   materials:
-    SheetPrinter: 100
-    Ink: 100
+    STSheetPrinter: 100
+    STInk: 100
 
 - type: latheRecipe
-  id: PrintedDocumentCertificateRecipe
-  result: PrintedDocumentCertificate
+  id: STPrintedDocumentCertificateRecipe
+  result: STPrintedDocumentCertificate
   icon: _Stories/Interface/Printer/evidence.png
   categories:
   - Evidence
   completetime: 2
   applyMaterialDiscount: false
   materials:
-    SheetPrinter: 100
-    Ink: 100
+    STSheetPrinter: 100
+    STInk: 100
 
 - type: latheRecipe
-  id: PrintedDocumentCertificateAdvancedTrainingRecipe
-  result: PrintedDocumentCertificateAdvancedTraining
+  id: STPrintedDocumentCertificateAdvancedTrainingRecipe
+  result: STPrintedDocumentCertificateAdvancedTraining
   icon: _Stories/Interface/Printer/evidence.png
   categories:
   - Evidence
   completetime: 2
   applyMaterialDiscount: false
   materials:
-    SheetPrinter: 100
-    Ink: 100
+    STSheetPrinter: 100
+    STInk: 100
 
 - type: latheRecipe
-  id: PrintedDocumentCertificateOffenseRecipe
-  result: PrintedDocumentCertificateOffense
+  id: STPrintedDocumentCertificateOffenseRecipe
+  result: STPrintedDocumentCertificateOffense
   icon: _Stories/Interface/Printer/evidence.png
   categories:
   - Evidence
   completetime: 2
   applyMaterialDiscount: false
   materials:
-    SheetPrinter: 100
-    Ink: 100
+    STSheetPrinter: 100
+    STInk: 100
 
 - type: latheRecipe
-  id: PrintedDocumentDeathCertificateRecipe
-  result: PrintedDocumentDeathCertificate
+  id: STPrintedDocumentDeathCertificateRecipe
+  result: STPrintedDocumentDeathCertificate
   icon: _Stories/Interface/Printer/evidence.png
   categories:
   - Evidence
   completetime: 2
   applyMaterialDiscount: false
   materials:
-    SheetPrinter: 100
-    Ink: 100
+    STSheetPrinter: 100
+    STInk: 100
 
 - type: latheRecipe
-  id: PrintedDocumentMarriageCertificateRecipe
-  result: PrintedDocumentMarriageCertificate
+  id: STPrintedDocumentMarriageCertificateRecipe
+  result: STPrintedDocumentMarriageCertificate
   icon: _Stories/Interface/Printer/evidence.png
   categories:
   - Evidence
   completetime: 2
   applyMaterialDiscount: false
   materials:
-    SheetPrinter: 100
-    Ink: 100
+    STSheetPrinter: 100
+    STInk: 100
 
 - type: latheRecipe
-  id: PrintedDocumentDivorceCertificateRecipe
-  result: PrintedDocumentDivorceCertificate
+  id: STPrintedDocumentDivorceCertificateRecipe
+  result: STPrintedDocumentDivorceCertificate
   icon: _Stories/Interface/Printer/evidence.png
   categories:
   - Evidence
   completetime: 2
   applyMaterialDiscount: false
   materials:
-    SheetPrinter: 100
-    Ink: 100
+    STSheetPrinter: 100
+    STInk: 100
 
 - type: latheRecipe
-  id: PrintedDocumentClosingIndictmentRecipe
-  result: PrintedDocumentClosingIndictment
+  id: STPrintedDocumentClosingIndictmentRecipe
+  result: STPrintedDocumentClosingIndictment
   icon: _Stories/Interface/Printer/decisions.png
   categories:
-  - ConclusionsAndDecisions
+  - STConclusionsAndDecisions
   completetime: 2
   applyMaterialDiscount: false
   materials:
-    SheetPrinter: 100
-    Ink: 100
+    STSheetPrinter: 100
+    STInk: 100
 
 - type: latheRecipe
-  id: PrintedDocumentSentenceRecipe
-  result: PrintedDocumentSentence
+  id: STPrintedDocumentSentenceRecipe
+  result: STPrintedDocumentSentence
   icon: _Stories/Interface/Printer/decisions.png
   categories:
-  - ConclusionsAndDecisions
+  - STConclusionsAndDecisions
   completetime: 2
   applyMaterialDiscount: false
   materials:
-    SheetPrinter: 100
-    Ink: 100
+    STSheetPrinter: 100
+    STInk: 100
 
 - type: latheRecipe
-  id: PrintedDocumentJudgmentRecipe
-  result: PrintedDocumentJudgment
+  id: STPrintedDocumentJudgmentRecipe
+  result: STPrintedDocumentJudgment
   icon: _Stories/Interface/Printer/decisions.png
   categories:
-  - ConclusionsAndDecisions
+  - STConclusionsAndDecisions
   completetime: 2
   applyMaterialDiscount: false
   materials:
-    SheetPrinter: 100
-    Ink: 100
+    STSheetPrinter: 100
+    STInk: 100
 
 - type: latheRecipe
-  id: PrintedDocumentStatementHealtheRecipe
-  result: PrintedDocumentStatementHealth
+  id: STPrintedDocumentStatementHealtheRecipe
+  result: STPrintedDocumentStatementHealth
   icon: _Stories/Interface/Printer/decisions.png
   categories:
-  - ConclusionsAndDecisions
+  - STConclusionsAndDecisions
   completetime: 2
   applyMaterialDiscount: false
   materials:
-    SheetPrinter: 100
-    Ink: 100
+    STSheetPrinter: 100
+    STInk: 100
 
 - type: latheRecipe
-  id: PrintedDocumentErrorLoadingFormHeaderRecipe
-  result: PrintedDocumentErrorLoadingFormHeader
+  id: STPrintedDocumentErrorLoadingFormHeaderRecipe
+  result: STPrintedDocumentErrorLoadingFormHeader
   categories:
-  - ErrorDocument
+  - STErrorDocument
   completetime: 2
   applyMaterialDiscount: false
   materials:
-    SheetPrinter: 100
-    Ink: 100
+    STSheetPrinter: 100
+    STInk: 100
 
 - type: latheRecipe
-  id: PrintedDocumentNoticeOfLiquidationRecipe
-  result: PrintedDocumentNoticeOfLiquidation
+  id: STPrintedDocumentNoticeOfLiquidationRecipe
+  result: STPrintedDocumentNoticeOfLiquidation
   categories:
-  - ErrorDocument
+  - STErrorDocument
   completetime: 2
   applyMaterialDiscount: false
   materials:
-    SheetPrinter: 100
-    Ink: 100
+    STSheetPrinter: 100
+    STInk: 100
 
 - type: latheRecipe
-  id: PrintedDocumentBusinessDealRecipe
-  result: PrintedDocumentBusinessDeal
+  id: STPrintedDocumentBusinessDealRecipe
+  result: STPrintedDocumentBusinessDeal
   categories:
-  - ErrorDocument
+  - STErrorDocument
   completetime: 2
   applyMaterialDiscount: false
   materials:
-    SheetPrinter: 100
-    Ink: 100
+    STSheetPrinter: 100
+    STInk: 100
 
 - type: latheRecipe
-  id: PrintedDocumentNoteBeginningMilitaryActionsRecipe
-  result: PrintedDocumentNoteBeginningMilitaryActions
+  id: STPrintedDocumentNoteBeginningMilitaryActionsRecipe
+  result: STPrintedDocumentNoteBeginningMilitaryActions
   categories:
-  - ErrorDocument
+  - STErrorDocument
   completetime: 2
   applyMaterialDiscount: false
   materials:
-    SheetPrinter: 100
-    Ink: 100
+    STSheetPrinter: 100
+    STInk: 100
 
 - type: latheRecipe
-  id: PrintedDocumentReportAccomplishmentGoalsRecipe
-  result: PrintedDocumentReportAccomplishmentGoals
+  id: STPrintedDocumentReportAccomplishmentGoalsRecipe
+  result: STPrintedDocumentReportAccomplishmentGoals
   categories:
-  - ErrorDocument
+  - STErrorDocument
   completetime: 2
   applyMaterialDiscount: false
   materials:
-    SheetPrinter: 100
-    Ink: 100
+    STSheetPrinter: 100
+    STInk: 100

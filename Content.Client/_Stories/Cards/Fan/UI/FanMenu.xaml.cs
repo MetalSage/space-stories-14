@@ -12,13 +12,13 @@ namespace Content.Client._Stories.Cards.Fan.UI;
 public sealed partial class FanMenu : RadialMenu
 {
     private readonly FanMenuBoundUserInterface? _boundUI;
-    [Dependency] private EntityManager _entManager = default!;
 
     private readonly EntityUid _owner;
     private readonly SpriteSystem _spriteSystem;
     private readonly EntityUid _user;
 
     private readonly Action<NetEntity, NetEntity>? OnCardSelectedMessageAction;
+    [Dependency] private EntityManager _entManager = default!;
 
     public FanMenu(EntityUid uid, FanMenuBoundUserInterface boundUI, EntityUid user)
     {

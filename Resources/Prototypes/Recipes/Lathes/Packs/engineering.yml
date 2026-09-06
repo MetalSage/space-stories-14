@@ -91,6 +91,6 @@
   - TelecomServerCircuitboard
   - SMESAdvancedMachineCircuitboard
   - HolopadMachineCircuitboard
-  - ReflectorBoxMachineCircuitboard # Stories
-  - ReflectorCornerMachineCircuitboard # Stories
-  - ReflectorCornerTsideMachineCircuitboard # Stories
+  - STReflectorBoxMachineCircuitboard # Stories
+  - STReflectorCornerMachineCircuitboard # Stories
+  - STReflectorCornerTsideMachineCircuitboard # Stories

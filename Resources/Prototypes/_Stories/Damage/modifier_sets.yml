@@ -1,5 +1,5 @@
 - type: damageModifierSet
-  id: ProtectiveBubble
+  id: STProtectiveBubble
   coefficients:
     Slash: 0.5
     Piercing: 0.5
@@ -9,7 +9,7 @@
     Caustic: 0.5
 
 - type: damageModifierSet
-  id: Kidan
+  id: STKidan
   coefficients:
     Cold: 1.3
     Heat: 0.7
@@ -30,3 +30,23 @@
     Slash: 0.5
     Piercing: 0.5
     Blunt: 0.5
+
+- type: damageModifierSet
+  id: STBorgMetallic
+  coefficients:
+    Blunt: 0.7
+    Slash: 0.5
+    Piercing: 0.7
+    Cold: 0.7
+    Heat: 0.7
+    Shock: 1.2
+
+- type: damageModifierSet
+  id: STBorgStructuralMetallicStrong
+  coefficients:
+    Blunt: 0.5
+    Slash: 0.5
+    Piercing: 0.5
+    Cold: 0.5
+    Heat: 0.5
+    Shock: 1.2

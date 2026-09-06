@@ -1,5 +1,5 @@
 - type: roleLoadout
-  id: JobSTJudge
+  id: STJobJudge
   groups:
   - STJudgeJumpsuit
   - STJudgeGloves
@@ -16,39 +16,36 @@
   id: STJudgeJumpsuit
   name: stories-loadout-group-judge-jumpsuit
   loadouts:
-  - IAAJumpsuitBlue
-  - IAAJumpskirtBlue
-  - IAAJumpsuitPurple
-  - IAAJumpskirtPurple
-  - IAAJumpsuitRed
-  - IAAJumpskirtRed
-  - IAAJumpsuitBlack
-  - IAAJumpskirtBlack
-  - IAAJumpsuitGood
-  - IAAJumpskirtGood
+  - STIAAJumpsuitBlue
+  - STIAAJumpskirtBlue
+  - STIAAJumpsuitPurple
+  - STIAAJumpskirtPurple
+  - STIAAJumpsuitRed
+  - STIAAJumpskirtRed
+  - STIAAJumpsuitBlack
+  - STIAAJumpskirtBlack
+  - STIAAJumpsuitGood
+  - STIAAJumpskirtGood
 
-# Перчатки
 - type: loadoutGroup
   id: STJudgeGloves
   name: stories-loadout-group-judge-gloves
   minLimit: 0
   loadouts:
-  - IAAGlovesWhite
-  - IAAGlovesGray
-  - IAAGlovesBlack
-  - IAAGlovesRed
-  - IAAGlovesBlue
+  - STIAAGlovesWhite
+  - STIAAGlovesGray
+  - STIAAGlovesBlack
+  - STIAAGlovesRed
+  - STIAAGlovesBlue
 
-# Обувь
 - type: loadoutGroup
   id: STJudgeShoes
   name: stories-loadout-group-judge-shoes
   loadouts:
   - BlackShoes
   - WhiteShoes
-  - IAAShoesLaceup
+  - STIAAShoesLaceup
 
-# Мантии
 - type: loadoutGroup
   id: STJudgeOuterClothing
   name: stories-loadout-group-judge-outerclothing

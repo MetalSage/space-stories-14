@@ -9,5 +9,5 @@ public sealed partial class InquisitorGhostComponent : Component
     public float Range = 5f;
 
     [DataField("revertAction")]
-    public EntProtoId RevertActionPrototype = "ActionInquisitorRevertPolymorph";
+    public EntProtoId RevertActionPrototype = "STActionInquisitorRevertPolymorph";
 }

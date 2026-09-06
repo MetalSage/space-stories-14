@@ -1,8 +1,8 @@
 - type: job
-  id: PRISONHeadOfPrison
+  id: STPRISONHeadOfPrison
   name: начальник космической тюрьмы
   description: Охраняйте это место используя все возможное и невозможно, иначе на свободу вырвутся самые опасные обитатели вселенной.
-  playTimeTracker: JobHeadOfSpacePrison
+  playTimeTracker: STJobHeadOfSpacePrison
   requirements:
     - !type:RoleTimeRequirement
       role: JobWarden
@@ -10,12 +10,12 @@
     - !type:DepartmentTimeRequirement
       department: Prison
       time: 18000 # 5 hours
-  startingGear: PRISONHeadOfPrisonGear
-  icon: "JobIconHeadOfSpacePrison"
+  startingGear: STPRISONHeadOfPrisonGear
+  icon: "STJobIconHeadOfSpacePrison"
   requireAdminNotify: true
   supervisors: job-supervisors-centcom
   accessGroups:
-  - PrisonAllAccess
+  - STPrisonAllAccess
   access:
   - Command
   - Armory
@@ -31,23 +31,23 @@
   maxBankBalance: 350
 
 - type: startingGear
-  id: PRISONHeadOfPrisonGear
+  id: STPRISONHeadOfPrisonGear
   storage:
     back:
     - WeaponPistolMk58
     - Flash
     - MagazinePistol
   equipment:
-    jumpsuit: PRISONClothingUniformJumpsuitHeadOfPrison
-    id: PRISONPDAHeadOfPrison
-    ears: PRISONClothingHeadsetAlt
-    outerClothing: PRISONClothingOuterCoatHeadOfPrison
-    eyes: PRISONClothingEyesGlasses
-    belt: PRISONClothingBeltSheathFilled
+    jumpsuit: STPRISONClothingUniformJumpsuitHeadOfPrison
+    id: STPRISONPDAHeadOfPrison
+    ears: STPRISONClothingHeadsetAlt
+    outerClothing: STPRISONClothingOuterCoatHeadOfPrison
+    eyes: STPRISONClothingEyesGlasses
+    belt: STPRISONClothingBeltSheathFilled
 
 - type: chameleonOutfit
-  id: PRISONHeadOfPrisonChameleonOutfit
-  job: PRISONHeadOfPrison
+  id: STPRISONHeadOfPrisonChameleonOutfit
+  job: STPRISONHeadOfPrison
   hasMindShield: true
   equipment:
     mask: ClothingMaskGasSecurity

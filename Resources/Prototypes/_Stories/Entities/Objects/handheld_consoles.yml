@@ -6,7 +6,7 @@
   parent:
   - BaseItem
   - PowerCellSlotSmallItem
-  id: BaseHandheldShuttleConsole
+  id: STBaseHandheldShuttleConsole
   components:
   - type: ItemToggle
   - type: ApcPowerReceiver
@@ -55,8 +55,8 @@
   name: prison portable shuttle console
   description: Used to control the shuttle from a distance.
   suffix: DON'T MAP
-  parent: BaseHandheldShuttleConsole
-  id: PRISONHandheldShuttleConsole
+  parent: STBaseHandheldShuttleConsole
+  id: STPRISONHandheldShuttleConsole
   components:
   - type: DroneConsole
     components:

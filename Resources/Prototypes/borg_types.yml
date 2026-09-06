@@ -57,6 +57,10 @@
   radioChannels:
   - Engineering
   - Science
+  accessReaderAccess: # Stories-Borg
+  - - Command
+  - - Engineering
+  - - Research
 
   # Visual
   inventoryTemplateId: borgShort
@@ -94,6 +98,10 @@
   radioChannels:
   - Supply
   - Science
+  accessReaderAccess: # Stories-Borg
+  - - Command
+  - - Cargo
+  - - Research
 
   # Visual
   inventoryTemplateId: borgTall
@@ -130,6 +138,10 @@
   radioChannels:
   - Science
   - Service
+  accessReaderAccess: # Stories-Borg
+  - - Command
+  - - Service
+  - - Research
 
   # Visual
   inventoryTemplateId: borgShort
@@ -167,6 +179,10 @@
   radioChannels:
   - Science
   - Medical
+  accessReaderAccess: # Stories-Borg
+  - - Command
+  - - Medical
+  - - Research
 
   addComponents:
   - type: SolutionScanner
@@ -218,6 +234,10 @@
   radioChannels:
   - Science
   - Service
+  accessReaderAccess: # Stories-Borg
+  - - Command
+  - - Service
+  - - Research
 
   # Visual
   inventoryTemplateId: borgTall

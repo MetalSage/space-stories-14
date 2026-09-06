@@ -1,23 +1,23 @@
 - type: listing
-  id: ActionInquisitorGhost
+  id: STActionInquisitorGhost
   name: Теневой призрак
   description: Станьте призраком и проходите сквозь стены. В таком состоянии вы не можете воздействовать на мир, но всегда можете вернуться.
-  productAction: ActionInquisitorGhost
+  productAction: STActionInquisitorGhost
   cost:
-    SkillPoint: 5
+    STSkillPoint: 5
   categories:
-  - ForceDark
+  - STForceDark
   conditions:
   - !type:ListingLimitedStockCondition
     stock: 1
 
 # - type: listing
 #   id: ActionInquisitorCreateProtectiveBubble
-#   name: Защитный пузырь инквизитора
+#   name: Protective Bubble инквизитора
 #   description: Создайте защитный телекинетический кокон, который отразит любые лазеры, сильно уменьшит урон от пуль и защитит от взрывов и давления. Почти не защищает от ударов ближнего боя.
 #   productAction: ActionInquisitorCreateProtectiveBubble
 #   cost:
-#     SkillPoint: 1
+#     STSkillPoint: 1
 #   categories:
 #   - Force
 #   conditions:
@@ -30,100 +30,100 @@
 #   description: Полностью излечивает вас. Вы потеряете всю энергию и не сможете ее восстановить на протяжении 100 секунд.
 #   productAction: ActionRejuvenate
 #   cost:
-#     SkillPoint: 3
+#     STSkillPoint: 3
 #   categories:
-#   - ForceDark
+#   - STForceDark
 #   conditions:
 #   - !type:ListingLimitedStockCondition
 #     stock: 1
 
 - type: listing
-  id: ActionFrozeBullets
+  id: STActionFrozeBullets
   name: Замедление силы
   description: Используйте телекинез, чтобы останавливать пули вокруг вас на протяжении 10 секунд.
-  productAction: ActionFrozeBullets
+  productAction: STActionFrozeBullets
   cost:
-    SkillPoint: 3
+    STSkillPoint: 3
   categories:
-  - ForceDark
+  - STForceDark
   conditions:
   - !type:ListingLimitedStockCondition
     stock: 1
 
 - type: listing
-  id: ActionRecliningPulse
+  id: STActionRecliningPulse
   name: Оттолкнуть
   description: Оттолкните всех вокруг вас.
-  productAction: ActionRecliningPulse
+  productAction: STActionRecliningPulse
   cost:
-    SkillPoint: 3
+    STSkillPoint: 3
   categories:
-  - ForceDark
+  - STForceDark
   conditions:
   - !type:ListingLimitedStockCondition
     stock: 1
 
 - type: listing
-  id: ActionHypnosis
+  id: STActionHypnosis
   name: Гипноз силы
   description: Обращает жертву на сторону Императора.
-  productAction: ActionHypnosis
+  productAction: STActionHypnosis
   cost:
-    SkillPoint: 0 # Нужно для выполнения цели.
+    STSkillPoint: 0
   categories:
-  - ForceDark
+  - STForceDark
   conditions:
   - !type:ListingLimitedStockCondition
     stock: 1
 
 - type: listing
-  id: ActionIgniteTarget
+  id: STActionIgniteTarget
   name: Пирокинез
   description: Вызывает легкое выгорание у врага.
-  productAction: ActionIgniteTarget
+  productAction: STActionIgniteTarget
   cost:
-    SkillPoint: 3
+    STSkillPoint: 3
   categories:
-  - ForceDark
+  - STForceDark
   conditions:
   - !type:ListingLimitedStockCondition
     stock: 1
 
 - type: listing
-  id: ActionLightningStrike
+  id: STActionLightningStrike
   name: Молнии силы
   description: Направьте молнию из ваших рук в вашего врага.
-  productAction: ActionLightningStrike
+  productAction: STActionLightningStrike
   cost:
-    SkillPoint: 3
+    STSkillPoint: 3
   categories:
-  - ForceDark
+  - STForceDark
   conditions:
   - !type:ListingLimitedStockCondition
     stock: 1
 
 - type: listing
-  id: ActionStrangle
+  id: STActionStrangle
   name: Удушение силой
   description: Удушающий прием техники бесконтактного боя.
-  productAction: ActionStrangle
+  productAction: STActionStrangle
   cost:
-    SkillPoint: 3
+    STSkillPoint: 3
   categories:
-  - ForceDark
+  - STForceDark
   conditions:
   - !type:ListingLimitedStockCondition
     stock: 1
 
 - type: listing
-  id: ActionLifeSteal
+  id: STActionLifeSteal
   name: Кража жизни
   description: Иссушает жертву, восстанавливая вас.
-  productAction: ActionLifeSteal
+  productAction: STActionLifeSteal
   cost:
-    SkillPoint: 2
+    STSkillPoint: 2
   categories:
-  - ForceDark
+  - STForceDark
   conditions:
   - !type:ListingLimitedStockCondition
     stock: 1

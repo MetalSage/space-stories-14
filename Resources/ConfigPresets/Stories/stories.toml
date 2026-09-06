@@ -30,11 +30,8 @@ max_message_length = 500
 [game]
 round_restart_time = 120
 lobbyduration = 210
-map_pool = "StoriesDefaultMapPool"
-secret_weight_prototype = "StoriesSecret"
-
-[gateway]
-generator_enabled = false
+map_pool = "STDefaultMapPool"
+secret_weight_prototype = "STSecret"
 
 [hub]
 tags = "lang:ru,rp:med,region:eu_e"

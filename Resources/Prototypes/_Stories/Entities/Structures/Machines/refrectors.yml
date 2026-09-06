@@ -1,6 +1,6 @@
 - type: entity
   categories: [ HideSpawnMenu ]
-  id: BaseReflector
+  id: STBaseReflector
   parent: [ BaseMachine, ConstructibleMachine ]
   components:
   - type: Transform
@@ -37,8 +37,8 @@
         acts: ["Destruction"]
 
 - type: entity
-  id: ReflectorBox
-  parent: BaseReflector
+  id: STReflectorBox
+  parent: STBaseReflector
   name: Reflector, type "Box"
   description: This device is capable of deflecting projectiles hitting it in the specified direction.
   components:
@@ -49,13 +49,13 @@
     - West
     reflectionDirection: South
   - type: Machine
-    board: ReflectorBoxMachineCircuitboard
+    board: STReflectorBoxMachineCircuitboard
   - type: Rotatable
     rotateWhileAnchored: true
 
 - type: entity
-  id: ReflectorCorner
-  parent: BaseReflector
+  id: STReflectorCorner
+  parent: STBaseReflector
   name: Reflector, type "Corner"
   description: This device is capable of deflecting projectiles hitting it in the specified direction.
   components:
@@ -67,7 +67,7 @@
     - North
     state: Angular
   - type: Machine
-    board: ReflectorCornerMachineCircuitboard
+    board: STReflectorCornerMachineCircuitboard
   - type: Rotatable
     rotateWhileAnchored: true
   - type: Fixtures
@@ -86,8 +86,8 @@
 
 
 - type: entity
-  id: ReflectorCornerTside
-  parent: BaseReflector
+  id: STReflectorCornerTside
+  parent: STBaseReflector
   name: Reflector, type "Double-Corner"
   description: This device is capable of deflecting projectiles hitting it in the specified direction.
   components:
@@ -96,7 +96,7 @@
   - type: Reflector
     state: Angular
   - type: Machine
-    board: ReflectorCornerTsideMachineCircuitboard
+    board: STReflectorCornerTsideMachineCircuitboard
   - type: Rotatable
     rotateWhileAnchored: true
   - type: Fixtures

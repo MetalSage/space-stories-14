@@ -1,6 +1,6 @@
 - type: entity
   parent: ComputerComms
-  id: CentcomComputerComms
+  id: STCentcomComputerComms
   name: centcom communications computer
   components:
     - type: AccessReader

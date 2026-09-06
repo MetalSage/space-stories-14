@@ -42,7 +42,7 @@
     groups:
     - AllAccess
     - Silicon
-    - PrisonAllAccess # Stories
+    - STPrisonAllAccess # Stories
     tags:
     - NuclearOperative
     - SyndicateAgent

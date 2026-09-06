@@ -1,6 +1,6 @@
 - type: markingsGroup
   parent: Undergarments
-  id: Avali
+  id: STAvali
   onlyGroupWhitelisted: true
   limits:
     enum.HumanoidVisualLayers.Hair:
@@ -12,7 +12,7 @@
     enum.HumanoidVisualLayers.Tail:
       limit: 1
       required: true
-      default: [ AvaliTailBase ]
+      default: [ STAvaliTailBase ]
     enum.HumanoidVisualLayers.Chest:
       limit: 1
       required: false
@@ -22,7 +22,7 @@
     enum.HumanoidVisualLayers.HeadSide:
       limit: 1
       required: true
-      default: [ AvaliEarsBase ]
+      default: [ STAvaliEarsBase ]
     enum.HumanoidVisualLayers.LArm:
       limit: 1
       required: false
@@ -50,23 +50,23 @@
 
 - type: entity
   parent: BaseSpeciesAppearance
-  id: AppearanceAvali
+  id: STAppearanceAvali
   name: avali appearance
   components:
   - type: InitialBody
     organs:
-      Torso: OrganAvaliTorso
-      Head: OrganAvaliHead
-      ArmLeft: OrganAvaliArmLeft
-      ArmRight: OrganAvaliArmRight
-      HandRight: OrganAvaliHandRight
-      HandLeft: OrganAvaliHandLeft
-      LegLeft: OrganAvaliLegLeft
-      LegRight: OrganAvaliLegRight
-      FootLeft: OrganAvaliFootLeft
-      FootRight: OrganAvaliFootRight
+      Torso: STOrganAvaliTorso
+      Head: STOrganAvaliHead
+      ArmLeft: STOrganAvaliArmLeft
+      ArmRight: STOrganAvaliArmRight
+      HandRight: STOrganAvaliHandRight
+      HandLeft: STOrganAvaliHandLeft
+      LegLeft: STOrganAvaliLegLeft
+      LegRight: STOrganAvaliLegRight
+      FootLeft: STOrganAvaliFootLeft
+      FootRight: STOrganAvaliFootRight
       Brain: OrganHumanBrain
-      Eyes: OrganAvaliEyes
+      Eyes: STOrganAvaliEyes
       Tongue: OrganHumanTongue
       Appendix: OrganHumanAppendix
       Ears: OrganHumanEars
@@ -76,13 +76,13 @@
       Liver: OrganAnimalLiver
       Kidneys: OrganHumanKidneys
   - type: HumanoidProfile
-    species: Avali
+    species: STAvali
 
 - type: entity
   parent:
-  - AppearanceAvali
+  - STAppearanceAvali
   - BaseSpeciesMobOrganic
-  id: MobAvali
+  id: STMobAvali
   name: Urist C.M McRaptor
   components:
   - type: MovementAlwaysTouching
@@ -92,10 +92,10 @@
   - type: Sprite
     drawdepth: Mobs
   - type: Vocal
-    emoteSounds: MaleAvali
+    emoteSounds: STMaleAvali
   - type: Speech
     speechVerb: Parrot
-    speechSounds: MaleAvali
+    speechSounds: STMaleAvali
   - type: DamageVisuals
     damageOverlayGroups:
       Brute:
@@ -110,13 +110,13 @@
 
 - type: entity
   parent: OrganBase
-  id: OrganAvali
+  id: STOrganAvali
   abstract: true
-  suffix: Avali
+  suffix: STAvali
 
 - type: entity
-  parent: OrganAvali
-  id: OrganAvaliExternal
+  parent: STOrganAvali
+  id: STOrganAvaliExternal
   abstract: true
   components:
   - type: Sprite
@@ -126,51 +126,51 @@
       sprite: _Stories/Mobs/Avali/parts.rsi
   - type: VisualOrganMarkings
     markingData:
-      group: Avali
+      group: STAvali
 
 - type: entity
-  id: OrganAvaliTorso
-  parent: [ OrganBaseTorsoSexed, OrganBaseTorso, OrganAvaliExternal ]
+  id: STOrganAvaliTorso
+  parent: [ OrganBaseTorsoSexed, OrganBaseTorso, STOrganAvaliExternal ]
 
 - type: entity
-  id: OrganAvaliHead
-  parent: [ OrganBaseHeadSexed, OrganBaseHead, OrganAvaliExternal ]
+  id: STOrganAvaliHead
+  parent: [ OrganBaseHeadSexed, OrganBaseHead, STOrganAvaliExternal ]
 
 - type: entity
-  id: OrganAvaliArmLeft
-  parent: [ OrganBaseArmLeft, OrganAvaliExternal ]
+  id: STOrganAvaliArmLeft
+  parent: [ OrganBaseArmLeft, STOrganAvaliExternal ]
 
 - type: entity
-  id: OrganAvaliArmRight
-  parent: [ OrganBaseArmRight, OrganAvaliExternal ]
+  id: STOrganAvaliArmRight
+  parent: [ OrganBaseArmRight, STOrganAvaliExternal ]
 
 - type: entity
-  id: OrganAvaliHandLeft
-  parent: [ OrganBaseHandLeft, OrganAvaliExternal ]
+  id: STOrganAvaliHandLeft
+  parent: [ OrganBaseHandLeft, STOrganAvaliExternal ]
 
 - type: entity
-  id: OrganAvaliHandRight
-  parent: [ OrganBaseHandRight, OrganAvaliExternal ]
+  id: STOrganAvaliHandRight
+  parent: [ OrganBaseHandRight, STOrganAvaliExternal ]
 
 - type: entity
-  id: OrganAvaliLegLeft
-  parent: [ OrganBaseLegLeft, OrganAvaliExternal ]
+  id: STOrganAvaliLegLeft
+  parent: [ OrganBaseLegLeft, STOrganAvaliExternal ]
 
 - type: entity
-  id: OrganAvaliLegRight
-  parent: [ OrganBaseLegRight, OrganAvaliExternal ]
+  id: STOrganAvaliLegRight
+  parent: [ OrganBaseLegRight, STOrganAvaliExternal ]
 
 - type: entity
-  id: OrganAvaliFootLeft
-  parent: [ OrganBaseFootLeft, OrganAvaliExternal ]
+  id: STOrganAvaliFootLeft
+  parent: [ OrganBaseFootLeft, STOrganAvaliExternal ]
 
 - type: entity
-  id: OrganAvaliFootRight
-  parent: [ OrganBaseFootRight, OrganAvaliExternal ]
+  id: STOrganAvaliFootRight
+  parent: [ OrganBaseFootRight, STOrganAvaliExternal ]
 
 - type: entity
-  id: OrganAvaliEyes
-  parent: [ OrganBaseEyes, OrganHumanInternal, OrganAvaliExternal ]
+  id: STOrganAvaliEyes
+  parent: [ OrganBaseEyes, OrganHumanInternal, STOrganAvaliExternal ]
   components:
   - type: VisualOrgan
     data:

@@ -1,5 +1,5 @@
 - type: roleLoadout
-  id: JobSTBrigmedic
+  id: STJobBrigmedic
   groups:
   - STBrigmedicHead
   - MedicalMask
@@ -29,32 +29,26 @@
   id: STBrigmedicBackpack
   name: loadout-group-STBrigmedicHead-backpack
   loadouts:
-  # Stories-partners - start
-  # Handbag
-  - ClothingBackpackHandbagAdidos
-  - ClothingBackpackHandbagBluesky
-  - ClothingBackpackHandbagEight
-  - ClothingBackpackHandbagGachi
-  - ClothingBackpackHandbagRl
-  # Backpack
-  - ClothingBackpackAdidos
-  - ClothingBackpackBluesky
-  - ClothingBackpackEight
-  - ClothingBackpackGachi
-  - ClothingBackpackRl
-  # Duffel
-  - ClothingBackpackDuffelAdidos
-  - ClothingBackpackDuffelBluesky
-  - ClothingBackpackDuffelEight
-  - ClothingBackpackDuffelGachi
-  - ClothingBackpackDuffelRl
-  # Satchel
-  - ClothingBackpackSatchelAdidos
-  - ClothingBackpackSatchelBluesky
-  - ClothingBackpackSatchelEight
-  - ClothingBackpackSatchelGachi
-  - ClothingBackpackSatchelRl
-  # Stories-partners - end
+  - STClothingBackpackHandbagAdidos
+  - STClothingBackpackHandbagBluesky
+  - STClothingBackpackHandbagEight
+  - STClothingBackpackHandbagGachi
+  - STClothingBackpackHandbagRl
+  - STClothingBackpackAdidos
+  - STClothingBackpackBluesky
+  - STClothingBackpackEight
+  - STClothingBackpackGachi
+  - STClothingBackpackRl
+  - STClothingBackpackDuffelAdidos
+  - STClothingBackpackDuffelBluesky
+  - STClothingBackpackDuffelEight
+  - STClothingBackpackDuffelGachi
+  - STClothingBackpackDuffelRl
+  - STClothingBackpackSatchelAdidos
+  - STClothingBackpackSatchelBluesky
+  - STClothingBackpackSatchelEight
+  - STClothingBackpackSatchelGachi
+  - STClothingBackpackSatchelRl
   - STBrigmedicBackpack
   - STBrigmedicSatchel
   - STBrigmedicDuffel
@@ -69,43 +63,36 @@
   - STEmergencyOxygenBrigmedic
   - LoadoutSpeciesVoxNitrogen
 
-# Берет бригмедика
 - type: loadout
   id: STBrigmedicBeret
   equipment:
     head: ClothingHeadHatBeretBrigmedic
 
-# Комбинезон бригмедика
 - type: loadout
   id: STBrigmedicJumpsuit
   equipment:
     jumpsuit: ClothingUniformJumpsuitBrigmedic
 
-# Юбка-комбинезон бригмедика
 - type: loadout
   id: STBrigmedicJumpskirt
   equipment:
     jumpsuit: ClothingUniformJumpskirtBrigmedic
 
-# Рюкзак бригмедика
 - type: loadout
   id: STBrigmedicBackpack
   equipment:
     back: ClothingBackpackBrigmedic
 
-# Сумка бригмедика
 - type: loadout
   id: STBrigmedicSatchel
   equipment:
     back: ClothingBackpackSatchelBrigmedic
 
-# Вещмешок бригмедика
 - type: loadout
   id: STBrigmedicDuffel
   equipment:
     back: ClothingBackpackDuffelBrigmedic
 
-# Аварийный набор с азотом для бригмедика
 - type: loadout
   id: STEmergencyNitrogenBrigmedic
   effects:
@@ -135,7 +122,6 @@
     - state: internals
     - state: emergencytank
 
-# Аварийный набор с кислородом для бригмедика
 - type: loadout
   id: STEmergencyOxygenBrigmedic
   effects:

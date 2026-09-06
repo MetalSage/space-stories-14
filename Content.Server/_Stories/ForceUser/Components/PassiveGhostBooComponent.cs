@@ -6,14 +6,12 @@ public sealed partial class PassiveGhostBooComponent : Component
     [ViewVariables(VVAccess.ReadOnly)]
     public float ActiveSeconds = 5f;
 
-    [DataField("maxTargets")] [ViewVariables(VVAccess.ReadWrite)]
+    [DataField("maxTargets"), ViewVariables(VVAccess.ReadWrite)] 
     public int MaxTargets = 10;
 
-    [DataField("range")]
-    [ViewVariables(VVAccess.ReadWrite)]
+    [DataField("range"), ViewVariables(VVAccess.ReadWrite)]
     public float Range = 15f;
 
-    [DataField("seconds")]
-    [ViewVariables(VVAccess.ReadWrite)]
+    [DataField("seconds"), ViewVariables(VVAccess.ReadWrite)]
     public float Seconds = 5f;
 }

@@ -49,8 +49,8 @@
     - !type:NestedSelector
       tableId: DerelictBorgEventTable
     # Stories-Start
-    - id: SpafMigration
-    - id: InquisitorSpawn
+    - id: STSpafMigration
+    - id: STInquisitorSpawn
     - id: STCorpiumSpawn
     - id: STSlaughterDemonSpawn
     - id: STShadowDemonSpawn

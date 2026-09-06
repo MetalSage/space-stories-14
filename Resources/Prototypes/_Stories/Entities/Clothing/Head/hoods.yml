@@ -1,6 +1,6 @@
 - type: entity
   parent: ClothingHeadBase
-  id: ClothingHeadHatHoodGuardianhood
+  id: STClothingHeadHatHoodGuardianhood
   name: jedi hood
   categories: [ HideSpawnMenu ]
   description: Cool enough for you to wear.
@@ -13,7 +13,7 @@
     - HeadSide
   - type: Tag
     tags:
-      - ForceRecallEquipment
+      - STForceRecallEquipment
   - type: Sprite
     sprite: _Stories/Clothing/Head/Hoods/guardian.rsi
   - type: Clothing
@@ -21,7 +21,7 @@
 
 - type: entity
   parent: ClothingHeadBase
-  id: ClothingHeadHatHoodInquisitor
+  id: STClothingHeadHatHoodInquisitor
   name: inquisitor hood
   categories: [ HideSpawnMenu ]
   description: What kind of villain are you without a cool hood?
@@ -46,7 +46,7 @@
         Heat: 0.9
   - type: Tag
     tags:
-      - ForceRecallEquipment
+      - STForceRecallEquipment
   - type: Sprite
     sprite: _Stories/Clothing/Head/Hoods/helmet_inquisitor.rsi
   - type: Clothing
@@ -54,7 +54,7 @@
 
 - type: entity
   parent: ClothingHeadBase
-  id: ClothingHeadHatHoodKylo
+  id: STClothingHeadHatHoodKylo
   name: kylo ren hood
   categories: [ HideSpawnMenu ]
   description: What kind of villain are you without a cool hood?
@@ -79,8 +79,27 @@
         Heat: 0.9
   - type: Tag
     tags:
-      - ForceRecallEquipment
+      - STForceRecallEquipment
   - type: Sprite
     sprite: _Stories/Clothing/Head/Hoods/helmet_kylo.rsi
   - type: Clothing
     sprite: _Stories/Clothing/Head/Hoods/helmet_kylo.rsi
+
+- type: entity
+  parent: ClothingHeadBase
+  id: STClothingHeadHatHoodBlueshieldWinter
+  name: blueshield's winter hood
+  description: A comfy kevlar-lined hood to go with the comfy kevlar-lined coat.
+  components:
+  - type: HideLayerClothing
+    slots:
+    - Hair
+    - Snout
+    - HeadTop
+    - HeadSide
+  - type: Sprite
+    sprite: _Stories/Clothing/Head/Hoods/blueshield_winterhood.rsi
+  - type: Clothing
+    sprite: _Stories/Clothing/Head/Hoods/blueshield_winterhood.rsi
+  - type: TemperatureProtection
+    coefficient: 0.05

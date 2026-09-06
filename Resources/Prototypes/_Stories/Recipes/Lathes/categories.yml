@@ -3,23 +3,23 @@
   name: lathe-category-reports
 
 - type: latheCategory
-  id: Statements
+  id: STStatements
   name: lathe-category-statements
 
 - type: latheCategory
-  id: InquiriesAndAppeals
+  id: STInquiriesAndAppeals
   name: lathe-category-inquiries-and-appeals
 
 - type: latheCategory
-  id: Complaintst
+  id: STComplaintst
   name: lathe-category-complaints
 
 - type: latheCategory
-  id: Permissions
+  id: STPermissions
   name: lathe-category-permissions
 
 - type: latheCategory
-  id: OrdersAndInstructions
+  id: STOrdersAndInstructions
   name: lathe-category-orders-and-instructions
 
 - type: latheCategory
@@ -31,9 +31,9 @@
   name: lathe-category-evidence
 
 - type: latheCategory
-  id: ConclusionsAndDecisions
+  id: STConclusionsAndDecisions
   name: lathe-category-conclusions-and-decisions
 
 - type: latheCategory
-  id: ErrorDocument
+  id: STErrorDocument
   name: lathe-category-error

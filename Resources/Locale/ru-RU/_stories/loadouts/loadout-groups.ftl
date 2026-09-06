@@ -55,3 +55,10 @@ stories-loadout-group-judge-gloves = Судья, перчатки
 stories-loadout-group-judge-shoes = Судья, обувь
 stories-loadout-group-judge-outerclothing = Судья, мантии
 stories-loadout-group-judge-head = Судья, парик
+
+# Офицер "Синий Щит"
+stories-loadout-group-blueshield-head = Головной убор Синего Щита
+stories-loadout-group-blueshield-neck = Наплечные аксессуары Синего Щита
+stories-loadout-group-blueshield-jumpsuits = Униформа Синего Щита
+stories-loadout-group-blueshield-outer-clothing = Верхняя одежда Синего Щита
+stories-loadout-group-blueshield-backpack = Рюкзак Синего Щита

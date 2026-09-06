@@ -1,10 +1,10 @@
 - type: entity
   parent: BaseGameRule
-  id: BaseInquisitorSpawn
+  id: STBaseInquisitorSpawn
 
 - type: entity
   parent: BaseGameRule
-  id: InquisitorSpawn
+  id: STInquisitorSpawn
   components:
   - type: InquisitorRule
   - type: StationEvent
@@ -15,9 +15,9 @@
     duration: 1
   - type: AntagObjectives
     objectives:
-    - KillGuardianNtObjective
-    - InquisitorSurviveObjective
-#    - HypnosisObjective
+    - STKillGuardianNtObjective
+    - STInquisitorSurviveObjective
+#    - STHypnosisObjective
   - type: AntagLoadProfileRule
     speciesOverride: Human
     speciesOverrideBlacklist:
@@ -28,14 +28,14 @@
   - type: AntagSelection
     antags:
     - !type:FixedAntagCount
-      proto: InquisitorSpecifier
+      proto: STInquisitorSpecifier
       count: 1
 
 - type: antagSpecifier
-  id: InquisitorSpecifier
-  spawnerPrototype: SpawnPointInquisitor
+  id: STInquisitorSpecifier
+  spawnerPrototype: STSpawnPointInquisitor
   pickPlayer: false
-  startingGear: InquisitorGear
+  startingGear: STInquisitorGear
   components:
   - type: Barotrauma
     protectionSlots:
@@ -43,20 +43,20 @@
     - neck
     damage:
       types:
-        Blunt: 0.55 #per second, scales with pressure and other constants.
+        Blunt: 0.55
   - type: Force
   - type: ForceUser
-    preset: Inquisitor
+    preset: STInquisitor
   - type: AutoImplant
     implants:
     - DeathAcidifierImplant
   - type: IntrinsicRadioReceiver
   - type: IntrinsicRadioTransmitter
     channels:
-    - Empire
+    - STEmpire
   - type: ActiveRadio
     channels:
-    - Empire
+    - STEmpire
   - type: Stamina
     stunTime: 3
     decay: 6
@@ -66,8 +66,8 @@
     needsHands: false
   - type: UserInterface
     interfaces:
-      enum.StoreUiKey.Key: # SpaceStories Немного магазина во всех нас.
-        type: StoreBoundUserInterface # ! Это нужно, чтобы пользователи силы могли открывать свой магазин навыков.
+      enum.StoreUiKey.Key:
+        type: StoreBoundUserInterface
       enum.VoiceMaskUIKey.Key:
         type: VoiceMaskBoundUserInterface
       enum.HumanoidMarkingModifierKey.Key:
@@ -85,7 +85,8 @@
     - Drunk
     - SlurredSpeech
     - RatvarianLanguage
-    - FrozeBullets # Stories
+    - PressureImmunity
+    - STFrozeBullets
     - Muted
     - ForcedSleep
     - TemporaryBlindness
@@ -93,18 +94,18 @@
     - StaminaModifier
   - type: RandomMetadata
     nameSegments:
-    - InquisitorTitle
-    - Inquisitor
+    - STInquisitorTitle
+    - STInquisitor
     nameFormat: name-format-standard
   - type: NpcFactionMember
     factions:
     - Syndicate
   mindRoles:
-  - MindRoleEmpireMember
+  - STMindRoleEmpireMember
 
 - type: entity
   parent: BaseGameRule
-  id: KyloSpawn
+  id: STKyloSpawn
   components:
   - type: InquisitorRule
   - type: StationEvent
@@ -115,9 +116,9 @@
     duration: 1
   - type: AntagObjectives
     objectives:
-    - KillGuardianNtObjective
-    - InquisitorSurviveObjective
-#    - HypnosisObjective
+    - STKillGuardianNtObjective
+    - STInquisitorSurviveObjective
+#    - STHypnosisObjective
   - type: AntagLoadProfileRule
     speciesOverride: Human
     speciesOverrideBlacklist:
@@ -128,14 +129,14 @@
   - type: AntagSelection
     antags:
     - !type:FixedAntagCount
-      proto: KyloSpecifier
+      proto: STKyloSpecifier
       count: 1
 
 - type: antagSpecifier
-  id: KyloSpecifier
-  spawnerPrototype: SpawnPointInquisitor
+  id: STKyloSpecifier
+  spawnerPrototype: STSpawnPointInquisitor
   pickPlayer: false
-  startingGear: KyloGear
+  startingGear: STKyloGear
   components:
   - type: Barotrauma
     protectionSlots:
@@ -143,20 +144,20 @@
     - neck
     damage:
       types:
-        Blunt: 0.55 #per second, scales with pressure and other constants.
+        Blunt: 0.55
   - type: Force
   - type: ForceUser
-    preset: Inquisitor
+    preset: STInquisitor
   - type: AutoImplant
     implants:
     - DeathAcidifierImplant
   - type: IntrinsicRadioReceiver
   - type: IntrinsicRadioTransmitter
     channels:
-    - Empire
+    - STEmpire
   - type: ActiveRadio
     channels:
-    - Empire
+    - STEmpire
   - type: Stamina
     stunTime: 3
     decay: 6
@@ -166,8 +167,8 @@
     needsHands: false
   - type: UserInterface
     interfaces:
-      enum.StoreUiKey.Key: # SpaceStories Немного магазина во всех нас.
-        type: StoreBoundUserInterface # ! Это нужно, чтобы пользователи силы могли открывать свой магазин навыков.
+      enum.StoreUiKey.Key:
+        type: StoreBoundUserInterface
       enum.HumanoidMarkingModifierKey.Key:
         type: HumanoidMarkingModifierBoundUserInterface
       enum.StrippingUiKey.Key:
@@ -183,7 +184,8 @@
     - Drunk
     - SlurredSpeech
     - RatvarianLanguage
-    - FrozeBullets # Stories
+    - PressureImmunity
+    - STFrozeBullets # Stories
     - Muted
     - ForcedSleep
     - TemporaryBlindness
@@ -191,17 +193,17 @@
     - StaminaModifier
   - type: RandomMetadata
     nameSegments:
-    - InquisitorTitle
-    - Inquisitor
+    - STInquisitorTitle
+    - STInquisitor
     nameFormat: name-format-standard
   - type: NpcFactionMember
     factions:
     - Syndicate
   mindRoles:
-  - MindRoleEmpireMember
+  - STMindRoleEmpireMember
 
 - type: entity
-  id: SpafMigration
+  id: STSpafMigration
   parent: BaseStationEventShortDelay
   components:
   - type: StationEvent
@@ -217,7 +219,7 @@
     table: !type:GroupSelector
       rolls: 1, 2
       children:
-      - id: SpawnPointGhostSpaf
+      - id: STSpawnPointGhostSpaf
 
 - type: entity
   id: STJobDistributionError

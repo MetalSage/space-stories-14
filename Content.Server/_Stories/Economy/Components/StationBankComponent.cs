@@ -6,14 +6,14 @@ public sealed partial class StationBankComponent : Component
     [DataField]
     public Dictionary<string, BankAccount> Accounts = new();
 
-    [DataField] [ViewVariables(VVAccess.ReadWrite)]
-    public float SalaryModifier = 1.0f;
-
-    [DataField] [ViewVariables(VVAccess.ReadWrite)]
-    public float SalaryFrequencyMins = 30f;
-
     [DataField]
     public TimeSpan NextPayday = TimeSpan.Zero;
+
+    [DataField, ViewVariables(VVAccess.ReadWrite)] 
+    public float SalaryFrequencyMins = 30f;
+
+    [DataField, ViewVariables(VVAccess.ReadWrite)] 
+    public float SalaryModifier = 1.0f;
 }
 
 [DataDefinition]

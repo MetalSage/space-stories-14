@@ -68,23 +68,19 @@ public sealed partial class InjectReagentsSystem : EntitySystem
 
 public sealed partial class InjectReagentsEvent : InstantActionEvent
 {
-    [ViewVariables(VVAccess.ReadWrite)]
-    [DataField("solution")]
+    [ViewVariables(VVAccess.ReadWrite), DataField("solution")]
     public Solution Solution { get; set; } = new();
 
-    [ViewVariables(VVAccess.ReadWrite)]
-    [DataField("solutionTarget")]
+    [ViewVariables(VVAccess.ReadWrite), DataField("solutionTarget")]
     public string SolutionTarget { get; set; } = "bloodstream";
 }
 
 public sealed partial class InjectReagentsToTargetEvent : EntityTargetActionEvent
 {
-    [ViewVariables(VVAccess.ReadWrite)]
-    [DataField("solution")]
+    [ViewVariables(VVAccess.ReadWrite), DataField("solution")]
     public Solution Solution { get; set; } = new();
 
-    [ViewVariables(VVAccess.ReadWrite)]
-    [DataField("solutionTarget")]
+    [ViewVariables(VVAccess.ReadWrite), DataField("solutionTarget")]
     public string SolutionTarget { get; set; } = "bloodstream";
 }
 

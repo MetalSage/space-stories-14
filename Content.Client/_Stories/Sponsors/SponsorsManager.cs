@@ -7,10 +7,9 @@ namespace Content.Client._Stories.Sponsors;
 
 public sealed partial class SponsorsManager
 {
+    private SponsorInfo? _info;
     [Dependency] private IClientNetManager _netMgr = default!;
     [Dependency] private IPlayerManager _playerMgr = default!;
-
-    private SponsorInfo? _info;
 
     public void Initialize()
     {

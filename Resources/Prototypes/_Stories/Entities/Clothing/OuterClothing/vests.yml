@@ -1,12 +1,12 @@
 - type: entity
   parent: ClothingOuterArmorBasic
-  id: ClothingOuterVestGuardianNt
+  id: STClothingOuterVestGuardianNt
   name: blade guardian's insulated armor vest
   description: Because someone said body armor could be insulated. Your shield is already insulated!
   components:
     - type: Tag
       tags:
-        - ForceRecallEquipment
+        - STForceRecallEquipment
         - WhitelistChameleon
     - type: TemperatureProtection
       coefficient: 0.005
@@ -17,7 +17,7 @@
 
 - type: entity
   parent: ClothingOuterArmorBasic
-  id: PRISONClothingOuterVestArmor
+  id: STPRISONClothingOuterVestArmor
   name: armor vest
   description: Type I thin armor vest, providing decent protection against most types of damage.
   components:
@@ -28,13 +28,13 @@
 
 - type: entity
   parent: ClothingOuterArmorBasic
-  id: ClothingOuterVestArmorExe
+  id: STClothingOuterVestArmorExe
   name: warden's armor vest
   description: An elegant armor vest protecting the warden from most types of damage and temperature fluctuations.
   components:
     - type: Tag
       tags:
-        - ForceRecallEquipment
+        - STForceRecallEquipment
     - type: TemperatureProtection
       coefficient: 0.001
     - type: Sprite
@@ -44,7 +44,7 @@
 
 - type: entity
   parent: ClothingOuterArmorBasic
-  id: ClothingOuterVestInquisitor
+  id: STClothingOuterVestInquisitor
   name: inquisition armor vest
   description: A formidable body armor that provides high protection against mechanical damage.
   components:
@@ -58,8 +58,48 @@
         Piercing: 0.3
   - type: Tag
     tags:
-    - ForceRecallEquipment
+    - STForceRecallEquipment
   - type: Sprite
     sprite: _Stories/Clothing/OuterClothing/Vests/inquisitor_armor.rsi
   - type: Clothing
     sprite: _Stories/Clothing/OuterClothing/Vests/inquisitor_armor.rsi
+
+- type: entity
+  parent: ClothingOuterArmorBasic
+  id: STClothingOuterVestBlueshieldJacket
+  name: blueshield's jacket
+  description: An expensive kevlar-lined jacket with a golden badge on the chest and "NT" emblazoned on the back. It weighs surprisingly little, despite how heavy it looks.
+  components:
+  - type: Sprite
+    sprite: _Stories/Clothing/OuterClothing/Vests/blueshield_jacket.rsi
+  - type: Clothing
+    sprite: _Stories/Clothing/OuterClothing/Vests/blueshield_jacket.rsi
+  - type: Armor
+    modifiers:
+      coefficients:
+        Blunt: 0.7
+        Slash: 0.7
+        Piercing: 0.6
+        Heat: 0.8
+  - type: ExplosionResistance
+    damageCoefficient: 0.85
+
+- type: entity
+  parent: ClothingOuterArmorBasic
+  id: STClothingOuterVestBlueshieldArmor
+  name: blueshield's armor
+  description: A tight-fitting kevlar-lined vest with a blue badge on the chest of it.
+  components:
+  - type: Sprite
+    sprite: _Stories/Clothing/OuterClothing/Vests/blueshield_armor.rsi
+  - type: Clothing
+    sprite: _Stories/Clothing/OuterClothing/Vests/blueshield_armor.rsi
+  - type: Armor
+    modifiers:
+      coefficients:
+        Blunt: 0.65
+        Slash: 0.65
+        Piercing: 0.55
+        Heat: 0.8
+  - type: ExplosionResistance
+    damageCoefficient: 0.8

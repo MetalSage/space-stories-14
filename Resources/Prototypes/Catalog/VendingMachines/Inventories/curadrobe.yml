@@ -14,7 +14,7 @@
     ClothingUniformJumpskirtLibrarian: 3
     ClothingShoesBootsLaceup: 2
     ClothingHeadsetService: 2
-    BoxPrinter: 1 # Stories
+    STBoxPrinter: 1 # Stories
   contrabandInventory:
     ToyFigurineLibrarian: 1
   prices: # Stories-Economy
@@ -31,5 +31,5 @@
     ClothingUniformJumpskirtLibrarian: 40
     ClothingShoesBootsLaceup: 60
     ClothingHeadsetService: 50
-    BoxPrinter: 150
+    STBoxPrinter: 150
     ToyFigurineLibrarian: 100

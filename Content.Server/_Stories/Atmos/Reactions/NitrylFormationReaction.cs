@@ -5,9 +5,6 @@ using JetBrains.Annotations;
 
 namespace Content.Server.Atmos.Reactions;
 
-/// <summary>
-/// Forms nitryl from mixing Healium, BZ and Nitrogen at high temperatures.
-/// </summary>
 [UsedImplicitly]
 public sealed partial class NitrylFormationReaction : IGasReactionEffect
 {
@@ -21,7 +18,7 @@ public sealed partial class NitrylFormationReaction : IGasReactionEffect
         var initNitrogen = mixture.GetMoles(Gas.Nitrogen);
 
         var rate = mixture.Temperature /
-                   Atmospherics.NitrylProductionMaxEfficiencyTemperature; // higher temperature gives higher speed
+                   Atmospherics.NitrylProductionMaxEfficiencyTemperature;
 
         var tritRemoved = rate * 2f;
         var bzRemoved = rate * 5f;

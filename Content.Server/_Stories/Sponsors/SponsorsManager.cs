@@ -7,9 +7,8 @@ namespace Content.Server._Stories.Sponsors;
 
 public sealed partial class SponsorsManager
 {
-    [Dependency] private ISponsorsApiClient _apiClient = default!;
-
     private readonly Dictionary<NetUserId, SponsorInfo> _cachedSponsors = new();
+    [Dependency] private ISponsorsApiClient _apiClient = default!;
     [Dependency] private IServerNetManager _netMgr = default!;
 
     private ISawmill _sawmill = default!;

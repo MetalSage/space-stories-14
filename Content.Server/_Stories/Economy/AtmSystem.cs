@@ -68,6 +68,7 @@ public sealed partial class AtmSystem : EntitySystem
                 return (directBank.AccountNumber, mindPin);
             }
         }
+
         return (string.Empty, string.Empty);
     }
 
@@ -79,6 +80,7 @@ public sealed partial class AtmSystem : EntitySystem
             if (mindBank.AccountNumber == accountNumber)
                 return mindBank.Pin;
         }
+
         return string.Empty;
     }
 
@@ -186,13 +188,14 @@ public sealed partial class AtmSystem : EntitySystem
         _stack.SetCount(cash, amount);
 
         if (user != null)
-        {
             _handsSystem.TryPickupAnyHand(user.Value, cash);
-        }
     }
 
-    private void UpdateUi(EntityUid uid, AtmComponent component, string message = "",
-        string prefillAccountNumber = "", string prefillPin = "")
+    private void UpdateUi(EntityUid uid,
+        AtmComponent component,
+        string message = "",
+        string prefillAccountNumber = "",
+        string prefillPin = "")
     {
         var balance = 0;
         var isLoggedIn = component.LoggedInAccountNumber != null;
@@ -210,8 +213,13 @@ public sealed partial class AtmSystem : EntitySystem
             }
         }
 
-        var state = new AtmBoundUserInterfaceState(isLoggedIn, accNum, balance, message, ownerName,
-            prefillAccountNumber, prefillPin);
+        var state = new AtmBoundUserInterfaceState(isLoggedIn,
+            accNum,
+            balance,
+            message,
+            ownerName,
+            prefillAccountNumber,
+            prefillPin);
         _ui.SetUiState(uid, AtmUiKey.Key, state);
     }
 
@@ -224,9 +232,7 @@ public sealed partial class AtmSystem : EntitySystem
             {
                 var station = _station.GetOwningStation(uid);
                 if (station == ev.Station)
-                {
                     UpdateUi(uid, component);
-                }
             }
         }
     }

@@ -37,9 +37,7 @@ public sealed partial class StoriesTetherGunSystem : EntitySystem
     {
         if (TryComp<TetheredComponent>(entityUid, out var tetheredComponent) &&
             TryComp<TetherGunComponent>(tetheredComponent.Tetherer, out var gunComp))
-        {
             StopTether(tetheredComponent.Tetherer, gunComp, land, transfer);
-        }
     }
 
     private void Cancel(EntityUid uid, TetheredComponent component, CancellableEntityEventArgs args)

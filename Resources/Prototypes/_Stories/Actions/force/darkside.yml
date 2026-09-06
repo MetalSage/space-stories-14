@@ -1,7 +1,7 @@
 # - type: entity
 #   parent: BaseAction
 #   id: ActionInquisitorCreateProtectiveBubble
-#   name: Защитный пузырь инквизитора
+#   name: Protective Bubble инквизитора
 #   description: Создайте защитный телекинетический кокон, который отразит любые лазеры, сильно уменьшит урон от пуль и защитит от взрывов и давления. Почти не защищает от ударов ближнего боя.
 #   categories: [ HideSpawnMenu ]
 #   components:
@@ -12,17 +12,16 @@
 #       state: shield
 #     itemIconStyle: NoItem
 #     event: !type:CreateProtectiveBubbleEvent
-#       proto: EffectInquisitorProtectiveBubble
+#       proto: STEffectInquisitorProtectiveBubble
 
 - type: entity
   parent: BaseAction
-  id: ActionLifeSteal
+  id: STActionLifeSteal
   name: Life Drain
   description: Drains the victim, restoring you.
   components:
   - type: Action
     useDelay: 10
-    itemIconStyle: BigAction
     sound: !type:SoundPathSpecifier
       path: /Audio/Effects/radpulse1.ogg
 
@@ -30,11 +29,11 @@
     sprite: _Stories/Actions/force.rsi
     layers:
     - state: steal
-  - type: EntityTargetAction    
+  - type: EntityTargetAction
     whitelist:
       components:
       - Body
-    canTargetSelf: false    
+    canTargetSelf: false
     event: !type:EntityTargetForceUserActionEvent
       volume: 7.5
       event: !type:StealLifeTargetEvent
@@ -44,7 +43,7 @@
     interactOnMiss: false
 - type: entity
   parent: BaseAction
-  id: ActionInquisitorGhost
+  id: STActionInquisitorGhost
   name: Shadow ghost
   description: Become a ghost and pass through walls. In this state, you cannot affect the world, but you can always return.
   components:
@@ -68,7 +67,7 @@
         event: !type:InquisitorPolymorphEvent
 - type: entity
   parent: BaseAction
-  id: ActionFrozeBullets
+  id: STActionFrozeBullets
   name: Force Slow
   description: Use telekinesis to stop bullets around you for 10 seconds.
   components:
@@ -103,13 +102,13 @@
         seconds: 100
 - type: entity
   parent: BaseAction
-  id: ActionRecliningPulse
+  id: STActionRecliningPulse
   name: Repel
   description: Push everyone around you away.
   components:
   - type: Action
     useDelay: 30
-    itemIconStyle: BigAction    
+    itemIconStyle: BigAction
 
   - type: Sprite
     sprite: _Stories/Actions/force.rsi
@@ -124,7 +123,7 @@
         range: 5
 - type: entity
   parent: BaseAction
-  id: ActionStrangle
+  id: STActionStrangle
   name: Force choke
   description: Choking technique of no-contact combat.
   components:
@@ -142,7 +141,7 @@
     whitelist:
       components:
       - Body
-    canTargetSelf: false 
+    canTargetSelf: false
     event: !type:EntityTargetForceUserActionEvent
       volume: 7.5
       event: !type:StrangleTargetEvent
@@ -152,19 +151,18 @@
     interactOnMiss: false
 - type: entity
   parent: BaseAction
-  id: ActionLightningStrike
+  id: STActionLightningStrike
   name: Force Lightning
   description: Direct lightning from your hands into your enemy.
   components:
   - type: Action
     useDelay: 5
     itemIconStyle: BigAction
-
   - type: Sprite
     sprite: _Stories/Actions/force.rsi
     layers:
     - state: lightning
-  - type: EntityTargetAction    
+  - type: EntityTargetAction
     canTargetSelf: false
     event: !type:EntityTargetForceUserActionEvent
       volume: 50
@@ -174,7 +172,7 @@
     interactOnMiss: false
 - type: entity
   parent: BaseAction
-  id: ActionIgniteTarget
+  id: STActionIgniteTarget
   name: Pyrokinesis
   description: Causes a slight burnout in the enemy.
   components:
@@ -199,7 +197,7 @@
     interactOnMiss: false
 - type: entity
   parent: BaseAction
-  id: ActionHypnosis
+  id: STActionHypnosis
   name: Force Hypnosis
   description: Converts the victim to the Emperor's side.
   components:
@@ -230,7 +228,7 @@
     interactOnMiss: false
 - type: entity
   parent: BaseAction
-  id: ActionInquisitorRevertPolymorph
+  id: STActionInquisitorRevertPolymorph
   name: Return to normal form
   description: Stop running and fight!
   components:

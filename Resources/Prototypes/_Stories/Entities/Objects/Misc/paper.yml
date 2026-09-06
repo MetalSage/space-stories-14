@@ -1,7 +1,7 @@
 - type: entity
   name: printed paper
   parent: Paper
-  id: PrintedPaper
+  id: STPrintedPaper
   description: A piece of printed paper.
   components:
   - type: Sprite
@@ -25,7 +25,7 @@
 - type: entity
   name: evil printed paper
   parent: Paper
-  id: PrintedSyndiePaper
+  id: STPrintedSyndiePaper
   description: A piece of evil printed paper.
   components:
   - type: Sprite

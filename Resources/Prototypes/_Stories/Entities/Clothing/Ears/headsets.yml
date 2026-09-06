@@ -1,13 +1,13 @@
 - type: entity
   parent: ClothingHeadset
-  id: ClothingHeadsetIAA
+  id: STClothingHeadsetIAA
   name: interior affairs headset
   description: A headset so that the internal affairs agent could hear the captain's last words.
   components:
     - type: ContainerFill
       containers:
         key_slots:
-          - EncryptionKeyIAA
+          - STEncryptionKeyIAA
     - type: Sprite
       sprite: Clothing/Ears/Headsets/servicesecurity.rsi
 
@@ -25,3 +25,20 @@
       - EncryptionKeyCommon
   - type: Sprite
     sprite: _Stories/Clothing/Ears/Headsets/juridical.rsi
+
+- type: entity
+  parent: ClothingHeadset
+  id: STClothingHeadsetBlueshield
+  name: blueshield headset
+  description: The headset of the bodyguard who keeps the administration alive.
+  components:
+  - type: ContainerFill
+    containers:
+      key_slots:
+      - STEncryptionKeyBlueshield
+      - EncryptionKeyCommon
+  - type: Sprite
+    sprite: _Stories/Clothing/Ears/Headsets/blueshield.rsi
+    state: icon
+  - type: Clothing
+    sprite: _Stories/Clothing/Ears/Headsets/blueshield.rsi

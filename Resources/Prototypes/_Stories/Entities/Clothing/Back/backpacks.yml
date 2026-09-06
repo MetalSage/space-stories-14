@@ -1,19 +1,19 @@
 - type: entity
   parent: ClothingBackpack
-  id: ClothingBackpackGuardianNt
+  id: STClothingBackpackGuardianNt
   name: blade guardian's backpack
   description: It seems like you've already seen this somewhere.
   components:
   - type: Tag
     tags:
-      - ForceRecallEquipment
+      - STForceRecallEquipment
       - WhitelistChameleon
   - type: Sprite
     sprite: _Stories/Clothing/Back/Backpacks/guardian_nt.rsi
 
 - type: entity
   parent: ClothingBackpack
-  id: ClothingBackpackAdidos
+  id: STClothingBackpackAdidos
   name: backpack
   description: You wear this on your back and put items in it.
   components:
@@ -22,7 +22,7 @@
 
 - type: entity
   parent: ClothingBackpack
-  id: ClothingBackpackBluesky
+  id: STClothingBackpackBluesky
   name: backpack
   description: You wear this on your back and put items in it.
   components:
@@ -31,7 +31,7 @@
 
 - type: entity
   parent: ClothingBackpack
-  id: ClothingBackpackEight
+  id: STClothingBackpackEight
   name: backpack
   description: You wear this on your back and put items in it.
   components:
@@ -40,7 +40,7 @@
 
 - type: entity
   parent: ClothingBackpack
-  id: ClothingBackpackGachi
+  id: STClothingBackpackGachi
   name: backpack
   description: You wear this on your back and put items in it.
   components:
@@ -49,9 +49,20 @@
 
 - type: entity
   parent: ClothingBackpack
-  id: ClothingBackpackRl
+  id: STClothingBackpackRl
   name: backpack
   description: You wear this on your back and put items in it.
   components:
   - type: Sprite
     sprite: _Stories/Clothing/Back/Backpacks/backpacks_rl.rsi
+
+- type: entity
+  parent: ClothingBackpack
+  id: STClothingBackpackBlueshield
+  name: blueshield backpack
+  description: A robust backpack issued to Nanotrasen's finest.
+  components:
+  - type: Sprite
+    sprite: _Stories/Clothing/Back/Backpacks/blueshield_backpack.rsi
+  - type: Clothing
+    sprite: _Stories/Clothing/Back/Backpacks/blueshield_backpack.rsi

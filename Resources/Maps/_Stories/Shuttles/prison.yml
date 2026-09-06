@@ -4189,7 +4189,7 @@ entities:
     - type: Transform
       pos: 5.5,30.5
       parent: 1
-- proto: PRISONAirlockGlassLockedBrig
+- proto: STPRISONAirlockGlassLockedBrig
   entities:
   - uid: 56
     components:
@@ -4203,7 +4203,7 @@ entities:
       rot: 1.5707963267948966 rad
       pos: 2.5,17.5
       parent: 1
-- proto: PRISONAirlockGlassShuttleLocked
+- proto: STPRISONAirlockGlassShuttleLocked
   entities:
   - uid: 160
     components:
@@ -4234,14 +4234,14 @@ entities:
     - type: Transform
       pos: 5.5,7.5
       parent: 1
-- proto: PRISONAirlockLocked
+- proto: STPRISONAirlockLocked
   entities:
   - uid: 52
     components:
     - type: Transform
       pos: 1.5,13.5
       parent: 1
-- proto: PRISONAirlockLockedBrig
+- proto: STPRISONAirlockLockedBrig
   entities:
   - uid: 159
     components:
@@ -4303,14 +4303,14 @@ entities:
       rot: 3.141592653589793 rad
       pos: 5.5,9.5
       parent: 1
-- proto: PRISONComputerShuttle
+- proto: STPRISONComputerShuttle
   entities:
   - uid: 114
     components:
     - type: Transform
       pos: 10.5,33.5
       parent: 1
-- proto: PRISONLockableButtonPrisonBrig
+- proto: STPRISONLockableButtonPrisonBrig
   entities:
   - uid: 752
     components:
@@ -4480,7 +4480,7 @@ entities:
           - Toggle
     - type: Fixtures
       fixtures: {}
-- proto: PRISONLocker
+- proto: STPRISONLocker
   entities:
   - uid: 235
     components:
@@ -4506,7 +4506,7 @@ entities:
     - type: Transform
       pos: -0.5,23.5
       parent: 1
-- proto: PRISONShuttleWindow
+- proto: STPRISONShuttleWindow
   entities:
   - uid: 20
     components:
@@ -4643,7 +4643,7 @@ entities:
     - type: Transform
       pos: 2.5,33.5
       parent: 1
-- proto: PRISONSuitStorageOfficer
+- proto: STPRISONSuitStorageOfficer
   entities:
   - uid: 280
     components:
@@ -4660,21 +4660,21 @@ entities:
     - type: Transform
       pos: -0.5,32.5
       parent: 1
-- proto: PRISONVendingMachine
+- proto: STPRISONVendingMachine
   entities:
   - uid: 279
     components:
     - type: Transform
       pos: 0.5,33.5
       parent: 1
-- proto: PRISONVendingMachineDrobe
+- proto: STPRISONVendingMachineDrobe
   entities:
   - uid: 278
     components:
     - type: Transform
       pos: 1.5,33.5
       parent: 1
-- proto: PRISONWallShuttle
+- proto: STPRISONWallShuttle
   entities:
   - uid: 3
     components:
@@ -5268,7 +5268,7 @@ entities:
     - type: Transform
       pos: -1.5,21.5
       parent: 1
-- proto: PRISONWallShuttleDiagonal
+- proto: STPRISONWallShuttleDiagonal
   entities:
   - uid: 2
     components:
@@ -5455,7 +5455,7 @@ entities:
       rot: 3.141592653589793 rad
       pos: 13.5,20.5
       parent: 1
-- proto: PRISONWindoorSecureBrigLocked
+- proto: STPRISONWindoorSecureBrigLocked
   entities:
   - uid: 54
     components:

@@ -1,71 +1,71 @@
 - type: jukebox
-  id: Cayava
-  name: James Primate - Cayava
+  id: STCayava
+  name: James Primate - STCayava
   path:
     path: /Audio/_Stories/Jukebox/cayava.ogg
 
 - type: jukebox
-  id: SpaceCruiser
+  id: STSpaceCruiser
   name: Ben Prunty - Space Cruiser
   path:
     path: /Audio/_Stories/Jukebox/spacecruiser.ogg
 
 - type: jukebox
-  id: SpaceAsshole
+  id: STSpaceAsshole
   name: Space Station 13 - Space Asshole
   path:
     path: /Audio/_Stories/Jukebox/spaceasshole.ogg
 
 - type: jukebox
-  id: SpaceOddity
+  id: STSpaceOddity
   name: David Bowie - Space Oddity
   path:
     path: /Audio/_Stories/Jukebox/spaceoddity.ogg
 
 - type: jukebox
-  id: ShBoom
-  name: The Chords - Sh Boom
+  id: STShBoom
+  name: The Chords - Sh STBoom
   path:
     path: /Audio/_Stories/Jukebox/shboom.ogg
 
 - type: jukebox
-  id: StarWars
+  id: STStarWars
   name: Star Wars - Cantina Band
   path:
     path: /Audio/_Stories/Jukebox/cantina.ogg
 
 - type: jukebox
-  id: HitTheFloor
+  id: STHitTheFloor
   name: Katana Zero - Hit The Floor
   path:
     path: /Audio/_Stories/Jukebox/hitthefloor.ogg
 
 - type: jukebox
-  id: ACyberWorld
+  id: STACyberWorld
   name: Toby Fox - A CYBER'S WORLD?
   path:
     path: /Audio/_Stories/Jukebox/acyberworld.ogg
 
 - type: jukebox
-  id: MyCastleTown
+  id: STMyCastleTown
   name: Toby Fox - My Castle Town
   path:
     path: /Audio/_Stories/Jukebox/mycastletown.ogg
 
 - type: jukebox
-  id: SinceIFellForYou
+  id: STSinceIFellForYou
   name: Lee Morgan - Since I Fell For You
   path:
     path: /Audio/_Stories/Jukebox/sinceifellforyou.ogg
 
 - type: jukebox
-  id: VisionsBrooklyn
+  id: STVisionsBrooklyn
   name: Daniel Pemberton - Visions Brooklyn
   path:
     path: /Audio/_Stories/Jukebox/visionsbrooklyn.ogg
 
 - type: jukebox
-  id: AbsoluteTravesty
+  id: STAbsoluteTravesty
   name: Wrong Organ - Absolute Travesty
   path:
     path: /Audio/_Stories/Jukebox/absolutetravesty.ogg

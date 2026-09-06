@@ -2,7 +2,7 @@
   id: STSecurityClown
   name: stories-job-name-security-clown
   description: stories-job-description-security-clown
-  playTimeTracker: JobSTSecurityClown
+  playTimeTracker: STJobSecurityClown
   requirements:
   - !type:OverallPlaytimeRequirement
     time: 36000 #10 hrs
@@ -10,7 +10,7 @@
     role: JobClown
     time: 3600 #1 hr
   startingGear: STSecurityClownGear
-  icon: "JobIconSTSecurityClown"
+  icon: "STJobIconSecurityClown"
   supervisors: job-supervisors-security
   setPreference: false
   access:

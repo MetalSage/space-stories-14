@@ -10,7 +10,7 @@
   supervisors: job-supervisors-centcom
   accessGroups:
   - AllAccess
-  - PrisonAllAccess # Stories
+  - STPrisonAllAccess # Stories
   access:
   - CentralCommand
   special:
@@ -109,7 +109,7 @@
   supervisors: job-supervisors-centcom
   accessGroups:
   - AllAccess
-  - PrisonAllAccess # Stories
+  - STPrisonAllAccess # Stories
   access:
   - CentralCommand
   special:
@@ -189,7 +189,7 @@
   supervisors: job-supervisors-centcom
   accessGroups:
   - AllAccess
-  - PrisonAllAccess # Stories
+  - STPrisonAllAccess # Stories
   access:
   - CentralCommand
   special:
@@ -283,7 +283,7 @@
   supervisors: job-supervisors-centcom
   accessGroups:
   - AllAccess
-  - PrisonAllAccess # Stories
+  - STPrisonAllAccess # Stories
   access:
   - CentralCommand
   special:
@@ -470,7 +470,7 @@
   supervisors: job-supervisors-centcom
   accessGroups:
   - AllAccess
-  - PrisonAllAccess # Stories
+  - STPrisonAllAccess # Stories
   access:
   - CentralCommand
   special:
@@ -570,7 +570,7 @@
   supervisors: job-supervisors-centcom
   accessGroups:
   - AllAccess
-  - PrisonAllAccess # Stories
+  - STPrisonAllAccess # Stories
   access:
   - CentralCommand
   special:

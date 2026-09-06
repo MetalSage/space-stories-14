@@ -1,10 +1,12 @@
-ent-ClothingBackpackDuffelAdidos = вещмешок
+ent-STClothingBackpackDuffelAdidos = вещмешок
     .desc = Большой вещмешок для хранения дополнительных предметов.
-ent-ClothingBackpackDuffelBluesky = вещмешок
+ent-STClothingBackpackDuffelBluesky = вещмешок
     .desc = Большой вещмешок для хранения дополнительных предметов.
-ent-ClothingBackpackDuffelEight = вещмешок
+ent-STClothingBackpackDuffelEight = вещмешок
     .desc = Большой вещмешок для хранения дополнительных предметов.
-ent-ClothingBackpackDuffelGachi = вещмешок
+ent-STClothingBackpackDuffelGachi = вещмешок
     .desc = Большой вещмешок для хранения дополнительных предметов.
-ent-ClothingBackpackDuffelRl = вещмешок
+ent-STClothingBackpackDuffelRl = вещмешок
     .desc = Большой вещмешок для хранения дополнительных предметов.
+ent-STClothingBackpackDuffelBlueshield = вещмешок синего щита
+    .desc = Вместительный вещмешок, выдаваемый лучшим сотрудникам Nanotrasen.

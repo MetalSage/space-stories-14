@@ -2,64 +2,64 @@
   parent: Windoor
   name: secure windoor
   description: It's both a sturdy window and a sliding door. Wow!
-  id: PRISONWindoorSecureHeadOfPrisonLocked
-  suffix: HeadOfPrison, Locked
+  id: STPRISONWindoorSecureHeadOfPrisonLocked
+  suffix: STHeadOfPrison, Locked
   components:
   - type: ContainerFill
     containers:
-      board: [ PRISONDoorElectronicsHeadOfPrison ]
+      board: [ STPRISONDoorElectronicsHeadOfPrison ]
 
 - type: entity
   parent: Windoor
   name: secure windoor
   description: It's both a sturdy window and a sliding door. Wow!
-  id: PRISONWindoorSecureBrigLocked
-  suffix: PrisonBrig, Locked
+  id: STPRISONWindoorSecureBrigLocked
+  suffix: STPrisonBrig, Locked
   components:
   - type: ContainerFill
     containers:
-      board: [ PRISONDoorElectronicsBrig ]
+      board: [ STPRISONDoorElectronicsBrig ]
 
 - type: entity
   parent: Windoor
   name: secure windoor
   description: It's both a sturdy window and a sliding door. Wow!
-  id: PRISONWindoorSecureLocked
+  id: STPRISONWindoorSecureLocked
   suffix: Prison, Locked
   components:
   - type: ContainerFill
     containers:
-      board: [ PRISONDoorElectronics ]
+      board: [ STPRISONDoorElectronics ]
 
 - type: entity
   parent: Windoor
   name: secure windoor
   description: It's both a sturdy window and a sliding door. Wow!
-  id: PRISONWindoorSecureEngLocked
-  suffix: PrisonEng, Locked
+  id: STPRISONWindoorSecureEngLocked
+  suffix: STPrisonEng, Locked
   components:
   - type: ContainerFill
     containers:
-      board: [ PRISONDoorElectronicsEng ]
+      board: [ STPRISONDoorElectronicsEng ]
 
 - type: entity
   parent: Windoor
   name: secure windoor
   description: It's both a sturdy window and a sliding door. Wow!
-  id: PRISONWindoorSecureMedLocked
-  suffix: PrisonMed, Locked
+  id: STPRISONWindoorSecureMedLocked
+  suffix: STPrisonMed, Locked
   components:
   - type: ContainerFill
     containers:
-      board: [ PRISONDoorElectronicsMed ]
+      board: [ STPRISONDoorElectronicsMed ]
 
 - type: entity
   parent: Windoor
   name: secure windoor
   description: It's both a sturdy window and a sliding door. Wow!
-  id: PRISONWindoorSecurePrisonerLocked
+  id: STPRISONWindoorSecurePrisonerLocked
   suffix: Prisoner, Locked
   components:
   - type: ContainerFill
     containers:
-      board: [ PRISONDoorElectronicsPrisoner ]
+      board: [ STPRISONDoorElectronicsPrisoner ]

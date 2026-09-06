@@ -1,3 +1,3 @@
-ent-WallRockBasaltIndestructible = базальт
-    .desc = { ent-BaseAsteroidRock.desc }
+ent-STWallRockBasaltIndestructible = базальт
+    .desc = { ent-BaseWall.desc }
     .suffix = Неразрушимый

@@ -2,14 +2,9 @@ using Robust.Shared.GameStates;
 
 namespace Content.Shared._Stories.Spaf;
 
-[RegisterComponent, NetworkedComponent]
-[Access(typeof(SharedSpafSystem))]
+[RegisterComponent, NetworkedComponent, Access(typeof(SharedSpafSystem))]
 public sealed partial class SpafComponent : Component
 {
-    // TODO: Add spaf status icon
-    // [DataField]
-    // public ProtoId<FactionIconPrototype> StatusIcon = "SpafFaction";
-
     [DataField]
     public HashSet<string> Actions = new();
 

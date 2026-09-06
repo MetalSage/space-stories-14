@@ -1,14 +1,14 @@
 - type: entity
-  parent: ClothingOuterStorageBase
-  id: ClothingOuterCoatGuardian
+  parent: ClothingOuterJacketToggleableBase
+  id: STClothingOuterCoatGuardian
   name: jedi cloak
   description: A long type of clothing that sits loosely on the shoulders, covering the neck.
   components:
   - type: Tag
     tags:
-      - ForceRecallEquipment
+      - STForceRecallEquipment
   - type: ToggleableClothing
-    clothingPrototype: ClothingHeadHatHoodGuardianhood
+    clothingPrototype: STClothingHeadHatHoodGuardianhood
   - type: TemperatureProtection
     coefficient: 0.005
   - type: AllowSuitStorage
@@ -28,7 +28,7 @@
 
 - type: entity
   parent: ClothingOuterStorageBase
-  id: PRISONClothingOuterCoatHeadOfPrison
+  id: STPRISONClothingOuterCoatHeadOfPrison
   name: head of prison's coat
   description: A durable canvas coat designed and manufactured by TX Fabrication Corp. Wearing it makes you feel sympathetic to the fate of Tibetans.
   components:
@@ -46,7 +46,7 @@
 
 - type: entity
   parent: [ClothingOuterStorageBase, AllowSuitStorageClothing, ClothingOuterArmorBasic]
-  id: ClothingOuterCoatDetectiveGrey
+  id: STClothingOuterCoatDetectiveGrey
   name: detective's grey trenchcoat
   description: An 18th-century multifunctional trench coat. The wearer is a serious guy.
   components:
@@ -59,7 +59,7 @@
     - id: SmokingPipeFilledTobacco
     - id: FlippoEngravedLighter
   - type: ExplosionResistance
-    damageCoefficient: 1 #its a coat. it doesnt do shit
+    damageCoefficient: 1
 
 - type: entity
   parent: ClothingOuterWinterCoat

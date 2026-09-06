@@ -10,8 +10,13 @@ namespace Content.Server._Stories.Photosensitivity;
 [RegisterComponent]
 public sealed partial class PhotosensitivityComponent : Component
 {
-    [ViewVariables(VVAccess.ReadWrite)]
-    [DataField("damage")]
+    [DataField("burnSound")]
+    public SoundSpecifier BurnSound = new SoundPathSpecifier("/Audio/Effects/lightburn.ogg");
+
+    [DataField("critDamageMultiplier")]
+    public float CritDamageMultiplier = 5f;
+
+    [ViewVariables(VVAccess.ReadWrite), DataField("damage")]
     public DamageSpecifier Damage = new()
     {
         DamageDict = new Dictionary<ProtoId<DamageTypePrototype>, FixedPoint2>
@@ -20,8 +25,7 @@ public sealed partial class PhotosensitivityComponent : Component
         },
     };
 
-    [ViewVariables(VVAccess.ReadWrite)]
-    [DataField("damageInSpace")]
+    [ViewVariables(VVAccess.ReadWrite), DataField("damageInSpace")]
     public DamageSpecifier DamageInSpace = new()
     {
         DamageDict = new Dictionary<ProtoId<DamageTypePrototype>, FixedPoint2>
@@ -49,8 +53,10 @@ public sealed partial class PhotosensitivityComponent : Component
         },
     };
 
-    [ViewVariables(VVAccess.ReadWrite)]
-    [DataField("flashDamage")]
+    [ViewVariables(VVAccess.ReadWrite), DataField("enabled")]
+    public bool Enabled = true;
+
+    [ViewVariables(VVAccess.ReadWrite), DataField("flashDamage")]
     public DamageSpecifier FlashDamage = new()
     {
         DamageDict = new Dictionary<ProtoId<DamageTypePrototype>, FixedPoint2>
@@ -59,8 +65,7 @@ public sealed partial class PhotosensitivityComponent : Component
         },
     };
 
-    [ViewVariables(VVAccess.ReadWrite)]
-    [DataField("meleeFlashDamage")]
+    [ViewVariables(VVAccess.ReadWrite), DataField("meleeFlashDamage")]
     public DamageSpecifier MeleeFlashDamage = new()
     {
         DamageDict = new Dictionary<ProtoId<DamageTypePrototype>, FixedPoint2>

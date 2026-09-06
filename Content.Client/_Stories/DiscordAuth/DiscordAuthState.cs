@@ -10,10 +10,10 @@ namespace Content.Client._Stories.DiscordAuth;
 public sealed partial class DiscordAuthState : State
 {
     private readonly CancellationTokenSource _checkTimerCancel = new();
-    [Dependency] private IClientNetManager _netManager = default!;
-    [Dependency] private IUserInterfaceManager _userInterfaceManager = default!;
 
     private DiscordAuthGui? _gui;
+    [Dependency] private IClientNetManager _netManager = default!;
+    [Dependency] private IUserInterfaceManager _userInterfaceManager = default!;
 
     protected override void Startup()
     {

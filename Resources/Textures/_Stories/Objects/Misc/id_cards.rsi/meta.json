@@ -1,64 +1,67 @@
 {
-    "version": 1,
-    "license": "CC-BY-SA-3.0",
-    "copyright": "Taken from tgstation at commit https://github.com/tgstation/tgstation/commit/d917f4c2a088419d5c3aec7656b7ff8cebd1822e idcluwne made by brainfood1183 (github) for ss14, idbrigmedic made by PuroSlavKing (Github). idpartymaker idsecurityclown idcommandmaid by lzk228 (github), idjudge, idprosecutor by itak_privet_chat (discord)",
-    "size": {
-        "x": 32,
-        "y": 32
+  "version": 1,
+  "license": "CC-BY-SA-3.0",
+  "copyright": "Taken from tgstation at commit https://github.com/tgstation/tgstation/commit/d917f4c2a088419d5c3aec7656b7ff8cebd1822e idcluwne made by brainfood1183 (github) for ss14, idbrigmedic made by PuroSlavKing (Github). idpartymaker idsecurityclown idcommandmaid by lzk228 (github), idjudge, idprosecutor by itak_privet_chat (discord), idblueshield taken from Monkestation at https://github.com/Monkestation/Monkestation2.0/blob/bdf60a966c1f57b8a0d9dc640c3e5dda340c7054/icons/obj/card.dmi",
+  "size": {
+    "x": 32,
+    "y": 32
+  },
+  "states": [
+    {
+      "name": "default"
     },
-    "states": [
-        {
-            "name": "default"
-        },
-        {
-            "name": "default_sp"
-        },
-        {
-            "name": "idguardiannt"
-        },
-        {
-            "name": "silver"
-        },
-        {
-            "name": "silver_sp"
-        },
-        {
-            "name": "idspofficer"
-        },
-        {
-            "name": "idspengineer"
-        },
-        {
-            "name": "idspmedic"
-        },
-        {
-            "name": "idhosp"
-        },
-        {
-            "name": "idiaa"
-        },
-        {
-            "name": "default-inhand-left",
-            "directions": 4
-        },
-        {
-            "name": "default-inhand-right",
-            "directions": 4
-        },
-        {
-            "name": "idcommandmaid"
-        },
-        {
-            "name": "idsecurityclown"
-        },
-        {
-            "name": "idpartymaker"
-        },
-        {
-            "name": "idprosecutor"
-        },
-        {
-            "name": "idjudge"
-        }
-    ]
+    {
+      "name": "default_sp"
+    },
+    {
+      "name": "idguardiannt"
+    },
+    {
+      "name": "silver"
+    },
+    {
+      "name": "silver_sp"
+    },
+    {
+      "name": "idspofficer"
+    },
+    {
+      "name": "idspengineer"
+    },
+    {
+      "name": "idspmedic"
+    },
+    {
+      "name": "idhosp"
+    },
+    {
+      "name": "idiaa"
+    },
+    {
+      "name": "default-inhand-left",
+      "directions": 4
+    },
+    {
+      "name": "default-inhand-right",
+      "directions": 4
+    },
+    {
+      "name": "idcommandmaid"
+    },
+    {
+      "name": "idsecurityclown"
+    },
+    {
+      "name": "idpartymaker"
+    },
+    {
+      "name": "idprosecutor"
+    },
+    {
+      "name": "idjudge"
+    },
+    {
+      "name": "idblueshield"
+    }
+  ]
 }

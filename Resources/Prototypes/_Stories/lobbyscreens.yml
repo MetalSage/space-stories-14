@@ -3,11 +3,11 @@
   background: /Textures/_Stories/LobbyScreens/atmos.jpg
 
 - type: lobbyBackground
-  id: Boom
+  id: STBoom
   background: /Textures/_Stories/LobbyScreens/boom.jpg
 
 - type: lobbyBackground
-  id: Botanic
+  id: STBotanic
   background: /Textures/_Stories/LobbyScreens/botanic.jpg
 
 - type: lobbyBackground
@@ -19,7 +19,7 @@
   background: /Textures/_Stories/LobbyScreens/fire.jpg
 
 - type: lobbyBackground
-  id: GuitarHunter
+  id: STGuitarHunter
   background: /Textures/_Stories/LobbyScreens/guiterhunter.jpg
 
 - type: lobbyBackground
@@ -27,24 +27,23 @@
   background: /Textures/_Stories/LobbyScreens/newyear.jpg
 
 - type: lobbyBackground
-  id: Plazma
+  id: STPlazma
   background: /Textures/_Stories/LobbyScreens/plazma.jpg
 
 - type: lobbyBackground
-  id: Spaf
+  id: STSpaf
   background: /Textures/_Stories/LobbyScreens/spaf.jpg
 
-# Created by Doner19 (discord:doner4037)
 - type: lobbyBackground
-  id: GlorySSSP
+  id: STGlorySSSP
   background: /Textures/_Stories/LobbyScreens/GlorySSSP.jpg
 
 - type: lobbyBackground
-  id: Nuclear_environment
+  id: STNuclear_environment
   background: /Textures/_Stories/LobbyScreens/Nuclear_environment.jpg
 
 - type: lobbyBackground
-  id: Nuclear_environmentV2
+  id: STNuclear_environmentV2
   background: /Textures/_Stories/LobbyScreens/Nuclear_environmentV2.jpg
 
 - type: lobbyBackground
@@ -52,11 +51,11 @@
   background: /Textures/_Stories/LobbyScreens/Paramedic.jpg
 
 - type: lobbyBackground
-  id: Starbow
+  id: STStarbow
   background: /Textures/_Stories/LobbyScreens/Starbow.jpg
 
 - type: lobbyBackground
-  id: Therapy
+  id: STTherapy
   background: /Textures/_Stories/LobbyScreens/Therapy.jpg
 
 - type: lobbyBackground
@@ -64,10 +63,9 @@
   background: /Textures/_Stories/LobbyScreens/Zombie.jpg
 
 - type: lobbyBackground
-  id: Space_surfer
+  id: STSpace_surfer
   background: /Textures/_Stories/LobbyScreens/Space_surfer.jpg
 
 - type: lobbyBackground
-  id: Nuclear_operative
+  id: STNuclear_operative
   background: /Textures/_Stories/LobbyScreens/Nuclear_operative.jpg
-

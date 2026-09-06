@@ -1,5 +1,5 @@
 - type: gameMap
-  id: StoriesBeta
+  id: STBeta
   mapName: 'Beta Station'
   mapPath: /Maps/_Stories/beta.yml
   minPlayers: 30
@@ -63,7 +63,7 @@
             StationAi: [ 1, 1 ]
             Borg: [ 1, 2 ]
             #stories content
-            GuardianNt: [ 1, 1 ]
-            IAA: [ 1, 1 ]
+            STGuardianNt: [ 1, 1 ]
+            STIAA: [ 1, 1 ]
             STBrigmedic: [ 1, 1 ]
             STJudge: [ 1, 1 ]

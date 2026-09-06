@@ -17,10 +17,9 @@ public interface ISponsorsApiClient
 
 public sealed partial class SponsorsApiClient : ISponsorsApiClient
 {
-    [Dependency] private IConfigurationManager _cfg = default!;
-
     private readonly HttpClient _httpClient = new();
     private string _apiUrl = string.Empty;
+    [Dependency] private IConfigurationManager _cfg = default!;
 
     private ISawmill _sawmill = default!;
 

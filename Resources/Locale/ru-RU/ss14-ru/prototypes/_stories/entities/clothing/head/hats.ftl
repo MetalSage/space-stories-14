@@ -1,8 +1,12 @@
-ent-ClothingHeadHatFedoraSpecialGrey = серая федора
+ent-STClothingHeadHatFedoraSpecialGrey = серая федора
     .desc = Это серая фетровая шляпа.
-ent-ClothingHeadHatCapHoS = фуражка главы службы безопасности
+ent-STClothingHeadHatCapHoS = фуражка главы службы безопасности
     .desc = Прочная форменная фуражка начальника службы безопасности. Напоминает рядовым офицерам, кто здесь главный.
 ent-STClothingHeadHatCapcapGeneral = { ent-ClothingHeadHatCapcap }
     .desc = { ent-ClothingHeadHatCapcap.desc }
 ent-STClothingHeadHatCapcapGeneralCMO = { ent-ClothingHeadHatCapcap }
     .desc = { ent-ClothingHeadHatCapcap.desc }
+ent-STClothingHeadHatBeretBlueshield = берет синего щита
+    .desc = Синий берет из дюраткани с настоящим золотым значком, обозначающим его владельца как лейтенанта Синего Щита. Усилен нанокевларом.
+ent-STClothingHeadHatBeretBlueshieldNavy = темно-синий берет синего щита
+    .desc = Темно-синий берет из дюраткани с серебряным значком, обозначающим его владельца как лейтенанта Синего Щита. Усилен нанокевларом.

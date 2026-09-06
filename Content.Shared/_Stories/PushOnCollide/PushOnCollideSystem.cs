@@ -6,7 +6,6 @@ namespace Content.Shared._Stories.Damage.Systems;
 
 public sealed partial class PushOnCollideSystem : EntitySystem
 {
-    // TODO: Добавить откидывание при контакте с кем-то и значения в компонент
     [Dependency] private ThrowingSystem _throwing = default!;
     [Dependency] private SharedTransformSystem _xform = default!;
 

@@ -1,23 +1,23 @@
 - type: accessLevel
-  id: HeadOfPrison
-  name: Начальник тюрьмы
+  id: STHeadOfPrison
+  name: Head of Prison
 
 - type: accessLevel
-  id: PrisonBrig
-  name: Бриг тюрьмы
+  id: STPrisonBrig
+  name: Space Prison Brig
 
 - type: accessLevel
   id: Prison
-  name: Тюрьма
+  name: Space Prison
 
 - type: accessLevel
-  id: PrisonMed
-  name: Медицинский тюрьма
+  id: STPrisonMed
+  name: Space Prison Medical
 
 - type: accessLevel
-  id: PrisonEng
-  name: Инженерный тюрьма
+  id: STPrisonEng
+  name: Space Prison Engineering
 
 - type: accessLevel
   id: Prisoner
-  name: Заключенный
+  name: Prisoner

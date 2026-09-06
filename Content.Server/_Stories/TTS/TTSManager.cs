@@ -38,13 +38,13 @@ public sealed partial class TTSManager
     private readonly ConcurrentDictionary<string, byte[]> _cache = new();
     private readonly List<string> _cacheKeysSeq = new();
 
-    [Dependency] private IConfigurationManager _cfg = default!;
-
     private readonly HttpClient _httpClient = new();
 
     private readonly ConcurrentDictionary<string, Task<byte[]?>> _pendingRequests = new();
     private string _apiToken = string.Empty;
     private string _apiUrl = string.Empty;
+
+    [Dependency] private IConfigurationManager _cfg = default!;
 
     private int _maxCachedCount = 200;
 
@@ -70,12 +70,6 @@ public sealed partial class TTSManager
             true);
     }
 
-    /// <summary>
-    /// Generates audio with passed text by API
-    /// </summary>
-    /// <param name="speaker">Identifier of speaker</param>
-    /// <param name="text">SSML formatted text</param>
-    /// <returns>OGG audio bytes or null if failed</returns>
     public Task<byte[]?> ConvertTextToSpeech(string speaker, string text)
     {
         WantedCount.Inc();

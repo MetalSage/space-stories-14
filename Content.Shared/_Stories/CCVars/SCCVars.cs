@@ -1,4 +1,4 @@
-﻿using Robust.Shared.Configuration;
+using Robust.Shared.Configuration;
 
 namespace Content.Shared._Stories.SCCVars;
 
@@ -135,7 +135,7 @@ public sealed class SCCVars
     public static readonly CVarDef<float> EconomySalaryPercentage =
         CVarDef.Create("economy.salary_percentage", 0.5f, CVar.SERVERONLY | CVar.ARCHIVE);
 
-    
+
     /*
      * NoEorgPopup
      */
@@ -168,4 +168,15 @@ public sealed class SCCVars
     /// </summary>
     public static readonly CVarDef<bool> EnthrallWithoutMind =
         CVarDef.Create("stories.enthrall_without_mind", false, CVar.SERVERONLY);
+
+
+    /*
+     * Space Prison (КТ)
+     */
+
+    /// <summary>
+    /// Controls whether the Space Prison station is enabled and allowed to spawn.
+    /// </summary>
+    public static readonly CVarDef<bool> PrisonEnabled =
+        CVarDef.Create("scc.prison_enabled", true, CVar.SERVERONLY | CVar.ARCHIVE);
 }

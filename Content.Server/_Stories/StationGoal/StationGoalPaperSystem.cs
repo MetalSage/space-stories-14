@@ -9,9 +9,6 @@ using Robust.Shared.Random;
 
 namespace Content.Server._Stories.StationGoal;
 
-/// <summary>
-/// System to spawn paper with station goal.
-/// </summary>
 public sealed partial class StationGoalPaperSystem : EntitySystem
 {
     [Dependency] private FaxSystem _faxSystem = default!;
@@ -43,10 +40,6 @@ public sealed partial class StationGoalPaperSystem : EntitySystem
         TrySendStationGoal(goal);
     }
 
-    /// <summary>
-    /// Send a station goal to all faxes which are authorized to receive it.
-    /// </summary>
-    /// <returns>True if at least one fax received paper</returns>
     private bool IsNotEnoughPlayers(StationGoalPrototype checkGoal)
     {
         return _playerManager.PlayerCount < checkGoal.OnlineLess;

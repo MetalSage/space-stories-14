@@ -8788,7 +8788,7 @@ entities:
     - type: Transform
       pos: -0.5,1.5
       parent: 2
-- proto: ClothingBackpackGuardianNt
+- proto: STClothingBackpackGuardianNt
   entities:
   - uid: 1763
     components:
@@ -8796,7 +8796,7 @@ entities:
       parent: 1761
     - type: Physics
       canCollide: False
-- proto: ClothingBeltInquisitor
+- proto: STClothingBeltInquisitor
   entities:
   - uid: 1801
     components:
@@ -8826,7 +8826,7 @@ entities:
     - type: Transform
       pos: 29.500692,7.560785
       parent: 2
-- proto: ClothingHandsGlovesInquisitor
+- proto: STClothingHandsGlovesInquisitor
   entities:
   - uid: 1790
     components:
@@ -8840,7 +8840,7 @@ entities:
       parent: 1792
     - type: Physics
       canCollide: False
-- proto: ClothingMaskGasInquisitor
+- proto: STClothingMaskGasInquisitor
   entities:
   - uid: 1788
     components:
@@ -8854,7 +8854,7 @@ entities:
       parent: 1792
     - type: Physics
       canCollide: False
-- proto: ClothingNeckCloakInquisitor
+- proto: STClothingNeckCloakInquisitor
   entities:
   - uid: 1787
     components:
@@ -8868,7 +8868,7 @@ entities:
       parent: 1792
     - type: Physics
       canCollide: False
-- proto: ClothingNeckMantleGuardianNt
+- proto: STClothingNeckMantleGuardianNt
   entities:
   - uid: 1762
     components:
@@ -8876,7 +8876,7 @@ entities:
       parent: 1761
     - type: Physics
       canCollide: False
-- proto: ClothingOuterVestInquisitor
+- proto: STClothingOuterVestInquisitor
   entities:
   - uid: 1802
     components:
@@ -8913,7 +8913,7 @@ entities:
     - type: Transform
       pos: 34.343533,11.202923
       parent: 2
-- proto: ClothingUniformJumpsuitInquisitor
+- proto: STClothingUniformJumpsuitInquisitor
   entities:
   - uid: 1791
     components:
@@ -23135,7 +23135,7 @@ entities:
     - type: Transform
       pos: 5.5403275,-0.39998552
       parent: 2
-- proto: ToyFigurineGuardianNt
+- proto: STToyFigurineGuardianNt
   entities:
   - uid: 1001
     components:
@@ -23147,7 +23147,7 @@ entities:
     - type: Transform
       pos: 20.475842,23.455378
       parent: 2
-- proto: ToyFigurineInquisitor
+- proto: STToyFigurineInquisitor
   entities:
   - uid: 995
     components:

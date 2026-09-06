@@ -1,12 +1,12 @@
 - type: entity
   parent: ClothingUniformBase
-  id: ClothingUniformJumpsuitGuardian
+  id: STClothingUniformJumpsuitGuardian
   name: jedi robe
   description: A loose robe worn by members of the Jedi Order.
   components:
     - type: Tag
       tags:
-        - ForceRecallEquipment
+        - STForceRecallEquipment
     - type: Sprite
       sprite: _Stories/Clothing/Uniforms/Jumpsuit/guardian.rsi
     - type: Clothing
@@ -14,13 +14,13 @@
 
 - type: entity
   parent: ClothingUniformBase
-  id: ClothingUniformJumpsuitGuardianNt
+  id: STClothingUniformJumpsuitGuardianNt
   name: blade guardian's uniform
   description: A special uniform that does not increase sword accuracy in any way.
   components:
     - type: Tag
       tags:
-        - ForceRecallEquipment
+        - STForceRecallEquipment
         - WhitelistChameleon
     - type: Sprite
       sprite: _Stories/Clothing/Uniforms/Jumpsuit/guardian_nt.rsi
@@ -29,13 +29,13 @@
 
 - type: entity
   parent: ClothingUniformBase
-  id: ClothingUniformJumpsuitInquisitor
+  id: STClothingUniformJumpsuitInquisitor
   name: inquisitor's uniform
-  description: Once upon a time on a Galactic Empire station...
+  description: Once upon a time on a Galactic STEmpire station...
   components:
     - type: Tag
       tags:
-        - ForceRecallEquipment
+        - STForceRecallEquipment
     - type: Sprite
       sprite: _Stories/Clothing/Uniforms/Jumpsuit/jumpsuit_inquisitor.rsi
     - type: Clothing
@@ -43,13 +43,13 @@
 
 - type: entity
   parent: ClothingUniformBase
-  id: ClothingUniformJumpsuitKylo
+  id: STClothingUniformJumpsuitKylo
   name: kylo ren's uniform
   description: Once upon a time on a First Order station...
   components:
     - type: Tag
       tags:
-        - ForceRecallEquipment
+        - STForceRecallEquipment
     - type: Sprite
       sprite: _Stories/Clothing/Uniforms/Jumpsuit/jumpsuit_kylo.rsi
     - type: Clothing
@@ -57,13 +57,13 @@
 
 - type: entity
   parent: ClothingUniformBase
-  id: ClothingUniformJumpsuitGuardianNomad
+  id: STClothingUniformJumpsuitGuardianNomad
   name: traveler's uniform
   description: A uniform that does not increase sword accuracy in any way.
   components:
     - type: Tag
       tags:
-        - ForceRecallEquipment
+        - STForceRecallEquipment
     - type: Sprite
       sprite: _Stories/Clothing/Uniforms/Jumpsuit/guardian_nomad.rsi
     - type: Clothing
@@ -71,13 +71,13 @@
 
 - type: entity
   parent: ClothingUniformBase
-  id: ClothingUniformJumpsuitExe
+  id: STClothingUniformJumpsuitExe
   name: guardian's uniform
   description: A special uniform that does not increase sword accuracy in any way.
   components:
     - type: Tag
       tags:
-        - ForceRecallEquipment
+        - STForceRecallEquipment
     - type: Sprite
       sprite: _Stories/Clothing/Uniforms/Jumpsuit/exe_jumpsuit.rsi
     - type: Clothing
@@ -85,7 +85,7 @@
 
 - type: entity
   parent: ClothingUniformBase
-  id: ClothingUniformJumpsuitDetectiveSpecialGrey
+  id: STClothingUniformJumpsuitDetectiveSpecialGrey
   name: hard-worn suit
   description: Whoever wears this represents being busy.
   components:
@@ -127,3 +127,41 @@
     sprite: _Stories/Clothing/Uniforms/Jumpsuit/prosecutorblack.rsi
   - type: Clothing
     sprite: _Stories/Clothing/Uniforms/Jumpsuit/prosecutorblack.rsi
+
+- type: entity
+  parent: ClothingUniformBase
+  id: STClothingUniformJumpsuitBlueshield
+  name: blueshield's suit
+  description: A classic bodyguard's suit, with custom-fitted Blueshield-Blue cuffs and a Nanotrasen insignia over one of the pockets.
+  components:
+  - type: Sprite
+    sprite: _Stories/Clothing/Uniforms/Jumpsuit/blueshield_suit.rsi
+  - type: Clothing
+    sprite: _Stories/Clothing/Uniforms/Jumpsuit/blueshield_suit.rsi
+  - type: Armor
+    modifiers:
+      coefficients:
+        Blunt: 0.9
+        Slash: 0.9
+        Piercing: 0.9
+        Heat: 0.8
+        Caustic: 0.8
+
+- type: entity
+  parent: ClothingUniformBase
+  id: STClothingUniformJumpsuitBlueshieldTurtleneck
+  name: blueshield's turtleneck
+  description: A tactical jumper fit for only the best of bodyguards, with plenty of tactical pockets for your tactical needs.
+  components:
+  - type: Sprite
+    sprite: _Stories/Clothing/Uniforms/Jumpsuit/blueshield_turtleneck.rsi
+  - type: Clothing
+    sprite: _Stories/Clothing/Uniforms/Jumpsuit/blueshield_turtleneck.rsi
+  - type: Armor
+    modifiers:
+      coefficients:
+        Blunt: 0.9
+        Slash: 0.9
+        Piercing: 0.9
+        Heat: 0.8
+        Caustic: 0.8

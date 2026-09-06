@@ -1,5 +1,5 @@
 - type: technology
-  id: ReflectionTech
+  id: STReflectionTech
   name: research-technology-reflection
   icon:
     sprite: _Stories/Structures/Machines/reflectors.rsi
@@ -8,6 +8,6 @@
   tier: 2
   cost: 5000
   recipeUnlocks:
-  - ReflectorBoxMachineCircuitboard
-  - ReflectorCornerMachineCircuitboard
-  - ReflectorCornerTsideMachineCircuitboard
+  - STReflectorBoxMachineCircuitboard
+  - STReflectorCornerMachineCircuitboard
+  - STReflectorCornerTsideMachineCircuitboard

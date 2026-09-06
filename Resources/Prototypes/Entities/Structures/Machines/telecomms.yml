@@ -215,7 +215,7 @@
       - EncryptionKeyService
       - EncryptionKeyCommand
       # Stories-Radio-Start
-      - PRISONEncryptionKey
+      - STPRISONEncryptionKey
       - STEncryptionKeyJuridical
       # Stories-Radio-End
 

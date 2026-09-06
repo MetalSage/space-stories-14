@@ -1,6 +1,6 @@
 - type: entity
   parent: ClothingShoesBootsJack
-  id: PRISONClothingShoesBootsJack
+  id: STPRISONClothingShoesBootsJack
   name: jackboots
   description: Prison footwear for combat operations or warfare. The fight is everything, the fight is always.
   components:

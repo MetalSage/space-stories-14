@@ -1,18 +1,17 @@
 using System.Diagnostics.CodeAnalysis;
 using Content.Server._Stories.Economy.Components;
+using Content.Server.Cargo.Systems;
 using Content.Server.Inventory;
 using Content.Server.Station.Systems;
 using Content.Shared._Stories.Economy.Components;
+using Content.Shared._Stories.SCCVars;
 using Content.Shared.Access.Components;
+using Content.Shared.Cargo.Prototypes;
 using Content.Shared.GameTicking;
 using Content.Shared.Mind;
 using Content.Shared.Mind.Components;
 using Content.Shared.PDA;
 using Content.Shared.Roles;
-using Content.Server.Cargo.Systems;
-using Content.Shared.Cargo.Prototypes;
-using Content.Shared.Station.Components;
-using Content.Shared._Stories.SCCVars;
 using Robust.Shared.Configuration;
 using Robust.Shared.Prototypes;
 using Robust.Shared.Random;
@@ -22,12 +21,12 @@ namespace Content.Server._Stories.Economy;
 
 public sealed partial class BankSystem : EntitySystem
 {
+    [Dependency] private CargoSystem _cargoSystem = default!;
+    [Dependency] private IConfigurationManager _cfg = default!;
     [Dependency] private IPrototypeManager _prototypeManager = default!;
     [Dependency] private IRobustRandom _random = default!;
     [Dependency] private StationSystem _station = default!;
     [Dependency] private IGameTiming _timing = default!;
-    [Dependency] private CargoSystem _cargoSystem = default!;
-    [Dependency] private IConfigurationManager _cfg = default!;
 
     public override void Initialize()
     {
@@ -55,10 +54,14 @@ public sealed partial class BankSystem : EntitySystem
 
         var stationUid = station.Value;
         var bank = EnsureComp<StationBankComponent>(stationUid);
-        
+
         var balance = _random.Next(
-            args.JobId != null && _prototypeManager.TryIndex<JobPrototype>(args.JobId, out var jobProto) ? jobProto.MinBankBalance : 100,
-            args.JobId != null && _prototypeManager.TryIndex(args.JobId, out jobProto) ? jobProto.MaxBankBalance + 1 : 501);
+            args.JobId != null && _prototypeManager.TryIndex<JobPrototype>(args.JobId, out var jobProto)
+                ? jobProto.MinBankBalance
+                : 100,
+            args.JobId != null && _prototypeManager.TryIndex(args.JobId, out jobProto)
+                ? jobProto.MaxBankBalance + 1
+                : 501);
 
         if (TryComp<MindContainerComponent>(entity, out var mindContainer) &&
             mindContainer.Mind.HasValue &&
@@ -93,7 +96,8 @@ public sealed partial class BankSystem : EntitySystem
 
     public void AttachBankToId(EntityUid mindId, EntityUid id, MindBankAccountComponent? mindBank = null)
     {
-        if (!Resolve(mindId, ref mindBank)) return;
+        if (!Resolve(mindId, ref mindBank))
+            return;
 
         if (mindBank.LinkedIdCard.HasValue && Exists(mindBank.LinkedIdCard.Value))
             DetachBankFromId(mindBank.LinkedIdCard.Value);
@@ -123,6 +127,7 @@ public sealed partial class BankSystem : EntitySystem
     {
         string number;
         do { number = _random.Next(10000000, 99999999).ToString(); } while (bank.Accounts.ContainsKey(number));
+
         return number;
     }
 
@@ -134,10 +139,11 @@ public sealed partial class BankSystem : EntitySystem
     public bool TryGetAccount(EntityUid stationUid, string accountNumber, [NotNullWhen(true)] out BankAccount? account)
     {
         account = null;
-        if (!TryComp<StationBankComponent>(stationUid, out var bank)) return false;
+        if (!TryComp<StationBankComponent>(stationUid, out var bank))
+            return false;
         return bank.Accounts.TryGetValue(accountNumber, out account);
     }
-    
+
     public bool TryGetMindByAccountNumber(string accountNumber, out EntityUid mindId)
     {
         mindId = EntityUid.Invalid;
@@ -150,13 +156,16 @@ public sealed partial class BankSystem : EntitySystem
                 return true;
             }
         }
+
         return false;
     }
 
     public bool TryChangeBalance(EntityUid stationUid, string accountNumber, int amount, bool force = false)
     {
-        if (!TryGetAccount(stationUid, accountNumber, out var account)) return false;
-        if (!force && account.Balance + amount < 0) return false;
+        if (!TryGetAccount(stationUid, accountNumber, out var account))
+            return false;
+        if (!force && account.Balance + amount < 0)
+            return false;
 
         account.Balance = Math.Max(0, account.Balance + amount);
         RaiseLocalEvent(new BankBalanceChangedEventArgs(stationUid, accountNumber));
@@ -165,10 +174,14 @@ public sealed partial class BankSystem : EntitySystem
 
     public bool TryTransfer(EntityUid stationUid, string fromAcc, string toAcc, int amount)
     {
-        if (amount <= 0) return false;
-        if (!TryGetAccount(stationUid, fromAcc, out var sender)) return false;
-        if (!TryGetAccount(stationUid, toAcc, out var receiver)) return false;
-        if (sender.Balance < amount) return false;
+        if (amount <= 0)
+            return false;
+        if (!TryGetAccount(stationUid, fromAcc, out var sender))
+            return false;
+        if (!TryGetAccount(stationUid, toAcc, out var receiver))
+            return false;
+        if (sender.Balance < amount)
+            return false;
 
         sender.Balance -= amount;
         receiver.Balance += amount;
@@ -182,8 +195,10 @@ public sealed partial class BankSystem : EntitySystem
     public bool TryChangeDepartmentBalance(EntityUid stationUid, string departmentId, int amount, bool force = false)
     {
         var protoId = new ProtoId<CargoAccountPrototype>(departmentId);
-        if (!_cargoSystem.TryGetAccount(stationUid, protoId, out var currentBalance)) return false;
-        if (!force && currentBalance + amount < 0) return false;
+        if (!_cargoSystem.TryGetAccount(stationUid, protoId, out var currentBalance))
+            return false;
+        if (!force && currentBalance + amount < 0)
+            return false;
 
         var addAmount = amount;
         if (force && currentBalance + amount < 0)
@@ -191,16 +206,15 @@ public sealed partial class BankSystem : EntitySystem
 
         var result = _cargoSystem.TryAdjustBankAccount(stationUid, protoId, addAmount);
         if (result)
-        {
             RaiseLocalEvent(new BankDepartmentBalanceChangedEventArgs(stationUid, departmentId));
-        }
         return result;
     }
 
     public int GetDepartmentBalance(EntityUid stationUid, string departmentId)
     {
         var protoId = new ProtoId<CargoAccountPrototype>(departmentId);
-        if (_cargoSystem.TryGetAccount(stationUid, protoId, out var balance)) return balance;
+        if (_cargoSystem.TryGetAccount(stationUid, protoId, out var balance))
+            return balance;
         return 0;
     }
 
@@ -213,7 +227,7 @@ public sealed partial class BankSystem : EntitySystem
             Source = source,
             Destination = dest,
             Amount = amount,
-            Reason = reason
+            Reason = reason,
         });
         Dirty(stationUid, logComp);
     }
@@ -221,24 +235,24 @@ public sealed partial class BankSystem : EntitySystem
 
 public sealed class BankBalanceChangedEventArgs : EntityEventArgs
 {
-    public EntityUid Station { get; }
-    public string AccountNumber { get; }
-
     public BankBalanceChangedEventArgs(EntityUid station, string accountNumber)
     {
         Station = station;
         AccountNumber = accountNumber;
     }
+
+    public EntityUid Station { get; }
+    public string AccountNumber { get; }
 }
 
 public sealed class BankDepartmentBalanceChangedEventArgs : EntityEventArgs
 {
-    public EntityUid Station { get; }
-    public string DepartmentId { get; }
-
     public BankDepartmentBalanceChangedEventArgs(EntityUid station, string departmentId)
     {
         Station = station;
         DepartmentId = departmentId;
     }
+
+    public EntityUid Station { get; }
+    public string DepartmentId { get; }
 }

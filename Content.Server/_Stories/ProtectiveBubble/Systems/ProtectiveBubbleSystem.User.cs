@@ -1,10 +1,9 @@
 using Content.Server._Stories.ForceUser.ProtectiveBubble.Components;
 using Content.Shared._Stories.ForceUser;
 using Content.Shared._Stories.ForceUser.Actions.Events;
+using Content.Shared.CombatMode;
 using Content.Shared.Damage.Components;
 using Content.Shared.Weapons.Melee.Events;
-
-using Content.Shared.CombatMode;
 
 namespace Content.Server._Stories.ForceUser.ProtectiveBubble.Systems;
 
@@ -60,13 +59,13 @@ public sealed partial class ProtectiveBubbleSystem
             ref component.StopProtectiveBubbleActionEntity,
             out var act,
             component.StopProtectiveBubbleAction);
-        _alerts.ShowAlert(uid, "ProjectiveBubble", 0);
+        _alerts.ShowAlert(uid, "STProjectiveBubble", 0);
     }
 
     private void OnShutdown(EntityUid uid, ProtectiveBubbleUserComponent component, ComponentShutdown args)
     {
         _actions.RemoveAction(component.StopProtectiveBubbleActionEntity);
-        _alerts.ClearAlert(uid, "ProjectiveBubble");
+        _alerts.ClearAlert(uid, "STProjectiveBubble");
     }
 
     private void OnStopProtectiveBubble(EntityUid uid,

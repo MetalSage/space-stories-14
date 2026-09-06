@@ -1,10 +1,8 @@
-# Prison
-
 - type: entity
   parent: AirlockShuttle
   name: shuttle airlock
   description: Required to connect two spaceships together.
-  id: PRISONAirlockShuttleLocked
+  id: STPRISONAirlockShuttleLocked
   suffix: Prison, Docking, Locked
   components:
     - type: Sprite
@@ -17,18 +15,18 @@
         map: ["enum.DoorVisualLayers.Base"]
     - type: ContainerFill
       containers:
-        board: [PRISONDoorElectronics]
+        board: [STPRISONDoorElectronics]
 
 - type: entity
   parent: AirlockGlassShuttle
   name: shuttle airlock
   description: Required to connect two spaceships together.
-  id: PRISONAirlockGlassShuttleLocked
+  id: STPRISONAirlockGlassShuttleLocked
   suffix: Prison, Docking, Glass, Locked
   components:
     - type: ContainerFill
       containers:
-        board: [PRISONDoorElectronics]
+        board: [STPRISONDoorElectronics]
     - type: Sprite
       sprite: _Stories/Structures/Doors/Airlocks/Glass/shuttle_sp.rsi
       layers:

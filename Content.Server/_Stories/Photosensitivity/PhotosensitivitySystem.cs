@@ -9,8 +9,6 @@ using Content.Shared.Mobs.Components;
 using Content.Shared.Movement.Systems;
 using Robust.Server.GameObjects;
 using Robust.Shared.Audio.Systems;
-using Robust.Shared.GameObjects;
-using Robust.Shared.Map;
 using Robust.Shared.Map.Components;
 using Robust.Shared.Utility;
 
@@ -21,6 +19,7 @@ public sealed partial class PhotosensitivitySystem : EntitySystem
     private const float UpdateTimer = 2f;
     public const float MaxIllumination = 10f;
     public const float MinIllumination = 0f;
+    [Dependency] private SharedAudioSystem _audio = default!;
 
     [Dependency] private DamageableSystem _damageable = default!;
     [Dependency] private EntityLookupSystem _entityLookup = default!;
@@ -32,6 +31,8 @@ public sealed partial class PhotosensitivitySystem : EntitySystem
     [Dependency] private MovementSpeedModifierSystem _movement = default!;
 
     private float _timer;
+    [Dependency] private TransformSystem _transform = default!;
+    [Dependency] private TurfSystem _turf = default!;
 
     public override void Initialize()
     {
@@ -73,6 +74,7 @@ public sealed partial class PhotosensitivitySystem : EntitySystem
             if (mobState.CurrentState == MobState.Critical || mobState.CurrentState == MobState.Dead)
                 return comp.CritDamageMultiplier;
         }
+
         return 1f;
     }
 
@@ -117,14 +119,10 @@ public sealed partial class PhotosensitivitySystem : EntitySystem
             if (gridUid != null && TryComp<MapGridComponent>(gridUid, out var grid))
             {
                 if (_turf.IsSpace(_mapSystem.GetTileRef(gridUid.Value, grid, Transform(uid).Coordinates)))
-                {
                     inSpace = true;
-                }
             }
             else
-            {
                 inSpace = true;
-            }
 
             if (inSpace)
             {
@@ -145,9 +143,7 @@ public sealed partial class PhotosensitivitySystem : EntitySystem
                 _audio.PlayPvs(comp.BurnSound, uid);
             }
             else if (illumination < 1f)
-            {
                 _damageable.TryChangeDamage(uid, comp.DarknessHealing, true, false);
-            }
         }
     }
 

@@ -2,9 +2,9 @@
   id: STPartyMaker
   name: stories-job-name-party-maker
   description: stories-job-description-party-maker
-  playTimeTracker: JobSTPartyMaker
+  playTimeTracker: STJobPartyMaker
   startingGear: STPartyMakerGear
-  icon: "JobIconSTPartyMaker"
+  icon: "STJobIconPartyMaker"
   supervisors: job-supervisors-hop
   setPreference: false
   access:

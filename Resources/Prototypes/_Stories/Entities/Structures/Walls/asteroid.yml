@@ -1,6 +1,6 @@
 - type: entity
-  parent: BaseAsteroidRock
-  id: WallRockBasaltIndestructible
+  parent: BaseWall
+  id: STWallRockBasaltIndestructible
   name: basalt
   suffix: Indestructible
   components:

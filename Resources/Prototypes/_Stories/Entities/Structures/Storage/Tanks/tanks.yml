@@ -1,6 +1,5 @@
-# Kvass
 - type: entity
-  id: KvassTank
+  id: STKvassTank
   parent: StorageTank
   suffix: Empty
   components:
@@ -9,12 +8,12 @@
       state: kvass
 
 - type: entity
-  parent: KvassTank
-  id: KvassTankFull
+  parent: STKvassTank
+  id: STKvassTankFull
   suffix: Full
   components:
   - type: Solution
     solution:
       reagents:
-        - ReagentId: Kvass
+        - ReagentId: STKvass
           Quantity: 1500

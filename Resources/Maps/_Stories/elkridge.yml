@@ -84574,7 +84574,7 @@ entities:
     - type: Transform
       parent: 2
       pos: -16.5,-5.5
-- proto: LockerGuardianNtFilled
+- proto: STLockerGuardianNtFilled
   entities:
   - uid: 16865
     components:
@@ -89392,7 +89392,7 @@ entities:
       parent: 2
       rot: 1.5707963267948966 rad
       pos: -37.5,-54.5
-- proto: PrintedDocumentJudgment
+- proto: STPrintedDocumentJudgment
   entities:
   - uid: 8453
     components:
@@ -96959,7 +96959,7 @@ entities:
     - type: Transform
       parent: 2
       pos: 4.5,-26.5
-- proto: SpawnPointGuardianNt
+- proto: STSpawnPointGuardianNt
   entities:
   - uid: 17580
     components:

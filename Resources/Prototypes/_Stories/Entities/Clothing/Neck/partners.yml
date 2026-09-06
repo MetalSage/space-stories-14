@@ -1,6 +1,6 @@
 - type: entity
   parent: ClothingNeckBase
-  id: ClothingNeckElectrospheres
+  id: STClothingNeckElectrospheres
   name: electrospheres
   description: Strange spheres that glow beautifully and fly.
   components:

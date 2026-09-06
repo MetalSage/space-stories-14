@@ -18,7 +18,8 @@
             <Control VerticalExpand="True" />
             <PanelContainer StyleClasses="Inset" Margin="40 0" HorizontalAlignment="Center">
                 <BoxContainer Orientation="Vertical" Margin="20">
-                    <Label Text="{Loc 'stories-atm-ui-welcome'}" Align="Center" StyleClasses="LabelHeading" Margin="0 0 0 10" />
+                    <Label Text="{Loc 'stories-atm-ui-welcome'}" Align="Center" StyleClasses="LabelHeading"
+                           Margin="0 0 0 10" />
                     <BoxContainer Orientation="Horizontal" Margin="0 5" HorizontalAlignment="Center">
                         <Label Text="{Loc 'stories-atm-ui-account-number'}" MinWidth="100" />
                         <Label Text=": " />

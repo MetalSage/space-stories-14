@@ -1,10 +1,10 @@
-ent-ClothingBackpackHandbagAdidos = поясная сумка
+ent-STClothingBackpackHandbagAdidos = поясная сумка
     .desc = Модная сумка.
-ent-ClothingBackpackHandbagBluesky = барсетка
+ent-STClothingBackpackHandbagBluesky = барсетка
     .desc = Модная барсетка.
-ent-ClothingBackpackHandbagEight = поясная сумка
+ent-STClothingBackpackHandbagEight = поясная сумка
     .desc = Модная сумка.
-ent-ClothingBackpackHandbagGachi = поясная сумка
+ent-STClothingBackpackHandbagGachi = поясная сумка
     .desc = Модная сумка.
-ent-ClothingBackpackHandbagRl = барсетка
+ent-STClothingBackpackHandbagRl = барсетка
     .desc = Модная барсетка.

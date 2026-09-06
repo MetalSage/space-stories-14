@@ -2,22 +2,15 @@ using Robust.Shared.Prototypes;
 
 namespace Content.Shared._Stories.ForceUser;
 
-[Prototype] [DataDefinition]
+[Prototype, DataDefinition] 
 public sealed partial class ForcePresetPrototype : IPrototype
 {
-    // Эту нужно чтобы добавить магазин.
-    [DataField("componentsToAdd")]
-    [AlwaysPushInheritance]
+    [DataField("componentsToAdd"), AlwaysPushInheritance]
     public ComponentRegistry ToAdd = new();
 
-    [DataField("componentsToRemove")]
-    [AlwaysPushInheritance]
+    [DataField("componentsToRemove"), AlwaysPushInheritance]
     public ComponentRegistry ToRemove = new();
 
-    /// <summary>
-    /// То имя, которое другие пользователи силы смогут почувствовать.
-    /// Это может быть джедай, инквизитор, древний ситх, адепт темной стороны.
-    /// </summary>
     [DataField("name", required: true)]
     public string Name { get; private set; } = string.Empty;
 
@@ -27,7 +20,7 @@ public sealed partial class ForcePresetPrototype : IPrototype
     [DataField("alert")]
     public string AlertType { get; private set; }
 
-    [ViewVariables] [IdDataField] public string ID { get; private set; } = default!;
+    [ViewVariables, IdDataField]  public string ID { get; private set; } = default!;
 
     #region ForceComponent
 
@@ -40,8 +33,8 @@ public sealed partial class ForcePresetPrototype : IPrototype
 
 public enum ForceSide : byte
 {
-    Dark, // Темная сторона
-    Grey, // Серая сторона
-    Light, // Светлая сторона
-    Debug, // Сторона фикса багов // ! Absolute power!
+    Dark,
+    Grey,
+    Light,
+    Debug,
 }

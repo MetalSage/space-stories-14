@@ -1,4 +1,4 @@
-ent-PRISONComputerShuttle = консоль управления шаттлом тюрьмы
+ent-STPRISONComputerShuttle = консоль управления шаттлом тюрьмы
     .desc = Используется для пилотирования корабля или побега с тюрьмы.
-ent-PRISONComputerId = консоль ID-карт тюрьмы
+ent-STPRISONComputerId = консоль ID-карт тюрьмы
     .desc = Компьютер для программирования ID-карт сотрудников Nanotrasen, для доступа к разным частям тюрьмы.

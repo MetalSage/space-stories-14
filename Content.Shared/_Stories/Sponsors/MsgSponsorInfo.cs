@@ -7,7 +7,7 @@ using Robust.Shared.Utility;
 
 namespace Content.Shared._Stories.Sponsors;
 
-[Serializable, NetSerializable]
+[Serializable, NetSerializable] 
 public sealed class SponsorInfo
 {
     public static readonly TimeSpan TimeAdvantage = TimeSpan.FromMinutes(3);
@@ -24,7 +24,7 @@ public sealed class SponsorInfo
     [JsonPropertyName("priorityJoin")]
     public bool HavePriorityJoin { get; set; } = false;
 
-    [JsonPropertyName("allowedMarkings")] // TODO: Rename API field in separate PR as breaking change!
+    [JsonPropertyName("allowedMarkings")]
     public string[] AllowedMarkings { get; set; } = Array.Empty<string>();
 
     [JsonPropertyName("allowedLoadouts")]
@@ -46,9 +46,6 @@ public sealed class SponsorInfo
     public float GhostRolePriority { get; set; } = 1.0f;
 }
 
-/// <summary>
-/// Server sends sponsoring info to client on connect only if user is sponsor
-/// </summary>
 public sealed class MsgSponsorInfo : NetMessage
 {
     public SponsorInfo? Info;

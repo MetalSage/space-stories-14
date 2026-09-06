@@ -7,13 +7,13 @@ public sealed partial class ForceComponent : Component
 {
     #region Volume
 
-    [ViewVariables(VVAccess.ReadWrite)] [DataField("volume")]
+    [ViewVariables(VVAccess.ReadWrite), DataField("volume")] 
     public FixedPoint2 Volume { get; set; }
 
-    [ViewVariables(VVAccess.ReadWrite)] [DataField("passiveVolume")]
+    [ViewVariables(VVAccess.ReadWrite), DataField("passiveVolume")] 
     public FixedPoint2 PassiveVolume { get; set; }
 
-    [ViewVariables(VVAccess.ReadWrite)] [DataField("maxVolume")]
+    [ViewVariables(VVAccess.ReadWrite), DataField("maxVolume")] 
     public FixedPoint2 MaxVolume { get; set; }
 
     #endregion

@@ -1,4 +1,4 @@
-ent-PrintedPaper = распечатаная бумага
+ent-STPrintedPaper = распечатаная бумага
     .desc = Кусок распечатанной бумаги.
-ent-PrintedSyndiePaper = злая печатная бумага
+ent-STPrintedSyndiePaper = злая печатная бумага
     .desc = Кусок злой распечатанной бумаги.

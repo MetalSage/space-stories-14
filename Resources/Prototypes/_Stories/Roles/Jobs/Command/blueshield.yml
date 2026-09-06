@@ -1,0 +1,56 @@
+- type: job
+  id: STBlueshield
+  name: stories-job-name-blueshield
+  description: stories-job-description-blueshield
+  playTimeTracker: STJobBlueshield
+  requirements:
+    - !type:DepartmentTimeRequirement
+      department: Command
+      time: 10h
+    - !type:DepartmentTimeRequirement
+      department: Security
+      time: 5h
+  startingGear: STBlueshieldGear
+  icon: "STJobIconBlueshield"
+  supervisors: job-supervisors-centcom
+  access:
+  - Command
+  - Security
+  - Brig
+  - Maintenance
+  - Service
+  - Medical
+  - Engineering
+  - Research
+  - Cargo
+  - External
+  special:
+  - !type:AddImplantSpecial
+    implants: [ MindShieldImplant ]
+  minBankBalance: 250
+  maxBankBalance: 300
+
+- type: startingGear
+  id: STBlueshieldGear
+  equipment:
+    eyes: ClothingEyesGlassesSecurity
+    ears: STClothingHeadsetBlueshieldAlt
+    gloves: ClothingHandsGlovesCombat
+    shoes: ClothingShoesBootsJack
+    id: STBlueshieldPDA
+    belt: STClothingBeltAssaultBlueshield
+    pocket1: STHandheldCrewMonitorCommand
+    pocket2: STChoiceBeaconBlueshield
+
+- type: chameleonOutfit
+  id: STBlueshieldChameleonOutfit
+  job: STBlueshield
+  hasMindShield: true
+  equipment:
+    head: STClothingHeadHatBeretBlueshield
+    neck: STClothingNeckMantleBlueshield
+    outerClothing: STClothingOuterVestBlueshieldJacket
+    jumpsuit: STClothingUniformJumpsuitBlueshield
+    back: STClothingBackpackBlueshield
+    shoes: ClothingShoesBootsJack
+    eyes: ClothingEyesGlassesSecurity

@@ -1,5 +1,6 @@
 using Content.Shared._Stories.Conversion;
 using Content.Shared._Stories.Shadowling;
+using Content.Shared.Ghost;
 using Content.Shared.StatusIcon;
 using Content.Shared.StatusIcon.Components;
 using Content.Shared.Ghost.Components;
@@ -10,8 +11,8 @@ namespace Content.Client._Stories.Conversion;
 
 public sealed partial class ConversionSystem : SharedConversionSystem
 {
-    [Dependency] private IPrototypeManager _prototype = default!;
     [Dependency] private IPlayerManager _player = default!;
+    [Dependency] private IPrototypeManager _prototype = default!;
 
     public override void Initialize()
     {
@@ -32,7 +33,8 @@ public sealed partial class ConversionSystem : SharedConversionSystem
 
             if (key == "STShadowlingThrall")
             {
-                if (!HasComp<GhostComponent>(local) && !HasComp<ShadowlingComponent>(local) && !HasComp<ShadowlingThrallComponent>(local))
+                if (!HasComp<GhostComponent>(local) && !HasComp<ShadowlingComponent>(local) &&
+                    !HasComp<ShadowlingThrallComponent>(local))
                     continue;
             }
 

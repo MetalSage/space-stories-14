@@ -1,18 +1,18 @@
 - type: entity
-  id: CrateNPCSpaceKoi
+  id: STCrateNPCSpaceKoi
   parent: CrateLivestock
   name: space koi crate
   description: A crate containing five space koi.
   components:
   - type: StorageFill
     contents:
-      - id: MobRedBlackKoi
+      - id: STMobRedBlackKoi
         amount: 1
-      - id: MobGoldBlackKoi
+      - id: STMobGoldBlackKoi
         amount: 1
-      - id: MobRedCircleKoi
+      - id: STMobRedCircleKoi
         amount: 1
-      - id: MobBloodSkeletonKoi
+      - id: STMobBloodSkeletonKoi
         amount: 1
-      - id: MobSpaceGlowKoi
+      - id: STMobSpaceGlowKoi
         amount: 1

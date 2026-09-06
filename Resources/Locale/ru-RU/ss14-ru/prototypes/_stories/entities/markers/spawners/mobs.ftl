@@ -1,2 +1,2 @@
-ent-SpawnSpaceKoi = спавнер космических кои
+ent-STSpawnSpaceKoi = спавнер космических кои
     .desc = { ent-MarkerBase.desc }

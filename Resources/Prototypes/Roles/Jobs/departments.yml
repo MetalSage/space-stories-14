@@ -60,7 +60,8 @@
   color: "#334E6D"
   roles:
   - Captain
-  - GuardianNt # Stories-Guardian
+  - STGuardianNt # Stories-Guardian
+  - STBlueshield # Stories-Blueshield
   - ChiefEngineer
   - ChiefMedicalOfficer
   - HeadOfPersonnel

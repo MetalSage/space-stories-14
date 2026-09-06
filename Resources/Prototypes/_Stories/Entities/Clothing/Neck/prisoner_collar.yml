@@ -1,0 +1,31 @@
+- type: entity
+  parent: Clothing
+  id: STClothingNeckPrisonerCollar
+  name: prisoner collar
+  description: A heavy metal collar equipped with a micro-charge and tracking system for prisoners.
+  components:
+  - type: Item
+    size: Small
+  - type: Sprite
+    sprite: Clothing/Neck/Scarfs/black.rsi
+    state: icon
+  - type: Clothing
+    sprite: Clothing/Neck/Scarfs/black.rsi
+    slots:
+    - neck
+  - type: Eye
+  - type: PrisonerCollar
+    failChance: 0.25
+  - type: AccessReader
+    access: [["STHeadOfPrison"]]
+  - type: SurveillanceCamera
+    id: STPrisonerCollar
+    networkSet: true
+    nameSet: true
+  - type: WirelessNetworkConnection
+  - type: Explosive
+    explosionType: Default
+    totalIntensity: 30
+    intensitySlope: 5
+    maxIntensity: 10
+    canCreateVacuum: false

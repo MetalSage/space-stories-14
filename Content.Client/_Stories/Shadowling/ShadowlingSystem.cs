@@ -3,6 +3,7 @@ using Content.Shared.Humanoid;
 using Content.Shared.StatusIcon;
 using Content.Shared.StatusIcon.Components;
 using Content.Shared.Ghost.Components;
+using Content.Shared.Ghost;
 using Robust.Client.GameObjects;
 using Robust.Client.Player;
 using Robust.Shared.Prototypes;
@@ -11,10 +12,10 @@ namespace Content.Client._Stories.Shadowling;
 
 public sealed partial class ShadowlingSystem : EntitySystem
 {
+    [Dependency] private SharedAppearanceSystem _appearance = default!;
+    [Dependency] private IPlayerManager _player = default!;
     [Dependency] private IPrototypeManager _prototype = default!;
     [Dependency] private SpriteSystem _spriteSystem = default!;
-    [Dependency] private IPlayerManager _player = default!;
-    [Dependency] private SharedAppearanceSystem _appearance = default!;
 
     public override void Initialize()
     {
@@ -39,13 +40,9 @@ public sealed partial class ShadowlingSystem : EntitySystem
             return;
 
         if (isThrall)
-        {
             args.Sprite.LayerSetShader(eyeLayer, "unshaded");
-        }
         else
-        {
             args.Sprite.LayerSetShader(eyeLayer, "shaded");
-        }
     }
 
     private void OnGetStatusIconsEvent(EntityUid uid, ShadowlingComponent component, ref GetStatusIconsEvent args)
@@ -54,10 +51,11 @@ public sealed partial class ShadowlingSystem : EntitySystem
         if (local == null)
             return;
 
-        if (!HasComp<GhostComponent>(local.Value) && !HasComp<ShadowlingComponent>(local.Value) && !HasComp<ShadowlingThrallComponent>(local.Value))
+        if (!HasComp<GhostComponent>(local.Value) && !HasComp<ShadowlingComponent>(local.Value) &&
+            !HasComp<ShadowlingThrallComponent>(local.Value))
             return;
 
-        args.StatusIcons.Add(_prototype.Index<FactionIconPrototype>(component.StatusIcon));
+        args.StatusIcons.Add(_prototype.Index(component.StatusIcon));
     }
 
     private void OnShadowWalkStartup(EntityUid uid, ShadowWalkingComponent component, ref ComponentStartup args)
@@ -66,7 +64,7 @@ public sealed partial class ShadowlingSystem : EntitySystem
         {
             sprite.Color = sprite.Color.WithAlpha(0.3f);
             component.OriginalDrawDepth = sprite.DrawDepth;
-            sprite.DrawDepth = (int)Content.Shared.DrawDepth.DrawDepth.Ghosts;
+            sprite.DrawDepth = (int)Shared.DrawDepth.DrawDepth.Ghosts;
         }
     }
 

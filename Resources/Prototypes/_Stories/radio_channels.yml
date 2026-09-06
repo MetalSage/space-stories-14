@@ -6,9 +6,9 @@
   color: "#e99844"
 
 - type: radioChannel
-  id: Empire
+  id: STEmpire
   name: chat-radio-empire
-  keycode: "г" # Stories-Localization
+  keycode: "г"
   frequency: 1984
   color: "#1b67a5"
   longRange: true
@@ -22,7 +22,7 @@
   longRange: true
 
 - type: radioChannel
-  id: SpafMind
+  id: STSpafMind
   name: chat-radio-spaf-mind
   keycode: "щ"
   frequency: 9361
@@ -45,7 +45,7 @@
   color: "#008080"
 
 - type: radioChannel
-  id: Chitine
+  id: STChitine
   name: chat-radio-chitine
   frequency: 98766
   keycode: "х"

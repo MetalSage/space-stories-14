@@ -1,0 +1,37 @@
+{
+  "version": 1,
+  "license": "CC-BY-SA-3.0",
+  "copyright": "Taken from Monkestation at https://github.com/Monkestation/Monkestation2.0/blob/bdf60a966c1f57b8a0d9dc640c3e5dda340c7054/monkestation/code/modules/cybernetics/icons/items_and_weapons.dmi",
+  "size": {
+    "x": 32,
+    "y": 32
+  },
+  "states": [
+    {
+      "name": "action_left"
+    },
+    {
+      "name": "action_right"
+    },
+    {
+      "name": "action"
+    },
+    {
+      "name": "shield_blade_left"
+    },
+    {
+      "name": "shield_blade_right"
+    },
+    {
+      "name": "icon"
+    },
+    {
+      "name": "inhand-left",
+      "directions": 4
+    },
+    {
+      "name": "inhand-right",
+      "directions": 4
+    }
+  ]
+}

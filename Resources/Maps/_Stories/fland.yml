@@ -164080,7 +164080,7 @@ entities:
     - type: Transform
       parent: 2
       pos: 87.5,46.5
-- proto: LockerGuardianNtFilled
+- proto: STLockerGuardianNtFilled
   entities:
   - uid: 36087
     components:
@@ -173017,7 +173017,7 @@ entities:
     - type: Transform
       parent: 2
       pos: 29.5,-4.5
-- proto: PrintedDocumentJudgment
+- proto: STPrintedDocumentJudgment
   entities:
   - uid: 6172
     components:
@@ -173031,7 +173031,7 @@ entities:
       parent: 2
       rot: 3.141592653589793 rad
       pos: 70.174484,34.57757
-- proto: PrinterDoc
+- proto: STPrinterDoc
   entities:
   - uid: 2378
     components:
@@ -187959,7 +187959,7 @@ entities:
     - type: Transform
       parent: 2
       pos: -22.5,41.5
-- proto: SpawnPointGuardianNt
+- proto: STSpawnPointGuardianNt
   entities:
   - uid: 36093
     components:
@@ -188438,7 +188438,7 @@ entities:
     - type: Transform
       parent: 2
       pos: 31.5,13.5
-- proto: SpawnSpaceKoi
+- proto: STSpawnSpaceKoi
   entities:
   - uid: 6142
     components:

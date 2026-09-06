@@ -1,8 +1,8 @@
-ent-ClothingEyesThermalVisionBase = { ent-ClothingEyesBase }
+ent-STClothingEyesThermalVisionBase = { ent-ClothingEyesBase }
     .desc = { ent-ClothingEyesBase.desc }
-ent-ClothingEyesThermalVisionMonocular = монокль термального зрения
+ent-STClothingEyesThermalVisionMonocular = монокль термального зрения
     .desc = Новейшая разведочная технология, которую поместили внутрь монокля. Позволяет видеть органические цели в полной темноте и даже через стены.
-ent-ClothingEyesThermalVisionHud = термальный визор оперативника
+ent-STClothingEyesThermalVisionHud = термальный визор оперативника
     .desc = Новейшая разведочная технология, которую поместили внутрь визора. Позволяет видеть органические цели в полной темноте и даже через стены. Этот вариант специально для Ядерных Оперативников имеет встроенный визор Синдиката.
-ent-ClothingEyesNightvision = прибор ночного видения
+ent-STClothingEyesNightvision = прибор ночного видения
     .desc = Позволяет видеть в полной темноте. Работает на ядерной батарее внутри и совсем не вреден для глаз.

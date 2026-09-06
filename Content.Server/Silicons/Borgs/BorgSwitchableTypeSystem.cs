@@ -1,4 +1,6 @@
-﻿using Content.Server.Inventory;
+using Content.Server.Inventory;
+using Content.Shared.Access.Components;
+using Content.Shared.Access.Systems;
 using Content.Shared.Inventory;
 using Content.Shared.Radio.Components;
 using Content.Shared.Silicons.Borgs;
@@ -15,6 +17,10 @@ public sealed partial class BorgSwitchableTypeSystem : SharedBorgSwitchableTypeS
 {
     [Dependency] private BorgSystem _borgSystem = default!;
     [Dependency] private ServerInventorySystem _inventorySystem = default!;
+    // Stories-Borg-Start
+    [Dependency] private SharedAccessSystem _accessSystem = default!;
+    [Dependency] private AccessReaderSystem _accessReader = default!;
+    // Stories-Borg-End
 
     protected override void SelectBorgModule(Entity<BorgSwitchableTypeComponent> ent, ProtoId<BorgTypePrototype> borgType)
     {
@@ -70,6 +76,13 @@ public sealed partial class BorgSwitchableTypeSystem : SharedBorgSwitchableTypeS
         {
             EntityManager.AddComponents(ent, addComponents);
         }
+
+        // Stories-Borg-Start
+        if (TryComp(ent, out AccessReaderComponent? accessReaderComp) && prototype.AccessReaderAccess != null)
+        {
+            _accessReader.TrySetAccesses((ent.Owner, accessReaderComp), prototype.AccessReaderAccess);
+        }
+        // Stories-Borg-End
 
         // Configure inventory template (used for hat spacing)
         if (TryComp(ent, out InventoryComponent? inventory))

@@ -8,7 +8,7 @@ namespace Content.Server._Stories.ForceUser.ProtectiveBubble.Systems;
 
 public sealed partial class ProtectiveBubbleSystem
 {
-    public const float MaxBubbleDamage = 100f; // TODO: Добавить возможность менять
+    public const float MaxBubbleDamage = 100f;
 
     public void InitializeBubble()
     {
@@ -44,7 +44,7 @@ public sealed partial class ProtectiveBubbleSystem
         var severity = ContentHelpers.RoundToLevels(MathF.Max(0f, totalDamage),
             MaxBubbleDamage,
             20);
-        _alerts.ShowAlert(component.User.Value, "ProjectiveBubble", (short)severity);
+        _alerts.ShowAlert(component.User.Value, "STProjectiveBubble", (short)severity);
     }
 
     public void StartBubbleWithUser(string proto, EntityUid user)

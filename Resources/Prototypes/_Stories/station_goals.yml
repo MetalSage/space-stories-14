@@ -1,69 +1,69 @@
 - type: stationGoal
-  id: StationGoalFree
+  id: STStationGoalFree
   text: station-goal-free
-  onlineLess: 0 #Сложность 0
+  onlineLess: 0
 
 - type: stationGoal
-  id: StationGoalShuttle
+  id: STStationGoalShuttle
   text: station-goal-shuttle
-  onlineLess: 40 #Сложность 3
+  onlineLess: 40
 
 - type: stationGoal
-  id: StationGoalSingularity
+  id: STStationGoalSingularity
   text: station-goal-singularity
-  onlineLess: 30 #Сложность 2
+  onlineLess: 30
 
 - type: stationGoal
-  id: StationGoalSolarPanels
+  id: STStationGoalSolarPanels
   text: station-goal-solar-panels
-  onlineLess: 20 #Сложность 1
+  onlineLess: 20
 
 - type: stationGoal
-  id: StationGoalArtifacts
+  id: STStationGoalArtifacts
   text: station-goal-artifacts
-  onlineLess: 20 #Сложность 1
+  onlineLess: 20
 
 - type: stationGoal
-  id: StationGoalBank
+  id: STStationGoalBank
   text: station-goal-bank
-  onlineLess: 40 #Сложность 3
+  onlineLess: 40
 
 - type: stationGoal
-  id: StationGoalZoo
+  id: STStationGoalZoo
   text: station-goal-zoo
-  onlineLess: 20 #Сложность 1
+  onlineLess: 20
 
 - type: stationGoal
-  id: StationGoalBorgbuild
+  id: STStationGoalBorgbuild
   text: station-goal-borgbuild
-  onlineLess: 20 #Сложность 1
+  onlineLess: 20
 
 - type: stationGoal
-  id: StationGoalColonization
+  id: STStationGoalColonization
   text: station-goal-colonization
-  onlineLess: 40 #Сложность 3
+  onlineLess: 40
 
 - type: stationGoal
-  id: StationGoalTesla
+  id: STStationGoalTesla
   text: station-goal-tesla
-  onlineLess: 30 #Сложность 2
+  onlineLess: 30
 
 - type: stationGoal
-  id: StationGoalBotany
+  id: STStationGoalBotany
   text: station-goal-botany
-  onlineLess: 30 #Сложность 2
+  onlineLess: 30
 
 - type: stationGoal
-  id: StationGoalArtifactsBank
+  id: STStationGoalArtifactsBank
   text: station-goal-artifacts-bank
-  onlineLess: 40 #Сложность 3
+  onlineLess: 40
 
 - type: stationGoal
-  id: StationGoalShootingGallery
+  id: STStationGoalShootingGallery
   text: station-goal-shooting-gallery
-  onlineLess: 40 #Сложность 3
-  
+  onlineLess: 40
+
 - type: stationGoal
-  id: StationGoalSatellite
+  id: STStationGoalSatellite
   text: station-goal-satellite
-  onlineLess: 10 #Сложность 1
+  onlineLess: 10

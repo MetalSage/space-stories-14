@@ -22,9 +22,9 @@ public sealed partial class ProtectiveBubbleUserComponent : Component
     };
 
     [DataField]
-    public EntProtoId StopProtectiveBubbleAction = "ActionStopProtectiveBubble";
+    public EntProtoId StopProtectiveBubbleAction = "STActionStopProtectiveBubble";
 
-    [DataField] [AutoNetworkedField]
+    [DataField, AutoNetworkedField] 
     public EntityUid? StopProtectiveBubbleActionEntity;
 
     [DataField]

@@ -1,6 +1,6 @@
 - type: entity
   parent: ClothingUniformBase
-  id: PRISONClothingUniformJumpsuit
+  id: STPRISONClothingUniformJumpsuit
   name: prison staff jumpsuit
   description: A jumpsuit made of durable material that provides reliable protection.
   components:
@@ -11,7 +11,7 @@
 
 - type: entity
   parent: ClothingUniformBase
-  id: PRISONClothingUniformJumpsuitEngi
+  id: STPRISONClothingUniformJumpsuitEngi
   name: prison engineer jumpsuit
   description: A jumpsuit made of durable material that provides reliable protection.
   components:
@@ -22,7 +22,7 @@
 
 - type: entity
   parent: ClothingUniformBase
-  id: PRISONClothingUniformJumpsuitMedic
+  id: STPRISONClothingUniformJumpsuitMedic
   name: prison doctor jumpsuit
   description: A jumpsuit made of durable material that provides reliable protection.
   components:
@@ -33,7 +33,7 @@
 
 - type: entity
   parent: ClothingUniformBase
-  id: PRISONClothingUniformJumpsuitHeadOfPrison
+  id: STPRISONClothingUniformJumpsuitHeadOfPrison
   name: warden jumpsuit
   description: A jumpsuit made of durable material that provides reliable protection.
   components:

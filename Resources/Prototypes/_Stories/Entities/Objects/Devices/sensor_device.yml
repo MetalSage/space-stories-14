@@ -1,0 +1,11 @@
+- type: entity
+  parent: HandheldCrewMonitor
+  id: STHandheldCrewMonitorCommand
+  name: specialized handheld crew monitor
+  description: A specialized model of handheld crew monitor that seems to have been customized for the purpose of protecting high rank Nanotrasen employees.
+  components:
+  - type: Sprite
+    sprite: _Stories/Objects/Devices/scanner_command.rsi
+    state: icon
+  - type: Item
+    sprite: _Stories/Objects/Devices/scanner_command.rsi

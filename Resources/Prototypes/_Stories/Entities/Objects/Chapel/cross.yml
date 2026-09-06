@@ -8,7 +8,7 @@
     - STChaplain
   - type: Reactive
     groups:
-      Extinguish: [ Touch ] # Need for bless reaction
+      Extinguish: [ Touch ]
   - type: Damageable
   - type: Injurable
   - type: Blessable
@@ -87,4 +87,4 @@
     sprite: _Stories/Objects/Chapel/silvercross.rsi
     state: icon
   - type: Blessable
-    timeModifier: 12 # Extinguish and Acidic reaction groups dublicate bless reaction, here timeModifier quadrupled to double the effect
+    timeModifier: 12

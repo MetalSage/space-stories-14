@@ -1,2 +1,2 @@
-ent-ClothingBackpackDuffelCrateTacticalMaid = чёрно-красный вещмешок
+ent-STClothingBackpackDuffelCrateTacticalMaid = чёрно-красный вещмешок
     .desc = Вместительный и удобный вещмешок цвета эбонита и крови, в который влезут «игрушки» для любых возрастов.

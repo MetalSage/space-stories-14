@@ -17,14 +17,14 @@
     - type: FaxMachine
       name: "Captain's Office"
       receiveNukeCodes: true
-      receiveStationGoal: true # Corvax-StationGoal
+      receiveStationGoal: true
     - type: StealTarget
       stealGroup: FaxMachineCaptain
 
 - type: entity
   parent: FaxMachineBase
   id: STFaxMachineCargo
-  name: long range fax machine 
+  name: long range fax machine
   description: Bluespace technology at the service of bureaucracy.
   suffix: Cargo
   components:
@@ -43,7 +43,7 @@
 - type: entity
   parent: FaxMachineBase
   id: STFaxMachineEngeneering
-  name: long range fax machine 
+  name: long range fax machine
   description: Bluespace technology at the service of bureaucracy.
   suffix: Engineering
   components:
@@ -62,7 +62,7 @@
 - type: entity
   parent: FaxMachineBase
   id: STFaxMachineScientist
-  name: long range fax machine 
+  name: long range fax machine
   description: Bluespace technology at the service of bureaucracy.
   suffix: Science
   components:
@@ -81,7 +81,7 @@
 - type: entity
   parent: FaxMachineBase
   id: STFaxMachineSecurity
-  name: long range fax machine 
+  name: long range fax machine
   description: Bluespace technology at the service of bureaucracy.
   suffix: Security
   components:
@@ -100,7 +100,7 @@
 - type: entity
   parent: FaxMachineBase
   id: STFaxMachineMedical
-  name: long range fax machine 
+  name: long range fax machine
   description: Bluespace technology at the service of bureaucracy.
   suffix: Medical
   components:
@@ -119,7 +119,7 @@
 - type: entity
   parent: FaxMachineBase
   id: STFaxMachineHop
-  name: long range fax machine 
+  name: long range fax machine
   description: Bluespace technology at the service of bureaucracy.
   suffix: Head of Personnel
   components:
@@ -154,4 +154,4 @@
     - type: FaxMachine
       name: "Central Command"
       notifyAdmins: true
-      receiveStationGoal: true # Corvax-StationGoal
+      receiveStationGoal: true

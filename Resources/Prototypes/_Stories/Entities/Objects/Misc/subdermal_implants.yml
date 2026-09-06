@@ -1,5 +1,3 @@
-#Traitor/Nuclear Operative implant
-
 - type: entity
   parent: BaseSubdermalImplant
   id: STAfterburnerImplant
@@ -18,8 +16,6 @@
         Quantity: 20
     solution: bloodstream
     targetUser: true
-
-#ERT implant
 
 - type: entity
   parent: BaseSubdermalImplant
@@ -41,3 +37,23 @@
         Quantity: 15
     solution: bloodstream
     targetUser: true
+
+- type: entity
+  parent: BaseSubdermalImplant
+  id: STShieldBladeImplantLeft
+  name: shield blade implant
+  description: A high-tech cybernetic implant that installs a retractable defense shield blade into your left arm.
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: SubdermalImplant
+    implantAction: STActionToggleShieldBladeLeft
+
+- type: entity
+  parent: BaseSubdermalImplant
+  id: STShieldBladeImplantRight
+  name: shield blade implant
+  description: A high-tech cybernetic implant that installs a retractable defense shield blade into your right arm.
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: SubdermalImplant
+    implantAction: STActionToggleShieldBladeRight

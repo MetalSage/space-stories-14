@@ -1,24 +1,24 @@
-ent-ActionForceShop = [color=purple]Магазин навыков[/color]
+ent-STActionForceShop = [color=purple]Магазин навыков[/color]
     .desc = Вспомните, что должны были.
-ent-ActionStopProtectiveBubble = Отключить защитный пузырь
+ent-STActionStopProtectiveBubble = Отключить защитный пузырь
     .desc = Отключит защитный пузырь вокруг вас.
-ent-ActionRecallEquipments = Призвать экипировку
+ent-STActionRecallEquipments = Призвать экипировку
     .desc = Призовите вашу экипировку к себе.
-ent-ActionForceLookUp = Прислушаться к силе
+ent-STActionForceLookUp = Прислушаться к силе
     .desc = Прислушайтесь к силе и узнайте есть ли другие пользователи силы в радиусе 25 метров.
-ent-ActionRecallLightsaber = Призвать световой меч
+ent-STActionRecallLightsaber = Призвать световой меч
     .desc = Телепортируйте свой световой меч к себе. Чем дальше меч, тем больше времени понадобится, чтобы притянуть меч во второй раз.
-ent-ActionTelekinesis = Телекинез
+ent-STActionTelekinesis = Телекинез
     .desc = Ваша рука сможет манипулировать гравитацией вокруг объектов. Левитируйте своим мечом, чтобы вести бой на расстоянии.
-ent-ActionFlashArea = Ослепление Силы
+ent-STActionFlashArea = Ослепление Силы
     .desc = Cоздайте при помощи телекинеза вспышки энергии, вызывая временную слепоту.
-ent-ActionArtOfMovement = Искусство движения
+ent-STActionArtOfMovement = Искусство движения
     .desc = Ускоряет вас, блокирует вашу боль на короткое время.
-ent-ActionEmp = Ионизация
+ent-STActionEmp = Ионизация
     .desc = Создайте ЭМ импульс в небольшом радиусе.
-ent-ActionFreedom = Снятие оков
+ent-STActionFreedom = Снятие оков
     .desc = Снимите наручники с помощью телекинеза.
-ent-ActionForceDash = Силовой рывок
+ent-STActionForceDash = Силовой рывок
     .desc = Вскочите с огромной скоростью в нужную точку. Только не стену, пожалуйста.
-ent-ActionForceKnock = Стук
+ent-STActionForceKnock = Стук
     .desc = Особая техника позволяющая открыть все ближайшие двери. По слухам, именно космическая федерация магов подала первый патент на это заклинание.

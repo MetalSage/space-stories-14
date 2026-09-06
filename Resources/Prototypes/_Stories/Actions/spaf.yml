@@ -1,6 +1,6 @@
 - type: entity
   parent: BaseAction
-  id: ActionSpafStealth
+  id: STActionSpafStealth
   name: "[color=limegreen]Invisibility mode[/color]"
   description: Spend 30 units of food to disguise yourself for 5 seconds.
   components:
@@ -17,7 +17,7 @@
       seconds: 5
 - type: entity
   parent: BaseToggleAction
-  id: ActionSpafLight
+  id: STActionSpafLight
   name: "[color=orange]Glowing essence[/color]"
   description: Produce a glowing essence to light your path.
   components:
@@ -32,7 +32,7 @@
     event: !type:ToggleActionEvent
 - type: entity
   parent: BaseAction
-  id: ActionSpafLube
+  id: STActionSpafLube
   name: "[color=purple]Slime[/color]"
   description: Spend 30 units of food to secrete very slippery slime.
   components:
@@ -53,7 +53,7 @@
             Quantity: 12
 - type: entity
   parent: BaseAction
-  id: ActionSpafMine
+  id: STActionSpafMine
   name: "[color=rosybrown]Organic trap[/color]"
   description: Spend 40 units of food to create an organic trap that temporarily stuns enemies.
   components:
@@ -67,10 +67,10 @@
   - type: InstantAction
     event: !type:SpafCreateEntityEvent
       cost: 40
-      proto: LandMineSpaf
+      proto: STLandMineSpaf
 - type: entity
   parent: BaseAction
-  id: ActionSpafFood
+  id: STActionSpafFood
   name: "[color=lightseagreen]Mysterious knowledge[/color]"
   description: A method unknown to science that allows you to determine how full your stomach is to the nearest hundredth.
   components:
@@ -85,7 +85,7 @@
     event: !type:FoodPopupEvent
 - type: entity
   parent: BaseAction
-  id: ActionSpafGlue
+  id: STActionSpafGlue
   name: "[color=darkslateblue]Sticky slime[/color]"
   description: Spend 10 units of food to secrete sticky slime.
   components:
@@ -106,7 +106,7 @@
             Quantity: 12
 - type: entity
   parent: BaseAction
-  id: ActionSpafEgg
+  id: STActionSpafEgg
   name: "[color=orange]New life[/color]"
   description: Spend 150 units of food to create an egg with a small copy of yourself.
   components:
@@ -120,10 +120,10 @@
   - type: InstantAction
     event: !type:SpafCreateEntityEvent
       cost: 150
-      proto: MobSpafEgg
+      proto: STMobSpafEgg
 - type: entity
   parent: BaseAction
-  id: ActionSpafEvol
+  id: STActionSpafEvol
   name: "[color=blue]Evolution[/color]"
   description: Spend 100 units of food to evolve into an adult.
   components:
@@ -137,10 +137,10 @@
   - type: InstantAction
     event: !type:SpafPolymorphEvent
       cost: 100
-      protoId: MobSpaf
+      protoId: STMobSpaf
 - type: entity
   parent: BaseToggleAction
-  id: ActionSpafDevour
+  id: STActionSpafDevour
   name: "[color=lime]Absorption[/color]"
   description: Devour your victim to satisfy your hunger.
   components:

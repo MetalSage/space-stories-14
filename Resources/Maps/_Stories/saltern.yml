@@ -7246,7 +7246,7 @@ entities:
     - type: Transform
       parent: 31
       pos: 28.560026,15.665409
-- proto: BoxPrinter
+- proto: STBoxPrinter
   entities:
   - uid: 419
     components:
@@ -50357,7 +50357,7 @@ entities:
     - type: Transform
       parent: 31
       pos: -0.5,18.5
-- proto: LockerGuardianNtFilled
+- proto: STLockerGuardianNtFilled
   entities:
   - uid: 8994
     components:
@@ -51187,7 +51187,7 @@ entities:
       parent: 31
       rot: -1.5707963267948966 rad
       pos: -3.5109282,7.8580284
-- proto: MusicalVendingMachine
+- proto: STMusicalVendingMachine
   entities:
   - uid: 11515
     components:
@@ -54412,7 +54412,7 @@ entities:
     - type: Transform
       parent: 31
       pos: -22.5,17.5
-- proto: PrintedDocumentJudgment
+- proto: STPrintedDocumentJudgment
   entities:
   - uid: 6839
     components:
@@ -59637,7 +59637,7 @@ entities:
     - type: Transform
       parent: 31
       pos: -15.5,-38.5
-- proto: SpawnPointGuardianNt
+- proto: STSpawnPointGuardianNt
   entities:
   - uid: 8890
     components:
@@ -59914,7 +59914,7 @@ entities:
     - type: Transform
       parent: 31
       pos: -0.5,7.5
-- proto: SpawnSpaceKoi
+- proto: STSpawnSpaceKoi
   entities:
   - uid: 8776
     components:

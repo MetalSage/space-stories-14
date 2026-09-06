@@ -108,9 +108,6 @@ public abstract partial class SharedSpafSystem : EntitySystem
         if (args.Handled || !TryModifyHunger(args.Performer, args.HungerCost))
             return;
 
-        // DoAfter с Hidden = true используется, чтобы спаф мог видеть сколько секунд
-        // у него осталось. Достаточно удобно, не требует писать много кода для этого.
-
         _stealth.SetEnabled(uid, true);
 
         args.Handled = _doAfter.TryStartDoAfter(new DoAfterArgs(EntityManager,

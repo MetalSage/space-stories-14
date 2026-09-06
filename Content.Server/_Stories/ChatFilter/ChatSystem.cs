@@ -8,7 +8,6 @@ public sealed partial class ChatSystem
 {
     private static readonly Dictionary<string, string> SlangReplace = new()
     {
-        // Game
         { "кк", "красный код" },
         { "ск", "синий код" },
         { "зк", "зелёный код" },
@@ -77,7 +76,6 @@ public sealed partial class ChatSystem
         { "шатлами", "шаттлами" },
         { "шатлы", "шаттлы" },
         { "шатлов", "шаттлов" },
-        // IC
         { "кст", "кстати" },
         { "плз", "пожалуйста" },
         { "пж", "пожалуйста" },
@@ -106,7 +104,6 @@ public sealed partial class ChatSystem
         { "хелпани", "помоги" },
         { "хелпанул", "помог" },
         { "крч", "короче говоря" },
-        // OOC
         { "афк", "ссд" },
         { "набегатор", "грейтардер" },
         { "админ", "бог" },
@@ -128,7 +125,6 @@ public sealed partial class ChatSystem
         { "фрикилл", "плохо" },
         { "лкм", "левая рука" },
         { "пкм", "правая рука" },
-        // BanWords
         { "слава Украине", "кхе-кхе" }, { "славаУкраине", "кхе-кхе" }, { "слава России", "кхе-кхе" },
         { "славаРоссии", "кхе-кхе" },
     };
@@ -172,7 +168,6 @@ public sealed partial class ChatSystem
         if (string.IsNullOrEmpty(message))
             return message;
 
-        // Очистка от лишних знаков
         message = ((Func<string>)(() =>
         {
             var result = new StringBuilder();
@@ -187,7 +182,6 @@ public sealed partial class ChatSystem
         if (message == "")
             return message;
 
-        // Поиск и замена сленга
         foreach (var pair in CompiledSlangReplace)
         {
             message = pair.Regex.Replace(message, pair.Replacement);

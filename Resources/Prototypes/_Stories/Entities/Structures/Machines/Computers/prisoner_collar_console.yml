@@ -1,0 +1,27 @@
+- type: entity
+  parent: BaseComputer
+  id: STComputerPrisonerCollarConsole
+  name: prisoner collar console
+  description: A computer for monitoring location, status, and remote detonation of prisoner collars.
+  components:
+  - type: Sprite
+    sprite: _Stories/Structures/Machines/computers_sp.rsi
+    layers:
+    - map: ["computerLayerBody"]
+      state: computer_sp
+    - map: ["computerLayerKeyboard"]
+      state: generic_keyboard_sp
+    - map: ["computerLayerScreen"]
+      state: shuttle_sp
+    - map: ["computerLayerKeys"]
+      state: generic_keys_sp
+  - type: PrisonerCollarConsole
+  - type: AccessReader
+    access: [["STHeadOfPrison"]]
+  - type: ActivatableUI
+    key: enum.PrisonerCollarConsoleUiKey.Key
+  - type: ActivatableUIRequiresAccess
+  - type: UserInterface
+    interfaces:
+      enum.PrisonerCollarConsoleUiKey.Key:
+        type: PrisonerCollarConsoleBoundUserInterface

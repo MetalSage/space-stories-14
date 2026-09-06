@@ -1,4 +1,4 @@
-ent-BaseSyndicateExplodingClothing = { "" }
+ent-STBaseSyndicateExplodingClothing = { "" }
     .desc = { "" }
-ent-BaseERTNotExplodingClothing = { "" }
+ent-STBaseERTNotExplodingClothing = { "" }
     .desc = { "" }

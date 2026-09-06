@@ -16,6 +16,7 @@ using Content.Shared._Stories.Vision.Systems;
 using Content.Shared.Actions;
 using Content.Shared.Body;
 using Content.Shared.Chat;
+using Content.Shared.Chemistry.Components;
 using Content.Shared.Damage.Systems;
 using Content.Shared.DoAfter;
 using Content.Shared.Gibbing;
@@ -56,39 +57,39 @@ public sealed partial class ShadowlingActionSystem : EntitySystem
 {
     private static readonly EntProtoId MutedStatusEffect = "StatusEffectMuted";
     private static readonly ProtoId<TagPrototype> WindowTag = "Window";
+    [Dependency] private SharedActionsSystem _actions = default!;
+    [Dependency] private SharedAudioSystem _audio = default!;
 
     [Dependency] private IConfigurationManager _cfg = default!;
+    [Dependency] private ChatSystem _chat = default!;
     [Dependency] private ConversionSystem _conversion = default!;
+    [Dependency] private DamageableSystem _damageable = default!;
     [Dependency] private SharedDoAfterSystem _doAfter = default!;
     [Dependency] private EmpSystem _emp = default!;
     [Dependency] private EntityLookupSystem _entityLookup = default!;
+    [Dependency] private SharedEyeSystem _eye = default!;
     [Dependency] private FlashSystem _flash = default!;
     [Dependency] private GibbingSystem _gib = default!;
     [Dependency] private HandheldLightSystem _handheldLight = default!;
     [Dependency] private SharedMindSystem _mind = default!;
     [Dependency] private MobStateSystem _mobState = default!;
-    [Dependency] private PolymorphSystem _polymorph = default!;
+    [Dependency] private MovementSpeedModifierSystem _movement = default!;
+    [Dependency] private SharedPhysicsSystem _physics = default!;
     [Dependency] private IPlayerManager _player = default!;
+    [Dependency] private PolymorphSystem _polymorph = default!;
     [Dependency] private SharedPopupSystem _popup = default!;
     [Dependency] private PoweredLightSystem _poweredLight = default!;
+    [Dependency] private ShadowlingSystem _shadowling = default!;
     [Dependency] private SmokeSystem _smoke = default!;
     [Dependency] private StandingStateSystem _standing = default!;
+    [Dependency] private StatusEffectsSystem _status = default!;
     [Dependency] private StunSystem _stun = default!;
+    [Dependency] private TagSystem _tag = default!;
+    [Dependency] private TemperatureSystem _temperature = default!;
+    [Dependency] private IGameTiming _timing = default!;
     [Dependency] private SharedTransformSystem _transform = default!;
     [Dependency] private UnpoweredFlashlightSystem _unpoweredFlashlight = default!;
-    [Dependency] private ShadowlingSystem _shadowling = default!;
-    [Dependency] private DamageableSystem _damageable = default!;
-    [Dependency] private TemperatureSystem _temperature = default!;
-    [Dependency] private ChatSystem _chat = default!;
-    [Dependency] private IGameTiming _timing = default!;
-    [Dependency] private SharedPhysicsSystem _physics = default!;
-    [Dependency] private StatusEffectsSystem _status = default!;
-    [Dependency] private SharedAudioSystem _audio = default!;
-    [Dependency] private MovementSpeedModifierSystem _movement = default!;
-    [Dependency] private TagSystem _tag = default!;
     [Dependency] private VisibilitySystem _visibility = default!;
-    [Dependency] private SharedEyeSystem _eye = default!;
-    [Dependency] private SharedActionsSystem _actions = default!;
     [Dependency] private SharedVisionSystem _vision = default!;
 
     public override void Initialize()
@@ -132,15 +133,18 @@ public sealed partial class ShadowlingActionSystem : EntitySystem
         while (query.MoveNext(out var uid, out var comp))
         {
             if (comp.EndTime != null && _timing.CurTime >= comp.EndTime)
-            {
                 DisableShadowWalk(uid, comp);
-            }
         }
     }
 
-    private void SpawnShadowSmoke(EntityUid uid, ShadowlingComponent component, EntityCoordinates coords, float amount = 100f, float duration = 15f, float radius = 5f)
+    private void SpawnShadowSmoke(EntityUid uid,
+        ShadowlingComponent component,
+        EntityCoordinates coords,
+        float amount = 100f,
+        float duration = 15f,
+        float radius = 5f)
     {
-        var solution = new Content.Shared.Chemistry.Components.Solution(component.ShadowlingSmokeReagent, amount);
+        var solution = new Solution(component.ShadowlingSmokeReagent, amount);
         var smokeEnt = Spawn(component.SmokePrototype, coords);
         _smoke.StartSmoke(smokeEnt, solution, duration, (int)radius);
     }
@@ -205,8 +209,8 @@ public sealed partial class ShadowlingActionSystem : EntitySystem
 
         var vis = EnsureComp<VisibilityComponent>(uid);
         comp.OriginalVisibility = vis.Layer;
-        _visibility.AddLayer((uid, vis), (ushort)2, false);
-        _visibility.RemoveLayer((uid, vis), (ushort)1, false);
+        _visibility.AddLayer((uid, vis), 2, false);
+        _visibility.RemoveLayer((uid, vis), 1, false);
         _visibility.RefreshVisibility(uid, vis);
 
         if (TryComp<EyeComponent>(uid, out var eye))
@@ -236,14 +240,12 @@ public sealed partial class ShadowlingActionSystem : EntitySystem
         }
 
         if (TryComp<MovementSpeedModifierComponent>(uid, out var move))
-        {
             _movement.ChangeBaseSpeed(uid, comp.OriginalWalkSpeed, comp.OriginalSprintSpeed, move.Acceleration);
-        }
 
         if (TryComp<VisibilityComponent>(uid, out var vis))
         {
-            _visibility.RemoveLayer((uid, vis), (ushort)2, false);
-            _visibility.AddLayer((uid, vis), (ushort)1, false);
+            _visibility.RemoveLayer((uid, vis), 2, false);
+            _visibility.AddLayer((uid, vis), 1, false);
             _visibility.RefreshVisibility(uid, vis);
         }
 
@@ -264,21 +266,21 @@ public sealed partial class ShadowlingActionSystem : EntitySystem
     {
         var count = _shadowling.RefreshActions(shadowlingUid, component);
         if (count >= component.AscendanceThrallRequirement / 2)
-        {
             RaiseLocalEvent(new ShadowlingHalfwayEvent());
-        }
     }
 
     private void OnShadowWalk(EntityUid uid, ShadowlingComponent component, ShadowlingShadowWalkEvent args)
     {
-        if (args.Handled) return;
+        if (args.Handled)
+            return;
         EnableShadowWalk(uid, component.ShadowWalkDuration);
         args.Handled = true;
     }
 
     private void OnPlaneShift(EntityUid uid, ShadowlingComponent component, ShadowlingPlaneShiftEvent args)
     {
-        if (args.Handled) return;
+        if (args.Handled)
+            return;
 
         if (TryComp<ShadowWalkingComponent>(uid, out var walk))
             DisableShadowWalk(uid, walk);
@@ -290,7 +292,8 @@ public sealed partial class ShadowlingActionSystem : EntitySystem
 
     private void OnToggleBroadcast(EntityUid uid, ShadowlingComponent component, ToggleAscendantBroadcastEvent args)
     {
-        if (args.Handled) return;
+        if (args.Handled)
+            return;
 
         if (HasComp<AscendantBroadcastComponent>(uid))
         {
@@ -302,6 +305,7 @@ public sealed partial class ShadowlingActionSystem : EntitySystem
             AddComp<AscendantBroadcastComponent>(uid);
             _popup.PopupEntity(Loc.GetString("stories-shadowling-broadcast-on"), uid, uid);
         }
+
         args.Handled = true;
     }
 
@@ -320,15 +324,15 @@ public sealed partial class ShadowlingActionSystem : EntitySystem
         _chat.DispatchGlobalAnnouncement(args.Message, MetaData(uid).EntityName, false, null, Color.Red);
 
         var broadcastAction = new EntProtoId("STActionShadowlingAscendantBroadcast");
-        if (TryComp<ShadowlingComponent>(uid, out var shadowling) && shadowling.GrantedActions.TryGetValue(broadcastAction, out var actionId))
-        {
+        if (TryComp<ShadowlingComponent>(uid, out var shadowling) &&
+            shadowling.GrantedActions.TryGetValue(broadcastAction, out var actionId))
             _actions.SetCooldown(actionId, _timing.CurTime, _timing.CurTime + TimeSpan.FromSeconds(10));
-        }
     }
 
     private void OnAnnihilate(EntityUid uid, ShadowlingComponent component, ShadowlingAnnihilateEvent args)
     {
-        if (args.Handled) return;
+        if (args.Handled)
+            return;
 
         if (HasComp<ShadowWalkingComponent>(uid))
         {
@@ -338,7 +342,8 @@ public sealed partial class ShadowlingActionSystem : EntitySystem
 
         var isAscendant = MetaData(uid).EntityPrototype?.ID == "STMobAscendance";
 
-        if (args.Target == uid || (!isAscendant && (HasComp<ShadowlingComponent>(args.Target) || HasComp<ShadowlingThrallComponent>(args.Target))))
+        if (args.Target == uid || !isAscendant &&
+            (HasComp<ShadowlingComponent>(args.Target) || HasComp<ShadowlingThrallComponent>(args.Target)))
         {
             _popup.PopupEntity(Loc.GetString("stories-shadowling-action-fail-ally"), uid, uid);
             return;
@@ -348,22 +353,27 @@ public sealed partial class ShadowlingActionSystem : EntitySystem
             return;
 
         _stun.TryAddStunDuration(args.Target, TimeSpan.FromSeconds(2));
-        _popup.PopupEntity(Loc.GetString("stories-shadowling-annihilate-target"), args.Target, args.Target, PopupType.LargeCaution);
+        _popup.PopupEntity(Loc.GetString("stories-shadowling-annihilate-target"),
+            args.Target,
+            args.Target,
+            PopupType.LargeCaution);
 
         _audio.PlayPvs(component.AnnihilateSound, args.Target);
 
-        Timer.Spawn(2000, () =>
-        {
-            if (!Deleted(args.Target))
-                _gib.Gib(args.Target);
-        });
+        Timer.Spawn(2000,
+            () =>
+            {
+                if (!Deleted(args.Target))
+                    _gib.Gib(args.Target);
+            });
 
         args.Handled = true;
     }
 
     private void OnSonicScreech(EntityUid uid, ShadowlingComponent component, ShadowlingSonicScreechEvent args)
     {
-        if (args.Handled) return;
+        if (args.Handled)
+            return;
 
         if (HasComp<ShadowWalkingComponent>(uid))
         {
@@ -373,32 +383,32 @@ public sealed partial class ShadowlingActionSystem : EntitySystem
 
         _audio.PlayPvs(component.ScreechSound, uid);
 
-        var targets = _entityLookup.GetEntitiesInRange<TransformComponent>(Transform(uid).Coordinates, component.SonicScreechRange);
+        var targets =
+            _entityLookup.GetEntitiesInRange<TransformComponent>(Transform(uid).Coordinates,
+                component.SonicScreechRange);
         foreach (var (target, _) in targets)
         {
             if (target == uid || HasComp<ShadowlingComponent>(target) || HasComp<ShadowlingThrallComponent>(target))
                 continue;
 
             if (HasComp<BorgChassisComponent>(target))
-            {
                 _emp.DoEmpEffects(target, 50000, TimeSpan.FromSeconds(6));
-            }
             else if (_tag.HasTag(target, WindowTag))
-            {
                 _damageable.TryChangeDamage(target, component.SonicScreechWindowDamage, true);
-            }
             else if (HasComp<MobStateComponent>(target))
             {
-                _stun.TryKnockdown(target, TimeSpan.FromSeconds(2), true);
+                _stun.TryKnockdown(target, TimeSpan.FromSeconds(2));
                 _stun.TryAddStunDuration(target, TimeSpan.FromSeconds(2));
             }
         }
+
         args.Handled = true;
     }
 
     private void OnVeil(EntityUid uid, ShadowlingComponent component, ShadowlingVeilEvent args)
     {
-        if (args.Handled) return;
+        if (args.Handled)
+            return;
 
         if (HasComp<ShadowWalkingComponent>(uid))
         {
@@ -406,21 +416,30 @@ public sealed partial class ShadowlingActionSystem : EntitySystem
             return;
         }
 
-        foreach (var (target, _) in _entityLookup.GetEntitiesInRange<PointLightComponent>(_transform.GetMapCoordinates(uid), component.VeilRange))
+        foreach (var (target, _) in _entityLookup.GetEntitiesInRange<PointLightComponent>(
+                     _transform.GetMapCoordinates(uid),
+                     component.VeilRange))
         {
             if (TryComp<PoweredLightComponent>(target, out var poweredLight))
                 _poweredLight.TryDestroyBulb(target, poweredLight);
             else if (TryComp<HandheldLightComponent>(target, out var handheldLight))
                 _handheldLight.TurnOff(new Entity<HandheldLightComponent>(target, handheldLight));
             else if (TryComp<UnpoweredFlashlightComponent>(target, out var unpoweredFlashlight))
-                _unpoweredFlashlight.SetLight(new Entity<UnpoweredFlashlightComponent?>(target, unpoweredFlashlight), false, uid, true);
+            {
+                _unpoweredFlashlight.SetLight(new Entity<UnpoweredFlashlightComponent?>(target, unpoweredFlashlight),
+                    false,
+                    uid,
+                    true);
+            }
         }
+
         args.Handled = true;
     }
 
     private void OnFlashFreeze(EntityUid uid, ShadowlingComponent component, ShadowlingFlashFreezeEvent args)
     {
-        if (args.Handled) return;
+        if (args.Handled)
+            return;
 
         if (HasComp<ShadowWalkingComponent>(uid))
         {
@@ -430,7 +449,8 @@ public sealed partial class ShadowlingActionSystem : EntitySystem
 
         _audio.PlayPvs(component.FreezeSound, uid);
 
-        foreach (var (target, _) in _entityLookup.GetEntitiesInRange<MobStateComponent>(Transform(uid).Coordinates, component.FlashFreezeRange))
+        foreach (var (target, _) in _entityLookup.GetEntitiesInRange<MobStateComponent>(Transform(uid).Coordinates,
+                     component.FlashFreezeRange))
         {
             if (target == uid || HasComp<ShadowlingComponent>(target) || HasComp<ShadowlingThrallComponent>(target))
                 continue;
@@ -441,12 +461,14 @@ public sealed partial class ShadowlingActionSystem : EntitySystem
             if (TryComp<TemperatureComponent>(target, out var temp))
                 _temperature.ForceChangeTemperature(target, 200f, temp);
         }
+
         args.Handled = true;
     }
 
     private void OnGlacialBlast(EntityUid uid, ShadowlingComponent component, ShadowlingGlacialBlastEvent args)
     {
-        if (args.Handled) return;
+        if (args.Handled)
+            return;
 
         if (HasComp<ShadowWalkingComponent>(uid))
         {
@@ -456,24 +478,27 @@ public sealed partial class ShadowlingActionSystem : EntitySystem
 
         _audio.PlayPvs(component.FreezeSound, uid);
 
-        foreach (var (target, _) in _entityLookup.GetEntitiesInRange<MobStateComponent>(Transform(uid).Coordinates, component.GlacialBlastRange))
+        foreach (var (target, _) in _entityLookup.GetEntitiesInRange<MobStateComponent>(Transform(uid).Coordinates,
+                     component.GlacialBlastRange))
         {
             if (target == uid || HasComp<ShadowlingComponent>(target) || HasComp<ShadowlingThrallComponent>(target))
                 continue;
 
             _damageable.TryChangeDamage(target, component.GlacialBlastDamage, true);
             _stun.TryAddStunDuration(target, component.GlacialBlastStunDuration);
-            _stun.TryKnockdown(target, component.GlacialBlastStunDuration, true);
+            _stun.TryKnockdown(target, component.GlacialBlastStunDuration);
 
             if (TryComp<TemperatureComponent>(target, out var temp))
                 _temperature.ForceChangeTemperature(target, 73.15f, temp);
         }
+
         args.Handled = true;
     }
 
     private void OnDrainLife(EntityUid uid, ShadowlingComponent component, ShadowlingDrainLifeEvent args)
     {
-        if (args.Handled) return;
+        if (args.Handled)
+            return;
 
         if (HasComp<ShadowWalkingComponent>(uid))
         {
@@ -482,9 +507,11 @@ public sealed partial class ShadowlingActionSystem : EntitySystem
         }
 
         var healed = false;
-        foreach (var (target, _) in _entityLookup.GetEntitiesInRange<MobStateComponent>(Transform(uid).Coordinates, component.DrainLifeRange))
+        foreach (var (target, _) in _entityLookup.GetEntitiesInRange<MobStateComponent>(Transform(uid).Coordinates,
+                     component.DrainLifeRange))
         {
-            if (target == uid || !_mobState.IsAlive(target) || HasComp<ShadowlingComponent>(target) || HasComp<ShadowlingThrallComponent>(target))
+            if (target == uid || !_mobState.IsAlive(target) || HasComp<ShadowlingComponent>(target) ||
+                HasComp<ShadowlingThrallComponent>(target))
                 continue;
 
             _damageable.TryChangeDamage(target, component.DrainLifeDamage, true);
@@ -499,14 +526,15 @@ public sealed partial class ShadowlingActionSystem : EntitySystem
             args.Handled = true;
         }
         else
-        {
             _popup.PopupEntity(Loc.GetString("stories-shadowling-drain-life-fail"), uid, uid);
-        }
     }
 
-    private void OnBlackRecuperation(EntityUid uid, ShadowlingComponent component, ShadowlingBlackRecuperationEvent args)
+    private void OnBlackRecuperation(EntityUid uid,
+        ShadowlingComponent component,
+        ShadowlingBlackRecuperationEvent args)
     {
-        if (args.Handled) return;
+        if (args.Handled)
+            return;
 
         if (HasComp<ShadowWalkingComponent>(uid))
         {
@@ -514,7 +542,8 @@ public sealed partial class ShadowlingActionSystem : EntitySystem
             return;
         }
 
-        if (args.Target == uid || !HasComp<ShadowlingThrallComponent>(args.Target) || HasComp<ShadowlingComponent>(args.Target))
+        if (args.Target == uid || !HasComp<ShadowlingThrallComponent>(args.Target) ||
+            HasComp<ShadowlingComponent>(args.Target))
             return;
 
         if (_mobState.IsAlive(args.Target))
@@ -527,7 +556,8 @@ public sealed partial class ShadowlingActionSystem : EntitySystem
 
     private void OnCollectiveMind(EntityUid uid, ShadowlingComponent component, ShadowlingCollectiveMindEvent args)
     {
-        if (args.Handled) return;
+        if (args.Handled)
+            return;
 
         if (HasComp<ShadowWalkingComponent>(uid))
         {
@@ -545,7 +575,8 @@ public sealed partial class ShadowlingActionSystem : EntitySystem
 
     private void OnGlare(EntityUid uid, ShadowlingComponent component, ShadowlingGlareEvent args)
     {
-        if (args.Handled) return;
+        if (args.Handled)
+            return;
 
         if (HasComp<ShadowWalkingComponent>(uid))
         {
@@ -553,7 +584,8 @@ public sealed partial class ShadowlingActionSystem : EntitySystem
             return;
         }
 
-        if (args.Target == uid || HasComp<ShadowlingComponent>(args.Target) || HasComp<ShadowlingThrallComponent>(args.Target))
+        if (args.Target == uid || HasComp<ShadowlingComponent>(args.Target) ||
+            HasComp<ShadowlingThrallComponent>(args.Target))
         {
             _popup.PopupEntity(Loc.GetString("stories-shadowling-action-fail-ally"), uid, uid);
             return;
@@ -570,7 +602,8 @@ public sealed partial class ShadowlingActionSystem : EntitySystem
 
     private void OnBlindnessSmoke(EntityUid uid, ShadowlingComponent component, ShadowlingBlindnessSmokeEvent args)
     {
-        if (args.Handled) return;
+        if (args.Handled)
+            return;
 
         if (HasComp<ShadowWalkingComponent>(uid))
         {
@@ -585,7 +618,8 @@ public sealed partial class ShadowlingActionSystem : EntitySystem
 
     private void OnHatch(EntityUid uid, ShadowlingComponent component, ShadowlingHatchEvent args)
     {
-        if (args.Handled) return;
+        if (args.Handled)
+            return;
 
         if (HasComp<ShadowWalkingComponent>(uid))
         {
@@ -597,10 +631,11 @@ public sealed partial class ShadowlingActionSystem : EntitySystem
         SpawnShadowSmoke(uid, component, Transform(uid).Coordinates, 100f, 15f, component.SmokeRadius);
         _stun.TryAddParalyzeDuration(uid, component.HatchDuration);
 
-        var doAfterArgs = new DoAfterArgs(EntityManager, uid, component.HatchDuration, new ShadowlingHatchDoAfterEvent(), uid)
-        {
-            RequireCanInteract = false
-        };
+        var doAfterArgs =
+            new DoAfterArgs(EntityManager, uid, component.HatchDuration, new ShadowlingHatchDoAfterEvent(), uid)
+            {
+                RequireCanInteract = false,
+            };
 
         if (_doAfter.TryStartDoAfter(doAfterArgs))
             args.Handled = true;
@@ -608,7 +643,8 @@ public sealed partial class ShadowlingActionSystem : EntitySystem
 
     private void OnHatchDoAfter(EntityUid uid, ShadowlingComponent component, ShadowlingHatchDoAfterEvent args)
     {
-        if (args.Cancelled || args.Handled) return;
+        if (args.Cancelled || args.Handled)
+            return;
 
         _standing.Stand(uid);
 
@@ -634,7 +670,8 @@ public sealed partial class ShadowlingActionSystem : EntitySystem
 
     private void OnAscendance(EntityUid uid, ShadowlingComponent component, ShadowlingAscendanceEvent args)
     {
-        if (args.Handled) return;
+        if (args.Handled)
+            return;
 
         if (HasComp<ShadowWalkingComponent>(uid))
         {
@@ -646,25 +683,33 @@ public sealed partial class ShadowlingActionSystem : EntitySystem
         SpawnShadowSmoke(uid, component, Transform(uid).Coordinates, 100f, 5f, component.SmokeRadius);
         _stun.TryAddParalyzeDuration(uid, component.AscendanceDuration);
 
-        var doAfter = new DoAfterArgs(EntityManager, uid, component.AscendanceDuration, new ShadowlingAscendanceDoAfterEvent(), uid)
+        var doAfter = new DoAfterArgs(EntityManager,
+            uid,
+            component.AscendanceDuration,
+            new ShadowlingAscendanceDoAfterEvent(),
+            uid)
         {
-            RequireCanInteract = false
+            RequireCanInteract = false,
         };
 
         if (_doAfter.TryStartDoAfter(doAfter))
             args.Handled = true;
     }
 
-    private void OnAscendanceDoAfter(EntityUid uid, ShadowlingComponent component, ShadowlingAscendanceDoAfterEvent args)
+    private void OnAscendanceDoAfter(EntityUid uid,
+        ShadowlingComponent component,
+        ShadowlingAscendanceDoAfterEvent args)
     {
-        if (args.Cancelled || args.Handled) return;
+        if (args.Cancelled || args.Handled)
+            return;
 
         _standing.Stand(uid);
 
         var thralls = _conversion.GetEntitiesConvertedBy(uid, component.ShadowlingThrallConversion).ToList();
 
         var ascendance = _polymorph.PolymorphEntity(uid, component.AscendancePolymorph);
-        if (ascendance == null) return;
+        if (ascendance == null)
+            return;
 
         foreach (var thrall in thralls)
         {
@@ -673,6 +718,7 @@ public sealed partial class ShadowlingActionSystem : EntitySystem
                 conversion.Owner = GetNetEntity(ascendance.Value);
                 Dirty(thrall, Comp<ConversionableComponent>(thrall));
             }
+
             _damageable.TryChangeDamage(thrall, component.AscendanceKillDamage, true);
         }
 
@@ -685,7 +731,8 @@ public sealed partial class ShadowlingActionSystem : EntitySystem
 
     private void OnEnthrall(EntityUid uid, ShadowlingComponent component, ShadowlingEnthrallEvent args)
     {
-        if (args.Handled) return;
+        if (args.Handled)
+            return;
 
         if (HasComp<ShadowWalkingComponent>(uid))
         {
@@ -693,16 +740,15 @@ public sealed partial class ShadowlingActionSystem : EntitySystem
             return;
         }
 
-        if (args.Target == uid || HasComp<ShadowlingComponent>(args.Target) || HasComp<ShadowlingThrallComponent>(args.Target) || HasComp<BorgChassisComponent>(args.Target))
+        if (args.Target == uid || HasComp<ShadowlingComponent>(args.Target) ||
+            HasComp<ShadowlingThrallComponent>(args.Target) || HasComp<BorgChassisComponent>(args.Target))
         {
             _popup.PopupEntity(Loc.GetString("stories-shadowling-action-fail-ally"), uid, uid);
             return;
         }
 
         if (component.RequireHumanoid && !HasComp<HumanoidProfileComponent>(args.Target))
-        {
             return;
-        }
 
         if (component.RequireConnectedMind && !_cfg.GetCVar(SCCVars.EnthrallWithoutMind))
         {
@@ -719,7 +765,8 @@ public sealed partial class ShadowlingActionSystem : EntitySystem
             }
         }
 
-        var isHatched = HasComp<MobStateComponent>(uid) && (MetaData(uid).EntityPrototype?.ID == "STMobShadowling" || MetaData(uid).EntityPrototype?.ID == "STMobAscendance");
+        var isHatched = HasComp<MobStateComponent>(uid) && (MetaData(uid).EntityPrototype?.ID == "STMobShadowling" ||
+                                                            MetaData(uid).EntityPrototype?.ID == "STMobAscendance");
         if (!isHatched && component.MaxThrallsBeforeHatch != null)
         {
             var thrallsCount = _conversion.GetEntitiesConvertedBy(uid, component.ShadowlingThrallConversion).Count;
@@ -738,11 +785,16 @@ public sealed partial class ShadowlingActionSystem : EntitySystem
 
         _popup.PopupEntity(Loc.GetString("stories-shadowling-enthrall-start", ("target", args.Target)), uid, uid);
 
-        var doAfterArgs = new DoAfterArgs(EntityManager, uid, component.EnthrallDuration, new ShadowlingEnthrallDoAfterEvent(), uid, args.Target)
+        var doAfterArgs = new DoAfterArgs(EntityManager,
+            uid,
+            component.EnthrallDuration,
+            new ShadowlingEnthrallDoAfterEvent(),
+            uid,
+            args.Target)
         {
             RequireCanInteract = true,
             BreakOnMove = true,
-            BreakOnDamage = true
+            BreakOnDamage = true,
         };
 
         if (_doAfter.TryStartDoAfter(doAfterArgs))
@@ -751,12 +803,15 @@ public sealed partial class ShadowlingActionSystem : EntitySystem
 
     private void OnEnthrallDoAfter(EntityUid uid, ShadowlingComponent component, ShadowlingEnthrallDoAfterEvent args)
     {
-        if (args.Cancelled || args.Handled || args.Args.Target == null) return;
-
-        if (HasComp<ShadowlingComponent>(args.Args.Target.Value) || HasComp<ShadowlingThrallComponent>(args.Args.Target.Value))
+        if (args.Cancelled || args.Handled || args.Args.Target == null)
             return;
 
-        var isHatched = HasComp<MobStateComponent>(uid) && (MetaData(uid).EntityPrototype?.ID == "STMobShadowling" || MetaData(uid).EntityPrototype?.ID == "STMobAscendance");
+        if (HasComp<ShadowlingComponent>(args.Args.Target.Value) ||
+            HasComp<ShadowlingThrallComponent>(args.Args.Target.Value))
+            return;
+
+        var isHatched = HasComp<MobStateComponent>(uid) && (MetaData(uid).EntityPrototype?.ID == "STMobShadowling" ||
+                                                            MetaData(uid).EntityPrototype?.ID == "STMobAscendance");
         if (!isHatched && component.MaxThrallsBeforeHatch != null)
         {
             var thrallsCount = _conversion.GetEntitiesConvertedBy(uid, component.ShadowlingThrallConversion).Count;
@@ -769,12 +824,16 @@ public sealed partial class ShadowlingActionSystem : EntitySystem
 
         if (_conversion.TryConvert(args.Args.Target.Value, component.ShadowlingThrallConversion, uid))
         {
-            _popup.PopupEntity(Loc.GetString("stories-shadowling-enthrall-success", ("target", args.Args.Target.Value)), uid, uid);
+            _popup.PopupEntity(Loc.GetString("stories-shadowling-enthrall-success", ("target", args.Args.Target.Value)),
+                uid,
+                uid);
             CheckHalfwayAscendance(uid, component);
         }
         else
         {
-            _popup.PopupEntity(Loc.GetString("stories-shadowling-enthrall-fail", ("target", args.Args.Target.Value)), uid, uid);
+            _popup.PopupEntity(Loc.GetString("stories-shadowling-enthrall-fail", ("target", args.Args.Target.Value)),
+                uid,
+                uid);
         }
 
         args.Handled = true;
@@ -782,7 +841,8 @@ public sealed partial class ShadowlingActionSystem : EntitySystem
 
     private void OnHypnosis(EntityUid uid, ShadowlingComponent component, ShadowlingHypnosisEvent args)
     {
-        if (args.Handled) return;
+        if (args.Handled)
+            return;
 
         if (HasComp<ShadowWalkingComponent>(uid))
         {
@@ -790,16 +850,15 @@ public sealed partial class ShadowlingActionSystem : EntitySystem
             return;
         }
 
-        if (args.Target == uid || HasComp<ShadowlingComponent>(args.Target) || HasComp<ShadowlingThrallComponent>(args.Target) || HasComp<BorgChassisComponent>(args.Target))
+        if (args.Target == uid || HasComp<ShadowlingComponent>(args.Target) ||
+            HasComp<ShadowlingThrallComponent>(args.Target) || HasComp<BorgChassisComponent>(args.Target))
         {
             _popup.PopupEntity(Loc.GetString("stories-shadowling-action-fail-ally"), uid, uid);
             return;
         }
 
         if (component.RequireHumanoid && !HasComp<HumanoidProfileComponent>(args.Target))
-        {
             return;
-        }
 
         if (component.RequireConnectedMind && !_cfg.GetCVar(SCCVars.EnthrallWithoutMind))
         {
@@ -816,7 +875,8 @@ public sealed partial class ShadowlingActionSystem : EntitySystem
             }
         }
 
-        var isHatched = HasComp<MobStateComponent>(uid) && (MetaData(uid).EntityPrototype?.ID == "STMobShadowling" || MetaData(uid).EntityPrototype?.ID == "STMobAscendance");
+        var isHatched = HasComp<MobStateComponent>(uid) && (MetaData(uid).EntityPrototype?.ID == "STMobShadowling" ||
+                                                            MetaData(uid).EntityPrototype?.ID == "STMobAscendance");
         if (!isHatched && component.MaxThrallsBeforeHatch != null)
         {
             var thrallsCount = _conversion.GetEntitiesConvertedBy(uid, component.ShadowlingThrallConversion).Count;
@@ -828,9 +888,7 @@ public sealed partial class ShadowlingActionSystem : EntitySystem
         }
 
         if (!_conversion.CanConvert(args.Target, component.ShadowlingThrallConversion, args.Performer))
-        {
             return;
-        }
 
         if (_conversion.TryConvert(args.Target, component.ShadowlingThrallConversion, args.Performer))
         {

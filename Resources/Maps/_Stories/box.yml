@@ -129360,7 +129360,7 @@ entities:
     - type: Transform
       parent: 8364
       pos: -29.522873,5.5863943
-- proto: InkPrinter
+- proto: STInkPrinter
   entities:
   - uid: 56
     components:
@@ -130369,7 +130369,7 @@ entities:
     - type: Transform
       parent: 8364
       pos: -33.5,6.5
-- proto: LockerGuardianNtFilled
+- proto: STLockerGuardianNtFilled
   entities:
   - uid: 8822
     components:
@@ -138966,7 +138966,7 @@ entities:
       parent: 8364
       rot: -1.5707963267948966 rad
       pos: -57.5,-0.5
-- proto: PrintedDocumentJudgment
+- proto: STPrintedDocumentJudgment
   entities:
   - uid: 9936
     components:
@@ -138974,7 +138974,7 @@ entities:
       parent: 8364
       rot: 3.141592653589793 rad
       pos: -7.134875,22.63238
-- proto: PrintedDocumentOrderParolePrisoner
+- proto: STPrintedDocumentOrderParolePrisoner
   entities:
   - uid: 8950
     components:
@@ -138982,7 +138982,7 @@ entities:
       parent: 8364
       rot: 3.141592653589793 rad
       pos: -4.163602,22.607841
-- proto: PrinterDoc
+- proto: STPrinterDoc
   entities:
   - uid: 7
     components:
@@ -151289,7 +151289,7 @@ entities:
     - type: Transform
       parent: 8364
       pos: 10.5,26.5
-- proto: SpawnPointGuardianNt
+- proto: STSpawnPointGuardianNt
   entities:
   - uid: 8884
     components:
@@ -151745,7 +151745,7 @@ entities:
     - type: Transform
       parent: 8364
       pos: -7.5,34.5
-- proto: SpawnSpaceKoi
+- proto: STSpawnSpaceKoi
   entities:
   - uid: 10001
     components:
@@ -152602,7 +152602,7 @@ entities:
     - type: Transform
       parent: 8364
       pos: 62.5,-33.5
-- proto: StoriesFlippoEngravedLighter
+- proto: STFlippoEngravedLighter
   entities:
   - uid: 7188
     components:

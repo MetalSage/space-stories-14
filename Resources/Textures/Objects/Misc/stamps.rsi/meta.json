@@ -71,6 +71,21 @@
             "name": "stamp-wizard"
         },
         {
+            "name": "stamp-iaa"
+        },
+        {
+            "name": "stamp-hosp"
+        },
+        {
+            "name": "stamp-judge"
+        },
+        {
+            "name": "stamp-blueshield"
+        },
+        {
+            "name": "stamp-prosecutor"
+        },
+        {
             "name": "handle-inhand-left",
             "directions": 4
         },

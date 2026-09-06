@@ -1,9 +1,12 @@
-ent-RubberStampIAA = печать агента внутренних дел
+ent-STRubberStampIAA = печать агента внутренних дел
     .desc = { ent-RubberStampBase.desc }
     .suffix = НЕ МАППИТЬ
-ent-PRISONRubberStamp = печать начальника тюрьмы
+ent-STPRISONRubberStamp = печать начальника тюрьмы
     .desc = Печать из резины, для проставления печатей на важных документах.
-    .suffix = DO NOT MAP
+    .suffix = НЕ МАППИТЬ
 ent-STRubberStampJudge = печать судьи
     .desc = { ent-RubberStampBase.desc }
-    .suffix = DO NOT MAP
+    .suffix = НЕ МАППИТЬ
+ent-STRubberStampBlueshield = печать офицера синего щита
+    .desc = Резиновая печать для заверения важных документов командования и службы безопасности.
+    .suffix = НЕ МАППИТЬ

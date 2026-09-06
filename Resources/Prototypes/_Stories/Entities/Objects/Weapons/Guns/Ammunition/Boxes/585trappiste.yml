@@ -1,0 +1,71 @@
+- type: entity
+  parent: BaseItem
+  id: STAmmoBox585Trappiste
+  name: ammo box (.585 Trappiste lethal)
+  description: A box of .585 Trappiste pistol rounds, holds thirty-two cartridges.
+  components:
+  - type: Sprite
+    sprite: _Stories/Objects/Weapons/Guns/Ammunition/Boxes/585trappiste_boxes.rsi
+    layers:
+    - state: 585box
+      map: ["enum.GunVisualLayers.Base"]
+  - type: Item
+    size: Small
+  - type: ContainerContainer
+    containers:
+      ballistic-ammo: !type:Container
+  - type: BallisticAmmoProvider
+    mayTransfer: true
+    proto: STCartridge585Trappiste
+    capacity: 32
+    whitelist:
+      tags:
+      - Cartridge585Trappiste
+
+- type: entity
+  parent: BaseItem
+  id: STAmmoBox585TrappisteIncapacitator
+  name: ammo box (.585 Trappiste flathead)
+  description: A box of .585 Trappiste pistol rounds, holds thirty-two cartridges. The blue stripe indicates that it should hold less lethal rounds.
+  components:
+  - type: Sprite
+    sprite: _Stories/Objects/Weapons/Guns/Ammunition/Boxes/585trappiste_boxes.rsi
+    layers:
+    - state: 585box_disabler
+      map: ["enum.GunVisualLayers.Base"]
+  - type: Item
+    size: Small
+  - type: ContainerContainer
+    containers:
+      ballistic-ammo: !type:Container
+  - type: BallisticAmmoProvider
+    mayTransfer: true
+    proto: STCartridge585TrappisteIncapacitator
+    capacity: 32
+    whitelist:
+      tags:
+      - Cartridge585Trappiste
+
+- type: entity
+  parent: BaseItem
+  id: STAmmoBox585TrappisteHollowpoint
+  name: ammo box (.585 Trappiste hollowhead)
+  description: A box of .585 Trappiste pistol rounds, holds thirty-two cartridges. The purple stripe indicates that it should hold hollowpoint-like rounds.
+  components:
+  - type: Sprite
+    sprite: _Stories/Objects/Weapons/Guns/Ammunition/Boxes/585trappiste_boxes.rsi
+    layers:
+    - state: 585box_shrapnel
+      map: ["enum.GunVisualLayers.Base"]
+  - type: Item
+    size: Small
+  - type: ContainerContainer
+    containers:
+      ballistic-ammo: !type:Container
+  - type: BallisticAmmoProvider
+    mayTransfer: true
+    proto: STCartridge585TrappisteHollowpoint
+    capacity: 32
+    whitelist:
+      tags:
+      - Cartridge585Trappiste

@@ -1,58 +1,58 @@
 - type: entity
-  id: PRISONSpawnPointPrisoner
+  id: STPRISONSpawnPointPrisoner
   parent: SpawnPointJobBase
   name: prisoner
   components:
   - type: SpawnPoint
-    job_id: PRISONPrisoner
+    job_id: STPRISONPrisoner
   - type: Sprite
     layers:
       - state: green
       - state: prisoner
 
 - type: entity
-  id: PRISONSpawnPointHeadOfPrison
-  parent: SpawnPointJobBaseStories
+  id: STPRISONSpawnPointHeadOfPrison
+  parent: STSpawnPointJobBaseStories
   name: headofsp
   components:
   - type: SpawnPoint
-    job_id: PRISONHeadOfPrison
+    job_id: STPRISONHeadOfPrison
   - type: Sprite
     layers:
       - state: green
       - state: hos
 
 - type: entity
-  id: PRISONSpawnPointOfficer
-  parent: SpawnPointJobBaseStories
+  id: STPRISONSpawnPointOfficer
+  parent: STSpawnPointJobBaseStories
   name: spofficer
   components:
   - type: SpawnPoint
-    job_id: PRISONOfficer
+    job_id: STPRISONOfficer
   - type: Sprite
     layers:
       - state: green
       - state: security_officer
 
 - type: entity
-  id: PRISONSpawnPointEngineer
-  parent: SpawnPointJobBaseStories
+  id: STPRISONSpawnPointEngineer
+  parent: STSpawnPointJobBaseStories
   name: spengineer
   components:
   - type: SpawnPoint
-    job_id: PRISONEngineer
+    job_id: STPRISONEngineer
   - type: Sprite
     layers:
       - state: green
       - state: engineer
 
 - type: entity
-  id: PRISONSpawnPointMedic
-  parent: SpawnPointJobBaseStories
+  id: STPRISONSpawnPointMedic
+  parent: STSpawnPointJobBaseStories
   name: spmedic
   components:
   - type: SpawnPoint
-    job_id: PRISONMedic
+    job_id: STPRISONMedic
   - type: Sprite
     layers:
       - state: green

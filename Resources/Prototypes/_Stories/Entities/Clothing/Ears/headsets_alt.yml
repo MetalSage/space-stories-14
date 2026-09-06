@@ -1,12 +1,12 @@
 - type: entity
   parent: ClothingHeadsetAlt
-  id: ClothingHeadsetGuardianNtAlt
+  id: STClothingHeadsetGuardianNtAlt
   name: blade guardian's over-ear headset
   description: Finally, there is a command frequency here.
   components:
     - type: Tag
       tags:
-        - ForceRecallEquipment
+        - STForceRecallEquipment
         - WhitelistChameleon
     - type: ContainerFill
       containers:
@@ -18,3 +18,22 @@
       sprite: _Stories/Clothing/Ears/Headsets/guardian_nt.rsi
     - type: Clothing
       sprite: _Stories/Clothing/Ears/Headsets/guardian_nt.rsi
+
+- type: entity
+  parent: ClothingHeadsetAlt
+  id: STClothingHeadsetBlueshieldAlt
+  name: blueshield bowman headset
+  description: The headset of the bodyguard who keeps the administration alive. Protects your ears from flashbangs.
+  components:
+  - type: ContainerFill
+    containers:
+      key_slots:
+      - STEncryptionKeyBlueshield
+      - EncryptionKeyCommon
+  - type: Sprite
+    sprite: _Stories/Clothing/Ears/Headsets/blueshield.rsi
+    state: icon_alt
+  - type: Clothing
+    sprite: _Stories/Clothing/Ears/Headsets/blueshield.rsi
+    equippedPrefix: alt
+  - type: FlashImmunity

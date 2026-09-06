@@ -2,7 +2,7 @@
   name: strange egg
   description: It's moving! Maybe we should call the experts.
   parent: BaseStructure
-  id: MobSpafEgg
+  id: STMobSpafEgg
   components:
   - type: Fixtures
     fixtures:
@@ -16,7 +16,7 @@
   - type: Damageable
   - type: Injurable
   - type: GhostRoleMobSpawner
-    prototype: MobMiniSpaf
+    prototype: STMobMiniSpaf
   - type: Destructible
     thresholds:
       - trigger:

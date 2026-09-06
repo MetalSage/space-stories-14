@@ -5,24 +5,21 @@ using Content.Shared.Mind;
 
 namespace Content.Server._Stories.Economy.Events;
 
-[RegisterComponent]
-[Access(typeof(BankingErrorRule))]
+[RegisterComponent, Access(typeof(BankingErrorRule))]
 public sealed partial class BankingErrorRuleComponent : Component
 {
     [DataField] public float LossPercentageMax = 0.20f;
     [DataField] public float LossPercentageMin = 0.05f;
 }
 
-[RegisterComponent]
-[Access(typeof(SalaryModifierRule))]
+[RegisterComponent, Access(typeof(SalaryModifierRule))]
 public sealed partial class SalaryModifierRuleComponent : Component
 {
     [DataField] public float ModifierMax = 0.5f;
     [DataField] public float ModifierMin = -0.5f;
 }
 
-[RegisterComponent]
-[Access(typeof(BankHackRule))]
+[RegisterComponent, Access(typeof(BankHackRule))]
 public sealed partial class BankHackRuleComponent : Component
 {
 }

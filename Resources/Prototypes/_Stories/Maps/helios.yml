@@ -1,5 +1,5 @@
 - type: gameMap
-  id: StoriesHelios
+  id: STHelios
   mapName: 'Helios Station'
   mapPath: /Maps/_Stories/helios.yml
   minPlayers: 15
@@ -64,7 +64,7 @@
           StationAi: [ 1, 1 ]
           Borg: [ 2, 3 ]
           #stories content
-          IAA: [ 1, 1 ]
-          GuardianNt: [ 1, 1 ]
+          STIAA: [ 1, 1 ]
+          STGuardianNt: [ 1, 1 ]
           STBrigmedic: [ 1, 1 ]
           #STJudge: [ 1, 1 ]

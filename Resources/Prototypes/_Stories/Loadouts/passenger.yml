@@ -1,12 +1,9 @@
-# Toolbox
 - type: loadoutGroup
   id: STPassengerToolbox
   name: stories-loadout-group-passenger-storage
   minLimit: 0
   loadouts:
   - STToolboxAncient
-
-# Старинный ящик для инструментов
 
 - type: loadout
   id: STToolboxAncient

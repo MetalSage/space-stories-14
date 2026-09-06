@@ -15708,7 +15708,7 @@ entities:
     - type: Transform
       parent: 2
       pos: 53.462254,149.59187
-- proto: BoxPrinter
+- proto: STBoxPrinter
   entities:
   - uid: 1054
     components:
@@ -15716,7 +15716,7 @@ entities:
       parent: 2
       rot: 3.141592653589793 rad
       pos: 112.62238,162.51527
-- proto: BoxSyndiePrinter
+- proto: STBoxSyndiePrinter
   entities:
   - uid: 1055
     components:
@@ -44325,7 +44325,7 @@ entities:
     - type: Transform
       parent: 2
       pos: 41.5,150.5
-- proto: ClothingBackpackDuffelEight
+- proto: STClothingBackpackDuffelEight
   entities:
   - uid: 6673
     components:
@@ -44760,7 +44760,7 @@ entities:
     - type: Transform
       parent: 2
       pos: 136.51814,143.14262
-- proto: ClothingUniformJumpsuitDetectiveSpecialGrey
+- proto: STClothingUniformJumpsuitDetectiveSpecialGrey
   entities:
   - uid: 6737
     components:
@@ -84730,7 +84730,7 @@ entities:
       parent: 2
       rot: 3.141592653589793 rad
       pos: 18.408058,187.56558
-- proto: InkPrinter
+- proto: STInkPrinter
   entities:
   - uid: 12331
     components:
@@ -85872,7 +85872,7 @@ entities:
     - type: Transform
       parent: 2
       pos: 88.5,195.5
-- proto: LockerGuardianNtFilled
+- proto: STLockerGuardianNtFilled
   entities:
   - uid: 12435
     components:
@@ -86923,14 +86923,14 @@ entities:
     - type: Transform
       parent: 2
       pos: 130.52399,183.54703
-- proto: MusicalVendingMachine
+- proto: STMusicalVendingMachine
   entities:
   - uid: 12607
     components:
     - type: Transform
       parent: 2
       pos: 56.5,161.5
-- proto: MusicalVendingMachinePrison
+- proto: STMusicalVendingMachinePrison
   entities:
   - uid: 12608
     components:
@@ -90623,35 +90623,35 @@ entities:
     - type: Transform
       parent: 2
       pos: 70.55254,165.78484
-- proto: PrintedDocumentClosingIndictment
+- proto: STPrintedDocumentClosingIndictment
   entities:
   - uid: 13238
     components:
     - type: Transform
       parent: 2
       pos: 106.49679,173.67479
-- proto: PrintedDocumentDeathCertificate
+- proto: STPrintedDocumentDeathCertificate
   entities:
   - uid: 13239
     components:
     - type: Transform
       parent: 2
       pos: 136.5107,148.51012
-- proto: PrintedDocumentJudgment
+- proto: STPrintedDocumentJudgment
   entities:
   - uid: 13240
     components:
     - type: Transform
       parent: 2
       pos: 103.00223,166.63942
-- proto: PrintedDocumentOrderParolePrisoner
+- proto: STPrintedDocumentOrderParolePrisoner
   entities:
   - uid: 13241
     components:
     - type: Transform
       parent: 2
       pos: 106.5135,172.57445
-- proto: PrintedSyndiePaper
+- proto: STPrintedSyndiePaper
   entities:
   - uid: 13242
     components:
@@ -90675,7 +90675,7 @@ entities:
         I s
 
         ?
-- proto: PrinterDoc
+- proto: STPrinterDoc
   entities:
   - uid: 13243
     components:
@@ -94239,7 +94239,7 @@ entities:
     - type: Transform
       parent: 2
       pos: 126.39915,145.70229
-- proto: SheetPrinter
+- proto: STSheetPrinter
   entities:
   - uid: 13892
     components:
@@ -96654,7 +96654,7 @@ entities:
     - type: Transform
       parent: 2
       pos: 115.5,193.5
-- proto: SpawnPointGuardianNt
+- proto: STSpawnPointGuardianNt
   entities:
   - uid: 14300
     components:
@@ -96978,7 +96978,7 @@ entities:
     - type: Transform
       parent: 2
       pos: 73.5,142.5
-- proto: SpawnSpaceKoi
+- proto: STSpawnSpaceKoi
   entities:
   - uid: 14354
     components:

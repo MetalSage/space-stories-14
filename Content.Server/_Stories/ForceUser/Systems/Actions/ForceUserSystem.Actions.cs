@@ -19,16 +19,15 @@ public sealed partial class ForceUserSystem
         SubscribeLocalEvent<EmpActionEvent>(OnEmp);
         SubscribeLocalEvent<RejuvenateActionEvent>(OnRejuvenate);
         SubscribeLocalEvent<FreedomActionEvent>(OnFreedom);
-        // SubscribeLocalEvent<LightningStrikeEvent>(OnStrike);
         SubscribeLocalEvent<IgniteTargetActionEvent>(OnIgnite);
         SubscribeLocalEvent<RecliningPulseEvent>(OnPulseEvent);
         SubscribeLocalEvent<ForceDashActionEvent>(OnDash);
 
-        SubscribeLocalEvent<HypnosisTargetActionEvent>(OnHypnosis); // FIXME: Тут не должно быть этого - start
+        SubscribeLocalEvent<HypnosisTargetActionEvent>(OnHypnosis);
         SubscribeLocalEvent<ForceUserComponent, FrozeBulletsActionEvent>(OnFrozeBullets);
         SubscribeLocalEvent<ForceUserComponent, ForceShopActionEvent>(OnShop);
         SubscribeLocalEvent<ForceUserComponent, ForceLookUpActionEvent>(
-            OnLookUp); // FIXME: Тут не должно быть этого - end
+            OnLookUp);
     }
 
     private void OnLookUp(EntityUid uid, ForceUserComponent component, ForceLookUpActionEvent args)
@@ -56,7 +55,7 @@ public sealed partial class ForceUserSystem
     {
         if (args.Handled)
             return;
-        _statusEffect.TryAddStatusEffectDuration(uid, "FrozeBullets", TimeSpan.FromSeconds(args.Seconds));
+        _statusEffect.TryAddStatusEffectDuration(uid, "STFrozeBullets", TimeSpan.FromSeconds(args.Seconds));
         args.Handled = true;
     }
 
@@ -132,8 +131,8 @@ public sealed partial class ForceUserSystem
         if (args.Handled || _mobState.IsIncapacitated(args.Target) || HasComp<MindShieldComponent>(args.Target))
             return;
         _conversion.TryConvert(args.Target,
-            "HypnotizedEmpire",
-            args.Performer); // FIXME: Hardcode. Исправим в обновлении инквизитора.
+            "STHypnotizedEmpire",
+            args.Performer);
         args.Handled = true;
     }
 
@@ -141,7 +140,7 @@ public sealed partial class ForceUserSystem
     {
         if (args.Handled || _mobState.IsIncapacitated(args.Target) ||
             HasComp<ProtectedByProtectiveBubbleComponent>(args.Target))
-            return; // FIXME: Hardcode
+            return;
 
         _flammable.AdjustFireStacks(args.Target, args.StackAmount);
         _flammable.Ignite(args.Target, args.Performer);

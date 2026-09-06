@@ -1,6 +1,6 @@
 - type: entity
   parent: BaseItem
-  id: BaseFigurineStories
+  id: STBaseFigurineStories
   name: figurine
   description: A small miniature.
   abstract: true
@@ -17,7 +17,7 @@
     - Figurine
 
 - type: entity
-  parent: BaseFigurineStories
+  parent: STBaseFigurineStories
   id: STToyFigurineShadowling
   name: shadowling figurine
   description: It's a bit dark.
@@ -26,7 +26,7 @@
     state: shadowling
 
 - type: entity
-  parent: BaseFigurineStories
+  parent: STBaseFigurineStories
   id: STToyFigurineAscendedShadowling
   name: ascended shadowling figurine
   description: Who is so brave?
@@ -35,8 +35,8 @@
     state: ascendedShadowling
 
 - type: entity
-  parent: BaseFigurineStories
-  id: ToyFigurineInquisitor
+  parent: STBaseFigurineStories
+  id: STToyFigurineInquisitor
   name: inquisitor figurine
   description: I've come for you!
   components:
@@ -44,8 +44,8 @@
     state: inquisitor
 
 - type: entity
-  parent: BaseFigurineStories
-  id: ToyFigurineGuardianNt
+  parent: STBaseFigurineStories
+  id: STToyFigurineGuardianNt
   name: blade guardian figurine
   description: It's so beautiful!
   components:
@@ -53,8 +53,8 @@
     state: guardiannt
 
 - type: entity
-  parent: BaseFigurineStories
-  id: ToyFigurineMSP
+  parent: STBaseFigurineStories
+  id: STToyFigurineMSP
   name: old Space Prison Medic figurine
   description: What a time that was!
   components:
@@ -62,8 +62,8 @@
     state: msp
 
 - type: entity
-  parent: BaseFigurineStories
-  id: ToyFigurineOSP
+  parent: STBaseFigurineStories
+  id: STToyFigurineOSP
   name: old Space Prison Officer figurine
   description: What a time that was!
   components:
@@ -71,8 +71,8 @@
     state: osp
 
 - type: entity
-  parent: BaseFigurineStories
-  id: ToyFigurineESP
+  parent: STBaseFigurineStories
+  id: STToyFigurineESP
   name: old Space Prison Engineer figurine
   description: What a time that was!
   components:
@@ -80,8 +80,8 @@
     state: esp
 
 - type: entity
-  parent: BaseFigurineStories
-  id: ToyFigurineHOSP
+  parent: STBaseFigurineStories
+  id: STToyFigurineHOSP
   name: old Head of Space Prison figurine
   description: What a time that was!
   components:
@@ -89,8 +89,8 @@
     state: hosp
 
 - type: entity
-  parent: BaseFigurineStories
-  id: ToyFigurineBubblegum
+  parent: STBaseFigurineStories
+  id: STToyFigurineBubblegum
   name: Bubblegum figurine
   description: The king of all slaughter demons. With his heavy tread he shakes Lavaland, leaving a bloody trail behind him.
   components:
@@ -98,8 +98,8 @@
     state: bublgum
 
 - type: entity
-  parent: BaseFigurineStories
-  id: ToyFigurineAshDragon
+  parent: STBaseFigurineStories
+  id: STToyFigurineAshDragon
   name: Ash Drake figurine
   description: A winged monster, the revered guardian of the Necropolis. Terror incarnate roams the barren wasteland, spewing streams of deadly flame.
   components:
@@ -107,8 +107,8 @@
     state: dragon
 
 - type: entity
-  parent: BaseFigurineStories
-  id: ToyFigurineColossus
+  parent: STBaseFigurineStories
+  id: STToyFigurineColossus
   name: Colossus figurine
   description: A fallen angel wandering the wastelands of Lavaland, punishing all who seem impure to him.
   components:

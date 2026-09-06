@@ -24,8 +24,8 @@
   - STShadowlingMind
 
 - type: conversion
-  id: HypnotizedEmpire
-  statusIcon: HypnotizedEmpireFaction
+  id: STHypnotizedEmpire
+  statusIcon: STHypnotizedEmpireFaction
   briefing:
     text: hypnosis-empire-role-greeting
     color: Red
@@ -39,6 +39,6 @@
   components:
   - type: HypnotizedEmpire
   mindRoles:
-  - MindRoleHypnotizedEmpireMember
+  - STMindRoleHypnotizedEmpireMember
   channels:
-  - Empire
+  - STEmpire

@@ -1,8 +1,8 @@
-ent-BaseInquisitorObjective = { ent-BaseObjective }
+ent-STBaseInquisitorObjective = { ent-BaseObjective }
     .desc = { ent-BaseObjective.desc }
-ent-KillGuardianNtObjective = { ent-BaseInquisitorObjective }
+ent-STKillGuardianNtObjective = { ent-STBaseInquisitorObjective }
     .desc = Уничтожьте его.
-ent-InquisitorSurviveObjective = Выжить.
+ent-STInquisitorSurviveObjective = Выжить.
     .desc = У вас нет планов умирать.
-ent-HypnosisObjective = { ent-BaseInquisitorObjective }
+ent-STHypnosisObjective = { ent-STBaseInquisitorObjective }
     .desc = Императору нужны новые подданные.

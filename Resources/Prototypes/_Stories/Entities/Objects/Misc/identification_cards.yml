@@ -1,14 +1,20 @@
 - type: entity
-  parent: PRISONIDCardHeadOfPrison
-  id: IAAIDCard
+  parent: IDCardStandard
+  id: STIAAIDCard
   name: Internal Affairs Agent ID card
   components:
-    - type: Sprite
-      layers:
-        - state: silver
-        - state: idiaa
-    - type: PresetIdCard
-      job: IAA
+  - type: Sprite
+    layers:
+    - state: silver
+    - state: stripe_top
+      color: "#800080"
+    - state: stripe_bottom
+      color: "#4b0082"
+    - sprite: _Stories/Interface/Misc/job_icons.rsi
+      offset: -0.09375, 0.0625
+      state: IAA
+  - type: PresetIdCard
+    job: STIAA
 
 - type: entity
   parent: IDCardStandard
@@ -19,100 +25,127 @@
   - type: Sprite
     layers:
     - state: silver
-    - state: idjudge
-      sprite: _Stories/Objects/Misc/id_cards.rsi
+    - state: stripe_top
+      color: "#6a0dad"
+    - state: stripe_bottom
+      color: "#3a0066"
+    - sprite: _Stories/Interface/Misc/job_icons.rsi
+      offset: -0.09375, 0.0625
+      state: Judge
   - type: PresetIdCard
     job: STJudge
 
 - type: entity
   parent: IDCardStandard
-  id: GuardianNtIDCard
+  id: STGuardianNtIDCard
   name: Bladeguard ID card
   description: A card required to access various areas of the station.
   components:
-    - type: Sprite
-      layers:
-        - state: centcom
-        - state: idguardiannt
-          sprite: _Stories/Objects/Misc/id_cards.rsi
-    - type: Item
-      heldPrefix: blue
-    - type: PresetIdCard
-      job: GuardianNt
+  - type: Sprite
+    layers:
+    - state: centcom
+    - state: stripe_top
+      color: "#006600"
+    - state: stripe_bottom
+      color: "#003300"
+    - sprite: _Stories/Interface/Misc/job_icons.rsi
+      offset: -0.09375, 0.0625
+      state: GuardianNtSecurity
+  - type: Item
+    heldPrefix: blue
+  - type: PresetIdCard
+    job: STGuardianNt
 
 - type: entity
   parent: IDCardStandard
-  id: PRISONIDCardHeadOfPrison
+  id: STPRISONIDCardHeadOfPrison
   name: Prison warden ID card
   description: A card required to access various areas of the station.
   components:
-    - type: Sprite
-      sprite: _Stories/Objects/Misc/id_cards.rsi
-      layers:
-        - state: silver_sp
-        - state: idhosp
-    - type: PresetIdCard
-      job: PRISONHeadOfPrison
-    - type: Clothing
-      slots:
-        - idcard
-      sprite: _Stories/Objects/Misc/id_cards.rsi
-
-- type: entity
-  parent: PRISONIDCardHeadOfPrison
-  id: PRISONIDCardOfficer
-  name: Prison officer ID card
-  description: A card required to access various areas of the station.
-  components:
-    - type: Sprite
-      layers:
-        - state: default_sp
-        - state: idspofficer
-    - type: PresetIdCard
-      job: PRISONOfficer
-
-- type: entity
-  parent: PRISONIDCardHeadOfPrison
-  id: PRISONIDCardEngineer
-  name: Prison engineer ID card
-  description: A card required to access various areas of the station.
-  components:
-    - type: Sprite
-      layers:
-        - state: default_sp
-        - state: idspengineer
-    - type: PresetIdCard
-      job: PRISONEngineer
-
-- type: entity
-  parent: PRISONIDCardHeadOfPrison
-  id: PRISONIDCardMedic
-  name: Prison doctor ID card
-  description: A card required to access various areas of the station.
-  components:
-    - type: Sprite
-      layers:
-        - state: default_sp
-        - state: idspmedic
-    - type: PresetIdCard
-      job: PRISONMedic
+  - type: Sprite
+    layers:
+    - state: silver
+    - state: stripe_top
+      color: "#5a5a5a"
+    - state: stripe_bottom
+      color: "#222222"
+    - sprite: _Stories/Interface/Misc/job_icons.rsi
+      offset: -0.09375, 0.0625
+      state: HeadOfSpacePrison
+  - type: PresetIdCard
+    job: STPRISONHeadOfPrison
 
 - type: entity
   parent: IDCardStandard
-  id: PRISONIDCardPrisoner
+  id: STPRISONIDCardOfficer
+  name: Prison officer ID card
+  description: A card required to access various areas of the station.
+  components:
+  - type: Sprite
+    layers:
+    - state: default
+    - state: stripe_top
+      color: "#cb0000"
+    - state: stripe_bottom
+      color: "#830000"
+    - sprite: _Stories/Interface/Misc/job_icons.rsi
+      offset: -0.09375, 0.0625
+      state: SpacePrisonSecurityOfficer
+  - type: PresetIdCard
+    job: STPRISONOfficer
+
+- type: entity
+  parent: IDCardStandard
+  id: STPRISONIDCardEngineer
+  name: Prison engineer ID card
+  description: A card required to access various areas of the station.
+  components:
+  - type: Sprite
+    layers:
+    - state: default
+    - state: stripe_top
+      color: "#e58a00"
+    - state: stripe_bottom
+      color: "#a05a00"
+    - sprite: _Stories/Interface/Misc/job_icons.rsi
+      offset: -0.09375, 0.0625
+      state: SpacePrisonEngineer
+  - type: PresetIdCard
+    job: STPRISONEngineer
+
+- type: entity
+  parent: IDCardStandard
+  id: STPRISONIDCardMedic
+  name: Prison doctor ID card
+  description: A card required to access various areas of the station.
+  components:
+  - type: Sprite
+    layers:
+    - state: default
+    - state: stripe_top
+      color: "#52b4e9"
+    - state: stripe_bottom
+      color: "#207ca0"
+    - sprite: _Stories/Interface/Misc/job_icons.rsi
+      offset: -0.09375, 0.0625
+      state: SpacePrisonMedic
+  - type: PresetIdCard
+    job: STPRISONMedic
+
+- type: entity
+  parent: IDCardStandard
+  id: STPRISONIDCardPrisoner
   name: Prison inmate ID card
   description: A card required to access various areas of the station.
   components:
-    - type: Sprite
-      sprite: Objects/Misc/id_cards.rsi
-      layers:
-        - state: orange
-    - type: PresetIdCard
-      job: PRISONPrisoner
-    - type: Clothing
-      slots:
-        - idcard
-      sprite: Objects/Misc/id_cards.rsi
+  - type: Sprite
+    layers:
+    - state: orange
+    - sprite: _Stories/Interface/Misc/job_icons.rsi
+      offset: -0.09375, 0.0625
+      state: prisoner
+  - type: PresetIdCard
+    job: STPRISONPrisoner
 
 - type: entity
   parent: IDCardStandard
@@ -120,7 +153,6 @@
   name: brigmedic ID card
   components:
   - type: Sprite
-    sprite: Objects/Misc/id_cards.rsi
     layers:
     - state: default
     - state: stripe_top
@@ -133,18 +165,21 @@
   - type: PresetIdCard
     job: STBrigmedic
 
-# Event-Restricted-Jobs
-
 - type: entity
   parent: IDCardStandard
   id: STSecurityClownIDCard
   name: security clown ID card
   components:
   - type: Sprite
-    sprite: _Stories/Objects/Misc/id_cards.rsi
     layers:
     - state: default
-    - state: idsecurityclown
+    - state: stripe_top
+      color: "#cb0000"
+    - state: stripe_bottom
+      color: "#830000"
+    - sprite: _Stories/Interface/Misc/job_icons.rsi
+      offset: -0.09375, 0.0625
+      state: SecurityClown
   - type: PresetIdCard
     job: STSecurityClown
 
@@ -154,10 +189,15 @@
   name: command maid ID card
   components:
   - type: Sprite
-    sprite: _Stories/Objects/Misc/id_cards.rsi
     layers:
-    - state: default
-    - state: idcommandmaid
+    - state: gold
+    - state: stripe_top
+      color: "#ff69b4"
+    - state: stripe_bottom
+      color: "#c71585"
+    - sprite: _Stories/Interface/Misc/job_icons.rsi
+      offset: -0.09375, 0.0625
+      state: CommandMaid
   - type: PresetIdCard
     job: STCommandMaid
 
@@ -167,9 +207,33 @@
   name: party maker ID card
   components:
   - type: Sprite
-    sprite: _Stories/Objects/Misc/id_cards.rsi
     layers:
     - state: default
-    - state: idpartymaker
+    - state: stripe_top
+      color: "#ff00ff"
+    - state: stripe_bottom
+      color: "#9400d3"
+    - sprite: _Stories/Interface/Misc/job_icons.rsi
+      offset: -0.09375, 0.0625
+      state: PartyMaker
   - type: PresetIdCard
     job: STPartyMaker
+
+- type: entity
+  parent: IDCardStandard
+  id: STBlueshieldIDCard
+  name: blueshield ID card
+  description: A card required to access various areas of the station.
+  components:
+  - type: Sprite
+    layers:
+    - state: centcom
+    - state: stripe_top
+      color: "#003366"
+    - state: stripe_bottom
+      color: "#1e90ff"
+    - sprite: _Stories/Interface/Misc/job_icons.rsi
+      offset: -0.09375, 0.0625
+      state: Blueshield
+  - type: PresetIdCard
+    job: STBlueshield

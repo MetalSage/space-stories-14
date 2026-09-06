@@ -1,16 +1,16 @@
 - type: entity
   parent: VendingMachine
-  id: PRISONVendingMachineDrobe
+  id: STPRISONVendingMachineDrobe
   name: Prison staff locker
   description: A vending machine for clothing related to prisoners and escapes!
   components:
     - type: VendingMachine
-      pack: PRISONDrobeInventory
+      pack: STPRISONDrobeInventory
       freeJobs:
-      - PRISONHeadOfPrison
-      - PRISONEngineer
-      - PRISONMedic
-      - PRISONOfficer
+      - STPRISONHeadOfPrison
+      - STPRISONEngineer
+      - STPRISONMedic
+      - STPRISONOfficer
     - type: VendingMachineVisuals
       offState: off
       brokenState: broken
@@ -32,17 +32,17 @@
 
 - type: entity
   parent: VendingMachine
-  id: PRISONVendingMachine
+  id: STPRISONVendingMachine
   name: Prison staff vending machine
   description: A vending machine containing prison staff gear. The sign says "PRISON STAFF ONLY".
   components:
     - type: VendingMachine
-      pack: PRISONTechInventory
+      pack: STPRISONTechInventory
       freeJobs:
-      - PRISONHeadOfPrison
-      - PRISONEngineer
-      - PRISONMedic
-      - PRISONOfficer
+      - STPRISONHeadOfPrison
+      - STPRISONEngineer
+      - STPRISONMedic
+      - STPRISONOfficer
     - type: VendingMachineVisuals
       offState: off
       brokenState: broken
@@ -73,12 +73,12 @@
 - type: entity
   abstract: true
   parent: VendingMachine
-  id: MusicalVendingMachineBase
+  id: STMusicalVendingMachineBase
   name: MusMat
   description: Vending machine with musical instruments.
   components:
     - type: VendingMachine
-      pack: MusVendInventory
+      pack: STMusVendInventory
     - type: VendingMachineVisuals
       offState: off
       brokenState: broken
@@ -104,8 +104,8 @@
       color: "#6f42d6"
 
 - type: entity
-  parent: MusicalVendingMachineBase
-  id: MusicalVendingMachine
+  parent: STMusicalVendingMachineBase
+  id: STMusicalVendingMachine
   suffix: Station
   components:
     - type: VendingMachine
@@ -116,15 +116,15 @@
       access: [["Theatre"]]
 
 - type: entity
-  parent: MusicalVendingMachineBase
-  id: MusicalVendingMachinePrison
+  parent: STMusicalVendingMachineBase
+  id: STMusicalVendingMachinePrison
   suffix: Prison
   components:
     - type: VendingMachine
       freeJobs:
-      - PRISONHeadOfPrison
-      - PRISONEngineer
-      - PRISONMedic
-      - PRISONOfficer
+      - STPRISONHeadOfPrison
+      - STPRISONEngineer
+      - STPRISONMedic
+      - STPRISONOfficer
     - type: AccessReader
       access: [["Prison"]]

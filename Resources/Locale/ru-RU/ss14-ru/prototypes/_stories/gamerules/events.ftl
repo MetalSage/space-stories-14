@@ -1,10 +1,10 @@
-ent-BaseInquisitorSpawn = { ent-BaseGameRule }
+ent-STBaseInquisitorSpawn = { ent-BaseGameRule }
     .desc = { ent-BaseGameRule.desc }
-ent-InquisitorSpawn = { ent-BaseGameRule }
+ent-STInquisitorSpawn = { ent-BaseGameRule }
     .desc = { ent-BaseGameRule.desc }
-ent-KyloSpawn = { ent-BaseGameRule }
+ent-STKyloSpawn = { ent-BaseGameRule }
     .desc = { ent-BaseGameRule.desc }
-ent-SpafMigration = { ent-BaseStationEventShortDelay }
+ent-STSpafMigration = { ent-BaseStationEventShortDelay }
     .desc = { ent-BaseStationEventShortDelay.desc }
 ent-STJobDistributionError = { ent-BaseGameRule }
     .desc = { ent-BaseGameRule.desc }

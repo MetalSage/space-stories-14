@@ -1,12 +1,12 @@
 - type: soundCollection
-  id: KidanSpeaks
+  id: STKidanSpeaks
   files:
     - /Audio/_Stories/Voice/Kidan/speak1.ogg
     - /Audio/_Stories/Voice/Kidan/speak2.ogg
     - /Audio/_Stories/Voice/Kidan/speak3.ogg
 
 - type: soundCollection
-  id: KidanSneeze
+  id: STKidanSneeze
   files:
     - /Audio/_Stories/Voice/Kidan/sneeze1.ogg
     - /Audio/_Stories/Voice/Kidan/sneeze2.ogg
@@ -14,19 +14,19 @@
     - /Audio/_Stories/Voice/Kidan/sneeze4.ogg
 
 - type: soundCollection
-  id: KidanCough
+  id: STKidanCough
   files:
   - /Audio/_Stories/Voice/Kidan/cough1.ogg
 
 - type: soundCollection
-  id: KidanScream
+  id: STKidanScream
   files:
     - /Audio/_Stories/Voice/Kidan/scream1.ogg
     - /Audio/_Stories/Voice/Kidan/scream2.ogg
     - /Audio/_Stories/Voice/Kidan/scream3.ogg
 
 - type: soundCollection
-  id: KidanLaugh
+  id: STKidanLaugh
   files:
   - /Audio/_Stories/Voice/Kidan/laugh1.ogg
   - /Audio/_Stories/Voice/Kidan/laugh2.ogg
@@ -36,50 +36,50 @@
   - /Audio/_Stories/Voice/Kidan/giggles2.ogg
 
 - type: soundCollection
-  id: KidanSigh
+  id: STKidanSigh
   files:
   - /Audio/_Stories/Voice/Kidan/sigh1.ogg
   - /Audio/_Stories/Voice/Kidan/sigh2.ogg
 
 - type: soundCollection
-  id: KidanCry
+  id: STKidanCry
   files:
   - /Audio/_Stories/Voice/Kidan/cry1.ogg
 
 - type: soundCollection
-  id: KidanGrumble
+  id: STKidanGrumble
   files:
   - /Audio/_Stories/Voice/Kidan/grumble1.ogg
   - /Audio/_Stories/Voice/Kidan/grumble2.ogg
   - /Audio/_Stories/Voice/Kidan/grumble3.ogg
 
 - type: soundCollection
-  id: KidanMoan
+  id: STKidanMoan
   files:
   - /Audio/_Stories/Voice/Kidan/moan1.ogg
 
 - type: soundCollection
-  id: KidanWigglesAtennae
+  id: STKidanWigglesAtennae
   files:
   - /Audio/_Stories/Voice/Kidan/wiggles_antennae1.ogg
   - /Audio/_Stories/Voice/Kidan/wiggles_antennae2.ogg
   - /Audio/_Stories/Voice/Kidan/wiggles_antennae3.ogg
 
 - type: soundCollection
-  id: KidanWavesAntennaeSharply
+  id: STKidanWavesAntennaeSharply
   files:
   - /Audio/_Stories/Voice/Kidan/waves_antennae_sharply1.ogg
   - /Audio/_Stories/Voice/Kidan/waves_antennae_sharply2.ogg
 
 - type: soundCollection
-  id: KidanGasp
+  id: STKidanGasp
   files:
   - /Audio/_Stories/Voice/Kidan/dying_gasp1.ogg
   - /Audio/_Stories/Voice/Kidan/dying_gasp2.ogg
   - /Audio/_Stories/Voice/Kidan/dying_gasp3.ogg
 
 - type: soundCollection
-  id: KidanDeathGasp
+  id: STKidanDeathGasp
   files:
   - /Audio/_Stories/Voice/Kidan/deathgasp1.ogg
   - /Audio/_Stories/Voice/Kidan/deathgasp2.ogg

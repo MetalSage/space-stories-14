@@ -2,7 +2,7 @@
   name: Grav-hand
   parent: BaseItem
   categories: [ HideSpawnMenu ]
-  id: HandTetherGun
+  id: STHandTetherGun
   description: Wow! Your hand can manipulate gravity around objects.
   components:
     - type: Sprite

@@ -1,6 +1,6 @@
 - type: entity
   parent: ClothingNeckBase
-  id: ClothingNeckCloakInquisitor
+  id: STClothingNeckCloakInquisitor
   name: inquisitor's cloak
   description: An incredible work of art that protects against space hardships. Charged with an unknown energy.
   components:
@@ -22,9 +22,9 @@
         Caustic: 0.4
   - type: Tag
     tags:
-      - ForceRecallEquipment
+      - STForceRecallEquipment
   - type: ToggleableClothing
-    clothingPrototype: ClothingHeadHatHoodInquisitor
+    clothingPrototype: STClothingHeadHatHoodInquisitor
     slot: head
     requiredSlot:
     - neck
@@ -36,7 +36,7 @@
 
 - type: entity
   parent: ClothingNeckBase
-  id: ClothingNeckCloakKylo
+  id: STClothingNeckCloakKylo
   name: kylo ren's cloak
   description: A dark cloak, absorbs fire damage and protects against space hazards.
   components:
@@ -53,9 +53,9 @@
         Caustic: 0.4
   - type: Tag
     tags:
-      - ForceRecallEquipment
+      - STForceRecallEquipment
   - type: ToggleableClothing
-    clothingPrototype: ClothingHeadHatHoodKylo
+    clothingPrototype: STClothingHeadHatHoodKylo
     slot: head
     requiredSlot:
     - neck
@@ -67,19 +67,19 @@
 
 - type: entity
   parent: ClothingNeckBase
-  id: ClothingNeckCloakExe
+  id: STClothingNeckCloakExe
   name: guardian's cloak
   description: Похоже, тут выгравировано "R u s t e d T i m". Что же это может значить?
   components:
   - type: Tag
     tags:
-      - ForceRecallEquipment
+      - STForceRecallEquipment
   - type: Sprite
     sprite: _Stories/Clothing/Neck/Cloaks/exe_cloak.rsi
 
 - type: entity
   parent: ClothingNeckBase
-  id: ClothingNeckCloakSnake
+  id: STClothingNeckCloakSnake
   name: snake charmer's cloak
   description: I'm not sure if this is a McCoy's Taipan, but it definitely escaped from the Taipan.
   components:
@@ -88,7 +88,7 @@
 
 - type: entity
   parent: ClothingNeckBase
-  id: ClothingNeckCloakAnomalist
+  id: STClothingNeckCloakAnomalist
   name: anomalist's cloak
   description: I think the coordinates of the anomalous zone are shown here.
   components:
@@ -97,7 +97,7 @@
 
 - type: entity
   parent: ClothingNeckBase
-  id: ClothingNeckCloakCollector
+  id: STClothingNeckCloakCollector
   name: collector's cloak
   description: No, its owner is not a midnight person.
   components:

@@ -32,6 +32,7 @@ public sealed partial class VendingMachineLogWireAction : BaseToggleWireAction
 
     public override bool GetValue(EntityUid owner)
     {
-        return EntityManager.TryGetComponent(owner, out VendingMachineComponent? vending) && !vending.DisableFinancialLogging;
+        return EntityManager.TryGetComponent(owner, out VendingMachineComponent? vending) &&
+               !vending.DisableFinancialLogging;
     }
 }

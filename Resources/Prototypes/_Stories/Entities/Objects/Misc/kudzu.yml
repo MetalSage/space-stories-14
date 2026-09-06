@@ -64,10 +64,9 @@
   - type: Kudzu
     growthTickChance: 1
     spreadChance: 1
-    # Heals each time it manages to do a growth tick:
     damageRecovery:
       types:
         Slash: -0.5
         Heat: -1.0
         Cold: -1.0
-        Blunt: -0.5 # Needs to be balanced (approx 3x) with vacuum damage to stall but not kill Kudzu
+        Blunt: -0.5

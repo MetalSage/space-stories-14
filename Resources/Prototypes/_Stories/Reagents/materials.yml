@@ -1,6 +1,6 @@
 - type: material
-  id: SheetPrinter
-  stackEntity: SheetPrinter1
+  id: STSheetPrinter
+  stackEntity: STSheetPrinter1
   name: materials-paper
   icon:
     sprite: Objects/Misc/bureaucracy.rsi
@@ -9,8 +9,8 @@
   price: 0.05
 
 - type: material
-  id: Ink
-  stackEntity: InkPrinter1
+  id: STInk
+  stackEntity: STInkPrinter1
   name: materials-inks
   icon:
     sprite: _Stories/Objects/Misc/bureaucracy.rsi

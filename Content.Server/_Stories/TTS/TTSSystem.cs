@@ -8,8 +8,8 @@ using Content.Shared._Stories.SCCVars;
 using Content.Shared._Stories.TTS;
 using Content.Shared.Chat;
 using Content.Shared.GameTicking;
-using Content.Shared.Inventory;
 using Content.Shared.Implants;
+using Content.Shared.Inventory;
 using Robust.Shared.Configuration;
 using Robust.Shared.Containers;
 using Robust.Shared.Player;
@@ -18,10 +18,9 @@ using Robust.Shared.Random;
 
 namespace Content.Server._Stories.TTS;
 
-// ReSharper disable once InconsistentNaming
 public sealed partial class TTSSystem : EntitySystem
 {
-    private const int MaxMessageChars = 100 * 2; // same as SingleBubbleCharLimit * 2
+    private const int MaxMessageChars = 100 * 2;
 
     private static readonly ProtoId<TTSVoicePrototype> FatherGrigoriId = "father_grigori";
 
@@ -49,8 +48,14 @@ public sealed partial class TTSSystem : EntitySystem
             "Бармен, налей мне самого крепкого вина, которое есть в твоих запасах!",
         };
 
-    [Dependency] private TTSManager _ttsManager = default!;
+    [Dependency] private IConfigurationManager _cfg = default!;
+    [Dependency] private SharedContainerSystem _container = default!;
+    [Dependency] private InventorySystem _inventory = default!;
     private bool _isEnabled;
+    [Dependency] private IPrototypeManager _prototypeManager = default!;
+    [Dependency] private IRobustRandom _rng = default!;
+
+    [Dependency] private TTSManager _ttsManager = default!;
 
     public override void Initialize()
     {

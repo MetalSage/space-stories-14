@@ -1,6 +1,6 @@
 - type: entity
   parent: ClothingBackpackDuffel
-  id: ClothingBackpackDuffelAdidos
+  id: STClothingBackpackDuffelAdidos
   name: duffel bag
   description: A large duffel bag for storing additional items.
   components:
@@ -9,7 +9,7 @@
 
 - type: entity
   parent: ClothingBackpackDuffel
-  id: ClothingBackpackDuffelBluesky
+  id: STClothingBackpackDuffelBluesky
   name: duffel bag
   description: A large duffel bag for storing additional items.
   components:
@@ -18,7 +18,7 @@
 
 - type: entity
   parent: ClothingBackpackDuffel
-  id: ClothingBackpackDuffelEight
+  id: STClothingBackpackDuffelEight
   name: duffel bag
   description: A large duffel bag for storing additional items.
   components:
@@ -27,7 +27,7 @@
 
 - type: entity
   parent: ClothingBackpackDuffel
-  id: ClothingBackpackDuffelGachi
+  id: STClothingBackpackDuffelGachi
   name: duffel bag
   description: A large duffel bag for storing additional items.
   components:
@@ -36,9 +36,20 @@
 
 - type: entity
   parent: ClothingBackpackDuffel
-  id: ClothingBackpackDuffelRl
+  id: STClothingBackpackDuffelRl
   name: duffel bag
   description: A large duffel bag for storing additional items.
   components:
   - type: Sprite
     sprite: _Stories/Clothing/Back/Duffels/duffels_rl.rsi
+
+- type: entity
+  parent: ClothingBackpackDuffel
+  id: STClothingBackpackDuffelBlueshield
+  name: blueshield duffel bag
+  description: A robust duffel bag issued to Nanotrasen's finest.
+  components:
+  - type: Sprite
+    sprite: _Stories/Clothing/Back/Duffels/blueshield_duffel.rsi
+  - type: Clothing
+    sprite: _Stories/Clothing/Back/Duffels/blueshield_duffel.rsi

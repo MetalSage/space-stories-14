@@ -1,5 +1,5 @@
 - type: entity
-  id: BaseEffectProtectiveBubble
+  id: STBaseEffectProtectiveBubble
   abstract: true
   components:
   - type: EffectVisuals
@@ -20,9 +20,9 @@
       path: /Audio/Effects/Grenades/Supermatter/whitehole_loop.ogg
 
 - type: entity
-  id: EffectProtectiveBubble
+  id: STEffectProtectiveBubble
   categories: [ HideSpawnMenu ]
-  parent: BaseEffectProtectiveBubble
+  parent: STBaseEffectProtectiveBubble
   components:
   - type: Destructible
     thresholds:
@@ -35,24 +35,14 @@
           path: /Audio/Weapons/block_metal1.ogg
       - !type:DoActsBehavior
         acts: [ "Destruction" ]
-  # - type: Reflect ! Сломалось.
-  #   reflectProb: 1
-  #   reflects:
-      # - Energy
   - type: MobState
     allowedStates:
       - Alive
   - type: Damageable
-    damageModifierSet: ProtectiveBubble
+    damageModifierSet: STProtectiveBubble
   - type: Injurable
-  # - type: PassiveDamage # Slight passive regen. Assuming one damage type, comes out to about 4 damage a minute.
-  #   allowedStates:
-  #     - Alive
-  #   damage:
-  #     types:
-  #       Blunt: 1
   - type: Fixtures
-    fixtures: # TODO: This needs a second fixture just for mob collisions.
+    fixtures:
       fix1:
         shape:
           !type:PhysShapeCircle
@@ -73,12 +63,12 @@
       state: shield3_bad
 
 - type: entity
-  id: EffectInquisitorProtectiveBubble
+  id: STEffectInquisitorProtectiveBubble
   categories: [ HideSpawnMenu ]
-  parent: BaseEffectProtectiveBubble
+  parent: STBaseEffectProtectiveBubble
   components:
   - type: Fixtures
-    fixtures: # TODO: This needs a second fixture just for mob collisions.
+    fixtures:
       fix1:
         shape:
           !type:PhysShapeCircle

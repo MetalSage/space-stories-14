@@ -1,6 +1,6 @@
 - type: markingsGroup
   parent: Undergarments
-  id: Felinid
+  id: STFelinid
   limits:
     enum.HumanoidVisualLayers.Hair:
       limit: 1
@@ -11,14 +11,14 @@
     enum.HumanoidVisualLayers.Tail:
       limit: 1
       required: true
-      default: [ FelinidTailBasic ]
+      default: [ STFelinidTailBasic ]
     enum.HumanoidVisualLayers.Chest:
       limit: 1
       required: false
     enum.HumanoidVisualLayers.HeadTop:
       limit: 1
       required: true
-      default: [ FelinidEarsBasic ]
+      default: [ STFelinidEarsBasic ]
     enum.HumanoidVisualLayers.LArm:
       limit: 1
       required: false
@@ -46,21 +46,21 @@
 
 - type: entity
   parent: BaseSpeciesAppearance
-  id: AppearanceFelinid
+  id: STAppearanceFelinid
   name: felinid appearance
   components:
   - type: InitialBody
     organs:
-      Torso: OrganFelinidTorso
-      Head: OrganFelinidHead
-      ArmLeft: OrganFelinidArmLeft
-      ArmRight: OrganFelinidArmRight
-      HandRight: OrganFelinidHandRight
-      HandLeft: OrganFelinidHandLeft
-      LegLeft: OrganFelinidLegLeft
-      LegRight: OrganFelinidLegRight
-      FootLeft: OrganFelinidFootLeft
-      FootRight: OrganFelinidFootRight
+      Torso: STOrganFelinidTorso
+      Head: STOrganFelinidHead
+      ArmLeft: STOrganFelinidArmLeft
+      ArmRight: STOrganFelinidArmRight
+      HandRight: STOrganFelinidHandRight
+      HandLeft: STOrganFelinidHandLeft
+      LegLeft: STOrganFelinidLegLeft
+      LegRight: STOrganFelinidLegRight
+      FootLeft: STOrganFelinidFootLeft
+      FootRight: STOrganFelinidFootRight
       Brain: OrganHumanBrain
       Eyes: OrganHumanEyes
       Tongue: OrganHumanTongue
@@ -72,13 +72,13 @@
       Liver: OrganAnimalLiver
       Kidneys: OrganHumanKidneys
   - type: HumanoidProfile
-    species: Felinid
+    species: STFelinid
 
 - type: entity
   parent:
-  - AppearanceFelinid
+  - STAppearanceFelinid
   - BaseSpeciesMobOrganic
-  id: MobFelinid
+  id: STMobFelinid
   name: Urist McFelinid
   components:
   - type: FootstepModifier
@@ -87,19 +87,19 @@
   - type: Sprite
     drawdepth: Mobs
   - type: Vocal
-    emoteSounds: MaleFelinid
+    emoteSounds: STMaleFelinid
   - type: Speech
-    allowedEmotes: ['Hiss', 'Meow', 'Mew', 'Growl', 'Purr']
+    allowedEmotes: ['STHiss', 'STMeow', 'STMew', 'Growl', 'STPurr']
 
 - type: entity
   parent: OrganBase
-  id: OrganFelinid
+  id: STOrganFelinid
   abstract: true
-  suffix: Felinid
+  suffix: STFelinid
 
 - type: entity
-  parent: OrganFelinid
-  id: OrganFelinidExternal
+  parent: STOrganFelinid
+  id: STOrganFelinidExternal
   abstract: true
   components:
   - type: Sprite
@@ -109,15 +109,15 @@
       sprite: Mobs/Species/Human/parts.rsi
   - type: VisualOrganMarkings
     markingData:
-      group: Felinid
+      group: STFelinid
 
 - type: entity
-  id: OrganFelinidTorso
-  parent: [ OrganBaseTorsoSexed, OrganBaseTorso, OrganFelinidExternal ]
+  id: STOrganFelinidTorso
+  parent: [ OrganBaseTorsoSexed, OrganBaseTorso, STOrganFelinidExternal ]
 
 - type: entity
-  id: OrganFelinidHead
-  parent: [ OrganBaseHeadSexed, OrganBaseHead, OrganFelinidExternal ]
+  id: STOrganFelinidHead
+  parent: [ OrganBaseHeadSexed, OrganBaseHead, STOrganFelinidExternal ]
   components:
   - type: VisualOrganMarkings
     hideableLayers:
@@ -125,33 +125,33 @@
     - enum.HumanoidVisualLayers.Snout
 
 - type: entity
-  id: OrganFelinidArmLeft
-  parent: [ OrganBaseArmLeft, OrganFelinidExternal ]
+  id: STOrganFelinidArmLeft
+  parent: [ OrganBaseArmLeft, STOrganFelinidExternal ]
 
 - type: entity
-  id: OrganFelinidArmRight
-  parent: [ OrganBaseArmRight, OrganFelinidExternal ]
+  id: STOrganFelinidArmRight
+  parent: [ OrganBaseArmRight, STOrganFelinidExternal ]
 
 - type: entity
-  id: OrganFelinidHandLeft
-  parent: [ OrganBaseHandLeft, OrganFelinidExternal ]
+  id: STOrganFelinidHandLeft
+  parent: [ OrganBaseHandLeft, STOrganFelinidExternal ]
 
 - type: entity
-  id: OrganFelinidHandRight
-  parent: [ OrganBaseHandRight, OrganFelinidExternal ]
+  id: STOrganFelinidHandRight
+  parent: [ OrganBaseHandRight, STOrganFelinidExternal ]
 
 - type: entity
-  id: OrganFelinidLegLeft
-  parent: [ OrganBaseLegLeft, OrganFelinidExternal ]
+  id: STOrganFelinidLegLeft
+  parent: [ OrganBaseLegLeft, STOrganFelinidExternal ]
 
 - type: entity
-  id: OrganFelinidLegRight
-  parent: [ OrganBaseLegRight, OrganFelinidExternal ]
+  id: STOrganFelinidLegRight
+  parent: [ OrganBaseLegRight, STOrganFelinidExternal ]
 
 - type: entity
-  id: OrganFelinidFootLeft
-  parent: [ OrganBaseFootLeft, OrganFelinidExternal ]
+  id: STOrganFelinidFootLeft
+  parent: [ OrganBaseFootLeft, STOrganFelinidExternal ]
 
 - type: entity
-  id: OrganFelinidFootRight
-  parent: [ OrganBaseFootRight, OrganFelinidExternal ]
+  id: STOrganFelinidFootRight
+  parent: [ OrganBaseFootRight, STOrganFelinidExternal ]

@@ -1,5 +1,5 @@
 - type: vendingMachineInventory
-  id: PRISONTechInventory
+  id: STPRISONTechInventory
   startingInventory:
     SecurityWhistle: 5
     Handcuffs: 8
@@ -10,8 +10,8 @@
     Flash: 5
     Tourniquet: 5
     FlashlightSeclite: 5
-    PRISONClothingEyesGlasses: 2
-    PRISONClothingBeltWebbing: 5
+    STPRISONClothingEyesGlasses: 2
+    STPRISONClothingBeltWebbing: 5
     CombatKnife: 3
     Zipties: 12
     RiotShield: 2
@@ -22,18 +22,18 @@
     FoodBoxDonut: 2
 
 - type: vendingMachineInventory
-  id: PRISONDrobeInventory
+  id: STPRISONDrobeInventory
   startingInventory:
-    PRISONClothingBackpack: 3
-    PRISONClothingBackpackSatchel: 3
-    PRISONClothingBackpackDuffel: 3
-    PRISONClothingUniformJumpsuit: 3
-    PRISONClothingHeadHatSoft: 3
-    PRISONClothingHeadHatBeret: 3
+    STPRISONClothingBackpack: 3
+    STPRISONClothingBackpackSatchel: 3
+    STPRISONClothingBackpackDuffel: 3
+    STPRISONClothingUniformJumpsuit: 3
+    STPRISONClothingHeadHatSoft: 3
+    STPRISONClothingHeadHatBeret: 3
     ClothingHeadBandBlue: 3
-    PRISONClothingShoesBootsJack: 3
+    STPRISONClothingShoesBootsJack: 3
     ClothingHandsGlovesColorBlack: 3
-    PRISONClothingHeadset: 3
-    PRISONClothingOuterVestArmor: 2
+    STPRISONClothingHeadset: 3
+    STPRISONClothingOuterVestArmor: 2
     ClothingEyesBlindfold: 1
     ClothingShoesBootsCombat: 1

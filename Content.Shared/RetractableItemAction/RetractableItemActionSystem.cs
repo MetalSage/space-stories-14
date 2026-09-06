@@ -1,6 +1,7 @@
 using Content.Shared.Actions;
 using Content.Shared.Cuffs;
 using Content.Shared.Hands;
+using Content.Shared.Hands.Components; // Stories-RetractableItems
 using Content.Shared.Hands.EntitySystems;
 using Content.Shared.Interaction.Components;
 using Content.Shared.Inventory;
@@ -41,9 +42,6 @@ public sealed partial class RetractableItemActionSystem : EntitySystem
 
     private void OnRetractableItemAction(Entity<RetractableItemActionComponent> ent, ref OnRetractableItemActionEvent args)
     {
-        if (_hands.GetActiveHand(args.Performer) is not { } activeHand)
-            return;
-
         if (_actions.GetAction(ent.Owner) is not { } action)
             return;
 
@@ -53,25 +51,43 @@ public sealed partial class RetractableItemActionSystem : EntitySystem
         if (ent.Comp.ActionItemUid == null)
             return;
 
-        // Don't allow to summon an item if holding an unremoveable item unless that item is summoned by the action.
-        if (_hands.GetActiveItem(ent.Owner) != null
-            && !_hands.IsHolding(args.Performer, ent.Comp.ActionItemUid)
-            && !_hands.CanDropHeld(args.Performer, activeHand, false))
+        // Stories-RetractableItems-Start
+        if (_hands.IsHolding(args.Performer, ent.Comp.ActionItemUid))
+        {
+            RetractRetractableItem(args.Performer, ent.Comp.ActionItemUid.Value, ent.Owner);
+            args.Handled = true;
+            return;
+        }
+
+        string? targetHandId = null;
+        if (ent.Comp.TargetHandLocation != null && TryComp<HandsComponent>(args.Performer, out var handsComp))
+        {
+            foreach (var handId in handsComp.SortedHands)
+            {
+                if (_hands.TryGetHand((args.Performer, handsComp), handId, out var hand) && hand.Value.Location == ent.Comp.TargetHandLocation)
+                {
+                    targetHandId = handId;
+                    break;
+                }
+            }
+        }
+
+        targetHandId ??= _hands.GetActiveHand(args.Performer);
+
+        if (targetHandId == null)
+            return;
+
+        // Don't allow to summon an item if holding an unremoveable item in the target hand.
+        var held = _hands.GetHeldItem(args.Performer, targetHandId);
+        if (held != null && held != ent.Comp.ActionItemUid && !_hands.CanDropHeld(args.Performer, targetHandId, false))
         {
             _popups.PopupEntity(Loc.GetString("retractable-item-hand-cannot-drop"), args.Performer, args.Performer);
             return;
         }
 
-        if (_hands.IsHolding(args.Performer, ent.Comp.ActionItemUid))
-        {
-            RetractRetractableItem(args.Performer, ent.Comp.ActionItemUid.Value, ent.Owner);
-        }
-        else
-        {
-            SummonRetractableItem(args.Performer, ent.Comp.ActionItemUid.Value, activeHand, ent.Owner);
-        }
-
+        SummonRetractableItem(args.Performer, ent.Comp.ActionItemUid.Value, targetHandId, ent.Owner);
         args.Handled = true;
+        // Stories-RetractableItems-End
     }
 
     private void OnActionSummonedShutdown(Entity<ActionRetractableItemComponent> ent, ref ComponentShutdown args)

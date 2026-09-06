@@ -62019,7 +62019,7 @@ entities:
     - type: Transform
       parent: 2
       pos: -33.504887,27.638458
-- proto: BoxPrinter
+- proto: STBoxPrinter
   entities:
   - uid: 9024
     components:
@@ -103022,7 +103022,7 @@ entities:
     - type: Transform
       parent: 2
       pos: -36.30147,-33.2918
-- proto: ClothingOuterCoatDetectiveGrey
+- proto: STClothingOuterCoatDetectiveGrey
   entities:
   - uid: 16685
     components:
@@ -103365,7 +103365,7 @@ entities:
     - type: Transform
       parent: 2
       pos: -41.608704,47.37455
-- proto: ClothingUniformJumpsuitDetectiveSpecialGrey
+- proto: STClothingUniformJumpsuitDetectiveSpecialGrey
   entities:
   - uid: 16687
     components:
@@ -152115,7 +152115,7 @@ entities:
     - type: Transform
       parent: 2
       pos: -2.3628702,-28.400854
-- proto: KvassTankFull
+- proto: STKvassTankFull
   entities:
   - uid: 15899
     components:
@@ -152207,7 +152207,7 @@ entities:
     - type: Transform
       parent: 2
       pos: 59.482655,94.46677
-- proto: LandMineSpaf
+- proto: STLandMineSpaf
   entities:
   - uid: 23972
     components:
@@ -153045,7 +153045,7 @@ entities:
     - type: Transform
       parent: 2
       pos: -10.5,31.5
-- proto: LockerGuardianNtFilled
+- proto: STLockerGuardianNtFilled
   entities:
   - uid: 24048
     components:
@@ -161089,7 +161089,7 @@ entities:
       parent: 2
       rot: 1.5707963267948966 rad
       pos: -32.5,14.5
-- proto: PrintedDocumentApplicationEquipment
+- proto: STPrintedDocumentApplicationEquipment
   entities:
   - uid: 25360
     components:
@@ -161097,7 +161097,7 @@ entities:
       parent: 2
       rot: 3.141592653589793 rad
       pos: 24.680271,-21.320217
-- proto: PrintedDocumentConstructionPermit
+- proto: STPrintedDocumentConstructionPermit
   entities:
   - uid: 25361
     components:
@@ -161111,7 +161111,7 @@ entities:
       parent: 2
       rot: 3.141592653589793 rad
       pos: 24.649021,-21.538967
-- proto: PrintedDocumentJudgment
+- proto: STPrintedDocumentJudgment
   entities:
   - uid: 15115
     components:
@@ -161119,7 +161119,7 @@ entities:
       parent: 2
       rot: 3.141592653589793 rad
       pos: -14.14702,-1.369412
-- proto: PrintedDocumentPermissionEquipment
+- proto: STPrintedDocumentPermissionEquipment
   entities:
   - uid: 25363
     components:
@@ -161127,7 +161127,7 @@ entities:
       parent: 2
       rot: 3.141592653589793 rad
       pos: 24.445896,-21.273342
-- proto: PrinterDoc
+- proto: STPrinterDoc
   entities:
   - uid: 8643
     components:
@@ -172124,7 +172124,7 @@ entities:
     - type: Transform
       parent: 2
       pos: -12.5,-17.5
-- proto: SpawnPointGuardianNt
+- proto: STSpawnPointGuardianNt
   entities:
   - uid: 27351
     components:
@@ -172470,7 +172470,7 @@ entities:
     - type: Transform
       parent: 2
       pos: -40.5,-16.5
-- proto: SpawnSpaceKoi
+- proto: STSpawnSpaceKoi
   entities:
   - uid: 27408
     components:

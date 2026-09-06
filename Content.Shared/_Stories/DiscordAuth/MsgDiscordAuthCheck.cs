@@ -4,9 +4,6 @@ using Robust.Shared.Serialization;
 
 namespace Content.Shared._Stories.DiscordAuth;
 
-/// <summary>
-/// Client sends this event to force server check player Discord verification state
-/// </summary>
 public sealed class MsgDiscordAuthCheck : NetMessage
 {
     public override MsgGroups MsgGroup => MsgGroups.Command;

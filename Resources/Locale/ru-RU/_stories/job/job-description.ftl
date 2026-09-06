@@ -7,3 +7,4 @@ job-description-STBrigmedic = Обследуйте и лечите сотруд�
 stories-job-description-command-maid = Очистите мостик, командные помещения и все остальное, что вам прикажет Капитан.
 stories-job-description-security-clown = Выполняйте работу службы безопасности, но не забывайте делать это со своей клоунской изюминкой.
 stories-job-description-party-maker = Устройте самую грандиозную вечеринку за всю историю этой станции!
+stories-job-description-blueshield = Защищайте глав отделов ценой своей жизни. Вы не офицер службы безопасности и не проводите аресты.

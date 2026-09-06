@@ -1,13 +1,12 @@
+using System.Linq;
 using Content.Shared._Stories.Conversion;
 using Content.Shared._Stories.Mindshield;
 using Content.Shared.Mindshield.Components;
-using System.Linq;
 
 namespace Content.Server._Stories.Conversion;
 
 public sealed partial class ConversionSystem
 {
-    // TODO: Имплант не должен защищать от всех конвертаций.
     private void InitializeMindShield()
     {
         base.Initialize();

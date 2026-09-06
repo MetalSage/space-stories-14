@@ -1,6 +1,6 @@
-ent-BaseEffectProtectiveBubble = { "" }
+ent-STBaseEffectProtectiveBubble = { "" }
     .desc = { "" }
-ent-EffectProtectiveBubble = { ent-BaseEffectProtectiveBubble }
-    .desc = { ent-BaseEffectProtectiveBubble.desc }
-ent-EffectInquisitorProtectiveBubble = { ent-BaseEffectProtectiveBubble }
-    .desc = { ent-BaseEffectProtectiveBubble.desc }
+ent-STEffectProtectiveBubble = { ent-STBaseEffectProtectiveBubble }
+    .desc = { ent-STBaseEffectProtectiveBubble.desc }
+ent-STEffectInquisitorProtectiveBubble = { ent-STBaseEffectProtectiveBubble }
+    .desc = { ent-STBaseEffectProtectiveBubble.desc }
