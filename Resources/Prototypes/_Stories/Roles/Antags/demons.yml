@@ -1,0 +1,27 @@
+- type: antag
+  id: STSlaughterDemonAntag
+  name: st-roles-antag-slaughter-demon-name
+  antagonist: true
+  objective: st-roles-antag-slaughter-demon-objective
+
+- type: antagSpecifier
+  parent: RestrictedAntag
+  id: STSlaughterDemonAntag
+  spawnerPrototype: STSpawnPointGhostSlaughterDemon
+  pickPlayer: false
+  mindRoles:
+  - STMindRoleSlaughterDemon
+
+- type: antag
+  id: STShadowDemonAntag
+  name: st-roles-antag-shadow-demon-name
+  antagonist: true
+  objective: st-roles-antag-shadow-demon-objective
+
+- type: antagSpecifier
+  parent: RestrictedAntag
+  id: STShadowDemonAntag
+  spawnerPrototype: STSpawnPointGhostShadowDemon
+  pickPlayer: false
+  mindRoles:
+  - STMindRoleShadowDemon

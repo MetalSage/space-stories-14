@@ -1,0 +1,23 @@
+- type: entity
+  id: STProjectileShadowHand
+  name: теневая рука
+  description: Коготь тьмы, летящий к своей цели.
+  categories: [ HideSpawnMenu ]
+  parent: BaseBullet
+  components:
+  - type: Sprite
+    noRot: false
+    sprite: _Stories/Effects/demons.rsi
+    layers:
+    - state: shadow_hand
+      shader: unshaded
+  - type: PointLight
+    color: "#4B0082"
+    radius: 1.5
+    energy: 1.5
+  - type: Projectile
+    deleteOnCollide: true
+    damage: {}
+    soundHit:
+      path: /Audio/_Stories/Demons/ShadowDemon/shadowattack1.ogg
+  - type: ShadowGrappleProjectile

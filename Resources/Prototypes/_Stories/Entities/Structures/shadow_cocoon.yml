@@ -1,0 +1,41 @@
+- type: entity
+  id: STStructureShadowCocoon
+  name: теневой кокон
+  description: Объект, завёрнутый в густую, почти осязаемую тьму.
+  components:
+  - type: Sprite
+    sprite: _Stories/Mobs/Demons/shadow_demon.rsi
+    layers:
+    - state: shadow_demon
+      color: "#150022"
+  - type: ShadowCocoon
+    hallucinationSounds:
+      collection: STShadowDemonHallucination
+    hallucinationChance: 0.2
+  - type: Damageable
+  - type: Injurable
+    damageContainer: Inorganic
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 60
+      behaviors:
+      - !type:PlaySoundBehavior
+        sound:
+          path: /Audio/_Stories/Demons/ShadowDemon/shadownode.ogg
+      - !type:DoActsBehavior
+        acts: [ "Destruction" ]
+  - type: Physics
+    bodyType: Static
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeAabb
+          bounds: "-0.4,-0.4,0.4,0.4"
+        density: 40
+        mask:
+        - MachineMask
+        layer:
+        - MachineLayer

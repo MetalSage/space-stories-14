@@ -254,3 +254,47 @@
       rolls: 3, 6
       children:
       - id: STSpawnPointGhostCorpium
+
+- type: entity
+  parent: BaseAntagGhostRoleRule
+  id: STSlaughterDemonSpawn
+  components:
+  - type: StationEvent
+    weight: 6
+    earliestStart: 30
+    minimumPlayers: 25
+    duration: null
+  - type: AntagRandomSpawn
+  - type: AntagSpawner
+    prototype: STMobSlaughterDemon
+  - type: AntagObjectives
+    objectives:
+    - STSlaughterDevourObjective
+    - STSlaughterFluffObjective
+  - type: AntagSelection
+    agentName: st-slaughter-demon-round-end-agent-name
+    antags:
+    - !type:FixedAntagCount
+      proto: STSlaughterDemonAntag
+
+- type: entity
+  parent: BaseAntagGhostRoleRule
+  id: STShadowDemonSpawn
+  components:
+  - type: StationEvent
+    weight: 6
+    earliestStart: 30
+    minimumPlayers: 30
+    duration: null
+  - type: ShadowDemonSpawnLocation
+  - type: AntagSpawner
+    prototype: STMobShadowDemon
+  - type: AntagObjectives
+    objectives:
+    - STShadowWrapObjective
+    - STShadowSurviveObjective
+  - type: AntagSelection
+    agentName: st-shadow-demon-round-end-agent-name
+    antags:
+    - !type:FixedAntagCount
+      proto: STShadowDemonAntag

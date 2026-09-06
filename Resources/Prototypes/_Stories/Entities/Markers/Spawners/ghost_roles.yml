@@ -59,3 +59,41 @@
       - state: green
       - sprite: _Stories/Mobs/Aliens/corpium.rsi
         state: alive
+
+- type: entity
+  categories: [ HideSpawnMenu, Spawner ]
+  parent: BaseAntagSpawner
+  id: STSpawnPointGhostSlaughterDemon
+  suffix: Slaughter Demon
+  components:
+  - type: GhostRole
+    name: stories-ghost-role-information-slaughter-demon-name
+    description: stories-ghost-role-information-slaughter-demon-desc
+    rules: stories-ghost-role-information-demon-rules
+    mindRoles:
+    - STMindRoleSlaughterDemon
+  - type: Sprite
+    sprite: Markers/jobs.rsi
+    layers:
+      - state: green
+      - sprite: _Stories/Mobs/Demons/slaughter_demon.rsi
+        state: icon
+
+- type: entity
+  categories: [ HideSpawnMenu, Spawner ]
+  parent: BaseAntagSpawner
+  id: STSpawnPointGhostShadowDemon
+  suffix: Shadow Demon
+  components:
+  - type: GhostRole
+    name: stories-ghost-role-information-shadow-demon-name
+    description: stories-ghost-role-information-shadow-demon-desc
+    rules: stories-ghost-role-information-demon-rules
+    mindRoles:
+    - STMindRoleShadowDemon
+  - type: Sprite
+    sprite: Markers/jobs.rsi
+    layers:
+      - state: green
+      - sprite: _Stories/Mobs/Demons/shadow_demon.rsi
+        state: icon

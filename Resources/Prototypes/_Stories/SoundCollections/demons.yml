@@ -1,0 +1,13 @@
+- type: soundCollection
+  id: STShadowDemonAttack
+  files:
+    - /Audio/_Stories/Demons/ShadowDemon/shadowattack2.ogg
+    - /Audio/_Stories/Demons/ShadowDemon/shadowattack3.ogg
+    - /Audio/_Stories/Demons/ShadowDemon/shadowattack4.ogg
+
+- type: soundCollection
+  id: STShadowDemonHallucination
+  files:
+    - /Audio/_Stories/Demons/ShadowDemon/shadowhalluc1.ogg
+    - /Audio/_Stories/Demons/ShadowDemon/shadowhalluc2.ogg
+    - /Audio/_Stories/Demons/ShadowDemon/shadowhalluc3.ogg

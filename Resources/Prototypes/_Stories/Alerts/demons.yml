@@ -1,0 +1,5 @@
+- type: alert
+  id: STLightExposure
+  icons: [ /Textures/Interface/Alerts/Fire/fire.png ]
+  name: alerts-light-exposure-name
+  description: alerts-light-exposure-desc

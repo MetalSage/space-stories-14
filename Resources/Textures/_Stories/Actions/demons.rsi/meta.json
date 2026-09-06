@@ -1,0 +1,16 @@
+{
+  "version": 1,
+  "license": "CC-BY-SA-3.0",
+  "copyright": "Taken from https://github.com/ParadiseSS13/Paradise/blob/master/icons/mob/actions/actions.dmi, states 'bloodcrawl', 'shadow_crawl', 'shadow_grapple', 'bg_demon', 'shadow_demon_bg'",
+  "size": {
+    "x": 32,
+    "y": 32
+  },
+  "states": [
+    { "name": "bloodcrawl" },
+    { "name": "shadow_crawl" },
+    { "name": "shadow_grapple" },
+    { "name": "bg_demon" },
+    { "name": "shadow_demon_bg" }
+  ]
+}

@@ -1,0 +1,32 @@
+{
+    "version": 1,
+    "size": {"x": 32, "y": 32},
+    "license": "CC-BY-SA-3.0",
+    "copyright": "Extracted from ParadiseSS13/Paradise icons/mob/mob.dmi (states: jaunt, jauntup, shadowwalk_appear, shadowwalk_disappear) and icons/obj/weapons/guns/projectiles.dmi (state: shadow_hand)",
+    "states": [
+        {
+            "name": "shadow_hand",
+            "directions": 1
+        },
+        {
+            "name": "jaunt",
+            "directions": 1,
+            "delays": [[0.2, 0.15, 0.1, 0.1, 0.1, 0.1]]
+        },
+        {
+            "name": "jauntup",
+            "directions": 1,
+            "delays": [[0.2, 0.2, 0.15, 0.15, 0.1, 0.1]]
+        },
+        {
+            "name": "shadowwalk_appear",
+            "directions": 1,
+            "delays": [[0.05, 0.05, 0.05, 0.05, 0.05, 0.05, 0.05, 0.05, 0.05, 0.05, 0.05, 0.05]]
+        },
+        {
+            "name": "shadowwalk_disappear",
+            "directions": 1,
+            "delays": [[0.1, 0.1, 0.1, 0.1, 0.1, 0.1]]
+        }
+    ]
+}
