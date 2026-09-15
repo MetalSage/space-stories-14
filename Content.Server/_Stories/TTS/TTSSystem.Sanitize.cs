@@ -1,11 +1,17 @@
-﻿using System.Text;
+using System.Text;
 using System.Text.RegularExpressions;
+using Content.Shared._Stories.TTS;
 using Content.Shared.Chat;
+using Robust.Shared.Prototypes;
+using Robust.Shared.Utility;
 
 namespace Content.Server._Stories.TTS;
 
 public sealed partial class TTSSystem
 {
+    private static readonly Regex MarkupTagRegex =
+        new(@"\[/?[a-zA-Z0-9_=:#\s\.\,\-]+\]", RegexOptions.Compiled);
+
     private static readonly Regex SanitizePunctuationRegex =
         new(@"[^a-zA-Zа-яА-ЯёЁ0-9,\-+?!. ]", RegexOptions.Compiled);
 
@@ -150,6 +156,43 @@ public sealed partial class TTSSystem
             { "ja", "я" },
         };
 
+    private readonly Dictionary<string, string> _wordReplacements = new();
+
+    private void InitializeSanitize()
+    {
+        _proto.PrototypesReloaded += OnPrototypesReloaded;
+        ReloadWordReplacements();
+    }
+
+    private void ShutdownSanitize()
+    {
+        _proto.PrototypesReloaded -= OnPrototypesReloaded;
+    }
+
+    private void ReloadWordReplacements()
+    {
+        _wordReplacements.Clear();
+
+        foreach (var (k, v) in WordReplacement)
+        {
+            _wordReplacements[k.ToLowerInvariant()] = v;
+        }
+
+        foreach (var proto in _proto.EnumeratePrototypes<TTSWordReplacementPrototype>())
+        {
+            foreach (var (k, v) in proto.WordReplacements)
+            {
+                _wordReplacements[k.ToLowerInvariant()] = v;
+            }
+        }
+    }
+
+    private void OnPrototypesReloaded(PrototypesReloadedEventArgs args)
+    {
+        if (args.WasModified<TTSWordReplacementPrototype>())
+            ReloadWordReplacements();
+    }
+
     private void OnTransformSpeech(TransformSpeechEvent args)
     {
         if (!_isEnabled)
@@ -159,6 +202,8 @@ public sealed partial class TTSSystem
 
     private string Sanitize(string text)
     {
+        text = FormattedMessage.RemoveMarkupPermissive(text);
+        text = MarkupTagRegex.Replace(text, "");
         text = text.Trim();
         text = SanitizePunctuationRegex.Replace(text, "");
         text = LatRegex.Replace(text, ReplaceLat2Cyr);
@@ -178,7 +223,7 @@ public sealed partial class TTSSystem
 
     private string ReplaceMatchedWord(Match word)
     {
-        if (WordReplacement.TryGetValue(word.Value.ToLower(), out var replace))
+        if (_wordReplacements.TryGetValue(word.Value.ToLower(), out var replace))
             return replace;
         return word.Value;
     }

@@ -1,0 +1,63 @@
+- type: ttsVoice
+  id: corvo_attano
+  name: "Корво Аттано"
+  speaker: corvo_attano
+  sex: Male
+  category: "Кастомные"
+  sponsorOnly: true
+
+- type: ttsVoice
+  id: adam_smasher
+  name: "Адам Смешер"
+  speaker: adam_smasher
+  sex: Male
+  category: "Кастомные"
+  sponsorOnly: true
+
+- type: ttsVoice
+  id: jinx
+  name: "Джинкс"
+  speaker: jinx
+  sex: Female
+  category: "Кастомные"
+  sponsorOnly: true
+
+- type: ttsVoice
+  id: night_lord
+  name: "Повелители Ночи"
+  speaker: night_lord
+  sex: Male
+  category: "Кастомные"
+  sponsorOnly: true
+
+- type: ttsVoice
+  id: alarak
+  name: "Аларак"
+  speaker: alarak
+  sex: Male
+  category: "Кастомные"
+  sponsorOnly: true
+
+- type: ttsVoice
+  id: ellie
+  name: "Элли"
+  speaker: ellie
+  sex: Female
+  category: "Кастомные"
+  sponsorOnly: true
+
+- type: ttsVoice
+  name: "Хиггс"
+  sex: Male
+  speaker: higgs
+  id: higgs
+  category: "Кастомные"
+  sponsorOnly: true
+
+- type: ttsVoice
+  name: "Вайпер"
+  sex: Male
+  speaker: viper
+  id: viper
+  category: "Кастомные"
+  sponsorOnly: true

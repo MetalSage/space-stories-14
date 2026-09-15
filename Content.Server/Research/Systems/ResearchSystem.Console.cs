@@ -14,6 +14,11 @@ public sealed partial class ResearchSystem
     [Dependency] private EmagSystem _emag = default!;
     [Dependency] private IdentitySystem _identity = default!;
 
+    // Stories-TTS-Start
+    private TimeSpan _nextResearchVoiceTime = TimeSpan.Zero;
+    private static readonly TimeSpan ResearchVoiceCooldown = TimeSpan.FromSeconds(30);
+    // Stories-TTS-End
+
     private void InitializeConsole()
     {
         SubscribeLocalEvent<ResearchConsoleComponent, ConsoleUnlockTechnologyMessage>(OnConsoleUnlock);
@@ -53,7 +58,17 @@ public sealed partial class ResearchSystem
                 ("amount", technologyPrototype.Cost),
                 ("approver", _identity.GetIdentityShortInfo(act, uid) ?? string.Empty)
             );
-            _radio.SendRadioMessage(uid, message, component.AnnouncementChannel, uid, escapeMarkup: false);
+
+            // Stories-TTS-Start
+            string? ttsVoice = null;
+            if (_timing.CurTime >= _nextResearchVoiceTime)
+            {
+                ttsVoice = "glados";
+                _nextResearchVoiceTime = _timing.CurTime + ResearchVoiceCooldown;
+            }
+
+            _radio.SendRadioMessage(uid, message, component.AnnouncementChannel, uid, ttsVoice, escapeMarkup: false);
+            // Stories-TTS-End
         }
 
         SyncClientWithServer(uid);

@@ -88,6 +88,13 @@
   id: MobBee
   description: Nice to have, but you can't build a civilization on a foundation of honey alone.
   components:
+  - type: Language # Stories-Language
+    currentLanguage: Buzzwords
+    defaultLanguage: Buzzwords
+    spokenLanguages:
+    - Buzzwords
+    understoodLanguages:
+    - Buzzwords
   - type: CombatMode
   - type: MovementSpeedModifier
     baseWalkSpeed : 3
@@ -365,6 +372,13 @@
   parent: [SolutionFood, SolutionTiny, SimpleMobBase, BaseSlicingRefinable, MobNightVision]
   id: BaseCockroach
   components:
+  - type: Language # Stories-Language
+    currentLanguage: Chitin
+    defaultLanguage: Chitin
+    spokenLanguages:
+    - Chitin
+    understoodLanguages:
+    - Chitin
   - type: Sprite
     drawdepth: SmallMobs
   - type: Item
@@ -1982,6 +1996,13 @@
     speechSounds: Squeak
     speechVerb: SmallMob
     allowedEmotes: ['Squeak']
+  - type: Language # Stories-Language
+    currentLanguage: Squeakspeak
+    defaultLanguage: Squeakspeak
+    spokenLanguages:
+    - Squeakspeak
+    understoodLanguages:
+    - Squeakspeak
   - type: Sprite
     drawdepth: SmallMobs
     sprite: Mobs/Animals/mouse.rsi
@@ -2440,6 +2461,13 @@
   abstract: true
   description: Infiltrates your domain, spies on you, and somehow still a cool pet.
   components:
+  - type: Language # Stories-Language
+    currentLanguage: Avalese
+    defaultLanguage: Avalese
+    spokenLanguages:
+    - Avalese
+    understoodLanguages:
+    - Avalese
   - type: MovementSpeedModifier
     baseWalkSpeed : 2.5
     baseSprintSpeed : 6
@@ -2525,6 +2553,13 @@
   id: MobPenguin
   description: Their lives are constant pain due to their inner-body knees.
   components:
+  - type: Language # Stories-Language
+    currentLanguage: Avalese
+    defaultLanguage: Avalese
+    spokenLanguages:
+    - Avalese
+    understoodLanguages:
+    - Avalese
   - type: Sprite
     drawdepth: Mobs
     layers:
@@ -2661,6 +2696,13 @@
   id: MobSnake
   description: Hissss! Bites aren't poisonous.
   components:
+  - type: Language # Stories-Language
+    currentLanguage: Draconic
+    defaultLanguage: Draconic
+    spokenLanguages:
+    - Draconic
+    understoodLanguages:
+    - Draconic
   - type: Sprite
     drawdepth: Mobs
     layers:
@@ -2711,6 +2753,13 @@
   id: MobSpiderBase
   abstract: true
   components:
+  - type: Language # Stories-Language
+    currentLanguage: Chitin
+    defaultLanguage: Chitin
+    spokenLanguages:
+    - Chitin
+    understoodLanguages:
+    - Chitin
   - type: Physics
   - type: Fixtures
     fixtures:
@@ -3064,6 +3113,13 @@
   id: MobFox
   description: They're a fox.
   components:
+  - type: Language # Stories-Language
+    currentLanguage: Canilunzt
+    defaultLanguage: Canilunzt
+    spokenLanguages:
+    - Canilunzt
+    understoodLanguages:
+    - Canilunzt
   - type: Sprite
     drawdepth: Mobs
     sprite: Mobs/Animals/fox.rsi
@@ -3157,6 +3213,13 @@
   - type: Speech
     speechVerb: Canine
     speechSounds: Dog
+  - type: Language # Stories-Language
+    currentLanguage: Canilunzt
+    defaultLanguage: Canilunzt
+    spokenLanguages:
+    - Canilunzt
+    understoodLanguages:
+    - Canilunzt
   - type: Fixtures
     fixtures:
       fix1:
@@ -3328,6 +3391,13 @@
   id: MobCat
   description: Feline pet, very funny.
   components:
+  - type: Language # Stories-Language
+    currentLanguage: Nekomimetic
+    defaultLanguage: Nekomimetic
+    spokenLanguages:
+    - Nekomimetic
+    understoodLanguages:
+    - Nekomimetic
   - type: Sprite
     drawdepth: Mobs
     sprite: Mobs/Pets/cat.rsi
@@ -3907,6 +3977,13 @@
   id: MobDionaNymph
   description: It's like a cat, only.... branch-ier.
   components:
+  - type: Language # Stories-Language
+    currentLanguage: Sylvan
+    defaultLanguage: Sylvan
+    spokenLanguages:
+    - Sylvan
+    understoodLanguages:
+    - Sylvan
   - type: Sprite
     drawdepth: Mobs
     layers:

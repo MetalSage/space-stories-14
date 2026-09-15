@@ -1,4 +1,5 @@
 using System.Linq;
+using System.Threading.Tasks;
 using Content.Server._Stories.Language.Systems;
 using Content.Server._Stories.TTS;
 using Content.Shared._Stories.Language.Components;
@@ -93,22 +94,38 @@ public sealed partial class RadioSystem : SharedRadioSystem
     }
 
     // Stories-TTS Start
-    private async void ProcessAndSendRadioTts(EntityUid messageSource, string message, RadioChannelPrototype channel, IEnumerable<ICommonSession> recipients)
+    private async void ProcessAndSendRadioTts(EntityUid messageSource, string message, RadioChannelPrototype channel, IEnumerable<ICommonSession> recipients, string voiceId, TimeSpan? delay = null)
     {
         if (!_cfg.GetCVar(SCCVars.TTSEnabled))
             return;
 
-        var voiceId = GetVoiceId(messageSource);
-        var soundData = await _tts.GenerateTTS(message, voiceId);
+        var recipientList = recipients.ToList();
+        if (recipientList.Count == 0)
+            return;
+
+        if (delay != null && delay.Value > TimeSpan.Zero)
+        {
+            await Task.Delay(delay.Value);
+        }
+
+        recipientList.RemoveAll(s => s.Status != SessionStatus.InGame);
+        if (recipientList.Count == 0)
+            return;
+
+        var speaker = voiceId;
+        if (ProtoMan.TryIndex<TTSVoicePrototype>(voiceId, out var protoVoice))
+            speaker = protoVoice.Speaker;
+
+        var soundData = await _tts.GenerateTTS(message, speaker);
 
         if (soundData == null)
             return;
 
-        byte[] processedSoundData = await _ttsProcessing.ApplyRadioEffect(soundData);
+        byte[] processedSoundData = await _ttsProcessing.ProcessRadioAudio(messageSource, soundData);
 
-        var ttsEvent = new PlayTTSEvent(processedSoundData, sourceUid: null, isWhisper: false, originalSourceUid: GetNetEntity(messageSource));
+        var ttsEvent = new PlayTTSEvent(processedSoundData, message, sourceUid: null, isWhisper: false, originalSourceUid: GetNetEntity(messageSource), isRadio: true, radioChannel: channel.ID);
 
-        var filter = Filter.Empty().AddPlayers(recipients.ToList());
+        var filter = Filter.Empty().AddPlayers(recipientList);
         RaiseNetworkEvent(ttsEvent, filter);
     }
 
@@ -119,12 +136,20 @@ public sealed partial class RadioSystem : SharedRadioSystem
         {
             return protoVoice.Speaker;
         }
-        return "father_grigori";
+        return "glados";
     }
     // Stories-TTS End
 
+    // Stories-TTS-Start
     /// <inheritdoc/>
     public override void SendRadioMessage(EntityUid messageSource, string message, RadioChannelPrototype channel, EntityUid radioSource, bool escapeMarkup = true)
+    {
+        SendRadioMessage(messageSource, message, channel, radioSource, GetVoiceId(messageSource), null, escapeMarkup);
+    }
+
+    /// <inheritdoc/>
+    public override void SendRadioMessage(EntityUid messageSource, string message, RadioChannelPrototype channel, EntityUid radioSource, string? ttsVoice, TimeSpan? ttsDelay = null, bool escapeMarkup = true)
+    // Stories-TTS-End
     {
         // TODO if radios ever garble / modify messages, feedback-prevention needs to be handled better than this.
         if (!_messages.Add(message))
@@ -256,17 +281,18 @@ public sealed partial class RadioSystem : SharedRadioSystem
         }
 
         // Stories-TTS Start
-        if (canSend)
+        if (canSend && !string.IsNullOrEmpty(ttsVoice))
         {
             var actorQuery = GetEntityQuery<ActorComponent>();
 
             var understoodSessions = ResolveTtsSessions(ttsUnderstood, actorQuery);
             if (understoodSessions.Count > 0)
-                ProcessAndSendRadioTts(messageSource, message, channel, understoodSessions);
+                ProcessAndSendRadioTts(messageSource, message, channel, understoodSessions, ttsVoice, ttsDelay);
 
             var confusedSessions = ResolveTtsSessions(ttsConfused, actorQuery);
+            confusedSessions.ExceptWith(understoodSessions);
             if (confusedSessions.Count > 0)
-                ProcessAndSendRadioTts(messageSource, _language.ObfuscateMessage(message, language), channel, confusedSessions);
+                ProcessAndSendRadioTts(messageSource, _language.ObfuscateMessage(message, language), channel, confusedSessions, ttsVoice, ttsDelay);
         }
         // Stories-TTS End
 

@@ -1,4 +1,6 @@
 using System.Linq;
+using Content.Client._Stories.Lobby.UI;
+using Content.Client._Stories.Sponsors;
 using Content.Client._Stories.TTS;
 using Content.Shared._Stories.TTS;
 using Content.Shared.Humanoid;
@@ -8,19 +10,48 @@ namespace Content.Client.Lobby.UI;
 public sealed partial class HumanoidProfileEditor
 {
     private List<TTSVoicePrototype> _voiceList = new();
+    private TTSVoiceSelectionWindow? _ttsWindow;
 
     private void InitializeVoice()
     {
-        _voiceList = _prototypeManager
-            .EnumeratePrototypes<TTSVoicePrototype>()
-            .Where(o => o.RoundStart)
-            .OrderBy(o => Loc.GetString(o.Name))
-            .ToList();
-
-        VoiceTTSButton.OnItemSelected += args =>
+        VoiceTTSButton.OnPressed += _ =>
         {
-            VoiceTTSButton.SelectId(args.Id);
-            SetVoice(_voiceList[args.Id].ID);
+            if (_ttsWindow != null && _ttsWindow.IsOpen)
+            {
+                _ttsWindow.MoveToFront();
+                return;
+            }
+
+            var isSponsor = _entManager.System<SponsorsSystem>().TryGetInfo(out var info) && info.Tier > 0;
+            var voices = new List<(TTSVoicePrototype Voice, bool Unlocked)>();
+            foreach (var v in _prototypeManager.EnumeratePrototypes<TTSVoicePrototype>().Where(o => o.RoundStart))
+            {
+                if (Profile != null)
+                {
+                    if (v.Sex != Sex.Unsexed && v.Sex != Profile.Sex)
+                        continue;
+                }
+
+                bool unlocked = !v.SponsorOnly || (isSponsor && info!.AllowedTTSVoices.Contains(v.ID));
+                voices.Add((v, unlocked));
+            }
+
+            _ttsWindow = new TTSVoiceSelectionWindow(voices, Profile?.VoiceTTS);
+            _ttsWindow.OnVoiceSelected += voiceId =>
+            {
+                var idx = _voiceList.FindIndex(v => v.ID == voiceId);
+                if (idx != -1)
+                {
+                    var voiceProto = _voiceList[idx];
+                    VoiceTTSButton.Text = voiceProto.Name;
+                    SetVoice(voiceId);
+                }
+            };
+            _ttsWindow.OnPreviewPlay += voiceId =>
+            {
+                _entManager.System<TTSSystem>().RequestPreviewTTS(voiceId);
+            };
+            _ttsWindow.OpenCentered();
         };
 
         VoicePlayButton.OnPressed += _ => PlayPreviewTTS();
@@ -31,26 +62,21 @@ public sealed partial class HumanoidProfileEditor
         if (Profile is null)
             return;
 
-        VoiceTTSButton.Clear();
+        var isSponsor = _entManager.System<SponsorsSystem>().TryGetInfo(out var info) && info.Tier > 0;
 
-        var firstVoiceChoiceId = 1;
-        for (var i = 0; i < _voiceList.Count; i++)
+        _voiceList = _prototypeManager
+            .EnumeratePrototypes<TTSVoicePrototype>()
+            .Where(o => o.RoundStart)
+            .Where(o => !o.SponsorOnly || (isSponsor && info!.AllowedTTSVoices.Contains(o.ID)))
+            .Where(o => o.Sex == Sex.Unsexed || o.Sex == Profile.Sex)
+            .ToList();
+
+        var voice = _voiceList.FirstOrDefault(x => x.ID == Profile.VoiceTTS) ?? _voiceList.FirstOrDefault();
+        if (voice != null)
         {
-            var voice = _voiceList[i];
-            if (!CanHaveVoice(voice, Profile.Sex))
-                continue;
-
-            var name = Loc.GetString(voice.Name);
-            VoiceTTSButton.AddItem(name, i);
-
-            if (firstVoiceChoiceId == 1)
-                firstVoiceChoiceId = i;
+            VoiceTTSButton.Text = voice.Name;
+            SetVoice(voice.ID);
         }
-
-        var voiceChoiceId = _voiceList.FindIndex(x => x.ID == Profile.VoiceTTS);
-        if (!VoiceTTSButton.TrySelectId(voiceChoiceId) &&
-            VoiceTTSButton.TrySelectId(firstVoiceChoiceId))
-            SetVoice(_voiceList[firstVoiceChoiceId].ID);
     }
 
     private void PlayPreviewTTS()
@@ -68,10 +94,5 @@ public sealed partial class HumanoidProfileEditor
 
         Profile = Profile.WithVoiceTTS(voiceId);
         IsDirty = true;
-    }
-
-    private bool CanHaveVoice(TTSVoicePrototype voice, Sex sex)
-    {
-        return sex == Sex.Unsexed || voice.Sex == sex || voice.Sex == Sex.Unsexed;
     }
 }

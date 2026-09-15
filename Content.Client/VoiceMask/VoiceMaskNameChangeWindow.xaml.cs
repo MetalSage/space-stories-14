@@ -92,11 +92,11 @@ public sealed partial class VoiceMaskNameChangeWindow : FancyWindow
         _voices = proto
             .EnumeratePrototypes<TTSVoicePrototype>()
             .Where(o => o.RoundStart)
-            .OrderBy(o => Loc.GetString(o.Name))
+            .OrderBy(o => o.Name)
             .ToList();
         for (var i = 0; i < _voices.Count; i++)
         {
-            var name = Loc.GetString(_voices[i].Name);
+            var name = _voices[i].Name;
             VoiceSelector.AddItem(name);
             VoiceSelector.SetItemMetadata(i, _voices[i].ID);
         }

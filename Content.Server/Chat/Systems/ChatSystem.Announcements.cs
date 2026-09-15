@@ -1,8 +1,11 @@
+using System;
+using Content.Server._Stories.TTS;
 using Content.Shared.Chat;
 using Content.Shared.Database;
 using Content.Shared.Station.Components;
 using Robust.Shared.Audio;
 using Robust.Shared.Player;
+using Robust.Shared.Timing;
 using Robust.Shared.Utility;
 
 namespace Content.Server.Chat.Systems;
@@ -15,7 +18,9 @@ public sealed partial class ChatSystem
         string? sender = null,
         bool playSound = true,
         SoundSpecifier? announcementSound = null,
-        Color? colorOverride = null
+        Color? colorOverride = null,
+        string? ttsVoice = null,
+        string? ttsMessage = null
         )
     {
         sender ??= Loc.GetString("chat-manager-sender-announcement");
@@ -28,6 +33,8 @@ public sealed partial class ChatSystem
             _audio.PlayGlobal(announcementSound ?? new SoundPathSpecifier(DefaultAnnouncementSound), Filter.Broadcast(), true, AudioParams.Default.WithVolume(-2f));
         }
         _adminLogger.Add(LogType.Chat, LogImpact.Low, $"Global station announcement from {sender}: {message}");
+
+        PlayTtsAnnouncement(ttsMessage ?? message, Filter.Broadcast(), ttsVoice); // Stories-TTS
     }
 
     /// <inheritdoc />
@@ -38,7 +45,9 @@ public sealed partial class ChatSystem
         string? sender = null,
         bool playSound = true,
         SoundSpecifier? announcementSound = null,
-        Color? colorOverride = null)
+        Color? colorOverride = null,
+        string? ttsVoice = null,
+        string? ttsMessage = null)
     {
         sender ??= Loc.GetString("chat-manager-sender-announcement");
 
@@ -49,6 +58,8 @@ public sealed partial class ChatSystem
             _audio.PlayGlobal(announcementSound ?? new SoundPathSpecifier(DefaultAnnouncementSound), filter, true, AudioParams.Default.WithVolume(-2f));
         }
         _adminLogger.Add(LogType.Chat, LogImpact.Low, $"Station Announcement from {sender}: {message}");
+
+        PlayTtsAnnouncement(ttsMessage ?? message, filter, ttsVoice); // Stories-TTS
     }
 
     /// <inheritdoc />
@@ -58,7 +69,9 @@ public sealed partial class ChatSystem
         string? sender = null,
         bool playDefaultSound = true,
         SoundSpecifier? announcementSound = null,
-        Color? colorOverride = null)
+        Color? colorOverride = null,
+        string? ttsVoice = null,
+        string? ttsMessage = null)
     {
         sender ??= Loc.GetString("chat-manager-sender-announcement");
 
@@ -83,5 +96,47 @@ public sealed partial class ChatSystem
         }
 
         _adminLogger.Add(LogType.Chat, LogImpact.Low, $"Station Announcement on {station} from {sender}: {message}");
+
+        PlayTtsAnnouncement(ttsMessage ?? message, filter, ttsVoice); // Stories-TTS
     }
+
+    // Stories-TTS-Start
+    private void PlayTtsAnnouncement(string message, Filter filter, string? ttsVoice = null)
+    {
+        if (string.IsNullOrEmpty(ttsVoice) || ttsVoice.ToLowerInvariant() is "none" or "off")
+            return;
+
+        var cleanMessage = StripSentByFooter(message);
+
+        if (string.IsNullOrWhiteSpace(cleanMessage))
+            return;
+
+        Timer.Spawn(TimeSpan.FromSeconds(5), () =>
+        {
+            var tts = EntityManager.System<TTSSystem>();
+            tts.PlayGlobalTTS(cleanMessage, ttsVoice, filter, isAnnounce: true);
+        });
+    }
+
+    private string StripSentByFooter(string message)
+    {
+        var sentByPrefix = Loc.GetString("comms-console-announcement-sent-by");
+        var lines = message.Split('\n');
+        for (var i = lines.Length - 1; i >= 0; i--)
+        {
+            var trimmed = lines[i].Trim();
+            if (string.IsNullOrEmpty(trimmed))
+                continue;
+
+            if (trimmed.StartsWith(sentByPrefix, StringComparison.OrdinalIgnoreCase))
+            {
+                return string.Join('\n', lines[..i]).Trim();
+            }
+
+            break;
+        }
+
+        return message.Trim();
+    }
+    // Stories-TTS-End
 }

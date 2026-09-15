@@ -1,7 +1,7 @@
 - type: job
   id: STPRISONOfficer
-  name: офицер космической тюрьмы
-  description: Ограждать станцию от преступного элемента - это ваша наивысшая миссия на смену, не подведите.
+  name: stories-job-name-prison-officer
+  description: stories-job-description-prison-officer
   playTimeTracker: STJobSpacePrisonOfficer
   requirements:
     - !type:DepartmentTimeRequirement

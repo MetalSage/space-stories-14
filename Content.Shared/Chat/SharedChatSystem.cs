@@ -411,7 +411,9 @@ public abstract partial class SharedChatSystem : EntitySystem
         string? sender = null,
         bool playSound = true,
         SoundSpecifier? announcementSound = null,
-        Color? colorOverride = null
+        Color? colorOverride = null,
+        string? ttsVoice = null, // Stories-TTS
+        string? ttsMessage = null // Stories-TTS
         )
     { }
 
@@ -425,6 +427,8 @@ public abstract partial class SharedChatSystem : EntitySystem
     /// <param name="playSound">Play the announcement sound.</param>
     /// <param name="announcementSound">Sound to play.</param>
     /// <param name="colorOverride">Optional color for the announcement message.</param>
+    /// <param name="ttsVoice">Optional TTS voice override.</param>
+    /// <param name="ttsMessage">Optional message override for TTS speech.</param>
     public virtual void DispatchFilteredAnnouncement(
         Filter filter,
         string message,
@@ -432,7 +436,9 @@ public abstract partial class SharedChatSystem : EntitySystem
         string? sender = null,
         bool playSound = true,
         SoundSpecifier? announcementSound = null,
-        Color? colorOverride = null)
+        Color? colorOverride = null,
+        string? ttsVoice = null, // Stories-TTS
+        string? ttsMessage = null) // Stories-TTS
     { }
 
     /// <summary>
@@ -444,13 +450,17 @@ public abstract partial class SharedChatSystem : EntitySystem
     /// <param name="playDefaultSound">Play the announcement sound.</param>
     /// <param name="announcementSound">Sound to play.</param>
     /// <param name="colorOverride">Optional color for the announcement message.</param>
+    /// <param name="ttsVoice">Optional TTS voice override.</param>
+    /// <param name="ttsMessage">Optional message override for TTS speech.</param>
     public virtual void DispatchStationAnnouncement(
         EntityUid source,
         string message,
         string? sender = null,
         bool playDefaultSound = true,
         SoundSpecifier? announcementSound = null,
-        Color? colorOverride = null)
+        Color? colorOverride = null,
+        string? ttsVoice = null, // Stories-TTS
+        string? ttsMessage = null) // Stories-TTS
     { }
 }
 

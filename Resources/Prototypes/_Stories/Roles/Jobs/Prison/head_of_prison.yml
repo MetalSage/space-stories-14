@@ -1,7 +1,7 @@
 - type: job
   id: STPRISONHeadOfPrison
-  name: начальник космической тюрьмы
-  description: Охраняйте это место используя все возможное и невозможно, иначе на свободу вырвутся самые опасные обитатели вселенной.
+  name: stories-job-name-head-of-prison
+  description: stories-job-description-head-of-prison
   playTimeTracker: STJobHeadOfSpacePrison
   requirements:
     - !type:RoleTimeRequirement

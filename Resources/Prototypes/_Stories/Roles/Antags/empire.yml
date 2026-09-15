@@ -1,9 +1,9 @@
 - type: antag
   id: STEmpireMember
-  name: Empire Member
+  name: stories-roles-antag-empire-member-name
   antagonist: true
   setPreference: false
-  objective: Выполняйте приказы императора.
+  objective: stories-roles-antag-empire-member-objective
   requirements:
   - !type:RoleTimeRequirement
     role: JobHeadOfSecurity
@@ -20,7 +20,7 @@
 
 - type: antag
   id: STHypnotizedEmpireMember
-  name: Гипнотизированный Имперец
+  name: stories-roles-antag-hypnotized-empire-member-name
   antagonist: true
   setPreference: false
-  objective: Выполняйте приказы императора.
+  objective: stories-roles-antag-hypnotized-empire-member-objective

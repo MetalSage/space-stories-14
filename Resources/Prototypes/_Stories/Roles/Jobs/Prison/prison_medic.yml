@@ -1,7 +1,7 @@
 - type: job
   id: STPRISONMedic
-  name: медик космической тюрьмы
-  description: Лечите самых опасных преступников космических просторов.
+  name: stories-job-name-prison-medic
+  description: stories-job-description-prison-medic
   playTimeTracker: STJobSpacePrisonMedic
   requirements:
     - !type:DepartmentTimeRequirement

@@ -40,6 +40,20 @@ public sealed class SCCVars
     public static readonly CVarDef<int> TTSApiTimeout =
         CVarDef.Create("tts.api_timeout", 5, CVar.SERVERONLY | CVar.ARCHIVE);
 
+
+    /// <summary>
+    /// Master volume setting of TTS sound
+    /// </summary>
+    public static readonly CVarDef<float> TTSVolumeMaster =
+        CVarDef.Create("tts.volume_master", 1.0f, CVar.CLIENTONLY | CVar.ARCHIVE);
+
+    /// <summary>
+    /// <summary>
+    /// Default volume setting of TTS sound for nearby characters (PVS)
+    /// </summary>
+    public static readonly CVarDef<float> TTSVolumeNearby =
+        CVarDef.Create("tts.volume_nearby", 1.0f, CVar.CLIENTONLY | CVar.ARCHIVE);
+
     /// <summary>
     /// Default volume setting of TTS sound for radio
     /// </summary>
@@ -47,10 +61,28 @@ public sealed class SCCVars
         CVarDef.Create("tts.volume_radio", 0.5f, CVar.CLIENTONLY | CVar.ARCHIVE);
 
     /// <summary>
-    /// Default volume setting of TTS sound for others
+    /// Default volume setting of TTS sound for others (legacy alias)
     /// </summary>
     public static readonly CVarDef<float> TTSVolume =
         CVarDef.Create("tts.volume", 0f, CVar.CLIENTONLY | CVar.ARCHIVE);
+
+    /// <summary>
+    /// TTS radio channels volume
+    /// </summary>
+    public static readonly CVarDef<string> TTSRadioVolumes =
+        CVarDef.Create("tts.radio_volumes", "{}", CVar.CLIENTONLY | CVar.ARCHIVE);
+
+    /// <summary>
+    /// Default volume setting of TTS sound for announcements
+    /// </summary>
+    public static readonly CVarDef<float> TTSVolumeAnnounce =
+        CVarDef.Create("tts.volume_announce", 1.0f, CVar.CLIENTONLY | CVar.ARCHIVE);
+
+    /// <summary>
+    /// Default voice prototype for station announcements
+    /// </summary>
+    public static readonly CVarDef<string> TTSAnnounceVoice =
+        CVarDef.Create("tts.announce_voice", "glados", CVar.SERVERONLY | CVar.ARCHIVE);
 
     /// <summary>
     /// Count of in-memory cached tts voice lines.
@@ -73,6 +105,28 @@ public sealed class SCCVars
     public static readonly CVarDef<string> TTSFfmpegArguments =
         CVarDef.Create("scc.tts.ffmpeg_arguments",
             "-i pipe:0 -f ogg -v quiet -filter_complex \"[0:a]highpass=f=1000,lowpass=f=500[filtered];[filtered]acrusher=level_in=1:level_out=1:bits=4:mix=0.5:mode=log[crushed];[crushed]loudnorm=I=-12:LRA=7\" pipe:1",
+            CVar.SERVERONLY);
+
+    /// <summary>
+    /// FFmpeg audio filter for standard radio TTS
+    /// </summary>
+    public static readonly CVarDef<string> TTSStandardRadioFfmpegFilter =
+        CVarDef.Create("scc.tts.standard_radio_ffmpeg_filter",
+            "highpass=f=400,lowpass=f=2500,volume=2.0",
+            CVar.SERVERONLY);
+
+    /// <summary>
+    /// Enable an announce effect for station announcements.
+    /// </summary>
+    public static readonly CVarDef<bool> TTSAnnounceEffect =
+        CVarDef.Create("scc.tts.announce_effect_enabled", true, CVar.SERVERONLY);
+
+    /// <summary>
+    /// FFmpeg audio filter for station announcement TTS
+    /// </summary>
+    public static readonly CVarDef<string> TTSAnnounceFfmpegFilter =
+        CVarDef.Create("scc.tts.announce_ffmpeg_filter",
+            "aecho=0.8:0.88:60:0.4,equalizer=f=1000:width_type=h:width=200:g=3,volume=1.5",
             CVar.SERVERONLY);
 
     /*

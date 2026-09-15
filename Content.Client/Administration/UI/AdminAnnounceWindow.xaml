@@ -8,6 +8,13 @@
             <Control HorizontalExpand="True" SizeFlagsStretchRatio="1" />
             <OptionButton Name="AnnounceMethod" Access="Public" HorizontalExpand="True" SizeFlagsStretchRatio="2"/>
         </BoxContainer>
+        <!-- Stories-TTS-Start -->
+        <BoxContainer Orientation="Horizontal" HorizontalExpand="True" Margin="0 2 0 2">
+            <Label Text="{Loc stories-admin-announce-voice-label}" VerticalAlignment="Center" Margin="0 0 5 0" />
+            <Button Name="VoiceButton" Access="Public" HorizontalExpand="True" />
+            <Button Name="ResetVoiceButton" Access="Public" Text="{Loc stories-admin-announce-voice-reset}" Margin="5 0 0 0" />
+        </BoxContainer>
+        <!-- Stories-TTS-End -->
         <TextEdit Name="Announcement" Access="Public" VerticalExpand="True" MinHeight="100" />
 
         <GridContainer Rows="1">

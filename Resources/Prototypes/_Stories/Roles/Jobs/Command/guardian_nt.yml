@@ -1,7 +1,7 @@
 - type: job
   id: STGuardianNt
-  name: страж клинка
-  description: Встань на защиту командования станции со своим крутым мечом и способностями!
+  name: stories-job-name-guardian-nt
+  description: stories-job-description-guardian-nt
   playTimeTracker: STJobGuardianNt
   requirements:
     - !type:RoleTimeRequirement

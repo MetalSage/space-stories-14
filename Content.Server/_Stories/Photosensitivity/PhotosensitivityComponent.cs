@@ -74,16 +74,6 @@ public sealed partial class PhotosensitivityComponent : Component
         },
     };
 
-    [ViewVariables(VVAccess.ReadWrite)]
-    [DataField("enabled")]
-    public bool Enabled = true;
-
-    [DataField("burnSound")]
-    public SoundSpecifier BurnSound = new SoundPathSpecifier("/Audio/Effects/lightburn.ogg");
-
-    [DataField("critDamageMultiplier")]
-    public float CritDamageMultiplier = 5f;
-
     [DataField("lightAlert")]
     public ProtoId<AlertPrototype>? LightAlert;
 

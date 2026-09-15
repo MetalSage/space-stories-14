@@ -1,7 +1,3 @@
-stories-ui-options-tts-label = TTS
-stories-ui-options-tts-enabled-client = Включить систему TTS
-stories-ui-options-tts-volume = Громкость TTS:
-stories-ui-options-tts-volume-radio = Громкость TTS радио:
 
 stories-humanoid-profile-editor-tts-voice-label = Голос:
 stories-humanoid-profile-editor-tts-voice-play = ▶

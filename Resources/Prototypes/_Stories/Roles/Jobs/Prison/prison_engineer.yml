@@ -1,7 +1,7 @@
 - type: job
   id: STPRISONEngineer
-  name: инженер космической тюрьмы
-  description: Обслуживайте тюрьму, ибо сбежавшие зеки придут за вами в первую очередь.
+  name: stories-job-name-prison-engineer
+  description: stories-job-description-prison-engineer
   playTimeTracker: STJobSpacePrisonEngineer
   requirements:
     - !type:DepartmentTimeRequirement
