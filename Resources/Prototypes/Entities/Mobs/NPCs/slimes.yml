@@ -1,4 +1,4 @@
-﻿- type: entity
+- type: entity
   name: basic slime
   id: BaseMobAdultSlimes
   parent: [ BaseMobSlimes, SimpleMobBase, MobCombat, BaseSlicingRefinable, MobNightVision, BaseMobDestructible ]
@@ -7,6 +7,13 @@
   components:
   - type: TTS # Stories-TTS
     voice: charlotte
+  - type: Language # Stories-Language
+    currentLanguage: Slime
+    defaultLanguage: Slime
+    spokenLanguages:
+    - Slime
+    understoodLanguages:
+    - Slime
   - type: Sprite
     drawdepth: Mobs
     sprite: Mobs/Aliens/slimes.rsi

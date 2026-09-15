@@ -1,7 +1,10 @@
 using Content.Server.Administration;
 using Content.Server.Chat.Systems;
 using Content.Shared.Administration;
+using Content.Shared._Stories.SCCVars;
+using Content.Shared._Stories.TTS;
 using Robust.Shared.Audio;
+using Robust.Shared.Configuration;
 using Robust.Shared.Console;
 using Robust.Shared.ContentPack;
 using Robust.Shared.Prototypes;
@@ -11,6 +14,9 @@ namespace Content.Server.Announcements;
 [AdminCommand(AdminFlags.Moderator)]
 public sealed partial class AnnounceCommand : LocalizedEntityCommands
 {
+    // Stories-TTS-Start
+    [Dependency] private IConfigurationManager _cfg = default!;
+    // Stories-TTS-End
     [Dependency] private ChatSystem _chat = default!;
     [Dependency] private IPrototypeManager _proto = default!;
     [Dependency] private IResourceManager _res = default!;
@@ -26,7 +32,7 @@ public sealed partial class AnnounceCommand : LocalizedEntityCommands
             case 0:
                 shell.WriteError(Loc.GetString("shell-need-minimum-one-argument"));
                 return;
-            case > 4:
+            case > 5:
                 shell.WriteError(Loc.GetString("shell-wrong-arguments-number"));
                 return;
         }
@@ -35,6 +41,7 @@ public sealed partial class AnnounceCommand : LocalizedEntityCommands
         var sender = Loc.GetString("cmd-announce-sender");
         var color = Color.Gold;
         var sound = new SoundPathSpecifier("/Audio/Announcements/announce.ogg");
+        string? voice = null;
 
         // Optional sender argument
         if (args.Length >= 2)
@@ -58,7 +65,15 @@ public sealed partial class AnnounceCommand : LocalizedEntityCommands
         if (args.Length >= 4)
             sound = new SoundPathSpecifier(args[3]);
 
-        _chat.DispatchGlobalAnnouncement(message, sender, true, sound, color);
+        // Stories-TTS-Start
+        // Optional voice argument
+        if (args.Length >= 5)
+            voice = args[4];
+
+        voice ??= _cfg.GetCVar(SCCVars.TTSAnnounceVoice);
+
+        _chat.DispatchGlobalAnnouncement(message, sender, true, sound, color, ttsVoice: voice);
+        // Stories-TTS-End
         shell.WriteLine(Loc.GetString("shell-command-success"));
     }
 
@@ -73,6 +88,12 @@ public sealed partial class AnnounceCommand : LocalizedEntityCommands
                 CompletionHelper.AudioFilePath(args[3], _proto, _res),
                 Loc.GetString("cmd-announce-arg-sound")
             ),
+            // Stories-TTS-Start
+            5 => CompletionResult.FromHintOptions(
+                CompletionHelper.PrototypeIDs<TTSVoicePrototype>(proto: _proto),
+                Loc.GetString("stories-cmd-announce-arg-voice")
+            ),
+            // Stories-TTS-End
             _ => CompletionResult.Empty
         };
     }

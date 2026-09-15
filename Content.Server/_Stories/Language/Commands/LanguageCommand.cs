@@ -40,7 +40,7 @@ public sealed class LanguageCommand : ToolshedCommand
     {
         if (!EntityManager.HasComponent<LanguageComponent>(ent))
         {
-            ctx.WriteLine("Cannot remove language from entity without a language comp!");
+            ctx.WriteLine(Loc.GetString("stories-command-language-error-remove-no-comp"));
             return ent;
         }
 
@@ -59,7 +59,7 @@ public sealed class LanguageCommand : ToolshedCommand
     {
         if (!EntityManager.TryGetComponent<LanguageComponent>(ent, out var languages))
         {
-            ctx.WriteLine("Cannot reset languages from entity without a language comp!");
+            ctx.WriteLine(Loc.GetString("stories-command-language-error-reset-no-comp"));
             return ent;
         }
 
@@ -126,7 +126,7 @@ public sealed class LanguageCommand : ToolshedCommand
     {
         if (!EntityManager.HasComponent<LanguageComponent>(ent))
         {
-            ctx.WriteLine("Cannot unblock language for entity without a language comp!");
+            ctx.WriteLine(Loc.GetString("stories-command-language-error-unblock-no-comp"));
             return ent;
         }
 

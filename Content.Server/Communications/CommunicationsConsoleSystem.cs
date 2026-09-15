@@ -20,6 +20,8 @@ using Content.Shared.Popups;
 using Robust.Server.GameObjects;
 using Robust.Shared.Configuration;
 using Robust.Shared.Prototypes;
+using Content.Shared._Stories.SCCVars;
+using Content.Shared._Stories.TTS;
 
 namespace Content.Server.Communications
 {
@@ -230,18 +232,32 @@ namespace Content.Server.Communications
             Loc.TryGetString(comp.Title, out var title);
             title ??= comp.Title;
 
+            var ttsMsg = msg; // Stories-TTS
+
             if (comp.AnnounceSentBy)
                 msg += "\n" + Loc.GetString("comms-console-announcement-sent-by") + " " + author;
 
+            // Stories-TTS-Start
+            string? ttsVoice = null;
+            if (message.Actor is { Valid: true } actor &&
+                TryComp<TTSComponent>(actor, out var ttsComp) &&
+                !string.IsNullOrEmpty(ttsComp.VoicePrototypeId))
+            {
+                ttsVoice = ttsComp.VoicePrototypeId.Value.Id;
+            }
+
+            ttsVoice ??= _cfg.GetCVar(SCCVars.TTSAnnounceVoice);
+            // Stories-TTS-End
+
             if (comp.Global)
             {
-                _chatSystem.DispatchGlobalAnnouncement(msg, title, announcementSound: comp.Sound, colorOverride: comp.Color);
+                _chatSystem.DispatchGlobalAnnouncement(msg, title, announcementSound: comp.Sound, colorOverride: comp.Color, ttsVoice: ttsVoice, ttsMessage: ttsMsg); // Stories-TTS
 
                 _adminLogger.Add(LogType.Chat, LogImpact.Low, $"{ToPrettyString(message.Actor):player} has sent the following global announcement: {msg}");
                 return;
             }
 
-            _chatSystem.DispatchStationAnnouncement(uid, msg, title, colorOverride: comp.Color);
+            _chatSystem.DispatchStationAnnouncement(uid, msg, title, colorOverride: comp.Color, ttsVoice: ttsVoice, ttsMessage: ttsMsg); // Stories-TTS
 
             _adminLogger.Add(LogType.Chat, LogImpact.Low, $"{ToPrettyString(message.Actor):player} has sent the following station announcement: {msg}");
 

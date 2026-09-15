@@ -6,16 +6,24 @@ concurrency:
 on:
   workflow_dispatch:
   schedule:
-    - cron: '0 7 * * *'
+    - cron: '0 2 * * *'
+
+env:
+  version: 1
+  DOTNET_CLI_TELEMETRY_OPTOUT: 1
+  DOTNET_NOLOGO: 1
 
 jobs:
   build:
     runs-on: self-hosted
+    timeout-minutes: 30
 
     steps:
-    - uses: actions/checkout@v3.6.0
+    - name: Checkout repository
+      uses: actions/checkout@v4
       with:
         submodules: 'recursive'
+        clean: true
 
     - name: Get Engine Tag
       run: |
@@ -24,18 +32,12 @@ jobs:
 
     - name: Build Packaging
       run: dotnet build Content.Packaging --configuration Release /m
-      env:
-        version: 1
 
     - name: Package server
       run: dotnet run --project Content.Packaging server --platform win-x64 --platform linux-x64 --platform osx-x64 --platform linux-arm64
-      env:
-        version: 1
 
     - name: Package client
       run: dotnet run --project Content.Packaging client --no-wipe-release
-      env:
-        version: 1
 
     - name: Publish version
       run: Tools/publish_multi_request.py
@@ -44,12 +46,14 @@ jobs:
         GITHUB_REPOSITORY: ${{ vars.GITHUB_REPOSITORY }}
 
     - name: Publish changelog (Discord)
+      continue-on-error: true
       run: Tools/actions_changelogs_since_last_run.py
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         DISCORD_WEBHOOK_URL: ${{ secrets.CHANGELOG_DISCORD_WEBHOOK }}
 
     - name: Publish changelog (RSS)
+      continue-on-error: true
       run: Tools/actions_changelog_rss.py
       env:
         CHANGELOG_RSS_KEY: ${{ secrets.CHANGELOG_RSS_KEY }}

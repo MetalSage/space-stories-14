@@ -8,6 +8,11 @@ public sealed partial class SponsorsSystem : EntitySystem, ISharedSponsorsManage
 {
     [Dependency] private SponsorsManager _sponsorsManager = default!;
 
+    public bool TryGetInfo([NotNullWhen(true)] out SponsorInfo? sponsor)
+    {
+        return _sponsorsManager.TryGetInfo(out sponsor);
+    }
+
     public bool TryGetInfo(NetUserId userId, [NotNullWhen(true)] out SponsorInfo? sponsor)
     {
         return _sponsorsManager.TryGetInfo(userId, out sponsor);

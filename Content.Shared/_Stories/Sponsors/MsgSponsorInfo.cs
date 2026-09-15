@@ -1,4 +1,4 @@
-﻿using System.IO;
+using System.IO;
 using System.Text.Json.Serialization;
 using Lidgren.Network;
 using Robust.Shared.Network;
@@ -26,6 +26,9 @@ public sealed class SponsorInfo
 
     [JsonPropertyName("allowedMarkings")]
     public string[] AllowedMarkings { get; set; } = Array.Empty<string>();
+
+    [JsonPropertyName("allowedTTSVoices")]
+    public string[] AllowedTTSVoices { get; set; } = Array.Empty<string>();
 
     [JsonPropertyName("allowedLoadouts")]
     public string[] AllowedLoadouts { get; set; } = Array.Empty<string>();

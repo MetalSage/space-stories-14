@@ -38,6 +38,13 @@
     - Dragon
   - type: Speech
     speechVerb: LargeMob
+  - type: Language # Stories-Language
+    currentLanguage: Draconic
+    defaultLanguage: Draconic
+    spokenLanguages:
+    - Draconic
+    understoodLanguages:
+    - Draconic
   - type: CombatMode
   - type: MobMover
   - type: InputMover

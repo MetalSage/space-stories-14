@@ -5,6 +5,8 @@ using Content.Server.Chat.Systems;
 using Content.Server.EUI;
 using Content.Shared.Administration;
 using Content.Shared.Eui;
+using Content.Shared._Stories.SCCVars;
+using Robust.Shared.Configuration;
 
 namespace Content.Server.Administration.UI
 {
@@ -12,6 +14,9 @@ namespace Content.Server.Administration.UI
     {
         [Dependency] private IAdminManager _adminManager = default!;
         [Dependency] private IChatManager _chatManager = default!;
+        // Stories-TTS-Start
+        [Dependency] private IConfigurationManager _cfg = default!;
+        // Stories-TTS-End
         private readonly ChatSystem _chatSystem;
 
         public AdminAnnounceEui()
@@ -50,7 +55,10 @@ namespace Content.Server.Administration.UI
                             break;
                         // TODO: Per-station announcement support
                         case AdminAnnounceType.Station:
-                            _chatSystem.DispatchGlobalAnnouncement(doAnnounce.Announcement, doAnnounce.Announcer, colorOverride: Color.Gold);
+                            // Stories-TTS-Start
+                            var voice = doAnnounce.Voice ?? _cfg.GetCVar(SCCVars.TTSAnnounceVoice);
+                            _chatSystem.DispatchGlobalAnnouncement(doAnnounce.Announcement, doAnnounce.Announcer, colorOverride: Color.Gold, ttsVoice: voice);
+                            // Stories-TTS-End
                             break;
                     }
 

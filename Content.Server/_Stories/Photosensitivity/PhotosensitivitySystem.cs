@@ -19,20 +19,18 @@ public sealed partial class PhotosensitivitySystem : EntitySystem
     private const float UpdateTimer = 2f;
     public const float MaxIllumination = 10f;
     public const float MinIllumination = 0f;
-    [Dependency] private SharedAudioSystem _audio = default!;
-
-    [Dependency] private DamageableSystem _damageable = default!;
-    [Dependency] private EntityLookupSystem _entityLookup = default!;
-    [Dependency] private MapSystem _mapSystem = default!;
-    [Dependency] private TransformSystem _transform = default!;
-    [Dependency] private TurfSystem _turf = default!;
-    [Dependency] private SharedAudioSystem _audio = default!;
     [Dependency] private AlertsSystem _alerts = default!;
+    [Dependency] private SharedAudioSystem _audio = default!;
+    [Dependency] private DamageableSystem _damageable = default!;
+    [Dependency] private EntityLookupSystem _lookup = default!;
+    [Dependency] private MapSystem _map = default!;
     [Dependency] private MovementSpeedModifierSystem _movement = default!;
-
-    private float _timer;
     [Dependency] private TransformSystem _transform = default!;
     [Dependency] private TurfSystem _turf = default!;
+
+    private readonly HashSet<Entity<PointLightComponent>> _lightPoints = new();
+    private List<Entity<MapGridComponent>> _intersectingGrids = new();
+    private float _timer;
 
     public override void Initialize()
     {
@@ -78,19 +76,19 @@ public sealed partial class PhotosensitivitySystem : EntitySystem
         return 1f;
     }
 
-    private void OnFlashed(EntityUid uid, PhotosensitivityComponent comp, ref AfterFlashedEvent args)
+    private void OnFlashed(Entity<PhotosensitivityComponent> ent, ref AfterFlashedEvent args)
     {
-        if (!comp.Enabled || HasComp<ShadowWalkingComponent>(uid))
+        if (!ent.Comp.Enabled || HasComp<ShadowWalkingComponent>(ent))
             return;
 
-        if (args.Target != uid)
+        if (args.Target != ent.Owner)
             return;
 
-        var damageMult = GetDamageMultiplier(uid, comp);
-        var damage = (args.Melee ? comp.MeleeFlashDamage : comp.FlashDamage) * damageMult;
+        var damageMult = GetDamageMultiplier(ent, ent.Comp);
+        var damage = (args.Melee ? ent.Comp.MeleeFlashDamage : ent.Comp.FlashDamage) * damageMult;
 
-        _damageable.TryChangeDamage(uid, damage, true, false);
-        _audio.PlayPvs(comp.BurnSound, uid);
+        _damageable.TryChangeDamage(ent.Owner, damage, true, false);
+        _audio.PlayPvs(ent.Comp.BurnSound, ent);
     }
 
     public override void Update(float frameTime)
@@ -118,7 +116,7 @@ public sealed partial class PhotosensitivitySystem : EntitySystem
 
             if (gridUid != null && TryComp<MapGridComponent>(gridUid, out var grid))
             {
-                if (_turf.IsSpace(_mapSystem.GetTileRef(gridUid.Value, grid, Transform(uid).Coordinates)))
+                if (_turf.IsSpace(_map.GetTileRef(gridUid.Value, grid, Transform(uid).Coordinates)))
                     inSpace = true;
             }
             else
@@ -151,16 +149,18 @@ public sealed partial class PhotosensitivitySystem : EntitySystem
     {
         var destTrs = Transform(uid);
 
-        var lightPoints = _entityLookup.GetEntitiesInRange<PointLightComponent>(
+        _lightPoints.Clear();
+        _lookup.GetEntitiesInRange(
             _transform.GetMapCoordinates(destTrs),
             20f,
+            _lightPoints,
             LookupFlags.Dynamic | LookupFlags.Static | LookupFlags.Contained);
 
         var destination = _transform.GetWorldPosition(destTrs);
 
         var illumination = 0f;
 
-        foreach (var lightPoint in lightPoints)
+        foreach (var lightPoint in _lightPoints)
         {
             if (!lightPoint.Comp.Enabled)
                 continue;
@@ -169,8 +169,8 @@ public sealed partial class PhotosensitivitySystem : EntitySystem
             var source = _transform.GetWorldPosition(sourceTrs);
 
             var box = Box2.FromTwoPoints(_transform.GetWorldPosition(sourceTrs), _transform.GetWorldPosition(destTrs));
-            var grids = new List<Entity<MapGridComponent>>();
-            _mapSystem.FindGridsIntersecting(sourceTrs.MapID, box, ref grids, true);
+            _intersectingGrids.Clear();
+            _map.FindGridsIntersecting(sourceTrs.MapID, box, ref _intersectingGrids, true);
 
             var dir = destination - source;
             var dist = dir.Length();
@@ -180,7 +180,7 @@ public sealed partial class PhotosensitivitySystem : EntitySystem
 
             var lightDirInterrupted = false;
 
-            foreach (var grid in grids)
+            foreach (var grid in _intersectingGrids)
             {
                 var gridTrs = Transform(grid);
 
@@ -204,7 +204,7 @@ public sealed partial class PhotosensitivitySystem : EntitySystem
 
                 while (line.MoveNext())
                 {
-                    foreach (var entity in _mapSystem.GetAnchoredEntities(grid, grid.Comp, line.Current))
+                    foreach (var entity in _map.GetAnchoredEntities(grid, grid.Comp, line.Current))
                     {
                         if (TryComp<OccluderComponent>(entity, out var occluder) && occluder.Enabled)
                         {

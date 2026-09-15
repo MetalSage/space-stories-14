@@ -1,11 +1,11 @@
 - type: job
   id: STPRISONPrisoner
-  name: заключенный космической тюрьмы
+  name: stories-job-name-prisoner
   playTimeTracker: STJobPrisoner
   requirements:
     - !type:OverallPlaytimeRequirement
       time: 7200 # 2 hours
-  description: Как я сюда попал?
+  description: stories-job-description-prisoner
   startingGear: STPRISONPrisoner
   icon: "STJobIconPRISONPrisoner"
   supervisors: job-supervisors-everyone

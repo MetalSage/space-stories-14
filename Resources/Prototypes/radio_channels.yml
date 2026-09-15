@@ -4,6 +4,7 @@
   keycode: ";"
   frequency: 145.9
   color: "#2cdb2c"
+  ttsCategory: stories-tts-category-radio-station # Stories-TTS
 
 - type: radioChannel
   id: CentCom
@@ -12,6 +13,7 @@
   frequency: 1337
   color: "#2681a5"
   longRange: true
+  ttsCategory: stories-tts-category-radio-special # Stories-TTS
 
 - type: radioChannel
   id: Command
@@ -19,6 +21,7 @@
   keycode: 'к' # Stories-Localization
   frequency: 1353
   color: "#fcdf03"
+  ttsCategory: stories-tts-category-radio-station # Stories-TTS
 
 - type: radioChannel
   id: Engineering
@@ -26,6 +29,7 @@
   keycode: 'и' # Stories-Localization
   frequency: 1357
   color: "#ff733c"
+  ttsCategory: stories-tts-category-radio-station # Stories-TTS
 
 - type: radioChannel
   id: Medical
@@ -33,6 +37,7 @@
   keycode: 'м' # Stories-Localization
   frequency: 1355
   color: "#57b8f0"
+  ttsCategory: stories-tts-category-radio-station # Stories-TTS
 
 - type: radioChannel
   id: Science
@@ -40,6 +45,7 @@
   keycode: 'н' # Stories-Localization
   frequency: 1351
   color: "#cd7ccd"
+  ttsCategory: stories-tts-category-radio-station # Stories-TTS
 
 - type: radioChannel
   id: Security
@@ -47,6 +53,7 @@
   keycode: 'о' # Stories-Localization
   frequency: 1359
   color: "#ff4242"
+  ttsCategory: stories-tts-category-radio-station # Stories-TTS
 
 - type: radioChannel
   id: Service
@@ -54,6 +61,7 @@
   keycode: 'с' # Stories-Localization
   frequency: 1349
   color: "#539c00"
+  ttsCategory: stories-tts-category-radio-station # Stories-TTS
 
 - type: radioChannel
   id: Supply
@@ -61,6 +69,7 @@
   keycode: 'п' # Stories-Localization
   frequency: 1347
   color: "#b48b57"
+  ttsCategory: stories-tts-category-radio-station # Stories-TTS
 
 - type: radioChannel
   id: Syndicate
@@ -69,6 +78,7 @@
   frequency: 1213
   color: "#8f4a4b"
   longRange: true
+  ttsCategory: stories-tts-category-radio-other # Stories-TTS
 
 - type: radioChannel
   id: Handheld
@@ -77,6 +87,7 @@
   color: "#967101"
   # long range since otherwise it'd defeat the point of a handheld radio independent of telecomms
   longRange: true
+  ttsCategory: stories-tts-category-radio-special # Stories-TTS
 
 - type: radioChannel
   id: Binary
@@ -86,6 +97,7 @@
   color: "#5ed7aa"
   # long range since otherwise it'd defeat the point of a handheld radio independent of telecomms
   longRange: true
+  showInTTSOptions: false # Stories-TTS
 
 - type: radioChannel
   id: Freelance
@@ -95,6 +107,7 @@
   color: "#f6ce64"
   # long range since otherwise it'd defeat the point of a handheld radio independent of telecomms
   longRange: true
+  ttsCategory: stories-tts-category-radio-special # Stories-TTS
 
 - type: radioChannel
   id: Xenoborg
@@ -104,6 +117,7 @@
   color: "#2288ff"
   # long range since I don't wanna make a special xenoborg telecomm server
   longRange: true
+  ttsCategory: stories-tts-category-radio-other # Stories-TTS
 
 - type: radioChannel
   id: Mothership
@@ -113,3 +127,4 @@
   color: "#ff2222"
   # long range since I don't wanna make a special xenoborg telecomm server
   longRange: true
+  ttsCategory: stories-tts-category-radio-other # Stories-TTS

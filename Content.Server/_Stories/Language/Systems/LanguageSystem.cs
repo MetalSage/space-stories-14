@@ -22,6 +22,11 @@ public sealed partial class LanguageSystem : SharedLanguageSystem
 
     private void OnInitLanguageSpeaker(Entity<LanguageComponent> ent, ref MapInitEvent args)
     {
+        foreach (var lang in ent.Comp.SpokenLanguages)
+            AddLanguageSource(ent.Comp.SpokenLanguageSources, lang, LanguageSource.Intrinsic);
+        foreach (var lang in ent.Comp.UnderstoodLanguages)
+            AddLanguageSource(ent.Comp.UnderstoodLanguageSources, lang, LanguageSource.Intrinsic);
+
         UpdateEntityLanguages(ent.AsNullable());
     }
 

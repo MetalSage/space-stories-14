@@ -38,4 +38,37 @@ public abstract partial class SharedRadioSystem : EntitySystem
     {
 
     }
+
+    // Stories-TTS-Start
+    /// <summary>
+    /// Send radio message to all active radio listeners with optional TTS voice override and delay.
+    /// </summary>
+    [PublicAPI]
+    public void SendRadioMessage(EntityUid messageSource,
+        string message,
+        ProtoId<RadioChannelPrototype> channel,
+        EntityUid radioSource,
+        string? ttsVoice,
+        TimeSpan? ttsDelay = null,
+        bool escapeMarkup = true)
+    {
+        SendRadioMessage(messageSource, message, ProtoMan.Index(channel), radioSource, ttsVoice, ttsDelay, escapeMarkup: escapeMarkup);
+    }
+
+    /// <summary>
+    /// Sends a radio message to all active radio listeners with optional TTS voice override and delay.
+    /// Pass null for ttsVoice to disable TTS voicing for this message.
+    /// </summary>
+    [PublicAPI]
+    public virtual void SendRadioMessage(EntityUid messageSource,
+        string message,
+        RadioChannelPrototype channel,
+        EntityUid radioSource,
+        string? ttsVoice,
+        TimeSpan? ttsDelay = null,
+        bool escapeMarkup = true)
+    {
+
+    }
+    // Stories-TTS-End
 }

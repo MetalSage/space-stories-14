@@ -58,6 +58,12 @@ namespace Content.Server.Lathe
         /// </summary>
         private readonly List<GasMixture> _environments = new();
 
+        // Stories-TTS-Start
+        private static readonly TimeSpan LatheVoiceCooldown = TimeSpan.FromSeconds(30);
+        private static readonly TimeSpan LatheVoiceDelay = TimeSpan.FromSeconds(5);
+        private TimeSpan _nextLatheVoiceTime = TimeSpan.Zero;
+        // Stories-TTS-End
+
         public override void Initialize()
         {
             base.Initialize();
@@ -402,9 +408,21 @@ namespace Content.Server.Lathe
                         ("items", ContentLocalizationManager.FormatList(recipeNames))
                     );
 
+            // Stories-TTS-Start
+            string? ttsVoice = null;
+            if (_timing.CurTime >= _nextLatheVoiceTime)
+            {
+                ttsVoice = "glados";
+                _nextLatheVoiceTime = _timing.CurTime + LatheVoiceCooldown;
+            }
+            // Stories-TTS-End
+
             foreach (var channel in ent.Comp.Channels)
             {
-                _radio.SendRadioMessage(ent.Owner, message, channel, ent.Owner, escapeMarkup: false);
+                // Stories-TTS-Start
+                _radio.SendRadioMessage(ent.Owner, message, channel, ent.Owner, ttsVoice: ttsVoice, ttsDelay: LatheVoiceDelay, escapeMarkup: false);
+                ttsVoice = null;
+                // Stories-TTS-End
             }
         }
 
