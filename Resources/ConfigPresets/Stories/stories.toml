@@ -54,7 +54,7 @@ tickrate = 25
 [procgen]
 preload = false
 
-[queue]
+[stories.queue]
 enabled = true
 
 [server]
