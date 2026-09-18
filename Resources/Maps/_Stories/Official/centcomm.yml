@@ -1,11 +1,11 @@
 meta:
   format: 7
   category: Grid
-  engineVersion: 288.0.1
+  engineVersion: 289.0.0
   forkId: ""
   forkVersion: ""
-  time: 08/12/2026 19:15:03
-  entityCount: 9790
+  time: 09/18/2026 17:47:24
+  entityCount: 9789
 maps: []
 grids:
 - 1668
@@ -26075,12 +26075,6 @@ entities:
           - CloningPodReceiver
 - proto: ComputerComms
   entities:
-  - uid: 2821
-    components:
-    - type: Transform
-      parent: 1668
-      rot: -1.5707963267948966 rad
-      pos: -11.5,12.5
   - uid: 6738
     components:
     - type: Transform
@@ -26089,7 +26083,7 @@ entities:
       pos: -43.5,-8.5
 - proto: ComputerCrewMonitoring
   entities:
-  - uid: 2438
+  - uid: 2821
     components:
     - type: Transform
       parent: 1668
@@ -53546,7 +53540,7 @@ entities:
     - type: Transform
       parent: 1668
       pos: -11.5,26.5
-- proto: StatueBananiumClown
+- proto: StatueOrnateClown
   entities:
   - uid: 9616
     components:
@@ -53567,6 +53561,14 @@ entities:
     - type: Transform
       parent: 1668
       pos: 21.5,7.5
+- proto: STComputerBankCentcom
+  entities:
+  - uid: 2438
+    components:
+    - type: Transform
+      parent: 1668
+      rot: -1.5707963267948966 rad
+      pos: -11.5,12.5
 - proto: SteelBench
   entities:
   - uid: 1781
@@ -53663,7 +53665,7 @@ entities:
     - type: Transform
       parent: 1668
       rot: 3.141592653589793 rad
-      pos: -7.029807,-10.078645
+      pos: -7.5,-10.5
 - proto: StoolBar
   entities:
   - uid: 748
@@ -57515,7 +57517,7 @@ entities:
     - type: Transform
       parent: 1668
       pos: -38.5,12.5
-- proto: UraniumWindoorSecureCentralCommandLocked
+- proto: UraniumWindoorCentralCommandLocked
   entities:
   - uid: 9603
     components:
@@ -57771,13 +57773,6 @@ entities:
     - type: Transform
       parent: 1668
       pos: 7.5,-18.5
-- proto: VendingMachinePride
-  entities:
-  - uid: 9108
-    components:
-    - type: Transform
-      parent: 1668
-      pos: -39.5,1.5
 - proto: VendingMachineSciDrobe
   entities:
   - uid: 9158
@@ -64363,84 +64358,7 @@ entities:
       parent: 1668
       rot: 3.141592653589793 rad
       pos: 33.5,23.5
-- proto: WindoorCargoLocked
-  entities:
-  - uid: 49
-    components:
-    - type: Transform
-      parent: 1668
-      rot: 3.141592653589793 rad
-      pos: 3.5,22.5
-  - uid: 2989
-    components:
-    - type: Transform
-      parent: 1668
-      rot: 3.141592653589793 rad
-      pos: 2.5,22.5
-- proto: WindoorHydroponicsLocked
-  entities:
-  - uid: 969
-    components:
-    - type: Transform
-      parent: 1668
-      rot: 1.5707963267948966 rad
-      pos: 2.5,-19.5
-  - uid: 970
-    components:
-    - type: Transform
-      parent: 1668
-      rot: 1.5707963267948966 rad
-      pos: 2.5,-18.5
-  - uid: 971
-    components:
-    - type: Transform
-      parent: 1668
-      rot: 1.5707963267948966 rad
-      pos: 2.5,-17.5
-  - uid: 981
-    components:
-    - type: Transform
-      parent: 1668
-      pos: 9.5,-13.5
-- proto: WindoorKitchenLocked
-  entities:
-  - uid: 1096
-    components:
-    - type: Transform
-      parent: 1668
-      rot: 1.5707963267948966 rad
-      pos: 11.5,-19.5
-  - uid: 1097
-    components:
-    - type: Transform
-      parent: 1668
-      rot: 1.5707963267948966 rad
-      pos: 11.5,-18.5
-  - uid: 1098
-    components:
-    - type: Transform
-      parent: 1668
-      rot: 1.5707963267948966 rad
-      pos: 11.5,-17.5
-  - uid: 1176
-    components:
-    - type: Transform
-      parent: 1668
-      rot: -1.5707963267948966 rad
-      pos: 18.5,-19.5
-  - uid: 1177
-    components:
-    - type: Transform
-      parent: 1668
-      rot: -1.5707963267948966 rad
-      pos: 18.5,-18.5
-  - uid: 1178
-    components:
-    - type: Transform
-      parent: 1668
-      rot: -1.5707963267948966 rad
-      pos: 18.5,-17.5
-- proto: WindoorSecureBrigLocked
+- proto: WindoorBrigLocked
   entities:
   - uid: 1864
     components:
@@ -64479,15 +64397,27 @@ entities:
     - type: Transform
       parent: 1668
       pos: 26.5,25.5
-- proto: WindoorSecureCargoLocked
+- proto: WindoorCargoLocked
   entities:
+  - uid: 49
+    components:
+    - type: Transform
+      parent: 1668
+      rot: 3.141592653589793 rad
+      pos: 3.5,22.5
+  - uid: 2989
+    components:
+    - type: Transform
+      parent: 1668
+      rot: 3.141592653589793 rad
+      pos: 2.5,22.5
   - uid: 3885
     components:
     - type: Transform
       parent: 1668
       rot: -1.5707963267948966 rad
       pos: -3.5,31.5
-- proto: WindoorSecureCentralCommandLocked
+- proto: WindoorCentralCommandLocked
   entities:
   - uid: 2903
     components:
@@ -64559,7 +64489,7 @@ entities:
     - type: Transform
       parent: 1668
       pos: -38.5,5.5
-- proto: WindoorSecureChemistryLocked
+- proto: WindoorChemistryLocked
   entities:
   - uid: 666
     components:
@@ -64597,7 +64527,7 @@ entities:
       parent: 1668
       rot: 3.141592653589793 rad
       pos: 9.5,-13.5
-- proto: WindoorSecureCommandLocked
+- proto: WindoorCommandLocked
   entities:
   - uid: 96
     components:
@@ -64627,7 +64557,7 @@ entities:
       parent: 1668
       rot: 3.141592653589793 rad
       pos: -31.5,-10.5
-- proto: WindoorSecureEngineeringLocked
+- proto: WindoorEngineeringLocked
   entities:
   - uid: 3030
     components:
@@ -64641,7 +64571,70 @@ entities:
       parent: 1668
       rot: 3.141592653589793 rad
       pos: -4.5,17.5
-- proto: WindoorSecureMedicalLocked
+- proto: WindoorHydroponicsLocked
+  entities:
+  - uid: 969
+    components:
+    - type: Transform
+      parent: 1668
+      rot: 1.5707963267948966 rad
+      pos: 2.5,-19.5
+  - uid: 970
+    components:
+    - type: Transform
+      parent: 1668
+      rot: 1.5707963267948966 rad
+      pos: 2.5,-18.5
+  - uid: 971
+    components:
+    - type: Transform
+      parent: 1668
+      rot: 1.5707963267948966 rad
+      pos: 2.5,-17.5
+  - uid: 981
+    components:
+    - type: Transform
+      parent: 1668
+      pos: 9.5,-13.5
+- proto: WindoorKitchenLocked
+  entities:
+  - uid: 1096
+    components:
+    - type: Transform
+      parent: 1668
+      rot: 1.5707963267948966 rad
+      pos: 11.5,-19.5
+  - uid: 1097
+    components:
+    - type: Transform
+      parent: 1668
+      rot: 1.5707963267948966 rad
+      pos: 11.5,-18.5
+  - uid: 1098
+    components:
+    - type: Transform
+      parent: 1668
+      rot: 1.5707963267948966 rad
+      pos: 11.5,-17.5
+  - uid: 1176
+    components:
+    - type: Transform
+      parent: 1668
+      rot: -1.5707963267948966 rad
+      pos: 18.5,-19.5
+  - uid: 1177
+    components:
+    - type: Transform
+      parent: 1668
+      rot: -1.5707963267948966 rad
+      pos: 18.5,-18.5
+  - uid: 1178
+    components:
+    - type: Transform
+      parent: 1668
+      rot: -1.5707963267948966 rad
+      pos: 18.5,-17.5
+- proto: WindoorMedicalLocked
   entities:
   - uid: 550
     components:
@@ -64653,7 +64646,7 @@ entities:
     - type: Transform
       parent: 1668
       pos: 15.5,-3.5
-- proto: WindoorSecureSecurityLocked
+- proto: WindoorSecurityLocked
   entities:
   - uid: 409
     components:

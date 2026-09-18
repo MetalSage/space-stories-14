@@ -3,6 +3,7 @@
   name: stories-job-name-prison-engineer
   description: stories-job-description-prison-engineer
   playTimeTracker: STJobSpacePrisonEngineer
+  setPreference: false
   requirements:
     - !type:DepartmentTimeRequirement
       department: Security

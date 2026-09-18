@@ -3,6 +3,7 @@
   name: stories-job-name-prison-medic
   description: stories-job-description-prison-medic
   playTimeTracker: STJobSpacePrisonMedic
+  setPreference: false
   requirements:
     - !type:DepartmentTimeRequirement
       department: Security

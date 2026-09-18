@@ -3,6 +3,7 @@
   name: stories-job-name-guardian-nt
   description: stories-job-description-guardian-nt
   playTimeTracker: STJobGuardianNt
+  setPreference: false
   requirements:
     - !type:RoleTimeRequirement
       role: JobHeadOfSecurity

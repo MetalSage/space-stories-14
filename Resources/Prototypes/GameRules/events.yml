@@ -50,7 +50,6 @@
       tableId: DerelictBorgEventTable
     # Stories-Start
     - id: STSpafMigration
-    - id: STInquisitorSpawn
     - id: STCorpiumSpawn
     - id: STSlaughterDemonSpawn
     - id: STShadowDemonSpawn

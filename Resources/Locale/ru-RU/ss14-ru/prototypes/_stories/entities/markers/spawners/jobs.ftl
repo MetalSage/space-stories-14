@@ -10,3 +10,7 @@ ent-STSpawnPointIAA = агент внутрених дел
 ent-STSpawnPointJudge = судья
     .desc = { ent-STSpawnPointJobBaseStories.desc }
     .suffix = { ent-STSpawnPointJobBaseStories.suffix }
+ent-STSpawnPointBlueshield = офицер синего щита
+    .desc = { ent-STSpawnPointJobBaseStories.desc }
+    .suffix = { ent-STSpawnPointJobBaseStories.suffix }
+

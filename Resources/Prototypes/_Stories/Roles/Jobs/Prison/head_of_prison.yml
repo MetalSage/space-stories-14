@@ -3,6 +3,7 @@
   name: stories-job-name-head-of-prison
   description: stories-job-description-head-of-prison
   playTimeTracker: STJobHeadOfSpacePrison
+  setPreference: false
   requirements:
     - !type:RoleTimeRequirement
       role: JobWarden
