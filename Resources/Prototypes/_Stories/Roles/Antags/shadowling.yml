@@ -6,7 +6,7 @@
   objective: stories-roles-antag-shadowling-objective
   requirements:
   - !type:OverallPlaytimeRequirement
-    time: 36000
+    time: 5h
 
 - type: antag
   id: STShadowlingThrall

@@ -6,11 +6,11 @@
   setPreference: false
   requirements:
     - !type:DepartmentTimeRequirement
-      department: Security
-      time: 18000 # 5 hours
-    - !type:DepartmentTimeRequirement
       department: Medical
-      time: 18000 # 5 hours
+      time: 2h
+    - !type:DepartmentTimeRequirement
+      department: Security
+      time: 1h
   startingGear: STPRISONMedicGear
   icon: "STJobIconSpacePrisonMedic"
   supervisors: stories-job-supervisors-headofprison

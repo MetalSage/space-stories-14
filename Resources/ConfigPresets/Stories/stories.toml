@@ -58,7 +58,7 @@ preload = false
 enabled = true
 
 [server]
-rules_file = "StoriesRuleset"
+rules_file = "STRuleset"
 
 [movement]
 mob_pushing = true
@@ -72,7 +72,7 @@ emergency_transit_time_max = 120
 [vote]
 restart_enabled = true
 preset_enabled = false
-map_enabled = false
+map_enabled = true
 restart_not_allowed_when_admin_online = true
 
 [viewport]

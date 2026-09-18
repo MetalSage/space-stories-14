@@ -5,7 +5,7 @@
   setPreference: false
   requirements:
     - !type:OverallPlaytimeRequirement
-      time: 7200 # 2 hours
+      time: 2h
   description: stories-job-description-prisoner
   startingGear: STPRISONPrisoner
   icon: "STJobIconPRISONPrisoner"

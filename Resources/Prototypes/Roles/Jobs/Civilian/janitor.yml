@@ -3,9 +3,6 @@
   name: job-name-janitor
   description: job-description-janitor
   playTimeTracker: JobJanitor
-  requirements:
-    - !type:OverallPlaytimeRequirement
-      time: 7200 #2 hrs # Stories-RoleTime
   startingGear: JanitorGear
   icon: "JobIconJanitor"
   supervisors: job-supervisors-hop

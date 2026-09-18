@@ -5,18 +5,8 @@
   setPreference: false
   objective: stories-roles-antag-empire-member-objective
   requirements:
-  - !type:RoleTimeRequirement
-    role: JobHeadOfSecurity
-    time: 36000 # 10 hours
-  - !type:RoleTimeRequirement
-    role: JobCaptain
-    time: 36000 # 10 hours
-  - !type:RoleTimeRequirement
-    role: STJobIAA
-    time: 36000 # 10 hours
-  - !type:RoleTimeRequirement
-    role: JobDetective
-    time: 18000 # 5 hours
+  - !type:OverallPlaytimeRequirement
+    time: 5h
 
 - type: antag
   id: STHypnotizedEmpireMember

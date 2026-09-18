@@ -5,12 +5,14 @@
   playTimeTracker: STJobHeadOfSpacePrison
   setPreference: false
   requirements:
-    - !type:RoleTimeRequirement
-      role: JobWarden
-      time: 18000 # 5 hours
+    - !type:OverallPlaytimeRequirement
+      time: 20h
     - !type:DepartmentTimeRequirement
       department: Prison
-      time: 18000 # 5 hours
+      time: 10h
+    - !type:RoleTimeRequirement
+      role: JobSpacePrisonOfficer
+      time: 2h
   startingGear: STPRISONHeadOfPrisonGear
   icon: "STJobIconHeadOfSpacePrison"
   requireAdminNotify: true

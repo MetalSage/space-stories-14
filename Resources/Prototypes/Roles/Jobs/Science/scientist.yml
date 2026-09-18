@@ -3,10 +3,10 @@
   name: job-name-scientist
   description: job-description-scientist
   playTimeTracker: JobScientist
-  requirements:
+  requirements: # Stories-PlaytimeRequirements
     - !type:DepartmentTimeRequirement
       department: Science
-      time: 5h
+      time: 2h
   startingGear: ScientistGear
   icon: "JobIconScientist"
   supervisors: job-supervisors-rd

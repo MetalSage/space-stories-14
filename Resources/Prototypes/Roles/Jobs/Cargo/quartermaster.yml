@@ -3,16 +3,18 @@
   name: job-name-qm
   description: job-description-qm
   playTimeTracker: JobQuartermaster
-  requirements:
-    - !type:RoleTimeRequirement
-      role: JobCargoTechnician
-      time: 5h
-    - !type:RoleTimeRequirement
-      role: JobSalvageSpecialist
-      time: 2.5h
+  requirements: # Stories-PlaytimeRequirements
+    - !type:OverallPlaytimeRequirement
+      time: 15h
     - !type:DepartmentTimeRequirement
       department: Cargo
       time: 10h
+    - !type:RoleTimeRequirement
+      role: JobCargoTechnician
+      time: 2h
+    - !type:RoleTimeRequirement
+      role: JobSalvageSpecialist
+      time: 2h
   startingGear: QuartermasterGear
   icon: "JobIconQuarterMaster"
   supervisors: job-supervisors-captain

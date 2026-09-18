@@ -5,18 +5,14 @@
   playTimeTracker: STJobGuardianNt
   setPreference: false
   requirements:
-    - !type:RoleTimeRequirement
-      role: JobHeadOfSecurity
-      time: 36000 # 10 hours
-    - !type:RoleTimeRequirement
-      role: JobCaptain
-      time: 36000 # 10 hours
-    - !type:RoleTimeRequirement
-      role: STJobIAA
-      time: 36000 # 10 hours # ! Почему так чертовски много?
-    - !type:RoleTimeRequirement
-      role: JobDetective
-      time: 18000 # 5 hours
+    - !type:OverallPlaytimeRequirement
+      time: 10h
+    - !type:DepartmentTimeRequirement
+      department: Security
+      time: 5h
+    - !type:DepartmentTimeRequirement
+      department: Command
+      time: 3h
   startingGear: STGuardianNtGear
   icon: "STJobIconGuardianNt"
   supervisors: job-supervisors-centcom

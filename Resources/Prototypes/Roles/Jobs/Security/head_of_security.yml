@@ -3,19 +3,18 @@
   name: job-name-hos
   description: job-description-hos
   playTimeTracker: JobHeadOfSecurity
-  requirements:
-    - !type:RoleTimeRequirement
-      role: JobWarden
-      time: 10h
-    - !type:RoleTimeRequirement
-      role: JobDetective
-      time: 10h # knowing how to use the tools is important
-    - !type:RoleTimeRequirement
-      role: JobSecurityOfficer
-      time: 30h
+  requirements: # Stories-PlaytimeRequirements
+    - !type:OverallPlaytimeRequirement
+      time: 20h
     - !type:DepartmentTimeRequirement
       department: Security
       time: 10h
+    - !type:RoleTimeRequirement
+      role: JobSecurityOfficer
+      time: 2h
+    - !type:RoleTimeRequirement
+      role: JobWarden
+      time: 2h
   startingGear: HoSGear
   icon: "JobIconHeadOfSecurity"
   supervisors: job-supervisors-captain
