@@ -1,5 +1,5 @@
-ent-STPRISONShuttleWindow = окно
-    .desc = Смотри не заляпай.
-ent-STPRISONShuttleWindowDiagonal = окно
-    .desc = Смотри не заляпай.
-    .suffix = Диагональ
+ent-STPRISONShuttleWindow = { ent-Window }
+    .desc = { ent-Window.desc }
+ent-STPRISONShuttleWindowDiagonal = { ent-Window }
+    .desc = { ent-Window.desc }
+    .suffix = { ent-WallDiagonalBase.suffix }

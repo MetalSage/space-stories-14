@@ -1,2 +1,2 @@
 ent-STShellShotgunSilver = патрон (.50 серебрянный)
-    .desc = { ent-BaseShellShotgun.desc }
+    .desc = { ent-BaseShellShotgun.desc } Серебряные боеприпасы наносят непоправимый урон демоническим приспешникам, что делает их идеальным оружием против нежити.

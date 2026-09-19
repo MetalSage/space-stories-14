@@ -1,2 +1,2 @@
 ent-STCartridgeMagnumSilver = патрон (.45 магнум серебрянный)
-    .desc = Heavy magnum cartridge mostly used by revolvers. Silver ammunition inflicts irreparable damage on demonic minions, making it an ideal weapon against the undead.
+    .desc = { ent-BaseCartridgeMagnum.desc } Серебряные боеприпасы наносят непоправимый урон демоническим приспешникам, что делает их идеальным оружием против нежити.
