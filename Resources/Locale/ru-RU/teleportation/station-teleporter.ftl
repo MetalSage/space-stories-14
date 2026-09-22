@@ -8,7 +8,7 @@ teleporter-console-chip-examine-null = [color=#f5b942]Записанные ко�
 
 teleporter-console-user-interface-title = Консоль управления телепортами
 
-teleporter-console-user-interface-locate = Обнаружить
+teleporter-console-user-interface-locate = Показать
 teleporter-console-user-interface-start-connection = Начать соединение
 teleporter-console-user-interface-cut-connection = Разорвать соединение
 teleporter-console-user-interface-no-power = Без питания

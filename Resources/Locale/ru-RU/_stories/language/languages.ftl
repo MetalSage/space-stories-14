@@ -1,4 +1,4 @@
-language-GalacticCommon-name = галактический общий
+language-GalacticCommon-name = общегалактический
 language-Draconic-name = драконий
 language-Moffic-name = моффийский
 language-Calcic-name = кальцитовый

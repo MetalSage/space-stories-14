@@ -1,23 +1,23 @@
 - type: accessLevel
   id: STHeadOfPrison
-  name: Head of Prison
+  name: stories-id-card-access-level-head-of-prison
 
 - type: accessLevel
   id: STPrisonBrig
-  name: Space Prison Brig
+  name: stories-id-card-access-level-space-prison-brig
 
 - type: accessLevel
   id: Prison
-  name: Space Prison
+  name: stories-id-card-access-level-space-prison
 
 - type: accessLevel
   id: STPrisonMed
-  name: Space Prison Medical
+  name: stories-id-card-access-level-space-prison-medical
 
 - type: accessLevel
   id: STPrisonEng
-  name: Space Prison Engineering
+  name: stories-id-card-access-level-space-prison-engineering
 
 - type: accessLevel
   id: Prisoner
-  name: Prisoner
+  name: stories-id-card-access-level-prisoner
