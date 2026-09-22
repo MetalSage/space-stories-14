@@ -1,33 +1,53 @@
-//Boilerplate
 uniform sampler2D SCREEN_TEXTURE;
 uniform sampler2D LIGHT_TEXTURE;
 
 uniform highp float Zoom;
 
-//Variables for controlling the falloff of the additive lighting effect.
-uniform highp float CircleRadius; //= 420.0;
-uniform highp float CircleMinDist; //= 0.0;
-uniform highp float CirclePow; //= 0.75;
-uniform highp float CircleMax; //= 4.0;
-uniform highp float CircleMult; //= 0.5;
-uniform highp float FalloffClampMin; //= 0.25;
-uniform highp float FalloffClampMax; //= 1.0;
-uniform highp float FalloffStrength; //= 0.6;
-uniform highp float FalloffPow; //= 3.0;
+uniform highp float CircleRadius;
+uniform highp float CircleMinDist;
+uniform highp float CirclePow;
+uniform highp float CircleMax;
+uniform highp float CircleMult;
+uniform highp float FalloffClampMin;
+uniform highp float FalloffClampMax;
+uniform highp float FalloffStrength;
 
 void fragment() {
-	COLOR = zTextureSpec(SCREEN_TEXTURE, Pos);
-	highp vec2 aspect = vec2(1.0/SCREEN_PIXEL_SIZE.x, 1.0/SCREEN_PIXEL_SIZE.y);
-	highp float actualZoom = Zoom;
+	highp float actualZoom = max(Zoom, 0.001);
+	highp vec2 aspect = vec2(1.0 / SCREEN_PIXEL_SIZE.x, 1.0 / SCREEN_PIXEL_SIZE.y);
 
-	highp float circle = clamp(zCircleGradient(aspect, FRAGCOORD.xy, CircleMax, CircleRadius / actualZoom, CircleMinDist / actualZoom, CirclePow) * CircleMult, FalloffClampMin, FalloffClampMax);
+	highp float rawCircle = zCircleGradient(aspect, FRAGCOORD.xy, CircleMax, CircleRadius / actualZoom, CircleMinDist / actualZoom, CirclePow) * CircleMult;
+	highp float circle = mix(FalloffClampMin, FalloffClampMax, smoothstep(0.0, FalloffClampMax, rawCircle));
 
-	highp vec3 lightsampleraw = texture2D(LIGHT_TEXTURE, Pos).rgb;
-	lightsampleraw = smoothstep(0.0, 1.0, lightsampleraw);
-	highp float graylight = max(zGrayscale(lightsampleraw) - max((1.0 - circle) * FalloffStrength, 0.0), 0.0);
-	graylight = pow(graylight, FalloffPow);
+	highp vec2 caOffset = (Pos - vec2(0.5)) * ((1.0 - circle) * 0.0025);
 
-	highp vec3 lightsample = lightsampleraw * vec3(graylight);
+	highp vec4 centerSample = zTextureSpec(SCREEN_TEXTURE, Pos);
+	COLOR = vec4(
+		zTextureSpec(SCREEN_TEXTURE, Pos + caOffset).r,
+		centerSample.g,
+		zTextureSpec(SCREEN_TEXTURE, Pos - caOffset).b,
+		centerSample.a
+	);
 
-	COLOR.rgb = COLOR.rgb + lightsample;
+	highp vec3 lightsample = texture2D(LIGHT_TEXTURE, Pos).rgb;
+
+	highp float lumaLight = zGrayscale(lightsample);
+	highp float graylight = clamp(lumaLight - max((1.0 - circle) * FalloffStrength, 0.0), 0.0, 1.0);
+	highp float falloff = graylight * graylight * graylight;
+	lightsample *= falloff;
+
+	highp float lightIntensity = lumaLight * falloff;
+	lightsample /= (1.0 + max(lightIntensity - 0.3, 0.0) * 1.5);
+	lightsample = min(lightsample, vec3(0.7));
+
+	highp vec3 composite = COLOR.rgb + lightsample * 0.65;
+
+	highp float lumaScale = 1.0 / (1.0 + zGrayscale(composite) * 1.2);
+	highp vec3 finalColor = composite * lumaScale;
+
+	highp vec2 ditherCoord = FRAGCOORD.xy;
+	highp float dither = fract(dot(ditherCoord, vec2(0.06711056, 0.00583715)) * 52.9829189) - 0.5;
+	finalColor += vec3(dither * (1.0 / 255.0));
+
+	COLOR.rgb = clamp(finalColor, 0.0, 1.0);
 }

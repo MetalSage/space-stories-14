@@ -28,7 +28,7 @@
       state: base
     - map: ["enum.PoweredLightLayers.Glow"]
       state: glow
-      shader: unshaded
+      shader: STLightBulb
   - type: PointLight
     color: "#FFE4CE" # 5000K color temp
     energy: 1.2
@@ -90,7 +90,7 @@
       state: base
     - map: ["enum.PoweredLightLayers.Glow"]
       state: glow
-      shader: unshaded
+      shader: STLightBulb
   - type: Destructible
     thresholds:
     - trigger: *DamageMachineFlimsy
@@ -452,7 +452,7 @@
     - state: emergency_light_on
       map: [ "enum.EmergencyLightVisualLayers.LightOn" ]
       color: "#7CFC00"
-      shader: "unshaded"
+      shader: "STLightBulb"
       visible: false
   - type: Appearance
   - type: Construction
