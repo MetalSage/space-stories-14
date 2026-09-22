@@ -6,6 +6,7 @@ using Robust.Client.UserInterface.Controls;
 using Robust.Client.UserInterface.XAML;
 using Robust.Shared.Player;
 using Robust.Shared.Prototypes;
+using Robust.Shared.Utility;
 
 namespace Content.Client.Lobby.UI;
 
@@ -30,4 +31,19 @@ public sealed partial class LobbyCharacterPreviewPanel : Control
     {
         Summary.Text = value;
     }
+
+    // Stories-Sponsors-Start
+    public void SetSponsor(string? title, string? hexColor)
+    {
+        if (string.IsNullOrEmpty(title))
+        {
+            SponsorTitle.Visible = false;
+            return;
+        }
+
+        SponsorTitle.Visible = true;
+        var colorTag = string.IsNullOrEmpty(hexColor) ? "Gold" : hexColor;
+        SponsorTitle.SetMessage(FormattedMessage.FromMarkupPermissive($"[color={colorTag}][bold]{title}[/bold][/color]"));
+    }
+    // Stories-Sponsors-End
 }

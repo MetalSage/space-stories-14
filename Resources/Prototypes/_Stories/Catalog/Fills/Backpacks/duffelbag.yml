@@ -1,7 +1,7 @@
 - type: entity
   parent: ClothingBackpackDuffelSyndicateBundle
   id: STClothingBackpackDuffelCrateTacticalMaid
-  name: чёрно-красный duffel bag
+  name: black and red duffel bag
   description: A spacious and comfortable duffel bag the color of ebony and blood, which can fit "toys" for all ages.
   components:
   - type: Storage

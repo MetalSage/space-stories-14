@@ -127,6 +127,9 @@ public sealed partial class PullController : VirtualController
         if (_container.IsEntityInContainer(player))
             return false;
 
+        if (HasComp<Content.Shared._Stories.Fireman.BeingFiremanCarriedComponent>(pulled)) // Stories-FiremanCarry
+            return false;
+
         pullerComp.NextThrow = _timing.CurTime + pullerComp.ThrowCooldown;
 
         // Cap the distance
@@ -194,6 +197,11 @@ public sealed partial class PullController : VirtualController
         if (!rotatable.RotateWhilePulling)
             return;
 
+        // Stories-FiremanCarry-Start
+        if (HasComp<Content.Shared._Stories.Fireman.BeingFiremanCarriedComponent>(pulled))
+            return;
+        // Stories-FiremanCarry-End
+
         var pulledXform = Transform(pulled);
         var pullerXform = Transform(puller);
 
@@ -228,6 +236,14 @@ public sealed partial class PullController : VirtualController
 
         while (movingQuery.MoveNext(out var pullableEnt, out var mover, out var pullable, out var pullableXform))
         {
+            // Stories-FiremanCarry-Start
+            if (HasComp<Content.Shared._Stories.Fireman.BeingFiremanCarriedComponent>(pullableEnt))
+            {
+                RemCompDeferred<PullMovingComponent>(pullableEnt);
+                continue;
+            }
+            // Stories-FiremanCarry-End
+
             if (!mover.MovingTo.IsValid(EntityManager))
             {
                 RemCompDeferred<PullMovingComponent>(pullableEnt);

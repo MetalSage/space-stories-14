@@ -7,6 +7,8 @@ stories-ghost-role-information-demon-rules = Сейчас вы находите�
 demon-phase-fail = Здесь не за что зацепиться.
 slaughter-demon-phase-fail = Рядом нет лужи крови!
 shadow-demon-phase-fail = Здесь недостаточно темно!
+slaughter-demon-victim-alive-fail = Жертва должна быть без сознания или мертва!
+slaughter-demon-consume-start = Демон начинает пожирать жертву!
 slaughter-demon-consume-complete = Демон поглощает жертву и восстанавливает силы.
 shadow-demon-wrap-start = Демон начинает оборачивать тело в кокон тьмы...
 

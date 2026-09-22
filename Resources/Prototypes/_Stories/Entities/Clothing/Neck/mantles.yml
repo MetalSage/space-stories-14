@@ -2,7 +2,7 @@
   parent: ClothingNeckBase
   id: STClothingNeckMantleGuardianNomad
   name: traveler mantle
-  description: Похоже, тут выгравировано "o k h r i m m". Что же это может значить?
+  description: It looks like is engraved here. What could this mean?
   components:
   - type: Tag
     tags:
@@ -16,7 +16,7 @@
   parent: ClothingNeckBase
   id: STClothingNeckMantleGuardianNt
   name: blade guardian mantle
-  description: Похоже, тут выгравировано "W o o b y". Что же это может значить?
+  description: It looks like is engraved here. What could this mean?
   components:
   - type: Tag
     tags:

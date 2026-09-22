@@ -1,6 +1,6 @@
 - type: gameMap
   id: STSushi
-  mapName: 'Sushi Station'
+  mapName: 'Sushi'
   mapPath: /Maps/_Stories/Official/sushi.yml
   minPlayers: 0
   maxPlayers: 70

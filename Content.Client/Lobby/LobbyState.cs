@@ -30,6 +30,7 @@ namespace Content.Client.Lobby
         [Dependency] private IVoteManager _voteManager = default!;
         [Dependency] private ClientsidePlaytimeTrackingManager _playtimeTracking = default!;
         [Dependency] private IPrototypeManager _protoMan = default!;
+        [Dependency] private readonly Content.Client._Stories.Sponsors.SponsorsManager _sponsorsManager = default!; // Stories-Sponsors
 
         private ClientGameTicker _gameTicker = default!;
         private ContentAudioSystem _contentAudioSystem = default!;
@@ -75,6 +76,7 @@ namespace Content.Client.Lobby
             _gameTicker.InfoBlobUpdated += UpdateLobbyUi;
             _gameTicker.LobbyStatusUpdated += LobbyStatusUpdated;
             _gameTicker.LobbyLateJoinStatusUpdated += LobbyLateJoinStatusUpdated;
+            _sponsorsManager.OnSponsorInfoLoaded += OnSponsorInfoLoaded; // Stories-Sponsors
         }
 
         protected override void Shutdown()
@@ -84,6 +86,7 @@ namespace Content.Client.Lobby
             _gameTicker.InfoBlobUpdated -= UpdateLobbyUi;
             _gameTicker.LobbyStatusUpdated -= LobbyStatusUpdated;
             _gameTicker.LobbyLateJoinStatusUpdated -= LobbyLateJoinStatusUpdated;
+            _sponsorsManager.OnSponsorInfoLoaded -= OnSponsorInfoLoaded; // Stories-Sponsors
             _contentAudioSystem.LobbySoundtrackChanged -= UpdateLobbySoundtrackInfo;
 
             _voteManager.ClearPopupContainer();
@@ -93,6 +96,11 @@ namespace Content.Client.Lobby
             Lobby!.ReadyButton.OnToggled -= OnReadyToggled;
 
             Lobby = null;
+        }
+
+        private void OnSponsorInfoLoaded(Content.Shared._Stories.Sponsors.SponsorInfo? info)
+        {
+            UpdateLobbyUi();
         }
 
         public void SwitchState(LobbyGui.LobbyGuiState state)
@@ -199,6 +207,17 @@ namespace Content.Client.Lobby
             {
                 Lobby!.ServerInfo.SetInfoBlob(_gameTicker.ServerInfoBlob);
             }
+
+            // Stories-Sponsors-Start
+            if (_sponsorsManager.TryGetInfo(out var sponsor) && !string.IsNullOrEmpty(sponsor.TierName))
+            {
+                Lobby!.CharacterPreview.SetSponsor(sponsor.TierName, sponsor.OOCColor);
+            }
+            else
+            {
+                Lobby!.CharacterPreview.SetSponsor(null, null);
+            }
+            // Stories-Sponsors-End
 
             var minutesToday = _playtimeTracking.PlaytimeMinutesToday;
             if (minutesToday > 60)

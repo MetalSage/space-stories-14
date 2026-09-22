@@ -1,6 +1,6 @@
 - type: gameMap
   id: STBox
-  mapName: 'Box Station'
+  mapName: 'Box'
   mapPath: /Maps/_Stories/Official/box.yml
   minPlayers: 0
   stations:

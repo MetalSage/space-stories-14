@@ -3,16 +3,13 @@ using Content.Server.Polymorph.Components;
 using Content.Server.Polymorph.Systems;
 using Content.Server.Popups;
 using Content.Shared._Stories.Demons;
-using Content.Shared.Audio;
 using Content.Shared.Chemistry.EntitySystems;
 using Content.Shared.Chemistry.Reagent;
 using Content.Shared.DoAfter;
 using Content.Shared.Fluids.Components;
-using Content.Shared.Mind;
 using Content.Shared.Mind.Components;
 using Content.Shared.Movement.Pulling.Components;
 using Robust.Shared.Audio.Systems;
-using Robust.Shared.GameObjects;
 using Robust.Shared.Prototypes;
 using Robust.Shared.Random;
 
@@ -20,14 +17,15 @@ namespace Content.Server._Stories.Demons;
 
 public sealed partial class DemonPhaseSystem : EntitySystem
 {
+    [Dependency] private SharedAudioSystem _audio = default!;
+    [Dependency] private SharedDoAfterSystem _doAfter = default!;
     [Dependency] private EntityLookupSystem _lookup = default!;
-    [Dependency] private SharedSolutionContainerSystem _solutionContainer = default!;
     [Dependency] private PhotosensitivitySystem _photosensitivity = default!;
     [Dependency] private PolymorphSystem _polymorph = default!;
     [Dependency] private PopupSystem _popup = default!;
-    [Dependency] private SharedDoAfterSystem _doAfter = default!;
-    [Dependency] private SharedAudioSystem _audio = default!;
     [Dependency] private IRobustRandom _random = default!;
+    [Dependency] private SlaughterDemonSystem _slaughterDemon = default!;
+    [Dependency] private SharedSolutionContainerSystem _solutionContainer = default!;
 
     private static readonly ProtoId<ReagentPrototype> BloodReagent = "Blood";
 
@@ -36,6 +34,7 @@ public sealed partial class DemonPhaseSystem : EntitySystem
         base.Initialize();
 
         SubscribeLocalEvent<DemonPhaseComponent, DemonPhaseActionEvent>(OnPhaseAction);
+        SubscribeLocalEvent<DemonPhaseComponent, DemonPhaseDoAfterEvent>(OnPhaseDoAfter);
         SubscribeLocalEvent<DemonPhaseComponent, DemonRiseDoAfterEvent>(OnRiseDoAfter);
         SubscribeLocalEvent<DemonSpawnPhasedComponent, MindAddedMessage>(OnMindAdded);
     }
@@ -48,6 +47,24 @@ public sealed partial class DemonPhaseSystem : EntitySystem
             return;
 
         _polymorph.PolymorphEntity(ent, phase.PhasePolymorph);
+    }
+
+    public bool TryPhase(EntityUid uid, DemonPhaseComponent? comp = null)
+    {
+        if (!Resolve(uid, ref comp, false))
+            return false;
+
+        if (!IsValidAnchor((uid, comp)))
+            return false;
+
+        var coords = Transform(uid).Coordinates;
+
+        if (_polymorph.PolymorphEntity(uid, comp.PhasePolymorph) is not { } phased)
+            return false;
+
+        Spawn(comp.PhaseOutEffect, coords);
+        _audio.PlayPvs(comp.PhaseOutSound, coords);
+        return true;
     }
 
     private void OnPhaseAction(Entity<DemonPhaseComponent> ent, ref DemonPhaseActionEvent args)
@@ -76,17 +93,56 @@ public sealed partial class DemonPhaseSystem : EntitySystem
         }
 
         EntityUid? pulling = TryComp<PullerComponent>(ent, out var puller) ? puller.Pulling : null;
-        var coords = Transform(ent).Coordinates;
+        if (pulling is { } victim && TryComp<SlaughterDemonComponent>(ent, out var slaughter))
+        {
+            if (_slaughterDemon.TryStartConsume((ent.Owner, slaughter), victim))
+            {
+                args.Handled = true;
+                return;
+            }
 
-        if (_polymorph.PolymorphEntity(ent, ent.Comp.PhasePolymorph) is not { } phased)
+            return;
+        }
+
+        args.Handled = StartPhase(ent);
+    }
+
+    public bool StartPhase(Entity<DemonPhaseComponent> ent)
+    {
+        if (!IsValidAnchor(ent))
+        {
+            _popup.PopupEntity(Loc.GetString(ent.Comp.FailPopup), ent, ent);
+            return false;
+        }
+
+        if (ent.Comp.PhaseDuration > TimeSpan.Zero)
+        {
+            return _doAfter.TryStartDoAfter(new DoAfterArgs(EntityManager,
+                ent,
+                ent.Comp.PhaseDuration,
+                new DemonPhaseDoAfterEvent(),
+                ent)
+            {
+                BreakOnMove = true,
+                BreakOnDamage = true,
+            });
+        }
+
+        return TryPhase(ent.Owner, ent.Comp);
+    }
+
+    private void OnPhaseDoAfter(Entity<DemonPhaseComponent> ent, ref DemonPhaseDoAfterEvent args)
+    {
+        if (args.Cancelled || args.Handled)
             return;
 
-        args.Handled = true;
-        Spawn(ent.Comp.PhaseOutEffect, coords);
-        _audio.PlayPvs(ent.Comp.PhaseOutSound, coords);
+        if (!IsValidAnchor(ent))
+        {
+            _popup.PopupEntity(Loc.GetString(ent.Comp.FailPopup), ent, ent);
+            return;
+        }
 
-        if (pulling is { } victim)
-            RaiseLocalEvent(phased, new DemonPhasedOutWithPullEvent(victim));
+        args.Handled = TryPhase(ent.Owner, ent.Comp);
     }
 
     private void OnRiseDoAfter(Entity<DemonPhaseComponent> ent, ref DemonRiseDoAfterEvent args)
@@ -121,7 +177,7 @@ public sealed partial class DemonPhaseSystem : EntitySystem
         return ent.Comp.Anchor switch
         {
             DemonPhaseAnchor.Blood => HasBloodNearby(ent),
-            DemonPhaseAnchor.Darkness => _photosensitivity.GetIllumination(ent) < ent.Comp.DarknessThreshold,
+            DemonPhaseAnchor.Darkness => !_photosensitivity.IsInSpace(ent) && _photosensitivity.GetIllumination(ent) < ent.Comp.DarknessThreshold,
             _ => false,
         };
     }
@@ -139,16 +195,6 @@ public sealed partial class DemonPhaseSystem : EntitySystem
         }
 
         return false;
-    }
-}
-
-public sealed class DemonPhasedOutWithPullEvent : EntityEventArgs
-{
-    public readonly EntityUid Pulled;
-
-    public DemonPhasedOutWithPullEvent(EntityUid pulled)
-    {
-        Pulled = pulled;
     }
 }
 

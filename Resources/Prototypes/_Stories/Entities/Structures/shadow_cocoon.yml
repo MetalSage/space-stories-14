@@ -1,7 +1,7 @@
 - type: entity
   id: STStructureShadowCocoon
-  name: теневой кокон
-  description: Объект, завёрнутый в густую, почти осязаемую тьму.
+  name: shadow cocoon
+  description: An object wrapped in thick, almost tangible darkness.
   components:
   - type: Sprite
     sprite: _Stories/Mobs/Demons/shadow_demon.rsi

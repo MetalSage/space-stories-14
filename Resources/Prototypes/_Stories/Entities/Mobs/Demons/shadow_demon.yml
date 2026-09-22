@@ -3,8 +3,8 @@
   parent:
   - BaseSimpleMob
   - MobCombat
-  name: демон тени
-  description: Существо, которое едва ощутимо. Вы чувствуете, как его взгляд пронзает вас.
+  name: shadow demon
+  description: A creature that is barely perceptible. You can feel its gaze piercing through you.
   components:
   - type: Sprite
     sprite: _Stories/Mobs/Demons/shadow_demon.rsi
@@ -13,10 +13,14 @@
   - type: MovementSpeedModifier
     baseWalkSpeed: 3
     baseSprintSpeed: 4.5
+  - type: Damageable
+    damageModifierSet: STShadowDemonDamageModifierSet
+  - type: TemperatureDamage
+    coldDamageThreshold: -10000
   - type: MobThresholds
     thresholds:
       0: Alive
-      300: Dead
+      180: Dead
   - type: MeleeWeapon
     range: 1.5
     angle: 0
@@ -34,9 +38,17 @@
     sound:
       path: /Audio/_Stories/Demons/ShadowDemon/shadowdeath.ogg
   - type: DemonImmunities
-    smashDamage:
-      types:
-        Structural: 50
+  - type: StaminaResistance
+    worn: false
+    damageCoefficient: 0
+  - type: Language
+    currentLanguage: Demonic
+    defaultLanguage: Demonic
+    spokenLanguages:
+    - Demonic
+    understoodLanguages:
+    - Demonic
+    - GalacticCommon
   - type: NoSlip
   - type: Puller
     needsHands: false
@@ -46,16 +58,11 @@
     visMask:
     - Normal
     - Ghost
-  - type: VisionProvider
-    isActive: true
-    drawFov: false
-    ambientColor: "#FFFFFF10"
-    shader: GreyscaleFullscreen
-    priority: 10
   - type: Photosensitivity
     damage:
       types:
         Heat: 15
+    damageInSpace: null
     darknessHealing:
       types:
         Blunt: -30
@@ -63,7 +70,14 @@
         Piercing: -30
         Heat: -30
     lightAlert: STLightExposure
-    darkSpeedMultiplier: 1.4
+    darkSpeedMultiplier: 1.5
+    lightSpeedMultiplier: 0.6
+    flashDamage:
+      types:
+        Heat: 50
+    meleeFlashDamage:
+      types:
+        Heat: 80
   - type: DemonPhase
     anchor: Darkness
     phasePolymorph: STPolymorphShadowDemonPhase
@@ -96,12 +110,13 @@
     tags:
     - CannotSuicide
     - DoorBumpOpener
+    - StunImmune
 
 - type: entity
   id: STMobShadowDemonPhased
   categories: [ HideSpawnMenu ]
-  name: сгусток тьмы
-  description: Нечто нематериальное, растворившееся во тьме.
+  name: dark clump
+  description: Something immaterial, dissolved into darkness.
   parent:
   - Incorporeal
   - BaseMob
@@ -113,6 +128,7 @@
     - state: shadow_demon
       shader: unshaded
   - type: Damageable
+    damageModifierSet: STShadowDemonDamageModifierSet
   - type: Injurable
     damageContainer: Biological
   - type: Alerts
@@ -123,11 +139,12 @@
   - type: MobThresholds
     thresholds:
       0: Alive
-      300: Dead
+      180: Dead
   - type: Photosensitivity
     damage:
       types:
         Heat: 7.5
+    damageInSpace: null
     darknessHealing:
       types:
         Blunt: -30
@@ -147,6 +164,14 @@
     - Ghost
   - type: Visibility
     layer: 2
+  - type: Language
+    currentLanguage: Demonic
+    defaultLanguage: Demonic
+    spokenLanguages:
+    - Demonic
+    understoodLanguages:
+    - Demonic
+    - GalacticCommon
   - type: VisionProvider
     isActive: true
     drawFov: false
@@ -167,6 +192,7 @@
   - type: Tag
     tags:
     - CannotSuicide
+    - StunImmune
 
 - type: polymorph
   id: STPolymorphShadowDemonPhase

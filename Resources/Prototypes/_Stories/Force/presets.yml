@@ -48,7 +48,7 @@
 
 - type: forcePreset
   id: Guardian
-  name: Джедай
+  name: Jedi
   side: Light
   volume: 140
   alert: STGuardianNtForceVolume

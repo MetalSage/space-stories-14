@@ -14,7 +14,9 @@ public struct BeforeThrowEvent
     }
 
     public EntityUid ItemUid { get; set; }
-    public Vector2 Direction { get; }
+    // Stories-FiremanCarry-Start
+    public Vector2 Direction { get; set; }
+    // Stories-FiremanCarry-End
     public float ThrowSpeed { get; set;}
     public EntityUid PlayerUid { get; }
 

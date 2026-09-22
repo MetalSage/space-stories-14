@@ -24,6 +24,9 @@ public sealed partial class GhostSpriteStateSystem : EntitySystem
         if (!Resolve(ent, ref ent.Comp))
             return;
 
+        if (TryComp<Content.Shared._Stories.Sponsors.SponsorGhostSkinComponent>(ent, out var sponsorSkin) && !string.IsNullOrEmpty(sponsorSkin.Skin))
+            return;
+
         if (!TryComp<AppearanceComponent>(ent, out var appearance) || !HasComp<MindComponent>(mind))
             return;
 

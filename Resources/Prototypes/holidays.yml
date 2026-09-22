@@ -79,11 +79,11 @@
   beginDay: 1
   beginMonth: April
 
-- type: holiday
-  id: AutismAwarenessDay
-  name: holiday-name-autism-awareness-day
-  beginDay: 2
-  beginMonth: April
+# - type: holiday
+#   id: AutismAwarenessDay
+#   name: holiday-name-autism-awareness-day
+#   beginDay: 2
+#   beginMonth: April
 
 - type: holiday
   id: CosmonauticsDay
@@ -265,11 +265,11 @@
     !type:DayOfYear
     dayOfYear: 256
 
-- type: holiday
-  id: BisexualPrideDay
-  name: holiday-name-bisexual-pride-day
-  beginDay: 23
-  beginMonth: September
+# - type: holiday
+#   id: BisexualPrideDay
+#   name: holiday-name-bisexual-pride-day
+#   beginDay: 23
+#   beginMonth: September
 
 - type: holiday
   id: StupidQuestionsDay
@@ -289,17 +289,17 @@
   beginDay: 7
   beginMonth: October
 
-- type: holiday
-  id: LesbianDay
-  name: holiday-name-lesbian-day
-  beginDay: 8
-  beginMonth: October
+# - type: holiday
+#   id: LesbianDay
+#   name: holiday-name-lesbian-day
+#   beginDay: 8
+#   beginMonth: October
 
-- type: holiday
-  id: NationalComingOutDay
-  name: holiday-name-national-coming-out-day
-  beginDay: 11
-  beginMonth: October
+# - type: holiday
+#   id: NationalComingOutDay
+#   name: holiday-name-national-coming-out-day
+#   beginDay: 11
+#   beginMonth: October
 
 - type: holiday
   id: CanadianThanksgiving
@@ -438,9 +438,9 @@
   shouldCelebrate:
     !type:FridayThirteenth { }
 
-- type: holiday
-  id: PrideMonth
-  name: holiday-name-pride-month
-  beginDay: 1
-  endDay: 31
-  beginMonth: June
+# - type: holiday
+#   id: PrideMonth
+#   name: holiday-name-pride-month
+#   beginDay: 1
+#   endDay: 31
+#   beginMonth: June

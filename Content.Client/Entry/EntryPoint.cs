@@ -2,6 +2,7 @@ using Content.Client.Administration.Managers;
 using Content.Client.Changelog;
 using Content.Client.Chat.Managers;
 using Content.Client._Stories.DiscordAuth;
+using Content.Client._Stories.Explosion;
 using Content.Client._Stories.JoinQueue;
 using Content.Client._Stories.Sponsors;
 using Content.Client.Options;
@@ -174,6 +175,7 @@ namespace Content.Client.Entry
             _overlayManager.AddOverlay(new SingularityOverlay());
             _overlayManager.AddOverlay(new RadiationPulseOverlay());
             _overlayManager.AddOverlay(new ScreechShockWaveOverlay());
+            _overlayManager.AddOverlay(new ExplosionShockWaveOverlay()); // Stories-ExplosionShockWave
             _chatManager.Initialize();
             _clientPreferencesManager.Initialize();
             _euiManager.Initialize();

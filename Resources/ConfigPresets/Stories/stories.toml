@@ -59,6 +59,7 @@ enabled = true
 
 [server]
 rules_file = "STRuleset"
+lobby_right_panel_width = 700
 
 [movement]
 mob_pushing = true
@@ -71,9 +72,16 @@ emergency_transit_time_max = 120
 
 [vote]
 restart_enabled = true
+restart_required_ratio = 0.75
 preset_enabled = false
 map_enabled = true
-restart_not_allowed_when_admin_online = true
+
+[votekick]
+initiator_ghost_requirement = false
+initiator_whitelist_requirement = false
+initiator_time_requirement = true
+voter_ghost_requirement = false
+voter_deathtime = 0
 
 [viewport]
 maximum_width = 26

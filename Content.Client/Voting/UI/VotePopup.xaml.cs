@@ -41,12 +41,55 @@ namespace Content.Client.Voting.UI
             _voteButtons = new Button[vote.Entries.Length];
             var group = new ButtonGroup();
 
+            var maxLen = 0;
+            foreach (var entry in vote.Entries)
+            {
+                if (entry.Text.Length > maxLen)
+                    maxLen = entry.Text.Length;
+            }
+
+            var isMapVote = string.Equals(_vote.Title, Loc.GetString("ui-vote-map-title"), StringComparison.OrdinalIgnoreCase) ||
+                            string.Equals(_vote.Title, Loc.GetString("stories-vote-map-title"), StringComparison.OrdinalIgnoreCase) ||
+                            _vote.Title.Contains("карту", StringComparison.OrdinalIgnoreCase) ||
+                            _vote.Title.Contains("map", StringComparison.OrdinalIgnoreCase);
+
+            var isPresetVote = string.Equals(_vote.Title, Loc.GetString("ui-vote-gamemode-title"), StringComparison.OrdinalIgnoreCase) ||
+                               _vote.Title.Contains("режим", StringComparison.OrdinalIgnoreCase) ||
+                               _vote.Title.Contains("gamemode", StringComparison.OrdinalIgnoreCase) ||
+                               _vote.Title.Contains("game mode", StringComparison.OrdinalIgnoreCase) ||
+                               _vote.Title.Contains("preset", StringComparison.OrdinalIgnoreCase);
+
+            var isRestartVote = string.Equals(_vote.Title, Loc.GetString("ui-vote-restart-title"), StringComparison.OrdinalIgnoreCase) ||
+                                _vote.Title.Contains("рестарт", StringComparison.OrdinalIgnoreCase) ||
+                                _vote.Title.Contains("перезапуск", StringComparison.OrdinalIgnoreCase) ||
+                                _vote.Title.Contains("restart", StringComparison.OrdinalIgnoreCase);
+
+            if (isMapVote)
+            {
+                VoteOptionsContainer.Columns = Math.Min(3, Math.Max(1, vote.Entries.Length));
+            }
+            else if (isPresetVote)
+            {
+                VoteOptionsContainer.Columns = Math.Min(2, Math.Max(1, vote.Entries.Length));
+            }
+            else if (isRestartVote)
+            {
+                VoteOptionsContainer.Columns = 1;
+            }
+            else
+            {
+                VoteOptionsContainer.Columns = maxLen > 12 ? 1 : Math.Min(2, Math.Max(1, vote.Entries.Length));
+            }
+
             for (var i = 0; i < _voteButtons.Length; i++)
             {
                 var button = new Button
                 {
                     ToggleMode = true,
-                    Group = group
+                    Group = group,
+                    HorizontalExpand = true,
+                    ClipText = false,
+                    MinHeight = 24,
                 };
                 _voteButtons[i] = button;
                 VoteOptionsContainer.AddChild(button);

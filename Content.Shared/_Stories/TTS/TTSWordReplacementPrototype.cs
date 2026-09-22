@@ -2,9 +2,6 @@ using Robust.Shared.Prototypes;
 
 namespace Content.Shared._Stories.TTS;
 
-/// <summary>
-/// Prototype for TTS word replacements during text sanitization.
-/// </summary>
 [Prototype("ttsWordReplacement")]
 public sealed partial class TTSWordReplacementPrototype : IPrototype
 {

@@ -243,4 +243,30 @@ public sealed class SCCVars
     /// </summary>
     public static readonly CVarDef<bool> PrisonEnabled =
         CVarDef.Create("stories.prison.enabled", false, CVar.SERVERONLY | CVar.ARCHIVE);
+
+    /*
+     * Спонсоры
+     */
+
+    /// <summary>
+    /// Выбранный спонсорский скин призрака.
+    /// </summary>
+    public static readonly CVarDef<string> SelectedGhostSkin =
+        CVarDef.Create("stories.sponsor.ghost_skin", "", CVar.CLIENTONLY | CVar.ARCHIVE);
+
+    /*
+     * Голосование
+     */
+
+    /// <summary>
+    /// Включает сохранение голосов для невыбранных карт между голосованиями.
+    /// </summary>
+    public static readonly CVarDef<bool> VoteMapCarryover =
+        CVarDef.Create("stories.vote_map_carryover", true, CVar.SERVERONLY | CVar.ARCHIVE);
+
+    /// <summary>
+    /// Включает сохранение голосов для невыбранных режимов игры между голосованиями.
+    /// </summary>
+    public static readonly CVarDef<bool> VotePresetCarryover =
+        CVarDef.Create("stories.vote_preset_carryover", true, CVar.SERVERONLY | CVar.ARCHIVE);
 }

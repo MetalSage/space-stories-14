@@ -1854,13 +1854,6 @@
   category: "Kingpin: Life of Crime"
 
 - type: ttsVoice
-  id: working_joe
-  name: "Рабочий Джо"
-  speaker: working_joe
-  sex: Male
-  category: "Кастомные"
-
-- type: ttsVoice
   id: dbkn
   name: "Добакин"
   speaker: dbkn
@@ -1883,4 +1876,3 @@
   sex: Male
   category: "Media"
   description: "Голос персонажа Tidehunter из игры Dota 2"
-

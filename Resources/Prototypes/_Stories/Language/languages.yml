@@ -780,3 +780,32 @@
     - twee
     - ees
     - chik
+
+- type: language
+  id: Demonic
+  name: Demonic
+  isVisibleLanguage: true
+  speechOverride:
+    color: "#B71C1C"
+  obfuscationMethod: !type:SyllableObfuscation
+    replacement:
+    - n'gha
+    - shogg
+    - fhtagn
+    - mor
+    - kra
+    - thul
+    - zhar
+    - ghol
+    - vor
+    - khar
+    - azh
+    - n'kai
+    - r'lyeh
+    - wgah
+    - nagfl
+    - mglw
+    - ph'nglui
+    - vulgt
+    - oroth
+    - k'zhar

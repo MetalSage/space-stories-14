@@ -8,6 +8,7 @@ using Content.Server.GameTicking;
 using Content.Server.GameTicking.Presets;
 using Content.Server.Roles;
 using Content.Server.RoundEnd;
+using Content.Shared._Stories.SCCVars;
 using Content.Shared.CCVar;
 using Content.Shared.Chat;
 using Content.Shared.Database;
@@ -217,7 +218,9 @@ namespace Content.Server.Voting.Managers
 
         private void CreatePresetVote(ICommonSession? initiator)
         {
+            // Stories-PresetVoteCarryover-Start
             var presets = GetGamePresets();
+            var presetList = presets.Keys.ToList();
 
             var alone = _playerManager.PlayerCount == 1 && initiator != null;
             var options = new VoteOptions
@@ -231,9 +234,22 @@ namespace Content.Server.Voting.Managers
             if (alone)
                 options.InitiatorTimeout = TimeSpan.FromSeconds(10);
 
-            foreach (var (k, v) in presets)
+            var useCarryover = _cfg.GetCVar(SCCVars.VotePresetCarryover);
+            if (!useCarryover)
             {
-                options.Options.Add((Loc.GetString(v), k));
+                _presetCarryoverVotes.Clear();
+            }
+
+            foreach (var k in presetList)
+            {
+                var text = Loc.GetString(presets[k]);
+                if (useCarryover)
+                {
+                    var carry = _presetCarryoverVotes.GetValueOrDefault(k);
+                    if (carry > 0)
+                        text = $"{text} [+{carry}]";
+                }
+                options.Options.Add((text, k));
             }
 
             WirePresetVoteInitiator(options, initiator);
@@ -243,32 +259,48 @@ namespace Content.Server.Voting.Managers
             vote.OnFinished += (_, args) =>
             {
                 string picked;
-                if (args.Winner == null)
+                if (_cfg.GetCVar(SCCVars.VotePresetCarryover))
                 {
-                    picked = (string) _random.Pick(args.Winners);
-                    _chatManager.DispatchServerAnnouncement(
-                        Loc.GetString("ui-vote-gamemode-tie", ("picked", Loc.GetString(presets[picked]))));
+                    picked = FinishPresetVoteWithCarryover(presets, presetList, args.Votes);
                 }
                 else
                 {
-                    picked = (string) args.Winner;
-                    _chatManager.DispatchServerAnnouncement(
-                        Loc.GetString("ui-vote-gamemode-win", ("winner", Loc.GetString(presets[picked]))));
+                    _presetCarryoverVotes.Clear();
+                    if (args.Winner == null)
+                    {
+                        picked = (string) _random.Pick(args.Winners);
+                        _chatManager.DispatchServerAnnouncement(
+                            Loc.GetString("ui-vote-gamemode-tie", ("picked", Loc.GetString(presets[picked]))));
+                    }
+                    else
+                    {
+                        picked = (string) args.Winner;
+                        _chatManager.DispatchServerAnnouncement(
+                            Loc.GetString("ui-vote-gamemode-win", ("winner", Loc.GetString(presets[picked]))));
+                    }
                 }
                 _adminLogger.Add(LogType.Vote, LogImpact.Medium, $"Preset vote finished: {picked}");
                 var ticker = _entityManager.EntitySysManager.GetEntitySystem<GameTicker>();
                 ticker.SetGamePreset(picked);
             };
+            // Stories-PresetVoteCarryover-End
         }
 
         private void CreateMapVote(ICommonSession? initiator)
         {
-            var maps = _gameMapManager.CurrentlyEligibleMaps().ToDictionary(map => map, map => map.MapName);
+            // Stories-MapVoteCarryover-Start
+            var useCarryover = _cfg.GetCVar(SCCVars.VoteMapCarryover);
+            if (!useCarryover)
+            {
+                _mapCarryoverVotes.Clear();
+            }
+
+            var maps = _gameMapManager.CurrentlyEligibleMaps().ToList();
 
             var alone = _playerManager.PlayerCount == 1 && initiator != null;
             var options = new VoteOptions
             {
-                Title = Loc.GetString("ui-vote-map-title"),
+                Title = Loc.GetString(useCarryover ? "stories-vote-map-title" : "ui-vote-map-title"),
                 Duration = alone
                     ? TimeSpan.FromSeconds(_cfg.GetCVar(CCVars.VoteTimerAlone))
                     : TimeSpan.FromSeconds(_cfg.GetCVar(CCVars.VoteTimerMap))
@@ -277,9 +309,17 @@ namespace Content.Server.Voting.Managers
             if (alone)
                 options.InitiatorTimeout = TimeSpan.FromSeconds(10);
 
-            foreach (var (k, v) in maps)
+            foreach (var map in maps)
             {
-                options.Options.Add((v, k));
+                var name = map.MapName;
+                if (useCarryover)
+                {
+                    var carry = _mapCarryoverVotes.GetValueOrDefault(map.ID);
+                    if (carry > 0)
+                        name = $"{name} [+{carry}]";
+                }
+
+                options.Options.Add((name, map));
             }
 
             WirePresetVoteInitiator(options, initiator);
@@ -288,18 +328,29 @@ namespace Content.Server.Voting.Managers
 
             vote.OnFinished += (_, args) =>
             {
+                if (maps.Count == 0)
+                    return;
+
                 GameMapPrototype picked;
-                if (args.Winner == null)
+                if (_cfg.GetCVar(SCCVars.VoteMapCarryover))
                 {
-                    picked = (GameMapPrototype) _random.Pick(args.Winners);
-                    _chatManager.DispatchServerAnnouncement(
-                        Loc.GetString("ui-vote-map-tie", ("picked", maps[picked])));
+                    picked = FinishMapVoteWithCarryover(maps, args.Votes);
                 }
                 else
                 {
-                    picked = (GameMapPrototype) args.Winner;
-                    _chatManager.DispatchServerAnnouncement(
-                        Loc.GetString("ui-vote-map-win", ("winner", maps[picked])));
+                    _mapCarryoverVotes.Clear();
+                    if (args.Winner == null)
+                    {
+                        picked = (GameMapPrototype) _random.Pick(args.Winners);
+                        _chatManager.DispatchServerAnnouncement(
+                            Loc.GetString("ui-vote-map-tie", ("picked", picked.MapName)));
+                    }
+                    else
+                    {
+                        picked = (GameMapPrototype) args.Winner;
+                        _chatManager.DispatchServerAnnouncement(
+                            Loc.GetString("ui-vote-map-win", ("winner", picked.MapName)));
+                    }
                 }
 
                 _adminLogger.Add(LogType.Vote, LogImpact.Medium, $"Map vote finished: {picked.MapName}");
@@ -313,7 +364,7 @@ namespace Content.Server.Voting.Managers
                     }
                     else
                     {
-                        _chatManager.DispatchServerAnnouncement(Loc.GetString("ui-vote-map-invalid", ("winner", maps[picked])));
+                        _chatManager.DispatchServerAnnouncement(Loc.GetString("ui-vote-map-invalid", ("winner", picked.MapName)));
                     }
                 }
                 else
@@ -329,6 +380,7 @@ namespace Content.Server.Voting.Managers
                     }
                 }
             };
+            // Stories-MapVoteCarryover-End
         }
 
         private async void CreateVotekickVote(ICommonSession? initiator, string[]? args)

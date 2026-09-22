@@ -1,6 +1,6 @@
 - type: gameMap
   id: STMarathon
-  mapName: 'Marathon Station'
+  mapName: 'Marathon'
   mapPath: /Maps/_Stories/Official/marathon.yml
   minPlayers: 0
   stations:

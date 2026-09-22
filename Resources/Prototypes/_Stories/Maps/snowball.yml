@@ -1,6 +1,6 @@
 - type: gameMap
   id: STSnowball
-  mapName: 'Snowball Station'
+  mapName: 'Snowball'
   mapPath: /Maps/_Stories/Official/snowball.yml
   minPlayers: 0
   maxPlayers: 24

@@ -21,16 +21,4 @@ public sealed partial class SlaughterDemonComponent : Component
 
     [DataField]
     public DamageSpecifier? HealOnMeagreConsume;
-
-    [DataField]
-    public TimeSpan BoostDuration = TimeSpan.FromSeconds(6);
-
-    [DataField]
-    public float BoostMultiplier = 1.75f;
-
-    [ViewVariables]
-    public TimeSpan BoostEndTime;
-
-    [ViewVariables]
-    public bool BoostActive;
 }

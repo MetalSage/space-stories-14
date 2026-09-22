@@ -26,7 +26,7 @@ public sealed partial class PhotosensitivityComponent : Component
     };
 
     [ViewVariables(VVAccess.ReadWrite), DataField("damageInSpace")]
-    public DamageSpecifier DamageInSpace = new()
+    public DamageSpecifier? DamageInSpace = new()
     {
         DamageDict = new Dictionary<ProtoId<DamageTypePrototype>, FixedPoint2>
         {
@@ -85,4 +85,7 @@ public sealed partial class PhotosensitivityComponent : Component
 
     [ViewVariables]
     public bool? WasInDarkness;
+
+    [ViewVariables]
+    public float CurrentSpeedMultiplier = 1f;
 }

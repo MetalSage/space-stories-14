@@ -10,6 +10,10 @@
   id: BaseSpeciesMob
   save: false
   components:
+  # Stories-FiremanCarry-Start
+  - type: CanFiremanCarry
+  - type: FiremanCarriable
+  # Stories-FiremanCarry-End
   - type: DamageVisuals
     thresholds: [ 10, 20, 30, 50, 70, 100 ]
     targetLayers:

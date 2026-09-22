@@ -1,6 +1,6 @@
 - type: gameMap
   id: STBagel
-  mapName: 'Bagel Station'
+  mapName: 'Bagel'
   mapPath: /Maps/_Stories/Official/bagel.yml
   minPlayers: 0
   stations:
