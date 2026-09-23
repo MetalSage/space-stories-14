@@ -30,7 +30,7 @@ namespace Content.Client.Lobby
         [Dependency] private IVoteManager _voteManager = default!;
         [Dependency] private ClientsidePlaytimeTrackingManager _playtimeTracking = default!;
         [Dependency] private IPrototypeManager _protoMan = default!;
-        [Dependency] private readonly Content.Client._Stories.Sponsors.SponsorsManager _sponsorsManager = default!; // Stories-Sponsors
+        [Dependency] private Content.Client._Stories.Sponsors.SponsorsManager _sponsorsManager = default!; // Stories-Sponsors
 
         private ClientGameTicker _gameTicker = default!;
         private ContentAudioSystem _contentAudioSystem = default!;

@@ -1,7 +1,7 @@
 - type: gameMap
   id: STPlasma
   mapName: 'Plasma'
-  mapPath: /Maps/_Stories/Official/_Stories/Official/plasma.yml
+  mapPath: /Maps/_Stories/Official/plasma.yml
   minPlayers: 0
   maxPlayers: 44
   stations:

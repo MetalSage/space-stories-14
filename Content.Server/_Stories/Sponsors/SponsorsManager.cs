@@ -14,8 +14,8 @@ public sealed partial class SponsorsManager
     private readonly Dictionary<NetUserId, SponsorInfo> _cachedSponsors = new();
     private readonly Dictionary<NetUserId, string> _selectedGhostSkins = new();
 
-    [Dependency] private readonly IEntityManager _entMgr = default!;
-    [Dependency] private readonly IPlayerManager _playerMgr = default!;
+    [Dependency] private IEntityManager _entMgr = default!;
+    [Dependency] private IPlayerManager _playerMgr = default!;
     [Dependency] private ISponsorsApiClient _apiClient = default!;
     [Dependency] private IServerNetManager _netMgr = default!;
 

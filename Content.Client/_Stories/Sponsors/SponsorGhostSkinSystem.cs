@@ -5,10 +5,10 @@ using Robust.Shared.Utility;
 
 namespace Content.Client._Stories.Sponsors;
 
-public sealed class SponsorGhostSkinSystem : EntitySystem
+public sealed partial class SponsorGhostSkinSystem : EntitySystem
 {
-    [Dependency] private readonly IPrototypeManager _prototype = default!;
-    [Dependency] private readonly SpriteSystem _spriteSystem = default!;
+    [Dependency] private IPrototypeManager _prototype = default!;
+    [Dependency] private SpriteSystem _spriteSystem = default!;
 
     private static readonly ResPath DefaultGhostRsi = new("Mobs/Ghosts/ghost_human.rsi");
     private static readonly ResPath SponsorGhostRsi = new("_Stories/Mobs/Ghosts/sponsor.rsi");

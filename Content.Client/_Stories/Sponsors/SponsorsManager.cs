@@ -10,9 +10,9 @@ namespace Content.Client._Stories.Sponsors;
 public sealed partial class SponsorsManager
 {
     private SponsorInfo? _info;
-    [Dependency] private readonly IConfigurationManager _cfg = default!;
-    [Dependency] private readonly IClientNetManager _netMgr = default!;
-    [Dependency] private readonly IPlayerManager _playerMgr = default!;
+    [Dependency] private IConfigurationManager _cfg = default!;
+    [Dependency] private IClientNetManager _netMgr = default!;
+    [Dependency] private IPlayerManager _playerMgr = default!;
 
     public event Action<SponsorInfo?>? OnSponsorInfoLoaded;
 

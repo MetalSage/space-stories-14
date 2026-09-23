@@ -20,11 +20,11 @@ namespace Content.Client._Stories.Lobby.UI;
 [GenerateTypedNameReferences]
 public sealed partial class SponsorPerksWindow : FancyWindow
 {
-    [Dependency] private readonly IConfigurationManager _cfg = default!;
-    [Dependency] private readonly IEntityManager _entManager = default!;
-    [Dependency] private readonly IPrototypeManager _prototype = default!;
-    [Dependency] private readonly SponsorsManager _sponsorsManager = default!;
-    [Dependency] private readonly IUriOpener _uriOpener = default!;
+    [Dependency] private IConfigurationManager _cfg = default!;
+    [Dependency] private IEntityManager _entManager = default!;
+    [Dependency] private IPrototypeManager _prototype = default!;
+    [Dependency] private SponsorsManager _sponsorsManager = default!;
+    [Dependency] private IUriOpener _uriOpener = default!;
 
     private readonly SpriteSystem _spriteSystem;
 

@@ -11,7 +11,7 @@
       department: Prison
       time: 10h
     - !type:RoleTimeRequirement
-      role: JobSpacePrisonOfficer
+      role: STJobSpacePrisonOfficer
       time: 2h
   startingGear: STPRISONHeadOfPrisonGear
   icon: "STJobIconHeadOfSpacePrison"
