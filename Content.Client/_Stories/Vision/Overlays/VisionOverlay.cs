@@ -26,6 +26,7 @@ public sealed partial class VisionOverlay : Overlay
     public VisionOverlay()
     {
         IoCManager.InjectDependencies(this);
+        ZIndex = 10;
         _transform = _entityManager.System<TransformSystem>();
         _sprite = _entityManager.System<SpriteSystem>();
     }

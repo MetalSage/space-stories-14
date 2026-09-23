@@ -30,7 +30,7 @@
       state: glow
       shader: STLightBulb
   - type: PointLight
-    color: "#FFE4CE" # 5000K color temp
+    color: "#FFF6ED" # 6000K color temp
     energy: 1.2
     radius: 10
     softness: 1

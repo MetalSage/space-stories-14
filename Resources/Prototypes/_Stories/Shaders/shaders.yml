@@ -1,6 +1,7 @@
 - type: shader
   id: STBasePostProcess
   kind: source
+  light_mode: unshaded
   path: "/Textures/_Stories/Shaders/base_postprocess.swsl"
   params:
     CircleRadius: 350.0
