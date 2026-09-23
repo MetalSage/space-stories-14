@@ -6,6 +6,13 @@
   name: демон тени
   description: Существо, которое едва ощутимо. Вы чувствуете, как его взгляд пронзает вас.
   components:
+  - type: Language
+    currentLanguage: GalacticCommon
+    defaultLanguage: GalacticCommon
+    spokenLanguages:
+    - GalacticCommon
+    understoodLanguages:
+    - GalacticCommon
   - type: Sprite
     sprite: _Stories/Mobs/Demons/shadow_demon.rsi
     layers:
@@ -18,7 +25,8 @@
       0: Alive
       300: Dead
   - type: MeleeWeapon
-    range: 1.5
+    altDisarm: false
+    range: 1
     angle: 0
     animation: WeaponArcThrust
     wideAnimation: WeaponArcThrust
@@ -58,10 +66,10 @@
         Heat: 15
     darknessHealing:
       types:
-        Blunt: -30
-        Slash: -30
-        Piercing: -30
-        Heat: -30
+        Blunt: -10
+        Slash: -10
+        Piercing: -10
+        Heat: -10
     lightAlert: STLightExposure
     darkSpeedMultiplier: 1.4
   - type: DemonPhase
@@ -78,11 +86,12 @@
     cocoonPrototype: STStructureShadowCocoon
   - type: DemonSpawnPhased
   - type: DemonWhisper
-  - type: ActionGrant
+  - type: MobStateActions
     actions:
-    - STActionShadowCrawl
-    - STActionShadowGrapple
-    - STActionDemonWhisper
+      Alive:
+      - STActionShadowCrawl
+      - STActionShadowGrapple
+      - STActionDemonWhisper
   - type: GhostRole
     name: stories-ghost-role-information-shadow-demon-name
     description: stories-ghost-role-information-shadow-demon-desc
@@ -106,6 +115,13 @@
   - Incorporeal
   - BaseMob
   components:
+  - type: Language
+    currentLanguage: GalacticCommon
+    defaultLanguage: GalacticCommon
+    spokenLanguages:
+    - GalacticCommon
+    understoodLanguages:
+    - GalacticCommon
   - type: Sprite
     sprite: _Stories/Mobs/Demons/shadow_demon.rsi
     color: "#3A2A5AAA"
@@ -138,8 +154,6 @@
   - type: MovementSpeedModifier
     baseWalkSpeed: 5
     baseSprintSpeed: 7
-  - type: Puller
-    needsHands: false
   - type: Eye
     drawFov: false
     visMask:
@@ -160,10 +174,11 @@
     phaseOutEffect: STShadowDemonDisappearEffect
     phaseInEffect: STShadowDemonAppearEffect
   - type: DemonWhisper
-  - type: ActionGrant
+  - type: MobStateActions
     actions:
-    - STActionShadowCrawl
-    - STActionDemonWhisper
+      Alive:
+      - STActionShadowCrawl
+      - STActionDemonWhisper
   - type: Tag
     tags:
     - CannotSuicide
