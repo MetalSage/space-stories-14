@@ -1,8 +1,8 @@
-﻿- type: entity
+- type: entity
   parent: ClothingShoesBaseButcherable
   id: ClothingShoesInquisitor
-  name: ботинки инквизитора
-  description: Обычные черные ботинки.
+  name: inquisitor boots
+  description: Ordinary black boots.
   components:
   - type: NoSlip
   - type: Tag

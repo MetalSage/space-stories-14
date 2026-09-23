@@ -7,4 +7,4 @@
   guides: [ STPontific ]
   requirements:
   - !type:OverallPlaytimeRequirement
-    time: 72000 # 10h Stories-RoleTime
+    time: 5h

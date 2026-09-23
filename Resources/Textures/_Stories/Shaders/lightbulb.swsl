@@ -1,0 +1,28 @@
+light_mode unshaded;
+
+uniform highp vec4 GlowColor;
+uniform highp float PulseSpeed;
+uniform highp float GlowIntensity;
+
+void fragment() {
+	highp vec4 col = zTexture(UV);
+
+	if (col.a <= 0.001) {
+		COLOR = vec4(0.0);
+		return;
+	}
+
+	highp vec2 centerOffset = UV - vec2(0.5);
+	highp float distSq = dot(centerOffset, centerOffset);
+	highp float radialGlow = max(1.0 - sqrt(distSq) * 1.8, 0.0);
+
+	highp float pulse = 1.0 + 0.05 * sin(TIME * PulseSpeed * 3.14159) + 0.025 * cos(TIME * PulseSpeed * 2.318);
+
+	highp float luma = zGrayscale(col.rgb);
+	highp vec3 hotCore = mix(col.rgb, vec3(1.0, 0.96, 0.85), clamp(luma * 0.4, 0.0, 0.5));
+
+	highp vec3 finalRGB = hotCore * pulse * (1.0 + radialGlow * 0.3 * GlowIntensity);
+	finalRGB += GlowColor.rgb * (radialGlow * radialGlow * 0.25 * GlowIntensity * col.a);
+
+	COLOR = vec4(finalRGB, col.a);
+}

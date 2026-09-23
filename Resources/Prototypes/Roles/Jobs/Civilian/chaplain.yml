@@ -3,9 +3,6 @@
   name: job-name-chaplain
   description: job-description-chaplain
   playTimeTracker: JobChaplain
-  requirements:
-    - !type:OverallPlaytimeRequirement
-      time: 7200 #2 hrs # Stories-RoleTime
   startingGear: ChaplainGear
   icon: "JobIconChaplain"
   supervisors: job-supervisors-hop

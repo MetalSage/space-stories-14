@@ -10,6 +10,8 @@
         - WhitelistChameleon
     - type: TemperatureProtection
       coefficient: 0.005
+    - type: StaminaResistance
+      damageCoefficient: 0.70
     - type: Sprite
       sprite: _Stories/Clothing/OuterClothing/Vests/guardian_nt.rsi
     - type: Clothing
@@ -37,6 +39,8 @@
         - STForceRecallEquipment
     - type: TemperatureProtection
       coefficient: 0.001
+    - type: StaminaResistance
+      damageCoefficient: 0.70
     - type: Sprite
       sprite: _Stories/Clothing/OuterClothing/Vests/exe_armor.rsi
     - type: Clothing
@@ -50,6 +54,8 @@
   components:
   - type: ExplosionResistance
     damageCoefficient: 0.2
+  - type: StaminaResistance
+    damageCoefficient: 0.50
   - type: Armor
     modifiers:
       coefficients:
@@ -83,6 +89,8 @@
         Heat: 0.8
   - type: ExplosionResistance
     damageCoefficient: 0.85
+  - type: StaminaResistance
+    damageCoefficient: 0.75
 
 - type: entity
   parent: ClothingOuterArmorBasic
@@ -103,3 +111,5 @@
         Heat: 0.8
   - type: ExplosionResistance
     damageCoefficient: 0.8
+  - type: StaminaResistance
+    damageCoefficient: 0.65

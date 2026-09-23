@@ -1,0 +1,33 @@
+<controls:FancyWindow
+    xmlns="https://spacestation14.io"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:controls="clr-namespace:Content.Client.UserInterface.Controls"
+    xmlns:s="clr-namespace:Content.Client.Stylesheets"
+    x:Class="Content.Client._Stories.Lobby.UI.SponsorPerksWindow"
+    SetSize="640 560"
+    MinSize="640 560"
+    MaxSize="640 560"
+    Resizable="False"
+>
+    <BoxContainer Orientation="Vertical" Margin="12" SeparationOverride="10" VerticalExpand="True">
+        <Label Text="{Loc 'stories-sponsor-perks-title'}" FontColorOverride="{x:Static s:StyleNano.NanoGold}" StyleClasses="LabelHeadingBigger" HorizontalAlignment="Center"/>
+        <controls:HLine Color="{x:Static s:StyleNano.NanoGold}" Thickness="2" />
+
+        <TabContainer Name="MainTabContainer" VerticalExpand="True">
+            <BoxContainer Orientation="Vertical" Margin="8" SeparationOverride="10" VerticalExpand="True">
+                <RichTextLabel Name="PerksText" VerticalExpand="True" Margin="5" />
+                <Button Name="BoostyLinkButton" Text="{Loc 'stories-ui-lobby-boosty-button'}" StyleClasses="ButtonBigOrange" HorizontalExpand="True" MinHeight="40" />
+            </BoxContainer>
+            <BoxContainer Orientation="Vertical" Margin="8" SeparationOverride="8" VerticalExpand="True">
+                <Label Text="{Loc 'stories-sponsor-ghost-skins-title'}" StyleClasses="LabelHeading" Margin="0 0 0 2" />
+                <PanelContainer StyleClasses="PanelInsetDark" VerticalExpand="True">
+                    <ScrollContainer VerticalExpand="True" HorizontalExpand="True">
+                        <BoxContainer Orientation="Vertical" Margin="12" SeparationOverride="12" HorizontalExpand="True">
+                            <GridContainer Name="GhostSkinsGrid" Columns="6" HSeparationOverride="10" VSeparationOverride="10" HorizontalAlignment="Center" />
+                        </BoxContainer>
+                    </ScrollContainer>
+                </PanelContainer>
+            </BoxContainer>
+        </TabContainer>
+    </BoxContainer>
+</controls:FancyWindow>

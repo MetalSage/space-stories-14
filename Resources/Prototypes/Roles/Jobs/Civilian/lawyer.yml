@@ -3,9 +3,9 @@
   name: job-name-lawyer
   description: job-description-lawyer
   playTimeTracker: JobLawyer
-  requirements:
+  requirements: # Stories-PlaytimeRequirements
     - !type:OverallPlaytimeRequirement
-      time: 2.5h
+      time: 1h
   startingGear: LawyerGear
   icon: "JobIconLawyer"
   supervisors: stories-job-supervisors-iaa #Stories

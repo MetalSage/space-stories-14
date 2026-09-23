@@ -3,10 +3,10 @@
   name: job-name-doctor
   description: job-description-doctor
   playTimeTracker: JobMedicalDoctor
-  requirements:
+  requirements: # Stories-PlaytimeRequirements
     - !type:DepartmentTimeRequirement
       department: Medical
-      time: 2.5h
+      time: 2h
   startingGear: DoctorGear
   icon: "JobIconMedicalDoctor"
   supervisors: job-supervisors-cmo

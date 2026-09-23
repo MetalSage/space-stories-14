@@ -1,8 +1,8 @@
 - type: entity
   parent: BaseAction
   id: STActionBloodCrawl
-  name: Кровавый путь
-  description: Провалиться в лужу крови, чтобы стать неосязаемым и появиться в другом месте.
+  name: Blood Crawl
+  description: Sink into a pool of blood to become intangible and emerge elsewhere.
   components:
   - type: Action
     itemIconStyle: NoItem
@@ -18,8 +18,8 @@
 - type: entity
   parent: BaseAction
   id: STActionShadowCrawl
-  name: Теневой путь
-  description: Раствориться во тьме, чтобы стать неосязаемым и появиться в другом месте.
+  name: Shadow Crawl
+  description: Dissolve into darkness to become intangible and emerge elsewhere.
   components:
   - type: Action
     itemIconStyle: NoItem
@@ -35,8 +35,8 @@
 - type: entity
   parent: BaseAction
   id: STActionShadowGrapple
-  name: Теневой захват
-  description: Притянуть живую цель к себе, или притянуться к структуре. Гасит источники света рядом с целью.
+  name: Shadow Grapple
+  description: Pull a living target towards yourself, or pull yourself to a structure. Extinguishes nearby light sources.
   components:
   - type: Action
     itemIconStyle: NoItem
@@ -56,8 +56,8 @@
 - type: entity
   parent: BaseAction
   id: STActionDemonWhisper
-  name: Демонический шёпот
-  description: Отправить пугающую мысль выбранной живой цели — её услышат только они.
+  name: Demonic Whisper
+  description: Send a chilling thought to a living target — only they can hear it.
   components:
   - type: Action
     itemIconStyle: NoItem

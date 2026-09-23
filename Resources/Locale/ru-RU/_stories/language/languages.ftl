@@ -17,6 +17,7 @@ language-Machine-name = машинный код
 language-Shadowtongue-name = теневой язык
 language-Codespeak-name = шифрокод
 language-Monkey-name = шимпанзийский
+language-Demonic-name = демонический
 
 language-menu-title = Языки
 game-hud-open-language-menu-button-tooltip = Открыть меню языков.

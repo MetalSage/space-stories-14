@@ -36,8 +36,18 @@ public sealed class SponsorInfo
     [JsonPropertyName("roleTimeBypass")]
     public bool RoleTimeBypass { get; set; } = false;
 
-    [JsonPropertyName("ghost_skin")]
-    public string GhostSkin { get; set; } = "MobObserver";
+    [JsonPropertyName("allowedGhostSkins")]
+    public string[] AllowedGhostSkins { get; set; } = Array.Empty<string>();
+
+    [JsonPropertyName("allowedGhostSkin")]
+    private string[]? LegacyAllowedGhostSkin
+    {
+        set
+        {
+            if (value != null && value.Length > 0 && AllowedGhostSkins.Length == 0)
+                AllowedGhostSkins = value;
+        }
+    }
 
     [JsonPropertyName("stationRolePriority")]
     public float StationRolePriority { get; set; } = 1.0f;

@@ -9,6 +9,7 @@
   tileBreakIntensity: [ 0, 50, 75 ]
   tileBreakRerollReduction: 25
   lightColor: Orange
+  fireColor: Transparent # Stories-Explosion
   texturePath: /Textures/Effects/fire.rsi
   fireStates: 3
   temperature: 800
@@ -25,6 +26,7 @@
   tileBreakIntensity: [ 0, 50, 75 ]
   tileBreakRerollReduction: 25
   lightColor: Orange
+  fireColor: Transparent # Stories-Explosion
   texturePath: /Textures/Effects/fire.rsi
   fireStates: 3
   temperature: 800
@@ -42,6 +44,7 @@
   tileBreakRerollReduction: 30
   intensityPerState: 20
   lightColor: Orange
+  fireColor: Transparent # Stories-Explosion
   texturePath: /Textures/Effects/fire.rsi
   fireStates: 3
   temperature: 800
@@ -55,7 +58,7 @@
       Blunt: 3
       Piercing: 3
   lightColor: Green
-  fireColor: Green
+  fireColor: Transparent # Stories-Explosion
   texturePath: /Textures/Effects/fire_greyscale.rsi
   fireStates: 3
 
@@ -69,7 +72,7 @@
   tileBreakChance: [0]
   tileBreakIntensity: [0]
   lightColor: Blue
-  fireColor: Blue
+  fireColor: Transparent # Stories-Explosion
   texturePath: /Textures/Effects/fire_greyscale.rsi
   fireStates: 3
 
@@ -85,6 +88,7 @@
   tileBreakIntensity: [0, 50, 75]
   tileBreakRerollReduction: 20
   lightColor: Orange
+  fireColor: Transparent # Stories-Explosion
   texturePath: /Textures/Effects/fire.rsi
   fireStates: 3
   temperature: 800
@@ -102,6 +106,7 @@
   tileBreakRerollReduction: 3
   intensityPerState: 20
   lightColor: Orange
+  fireColor: Transparent # Stories-Explosion
   texturePath: /Textures/Effects/fire.rsi
   fireStates: 3
   temperature: 800
@@ -119,6 +124,7 @@
   tileBreakRerollReduction: 10
   intensityPerState: 20
   lightColor: Orange
+  fireColor: Transparent # Stories-Explosion
   texturePath: /Textures/Effects/fire.rsi
   fireStates: 3
   temperature: 800
@@ -145,7 +151,7 @@
       Piercing: 3
       Structural: 50
   lightColor: Blue
-  fireColor: Blue
+  fireColor: Transparent # Stories-Explosion
   texturePath: /Textures/Effects/fire_greyscale.rsi
   fireStates: 3
   temperature: 800

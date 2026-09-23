@@ -1,7 +1,9 @@
 using Content.Shared.Actions;
+using Content.Shared.DoAfter;
 using Content.Shared.Polymorph;
 using Robust.Shared.Audio;
 using Robust.Shared.Prototypes;
+using Robust.Shared.Serialization;
 
 namespace Content.Shared._Stories.Demons;
 
@@ -30,6 +32,9 @@ public sealed partial class DemonPhaseComponent : Component
     public EntProtoId PhaseInEffect;
 
     [DataField]
+    public TimeSpan PhaseDuration = TimeSpan.Zero;
+
+    [DataField]
     public TimeSpan RiseDuration = TimeSpan.FromSeconds(2);
 
     [DataField]
@@ -53,3 +58,7 @@ public enum DemonPhaseAnchor : byte
 }
 
 public sealed partial class DemonPhaseActionEvent : InstantActionEvent;
+
+[Serializable, NetSerializable]
+public sealed partial class DemonPhaseDoAfterEvent : SimpleDoAfterEvent;
+

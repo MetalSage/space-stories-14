@@ -62,7 +62,7 @@ public sealed partial class SingularitySystem : SharedSingularitySystem
     /// <param name="args">The event arguments including the state to sync the singularity with.</param>
     private void HandleSingularityState(EntityUid uid, SingularityComponent comp, ref ComponentHandleState args)
     {
-        if (args.Current is not SingularityComponentState state)
+        if (TerminatingOrDeleted(uid) || args.Current is not SingularityComponentState state)
             return;
 
         SetLevel(uid, state.Level, comp);

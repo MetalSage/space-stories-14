@@ -11,6 +11,7 @@ namespace Content.Shared.Damage.Systems;
 public sealed partial class RequireProjectileTargetSystem : EntitySystem
 {
     [Dependency] private SharedContainerSystem _container = default!;
+    [Dependency] private StandingStateSystem _standing = default!;
 
     public override void Initialize()
     {
@@ -41,6 +42,12 @@ public sealed partial class RequireProjectileTargetSystem : EntitySystem
             // so it's impossible to check if the entity is in a container
             if (TerminatingOrDeleted(shooter.Value))
                 return;
+
+            // Stories-ProneShooting-Start
+            // If the shooter is lying down, their projectiles travel low and hit lying targets
+            if (_standing.IsDown(shooter.Value))
+                return;
+            // Stories-ProneShooting-End
 
             if (!_container.IsEntityOrParentInContainer(shooter.Value))
                args.Cancelled = true;

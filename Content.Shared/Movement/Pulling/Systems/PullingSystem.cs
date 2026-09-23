@@ -484,6 +484,13 @@ public sealed partial class PullingSystem : EntitySystem
 
         if (pullable.Comp.Puller == pullerUid)
         {
+            // Stories-FiremanCarry-Start
+            var ev = new Content.Shared._Stories.Fireman.StoriesFiremanCarryPullToggleEvent();
+            RaiseLocalEvent(pullerUid, ref ev);
+            if (ev.Handled)
+                return true;
+            // Stories-FiremanCarry-End
+
             return TryStopPull(pullable, pullable.Comp);
         }
 

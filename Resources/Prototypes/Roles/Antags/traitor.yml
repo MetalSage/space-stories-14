@@ -5,9 +5,9 @@
   setPreference: true
   objective: roles-antag-syndicate-agent-objective
   guides: [ Traitors ]
-  requirements:
+  requirements: # Stories-PlaytimeRequirements
   - !type:OverallPlaytimeRequirement
-    time: 10h
+    time: 2h
 
 - type: antagSpecifier
   abstract: true
@@ -34,7 +34,7 @@
   guides: [ Traitors ]
   requirements:
   - !type:OverallPlaytimeRequirement
-    time: 5h
+    time: 1h
 
 - type: antagSpecifier
   parent: BaseTraitor
@@ -108,7 +108,7 @@
     - WeaponPistolViper
     - Syringe
     - Syringe
-    
+
 - type: startingGear
   id: SyndicateReinforcementSpy
   equipment:

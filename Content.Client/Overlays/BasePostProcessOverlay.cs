@@ -1,3 +1,4 @@
+using Content.Shared._Stories.Vision.Components;
 using Content.Shared.CCVar;
 using System.Numerics;
 using Robust.Client.Graphics;
@@ -5,13 +6,13 @@ using Robust.Client.Player;
 using Robust.Shared.Configuration;
 using Robust.Shared.Enums;
 using Robust.Shared.Graphics;
+using Robust.Shared.Map;
+using Robust.Shared.Map.Components;
 using Robust.Shared.Physics;
 using Robust.Shared.Prototypes;
 
 namespace Content.Client.Overlays;
 
-// This overlay serves as the foundational post processing overlay.
-// Ideally, for performance reasons, post processing designed to be present at all times, such as additive light blending or tonemapping, should be done as part of a single shader pass.
 public sealed partial class BasePostProcessOverlay : Overlay
 {
     private static readonly ProtoId<ShaderPrototype> BasePostProcessShaderId = "STBasePostProcess";
@@ -23,12 +24,13 @@ public sealed partial class BasePostProcessOverlay : Overlay
     [Dependency] private IPrototypeManager _prototypeManager = default!;
 
     public override bool RequestScreenTexture => true;
-    public override OverlaySpace Space => OverlaySpace.WorldSpace;
+    public override OverlaySpace Space => OverlaySpace.WorldSpaceBelowFOV;
     private readonly ShaderInstance _basePostProcessShader;
 
     public BasePostProcessOverlay()
     {
         IoCManager.InjectDependencies(this);
+        ZIndex = 1000;
         _basePostProcessShader = _prototypeManager.Index(BasePostProcessShaderId).InstanceUnique();
     }
 
@@ -43,13 +45,24 @@ public sealed partial class BasePostProcessOverlay : Overlay
         if (args.Viewport.Eye != eyeComp.Eye)
             return false;
 
-        if (!_lightManager.Enabled || !eyeComp.Eye.DrawLight)
+        if (!_lightManager.Enabled || !_lightManager.DrawLighting || !eyeComp.Eye.DrawLight)
+            return false;
+
+        if (args.MapId == MapId.Nullspace)
+            return false;
+
+        if (!_entityManager.TryGetComponent<MapComponent>(args.MapUid, out var map) || !map.LightingEnabled)
             return false;
 
         var playerEntity = _playerManager.LocalSession?.AttachedEntity;
-
         if (playerEntity == null)
             return false;
+
+        if (_entityManager.TryGetComponent(playerEntity, out VisionComponent? vision) && vision.IsActive)
+        {
+            if (!vision.DrawLighting || vision.Shader != null)
+                return false;
+        }
 
         return true;
     }
@@ -60,6 +73,9 @@ public sealed partial class BasePostProcessOverlay : Overlay
             return;
 
         if (args.Viewport.Eye == null)
+            return;
+
+        if (args.Viewport.LightRenderTarget == null)
             return;
 
         var playerEntity = _playerManager.LocalSession?.AttachedEntity;

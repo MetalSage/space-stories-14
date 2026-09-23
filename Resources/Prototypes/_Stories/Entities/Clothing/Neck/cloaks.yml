@@ -69,7 +69,7 @@
   parent: ClothingNeckBase
   id: STClothingNeckCloakExe
   name: guardian's cloak
-  description: Похоже, тут выгравировано "R u s t e d T i m". Что же это может значить?
+  description: It looks like is engraved here. What could this mean?
   components:
   - type: Tag
     tags:

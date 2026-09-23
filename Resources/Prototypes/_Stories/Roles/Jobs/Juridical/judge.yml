@@ -3,22 +3,14 @@
   name: stories-job-name-judge
   description: stories-job-description-judge
   playTimeTracker: STJobJudge
+  setPreference: false
   requirements:
   - !type:DepartmentTimeRequirement
     department: Security
-    time: 10h
+    time: 4h
   - !type:DepartmentTimeRequirement
     department: Command
-    time: 35h
-  - !type:RoleTimeRequirement
-    role: JobCaptain
-    time: 15h
-  - !type:RoleTimeRequirement
-    role: JobHeadOfSecurity
-    time: 5h
-  - !type:RoleTimeRequirement
-    role: STJobIAA
-    time: 30h
+    time: 4h
   startingGear: STJudgeGear
   icon: "STJobIconJudge"
   supervisors: job-supervisors-centcom

@@ -1,8 +1,8 @@
 - type: entity
   parent: BaseAction
   id: STActionPontificToggleNightvision
-  name: Ночное зрение
-  description: Переключить своё ночное зрение.
+  name: Night Vision
+  description: Toggle your night vision.
   components:
   - type: Action
     useDelay: 1

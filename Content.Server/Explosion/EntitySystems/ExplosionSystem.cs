@@ -165,6 +165,11 @@ public sealed partial class ExplosionSystem : SharedExplosionSystem
             explosive.CanCreateVacuum,
             user);
 
+        // Stories-ExplosionEffect-Start
+        var ev = new Content.Shared._Stories.Explosion.StoriesExplosiveTriggeredEvent();
+        RaiseLocalEvent(uid, ref ev);
+        // Stories-ExplosionEffect-End
+
         if (explosive.DeleteAfterExplosion ?? delete)
             QueueDel(uid);
     }

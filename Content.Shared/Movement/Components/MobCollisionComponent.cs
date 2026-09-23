@@ -47,6 +47,20 @@ public sealed partial class MobCollisionComponent : Component
     [DataField, AutoNetworkedField]
     public float Strength = 50f;
 
+    // Stories-CombatCollision-Start
+    /// <summary>
+    /// Strength of the pushback when in combat mode, making passage much stiffer and blocking chokepoints.
+    /// </summary>
+    [DataField, AutoNetworkedField]
+    public float CombatStrength = 175f;
+
+    /// <summary>
+    /// Minimum speed modifier applied when colliding while in combat mode or with someone in combat mode.
+    /// </summary>
+    [DataField, AutoNetworkedField]
+    public float CombatMinimumSpeedModifier = 0.1f;
+    // Stories-CombatCollision-End
+
     // Yes I know, I will deal with it if I ever refactor collision layers due to misuse.
     // If anything it probably needs some assurance on mobcollisionsystem for it.
     /// <summary>

@@ -50,3 +50,18 @@
     layers:
     - state: green
     - state: guardiannt
+
+# Blueshield
+
+- type: entity
+  id: STSpawnPointBlueshield
+  parent: STSpawnPointJobBaseStories
+  name: blueshield
+  components:
+  - type: SpawnPoint
+    job_id: STBlueshield
+  - type: Sprite
+    layers:
+    - state: green
+    - state: hos
+

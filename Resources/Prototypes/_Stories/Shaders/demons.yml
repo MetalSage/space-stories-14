@@ -1,4 +1,4 @@
 - type: shader
   id: STRedVisionFullscreen
   kind: source
-  path: "/Textures/Shaders/st_red_vision_fullscreen.swsl"
+  path: "/Textures/_Stories/Shaders/red_vision_fullscreen.swsl"

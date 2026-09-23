@@ -1,7 +1,7 @@
 - type: entity
   id: STPRISONLockableButtonPrisonBrig
   suffix: STPrisonBrig
-  name: кнопка с замком
+  name: lockable button
   description: This button activates something.
   parent: LockableButton
   components:
@@ -11,7 +11,7 @@
 - type: entity
   id: STPRISONLockableButtonHeadOfPrison
   suffix: STHeadOfPrison
-  name: кнопка с замком
+  name: lockable button
   description: This button activates something.
   parent: LockableButton
   components:
@@ -21,7 +21,7 @@
 - type: entity
   id: STPRISONLockableButtonPrisonMed
   suffix: STPrisonMed
-  name: кнопка с замком
+  name: lockable button
   description: This button activates something.
   parent: LockableButton
   components:
@@ -31,7 +31,7 @@
 - type: entity
   id: STPRISONLockableButtonPrisonEng
   suffix: STPrisonEng
-  name: кнопка с замком
+  name: lockable button
   description: This button activates something.
   parent: LockableButton
   components:

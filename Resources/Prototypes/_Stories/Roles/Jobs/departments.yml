@@ -3,6 +3,7 @@
   name: department-Prison
   description: department-Cargo-description
   color: "#e99844"
+  editorHidden: true
   roles:
   - STPRISONHeadOfPrison
   - STPRISONEngineer

@@ -1,3 +1,4 @@
+using Content.Client._Stories.Lobby.UI;
 using Content.Client.FeedbackPopup;
 using Content.Client.Gameplay;
 using Content.Client.UserInterface.Controls;
@@ -65,6 +66,12 @@ public sealed partial class EscapeUIController : UIController, IOnStateEntered<G
 
         _escapeWindow.OnClose += DeactivateButton;
         _escapeWindow.OnOpen += ActivateButton;
+
+        _escapeWindow.SupportButton.OnPressed += _ =>
+        {
+            CloseEscapeWindow();
+            new SponsorPerksWindow().OpenCentered();
+        };
 
         _escapeWindow.FeedbackButton.OnPressed += _ =>
         {
