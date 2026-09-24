@@ -87,4 +87,22 @@ public sealed partial class StationEventComponent : Component
     /// </summary>
     [DataField]
     public bool OccursDuringRoundEnd = true;
+
+    // Stories-Antag-Start
+    /// <summary>
+    /// Category of the station event, used for pacing and limits.
+    /// </summary>
+    [DataField]
+    public StationEventCategory Category = StationEventCategory.Default;
+    // Stories-Antag-End
 }
+
+// Stories-Antag-Start
+public enum StationEventCategory : byte
+{
+    Default,
+    Minor,
+    MajorAntag,
+    MinorAntag,
+}
+// Stories-Antag-End

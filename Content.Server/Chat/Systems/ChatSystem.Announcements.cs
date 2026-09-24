@@ -4,6 +4,7 @@ using Content.Shared.Chat;
 using Content.Shared.Database;
 using Content.Shared.Station.Components;
 using Robust.Shared.Audio;
+using Robust.Shared.Enums;
 using Robust.Shared.Player;
 using Robust.Shared.Timing;
 using Robust.Shared.Utility;
@@ -34,7 +35,10 @@ public sealed partial class ChatSystem
         }
         _adminLogger.Add(LogType.Chat, LogImpact.Low, $"Global station announcement from {sender}: {message}");
 
-        PlayTtsAnnouncement(ttsMessage ?? message, Filter.Broadcast(), ttsVoice); // Stories-TTS
+        // Stories-TTS-Start
+        var ttsFilter = Filter.Empty().AddWhere(s => s.Status == SessionStatus.InGame);
+        PlayTtsAnnouncement(ttsMessage ?? message, ttsFilter, ttsVoice);
+        // Stories-TTS-End
     }
 
     /// <inheritdoc />

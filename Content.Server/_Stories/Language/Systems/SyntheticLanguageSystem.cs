@@ -18,8 +18,10 @@ public sealed partial class SyntheticLanguageSystem : EntitySystem
         base.Initialize();
 
         SubscribeLocalEvent<BorgChassisComponent, ComponentInit>(OnSyntheticInit);
+        SubscribeLocalEvent<BorgBrainComponent, ComponentInit>(OnSyntheticInit);
         SubscribeLocalEvent<StationAiHeldComponent, ComponentInit>(OnSyntheticInit);
         SubscribeLocalEvent<BorgChassisComponent, ComponentRemove>(OnSyntheticRemoved);
+        SubscribeLocalEvent<BorgBrainComponent, ComponentRemove>(OnSyntheticRemoved);
         SubscribeLocalEvent<StationAiHeldComponent, ComponentRemove>(OnSyntheticRemoved);
     }
 
