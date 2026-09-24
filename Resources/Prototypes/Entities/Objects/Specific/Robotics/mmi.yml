@@ -21,6 +21,15 @@
         components:
         - Brain
   - type: BorgBrain
+  - type: Language # Stories-Language
+    currentLanguage: GalacticCommon
+    defaultLanguage: GalacticCommon
+    spokenLanguages:
+    - GalacticCommon
+    - Machine
+    understoodLanguages:
+    - GalacticCommon
+    - Machine
   - type: BlockMovement
   - type: Examiner
   - type: IntrinsicRadioReceiver
@@ -97,6 +106,15 @@
     - type: BlockMovement
     - type: Examiner
     - type: BorgBrain
+    - type: Language # Stories-Language
+      currentLanguage: GalacticCommon
+      defaultLanguage: GalacticCommon
+      spokenLanguages:
+      - GalacticCommon
+      - Machine
+      understoodLanguages:
+      - GalacticCommon
+      - Machine
     - type: IntrinsicRadioReceiver
     - type: IntrinsicRadioTransmitter
       channels:

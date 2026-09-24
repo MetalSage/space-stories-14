@@ -90,6 +90,13 @@
       isActive: true
       ambientColor: "#FFFFFF10"
     - type: MobCollision # Stories-Collision
+    - type: Language # Stories-Language
+      currentLanguage: Draconic
+      defaultLanguage: Draconic
+      spokenLanguages:
+      - Draconic
+      understoodLanguages:
+      - Draconic
 
 - type: entity
   parent: BaseMobCarp

@@ -248,6 +248,8 @@
   id: STSlaughterDemonSpawn
   components:
   - type: StationEvent
+    category: MajorAntag
+    maxOccurrences: 1
     weight: 6
     earliestStart: 30
     minimumPlayers: 25
@@ -270,6 +272,8 @@
   id: STShadowDemonSpawn
   components:
   - type: StationEvent
+    category: MajorAntag
+    maxOccurrences: 1
     weight: 6
     earliestStart: 30
     minimumPlayers: 30
