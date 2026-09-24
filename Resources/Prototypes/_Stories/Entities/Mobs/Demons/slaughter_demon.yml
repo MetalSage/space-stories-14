@@ -124,13 +124,6 @@
   - Incorporeal
   - BaseMob
   components:
-  - type: Language
-    currentLanguage: GalacticCommon
-    defaultLanguage: GalacticCommon
-    spokenLanguages:
-    - GalacticCommon
-    understoodLanguages:
-    - GalacticCommon
   - type: Sprite
     sprite: _Stories/Mobs/Demons/slaughter_demon.rsi
     color: "#AA0000AA"

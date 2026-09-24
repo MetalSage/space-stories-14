@@ -6,13 +6,6 @@
   name: shadow demon
   description: A creature that is barely perceptible. You can feel its gaze piercing through you.
   components:
-  - type: Language
-    currentLanguage: GalacticCommon
-    defaultLanguage: GalacticCommon
-    spokenLanguages:
-    - GalacticCommon
-    understoodLanguages:
-    - GalacticCommon
   - type: Sprite
     sprite: _Stories/Mobs/Demons/shadow_demon.rsi
     layers:
@@ -130,13 +123,6 @@
   - Incorporeal
   - BaseMob
   components:
-  - type: Language
-    currentLanguage: GalacticCommon
-    defaultLanguage: GalacticCommon
-    spokenLanguages:
-    - GalacticCommon
-    understoodLanguages:
-    - GalacticCommon
   - type: Sprite
     sprite: _Stories/Mobs/Demons/shadow_demon.rsi
     color: "#3A2A5AAA"
