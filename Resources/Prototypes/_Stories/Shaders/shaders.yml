@@ -1,14 +1,29 @@
 - type: shader
   id: STBasePostProcess
   kind: source
-  path: "/Textures/Shaders/base_postprocess.swsl"
+  light_mode: unshaded
+  path: "/Textures/_Stories/Shaders/base_postprocess.swsl"
   params:
-    CircleRadius: 420.0
-    CircleMinDist: 0.0
-    CirclePow: 1.0
-    CircleMax: 4.0
-    CircleMult: 0.25
+    CircleRadius: 350.0
+    CircleMinDist: 0.25
+    CirclePow: 1.5
+    CircleMax: 2.0
+    CircleMult: 0.175
     FalloffClampMin: 0.075
-    FalloffClampMax: 1.0
-    FalloffStrength: 0.75
-    FalloffPow: 3.0
+    FalloffClampMax: 0.75
+    FalloffStrength: 2.0
+
+- type: shader
+  id: STExplosionShockWave
+  kind: source
+  path: "/Textures/_Stories/Shaders/shock_wave.swsl"
+
+- type: shader
+  id: STLightBulb
+  kind: source
+  light_mode: unshaded
+  path: "/Textures/_Stories/Shaders/lightbulb.swsl"
+  params:
+    GlowColor: "1.0, 0.88, 0.6, 1.0"
+    PulseSpeed: 1.5
+    GlowIntensity: 10.2

@@ -210,6 +210,10 @@
         Radiation: 0.1
   - type: ExplosionResistance
     damageCoefficient: 0.2
+  # Stories-StaminaResistance-Start
+  - type: StaminaResistance
+    damageCoefficient: 0.5
+  # Stories-StaminaResistance-End
   - type: ToggleableClothing
     clothingPrototype: ClothingHeadHelmetHardsuitMaxim
 
@@ -229,6 +233,10 @@
     lowPressureMultiplier: 1000
   - type: ExplosionResistance
     damageCoefficient: 0.5
+  # Stories-StaminaResistance-Start
+  - type: StaminaResistance
+    damageCoefficient: 0.55
+  # Stories-StaminaResistance-End
   - type: Armor
     modifiers:
       coefficients:
@@ -262,6 +270,10 @@
   - type: PressureProtection
     highPressureMultiplier: 0.3
     lowPressureMultiplier: 1000
+  # Stories-StaminaResistance-Start
+  - type: StaminaResistance
+    damageCoefficient: 0.6
+  # Stories-StaminaResistance-End
   - type: Armor
     modifiers:
       coefficients:
@@ -291,6 +303,10 @@
     lowPressureMultiplier: 1000
   - type: ExplosionResistance
     damageCoefficient: 0.5
+  # Stories-StaminaResistance-Start
+  - type: StaminaResistance
+    damageCoefficient: 0.5
+  # Stories-StaminaResistance-End
   - type: Armor
     modifiers:
       coefficients:
@@ -322,6 +338,10 @@
     lowPressureMultiplier: 1000
   - type: ExplosionResistance
     damageCoefficient: 0.7
+  # Stories-StaminaResistance-Start
+  - type: StaminaResistance
+    damageCoefficient: 0.5
+  # Stories-StaminaResistance-End
   - type: Armor
     modifiers:
       coefficients:
@@ -472,6 +492,10 @@
     lowPressureMultiplier: 1000
   - type: ExplosionResistance
     damageCoefficient: 0.5
+  # Stories-StaminaResistance-Start
+  - type: StaminaResistance
+    damageCoefficient: 0.45
+  # Stories-StaminaResistance-End
   - type: Armor
     modifiers:
       coefficients:
@@ -542,8 +566,10 @@
     lowPressureMultiplier: 1000
   - type: ExplosionResistance
     damageCoefficient: 0.5
-  - type: StaminaResistance # do not add these to other equipment or mobs, we don't want to microbalance these everywhere
-    damageCoefficient: 0.75
+  # Stories-StaminaResistance-Start
+  - type: StaminaResistance
+    damageCoefficient: 0.45 # 0.75
+  # Stories-StaminaResistance-End
   - type: Armor
     modifiers:
       coefficients:
@@ -620,8 +646,10 @@
     damageCoefficient: 0.3
   - type: FireProtection
     reduction: 0.8
-  - type: StaminaResistance # do not add these to other equipment or mobs, we don't want to microbalance these everywhere
-    damageCoefficient: 0.6
+  # Stories-StaminaResistance-Start
+  - type: StaminaResistance
+    damageCoefficient: 0.35 # 0.6
+  # Stories-StaminaResistance-End
   - type: Armor
     modifiers:
       coefficients:
@@ -678,8 +706,10 @@
     lowPressureMultiplier: 1000
   - type: ExplosionResistance
     damageCoefficient: 0.5
-  - type: StaminaResistance # do not add these to other equipment or mobs, we don't want to microbalance these everywhere
-    damageCoefficient: 0.6
+  # Stories-StaminaResistance-Start
+  - type: StaminaResistance
+    damageCoefficient: 0.3 # 0.6
+  # Stories-StaminaResistance-End
   - type: Armor
     modifiers:
       coefficients:
@@ -731,7 +761,10 @@
   - type: PressureProtection
     highPressureMultiplier: 0.2
     lowPressureMultiplier: 1000
-  # - type: StaminaResistance # Should not have stamina resistance, this is purely so people know it was not forgotten.
+  # Stories-StaminaResistance-Start
+  - type: StaminaResistance
+    damageCoefficient: 0.15
+  # Stories-StaminaResistance-End
   - type: Armor
     modifiers:
       coefficients:
@@ -785,6 +818,10 @@
     lowPressureMultiplier: 1000
   - type: ExplosionResistance
     damageCoefficient: 0.5
+  # Stories-StaminaResistance-Start
+  - type: StaminaResistance
+    damageCoefficient: 0.4
+  # Stories-StaminaResistance-End
   - type: Armor
     modifiers:
       coefficients:
@@ -821,6 +858,10 @@
     lowPressureMultiplier: 1000
   - type: ExplosionResistance
     damageCoefficient: 0.2
+  # Stories-StaminaResistance-Start
+  - type: StaminaResistance
+    damageCoefficient: 0.45
+  # Stories-StaminaResistance-End
   - type: Armor
     modifiers:
       coefficients:
@@ -891,6 +932,10 @@
     lowPressureMultiplier: 1000
   - type: ExplosionResistance
     damageCoefficient: 0.6
+  # Stories-StaminaResistance-Start
+  - type: StaminaResistance
+    damageCoefficient: 0.5
+  # Stories-StaminaResistance-End
   - type: Armor
     modifiers:
       coefficients:
@@ -1104,6 +1149,10 @@
     lowPressureMultiplier: 1000
   - type: ExplosionResistance
     damageCoefficient: 0.7
+  # Stories-StaminaResistance-Start
+  - type: StaminaResistance
+    damageCoefficient: 0.4
+  # Stories-StaminaResistance-End
   - type: Armor
     modifiers:
       coefficients:

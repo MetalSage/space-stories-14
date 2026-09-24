@@ -41,7 +41,7 @@
     state: 18
   - sprite: /Textures/_Stories/Interface/Alerts/projective_bubble.rsi
     state: 19
-  name: Здоровье щита
-  description: Только бы не разгерма.
+  name: Shield Health
+  description: Just don't breach.
   minSeverity: 0
   maxSeverity: 20

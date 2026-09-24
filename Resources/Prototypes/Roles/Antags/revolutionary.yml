@@ -5,7 +5,7 @@
   setPreference: true
   objective: roles-antag-rev-head-objective
   guides: [ Revolutionaries ]
-  requirements:
+  requirements: # Stories-PlaytimeRequirements
   - !type:OverallPlaytimeRequirement
     time: 10h
 

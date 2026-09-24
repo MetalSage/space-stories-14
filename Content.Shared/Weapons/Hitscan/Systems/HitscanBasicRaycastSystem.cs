@@ -2,6 +2,7 @@ using System.Numerics;
 using Content.Shared.Administration.Logs;
 using Content.Shared.Damage.Components;
 using Content.Shared.Database;
+using Content.Shared.Standing;
 using Content.Shared.Weapons.Hitscan.Components;
 using Content.Shared.Weapons.Hitscan.Events;
 using Content.Shared.Weapons.Ranged.Systems;
@@ -20,6 +21,7 @@ public sealed partial class HitscanBasicRaycastSystem : EntitySystem
     [Dependency] private SharedContainerSystem _container = default!;
     [Dependency] private ISharedAdminLogManager _log = default!;
     [Dependency] private SharedTransformSystem _transform = default!;
+    [Dependency] private StandingStateSystem _standing = default!;
 
     [Dependency] private EntityQuery<HitscanBasicVisualsComponent> _visualsQuery = default!;
 
@@ -38,13 +40,17 @@ public sealed partial class HitscanBasicRaycastSystem : EntitySystem
         var rayCastResults = _physics.IntersectRay(mapCords.MapId, ray, ent.Comp.MaxDistance, shooter, false);
 
         var target = args.Target;
+        // Stories-ProneShooting-Start
+        var isShooterDown = _standing.IsDown(shooter);
+        // Stories-ProneShooting-End
         // If you are in a container, use the raycast result
         // Otherwise:
         //  1.) Hit the first entity that you targeted.
-        //  2.) Hit the first entity that doesn't require you to aim at it specifically to be hit.
+        //  2.) Hit the first entity that doesn't require you to aim at it specifically to be hit (or if shooter is prone).
         var result = _container.IsEntityOrParentInContainer(shooter)
             ? rayCastResults.FirstOrNull()
             : rayCastResults.FirstOrNull(hit => hit.HitEntity == target
+                                                || isShooterDown // Stories-ProneShooting
                                                 || CompOrNull<RequireProjectileTargetComponent>(hit.HitEntity)?.Active != true);
 
         var distanceTried = result?.Distance ?? ent.Comp.MaxDistance;

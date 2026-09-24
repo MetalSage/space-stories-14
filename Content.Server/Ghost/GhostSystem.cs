@@ -513,18 +513,21 @@ namespace Content.Server.Ghost
                 return null;
             }
 
-            var proto = GameTicker.ObserverPrototypeName; // STORIES - start
-
-            if (mind.Comp.UserId != null && _sponsorsManager.TryGetInfo(mind.Comp.UserId.Value, out var sponsorInfo))
-                proto = sponsorInfo.GhostSkin;
-
-            var ghost = SpawnAtPosition(proto, spawnPosition.Value); // STORIES - end
+            // Stories-Sponsors-Start
+            var ghost = SpawnAtPosition(GameTicker.ObserverPrototypeName, spawnPosition.Value);
             var ghostComponent = Comp<GhostComponent>(ghost);
 
-            if (TryComp<GhostSpriteStateComponent>(ghost, out var state))  // If more TryComps are added this should be turned into an event
+            if (mind.Comp.UserId != null && _sponsorsManager.GetSelectedGhostSkin(mind.Comp.UserId.Value) is { } skinId)
+            {
+                var skinComp = EnsureComp<Content.Shared._Stories.Sponsors.SponsorGhostSkinComponent>(ghost);
+                skinComp.Skin = skinId;
+                Dirty(ghost, skinComp);
+            }
+            else if (TryComp<GhostSpriteStateComponent>(ghost, out var state))  // If more TryComps are added this should be turned into an event
             {
                 _ghostState.SetGhostSprite((ghost, state), mind);
             }
+            // Stories-Sponsors-End
 
             // Try setting the ghost entity name to either the character name or the player name.
             // If all else fails, it'll default to the default entity prototype name, "observer".

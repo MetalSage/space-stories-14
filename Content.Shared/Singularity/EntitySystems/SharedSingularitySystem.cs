@@ -4,6 +4,7 @@ using Content.Shared.Radiation.Systems;
 using Content.Shared.Singularity.Components;
 using Content.Shared.Singularity.Events;
 using Robust.Shared.Containers;
+using Robust.Shared.Network;
 using Robust.Shared.Physics.Components;
 using Robust.Shared.Physics.Systems;
 using Robust.Shared.Serialization;
@@ -16,6 +17,7 @@ namespace Content.Shared.Singularity.EntitySystems;
 public abstract partial class SharedSingularitySystem : EntitySystem
 {
 #region Dependencies
+    [Dependency] private INetManager _net = default!;
     [Dependency] private SharedAppearanceSystem _visualizer = default!;
     [Dependency] private SharedContainerSystem _containers = default!;
     [Dependency] private SharedEventHorizonSystem _horizons = default!;
@@ -86,7 +88,7 @@ public abstract partial class SharedSingularitySystem : EntitySystem
 
         singularity.Level = value;
         UpdateSingularityLevel(uid, oldValue, singularity);
-        if (!Deleted(uid))
+        if (_net.IsServer && !Deleted(uid))
             Dirty(uid, singularity);
     }
 
@@ -107,7 +109,8 @@ public abstract partial class SharedSingularitySystem : EntitySystem
             return;
 
         singularity.RadsPerLevel = value;
-        UpdateRadiation(uid, singularity);
+        if (_net.IsServer)
+            UpdateRadiation(uid, singularity);
     }
 
     /// <summary>
@@ -119,17 +122,21 @@ public abstract partial class SharedSingularitySystem : EntitySystem
     /// <param name="singularity">The state of the singularity which's level has changed.</param>
     public void UpdateSingularityLevel(EntityUid uid, byte oldValue, SingularityComponent? singularity = null)
     {
+        if (TerminatingOrDeleted(uid))
+            return;
+
         if (!Resolve(uid, ref singularity))
             return;
 
-        if (TryComp<EventHorizonComponent>(uid, out var eventHorizon))
+        if (singularity.Level > 0 && TryComp<EventHorizonComponent>(uid, out var eventHorizon))
         {
             _horizons.SetRadius(uid, EventHorizonRadius(singularity), false, eventHorizon);
             _horizons.SetCanBreachContainment(uid, CanBreachContainment(singularity), false, eventHorizon);
-            _horizons.UpdateEventHorizonFixture(uid, eventHorizon: eventHorizon);
+            if (_net.IsServer)
+                _horizons.UpdateEventHorizonFixture(uid, eventHorizon: eventHorizon);
         }
 
-        if (TryComp<PhysicsComponent>(uid, out var body))
+        if (_net.IsServer && TryComp<PhysicsComponent>(uid, out var body))
         {
             if (singularity.Level <= 1 && oldValue > 1) // Apparently keeps singularities from getting stuck in the corners of containment fields.
                 _physics.SetLinearVelocity(uid, Vector2.Zero, body: body); // No idea how stopping the singularities movement keeps it from getting stuck though.
@@ -140,10 +147,11 @@ public abstract partial class SharedSingularitySystem : EntitySystem
             _visualizer.SetData(uid, SingularityAppearanceKeys.Singularity, singularity.Level, appearance);
         }
 
-        UpdateRadiation(uid, singularity);
+        if (_net.IsServer)
+            UpdateRadiation(uid, singularity);
 
         RaiseLocalEvent(uid, new SingularityLevelChangedEvent(singularity.Level, oldValue, singularity));
-        if (singularity.Level <= 0)
+        if (singularity.Level <= 0 && _net.IsServer)
             QueueDel(uid);
     }
 
@@ -314,7 +322,8 @@ public abstract partial class SharedSingularitySystem : EntitySystem
 
         comp.FalloffPower = newFalloffPower;
         comp.Intensity = newIntensity;
-        Dirty(uid, comp);
+        if (_net.IsServer)
+            Dirty(uid, comp);
     }
 
     /// <summary>

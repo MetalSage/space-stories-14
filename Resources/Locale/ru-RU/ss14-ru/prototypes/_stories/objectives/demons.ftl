@@ -1,0 +1,12 @@
+ent-STBaseSlaughterDemonObjective = { ent-BaseObjective }
+    .desc = { ent-BaseObjective.desc }
+ent-STSlaughterDevourObjective = { ent-STBaseSlaughterDemonObjective }
+    .desc = { ent-STBaseSlaughterDemonObjective.desc }
+ent-STSlaughterFluffObjective = Залейте станцию кровью
+    .desc = Устройте резню неосторожным. Охотьтесь на тех, кто попытается охотиться на вас.
+ent-STBaseShadowDemonObjective = { ent-BaseObjective }
+    .desc = { ent-BaseObjective.desc }
+ent-STShadowWrapObjective = { ent-STBaseShadowDemonObjective }
+    .desc = { ent-STBaseShadowDemonObjective.desc }
+ent-STShadowSurviveObjective = Выживите
+    .desc = Тени укрывают вас. Не дайте свету и экипажу оборвать вашу охоту — доживите до конца смены.

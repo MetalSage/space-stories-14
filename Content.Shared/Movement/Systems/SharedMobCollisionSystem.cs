@@ -1,5 +1,6 @@
 using System.Numerics;
 using Content.Shared.CCVar;
+using Content.Shared.CombatMode;
 using Content.Shared.Movement.Components;
 using Robust.Shared;
 using Robust.Shared.Configuration;
@@ -20,6 +21,7 @@ public abstract partial class SharedMobCollisionSystem : EntitySystem
     [Dependency] protected SharedPhysicsSystem Physics = default!;
     [Dependency] private SharedTransformSystem _xformSystem = default!;
 
+    [Dependency] private EntityQuery<CombatModeComponent> _combatQuery = default!;
     [Dependency] protected EntityQuery<MobCollisionComponent> MobQuery = default!;
     [Dependency] protected EntityQuery<PhysicsComponent> PhysicsQuery = default!;
 
@@ -268,8 +270,15 @@ public abstract partial class SharedMobCollisionSystem : EntitySystem
             // Maybe we just do speedcap and dump this? Though it's less configurable and the cap is just there for cheaters.
             var penDepth = Math.Clamp(0.7f - diff.Length(), 0f, _penCap);
 
+            // Stories-CombatCollision-Start
+            var ourCombat = _combatQuery.TryComp(entity.Owner, out var ourCombatComp) && ourCombatComp.IsInCombatMode;
+            var otherCombat = _combatQuery.TryComp(other, out var otherCombatComp) && otherCombatComp.IsInCombatMode;
+
+            var ourStrength = ourCombat ? entity.Comp1.CombatStrength : entity.Comp1.Strength;
+            var otherStrength = otherCombat ? otherComp.CombatStrength : otherComp.Strength;
+
             // Sum the strengths so we get pushes back the same amount (impulse-wise, ignoring prediction).
-            var mobMovement = penDepth * diff.Normalized() * (entity.Comp1.Strength + otherComp.Strength);
+            var mobMovement = penDepth * diff.Normalized() * (ourStrength + otherStrength);
 
             // Big mob push smaller mob, needs fine-tuning and potentially another co-efficient.
             if (_massDiffCap > 0f)
@@ -281,14 +290,19 @@ public abstract partial class SharedMobCollisionSystem : EntitySystem
 
                 mobMovement *= modifier;
 
-                var speedReduction = 1f - entity.Comp1.MinimumSpeedModifier;
+                var minSpeed = (ourCombat || otherCombat)
+                    ? MathF.Min(entity.Comp1.CombatMinimumSpeedModifier, otherComp.CombatMinimumSpeedModifier)
+                    : entity.Comp1.MinimumSpeedModifier;
+
+                var speedReduction = 1f - minSpeed;
                 speedReduction /= _penCap / penDepth;
                 var speedModifier = Math.Clamp(
                     1f - speedReduction * modifier,
-                    entity.Comp1.MinimumSpeedModifier, 1f);
+                    minSpeed, 1f);
 
-                speedMod = MathF.Min(speedModifier, 1f);
+                speedMod = MathF.Min(speedModifier, speedMod);
             }
+            // Stories-CombatCollision-End
 
             // Need the push strength proportional to penetration depth.
             direction += mobMovement;

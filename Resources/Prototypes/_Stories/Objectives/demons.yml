@@ -25,8 +25,8 @@
 - type: entity
   parent: [STBaseSlaughterDemonObjective, BaseFreeObjective]
   id: STSlaughterFluffObjective
-  name: Залейте станцию кровью
-  description: Устройте резню неосторожным. Охотьтесь на тех, кто попытается охотиться на вас.
+  name: Drench the station in blood
+  description: Slaughter the unwary. Hunt those who would hunt you.
   components:
   - type: Objective
     icon:
@@ -69,8 +69,8 @@
 - type: entity
   parent: [STBaseShadowDemonObjective, BaseSurviveObjective]
   id: STShadowSurviveObjective
-  name: Выживите
-  description: Тени укрывают вас. Не дайте свету и экипажу оборвать вашу охоту — доживите до конца смены.
+  name: Survive
+  description: The shadows shroud you. Do not let the light and crew cut your hunt short — survive until the end of the shift.
   components:
   - type: Objective
     icon:

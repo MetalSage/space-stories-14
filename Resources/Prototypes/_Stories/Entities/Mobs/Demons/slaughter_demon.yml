@@ -3,8 +3,8 @@
   parent:
   - BaseSimpleMob
   - MobCombat
-  name: демон резни
-  description: Огромное угрожающее существо, покрытое бронированной чёрной чешуёй. Вам стоит бежать!
+  name: slaughter demon
+  description: A huge, menacing creature covered in armored black scales. You should run!
   components:
   - type: Language
     currentLanguage: GalacticCommon
@@ -18,12 +18,14 @@
     layers:
     - state: daemon
   - type: MovementSpeedModifier
-    baseWalkSpeed: 3.5
-    baseSprintSpeed: 5
+    baseWalkSpeed: 1
+    baseSprintSpeed: 2
+  - type: Damageable
+    damageModifierSet: STSlaughterDemonDamageModifierSet
   - type: MobThresholds
     thresholds:
       0: Alive
-      200: Dead
+      250: Dead
   - type: MeleeWeapon
     altDisarm: false
     range: 1
@@ -43,9 +45,17 @@
     sound:
       path: /Audio/_Stories/Demons/Common/demon_dies.ogg
   - type: DemonImmunities
-    smashDamage:
-      types:
-        Structural: 50
+  - type: StaminaResistance
+    worn: false
+    damageCoefficient: 0
+  - type: Language
+    currentLanguage: Demonic
+    defaultLanguage: Demonic
+    spokenLanguages:
+    - Demonic
+    understoodLanguages:
+    - Demonic
+    - GalacticCommon
   - type: NoSlip
   - type: Puller
     needsHands: false
@@ -55,17 +65,12 @@
     visMask:
     - Normal
     - Ghost
-  - type: VisionProvider
-    isActive: true
-    drawFov: false
-    drawLighting: false
-    shader: STRedVisionFullscreen
-    priority: 10
   - type: DemonPhase
     anchor: Blood
     phasePolymorph: STPolymorphSlaughterDemonPhase
     searchRange: 1.5
     failPopup: slaughter-demon-phase-fail
+    phaseDuration: 1.0
     phaseOutEffect: STSlaughterDemonJauntEffect
     phaseInEffect: STSlaughterDemonJauntUpEffect
     phaseOutSound:
@@ -115,12 +120,13 @@
     tags:
     - CannotSuicide
     - DoorBumpOpener
+    - StunImmune
 
 - type: entity
   id: STMobSlaughterDemonPhased
   categories: [ HideSpawnMenu ]
-  name: странная кровь
-  description: Нечто нематериальное, растворившееся в крови.
+  name: strange blood
+  description: Something immaterial, dissolved into blood.
   parent:
   - Incorporeal
   - BaseMob
@@ -154,6 +160,14 @@
     - Ghost
   - type: Visibility
     layer: 2
+  - type: Language
+    currentLanguage: Demonic
+    defaultLanguage: Demonic
+    spokenLanguages:
+    - Demonic
+    understoodLanguages:
+    - Demonic
+    - GalacticCommon
   - type: VisionProvider
     isActive: true
     drawFov: false

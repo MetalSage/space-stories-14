@@ -5,9 +5,6 @@ public sealed class GetTTSPlaybackModifiersEvent(float baseRange) : EntityEventA
 {
     private const float Epsilon = 0.0001f;
 
-    /// <summary>
-    /// Caps default TTS gain at 0.9, below the OpenAL source limit.
-    /// </summary>
     public const float MaxClientVolumeMultiplier = 1.5f;
 
     public float BaseRange { get; } = MathF.Max(0f, baseRange);

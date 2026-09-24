@@ -1,69 +1,39 @@
 - type: entity
-  parent: MobObserver
   id: STSponsorObserverTier1
-  name: observer
-  description: This ghost is suspicious.
   components:
-  - type: Sprite
-    overrideContainerOcclusion: true
-    drawdepth: Ghosts
-    sprite: _Stories/Mobs/Ghosts/sponsor.rsi
-    layers:
-    - state: tier1
-      shader: unshaded
+  - type: SponsorGhostSkinInfo
+    sprite:
+      sprite: _Stories/Mobs/Ghosts/sponsor.rsi
+      state: tier1
 
 - type: entity
-  parent: MobObserver
   id: STSponsorObserverTier2
-  name: observer
-  description: This ghost is suspicious.
   components:
-  - type: Sprite
-    overrideContainerOcclusion: true
-    drawdepth: Ghosts
-    sprite: _Stories/Mobs/Ghosts/sponsor.rsi
-    layers:
-    - state: tier2
-      shader: unshaded
+  - type: SponsorGhostSkinInfo
+    sprite:
+      sprite: _Stories/Mobs/Ghosts/sponsor.rsi
+      state: tier2
 
 - type: entity
-  parent: MobObserver
   id: STSponsorObserverTier3
-  name: observer
-  description: This ghost is suspicious.
   components:
-  - type: Sprite
-    overrideContainerOcclusion: true
-    drawdepth: Ghosts
-    sprite: _Stories/Mobs/Ghosts/sponsor.rsi
-    layers:
-    - state: tier3
-      shader: unshaded
+  - type: SponsorGhostSkinInfo
+    sprite:
+      sprite: _Stories/Mobs/Ghosts/sponsor.rsi
+      state: tier3
 
 - type: entity
-  parent: MobObserver
   id: STSponsorObserverTier4
-  name: observer
-  description: This ghost is suspicious.
   components:
-  - type: Sprite
-    overrideContainerOcclusion: true
-    drawdepth: Ghosts
-    sprite: _Stories/Mobs/Ghosts/sponsor.rsi
-    layers:
-    - state: tier4
-      shader: unshaded
+  - type: SponsorGhostSkinInfo
+    sprite:
+      sprite: _Stories/Mobs/Ghosts/sponsor.rsi
+      state: tier4
 
 - type: entity
-  parent: MobObserver
   id: STSponsorObserverTier5
-  name: observer
-  description: This ghost is suspicious.
   components:
-  - type: Sprite
-    overrideContainerOcclusion: true
-    drawdepth: Ghosts
-    sprite: _Stories/Mobs/Ghosts/sponsor.rsi
-    layers:
-    - state: tier5
-      shader: unshaded
+  - type: SponsorGhostSkinInfo
+    sprite:
+      sprite: _Stories/Mobs/Ghosts/sponsor.rsi
+      state: tier5

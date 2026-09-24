@@ -41,20 +41,21 @@ public sealed partial class PhotosensitivitySystem : EntitySystem
 
     private void OnRefreshSpeed(Entity<PhotosensitivityComponent> ent, ref RefreshMovementSpeedModifiersEvent args)
     {
-        var multiplier = ent.Comp.WasInDarkness == true
-            ? ent.Comp.DarkSpeedMultiplier
-            : ent.Comp.LightSpeedMultiplier;
-
-        args.ModifySpeed(multiplier, multiplier);
+        args.ModifySpeed(ent.Comp.CurrentSpeedMultiplier, ent.Comp.CurrentSpeedMultiplier);
     }
 
-    private void UpdateLightState(EntityUid uid, PhotosensitivityComponent comp, bool inDarkness)
+    private void UpdateLightState(EntityUid uid, PhotosensitivityComponent comp, bool inDarkness, float speedMultiplier)
     {
+        var speedChanged = Math.Abs(comp.CurrentSpeedMultiplier - speedMultiplier) > 0.01f;
+        comp.CurrentSpeedMultiplier = speedMultiplier;
+
+        if (speedChanged)
+            _movement.RefreshMovementSpeedModifiers(uid);
+
         if (comp.WasInDarkness == inDarkness)
             return;
 
         comp.WasInDarkness = inDarkness;
-        _movement.RefreshMovementSpeedModifiers(uid);
 
         if (comp.LightAlert is not { } alert)
             return;
@@ -111,28 +112,31 @@ public sealed partial class PhotosensitivitySystem : EntitySystem
                 continue;
 
             var damageMult = GetDamageMultiplier(uid, comp);
-            var gridUid = Transform(uid).GridUid;
-            var inSpace = false;
+            var inSpace = IsInSpace(uid);
 
-            if (gridUid != null && TryComp<MapGridComponent>(gridUid, out var grid))
+            if (inSpace && comp.DamageInSpace != null)
             {
-                if (_turf.IsSpace(_map.GetTileRef(gridUid.Value, grid, Transform(uid).Coordinates)))
-                    inSpace = true;
-            }
-            else
-                inSpace = true;
-
-            if (inSpace)
-            {
-                UpdateLightState(uid, comp, false);
+                UpdateLightState(uid, comp, false, comp.LightSpeedMultiplier);
                 _damageable.TryChangeDamage(uid, comp.DamageInSpace * damageMult, true, false);
                 _audio.PlayPvs(comp.BurnSound, uid);
                 continue;
             }
 
             var illumination = Math.Min(GetIllumination(uid), 10);
+            var inDarkness = !inSpace && illumination < 1f;
 
-            UpdateLightState(uid, comp, illumination < 1f);
+            float speedMult;
+            if (inDarkness)
+            {
+                speedMult = comp.DarkSpeedMultiplier;
+            }
+            else
+            {
+                var t = Math.Clamp((illumination - 1f) / 3f, 0f, 1f);
+                speedMult = MathHelper.Lerp(1.0f, comp.LightSpeedMultiplier, t);
+            }
+
+            UpdateLightState(uid, comp, inDarkness, speedMult);
 
             if (illumination > 1.5f)
             {
@@ -245,6 +249,9 @@ public sealed partial class PhotosensitivitySystem : EntitySystem
             illumination = Math.Max(illumination, lightPoint.Comp.Radius - lightPoint.Comp.Energy * dist);
         }
 
+        if (IsInSpace(uid))
+            illumination = Math.Max(illumination, 1.0f);
+
         if (illumination > MaxIllumination)
             illumination = MaxIllumination;
 
@@ -252,5 +259,17 @@ public sealed partial class PhotosensitivitySystem : EntitySystem
             illumination = MinIllumination;
 
         return illumination;
+    }
+
+    public bool IsInSpace(EntityUid uid)
+    {
+        var xform = Transform(uid);
+        var gridUid = xform.GridUid;
+        if (gridUid != null && TryComp<MapGridComponent>(gridUid, out var grid))
+        {
+            return _turf.IsSpace(_map.GetTileRef(gridUid.Value, grid, xform.Coordinates));
+        }
+
+        return true;
     }
 }

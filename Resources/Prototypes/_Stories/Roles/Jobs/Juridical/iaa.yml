@@ -4,12 +4,14 @@
   description: job-description-iaa
   playTimeTracker: STJobIAA
   requirements:
+  - !type:OverallPlaytimeRequirement
+    time: 10h
   - !type:DepartmentTimeRequirement
     department: Command
-    time: 72000
+    time: 5h
   - !type:DepartmentTimeRequirement
     department: Security
-    time: 36000
+    time: 5h
   startingGear: STIAAGear
   icon: "STJobIconIAA"
   supervisors: job-supervisors-centcom

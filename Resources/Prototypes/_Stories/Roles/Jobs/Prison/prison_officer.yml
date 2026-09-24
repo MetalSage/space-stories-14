@@ -3,10 +3,11 @@
   name: stories-job-name-prison-officer
   description: stories-job-description-prison-officer
   playTimeTracker: STJobSpacePrisonOfficer
+  setPreference: false
   requirements:
     - !type:DepartmentTimeRequirement
       department: Security
-      time: 18000 # 5 hours
+      time: 2h
   startingGear: STPRISONOfficerGear
   icon: "STJobIconSpacePrisonOfficer"
   supervisors: stories-job-supervisors-headofprison

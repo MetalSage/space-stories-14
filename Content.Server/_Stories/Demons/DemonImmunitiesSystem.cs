@@ -1,46 +1,26 @@
 using Content.Shared._Stories.Demons;
-using Content.Shared.Damage;
-using Content.Shared.Damage.Components;
-using Content.Shared.Damage.Systems;
-using Content.Shared.Movement.Pulling.Events;
 using Content.Shared.Mobs;
-using Robust.Shared.Physics.Events;
+using Content.Shared.Movement.Pulling.Events;
+using Content.Shared.Standing;
 using Robust.Shared.Timing;
 
 namespace Content.Server._Stories.Demons;
 
 public sealed partial class DemonImmunitiesSystem : EntitySystem
 {
-    [Dependency] private DamageableSystem _damageable = default!;
-    [Dependency] private IGameTiming _timing = default!;
-
     public override void Initialize()
     {
         base.Initialize();
 
-        SubscribeLocalEvent<DemonImmunitiesComponent, StartCollideEvent>(OnStartCollide);
         SubscribeLocalEvent<DemonImmunitiesComponent, PullAttemptEvent>(OnPullAttempt);
         SubscribeLocalEvent<DemonImmunitiesComponent, MobStateChangedEvent>(OnMobStateChanged);
+        SubscribeLocalEvent<DemonImmunitiesComponent, DownAttemptEvent>(OnDownAttempt);
     }
 
-    private void OnStartCollide(Entity<DemonImmunitiesComponent> ent, ref StartCollideEvent args)
+    private void OnDownAttempt(Entity<DemonImmunitiesComponent> ent, ref DownAttemptEvent args)
     {
-        if (!ent.Comp.SmashWalls)
-            return;
-
-        if (ent.Comp.NextSmash > _timing.CurTime)
-            return;
-
-        var other = args.OtherEntity;
-
-        if (!TryComp<DamageableComponent>(other, out var damageable))
-            return;
-
-        if (!Transform(other).Anchored)
-            return;
-
-        ent.Comp.NextSmash = _timing.CurTime + ent.Comp.SmashInterval;
-        _damageable.TryChangeDamage((other, damageable), ent.Comp.SmashDamage, origin: ent);
+        if (ent.Comp.ImmuneToKnockdown)
+            args.Cancel();
     }
 
     private void OnPullAttempt(Entity<DemonImmunitiesComponent> ent, ref PullAttemptEvent args)

@@ -1,7 +1,7 @@
 - type: entity
   id: STProjectileShadowHand
-  name: теневая рука
-  description: Коготь тьмы, летящий к своей цели.
+  name: shadow hand
+  description: A claw of darkness flying towards its target.
   categories: [ HideSpawnMenu ]
   parent: BaseBullet
   components:

@@ -3,10 +3,10 @@
   name: job-name-security
   description: job-description-security
   playTimeTracker: JobSecurityOfficer
-  requirements:
+  requirements: # Stories-PlaytimeRequirements
     - !type:DepartmentTimeRequirement
       department: Security
-      time: 10h
+      time: 2h
   startingGear: SecurityOfficerGear
   icon: "JobIconSecurityOfficer"
   supervisors: job-supervisors-hos

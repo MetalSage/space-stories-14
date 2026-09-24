@@ -3,234 +3,270 @@ using Robust.Shared.Configuration;
 namespace Content.Shared._Stories.SCCVars;
 
 /// <summary>
-/// Stories modules console variables
+/// Консольные переменные модулей Stories.
 /// </summary>
 [CVarDefs]
 // ReSharper disable once InconsistentNaming
 public sealed class SCCVars
 {
-    /// TTS (Text-To-Speech)
+    /*
+     * TTS (Синтез речи)
+     */
+
     /// <summary>
-    /// URL of the TTS server API.
+    /// Включена ли система TTS на сервере.
     /// </summary>
     public static readonly CVarDef<bool> TTSEnabled =
-        CVarDef.Create("tts.enabled", false, CVar.SERVER | CVar.REPLICATED | CVar.ARCHIVE);
+        CVarDef.Create("stories.tts.enabled", false, CVar.SERVER | CVar.REPLICATED | CVar.ARCHIVE);
 
     /// <summary>
-    /// Whether the TTS system is enabled on the client.
+    /// Включена ли система TTS на клиенте.
     /// </summary>
     public static readonly CVarDef<bool> TTSEnabledClient =
-        CVarDef.Create("tts.enabled_client", true, CVar.CLIENTONLY | CVar.ARCHIVE);
+        CVarDef.Create("stories.tts.enabled_client", true, CVar.CLIENTONLY | CVar.ARCHIVE);
 
     /// <summary>
-    /// URL of the TTS server API.
+    /// URL-адрес API сервера TTS.
     /// </summary>
     public static readonly CVarDef<string> TTSApiUrl =
-        CVarDef.Create("tts.api_url", "", CVar.SERVERONLY | CVar.ARCHIVE);
+        CVarDef.Create("stories.tts.api_url", "", CVar.SERVERONLY | CVar.ARCHIVE);
 
     /// <summary>
-    /// Auth token of the TTS server API.
+    /// Токен авторизации API сервера TTS.
     /// </summary>
     public static readonly CVarDef<string> TTSApiToken =
-        CVarDef.Create("tts.api_token", "", CVar.SERVERONLY | CVar.CONFIDENTIAL);
+        CVarDef.Create("stories.tts.api_token", "", CVar.SERVERONLY | CVar.CONFIDENTIAL);
 
     /// <summary>
-    /// Amount of seconds before timeout for API
+    /// Таймаут запросов к API TTS в секундах.
     /// </summary>
     public static readonly CVarDef<int> TTSApiTimeout =
-        CVarDef.Create("tts.api_timeout", 5, CVar.SERVERONLY | CVar.ARCHIVE);
-
+        CVarDef.Create("stories.tts.api_timeout", 5, CVar.SERVERONLY | CVar.ARCHIVE);
 
     /// <summary>
-    /// Master volume setting of TTS sound
+    /// Общая громкость звука TTS (мастер-громкость).
     /// </summary>
     public static readonly CVarDef<float> TTSVolumeMaster =
-        CVarDef.Create("tts.volume_master", 1.0f, CVar.CLIENTONLY | CVar.ARCHIVE);
+        CVarDef.Create("stories.tts.volume_master", 1.0f, CVar.CLIENTONLY | CVar.ARCHIVE);
 
     /// <summary>
-    /// <summary>
-    /// Default volume setting of TTS sound for nearby characters (PVS)
+    /// Стандартная громкость звука TTS для персонажей поблизости (PVS).
     /// </summary>
     public static readonly CVarDef<float> TTSVolumeNearby =
-        CVarDef.Create("tts.volume_nearby", 1.0f, CVar.CLIENTONLY | CVar.ARCHIVE);
+        CVarDef.Create("stories.tts.volume_nearby", 1.0f, CVar.CLIENTONLY | CVar.ARCHIVE);
 
     /// <summary>
-    /// Default volume setting of TTS sound for radio
+    /// Стандартная громкость звука TTS для радио.
     /// </summary>
     public static readonly CVarDef<float> TTSVolumeRadio =
-        CVarDef.Create("tts.volume_radio", 0.5f, CVar.CLIENTONLY | CVar.ARCHIVE);
+        CVarDef.Create("stories.tts.volume_radio", 0.5f, CVar.CLIENTONLY | CVar.ARCHIVE);
 
     /// <summary>
-    /// Default volume setting of TTS sound for others (legacy alias)
+    /// Стандартная громкость звука TTS для остальных.
     /// </summary>
     public static readonly CVarDef<float> TTSVolume =
-        CVarDef.Create("tts.volume", 0f, CVar.CLIENTONLY | CVar.ARCHIVE);
+        CVarDef.Create("stories.tts.volume", 0f, CVar.CLIENTONLY | CVar.ARCHIVE);
 
     /// <summary>
-    /// TTS radio channels volume
+    /// Громкость отдельных радиоканалов TTS.
     /// </summary>
     public static readonly CVarDef<string> TTSRadioVolumes =
-        CVarDef.Create("tts.radio_volumes", "{}", CVar.CLIENTONLY | CVar.ARCHIVE);
+        CVarDef.Create("stories.tts.radio_volumes", "{}", CVar.CLIENTONLY | CVar.ARCHIVE);
 
     /// <summary>
-    /// Default volume setting of TTS sound for announcements
+    /// Стандартная громкость звука TTS для объявлений.
     /// </summary>
     public static readonly CVarDef<float> TTSVolumeAnnounce =
-        CVarDef.Create("tts.volume_announce", 1.0f, CVar.CLIENTONLY | CVar.ARCHIVE);
+        CVarDef.Create("stories.tts.volume_announce", 1.0f, CVar.CLIENTONLY | CVar.ARCHIVE);
 
     /// <summary>
-    /// Default voice prototype for station announcements
+    /// Прототип голоса по умолчанию для станционных объявлений.
     /// </summary>
     public static readonly CVarDef<string> TTSAnnounceVoice =
-        CVarDef.Create("tts.announce_voice", "glados", CVar.SERVERONLY | CVar.ARCHIVE);
+        CVarDef.Create("stories.tts.announce_voice", "glados", CVar.SERVERONLY | CVar.ARCHIVE);
 
     /// <summary>
-    /// Count of in-memory cached tts voice lines.
+    /// Количество кэшируемых в памяти голосовых реплик TTS.
     /// </summary>
     public static readonly CVarDef<int> TTSMaxCache =
-        CVarDef.Create("tts.max_cache", 250, CVar.SERVERONLY | CVar.ARCHIVE);
+        CVarDef.Create("stories.tts.max_cache", 250, CVar.SERVERONLY | CVar.ARCHIVE);
 
     /// <summary>
-    /// Enable a radio effect for TTS messages sent over radio channels.
+    /// Включить радиоэффект для сообщений TTS, передаваемых по каналам радио.
     /// </summary>
     public static readonly CVarDef<bool> TTSRadioEffect =
-        CVarDef.Create("scc.tts.radio_effect_enabled", true, CVar.SERVERONLY);
+        CVarDef.Create("stories.tts.radio_effect_enabled", true, CVar.SERVERONLY);
 
     /// <summary>
-    /// The path to the FFmpeg executable for audio processing.
+    /// Путь к исполняемому файлу FFmpeg для обработки звука.
     /// </summary>
     public static readonly CVarDef<string> TTSFfmpegPath =
-        CVarDef.Create("scc.tts.ffmpeg_path", "", CVar.SERVERONLY);
+        CVarDef.Create("stories.tts.ffmpeg_path", "", CVar.SERVERONLY);
 
+    /// <summary>
+    /// Аргументы командной строки FFmpeg для обработки звука TTS.
+    /// </summary>
     public static readonly CVarDef<string> TTSFfmpegArguments =
-        CVarDef.Create("scc.tts.ffmpeg_arguments",
+        CVarDef.Create("stories.tts.ffmpeg_arguments",
             "-i pipe:0 -f ogg -v quiet -filter_complex \"[0:a]highpass=f=1000,lowpass=f=500[filtered];[filtered]acrusher=level_in=1:level_out=1:bits=4:mix=0.5:mode=log[crushed];[crushed]loudnorm=I=-12:LRA=7\" pipe:1",
             CVar.SERVERONLY);
 
     /// <summary>
-    /// FFmpeg audio filter for standard radio TTS
+    /// FFmpeg аудиофильтр для стандартного радио TTS.
     /// </summary>
     public static readonly CVarDef<string> TTSStandardRadioFfmpegFilter =
-        CVarDef.Create("scc.tts.standard_radio_ffmpeg_filter",
+        CVarDef.Create("stories.tts.standard_radio_ffmpeg_filter",
             "highpass=f=400,lowpass=f=2500,volume=2.0",
             CVar.SERVERONLY);
 
     /// <summary>
-    /// Enable an announce effect for station announcements.
+    /// Включить эффект объявления для станционных оповещений TTS.
     /// </summary>
     public static readonly CVarDef<bool> TTSAnnounceEffect =
-        CVarDef.Create("scc.tts.announce_effect_enabled", true, CVar.SERVERONLY);
+        CVarDef.Create("stories.tts.announce_effect_enabled", true, CVar.SERVERONLY);
 
     /// <summary>
-    /// FFmpeg audio filter for station announcement TTS
+    /// FFmpeg аудиофильтр для станционных объявлений TTS.
     /// </summary>
     public static readonly CVarDef<string> TTSAnnounceFfmpegFilter =
-        CVarDef.Create("scc.tts.announce_ffmpeg_filter",
+        CVarDef.Create("stories.tts.announce_ffmpeg_filter",
             "aecho=0.8:0.88:60:0.4,equalizer=f=1000:width_type=h:width=200:g=3,volume=1.5",
             CVar.SERVERONLY);
 
     /*
-     * Sponsors
+     * Спонсоры
      */
 
     /// <summary>
-    /// URL of the sponsors server API.
+    /// URL-адрес API сервера спонсоров.
     /// </summary>
     public static readonly CVarDef<string> SponsorsApiUrl =
-        CVarDef.Create("sponsor.api_url", "", CVar.SERVERONLY);
+        CVarDef.Create("stories.sponsor.api_url", "", CVar.SERVERONLY);
 
     /*
-     * Queue
+     * Очередь подключения
      */
 
     /// <summary>
-    /// Controls if the connections queue is enabled. If enabled stop kicking new players after `SoftMaxPlayers` cap and
-    /// instead add them to queue.
+    /// Управляет включением очереди подключения. Если включено, перестает кикать новых игроков
+    /// после превышения лимита `SoftMaxPlayers` и добавляет их в очередь.
     /// </summary>
-    public static readonly CVarDef<bool>
-        QueueEnabled = CVarDef.Create("queue.enabled", false, CVar.SERVERONLY);
+    public static readonly CVarDef<bool> QueueEnabled =
+        CVarDef.Create("stories.queue.enabled", false, CVar.SERVERONLY);
 
     /*
-     * Discord Auth
+     * Авторизация через Discord
      */
 
     /// <summary>
-    /// Enabled Discord linking, show linking button and modal window
+    /// Включить привязку Discord, отображение кнопки привязки и модального окна.
     /// </summary>
     public static readonly CVarDef<bool> DiscordAuthEnabled =
-        CVarDef.Create("discord_auth.enabled", false, CVar.SERVERONLY);
+        CVarDef.Create("stories.discord_auth.enabled", false, CVar.SERVERONLY);
 
     /// <summary>
-    /// URL of the Discord auth server API
+    /// URL-адрес API сервера авторизации Discord.
     /// </summary>
     public static readonly CVarDef<string> DiscordAuthApiUrl =
-        CVarDef.Create("discord_auth.api_url", "", CVar.SERVERONLY);
+        CVarDef.Create("stories.discord_auth.api_url", "", CVar.SERVERONLY);
 
     /// <summary>
-    /// Secret key of the Discord auth server API
+    /// Секретный ключ API сервера авторизации Discord.
     /// </summary>
     public static readonly CVarDef<string> DiscordAuthApiKey =
-        CVarDef.Create("discord_auth.api_key", "", CVar.SERVERONLY | CVar.CONFIDENTIAL);
+        CVarDef.Create("stories.discord_auth.api_key", "", CVar.SERVERONLY | CVar.CONFIDENTIAL);
+
+    /*
+     * Управление
+     */
 
     /// <summary>
-    /// Getting up a character after falling
+    /// Автоматический подъем персонажа на ноги после падения.
     /// </summary>
     public static readonly CVarDef<bool> AutoStanding =
-        CVarDef.Create("control.auto_standing", false, CVar.CLIENT | CVar.ARCHIVE | CVar.REPLICATED);
-
-
-    /*
-     * Economy
-     */
-
-    public static readonly CVarDef<float> EconomySalaryFrequency =
-        CVarDef.Create("economy.salary_frequency", 15f, CVar.SERVERONLY | CVar.ARCHIVE);
-
-    public static readonly CVarDef<float> EconomySalaryPercentage =
-        CVarDef.Create("economy.salary_percentage", 0.5f, CVar.SERVERONLY | CVar.ARCHIVE);
-
+        CVarDef.Create("stories.control.auto_standing", false, CVar.CLIENT | CVar.ARCHIVE | CVar.REPLICATED);
 
     /*
-     * NoEorgPopup
+     * Экономика
      */
 
     /// <summary>
-    /// Whether the no EORG popup is enabled.
+    /// Частота начисления зарплаты (в минутах).
+    /// </summary>
+    public static readonly CVarDef<float> EconomySalaryFrequency =
+        CVarDef.Create("stories.economy.salary_frequency", 15f, CVar.SERVERONLY | CVar.ARCHIVE);
+
+    /// <summary>
+    /// Процент начисляемой зарплаты.
+    /// </summary>
+    public static readonly CVarDef<float> EconomySalaryPercentage =
+        CVarDef.Create("stories.economy.salary_percentage", 0.5f, CVar.SERVERONLY | CVar.ARCHIVE);
+
+    /*
+     * Предупреждение о EORG в конце раунда
+     */
+
+    /// <summary>
+    /// Включено ли всплывающее окно с предупреждением о запрете EORG в конце раунда.
     /// </summary>
     public static readonly CVarDef<bool> RoundEndNoEorgPopup =
-        CVarDef.Create("game.round_end_eorg_popup_enabled", true, CVar.SERVER | CVar.REPLICATED);
+        CVarDef.Create("stories.round_end.eorg_popup_enabled", true, CVar.SERVER | CVar.REPLICATED);
 
     /// <summary>
-    /// Skip the no EORG popup.
+    /// Пропускать ли всплывающее окно о EORG в конце раунда (настройка клиента).
     /// </summary>
     public static readonly CVarDef<bool> SkipRoundEndNoEorgPopup =
-        CVarDef.Create("game.skip_round_end_eorg_popup", false, CVar.CLIENTONLY | CVar.ARCHIVE);
+        CVarDef.Create("stories.round_end.eorg_popup_skip", false, CVar.CLIENTONLY | CVar.ARCHIVE);
 
     /// <summary>
-    /// How long to display the EORG popup for.
+    /// Время отображения всплывающего окна о EORG в конце раунда (в секундах).
     /// </summary>
     public static readonly CVarDef<float> RoundEndNoEorgPopupTime =
-        CVarDef.Create("game.round_end_eorg_popup_time", 5f, CVar.SERVER | CVar.REPLICATED);
-
+        CVarDef.Create("stories.round_end.eorg_popup_time", 5f, CVar.SERVER | CVar.REPLICATED);
 
     /*
-     * Shadowling
+     * Тенеморф
      */
 
     /// <summary>
-    /// Bypass mind requirement for shadowling enthrall.
+    /// Игнорировать требование наличия разума для подчинения тенеморфом.
     /// </summary>
     public static readonly CVarDef<bool> EnthrallWithoutMind =
-        CVarDef.Create("stories.enthrall_without_mind", false, CVar.SERVERONLY);
-
+        CVarDef.Create("stories.shadowling.enthrall_without_mind", false, CVar.SERVERONLY);
 
     /*
-     * Space Prison (КТ)
+     * Космическая тюрьма (КТ)
      */
 
     /// <summary>
-    /// Controls whether the Space Prison station is enabled and allowed to spawn.
+    /// Включена ли станция Космической тюрьмы и разрешено ли ее появление.
     /// </summary>
     public static readonly CVarDef<bool> PrisonEnabled =
-        CVarDef.Create("scc.prison_enabled", true, CVar.SERVERONLY | CVar.ARCHIVE);
+        CVarDef.Create("stories.prison.enabled", false, CVar.SERVERONLY | CVar.ARCHIVE);
+
+    /*
+     * Спонсоры
+     */
+
+    /// <summary>
+    /// Выбранный спонсорский скин призрака.
+    /// </summary>
+    public static readonly CVarDef<string> SelectedGhostSkin =
+        CVarDef.Create("stories.sponsor.ghost_skin", "", CVar.CLIENTONLY | CVar.ARCHIVE);
+
+    /*
+     * Голосование
+     */
+
+    /// <summary>
+    /// Включает сохранение голосов для невыбранных карт между голосованиями.
+    /// </summary>
+    public static readonly CVarDef<bool> VoteMapCarryover =
+        CVarDef.Create("stories.vote_map_carryover", true, CVar.SERVERONLY | CVar.ARCHIVE);
+
+    /// <summary>
+    /// Включает сохранение голосов для невыбранных режимов игры между голосованиями.
+    /// </summary>
+    public static readonly CVarDef<bool> VotePresetCarryover =
+        CVarDef.Create("stories.vote_preset_carryover", true, CVar.SERVERONLY | CVar.ARCHIVE);
 }

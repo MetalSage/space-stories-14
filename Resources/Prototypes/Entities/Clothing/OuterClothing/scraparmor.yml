@@ -78,6 +78,10 @@
         Radiation: 0.8 #Hey, it's a bunch of solid steel.
   - type: ExplosionResistance
     damageCoefficient: 0.80
+  # Stories-StaminaResistance-Start
+  - type: StaminaResistance
+    damageCoefficient: 0.75
+  # Stories-StaminaResistance-End
   - type: ClothingSpeedModifier #But that protection comes at a price.
     walkModifier: 0.6
     sprintModifier: 0.6

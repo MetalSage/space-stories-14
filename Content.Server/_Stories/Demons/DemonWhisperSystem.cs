@@ -17,6 +17,7 @@ public sealed partial class DemonWhisperSystem : EntitySystem
     [Dependency] private QuickDialogSystem _quickDialog = default!;
     [Dependency] private SharedTransformSystem _transform = default!;
     [Dependency] private IAdminLogManager _adminLogger = default!;
+    [Dependency] private ShadowGrappleSystem _shadowGrapple = default!;
 
     public override void Initialize()
     {
@@ -82,5 +83,9 @@ public sealed partial class DemonWhisperSystem : EntitySystem
 
         _popup.PopupEntity(Loc.GetString("demon-whisper-sent", ("target", target)), ent, ent);
         _popup.PopupEntity(Loc.GetString("demon-whisper-received", ("message", trimmed)), target, target);
+
+        var targetCoords = _transform.GetMoverCoordinates(target);
+        _shadowGrapple.ExtinguishNearby(targetCoords, 6f);
+        _shadowGrapple.BreakLightsNearby(targetCoords, 4f);
     }
 }

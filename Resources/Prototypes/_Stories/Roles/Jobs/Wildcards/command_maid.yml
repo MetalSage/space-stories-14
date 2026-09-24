@@ -6,7 +6,7 @@
   requirements:
   - !type:RoleTimeRequirement
     role: JobJanitor
-    time: 3600 #1 hr
+    time: 1h
   startingGear: STCommandMaidGear
   icon: "STJobIconCommandMaid"
   supervisors: job-supervisors-captain

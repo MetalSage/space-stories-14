@@ -133,7 +133,7 @@ public sealed partial class PrisonSystem : EntitySystem
     {
         if (!_cfg.GetCVar(SCCVars.PrisonEnabled))
         {
-            _sawmill.Info("Space prison is disabled by CVar (scc.prison_enabled = false). Skipping prison loading.");
+            _sawmill.Info("Space prison is disabled by CVar (stories.prison.enabled = false). Skipping prison loading.");
             return;
         }
 

@@ -4,7 +4,7 @@
 
 - type: storeCategory
   id: STForceDark
-  name: Темная сторона
+  name: Dark Side
 
 - type: storeCategory
   id: STForceLight

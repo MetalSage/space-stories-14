@@ -1,7 +1,7 @@
 - type: listing
   id: STActionForceLookUp
-  name: Прислушаться к силе
-  description: Позволяет обнаружить других пользователей силы в радиусе 25 метров.
+  name: Sense Force
+  description: Allows you to detect other force users within a 25-meter radius.
   productAction: STActionForceLookUp
   cost:
     STSkillPoint: 1
@@ -13,8 +13,8 @@
 
 - type: listing
   id: STActionForceKnock
-  name: Стук
-  description: Особая техника позволяющая открыть все ближайшие двери. По слухам, именно космическая федерация магов подала первый патент на это заклинание.
+  name: Knock
+  description: A special technique allowing you to open all nearby doors. Rumor has it the Space Wizard Federation filed the original patent for this spell.
   productAction: STActionForceKnock
   cost:
     STSkillPoint: 1
@@ -26,8 +26,8 @@
 
 - type: listing
   id: STActionRecallEquipments
-  name: Призвать экипировку
-  description: Призовите вашу экипировку к себе. Если она не сможет настигнуть вас, то телепортируется к вам.
+  name: Recall Equipment
+  description: Call your equipment to yourself. If it cannot reach you, it teleports to you.
   productAction: STActionRecallEquipments
   cost:
     STSkillPoint: 2
@@ -39,8 +39,8 @@
 
 - type: listing
   id: STActionRecallLightsaber
-  name: Призвать световой меч
-  description: Призовите ваш световой меч к себе. Если он не сможет настигнуть вас, то телепортируется к вам.
+  name: Recall Lightsaber
+  description: Call your lightsaber to yourself. If it cannot reach you, it teleports to you.
   productAction: STActionRecallLightsaber
   cost:
     STSkillPoint: 2
@@ -52,8 +52,8 @@
 
 - type: listing
   id: STActionTelekinesis
-  name: Телекинез
-  description: Ваша рука сможет манипулировать гравитацией вокруг объектов. Левитируйте своим мечом, чтобы вести бой на расстоянии. Другие пользователи силы уворачиваются от этого.
+  name: Telekinesis
+  description: Your hand manipulates gravity around objects. Levitate your blade to fight at range. Other force users will dodge this.
   productAction: STActionTelekinesis
   cost:
     STSkillPoint: 3
@@ -65,8 +65,8 @@
 
 - type: listing
   id: STActionFlashArea
-  name: Ослепление Силы
-  description: Cоздайте при помощи телекинеза вспышки энергии, вызывая временную слепоту. Может ослепить вас.
+  name: Force Flash
+  description: Create flashes of energy using telekinesis, causing temporary blindness. May blind you.
   productAction: STActionFlashArea
   cost:
     STSkillPoint: 1
@@ -78,8 +78,8 @@
 
 - type: listing
   id: STActionArtOfMovement
-  name: Искусство движения
-  description: Ускоряет вас, блокирует вашу боль на короткое время.
+  name: Art of Movement
+  description: Hastens you and blocks your pain for a short time.
   productAction: STActionArtOfMovement
   cost:
     STSkillPoint: 3
@@ -91,8 +91,8 @@
 
 - type: listing
   id: STActionEmp
-  name: Ионизация
-  description: Создайте ЭМ импульс в небольшом радиусе.
+  name: Ionize
+  description: Creates an EMP pulse in a small radius.
   productAction: STActionEmp
   cost:
     STSkillPoint: 1
@@ -104,8 +104,8 @@
 
 - type: listing
   id: STActionFreedom
-  name: Снятие оков
-  description: Снимите наручники с помощью телекинеза.
+  name: Break Restraints
+  description: Remove handcuffs using telekinesis.
   productAction: STActionFreedom
   cost:
     STSkillPoint: 1
@@ -117,8 +117,8 @@
 
 - type: listing
   id: STActionForceDash
-  name: Силовой рывок
-  description: Вскочите с огромной скоростью в нужную точку. Только не стену, пожалуйста.
+  name: Force Dash
+  description: Dash with immense speed to a target point. Just not into a wall, please.
   productAction: STActionForceDash
   cost:
     STSkillPoint: 3

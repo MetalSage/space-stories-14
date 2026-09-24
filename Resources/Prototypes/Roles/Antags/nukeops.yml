@@ -4,9 +4,9 @@
   antagonist: true
   setPreference: true
   objective: roles-antag-nuclear-operative-objective
-  requirements:
+  requirements: # Stories-PlaytimeRequirements
   - !type:OverallPlaytimeRequirement
-    time: 10h
+    time: 5h
   guides: [ NuclearOperatives ]
 
 - type: antag
@@ -15,12 +15,12 @@
   antagonist: true
   setPreference: true
   objective: roles-antag-nuclear-operative-agent-objective
-  requirements:
+  requirements: # Stories-PlaytimeRequirements
   - !type:OverallPlaytimeRequirement
-    time: 15h
+    time: 10h
   - !type:RoleTimeRequirement
     role: JobChemist
-    time: 10h
+    time: 5h
   guides: [ NuclearOperatives ]
 
 - type: antag
@@ -29,12 +29,9 @@
   antagonist: true
   setPreference: true
   objective: roles-antag-nuclear-operative-commander-objective
-  requirements:
+  requirements: # Stories-PlaytimeRequirements
   - !type:OverallPlaytimeRequirement
-    time: 10h
-  - !type:DepartmentTimeRequirement
-    department: Security
-    time: 10h
+    time: 15h
   # should be changed to nukie playtime when thats tracked (wyci)
   guides: [ NuclearOperatives ]
 

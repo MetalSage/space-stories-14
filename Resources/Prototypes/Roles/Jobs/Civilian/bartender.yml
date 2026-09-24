@@ -3,10 +3,9 @@
   name: job-name-bartender
   description: job-description-bartender
   playTimeTracker: JobBartender
-  requirements:
-    - !type:DepartmentTimeRequirement
-      department: Civilian
-      time: 2h
+  requirements: # Stories-PlaytimeRequirements
+    - !type:OverallPlaytimeRequirement
+      time: 1h
   startingGear: BartenderGear
   icon: "JobIconBartender"
   supervisors: job-supervisors-hop
@@ -38,4 +37,3 @@
     neck: ClothingNeckScarfStripedBlack
     outerClothing: ClothingOuterArmorBasicSlim
     gloves: ClothingHandsGlovesColorBlack
-

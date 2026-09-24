@@ -1,7 +1,7 @@
 - type: listing
   id: STActionInquisitorGhost
-  name: Теневой призрак
-  description: Станьте призраком и проходите сквозь стены. В таком состоянии вы не можете воздействовать на мир, но всегда можете вернуться.
+  name: Shadow Phantom
+  description: Become a ghost and pass through walls. In this state you cannot affect the world, but you can always return.
   productAction: STActionInquisitorGhost
   cost:
     STSkillPoint: 5
@@ -39,8 +39,8 @@
 
 - type: listing
   id: STActionFrozeBullets
-  name: Замедление силы
-  description: Используйте телекинез, чтобы останавливать пули вокруг вас на протяжении 10 секунд.
+  name: Force Slow
+  description: Use telekinesis to freeze bullets around you for 10 seconds.
   productAction: STActionFrozeBullets
   cost:
     STSkillPoint: 3
@@ -52,8 +52,8 @@
 
 - type: listing
   id: STActionRecliningPulse
-  name: Оттолкнуть
-  description: Оттолкните всех вокруг вас.
+  name: Repulse
+  description: Push away everyone around you.
   productAction: STActionRecliningPulse
   cost:
     STSkillPoint: 3
@@ -65,8 +65,8 @@
 
 - type: listing
   id: STActionHypnosis
-  name: Гипноз силы
-  description: Обращает жертву на сторону Императора.
+  name: Force Hypnosis
+  description: Converts the victim to the Emperor's side.
   productAction: STActionHypnosis
   cost:
     STSkillPoint: 0
@@ -78,8 +78,8 @@
 
 - type: listing
   id: STActionIgniteTarget
-  name: Пирокинез
-  description: Вызывает легкое выгорание у врага.
+  name: Pyrokinesis
+  description: Causes mild burn on the enemy.
   productAction: STActionIgniteTarget
   cost:
     STSkillPoint: 3
@@ -91,8 +91,8 @@
 
 - type: listing
   id: STActionLightningStrike
-  name: Молнии силы
-  description: Направьте молнию из ваших рук в вашего врага.
+  name: Force Lightning
+  description: Channel lightning from your hands into your enemy.
   productAction: STActionLightningStrike
   cost:
     STSkillPoint: 3
@@ -104,8 +104,8 @@
 
 - type: listing
   id: STActionStrangle
-  name: Удушение силой
-  description: Удушающий прием техники бесконтактного боя.
+  name: Force Choke
+  description: A suffocating technique of touchless combat.
   productAction: STActionStrangle
   cost:
     STSkillPoint: 3
@@ -117,8 +117,8 @@
 
 - type: listing
   id: STActionLifeSteal
-  name: Кража жизни
-  description: Иссушает жертву, восстанавливая вас.
+  name: Life Drain
+  description: Drains the victim, healing you.
   productAction: STActionLifeSteal
   cost:
     STSkillPoint: 2

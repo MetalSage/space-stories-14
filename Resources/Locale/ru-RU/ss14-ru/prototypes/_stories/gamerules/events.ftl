@@ -10,3 +10,7 @@ ent-STJobDistributionError = { ent-BaseGameRule }
     .desc = { ent-BaseGameRule.desc }
 ent-STCorpiumSpawn = { ent-BaseStationEventShortDelay }
     .desc = { ent-BaseStationEventShortDelay.desc }
+ent-STSlaughterDemonSpawn = { ent-BaseAntagGhostRoleRule }
+    .desc = { ent-BaseAntagGhostRoleRule.desc }
+ent-STShadowDemonSpawn = { ent-BaseAntagGhostRoleRule }
+    .desc = { ent-BaseAntagGhostRoleRule.desc }

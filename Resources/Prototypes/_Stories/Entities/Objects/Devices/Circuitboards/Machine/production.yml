@@ -1,8 +1,8 @@
-﻿- type: entity
+- type: entity
   id: STPrinterDocMachineCircuitboard
   parent: BaseMachineCircuitboard
-  name: бумажный принтер (машинная плата)
-  description: Печатна плата для бумажного принтера.
+  name: paper printer machine board
+  description: A printed circuit board for a paper printer.
   components:
   - type: MachineBoard
     prototype: STPrinterDoc

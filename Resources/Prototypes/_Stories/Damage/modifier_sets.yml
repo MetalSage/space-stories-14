@@ -50,3 +50,27 @@
     Cold: 0.5
     Heat: 0.5
     Shock: 1.2
+
+- type: damageModifierSet
+  id: STSlaughterDemonDamageModifierSet
+  coefficients:
+    Blunt: 0.6
+    Slash: 0.6
+    Piercing: 0.6
+    Heat: 1.0
+    Shock: 1.0
+    Cold: 1.0
+    Caustic: 1.0
+    Asphyxiation: 0.0
+
+- type: damageModifierSet
+  id: STShadowDemonDamageModifierSet
+  coefficients:
+    Blunt: 0.75
+    Slash: 0.75
+    Piercing: 0.75
+    Heat: 1.5
+    Shock: 1.5
+    Cold: 0.0
+    Asphyxiation: 0.0
+

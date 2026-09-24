@@ -23,6 +23,7 @@ namespace Content.Client.Lobby.UI
 
             LeaveButton.OnPressed += _ => _consoleHost.ExecuteCommand("disconnect");
             OptionsButton.OnPressed += _ => UserInterfaceManager.GetUIController<OptionsUIController>().ToggleWindow();
+            SupportButton.OnPressed += _ => new Content.Client._Stories.Lobby.UI.SponsorPerksWindow().OpenCentered(); // Stories-Sponsors
 
             CollapseButton.OnPressed += _ => TogglePanel(false);
             ExpandButton.OnPressed += _ => TogglePanel(true);

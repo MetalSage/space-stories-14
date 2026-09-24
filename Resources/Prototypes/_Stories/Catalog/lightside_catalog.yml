@@ -1,7 +1,7 @@
 - type: listing
   id: STActionHealingTouch
-  name: Целебное прикосновение
-  description: Излечивает легкие травмы. Можно использовать на себе.
+  name: Healing Touch
+  description: Heals minor injuries. Can be used on yourself.
   productAction: STActionHealingTouch
   cost:
     STSkillPoint: 2
@@ -14,7 +14,7 @@
 - type: listing
   id: STActionCreateProtectiveBubble
   name: Protective Bubble
-  description: Защитит вас от взрывов, давления, высоких и низких температур, пуль, ударов, лазеров. Он восстанавливается, используя вашу силу, и выдерживает 100 урона.
+  description: Protects you from explosions, pressure, extreme temperatures, bullets, blunt impacts, and lasers. Regenerates using your force and withstands 100 damage.
   productAction: STActionCreateProtectiveBubble
   cost:
     STSkillPoint: 5
@@ -26,8 +26,8 @@
 
 - type: listing
   id: STActionGuardianForceWall
-  name: Барьер Силы
-  description: Создайте нерушимый барьер 3x1 в направлении вашего взгляда, который остановит ваших врагов. Вы можете проходить сквозь свой барьер.
+  name: Force Barrier
+  description: Creates an unbreakable 3x1 barrier in your facing direction that stops enemies. You can pass through your own barrier.
   productAction: STActionGuardianForceWall
   cost:
     STSkillPoint: 3
@@ -39,8 +39,8 @@
 
 - type: listing
   id: STActionHibernationTrance
-  name: Гибернационный транс
-  description: Вы излечите множество своих ранений, восстановите жажду и голод, остановите кровотечение, но будете спать на протяжении 2 минут. Вы можете войти в транс даже в критическом состоянии.
+  name: Hibernation Trance
+  description: Heals many of your wounds, restores thirst and hunger, stops bleeding, but you will sleep for 2 minutes. You can enter trance even in critical condition.
   productAction: STActionHibernationTrance
   cost:
     STSkillPoint: 3
@@ -52,8 +52,8 @@
 
 - type: listing
   id: STActionPushBall
-  name: Силовой толчок
-  description: Создайте сильный толчок, который может сбить человека с ног. Полностью ослабевает, пролетев 4 тайла.
+  name: Force Push
+  description: Creates a strong push that can knock someone off their feet. Fully dissipates after traveling 4 tiles.
   productAction: STActionPushBall
   cost:
     STSkillPoint: 3

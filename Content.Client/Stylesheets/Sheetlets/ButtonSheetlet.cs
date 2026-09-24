@@ -46,6 +46,8 @@ public sealed class ButtonSheetlet<T> : Sheetlet<T> where T : PalettedStylesheet
                 .ParentOf(E<Label>())
                 .Font(sheet.BaseFont.GetFont(8)),
             CButton().Class(StyleClass.ButtonBig).ParentOf(E<Label>()).Font(sheet.BaseFont.GetFont(16)),
+            CButton().Class(StyleNano.StyleClassButtonBigOrange).ParentOf(E<Label>()).Font(sheet.BaseFont.GetFont(16)),
+            E<Button>().Class(StyleNano.StyleClassButtonBigOrange).ParentOf(E<Label>()).Font(sheet.BaseFont.GetFont(16)),
 
             // Cross Button (Red)
             E<TextureButton>()
@@ -79,6 +81,24 @@ public sealed class ButtonSheetlet<T> : Sheetlet<T> where T : PalettedStylesheet
         MakeButtonRules(rules, buttonCfg.ButtonPalette, null);
         MakeButtonRules(rules, buttonCfg.PositiveButtonPalette, StyleClass.Positive);
         MakeButtonRules(rules, buttonCfg.NegativeButtonPalette, StyleClass.Negative);
+
+        var orangePalette = new ColorPalette(
+            Base: StyleNano.ButtonColorOrangeDefault,
+            LightnessShift: 0.06f,
+            ChromaShift: 0.0f,
+            Element: StyleNano.ButtonColorOrangeDefault,
+            HoveredElement: StyleNano.ButtonColorOrangeHovered,
+            PressedElement: StyleNano.ButtonColorOrangePressed,
+            DisabledElement: StyleNano.ButtonColorOrangeDisabled,
+            Background: StyleNano.ButtonColorOrangeDefault,
+            BackgroundLight: StyleNano.ButtonColorOrangeHovered,
+            BackgroundDark: StyleNano.ButtonColorOrangeDisabled,
+            Text: Color.White,
+            TextDark: Color.LightGray
+        );
+        MakeButtonRules(rules, orangePalette, StyleNano.StyleClassButtonColorOrange);
+        MakeButtonRules(rules, orangePalette, StyleNano.StyleClassButtonBigOrange);
+        MakeButtonRules(rules, orangePalette, "orange");
 
         return rules.ToArray();
     }
@@ -116,6 +136,22 @@ public sealed class ButtonSheetlet<T> : Sheetlet<T> where T : PalettedStylesheet
                 .PseudoPressed()
                 .Prop(Control.StylePropertyModulateSelf, palette.PressedElement),
             CButton()
+                .MaybeClass(styleclass)
+                .PseudoDisabled()
+                .Prop(Control.StylePropertyModulateSelf, palette.DisabledElement),
+            E<Button>()
+                .MaybeClass(styleclass)
+                .PseudoNormal()
+                .Prop(Control.StylePropertyModulateSelf, palette.Element),
+            E<Button>()
+                .MaybeClass(styleclass)
+                .PseudoHovered()
+                .Prop(Control.StylePropertyModulateSelf, palette.HoveredElement),
+            E<Button>()
+                .MaybeClass(styleclass)
+                .PseudoPressed()
+                .Prop(Control.StylePropertyModulateSelf, palette.PressedElement),
+            E<Button>()
                 .MaybeClass(styleclass)
                 .PseudoDisabled()
                 .Prop(Control.StylePropertyModulateSelf, palette.DisabledElement),

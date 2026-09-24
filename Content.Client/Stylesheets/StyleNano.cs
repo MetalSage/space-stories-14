@@ -83,6 +83,8 @@ namespace Content.Client.Stylesheets
         public const string StyleClassLabelBig = "LabelBig";
         public const string StyleClassLabelSmall = "LabelSmall";
         public const string StyleClassButtonBig = "ButtonBig";
+        public const string StyleClassButtonColorOrange = "ButtonColorOrange"; // Stories-Sponsors
+        public const string StyleClassButtonBigOrange = "ButtonBigOrange"; // Stories-Sponsors
 
         public const string StyleClassPopupMessageSmall = "PopupMessageSmall";
         public const string StyleClassPopupMessageSmallCaution = "PopupMessageSmallCaution";
@@ -114,6 +116,13 @@ namespace Content.Client.Stylesheets
         public static readonly Color ButtonColorGoodDefault = Color.FromHex("#3E6C45");
         public static readonly Color ButtonColorGoodHovered = Color.FromHex("#31843E");
         public static readonly Color ButtonColorGoodDisabled = Color.FromHex("#164420");
+
+        // Stories-Sponsors-Start
+        public static readonly Color ButtonColorOrangeDefault = Color.FromHex("#e77719");
+        public static readonly Color ButtonColorOrangeHovered = Color.FromHex("#eb8129");
+        public static readonly Color ButtonColorOrangePressed = Color.FromHex("#ec8c3c");
+        public static readonly Color ButtonColorOrangeDisabled = Color.FromHex("#c76512");
+        // Stories-Sponsors-End
 
         //NavMap
         public static readonly Color PointRed = Color.FromHex("#B02E26");
@@ -1126,6 +1135,16 @@ namespace Content.Client.Stylesheets
                         new StyleProperty("font", notoSans16)
                     }),
 
+                // Stories-Sponsors-Start
+                new StyleRule(new SelectorChild(
+                    new SelectorElement(typeof(Button), new[] {StyleClassButtonBigOrange}, null, null),
+                    new SelectorElement(typeof(Label), null, null, null)),
+                    new[]
+                    {
+                        new StyleProperty("font", notoSans16)
+                    }),
+                // Stories-Sponsors-End
+
                 //APC and SMES power state label colors
                 new StyleRule(new SelectorElement(typeof(Label), new[] {StyleClassPowerStateNone}, null, null), new[]
                 {
@@ -1633,6 +1652,39 @@ namespace Content.Client.Stylesheets
                 // Silicon law edit ui
                 Element<Label>().Class(SiliconLawContainer.StyleClassSiliconLawPositionLabel)
                     .Prop(Label.StylePropertyFontColor, NanoGold),
+
+                // Stories-Sponsors-Start
+                Element<Button>().Class("ButtonColorOrange")
+                    .Prop(Control.StylePropertyModulateSelf, ButtonColorOrangeDefault),
+
+                Element<Button>().Class("ButtonColorOrange").Pseudo(ContainerButton.StylePseudoClassNormal)
+                    .Prop(Control.StylePropertyModulateSelf, ButtonColorOrangeDefault),
+
+                Element<Button>().Class("ButtonColorOrange").Pseudo(ContainerButton.StylePseudoClassHover)
+                    .Prop(Control.StylePropertyModulateSelf, ButtonColorOrangeHovered),
+
+                Element<Button>().Class("ButtonColorOrange").Pseudo(ContainerButton.StylePseudoClassPressed)
+                    .Prop(Control.StylePropertyModulateSelf, ButtonColorOrangePressed),
+
+                Element<Button>().Class("ButtonColorOrange").Pseudo(ContainerButton.StylePseudoClassDisabled)
+                    .Prop(Control.StylePropertyModulateSelf, ButtonColorOrangeDisabled),
+
+                Element<ContainerButton>().Class(ContainerButton.StyleClassButton).Class(StyleClassButtonBigOrange)
+                    .Pseudo(ContainerButton.StylePseudoClassNormal)
+                    .Prop(Control.StylePropertyModulateSelf, ButtonColorOrangeDefault),
+
+                Element<ContainerButton>().Class(ContainerButton.StyleClassButton).Class(StyleClassButtonBigOrange)
+                    .Pseudo(ContainerButton.StylePseudoClassHover)
+                    .Prop(Control.StylePropertyModulateSelf, ButtonColorOrangeHovered),
+
+                Element<ContainerButton>().Class(ContainerButton.StyleClassButton).Class(StyleClassButtonBigOrange)
+                    .Pseudo(ContainerButton.StylePseudoClassPressed)
+                    .Prop(Control.StylePropertyModulateSelf, ButtonColorOrangePressed),
+
+                Element<ContainerButton>().Class(ContainerButton.StyleClassButton).Class(StyleClassButtonBigOrange)
+                    .Pseudo(ContainerButton.StylePseudoClassDisabled)
+                    .Prop(Control.StylePropertyModulateSelf, ButtonColorOrangeDisabled),
+                // Stories-Sponsors-End
             }).ToList());
         }
     }
