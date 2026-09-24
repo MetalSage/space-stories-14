@@ -954,6 +954,15 @@
   name: Polly the parrot
   description: An expert in quantum cracker theory.
   components:
+  - type: Language # Stories-Language
+    currentLanguage: GalacticCommon
+    defaultLanguage: GalacticCommon
+    spokenLanguages:
+    - GalacticCommon
+    - Avalese
+    understoodLanguages:
+    - GalacticCommon
+    - Avalese
   - type: Vocalizer
     maxVocalizeInterval: 240 # polly is chattier
   - type: RadioVocalizer
