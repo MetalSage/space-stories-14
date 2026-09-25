@@ -212,6 +212,8 @@
   id: DragonSpawn
   components:
   - type: StationEvent
+    category: MajorAntag
+    maxOccurrences: 1
     weight: 6.5
     earliestStart: 40
     reoccurrenceDelay: 20
@@ -240,6 +242,8 @@
   id: NinjaSpawn
   components:
   - type: StationEvent
+    category: MajorAntag
+    maxOccurrences: 1
     weight: 6
     duration: null
     occursDuringRoundEnd: false
@@ -269,6 +273,8 @@
   id: ParadoxCloneSpawn
   components:
   - type: StationEvent
+    category: MajorAntag
+    maxOccurrences: 1
     weight: 5
     duration: null
     occursDuringRoundEnd: false
@@ -297,6 +303,8 @@
   id: RevenantSpawn
   components:
   - type: StationEvent
+    category: MajorAntag
+    maxOccurrences: 1
     weight: 7.5
     duration: 1
     occursDuringRoundEnd: false
@@ -310,6 +318,8 @@
   id: WizardSpawn
   components:
   - type: StationEvent
+    category: MajorAntag
+    maxOccurrences: 1
     weight: 1 # rare
     duration: null
     occursDuringRoundEnd: false
@@ -528,6 +538,8 @@
   id: LoneOpsSpawn
   components:
   - type: StationEvent
+    category: MajorAntag
+    maxOccurrences: 1
     earliestStart: 35
     weight: 5.5
     minimumPlayers: 20
@@ -550,6 +562,7 @@
   id: SleeperAgents
   components:
   - type: StationEvent
+    category: MajorAntag
     earliestStart: 30
     weight: 8
     minimumPlayers: 15

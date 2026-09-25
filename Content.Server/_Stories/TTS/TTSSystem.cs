@@ -16,8 +16,11 @@ using Content.Shared.Implants;
 using Content.Shared.Inventory;
 using Content.Shared.Mind;
 using Content.Shared.Mind.Components;
+using Content.Shared.Ghost.Components;
+using Content.Shared.Mobs.Systems;
 using Robust.Shared.Configuration;
 using Robust.Shared.Containers;
+using Robust.Shared.Enums;
 using Robust.Shared.Network;
 using Robust.Shared.Player;
 using Robust.Shared.Prototypes;
@@ -35,6 +38,7 @@ public sealed partial class TTSSystem : EntitySystem
     [Dependency] private SharedContainerSystem _container = default!;
     [Dependency] private InventorySystem _inventory = default!;
     [Dependency] private LanguageSystem _language = default!;
+    [Dependency] private MobStateSystem _mobState = default!;
     [Dependency] private IPrototypeManager _proto = default!;
     [Dependency] private IRobustRandom _random = default!;
     [Dependency] private SponsorsManager _sponsors = default!;
@@ -343,12 +347,30 @@ public sealed partial class TTSSystem : EntitySystem
 
         soundData = await _ttsAudio.ApplyPlaybackEffects(soundData, audioEffects);
 
+        var finalFilter = Filter.Empty();
+        foreach (var session in filter.Recipients)
+        {
+            if (session.Status != SessionStatus.InGame)
+                continue;
+
+            if (session.AttachedEntity is { } attached)
+            {
+                if (!HasComp<GhostComponent>(attached) && _mobState.IsDead(attached))
+                    continue;
+            }
+
+            finalFilter.AddPlayer(session);
+        }
+
+        if (finalFilter.Count == 0)
+            return;
+
         var ev = new PlayTTSEvent(
             soundData,
             text,
             isRadio: isRadio,
             isAnnounce: isAnnounce);
-        RaiseNetworkEvent(ev, filter);
+        RaiseNetworkEvent(ev, finalFilter);
     }
 
     private void SplitListenersByComprehension(

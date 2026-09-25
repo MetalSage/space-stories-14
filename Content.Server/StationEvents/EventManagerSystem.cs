@@ -26,6 +26,11 @@ public sealed partial class EventManagerSystem : EntitySystem
 
     public Dictionary<EntityPrototype, StationEventComponent>? AllEventCache;
 
+    // Stories-Antag-Start
+    private int _majorAntagsMax;
+    private float _majorAntagCooldown;
+    // Stories-Antag-End
+
     public override void Initialize()
     {
         base.Initialize();
@@ -33,6 +38,10 @@ public sealed partial class EventManagerSystem : EntitySystem
         SubscribeLocalEvent<PrototypesReloadedEventArgs>(OnPrototypesReloaded);
 
         Subs.CVar(_configurationManager, CCVars.EventsEnabled, SetEnabled, true);
+        // Stories-Antag-Start
+        Subs.CVar(_configurationManager, CCVars.EventsMajorAntagsMax, value => _majorAntagsMax = value, true);
+        Subs.CVar(_configurationManager, CCVars.EventsMajorAntagCooldown, value => _majorAntagCooldown = value, true);
+        // Stories-Antag-End
     }
 
     private void OnPrototypesReloaded(PrototypesReloadedEventArgs args)
@@ -315,10 +324,79 @@ public sealed partial class EventManagerSystem : EntitySystem
         return TimeSpan.Zero;
     }
 
+    // Stories-Antag-Start
+    public bool IsAnyEventOfCategoryActive(StationEventCategory category)
+    {
+        foreach (var ruleEntity in GameTicker.GetActiveGameRules())
+        {
+            if (TryComp<StationEventComponent>(ruleEntity, out var stationEvent) && stationEvent.Category == category)
+                return true;
+        }
+
+        return false;
+    }
+
+    public int GetOccurrencesOfCategory(StationEventCategory category)
+    {
+        var count = 0;
+        var allEvents = AllEvents();
+        foreach (var (_, ruleId) in GameTicker.AllPreviousGameRules)
+        {
+            var cleanId = ruleId.EndsWith(" (Pending)") ? ruleId[..^10] : ruleId;
+            foreach (var (proto, stationEvent) in allEvents)
+            {
+                if (proto.ID == cleanId && stationEvent.Category == category)
+                {
+                    count++;
+                    break;
+                }
+            }
+        }
+
+        return count;
+    }
+
+    public TimeSpan TimeSinceLastEventOfCategory(StationEventCategory category)
+    {
+        var allEvents = AllEvents();
+        foreach (var (time, ruleId) in GameTicker.AllPreviousGameRules.Reverse())
+        {
+            var cleanId = ruleId.EndsWith(" (Pending)") ? ruleId[..^10] : ruleId;
+            foreach (var (proto, stationEvent) in allEvents)
+            {
+                if (proto.ID == cleanId && stationEvent.Category == category)
+                {
+                    return time;
+                }
+            }
+        }
+
+        return TimeSpan.Zero;
+    }
+    // Stories-Antag-End
+
     private bool CanRun(EntityPrototype prototype, StationEventComponent stationEvent, int playerCount, TimeSpan currentTime)
     {
         if (GameTicker.IsGameRuleActive(prototype.ID))
             return false;
+
+        // Stories-Antag-Start
+        if (stationEvent.Category == StationEventCategory.MajorAntag)
+        {
+            if (IsAnyEventOfCategoryActive(StationEventCategory.MajorAntag))
+                return false;
+
+            if (_majorAntagsMax >= 0 && GetOccurrencesOfCategory(StationEventCategory.MajorAntag) >= _majorAntagsMax)
+                return false;
+
+            if (_majorAntagCooldown > 0f)
+            {
+                var lastMajorAntagTime = TimeSinceLastEventOfCategory(StationEventCategory.MajorAntag);
+                if (lastMajorAntagTime != TimeSpan.Zero && currentTime.TotalMinutes < _majorAntagCooldown + lastMajorAntagTime.TotalMinutes)
+                    return false;
+            }
+        }
+        // Stories-Antag-End
 
         if (stationEvent.MaxOccurrences.HasValue && GetOccurrences(prototype) >= stationEvent.MaxOccurrences.Value)
         {

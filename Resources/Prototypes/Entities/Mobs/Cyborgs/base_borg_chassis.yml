@@ -156,6 +156,15 @@
   - type: Speech
     speechVerb: Robotic
     speechSounds: Borg
+  - type: Language # Stories-Language
+    currentLanguage: GalacticCommon
+    defaultLanguage: GalacticCommon
+    spokenLanguages:
+    - GalacticCommon
+    - Machine
+    understoodLanguages:
+    - GalacticCommon
+    - Machine
   - type: Vocal
     emoteSounds: UnisexSilicon
     wilhelmProbability: 0

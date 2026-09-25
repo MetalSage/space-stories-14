@@ -12,6 +12,8 @@ using Content.Shared._Stories.SCCVars;
 using Content.Shared._Stories.TTS;
 using Content.Shared.Chat;
 using Content.Shared.Database;
+using Content.Shared.Ghost.Components;
+using Content.Shared.Mobs.Systems;
 using Content.Shared.Radio;
 using Content.Shared.Radio.Components;
 using Content.Shared.Radio.EntitySystems;
@@ -40,6 +42,7 @@ public sealed partial class RadioSystem : SharedRadioSystem
     [Dependency] private GhostSystem _ghost = default!;
     [Dependency] private EntityQuery<TelecomExemptComponent> _exemptQuery = default!;
     [Dependency] private LanguageSystem _language = default!; // Stories-Language
+    [Dependency] private MobStateSystem _mobState = default!;
 
     // Stories-TTS Start
     [Dependency] private TTSSystem _tts = default!;
@@ -329,13 +332,32 @@ public sealed partial class RadioSystem : SharedRadioSystem
         var sessions = new HashSet<ICommonSession>();
         foreach (var uid in recipients)
         {
-            var parent = Transform(uid).ParentUid;
-            var target = actorQuery.HasComponent(uid) ? uid : (actorQuery.HasComponent(parent) ? parent : (EntityUid?)null);
+            EntityUid? target = null;
+            if (actorQuery.HasComponent(uid))
+            {
+                target = uid;
+            }
+            else
+            {
+                var parent = Transform(uid).ParentUid;
+                if (parent.IsValid() &&
+                    TryComp<WearingHeadsetComponent>(parent, out var wearing) &&
+                    wearing.Headset == uid &&
+                    actorQuery.HasComponent(parent))
+                {
+                    target = parent;
+                }
+            }
 
             if (target.HasValue && actorQuery.TryGetComponent(target.Value, out var actor))
             {
-                if (actor.PlayerSession.Status == SessionStatus.InGame)
-                    sessions.Add(actor.PlayerSession);
+                if (actor.PlayerSession.Status != SessionStatus.InGame)
+                    continue;
+
+                if (!HasComp<GhostComponent>(target.Value) && _mobState.IsDead(target.Value))
+                    continue;
+
+                sessions.Add(actor.PlayerSession);
             }
         }
 
