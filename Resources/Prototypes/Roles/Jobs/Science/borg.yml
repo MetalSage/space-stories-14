@@ -10,7 +10,7 @@
     role: JobBorg
     time: 5h
   icon: JobIconStationAi
-  supervisors: job-supervisors-rd
+  supervisors: stories-job-supervisors-ailaws
   jobEntity: StationAiBrain
   jobPreviewEntity: PlayerStationAiPreview
   applyTraits: false
@@ -24,6 +24,6 @@
     - !type:OverallPlaytimeRequirement
       time: 2h
   icon: JobIconBorg
-  supervisors: job-supervisors-rd
+  supervisors: stories-job-supervisors-ailaws
   jobEntity: PlayerBorgBattery
   applyTraits: false
