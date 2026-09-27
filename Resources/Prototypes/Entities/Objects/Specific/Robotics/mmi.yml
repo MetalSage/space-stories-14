@@ -30,6 +30,16 @@
     understoodLanguages:
     - GalacticCommon
     - Machine
+    spokenLanguageSources:
+      GalacticCommon:
+      - Synthetic
+      Machine:
+      - Synthetic
+    understoodLanguageSources:
+      GalacticCommon:
+      - Synthetic
+      Machine:
+      - Synthetic
   - type: BlockMovement
   - type: Examiner
   - type: IntrinsicRadioReceiver
@@ -115,6 +125,16 @@
       understoodLanguages:
       - GalacticCommon
       - Machine
+      spokenLanguageSources:
+        GalacticCommon:
+        - Synthetic
+        Machine:
+        - Synthetic
+      understoodLanguageSources:
+        GalacticCommon:
+        - Synthetic
+        Machine:
+        - Synthetic
     - type: IntrinsicRadioReceiver
     - type: IntrinsicRadioTransmitter
       channels:

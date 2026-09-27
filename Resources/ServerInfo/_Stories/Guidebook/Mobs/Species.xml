@@ -18,10 +18,10 @@
   </Box>
 
   <Box>
-	<GuideEntityEmbed Entity="AppearanceFelinid" Caption="Фелинид"/>
-	<GuideEntityEmbed Entity="AppearanceAvali" Caption="Авали"/>
-	<GuideEntityEmbed Entity="AppearanceRodentia" Caption="Родентия"/>
-	<GuideEntityEmbed Entity="AppearanceKidan" Caption="Кидан"/>
+	<GuideEntityEmbed Entity="STAppearanceFelinid" Caption="Фелинид"/>
+	<GuideEntityEmbed Entity="STAppearanceAvali" Caption="Авали"/>
+	<GuideEntityEmbed Entity="STAppearanceRodentia" Caption="Родентия"/>
+	<GuideEntityEmbed Entity="STAppearanceKidan" Caption="Кидан"/>
   </Box>
   <Box>
     <GuideEntityEmbed Entity="AppearanceVulpkanin" Caption="Вульпканин"/>
