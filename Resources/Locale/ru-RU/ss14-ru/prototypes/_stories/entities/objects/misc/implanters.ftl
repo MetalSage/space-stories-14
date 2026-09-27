@@ -1,6 +1,6 @@
-ent-STAfterburnerImplanter = имплантер форсажа
+ent-STAfterburnerImplanter = имплантер "Форсаж"
     .desc = { ent-BaseImplantOnlyImplanterSyndi.desc }
-ent-STAdrenocorImplanter = имплантер адренокора
+ent-STAdrenocorImplanter = имплантер "Адренокор"
     .desc = { ent-BaseImplantOnlyImplanter.desc }
 ent-STShieldBladeImplanterLeft = имплантер защитного клинка (левая рука)
     .desc = Стерильный имплантер, содержащий кибернетический защитный клинок для левой руки.

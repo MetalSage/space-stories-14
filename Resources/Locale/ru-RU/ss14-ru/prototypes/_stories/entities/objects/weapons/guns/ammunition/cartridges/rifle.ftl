@@ -1,2 +1,2 @@
 ent-STCartridgeRifleSilver = патрон (.20 винтовочный серебрянный)
-    .desc = { ent-BaseCartridgeRifle.desc }
+    .desc = { ent-BaseCartridgeRifle.desc } Серебряные боеприпасы наносят непоправимый урон демоническим приспешникам, что делает их идеальным оружием против нежити.

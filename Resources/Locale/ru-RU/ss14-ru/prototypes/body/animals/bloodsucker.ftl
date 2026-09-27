@@ -1,6 +1,6 @@
 ent-OrganBloodsucker = { "" }
     .desc = { "" }
-    .suffix = кровосос
+    .suffix = Кровосос
 ent-OrganBloodsuckerStomach = { ent-OrganAnimalStomach }
     .desc = { ent-OrganBloodsucker.desc }
     .suffix = { ent-OrganBloodsucker.suffix }

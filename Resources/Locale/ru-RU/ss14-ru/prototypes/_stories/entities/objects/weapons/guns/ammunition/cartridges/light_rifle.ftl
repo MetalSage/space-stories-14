@@ -1,2 +1,2 @@
 ent-STCartridgeLightRifleSilver = патрон (.30 винтовочный серебряный)
-    .desc = A classic intermediate cartridge used by many combat rifles and LMGs. Incendiary ammunition contains a self-igniting compound that sets the target ablaze.
+    .desc = { ent-BaseCartridgeLightRifle.desc } Серебряные боеприпасы наносят непоправимый урон демоническим приспешникам, что делает их идеальным оружием против нежити.
