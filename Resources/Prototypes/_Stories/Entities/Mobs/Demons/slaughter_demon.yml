@@ -21,7 +21,7 @@
       250: Dead
   - type: MeleeWeapon
     altDisarm: false
-    range: 1
+    range: 1.5
     angle: 0
     animation: WeaponArcThrust
     wideAnimation: WeaponArcThrust

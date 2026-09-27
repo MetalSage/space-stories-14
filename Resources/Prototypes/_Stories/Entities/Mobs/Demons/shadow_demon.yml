@@ -23,7 +23,7 @@
       180: Dead
   - type: MeleeWeapon
     altDisarm: false
-    range: 1
+    range: 1.5
     angle: 0
     animation: WeaponArcThrust
     wideAnimation: WeaponArcThrust
@@ -66,10 +66,10 @@
     damageInSpace: null
     darknessHealing:
       types:
-        Blunt: -10
-        Slash: -10
-        Piercing: -10
-        Heat: -10
+        Blunt: -30
+        Slash: -30
+        Piercing: -30
+        Heat: -30
     lightAlert: STLightExposure
     darkSpeedMultiplier: 1.5
     lightSpeedMultiplier: 0.6
