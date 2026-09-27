@@ -9,3 +9,5 @@
     drawdepth: BelowFloor
     layers:
       - state: shoreline_azure_water
+  - type: IconSmooth
+    mode: NoSprite

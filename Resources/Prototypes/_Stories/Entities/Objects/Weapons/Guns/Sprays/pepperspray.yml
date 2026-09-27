@@ -23,6 +23,7 @@
   - type: SolutionContainerVisuals
     fillBaseName: pepperspray-fill-
     maxFillLevels: 4
+    inHandsMaxFillLevels: 0
   - type: Spray
     solution: drink
     transferAmount: 5
