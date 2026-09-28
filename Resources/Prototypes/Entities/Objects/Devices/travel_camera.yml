@@ -39,6 +39,15 @@
   parent: BasePaper
   id: BasePhotograph
   name: photograph
+  components:
+  - type: Item
+    size: Tiny
+    sprite: Objects/Misc/bureaucracy.rsi
+    inhandVisuals:
+      left:
+      - state: paper-inhand-left
+      right:
+      - state: paper-inhand-right
 
 - type: entity
   parent: BasePhotograph
