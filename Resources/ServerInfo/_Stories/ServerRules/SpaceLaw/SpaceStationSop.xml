@@ -121,7 +121,7 @@
 
 
 <Box>
-<GuideEntityEmbed Entity="ToyFigurineGuardianNt" Caption="Страж Клинка"/>
+<GuideEntityEmbed Entity="STToyFigurineGuardianNt" Caption="Страж Клинка"/>
 </Box>
 ##Страж Клинка обязан:
 

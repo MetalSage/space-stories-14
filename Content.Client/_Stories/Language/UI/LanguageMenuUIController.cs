@@ -20,7 +20,7 @@ using static Robust.Client.UserInterface.Controls.BaseButton;
 namespace Content.Client._Stories.Language.UI;
 
 [UsedImplicitly]
-public sealed partial class LanguageMenuUIController : UIController, IOnStateEntered<GameplayState>, IOnStateExited<GameplayState>
+public sealed partial class LanguageMenuUIController : UIController, IOnStateEntered<GameplayState>, IOnStateExited<GameplayState>, IOnSystemChanged<LanguageSystem>
 {
     [Dependency] private IEntityManager _ent = default!;
     [Dependency] private IPlayerManager _player = default!;
@@ -32,6 +32,16 @@ public sealed partial class LanguageMenuUIController : UIController, IOnStateEnt
     private LanguageMenuWindow? _window;
     private MenuButton? LanguageButton => UIManager.GetActiveUIWidgetOrNull<GameTopMenuBar>()?.LanguageButton;
 
+    public void OnSystemLoaded(LanguageSystem system)
+    {
+        system.OnLanguagesChanged += RefreshList;
+    }
+
+    public void OnSystemUnloaded(LanguageSystem system)
+    {
+        system.OnLanguagesChanged -= RefreshList;
+    }
+
     public void OnStateEntered(GameplayState state)
     {
         DebugTools.Assert(_window == null);
@@ -42,8 +52,6 @@ public sealed partial class LanguageMenuUIController : UIController, IOnStateEnt
         _window.OnClose += DeactivateButton;
         _window.OnOpen += ActivateButton;
 
-        _language.OnLanguagesChanged += RefreshList;
-
         CommandBinds.Builder
             .Bind(ContentKeyFunctions.OpenLanguageMenu,
                 InputCmdHandler.FromDelegate(_ => ToggleWindow()))
@@ -52,8 +60,6 @@ public sealed partial class LanguageMenuUIController : UIController, IOnStateEnt
 
     public void OnStateExited(GameplayState state)
     {
-        _language.OnLanguagesChanged -= RefreshList;
-
         if (_window != null)
         {
             _window.Close();
