@@ -6,7 +6,7 @@
   suffix: STHeadOfPrison, Locked
   components:
     - type: Sprite
-      sprite: _Stories/Structures/Doors/Airlocks/Glass/security.rsi
+      sprite: _Stories/Structures/Doors/Airlocks/Glass/prison-base.rsi
     - type: ContainerFill
       containers:
         board: [STPRISONDoorElectronicsHeadOfPrison]
@@ -19,7 +19,7 @@
   suffix: STHeadOfPrison, Locked
   components:
     - type: Sprite
-      sprite: _Stories/Structures/Doors/Airlocks/Standard/security.rsi
+      sprite: _Stories/Structures/Doors/Airlocks/Standard/prison-base.rsi
     - type: ContainerFill
       containers:
         board: [STPRISONDoorElectronicsHeadOfPrison]
@@ -32,7 +32,7 @@
   suffix: STPrisonBrig, Glass, Locked
   components:
     - type: Sprite
-      sprite: _Stories/Structures/Doors/Airlocks/Glass/security.rsi
+      sprite: _Stories/Structures/Doors/Airlocks/Glass/prison-base.rsi
     - type: ContainerFill
       containers:
         board: [STPRISONDoorElectronicsBrig]
@@ -45,7 +45,7 @@
   suffix: STPrisonBrig, Locked
   components:
     - type: Sprite
-      sprite: _Stories/Structures/Doors/Airlocks/Standard/security.rsi
+      sprite: _Stories/Structures/Doors/Airlocks/Standard/prison-base.rsi
     - type: ContainerFill
       containers:
         board: [STPRISONDoorElectronicsBrig]
@@ -58,7 +58,7 @@
   suffix: Prison, Glass, Locked
   components:
     - type: Sprite
-      sprite: _Stories/Structures/Doors/Airlocks/Glass/security.rsi
+      sprite: _Stories/Structures/Doors/Airlocks/Glass/prison-base.rsi
     - type: ContainerFill
       containers:
         board: [STPRISONDoorElectronics]
@@ -71,7 +71,7 @@
   suffix: Prison, Locked
   components:
     - type: Sprite
-      sprite: _Stories/Structures/Doors/Airlocks/Standard/security.rsi
+      sprite: _Stories/Structures/Doors/Airlocks/Standard/prison-base.rsi
     - type: ContainerFill
       containers:
         board: [STPRISONDoorElectronics]
@@ -84,7 +84,7 @@
   suffix: STPrisonMed, Glass, Locked
   components:
     - type: Sprite
-      sprite: _Stories/Structures/Doors/Airlocks/Glass/security.rsi
+      sprite: _Stories/Structures/Doors/Airlocks/Glass/prison-base.rsi
     - type: ContainerFill
       containers:
         board: [STPRISONDoorElectronicsMed]
@@ -97,7 +97,7 @@
   suffix: STPrisonMed, Locked
   components:
     - type: Sprite
-      sprite: _Stories/Structures/Doors/Airlocks/Standard/security.rsi
+      sprite: _Stories/Structures/Doors/Airlocks/Standard/prison-base.rsi
     - type: ContainerFill
       containers:
         board: [STPRISONDoorElectronicsMed]
@@ -110,7 +110,7 @@
   suffix: STPrisonEng, Glass, Locked
   components:
     - type: Sprite
-      sprite: _Stories/Structures/Doors/Airlocks/Glass/security.rsi
+      sprite: _Stories/Structures/Doors/Airlocks/Glass/prison-base.rsi
     - type: ContainerFill
       containers:
         board: [STPRISONDoorElectronicsEng]
@@ -123,7 +123,7 @@
   suffix: STPrisonEng, Locked
   components:
     - type: Sprite
-      sprite: _Stories/Structures/Doors/Airlocks/Standard/security.rsi
+      sprite: _Stories/Structures/Doors/Airlocks/Standard/prison-base.rsi
     - type: ContainerFill
       containers:
         board: [STPRISONDoorElectronicsEng]

@@ -8,6 +8,7 @@ using Content.Shared.Light.EntitySystems;
 using Content.Shared.Mobs.Components;
 using Content.Shared.Projectiles;
 using Content.Shared.Movement.Systems;
+using Content.Shared.Revenant.Components;
 using Content.Shared.Weapons.Melee.Events;
 using Robust.Server.GameObjects;
 using Robust.Shared.GameObjects;
@@ -77,6 +78,9 @@ public sealed partial class ShadowGrappleSystem : EntitySystem
     {
         foreach (var light in _lookup.GetEntitiesInRange<PointLightComponent>(coords, range))
         {
+            if (HasComp<MobStateComponent>(light.Owner) || HasComp<RevenantComponent>(light.Owner))
+                continue;
+
             _pointLight.SetEnabled(light.Owner, false, light.Comp);
         }
     }
