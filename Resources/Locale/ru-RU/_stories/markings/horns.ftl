@@ -1,2 +1,2 @@
-marking-HumanHornsShort = Короткие рожки
-marking-HumanHornsSimple = Рожки
+marking-STHumanHornsShort = Короткие рожки
+marking-STHumanHornsSimple = Рожки
