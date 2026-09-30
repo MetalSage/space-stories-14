@@ -62,7 +62,7 @@
     - id: STWeaponSubmachineGunBogseo
     - id: STAmmoBox585TrappisteIncapacitator
     - id: STAmmoBox585Trappiste
-    - id: STAmmoBox585TrappisteHollowpoint
+      amount: 2
     - id: STMagazine585TrappistePistolEmpty
       amount: 3
 

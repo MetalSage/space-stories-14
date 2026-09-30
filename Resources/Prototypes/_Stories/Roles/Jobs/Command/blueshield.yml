@@ -41,6 +41,11 @@
     belt: STClothingBeltAssaultBlueshield
     pocket1: STHandheldCrewMonitorCommand
     pocket2: STChoiceBeaconBlueshield
+  storage:
+    back:
+    - EmergencyMedipen
+    - EmergencyMedipen
+    - Gauze
 
 - type: chameleonOutfit
   id: STBlueshieldChameleonOutfit
