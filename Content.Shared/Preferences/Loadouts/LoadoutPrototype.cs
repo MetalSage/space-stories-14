@@ -1,6 +1,7 @@
 using Content.Shared.Preferences.Loadouts.Effects;
 using Content.Shared.Roles;
 using Robust.Shared.Prototypes;
+using Content.Shared.Silicons.Laws; // Stories
 
 namespace Content.Shared.Preferences.Loadouts;
 
@@ -49,4 +50,7 @@ public sealed partial class LoadoutPrototype : IPrototype, IEquipmentLoadout
     /// <inheritdoc />
     [DataField]
     public Dictionary<string, List<EntProtoId>> Storage { get; set; } = new();
+
+    [DataField] // Stories
+    public ProtoId<SiliconLawsetPrototype>? SiliconLawset;
 }
