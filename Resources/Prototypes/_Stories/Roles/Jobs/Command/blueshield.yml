@@ -45,7 +45,8 @@
     back:
     - EmergencyMedipen
     - EmergencyMedipen
-    - Gauze
+    - Brutepack
+    - Ointment
 
 - type: chameleonOutfit
   id: STBlueshieldChameleonOutfit
