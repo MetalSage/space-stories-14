@@ -1,7 +1,7 @@
 using Content.Shared.Preferences.Loadouts.Effects;
 using Content.Shared.Roles;
-using Robust.Shared.Prototypes;
 using Content.Shared.Silicons.Laws; // Stories
+using Robust.Shared.Prototypes;
 
 namespace Content.Shared.Preferences.Loadouts;
 
