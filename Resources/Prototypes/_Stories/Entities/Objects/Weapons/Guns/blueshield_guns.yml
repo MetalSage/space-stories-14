@@ -113,7 +113,7 @@
   name: modified lightning laser pistol
   parent: BaseWeaponBatterySmall
   id: STWeaponEnergyPistolLightning
-  description: A pistol designed specifically for officers whose tasks include protecting members of the command stuff.
+  description: A pistol designed specifically for officers whose tasks include protecting members of the command staff.
   components:
   - type: Sprite
     sprite: _Stories/Objects/Weapons/Guns/Battery/blueshield_gun.rsi
