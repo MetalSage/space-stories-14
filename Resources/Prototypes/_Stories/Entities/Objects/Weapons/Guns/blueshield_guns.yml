@@ -48,8 +48,6 @@
   - type: Clothing
     sprite: _Stories/Objects/Weapons/Guns/SubmachineGuns/bogseo.rsi
   - type: Gun
-    minAngle: 21
-    maxAngle: 32
     fireRate: 3.33
     selectedMode: FullAuto
     availableModes:
@@ -59,9 +57,10 @@
       path: /Audio/Weapons/Guns/Gunshots/smg.ogg
   - type: Wieldable
     unwieldOnUse: false
+  - type: GunRequiresWield
   - type: GunWieldBonus
-    minAngle: -5
-    maxAngle: -16
+    minAngle: -10
+    maxAngle: -10
   - type: ItemSlots
     slots:
       gun_magazine:
