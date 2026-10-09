@@ -37,6 +37,7 @@
     damageContainer: Shield
   - type: ExaminableDamage
     messages: ShieldMessages
+  - type: Damageable
 
 - type: entity
   name: combat blade
@@ -64,4 +65,3 @@
   - type: Prying
     speedModifier: 1.2
     pryPowered: true
-  - type: Damageable
